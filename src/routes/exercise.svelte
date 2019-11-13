@@ -1,6 +1,8 @@
 <script>
+import { onMount } from 'svelte';
 import hotkeys from 'hotkeys-js';
 import shuffle from 'lodash.shuffle';
+import OptionCard from '../components/OptionCard.svelte'
 
 const exercises = [
 {
@@ -35,9 +37,11 @@ const currentItem = exercises[0]
 const alternativeItems = exercises.filter(({ formInTargetLanguage }) => formInTargetLanguage !== currentItem.formInTargetLanguage);
 const options = shuffle([currentItem, ...shuffle(alternativeItems).slice(0, 2)]);
 
-hotkeys('1,2,3', (_, { key }) => {
-	selectedOption = parseInt(key) - 1
-});
+onMount(() => {
+	hotkeys('1,2,3', (_, { key }) => {
+		selectedOption = parseInt(key) - 1
+	});
+})
 
 </script>
 
@@ -52,51 +56,18 @@ hotkeys('1,2,3', (_, { key }) => {
 		margin: 0;
 	}
 
-	.picture {
-		text-align: center;
-		font-size: 10vw;
-	}
-
-	.card {
-		border: 1px solid silver;
-		border-radius: 1em;
-		margin: 0.5em;
-	}
-
-	.active .card {
-		border-color: gray;
-	}
-
 	.options {
 		user-select: none;
 		display: flex;
 		justify-content: center;
 	}
 
-	.options li {
-		display: flex;
-		flex-direction: column;
-		width: 25vw;
-		max-width: 20em;
-		margin: 0;
-	}
-
-	.options li label {
-		padding: 1em;
-	}
-
-	.options li input {
+	input {
 		display: none;
 	}
 
-
-	.number {
-		font-size: 2em;
-		text-align: center;
-	}
-
-	.text {
-		text-align: center;
+	label {
+		padding: 1em;
 	}
 </style>
 
@@ -108,15 +79,9 @@ hotkeys('1,2,3', (_, { key }) => {
 
 <ul class="options">
 {#each options as { picture, meaningInSourceLanguage, formInTargetLanguage }, i}
-	<li class:active={selectedOption===i}>
-		<label for={i}>
-			<input type="radio" bind:group={selectedOption} value={i} name={i} id={i} >
-			<div class="card">
-				<div class="picture">{picture}</div>
-				<div class="number">{i + 1}</div>
-				<div class="text">{formInTargetLanguage}</div>
-			</div>
-		</label>
-	</li>
+	<label for={i}>
+		<input type="radio" bind:group={selectedOption} value={i} name={i} id={i} >
+		<OptionCard active={selectedOption===i} picture={picture} number={i + 1} formInTargetLanguage={formInTargetLanguage} />
+	</label>
 {/each}
 </ul>
