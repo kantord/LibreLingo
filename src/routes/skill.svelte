@@ -29,13 +29,20 @@ const challenges = [
 }
 ]
 
-const currentChallenge = challenges[0];
-const alternativeChallenges = challenges.filter(({ formInTargetLanguage }) => formInTargetLanguage !== currentChallenge.formInTargetLanguage);
+let currentChallengeId = 0;
+$: currentChallenge = challenges[currentChallengeId];
+$: alternativeChallenges = challenges.filter((_, id) => id !== currentChallengeId)
+
+$: resolveChallenge = () =>
+{
+	currentChallengeId ++
+}
+
 </script>
 
 <svelte:head>
 	<title>Exercise</title>
 </svelte:head>
 
-<DeckChallenge currentChallenge={currentChallenge} alternativeChallenges={alternativeChallenges} />
+<DeckChallenge currentChallenge={currentChallenge} alternativeChallenges={alternativeChallenges} resolveChallenge={resolveChallenge} />
 
