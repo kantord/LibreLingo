@@ -2,7 +2,7 @@
 import { onMount } from 'svelte';
 import hotkeys from 'hotkeys-js';
 import shuffle from 'lodash.shuffle';
-import OptionCard from '../components/OptionCard.svelte'
+import OptionDeck from '../components/OptionDeck.svelte'
 
 const exercises = [
 {
@@ -49,26 +49,6 @@ onMount(() => {
 	h1 {
 		text-align: center;
 	}
-
-	ul {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-	}
-
-	.options {
-		user-select: none;
-		display: flex;
-		justify-content: center;
-	}
-
-	input {
-		display: none;
-	}
-
-	label {
-		padding: 1em;
-	}
 </style>
 
 <svelte:head>
@@ -77,11 +57,4 @@ onMount(() => {
 
 <h1>Select {currentItem.meaningInSourceLanguage}!</h1>
 
-<ul class="options">
-{#each options as { picture, meaningInSourceLanguage, formInTargetLanguage }, i}
-	<label for={i}>
-		<input type="radio" bind:group={selectedOption} value={i} name={i} id={i} >
-		<OptionCard active={selectedOption===i} picture={picture} number={i + 1} formInTargetLanguage={formInTargetLanguage} />
-	</label>
-{/each}
-</ul>
+<OptionDeck options={options} selectedOption={selectedOption} />
