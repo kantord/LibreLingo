@@ -37,6 +37,7 @@
 
 	.active .card {
 		border-color: gray;
+		background-color: silver;
 	}
 	.number {
 		font-size: 2em;
