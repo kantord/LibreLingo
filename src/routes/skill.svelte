@@ -1,8 +1,5 @@
 <script>
-import { onMount } from 'svelte';
-import hotkeys from 'hotkeys-js';
-import shuffle from 'lodash.shuffle';
-import OptionDeck from '../components/OptionDeck.svelte'
+import DeckChallenge from '../components/DeckChallenge.svelte'
 
 const exercises = [
 {
@@ -33,16 +30,7 @@ const exercises = [
 ]
 
 let selectedOption = null
-const currentItem = exercises[0]
-const alternativeItems = exercises.filter(({ formInTargetLanguage }) => formInTargetLanguage !== currentItem.formInTargetLanguage);
-const options = shuffle([currentItem, ...shuffle(alternativeItems).slice(0, 2)]);
-
-onMount(() => {
-	hotkeys('1,2,3', (_, { key }) => {
-		selectedOption = parseInt(key) - 1
-	});
-})
-
+const currentItem = exercises[0];
 </script>
 
 <style>
@@ -57,4 +45,4 @@ onMount(() => {
 
 <h1>Select {currentItem.meaningInSourceLanguage}!</h1>
 
-<OptionDeck options={options} selectedOption={selectedOption} />
+<DeckChallenge exercises={exercises} currentItem={currentItem} />
