@@ -1,7 +1,7 @@
 <script>
 import DeckChallenge from '../components/DeckChallenge.svelte'
 
-const exercises = [
+const challenges = [
 {
 	"picture": "🦁",
 	"meaningInSourceLanguage": "lion",
@@ -29,8 +29,7 @@ const exercises = [
 }
 ]
 
-let selectedOption = null
-const currentItem = exercises[0];
+const currentChallenge = challenges[0];
 </script>
 
 <style>
@@ -43,6 +42,7 @@ const currentItem = exercises[0];
 	<title>Exercise</title>
 </svelte:head>
 
-<h1>Select {currentItem.meaningInSourceLanguage}!</h1>
+<h1>Select {currentChallenge.meaningInSourceLanguage}!</h1>
 
-<DeckChallenge exercises={exercises} currentItem={currentItem} />
+<DeckChallenge challenges={challenges} currentChallenge={currentChallenge} />
+

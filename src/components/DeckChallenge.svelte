@@ -4,12 +4,12 @@ import hotkeys from 'hotkeys-js';
 import shuffle from 'lodash.shuffle';
 import OptionDeck from '../components/OptionDeck.svelte'
 
-export let exercises;
-export let currentItem;
+export let challenges;
+export let currentChallenge;
 let selectedOption = null
 
-const alternativeItems = exercises.filter(({ formInTargetLanguage }) => formInTargetLanguage !== currentItem.formInTargetLanguage);
-const options = shuffle([currentItem, ...shuffle(alternativeItems).slice(0, 2)]);
+const alternativeChallenges = challenges.filter(({ formInTargetLanguage }) => formInTargetLanguage !== currentChallenge.formInTargetLanguage);
+const options = shuffle([currentChallenge, ...shuffle(alternativeChallenges).slice(0, 2)]);
 
 onMount(() => {
 	hotkeys('1,2,3', (_, { key }) => {
