@@ -32,17 +32,9 @@ const challenges = [
 const currentChallenge = challenges[0];
 </script>
 
-<style>
-	h1 {
-		text-align: center;
-	}
-</style>
-
 <svelte:head>
 	<title>Exercise</title>
 </svelte:head>
-
-<h1>Select {currentChallenge.meaningInSourceLanguage}!</h1>
 
 <DeckChallenge challenges={challenges} currentChallenge={currentChallenge} />
 

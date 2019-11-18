@@ -19,4 +19,13 @@ onMount(() => {
 
 </script>
 
+<h1>Select {currentChallenge.meaningInSourceLanguage}!</h1>
+
 <OptionDeck options={options} selectedOption={selectedOption} />
+
+<style>
+	h1 {
+		text-align: center;
+	}
+</style>
+
