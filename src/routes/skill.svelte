@@ -1,7 +1,8 @@
 <script>
 import DeckChallenge from '../components/DeckChallenge.svelte'
+import shuffle from 'lodash.shuffle';
 
-const challenges = [
+const rawChallenges = [
 {
 	"picture": "🦁",
 	"meaningInSourceLanguage": "lion",
@@ -30,6 +31,7 @@ const challenges = [
 ]
 
 let currentChallengeId = 0;
+let challenges = shuffle(rawChallenges);
 $: currentChallenge = challenges[currentChallengeId];
 $: alternativeChallenges = challenges.filter((_, id) => id !== currentChallengeId)
 
