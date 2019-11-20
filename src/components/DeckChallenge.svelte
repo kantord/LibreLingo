@@ -37,17 +37,11 @@ $: submitChallenge = () => {
 
 
 onMount(() => {
-	hotkeys('1,2,3,enter', (_, { key }) => {
-		if (key === "enter") {
-			if (submitted) {
-				nextChallenge()
-			} else {
-				submitChallenge();
-			}
+	hotkeys('enter', () => {
+		if (submitted) {
+			nextChallenge()
 		} else {
-			if (submitted) return;
-
-			selectedOption = parseInt(key) - 1;
+			submitChallenge();
 		}
 	});
 })
