@@ -80,11 +80,13 @@ onMount(() => {
 	}
 
 	.correct {
-		color: green;
+		color: white;
+		background: green;
 	}
 
 	.incorrect {
-		color: red;
+		color: white;
+		background: red;
 	}
 
 	.result {
@@ -92,7 +94,14 @@ onMount(() => {
 		left: 0;
 		bottom: 0;
 		right: 0;
-		height: 20vh;
+		height: 5vh;
+		padding: 1em;
+		font-size: 3vh;
+	}
+
+	.result button {
+		float: right;
+		font-size: 3vh;
 	}
 </style>
 
