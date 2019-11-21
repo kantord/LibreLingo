@@ -34,7 +34,7 @@ $: {
 	options = shuffle([correctOption, ...shuffle(incorrectOptions).slice(0, 2)]);
 }
 
-$: nextChallenge = () => {
+$: finishChallenge = () => {
 	selectedOption = null;
 	submitted = false;
 	resolveChallenge();
@@ -53,7 +53,7 @@ $: submitChallenge = () => {
 onMount(() => {
 	hotkeys('enter', () => {
 		if (submitted) {
-			nextChallenge()
+			finishChallenge()
 		} else {
 			submitChallenge();
 		}
@@ -75,14 +75,14 @@ onMount(() => {
 		{#if options[selectedOption].correct }
 			<div class="result correct">
 				Correct solution!
-				<button type="submit" on:click={nextChallenge}>Continue</button>
+				<button type="submit" on:click={finishChallenge}>Continue</button>
 			</div>
 		{/if}
 
 		{#if !options[selectedOption].correct }
 			<div class="result incorrect">
 				Incorect solution!
-				<button type="submit" on:click={nextChallenge}>Continue</button>
+				<button type="submit" on:click={finishChallenge}>Continue</button>
 			</div>
 		{/if}
 	{/if}
