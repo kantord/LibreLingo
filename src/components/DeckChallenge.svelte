@@ -3,6 +3,7 @@ import { onMount } from 'svelte';
 import hotkeys from 'hotkeys-js';
 import shuffle from 'lodash.shuffle';
 import { Howl } from 'howler';
+import { slide } from 'svelte/transition';
 import OptionDeck from '../components/OptionDeck.svelte'
 
 export let currentChallenge;
@@ -68,19 +69,21 @@ onMount(() => {
 	<OptionDeck options={options} bind:selectedOption={selectedOption} disabled={submitted} />
 
 	{#if !submitted }
-	  <button type="submit">Submit</button>
+		<div class="panel">
+		  <button type="submit">Submit</button>
+		</div>
 	{/if}
 
 	{#if submitted }
 		{#if options[selectedOption].correct }
-			<div class="result correct">
+			<div class="panel correct" transition:slide="{{ duration: 300 }}">
 				Correct solution!
 				<button type="submit" on:click={finishChallenge}>Continue</button>
 			</div>
 		{/if}
 
 		{#if !options[selectedOption].correct }
-			<div class="result incorrect">
+			<div class="panel incorrect" transition:slide="{{ duration: 300 }}">
 				Incorect solution!
 				<button type="submit" on:click={finishChallenge}>Continue</button>
 			</div>
@@ -93,6 +96,16 @@ onMount(() => {
 		text-align: center;
 	}
 
+	.panel {
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		height: 5vh;
+		padding: 1em;
+		font-size: 3vh;
+	}
+
 	.correct {
 		color: white;
 		background: green;
@@ -103,17 +116,7 @@ onMount(() => {
 		background: red;
 	}
 
-	.result {
-		position: fixed;
-		left: 0;
-		bottom: 0;
-		right: 0;
-		height: 5vh;
-		padding: 1em;
-		font-size: 3vh;
-	}
-
-	.result button {
+	.panel button {
 		float: right;
 		font-size: 3vh;
 	}
