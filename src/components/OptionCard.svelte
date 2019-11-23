@@ -8,7 +8,7 @@
 
 <li class:active={active}>
 	<div class="card">
-		<div class="picture">{picture}</div>
+		<img src={`images/${picture}`} alt="" />
 		<div class="number">{number}</div>
 		<div class="text">{formInTargetLanguage}</div>
 	</div>
@@ -24,9 +24,13 @@
 	}
 
 
-	.picture {
-		text-align: center;
-		font-size: 10vw;
+	img {
+		display: block;
+		margin: 1em auto 0;
+		width: 10vw;
+		height: 10vw;
+		object-position: center;
+		object-fit: cover;
 	}
 
 	.card {

@@ -4,27 +4,27 @@ import shuffle from 'lodash.shuffle';
 
 const rawChallenges = [
 {
-	"picture": "🦁",
+	"pictures": ["lion1.jpg", "lion2.jpg", "lion3.jpg"],
 	"meaningInSourceLanguage": "lion",
 	"formInTargetLanguage": "león",
 },
 {
-	"picture": "🐈",
+	"pictures": ["cat1.jpg", "cat2.jpg", "cat3.jpg"],
 	"meaningInSourceLanguage": "cat",
 	"formInTargetLanguage": "gato",
 },
 {
-	"picture": "🐕",
+	"pictures": ["dog1.jpg", "dog2.jpg", "dog3.jpg"],
 	"meaningInSourceLanguage": "dog",
 	"formInTargetLanguage": "perro",
 },
 {
-	"picture": "🦆",
+	"pictures": ["duck1.jpg", "duck2.jpg", "duck3.jpg"],
 	"meaningInSourceLanguage": "duck",
 	"formInTargetLanguage": "pato",
 },
 {
-	"picture": "🐻",
+	"pictures": ["bear1.jpg", "bear2.jpg", "bear3.jpg"],
 	"meaningInSourceLanguage": "bear",
 	"formInTargetLanguage": "oso",
 }
@@ -40,6 +40,12 @@ $: resolveChallenge = () =>
 	currentChallengeId ++
 }
 
+const preloadImage = imageName => {
+	new Image().src = `images/${imageName}`
+}
+
+challenges.map(({ pictures }) => pictures.map(preloadImage))
+
 </script>
 
 <svelte:head>
@@ -47,4 +53,3 @@ $: resolveChallenge = () =>
 </svelte:head>
 
 <DeckChallenge currentChallenge={currentChallenge} alternativeChallenges={alternativeChallenges} resolveChallenge={resolveChallenge} />
-
