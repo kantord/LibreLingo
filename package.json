@@ -9,7 +9,8 @@
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
-    "test": "run-p --race dev cy:run"
+    "test": "run-p --race dev cy:run",
+    "lint": "eslint src"
   },
   "dependencies": {
     "compression": "^1.7.1",
@@ -20,6 +21,8 @@
     "sirv": "^0.4.0"
   },
   "devDependencies": {
+    "eslint": "^6.7.0",
+    "eslint-plugin-svelte3": "^2.7.3",
     "npm-run-all": "^4.1.5",
     "sapper": "^0.27.0",
     "svelte": "^3.0.0",
