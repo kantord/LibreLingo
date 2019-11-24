@@ -1,5 +1,5 @@
 <script>
-  import DeckChallenge from "../components/DeckChallenge.svelte";
+  import DeckChallenge from "../components/DeckChallenge"
   import shuffle from "lodash.shuffle";
 
   const rawChallenges = [

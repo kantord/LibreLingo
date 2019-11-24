@@ -2,9 +2,9 @@
   import { onMount } from "svelte";
   import hotkeys from "hotkeys-js";
   import shuffle from "lodash.shuffle";
-  import sound from "../media/sound";
+  import sound from "../../media/sound";
   import { slide } from "svelte/transition";
-  import OptionDeck from "../components/OptionDeck.svelte";
+  import OptionDeck from "../../components/OptionDeck.svelte";
 
   export let currentChallenge;
   export let alternativeChallenges;
