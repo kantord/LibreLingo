@@ -2,7 +2,7 @@
   import { onMount } from "svelte";
   import hotkeys from "hotkeys-js";
   import shuffle from "lodash.shuffle";
-  import { Howl } from "howler";
+  import sound from '../media/sound'
   import { slide } from "svelte/transition";
   import OptionDeck from "../components/OptionDeck.svelte";
 
@@ -12,14 +12,7 @@
   let selectedOption = null;
   let options = null;
   let submitted = false;
-  const sounds = {
-    correct: new Howl({
-      src: ["sound/correct.mp3"]
-    }),
-    wrong: new Howl({
-      src: ["sound/wrong.mp3"]
-    })
-  };
+
 
   $: correctOption = {
     ...currentChallenge,
@@ -46,9 +39,9 @@
 
   $: submitChallenge = () => {
     if (options[selectedOption].correct) {
-      sounds.correct.play();
+      sound.correct.play();
     } else {
-      sounds.wrong.play();
+      sound.wrong.play();
     }
     submitted = true;
   };
