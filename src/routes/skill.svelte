@@ -1,5 +1,5 @@
 <script>
-  import DeckChallenge from "../components/DeckChallenge"
+  import DeckChallenge from "../components/DeckChallenge";
   import shuffle from "lodash.shuffle";
 
   const rawChallenges = [
@@ -42,6 +42,7 @@
   };
 
   const preloadImage = imageName => {
+    if (typeof Image === "undefined") return;
     new Image().src = `images/${imageName}`;
   };
 
