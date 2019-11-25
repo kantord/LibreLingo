@@ -5,30 +5,18 @@
   import sound from "../../media/sound";
   import { slide } from "svelte/transition";
   import OptionDeck from "../../components/OptionDeck.svelte";
+  import { prepareChallenge } from "./logic";
 
   export let currentChallenge;
   export let alternativeChallenges;
   export let resolveChallenge;
   let selectedOption = null;
-  let options = null;
   let submitted = false;
 
-  $: correctOption = {
-    ...currentChallenge,
-    correct: true
-  };
-
-  $: incorrectOptions = alternativeChallenges.map(challenge => ({
-    ...challenge,
-    correct: false
-  }));
-
-  $: {
-    options = shuffle([
-      correctOption,
-      ...shuffle(incorrectOptions).slice(0, 2)
-    ]);
-  }
+  $: options = prepareChallenge({
+    currentChallenge,
+    alternativeChallenges
+  });
 
   $: finishChallenge = () => {
     selectedOption = null;
