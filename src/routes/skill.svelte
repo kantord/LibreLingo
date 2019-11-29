@@ -53,4 +53,8 @@
   <title>Exercise</title>
 </svelte:head>
 
+<p>
+	Progress: {currentChallengeId}
+</p>
+
 <DeckChallenge {currentChallenge} {alternativeChallenges} {resolveChallenge} />
