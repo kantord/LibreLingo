@@ -2,7 +2,6 @@
   import { onMount } from "svelte";
   import hotkeys from "hotkeys-js";
   import shuffle from "lodash.shuffle";
-  import sound from "../../media/sound";
   import { slide } from "svelte/transition";
   import OptionDeck from "../../components/OptionDeck.svelte";
   import { prepareChallenge } from "./logic";
@@ -10,6 +9,7 @@
   export let currentChallenge;
   export let alternativeChallenges;
   export let resolveChallenge;
+  export let registerResult;
   let selectedOption = null;
   let submitted = false;
 
@@ -25,11 +25,7 @@
   };
 
   $: submitChallenge = () => {
-    if (options[selectedOption].correct) {
-      sound.correct.play();
-    } else {
-      sound.wrong.play();
-    }
+    registerResult(options[selectedOption].correct);
     submitted = true;
   };
 

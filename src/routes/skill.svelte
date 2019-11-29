@@ -1,4 +1,5 @@
 <script>
+  import sound from "../media/sound";
   import DeckChallenge from "../components/DeckChallenge";
   import shuffle from "lodash.shuffle";
 
@@ -37,6 +38,14 @@
     (_, id) => id !== currentChallengeId
   );
 
+  $: registerResult = isCorrect => {
+    if (isCorrect) {
+      sound.correct.play();
+    } else {
+      sound.wrong.play();
+    }
+  };
+
   $: resolveChallenge = () => {
     currentChallengeId++;
   };
@@ -53,8 +62,10 @@
   <title>Exercise</title>
 </svelte:head>
 
-<p>
-	Progress: {currentChallengeId}
-</p>
+<p>Progress: {currentChallengeId}</p>
 
-<DeckChallenge {currentChallenge} {alternativeChallenges} {resolveChallenge} />
+<DeckChallenge
+  {currentChallenge}
+  {alternativeChallenges}
+  {resolveChallenge}
+  {registerResult} />
