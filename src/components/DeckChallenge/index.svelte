@@ -111,12 +111,12 @@
   }
 
   .correct {
-	  color: $text-invert;
+    color: $text-invert;
     background: $success;
   }
 
   .incorrect {
-	  color: $text-invert;
+    color: $text-invert;
     background: $danger;
   }
 
@@ -125,6 +125,6 @@
   }
 
   .panel-block {
-	  color: inherit;
+    color: inherit;
   }
 </style>
