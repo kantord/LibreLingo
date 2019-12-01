@@ -47,7 +47,7 @@
 
   {#if !submitted}
     <div class="panel">
-      <button type="submit">Submit</button>
+      <button class="button is-primary" type="submit">Submit</button>
     </div>
   {/if}
 
@@ -55,14 +55,14 @@
     {#if options[selectedOption].correct}
       <div class="panel correct" transition:slide="{{ duration: 300 }}">
         Correct solution!
-        <button type="submit" on:click="{finishChallenge}">Continue</button>
+        <button class="button is-primary" type="submit" on:click="{finishChallenge}">Continue</button>
       </div>
     {/if}
 
     {#if !options[selectedOption].correct}
       <div class="panel incorrect" transition:slide="{{ duration: 300 }}">
         Incorect solution!
-        <button type="submit" on:click="{finishChallenge}">Continue</button>
+        <button class="button is-primary" type="submit" on:click="{finishChallenge}">Continue</button>
       </div>
     {/if}
   {/if}
@@ -95,6 +95,5 @@
 
   .panel button {
     float: right;
-    font-size: 3vh;
   }
 </style>
