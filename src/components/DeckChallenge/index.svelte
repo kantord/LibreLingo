@@ -95,7 +95,9 @@
   {/if}
 </form>
 
-<style>
+<style type="text/scss">
+  @import "../../variables";
+
   h1 {
     text-align: center;
   }
@@ -109,16 +111,20 @@
   }
 
   .correct {
-    color: white;
-    background: green;
+	  color: $text-invert;
+    background: $success;
   }
 
   .incorrect {
-    color: white;
-    background: red;
+	  color: $text-invert;
+    background: $danger;
   }
 
   .panel button {
     float: right;
+  }
+
+  .panel-block {
+	  color: inherit;
   }
 </style>
