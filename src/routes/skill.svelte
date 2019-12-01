@@ -73,7 +73,9 @@
   <title>Exercise</title>
 </svelte:head>
 
-<progress class="progress" value={progress} max="1">{progress * 100}%</progress>
+<progress class="progress" value="{progress}" max="1">
+  {progress * 100}%
+</progress>
 
 <DeckChallenge
   {currentChallenge}
