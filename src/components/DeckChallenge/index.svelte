@@ -95,7 +95,7 @@
   {/if}
 </form>
 
-<style>
+<style type="text/scss">
   h1 {
     text-align: center;
   }
@@ -110,7 +110,7 @@
 
   .correct {
     color: white;
-    background: green;
+    background: $success;
   }
 
   .incorrect {
