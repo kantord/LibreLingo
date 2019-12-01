@@ -3,6 +3,7 @@
   import hotkeys from "hotkeys-js";
   import shuffle from "lodash.shuffle";
   import { slide } from "svelte/transition";
+  import { fade } from "svelte/transition";
   import OptionDeck from "../../components/OptionDeck.svelte";
   import { prepareChallenge } from "./logic";
 
@@ -46,33 +47,49 @@
   <OptionDeck {options} bind:selectedOption disabled="{submitted}" />
 
   {#if !submitted}
-    <div class="panel">
-      <button class="button is-primary" type="submit">Submit</button>
+    <div class="panel is-primary">
+      <div class="panel-block">
+        <div class="control">
+          <button class="button is-primary" type="submit">Submit</button>
+        </div>
+      </div>
     </div>
   {/if}
 
   {#if submitted}
     {#if options[selectedOption].correct}
-      <div class="panel correct" transition:slide="{{ duration: 300 }}">
-        Correct solution!
-        <button
-          class="button is-primary"
-          type="submit"
-          on:click="{finishChallenge}">
-          Continue
-        </button>
+      <div
+        class="panel correct is-primary"
+        transition:slide="{{ duration: 300 }}">
+        <div class="panel-block">
+          <div class="control">
+            Correct solution!
+            <button
+              class="button is-primary"
+              type="submit"
+              on:click="{finishChallenge}">
+              Continue
+            </button>
+          </div>
+        </div>
       </div>
     {/if}
 
     {#if !options[selectedOption].correct}
-      <div class="panel incorrect" transition:slide="{{ duration: 300 }}">
-        Incorect solution!
-        <button
-          class="button is-primary"
-          type="submit"
-          on:click="{finishChallenge}">
-          Continue
-        </button>
+      <div
+        class="panel incorrect is-primary"
+        transition:slide="{{ duration: 300 }}">
+        <div class="panel-block">
+          <div class="control">
+            Incorect solution!
+            <button
+              class="button is-primary"
+              type="submit"
+              on:click="{finishChallenge}">
+              Continue
+            </button>
+          </div>
+        </div>
       </div>
     {/if}
   {/if}
@@ -88,9 +105,7 @@
     left: 0;
     bottom: 0;
     right: 0;
-    height: 5vh;
-    padding: 1em;
-    font-size: 3vh;
+    border-radius: 0;
   }
 
   .correct {
