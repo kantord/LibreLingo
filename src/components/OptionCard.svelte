@@ -7,9 +7,15 @@
 
 <li class:active>
   <div class="card">
-    <img src="{`images/${picture}`}" alt="" />
-    <div class="number">{number}</div>
-    <div class="text">{formInTargetLanguage}</div>
+    <div class="card-image">
+      <figure class="image is-1by1">
+        <img src="{`images/${picture}`}" alt="" />
+      </figure>
+    </div>
+    <div class="card-content">
+      <div class="is-size-5 has-text-centered">{formInTargetLanguage}</div>
+      <div class="is-size-6 has-text-centered">{number}</div>
+    </div>
   </div>
 </li>
 
@@ -22,31 +28,12 @@
     margin: 0;
   }
 
-  img {
-    display: block;
-    margin: 1em auto 0;
-    width: 10vw;
-    height: 10vw;
-    object-position: center;
+  .card-image img {
     object-fit: cover;
-  }
-
-  .card {
-    border: 1px solid silver;
-    border-radius: 1em;
-    margin: 0.5em;
   }
 
   .active .card {
     border-color: gray;
     background-color: silver;
-  }
-  .number {
-    font-size: 2em;
-    text-align: center;
-  }
-
-  .text {
-    text-align: center;
   }
 </style>
