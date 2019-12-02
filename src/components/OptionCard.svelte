@@ -25,6 +25,7 @@
 
   .card {
 	  transition: opacity .2s, outline .2s;
+	  cursor: pointer;
   }
 
   li {
@@ -39,13 +40,17 @@
     object-fit: cover;
   }
 
-  .active .card {
-    outline: 1px solid $info;
-    box-sizing: content-box;
-  }
-
   .inactive .card {
     opacity: 0.65;
     outline: 1px solid rgba(0, 0, 0, 0);
+  }
+
+  :hover .card {
+    outline: 1px solid $link-active-border;
+  }
+
+  .active .card {
+    outline: 1px solid $info;
+    box-sizing: content-box;
   }
 </style>
