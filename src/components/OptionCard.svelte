@@ -20,6 +20,8 @@
 </li>
 
 <style>
+  @import "../variables";
+
   li {
     display: flex;
     flex-direction: column;
@@ -33,7 +35,7 @@
   }
 
   .active .card {
-    border-color: gray;
-    background-color: silver;
+    outline: 1px solid $info;
+    box-sizing: content-box;
   }
 </style>
