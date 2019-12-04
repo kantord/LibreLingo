@@ -46,8 +46,8 @@
 <form on:submit|preventDefault="{submitChallenge}">
   <OptionDeck {options} bind:selectedOption disabled="{submitted}" />
 
-  {#if !submitted}
-    <div class="panel is-primary">
+  {#if !submitted && selectedOption !== null}
+    <div class="panel is-primary" transition:slide="{{ duration: 300 }}">
       <div class="panel-block">
         <div class="control">
           <button class="button is-primary" type="submit">Submit</button>
