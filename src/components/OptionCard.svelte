@@ -14,8 +14,13 @@
       </figure>
     </div>
     <div class="card-content">
-      <div class="is-size-5 has-text-centered">{formInTargetLanguage}</div>
-      <div class="is-size-6 has-text-centered">{number}</div>
+      <div class="is-size-5 has-text-centered is-size-6-mobile">
+        {formInTargetLanguage}
+      </div>
+      <div
+        class="is-size-6 has-text-centered is-hidden-touch is-hidden-tablet-only">
+        {number}
+      </div>
     </div>
   </div>
 </li>
@@ -24,7 +29,7 @@
   @import "../variables";
 
   .card {
-    transition: opacity 0.2s, outline 0.2s;
+    transition: opacity 0.15s, outline 0.2s;
     cursor: pointer;
   }
 
@@ -52,5 +57,11 @@
   .active .card {
     outline: 1px solid $info;
     box-sizing: content-box;
+  }
+
+  @include mobile {
+    .card-content {
+      padding: $size-7;
+    }
   }
 </style>
