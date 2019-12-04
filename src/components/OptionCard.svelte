@@ -24,8 +24,8 @@
   @import "../variables";
 
   .card {
-	  transition: opacity .2s, outline .2s;
-	  cursor: pointer;
+    transition: opacity 0.2s, outline 0.2s;
+    cursor: pointer;
   }
 
   li {
