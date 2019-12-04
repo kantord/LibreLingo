@@ -1,6 +1,7 @@
 <script>
   import sound from "../media/sound";
   import DeckChallenge from "../components/DeckChallenge";
+  import ProgressBar from "../components/ProgressBar";
   import shuffle from "lodash.shuffle";
 
   const rawChallenges = [
@@ -73,9 +74,7 @@
   <title>Exercise</title>
 </svelte:head>
 
-<progress class="progress" value="{progress}" max="1">
-  {progress * 100}%
-</progress>
+<ProgressBar value="{progress}" />
 
 <DeckChallenge
   {currentChallenge}
