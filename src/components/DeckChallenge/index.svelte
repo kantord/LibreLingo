@@ -41,7 +41,7 @@
   });
 </script>
 
-<h1>Select {currentChallenge.meaningInSourceLanguage}!</h1>
+<p class="is-size-1 is-size-2-tablet is-size-4-mobile has-text-centered">Which of these is "<strong>{currentChallenge.meaningInSourceLanguage}</strong>"?</p>
 
 <form on:submit|preventDefault="{submitChallenge}">
   <OptionDeck {options} bind:selectedOption disabled="{submitted}" />
@@ -97,10 +97,6 @@
 
 <style type="text/scss">
   @import "../../variables";
-
-  h1 {
-    text-align: center;
-  }
 
   .panel {
     position: fixed;
