@@ -7,6 +7,16 @@
   $: progress.set(value);
 </script>
 
-<progress class="progress" value="{$progress}" max="1">
-  {$progress * 100}%
-</progress>
+<div>
+  <progress class="progress" value="{$progress}" max="1">
+    {$progress * 100}%
+  </progress>
+</div>
+
+<style>
+  @import "../variables";
+
+  div {
+    padding: $size-6;
+  }
+</style>
