@@ -36,7 +36,7 @@
   li {
     display: flex;
     flex-direction: column;
-    width: 25vw;
+    width: 100%;
     max-width: 20em;
     margin: 0;
   }

@@ -76,8 +76,10 @@
 
 <ProgressBar value="{progress}" />
 
-<DeckChallenge
-  {currentChallenge}
-  {alternativeChallenges}
-  {resolveChallenge}
-  {registerResult} />
+<div class="container">
+  <DeckChallenge
+    {currentChallenge}
+    {alternativeChallenges}
+    {resolveChallenge}
+    {registerResult} />
+</div>
