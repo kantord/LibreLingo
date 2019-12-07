@@ -42,9 +42,9 @@
 </script>
 
 <p class="is-size-1 is-size-2-tablet is-size-4-mobile has-text-centered">
-  Which of these is "
+  Which of these is
   <strong>{currentChallenge.meaningInSourceLanguage}</strong>
-  "?
+  ?
 </p>
 
 <form on:submit|preventDefault="{submitChallenge}">
