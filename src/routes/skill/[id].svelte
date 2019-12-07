@@ -50,8 +50,8 @@
         pictures: ["bread1.jpg", "bread2.jpg", "bread3.jpg"],
         meaningInSourceLanguage: "bread",
         formInTargetLanguage: "pan"
-      },
-    ],
+      }
+    ]
   };
 
   export async function preload(page, session) {
@@ -67,6 +67,7 @@
   import DeckChallenge from "../../components/DeckChallenge";
   import ProgressBar from "../../components/ProgressBar";
   import shuffle from "lodash.shuffle";
+  import { fade } from "svelte/transition";
 
   export let rawChallenges;
   let challenges = shuffle(rawChallenges);
@@ -109,9 +110,18 @@
 <ProgressBar value="{progress}" />
 
 <div class="container">
-  <DeckChallenge
-    {currentChallenge}
-    {alternativeChallenges}
-    {resolveChallenge}
-    {registerResult} />
+  {#each challenges as challenge, i (challenge.id)}
+    {#if challenge.id === currentChallenge.id}
+      <div
+        out:fade="{{ duration: 300 }}"
+        in:fade="{{ duration: 300, delay: 300 }}">
+        <DeckChallenge
+          {currentChallenge}
+          {alternativeChallenges}
+          {resolveChallenge}
+          {registerResult} />
+      </div>
+    {/if}
+  {/each}
+
 </div>
