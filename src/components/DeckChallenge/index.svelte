@@ -85,7 +85,7 @@
         transition:slide="{{ duration: 300 }}">
         <div class="panel-block">
           <div class="control">
-            Incorect solution!
+            Incorrect solution!
             <button
               class="button is-primary"
               type="submit"

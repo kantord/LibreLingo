@@ -16,7 +16,7 @@
 </script>
 
 <ul class="options">
-  {#each options as { pictures, meaningInSourceLanguage, formInTargetLanguage }, i}
+  {#each options as { pictures, meaningInSourceLanguage, formInTargetLanguage, correct }, i}
     <label for="{i}">
       <input
         type="radio"
@@ -26,6 +26,7 @@
         id="{i}"
         {disabled} />
       <OptionCard
+        {correct}
         active="{selectedOption === i}"
         inactive="{selectedOption !== null && selectedOption !== i}"
         picture="{shuffle(pictures)[0]}"

@@ -3,11 +3,15 @@
   export let inactive;
   export let number;
   export let picture;
+  export let correct;
   export let formInTargetLanguage;
 </script>
 
 <li class:active class:inactive>
-  <div class="card">
+  <div
+    class="card"
+    data-test="{active ? 'active' : inactive ? 'inactive' : 'neutral'}"
+    data-test-correct="{correct}">
     <div class="card-image">
       <figure class="image is-1by1">
         <img src="{`images/${picture}`}" alt="" />
