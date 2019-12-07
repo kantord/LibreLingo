@@ -4,6 +4,7 @@ const config = require("sapper/config/webpack.js")
 const pkg = require("./package.json")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const sass = require("svelte-preprocess-sass").sass
+const CopyPlugin = require("copy-webpack-plugin")
 
 const mode = process.env.NODE_ENV
 const dev = mode === "development"
@@ -19,6 +20,22 @@ module.exports = {
         resolve: { alias, extensions, mainFields },
         module: {
             rules: [
+                {
+                    test: /\.css$/i,
+                    use: ["style-loader", "css-loader"]
+                },
+                {
+                    test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                    use: [
+                        {
+                            loader: "file-loader",
+                            options: {
+                                name: "[name].[ext]",
+                                outputPath: "fonts/"
+                            }
+                        }
+                    ]
+                },
                 {
                     test: /\.scss$/,
                     use: [
@@ -53,6 +70,16 @@ module.exports = {
         },
         mode,
         plugins: [
+            new CopyPlugin([
+                {
+                    from: path.resolve(
+                        "node_modules",
+                        "oswald-webfont",
+                        "fonts"
+                    ),
+                    to: path.resolve("static", "fonts")
+                }
+            ]),
             new MiniCssExtractPlugin({
                 filename: "css/mystyles.css"
             }),

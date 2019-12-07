@@ -53,7 +53,7 @@
   }
 
   label {
-	  width: 100%;
+    width: 100%;
     padding: 1em;
   }
 </style>
