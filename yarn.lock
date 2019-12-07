@@ -18,6 +18,11 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
+"@openfonts/josefin-sans_all@^1.44.0":
+  version "1.44.0"
+  resolved "https://registry.yarnpkg.com/@openfonts/josefin-sans_all/-/josefin-sans_all-1.44.0.tgz#748a92b6e264acce6a33fc4da21336020c542df4"
+  integrity sha512-gJ5PzIUblOXsa6kdvSJQ93f/1PiLl+gjFlYSoau1mp/YTJsMvYYN0p4ZDNfntHCpyK5AhGl2XegocnKIoaMdng==
+
 "@polka/url@^0.5.0":
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/@polka/url/-/url-0.5.0.tgz#b21510597fd601e5d7c95008b76bf0d254ebfd31"
@@ -3168,11 +3173,6 @@ osenv@0, osenv@^0.1.4:
   dependencies:
     os-homedir "^1.0.0"
     os-tmpdir "^1.0.0"
-
-oswald-webfont@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/oswald-webfont/-/oswald-webfont-0.0.1.tgz#9f99999d66e5f4e2e72de996d8475a6bf59a4bb8"
-  integrity sha512-tl02q92kT9h8KLvNua4us+8kuWNXgXObC7SHAA4La/J6AJAdMELtzLFBjStCNRjxgcMsS10sV1ZuLVr7MRV8PA==
 
 p-defer@^1.0.0:
   version "1.0.0"

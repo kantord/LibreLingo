@@ -74,10 +74,10 @@ module.exports = {
                 {
                     from: path.resolve(
                         "node_modules",
-                        "oswald-webfont",
-                        "fonts"
+                        "@openfonts/josefin-sans_all",
+                        "files"
                     ),
-                    to: path.resolve("static", "fonts")
+                    to: path.resolve("static", "files")
                 }
             ]),
             new MiniCssExtractPlugin({
