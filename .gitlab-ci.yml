@@ -28,8 +28,8 @@ install:
   image: cypress/base:10
   stage: test
   script:
-    - yarn run dev &
-    - yarn cy:run -- --parallel --record --group "electrons on GitLab CI"  --key b103d0e6-1ee6-4d48-b4b9-18da663bea07
+    - yarn serve __sapper__/export/
+    - CYPRESS_BASE_URL="http://localhost:5000/blab" yarn cy:run -- --parallel --record --group "electrons on GitLab CI"  --key b103d0e6-1ee6-4d48-b4b9-18da663bea07
   artifacts:
     when: always
     paths:
