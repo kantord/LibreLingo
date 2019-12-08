@@ -48,6 +48,7 @@ electrons-5:
   <<: *job
 
 deploy-to-gh-pages:
+  image: cypress/base:10
   stage: deploy
   script:
     - yarn export
