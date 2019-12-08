@@ -54,4 +54,5 @@ deploy-to-gh-pages:
     - git config --global user.email "gitlab@daniel-kantor.com"
     - git config --global user.name "Dániel Kántor"
     - yarn export --basepath blab
+    - mv __sapper__/export/blab/* __sapper__/export/
     - yarn deploy --repo=https://$GH_TOKEN@github.com/kantord/blab.git
