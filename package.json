@@ -6,7 +6,7 @@
     "dev": "sapper dev",
     "build": "sapper build",
     "export": "sapper export",
-    "deploy": "gh-pages -d __sapper__/export --repo=https://github.com/kantord/blab.git",
+    "deploy": "gh-pages -d __sapper__/export",
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
