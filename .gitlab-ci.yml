@@ -1,0 +1,47 @@
+stages:
+  - build
+  - test
+
+variables:
+  yarn_config_cache: "$CI_PROJECT_DIR/.yarn"
+  CYPRESS_CACHE_FOLDER: "$CI_PROJECT_DIR/cache/Cypress"
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - .yarn
+    - cache/Cypress
+    - node_modules
+
+install:
+  image: cypress/base:10
+  stage: build
+  script:
+    - yarn install
+
+# all jobs that actually run tests can use the same definition
+.job_template: &job
+  image: cypress/base:10
+  stage: test
+  script:
+    - yarn run dev &
+    - yarn cy:run -- --parallel --group "electrons on GitLab CI"
+  artifacts:
+    when: always
+    paths:
+      - cypress/videos/**/*.mp4
+      - cypress/screenshots/**/*.png
+    expire_in: 1 day
+
+# actual job definitions
+# all steps are the same, they come from the template above
+electrons-1:
+  <<: *job
+electrons-2:
+  <<: *job
+electrons-3:
+  <<: *job
+electrons-4:
+  <<: *job
+electrons-5:
+  <<: *job
