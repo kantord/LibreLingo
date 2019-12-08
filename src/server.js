@@ -9,7 +9,7 @@ const dev = NODE_ENV === "development"
 
 polka() // You can also use Express
     .use(
-        "/blab",
+        process.env.NODE_ENV === "production" ? "/blab" : "/",
         compression({ threshold: 0 }),
         sirv("static", { dev }),
         sapper.middleware()
