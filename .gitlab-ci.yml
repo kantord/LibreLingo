@@ -20,6 +20,7 @@ install:
   stage: build
   script:
     - yarn install
+    - rm -rf __sapper__
     - NODE_ENV=production yarn export --basepath blab
     - mv __sapper__/export/blab/* __sapper__/export/
 
