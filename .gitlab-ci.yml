@@ -1,6 +1,7 @@
 stages:
   - build
   - test
+  - deploy
 
 variables:
   yarn_config_cache: "$CI_PROJECT_DIR/.yarn"
@@ -45,3 +46,9 @@ electrons-4:
   <<: *job
 electrons-5:
   <<: *job
+
+deploy-to-gh-pages:
+  stage: deploy
+  script:
+    - yarn export
+    - yarn deploy
