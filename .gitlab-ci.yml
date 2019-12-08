@@ -25,7 +25,7 @@ install:
   stage: test
   script:
     - yarn run dev &
-    - yarn cy:run -- --parallel --group --record "electrons on GitLab CI"  --key b103d0e6-1ee6-4d48-b4b9-18da663bea07
+    - yarn cy:run -- --parallel --record --group "electrons on GitLab CI"  --key b103d0e6-1ee6-4d48-b4b9-18da663bea07
   artifacts:
     when: always
     paths:
