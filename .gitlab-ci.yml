@@ -25,7 +25,7 @@ install:
   stage: test
   script:
     - yarn run dev &
-    - yarn cy:run -- --parallel --group "electrons on GitLab CI"
+    - yarn cy:run -- --parallel --group --record "electrons on GitLab CI"
   artifacts:
     when: always
     paths:
