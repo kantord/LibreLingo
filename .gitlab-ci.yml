@@ -54,4 +54,4 @@ deploy-to-gh-pages:
     - git config --global user.email "gitlab@daniel-kantor.com"
     - git config --global user.name "Dániel Kántor"
     - yarn export
-    - yarn deploy
+    - yarn deploy -u $GH_TOKEN
