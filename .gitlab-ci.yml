@@ -51,5 +51,7 @@ deploy-to-gh-pages:
   image: cypress/base:10
   stage: deploy
   script:
+    - git config --global user.email "gitlab@daniel-kantor.com"
+    - git config --global user.name "Dániel Kántor"
     - yarn export
     - yarn deploy
