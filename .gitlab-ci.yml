@@ -19,6 +19,8 @@ install:
   stage: build
   script:
     - yarn install
+    - NODE_ENV=production yarn export --basepath blab
+    - mv __sapper__/export/blab/* __sapper__/export/
 
 # all jobs that actually run tests can use the same definition
 .job_template: &job
@@ -53,6 +55,4 @@ deploy-to-gh-pages:
   script:
     - git config --global user.email "gitlab@daniel-kantor.com"
     - git config --global user.name "Dániel Kántor"
-    - NODE_ENV=production yarn export --basepath blab
-    - mv __sapper__/export/blab/* __sapper__/export/
     - yarn deploy --repo=https://$GH_TOKEN@github.com/kantord/blab.git
