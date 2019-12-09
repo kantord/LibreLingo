@@ -1,6 +1,6 @@
 stages:
   - build
-  - test
+  - cypress_static
   - deploy
 
 variables:
@@ -27,7 +27,7 @@ install:
 # all jobs that actually run tests can use the same definition
 .job_static_template: &job_static
   image: cypress/base:10
-  stage: test
+  stage: cypress_static
   script:
     - find __sapper__/export/
     - yarn serve __sapper__/export/ && curl --connect-timeout 5 --max-time 10 --retry 5 --retry-connrefused --retry-delay 0 --retry-max-time 40 'http://localhost:5000' &

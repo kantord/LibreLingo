@@ -24,6 +24,11 @@
     "sirv": "^0.4.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.6",
+    "@cypress/code-coverage": "^1.10.2",
+    "babel-jest": "^24.9.0",
+    "babel-plugin-istanbul": "^5.2.0",
     "copy-webpack-plugin": "^5.0.5",
     "css-loader": "^3.2.1",
     "cypress": "^3.7.0",
@@ -32,9 +37,12 @@
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^5.0.2",
     "gh-pages": "^2.1.1",
+    "istanbul-lib-coverage": "^2.0.5",
+    "jest": "^24.9.0",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.13.0",
     "npm-run-all": "^4.1.5",
+    "nyc": "^14.1.1",
     "prettier": "^1.19.1",
     "prettier-plugin-svelte": "^0.7.0",
     "sapper": "^0.27.0",
@@ -46,5 +54,14 @@
     "svelte-preprocess-sass": "^0.2.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"
+  },
+  "nyc": {
+    "report-dir": "cypress-coverage",
+    "extension": [
+      ".js",
+      ".svelte"
+    ],
+    "all": true,
+    "cache": false
   }
 }
