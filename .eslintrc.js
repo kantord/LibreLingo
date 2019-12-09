@@ -2,7 +2,8 @@ module.exports = {
     ignorePatterns: ["node_modules/"],
     env: {
         browser: true,
-        es6: true
+        es6: true,
+        "jest/globals": true
     },
     extends: "eslint:recommended",
     globals: {
@@ -14,7 +15,7 @@ module.exports = {
         ecmaVersion: 2018,
         sourceType: "module"
     },
-    plugins: ["svelte3"],
+    plugins: ["svelte3", "jest"],
     overrides: [
         {
             files: ["**/*.svelte"],
