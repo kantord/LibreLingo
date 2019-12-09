@@ -3,7 +3,9 @@ module.exports = {
     env: {
         browser: true,
         es6: true,
-        "jest/globals": true
+        node: true,
+        "jest/globals": true,
+        "cypress/globals": true
     },
     extends: "eslint:recommended",
     globals: {
@@ -15,7 +17,7 @@ module.exports = {
         ecmaVersion: 2018,
         sourceType: "module"
     },
-    plugins: ["svelte3", "jest"],
+    plugins: ["svelte3", "jest", "cypress"],
     overrides: [
         {
             files: ["**/*.svelte"],

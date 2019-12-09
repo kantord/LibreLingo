@@ -1,5 +1,6 @@
 stages:
   - build
+  - lint
   - cypress_static
   - deploy
 
@@ -23,6 +24,18 @@ install:
     - rm -rf __sapper__/export
     - NODE_ENV=production yarn export --basepath blab
     - mv __sapper__/export/blab/* __sapper__/export/
+
+eslint-src:
+  image: cypress/base:10
+  stage: lint
+  script:
+    - yarn eslint src
+
+eslint-cypress:
+  image: cypress/base:10
+  stage: lint
+  script:
+    - yarn eslint cypress
 
 # all jobs that actually run tests can use the same definition
 .job_static_template: &job_static
