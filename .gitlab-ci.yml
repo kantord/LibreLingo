@@ -29,6 +29,7 @@ install:
   image: cypress/base:10
   stage: test
   script:
+    - find __sapper__/export/
     - yarn serve __sapper__/export/ && curl --connect-timeout 5 --max-time 10 --retry 5 --retry-connrefused --retry-delay 0 --retry-max-time 40 'http://localhost:5000' &
     - CYPRESS_BASE_URL="http://localhost:5000/blab" yarn cy:run -- --parallel --record --group "electrons on GitLab CI"  --key b103d0e6-1ee6-4d48-b4b9-18da663bea07
   artifacts:
