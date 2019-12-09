@@ -25,13 +25,13 @@ install:
     - mv __sapper__/export/blab/* __sapper__/export/
 
 # all jobs that actually run tests can use the same definition
-.job_template: &job
+.job_static_template: &job_static
   image: cypress/base:10
   stage: test
   script:
     - find __sapper__/export/
     - yarn serve __sapper__/export/ && curl --connect-timeout 5 --max-time 10 --retry 5 --retry-connrefused --retry-delay 0 --retry-max-time 40 'http://localhost:5000' &
-    - CYPRESS_BASE_URL="http://localhost:5000/blab" yarn cy:run -- --parallel --record --group "electrons on GitLab CI"  --key b103d0e6-1ee6-4d48-b4b9-18da663bea07
+    - CYPRESS_BASE_URL="http://localhost:5000/blab" yarn cy:run -- --parallel --record --group "static_electrons on GitLab CI"  --key b103d0e6-1ee6-4d48-b4b9-18da663bea07
   artifacts:
     when: always
     paths:
@@ -41,16 +41,16 @@ install:
 
 # actual job definitions
 # all steps are the same, they come from the template above
-electrons-1:
-  <<: *job
-electrons-2:
-  <<: *job
-electrons-3:
-  <<: *job
-electrons-4:
-  <<: *job
-electrons-5:
-  <<: *job
+static_electrons-1:
+  <<: *job_static
+static_electrons-2:
+  <<: *job_static
+static_electrons-3:
+  <<: *job_static
+static_electrons-4:
+  <<: *job_static
+static_electrons-5:
+  <<: *job_static
 
 deploy-to-gh-pages:
   image: cypress/base:10
