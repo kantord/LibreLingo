@@ -8,6 +8,7 @@
   export let disabled;
 
   onMount(() => {
+    hotkeys.unbind("1,2,3")
     hotkeys("1,2,3", (_, { key }) => {
       if (disabled) return;
       selectedOption = parseInt(key) - 1;
