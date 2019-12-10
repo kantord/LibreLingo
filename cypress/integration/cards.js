@@ -1,6 +1,8 @@
+const CARDS_TEST_URL = "/skill/_cards_test"
+
 describe("Open skill page", () => {
     beforeEach(() => {
-        cy.visit("/skill/animals")
+        cy.visit(CARDS_TEST_URL)
     })
 
     it("Has correct question", () => {
@@ -30,7 +32,7 @@ describe("Open skill page", () => {
 
 describe("Clicking card", () => {
     beforeEach(() => {
-        cy.visit("/skill/animals")
+        cy.visit(CARDS_TEST_URL)
         cy.get(".card")
             .first()
             .click()
@@ -59,7 +61,7 @@ describe("Clicking card", () => {
 
 describe("Submitting a correct answer", () => {
     beforeEach(() => {
-        cy.visit("/skill/animals")
+        cy.visit(CARDS_TEST_URL)
         cy.get(".card[data-test-correct=true]").click()
         cy.contains("Submit").click()
     })
@@ -75,7 +77,7 @@ describe("Submitting a correct answer", () => {
 
 describe("Submitting a incorrect answer", () => {
     beforeEach(() => {
-        cy.visit("/skill/animals")
+        cy.visit(CARDS_TEST_URL)
         cy.get(".card[data-test-correct=false]")
             .first()
             .click()

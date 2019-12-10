@@ -32,6 +32,26 @@
         formInTargetLanguage: "oso"
       }
     ],
+    _cards_test: [
+      {
+        id: 44543,
+        pictures: ["pasta1.jpg", "pasta2.jpg", "pasta3.jpg"],
+        meaningInSourceLanguage: "pasta",
+        formInTargetLanguage: "pasta"
+      },
+      {
+        id: 4543,
+        pictures: ["milk1.jpg", "milk2.jpg", "milk3.jpg"],
+        meaningInSourceLanguage: "milk",
+        formInTargetLanguage: "leche"
+      },
+      {
+        id: 4542,
+        pictures: ["bread1.jpg", "bread2.jpg", "bread3.jpg"],
+        meaningInSourceLanguage: "bread",
+        formInTargetLanguage: "pan"
+      }
+    ],
     food: [
       {
         id: 44543,
