@@ -3,30 +3,35 @@
     animals: [
       {
         id: 4,
+        type: "cards",
         pictures: ["lion1.jpg", "lion2.jpg", "lion3.jpg"],
         meaningInSourceLanguage: "lion",
         formInTargetLanguage: "león"
       },
       {
         id: 3,
+        type: "cards",
         pictures: ["cat1.jpg", "cat2.jpg", "cat3.jpg"],
         meaningInSourceLanguage: "cat",
         formInTargetLanguage: "gato"
       },
       {
         id: 42,
+        type: "cards",
         pictures: ["dog1.jpg", "dog2.jpg", "dog3.jpg"],
         meaningInSourceLanguage: "dog",
         formInTargetLanguage: "perro"
       },
       {
         id: 888,
+        type: "cards",
         pictures: ["duck1.jpg", "duck2.jpg", "duck3.jpg"],
         meaningInSourceLanguage: "duck",
         formInTargetLanguage: "pato"
       },
       {
         id: 202,
+        type: "cards",
         pictures: ["bear1.jpg", "bear2.jpg", "bear3.jpg"],
         meaningInSourceLanguage: "bear",
         formInTargetLanguage: "oso"
@@ -35,18 +40,21 @@
     _cards_test: [
       {
         id: 44543,
+        type: "cards",
         pictures: ["pasta1.jpg", "pasta2.jpg", "pasta3.jpg"],
         meaningInSourceLanguage: "pasta",
         formInTargetLanguage: "pasta"
       },
       {
         id: 4543,
+        type: "cards",
         pictures: ["milk1.jpg", "milk2.jpg", "milk3.jpg"],
         meaningInSourceLanguage: "milk",
         formInTargetLanguage: "leche"
       },
       {
         id: 4542,
+        type: "cards",
         pictures: ["bread1.jpg", "bread2.jpg", "bread3.jpg"],
         meaningInSourceLanguage: "bread",
         formInTargetLanguage: "pan"
@@ -55,18 +63,21 @@
     food: [
       {
         id: 44543,
+        type: "cards",
         pictures: ["pasta1.jpg", "pasta2.jpg", "pasta3.jpg"],
         meaningInSourceLanguage: "pasta",
         formInTargetLanguage: "pasta"
       },
       {
         id: 4543,
+        type: "cards",
         pictures: ["milk1.jpg", "milk2.jpg", "milk3.jpg"],
         meaningInSourceLanguage: "milk",
         formInTargetLanguage: "leche"
       },
       {
         id: 4542,
+        type: "cards",
         pictures: ["bread1.jpg", "bread2.jpg", "bread3.jpg"],
         meaningInSourceLanguage: "bread",
         formInTargetLanguage: "pan"
@@ -135,11 +146,13 @@
       <div
         out:fade="{{ duration: 300 }}"
         in:fade="{{ duration: 300, delay: 300 }}">
-        <DeckChallenge
-          {currentChallenge}
-          {alternativeChallenges}
-          {resolveChallenge}
-          {registerResult} />
+        {#if challenge.type === 'cards'}
+          <DeckChallenge
+            {currentChallenge}
+            {alternativeChallenges}
+            {resolveChallenge}
+            {registerResult} />
+        {/if}
       </div>
     {/if}
   {/each}

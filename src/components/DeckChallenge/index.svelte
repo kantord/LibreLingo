@@ -31,7 +31,7 @@
   };
 
   onMount(() => {
-    hotkeys.unbind("enter")
+    hotkeys.unbind("enter");
     hotkeys("enter", () => {
       if (submitted) {
         finishChallenge();
