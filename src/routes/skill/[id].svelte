@@ -37,6 +37,22 @@
         formInTargetLanguage: "oso"
       }
     ],
+    _short_input_test0: [
+      {
+        id: 6663,
+        type: "shortInput",
+        meaningInSourceLanguage: "dog",
+        formInTargetLanguage: ["perro", "el perro", "can"]
+      }
+    ],
+    _short_input_test1: [
+      {
+        id: 663,
+        type: "shortInput",
+        meaningInSourceLanguage: "foo",
+        formInTargetLanguage: ["leche", "la leche"]
+      }
+    ],
     _cards_test: [
       {
         id: 44543,
@@ -96,6 +112,7 @@
 <script>
   import sound from "../../media/sound";
   import DeckChallenge from "../../components/DeckChallenge";
+  import ShortInputChallenge from "../../components/ShortInputChallenge";
   import ProgressBar from "../../components/ProgressBar";
   import shuffle from "lodash.shuffle";
   import { fade } from "svelte/transition";
@@ -131,7 +148,9 @@
     new Image().src = `images/${imageName}`;
   };
 
-  challenges.map(({ pictures }) => pictures.map(preloadImage));
+  challenges
+    .filter(({ type }) => type === "card")
+    .map(({ pictures }) => pictures.map(preloadImage));
 </script>
 
 <svelte:head>
@@ -152,6 +171,12 @@
             {alternativeChallenges}
             {resolveChallenge}
             {registerResult} />
+        {/if}
+        {#if challenge.type === 'shortInput'}
+          <ShortInputChallenge
+		  {registerResult}
+		  {resolveChallenge}
+            {challenge} />
         {/if}
       </div>
     {/if}
