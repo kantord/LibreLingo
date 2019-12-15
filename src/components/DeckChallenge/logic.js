@@ -9,10 +9,12 @@ export const prepareChallenge = ({
         correct: true
     }
 
-    const incorrectOptions = alternativeChallenges.map(challenge => ({
-        ...challenge,
-        correct: false
-    }))
+    const incorrectOptions = alternativeChallenges
+        .filter(({ type }) => type === "cards")
+        .map(challenge => ({
+            ...challenge,
+            correct: false
+        }))
 
     return shuffle([correctOption, ...shuffle(incorrectOptions).slice(0, 2)])
 }

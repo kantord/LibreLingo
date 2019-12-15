@@ -1,5 +1,6 @@
 <script>
     import { slide } from "svelte/transition"
+    import levenshtein from "js-levenshtein"
     import ChallengePanel from "./ChallengePanel"
 
     export let challenge
@@ -10,13 +11,27 @@
     let correct = null
 
     $: submitChallenge = () => {
-        correct = answer === "perro"
+        if (!answer) return
+        if (submitted) return
+
+        challenge.formInTargetLanguage.forEach(form => {
+            correct =
+                correct ||
+                levenshtein(
+                    answer
+                        .toLowerCase()
+                        .replace(/^\s+|\s+$/g, "")
+                        .replace(/\s+/g, " "),
+                    form.toLowerCase()
+                ) <= 1
+        })
+
         registerResult(correct)
         submitted = true
     }
 
     $: finishChallenge = () => {
-        selectedOption = null
+        answer = null
         submitted = false
         resolveChallenge()
     }
@@ -32,9 +47,10 @@
         type="text"
         class="input"
         placeholder="Type your answer…"
+        disabled="{submitted}"
         bind:value="{answer}" />
 
-    {#if answer !== null && !submitted}
+    {#if answer && !submitted}
         <ChallengePanel message="" buttonText="Submit" submit />
     {/if}
 

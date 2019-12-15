@@ -1,7 +1,7 @@
 stages:
   - build
   - lint
-  - cypress_static
+  - test
   - deploy
 
 variables:
@@ -37,14 +37,19 @@ eslint-cypress:
   script:
     - yarn eslint cypress
 
+jest:
+  image: cypress/base:10
+  stage: test
+  script:
+    - yarn jest
+
 # all jobs that actually run tests can use the same definition
 .job_static_template: &job_static
   image: cypress/base:10
-  stage: cypress_static
+  stage: test
   script:
-    - find __sapper__/export/
-    - yarn serve __sapper__/export/ && curl --connect-timeout 5 --max-time 10 --retry 5 --retry-connrefused --retry-delay 0 --retry-max-time 40 'http://localhost:5000' &
-    - CYPRESS_BASE_URL="http://localhost:5000/blab" yarn cy:run -- --parallel --record --group "static_electrons on GitLab CI"  --key b103d0e6-1ee6-4d48-b4b9-18da663bea07
+    - yarn run dev &
+    - yarn cy:run -- --parallel --record --group "static_electrons on GitLab CI" --key b103d0e6-1ee6-4d48-b4b9-18da663bea07
   artifacts:
     when: always
     paths:
@@ -59,10 +64,6 @@ static_electrons-1:
 static_electrons-2:
   <<: *job_static
 static_electrons-3:
-  <<: *job_static
-static_electrons-4:
-  <<: *job_static
-static_electrons-5:
   <<: *job_static
 
 deploy-to-gh-pages:

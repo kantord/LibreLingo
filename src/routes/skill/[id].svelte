@@ -35,6 +35,18 @@
         pictures: ["bear1.jpg", "bear2.jpg", "bear3.jpg"],
         meaningInSourceLanguage: "bear",
         formInTargetLanguage: "oso"
+      },
+      {
+        id: 6663,
+        type: "shortInput",
+        meaningInSourceLanguage: "dog",
+        formInTargetLanguage: ["perro", "el perro", "can"]
+      },
+      {
+        id: 3435435,
+        type: "shortInput",
+        meaningInSourceLanguage: "bear",
+        formInTargetLanguage: ["oso", "el oso"]
       }
     ],
     _short_input_test0: [
@@ -51,6 +63,20 @@
         type: "shortInput",
         meaningInSourceLanguage: "foo",
         formInTargetLanguage: ["leche", "la leche"]
+      }
+    ],
+    _short_input_test2: [
+      {
+        id: 662,
+        type: "shortInput",
+        meaningInSourceLanguage: "water",
+        formInTargetLanguage: ["agua", "el agua"]
+      },
+      {
+        id: 661,
+        type: "shortInput",
+        meaningInSourceLanguage: "water",
+        formInTargetLanguage: ["agua", "el agua"]
       }
     ],
     _cards_test: [

@@ -6,6 +6,7 @@
     export let correct
     export let incorrect
     export let message
+    export let messageDetail
     export let submit
 </script>
 
@@ -16,7 +17,12 @@
     transition:slide="{{ duration: 300 }}">
     <div class="panel-block">
         <div class="control">
-            {message}
+            {#if message}
+                <b>{message}</b>
+            {/if}
+            {#if messageDetail}
+                <p>{messageDetail}</p>
+            {/if}
             {#if buttonAction}
                 <button
                     class="button is-primary"
