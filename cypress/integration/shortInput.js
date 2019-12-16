@@ -30,6 +30,10 @@ describe("Short inputs", () => {
             cy.get("input[type=text]").should("be.visible")
         })
 
+        it("Input field should be focused", () => {
+            cy.get("[data-test=answer]").should("be.focused")
+        })
+
         it("Input field has placeholder", () => {
             cy.get("input[type=text]")
                 .first()

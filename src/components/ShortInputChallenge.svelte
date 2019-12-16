@@ -1,5 +1,6 @@
 <script>
     import { slide } from "svelte/transition"
+    import { onMount } from "svelte"
     import levenshtein from "js-levenshtein"
     import ChallengePanel from "./ChallengePanel"
 
@@ -35,6 +36,12 @@
         submitted = false
         resolveChallenge()
     }
+
+    const focusMe = el => {
+        setTimeout(() => {
+            el.focus()
+        }, 1)
+    }
 </script>
 
 <form on:submit|preventDefault="{submitChallenge}">
@@ -44,10 +51,13 @@
         in Spanish!
     </p>
     <input
+        tabindex="0"
+        data-test="answer"
         type="text"
         class="input"
         placeholder="Type your answer…"
         disabled="{submitted}"
+        use:focusMe
         bind:value="{answer}" />
 
     {#if answer && !submitted}
