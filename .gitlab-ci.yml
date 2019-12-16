@@ -49,7 +49,7 @@ jest:
   stage: test
   script:
     - yarn run dev &
-    - yarn cy:run -- --parallel --record --group "static_electrons on GitLab CI" --key b103d0e6-1ee6-4d48-b4b9-18da663bea07
+    - yarn cy:run
   artifacts:
     when: always
     paths:
