@@ -17,12 +17,21 @@ describe("Short inputs", () => {
             cy.get(".panel").should("not.exist")
         })
 
+        it("Shouldn't be able to submit empty form", () => {
+            cy.get("form").submit()
+            cy.get(".panel").should("not.exist")
+        })
+
         it("Submit button is not visible", () => {
             cy.contains("Submit").should("not.exist")
         })
 
         it("Has input field", () => {
             cy.get("input[type=text]").should("be.visible")
+        })
+
+        it("Input field should be focused", () => {
+            cy.get("[data-test=answer]").should("be.focused")
         })
 
         it("Input field has placeholder", () => {
@@ -76,6 +85,55 @@ describe("Short inputs", () => {
 
         it("Continue button is visible", () => {
             cy.contains("Continue").should("exist")
+        })
+    })
+
+    describe("Alternative form", () => {
+        beforeEach(() => {
+            cy.visit(CARDS_TEST_URL(0))
+            cy.get("input[type=text]").type("el perro")
+            cy.contains("Submit").click()
+        })
+
+        it("Panel says correct answer", () => {
+            cy.contains(/Correct solution/).should("be.visible")
+        })
+    })
+
+    describe("Small typos", () => {
+        beforeEach(() => {
+            cy.visit(CARDS_TEST_URL(0))
+            cy.get("input[type=text]").type("      el      pierro      ")
+            cy.contains("Submit").click()
+        })
+
+        it("Panel says correct answer", () => {
+            cy.contains(/Correct solution/).should("be.visible")
+        })
+    })
+
+    describe("Goes to next challenge", () => {
+        beforeEach(() => {
+            cy.visit(CARDS_TEST_URL(2))
+            cy.get("input[type=text]").type("agua")
+            cy.contains("Submit").click()
+        })
+
+        it("Panel is not visible", () => {
+            cy.contains("Continue").click()
+            cy.get(".panel").should("not.exist")
+        })
+    })
+
+    describe("Case doesn't matter", () => {
+        beforeEach(() => {
+            cy.visit(CARDS_TEST_URL(0))
+            cy.get("input[type=text]").type("PerRo")
+            cy.contains("Submit").click()
+        })
+
+        it("Panel says correct answer", () => {
+            cy.contains(/Correct solution/).should("be.visible")
         })
     })
 })

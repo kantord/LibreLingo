@@ -11,7 +11,8 @@
     "cy:run": "cypress run",
     "cy:open": "cypress open",
     "test": "run-p --race dev cy:run",
-    "lint": "prettier --write --plugin-search-dir=. ./**/*.svelte && eslint src --fix"
+    "lint": "prettier --write --plugin-search-dir=. ./**/*.svelte && eslint src --fix",
+    "jest": "jest src"
   },
   "dependencies": {
     "@openfonts/josefin-sans_all": "^1.44.0",
@@ -19,6 +20,7 @@
     "compression": "^1.7.1",
     "hotkeys-js": "^3.7.2",
     "howler": "^2.1.2",
+    "js-levenshtein": "^1.1.6",
     "lodash.shuffle": "^4.2.0",
     "polka": "next",
     "sirv": "^0.4.0"
@@ -49,7 +51,6 @@
     "prettier-plugin-svelte": "^0.7.0",
     "sapper": "^0.27.0",
     "sass-loader": "^8.0.0",
-    "serve": "^11.2.0",
     "style-loader": "^1.0.1",
     "svelte": "^3.0.0",
     "svelte-loader": "^2.9.0",

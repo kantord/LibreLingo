@@ -1,5 +1,7 @@
 <script>
     import { slide } from "svelte/transition"
+    import { onMount } from "svelte"
+    import levenshtein from "js-levenshtein"
     import ChallengePanel from "./ChallengePanel"
 
     export let challenge
@@ -10,15 +12,35 @@
     let correct = null
 
     $: submitChallenge = () => {
-        correct = answer === "perro"
+        if (!answer) return
+        if (submitted) return
+
+        challenge.formInTargetLanguage.forEach(form => {
+            correct =
+                correct ||
+                levenshtein(
+                    answer
+                        .toLowerCase()
+                        .replace(/^\s+|\s+$/g, "")
+                        .replace(/\s+/g, " "),
+                    form.toLowerCase()
+                ) <= 1
+        })
+
         registerResult(correct)
         submitted = true
     }
 
     $: finishChallenge = () => {
-        selectedOption = null
+        answer = null
         submitted = false
         resolveChallenge()
+    }
+
+    const focusMe = el => {
+        setTimeout(() => {
+            el.focus()
+        }, 1)
     }
 </script>
 
@@ -29,12 +51,16 @@
         in Spanish!
     </p>
     <input
+        tabindex="0"
+        data-test="answer"
         type="text"
         class="input"
         placeholder="Type your answer…"
+        disabled="{submitted}"
+        use:focusMe
         bind:value="{answer}" />
 
-    {#if answer !== null && !submitted}
+    {#if answer && !submitted}
         <ChallengePanel message="" buttonText="Submit" submit />
     {/if}
 
