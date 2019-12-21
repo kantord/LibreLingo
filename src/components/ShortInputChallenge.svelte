@@ -3,6 +3,7 @@
     import { onMount } from "svelte"
     import levenshtein from "js-levenshtein"
     import ChallengePanel from "./ChallengePanel"
+    import { languageName } from "../courseData.json"
 
     export let challenge
     export let registerResult
@@ -48,7 +49,7 @@
     <p>
         Type
         <b>{challenge.meaningInSourceLanguage}</b>
-        in Spanish!
+        in {languageName}!
     </p>
     <input
         tabindex="0"
