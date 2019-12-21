@@ -1,5 +1,5 @@
 describe("Cards ", () => {
-    const CARDS_TEST_URL = "/skill/_cards_test"
+    const CARDS_TEST_URL = "course/spanish-from-english/skill/_cards_test"
     describe("Open skill page", () => {
         beforeEach(() => {
             cy.visit(CARDS_TEST_URL)

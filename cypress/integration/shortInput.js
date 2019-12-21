@@ -1,5 +1,6 @@
 describe("Short inputs", () => {
-    const CARDS_TEST_URL = number => `/skill/_short_input_test${number}`
+    const CARDS_TEST_URL = number =>
+        `/course/spanish-from-english/skill/_short_input_test${number}`
     describe("Open skill page", () => {
         beforeEach(() => {
             cy.visit(CARDS_TEST_URL(0))

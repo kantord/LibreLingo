@@ -136,10 +136,10 @@
 </script>
 
 <script>
-  import sound from "../../media/sound";
-  import DeckChallenge from "../../components/DeckChallenge";
-  import ShortInputChallenge from "../../components/ShortInputChallenge";
-  import ProgressBar from "../../components/ProgressBar";
+  import sound from "../../../../media/sound";
+  import DeckChallenge from "../../../../components/DeckChallenge";
+  import ShortInputChallenge from "../../../../components/ShortInputChallenge";
+  import ProgressBar from "../../../../components/ProgressBar";
   import shuffle from "lodash.shuffle";
   import { fade } from "svelte/transition";
 
