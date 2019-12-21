@@ -1,4 +1,6 @@
 # sapper-template
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fkantord%2Fblab.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fkantord%2Fblab?ref=badge_shield)
+
 
 The default [Sapper](https://github.com/sveltejs/sapper) template, available for Rollup and webpack.
 
@@ -107,3 +109,7 @@ npm install -D @sveltejs/svelte-virtual-list
 ## Bugs and feedback
 
 Sapper is in early development, and may have the odd rough edge here and there. Please be vocal over on the [Sapper issue tracker](https://github.com/sveltejs/sapper/issues).
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fkantord%2Fblab.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fkantord%2Fblab?ref=badge_large)
