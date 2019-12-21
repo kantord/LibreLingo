@@ -1,75 +1,75 @@
 <script>
-    import { onMount } from "svelte"
-    import hotkeys from "hotkeys-js"
-    import shuffle from "lodash.shuffle"
-    import { slide } from "svelte/transition"
-    import { fade } from "svelte/transition"
-    import OptionDeck from "../OptionDeck"
-    import ChallengePanel from "../ChallengePanel"
-    import { prepareChallenge } from "./logic"
+  import { onMount } from "svelte";
+  import hotkeys from "hotkeys-js";
+  import shuffle from "lodash.shuffle";
+  import { slide } from "svelte/transition";
+  import { fade } from "svelte/transition";
+  import OptionDeck from "../OptionDeck";
+  import ChallengePanel from "../ChallengePanel";
+  import { prepareChallenge } from "./logic";
 
-    export let currentChallenge
-    export let alternativeChallenges
-    export let resolveChallenge
-    export let registerResult
-    let selectedOption = null
-    let submitted = false
+  export let currentChallenge;
+  export let alternativeChallenges;
+  export let resolveChallenge;
+  export let registerResult;
+  let selectedOption = null;
+  let submitted = false;
 
-    $: options = prepareChallenge({
-        currentChallenge,
-        alternativeChallenges
-    })
+  $: options = prepareChallenge({
+    currentChallenge,
+    alternativeChallenges
+  });
 
-    $: finishChallenge = () => {
-        selectedOption = null
-        submitted = false
-        resolveChallenge()
-    }
+  $: finishChallenge = () => {
+    selectedOption = null;
+    submitted = false;
+    resolveChallenge();
+  };
 
-    $: submitChallenge = () => {
-        registerResult(options[selectedOption].correct)
-        submitted = true
-    }
+  $: submitChallenge = () => {
+    registerResult(options[selectedOption].correct);
+    submitted = true;
+  };
 
-    onMount(() => {
-        hotkeys.unbind("enter")
-        hotkeys("enter", () => {
-            if (submitted) {
-                finishChallenge()
-            } else {
-                submitChallenge()
-            }
-        })
-    })
+  onMount(() => {
+    hotkeys.unbind("enter");
+    hotkeys("enter", () => {
+      if (submitted) {
+        finishChallenge();
+      } else {
+        submitChallenge();
+      }
+    });
+  });
 </script>
 
 <p class="is-size-1 is-size-2-tablet is-size-4-mobile has-text-centered">
-    Which of these is
-    <strong>{currentChallenge.meaningInSourceLanguage}</strong>
-    ?
+  Which of these is
+  <strong>{currentChallenge.meaningInSourceLanguage}</strong>
+  ?
 </p>
 
 <form on:submit|preventDefault="{submitChallenge}">
-    <OptionDeck {options} bind:selectedOption disabled="{submitted}" />
+  <OptionDeck {options} bind:selectedOption disabled="{submitted}" />
 
-    {#if !submitted && selectedOption !== null}
-        <ChallengePanel message="" buttonText="Submit" submit />
-    {/if}
+  {#if !submitted && selectedOption !== null}
+    <ChallengePanel message="" buttonText="Submit" submit />
+  {/if}
 
-    {#if submitted}
-        {#if options[selectedOption].correct}
-            <ChallengePanel
-                message="Correct solution!"
-                buttonText="Continue"
-                correct
-                buttonAction="{finishChallenge}" />
-        {/if}
-        {#if !options[selectedOption].correct}
-            <ChallengePanel
-                message="Incorrect solution!"
-                buttonText="Continue"
-                incorrect
-                buttonAction="{finishChallenge}" />
-        {/if}
+  {#if submitted}
+    {#if options[selectedOption].correct}
+      <ChallengePanel
+        message="Correct solution!"
+        buttonText="Continue"
+        correct
+        buttonAction="{finishChallenge}" />
     {/if}
+    {#if !options[selectedOption].correct}
+      <ChallengePanel
+        message="Incorrect solution!"
+        buttonText="Continue"
+        incorrect
+        buttonAction="{finishChallenge}" />
+    {/if}
+  {/if}
 </form>
