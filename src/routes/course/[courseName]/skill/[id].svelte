@@ -1,137 +1,15 @@
 <script context="module">
-  const allRawChallenges = {
-    animals: [
-      {
-        id: 4,
-        type: "cards",
-        pictures: ["lion1.jpg", "lion2.jpg", "lion3.jpg"],
-        meaningInSourceLanguage: "lion",
-        formInTargetLanguage: "león"
-      },
-      {
-        id: 3,
-        type: "cards",
-        pictures: ["cat1.jpg", "cat2.jpg", "cat3.jpg"],
-        meaningInSourceLanguage: "cat",
-        formInTargetLanguage: "gato"
-      },
-      {
-        id: 42,
-        type: "cards",
-        pictures: ["dog1.jpg", "dog2.jpg", "dog3.jpg"],
-        meaningInSourceLanguage: "dog",
-        formInTargetLanguage: "perro"
-      },
-      {
-        id: 888,
-        type: "cards",
-        pictures: ["duck1.jpg", "duck2.jpg", "duck3.jpg"],
-        meaningInSourceLanguage: "duck",
-        formInTargetLanguage: "pato"
-      },
-      {
-        id: 202,
-        type: "cards",
-        pictures: ["bear1.jpg", "bear2.jpg", "bear3.jpg"],
-        meaningInSourceLanguage: "bear",
-        formInTargetLanguage: "oso"
-      },
-      {
-        id: 6663,
-        type: "shortInput",
-        meaningInSourceLanguage: "dog",
-        formInTargetLanguage: ["perro", "el perro", "can"]
-      },
-      {
-        id: 3435435,
-        type: "shortInput",
-        meaningInSourceLanguage: "bear",
-        formInTargetLanguage: ["oso", "el oso"]
-      }
-    ],
-    _short_input_test0: [
-      {
-        id: 6663,
-        type: "shortInput",
-        meaningInSourceLanguage: "dog",
-        formInTargetLanguage: ["perro", "el perro", "can"]
-      }
-    ],
-    _short_input_test1: [
-      {
-        id: 663,
-        type: "shortInput",
-        meaningInSourceLanguage: "foo",
-        formInTargetLanguage: ["leche", "la leche"]
-      }
-    ],
-    _short_input_test2: [
-      {
-        id: 662,
-        type: "shortInput",
-        meaningInSourceLanguage: "water",
-        formInTargetLanguage: ["agua", "el agua"]
-      },
-      {
-        id: 661,
-        type: "shortInput",
-        meaningInSourceLanguage: "water",
-        formInTargetLanguage: ["agua", "el agua"]
-      }
-    ],
-    _cards_test: [
-      {
-        id: 44543,
-        type: "cards",
-        pictures: ["pasta1.jpg", "pasta2.jpg", "pasta3.jpg"],
-        meaningInSourceLanguage: "pasta",
-        formInTargetLanguage: "pasta"
-      },
-      {
-        id: 4543,
-        type: "cards",
-        pictures: ["milk1.jpg", "milk2.jpg", "milk3.jpg"],
-        meaningInSourceLanguage: "milk",
-        formInTargetLanguage: "leche"
-      },
-      {
-        id: 4542,
-        type: "cards",
-        pictures: ["bread1.jpg", "bread2.jpg", "bread3.jpg"],
-        meaningInSourceLanguage: "bread",
-        formInTargetLanguage: "pan"
-      }
-    ],
-    food: [
-      {
-        id: 44543,
-        type: "cards",
-        pictures: ["pasta1.jpg", "pasta2.jpg", "pasta3.jpg"],
-        meaningInSourceLanguage: "pasta",
-        formInTargetLanguage: "pasta"
-      },
-      {
-        id: 4543,
-        type: "cards",
-        pictures: ["milk1.jpg", "milk2.jpg", "milk3.jpg"],
-        meaningInSourceLanguage: "milk",
-        formInTargetLanguage: "leche"
-      },
-      {
-        id: 4542,
-        type: "cards",
-        pictures: ["bread1.jpg", "bread2.jpg", "bread3.jpg"],
-        meaningInSourceLanguage: "bread",
-        formInTargetLanguage: "pan"
-      }
-    ]
-  };
-
   export async function preload(page, session) {
-    const { id } = page.params;
-    const rawChallenges = allRawChallenges[id];
+    const { id, courseName } = page.params;
+    const { languageName } = await import(
+      `../../../../courses/${courseName}/courseData.json`
+    );
+    const rawChallenges = await import(
+      `../../../../courses/${courseName}/challenges/${id}.json`
+    )
 
-    return { rawChallenges };
+
+    return { rawChallenges: Array.from(rawChallenges.default), languageName };
   }
 </script>
 
@@ -144,6 +22,7 @@
   import { fade } from "svelte/transition";
 
   export let rawChallenges;
+  export let languageName;
   let challenges = shuffle(rawChallenges);
   let remainingChallenges = [...challenges];
   let currentChallenge = remainingChallenges.shift();
@@ -200,8 +79,9 @@
         {/if}
         {#if challenge.type === 'shortInput'}
           <ShortInputChallenge
-		  {registerResult}
-		  {resolveChallenge}
+            {languageName}
+            {registerResult}
+            {resolveChallenge}
             {challenge} />
         {/if}
       </div>

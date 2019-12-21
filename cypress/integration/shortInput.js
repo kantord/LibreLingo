@@ -1,6 +1,6 @@
 describe("Short inputs", () => {
     const CARDS_TEST_URL = number =>
-        `/course/spanish-from-english/skill/_short_input_test${number}`
+        `/course/test/skill/_short_input_test${number}`
     describe("Open skill page", () => {
         beforeEach(() => {
             cy.visit(CARDS_TEST_URL(0))
@@ -9,7 +9,7 @@ describe("Short inputs", () => {
         it("Has correct instruction", () => {
             cy.contains(/Type/).should("be.visible")
             cy.contains(/dog/).should("be.visible")
-            cy.contains(/in Spanish!/).should("be.visible")
+            cy.contains(/in Test Language!/).should("be.visible")
             cy.visit(CARDS_TEST_URL(1))
             cy.contains(/foo/).should("be.visible")
         })
