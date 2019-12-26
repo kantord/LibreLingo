@@ -1,5 +1,5 @@
 describe("Course page", () => {
-    const COURSE_PAGE_URL = "/"
+    const COURSE_PAGE_URL = "/course/spanish-from-english"
     describe("Open skill page", () => {
         beforeEach(() => {
             cy.window().then(window => {
