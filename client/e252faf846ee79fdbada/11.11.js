@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[11],{59:function(e){e.exports=JSON.parse('[{"id":663,"type":"shortInput","meaningInSourceLanguage":"foo","formInTargetLanguage":["leche","la leche"]}]')}}]);
