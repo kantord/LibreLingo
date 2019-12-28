@@ -12,11 +12,11 @@ describe("Course page", () => {
             cy.contains(/Animals/).should("be.visible")
         })
 
-        it("Food skill should not be visible", () => {
+        xit("Food skill should not be visible", () => {
             cy.contains(/Food/).should("not.be.visible")
         })
 
-        it("Food skill should be visible when its available based on database", () => {
+        xit("Food skill should be visible when its available based on database", () => {
             cy.window().then(window => {
                 const db = window._DB
                 cy.wrap(db.put({ _id: "foo_bar" }))
