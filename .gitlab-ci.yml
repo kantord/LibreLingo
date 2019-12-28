@@ -22,8 +22,8 @@ install:
   script:
     - yarn install
     - rm -rf __sapper__/export
-    - NODE_ENV=production yarn export --basepath blab
-    - mv __sapper__/export/blab/* __sapper__/export/
+    - NODE_ENV=production yarn export --basepath LibreLingo
+    - mv __sapper__/export/LibreLingo/* __sapper__/export/
 
 eslint-src:
   image: cypress/base:10
@@ -72,7 +72,7 @@ deploy-to-gh-pages:
   script:
     - git config --global user.email "gitlab@daniel-kantor.com"
     - git config --global user.name "Dániel Kántor"
-    - yarn deploy --repo=https://$GH_TOKEN@github.com/kantord/blab.git
+    - yarn deploy --repo=https://$GH_TOKEN@github.com/kantord/LibreLingo.git
   only:
     refs:
       - master
