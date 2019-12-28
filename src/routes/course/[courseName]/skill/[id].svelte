@@ -6,8 +6,7 @@
     );
     const rawChallenges = await import(
       `../../../../courses/${courseName}/challenges/${id}.json`
-    )
-
+    );
 
     return { rawChallenges: Array.from(rawChallenges.default), languageName };
   }

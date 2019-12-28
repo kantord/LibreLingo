@@ -1,5 +1,5 @@
 <svelte:head>
-    <title>Sapper project template</title>
+    <title>LibreLingo</title>
 </svelte:head>
 
 <a href="course/spanish-from-english">Spanish from English</a>
