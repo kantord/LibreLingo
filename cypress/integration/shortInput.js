@@ -111,6 +111,12 @@ describe("Short inputs", () => {
         it("Panel says correct answer", () => {
             cy.contains(/Correct solution/).should("be.visible")
         })
+
+        it("Panel says what correct spelling would be", () => {
+            cy.contains(
+                /You made a small error. Correct spelling: el perro/
+            ).should("be.visible")
+        })
     })
 
     describe("Goes to next challenge", () => {
