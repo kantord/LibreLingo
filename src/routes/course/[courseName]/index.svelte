@@ -14,6 +14,4 @@
 </svelte:head>
 
 <a href="course/spanish-from-english/skill/animals">Animals</a>
-{#if foodSkillAvailable}
-  <a href="course/spanish-from-english/skill/food">Food</a>
-{/if}
+<a hidden={!foodSkillAvailable} href="course/spanish-from-english/skill/food">Food</a>
