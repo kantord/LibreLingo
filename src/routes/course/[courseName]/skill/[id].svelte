@@ -8,7 +8,7 @@
       `../../../../courses/${courseName}/challenges/${id}.json`
     );
 
-    return { rawChallenges: Array.from(rawChallenges.default), languageName };
+    return { rawChallenges: Array.from(rawChallenges.default), languageName, id };
   }
 </script>
 
@@ -22,6 +22,7 @@
 
   export let rawChallenges;
   export let languageName;
+  export let id;
   let challenges = shuffle(rawChallenges);
   let remainingChallenges = [...challenges];
   let currentChallenge = remainingChallenges.shift();
@@ -58,7 +59,7 @@
 </script>
 
 <svelte:head>
-  <title>Exercise</title>
+	<title>LibreLingo - learn {id} in {languageName} for free</title>
 </svelte:head>
 
 <ProgressBar value="{progress}" />

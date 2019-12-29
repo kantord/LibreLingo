@@ -1,11 +1,11 @@
 <script context="module">
   export async function preload(page, session) {
     const { courseName } = page.params;
-    const { modules } = await import(
+    const { modules, languageName } = await import(
       `../../../courses/${courseName}/courseData.json`
     );
 
-    return { courseName, modules };
+    return { courseName, modules, languageName };
   }
 </script>
 
@@ -14,7 +14,7 @@
   import SkillCard from "../../../components/SkillCard.svelte";
 
   let foodSkillAvailable = false;
-  export let courseName, modules;
+  export let courseName, modules, languageName;
 
   db &&
     db.get("foo_bar").then(function(doc) {
@@ -23,25 +23,25 @@
 </script>
 
 <svelte:head>
-  <title>Sapper project template</title>
+  <title>LibreLingo - learn {languageName} for free</title>
 </svelte:head>
 
-  {#each modules as { title, skills }}
-	  <section class="section">
-<div class="container">
-    <h2 class="is-size-2">{title}</h2>
-    <div class="columns is-multiline">
-      {#each skills as skill}
-        <div class="column is-one-third-desktop is-half-tablet">
-          <SkillCard
-            {...skill}
-            practiceHref="{`/course/${courseName}/skill/${skill.practiceHref}`}" />
-        </div>
-      {/each}
+{#each modules as { title, skills }}
+  <section class="section">
+    <div class="container">
+      <h2 class="is-size-2">{title}</h2>
+      <div class="columns is-multiline">
+        {#each skills as skill}
+          <div class="column is-one-third-desktop is-half-tablet">
+            <SkillCard
+              {...skill}
+              practiceHref="{`/course/${courseName}/skill/${skill.practiceHref}`}" />
+          </div>
+        {/each}
+      </div>
     </div>
-</div>
-	  </section>
-  {/each}
+  </section>
+{/each}
 
 <style>
   @import "../../../variables";
