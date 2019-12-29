@@ -35,7 +35,7 @@
           <div class="column is-one-third-desktop is-half-tablet">
             <SkillCard
               {...skill}
-              practiceHref="{`/course/${courseName}/skill/${skill.practiceHref}`}" />
+              practiceHref="{`course/${courseName}/skill/${skill.practiceHref}`}" />
           </div>
         {/each}
       </div>
