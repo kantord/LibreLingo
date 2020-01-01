@@ -8,7 +8,11 @@
       `../../../../courses/${courseName}/challenges/${id}.json`
     );
 
-    return { rawChallenges: Array.from(rawChallenges.default), languageName, id };
+    return {
+      rawChallenges: Array.from(rawChallenges.default),
+      languageName,
+      id
+    };
   }
 </script>
 
@@ -59,7 +63,7 @@
 </script>
 
 <svelte:head>
-	<title>LibreLingo - learn {id} in {languageName} for free</title>
+  <title>LibreLingo - learn {id} in {languageName} for free</title>
 </svelte:head>
 
 <ProgressBar value="{progress}" />
