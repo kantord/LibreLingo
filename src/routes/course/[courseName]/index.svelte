@@ -14,7 +14,9 @@
   import SkillCard from "../../../components/SkillCard.svelte";
 
   let foodSkillAvailable = false;
-  export let courseName, modules, languageName;
+  export let courseName = null;
+  export let modules = null;
+  export let languageName = null;
 
   db &&
     db.get("foo_bar").then(function(doc) {
@@ -34,8 +36,8 @@
         {#each skills as skill}
           <div class="column is-one-third-desktop is-half-tablet">
             <SkillCard
-              {...skill}
-              practiceHref="{`course/${courseName}/skill/${skill.practiceHref}`}" />
+              {...{ ...skill }}
+              practiceHref="{`/course/${courseName}/skill/${skill.practiceHref}`}" />
           </div>
         {/each}
       </div>
