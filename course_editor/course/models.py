@@ -1,3 +1,6 @@
 from django.db import models
 
-# Create your models here.
+
+class LearnWord(models.Model):
+    meaningInSourceLanguage = models.TextField()
+    formInTargetLanguage = models.TextField()
