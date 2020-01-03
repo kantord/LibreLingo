@@ -20,6 +20,7 @@ class SkillForm(forms.ModelForm):
 class SkillInline(SortableInlineAdminMixin, admin.StackedInline):
     model = Skill
     form = SkillForm
+    show_change_link = True
 
 
 class ModuleForm(forms.ModelForm):
@@ -44,7 +45,7 @@ admin.site.register(Module, ModuleAdmin)
 class ModuleInline(SortableInlineAdminMixin, admin.TabularInline):
     model = Module
     form = ModuleForm
-
+    show_change_link = True
 
 class CourseForm(forms.ModelForm):
     class Meta:
@@ -78,6 +79,7 @@ class LearnWordForm(forms.ModelForm):
 class LearnWordInline(admin.TabularInline):
     model = LearnWord
     form = LearnWordForm
+    show_change_link = True
 
 
 class SkillAdmin(admin.ModelAdmin):
