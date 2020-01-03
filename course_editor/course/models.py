@@ -53,3 +53,6 @@ class Skill(models.Model):
     module = models.ForeignKey('Module', on_delete=models.CASCADE)
     name = models.TextField(verbose_name="Skill")
     order = models.PositiveIntegerField(default=0, blank=False, null=False)
+    image1 = models.TextField(choices=VALID_IMAGE_NAMES)
+    image2 = models.TextField(choices=VALID_IMAGE_NAMES)
+    image3 = models.TextField(choices=VALID_IMAGE_NAMES)

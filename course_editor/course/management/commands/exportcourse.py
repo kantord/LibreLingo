@@ -26,7 +26,7 @@ def export_course_data(export_path, course):
         "modules": [{
             "title": module.name,
             "skills": [{
-                "imageSet": [],
+                "imageSet": [skill.image1, skill.image2, skill.image3],
                 "summary": "",
                 "practiceHref": skill.name.lower()} for skill in module.skill_set.all()]
         } for module in course.module_set.all()]
