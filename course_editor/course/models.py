@@ -1,4 +1,10 @@
 from django.db import models
+from pathlib import Path
+import csv
+
+
+with open(Path('../image_attributions.csv').resolve()) as f:
+    VALID_IMAGE_NAMES = [(o["image_name"], o["image_name"], ) for o in csv.DictReader(f)]
 
 
 class LearnWord(models.Model):
@@ -7,6 +13,9 @@ class LearnWord(models.Model):
     skill = models.ForeignKey('Skill', on_delete=models.CASCADE)
     meaningInSourceLanguage = models.TextField(verbose_name="Meaning in source language")
     formInTargetLanguage = models.TextField(verbose_name="Meaning in target language")
+    image1 = models.TextField(choices=VALID_IMAGE_NAMES)
+    image2 = models.TextField(choices=VALID_IMAGE_NAMES)
+    image3 = models.TextField(choices=VALID_IMAGE_NAMES)
 
 
 class Course(models.Model):
