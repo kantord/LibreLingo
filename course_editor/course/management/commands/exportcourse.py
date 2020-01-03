@@ -1,3 +1,4 @@
+import json
 from pathlib import Path
 
 from django.core.management.base import BaseCommand, CommandError
@@ -18,6 +19,22 @@ class Command(BaseCommand):
             raise CommandError('Course "%s" does not exist' % course_id)
 
 
+def export_course_data(export_path, course):
+    print("Exporting course meta data")
+    data = {
+        "languageName": course.language_name,
+        "modules": [{
+            "title": module.name,
+            "skills": [{
+                "imageSet": [],
+                "summary": "",
+                "practiceHref": skill.name.lower()} for skill in module.skill_set.all()]
+        } for module in course.module_set.all()]
+    }
+    with open(Path(export_path) / "courseData.json", 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+
 def export_course(course):
     print("Exporting course {}...".format(str(course)))
     language_id = course.language_name.lower()
@@ -27,3 +44,4 @@ def export_course(course):
     print("Exporting to {}".format(export_path))
     print("Making sure course directory exists")
     Path(export_path).mkdir(parents=True, exist_ok=True)
+    export_course_data(export_path, course)
