@@ -17,7 +17,7 @@ class SkillForm(forms.ModelForm):
         }
 
 
-class SkillInline(SortableInlineAdminMixin, admin.TabularInline):
+class SkillInline(SortableInlineAdminMixin, admin.StackedInline):
     model = Skill
     form = SkillForm
 
