@@ -4,6 +4,7 @@ from django.db import models
 class LearnWord(models.Model):
     class Meta:
         verbose_name = "Learn a new word"
+    skill = models.ForeignKey('Skill', on_delete=models.CASCADE)
     meaningInSourceLanguage = models.TextField(verbose_name="Meaning in source language")
     formInTargetLanguage = models.TextField(verbose_name="Meaning in target language")
 
@@ -18,7 +19,7 @@ class Module(models.Model):
     class Meta:
         verbose_name = "Module"
     course = models.ForeignKey('Course', on_delete=models.CASCADE)
-    name = models.TextField(verbose_name="Language name")
+    name = models.TextField(verbose_name="Module name")
 
 
 class Skill(models.Model):
