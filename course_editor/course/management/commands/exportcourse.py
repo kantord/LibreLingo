@@ -27,8 +27,10 @@ def export_course_data(export_path, course):
             "title": module.name,
             "skills": [{
                 "imageSet": [skill.image1, skill.image2, skill.image3],
-                "summary": "",
-                "practiceHref": skill.name.lower()} for skill in module.skill_set.all()]
+                "summary": [word.formInTargetLanguage for word in skill.learnword_set.all()],
+                "practiceHref": skill.name.lower(),
+                "title": skill.name,
+            } for skill in module.skill_set.all()]
         } for module in course.module_set.all()]
     }
     with open(Path(export_path) / "courseData.json", 'w', encoding='utf-8') as f:

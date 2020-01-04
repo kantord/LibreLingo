@@ -23,7 +23,7 @@
             {/if}
             <div class="media-content">
                 <p class="title is-4">{title}</p>
-                <p class="is-6">{summary}</p>
+                <p class="is-6 clamp">Learn: {summary.join(', ')}</p>
             </div>
 
         </div>
@@ -62,5 +62,12 @@
 
     .card-content {
         height: 147px;
+    }
+
+    .clamp {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
     }
 </style>
