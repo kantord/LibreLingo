@@ -5,17 +5,32 @@
       "title": "Basics",
       "skills": [
         {
-          "title": "Animals",
-          "imageSet": ["lion1", "dog2", "cat3"],
-          "summary": "gato, perro, ratón and 7 more words",
-          "practiceHref": "animals"
+          "imageSet": [
+            "cat1",
+            "cat2",
+            "cat3"
+          ],
+          "summary": [
+            "perro",
+            "gato",
+            "oso",
+            "león",
+            "pato",
+            "pan",
+            "pasta"
+          ],
+          "practiceHref": "food",
+          "title": "Food"
         },
-
         {
-          "title": "Food",
-          "imageSet": ["milk3", "bread3", "pasta3"],
-          "summary": "pasta, leche, pan and 4 more words",
-          "practiceHref": "food"
+          "imageSet": [
+            "cat1",
+            "cat2",
+            "cat3"
+          ],
+          "summary": [],
+          "practiceHref": "animals",
+          "title": "Animals"
         }
       ]
     }
