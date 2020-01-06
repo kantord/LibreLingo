@@ -1,23 +1,71 @@
 [
-      {
-        "id": 44543,
-        "type": "cards",
-        "pictures": ["pasta1.jpg", "pasta2.jpg", "pasta3.jpg"],
-        "meaningInSourceLanguage": "pasta",
-        "formInTargetLanguage": "pasta"
-      },
-      {
-        "id": 4543,
-        "type": "cards",
-        "pictures": ["milk1.jpg", "milk2.jpg", "milk3.jpg"],
-        "meaningInSourceLanguage": "milk",
-        "formInTargetLanguage": "leche"
-      },
-      {
-        "id": 4542,
-        "type": "cards",
-        "pictures": ["bread1.jpg", "bread2.jpg", "bread3.jpg"],
-        "meaningInSourceLanguage": "bread",
-        "formInTargetLanguage": "pan"
-      }
-    ]
+  {
+    "type": "cards",
+    "pictures": [
+      "bread1.jpg",
+      "bread2.jpg",
+      "bread3.jpg"
+    ],
+    "formInTargetLanguage": "pan",
+    "meaningInSourceLanguage": "bread",
+    "id": "a592d7beb8",
+    "priority": 0,
+    "group": "0a8c0cb0bc"
+  },
+  {
+    "type": "shortInput",
+    "formInTargetLanguage": [
+      "pan"
+    ],
+    "meaningInSourceLanguage": "bread",
+    "id": "c38db613a2",
+    "priority": 1,
+    "group": "0a8c0cb0bc"
+  },
+  {
+    "type": "cards",
+    "pictures": [
+      "milk1.jpg",
+      "milk2.jpg",
+      "milk3.jpg"
+    ],
+    "formInTargetLanguage": "leche",
+    "meaningInSourceLanguage": "milk",
+    "id": "9d313ffaf6",
+    "priority": 0,
+    "group": "dcc561c7e3"
+  },
+  {
+    "type": "shortInput",
+    "formInTargetLanguage": [
+      "leche"
+    ],
+    "meaningInSourceLanguage": "milk",
+    "id": "cd9cf98bd3",
+    "priority": 1,
+    "group": "dcc561c7e3"
+  },
+  {
+    "type": "cards",
+    "pictures": [
+      "pasta1.jpg",
+      "pasta2.jpg",
+      "pasta3.jpg"
+    ],
+    "formInTargetLanguage": "pasta",
+    "meaningInSourceLanguage": "pasta",
+    "id": "e677f336a1",
+    "priority": 0,
+    "group": "6f2b6bf8ce"
+  },
+  {
+    "type": "shortInput",
+    "formInTargetLanguage": [
+      "pasta"
+    ],
+    "meaningInSourceLanguage": "pasta",
+    "id": "e1a6732f17",
+    "priority": 1,
+    "group": "6f2b6bf8ce"
+  }
+]
