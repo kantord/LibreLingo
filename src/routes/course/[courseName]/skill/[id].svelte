@@ -19,7 +19,7 @@
 <script>
   import sound from "../../../../media/sound";
   import DeckChallenge from "../../../../components/DeckChallenge";
-  import { sortChallengeGroups } from "../../../../components/DeckChallenge/logic";
+  import { sortChallengeGroups } from "./_logic";
   import ShortInputChallenge from "../../../../components/ShortInputChallenge";
   import ProgressBar from "../../../../components/ProgressBar";
   import shuffle from "lodash.shuffle";
