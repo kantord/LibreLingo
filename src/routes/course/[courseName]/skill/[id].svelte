@@ -19,6 +19,7 @@
 <script>
   import sound from "../../../../media/sound";
   import DeckChallenge from "../../../../components/DeckChallenge";
+  import { sortChallengeGroups } from "./_logic";
   import ShortInputChallenge from "../../../../components/ShortInputChallenge";
   import ProgressBar from "../../../../components/ProgressBar";
   import shuffle from "lodash.shuffle";
@@ -27,7 +28,7 @@
   export let rawChallenges;
   export let languageName;
   export let id;
-  let challenges = shuffle(rawChallenges);
+  let challenges = sortChallengeGroups(shuffle(rawChallenges))
   let remainingChallenges = [...challenges];
   let currentChallenge = remainingChallenges.shift();
   let solvedChallenges = [];
