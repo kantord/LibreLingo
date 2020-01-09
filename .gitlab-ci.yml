@@ -22,7 +22,7 @@ install:
   script:
     - yarn install
     - rm -rf __sapper__/export
-    - NODE_ENV=production yarn export --basepath LibreLingo
+    - NODE_ENV=production yarn export
     - mv __sapper__/export/LibreLingo/* __sapper__/export/
 
 eslint-src:
