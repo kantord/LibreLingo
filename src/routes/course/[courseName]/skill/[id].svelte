@@ -28,7 +28,7 @@
   export let rawChallenges;
   export let languageName;
   export let id;
-  let challenges = sortChallengeGroups(shuffle(rawChallenges))
+  let challenges = sortChallengeGroups(shuffle(rawChallenges));
   let remainingChallenges = [...challenges];
   let currentChallenge = remainingChallenges.shift();
   let solvedChallenges = [];
