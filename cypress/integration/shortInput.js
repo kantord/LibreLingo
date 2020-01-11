@@ -132,6 +132,23 @@ describe("Short inputs", () => {
         })
     })
 
+    describe("Goes to next challenge with keyboard", () => {
+        beforeEach(() => {
+            cy.visit(CARDS_TEST_URL(2))
+            cy.get("input[type=text]").type("agua")
+            cy.contains("Submit").click()
+        })
+
+        it("Input should not be focused", () => {
+            cy.get("input[type=text]").should("not.be.focused")
+        })
+
+        it("Panel is not visible", () => {
+            cy.get("body").trigger("keydown", { keyCode: 13, which: 13 })
+            cy.get(".panel").should("not.exist")
+        })
+    })
+
     describe("Case doesn't matter", () => {
         beforeEach(() => {
             cy.visit(CARDS_TEST_URL(0))

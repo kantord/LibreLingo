@@ -1,6 +1,7 @@
 <script>
   import { slide } from "svelte/transition";
   import { onMount } from "svelte";
+  import hotkeys from "hotkeys-js";
   import levenshtein from "js-levenshtein";
   import ChallengePanel from "./ChallengePanel";
 
@@ -12,6 +13,7 @@
   let submitted = false;
   let correct = null;
   let spellingSuggestion = "";
+  let inputFieldRef = null;
 
   $: submitChallenge = () => {
     if (!answer) return;
@@ -37,6 +39,7 @@
     });
 
     registerResult(correct);
+    inputFieldRef.blur();
     submitted = true;
   };
 
@@ -48,9 +51,24 @@
 
   const focusMe = el => {
     setTimeout(() => {
-      el.focus();
+      if (el.disabled) {
+        el.blur();
+      } else {
+        el.focus();
+      }
     }, 1);
   };
+
+  onMount(() => {
+    hotkeys.unbind("enter");
+    hotkeys("enter", () => {
+      if (submitted) {
+        finishChallenge();
+      } else {
+        submitChallenge();
+      }
+    });
+  });
 </script>
 
 <form on:submit|preventDefault="{submitChallenge}">
@@ -67,6 +85,7 @@
     placeholder="Type your answer…"
     disabled="{submitted}"
     use:focusMe
+    bind:this="{inputFieldRef}"
     bind:value="{answer}" />
 
   {#if answer && !submitted}
