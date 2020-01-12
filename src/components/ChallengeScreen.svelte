@@ -24,9 +24,9 @@
         .filter(({ type }) => type === "card")
         .map(({ pictures }) => pictures.map(preloadImage))
 
-    $: alternativeChallenges = challenges.filter(
-        ({ id }) => id !== currentChallenge.id
-    )
+    $: alternativeChallenges =
+        currentChallenge &&
+        challenges.filter(({ id }) => id !== currentChallenge.id)
 
     $: registerResult = isCorrect => {
         if (isCorrect) {
@@ -41,33 +41,53 @@
     }
 
     $: resolveChallenge = () => {
-        currentChallenge = remainingChallenges.shift()
+        if (remainingChallenges) {
+            currentChallenge = remainingChallenges.shift()
+        }
     }
 </script>
 
-<ProgressBar value="{progress}" />
+{#if currentChallenge}
 
-<div class="container">
-    {#each challenges as challenge, i (challenge.id)}
-        {#if challenge.id === currentChallenge.id}
-            <div
-                out:fade="{{ duration: 300 }}"
-                in:fade="{{ duration: 300, delay: 300 }}">
-                {#if challenge.type === 'cards'}
-                    <DeckChallenge
-                        {currentChallenge}
-                        {alternativeChallenges}
-                        {resolveChallenge}
-                        {registerResult} />
-                {/if}
-                {#if challenge.type === 'shortInput'}
-                    <ShortInputChallenge
-                        {languageName}
-                        {registerResult}
-                        {resolveChallenge}
-                        {challenge} />
-                {/if}
+    <ProgressBar value="{progress}" />
+
+    <div class="container">
+        {#each challenges as challenge, i (challenge.id)}
+            {#if challenge.id === currentChallenge.id}
+                <div
+                    out:fade="{{ duration: 300 }}"
+                    in:fade="{{ duration: 300, delay: 300 }}">
+                    {#if challenge.type === 'cards'}
+                        <DeckChallenge
+                            {currentChallenge}
+                            {alternativeChallenges}
+                            {resolveChallenge}
+                            {registerResult} />
+                    {/if}
+                    {#if challenge.type === 'shortInput'}
+                        <ShortInputChallenge
+                            {languageName}
+                            {registerResult}
+                            {resolveChallenge}
+                            {challenge} />
+                    {/if}
+                </div>
+            {/if}
+        {/each}
+    </div>
+{/if}
+
+{#if !currentChallenge}
+    <div class="container">
+        <section class="hero">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title">Lesson completed!</h1>
+                    <h2 class="subtitle">
+                        You've completed {rawChallenges.length} challenges
+                    </h2>
+                </div>
             </div>
-        {/if}
-    {/each}
-</div>
+        </section>
+    </div>
+{/if}

@@ -28,4 +28,4 @@
   <title>LibreLingo - learn {id} in {languageName} for free</title>
 </svelte:head>
 
-<ChallengeScreen {rawChallenges} {languageName} { sortChallengeGroups} />
+<ChallengeScreen {rawChallenges} {languageName} {sortChallengeGroups} />
