@@ -17,7 +17,6 @@
 </script>
 
 <script>
-  import sound from "../../../../media/sound";
   import ChallengeScreen from "../../../../components/ChallengeScreen";
   import { sortChallengeGroups } from "./_logic";
   export let rawChallenges;
