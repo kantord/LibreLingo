@@ -12,5 +12,19 @@ describe("Fanfare screen", () => {
         it("Fanfare screen visible", () => {
             cy.contains(/Lesson completed!/).should("be.visible")
         })
+
+        it("Continue button visible", () => {
+            cy.contains(/Continue to course page/).should("be.visible")
+        })
+
+        it("Clicking continue should lead to course page", () => {
+            cy.contains(/Continue to course page/).click()
+            cy.url().should("match", /course\/test\/?$/)
+        })
+
+        it("Go to course page with keyboard", () => {
+            cy.get("body").trigger("keydown", { keyCode: 13, which: 13 })
+            cy.url().should("match", /course\/test\/?$/)
+        })
     })
 })

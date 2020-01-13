@@ -11,7 +11,8 @@
     return {
       rawChallenges: Array.from(rawChallenges.default),
       languageName,
-      id
+      id,
+courseURL: `/course/${courseName}`
     };
   }
 </script>
@@ -22,10 +23,11 @@
   export let rawChallenges;
   export let languageName;
   export let id;
+  export let courseURL;
 </script>
 
 <svelte:head>
   <title>LibreLingo - learn {id} in {languageName} for free</title>
 </svelte:head>
 
-<ChallengeScreen {rawChallenges} {languageName} {sortChallengeGroups} />
+<ChallengeScreen {rawChallenges} {languageName} {sortChallengeGroups} {courseURL} />

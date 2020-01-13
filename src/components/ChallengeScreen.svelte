@@ -2,6 +2,7 @@
     import sound from "../media/sound"
     import DeckChallenge from "./DeckChallenge"
     import ShortInputChallenge from "./ShortInputChallenge"
+    import FanfareScreen from "./FanfareScreen"
     import ProgressBar from "./ProgressBar"
     import shuffle from "lodash.shuffle"
     import { fade } from "svelte/transition"
@@ -9,6 +10,7 @@
     export let rawChallenges
     export let languageName
     export let sortChallengeGroups
+    export let courseURL
     let challenges = sortChallengeGroups(shuffle(rawChallenges))
     let remainingChallenges = [...challenges]
     let currentChallenge = remainingChallenges.shift()
@@ -79,15 +81,6 @@
 
 {#if !currentChallenge}
     <div class="container">
-        <section class="hero">
-            <div class="hero-body">
-                <div class="container">
-                    <h1 class="title">Lesson completed!</h1>
-                    <h2 class="subtitle">
-                        You've completed {rawChallenges.length} challenges
-                    </h2>
-                </div>
-            </div>
-        </section>
+        <FanfareScreen {courseURL} {rawChallenges} />
     </div>
 {/if}
