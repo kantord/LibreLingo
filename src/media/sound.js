@@ -6,6 +6,9 @@ const sound = {
     }),
     wrong: new Howl({
         src: ["sound/wrong.mp3"]
+    }),
+    fanfare: new Howl({
+        src: ["sound/fanfare.mp3"]
     })
 }
 
