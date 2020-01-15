@@ -11,13 +11,20 @@ describe("Cards ", () => {
 
         it("Has 3 cards", () => {
             cy.get(".options")
-                .find(".card")
+                .find(".card:visible")
                 .should("have.length", 3)
+        })
+
+        it("Has 4 cards on iPhone", () => {
+            cy.viewport("iphone-6")
+            cy.get(".options")
+                .find(".card:visible")
+                .should("have.length", 4)
         })
 
         it("All cards inactive", () => {
             cy.get(".options")
-                .find(".card[data-test=neutral]")
+                .find(".card[data-test=neutral]:visible")
                 .should("have.length", 3)
         })
 
@@ -33,7 +40,7 @@ describe("Cards ", () => {
     describe("Clicking card", () => {
         beforeEach(() => {
             cy.visit(CARDS_TEST_URL)
-            cy.get(".card")
+            cy.get(".card:visible")
                 .first()
                 .click()
         })
@@ -48,7 +55,7 @@ describe("Cards ", () => {
 
         it("2 cards inactive", () => {
             cy.get(".options")
-                .find(".card[data-test=inactive]")
+                .find(".card[data-test=inactive]:visible")
                 .should("have.length", 2)
         })
 

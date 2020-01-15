@@ -16,5 +16,14 @@ export const prepareChallenge = ({
             correct: false
         }))
 
-    return shuffle([correctOption, ...shuffle(incorrectOptions).slice(0, 2)])
+    const incorrectOptionsSample = shuffle(incorrectOptions).slice(0, 3)
+    const incorrectOptionsWithFake =
+        incorrectOptions.length >= 2
+            ? [
+                ...incorrectOptionsSample.slice(0, 2),
+                { ...incorrectOptionsSample[2], fake: true }
+            ]
+            : []
+
+    return shuffle([correctOption, ...incorrectOptionsWithFake])
 }
