@@ -17,10 +17,13 @@ export const prepareChallenge = ({
         }))
 
     const incorrectOptionsSample = shuffle(incorrectOptions).slice(0, 3)
-    const incorrectOptionsWithFake = [
-        ...incorrectOptionsSample.slice(0, 2),
-        { ...incorrectOptionsSample[2], fake: true }
-    ]
+    const incorrectOptionsWithFake =
+        incorrectOptions.length >= 3
+            ? [
+                ...incorrectOptionsSample.slice(0, 2),
+                { ...incorrectOptionsSample[2], fake: true }
+            ]
+            : []
 
     return shuffle([correctOption, ...incorrectOptionsWithFake])
 }
