@@ -29,6 +29,7 @@ def export_course_data(export_path, course):
     print("Exporting course meta data")
     data = {
         "languageName": course.language_name,
+        "languageCode": course.target_language_code,
         "modules": [{
             "title": module.name,
             "skills": [{

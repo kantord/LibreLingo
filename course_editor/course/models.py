@@ -27,6 +27,7 @@ class Course(models.Model):
 
     language_name = models.TextField(verbose_name="Language name")
     source_language_name = models.TextField(verbose_name="Source langauge name")
+    target_language_code = models.TextField(verbose_name="Target langauge IETF BCP 47 code")
 
 
 class Module(models.Model):
