@@ -1,7 +1,7 @@
 <script context="module">
   export async function preload(page, session) {
     const { id, courseName } = page.params;
-    const { languageName } = await import(
+    const { languageName, languageCode } = await import(
       `../../../../courses/${courseName}/courseData.json`
     );
     const rawChallenges = await import(
@@ -11,8 +11,9 @@
     return {
       rawChallenges: Array.from(rawChallenges.default),
       languageName,
+      languageCode,
       id,
-courseURL: `/course/${courseName}`
+      courseURL: `/course/${courseName}`
     };
   }
 </script>
@@ -22,6 +23,7 @@ courseURL: `/course/${courseName}`
   import { sortChallengeGroups } from "./_logic";
   export let rawChallenges;
   export let languageName;
+  export let languageCode;
   export let id;
   export let courseURL;
 </script>
@@ -30,4 +32,9 @@ courseURL: `/course/${courseName}`
   <title>LibreLingo - learn {id} in {languageName} for free</title>
 </svelte:head>
 
-<ChallengeScreen {rawChallenges} {languageName} {sortChallengeGroups} {courseURL} />
+<ChallengeScreen
+  {rawChallenges}
+  {languageName}
+  {languageCode}
+  {sortChallengeGroups}
+  {courseURL} />

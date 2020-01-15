@@ -9,6 +9,7 @@
   export let registerResult;
   export let resolveChallenge;
   export let languageName;
+  export let languageCode;
   let answer = null;
   let submitted = false;
   let correct = null;
@@ -84,6 +85,8 @@
     class="input"
     placeholder="Type your answer…"
     disabled="{submitted}"
+    spellcheck="false"
+    lang="{languageCode}"
     use:focusMe
     bind:this="{inputFieldRef}"
     bind:value="{answer}" />
