@@ -119,6 +119,24 @@ describe("Short inputs", () => {
         })
     })
 
+    describe("Case error", () => {
+        beforeEach(() => {
+            cy.visit(CARDS_TEST_URL(0))
+            cy.get("input[type=text]").type("PerRo")
+            cy.contains("Submit").click()
+        })
+
+        it("Panel says correct answer", () => {
+            cy.contains(/Correct solution/).should("be.visible")
+        })
+
+        it("Panel doesn't say what correct spelling would be", () => {
+            cy.contains(
+                /You made a small error. Correct spelling: perro/
+            ).should("not.exist")
+        })
+    })
+
     describe("Goes to next challenge", () => {
         beforeEach(() => {
             cy.visit(CARDS_TEST_URL(2))
