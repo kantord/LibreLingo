@@ -1,7 +1,4 @@
 <h1 align="center">
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 <img src="logo_for_readme.svg" alt="LibreLingo" /></h1>
 <p align="center"><em>an experiment to create a community-driven language-learning platform</em></p>
 
