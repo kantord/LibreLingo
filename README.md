@@ -1,5 +1,7 @@
-<h1 align="center">LibreLingo</h1>
+<h1 align="center">
+<img src="logo_for_readme.svg" alt="LibreLingo" /></h1>
 <p align="center"><em>an experiment to create a community-driven language-learning platform</em></p>
+
 
 ## Project goal
 
