@@ -11,6 +11,15 @@ In addition to licensing the software under a free software license, the course 
 
 Once course content is properly decoupled from the software, it should be possible to experiment with alternative ways of using course content: for example, the creation of audiobooks or print material.
 
+Here's a rough sketch of how  I imagine the milestones of this project:
+
+### First demo
+
+* ☐ Demo course content in Spanish for English speakers
+* ☑️ Some basic building blocks of course content implemented
+* ☑️ Developers can use course editor
+* ☐ Basic theme/branding
+
 ## License
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fkantord%2FLibreLingo.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fkantord%2FLibreLingo?ref=badge_large)
 
