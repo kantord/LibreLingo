@@ -47,6 +47,17 @@ Here's a rough sketch of how  I imagine the milestones of this project:
 * ☐ Dictionary
 * ☐ Speaking exercises
 
+## Tech stack
+
+​       | Web app/PWA   | Course editor |
+--------| ------------- | ------------- |
+Frontend| Svelte        | Django Admin* |
+Backend | CouchDB       |               |
+
+* Djando Admin might be replaced in the future
+
+Testing is done using Jest and Cypress. Other technology in use include: bulma, webpack, etc.
+
 ## License
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fkantord%2FLibreLingo.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fkantord%2FLibreLingo?ref=badge_large)
 
