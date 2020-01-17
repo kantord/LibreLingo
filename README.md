@@ -54,7 +54,7 @@ Here's a rough sketch of how  I imagine the milestones of this project:
 Frontend| Svelte        | Django Admin* |
 Backend | CouchDB       |               |
 
-* Djando Admin might be replaced in the future
+\* Djando Admin might be replaced in the future
 
 Testing is done using Jest and Cypress. Other technology in use include: bulma, webpack, etc.
 
