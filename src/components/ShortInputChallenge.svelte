@@ -86,6 +86,7 @@
     data-test="answer"
     type="text"
     class="input"
+    autofocus
     placeholder="Type your answer…"
     disabled="{submitted}"
     spellcheck="false"
