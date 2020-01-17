@@ -57,7 +57,7 @@
 
   .incorrect {
     color: $text-invert;
-    background: $danger;
+    background: $pink;
   }
 
   .panel button {

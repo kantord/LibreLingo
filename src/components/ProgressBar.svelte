@@ -15,8 +15,11 @@
 
 <style>
   @import "../variables";
-
   div {
-    padding: $size-6;
+    padding-bottom: $size-6;
+  }
+
+  .progress {
+    border: 1px solid transparentize($blue, 0.9);
   }
 </style>
