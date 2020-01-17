@@ -21,6 +21,10 @@ module.exports = {
         module: {
             rules: [
                 {
+                    test: /\.md/i,
+                    use: "raw-loader"
+                },
+                {
                     test: /\.css$/i,
                     use: ["style-loader", "css-loader"]
                 },
@@ -101,6 +105,10 @@ module.exports = {
         externals: Object.keys(pkg.dependencies).concat("encoding"),
         module: {
             rules: [
+                {
+                    test: /\.md/i,
+                    use: "raw-loader"
+                },
                 {
                     test: /\.(svelte|html)$/,
                     use: {
