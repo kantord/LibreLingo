@@ -20,6 +20,7 @@
 
 <script>
   import ChallengeScreen from "../../../../components/ChallengeScreen";
+  import NavBar from "../../../../components/NavBar";
   import { sortChallengeGroups } from "./_logic";
   export let rawChallenges;
   export let languageName;
@@ -31,6 +32,8 @@
 <svelte:head>
   <title>LibreLingo - learn {id} in {languageName} for free</title>
 </svelte:head>
+
+<NavBar dark is_hidden_mobile />
 
 <ChallengeScreen
   {rawChallenges}

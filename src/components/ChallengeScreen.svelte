@@ -52,32 +52,34 @@
 
 {#if currentChallenge}
 
-  <ProgressBar value="{progress}" />
-
   <div class="container">
-    {#each challenges as challenge, i (challenge.id)}
-      {#if challenge.id === currentChallenge.id}
-        <div
-          out:fade="{{ duration: 300 }}"
-          in:fade="{{ duration: 300, delay: 300 }}">
-          {#if challenge.type === 'cards'}
-            <DeckChallenge
-              {currentChallenge}
-              {alternativeChallenges}
-              {resolveChallenge}
-              {registerResult} />
-          {/if}
-          {#if challenge.type === 'shortInput'}
-            <ShortInputChallenge
-              {languageName}
-              {languageCode}
-              {registerResult}
-              {resolveChallenge}
-              {challenge} />
-          {/if}
-        </div>
-      {/if}
-    {/each}
+    <section class="section">
+      <ProgressBar value="{progress}" />
+      {#each challenges as challenge, i (challenge.id)}
+        {#if challenge.id === currentChallenge.id}
+          <div
+            out:fade="{{ duration: 300 }}"
+            in:fade="{{ duration: 300, delay: 300 }}">
+            {#if challenge.type === 'cards'}
+              <DeckChallenge
+                {currentChallenge}
+                {alternativeChallenges}
+                {resolveChallenge}
+                {registerResult} />
+            {/if}
+            {#if challenge.type === 'shortInput'}
+              <ShortInputChallenge
+                {languageName}
+                {languageCode}
+                {registerResult}
+                {resolveChallenge}
+                {challenge} />
+            {/if}
+          </div>
+        {/if}
+      {/each}
+
+    </section>
   </div>
 {/if}
 
@@ -86,3 +88,9 @@
     <FanfareScreen {courseURL} {rawChallenges} />
   </div>
 {/if}
+
+<style>
+  .section {
+    padding: 1.5em;
+  }
+</style>

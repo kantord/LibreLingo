@@ -12,6 +12,7 @@
 <script>
   import db from "../../../db";
   import SkillCard from "../../../components/SkillCard.svelte";
+  import NavBar from "../../../components/NavBar.svelte";
 
   let foodSkillAvailable = false;
   export let courseName = null;
@@ -27,6 +28,8 @@
 <svelte:head>
   <title>LibreLingo - learn {languageName} for free</title>
 </svelte:head>
+
+<NavBar dark />
 
 {#each modules as { title, skills }}
   <section class="section">
