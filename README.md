@@ -20,6 +20,33 @@ Here's a rough sketch of how  I imagine the milestones of this project:
 * ☑️ Developers can use course editor
 * ☐ Basic theme/branding
 
+### Alpha release
+
+* ☐ Course progress can be properly syncronised across devices
+* ☐ Course editor can be accessed by all course contributors
+* ☐ Statistics about course controbutors are collected and published
+* ☐ At least the basics of the Spanish course are ready
+* ☐ Most of the course building blocks are implemented
+
+
+### Beta release
+
+* ☐ All of the basic building blocks of courses are implemented
+* ☐ More advanced learning features (reading exercises)
+* ☐ Spaced repetition implemented
+* ☐ Spanish course is stable and useful
+
+### Stable release(s)
+
+* ☐ Any user can build their own course
+* ☐ Users can suggest changes to course content
+* ☐ There's a marketplace for "unofficial" courses
+* ☐ Multiple stable courses available
+* ☐ Mobile apps available
+* ☐ Wiki features
+* ☐ Dictionary
+* ☐ Speaking exercises
+
 ## License
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fkantord%2FLibreLingo.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fkantord%2FLibreLingo?ref=badge_large)
 
