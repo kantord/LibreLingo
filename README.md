@@ -51,7 +51,14 @@ Here's a rough sketch of how  I imagine the milestones of this project:
 
 ## Become a contributor
 
-If you are interested in contributing to course development, please fill the following form: https://danielkantor196881.typeform.com/to/V00Paz. The project is in a very early stage right now, so you might not be able to contribute right away. Your work will be released in this GitHub repository and you will show up as a contributor here. 
+### Contribute to course material
+If you are interested in contributing to course development, please fill the following form: https://danielkantor196881.typeform.com/to/V00Paz. The project is in a very early stage right now, so you might not be able to contribute right away. Your work will be released in this GitHub repository and you will show up as a contributor here.
+
+### Contribute to software development
+If you are interested in writing code for LibreLingo, you can simply start submitting pull requests. You can also use this form to get in touch: https://danielkantor196881.typeform.com/to/jTe9jX.
+
+### Other forms of contribution
+You can help LibreLingo by testing it and submitting feature requests or bug reports: https://github.com/kantord/LibreLingo/issues/new. If you want to get in touch, you can simply the contacts on [my GitHub profile](https://github.com/kantord).
 
 ## Tech stack
 
