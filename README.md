@@ -49,6 +49,10 @@ Here's a rough sketch of how  I imagine the milestones of this project:
 * ☐ Dictionary
 * ☐ Speaking exercises
 
+## Become a contributor
+
+If you are interested in contributing to course development, please fill the following form: https://danielkantor196881.typeform.com/to/V00Paz. The project is in a very early stage right now, so you might not be able to contribute right away. Your work will be released in this GitHub repository and you will show up as a contributor here. 
+
 ## Tech stack
 
 ​       | Web app/PWA   | Course editor |
