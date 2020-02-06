@@ -3,6 +3,8 @@
 <p align="center"><em>an experiment to create a community-driven language-learning platform</em></p>
 
 
+<a href="https://librelingo.app/"><h3>Click here for live demo</h3></a>
+
 ## Project goal
 
 My goal is to start a community-driven language-learning platform that gives it's users and contributors a way to influence it's future and adapt it to special requirements.
