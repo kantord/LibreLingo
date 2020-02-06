@@ -1,5 +1,6 @@
 <script>
     import NavBar from "../components/NavBar"
+    import GitHubForkRibbon from "../components/GitHubForkRibbon"
 </script>
 
 <svelte:head>
@@ -31,6 +32,8 @@
 
     </div>
 </section>
+
+<GitHubForkRibbon />
 
 <style>
     @import "../variables";

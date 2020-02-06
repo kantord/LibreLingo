@@ -22,6 +22,7 @@
 
 <script>
     import NavBar from "../components/NavBar"
+    import GitHubForkRibbon from "../components/GitHubForkRibbon"
 
     export let readmeHTML
 </script>
@@ -49,3 +50,5 @@
         </div>
     </div>
 </section>
+
+<GitHubForkRibbon />
