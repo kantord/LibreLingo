@@ -1,5 +1,6 @@
 <script>
     import NavBar from "../components/NavBar"
+    import GitHubForkRibbon from "../components/GitHubForkRibbon"
 </script>
 
 <svelte:head>
@@ -32,17 +33,10 @@
     </div>
 </section>
 
-<a
-    class="github-fork-ribbon fixed"
-    href="https://github.com/kantord/LibreLingo"
-    data-ribbon="Fork me on GitHub"
-    title="Fork me on GitHub">
-    Fork me on GitHub
-</a>
+<GitHubForkRibbon />
 
 <style>
     @import "../variables";
-    @import "./node_modules/github-fork-ribbon-css/gh-fork-ribbon";
 
     .title img {
         height: 3em;
