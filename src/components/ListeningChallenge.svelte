@@ -5,6 +5,7 @@
     import levenshtein from "js-levenshtein"
     import shuffle from "lodash.shuffle"
     import ChallengePanel from "./ChallengePanel"
+    import playVoice from "../media/voice"
 
     export let challenge
     export let registerResult
@@ -16,33 +17,31 @@
     let correct = null
     let spellingSuggestion = ""
     let inputFieldRef = null
-    let picture = shuffle(challenge.pictures)[0]
 
     $: submitChallenge = () => {
         if (!answer) return
         if (submitted) return
+        const form = challenge.answer
         correct = false
 
-        challenge.formInTargetLanguage.forEach(form => {
-            if (
-                levenshtein(
-                    answer
-                        .toLowerCase()
-                        .replace(/^\s+|\s+$/g, "")
-                        .replace(/\s+/g, " "),
-                    form.toLowerCase()
-                ) <= 1
-            ) {
-                correct = true
-                spellingSuggestion =
-                    form
-                        .replace(/^\s+|\s+$/g, "")
-                        .replace(/\s+/g, " ")
-                        .toLowerCase() === answer.toLowerCase()
-                        ? ""
-                        : `You made a small error. Correct spelling: ${form}`
-            }
-        })
+        if (
+            levenshtein(
+                answer
+                    .toLowerCase()
+                    .replace(/^\s+|\s+$/g, "")
+                    .replace(/\s+/g, " "),
+                form.toLowerCase()
+            ) <= 1
+        ) {
+            correct = true
+            spellingSuggestion =
+                form
+                    .replace(/^\s+|\s+$/g, "")
+                    .replace(/\s+/g, " ")
+                    .toLowerCase() === answer.toLowerCase()
+                    ? ""
+                    : `You made a small error. Correct spelling: ${form}`
+        }
 
         registerResult(correct)
         inputFieldRef.blur()
@@ -65,7 +64,10 @@
         }, 1)
     }
 
+    const playChallengeVoice = () => playVoice(challenge.audio)
+
     onMount(() => {
+        playChallengeVoice()
         hotkeys.unbind("enter")
         hotkeys("enter", () => {
             if (submitted) {
@@ -81,12 +83,22 @@
     <div class="section">
         <p
             class="is-size-1 is-size-2-tablet is-size-4-mobile has-text-centered">
-            Type
-            <b>{challenge.meaningInSourceLanguage}</b>
-            in {languageName}!
+            Type what you hear
         </p>
     </div>
+
     <div class="columns">
+
+        <div class="column is-1">
+
+            <button
+                class="button is-large is-primary"
+                on:click="{playChallengeVoice}">
+                <span class="icon is-medium">
+                    <i class="fas fa-volume-up "></i>
+                </span>
+            </button>
+        </div>
 
         <div class="column">
             <input
@@ -102,15 +114,7 @@
                 use:focusMe
                 bind:this="{inputFieldRef}"
                 bind:value="{answer}" />
-        </div>
-        <div class="column is-one-fourth">
-            <div class="card">
-                <div class="card-image">
-                    <figure class="image is-1by1">
-                        <img src="images/{picture}" alt="" />
-                    </figure>
-                </div>
-            </div>
+
         </div>
     </div>
 
@@ -122,7 +126,7 @@
         {#if !correct}
             <ChallengePanel
                 message="Incorrect solution!"
-                messageDetail="{`Correct answer: ${challenge.formInTargetLanguage[0]}`}"
+                messageDetail="{`Correct answer: ${challenge.answer}`}"
                 buttonText="Continue"
                 incorrect
                 buttonAction="{finishChallenge}" />
