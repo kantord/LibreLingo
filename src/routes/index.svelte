@@ -32,8 +32,17 @@
     </div>
 </section>
 
+<a
+    class="github-fork-ribbon fixed"
+    href="https://github.com/kantord/LibreLingo"
+    data-ribbon="Fork me on GitHub"
+    title="Fork me on GitHub">
+    Fork me on GitHub
+</a>
+
 <style>
     @import "../variables";
+    @import "./node_modules/github-fork-ribbon-css/gh-fork-ribbon";
 
     .title img {
         height: 3em;
