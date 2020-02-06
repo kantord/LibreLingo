@@ -66,6 +66,14 @@ def export_skill(export_path, skill):
                 "priority": 1,
                 "group": opaqueId(learnword),
             },
+            {
+                "type": "listeningExercise",
+                "answer": learnword.formInTargetLanguage,
+                "audio": learnword.formInTargetLanguage.lower().replace(' ', '_'),
+                "id": opaqueId(learnword, "listeningExercise"),
+                "priority": 1,
+                "group": opaqueId(learnword),
+            },
         ]
 
     Path(Path(export_path) / "challenges").mkdir(parents=True, exist_ok=True)
