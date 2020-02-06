@@ -27,6 +27,10 @@ describe("Short inputs", () => {
             cy.contains("Submit").should("not.exist")
         })
 
+        it("Card with image is visible", () => {
+            cy.get(".card img").should("be.visible")
+        })
+
         it("Has input field", () => {
             cy.get("input[type=text]").should("be.visible")
         })

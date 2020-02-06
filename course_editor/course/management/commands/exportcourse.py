@@ -59,6 +59,7 @@ def export_skill(export_path, skill):
             },
             {
                 "type": "shortInput",
+                "pictures": ["{}.jpg".format(image_name) for image_name in [learnword.image1, learnword.image2, learnword.image3]],
                 "formInTargetLanguage": [learnword.formInTargetLanguage],
                 "meaningInSourceLanguage": learnword.meaningInSourceLanguage,
                 "id": opaqueId(learnword, "shortInput"),
