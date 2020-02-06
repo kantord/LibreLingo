@@ -66,6 +66,14 @@ def export_skill(export_path, skill):
                 "priority": 1,
                 "group": opaqueId(learnword),
             },
+            {
+                "type": "listeningExercise",
+                "answer": learnword.formInTargetLanguage,
+                "audio": learnword.formInTargetLanguage.lower().replace(' ', '_'),
+                "id": opaqueId(learnword, "listeningExercise"),
+                "priority": 1,
+                "group": opaqueId(learnword),
+            },
         ]
 
     Path(Path(export_path) / "challenges").mkdir(parents=True, exist_ok=True)
@@ -84,8 +92,14 @@ def export_course(course):
     print("Making sure course directory exists")
     Path(export_path).mkdir(parents=True, exist_ok=True)
     export_course_data(export_path, course)
+    audios_to_fetch = []
 
     for module in course.module_set.all():
         for skill in module.skill_set.all():
             print("Exporting skill {}".format(str(skill)))
             export_skill(export_path, skill)
+            for learnword in skill.learnword_set.all():
+                audios_to_fetch.append(learnword.formInTargetLanguage)
+
+    with open(Path(export_path) / ".." / ".." / ".." / "audios_to_fetch.csv", 'w', encoding='utf-8') as f:
+        f.write("\n".join(audios_to_fetch))
