@@ -3,6 +3,7 @@
   import { onMount } from "svelte";
   import hotkeys from "hotkeys-js";
   import levenshtein from "js-levenshtein";
+  import shuffle from "lodash.shuffle";
   import ChallengePanel from "./ChallengePanel";
 
   export let challenge;
@@ -15,6 +16,7 @@
   let correct = null;
   let spellingSuggestion = "";
   let inputFieldRef = null;
+  let picture = shuffle(challenge.pictures)[0];
 
   $: submitChallenge = () => {
     if (!answer) return;
@@ -76,24 +78,40 @@
 </script>
 
 <form on:submit|preventDefault="{submitChallenge}">
-  <p>
-    Type
-    <b>{challenge.meaningInSourceLanguage}</b>
-    in {languageName}!
-  </p>
-  <input
-    tabindex="0"
-    data-test="answer"
-    type="text"
-    class="input"
-    autofocus
-    placeholder="Type your answer…"
-    disabled="{submitted}"
-    spellcheck="false"
-    lang="{languageCode}"
-    use:focusMe
-    bind:this="{inputFieldRef}"
-    bind:value="{answer}" />
+  <div class="section">
+    <p class="is-size-1 is-size-2-tablet is-size-4-mobile has-text-centered">
+      Type
+      <b>{challenge.meaningInSourceLanguage}</b>
+      in {languageName}!
+    </p>
+  </div>
+  <div class="columns">
+
+    <div class="column">
+      <input
+        tabindex="0"
+        data-test="answer"
+        type="text"
+        class="input"
+        autofocus
+        placeholder="Type your answer…"
+        disabled="{submitted}"
+        spellcheck="false"
+        lang="{languageCode}"
+        use:focusMe
+        bind:this="{inputFieldRef}"
+        bind:value="{answer}" />
+    </div>
+    <div class="column is-one-fourth">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-1by1">
+            <img src="images/{picture}" alt="" />
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
 
   {#if answer && !submitted}
     <ChallengePanel message="" buttonText="Submit" submit />
@@ -119,3 +137,10 @@
   {/if}
 
 </form>
+
+<style>
+  .card {
+    max-width: 16em;
+    margin: auto;
+  }
+</style>
