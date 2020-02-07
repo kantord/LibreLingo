@@ -31,10 +31,10 @@ Here's a rough sketch of how  I imagine the milestones of this project:
 
 ### First demo
 
-* ☐ Demo course content in Spanish for English speakers
+* ☑️ Demo course content in Spanish for English speakers
 * ☑️ Some basic building blocks of course content implemented
 * ☑️ Developers can use course editor
-* ☐ Basic theme/branding
+* ☑️ Basic theme/branding
 
 ### Alpha release
 
