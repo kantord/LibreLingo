@@ -3,7 +3,7 @@
 <p align="center"><em>an experiment to create a community-driven language-learning platform</em></p>
 
 
-<a href="https://librelingo.app/"><h3>Click here for live demo</h3></a>
+[Click here for live demo](https://librelingo.app/)
 
 ## Project goal
 
