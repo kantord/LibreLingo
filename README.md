@@ -88,6 +88,30 @@ Testing is done using Jest and Cypress. Other technology in use include: bulma, 
 ## License
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fkantord%2FLibreLingo.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fkantord%2FLibreLingo?ref=badge_large)
 
+## Development
+
+### Running the project in development mode
+
+If you have cloned the repo and have `yarn` installed on your computer, you can install dependencies and run the development server using:
+
+```
+yarn
+yarn dev
+```
+
+### Deploying to production
+
+LibreLingo's frontend is a static site, therefore you can simply deploy it using the static HTTP server of your choice!
+
+To generate the static files (assuming that you have set up a working development mode), you just have to export them using:
+
+```
+yarn export
+```
+
+This will create a `__sapper__/export` folder with a production-ready build of your site.
+
+See Sapper's documentation for more detail: https://sapper.svelte.dev/docs#Exporting
 
 ## Contributors ✨
 
