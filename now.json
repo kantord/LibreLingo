@@ -1,0 +1,6 @@
+{
+  "name": "LibreLingoTest",
+  "builds": [
+    { "src": "./__sapper__/export/**", "use": "@now/static" }
+  ]
+}
