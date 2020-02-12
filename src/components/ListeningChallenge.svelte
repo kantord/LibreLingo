@@ -134,7 +134,7 @@
         {#if correct}
             <ChallengePanel
                 message="Correct solution!"
-                messageDetail="{spellingSuggestion}"
+                messageDetail="{spellingSuggestion || `Meaning: "${challenge.meaning}"`}"
                 buttonText="Continue"
                 correct
                 buttonAction="{finishChallenge}" />
