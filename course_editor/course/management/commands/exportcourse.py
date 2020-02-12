@@ -69,6 +69,7 @@ def export_skill(export_path, skill):
             {
                 "type": "listeningExercise",
                 "answer": learnword.formInTargetLanguage,
+                "meaning": learnword.meaningInSourceLanguage,
                 "audio": learnword.formInTargetLanguage.lower().replace(' ', '_'),
                 "id": opaqueId(learnword, "listeningExercise"),
                 "priority": 1,

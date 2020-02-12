@@ -80,6 +80,10 @@ describe("Listening exercises", () => {
             cy.contains(/Correct solution/).should("be.visible")
         })
 
+        it("Meaning should be visible", () => {
+            cy.contains(/Meaning: "foo bar baz"/).should("be.visible")
+        })
+
         it("Continue button is visible", () => {
             cy.contains("Continue").should("exist")
         })
