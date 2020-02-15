@@ -9,20 +9,23 @@ variables:
   CYPRESS_CACHE_FOLDER: "$CI_PROJECT_DIR/cache/Cypress"
 
 cache:
-  key: ${CI_COMMIT_REF_SLUG}
+  key:
+    files:
+      - package.json
+      - yarn.lock
   paths:
     - .yarn
+    - .npm
     - cache/Cypress
     - node_modules
-    - __sapper__
 
 install:
   image: cypress/base:10
   stage: build
   script:
-    - yarn install
-    - rm -rf __sapper__/export
-    - NODE_ENV=production yarn export
+    - yarn install --frozen-lockfile --check-files
+    - npx cypress cache path
+    - npx cypress cache list
 
 eslint-src:
   image: cypress/base:10
