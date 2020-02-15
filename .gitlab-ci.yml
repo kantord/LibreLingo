@@ -78,6 +78,7 @@ deploy-to-gh-pages:
   image: cypress/base:10
   stage: deploy
   script:
+    - NODE_ENV=production yarn export
     - git config --global user.email "gitlab@daniel-kantor.com"
     - git config --global user.name "Dániel Kántor"
     - yarn deploy --repo=https://$GH_TOKEN@github.com/kantord/LibreLingo.git
