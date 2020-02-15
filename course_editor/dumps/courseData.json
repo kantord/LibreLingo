@@ -1,0 +1,152 @@
+[
+{
+  "model": "course.learnword",
+  "pk": 1,
+  "fields": {
+    "skill": 2,
+    "meaningInSourceLanguage": "dog",
+    "formInTargetLanguage": "perro",
+    "image1": "dog1",
+    "image2": "dog2",
+    "image3": "dog3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 2,
+  "fields": {
+    "skill": 2,
+    "meaningInSourceLanguage": "cat",
+    "formInTargetLanguage": "gato",
+    "image1": "cat1",
+    "image2": "cat2",
+    "image3": "cat3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 3,
+  "fields": {
+    "skill": 2,
+    "meaningInSourceLanguage": "bear",
+    "formInTargetLanguage": "oso",
+    "image1": "bear1",
+    "image2": "bear2",
+    "image3": "bear1"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 4,
+  "fields": {
+    "skill": 2,
+    "meaningInSourceLanguage": "lion",
+    "formInTargetLanguage": "le\u00f3n",
+    "image1": "lion1",
+    "image2": "lion2",
+    "image3": "lion3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 5,
+  "fields": {
+    "skill": 2,
+    "meaningInSourceLanguage": "duck",
+    "formInTargetLanguage": "pato",
+    "image1": "duck2",
+    "image2": "duck1",
+    "image3": "duck3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 11,
+  "fields": {
+    "skill": 1,
+    "meaningInSourceLanguage": "bread",
+    "formInTargetLanguage": "pan",
+    "image1": "bread1",
+    "image2": "bread2",
+    "image3": "bread3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 12,
+  "fields": {
+    "skill": 1,
+    "meaningInSourceLanguage": "milk",
+    "formInTargetLanguage": "leche",
+    "image1": "milk1",
+    "image2": "milk2",
+    "image3": "milk3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 13,
+  "fields": {
+    "skill": 1,
+    "meaningInSourceLanguage": "pasta",
+    "formInTargetLanguage": "pasta",
+    "image1": "pasta1",
+    "image2": "pasta2",
+    "image3": "pasta3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 14,
+  "fields": {
+    "skill": 1,
+    "meaningInSourceLanguage": "couple",
+    "formInTargetLanguage": "pareja",
+    "image1": "couple1",
+    "image2": "couple2",
+    "image3": "couple3"
+  }
+},
+{
+  "model": "course.course",
+  "pk": 1,
+  "fields": {
+    "language_name": "Spanish",
+    "source_language_name": "English",
+    "target_language_code": "es"
+  }
+},
+{
+  "model": "course.module",
+  "pk": 1,
+  "fields": {
+    "course": 1,
+    "name": "Basics",
+    "order": 1
+  }
+},
+{
+  "model": "course.skill",
+  "pk": 1,
+  "fields": {
+    "module": 1,
+    "name": "Food",
+    "order": 2,
+    "image1": "bread1",
+    "image2": "milk2",
+    "image3": "pasta3"
+  }
+},
+{
+  "model": "course.skill",
+  "pk": 2,
+  "fields": {
+    "module": 1,
+    "name": "Animals",
+    "order": 1,
+    "image1": "dog1",
+    "image2": "lion3",
+    "image3": "cat3"
+  }
+}
+]
