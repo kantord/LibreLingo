@@ -2,12 +2,12 @@
   import { slide } from "svelte/transition";
 
   export let buttonText;
-  export let buttonAction;
-  export let correct;
-  export let incorrect;
+  export let buttonAction = null;
+  export let correct = false;
+  export let incorrect = false;
   export let message;
-  export let messageDetail;
-  export let submit;
+  export let messageDetail = null;
+  export let submit = null;
 </script>
 
 <div
