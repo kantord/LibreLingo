@@ -1,6 +1,5 @@
 stages:
   - build
-  - lint
   - test
   - deploy
 
@@ -9,30 +8,31 @@ variables:
   CYPRESS_CACHE_FOLDER: "$CI_PROJECT_DIR/cache/Cypress"
 
 cache:
-  key: ${CI_COMMIT_REF_SLUG}
+  key:
+    files:
+      - package.json
+      - yarn.lock
   paths:
-    - .yarn
     - cache/Cypress
     - node_modules
-    - __sapper__
 
 install:
   image: cypress/base:10
   stage: build
   script:
-    - yarn install
-    - rm -rf __sapper__/export
-    - NODE_ENV=production yarn export
+    - yarn install --frozen-lockfile --check-files
+    - npx cypress cache path
+    - npx cypress cache list
 
 eslint-src:
   image: cypress/base:10
-  stage: lint
+  stage: test
   script:
     - yarn eslint src
 
 eslint-cypress:
   image: cypress/base:10
-  stage: lint
+  stage: test
   script:
     - yarn eslint cypress
 
@@ -42,28 +42,37 @@ jest:
   script:
     - yarn jest
 
-# all jobs that actually run tests can use the same definition
-.job_static_template: &job_static
+.cypress_template: &cypress
   image: cypress/base:10
   stage: test
   script:
     - yarn run dev &
-    - yarn cy:run
-  artifacts:
-    when: always
-    paths:
-      - cypress/videos/**/*.mp4
-      - cypress/screenshots/**/*.png
-    expire_in: 1 day
+    - yarn cy:run --spec ./cypress/integration/$test_name.js
 
-# actual job definitions
-# all steps are the same, they come from the template above
-static_electrons-1:
-  <<: *job_static
-# static_electrons-2:
-# <<: *job_static
-# static_electrons-3:
-# <<: *job_static
+cy-cards:
+  variables:
+    test_name: "cards"
+  <<: *cypress
+
+cy-coursePage:
+  variables:
+    test_name: "coursePage"
+  <<: *cypress
+
+cy-fanfareScreen:
+  variables:
+    test_name: "fanfareScreen"
+  <<: *cypress
+
+cy-listening:
+  variables:
+    test_name: "listening"
+  <<: *cypress
+
+cy-shortInput:
+  variables:
+    test_name: "shortInput"
+  <<: *cypress
 
 deploy-to-gh-pages:
   image: cypress/base:10
