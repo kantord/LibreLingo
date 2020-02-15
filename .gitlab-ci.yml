@@ -1,6 +1,5 @@
 stages:
   - build
-  - lint
   - test
   - deploy
 
@@ -27,13 +26,13 @@ install:
 
 eslint-src:
   image: cypress/base:10
-  stage: lint
+  stage: test
   script:
     - yarn eslint src
 
 eslint-cypress:
   image: cypress/base:10
-  stage: lint
+  stage: test
   script:
     - yarn eslint cypress
 
