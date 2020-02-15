@@ -5,6 +5,10 @@ image_name=`echo $1 | cut -d',' -f1`
 image_id=`echo $url | cut -d'/' -f5`
 download_url="https://unsplash.com/photos/$image_id/download"
 
+if [ -e "./static/images/$image_name.jpg" ]; then
+	exit 0
+fi
+
 echo "Fetching URL $url"
 echo "Image ID $image_id"
 wget $download_url -O "/tmp/$image_id.jpg"
