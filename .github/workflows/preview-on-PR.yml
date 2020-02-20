@@ -12,7 +12,7 @@ jobs:
       - uses: borales/actions-yarn@v2.0.0
         with:
           cmd: export # will run `yarn export` command
-      - uses: amondnet/now-deployment@v1
+      - uses: amondnet/now-deployment@v2.0.0
         with:
           zeit-token: ${{ secrets.ZEIT_TOKEN }} # Required
           github-token: ${{ secrets.GITHUB_TOKEN }} #Optional 
