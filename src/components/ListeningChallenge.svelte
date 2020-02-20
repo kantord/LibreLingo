@@ -92,7 +92,8 @@
 
       <button
         class="button is-large is-primary"
-        on:click="{playChallengeVoice}">
+        on:click="{playChallengeVoice}"
+        type="button">
         <span class="icon is-medium">
           <i class="fas fa-volume-up "></i>
         </span>
