@@ -1,6 +1,7 @@
 <script>
   import sound from "../media/sound";
   import DeckChallenge from "./DeckChallenge";
+  import OptionChallenge from "./OptionChallenge";
   import ShortInputChallenge from "./ShortInputChallenge";
   import ListeningChallenge from "./ListeningChallenge";
   import FanfareScreen from "./FanfareScreen";
@@ -63,6 +64,13 @@
             in:fade="{{ duration: 300, delay: 300 }}">
             {#if challenge.type === 'cards'}
               <DeckChallenge
+                {currentChallenge}
+                {alternativeChallenges}
+                {resolveChallenge}
+                {registerResult} />
+            {/if}
+            {#if challenge.type === 'options'}
+              <OptionChallenge
                 {currentChallenge}
                 {alternativeChallenges}
                 {resolveChallenge}

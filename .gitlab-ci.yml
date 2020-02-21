@@ -74,6 +74,11 @@ cy-shortInput:
     test_name: "shortInput"
   <<: *cypress
 
+cy-shortInput:
+  variables:
+    test_name: "optionSelection"
+  <<: *cypress
+
 deploy-to-gh-pages:
   image: cypress/base:10
   stage: deploy
