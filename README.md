@@ -74,6 +74,11 @@ If you are interested in writing code for LibreLingo, you can simply start submi
 ### Other forms of contribution
 You can help LibreLingo by testing it and submitting feature requests or bug reports: https://github.com/kantord/LibreLingo/issues/new. If you want to get in touch, you can simply the contacts on [my GitHub profile](https://github.com/kantord).
 
+There is also a Matrix/FreeNode IRC channel `#LibreLingo`, instructions for joining:
+
+* Matrix: [`#LibreLingo`](https://riot.im/app/#/room/#librelingo:matrix.org) on `matrix.org`
+* IRC: connect to `irc.freenode.net` with your favourite client and join `#LibreLingo`
+
 ## Tech stack
 
 ​       | Web app/PWA   | Course editor |
