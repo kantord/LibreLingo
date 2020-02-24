@@ -20,3 +20,7 @@ import "./commands"
 // require('./commands')
 
 import "@cypress/code-coverage/support"
+
+after(() => {
+    cy.contains(/undefined/).should("not.be.visible")
+})

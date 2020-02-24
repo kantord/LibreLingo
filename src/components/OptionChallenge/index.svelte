@@ -6,7 +6,7 @@
   import { fade } from "svelte/transition";
   import Options from "../Options";
   import ChallengePanel from "../ChallengePanel";
-  import { prepareChallenge } from "./logic";
+  import { prepareChallenge } from "../../logic";
 
   export let currentChallenge;
   export let alternativeChallenges;
@@ -17,7 +17,8 @@
 
   $: options = prepareChallenge({
     currentChallenge,
-    alternativeChallenges
+    alternativeChallenges,
+    typeToSelect: "options"
   });
 
   $: finishChallenge = () => {

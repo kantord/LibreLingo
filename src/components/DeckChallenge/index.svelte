@@ -17,7 +17,9 @@
 
   $: options = prepareChallenge({
     currentChallenge,
-    alternativeChallenges
+    alternativeChallenges,
+    typeToSelect: "cards",
+    hasFakeOption: true
   });
 
   $: finishChallenge = () => {
