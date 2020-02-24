@@ -1,10 +1,19 @@
 [
   {
     "type": "options",
-    "formInTargetLanguage": "Bueno provecho",
+    "formInTargetLanguage": "¡Buen provecho!",
     "meaningInSourceLanguage": "Enjoy your meal",
     "id": "fa83044ce0",
     "priority": 0,
+    "group": "2f4f49b572"
+  },
+  {
+    "type": "listeningExercise",
+    "answer": "¡Buen provecho!",
+    "meaning": "Enjoy your meal",
+    "audio": "¡buen_provecho!",
+    "id": "c921093dd8",
+    "priority": 1,
     "group": "2f4f49b572"
   },
   {
@@ -16,6 +25,15 @@
     "group": "48dcc7d5bf"
   },
   {
+    "type": "listeningExercise",
+    "answer": "Por favor",
+    "meaning": "Please",
+    "audio": "por_favor",
+    "id": "3cef689889",
+    "priority": 1,
+    "group": "48dcc7d5bf"
+  },
+  {
     "type": "options",
     "formInTargetLanguage": "Pan, por favor",
     "meaningInSourceLanguage": "Bread, please",
@@ -24,11 +42,29 @@
     "group": "75c2b7ee32"
   },
   {
+    "type": "listeningExercise",
+    "answer": "Pan, por favor",
+    "meaning": "Bread, please",
+    "audio": "pan,_por_favor",
+    "id": "404eacdb9c",
+    "priority": 1,
+    "group": "75c2b7ee32"
+  },
+  {
     "type": "options",
     "formInTargetLanguage": "Pasta, por favor",
     "meaningInSourceLanguage": "Pasta, please",
     "id": "4407ec5b3e",
     "priority": 0,
+    "group": "8f89e5bb77"
+  },
+  {
+    "type": "listeningExercise",
+    "answer": "Pasta, por favor",
+    "meaning": "Pasta, please",
+    "audio": "pasta,_por_favor",
+    "id": "32e41b5219",
+    "priority": 1,
     "group": "8f89e5bb77"
   },
   {

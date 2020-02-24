@@ -56,6 +56,15 @@ def export_skill(export_path, skill):
                 "priority": 0,
                 "group": opaqueId(learnsentence),
             },
+            {
+                "type": "listeningExercise",
+                "answer": learnsentence.formInTargetLanguage,
+                "meaning": learnsentence.meaningInSourceLanguage,
+                "audio": learnsentence.formInTargetLanguage.lower().replace(' ', '_'),
+                "id": opaqueId(learnsentence, "listeningExercise"),
+                "priority": 1,
+                "group": opaqueId(learnsentence),
+            },
         ]
 
     for learnword in skill.learnword_set.all():
