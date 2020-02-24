@@ -46,6 +46,18 @@ def export_course_data(export_path, course):
 
 def export_skill(export_path, skill):
     data = []
+    for learnsentence in skill.learnsentence_set.all():
+        data = data + [
+            {
+                "type": "options",
+                "formInTargetLanguage": learnsentence.formInTargetLanguage,
+                "meaningInSourceLanguage": learnsentence.meaningInSourceLanguage,
+                "id": opaqueId(learnsentence, "options"),
+                "priority": 0,
+                "group": opaqueId(learnsentence),
+            },
+        ]
+
     for learnword in skill.learnword_set.all():
         data = data + [
             {

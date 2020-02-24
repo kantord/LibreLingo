@@ -18,6 +18,14 @@ class LearnWord(models.Model):
     image3 = models.TextField(choices=VALID_IMAGE_NAMES)
 
 
+class LearnSentence(models.Model):
+    class Meta:
+        verbose_name = "Learn a new sentence"
+    skill = models.ForeignKey('Skill', on_delete=models.CASCADE)
+    meaningInSourceLanguage = models.TextField(verbose_name="Meaning in source language")
+    formInTargetLanguage = models.TextField(verbose_name="Meaning in target language")
+
+
 class Course(models.Model):
     class Meta:
         verbose_name = "Language course"

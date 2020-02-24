@@ -3,6 +3,7 @@ from django import forms
 from adminsortable2.admin import SortableInlineAdminMixin
 
 from .models import LearnWord
+from .models import LearnSentence
 from .models import Course
 from .models import Module
 from .models import Skill
@@ -76,15 +77,38 @@ class LearnWordForm(forms.ModelForm):
         }
 
 
+class LearnSentenceForm(forms.ModelForm):
+    class Meta:
+        model = LearnSentence
+        exclude = []
+        widgets = {
+            'meaningInSourceLanguage': forms.TextInput(),
+            'formInTargetLanguage': forms.TextInput()
+        }
+
 class LearnWordInline(admin.TabularInline):
     model = LearnWord
     form = LearnWordForm
     show_change_link = True
 
 
+class LearnSentenceInline(admin.TabularInline):
+    model = LearnSentence
+    form = LearnSentenceForm
+    show_change_link = True
+
+
+class LearnSentenceAdmin(admin.ModelAdmin):
+    form = LearnSentenceForm
+    list_display = ('formInTargetLanguage', )
+
+
+admin.site.register(LearnSentence, LearnSentenceAdmin)
+
+
 class SkillAdmin(admin.ModelAdmin):
     inlines = [
-        LearnWordInline
+        LearnWordInline, LearnSentenceInline
     ]
     form = SkillForm
     list_display = ('name', )
