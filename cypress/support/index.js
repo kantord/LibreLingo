@@ -21,6 +21,6 @@ import "./commands"
 
 import "@cypress/code-coverage/support"
 
-after(() => {
-    cy.contains(/undefined/).should("not.be.visible")
+afterEach(() => {
+    cy.contains(/undefined/).should("not.exist")
 })
