@@ -6,7 +6,7 @@
   import { fade } from "svelte/transition";
   import OptionDeck from "../OptionDeck";
   import ChallengePanel from "../ChallengePanel";
-  import { prepareChallenge } from "./logic";
+  import { prepareChallenge } from "../../logic";
 
   export let currentChallenge;
   export let alternativeChallenges;
