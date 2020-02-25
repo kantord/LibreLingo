@@ -15,6 +15,10 @@ describe("OptionSelection", () => {
                 .should("have.length", 3)
         })
 
+        it("undefined not seen on the page", () => {
+            cy.contains(/undefined/).should("not.exist")
+        })
+
         it("All options inactive", () => {
             cy.get(".options")
                 .find(".option[data-test=neutral]:visible")
