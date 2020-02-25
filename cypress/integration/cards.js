@@ -9,6 +9,10 @@ describe("Cards ", () => {
             cy.contains(/Which of these is/).should("be.visible")
         })
 
+        it("undefined not seen on the page", () => {
+            cy.contains(/undefined/).should("not.exist")
+        })
+
         it("Has 3 cards", () => {
             cy.get(".options")
                 .find(".card:visible")

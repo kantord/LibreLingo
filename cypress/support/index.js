@@ -20,7 +20,3 @@ import "./commands"
 // require('./commands')
 
 import "@cypress/code-coverage/support"
-
-afterEach(() => {
-    cy.contains(/undefined/).should("not.exist")
-})
