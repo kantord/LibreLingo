@@ -21,16 +21,16 @@ export const prepareChallenge = ({
 
     const incorrectOptionsSample = shuffle(incorrectOptions).slice(
         0,
-        numberOfCards
+        numberOfCards - 1
     )
     const incorrectOptionsWithFake =
         incorrectOptions.length >= 2
             ? [
-                ...incorrectOptionsSample.slice(0, numberOfCards - 2),
                 {
-                    ...incorrectOptionsSample[numberOfCards - 2],
+                    ...incorrectOptionsSample[0],
                     fake: true
-                }
+                },
+                ...incorrectOptionsSample.slice(1)
             ]
             : []
 

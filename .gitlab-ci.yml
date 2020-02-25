@@ -74,7 +74,7 @@ cy-shortInput:
     test_name: "shortInput"
   <<: *cypress
 
-cy-shortInput:
+cy-optionSelection:
   variables:
     test_name: "optionSelection"
   <<: *cypress
