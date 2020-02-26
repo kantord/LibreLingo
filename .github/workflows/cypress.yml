@@ -1,0 +1,17 @@
+name: Cypress
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Install dependencies
+      uses: Borales/actions-yarn@v2.1.0
+      with:
+        cmd: install
+    - uses: actions/checkout@v2
+    - name: Run Cypress
+      uses: cypress-io/github-action@v1.16.1
