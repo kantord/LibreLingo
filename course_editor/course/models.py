@@ -3,8 +3,11 @@ from pathlib import Path
 import csv
 
 
-with open(Path('../image_attributions.csv').resolve()) as f:
-    VALID_IMAGE_NAMES = [(o["image_name"], o["image_name"], ) for o in csv.DictReader(f)]
+try:
+    with open(Path('../image_attributions.csv').resolve()) as f:
+        VALID_IMAGE_NAMES = [(o["image_name"], o["image_name"], ) for o in csv.DictReader(f)]
+except:
+    VALID_IMAGE_NAMES = []
 
 
 class LearnWord(models.Model):
