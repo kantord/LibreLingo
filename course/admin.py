@@ -50,6 +50,12 @@ class SkillInline(SortableInlineAdminMixin, admin.StackedInline):
     model = Skill
     form = SkillForm
     show_change_link = True
+    readonly_fields = ('change_link',)
+    def change_link(self, obj):
+        if not obj.id:
+            return ""
+        return mark_safe('<a href="%s">Edit</a>' % \
+         ("/admin/course/course/%s/module/%s/skill/%s/change/" % (obj.module.id, obj.module.id, obj.id)))
 
 
 class LearnWordInline(admin.TabularInline):
