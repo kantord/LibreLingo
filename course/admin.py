@@ -84,6 +84,9 @@ class ModuleAdmin(SubAdmin):
     model = Module
     subadmins = [SkillAdmin]
     form = ModuleForm
+    inlines = [
+        SkillInline,
+    ]
     list_display = ('name', )
 
 
