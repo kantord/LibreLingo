@@ -17,7 +17,7 @@ cache:
     - node_modules
 
 install:
-  image: cypress/base:10
+  image: cypress/base:12.16.1
   stage: build
   script:
     - yarn install --frozen-lockfile --check-files
@@ -25,25 +25,25 @@ install:
     - npx cypress cache list
 
 eslint-src:
-  image: cypress/base:10
+  image: cypress/base:12.16.1
   stage: test
   script:
     - yarn eslint src
 
 eslint-cypress:
-  image: cypress/base:10
+  image: cypress/base:12.16.1
   stage: test
   script:
     - yarn eslint cypress
 
 jest:
-  image: cypress/base:10
+  image: cypress/base:12.16.1
   stage: test
   script:
     - yarn jest
 
 .cypress_template: &cypress
-  image: cypress/base:10
+  image: cypress/base:12.16.1
   stage: test
   script:
     - yarn run dev &
@@ -80,7 +80,7 @@ cy-optionSelection:
   <<: *cypress
 
 deploy-to-gh-pages:
-  image: cypress/base:10
+  image: cypress/base:12.16.1
   stage: deploy
   script:
     - NODE_ENV=production yarn export
