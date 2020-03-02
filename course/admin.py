@@ -2,6 +2,8 @@ from django.contrib import admin
 from django import forms
 from adminsortable2.admin import SortableInlineAdminMixin
 from subadmin import SubAdmin, RootSubAdmin
+from django.utils.safestring import mark_safe
+from django.urls import reverse
 
 from .models import LearnWord
 from .models import LearnSentence
@@ -94,6 +96,13 @@ class ModuleInline(SortableInlineAdminMixin, admin.TabularInline):
     model = Module
     form = ModuleForm
     show_change_link = True
+    readonly_fields = ('change_link',)
+    list_display = ('change_link' )
+    def change_link(self, obj):
+        if not obj.id:
+            return ""
+        return mark_safe('<a href="%s">Edit</a>' % \
+         ("/admin/course/course/%s/module/%s/change/" % (obj.course.id, obj.id)))
 
 
 class CourseForm(forms.ModelForm):
