@@ -13,7 +13,8 @@
     "test": "run-p --race dev cy:run",
     "lint": "prettier --write --plugin-search-dir=. ./**/*.svelte && eslint src --fix",
     "jest": "jest src",
-    "fetchPhotos": "./scripts/fetchPhotos.sh"
+    "fetchPhotos": "./scripts/fetchPhotos.sh",
+    "fetchAudios": "./scripts/fetchAudios.sh"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.12.1",
