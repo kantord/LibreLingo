@@ -19,10 +19,56 @@ class SkillForm(forms.ModelForm):
         }
 
 
+class LearnSentenceForm(forms.ModelForm):
+    class Meta:
+        model = LearnSentence
+        exclude = []
+        widgets = {
+            'meaningInSourceLanguage': forms.TextInput(),
+            'formInTargetLanguage': forms.TextInput()
+        }
+
+
+class LearnSentenceAdmin(admin.ModelAdmin):
+    form = LearnSentenceForm
+    list_display = ('formInTargetLanguage', )
+
+
+class LearnWordForm(forms.ModelForm):
+    class Meta:
+        model = LearnWord
+        exclude = []
+        widgets = {
+            'meaningInSourceLanguage': forms.TextInput(),
+            'formInTargetLanguage': forms.TextInput()
+        }
+
+
 class SkillInline(SortableInlineAdminMixin, admin.StackedInline):
     model = Skill
     form = SkillForm
     show_change_link = True
+
+
+class LearnWordInline(admin.TabularInline):
+    model = LearnWord
+    form = LearnWordForm
+    show_change_link = True
+
+
+class LearnSentenceInline(admin.TabularInline):
+    model = LearnSentence
+    form = LearnSentenceForm
+    show_change_link = True
+
+
+class SkillAdmin(SubAdmin):
+    inlines = [
+        LearnWordInline, LearnSentenceInline
+    ]
+    model = Skill
+    form = SkillForm
+    list_display = ('name', )
 
 
 class ModuleForm(forms.ModelForm):
@@ -36,9 +82,7 @@ class ModuleForm(forms.ModelForm):
 
 class ModuleAdmin(SubAdmin):
     model = Module
-    inlines = [
-        SkillInline,
-    ]
+    subadmins = [SkillAdmin]
     form = ModuleForm
     list_display = ('name', )
 
@@ -47,6 +91,7 @@ class ModuleInline(SortableInlineAdminMixin, admin.TabularInline):
     model = Module
     form = ModuleForm
     show_change_link = True
+
 
 class CourseForm(forms.ModelForm):
     class Meta:
@@ -67,56 +112,8 @@ class CourseAdmin(RootSubAdmin):
 
 admin.site.register(Course, CourseAdmin)
 
-class LearnWordForm(forms.ModelForm):
-    class Meta:
-        model = LearnWord
-        exclude = []
-        widgets = {
-            'meaningInSourceLanguage': forms.TextInput(),
-            'formInTargetLanguage': forms.TextInput()
-        }
-
-
-class LearnSentenceForm(forms.ModelForm):
-    class Meta:
-        model = LearnSentence
-        exclude = []
-        widgets = {
-            'meaningInSourceLanguage': forms.TextInput(),
-            'formInTargetLanguage': forms.TextInput()
-        }
-
-class LearnWordInline(admin.TabularInline):
-    model = LearnWord
-    form = LearnWordForm
-    show_change_link = True
-
-
-class LearnSentenceInline(admin.TabularInline):
-    model = LearnSentence
-    form = LearnSentenceForm
-    show_change_link = True
-
-
-class LearnSentenceAdmin(admin.ModelAdmin):
-    form = LearnSentenceForm
-    list_display = ('formInTargetLanguage', )
-
-
-
-
-class SkillAdmin(admin.ModelAdmin):
-    inlines = [
-        LearnWordInline, LearnSentenceInline
-    ]
-    form = SkillForm
-    list_display = ('name', )
-
 
 class LearnWordAdmin(admin.ModelAdmin):
     form = LearnWordForm
     list_display = ('formInTargetLanguage', )
-
-
-
 
