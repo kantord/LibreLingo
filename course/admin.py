@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django import forms
 from adminsortable2.admin import SortableInlineAdminMixin
+from subadmin import SubAdmin, RootSubAdmin
 
 from .models import LearnWord
 from .models import LearnSentence
@@ -33,14 +34,13 @@ class ModuleForm(forms.ModelForm):
         }
 
 
-class ModuleAdmin(admin.ModelAdmin):
+class ModuleAdmin(SubAdmin):
+    model = Module
     inlines = [
         SkillInline,
     ]
     form = ModuleForm
     list_display = ('name', )
-
-admin.site.register(Module, ModuleAdmin)
 
 
 class ModuleInline(SortableInlineAdminMixin, admin.TabularInline):
@@ -54,16 +54,16 @@ class CourseForm(forms.ModelForm):
         exclude = []
         widgets = {
             'language_name': forms.TextInput(),
-            'source_language_name': forms.TextInput()
+            'source_language_name': forms.TextInput(),
+            'target_language_code': forms.TextInput(),
         }
 
 
-class CourseAdmin(admin.ModelAdmin):
-    inlines = [
-        ModuleInline,
-    ]
+class CourseAdmin(RootSubAdmin):
     form = CourseForm
     list_display = ('language_name', 'source_language_name')
+    subadmins = [ModuleAdmin]
+
 
 admin.site.register(Course, CourseAdmin)
 
@@ -103,7 +103,6 @@ class LearnSentenceAdmin(admin.ModelAdmin):
     list_display = ('formInTargetLanguage', )
 
 
-admin.site.register(LearnSentence, LearnSentenceAdmin)
 
 
 class SkillAdmin(admin.ModelAdmin):
@@ -119,7 +118,5 @@ class LearnWordAdmin(admin.ModelAdmin):
     list_display = ('formInTargetLanguage', )
 
 
-admin.site.register(Skill, SkillAdmin)
 
 
-admin.site.register(LearnWord, LearnWordAdmin)
