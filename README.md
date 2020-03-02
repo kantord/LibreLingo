@@ -18,10 +18,10 @@ Once course content is properly decoupled from the software, it should be possib
 ## Screenshots
 
 <div align="center">
-    <img src="/screenshots/screenshot1.png" width="400px"></img> 
-    <img src="/screenshots/screenshot2.png" width="400px"></img> 
-    <img src="/screenshots/screenshot3.png" width="400px"></img> 
-    <img src="/screenshots/screenshot4.png" width="400px"></img> 
+    <img src="/docs/screenshots/screenshot1.png" width="400px"></img> 
+    <img src="/docs/screenshots/screenshot2.png" width="400px"></img> 
+    <img src="/docs/screenshots/screenshot3.png" width="400px"></img> 
+    <img src="/docs/screenshots/screenshot4.png" width="400px"></img> 
 </div>
 
 
