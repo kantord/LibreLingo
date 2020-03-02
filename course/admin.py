@@ -107,6 +107,9 @@ class CourseForm(forms.ModelForm):
 class CourseAdmin(RootSubAdmin):
     form = CourseForm
     list_display = ('language_name', 'source_language_name')
+    inlines = [
+        ModuleInline,
+    ]
     subadmins = [ModuleAdmin]
 
 
