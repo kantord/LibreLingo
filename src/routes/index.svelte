@@ -1,10 +1,11 @@
 <script>
   import NavBar from "../components/NavBar";
   import GitHubForkRibbon from "../components/GitHubForkRibbon";
+  import { _ } from "svelte-i18n";
 </script>
 
 <svelte:head>
-  <title>LibreLingo - learn a langauge for free</title>
+  <title>{$_('meta.title')}</title>
 </svelte:head>
 
 <section class="hero is-primary is-bold is-fullheight">
@@ -16,16 +17,14 @@
       <h1 class="title">
         <img src="images/logo.svg" alt="LibreLingo" />
       </h1>
-      <h2 class="subtitle">
-        an experiment to create a community driven language-learning platform
-      </h2>
+      <h2 class="subtitle">{$_('index.subtitle')}</h2>
       <a
         class="button is-primary is-inverted is-outlined"
         href="course/spanish-from-english">
-        Start learning Spanish
+        {$_('index.start_spanish_course')}
       </a>
       <a class="button is-primary is-inverted is-outlined" href="about">
-        About LibreLingo
+        {$_('index.about_librelingo')}
       </a>
     </div>
 

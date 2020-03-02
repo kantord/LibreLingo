@@ -2,6 +2,7 @@ import sirv from "sirv"
 import polka from "polka"
 import compression from "compression"
 import * as sapper from "@sapper/server"
+import "./i18n"
 
 // eslint-disable-next-line no-undef
 const { PORT, NODE_ENV } = process.env
