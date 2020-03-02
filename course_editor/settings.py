@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'course',
     'adminsortable2',
+    'subadmin',
 ]
 
 MIDDLEWARE = [
