@@ -120,6 +120,42 @@
   }
 },
 {
+  "model": "course.learnsentence",
+  "pk": 1,
+  "fields": {
+    "skill": 1,
+    "meaningInSourceLanguage": "Enjoy your meal",
+    "formInTargetLanguage": "\u00a1Buen provecho!"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 2,
+  "fields": {
+    "skill": 1,
+    "meaningInSourceLanguage": "Please",
+    "formInTargetLanguage": "Por favor"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 3,
+  "fields": {
+    "skill": 1,
+    "meaningInSourceLanguage": "Bread, please",
+    "formInTargetLanguage": "Pan, por favor"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 4,
+  "fields": {
+    "skill": 1,
+    "meaningInSourceLanguage": "Water, please",
+    "formInTargetLanguage": "Agua, por favor"
+  }
+},
+{
   "model": "course.course",
   "pk": 1,
   "fields": {
