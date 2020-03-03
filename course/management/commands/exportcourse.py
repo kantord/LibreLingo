@@ -109,7 +109,7 @@ def export_course(course):
     language_id = course.language_name.lower()
     source_language_id = course.source_language_name.lower()
     course_id = "{}-from-{}".format(language_id, source_language_id)
-    export_path = Path("../src/courses/{}".format(course_id)).resolve()
+    export_path = Path("./src/courses/{}".format(course_id)).resolve()
     print("Exporting to {}".format(export_path))
     print("Making sure course directory exists")
     Path(export_path).mkdir(parents=True, exist_ok=True)
@@ -123,5 +123,5 @@ def export_course(course):
             for learnword in skill.learnword_set.all():
                 audios_to_fetch.append(learnword.formInTargetLanguage)
 
-    with open(Path(export_path) / ".." / ".." / ".." / "audios_to_fetch.csv", 'w', encoding='utf-8') as f:
+    with open(Path(export_path) / ".." / ".." / ".." / "src" / "audios_to_fetch.csv", 'w', encoding='utf-8') as f:
         f.write("\n".join(audios_to_fetch))

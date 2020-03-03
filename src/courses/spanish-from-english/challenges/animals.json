@@ -183,5 +183,42 @@
     "id": "94a0b8398d",
     "priority": 1,
     "group": "1d1dacd127"
+  },
+  {
+    "type": "cards",
+    "pictures": [
+      "horse1.jpg",
+      "horse2.jpg",
+      "horse3.jpg"
+    ],
+    "formInTargetLanguage": "caballo",
+    "meaningInSourceLanguage": "horse",
+    "id": "8940e6f3d4",
+    "priority": 0,
+    "group": "f482f4b670"
+  },
+  {
+    "type": "shortInput",
+    "pictures": [
+      "horse1.jpg",
+      "horse2.jpg",
+      "horse3.jpg"
+    ],
+    "formInTargetLanguage": [
+      "caballo"
+    ],
+    "meaningInSourceLanguage": "horse",
+    "id": "e61012b98d",
+    "priority": 1,
+    "group": "f482f4b670"
+  },
+  {
+    "type": "listeningExercise",
+    "answer": "caballo",
+    "meaning": "horse",
+    "audio": "caballo",
+    "id": "b5607942b0",
+    "priority": 1,
+    "group": "f482f4b670"
   }
 ]

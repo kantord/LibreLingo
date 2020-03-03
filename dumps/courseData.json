@@ -108,6 +108,18 @@
   }
 },
 {
+  "model": "course.learnword",
+  "pk": 15,
+  "fields": {
+    "skill": 2,
+    "meaningInSourceLanguage": "horse",
+    "formInTargetLanguage": "caballo",
+    "image1": "horse1",
+    "image2": "horse2",
+    "image3": "horse3"
+  }
+},
+{
   "model": "course.course",
   "pk": 1,
   "fields": {
