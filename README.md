@@ -95,7 +95,7 @@ Testing is done using Jest and Cypress. Other technology in use include: bulma, 
 
 ## Development
 
-[Development documentation is available on Read the Docs](https://readthedocs.org/dashboard/import/)
+[Development documentation is available on Read the Docs](https://librelingo.readthedocs.io/en/latest/)
 
 
 ## Contributors ✨
