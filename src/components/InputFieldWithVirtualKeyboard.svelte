@@ -52,18 +52,6 @@
   };
 </script>
 
-<div class="keyboard">
-  {#each specialCharacters as specialCharacter}
-    <button
-      type="button"
-      tabindex="-1"
-      class="button key is-small is-light"
-      {disabled}
-      on:click="{handleVirtualKey(specialCharacter)}">
-      {specialCharacter}
-    </button>
-  {/each}
-</div>
 <input
   tabindex="0"
   data-test="answer"
@@ -77,3 +65,29 @@
   use:focusMe
   bind:value
   bind:this="{inputFieldRef}" />
+
+<div class="keyboard">
+  {#each specialCharacters as specialCharacter}
+    <button
+      type="button"
+      tabindex="-1"
+      class="button key is-small is-light"
+      {disabled}
+      on:click="{handleVirtualKey(specialCharacter)}">
+      {specialCharacter}
+    </button>
+  {/each}
+</div>
+
+<style>
+  .keyboard {
+    margin-top: 2em;
+
+    .key {
+      font-family: monospace;
+      margin: 1em;
+      margin-left: 0;
+      margin-top: 0;
+    }
+  }
+</style>
