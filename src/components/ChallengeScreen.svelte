@@ -90,6 +90,7 @@
               <ListeningChallenge
                 {languageName}
                 {languageCode}
+                {specialCharacters}
                 {registerResult}
                 {resolveChallenge}
                 {challenge} />

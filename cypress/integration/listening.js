@@ -6,6 +6,12 @@ describe("Listening exercises", () => {
             cy.visit(LISTENING_TEST_URL(0))
         })
 
+        it("Has virtual keyboard", () => {
+            cy.get(".keyboard")
+                .find(".key")
+                .should("have.length", 16)
+        })
+
         it("Has correct instruction", () => {
             cy.contains(/Type what you hear/).should("be.visible")
         })

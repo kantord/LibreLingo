@@ -10,7 +10,7 @@ describe("Short inputs", () => {
             it("Has 4 keys", () => {
                 cy.get(".keyboard")
                     .find(".key")
-                    .should("have.length", 4)
+                    .should("have.length", 16)
             })
 
             it("Keys have proper label", () => {
