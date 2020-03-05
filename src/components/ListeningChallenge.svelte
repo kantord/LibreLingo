@@ -5,6 +5,7 @@
   import levenshtein from "js-levenshtein";
   import shuffle from "lodash.shuffle";
   import ChallengePanel from "./ChallengePanel";
+  import InputFieldWithVirtualKeyboard from "./InputFieldWithVirtualKeyboard";
   import playVoice from "../media/voice";
 
   export let challenge;
@@ -12,11 +13,11 @@
   export let resolveChallenge;
   export let languageName;
   export let languageCode;
+  export let specialCharacters;
   let answer = null;
   let submitted = false;
   let correct = null;
   let spellingSuggestion = "";
-  let inputFieldRef = null;
 
   $: submitChallenge = () => {
     if (!answer) return;
@@ -44,7 +45,6 @@
     }
 
     registerResult(correct);
-    inputFieldRef.blur();
     submitted = true;
   };
 
@@ -52,16 +52,6 @@
     answer = null;
     submitted = false;
     resolveChallenge();
-  };
-
-  const focusMe = el => {
-    setTimeout(() => {
-      if (el.disabled) {
-        el.blur();
-      } else {
-        el.focus();
-      }
-    }, 1);
   };
 
   const playChallengeVoice = () => playVoice(challenge.audio);
@@ -101,18 +91,10 @@
     </div>
 
     <div class="column">
-      <input
-        tabindex="0"
-        data-test="answer"
-        type="text"
-        class="input"
-        autofocus
-        placeholder="Type your answer…"
+      <InputFieldWithVirtualKeyboard
+        {specialCharacters}
+        {languageCode}
         disabled="{submitted}"
-        spellcheck="false"
-        lang="{languageCode}"
-        use:focusMe
-        bind:this="{inputFieldRef}"
         bind:value="{answer}" />
 
     </div>
