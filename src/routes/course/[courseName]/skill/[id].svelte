@@ -1,7 +1,7 @@
 <script context="module">
   export async function preload(page, session) {
     const { id, courseName } = page.params;
-    const { languageName, languageCode } = await import(
+    const { languageName, languageCode, specialCharacters } = await import(
       `../../../../courses/${courseName}/courseData.json`
     );
     const rawChallenges = await import(
@@ -12,6 +12,7 @@
       rawChallenges: Array.from(rawChallenges.default),
       languageName,
       languageCode,
+      specialCharacters,
       id,
       courseURL: `/course/${courseName}`
     };
@@ -25,6 +26,7 @@
   export let rawChallenges;
   export let languageName;
   export let languageCode;
+  export let specialCharacters;
   export let id;
   export let courseURL;
 </script>
@@ -39,5 +41,6 @@
   {rawChallenges}
   {languageName}
   {languageCode}
+  {specialCharacters}
   {sortChallengeGroups}
   {courseURL} />

@@ -30,6 +30,7 @@ def export_course_data(export_path, course):
     data = {
         "languageName": course.language_name,
         "languageCode": course.target_language_code,
+        "specialCharacters": course.special_characters.split(' '),
         "modules": [{
             "title": module.name,
             "skills": [{
