@@ -12,6 +12,7 @@
   export let rawChallenges;
   export let languageName;
   export let languageCode;
+  export let specialCharacters;
   export let sortChallengeGroups;
   export let courseURL;
   let challenges = sortChallengeGroups(shuffle(rawChallenges));
@@ -80,6 +81,7 @@
               <ShortInputChallenge
                 {languageName}
                 {languageCode}
+                {specialCharacters}
                 {registerResult}
                 {resolveChallenge}
                 {challenge} />

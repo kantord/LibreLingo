@@ -6,6 +6,39 @@ describe("Short inputs", () => {
             cy.visit(CARDS_TEST_URL(0))
         })
 
+        describe("Virtual keyboard", () => {
+            it("Has 4 keys", () => {
+                cy.get(".keyboard")
+                    .find(".key")
+                    .should("have.length", 4)
+            })
+
+            it("Keys have proper label", () => {
+                cy.get(".keyboard")
+                    .find(".key")
+                    .contains("á")
+                    .should("be.visible")
+            })
+
+            it("Clicking a key types into input field", () => {
+                cy.get(".keyboard")
+                    .find(".key")
+                    .contains("á")
+                    .click()
+
+                cy.get("input").should("have.value", "á")
+            })
+
+            it("Virtual keyboard should be inactive after submit", () => {
+                cy.get("input[type=text]").type("asdfg")
+                cy.contains("Submit").click()
+                cy.get(".keyboard")
+                    .find(".key")
+                    .contains("á")
+                    .should("be.disabled")
+            })
+        })
+
         it("Has correct instruction", () => {
             cy.contains(/Type/).should("be.visible")
             cy.contains(/dog/).should("be.visible")
