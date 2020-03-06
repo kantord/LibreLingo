@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[23],{97:function(a){a.exports=JSON.parse('{"languageName":"Test Language","languageCode":"test","specialCharacters":["á","Á","é","É","á","Á","é","É","á","Á","é","É","á","Á","é","É"]}')}}]);
