@@ -21,7 +21,7 @@ yarn export
 
 This will create a `__sapper__/export` folder with a production-ready build of your site.
 
-See Sapper's documentation for more detail: https://sapper.svelte.dev/docs#Exporting
+See Sapper's documentation for more detail: [https://sapper.svelte.dev/docs#Exporting](https://sapper.svelte.dev/docs#Exporting)
 
 
 ## Using the course editor
@@ -32,6 +32,6 @@ The course editor is implemented as a django project in the `course_editor` fold
 
 If you want to set up your course editor with real data, you can find a database dump here: `src/courses/spanish-from-english/courseData.json`
 
-Check out Django's documentation about database dumps: https://docs.djangoproject.com/en/3.0/ref/django-admin/#loaddata
+Check out Django's documentation about database dumps: [https://docs.djangoproject.com/en/3.0/ref/django-admin/#loaddata](https://docs.djangoproject.com/en/3.0/ref/django-admin/#loaddata)
 
 
