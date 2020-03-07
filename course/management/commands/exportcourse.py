@@ -17,6 +17,10 @@ def audioId(language_id, text):
     return hash.hexdigest()
 
 
+def clean_word(word):
+    return "".join(c for c in word if c.isalnum())
+
+
 class Command(BaseCommand):
     help = 'Exports a given langauge course'
 
@@ -71,6 +75,16 @@ def export_skill(export_path, skill, language_id):
                 "audio": audioId(language_id, learnsentence.formInTargetLanguage),
                 "id": opaqueId(learnsentence, "listeningExercise"),
                 "priority": 1,
+                "group": opaqueId(learnsentence),
+            },
+            {
+                "type": "chips",
+                "meaningInSourceLanguage": learnsentence.meaningInSourceLanguage,
+                "chips": [clean_word(w) for w in learnsentence.formInTargetLanguage.split()],
+                "solution": [clean_word(w) for w in learnsentence.formInTargetLanguage.split()],
+                "formInTargetLanguage": learnsentence.formInTargetLanguage,
+                "id": opaqueId(learnsentence, "chips"),
+                "priority": 2,
                 "group": opaqueId(learnsentence),
             },
         ]
