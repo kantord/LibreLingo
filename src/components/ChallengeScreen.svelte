@@ -4,6 +4,7 @@
   import OptionChallenge from "./OptionChallenge";
   import ShortInputChallenge from "./ShortInputChallenge";
   import ListeningChallenge from "./ListeningChallenge";
+  import ChipsChallenge from "./ChipsChallenge";
   import FanfareScreen from "./FanfareScreen";
   import ProgressBar from "./ProgressBar";
   import shuffle from "lodash.shuffle";
@@ -95,6 +96,9 @@
                 {registerResult}
                 {resolveChallenge}
                 {challenge} />
+            {/if}
+            {#if challenge.type === 'chips'}
+              <ChipsChallenge {registerResult} {resolveChallenge} {challenge} />
             {/if}
           </div>
         {/if}

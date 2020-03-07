@@ -79,6 +79,11 @@ cy-optionSelection:
     test_name: "optionSelection"
   <<: *cypress
 
+cy-chips:
+  variables:
+    test_name: "chips"
+  <<: *cypress
+
 deploy-to-gh-pages:
   image: cypress/base:12.16.1
   stage: deploy
