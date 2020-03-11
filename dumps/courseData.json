@@ -120,6 +120,42 @@
   }
 },
 {
+  "model": "course.learnword",
+  "pk": 16,
+  "fields": {
+    "skill": 6,
+    "meaningInSourceLanguage": "The river",
+    "formInTargetLanguage": "Der Fluss",
+    "image1": "river1",
+    "image2": "river2",
+    "image3": "river3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 17,
+  "fields": {
+    "skill": 6,
+    "meaningInSourceLanguage": "The book",
+    "formInTargetLanguage": "Das buch",
+    "image1": "book1",
+    "image2": "book2",
+    "image3": "book3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 18,
+  "fields": {
+    "skill": 6,
+    "meaningInSourceLanguage": "The color",
+    "formInTargetLanguage": "Die Farbe",
+    "image1": "color1",
+    "image2": "color2",
+    "image3": "color3"
+  }
+},
+{
   "model": "course.learnsentence",
   "pk": 1,
   "fields": {
@@ -166,10 +202,29 @@
   }
 },
 {
+  "model": "course.course",
+  "pk": 2,
+  "fields": {
+    "language_name": "German",
+    "source_language_name": "English",
+    "target_language_code": "de",
+    "special_characters": "\u00e4 \u00c4 \u00f6 \u00d6 \u00fc \u00dc \u00df \u1e9e"
+  }
+},
+{
   "model": "course.module",
   "pk": 1,
   "fields": {
     "course": 1,
+    "name": "Basics",
+    "order": 1
+  }
+},
+{
+  "model": "course.module",
+  "pk": 2,
+  "fields": {
+    "course": 2,
     "name": "Basics",
     "order": 1
   }
@@ -196,6 +251,54 @@
     "image1": "dog1",
     "image2": "lion3",
     "image3": "cat3"
+  }
+},
+{
+  "model": "course.skill",
+  "pk": 3,
+  "fields": {
+    "module": 2,
+    "name": "Clothes",
+    "order": 1,
+    "image1": "t-shirt2",
+    "image2": "dress2",
+    "image3": "trousers3"
+  }
+},
+{
+  "model": "course.skill",
+  "pk": 4,
+  "fields": {
+    "module": 2,
+    "name": "Fruits",
+    "order": 2,
+    "image1": "pineapple2",
+    "image2": "banana1",
+    "image3": "strawberry3"
+  }
+},
+{
+  "model": "course.skill",
+  "pk": 5,
+  "fields": {
+    "module": 2,
+    "name": "Nature",
+    "order": 3,
+    "image1": "sky2",
+    "image2": "sun2",
+    "image3": "rock2"
+  }
+},
+{
+  "model": "course.skill",
+  "pk": 6,
+  "fields": {
+    "module": 2,
+    "name": "Village",
+    "order": 0,
+    "image1": "village1",
+    "image2": "village2",
+    "image3": "village3"
   }
 }
 ]

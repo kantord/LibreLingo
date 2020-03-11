@@ -16,7 +16,7 @@
     "fetchPhotos": "./scripts/fetchPhotos.sh",
     "fetchAudios": "./scripts/fetchAudios.sh",
     "downloadCourseData": "heroku run -a librelingo-course-editor python manage.py dumpdata course --indent=2 > ./dumps/courseData.json",
-    "loadCourseDataLocally": "yarn downloadCourseData && rm db.sqlite3 && python manage.py migrate && python manage.py loaddata ./dumps/courseData.json",
+    "loadCourseDataLocally": "yarn downloadCourseData && rm -f db.sqlite3 && python manage.py migrate && python manage.py loaddata ./dumps/courseData.json",
     "exportCourse": "yarn loadCourseDataLocally && python manage.py exportcourse",
     "docs": "mkdocs serve"
   },
