@@ -23,6 +23,11 @@
         href="course/spanish-from-english">
         {$_('index.start_spanish_course')}
       </a>
+      <a
+        class="button is-primary is-inverted is-outlined is-hidden"
+        href="course/german-from-english">
+        {$_('index.start_german_course')}
+      </a>
       <a class="button is-primary is-inverted is-outlined" href="about">
         {$_('index.about_librelingo')}
       </a>
