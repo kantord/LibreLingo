@@ -10,6 +10,13 @@ def opaqueId(obj, salt=""):
     hash.update((obj._meta.model_name + str(obj.pk) + salt).encode('utf-8'))
     return hash.hexdigest()[0:10]
 
+
+def audioId(language_id, text):
+    hash = hashlib.sha256()
+    hash.update((language_id + "|" + text).encode('utf-8'))
+    return hash.hexdigest()
+
+
 class Command(BaseCommand):
     help = 'Exports a given langauge course'
 
@@ -45,7 +52,7 @@ def export_course_data(export_path, course):
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 
-def export_skill(export_path, skill):
+def export_skill(export_path, skill, language_id):
     data = []
     for learnsentence in skill.learnsentence_set.all():
         data = data + [
@@ -61,7 +68,7 @@ def export_skill(export_path, skill):
                 "type": "listeningExercise",
                 "answer": learnsentence.formInTargetLanguage,
                 "meaning": learnsentence.meaningInSourceLanguage,
-                "audio": learnsentence.formInTargetLanguage.lower().replace(' ', '_'),
+                "audio": audioId(language_id, learnsentence.formInTargetLanguage),
                 "id": opaqueId(learnsentence, "listeningExercise"),
                 "priority": 1,
                 "group": opaqueId(learnsentence),
@@ -92,7 +99,7 @@ def export_skill(export_path, skill):
                 "type": "listeningExercise",
                 "answer": learnword.formInTargetLanguage,
                 "meaning": learnword.meaningInSourceLanguage,
-                "audio": learnword.formInTargetLanguage.lower().replace(' ', '_'),
+                "audio": audioId(language_id, learnword.formInTargetLanguage),
                 "id": opaqueId(learnword, "listeningExercise"),
                 "priority": 1,
                 "group": opaqueId(learnword),
@@ -120,9 +127,11 @@ def export_course(course):
     for module in course.module_set.all():
         for skill in module.skill_set.all():
             print("Exporting skill {}".format(str(skill)))
-            export_skill(export_path, skill)
+            export_skill(export_path, skill, language_id)
             for learnword in skill.learnword_set.all():
-                audios_to_fetch.append(learnword.formInTargetLanguage)
+                audios_to_fetch.append("{}|{}|{}".format(language_id, audioId(language_id, learnword.formInTargetLanguage), learnword.formInTargetLanguage))
+            for learnsentence in skill.learnsentence_set.all():
+                audios_to_fetch.append("{}|{}|{}".format(language_id, audioId(language_id, learnsentence.formInTargetLanguage), learnsentence.formInTargetLanguage))
 
     with open(Path(export_path) / ".." / ".." / ".." / "src" / "audios_to_fetch.csv", 'w', encoding='utf-8') as f:
         f.write("\n".join(audios_to_fetch))
