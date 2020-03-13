@@ -61,8 +61,9 @@
       {#each challenges as challenge, i (challenge.id)}
         {#if challenge.id === currentChallenge.id}
           <div
-            out:fade="{{ duration: 300 }}"
-            in:fade="{{ duration: 300, delay: 300 }}">
+            class="challenge"
+            in:fade|local="{{ duration: 300, delay: 300 }}"
+            out:fade|local="{{ duration: 300 }}">
             {#if challenge.type === 'cards'}
               <DeckChallenge
                 {currentChallenge}
@@ -112,5 +113,10 @@
 <style>
   .section {
     padding: 1.5em;
+  }
+
+  .challenge {
+    position: absolute;
+    width: 100%;
   }
 </style>
