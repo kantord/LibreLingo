@@ -121,9 +121,117 @@
 },
 {
   "model": "course.learnword",
-  "pk": 16,
+  "pk": 19,
   "fields": {
-    "skill": 6,
+    "skill": 3,
+    "meaningInSourceLanguage": "The shirt",
+    "formInTargetLanguage": "Das Hemd",
+    "image1": "shirt1",
+    "image2": "shirt2",
+    "image3": "shirt3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 20,
+  "fields": {
+    "skill": 3,
+    "meaningInSourceLanguage": "The dress",
+    "formInTargetLanguage": "Das Kleid",
+    "image1": "dress1",
+    "image2": "dress3",
+    "image3": "dress2"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 21,
+  "fields": {
+    "skill": 3,
+    "meaningInSourceLanguage": "The trousers",
+    "formInTargetLanguage": "Die Hose",
+    "image1": "trousers1",
+    "image2": "trousers2",
+    "image3": "trousers3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 22,
+  "fields": {
+    "skill": 4,
+    "meaningInSourceLanguage": "The pineapple",
+    "formInTargetLanguage": "Die Ananas",
+    "image1": "pineapple1",
+    "image2": "pineapple2",
+    "image3": "pineapple3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 23,
+  "fields": {
+    "skill": 4,
+    "meaningInSourceLanguage": "The banana",
+    "formInTargetLanguage": "Die Banane",
+    "image1": "banana1",
+    "image2": "banana2",
+    "image3": "banana3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 24,
+  "fields": {
+    "skill": 4,
+    "meaningInSourceLanguage": "The strawberry",
+    "formInTargetLanguage": "Die Erdbeere",
+    "image1": "strawberry1",
+    "image2": "strawberry2",
+    "image3": "strawberry3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 25,
+  "fields": {
+    "skill": 5,
+    "meaningInSourceLanguage": "The sky",
+    "formInTargetLanguage": "Der Himmel",
+    "image1": "sky1",
+    "image2": "sky2",
+    "image3": "sky3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 26,
+  "fields": {
+    "skill": 5,
+    "meaningInSourceLanguage": "The sun",
+    "formInTargetLanguage": "Die Sonne",
+    "image1": "sun1",
+    "image2": "sun2",
+    "image3": "sun3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 27,
+  "fields": {
+    "skill": 5,
+    "meaningInSourceLanguage": "The rock",
+    "formInTargetLanguage": "Der Stein",
+    "image1": "rock1",
+    "image2": "rock2",
+    "image3": "rock3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 28,
+  "fields": {
+    "skill": 5,
     "meaningInSourceLanguage": "The river",
     "formInTargetLanguage": "Der Fluss",
     "image1": "river1",
@@ -133,26 +241,50 @@
 },
 {
   "model": "course.learnword",
-  "pk": 17,
+  "pk": 29,
   "fields": {
-    "skill": 6,
-    "meaningInSourceLanguage": "The book",
-    "formInTargetLanguage": "Das buch",
-    "image1": "book1",
-    "image2": "book2",
-    "image3": "book3"
+    "skill": 5,
+    "meaningInSourceLanguage": "The sea",
+    "formInTargetLanguage": "Das Meer",
+    "image1": "sea1",
+    "image2": "sea2",
+    "image3": "sea3"
   }
 },
 {
   "model": "course.learnword",
-  "pk": 18,
+  "pk": 30,
   "fields": {
-    "skill": 6,
-    "meaningInSourceLanguage": "The color",
-    "formInTargetLanguage": "Die Farbe",
-    "image1": "color1",
-    "image2": "color2",
-    "image3": "color3"
+    "skill": 5,
+    "meaningInSourceLanguage": "The tree",
+    "formInTargetLanguage": "Der Baum",
+    "image1": "tree1",
+    "image2": "tree2",
+    "image3": "tree3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 31,
+  "fields": {
+    "skill": 5,
+    "meaningInSourceLanguage": "The mountain",
+    "formInTargetLanguage": "Der Berg",
+    "image1": "mountain1",
+    "image2": "mountain2",
+    "image3": "mountain3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 32,
+  "fields": {
+    "skill": 5,
+    "meaningInSourceLanguage": "The lake",
+    "formInTargetLanguage": "Der See",
+    "image1": "lake1",
+    "image2": "lake2",
+    "image3": "lake3"
   }
 },
 {
@@ -287,18 +419,6 @@
     "image1": "sky2",
     "image2": "sun2",
     "image3": "rock2"
-  }
-},
-{
-  "model": "course.skill",
-  "pk": 6,
-  "fields": {
-    "module": 2,
-    "name": "Village",
-    "order": 0,
-    "image1": "village1",
-    "image2": "village2",
-    "image3": "village3"
   }
 }
 ]
