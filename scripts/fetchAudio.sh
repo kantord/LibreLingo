@@ -8,6 +8,12 @@ echo $filename
 
 voice=$(echo $1 | cut -d'|' -f1 \
        	| sed 's/spanish/Lupe/g' \
+       	| sed 's/german/Vicki/g' \
+)
+
+engine=$(echo $1 | cut -d'|' -f1 \
+       	| sed 's/spanish/neural/g' \
+       	| sed 's/german/standard/g' \
 )
 
 
@@ -19,7 +25,7 @@ fi
 aws2 polly synthesize-speech \
     --output-format mp3 \
     --voice-id $voice \
-    --engine neural \
+    --engine $engine \
     --text "$sentence" \
     ./static/voice/$filename.mp3 \
     > /dev/null
