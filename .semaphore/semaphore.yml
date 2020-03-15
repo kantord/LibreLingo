@@ -19,6 +19,7 @@ blocks:
       jobs:
         - name: jest
           commands:
+            - checkout
             - yarn jest
     dependencies:
       - Eslint
@@ -27,6 +28,7 @@ blocks:
       jobs:
         - name: cypress
           commands:
+            - checkout
             - yarn test
     dependencies:
       - Eslint Cypress
@@ -37,6 +39,7 @@ blocks:
       jobs:
         - name: eslint
           commands:
+            - checkout
             - yarn eslint src
   - name: Eslint Cypress
     dependencies:
@@ -45,6 +48,7 @@ blocks:
       jobs:
         - name: eslint
           commands:
+            - checkout
             - yarn eslint cypress
 promotions:
   - name: Deploy to production
