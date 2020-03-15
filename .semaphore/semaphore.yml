@@ -34,10 +34,9 @@ blocks:
             - sem-version node 12
             - checkout
             - cache restore
-            - yarn --check-files
-            - yarn test
-    dependencies:
-      - Install dependencies
+            - yarn install
+            - cache store
+    dependencies: []
   - name: Eslint
     dependencies:
       - Install dependencies
