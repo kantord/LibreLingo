@@ -288,6 +288,174 @@
   }
 },
 {
+  "model": "course.learnword",
+  "pk": 33,
+  "fields": {
+    "skill": 7,
+    "meaningInSourceLanguage": "dress",
+    "formInTargetLanguage": "vestido",
+    "image1": "dress2",
+    "image2": "dress3",
+    "image3": "dress1"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 34,
+  "fields": {
+    "skill": 7,
+    "meaningInSourceLanguage": "t-shirt",
+    "formInTargetLanguage": "camiseta",
+    "image1": "t-shirt1",
+    "image2": "t-shirt3",
+    "image3": "t-shirt2"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 35,
+  "fields": {
+    "skill": 7,
+    "meaningInSourceLanguage": "hat",
+    "formInTargetLanguage": "gorro",
+    "image1": "hat1",
+    "image2": "hat2",
+    "image3": "hat3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 36,
+  "fields": {
+    "skill": 7,
+    "meaningInSourceLanguage": "shoes",
+    "formInTargetLanguage": "zapatos",
+    "image1": "shoes3",
+    "image2": "shoes2",
+    "image3": "shoes1"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 37,
+  "fields": {
+    "skill": 7,
+    "meaningInSourceLanguage": "shirt",
+    "formInTargetLanguage": "camisa",
+    "image1": "shirt1",
+    "image2": "shirt3",
+    "image3": "shirt2"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 38,
+  "fields": {
+    "skill": 7,
+    "meaningInSourceLanguage": "skirt",
+    "formInTargetLanguage": "falda",
+    "image1": "skirt1",
+    "image2": "skirt2",
+    "image3": "skirt3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 39,
+  "fields": {
+    "skill": 7,
+    "meaningInSourceLanguage": "socks",
+    "formInTargetLanguage": "calcetines",
+    "image1": "socks2",
+    "image2": "socks1",
+    "image3": "socks3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 40,
+  "fields": {
+    "skill": 8,
+    "meaningInSourceLanguage": "sky",
+    "formInTargetLanguage": "cielo",
+    "image1": "sky1",
+    "image2": "sky2",
+    "image3": "sky3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 41,
+  "fields": {
+    "skill": 8,
+    "meaningInSourceLanguage": "river",
+    "formInTargetLanguage": "r\u00edo",
+    "image1": "river1",
+    "image2": "river2",
+    "image3": "river3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 42,
+  "fields": {
+    "skill": 8,
+    "meaningInSourceLanguage": "sun",
+    "formInTargetLanguage": "sol",
+    "image1": "sun1",
+    "image2": "sun2",
+    "image3": "sun3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 43,
+  "fields": {
+    "skill": 8,
+    "meaningInSourceLanguage": "sea",
+    "formInTargetLanguage": "mar",
+    "image1": "sea1",
+    "image2": "sea2",
+    "image3": "sea3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 44,
+  "fields": {
+    "skill": 8,
+    "meaningInSourceLanguage": "mountain",
+    "formInTargetLanguage": "monta\u00f1a",
+    "image1": "mountain1",
+    "image2": "mountain2",
+    "image3": "mountain3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 45,
+  "fields": {
+    "skill": 8,
+    "meaningInSourceLanguage": "lake",
+    "formInTargetLanguage": "lago",
+    "image1": "lake1",
+    "image2": "lake2",
+    "image3": "lake3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 46,
+  "fields": {
+    "skill": 8,
+    "meaningInSourceLanguage": "beach",
+    "formInTargetLanguage": "playa",
+    "image1": "beach1",
+    "image2": "beach2",
+    "image3": "beach3"
+  }
+},
+{
   "model": "course.learnsentence",
   "pk": 1,
   "fields": {
@@ -321,6 +489,51 @@
     "skill": 1,
     "meaningInSourceLanguage": "Water, please",
     "formInTargetLanguage": "Agua, por favor"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 5,
+  "fields": {
+    "skill": 7,
+    "meaningInSourceLanguage": "I like it!",
+    "formInTargetLanguage": "\u00a1Me gusta!"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 6,
+  "fields": {
+    "skill": 7,
+    "meaningInSourceLanguage": "How much is it?",
+    "formInTargetLanguage": "\u00bfCu\u00e1nto cuesta?"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 7,
+  "fields": {
+    "skill": 7,
+    "meaningInSourceLanguage": "Thank you",
+    "formInTargetLanguage": "Gracias"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 8,
+  "fields": {
+    "skill": 8,
+    "meaningInSourceLanguage": "Have a good trip!",
+    "formInTargetLanguage": "\u00a1Buen viaje!"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 9,
+  "fields": {
+    "skill": 8,
+    "meaningInSourceLanguage": "Let's go to the beach",
+    "formInTargetLanguage": "Vamos a la playa"
   }
 },
 {
@@ -419,6 +632,30 @@
     "image1": "sky2",
     "image2": "sun2",
     "image3": "rock2"
+  }
+},
+{
+  "model": "course.skill",
+  "pk": 7,
+  "fields": {
+    "module": 1,
+    "name": "Clothes",
+    "order": 3,
+    "image1": "dress2",
+    "image2": "t-shirt1",
+    "image3": "hat2"
+  }
+},
+{
+  "model": "course.skill",
+  "pk": 8,
+  "fields": {
+    "module": 1,
+    "name": "Nature",
+    "order": 4,
+    "image1": "sky1",
+    "image2": "river2",
+    "image3": "sun3"
   }
 }
 ]
