@@ -6,6 +6,7 @@ blocks:
       jobs:
         - name: gh-pages
           commands:
+            - sem-version node 12
             - checkout
             - cache restore
             - NODE_ENV=production yarn export
