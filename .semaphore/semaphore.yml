@@ -22,18 +22,20 @@ blocks:
         - name: jest
           commands:
             - checkout
+            - cache restore
             - yarn jest
     dependencies:
-      - Eslint
+      - Eslint Cypress
   - name: Cypress
     task:
       jobs:
         - name: cypress
           commands:
             - checkout
+            - cache restore
             - yarn test
     dependencies:
-      - Eslint Cypress
+      - Install dependencies
   - name: Eslint
     dependencies:
       - Install dependencies
@@ -46,12 +48,13 @@ blocks:
             - yarn eslint src
   - name: Eslint Cypress
     dependencies:
-      - Install dependencies
+      - Eslint
     task:
       jobs:
         - name: eslint
           commands:
             - checkout
+            - cache restore
             - yarn eslint cypress
 promotions:
   - name: Deploy to production
