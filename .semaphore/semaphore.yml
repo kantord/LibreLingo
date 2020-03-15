@@ -36,6 +36,7 @@ blocks:
             - cache restore
             - yarn install
             - cache store
+            - yarn test
     dependencies: []
   - name: Eslint
     dependencies:
