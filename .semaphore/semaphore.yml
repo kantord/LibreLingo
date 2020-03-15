@@ -33,9 +33,7 @@ blocks:
           commands:
             - sem-version node 12
             - checkout
-            - cache restore
             - yarn install
-            - cache store
             - yarn test
     dependencies: []
   - name: Eslint
