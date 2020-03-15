@@ -12,7 +12,8 @@ blocks:
             - NODE_ENV=production yarn export
             - git config --global user.email "gitlab@daniel-kantor.com"
             - git config --global user.name "Dániel Kántor"
-            - 'yarn deploy --repo=https://$GH_TOKEN@github.com/kantord/LibreLingo.git'
+            - echo 'librelingo.app' > __sapper__/export/CNAME
+            - 'yarn gh-pages -d __sapper__/export --repo=https://$GH_TOKEN@github.com/kantord/LibreLingo.git'
 agent:
   machine:
     type: e1-standard-2
