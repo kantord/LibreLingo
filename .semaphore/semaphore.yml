@@ -13,4 +13,15 @@ blocks:
             - sem-version node 12
             - checkout
             - yarn install
+  - name: Jest
+    task:
+      jobs:
+        - name: 'Job #1'
+          commands:
+            - yarn jest
+  - name: Cypress
+    task:
+      jobs:
+        - name: 'Job #1'
+          commands:
             - yarn test
