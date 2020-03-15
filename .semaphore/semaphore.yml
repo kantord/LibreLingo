@@ -14,3 +14,9 @@ blocks:
             - checkout
             - yarn install
             - yarn test
+  - name: Cypress test
+    task:
+      jobs:
+        - name: 'Job #1'
+          commands:
+            - yarn cypress run
