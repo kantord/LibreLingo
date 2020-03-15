@@ -6,6 +6,8 @@ blocks:
       jobs:
         - name: gh-pages
           commands:
+            - checkout
+            - cache restore
             - NODE_ENV=production yarn export
             - git config --global user.email "gitlab@daniel-kantor.com"
             - git config --global user.name "Dániel Kántor"
