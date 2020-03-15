@@ -12,7 +12,9 @@ blocks:
           commands:
             - sem-version node 12
             - checkout
+            - cache restore
             - yarn install
+            - cache store
     dependencies: []
   - name: Jest
     task:
@@ -40,6 +42,7 @@ blocks:
         - name: eslint
           commands:
             - checkout
+            - cache restore
             - yarn eslint src
   - name: Eslint Cypress
     dependencies:
