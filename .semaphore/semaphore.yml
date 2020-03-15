@@ -13,8 +13,6 @@ blocks:
             - sem-version node 12
             - checkout
             - cache restore
-            - mkdir -p $SEMAPHORE_CACHE_DIR/Cypress
-            - sudo ln -s $SEMAPHORE_CACHE_DIR/Cypress ~/.cache/Cypress
             - yarn install
             - cache store
     dependencies: []
@@ -33,11 +31,11 @@ blocks:
       jobs:
         - name: cypress
           commands:
+            - sem-version node 12
             - checkout
-            - cache restore
+            - yarn install
             - yarn test
-    dependencies:
-      - Install dependencies
+    dependencies: []
   - name: Eslint
     dependencies:
       - Install dependencies
