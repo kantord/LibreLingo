@@ -13,15 +13,41 @@ blocks:
             - sem-version node 12
             - checkout
             - yarn install
+    dependencies: []
   - name: Jest
     task:
       jobs:
-        - name: 'Job #1'
+        - name: jest
           commands:
             - yarn jest
+    dependencies:
+      - Eslint
   - name: Cypress
     task:
       jobs:
-        - name: 'Job #1'
+        - name: cypress
           commands:
             - yarn test
+    dependencies:
+      - Eslint Cypress
+  - name: Eslint
+    dependencies:
+      - Install dependencies
+    task:
+      jobs:
+        - name: eslint
+          commands:
+            - yarn eslint src
+  - name: Eslint Cypress
+    dependencies:
+      - Install dependencies
+    task:
+      jobs:
+        - name: eslint
+          commands:
+            - yarn eslint cypress
+promotions:
+  - name: Deploy to production
+    pipeline_file: pipeline_2.yml
+    auto_promote:
+      when: branch = 'master' AND result = 'passed'

@@ -1,0 +1,16 @@
+version: v1.0
+name: Pipeline 2
+blocks:
+  - name: GitHub pages
+    task:
+      jobs:
+        - name: gh-pages
+          commands:
+            - NODE_ENV=production yarn export
+            - git config --global user.email "gitlab@daniel-kantor.com"
+            - git config --global user.name "Dániel Kántor"
+            - 'yarn deploy --repo=https://$GH_TOKEN@github.com/kantord/LibreLingo.git'
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
