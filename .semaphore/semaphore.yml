@@ -12,9 +12,9 @@ blocks:
           commands:
             - sem-version node 12
             - checkout
-            - cache restore
             - mkdir -p $SEMAPHORE_CACHE_DIR/Cypress
             - sudo ln -s $SEMAPHORE_CACHE_DIR/Cypress ~/.cache/Cypress
+            - cache restore
             - yarn install
             - cache store
     dependencies: []
