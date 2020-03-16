@@ -39,6 +39,43 @@
   {
     "type": "cards",
     "pictures": [
+      "dog1.jpg",
+      "dog2.jpg",
+      "dog3.jpg"
+    ],
+    "formInTargetLanguage": "el perro",
+    "meaningInSourceLanguage": "the dog",
+    "id": "d4d64c350a",
+    "priority": 0,
+    "group": "759ec39eac"
+  },
+  {
+    "type": "shortInput",
+    "pictures": [
+      "dog1.jpg",
+      "dog2.jpg",
+      "dog3.jpg"
+    ],
+    "formInTargetLanguage": [
+      "el perro"
+    ],
+    "meaningInSourceLanguage": "the dog",
+    "id": "c746fa73eb",
+    "priority": 1,
+    "group": "759ec39eac"
+  },
+  {
+    "type": "listeningExercise",
+    "answer": "el perro",
+    "meaning": "the dog",
+    "audio": "787a71468d36a51e3a3c18c4f67b1d98c87ff43c0ff599757b190d386021b482",
+    "id": "a15fac6d6c",
+    "priority": 1,
+    "group": "759ec39eac"
+  },
+  {
+    "type": "cards",
+    "pictures": [
       "cat1.jpg",
       "cat2.jpg",
       "cat3.jpg"
@@ -76,6 +113,43 @@
   {
     "type": "cards",
     "pictures": [
+      "cat1.jpg",
+      "cat2.jpg",
+      "cat3.jpg"
+    ],
+    "formInTargetLanguage": "el gato",
+    "meaningInSourceLanguage": "the cat",
+    "id": "9e24f45456",
+    "priority": 0,
+    "group": "338ff46032"
+  },
+  {
+    "type": "shortInput",
+    "pictures": [
+      "cat1.jpg",
+      "cat2.jpg",
+      "cat3.jpg"
+    ],
+    "formInTargetLanguage": [
+      "el gato"
+    ],
+    "meaningInSourceLanguage": "the cat",
+    "id": "8173f786ba",
+    "priority": 1,
+    "group": "338ff46032"
+  },
+  {
+    "type": "listeningExercise",
+    "answer": "el gato",
+    "meaning": "the cat",
+    "audio": "fd35f3803cc66507796b4a75d2c67ab893f9e25da3132f66fd34d5e47a261307",
+    "id": "e81653fff9",
+    "priority": 1,
+    "group": "338ff46032"
+  },
+  {
+    "type": "cards",
+    "pictures": [
       "bear1.jpg",
       "bear2.jpg",
       "bear1.jpg"
@@ -106,6 +180,43 @@
     "answer": "oso",
     "meaning": "bear",
     "audio": "be46615fccf95c5b1ae2071f90bfff650aa7519526f9ced4bb74c54b686b6c03",
+    "id": "7e42f9ac03",
+    "priority": 1,
+    "group": "3694c01b5f"
+  },
+  {
+    "type": "cards",
+    "pictures": [
+      "bear1.jpg",
+      "bear2.jpg",
+      "bear1.jpg"
+    ],
+    "formInTargetLanguage": "un oso",
+    "meaningInSourceLanguage": "a bear",
+    "id": "797412f48a",
+    "priority": 0,
+    "group": "3694c01b5f"
+  },
+  {
+    "type": "shortInput",
+    "pictures": [
+      "bear1.jpg",
+      "bear2.jpg",
+      "bear1.jpg"
+    ],
+    "formInTargetLanguage": [
+      "un oso"
+    ],
+    "meaningInSourceLanguage": "a bear",
+    "id": "c7f16b6da9",
+    "priority": 1,
+    "group": "3694c01b5f"
+  },
+  {
+    "type": "listeningExercise",
+    "answer": "un oso",
+    "meaning": "a bear",
+    "audio": "ea747a0a90a0b1084c58511a8f384e9cee48dfc5526e8a7069ae76a538cc72ec",
     "id": "7e42f9ac03",
     "priority": 1,
     "group": "3694c01b5f"

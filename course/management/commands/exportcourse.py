@@ -56,6 +56,38 @@ def export_course_data(export_path, course):
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 
+def generate_learnword_challenged(learnword, formInTargetLanguage, meaningInSourceLanguage, language_id):
+    return [
+            {
+                "type": "cards",
+                "pictures": ["{}.jpg".format(image_name) for image_name in [learnword.image1, learnword.image2, learnword.image3]],
+                "formInTargetLanguage": formInTargetLanguage,
+                "meaningInSourceLanguage": meaningInSourceLanguage,
+                "id": opaqueId(learnword, "cards"),
+                "priority": 0,
+                "group": opaqueId(learnword),
+            },
+            {
+                "type": "shortInput",
+                "pictures": ["{}.jpg".format(image_name) for image_name in [learnword.image1, learnword.image2, learnword.image3]],
+                "formInTargetLanguage": [formInTargetLanguage],
+                "meaningInSourceLanguage": meaningInSourceLanguage,
+                "id": opaqueId(learnword, "shortInput"),
+                "priority": 1,
+                "group": opaqueId(learnword),
+            },
+            {
+                "type": "listeningExercise",
+                "answer": formInTargetLanguage,
+                "meaning": meaningInSourceLanguage,
+                "audio": audioId(language_id, formInTargetLanguage),
+                "id": opaqueId(learnword, "listeningExercise"),
+                "priority": 1,
+                "group": opaqueId(learnword),
+            },
+        ]
+
+
 def export_skill(export_path, skill, language_id):
     data = []
     for learnsentence in skill.learnsentence_set.all():
@@ -90,35 +122,10 @@ def export_skill(export_path, skill, language_id):
         ]
 
     for learnword in skill.learnword_set.all():
-        data = data + [
-            {
-                "type": "cards",
-                "pictures": ["{}.jpg".format(image_name) for image_name in [learnword.image1, learnword.image2, learnword.image3]],
-                "formInTargetLanguage": learnword.formInTargetLanguage,
-                "meaningInSourceLanguage": learnword.meaningInSourceLanguage,
-                "id": opaqueId(learnword, "cards"),
-                "priority": 0,
-                "group": opaqueId(learnword),
-            },
-            {
-                "type": "shortInput",
-                "pictures": ["{}.jpg".format(image_name) for image_name in [learnword.image1, learnword.image2, learnword.image3]],
-                "formInTargetLanguage": [learnword.formInTargetLanguage],
-                "meaningInSourceLanguage": learnword.meaningInSourceLanguage,
-                "id": opaqueId(learnword, "shortInput"),
-                "priority": 1,
-                "group": opaqueId(learnword),
-            },
-            {
-                "type": "listeningExercise",
-                "answer": learnword.formInTargetLanguage,
-                "meaning": learnword.meaningInSourceLanguage,
-                "audio": audioId(language_id, learnword.formInTargetLanguage),
-                "id": opaqueId(learnword, "listeningExercise"),
-                "priority": 1,
-                "group": opaqueId(learnword),
-            },
-        ]
+        data = data + generate_learnword_challenged(learnword, learnword.formInTargetLanguage, learnword.meaningInSourceLanguage, language_id)
+        if (learnword.formInTargetLanguage2):
+            data = data + generate_learnword_challenged(learnword, learnword.formInTargetLanguage2, learnword.meaningInSourceLanguage2, language_id)
+
 
     Path(Path(export_path) / "challenges").mkdir(parents=True, exist_ok=True)
 
@@ -144,6 +151,8 @@ def export_course(course):
             export_skill(export_path, skill, language_id)
             for learnword in skill.learnword_set.all():
                 audios_to_fetch.append("{}|{}|{}".format(language_id, audioId(language_id, learnword.formInTargetLanguage), learnword.formInTargetLanguage))
+                if (learnword.formInTargetLanguage2):
+                    audios_to_fetch.append("{}|{}|{}".format(language_id, audioId(language_id, learnword.formInTargetLanguage2), learnword.formInTargetLanguage2))
             for learnsentence in skill.learnsentence_set.all():
                 audios_to_fetch.append("{}|{}|{}".format(language_id, audioId(language_id, learnsentence.formInTargetLanguage), learnsentence.formInTargetLanguage))
 
