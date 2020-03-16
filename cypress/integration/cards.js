@@ -89,7 +89,7 @@ describe("Cards ", () => {
     describe("Submitting a incorrect answer", () => {
         beforeEach(() => {
             cy.visit(CARDS_TEST_URL)
-            cy.get(":not(.fake) .card[data-test-correct=false]")
+            cy.get(".real .card[data-test-correct=false]")
                 .first()
                 .click()
             cy.contains("Submit").click()

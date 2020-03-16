@@ -25,7 +25,7 @@
 
 <ul class="options">
   {#each options as { pictures, meaningInSourceLanguage, formInTargetLanguage, correct, fake }, i}
-    <label for="{i}" class:fake="{fake && true}">
+    <label for="{i}" class:fake="{fake && true}" class:real="{!(fake && true)}">
       <input
         type="radio"
         bind:group="{selectedOption}"
