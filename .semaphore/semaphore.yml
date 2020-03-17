@@ -21,6 +21,7 @@ blocks:
       jobs:
         - name: jest
           commands:
+            - sem-version node 12
             - checkout
             - cache restore
             - yarn jest
@@ -43,6 +44,7 @@ blocks:
       jobs:
         - name: eslint
           commands:
+            - sem-version node 12
             - checkout
             - cache restore
             - yarn eslint src
@@ -53,6 +55,7 @@ blocks:
       jobs:
         - name: eslint
           commands:
+            - sem-version node 12
             - checkout
             - cache restore
             - yarn eslint cypress
