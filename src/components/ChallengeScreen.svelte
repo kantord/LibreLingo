@@ -8,7 +8,7 @@
   import FanfareScreen from "./FanfareScreen";
   import ProgressBar from "./ProgressBar";
   import shuffle from "lodash.shuffle";
-  import { fade } from "svelte/transition";
+  import { fade, scale } from "svelte/transition";
 
   export let rawChallenges;
   export let languageName;
@@ -56,7 +56,7 @@
 
 {#if currentChallenge}
 
-  <div class="container">
+  <div class="container" in:scale>
     <section class="section">
       <ProgressBar value="{progress}" />
       {#each challenges as challenge, i (challenge.id)}
