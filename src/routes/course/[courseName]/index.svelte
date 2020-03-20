@@ -48,6 +48,51 @@
   </section>
 {/each}
 
+<footer class="footer">
+  <div class="content">
+
+    <div class="columns">
+      <div class="column">
+        <strong>LibreLingo</strong>
+        by
+        <a href="https://github.com/kantord">Dániel Kántor</a>
+        and
+        <a href="https://github.com/kantord/LibreLingo#contributors-">
+          various contributors
+        </a>
+        .
+      </div>
+      <div class="column">
+        The source code is licensed
+        <a href="https://opensource.org/licenses/AGPL-3.0">AGPL-3.0.</a>
+        <br />
+        <a href="https://github.com/kantord/LibreLingo">
+          Source code available on GitHub.
+        </a>
+      </div>
+      <div class="column">
+        <a
+          class="github-button"
+          href="https://github.com/kantord/LibreLingo"
+          data-size="large"
+          data-show-count="true"
+          aria-label="Star kantord/LibreLingo on GitHub">
+          Star
+        </a>
+        <a
+          class="github-button"
+          href="https://github.com/kantord/LibreLingo/issues"
+          data-size="large"
+          data-show-count="true"
+          aria-label="Issue kantord/LibreLingo on GitHub">
+          Issue
+        </a>
+      </div>
+    </div>
+    <p></p>
+  </div>
+</footer>
+
 <style>
   @import "../../../variables";
   .container {
