@@ -48,6 +48,15 @@
   </section>
 {/each}
 
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+	    <strong>LibreLingo</strong> by <a href="https://github.com/kantord">Dániel Kántor</a> and <a href="https://github.com/kantord/LibreLingo#contributors-">various contributors</a>. The source code is licensed
+      <a href="https://opensource.org/licenses/AGPL-3.0">AGPL-3.0</a>. <a href="https://github.com/kantord/LibreLingo">Source code available on GitHub</a>.
+    </p>
+  </div>
+</footer>
+
 <style>
   @import "../../../variables";
   .container {
