@@ -125,7 +125,7 @@
     {#if !correct}
       <ChallengePanel
         message="Incorrect solution!"
-        messageDetail="{`Correct answer: ${challenge.formInTargetLanguage}`}"
+        messageDetail="{`Correct answer: ${challenge.formattedSolution}`}"
         buttonText="Continue"
         incorrect
         buttonAction="{finishChallenge}" />
