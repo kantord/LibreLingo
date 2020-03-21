@@ -35,7 +35,9 @@ blocks:
             - sem-version node 12
             - checkout
             - yarn install
-            - yarn percy exec -- yarn test
+            - yarn test
+      secrets:
+        - name: Percy token
     dependencies: []
   - name: Eslint
     dependencies:
