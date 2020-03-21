@@ -34,6 +34,25 @@
     "group": "073917fd7f"
   },
   {
+    "type": "chips",
+    "translatesToSourceLanguage": true,
+    "meaningInSourceLanguage": "¡Me gusta!",
+    "chips": [
+      "I",
+      "like",
+      "it"
+    ],
+    "solution": [
+      "I",
+      "like",
+      "it"
+    ],
+    "formInTargetLanguage": "I like it!",
+    "id": "c0b444b680",
+    "priority": 2,
+    "group": "073917fd7f"
+  },
+  {
     "type": "options",
     "formInTargetLanguage": "¿Cuánto cuesta?",
     "meaningInSourceLanguage": "How much is it?",
@@ -68,6 +87,27 @@
     "group": "899c76e830"
   },
   {
+    "type": "chips",
+    "translatesToSourceLanguage": true,
+    "meaningInSourceLanguage": "¿Cuánto cuesta?",
+    "chips": [
+      "How",
+      "much",
+      "is",
+      "it"
+    ],
+    "solution": [
+      "How",
+      "much",
+      "is",
+      "it"
+    ],
+    "formInTargetLanguage": "How much is it?",
+    "id": "d681be528a",
+    "priority": 2,
+    "group": "899c76e830"
+  },
+  {
     "type": "options",
     "formInTargetLanguage": "Gracias",
     "meaningInSourceLanguage": "Thank you",
@@ -95,6 +135,23 @@
       "Gracias"
     ],
     "formInTargetLanguage": "Gracias",
+    "id": "3089902815",
+    "priority": 2,
+    "group": "a72dc80a65"
+  },
+  {
+    "type": "chips",
+    "translatesToSourceLanguage": true,
+    "meaningInSourceLanguage": "Gracias",
+    "chips": [
+      "Thank",
+      "you"
+    ],
+    "solution": [
+      "Thank",
+      "you"
+    ],
+    "formInTargetLanguage": "Thank you",
     "id": "3089902815",
     "priority": 2,
     "group": "a72dc80a65"
