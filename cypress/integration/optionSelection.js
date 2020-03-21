@@ -1,5 +1,8 @@
 describe("OptionSelection", () => {
     const OPTION_SELECTION_TEST_URL = "course/test/skill/_options_test"
+    afterEach(() => {
+        cy.percySnapshot()
+    })
     describe("Open skill page", () => {
         beforeEach(() => {
             cy.visit(OPTION_SELECTION_TEST_URL)

@@ -1,6 +1,9 @@
 describe("Fanfare screen", () => {
     const CARDS_TEST_URL = number =>
         `/course/test/skill/_short_input_test${number}`
+    afterEach(() => {
+        cy.percySnapshot()
+    })
     describe("Display fanfare screen", () => {
         beforeEach(() => {
             cy.visit(CARDS_TEST_URL(1))

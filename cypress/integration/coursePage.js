@@ -1,5 +1,8 @@
 describe("Course page", () => {
     const COURSE_PAGE_URL = "/course/spanish-from-english"
+    afterEach(() => {
+        cy.percySnapshot()
+    })
     describe("Open skill page", () => {
         beforeEach(() => {
             cy.window().then(window => {
