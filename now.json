@@ -1,9 +1,0 @@
-{
-  "name": "librelingo",
-  "builds": [
-    { "src": "./__sapper__/export/**", "use": "@now/static" }
-  ],
-   "routes": [
-     { "src": "/(.*)", "dest": "__sapper__/export/$1" }  
-   ]
-}
