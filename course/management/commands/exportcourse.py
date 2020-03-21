@@ -120,6 +120,17 @@ def export_skill(export_path, skill, language_id):
                 "priority": 2,
                 "group": opaqueId(learnsentence),
             },
+            {
+                "type": "chips",
+                "translatesToSourceLanguage": True,
+                "meaningInSourceLanguage": learnsentence.formInTargetLanguage,
+                "chips": [clean_word(w) for w in learnsentence.meaningInSourceLanguage.split()],
+                "solution": [clean_word(w) for w in learnsentence.meaningInSourceLanguage.split()],
+                "formInTargetLanguage": learnsentence.meaningInSourceLanguage,
+                "id": opaqueId(learnsentence, "chips"),
+                "priority": 2,
+                "group": opaqueId(learnsentence),
+            },
         ]
 
     for learnword in skill.learnword_set.all():
