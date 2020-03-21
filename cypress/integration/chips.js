@@ -13,6 +13,10 @@ describe("Chips", () => {
             cy.contains(/How are you today?/).should("be.visible")
         })
 
+        it("Has no undefined", () => {
+            cy.contains("undefined").should("not.be.visible")
+        })
+
         it("Has no panel visible", () => {
             cy.get(".panel").should("not.exist")
         })

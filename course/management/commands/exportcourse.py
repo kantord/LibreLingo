@@ -112,7 +112,7 @@ def export_skill(export_path, skill, language_id):
             {
                 "type": "chips",
                 "translatesToSourceLanguage": False,
-                "meaningInSourceLanguage": learnsentence.meaningInSourceLanguage,
+                "phrase": learnsentence.meaningInSourceLanguage,
                 "chips": [clean_word(w) for w in learnsentence.formInTargetLanguage.split()],
                 "solution": [clean_word(w) for w in learnsentence.formInTargetLanguage.split()],
                 "formattedSolution": learnsentence.formInTargetLanguage,
@@ -123,7 +123,7 @@ def export_skill(export_path, skill, language_id):
             {
                 "type": "chips",
                 "translatesToSourceLanguage": True,
-                "meaningInSourceLanguage": learnsentence.formInTargetLanguage,
+                "phrase": learnsentence.formInTargetLanguage,
                 "chips": [clean_word(w) for w in learnsentence.meaningInSourceLanguage.split()],
                 "solution": [clean_word(w) for w in learnsentence.meaningInSourceLanguage.split()],
                 "formattedSolution": learnsentence.meaningInSourceLanguage,
