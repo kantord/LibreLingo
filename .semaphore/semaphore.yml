@@ -36,6 +36,8 @@ blocks:
             - checkout
             - yarn install
             - yarn test
+      secrets:
+        - name: Percy token
     dependencies: []
   - name: Eslint
     dependencies:
