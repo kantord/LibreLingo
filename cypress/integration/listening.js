@@ -1,6 +1,9 @@
 describe("Listening exercises", () => {
     const LISTENING_TEST_URL = number =>
         `/course/test/skill/_listening_test${number}`
+    afterEach(() => {
+        cy.percySnapshot()
+    })
     describe("Open skill page", () => {
         beforeEach(() => {
             cy.visit(LISTENING_TEST_URL(0))

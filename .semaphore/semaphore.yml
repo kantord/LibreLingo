@@ -35,7 +35,7 @@ blocks:
             - sem-version node 12
             - checkout
             - yarn install
-            - yarn test
+            - yarn percy exec -- yarn test
     dependencies: []
   - name: Eslint
     dependencies:

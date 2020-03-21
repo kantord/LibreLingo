@@ -1,6 +1,9 @@
 describe("Short inputs", () => {
     const CARDS_TEST_URL = number =>
         `/course/test/skill/_short_input_test${number}`
+    afterEach(() => {
+        cy.percySnapshot()
+    })
     describe("Open skill page", () => {
         beforeEach(() => {
             cy.visit(CARDS_TEST_URL(0))

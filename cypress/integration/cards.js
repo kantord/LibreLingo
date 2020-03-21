@@ -1,5 +1,10 @@
 describe("Cards ", () => {
     const CARDS_TEST_URL = "course/test/skill/_cards_test"
+
+    afterEach(() => {
+        cy.percySnapshot()
+    })
+
     describe("Open skill page", () => {
         beforeEach(() => {
             cy.visit(CARDS_TEST_URL)

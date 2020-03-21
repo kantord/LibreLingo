@@ -1,5 +1,8 @@
 describe("Chips", () => {
     const CHIPS_TEST_URL = number => `/course/test/skill/_chips_test${number}`
+    afterEach(() => {
+        cy.percySnapshot()
+    })
     describe("Open skill page", () => {
         beforeEach(() => {
             cy.visit(CHIPS_TEST_URL(0))
