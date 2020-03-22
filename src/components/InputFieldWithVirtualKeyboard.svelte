@@ -61,6 +61,7 @@
   placeholder="Type your answer…"
   {disabled}
   spellcheck="false"
+  autocapitalize="none"
   lang="{languageCode}"
   use:focusMe
   bind:value
