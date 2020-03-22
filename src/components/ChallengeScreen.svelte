@@ -118,9 +118,4 @@
   .section {
     padding: 1.5em;
   }
-
-  .challenge {
-    position: absolute;
-    width: 100%;
-  }
 </style>
