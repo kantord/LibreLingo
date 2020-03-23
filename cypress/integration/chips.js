@@ -1,8 +1,16 @@
 describe("Chips", () => {
-    const CHIPS_TEST_URL = number => `/course/test/skill/_chips_test${number}`
-    afterEach(() => {
-        cy.percySnapshot()
+    const CHIPS_TEST_URL = (number) => `/course/test/skill/_chips_test${number}`
+
+    describe("Visual snapshot", () => {
+        beforeEach(() => {
+            cy.visit(CHIPS_TEST_URL(1))
+        })
+
+        it("ChipsChallenge", function () {
+            cy.percySnapshot(this.test.fullTitle())
+        })
     })
+
     describe("Open skill page", () => {
         beforeEach(() => {
             cy.visit(CHIPS_TEST_URL(0))
@@ -22,20 +30,14 @@ describe("Chips", () => {
         })
 
         it("Has correct chips", () => {
-            cy.get(".chip")
-                .contains("Como")
-                .should("be.visible")
-            cy.get(".chip")
-                .contains("estás")
-                .should("be.visible")
-            cy.get(".chip")
-                .contains("hoy")
-                .should("be.visible")
+            cy.get(".chip").contains("Como").should("be.visible")
+            cy.get(".chip").contains("estás").should("be.visible")
+            cy.get(".chip").contains("hoy").should("be.visible")
         })
 
         describe("Submit incorrect solution", () => {
             beforeEach(() => {
-                cy.window().then(win => win.testIncorrectSolution())
+                cy.window().then((win) => win.testIncorrectSolution())
             })
 
             it("Panel is visible", () => {
@@ -75,7 +77,7 @@ describe("Chips", () => {
 
         describe("Drag chip", () => {
             beforeEach(() => {
-                cy.window().then(win => win.testSolution())
+                cy.window().then((win) => win.testSolution())
             })
 
             it("Panel is visible", () => {

@@ -1,13 +1,13 @@
 describe("Cards ", () => {
     const CARDS_TEST_URL = "course/test/skill/_cards_test"
 
-    afterEach(() => {
-        cy.percySnapshot()
-    })
-
     describe("Open skill page", () => {
         beforeEach(() => {
             cy.visit(CARDS_TEST_URL)
+        })
+
+        it("CardsChallenge", function () {
+            cy.percySnapshot(this.test.fullTitle())
         })
 
         it("Has correct question", () => {
@@ -19,16 +19,12 @@ describe("Cards ", () => {
         })
 
         it("Has 3 cards", () => {
-            cy.get(".options")
-                .find(".card:visible")
-                .should("have.length", 3)
+            cy.get(".options").find(".card:visible").should("have.length", 3)
         })
 
         it("Has 4 cards on iPhone", () => {
             cy.viewport("iphone-6")
-            cy.get(".options")
-                .find(".card:visible")
-                .should("have.length", 4)
+            cy.get(".options").find(".card:visible").should("have.length", 4)
         })
 
         it("All cards inactive", () => {
@@ -49,9 +45,7 @@ describe("Cards ", () => {
     describe("Clicking card", () => {
         beforeEach(() => {
             cy.visit(CARDS_TEST_URL)
-            cy.get(".card:visible")
-                .first()
-                .click()
+            cy.get(".card:visible").first().click()
         })
 
         it("Panel is visible", () => {
@@ -94,9 +88,7 @@ describe("Cards ", () => {
     describe("Submitting a incorrect answer", () => {
         beforeEach(() => {
             cy.visit(CARDS_TEST_URL)
-            cy.get(".real .card[data-test-correct=false]")
-                .first()
-                .click()
+            cy.get(".real .card[data-test-correct=false]").first().click()
             cy.contains("Submit").click()
         })
 

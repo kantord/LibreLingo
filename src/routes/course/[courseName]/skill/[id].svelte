@@ -14,7 +14,7 @@
       languageCode,
       specialCharacters,
       id,
-      courseURL: `/course/${courseName}`
+      courseURL: `/course/${courseName}`,
     };
   }
 </script>

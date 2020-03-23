@@ -1,18 +1,17 @@
 describe("Listening exercises", () => {
-    const LISTENING_TEST_URL = number =>
+    const LISTENING_TEST_URL = (number) =>
         `/course/test/skill/_listening_test${number}`
-    afterEach(() => {
-        cy.percySnapshot()
-    })
     describe("Open skill page", () => {
         beforeEach(() => {
             cy.visit(LISTENING_TEST_URL(0))
         })
 
+        it("ListeningChallenge", function () {
+            cy.percySnapshot(this.test.fullTitle())
+        })
+
         it("Has virtual keyboard", () => {
-            cy.get(".keyboard")
-                .find(".key")
-                .should("have.length", 16)
+            cy.get(".keyboard").find(".key").should("have.length", 16)
         })
 
         it("Has correct instruction", () => {

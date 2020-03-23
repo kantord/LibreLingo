@@ -1,11 +1,13 @@
 describe("OptionSelection", () => {
     const OPTION_SELECTION_TEST_URL = "course/test/skill/_options_test"
-    afterEach(() => {
-        cy.percySnapshot()
-    })
+
     describe("Open skill page", () => {
         beforeEach(() => {
             cy.visit(OPTION_SELECTION_TEST_URL)
+        })
+
+        it("Options", function () {
+            cy.percySnapshot(this.test.fullTitle())
         })
 
         it("Has correct question", () => {
@@ -13,9 +15,7 @@ describe("OptionSelection", () => {
         })
 
         it("Has 3 options", () => {
-            cy.get(".options")
-                .find(".option:visible")
-                .should("have.length", 3)
+            cy.get(".options").find(".option:visible").should("have.length", 3)
         })
 
         it("undefined not seen on the page", () => {
@@ -40,9 +40,7 @@ describe("OptionSelection", () => {
     describe("Clicking option", () => {
         beforeEach(() => {
             cy.visit(OPTION_SELECTION_TEST_URL)
-            cy.get(".option:visible")
-                .first()
-                .click()
+            cy.get(".option:visible").first().click()
         })
 
         it("Panel is visible", () => {
@@ -85,9 +83,7 @@ describe("OptionSelection", () => {
     describe("Submitting a incorrect answer", () => {
         beforeEach(() => {
             cy.visit(OPTION_SELECTION_TEST_URL)
-            cy.get(".option[data-test-correct=false]")
-                .first()
-                .click()
+            cy.get(".option[data-test-correct=false]").first().click()
             cy.contains("Submit").click()
         })
 

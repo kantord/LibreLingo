@@ -1,19 +1,19 @@
 describe("Short inputs", () => {
-    const CARDS_TEST_URL = number =>
+    const CARDS_TEST_URL = (number) =>
         `/course/test/skill/_short_input_test${number}`
-    afterEach(() => {
-        cy.percySnapshot()
-    })
+
     describe("Open skill page", () => {
         beforeEach(() => {
             cy.visit(CARDS_TEST_URL(0))
         })
 
+        it("ShortInputChallenge", function () {
+            cy.percySnapshot(this.test.fullTitle())
+        })
+
         describe("Virtual keyboard", () => {
             it("Has 4 keys", () => {
-                cy.get(".keyboard")
-                    .find(".key")
-                    .should("have.length", 16)
+                cy.get(".keyboard").find(".key").should("have.length", 16)
             })
 
             it("Keys have proper label", () => {
@@ -24,10 +24,7 @@ describe("Short inputs", () => {
             })
 
             it("Clicking a key types into input field", () => {
-                cy.get(".keyboard")
-                    .find(".key")
-                    .contains("á")
-                    .click()
+                cy.get(".keyboard").find(".key").contains("á").click()
 
                 cy.get("input").should("have.value", "á")
             })
