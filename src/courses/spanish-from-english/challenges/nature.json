@@ -19,7 +19,20 @@
   {
     "type": "chips",
     "translatesToSourceLanguage": false,
-    "phrase": "Have a good trip!",
+    "phrase": [
+      {
+        "word": "Have"
+      },
+      {
+        "word": "a"
+      },
+      {
+        "word": "good"
+      },
+      {
+        "word": "trip!"
+      }
+    ],
     "chips": [
       "Buen",
       "viaje"
@@ -36,7 +49,14 @@
   {
     "type": "chips",
     "translatesToSourceLanguage": true,
-    "phrase": "¡Buen viaje!",
+    "phrase": [
+      {
+        "word": "¡Buen"
+      },
+      {
+        "word": "viaje!"
+      }
+    ],
     "chips": [
       "Have",
       "a",
@@ -74,7 +94,23 @@
   {
     "type": "chips",
     "translatesToSourceLanguage": false,
-    "phrase": "Let's go to the beach",
+    "phrase": [
+      {
+        "word": "Let's"
+      },
+      {
+        "word": "go"
+      },
+      {
+        "word": "to"
+      },
+      {
+        "word": "the"
+      },
+      {
+        "word": "beach"
+      }
+    ],
     "chips": [
       "Vamos",
       "a",
@@ -95,7 +131,21 @@
   {
     "type": "chips",
     "translatesToSourceLanguage": true,
-    "phrase": "Vamos a la playa",
+    "phrase": [
+      {
+        "word": "Vamos"
+      },
+      {
+        "word": "a"
+      },
+      {
+        "word": "la"
+      },
+      {
+        "word": "playa",
+        "definition": "beach"
+      }
+    ],
     "chips": [
       "Lets",
       "go",
