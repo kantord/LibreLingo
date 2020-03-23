@@ -7,6 +7,7 @@ describe("Listening exercises", () => {
         })
 
         it("ListeningChallenge", function () {
+            cy.wait(200)
             cy.percySnapshot(this.test.fullTitle())
         })
 
