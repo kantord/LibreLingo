@@ -4,6 +4,7 @@ from pathlib import Path
 
 from django.core.management.base import BaseCommand, CommandError
 from course.models import Course
+from course.models import DictionaryItem
 
 def opaqueId(obj, salt=""):
     hash = hashlib.sha256()
@@ -60,6 +61,23 @@ def export_course_data(export_path, course):
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 
+def define_word(course, word, reverse):
+    try:
+        dictionary_item = DictionaryItem.objects.get(course__id=course.id, word=word, reverse=reverse)
+        return {
+            "word": word,
+            "definition": dictionary_item.definition
+        }
+    except DictionaryItem.DoesNotExist:
+        return {
+            "word": word
+        }
+
+
+def define_words_in_sentence(course, sentence, reverse):
+    return [define_word(course, word, reverse) for word in sentence.split(" ")]
+
+
 def generate_learnword_challenged(learnword, formInTargetLanguage, meaningInSourceLanguage, language_id):
     return [
             {
@@ -92,7 +110,7 @@ def generate_learnword_challenged(learnword, formInTargetLanguage, meaningInSour
         ]
 
 
-def export_skill(export_path, skill, language_id):
+def export_skill(export_path, skill, language_id, course):
     data = []
     for learnsentence in skill.learnsentence_set.all():
         data = data + [
@@ -120,7 +138,7 @@ def export_skill(export_path, skill, language_id):
                 {
                     "type": "chips",
                     "translatesToSourceLanguage": False,
-                    "phrase": learnsentence.meaningInSourceLanguage,
+                    "phrase": define_words_in_sentence(course, learnsentence.meaningInSourceLanguage, True),
                     "chips": generate_chips(learnsentence.formInTargetLanguage),
                     "solution": generate_chips(learnsentence.formInTargetLanguage),
                     "formattedSolution": learnsentence.formInTargetLanguage,
@@ -135,7 +153,7 @@ def export_skill(export_path, skill, language_id):
                 {
                     "type": "chips",
                     "translatesToSourceLanguage": True,
-                    "phrase": learnsentence.formInTargetLanguage,
+                    "phrase": define_words_in_sentence(course, learnsentence.formInTargetLanguage, False),
                     "chips": generate_chips(learnsentence.meaningInSourceLanguage),
                     "solution": generate_chips(learnsentence.meaningInSourceLanguage),
                     "formattedSolution": learnsentence.meaningInSourceLanguage,
@@ -172,7 +190,7 @@ def export_course(course):
     for module in course.module_set.all():
         for skill in module.skill_set.all():
             print("Exporting skill {}".format(str(skill)))
-            export_skill(export_path, skill, language_id)
+            export_skill(export_path, skill, language_id, course)
             for learnword in skill.learnword_set.all():
                 audios_to_fetch.append("{}|{}|{}".format(language_id, audioId(language_id, learnword.formInTargetLanguage), learnword.formInTargetLanguage))
                 if (learnword.formInTargetLanguage2):
