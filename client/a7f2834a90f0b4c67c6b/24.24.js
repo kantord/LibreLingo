@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[24],{249:function(o){o.exports=JSON.parse('[{"id":6663,"type":"chips","phrase":"How are you today?","chips":["foo","foo","foo"],"solution":["foo","foo","foo"],"formattedSolution":"¿Como, estás hoy?"}]')}}]);
