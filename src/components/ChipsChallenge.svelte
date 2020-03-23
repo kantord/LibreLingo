@@ -87,7 +87,7 @@
   <div class="section">
     <p class="is-size-1 is-size-2-tablet is-size-4-mobile has-text-centered">
       Translate
-      <b>{challenge.phrase}</b>
+      <b>{challenge.phrase.map(({word}) => word).join(" ")}</b>
     </p>
   </div>
 

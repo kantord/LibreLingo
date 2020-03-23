@@ -9,6 +9,7 @@ from .models import LearnWord
 from .models import LearnSentence
 from .models import Course
 from .models import Module
+from .models import DictionaryItem
 from .models import Skill
 
 
@@ -113,6 +114,21 @@ class ModuleInline(SortableInlineAdminMixin, admin.TabularInline):
          ("/admin/course/course/%s/module/%s/change/" % (obj.course.id, obj.id)))
 
 
+class DictionaryItemForm(forms.ModelForm):
+    class Meta:
+        model = DictionaryItem
+        exclude = []
+        widgets = {
+            'word': forms.TextInput()
+        }
+
+
+class DictionaryItemAdmin(SubAdmin):
+    model = DictionaryItem
+    form = DictionaryItemForm
+    list_display = ('word', 'definition')
+
+
 class CourseForm(forms.ModelForm):
     class Meta:
         model = Skill
@@ -130,7 +146,7 @@ class CourseAdmin(RootSubAdmin):
     inlines = [
         ModuleInline,
     ]
-    subadmins = [ModuleAdmin]
+    subadmins = [ModuleAdmin, DictionaryItemAdmin]
 
 
 admin.site.register(Course, CourseAdmin)
