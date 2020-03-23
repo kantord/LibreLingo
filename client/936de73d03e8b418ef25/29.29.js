@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[29],{257:function(o){o.exports=JSON.parse('[{"id":6663,"type":"shortInput","meaningInSourceLanguage":"dog","pictures":["dog1.jpg","dog1.jpg","dog1.jpg"],"formInTargetLanguage":["perro","el perro","can"]}]')}}]);
