@@ -1,3 +1,5 @@
+![Build status](https://kantord.semaphoreci.com/badges/LibreLingo.svg?style=shields "Build status")
+ [![BCH compliance](https://bettercodehub.com/edge/badge/kantord/LibreLingo?branch=master)](https://bettercodehub.com/)
 <h1 align="center">
 <img src="docs/logo_for_readme.svg" alt="LibreLingo" /></h1>
 <p align="center"><em>an experiment to create a community-driven language-learning platform</em></p>
