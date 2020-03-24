@@ -1,4 +1,5 @@
 ![Build status](https://kantord.semaphoreci.com/badges/LibreLingo.svg?style=shields "Build status")
+[![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/LibreLingo/LibreLingo)
 [![BCH compliance](https://bettercodehub.com/edge/badge/kantord/LibreLingo?branch=master)](https://bettercodehub.com/)
 ![GitHub PageSpeed](https://api.speedbadge.io/v1?url=librelingo.app)
 ![David](https://img.shields.io/david/kantord/LibreLingo)
