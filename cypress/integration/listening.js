@@ -7,7 +7,7 @@ describe("Listening exercises", () => {
         })
 
         it("ListeningChallenge", function () {
-            cy.wait(200)
+            cy.get(".fontawesome-i2svg-pending").should("not.exist")
             cy.percySnapshot(this.test.fullTitle())
         })
 
