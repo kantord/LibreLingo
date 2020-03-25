@@ -26,6 +26,15 @@ class LearnWord(models.Model):
     image3 = models.TextField(choices=VALID_IMAGE_NAMES)
 
 
+class DictionaryItem(models.Model):
+    class Meta:
+        verbose_name = "Dictionary Item"
+
+    course = models.ForeignKey('Course', on_delete=models.CASCADE)
+    word = models.TextField()
+    definition = models.TextField()
+
+
 class LearnSentence(models.Model):
     class Meta:
         verbose_name = "Learn a new sentence"
