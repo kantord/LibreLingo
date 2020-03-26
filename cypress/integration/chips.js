@@ -11,6 +11,12 @@ describe("Chips", () => {
         })
     })
 
+    describe("Dictionary", () => {
+        beforeEach(() => {
+            cy.visit(CHIPS_TEST_URL(2))
+        })
+    })
+
     describe("Open skill page", () => {
         beforeEach(() => {
             cy.visit(CHIPS_TEST_URL(0))
