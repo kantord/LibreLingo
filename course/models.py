@@ -40,6 +40,25 @@ class DictionaryItem(models.Model):
 class LearnSentence(models.Model):
     class Meta:
         verbose_name = "Learn a new sentence"
+
+    def ensure_word(self, word, reverse):
+        course = self.skill.module.course
+        try:
+            DictionaryItem.objects.get(course=course, word=word, reverse=reverse)
+        except:
+            DictionaryItem.objects.create(course=course, word=word, reverse=reverse)
+
+    def ensure_all_words(self):
+        for word in self.formInTargetLanguage.split():
+            self.ensure_word(word, reverse=False)
+
+        for word in self.meaningInSourceLanguage.split():
+            self.ensure_word(word, reverse=True)
+
+    def save(self, *args, **kwargs):
+        self.ensure_all_words()
+        super(LearnSentence, self).save(*args, **kwargs)
+
     skill = models.ForeignKey('Skill', on_delete=models.CASCADE)
     meaningInSourceLanguage = models.TextField(verbose_name="Meaning in source language")
     formInTargetLanguage = models.TextField(verbose_name="Meaning in target language")
