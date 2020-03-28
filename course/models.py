@@ -3,6 +3,8 @@ from django.db import models
 from pathlib import Path
 import csv
 
+from .utils import clean_word
+
 
 with open(Path('./docs/image_attributions.csv').resolve()) as f:
     VALID_IMAGE_NAMES = [(o["image_name"], o["image_name"], ) for o in csv.DictReader(f)]
@@ -42,9 +44,10 @@ class LearnSentence(models.Model):
         verbose_name = "Learn a new sentence"
 
     def ensure_word(self, word, reverse):
+        word = clean_word(word)
         course = self.skill.module.course
         try:
-            DictionaryItem.objects.get(course=course, word=word, reverse=reverse)
+            DictionaryItem.objects.get(course=course, word__iexact=word, reverse=reverse)
         except:
             DictionaryItem.objects.create(course=course, word=word, reverse=reverse)
 

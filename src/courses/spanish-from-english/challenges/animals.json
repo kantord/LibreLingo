@@ -1,5 +1,259 @@
 [
   {
+    "type": "options",
+    "formInTargetLanguage": "¡El león come el pato!",
+    "meaningInSourceLanguage": "¡The lion eats the duck!",
+    "id": "6a2308364d",
+    "priority": 0,
+    "group": "c9df577986"
+  },
+  {
+    "type": "listeningExercise",
+    "answer": "¡El león come el pato!",
+    "meaning": "¡The lion eats the duck!",
+    "audio": "e6d8d3fb5032e9ce5ef3b04ba14ec1798aa8fe775e443dc7101199cf029fcd6c",
+    "id": "e1327008ed",
+    "priority": 1,
+    "group": "c9df577986"
+  },
+  {
+    "type": "chips",
+    "translatesToSourceLanguage": false,
+    "phrase": [
+      {
+        "word": "¡The"
+      },
+      {
+        "word": "lion"
+      },
+      {
+        "word": "eats",
+        "definition": "come"
+      },
+      {
+        "word": "the"
+      },
+      {
+        "word": "duck!"
+      }
+    ],
+    "chips": [
+      "El",
+      "león",
+      "come",
+      "el",
+      "pato"
+    ],
+    "solution": [
+      "El",
+      "león",
+      "come",
+      "el",
+      "pato"
+    ],
+    "formattedSolution": "¡El león come el pato!",
+    "id": "6989b03526",
+    "priority": 2,
+    "group": "c9df577986"
+  },
+  {
+    "type": "chips",
+    "translatesToSourceLanguage": true,
+    "phrase": [
+      {
+        "word": "¡El"
+      },
+      {
+        "word": "león"
+      },
+      {
+        "word": "come"
+      },
+      {
+        "word": "el"
+      },
+      {
+        "word": "pato!",
+        "definition": "duck"
+      }
+    ],
+    "chips": [
+      "The",
+      "lion",
+      "eats",
+      "the",
+      "duck"
+    ],
+    "solution": [
+      "The",
+      "lion",
+      "eats",
+      "the",
+      "duck"
+    ],
+    "formattedSolution": "¡The lion eats the duck!",
+    "id": "6989b03526",
+    "priority": 2,
+    "group": "c9df577986"
+  },
+  {
+    "type": "options",
+    "formInTargetLanguage": "El mono come",
+    "meaningInSourceLanguage": "The monkey eats",
+    "id": "688b7a00c8",
+    "priority": 0,
+    "group": "1396179b42"
+  },
+  {
+    "type": "listeningExercise",
+    "answer": "El mono come",
+    "meaning": "The monkey eats",
+    "audio": "6265368f240669a3347ea253e96016a451ffe9cabdf0478fe5ba973a385efe3f",
+    "id": "581c5541f0",
+    "priority": 1,
+    "group": "1396179b42"
+  },
+  {
+    "type": "chips",
+    "translatesToSourceLanguage": false,
+    "phrase": [
+      {
+        "word": "The"
+      },
+      {
+        "word": "monkey"
+      },
+      {
+        "word": "eats",
+        "definition": "come"
+      }
+    ],
+    "chips": [
+      "El",
+      "mono",
+      "come"
+    ],
+    "solution": [
+      "El",
+      "mono",
+      "come"
+    ],
+    "formattedSolution": "El mono come",
+    "id": "0626518d14",
+    "priority": 2,
+    "group": "1396179b42"
+  },
+  {
+    "type": "chips",
+    "translatesToSourceLanguage": true,
+    "phrase": [
+      {
+        "word": "El"
+      },
+      {
+        "word": "mono"
+      },
+      {
+        "word": "come"
+      }
+    ],
+    "chips": [
+      "The",
+      "monkey",
+      "eats"
+    ],
+    "solution": [
+      "The",
+      "monkey",
+      "eats"
+    ],
+    "formattedSolution": "The monkey eats",
+    "id": "0626518d14",
+    "priority": 2,
+    "group": "1396179b42"
+  },
+  {
+    "type": "options",
+    "formInTargetLanguage": "¿Come el pato?",
+    "meaningInSourceLanguage": "Does the duck eat?",
+    "id": "72b008c9e6",
+    "priority": 0,
+    "group": "28469bbccf"
+  },
+  {
+    "type": "listeningExercise",
+    "answer": "¿Come el pato?",
+    "meaning": "Does the duck eat?",
+    "audio": "adb06069287855157a3ab39353d46b41b1b3cd0c97a736189e9712a758c14e16",
+    "id": "18652386c2",
+    "priority": 1,
+    "group": "28469bbccf"
+  },
+  {
+    "type": "chips",
+    "translatesToSourceLanguage": false,
+    "phrase": [
+      {
+        "word": "Does"
+      },
+      {
+        "word": "the"
+      },
+      {
+        "word": "duck"
+      },
+      {
+        "word": "eat?"
+      }
+    ],
+    "chips": [
+      "Come",
+      "el",
+      "pato"
+    ],
+    "solution": [
+      "Come",
+      "el",
+      "pato"
+    ],
+    "formattedSolution": "¿Come el pato?",
+    "id": "91b3d72a96",
+    "priority": 2,
+    "group": "28469bbccf"
+  },
+  {
+    "type": "chips",
+    "translatesToSourceLanguage": true,
+    "phrase": [
+      {
+        "word": "¿Come"
+      },
+      {
+        "word": "el"
+      },
+      {
+        "word": "pato?",
+        "definition": "duck"
+      }
+    ],
+    "chips": [
+      "Does",
+      "the",
+      "duck",
+      "eat"
+    ],
+    "solution": [
+      "Does",
+      "the",
+      "duck",
+      "eat"
+    ],
+    "formattedSolution": "Does the duck eat?",
+    "id": "91b3d72a96",
+    "priority": 2,
+    "group": "28469bbccf"
+  },
+  {
     "type": "cards",
     "pictures": [
       "dog1.jpg",
