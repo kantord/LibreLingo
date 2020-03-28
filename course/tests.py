@@ -24,6 +24,6 @@ class CommandTests(TestCase):
             management.call_command(('exportcourses',))
 
     def test_check_course_does_not_exists(self):
-        with self.assertRaisesMessage(CommandError, 'Course "3" does not exist'):
+        with self.assertRaisesMessage(CommandError, 'Course "645343" does not exist'):
             sys.stdout = out = StringIO()
-            management.call_command('exportcourse', 3, stdout=out, verbosity=3)
+            management.call_command('exportcourse', 645343, stdout=out, verbosity=3)
