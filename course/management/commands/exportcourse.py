@@ -63,7 +63,7 @@ def export_course_data(export_path, course):
 
 def define_word(course, word, reverse):
     try:
-        dictionary_item = DictionaryItem.objects.get(course__id=course.id, word=word, reverse=reverse)
+        dictionary_item = DictionaryItem.objects.exclude(definition="").get(course__id=course.id, word=word, reverse=reverse)
         return {
             "word": word,
             "definition": dictionary_item.definition
