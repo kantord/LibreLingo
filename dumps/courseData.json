@@ -532,6 +532,1156 @@
   }
 },
 {
+  "model": "course.dictionaryitem",
+  "pk": 1,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "le\u00f3n",
+    "definition": "lion"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 2,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "lion",
+    "definition": "le\u00f3n"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 3,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "pato",
+    "definition": "duck"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 4,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "duck",
+    "definition": "pato"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 5,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "pan",
+    "definition": "bread"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 6,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "bread",
+    "definition": "pan"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 7,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "leche",
+    "definition": "milk"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 8,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "milk",
+    "definition": "leche"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 9,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "pasta",
+    "definition": "pasta"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 10,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "pasta",
+    "definition": "pasta"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 11,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "pareja",
+    "definition": "couple"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 12,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "couple",
+    "definition": "pareja"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 13,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "caballo",
+    "definition": "horse"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 14,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "horse",
+    "definition": "caballo"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 15,
+  "fields": {
+    "course": 2,
+    "reverse": false,
+    "word": "Das",
+    "definition": "The shirt"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 16,
+  "fields": {
+    "course": 2,
+    "reverse": false,
+    "word": "Hemd",
+    "definition": "The shirt"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 17,
+  "fields": {
+    "course": 2,
+    "reverse": true,
+    "word": "The",
+    "definition": "Das Hemd"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 18,
+  "fields": {
+    "course": 2,
+    "reverse": true,
+    "word": "shirt",
+    "definition": "Das Hemd"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 19,
+  "fields": {
+    "course": 2,
+    "reverse": false,
+    "word": "Kleid",
+    "definition": "The dress"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 20,
+  "fields": {
+    "course": 2,
+    "reverse": true,
+    "word": "dress",
+    "definition": "Das Kleid"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 21,
+  "fields": {
+    "course": 2,
+    "reverse": false,
+    "word": "Die",
+    "definition": "The trousers"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 22,
+  "fields": {
+    "course": 2,
+    "reverse": false,
+    "word": "Hose",
+    "definition": "The trousers"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 23,
+  "fields": {
+    "course": 2,
+    "reverse": true,
+    "word": "trousers",
+    "definition": "Die Hose"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 24,
+  "fields": {
+    "course": 2,
+    "reverse": false,
+    "word": "Ananas",
+    "definition": "The pineapple"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 25,
+  "fields": {
+    "course": 2,
+    "reverse": true,
+    "word": "pineapple",
+    "definition": "Die Ananas"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 26,
+  "fields": {
+    "course": 2,
+    "reverse": false,
+    "word": "Banane",
+    "definition": "The banana"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 27,
+  "fields": {
+    "course": 2,
+    "reverse": true,
+    "word": "banana",
+    "definition": "Die Banane"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 28,
+  "fields": {
+    "course": 2,
+    "reverse": false,
+    "word": "Erdbeere",
+    "definition": "The strawberry"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 29,
+  "fields": {
+    "course": 2,
+    "reverse": true,
+    "word": "strawberry",
+    "definition": "Die Erdbeere"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 30,
+  "fields": {
+    "course": 2,
+    "reverse": false,
+    "word": "Der",
+    "definition": "The sky"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 31,
+  "fields": {
+    "course": 2,
+    "reverse": false,
+    "word": "Himmel",
+    "definition": "The sky"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 32,
+  "fields": {
+    "course": 2,
+    "reverse": true,
+    "word": "sky",
+    "definition": "Der Himmel"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 33,
+  "fields": {
+    "course": 2,
+    "reverse": false,
+    "word": "Sonne",
+    "definition": "The sun"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 34,
+  "fields": {
+    "course": 2,
+    "reverse": true,
+    "word": "sun",
+    "definition": "Die Sonne"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 35,
+  "fields": {
+    "course": 2,
+    "reverse": false,
+    "word": "Stein",
+    "definition": "The rock"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 36,
+  "fields": {
+    "course": 2,
+    "reverse": true,
+    "word": "rock",
+    "definition": "Der Stein"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 37,
+  "fields": {
+    "course": 2,
+    "reverse": false,
+    "word": "Fluss",
+    "definition": "The river"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 38,
+  "fields": {
+    "course": 2,
+    "reverse": true,
+    "word": "river",
+    "definition": "Der Fluss"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 39,
+  "fields": {
+    "course": 2,
+    "reverse": false,
+    "word": "Meer",
+    "definition": "The sea"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 40,
+  "fields": {
+    "course": 2,
+    "reverse": true,
+    "word": "sea",
+    "definition": "Das Meer"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 41,
+  "fields": {
+    "course": 2,
+    "reverse": false,
+    "word": "Baum",
+    "definition": "The tree"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 42,
+  "fields": {
+    "course": 2,
+    "reverse": true,
+    "word": "tree",
+    "definition": "Der Baum"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 43,
+  "fields": {
+    "course": 2,
+    "reverse": false,
+    "word": "Berg",
+    "definition": "The mountain"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 44,
+  "fields": {
+    "course": 2,
+    "reverse": true,
+    "word": "mountain",
+    "definition": "Der Berg"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 45,
+  "fields": {
+    "course": 2,
+    "reverse": false,
+    "word": "See",
+    "definition": "The lake"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 46,
+  "fields": {
+    "course": 2,
+    "reverse": true,
+    "word": "lake",
+    "definition": "Der See"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 47,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "vestido",
+    "definition": "dress"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 48,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "dress",
+    "definition": "vestido"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 49,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "camiseta",
+    "definition": "t-shirt"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 50,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "t-shirt",
+    "definition": "camiseta"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 51,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "gorro",
+    "definition": "hat"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 52,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "hat",
+    "definition": "gorro"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 53,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "zapatos",
+    "definition": "shoes"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 54,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "shoes",
+    "definition": "zapatos"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 55,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "camisa",
+    "definition": "shirt"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 56,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "shirt",
+    "definition": "camisa"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 57,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "falda",
+    "definition": "skirt"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 58,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "skirt",
+    "definition": "falda"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 59,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "calcetines",
+    "definition": "socks"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 60,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "socks",
+    "definition": "calcetines"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 61,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "cielo",
+    "definition": "sky"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 62,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "sky",
+    "definition": "cielo"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 63,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "r\u00edo",
+    "definition": "river"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 64,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "river",
+    "definition": "r\u00edo"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 65,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "sol",
+    "definition": "sun"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 66,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "sun",
+    "definition": "sol"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 67,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "mar",
+    "definition": "sea"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 68,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "sea",
+    "definition": "mar"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 69,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "monta\u00f1a",
+    "definition": "mountain"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 70,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "mountain",
+    "definition": "monta\u00f1a"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 71,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "lago",
+    "definition": "lake"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 72,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "lake",
+    "definition": "lago"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 73,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "playa",
+    "definition": "beach"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 74,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "beach",
+    "definition": "playa"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 75,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "perro",
+    "definition": "dog"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 76,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "dog",
+    "definition": "perro"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 77,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "gato",
+    "definition": "cat"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 78,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "cat",
+    "definition": "gato"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 79,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "oso",
+    "definition": "bear"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 80,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "bear",
+    "definition": "oso"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 81,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Buen",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 82,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "provecho",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 83,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "Enjoy",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 84,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "your",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 85,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "meal",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 86,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Por",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 87,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "favor",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 88,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "Please",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 89,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Agua",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 90,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "Water",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 91,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Me",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 92,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "gusta",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 93,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "I",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 94,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "like",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 95,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "it",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 96,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Cu\u00e1nto",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 97,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "cuesta",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 98,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "How",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 99,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "much",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 100,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "is",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 101,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Gracias",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 102,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "Thank",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 103,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "you",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 104,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "viaje",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 105,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "Have",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 106,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "a",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 107,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "good",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 108,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "trip",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 109,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Vamos",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 110,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "a",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 111,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "la",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 112,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "Let's",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 113,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "go",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 114,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "to",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 115,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "the",
+    "definition": ""
+  }
+},
+{
   "model": "course.learnsentence",
   "pk": 1,
   "fields": {
