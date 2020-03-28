@@ -11,6 +11,22 @@ describe("Chips", () => {
         })
     })
 
+    describe("Dictionary", () => {
+        beforeEach(() => {
+            cy.visit(CHIPS_TEST_URL(1))
+        })
+
+        it("Has correct tooltips", () => {
+            cy.get(".has-tooltip-bottom[data-tooltip=tu]").should("be.visible")
+        })
+
+        it("Word withut definition has no tooltip", () => {
+            cy.get(".has-tooltip-bottom")
+                .contains("How")
+                .should("not.be.visible")
+        })
+    })
+
     describe("Open skill page", () => {
         beforeEach(() => {
             cy.visit(CHIPS_TEST_URL(0))
@@ -18,7 +34,10 @@ describe("Chips", () => {
 
         it("Has correct instruction", () => {
             cy.contains(/Translate/).should("be.visible")
-            cy.contains(/How are you today?/).should("be.visible")
+            cy.contains("How").should("be.visible")
+            cy.contains("are").should("be.visible")
+            cy.contains("you").should("be.visible")
+            cy.contains("today?").should("be.visible")
         })
 
         it("Has no undefined", () => {

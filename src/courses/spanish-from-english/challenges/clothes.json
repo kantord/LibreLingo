@@ -19,7 +19,17 @@
   {
     "type": "chips",
     "translatesToSourceLanguage": false,
-    "phrase": "I like it!",
+    "phrase": [
+      {
+        "word": "I"
+      },
+      {
+        "word": "like"
+      },
+      {
+        "word": "it!"
+      }
+    ],
     "chips": [
       "Me",
       "gusta"
@@ -36,7 +46,14 @@
   {
     "type": "chips",
     "translatesToSourceLanguage": true,
-    "phrase": "¡Me gusta!",
+    "phrase": [
+      {
+        "word": "¡Me"
+      },
+      {
+        "word": "gusta!"
+      }
+    ],
     "chips": [
       "I",
       "like",
@@ -72,7 +89,20 @@
   {
     "type": "chips",
     "translatesToSourceLanguage": false,
-    "phrase": "How much is it?",
+    "phrase": [
+      {
+        "word": "How"
+      },
+      {
+        "word": "much"
+      },
+      {
+        "word": "is"
+      },
+      {
+        "word": "it?"
+      }
+    ],
     "chips": [
       "Cuánto",
       "cuesta"
@@ -89,7 +119,14 @@
   {
     "type": "chips",
     "translatesToSourceLanguage": true,
-    "phrase": "¿Cuánto cuesta?",
+    "phrase": [
+      {
+        "word": "¿Cuánto"
+      },
+      {
+        "word": "cuesta?"
+      }
+    ],
     "chips": [
       "How",
       "much",
@@ -127,7 +164,11 @@
   {
     "type": "chips",
     "translatesToSourceLanguage": true,
-    "phrase": "Gracias",
+    "phrase": [
+      {
+        "word": "Gracias"
+      }
+    ],
     "chips": [
       "Thank",
       "you"
