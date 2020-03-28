@@ -1,11 +1,8 @@
-import os
-from django.apps import apps
 from django.core.management import CommandError, find_commands
 from django.test import TestCase
 from django.core import management
 from io import StringIO
-from django.test.utils import extend_sys_path
-from django.utils import translation
+import sys
 
 
 class CommandTests(TestCase):
@@ -13,30 +10,20 @@ class CommandTests(TestCase):
     fixtures = ["dumps/courseData.json"]
 
     def test_command(self):
-        out = StringIO()
+        sys.stdout = out = StringIO()
         management.call_command('exportcourse', 1, stdout=out, verbosity=3)
-        # print(out.getvalue())
-        # self.assertIn("Exporting course Spanish for English speakers course", out.getvalue())
+        self.assertIn("Exporting course Spanish for English speakers course", out.getvalue())
 
-    def test_language_preserved(self):
-        out = StringIO()
-        with translation.override('en'):
-            management.call_command('exportcourse', 2, stdout=out)
-            self.assertEqual(translation.get_language(), 'en', "Same language")
-            # self.assertEqual(translation.get_language(), 'fr', "Not Same language")
+    def test_calling_a_command_without_argument(self):
+        with self.assertRaisesMessage(CommandError, 'Error: the following arguments are required: course_id'):
+            sys.stdout = out = StringIO()
+            management.call_command('exportcourse', stdout=out)
 
     def test_exportcourses(self):
-        """ An unknown command raises CommandError """
         with self.assertRaisesMessage(CommandError, "Unknown command: 'exportcourses'"):
             management.call_command(('exportcourses',))
 
-    def test_discover_commands_in_eggs(self):
-        """
-        Management commands can also be loaded from Python eggs.
-        """
-        egg_dir = '%s/eggs' % os.path.dirname(__file__)
-        egg_name = '%s/basic.egg' % egg_dir
-        with extend_sys_path(egg_name):
-            with self.settings(INSTALLED_APPS=['course']):
-                cmds = find_commands(os.path.join(apps.get_app_config('course').path, 'management'))
-        self.assertEqual(cmds, ['exportcourse'])
+    def test_check_course_does_not_exists(self):
+        with self.assertRaisesMessage(CommandError, 'Course "3" does not exist'):
+            sys.stdout = out = StringIO()
+            management.call_command('exportcourse', 3, stdout=out, verbosity=3)
