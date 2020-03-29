@@ -1,3 +1,4 @@
+import re
 from django.contrib import admin
 from django import forms
 from adminsortable2.admin import SortableInlineAdminMixin
@@ -141,11 +142,31 @@ class DictionaryIsEmptyFilter(admin.SimpleListFilter):
             return queryset.filter(definition="")
 
 
+class DictionaryReverseFilter(admin.SimpleListFilter):
+    title = 'language'
+    parameter_name = "reverse"
+
+    def lookups(self, request, model_admin):
+        course_id = re.match("/admin/course/course/([0-9]+)/dictionaryitem/", request.path).group(1)
+        course = Course.objects.get(pk=int(course_id))
+
+        return (
+            ("yes", course.source_language_name),
+            ("no", course.language_name),)
+
+    def queryset(self, request, queryset):
+        if self.value() == "yes":
+            return queryset.filter(reverse=True)
+
+        if self.value() == "no":
+            return queryset.filter(reverse=False)
+
+
 class DictionaryItemAdmin(SubAdmin):
     model = DictionaryItem
     form = DictionaryItemForm
     list_display = ('word_', 'definition', )
-    list_filter = ('reverse', DictionaryIsEmptyFilter, )
+    list_filter = (DictionaryReverseFilter, DictionaryIsEmptyFilter, )
 
     def word_(self, obj):
         lng = obj.course.source_language_name if obj.reverse else obj.course.language_name
