@@ -126,7 +126,12 @@ class DictionaryItemForm(forms.ModelForm):
 class DictionaryItemAdmin(SubAdmin):
     model = DictionaryItem
     form = DictionaryItemForm
-    list_display = ('word', 'definition')
+    list_display = ('word_', 'definition')
+    list_filter = ('reverse', )
+
+    def word_(self, obj):
+        lng = obj.course.source_language_name if obj.reverse else obj.course.language_name
+        return "{} ({})".format(obj.word, lng)
 
 
 class CourseForm(forms.ModelForm):
