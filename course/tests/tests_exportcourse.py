@@ -4,6 +4,8 @@ from django.core import management
 from io import StringIO
 import sys
 
+from django.utils import translation
+
 
 class CommandTests(TestCase):
     databases = '__all__'
@@ -18,6 +20,7 @@ class CommandTests(TestCase):
         with self.assertRaisesMessage(CommandError, 'Course "645343" does not exist'):
             management.call_command('exportcourse', 645343, stdout=StringIO(), verbosity=3)
 
-    def test_argument_type(self):
-        with self.assertRaisesMessage(CommandError, "Error: argument course_id: invalid int value: 'dgdnfgn'"):
-            management.call_command('exportcourse', "dgdnfgn", stdout=StringIO(), verbosity=3)
+    def test_language_preserved(self):
+        with translation.override('en'):
+            management.call_command('exportcourse', 2, stdout=StringIO())
+            self.assertEqual(translation.get_language(), 'en', "Same language")
