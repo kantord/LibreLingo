@@ -124,11 +124,28 @@ class DictionaryItemForm(forms.ModelForm):
         }
 
 
+class DictionaryIsEmptyFilter(admin.SimpleListFilter):
+    title = '"Is defined?"'
+    parameter_name = "todo"
+
+    def lookups(self, request, model_admin):
+        return (
+            ("done", "Yes, is defined"),
+            ("todo", "No, is not defined"),)
+
+    def queryset(self, request, queryset):
+        if self.value() == "done":
+            return queryset.exclude(definition="")
+
+        if self.value() == "todo":
+            return queryset.filter(definition="")
+
+
 class DictionaryItemAdmin(SubAdmin):
     model = DictionaryItem
     form = DictionaryItemForm
-    list_display = ('word_', 'definition')
-    list_filter = ('reverse', )
+    list_display = ('word_', 'definition', )
+    list_filter = ('reverse', DictionaryIsEmptyFilter, )
 
     def word_(self, obj):
         lng = obj.course.source_language_name if obj.reverse else obj.course.language_name
