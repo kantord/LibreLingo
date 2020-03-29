@@ -70,7 +70,7 @@ blocks:
             - sem-version python 3.8
             - checkout
             - pip install --cache-dir .pip_cache -r requirements.txt
-            - python manage.py test
+            - 'DATABASE_URL=sqlite:///db.sqlite3 python manage.py test'
 promotions:
   - name: Deploy to production
     pipeline_file: pipeline_2.yml
