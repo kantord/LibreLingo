@@ -106,7 +106,8 @@ class ModuleInline(SortableInlineAdminMixin, admin.TabularInline):
     form = ModuleForm
     show_change_link = True
     readonly_fields = ('change_link',)
-    list_display = ('change_link' )
+    list_display = ('change_link')
+
     def change_link(self, obj):
         if not obj.id:
             return ""
