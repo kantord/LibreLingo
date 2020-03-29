@@ -23,7 +23,8 @@
     "docs": "mkdocs serve"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "5.13.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.28",
+    "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "@openfonts/josefin-sans_all": "1.44.0",
     "bulma": "0.8.1",
     "bulma-pageloader": "0.3.0",
@@ -82,6 +83,7 @@
     "svelte-loader": "2.13.6",
     "svelte-preprocess-sass": "0.2.0",
     "webpack": "4.42.1",
+    "webpack-bundle-analyzer": "^3.6.1",
     "webpack-cli": "3.3.11"
   },
   "nyc": {
