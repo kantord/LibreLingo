@@ -5,6 +5,8 @@ const pkg = require("./package.json")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const sass = require("svelte-preprocess-sass").sass
 const CopyPlugin = require("copy-webpack-plugin")
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
+    .BundleAnalyzerPlugin
 
 const mode = process.env.NODE_ENV
 const dev = mode === "development"
@@ -22,11 +24,11 @@ module.exports = {
             rules: [
                 {
                     test: /\.md/i,
-                    use: "raw-loader"
+                    use: "raw-loader",
                 },
                 {
                     test: /\.css$/i,
-                    use: ["style-loader", "css-loader"]
+                    use: ["style-loader", "css-loader"],
                 },
                 {
                     test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
@@ -35,26 +37,26 @@ module.exports = {
                             loader: "file-loader",
                             options: {
                                 name: "[name].[ext]",
-                                outputPath: "fonts/"
-                            }
-                        }
-                    ]
+                                outputPath: "fonts/",
+                            },
+                        },
+                    ],
                 },
                 {
                     test: /\.scss$/,
                     use: [
                         MiniCssExtractPlugin.loader,
                         {
-                            loader: "css-loader"
+                            loader: "css-loader",
                         },
                         {
                             loader: "sass-loader",
                             options: {
-                                sourceMap: true
+                                sourceMap: true,
                                 // options...
-                            }
-                        }
-                    ]
+                            },
+                        },
+                    ],
                 },
                 {
                     test: /\.(svelte|html)$/,
@@ -62,18 +64,21 @@ module.exports = {
                         loader: "svelte-loader",
                         options: {
                             preprocess: {
-                                style: sass({}, { all: true })
+                                style: sass({}, { all: true }),
                             },
                             dev,
                             hydratable: true,
-                            hotReload: false // pending https://github.com/sveltejs/svelte/issues/2377
-                        }
-                    }
-                }
-            ]
+                            hotReload: false, // pending https://github.com/sveltejs/svelte/issues/2377
+                        },
+                    },
+                },
+            ],
         },
         mode,
         plugins: [
+            ...(process.env.ANALYZE === "true"
+                ? [new BundleAnalyzerPlugin()]
+                : []),
             new CopyPlugin([
                 {
                     from: path.resolve(
@@ -81,20 +86,20 @@ module.exports = {
                         "@openfonts/josefin-sans_all",
                         "files"
                     ),
-                    to: path.resolve("static", "files")
-                }
+                    to: path.resolve("static", "files"),
+                },
             ]),
             new MiniCssExtractPlugin({
-                filename: "css/mystyles.css"
+                filename: "css/mystyles.css",
             }),
             // pending https://github.com/sveltejs/svelte/issues/2377
             // dev && new webpack.HotModuleReplacementPlugin(),
             new webpack.DefinePlugin({
                 "process.browser": true,
-                "process.env.NODE_ENV": JSON.stringify(mode)
-            })
+                "process.env.NODE_ENV": JSON.stringify(mode),
+            }),
         ].filter(Boolean),
-        devtool: dev && "inline-source-map"
+        devtool: dev && "inline-source-map",
     },
 
     server: {
@@ -107,7 +112,7 @@ module.exports = {
             rules: [
                 {
                     test: /\.md/i,
-                    use: "raw-loader"
+                    use: "raw-loader",
                 },
                 {
                     test: /\.(svelte|html)$/,
@@ -115,25 +120,25 @@ module.exports = {
                         loader: "svelte-loader",
                         options: {
                             preprocess: {
-                                style: sass({}, { all: true })
+                                style: sass({}, { all: true }),
                             },
                             css: false,
                             generate: "ssr",
-                            dev
-                        }
-                    }
-                }
-            ]
+                            dev,
+                        },
+                    },
+                },
+            ],
         },
         mode: process.env.NODE_ENV,
         performance: {
-            hints: false // it doesn't matter if server.js is large
-        }
+            hints: false, // it doesn't matter if server.js is large
+        },
     },
 
     serviceworker: {
         entry: config.serviceworker.entry(),
         output: config.serviceworker.output(),
-        mode: process.env.NODE_ENV
-    }
+        mode: process.env.NODE_ENV,
+    },
 }
