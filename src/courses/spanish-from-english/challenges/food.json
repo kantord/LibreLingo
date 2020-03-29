@@ -19,7 +19,17 @@
   {
     "type": "chips",
     "translatesToSourceLanguage": false,
-    "phrase": "Enjoy your meal",
+    "phrase": [
+      {
+        "word": "Enjoy"
+      },
+      {
+        "word": "your"
+      },
+      {
+        "word": "meal"
+      }
+    ],
     "chips": [
       "Buen",
       "provecho"
@@ -36,7 +46,14 @@
   {
     "type": "chips",
     "translatesToSourceLanguage": true,
-    "phrase": "¡Buen provecho!",
+    "phrase": [
+      {
+        "word": "¡Buen"
+      },
+      {
+        "word": "provecho!"
+      }
+    ],
     "chips": [
       "Enjoy",
       "your",
@@ -72,7 +89,11 @@
   {
     "type": "chips",
     "translatesToSourceLanguage": false,
-    "phrase": "Please",
+    "phrase": [
+      {
+        "word": "Please"
+      }
+    ],
     "chips": [
       "Por",
       "favor"
@@ -106,7 +127,14 @@
   {
     "type": "chips",
     "translatesToSourceLanguage": false,
-    "phrase": "Bread, please",
+    "phrase": [
+      {
+        "word": "Bread,"
+      },
+      {
+        "word": "please"
+      }
+    ],
     "chips": [
       "Pan",
       "por",
@@ -125,7 +153,17 @@
   {
     "type": "chips",
     "translatesToSourceLanguage": true,
-    "phrase": "Pan, por favor",
+    "phrase": [
+      {
+        "word": "Pan,"
+      },
+      {
+        "word": "por"
+      },
+      {
+        "word": "favor"
+      }
+    ],
     "chips": [
       "Bread",
       "please"
@@ -159,7 +197,14 @@
   {
     "type": "chips",
     "translatesToSourceLanguage": false,
-    "phrase": "Water, please",
+    "phrase": [
+      {
+        "word": "Water,"
+      },
+      {
+        "word": "please"
+      }
+    ],
     "chips": [
       "Agua",
       "por",
@@ -178,7 +223,17 @@
   {
     "type": "chips",
     "translatesToSourceLanguage": true,
-    "phrase": "Agua, por favor",
+    "phrase": [
+      {
+        "word": "Agua,"
+      },
+      {
+        "word": "por"
+      },
+      {
+        "word": "favor"
+      }
+    ],
     "chips": [
       "Water",
       "please"

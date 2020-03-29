@@ -1,3 +1,4 @@
+import re
 from django.contrib import admin
 from django import forms
 from adminsortable2.admin import SortableInlineAdminMixin
@@ -9,6 +10,7 @@ from .models import LearnWord
 from .models import LearnSentence
 from .models import Course
 from .models import Module
+from .models import DictionaryItem
 from .models import Skill
 
 
@@ -105,12 +107,71 @@ class ModuleInline(SortableInlineAdminMixin, admin.TabularInline):
     form = ModuleForm
     show_change_link = True
     readonly_fields = ('change_link',)
-    list_display = ('change_link' )
+    list_display = ('change_link')
+
     def change_link(self, obj):
         if not obj.id:
             return ""
         return mark_safe('<a href="%s">Edit</a>' % \
          ("/admin/course/course/%s/module/%s/change/" % (obj.course.id, obj.id)))
+
+
+class DictionaryItemForm(forms.ModelForm):
+    class Meta:
+        model = DictionaryItem
+        exclude = []
+        widgets = {
+            'word': forms.TextInput()
+        }
+
+
+class DictionaryIsEmptyFilter(admin.SimpleListFilter):
+    title = '"Is defined?"'
+    parameter_name = "todo"
+
+    def lookups(self, request, model_admin):
+        return (
+            ("done", "Yes, is defined"),
+            ("todo", "No, is not defined"),)
+
+    def queryset(self, request, queryset):
+        if self.value() == "done":
+            return queryset.exclude(definition="")
+
+        if self.value() == "todo":
+            return queryset.filter(definition="")
+
+
+class DictionaryReverseFilter(admin.SimpleListFilter):
+    title = 'language'
+    parameter_name = "reverse"
+
+    def lookups(self, request, model_admin):
+        course_id = re.match("/admin/course/course/([0-9]+)/dictionaryitem/", request.path).group(1)
+        course = Course.objects.get(pk=int(course_id))
+
+        return (
+            ("yes", course.source_language_name),
+            ("no", course.language_name),)
+
+    def queryset(self, request, queryset):
+        if self.value() == "yes":
+            return queryset.filter(reverse=True)
+
+        if self.value() == "no":
+            return queryset.filter(reverse=False)
+
+
+class DictionaryItemAdmin(SubAdmin):
+    model = DictionaryItem
+    form = DictionaryItemForm
+    list_display = ('word_', 'definition', )
+    list_filter = (DictionaryReverseFilter, DictionaryIsEmptyFilter, )
+    search_fields = ['word', 'definition']
+
+    def word_(self, obj):
+        lng = obj.course.source_language_name if obj.reverse else obj.course.language_name
+        return "{} ({})".format(obj.word, lng)
 
 
 class CourseForm(forms.ModelForm):
@@ -130,7 +191,7 @@ class CourseAdmin(RootSubAdmin):
     inlines = [
         ModuleInline,
     ]
-    subadmins = [ModuleAdmin]
+    subadmins = [ModuleAdmin, DictionaryItemAdmin]
 
 
 admin.site.register(Course, CourseAdmin)
