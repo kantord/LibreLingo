@@ -3,6 +3,8 @@ from django.db import models
 from pathlib import Path
 import csv
 
+from .utils import clean_word
+
 
 with open(Path('./docs/image_attributions.csv').resolve()) as f:
     VALID_IMAGE_NAMES = [(o["image_name"], o["image_name"], ) for o in csv.DictReader(f)]
@@ -46,7 +48,7 @@ class LearnSentence(models.Model):
         try:
             DictionaryItem.objects.get(course=course, word=word, reverse=reverse)
         except:
-            DictionaryItem.objects.create(course=course, word=word, reverse=reverse)
+            DictionaryItem.objects.create(course=course, word=clean_word(word), reverse=reverse)
 
     def ensure_all_words(self):
         for word in self.formInTargetLanguage.split():
