@@ -165,8 +165,9 @@ class DictionaryReverseFilter(admin.SimpleListFilter):
 class DictionaryItemAdmin(SubAdmin):
     model = DictionaryItem
     form = DictionaryItemForm
-    list_display = ('word_', 'definition', )
+    list_display = ('word_', 'word', 'definition', )
     list_filter = (DictionaryReverseFilter, DictionaryIsEmptyFilter, )
+    search_fields = ['word', 'definition']
 
     def word_(self, obj):
         lng = obj.course.source_language_name if obj.reverse else obj.course.language_name
