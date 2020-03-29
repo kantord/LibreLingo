@@ -5,6 +5,7 @@ from pathlib import Path
 from django.core.management.base import BaseCommand, CommandError
 from course.models import Course
 from course.models import DictionaryItem
+from course.utils import clean_word
 
 def opaqueId(obj, salt=""):
     hash = hashlib.sha256()
@@ -16,10 +17,6 @@ def audioId(language_id, text):
     hash = hashlib.sha256()
     hash.update((language_id + "|" + text).encode('utf-8'))
     return hash.hexdigest()
-
-
-def clean_word(word):
-    return "".join(c for c in word if c.isalnum())
 
 
 def generate_chips(text):
