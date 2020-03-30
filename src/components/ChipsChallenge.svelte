@@ -3,6 +3,7 @@
   import shuffle from "lodash.shuffle";
   import { writable, get } from "svelte/store";
   import ChallengePanel from "./ChallengePanel";
+  import Phrase from "./Phrase";
 
   const swapArrayElements = function(arr, indexA, indexB) {
     const temp = arr[indexA];
@@ -87,15 +88,7 @@
   <div class="section">
     <p class="is-size-1 is-size-2-tablet is-size-4-mobile has-text-centered">
       Translate
-      <b class="phrase">
-	      {#each challenge.phrase as { word, definition }}
-		      {#if definition}
-			      <span class="has-tooltip-bottom" data-tooltip="{definition}">{word}</span>
-		      {:else}
-			      <span>{word}</span>
-		      {/if}
-	      {/each}
-      </b>
+      <Phrase  phrase={challenge.phrase} />
     </p>
   </div>
 
@@ -150,21 +143,6 @@
 
 <style>
   @import "../variables";
-
-  .phrase span {
-	  margin: 0 .15em;
-
-	  &.has-tooltip-bottom {
-		  text-decoration: wavy underline rgba($blue, .5);
-	  }
-
-	  &:first-child {
-		  margin-left: 0;
-	  }
-	  &:last-child {
-		  margin-left: 0;
-	  }
-  }
 
   .chip {
     user-select: none;
