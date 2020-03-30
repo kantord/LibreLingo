@@ -1,7 +1,52 @@
 @charset "utf-8";
 @import "./custom_variables";
 
-@import "~bulma/bulma";
+@import "~bulma/sass/utilities/_all.sass";
+
+// Don't remove commented out code here: they are disabled bulma modules
+
+@import "~bulma/sass/base/minireset.sass";
+//@import "~bulma/sass/form/file.sass";
+@import "~bulma/sass/form/shared.sass";
+@import "~bulma/sass/form/input-textarea.sass";
+//@import "~bulma/sass/form/all.sass";
+//@import "~bulma/sass/form/select.sass";
+//@import "~bulma/sass/form/checkbox-radio.sass";
+//@import "~bulma/sass/form/tools.sass";
+//@import "~bulma/sass/grid/tiles.sass";
+@import "~bulma/sass/grid/columns.sass";
+@import "~bulma/sass/elements/progress.sass";
+//@import "~bulma/sass/elements/other.sass";
+//@import "~bulma/sass/elements/notification.sass";
+@import "~bulma/sass/elements/icon.sass";
+@import "~bulma/sass/elements/image.sass";
+@import "~bulma/sass/elements/button.sass";
+@import "~bulma/sass/elements/content.sass";
+@import "~bulma/sass/elements/title.sass";
+@import "~bulma/sass/elements/box.sass";
+//@import "~bulma/sass/elements/table.sass";
+@import "~bulma/sass/elements/container.sass";
+@import "~bulma/sass/elements/tag.sass";
+@import "~bulma/sass/elements/form.sass";
+@import "~bulma/sass/layout/section.sass";
+@import "~bulma/sass/layout/footer.sass";
+@import "~bulma/sass/layout/hero.sass";
+@import "~bulma/sass/base/generic.sass";
+@import "~bulma/sass/base/helpers.sass";
+//@import "~bulma/sass/components/pagination.sass";
+//@import "~bulma/sass/components/level.sass";
+//@import "~bulma/sass/components/message.sass";
+//@import "~bulma/sass/components/modal.sass";
+@import "~bulma/sass/components/navbar.sass";
+@import "~bulma/sass/components/panel.sass";
+//@import "~bulma/sass/components/list.sass";
+//@import "~bulma/sass/components/breadcrumb.sass";
+//@import "~bulma/sass/components/menu.sass";
+//@import "~bulma/sass/components/tabs.sass";
+//@import "~bulma/sass/components/dropdown.sass";
+@import "~bulma/sass/components/card.sass";
+@import "~bulma/sass/components/media.sass";
+
 @import "~bulma-pageloader";
 @import "~bulma-tooltip";
 
