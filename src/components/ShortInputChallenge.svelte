@@ -1,28 +1,28 @@
 <script>
-  import { slide } from "svelte/transition";
-  import { onMount } from "svelte";
-  import hotkeys from "hotkeys-js";
-  import levenshtein from "js-levenshtein";
-  import shuffle from "lodash.shuffle";
-  import ChallengePanel from "./ChallengePanel";
-  import InputFieldWithVirtualKeyboard from "./InputFieldWithVirtualKeyboard";
+  import { slide } from "svelte/transition"
+  import { onMount } from "svelte"
+  import hotkeys from "hotkeys-js"
+  import levenshtein from "js-levenshtein"
+  import shuffle from "lodash.shuffle"
+  import ChallengePanel from "./ChallengePanel"
+  import InputFieldWithVirtualKeyboard from "./InputFieldWithVirtualKeyboard"
 
-  export let challenge;
-  export let registerResult;
-  export let resolveChallenge;
-  export let languageName;
-  export let languageCode;
-  export let specialCharacters;
-  let answer = null;
-  let submitted = false;
-  let correct = null;
-  let spellingSuggestion = "";
-  let picture = shuffle(challenge.pictures)[0];
+  export let challenge
+  export let registerResult
+  export let resolveChallenge
+  export let languageName
+  export let languageCode
+  export let specialCharacters
+  let answer = null
+  let submitted = false
+  let correct = null
+  let spellingSuggestion = ""
+  let picture = shuffle(challenge.pictures)[0]
 
   $: submitChallenge = () => {
-    if (!answer) return;
-    if (submitted) return;
-    correct = false;
+    if (!answer) return
+    if (submitted) return
+    correct = false
 
     challenge.formInTargetLanguage.forEach(form => {
       if (
@@ -34,37 +34,37 @@
           form.toLowerCase()
         ) <= 1
       ) {
-        correct = true;
+        correct = true
         spellingSuggestion =
           form
             .replace(/^\s+|\s+$/g, "")
             .replace(/\s+/g, " ")
             .toLowerCase() === answer.toLowerCase()
             ? ""
-            : `You made a small error. Correct spelling: ${form}`;
+            : `You made a small error. Correct spelling: ${form}`
       }
-    });
+    })
 
-    registerResult(correct);
-    submitted = true;
-  };
+    registerResult(correct)
+    submitted = true
+  }
 
   $: finishChallenge = () => {
-    answer = null;
-    submitted = false;
-    resolveChallenge();
-  };
+    answer = null
+    submitted = false
+    resolveChallenge()
+  }
 
   onMount(() => {
-    hotkeys.unbind("enter");
+    hotkeys.unbind("enter")
     hotkeys("enter", () => {
       if (submitted) {
-        finishChallenge();
+        finishChallenge()
       } else {
-        submitChallenge();
+        submitChallenge()
       }
-    });
-  });
+    })
+  })
 </script>
 
 <form on:submit|preventDefault="{submitChallenge}">

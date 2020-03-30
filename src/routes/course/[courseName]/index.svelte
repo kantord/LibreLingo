@@ -1,28 +1,28 @@
 <script context="module">
   export async function preload(page, session) {
-    const { courseName } = page.params;
+    const { courseName } = page.params
     const { modules, languageName } = await import(
       `../../../courses/${courseName}/courseData.json`
-    );
+    )
 
-    return { courseName, modules, languageName };
+    return { courseName, modules, languageName }
   }
 </script>
 
 <script>
-  import db from "../../../db";
-  import SkillCard from "../../../components/SkillCard.svelte";
-  import NavBar from "../../../components/NavBar.svelte";
+  import db from "../../../db"
+  import SkillCard from "../../../components/SkillCard.svelte"
+  import NavBar from "../../../components/NavBar.svelte"
 
-  let foodSkillAvailable = false;
-  export let courseName = null;
-  export let modules = null;
-  export let languageName = null;
+  let foodSkillAvailable = false
+  export let courseName = null
+  export let modules = null
+  export let languageName = null
 
   db &&
     db.get("foo_bar").then(function(doc) {
-      foodSkillAvailable = true;
-    });
+      foodSkillAvailable = true
+    })
 </script>
 
 <svelte:head>
