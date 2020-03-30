@@ -21,7 +21,7 @@ describe("prepareChallenge", () => {
             type: "cards",
             pictures: ["lion1.jpg", "lion2.jpg", "lion3.jpg"],
             meaningInSourceLanguage: "lion",
-            formInTargetLanguage: "león",
+            formInTargetLanguage: "león"
         }
         const alternativeChallenges = [
             {
@@ -29,19 +29,19 @@ describe("prepareChallenge", () => {
                 type: "cards",
                 pictures: ["bear1.jpg", "bear2.jpg", "bear3.jpg"],
                 meaningInSourceLanguage: "bear",
-                formInTargetLanguage: "oso",
+                formInTargetLanguage: "oso"
             },
             {
                 id: 6663,
                 type: "shortInput",
                 meaningInSourceLanguage: "dog",
-                formInTargetLanguage: ["perro", "el perro", "can"],
-            },
+                formInTargetLanguage: ["perro", "el perro", "can"]
+            }
         ]
         expect(
             prepareChallenge({
                 currentChallenge,
-                alternativeChallenges,
+                alternativeChallenges
             }).filter(({ type }) => type !== "cards")
         ).toEqual([])
     })

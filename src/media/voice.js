@@ -1,8 +1,8 @@
 import { Howl } from "howler"
 
-const playVoice = (voice) => {
+const playVoice = voice => {
     new Howl({
-        src: [`voice/${voice}.mp3`],
+        src: [`voice/${voice}.mp3`]
     }).play()
 }
 
