@@ -15,7 +15,7 @@
       .process(readme.default)
 
     return {
-      readmeHTML: readmeHTML.contents.split("<h2>Tech stack</h2>")[0],
+      readmeHTML: readmeHTML.contents.split("<h2>Tech stack</h2>")[0]
     }
   }
 </script>

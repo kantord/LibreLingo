@@ -1,8 +1,8 @@
 <script>
-  export let title;
-  export let practiceHref;
-  export let imageSet;
-  export let summary;
+  export let title
+  export let practiceHref
+  export let imageSet
+  export let summary
 </script>
 
 <div class="card">

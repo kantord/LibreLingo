@@ -1,10 +1,10 @@
 <script>
-  import { tweened } from "svelte/motion";
+  import { tweened } from "svelte/motion"
 
-  export let value;
+  export let value
 
-  const progress = tweened(0);
-  $: progress.set(value);
+  const progress = tweened(0)
+  $: progress.set(value)
 </script>
 
 <div>

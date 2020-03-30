@@ -1,10 +1,10 @@
 <script>
-  export let active;
-  export let inactive;
-  export let number;
-  export let picture;
-  export let correct;
-  export let formInTargetLanguage;
+  export let active
+  export let inactive
+  export let number
+  export let picture
+  export let correct
+  export let formInTargetLanguage
 </script>
 
 <li class:active class:inactive>
