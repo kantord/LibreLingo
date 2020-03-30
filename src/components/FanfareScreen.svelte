@@ -1,22 +1,22 @@
 <script>
-  import sound from "../media/sound";
-  import hotkeys from "hotkeys-js";
-  import { onMount } from "svelte";
-  import { goto } from "@sapper/app";
+  import sound from "../media/sound"
+  import hotkeys from "hotkeys-js"
+  import { onMount } from "svelte"
+  import { goto } from "@sapper/app"
 
-  export let rawChallenges;
-  export let courseURL;
+  export let rawChallenges
+  export let courseURL
 
   onMount(async () => {
-    sound.fanfare.play();
-  });
+    sound.fanfare.play()
+  })
 
   onMount(() => {
-    hotkeys.unbind("enter");
+    hotkeys.unbind("enter")
     hotkeys("enter", () => {
-      goto(courseURL);
-    });
-  });
+      goto(courseURL)
+    })
+  })
 </script>
 
 <section class="hero">

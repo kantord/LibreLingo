@@ -1,7 +1,7 @@
 <script>
-  import NavBar from "../components/NavBar";
-  import GitHubForkRibbon from "../components/GitHubForkRibbon";
-  import { _ } from "svelte-i18n";
+  import NavBar from "../components/NavBar"
+  import GitHubForkRibbon from "../components/GitHubForkRibbon"
+  import { _ } from "svelte-i18n"
 </script>
 
 <svelte:head>

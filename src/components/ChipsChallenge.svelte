@@ -1,94 +1,94 @@
 <script>
-  import Sortable from "sortablejs";
-  import shuffle from "lodash.shuffle";
-  import { writable, get } from "svelte/store";
-  import ChallengePanel from "./ChallengePanel";
-  import Phrase from "./Phrase";
+  import Sortable from "sortablejs"
+  import shuffle from "lodash.shuffle"
+  import { writable, get } from "svelte/store"
+  import ChallengePanel from "./ChallengePanel"
+  import Phrase from "./Phrase"
 
   const swapArrayElements = function(arr, indexA, indexB) {
-    const temp = arr[indexA];
-    const new_arr = [...arr];
-    new_arr[indexA] = arr[indexB];
-    new_arr[indexB] = temp;
-    return new_arr;
-  };
+    const temp = arr[indexA]
+    const new_arr = [...arr]
+    new_arr[indexA] = arr[indexB]
+    new_arr[indexB] = temp
+    return new_arr
+  }
 
   const sortable = function(node, { items, options }) {
     options = Object.assign(options, {
       onUpdate({ newIndex, oldIndex }) {
         items.update(oldItems =>
           swapArrayElements(oldItems, oldIndex, newIndex)
-        );
+        )
       },
 
       onRemove({ oldIndex }) {
         items.update(oldItems => {
-          const newItems = [...oldItems];
-          newItems.splice(oldIndex, 1);
-          return newItems;
-        });
+          const newItems = [...oldItems]
+          newItems.splice(oldIndex, 1)
+          return newItems
+        })
       },
 
       onAdd({ newIndex, item }) {
         items.update(oldItems => {
-          const newItems = [...oldItems];
-          newItems.splice(newIndex, 0, item.innerText);
-          return newItems;
-        });
+          const newItems = [...oldItems]
+          newItems.splice(newIndex, 0, item.innerText)
+          return newItems
+        })
       }
-    });
+    })
 
-    let sortable = new Sortable(node, options);
+    let sortable = new Sortable(node, options)
 
     return {
       update(items) {
-        sortable.destroy();
-        sortable = new Sortable(node, options);
+        sortable.destroy()
+        sortable = new Sortable(node, options)
       },
       destroy() {
-        sortable.destroy();
+        sortable.destroy()
       }
-    };
-  };
+    }
+  }
 
-  export let challenge;
-  export let registerResult;
-  export let resolveChallenge;
-  let submitted = false;
-  let correct = null;
-  const answer = writable([]);
-  const chips = writable(shuffle(challenge.chips));
+  export let challenge
+  export let registerResult
+  export let resolveChallenge
+  let submitted = false
+  let correct = null
+  const answer = writable([])
+  const chips = writable(shuffle(challenge.chips))
 
   if (process.browser === true) {
     window.testSolution = () => {
-      answer.update(() => ["Como", "estás", "hoy"]);
-    };
+      answer.update(() => ["Como", "estás", "hoy"])
+    }
 
     window.testIncorrectSolution = () => {
-      answer.update(() => ["Como", "hoy"]);
-    };
+      answer.update(() => ["Como", "hoy"])
+    }
   }
 
   $: submitChallenge = () => {
-    if (!$answer) return;
-    if (submitted) return;
-    correct = $answer.join(" ") === challenge.solution.join(" ");
-    registerResult(correct);
-    submitted = true;
-  };
+    if (!$answer) return
+    if (submitted) return
+    correct = $answer.join(" ") === challenge.solution.join(" ")
+    registerResult(correct)
+    submitted = true
+  }
 
   $: finishChallenge = () => {
-    $answer = false;
-    submitted = false;
-    resolveChallenge();
-  };
+    $answer = false
+    submitted = false
+    resolveChallenge()
+  }
 </script>
 
 <form on:submit|preventDefault="{submitChallenge}">
   <div class="section">
     <p class="is-size-1 is-size-2-tablet is-size-4-mobile has-text-centered">
       Translate
-      <Phrase  phrase={challenge.phrase} />
+      <Phrase phrase="{challenge.phrase}" />
     </p>
   </div>
 
