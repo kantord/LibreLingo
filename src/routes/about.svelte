@@ -1,30 +1,30 @@
 <script context="module">
   export async function preload(page, session) {
-    const remark = await require("remark");
-    const markdown = await import("remark-parse");
-    const html = await import("rehype-stringify");
-    const readme = await import("../../README.md");
-    const remark2rehype = await import("remark-rehype");
-    const format = await import("rehype-format");
+    const remark = await require("remark")
+    const markdown = await import("remark-parse")
+    const html = await import("rehype-stringify")
+    const readme = await import("../../README.md")
+    const remark2rehype = await import("remark-rehype")
+    const format = await import("rehype-format")
 
     const readmeHTML = await remark()
       .use(markdown.default, { gfm: true, commonmark: true })
       .use(remark2rehype.default)
       .use(format.default)
       .use(html.default)
-      .process(readme.default);
+      .process(readme.default)
 
     return {
       readmeHTML: readmeHTML.contents.split("<h2>Tech stack</h2>")[0],
-    };
+    }
   }
 </script>
 
 <script>
-  import NavBar from "../components/NavBar";
-  import GitHubForkRibbon from "../components/GitHubForkRibbon";
+  import NavBar from "../components/NavBar"
+  import GitHubForkRibbon from "../components/GitHubForkRibbon"
 
-  export let readmeHTML;
+  export let readmeHTML
 </script>
 
 <svelte:head>

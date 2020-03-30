@@ -1,21 +1,23 @@
 export const removeAlternatives = (challenges) =>
-    Object.values(Object.fromEntries(challenges.map(challenge => [challenge.id, challenge])))
+    Object.values(
+        Object.fromEntries(challenges.map((challenge) => [challenge.id, challenge]))
+    )
 
-
-export const sortChallengeGroups = challenges => {
+export const sortChallengeGroups = (challenges) => {
     // This is a very inefficient sorting algorithm to make sure that random order is preserved
     // as much as possible while also priorities are respected within groups
     // this is useful because some challenges should precede others
-    const challengesWithPosition = removeAlternatives(challenges).map((item, index) => ({
-        item,
-        index
-    }))
+    const challengesWithPosition = removeAlternatives(challenges).map(
+        (item, index) => ({
+            item,
+            index,
+        })
+    )
 
-    const isSmallestInGroup = itemToCheck =>
+    const isSmallestInGroup = (itemToCheck) =>
         challengesWithPosition.filter(
             ({ item }) =>
-                item.group === itemToCheck.group &&
-                item.priority < itemToCheck.priority
+                item.group === itemToCheck.group && item.priority < itemToCheck.priority
         ).length === 0
 
     const sortedResults = []
@@ -48,4 +50,3 @@ export const sortChallengeGroups = challenges => {
 
     return sortedResults
 }
-
