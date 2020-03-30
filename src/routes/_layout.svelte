@@ -1,3 +1,4 @@
+
 <script context="module">
   import { waitLocale } from "svelte-i18n";
 

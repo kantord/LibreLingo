@@ -1,6 +1,6 @@
 <script>
-  export let dark;
-  export let is_hidden_mobile;
+  export let dark
+  export let is_hidden_mobile
 </script>
 
 <nav
