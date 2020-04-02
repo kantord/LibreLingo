@@ -70,7 +70,8 @@ blocks:
             - sem-version python 3.8
             - checkout
             - pip install --cache-dir .pip_cache -r requirements.txt
-            - 'DATABASE_URL=sqlite:///db.sqlite3 python manage.py test'
+            - coverage run --source='.' 'DATABASE_URL=sqlite:///db.sqlite3 manage.py test'
+            - coverage report --fail-under 38
 promotions:
   - name: Deploy to production
     pipeline_file: pipeline_2.yml
