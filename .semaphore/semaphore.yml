@@ -71,7 +71,10 @@ blocks:
             - checkout
             - pip install --cache-dir .pip_cache -r requirements.txt
             - 'DATABASE_URL=sqlite:///db.sqlite3 coverage run --source="." manage.py test'
-            - coverage report --fail-under 38
+            - coverage report
+            - SEMAPHORE_BUILD_NUMBER=$SEMAPHORE_JOB_ID codecov
+      secrets:
+        - name: CODECOV_TOKEN
 promotions:
   - name: Deploy to production
     pipeline_file: pipeline_2.yml
