@@ -1,4 +1,5 @@
 <script>
+  import db from "../db"
   import sound from "../media/sound"
   import hotkeys from "hotkeys-js"
   import { onMount } from "svelte"
@@ -6,9 +7,14 @@
 
   export let rawChallenges
   export let courseURL
+  export let skill
 
   onMount(async () => {
     sound.fanfare.play()
+  })
+
+  onMount(() => {
+    db.put({ _id: `${courseURL}/skill/${skill}` })
   })
 
   onMount(() => {
