@@ -6,5 +6,80 @@
 	  "á", "Á", "é", "É",
 	  "á", "Á", "é", "É",
 	  "á", "Á", "é", "É"
+  ],
+  "modules": [
+    {
+      "title": "Basics",
+      "skills": [
+        {
+          "imageSet": [
+            "dog1",
+            "lion3",
+            "cat3"
+          ],
+          "summary": [
+            "perro",
+            "gato",
+            "oso",
+            "león",
+            "pato",
+            "caballo"
+          ],
+          "practiceHref": "animals",
+          "title": "Animals"
+        },
+        {
+          "imageSet": [
+            "bread1",
+            "milk2",
+            "pasta3"
+          ],
+          "summary": [
+            "pan",
+            "leche",
+            "pasta",
+            "pareja"
+          ],
+          "practiceHref": "_short_input_test0",
+          "title": "Test"
+        },
+        {
+          "imageSet": [
+            "dress2",
+            "t-shirt1",
+            "hat2"
+          ],
+          "summary": [
+            "vestido",
+            "camiseta",
+            "gorro",
+            "zapatos",
+            "camisa",
+            "falda",
+            "calcetines"
+          ],
+          "practiceHref": "clothes",
+          "title": "Clothes"
+        },
+        {
+          "imageSet": [
+            "sky1",
+            "river2",
+            "sun3"
+          ],
+          "summary": [
+            "cielo",
+            "río",
+            "sol",
+            "mar",
+            "montaña",
+            "lago",
+            "playa"
+          ],
+          "practiceHref": "nature",
+          "title": "Nature"
+        }
+      ]
+    }
   ]
 }

@@ -1,11 +1,30 @@
 <script>
+  import db from "../db"
+
   export let title
   export let practiceHref
   export let imageSet
   export let summary
+
+  let completed = null
+
+  db &&
+    db
+      .get(practiceHref)
+      .then(function(doc) {
+        completed = true
+      })
+      .catch(function() {
+        completed = false
+      })
 </script>
 
-<div class="card">
+<div class="card" data-completed="{completed}">
+  {#if completed}
+    <span class="icon is-medium">
+      <i class="fas fa-check-square fa-2x"></i>
+    </span>
+  {/if}
   <div class="card-content">
     <div class="media">
       {#if imageSet && imageSet.length}
@@ -32,6 +51,8 @@
 </div>
 
 <style>
+  @import "../variables";
+
   .image-set {
     position: relative;
     overflow: hidden;
@@ -65,5 +86,42 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     overflow: hidden;
+  }
+
+  .card {
+    $done-color: lighten(desaturate($green, 15%), 20%);
+    &[data-completed="true"] {
+      background-color: $done-color;
+
+      .title,
+      .media-content,
+      .icon {
+        color: $white;
+      }
+
+      .button {
+        background-color: $white;
+        color: darken($done-color, 8%);
+      }
+
+      .media-left {
+        mix-blend-mode: screen;
+
+        .image-set {
+          filter: saturate(0);
+
+          img {
+            box-sizing: border-box;
+            border: 1px solid rgba($white, 0.3);
+          }
+        }
+      }
+    }
+
+    & > .icon {
+      position: absolute;
+      right: 0.5em;
+      top: 0.5em;
+    }
   }
 </style>
