@@ -38,6 +38,7 @@
 <NavBar dark is_hidden_mobile />
 
 <ChallengeScreen
+  skill={id}
   {rawChallenges}
   {languageName}
   {languageCode}
