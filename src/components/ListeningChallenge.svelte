@@ -7,10 +7,6 @@
   import ChallengePanel from "./ChallengePanel"
   import InputFieldWithVirtualKeyboard from "./InputFieldWithVirtualKeyboard"
   import playVoice from "../media/voice"
-  import { library, dom } from "@fortawesome/fontawesome-svg-core"
-  import { faVolumeUp } from "@fortawesome/free-solid-svg-icons"
-  library.add(faVolumeUp)
-  dom.watch()
 
   export let challenge
   export let registerResult
