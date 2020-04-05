@@ -12,7 +12,7 @@
     db
       .get(practiceHref)
       .then(function(doc) {
-        completed = true
+        completed = doc.practiced.length >= 1
       })
       .catch(function() {
         completed = false
