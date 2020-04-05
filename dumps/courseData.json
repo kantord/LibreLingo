@@ -48,8 +48,8 @@
     "skill": 2,
     "meaningInSourceLanguage": "lion",
     "formInTargetLanguage": "le\u00f3n",
-    "meaningInSourceLanguage2": "",
-    "formInTargetLanguage2": "",
+    "meaningInSourceLanguage2": "a lion",
+    "formInTargetLanguage2": "un le\u00f3n",
     "image1": "lion1",
     "image2": "lion2",
     "image3": "lion3"
@@ -62,8 +62,8 @@
     "skill": 2,
     "meaningInSourceLanguage": "duck",
     "formInTargetLanguage": "pato",
-    "meaningInSourceLanguage2": "",
-    "formInTargetLanguage2": "",
+    "meaningInSourceLanguage2": "the duck",
+    "formInTargetLanguage2": "el pato",
     "image1": "duck2",
     "image2": "duck1",
     "image3": "duck3"
@@ -132,8 +132,8 @@
     "skill": 2,
     "meaningInSourceLanguage": "horse",
     "formInTargetLanguage": "caballo",
-    "meaningInSourceLanguage2": "",
-    "formInTargetLanguage2": "",
+    "meaningInSourceLanguage2": "a horse",
+    "formInTargetLanguage2": "un caballo",
     "image1": "horse1",
     "image2": "horse2",
     "image3": "horse3"
@@ -342,8 +342,8 @@
     "skill": 7,
     "meaningInSourceLanguage": "dress",
     "formInTargetLanguage": "vestido",
-    "meaningInSourceLanguage2": "",
-    "formInTargetLanguage2": "",
+    "meaningInSourceLanguage2": "the dress",
+    "formInTargetLanguage2": "el vestido",
     "image1": "dress2",
     "image2": "dress3",
     "image3": "dress1"
@@ -356,8 +356,8 @@
     "skill": 7,
     "meaningInSourceLanguage": "t-shirt",
     "formInTargetLanguage": "camiseta",
-    "meaningInSourceLanguage2": "",
-    "formInTargetLanguage2": "",
+    "meaningInSourceLanguage2": "the t-shirt",
+    "formInTargetLanguage2": "la camiseta",
     "image1": "t-shirt1",
     "image2": "t-shirt3",
     "image3": "t-shirt2"
@@ -370,8 +370,8 @@
     "skill": 7,
     "meaningInSourceLanguage": "hat",
     "formInTargetLanguage": "gorro",
-    "meaningInSourceLanguage2": "",
-    "formInTargetLanguage2": "",
+    "meaningInSourceLanguage2": "a hat",
+    "formInTargetLanguage2": "un gorro",
     "image1": "hat1",
     "image2": "hat2",
     "image3": "hat3"
@@ -384,8 +384,8 @@
     "skill": 7,
     "meaningInSourceLanguage": "shoes",
     "formInTargetLanguage": "zapatos",
-    "meaningInSourceLanguage2": "",
-    "formInTargetLanguage2": "",
+    "meaningInSourceLanguage2": "the shoes",
+    "formInTargetLanguage2": "los zapatos",
     "image1": "shoes3",
     "image2": "shoes2",
     "image3": "shoes1"
@@ -398,8 +398,8 @@
     "skill": 7,
     "meaningInSourceLanguage": "shirt",
     "formInTargetLanguage": "camisa",
-    "meaningInSourceLanguage2": "",
-    "formInTargetLanguage2": "",
+    "meaningInSourceLanguage2": "a shirt",
+    "formInTargetLanguage2": "una camisa",
     "image1": "shirt1",
     "image2": "shirt3",
     "image3": "shirt2"
@@ -412,8 +412,8 @@
     "skill": 7,
     "meaningInSourceLanguage": "skirt",
     "formInTargetLanguage": "falda",
-    "meaningInSourceLanguage2": "",
-    "formInTargetLanguage2": "",
+    "meaningInSourceLanguage2": "the skirt",
+    "formInTargetLanguage2": "la falda",
     "image1": "skirt1",
     "image2": "skirt2",
     "image3": "skirt3"
@@ -426,8 +426,8 @@
     "skill": 7,
     "meaningInSourceLanguage": "socks",
     "formInTargetLanguage": "calcetines",
-    "meaningInSourceLanguage2": "",
-    "formInTargetLanguage2": "",
+    "meaningInSourceLanguage2": "the socks",
+    "formInTargetLanguage2": "los calcetines",
     "image1": "socks2",
     "image2": "socks1",
     "image3": "socks3"
@@ -1338,7 +1338,7 @@
     "course": 1,
     "reverse": false,
     "word": "Buen",
-    "definition": ""
+    "definition": "good"
   }
 },
 {
@@ -1348,7 +1348,7 @@
     "course": 1,
     "reverse": false,
     "word": "provecho",
-    "definition": ""
+    "definition": "benefit"
   }
 },
 {
@@ -1388,7 +1388,7 @@
     "course": 1,
     "reverse": false,
     "word": "Por",
-    "definition": ""
+    "definition": "For"
   }
 },
 {
@@ -1398,7 +1398,7 @@
     "course": 1,
     "reverse": false,
     "word": "favor",
-    "definition": ""
+    "definition": "favor"
   }
 },
 {
@@ -1438,7 +1438,7 @@
     "course": 1,
     "reverse": false,
     "word": "Me",
-    "definition": ""
+    "definition": "I\r\nMe"
   }
 },
 {
@@ -1538,7 +1538,7 @@
     "course": 1,
     "reverse": false,
     "word": "Gracias",
-    "definition": ""
+    "definition": "Thanks"
   }
 },
 {
@@ -1568,7 +1568,7 @@
     "course": 1,
     "reverse": false,
     "word": "viaje",
-    "definition": ""
+    "definition": "voyage\r\njourney\r\ntrip"
   }
 },
 {
@@ -1638,7 +1638,7 @@
     "course": 1,
     "reverse": false,
     "word": "la",
-    "definition": ""
+    "definition": "the"
   }
 },
 {
@@ -1648,7 +1648,7 @@
     "course": 1,
     "reverse": true,
     "word": "Let's",
-    "definition": ""
+    "definition": "Vamos"
   }
 },
 {
@@ -1678,6 +1678,656 @@
     "course": 1,
     "reverse": true,
     "word": "the",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 116,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Cecilia",
+    "definition": "Cecilia"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 117,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "bebe",
+    "definition": "drinks"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 118,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "agua",
+    "definition": "water"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 119,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "Cecilia",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 120,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "drinks",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 121,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "water",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 122,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Maria",
+    "definition": "Maria"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 123,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "cerveza",
+    "definition": "beer"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 124,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "Maria",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 125,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "beer",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 126,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Es",
+    "definition": "is"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 127,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "un",
+    "definition": "a"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 128,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "It's",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 129,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Oscar",
+    "definition": "Oscar"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 130,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "es",
+    "definition": "is"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 131,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "Oscar",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 132,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Max",
+    "definition": "Max"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 133,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "Max",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 134,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Bebo",
+    "definition": "I drink"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 135,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "drink",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 136,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Jos\u00e9",
+    "definition": "Jos\u00e9"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 137,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "come",
+    "definition": "eats"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 138,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "Jos\u00e9",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 139,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "eats",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 140,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Como",
+    "definition": "I eat"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 141,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "eat",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 142,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "El",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 143,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "bonito",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 144,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "The",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 145,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "beautiful",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 146,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Los",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 147,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "son",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 148,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "grandes",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 149,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "are",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 150,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "big",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 151,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "La",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 152,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "grande",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 153,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "peque\u00f1a",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 154,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "small",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 155,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Soy",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 156,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "am",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 157,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Eres",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 158,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "You",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 159,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "The",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 160,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "horse",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 161,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "is",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 162,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "small",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 163,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "El",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 164,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "caballo",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 165,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "es",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 166,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "peque\u00f1o",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 167,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Yo",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 168,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "como",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 169,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "T\u00fa",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 170,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "comes",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 171,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Ella",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 172,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "pizza",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 173,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "She",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 174,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "pizza",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 175,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "\u00c9l",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 176,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "He",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 177,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "bebo",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 178,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "bebes",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 179,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Marina",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 180,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "Marina",
     "definition": ""
   }
 },
@@ -1760,6 +2410,195 @@
     "skill": 8,
     "meaningInSourceLanguage": "Let's go to the beach",
     "formInTargetLanguage": "Vamos a la playa"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 10,
+  "fields": {
+    "skill": 1,
+    "meaningInSourceLanguage": "Cecilia drinks water",
+    "formInTargetLanguage": "Cecilia bebe agua"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 11,
+  "fields": {
+    "skill": 1,
+    "meaningInSourceLanguage": "I drink beer",
+    "formInTargetLanguage": "Bebo cerveza"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 12,
+  "fields": {
+    "skill": 2,
+    "meaningInSourceLanguage": "It's a horse",
+    "formInTargetLanguage": "Es un caballo"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 13,
+  "fields": {
+    "skill": 2,
+    "meaningInSourceLanguage": "Max is a dog",
+    "formInTargetLanguage": "Max es un perro"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 14,
+  "fields": {
+    "skill": 1,
+    "meaningInSourceLanguage": "Jos\u00e9 eats bread",
+    "formInTargetLanguage": "Jos\u00e9 come pan"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 15,
+  "fields": {
+    "skill": 1,
+    "meaningInSourceLanguage": "I eat pasta",
+    "formInTargetLanguage": "Como pasta"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 16,
+  "fields": {
+    "skill": 7,
+    "meaningInSourceLanguage": "The dress is beautiful",
+    "formInTargetLanguage": "El vestido es bonito"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 17,
+  "fields": {
+    "skill": 7,
+    "meaningInSourceLanguage": "The shoes are big",
+    "formInTargetLanguage": "Los zapatos son grandes"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 18,
+  "fields": {
+    "skill": 7,
+    "meaningInSourceLanguage": "The t-shirt is big",
+    "formInTargetLanguage": "La camiseta es grande"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 19,
+  "fields": {
+    "skill": 7,
+    "meaningInSourceLanguage": "The skirt is small",
+    "formInTargetLanguage": "La falda es peque\u00f1a"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 20,
+  "fields": {
+    "skill": 9,
+    "meaningInSourceLanguage": "I am a cat",
+    "formInTargetLanguage": "Soy un gato"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 21,
+  "fields": {
+    "skill": 9,
+    "meaningInSourceLanguage": "You are big",
+    "formInTargetLanguage": "Eres grande"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 22,
+  "fields": {
+    "skill": 9,
+    "meaningInSourceLanguage": "El caballo es peque\u00f1o",
+    "formInTargetLanguage": "The horse is small"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 23,
+  "fields": {
+    "skill": 9,
+    "meaningInSourceLanguage": "I eat bread",
+    "formInTargetLanguage": "Yo como pan"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 24,
+  "fields": {
+    "skill": 9,
+    "meaningInSourceLanguage": "You eat pasta",
+    "formInTargetLanguage": "T\u00fa comes pasta"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 25,
+  "fields": {
+    "skill": 9,
+    "meaningInSourceLanguage": "She eats pizza",
+    "formInTargetLanguage": "Ella come pizza"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 26,
+  "fields": {
+    "skill": 9,
+    "meaningInSourceLanguage": "He eats bread",
+    "formInTargetLanguage": "\u00c9l come pan"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 27,
+  "fields": {
+    "skill": 9,
+    "meaningInSourceLanguage": "I drink beer",
+    "formInTargetLanguage": "Yo bebo cerveza"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 28,
+  "fields": {
+    "skill": 9,
+    "meaningInSourceLanguage": "You drink milk",
+    "formInTargetLanguage": "T\u00fa bebes leche"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 29,
+  "fields": {
+    "skill": 9,
+    "meaningInSourceLanguage": "Marina drinks beer",
+    "formInTargetLanguage": "Marina bebe cerveza"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 30,
+  "fields": {
+    "skill": 9,
+    "meaningInSourceLanguage": "The horse drinks water",
+    "formInTargetLanguage": "El caballo bebe agua"
   }
 },
 {
@@ -1882,6 +2721,18 @@
     "image1": "sky1",
     "image2": "river2",
     "image3": "sun3"
+  }
+},
+{
+  "model": "course.skill",
+  "pk": 9,
+  "fields": {
+    "module": 1,
+    "name": "Verbs, part 1",
+    "order": 0,
+    "image1": "people2",
+    "image2": "pasta3",
+    "image3": "horse2"
   }
 }
 ]

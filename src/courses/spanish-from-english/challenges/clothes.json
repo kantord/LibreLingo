@@ -166,7 +166,8 @@
     "translatesToSourceLanguage": true,
     "phrase": [
       {
-        "word": "Gracias"
+        "word": "Gracias",
+        "definition": "Thanks"
       }
     ],
     "chips": [
@@ -181,6 +182,357 @@
     "id": "3089902815",
     "priority": 2,
     "group": "a72dc80a65"
+  },
+  {
+    "type": "options",
+    "formInTargetLanguage": "El vestido es bonito",
+    "meaningInSourceLanguage": "The dress is beautiful",
+    "id": "4eb90e3263",
+    "priority": 0,
+    "group": "67c893d6d1"
+  },
+  {
+    "type": "listeningExercise",
+    "answer": "El vestido es bonito",
+    "meaning": "The dress is beautiful",
+    "audio": "b0906027f4cda1e77383b1adf4ac319ff79ab81f5ac11797bdbf7e779e3c2091",
+    "id": "1805664da2",
+    "priority": 1,
+    "group": "67c893d6d1"
+  },
+  {
+    "type": "chips",
+    "translatesToSourceLanguage": false,
+    "phrase": [
+      {
+        "word": "The"
+      },
+      {
+        "word": "dress",
+        "definition": "vestido"
+      },
+      {
+        "word": "is"
+      },
+      {
+        "word": "beautiful"
+      }
+    ],
+    "chips": [
+      "El",
+      "vestido",
+      "es",
+      "bonito"
+    ],
+    "solution": [
+      "El",
+      "vestido",
+      "es",
+      "bonito"
+    ],
+    "formattedSolution": "El vestido es bonito",
+    "id": "e9a5ffd102",
+    "priority": 2,
+    "group": "67c893d6d1"
+  },
+  {
+    "type": "chips",
+    "translatesToSourceLanguage": true,
+    "phrase": [
+      {
+        "word": "El"
+      },
+      {
+        "word": "vestido",
+        "definition": "dress"
+      },
+      {
+        "word": "es",
+        "definition": "is"
+      },
+      {
+        "word": "bonito"
+      }
+    ],
+    "chips": [
+      "The",
+      "dress",
+      "is",
+      "beautiful"
+    ],
+    "solution": [
+      "The",
+      "dress",
+      "is",
+      "beautiful"
+    ],
+    "formattedSolution": "The dress is beautiful",
+    "id": "e9a5ffd102",
+    "priority": 2,
+    "group": "67c893d6d1"
+  },
+  {
+    "type": "options",
+    "formInTargetLanguage": "Los zapatos son grandes",
+    "meaningInSourceLanguage": "The shoes are big",
+    "id": "fcb9d762e3",
+    "priority": 0,
+    "group": "41e6fa1765"
+  },
+  {
+    "type": "listeningExercise",
+    "answer": "Los zapatos son grandes",
+    "meaning": "The shoes are big",
+    "audio": "63f5a0685cbb61f6e8ac554d61c52985fde152c5bae2f04ea525a36a1702e56f",
+    "id": "4d9fdf494c",
+    "priority": 1,
+    "group": "41e6fa1765"
+  },
+  {
+    "type": "chips",
+    "translatesToSourceLanguage": false,
+    "phrase": [
+      {
+        "word": "The"
+      },
+      {
+        "word": "shoes",
+        "definition": "zapatos"
+      },
+      {
+        "word": "are"
+      },
+      {
+        "word": "big"
+      }
+    ],
+    "chips": [
+      "Los",
+      "zapatos",
+      "son",
+      "grandes"
+    ],
+    "solution": [
+      "Los",
+      "zapatos",
+      "son",
+      "grandes"
+    ],
+    "formattedSolution": "Los zapatos son grandes",
+    "id": "830a4b9c53",
+    "priority": 2,
+    "group": "41e6fa1765"
+  },
+  {
+    "type": "chips",
+    "translatesToSourceLanguage": true,
+    "phrase": [
+      {
+        "word": "Los"
+      },
+      {
+        "word": "zapatos",
+        "definition": "shoes"
+      },
+      {
+        "word": "son"
+      },
+      {
+        "word": "grandes"
+      }
+    ],
+    "chips": [
+      "The",
+      "shoes",
+      "are",
+      "big"
+    ],
+    "solution": [
+      "The",
+      "shoes",
+      "are",
+      "big"
+    ],
+    "formattedSolution": "The shoes are big",
+    "id": "830a4b9c53",
+    "priority": 2,
+    "group": "41e6fa1765"
+  },
+  {
+    "type": "options",
+    "formInTargetLanguage": "La camiseta es grande",
+    "meaningInSourceLanguage": "The t-shirt is big",
+    "id": "77b9fa2eba",
+    "priority": 0,
+    "group": "325f1cc076"
+  },
+  {
+    "type": "listeningExercise",
+    "answer": "La camiseta es grande",
+    "meaning": "The t-shirt is big",
+    "audio": "eda6b5b905ab6d2906c122e6fefa82309dc5f654f0573c04fd56013ae1a41497",
+    "id": "e863c7f1c4",
+    "priority": 1,
+    "group": "325f1cc076"
+  },
+  {
+    "type": "chips",
+    "translatesToSourceLanguage": false,
+    "phrase": [
+      {
+        "word": "The"
+      },
+      {
+        "word": "t-shirt",
+        "definition": "camiseta"
+      },
+      {
+        "word": "is"
+      },
+      {
+        "word": "big"
+      }
+    ],
+    "chips": [
+      "La",
+      "camiseta",
+      "es",
+      "grande"
+    ],
+    "solution": [
+      "La",
+      "camiseta",
+      "es",
+      "grande"
+    ],
+    "formattedSolution": "La camiseta es grande",
+    "id": "197507f936",
+    "priority": 2,
+    "group": "325f1cc076"
+  },
+  {
+    "type": "chips",
+    "translatesToSourceLanguage": true,
+    "phrase": [
+      {
+        "word": "La"
+      },
+      {
+        "word": "camiseta",
+        "definition": "t-shirt"
+      },
+      {
+        "word": "es",
+        "definition": "is"
+      },
+      {
+        "word": "grande"
+      }
+    ],
+    "chips": [
+      "The",
+      "t-shirt",
+      "is",
+      "big"
+    ],
+    "solution": [
+      "The",
+      "t-shirt",
+      "is",
+      "big"
+    ],
+    "formattedSolution": "The t-shirt is big",
+    "id": "197507f936",
+    "priority": 2,
+    "group": "325f1cc076"
+  },
+  {
+    "type": "options",
+    "formInTargetLanguage": "La falda es pequeña",
+    "meaningInSourceLanguage": "The skirt is small",
+    "id": "7194c47e3a",
+    "priority": 0,
+    "group": "f2e95945c3"
+  },
+  {
+    "type": "listeningExercise",
+    "answer": "La falda es pequeña",
+    "meaning": "The skirt is small",
+    "audio": "8e971ac767888190368efe5f2579c4d922ec4cf33765a231799810ec1dfaf3de",
+    "id": "d2c05ef4ee",
+    "priority": 1,
+    "group": "f2e95945c3"
+  },
+  {
+    "type": "chips",
+    "translatesToSourceLanguage": false,
+    "phrase": [
+      {
+        "word": "The"
+      },
+      {
+        "word": "skirt",
+        "definition": "falda"
+      },
+      {
+        "word": "is"
+      },
+      {
+        "word": "small"
+      }
+    ],
+    "chips": [
+      "La",
+      "falda",
+      "es",
+      "pequeña"
+    ],
+    "solution": [
+      "La",
+      "falda",
+      "es",
+      "pequeña"
+    ],
+    "formattedSolution": "La falda es pequeña",
+    "id": "752612e6d4",
+    "priority": 2,
+    "group": "f2e95945c3"
+  },
+  {
+    "type": "chips",
+    "translatesToSourceLanguage": true,
+    "phrase": [
+      {
+        "word": "La"
+      },
+      {
+        "word": "falda",
+        "definition": "skirt"
+      },
+      {
+        "word": "es",
+        "definition": "is"
+      },
+      {
+        "word": "pequeña"
+      }
+    ],
+    "chips": [
+      "The",
+      "skirt",
+      "is",
+      "small"
+    ],
+    "solution": [
+      "The",
+      "skirt",
+      "is",
+      "small"
+    ],
+    "formattedSolution": "The skirt is small",
+    "id": "752612e6d4",
+    "priority": 2,
+    "group": "f2e95945c3"
   },
   {
     "type": "cards",
@@ -215,6 +567,43 @@
     "answer": "vestido",
     "meaning": "dress",
     "audio": "50f05ff517851c75447042e3ccbc534b3b0cce08db250473d4fb8ccc9b8a834f",
+    "id": "65968b05db",
+    "priority": 1,
+    "group": "e1713af4a3"
+  },
+  {
+    "type": "cards",
+    "pictures": [
+      "dress2.jpg",
+      "dress3.jpg",
+      "dress1.jpg"
+    ],
+    "formInTargetLanguage": "el vestido",
+    "meaningInSourceLanguage": "the dress",
+    "id": "b09d4cb5f3",
+    "priority": 0,
+    "group": "e1713af4a3"
+  },
+  {
+    "type": "shortInput",
+    "pictures": [
+      "dress2.jpg",
+      "dress3.jpg",
+      "dress1.jpg"
+    ],
+    "formInTargetLanguage": [
+      "el vestido"
+    ],
+    "meaningInSourceLanguage": "the dress",
+    "id": "1e5f4ec9be",
+    "priority": 1,
+    "group": "e1713af4a3"
+  },
+  {
+    "type": "listeningExercise",
+    "answer": "el vestido",
+    "meaning": "the dress",
+    "audio": "dc2e90bea69b8f5db7a78ce380dc7786b15307f8557aa0815ca32d7b805e7b3f",
     "id": "65968b05db",
     "priority": 1,
     "group": "e1713af4a3"
@@ -259,6 +648,43 @@
   {
     "type": "cards",
     "pictures": [
+      "t-shirt1.jpg",
+      "t-shirt3.jpg",
+      "t-shirt2.jpg"
+    ],
+    "formInTargetLanguage": "la camiseta",
+    "meaningInSourceLanguage": "the t-shirt",
+    "id": "04edb32e81",
+    "priority": 0,
+    "group": "9b85b1d2f3"
+  },
+  {
+    "type": "shortInput",
+    "pictures": [
+      "t-shirt1.jpg",
+      "t-shirt3.jpg",
+      "t-shirt2.jpg"
+    ],
+    "formInTargetLanguage": [
+      "la camiseta"
+    ],
+    "meaningInSourceLanguage": "the t-shirt",
+    "id": "5a57437c6d",
+    "priority": 1,
+    "group": "9b85b1d2f3"
+  },
+  {
+    "type": "listeningExercise",
+    "answer": "la camiseta",
+    "meaning": "the t-shirt",
+    "audio": "664a18210f69dcdd29181c54460202ef7f21ea523e895a57e574a709b3d8068b",
+    "id": "93a6758e24",
+    "priority": 1,
+    "group": "9b85b1d2f3"
+  },
+  {
+    "type": "cards",
+    "pictures": [
       "hat1.jpg",
       "hat2.jpg",
       "hat3.jpg"
@@ -289,6 +715,43 @@
     "answer": "gorro",
     "meaning": "hat",
     "audio": "8e3e662ec4dd32fad183838f17960f6e9470274a16ebacd4fdc0c3edf5f74084",
+    "id": "9f9d7c0585",
+    "priority": 1,
+    "group": "b91cac93e0"
+  },
+  {
+    "type": "cards",
+    "pictures": [
+      "hat1.jpg",
+      "hat2.jpg",
+      "hat3.jpg"
+    ],
+    "formInTargetLanguage": "un gorro",
+    "meaningInSourceLanguage": "a hat",
+    "id": "511d5f9fd3",
+    "priority": 0,
+    "group": "b91cac93e0"
+  },
+  {
+    "type": "shortInput",
+    "pictures": [
+      "hat1.jpg",
+      "hat2.jpg",
+      "hat3.jpg"
+    ],
+    "formInTargetLanguage": [
+      "un gorro"
+    ],
+    "meaningInSourceLanguage": "a hat",
+    "id": "6a9f63e967",
+    "priority": 1,
+    "group": "b91cac93e0"
+  },
+  {
+    "type": "listeningExercise",
+    "answer": "un gorro",
+    "meaning": "a hat",
+    "audio": "ebf0e51909771e7f712c0202f5ec384bbea8846f28cb757888e0c219f0d81f75",
     "id": "9f9d7c0585",
     "priority": 1,
     "group": "b91cac93e0"
@@ -333,6 +796,43 @@
   {
     "type": "cards",
     "pictures": [
+      "shoes3.jpg",
+      "shoes2.jpg",
+      "shoes1.jpg"
+    ],
+    "formInTargetLanguage": "los zapatos",
+    "meaningInSourceLanguage": "the shoes",
+    "id": "5ce27c4d89",
+    "priority": 0,
+    "group": "a0bae01012"
+  },
+  {
+    "type": "shortInput",
+    "pictures": [
+      "shoes3.jpg",
+      "shoes2.jpg",
+      "shoes1.jpg"
+    ],
+    "formInTargetLanguage": [
+      "los zapatos"
+    ],
+    "meaningInSourceLanguage": "the shoes",
+    "id": "56db312e5c",
+    "priority": 1,
+    "group": "a0bae01012"
+  },
+  {
+    "type": "listeningExercise",
+    "answer": "los zapatos",
+    "meaning": "the shoes",
+    "audio": "c5ebe9ccd88374ffd5bbed0937aaf8cc081263a0d211e1e84cc2a4fccdca3036",
+    "id": "fe19e2256f",
+    "priority": 1,
+    "group": "a0bae01012"
+  },
+  {
+    "type": "cards",
+    "pictures": [
       "shirt1.jpg",
       "shirt3.jpg",
       "shirt2.jpg"
@@ -363,6 +863,43 @@
     "answer": "camisa",
     "meaning": "shirt",
     "audio": "e78369c6d1df8ff193301b0fb1a955f6efec07e76cc1455bef49e8eaee392cd0",
+    "id": "fca4e5d7c4",
+    "priority": 1,
+    "group": "37e66e9a1e"
+  },
+  {
+    "type": "cards",
+    "pictures": [
+      "shirt1.jpg",
+      "shirt3.jpg",
+      "shirt2.jpg"
+    ],
+    "formInTargetLanguage": "una camisa",
+    "meaningInSourceLanguage": "a shirt",
+    "id": "7eee453c33",
+    "priority": 0,
+    "group": "37e66e9a1e"
+  },
+  {
+    "type": "shortInput",
+    "pictures": [
+      "shirt1.jpg",
+      "shirt3.jpg",
+      "shirt2.jpg"
+    ],
+    "formInTargetLanguage": [
+      "una camisa"
+    ],
+    "meaningInSourceLanguage": "a shirt",
+    "id": "b6006c2d42",
+    "priority": 1,
+    "group": "37e66e9a1e"
+  },
+  {
+    "type": "listeningExercise",
+    "answer": "una camisa",
+    "meaning": "a shirt",
+    "audio": "093c2ed63cf53f0f71dc2f0a70b8c3aafd4182bb0a47a312ac6ec871321dec2c",
     "id": "fca4e5d7c4",
     "priority": 1,
     "group": "37e66e9a1e"
@@ -407,6 +944,43 @@
   {
     "type": "cards",
     "pictures": [
+      "skirt1.jpg",
+      "skirt2.jpg",
+      "skirt3.jpg"
+    ],
+    "formInTargetLanguage": "la falda",
+    "meaningInSourceLanguage": "the skirt",
+    "id": "c8aee016d0",
+    "priority": 0,
+    "group": "0a7ec71df6"
+  },
+  {
+    "type": "shortInput",
+    "pictures": [
+      "skirt1.jpg",
+      "skirt2.jpg",
+      "skirt3.jpg"
+    ],
+    "formInTargetLanguage": [
+      "la falda"
+    ],
+    "meaningInSourceLanguage": "the skirt",
+    "id": "fceab877e3",
+    "priority": 1,
+    "group": "0a7ec71df6"
+  },
+  {
+    "type": "listeningExercise",
+    "answer": "la falda",
+    "meaning": "the skirt",
+    "audio": "759b484ae2f7cb533642409f13720be475f51df4f16f900a0c5d01135dad913f",
+    "id": "cc5ac1b5e6",
+    "priority": 1,
+    "group": "0a7ec71df6"
+  },
+  {
+    "type": "cards",
+    "pictures": [
       "socks2.jpg",
       "socks1.jpg",
       "socks3.jpg"
@@ -437,6 +1011,43 @@
     "answer": "calcetines",
     "meaning": "socks",
     "audio": "f9eed1ce5529687afeb0ac8f65768c0c4ba57ca9d302903707d448de8cbf02be",
+    "id": "5adaa47897",
+    "priority": 1,
+    "group": "848694e92b"
+  },
+  {
+    "type": "cards",
+    "pictures": [
+      "socks2.jpg",
+      "socks1.jpg",
+      "socks3.jpg"
+    ],
+    "formInTargetLanguage": "los calcetines",
+    "meaningInSourceLanguage": "the socks",
+    "id": "1f7ed37a0c",
+    "priority": 0,
+    "group": "848694e92b"
+  },
+  {
+    "type": "shortInput",
+    "pictures": [
+      "socks2.jpg",
+      "socks1.jpg",
+      "socks3.jpg"
+    ],
+    "formInTargetLanguage": [
+      "los calcetines"
+    ],
+    "meaningInSourceLanguage": "the socks",
+    "id": "f366057988",
+    "priority": 1,
+    "group": "848694e92b"
+  },
+  {
+    "type": "listeningExercise",
+    "answer": "los calcetines",
+    "meaning": "the socks",
+    "audio": "3039666601b25c068be538f7c02cc825446b74e164c68339738ca002b4e61d0e",
     "id": "5adaa47897",
     "priority": 1,
     "group": "848694e92b"
