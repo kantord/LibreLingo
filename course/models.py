@@ -103,10 +103,20 @@ class Skill(models.Model):
     def __str__(self):
         return "{} in {} ".format(self.name, str(self.module))
 
+    def clean(self):
+        images = [self.image1, self.image2, self.image3]
+        if not all(images):
+            if any(images):
+                raise ValidationError("Either exactly 0 or exactly 3 images are needed")
+
+    def save(self, *args, **kwargs):
+        self.clean()
+        return super(Skill, self).save(*args, **kwargs)
+
     module = models.ForeignKey('Module', on_delete=models.CASCADE)
     name = models.TextField(verbose_name="Skill")
     order = models.PositiveIntegerField(default=0, blank=False, null=False)
-    image1 = models.TextField(choices=VALID_IMAGE_NAMES)
-    image2 = models.TextField(choices=VALID_IMAGE_NAMES)
-    image3 = models.TextField(choices=VALID_IMAGE_NAMES)
+    image1 = models.TextField(choices=VALID_IMAGE_NAMES, null=True, blank=True)
+    image2 = models.TextField(choices=VALID_IMAGE_NAMES, null=True, blank=True)
+    image3 = models.TextField(choices=VALID_IMAGE_NAMES, null=True, blank=True)
 
