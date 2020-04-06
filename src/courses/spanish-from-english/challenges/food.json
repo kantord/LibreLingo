@@ -161,7 +161,8 @@
         "word": "por"
       },
       {
-        "word": "favor"
+        "word": "favor",
+        "definition": "favor"
       }
     ],
     "chips": [
@@ -231,7 +232,8 @@
         "word": "por"
       },
       {
-        "word": "favor"
+        "word": "favor",
+        "definition": "favor"
       }
     ],
     "chips": [
@@ -246,6 +248,308 @@
     "id": "94a63f7647",
     "priority": 2,
     "group": "8f89e5bb77"
+  },
+  {
+    "type": "options",
+    "formInTargetLanguage": "Cecilia bebe agua",
+    "meaningInSourceLanguage": "Cecilia drinks water",
+    "id": "6a2308364d",
+    "priority": 0,
+    "group": "c9df577986"
+  },
+  {
+    "type": "listeningExercise",
+    "answer": "Cecilia bebe agua",
+    "meaning": "Cecilia drinks water",
+    "audio": "d514be6a439f4da7ccad3546da2a8dcc7b5288790d79053add681aee77c92a84",
+    "id": "e1327008ed",
+    "priority": 1,
+    "group": "c9df577986"
+  },
+  {
+    "type": "chips",
+    "translatesToSourceLanguage": false,
+    "phrase": [
+      {
+        "word": "Cecilia"
+      },
+      {
+        "word": "drinks"
+      },
+      {
+        "word": "water"
+      }
+    ],
+    "chips": [
+      "Cecilia",
+      "bebe",
+      "agua"
+    ],
+    "solution": [
+      "Cecilia",
+      "bebe",
+      "agua"
+    ],
+    "formattedSolution": "Cecilia bebe agua",
+    "id": "6989b03526",
+    "priority": 2,
+    "group": "c9df577986"
+  },
+  {
+    "type": "chips",
+    "translatesToSourceLanguage": true,
+    "phrase": [
+      {
+        "word": "Cecilia",
+        "definition": "Cecilia"
+      },
+      {
+        "word": "bebe",
+        "definition": "drinks"
+      },
+      {
+        "word": "agua",
+        "definition": "water"
+      }
+    ],
+    "chips": [
+      "Cecilia",
+      "drinks",
+      "water"
+    ],
+    "solution": [
+      "Cecilia",
+      "drinks",
+      "water"
+    ],
+    "formattedSolution": "Cecilia drinks water",
+    "id": "6989b03526",
+    "priority": 2,
+    "group": "c9df577986"
+  },
+  {
+    "type": "options",
+    "formInTargetLanguage": "Bebo cerveza",
+    "meaningInSourceLanguage": "I drink beer",
+    "id": "688b7a00c8",
+    "priority": 0,
+    "group": "1396179b42"
+  },
+  {
+    "type": "listeningExercise",
+    "answer": "Bebo cerveza",
+    "meaning": "I drink beer",
+    "audio": "567748169e99d0ca8a64ab618b1d7b4a034640ce1a63813a4cfd05ef42f62333",
+    "id": "581c5541f0",
+    "priority": 1,
+    "group": "1396179b42"
+  },
+  {
+    "type": "chips",
+    "translatesToSourceLanguage": false,
+    "phrase": [
+      {
+        "word": "I"
+      },
+      {
+        "word": "drink"
+      },
+      {
+        "word": "beer"
+      }
+    ],
+    "chips": [
+      "Bebo",
+      "cerveza"
+    ],
+    "solution": [
+      "Bebo",
+      "cerveza"
+    ],
+    "formattedSolution": "Bebo cerveza",
+    "id": "0626518d14",
+    "priority": 2,
+    "group": "1396179b42"
+  },
+  {
+    "type": "chips",
+    "translatesToSourceLanguage": true,
+    "phrase": [
+      {
+        "word": "Bebo",
+        "definition": "I drink"
+      },
+      {
+        "word": "cerveza",
+        "definition": "beer"
+      }
+    ],
+    "chips": [
+      "I",
+      "drink",
+      "beer"
+    ],
+    "solution": [
+      "I",
+      "drink",
+      "beer"
+    ],
+    "formattedSolution": "I drink beer",
+    "id": "0626518d14",
+    "priority": 2,
+    "group": "1396179b42"
+  },
+  {
+    "type": "options",
+    "formInTargetLanguage": "José come pan",
+    "meaningInSourceLanguage": "José eats bread",
+    "id": "a80a542827",
+    "priority": 0,
+    "group": "aa9219c267"
+  },
+  {
+    "type": "listeningExercise",
+    "answer": "José come pan",
+    "meaning": "José eats bread",
+    "audio": "a4968c11c195ff168b266769bee892c00661459365a1bdc62a66a1e8dd4c9417",
+    "id": "1dd75d3293",
+    "priority": 1,
+    "group": "aa9219c267"
+  },
+  {
+    "type": "chips",
+    "translatesToSourceLanguage": false,
+    "phrase": [
+      {
+        "word": "José"
+      },
+      {
+        "word": "eats"
+      },
+      {
+        "word": "bread",
+        "definition": "pan"
+      }
+    ],
+    "chips": [
+      "José",
+      "come",
+      "pan"
+    ],
+    "solution": [
+      "José",
+      "come",
+      "pan"
+    ],
+    "formattedSolution": "José come pan",
+    "id": "6a4823bcfa",
+    "priority": 2,
+    "group": "aa9219c267"
+  },
+  {
+    "type": "chips",
+    "translatesToSourceLanguage": true,
+    "phrase": [
+      {
+        "word": "José",
+        "definition": "José"
+      },
+      {
+        "word": "come",
+        "definition": "eats"
+      },
+      {
+        "word": "pan",
+        "definition": "bread"
+      }
+    ],
+    "chips": [
+      "José",
+      "eats",
+      "bread"
+    ],
+    "solution": [
+      "José",
+      "eats",
+      "bread"
+    ],
+    "formattedSolution": "José eats bread",
+    "id": "6a4823bcfa",
+    "priority": 2,
+    "group": "aa9219c267"
+  },
+  {
+    "type": "options",
+    "formInTargetLanguage": "Como pasta",
+    "meaningInSourceLanguage": "I eat pasta",
+    "id": "4fe67adc4e",
+    "priority": 0,
+    "group": "1e3cfabc3c"
+  },
+  {
+    "type": "listeningExercise",
+    "answer": "Como pasta",
+    "meaning": "I eat pasta",
+    "audio": "17790a9cb94e719bdc4a9dddc47b991491f38996e6a5e6aaec665a94dc2d0d0a",
+    "id": "e8e9cc0716",
+    "priority": 1,
+    "group": "1e3cfabc3c"
+  },
+  {
+    "type": "chips",
+    "translatesToSourceLanguage": false,
+    "phrase": [
+      {
+        "word": "I"
+      },
+      {
+        "word": "eat"
+      },
+      {
+        "word": "pasta",
+        "definition": "pasta"
+      }
+    ],
+    "chips": [
+      "Como",
+      "pasta"
+    ],
+    "solution": [
+      "Como",
+      "pasta"
+    ],
+    "formattedSolution": "Como pasta",
+    "id": "96fc695e10",
+    "priority": 2,
+    "group": "1e3cfabc3c"
+  },
+  {
+    "type": "chips",
+    "translatesToSourceLanguage": true,
+    "phrase": [
+      {
+        "word": "Como",
+        "definition": "I eat"
+      },
+      {
+        "word": "pasta",
+        "definition": "pasta"
+      }
+    ],
+    "chips": [
+      "I",
+      "eat",
+      "pasta"
+    ],
+    "solution": [
+      "I",
+      "eat",
+      "pasta"
+    ],
+    "formattedSolution": "I eat pasta",
+    "id": "96fc695e10",
+    "priority": 2,
+    "group": "1e3cfabc3c"
   },
   {
     "type": "cards",

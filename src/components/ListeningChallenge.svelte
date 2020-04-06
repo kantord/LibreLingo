@@ -1,29 +1,29 @@
 <script>
-  import { slide } from "svelte/transition";
-  import { onMount } from "svelte";
-  import hotkeys from "hotkeys-js";
-  import levenshtein from "js-levenshtein";
-  import shuffle from "lodash.shuffle";
-  import ChallengePanel from "./ChallengePanel";
-  import InputFieldWithVirtualKeyboard from "./InputFieldWithVirtualKeyboard";
-  import playVoice from "../media/voice";
+  import { slide } from "svelte/transition"
+  import { onMount } from "svelte"
+  import hotkeys from "hotkeys-js"
+  import levenshtein from "js-levenshtein"
+  import shuffle from "lodash.shuffle"
+  import ChallengePanel from "./ChallengePanel"
+  import InputFieldWithVirtualKeyboard from "./InputFieldWithVirtualKeyboard"
+  import playVoice from "../media/voice"
 
-  export let challenge;
-  export let registerResult;
-  export let resolveChallenge;
-  export let languageName;
-  export let languageCode;
-  export let specialCharacters;
-  let answer = null;
-  let submitted = false;
-  let correct = null;
-  let spellingSuggestion = "";
+  export let challenge
+  export let registerResult
+  export let resolveChallenge
+  export let languageName
+  export let languageCode
+  export let specialCharacters
+  let answer = null
+  let submitted = false
+  let correct = null
+  let spellingSuggestion = ""
 
   $: submitChallenge = () => {
-    if (!answer) return;
-    if (submitted) return;
-    const form = challenge.answer;
-    correct = false;
+    if (!answer) return
+    if (submitted) return
+    const form = challenge.answer
+    correct = false
 
     if (
       levenshtein(
@@ -34,39 +34,39 @@
         form.toLowerCase()
       ) <= 1
     ) {
-      correct = true;
+      correct = true
       spellingSuggestion =
         form
           .replace(/^\s+|\s+$/g, "")
           .replace(/\s+/g, " ")
           .toLowerCase() === answer.toLowerCase()
           ? ""
-          : `You made a small error. Correct spelling: ${form}`;
+          : `You made a small error. Correct spelling: ${form}`
     }
 
-    registerResult(correct);
-    submitted = true;
-  };
+    registerResult(correct)
+    submitted = true
+  }
 
   $: finishChallenge = () => {
-    answer = null;
-    submitted = false;
-    resolveChallenge();
-  };
+    answer = null
+    submitted = false
+    resolveChallenge()
+  }
 
-  const playChallengeVoice = () => playVoice(challenge.audio);
+  const playChallengeVoice = () => playVoice(challenge.audio)
 
   onMount(() => {
-    playChallengeVoice();
-    hotkeys.unbind("enter");
+    playChallengeVoice()
+    hotkeys.unbind("enter")
     hotkeys("enter", () => {
       if (submitted) {
-        finishChallenge();
+        finishChallenge()
       } else {
-        submitChallenge();
+        submitChallenge()
       }
-    });
-  });
+    })
+  })
 </script>
 
 <form on:submit|preventDefault="{submitChallenge}">

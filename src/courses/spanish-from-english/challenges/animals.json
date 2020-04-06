@@ -1,5 +1,174 @@
 [
   {
+    "type": "options",
+    "formInTargetLanguage": "Es un caballo",
+    "meaningInSourceLanguage": "It's a horse",
+    "id": "72b008c9e6",
+    "priority": 0,
+    "group": "28469bbccf"
+  },
+  {
+    "type": "listeningExercise",
+    "answer": "Es un caballo",
+    "meaning": "It's a horse",
+    "audio": "a422fc6d7571bcde62d2499da164bdc839dd7338b900545733731b068981f609",
+    "id": "18652386c2",
+    "priority": 1,
+    "group": "28469bbccf"
+  },
+  {
+    "type": "chips",
+    "translatesToSourceLanguage": false,
+    "phrase": [
+      {
+        "word": "It's"
+      },
+      {
+        "word": "a"
+      },
+      {
+        "word": "horse",
+        "definition": "caballo"
+      }
+    ],
+    "chips": [
+      "Es",
+      "un",
+      "caballo"
+    ],
+    "solution": [
+      "Es",
+      "un",
+      "caballo"
+    ],
+    "formattedSolution": "Es un caballo",
+    "id": "91b3d72a96",
+    "priority": 2,
+    "group": "28469bbccf"
+  },
+  {
+    "type": "chips",
+    "translatesToSourceLanguage": true,
+    "phrase": [
+      {
+        "word": "Es",
+        "definition": "is"
+      },
+      {
+        "word": "un",
+        "definition": "a"
+      },
+      {
+        "word": "caballo",
+        "definition": "horse"
+      }
+    ],
+    "chips": [
+      "It's",
+      "a",
+      "horse"
+    ],
+    "solution": [
+      "It's",
+      "a",
+      "horse"
+    ],
+    "formattedSolution": "It's a horse",
+    "id": "91b3d72a96",
+    "priority": 2,
+    "group": "28469bbccf"
+  },
+  {
+    "type": "options",
+    "formInTargetLanguage": "Max es un perro",
+    "meaningInSourceLanguage": "Max is a dog",
+    "id": "8b97d3aea1",
+    "priority": 0,
+    "group": "88d030806e"
+  },
+  {
+    "type": "listeningExercise",
+    "answer": "Max es un perro",
+    "meaning": "Max is a dog",
+    "audio": "884d79a25c9e913a72c49caa14e29e6ab1bb7a34b42d93d4250d35ea117fb28e",
+    "id": "59eeb95a3b",
+    "priority": 1,
+    "group": "88d030806e"
+  },
+  {
+    "type": "chips",
+    "translatesToSourceLanguage": false,
+    "phrase": [
+      {
+        "word": "Max"
+      },
+      {
+        "word": "is"
+      },
+      {
+        "word": "a"
+      },
+      {
+        "word": "dog",
+        "definition": "perro"
+      }
+    ],
+    "chips": [
+      "Max",
+      "es",
+      "un",
+      "perro"
+    ],
+    "solution": [
+      "Max",
+      "es",
+      "un",
+      "perro"
+    ],
+    "formattedSolution": "Max es un perro",
+    "id": "3339371c31",
+    "priority": 2,
+    "group": "88d030806e"
+  },
+  {
+    "type": "chips",
+    "translatesToSourceLanguage": true,
+    "phrase": [
+      {
+        "word": "Max",
+        "definition": "Max"
+      },
+      {
+        "word": "es",
+        "definition": "is"
+      },
+      {
+        "word": "un",
+        "definition": "a"
+      },
+      {
+        "word": "perro",
+        "definition": "dog"
+      }
+    ],
+    "chips": [
+      "Max",
+      "is",
+      "a",
+      "dog"
+    ],
+    "solution": [
+      "Max",
+      "is",
+      "a",
+      "dog"
+    ],
+    "formattedSolution": "Max is a dog",
+    "id": "3339371c31",
+    "priority": 2,
+    "group": "88d030806e"
+  },
+  {
     "type": "cards",
     "pictures": [
       "dog1.jpg",
@@ -261,6 +430,43 @@
   {
     "type": "cards",
     "pictures": [
+      "lion1.jpg",
+      "lion2.jpg",
+      "lion3.jpg"
+    ],
+    "formInTargetLanguage": "un león",
+    "meaningInSourceLanguage": "a lion",
+    "id": "669672784f",
+    "priority": 0,
+    "group": "15f702e259"
+  },
+  {
+    "type": "shortInput",
+    "pictures": [
+      "lion1.jpg",
+      "lion2.jpg",
+      "lion3.jpg"
+    ],
+    "formInTargetLanguage": [
+      "un león"
+    ],
+    "meaningInSourceLanguage": "a lion",
+    "id": "76e2fda996",
+    "priority": 1,
+    "group": "15f702e259"
+  },
+  {
+    "type": "listeningExercise",
+    "answer": "un león",
+    "meaning": "a lion",
+    "audio": "03c5a6c604e2e66e14034625d5193480fac0e46b698a473d5ee327a54792ecb1",
+    "id": "3dcf67453d",
+    "priority": 1,
+    "group": "15f702e259"
+  },
+  {
+    "type": "cards",
+    "pictures": [
       "duck2.jpg",
       "duck1.jpg",
       "duck3.jpg"
@@ -298,6 +504,43 @@
   {
     "type": "cards",
     "pictures": [
+      "duck2.jpg",
+      "duck1.jpg",
+      "duck3.jpg"
+    ],
+    "formInTargetLanguage": "el pato",
+    "meaningInSourceLanguage": "the duck",
+    "id": "f7603dc9b6",
+    "priority": 0,
+    "group": "1d1dacd127"
+  },
+  {
+    "type": "shortInput",
+    "pictures": [
+      "duck2.jpg",
+      "duck1.jpg",
+      "duck3.jpg"
+    ],
+    "formInTargetLanguage": [
+      "el pato"
+    ],
+    "meaningInSourceLanguage": "the duck",
+    "id": "bf0a28bbbb",
+    "priority": 1,
+    "group": "1d1dacd127"
+  },
+  {
+    "type": "listeningExercise",
+    "answer": "el pato",
+    "meaning": "the duck",
+    "audio": "d7c1e9e216ffa757c7788dac995e666d937ac51bb0703872c256b4b78fbcd268",
+    "id": "94a0b8398d",
+    "priority": 1,
+    "group": "1d1dacd127"
+  },
+  {
+    "type": "cards",
+    "pictures": [
       "horse1.jpg",
       "horse2.jpg",
       "horse3.jpg"
@@ -328,6 +571,43 @@
     "answer": "caballo",
     "meaning": "horse",
     "audio": "1be1aa9e8015834c13736b5c6cc6a45eabbfb452e3583be7d41e55c92b0e3581",
+    "id": "b5607942b0",
+    "priority": 1,
+    "group": "f482f4b670"
+  },
+  {
+    "type": "cards",
+    "pictures": [
+      "horse1.jpg",
+      "horse2.jpg",
+      "horse3.jpg"
+    ],
+    "formInTargetLanguage": "un caballo",
+    "meaningInSourceLanguage": "a horse",
+    "id": "8940e6f3d4",
+    "priority": 0,
+    "group": "f482f4b670"
+  },
+  {
+    "type": "shortInput",
+    "pictures": [
+      "horse1.jpg",
+      "horse2.jpg",
+      "horse3.jpg"
+    ],
+    "formInTargetLanguage": [
+      "un caballo"
+    ],
+    "meaningInSourceLanguage": "a horse",
+    "id": "e61012b98d",
+    "priority": 1,
+    "group": "f482f4b670"
+  },
+  {
+    "type": "listeningExercise",
+    "answer": "un caballo",
+    "meaning": "a horse",
+    "audio": "a953fff1542f379226e7bf14b336803f557da4f868335535bf0e212baf5ad1f6",
     "id": "b5607942b0",
     "priority": 1,
     "group": "f482f4b670"

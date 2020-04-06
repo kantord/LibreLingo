@@ -1,15 +1,20 @@
 describe("Course page", () => {
-    const COURSE_PAGE_URL = "/course/spanish-from-english"
+    const COURSE_PAGE_URL = "/course/test"
+    const SKILL_PAGE_URL = `${COURSE_PAGE_URL}/skill/_short_input_test0`
 
     describe("Open skill page", () => {
         beforeEach(() => {
-            cy.window().then((window) => {
+            cy.window().then(window => {
                 cy.wrap(window.indexedDB.deleteDatabase("_pouch_localData"))
             })
             cy.visit(COURSE_PAGE_URL)
         })
 
-        it("Course page", function () {
+        it("Clean course page", function() {
+            cy.percySnapshot(this.test.fullTitle())
+        })
+
+        it("Course page", function() {
             cy.percySnapshot(this.test.fullTitle())
         })
 
@@ -17,17 +22,27 @@ describe("Course page", () => {
             cy.contains(/Animals/).should("be.visible")
         })
 
-        xit("Food skill should not be visible", () => {
-            cy.contains(/Food/).should("not.be.visible")
+        it("There should be 4 lessons that are not completed", () => {
+            cy.get("[data-completed=false]").should("have.length", 4)
         })
 
-        xit("Food skill should be visible when its available based on database", () => {
-            cy.window().then((window) => {
-                const db = window._DB
-                cy.wrap(db.put({ _id: "foo_bar" }))
+        describe("Complete a lesson", () => {
+            beforeEach(() => {
+                cy.visit(SKILL_PAGE_URL)
+                cy.get("input[type=text]").type("el perro")
+                cy.contains("Submit").click()
+                cy.contains("Continue").click()
+                cy.contains("Continue to course page").click()
             })
-            cy.reload()
-            cy.contains(/Food/).should("be.visible")
+
+            it("Course page with finished lesson", function() {
+                cy.contains(/Animals/).should("be.visible")
+                cy.percySnapshot(this.test.fullTitle())
+            })
+
+            it("There should be 3 lessons that are not completed", () => {
+                cy.get("[data-completed=false]").should("have.length", 3)
+            })
         })
     })
 })

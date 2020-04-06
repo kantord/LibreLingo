@@ -1,19 +1,19 @@
 <script>
-  import { onMount } from "svelte";
-  import hotkeys from "hotkeys-js";
-  import shuffle from "lodash.shuffle";
-  import Option from "../components/Option.svelte";
-  export let options;
-  export let selectedOption;
-  export let disabled;
+  import { onMount } from "svelte"
+  import hotkeys from "hotkeys-js"
+  import shuffle from "lodash.shuffle"
+  import Option from "../components/Option.svelte"
+  export let options
+  export let selectedOption
+  export let disabled
 
   onMount(() => {
-    hotkeys.unbind("1,2,3");
+    hotkeys.unbind("1,2,3")
     hotkeys("1,2,3", (_, { key }) => {
-      if (disabled) return;
-      selectedOption = parseInt(key) - 1;
-    });
-  });
+      if (disabled) return
+      selectedOption = parseInt(key) - 1
+    })
+  })
 </script>
 
 <ul class="options">
