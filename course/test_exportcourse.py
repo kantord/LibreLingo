@@ -1,5 +1,5 @@
 from django.core.management import CommandError, find_commands
-from django.test import TestCase
+from snapshottest.django import TestCase
 from django.core import management
 from io import StringIO
 import sys
@@ -7,6 +7,9 @@ from unittest.mock import patch
 
 from django.utils import translation
 from course.management.commands.exportcourse import generate_chips
+from course.management.commands.exportcourse import get_skill_data
+from course.management.commands.exportcourse import get_course_data
+from course.models import Course, Skill, Module
 
 
 class CommandTests(TestCase):
@@ -50,4 +53,51 @@ class GenerateChipsTest(TestCase):
     def test_calls_clean_word_correct_times(self, clean_word):
         generate_chips('foo bar bazz')
         self.assertEqual(clean_word.call_count, 3)
+
+
+class ExportSkillTest(TestCase):
+    databases = '__all__'
+    fixtures = ["dumps/courseData.json"]
+
+    def test_export_skill_correct_output_format(self):
+        course = Course.objects.get(pk=1)
+        skill = Skill.objects.get(pk=1)
+        language_id = "test"
+        data = get_skill_data(skill, language_id, course)
+        self.assertMatchSnapshot(data[0:1])
+
+
+class CourseDataTest(TestCase):
+    databases = '__all__'
+
+    def setUp(self):
+        self.course = Course.objects.create(
+            language_name="Spanish",
+            source_language_name="English",
+            target_language_code="ES",
+            special_characters="a b"
+        )
+        self.module = Module.objects.create(
+            course=self.course,
+            name="Basics"
+        )
+        self.skill = Skill.objects.create(
+            module=self.module,
+            name="Animals",
+            image1="water1",
+            image2="water2",
+            image3="water3",
+        )
+
+    def test_correct_output_format(self):
+        data = get_course_data(self.course)
+        self.assertMatchSnapshot(data)
+
+    def test_imageset_optional(self):
+        self.skill.image1 = None
+        self.skill.image2 = None
+        self.skill.image3 = None
+        self.skill.save()
+        data = get_course_data(self.course)
+        assert "imageSet" not in data["modules"][0]["skills"][0], "Has not imageset"
 

@@ -137,3 +137,5 @@ STATICFILES_DIRS = (
 )
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+TEST_RUNNER = 'snapshottest.django.TestRunner'
