@@ -26,6 +26,14 @@ describe("Course page", () => {
             cy.get("[data-completed=false]").should("have.length", 4)
         })
 
+        it("Skills without imageSet are supported", () => {
+            cy.get(".column:first-child .card img").should("have.length", 0)
+        })
+
+        it("Skills with images are supported", () => {
+            cy.get(".column:nth-child(2) .card img").should("have.length", 3)
+        })
+
         describe("Complete a lesson", () => {
             beforeEach(() => {
                 cy.visit(SKILL_PAGE_URL)
