@@ -38,22 +38,30 @@ class Command(BaseCommand):
             raise CommandError('Course "%s" does not exist' % course_id)
 
 
-def export_course_data(export_path, course):
-    print("Exporting course meta data")
-    data = {
+def get_course_data(course):
+    def get_imageset(skill):
+        images = [skill.image1, skill.image2, skill.image3]
+        return {"imageSet": images} if all(images) else {}
+
+    return {
         "languageName": course.language_name,
         "languageCode": course.target_language_code,
         "specialCharacters": course.special_characters.split(' '),
         "modules": [{
             "title": module.name,
             "skills": [{
-                "imageSet": [skill.image1, skill.image2, skill.image3],
+                **(get_imageset(skill)),
                 "summary": [word.formInTargetLanguage for word in skill.learnword_set.all()],
                 "practiceHref": skill.name.lower(),
                 "title": skill.name,
             } for skill in module.skill_set.all()]
         } for module in course.module_set.all()]
     }
+
+
+def export_course_data(export_path, course):
+    print("Exporting course meta data")
+    data = get_course_data(course)
     with open(Path(export_path) / "courseData.json", 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
@@ -107,7 +115,7 @@ def generate_learnword_challenged(learnword, formInTargetLanguage, meaningInSour
         ]
 
 
-def export_skill(export_path, skill, language_id, course):
+def get_skill_data(skill, language_id, course):
     data = []
     for learnsentence in skill.learnsentence_set.all():
         data = data + [
@@ -165,7 +173,12 @@ def export_skill(export_path, skill, language_id, course):
         if (learnword.formInTargetLanguage2):
             data = data + generate_learnword_challenged(learnword, learnword.formInTargetLanguage2, learnword.meaningInSourceLanguage2, language_id)
 
+    return data
 
+
+
+def export_skill(export_path, skill, language_id, course):
+    data = get_skill_data(skill, language_id, course)
     Path(Path(export_path) / "challenges").mkdir(parents=True, exist_ok=True)
 
     with open(Path(export_path) / "challenges" / "{}.json".format(skill.name.lower()), 'w', encoding='utf-8') as f:
