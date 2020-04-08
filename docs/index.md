@@ -30,7 +30,52 @@ yarn dev
 
 Now you should be able to see your app on [http://localhost:3000/](http://localhost:3000/)
 
-## Deploying to production
+### Course editor (backend)
+
+Make sure you have `python` installed and you've [set up and activated a virtualenv.](https://docs.python.org/3/library/venv.html)
+
+Install dependencies using `pip`:
+
+```
+pip install -r requirements.txt
+```
+
+In order to configure the local database, simply create `.env` file with these contents:
+
+```
+DATABASE_URL=sqlite:///db.sqlite3
+DEBUG=true
+```
+
+To be able to run the course editor locally, first we have to install migrations in the local database:
+
+```
+python manage.py migrate
+```
+
+You are able to run the course editor now, but you will need to create a user to actually log in into the interface. Let's do it:
+
+```
+python manage.py createsuperuser
+```
+
+Now you should be able to launch the course editor server using:
+
+```
+python manage.py runserver
+```
+
+Open the course editor on [https://localhost:8000/admin](https://localhost:8000/admin) and log in using your newly created user.
+
+### Loading real course data into the course editor
+
+If you've set up the course editor locally, you can load production course data into your local server using:
+
+```
+python manage.py loaddata courseData.json
+```
+
+## Deployment to production
 
 LibreLingo's frontend is a static site, therefore you can simply deploy it using the static HTTP server of your choice!
 
