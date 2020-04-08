@@ -14,10 +14,6 @@ describe("Course page", () => {
             cy.percySnapshot(this.test.fullTitle())
         })
 
-        it("Course page", function() {
-            cy.percySnapshot(this.test.fullTitle())
-        })
-
         it("Animals skill should not be visible", () => {
             cy.contains(/Animals/).should("be.visible")
         })
@@ -44,7 +40,7 @@ describe("Course page", () => {
             })
 
             it("Course page with finished lesson", function() {
-                cy.contains(/Animals/).should("be.visible")
+                cy.get("[data-completed=false]").should("have.length", 3)
                 cy.percySnapshot(this.test.fullTitle())
             })
 
