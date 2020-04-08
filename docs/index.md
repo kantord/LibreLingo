@@ -1,13 +1,34 @@
 # Development
 
-## Running the project in development mode
+## Setting up the development environment
 
-If you have cloned the repo and have `yarn` installed on your computer, you can install dependencies and run the development server using:
+Clone the repository:
+
+```
+git clone git@github.com:kantord/LibreLingo.git
+```
+
+Move into the repo directory:
+
+```
+cd LibreLingo
+```
+
+### Frontend
+
+Install dependencies:
 
 ```
 yarn
+```
+
+Start the development server:
+
+```
 yarn dev
 ```
+
+Now you should be able to see your app on [http://localhost:3000/](http://localhost:3000/)
 
 ## Deploying to production
 
