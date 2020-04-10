@@ -14,10 +14,22 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='LearnSentence',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('meaningInSourceLanguage', models.TextField(verbose_name='Meaning in source language')),
-                ('formInTargetLanguage', models.TextField(verbose_name='Meaning in target language')),
-                ('skill', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='course.Skill')),
+                ('id',
+                 models.AutoField(
+                     auto_created=True,
+                     primary_key=True,
+                     serialize=False,
+                     verbose_name='ID')),
+                ('meaningInSourceLanguage',
+                 models.TextField(
+                     verbose_name='Meaning in source language')),
+                ('formInTargetLanguage',
+                 models.TextField(
+                     verbose_name='Meaning in target language')),
+                ('skill',
+                 models.ForeignKey(
+                     on_delete=django.db.models.deletion.CASCADE,
+                     to='course.Skill')),
             ],
             options={
                 'verbose_name': 'Learn a new sentence',

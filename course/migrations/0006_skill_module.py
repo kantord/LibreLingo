@@ -14,7 +14,10 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='skill',
             name='module',
-            field=models.ForeignKey(default=0, on_delete=django.db.models.deletion.CASCADE, to='course.Module'),
+            field=models.ForeignKey(
+                default=0,
+                on_delete=django.db.models.deletion.CASCADE,
+                to='course.Module'),
             preserve_default=False,
         ),
     ]
