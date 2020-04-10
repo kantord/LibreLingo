@@ -14,7 +14,29 @@
   })
 
   onMount(() => {
-    db.put({ _id: `${courseURL}/skill/${skill}` })
+    const _id = `${courseURL}/skill/${skill}`
+    db.get(_id)
+      .then(function(doc) {
+        db.put({
+          ...doc,
+          practiced: [
+            ...(practiced || []),
+            {
+              at: new Date().valueOf()
+            }
+          ]
+        })
+      })
+      .catch(function() {
+        db.put({
+          _id,
+          practiced: [
+            {
+              at: new Date().valueOf()
+            }
+          ]
+        })
+      })
   })
 
   onMount(() => {
