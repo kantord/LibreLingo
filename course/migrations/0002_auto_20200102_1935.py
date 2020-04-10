@@ -13,8 +13,15 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Course',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('language_name', models.TextField(verbose_name='Language name')),
+                ('id',
+                 models.AutoField(
+                     auto_created=True,
+                     primary_key=True,
+                     serialize=False,
+                     verbose_name='ID')),
+                ('language_name',
+                 models.TextField(
+                     verbose_name='Language name')),
             ],
             options={
                 'verbose_name': 'Language course',
@@ -22,16 +29,19 @@ class Migration(migrations.Migration):
         ),
         migrations.AlterModelOptions(
             name='learnword',
-            options={'verbose_name': 'Learn a new word'},
+            options={
+                'verbose_name': 'Learn a new word'},
         ),
         migrations.AlterField(
             model_name='learnword',
             name='formInTargetLanguage',
-            field=models.TextField(verbose_name='Meaning in target language'),
+            field=models.TextField(
+                verbose_name='Meaning in target language'),
         ),
         migrations.AlterField(
             model_name='learnword',
             name='meaningInSourceLanguage',
-            field=models.TextField(verbose_name='Meaning in source language'),
+            field=models.TextField(
+                verbose_name='Meaning in source language'),
         ),
     ]

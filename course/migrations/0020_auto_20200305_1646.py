@@ -13,6 +13,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='course',
             name='special_characters',
-            field=models.TextField(verbose_name='Space-separated list of characters for the virtual keyboard'),
+            field=models.TextField(
+                verbose_name='Space-separated list of characters for the virtual keyboard'),
         ),
     ]
