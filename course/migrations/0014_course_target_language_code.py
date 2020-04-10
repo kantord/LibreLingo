@@ -13,7 +13,9 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='course',
             name='target_language_code',
-            field=models.TextField(default='', verbose_name='Target langauge IETF BCP 47 code'),
+            field=models.TextField(
+                default='',
+                verbose_name='Target langauge IETF BCP 47 code'),
             preserve_default=False,
         ),
     ]
