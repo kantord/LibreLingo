@@ -1,5 +1,5 @@
 <script>
-  import db from "../db"
+  import db from "../../db"
 
   export let title
   export let practiceHref
@@ -51,7 +51,7 @@
 </div>
 
 <style>
-  @import "../variables";
+  @import "../../variables";
 
   .image-set {
     position: relative;
