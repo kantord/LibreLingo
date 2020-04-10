@@ -14,12 +14,16 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='learnword',
             name='skill',
-            field=models.ForeignKey(default=0, on_delete=django.db.models.deletion.CASCADE, to='course.Skill'),
+            field=models.ForeignKey(
+                default=0,
+                on_delete=django.db.models.deletion.CASCADE,
+                to='course.Skill'),
             preserve_default=False,
         ),
         migrations.AlterField(
             model_name='module',
             name='name',
-            field=models.TextField(verbose_name='Module name'),
+            field=models.TextField(
+                verbose_name='Module name'),
         ),
     ]

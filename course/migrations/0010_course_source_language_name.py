@@ -13,7 +13,9 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='course',
             name='source_language_name',
-            field=models.TextField(default='English', verbose_name='Source langauge name'),
+            field=models.TextField(
+                default='English',
+                verbose_name='Source langauge name'),
             preserve_default=False,
         ),
     ]

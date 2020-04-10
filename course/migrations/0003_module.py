@@ -13,8 +13,15 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Module',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.TextField(verbose_name='Language name')),
+                ('id',
+                 models.AutoField(
+                     auto_created=True,
+                     primary_key=True,
+                     serialize=False,
+                     verbose_name='ID')),
+                ('name',
+                 models.TextField(
+                     verbose_name='Language name')),
             ],
             options={
                 'verbose_name': 'Module',
