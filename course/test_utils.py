@@ -17,4 +17,3 @@ class CleanWordTestCase(TestCase):
 
     def test_messy_word(self):
         self.assertEqual(clean_word(":::col·lecciona'm::?"), "col·lecciona'm")
-

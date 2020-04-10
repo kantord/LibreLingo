@@ -2,6 +2,7 @@ from django.core.exceptions import ValidationError
 from snapshottest.django import TestCase
 from .models import Course, Skill, Module
 
+
 class SkillTests(TestCase):
     databases = '__all__'
     fixtures = ["dumps/courseData.json"]
@@ -38,4 +39,3 @@ class SkillTests(TestCase):
             self.skill.save()
         except ValidationError:
             self.fail("Couldnt save skill with no images")
-

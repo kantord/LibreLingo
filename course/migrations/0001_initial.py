@@ -14,9 +14,16 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='LearnWord',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('meaningInSourceLanguage', models.TextField()),
-                ('formInTargetLanguage', models.TextField()),
+                ('id',
+                 models.AutoField(
+                     auto_created=True,
+                     primary_key=True,
+                     serialize=False,
+                     verbose_name='ID')),
+                ('meaningInSourceLanguage',
+                 models.TextField()),
+                ('formInTargetLanguage',
+                 models.TextField()),
             ],
         ),
     ]

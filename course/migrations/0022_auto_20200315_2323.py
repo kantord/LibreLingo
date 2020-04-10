@@ -13,11 +13,13 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='learnword',
             name='formInTargetLanguage2',
-            field=models.TextField(verbose_name='Alternative form in target language'),
+            field=models.TextField(
+                verbose_name='Alternative form in target language'),
         ),
         migrations.AlterField(
             model_name='learnword',
             name='meaningInSourceLanguage2',
-            field=models.TextField(verbose_name='Alternative form in source language'),
+            field=models.TextField(
+                verbose_name='Alternative form in source language'),
         ),
     ]
