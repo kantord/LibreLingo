@@ -1,5 +1,5 @@
 <script>
-  import db from "../db"
+  import db from "../../db"
 
   export let title
   export let practiceHref
@@ -12,7 +12,7 @@
     db
       .get(practiceHref)
       .then(function(doc) {
-        completed = true
+        completed = doc.practiced.length >= 1
       })
       .catch(function() {
         completed = false
@@ -51,7 +51,7 @@
 </div>
 
 <style>
-  @import "../variables";
+  @import "../../variables";
 
   .image-set {
     position: relative;
