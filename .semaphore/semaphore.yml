@@ -71,7 +71,7 @@ blocks:
             - sem-version python 3.8
             - checkout
             - pip install --cache-dir .pip_cache -r requirements.txt
-            - pycodestyle . --exclude="course/migrations"
+            - pycodestyle . --exclude="course/migrations" --max-line-length 119
 
   - name: Django test
     dependencies: []
