@@ -20,7 +20,7 @@
         db.put({
           ...doc,
           practiced: [
-            ...(practiced || []),
+            ...(doc.practiced || []),
             {
               at: new Date().valueOf()
             }
