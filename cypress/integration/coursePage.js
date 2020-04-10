@@ -41,6 +41,7 @@ describe("Course page", () => {
 
             it("Course page with finished lesson", function() {
                 cy.get("[data-completed=false]").should("have.length", 3)
+                cy.get(".svg-inline--fa.fa-check-square").should("be.visible")
                 cy.percySnapshot(this.test.fullTitle())
             })
 
