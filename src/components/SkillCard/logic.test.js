@@ -1,5 +1,10 @@
 import dayjs from "dayjs"
-import { daysUntilNextPractice, wouldBeStale, getLastPractice } from "./logic"
+import {
+    daysUntilNextPractice,
+    wouldBeStale,
+    getLastPractice,
+    isStale
+} from "./logic"
 
 const today = dayjs()
 const yesterday = dayjs().subtract(1, "day")
@@ -72,6 +77,34 @@ describe("getLastPractice", () => {
     tests.forEach(({ practices, expectedOutput }) => {
         it(`returns correct value for ${practices.length} items`, () => {
             expect(getLastPractice(practices)).toEqual(expectedOutput)
+        })
+    })
+})
+
+describe("isStale", () => {
+    const tests = [
+        {
+            description: "expired after first practice",
+            practices: [{ at: dayBeforeYesterday }],
+            expectedOutput: true
+        },
+        {
+            description: "not expired after second practice",
+            practices: [{ at: dayBeforeYesterday }, { at: yesterday }],
+            practicesSoFar: 2,
+            expectedOutput: false
+        },
+        {
+            description: "not expired after second practice",
+            practices: [{ at: dayBeforeYesterday }, { at: dayBeforeYesterday }],
+            practicesSoFar: 2,
+            expectedOutput: true
+        }
+    ]
+
+    tests.forEach(({ practices, expectedOutput, description }) => {
+        it(`returns correct value when ${description}`, () => {
+            expect(isStale({ practices })).toEqual(expectedOutput)
         })
     })
 })
