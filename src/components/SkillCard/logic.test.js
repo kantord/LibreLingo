@@ -85,19 +85,17 @@ describe("isStale", () => {
     const tests = [
         {
             description: "expired after first practice",
-            practices: [{ at: dayBeforeYesterday }],
+            practices: [{ at: +dayBeforeYesterday }],
             expectedOutput: true
         },
         {
             description: "not expired after second practice",
-            practices: [{ at: dayBeforeYesterday }, { at: yesterday }],
-            practicesSoFar: 2,
+            practices: [{ at: +dayBeforeYesterday }, { at: +yesterday }],
             expectedOutput: false
         },
         {
             description: "not expired after second practice",
-            practices: [{ at: dayBeforeYesterday }, { at: dayBeforeYesterday }],
-            practicesSoFar: 2,
+            practices: [{ at: +dayBeforeYesterday }, { at: +dayBeforeYesterday }],
             expectedOutput: true
         }
     ]
