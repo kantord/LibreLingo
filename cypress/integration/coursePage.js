@@ -49,7 +49,7 @@ describe("Course page", () => {
                 })
             })
 
-            it.only("Course page with stale lesson", function() {
+            it("Course page with stale lesson", function() {
                 cy.get("[data-completed=true][data-stale=true]").should(
                     "have.length",
                     1
@@ -74,6 +74,10 @@ describe("Course page", () => {
 
             it("There should be 3 lessons that are not completed", () => {
                 cy.get("[data-completed=false]").should("have.length", 3)
+            })
+
+            it("Practice button has correct text", () => {
+                cy.contains("Practice Test").should("be.visible")
             })
         })
     })
