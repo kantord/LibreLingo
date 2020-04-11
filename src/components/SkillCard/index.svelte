@@ -1,25 +1,28 @@
 <script>
   import db from "../../db"
+  import { isStale } from "./logic"
 
   export let title
   export let practiceHref
-  export let imageSet
+  export let imageSet = []
   export let summary
 
   let completed = null
+  let stale = null
 
   db &&
     db
       .get(practiceHref)
       .then(function(doc) {
         completed = doc.practiced.length >= 1
+        stale = isStale({ practices: doc.practiced })
       })
-      .catch(function() {
+      .catch(function(error) {
         completed = false
       })
 </script>
 
-<div class="card" data-completed="{completed}">
+<div class="card" data-completed="{completed}" data-stale="{stale}">
   {#if completed}
     <span class="icon is-medium">
       <i class="fas fa-check-square fa-2x"></i>
