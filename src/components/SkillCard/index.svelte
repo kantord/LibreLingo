@@ -1,25 +1,28 @@
 <script>
-  import db from "../db"
+  import db from "../../db"
+  import { isStale } from "./logic"
 
   export let title
   export let practiceHref
-  export let imageSet
+  export let imageSet = []
   export let summary
 
   let completed = null
+  let stale = null
 
   db &&
     db
       .get(practiceHref)
       .then(function(doc) {
-        completed = true
+        completed = doc.practiced.length >= 1
+        stale = isStale({ practices: doc.practiced })
       })
-      .catch(function() {
+      .catch(function(error) {
         completed = false
       })
 </script>
 
-<div class="card" data-completed="{completed}">
+<div class="card" data-completed="{completed}" data-stale="{stale}">
   {#if completed}
     <span class="icon is-medium">
       <i class="fas fa-check-square fa-2x"></i>
@@ -45,13 +48,17 @@
   </div>
   <footer class="card-footer">
     <a href="{practiceHref}" class="card-footer-item">
-      <button class="button is-primary">Learn {title}</button>
+      {#if completed}
+        <button class="button is-primary">Practice {title}</button>
+      {:else}
+        <button class="button is-primary">Learn {title}</button>
+      {/if}
     </a>
   </footer>
 </div>
 
 <style>
-  @import "../variables";
+  @import "../../variables";
 
   .image-set {
     position: relative;
@@ -90,8 +97,16 @@
 
   .card {
     $done-color: lighten(desaturate($green, 15%), 20%);
+    $stale-color: lighten(desaturate($green, 45%), 20%);
     &[data-completed="true"] {
       background-color: $done-color;
+
+      &[data-stale="true"] {
+        background-color: $stale-color;
+        .button {
+          color: darken($stale-color, 8%);
+        }
+      }
 
       .title,
       .media-content,
