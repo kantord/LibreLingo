@@ -16,3 +16,9 @@ export const wouldBeStale = ({ lastPractice, practicesSoFar }) => {
 
     return dayjs().isAfter(dayjs(dayjs(shouldBeStaleAt).subtract(1, "second")))
 }
+
+export const isStale = ({ practices }) =>
+    wouldBeStale({
+        practicesSoFar: practices.length,
+        lastPractice: getLastPractice(practices)
+    })
