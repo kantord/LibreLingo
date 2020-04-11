@@ -48,7 +48,11 @@
   </div>
   <footer class="card-footer">
     <a href="{practiceHref}" class="card-footer-item">
-      <button class="button is-primary">Learn {title}</button>
+      {#if completed}
+        <button class="button is-primary">Practice {title}</button>
+      {:else}
+        <button class="button is-primary">Learn {title}</button>
+      {/if}
     </a>
   </footer>
 </div>
@@ -93,8 +97,16 @@
 
   .card {
     $done-color: lighten(desaturate($green, 15%), 20%);
+    $stale-color: lighten(desaturate($green, 45%), 20%);
     &[data-completed="true"] {
       background-color: $done-color;
+
+      &[data-stale="true"] {
+        background-color: $stale-color;
+        .button {
+          color: darken($stale-color, 8%);
+        }
+      }
 
       .title,
       .media-content,
