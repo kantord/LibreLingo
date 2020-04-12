@@ -532,6 +532,160 @@
   }
 },
 {
+  "model": "course.learnword",
+  "pk": 47,
+  "fields": {
+    "skill": 11,
+    "meaningInSourceLanguage": "cats",
+    "formInTargetLanguage": "gatos",
+    "meaningInSourceLanguage2": "the cats",
+    "formInTargetLanguage2": "los gatos",
+    "image1": "cat1",
+    "image2": "cat2",
+    "image3": "cat3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 48,
+  "fields": {
+    "skill": 11,
+    "meaningInSourceLanguage": "beaches",
+    "formInTargetLanguage": "playas",
+    "meaningInSourceLanguage2": "the beaches",
+    "formInTargetLanguage2": "las playas",
+    "image1": "beach1",
+    "image2": "beach2",
+    "image3": "beach3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 49,
+  "fields": {
+    "skill": 11,
+    "meaningInSourceLanguage": "ducks",
+    "formInTargetLanguage": "patos",
+    "meaningInSourceLanguage2": "the ducks",
+    "formInTargetLanguage2": "los patos",
+    "image1": "duck1",
+    "image2": "duck2",
+    "image3": "duck3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 50,
+  "fields": {
+    "skill": 11,
+    "meaningInSourceLanguage": "camisas",
+    "formInTargetLanguage": "shirts",
+    "meaningInSourceLanguage2": "the shirts",
+    "formInTargetLanguage2": "las camisas",
+    "image1": "shirt1",
+    "image2": "shirt2",
+    "image3": "shirt3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 51,
+  "fields": {
+    "skill": 11,
+    "meaningInSourceLanguage": "students",
+    "formInTargetLanguage": "estudiantes",
+    "meaningInSourceLanguage2": "the students",
+    "formInTargetLanguage2": "los estudiantes",
+    "image1": "student1",
+    "image2": "student2",
+    "image3": "student3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 52,
+  "fields": {
+    "skill": 11,
+    "meaningInSourceLanguage": "strawberries",
+    "formInTargetLanguage": "fresas",
+    "meaningInSourceLanguage2": "the strawberries",
+    "formInTargetLanguage2": "las fresas",
+    "image1": "strawberry1",
+    "image2": "strawberry2",
+    "image3": "strawberry3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 53,
+  "fields": {
+    "skill": 11,
+    "meaningInSourceLanguage": "glasses",
+    "formInTargetLanguage": "gafas",
+    "meaningInSourceLanguage2": "the glasses",
+    "formInTargetLanguage2": "las gafas",
+    "image1": "glasses1",
+    "image2": "glasses2",
+    "image3": "glasses3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 54,
+  "fields": {
+    "skill": 11,
+    "meaningInSourceLanguage": "doctors",
+    "formInTargetLanguage": "m\u00e9dicos",
+    "meaningInSourceLanguage2": "the doctors",
+    "formInTargetLanguage2": "los m\u00e9dicos",
+    "image1": "doctor1",
+    "image2": "doctor2",
+    "image3": "doctor3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 55,
+  "fields": {
+    "skill": 12,
+    "meaningInSourceLanguage": "doctor",
+    "formInTargetLanguage": "m\u00e9dico",
+    "meaningInSourceLanguage2": "a doctor",
+    "formInTargetLanguage2": "una m\u00e9dica",
+    "image1": "doctor1",
+    "image2": "doctor2",
+    "image3": "doctor3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 56,
+  "fields": {
+    "skill": 12,
+    "meaningInSourceLanguage": "firefighter",
+    "formInTargetLanguage": "bombera",
+    "meaningInSourceLanguage2": "firefighter",
+    "formInTargetLanguage2": "bombero",
+    "image1": "firefighter1",
+    "image2": "firefighter2",
+    "image3": "firefighter3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 57,
+  "fields": {
+    "skill": 12,
+    "meaningInSourceLanguage": "farmer",
+    "formInTargetLanguage": "granjera",
+    "meaningInSourceLanguage2": "farmers",
+    "formInTargetLanguage2": "granjeras",
+    "image1": "farmer1",
+    "image2": "farmer2",
+    "image3": "farmer3"
+  }
+},
+{
   "model": "course.dictionaryitem",
   "pk": 1,
   "fields": {
@@ -1358,7 +1512,7 @@
     "course": 1,
     "reverse": true,
     "word": "Enjoy",
-    "definition": ""
+    "definition": "disfruto\r\ndisfrutas\r\ndisfrutamos\r\ndisfrut\u00e1is\r\ndisfrutan"
   }
 },
 {
@@ -1368,7 +1522,7 @@
     "course": 1,
     "reverse": true,
     "word": "your",
-    "definition": ""
+    "definition": "tu"
   }
 },
 {
@@ -1378,7 +1532,7 @@
     "course": 1,
     "reverse": true,
     "word": "meal",
-    "definition": ""
+    "definition": "comida"
   }
 },
 {
@@ -1408,7 +1562,7 @@
     "course": 1,
     "reverse": true,
     "word": "Please",
-    "definition": ""
+    "definition": "por favor"
   }
 },
 {
@@ -1428,7 +1582,7 @@
     "course": 1,
     "reverse": true,
     "word": "Water",
-    "definition": ""
+    "definition": "agua"
   }
 },
 {
@@ -1458,7 +1612,7 @@
     "course": 1,
     "reverse": true,
     "word": "I",
-    "definition": ""
+    "definition": "yo\r\nme"
   }
 },
 {
@@ -1468,7 +1622,7 @@
     "course": 1,
     "reverse": true,
     "word": "like",
-    "definition": ""
+    "definition": "gusta"
   }
 },
 {
@@ -1478,7 +1632,7 @@
     "course": 1,
     "reverse": true,
     "word": "it",
-    "definition": ""
+    "definition": "eso"
   }
 },
 {
@@ -1508,7 +1662,7 @@
     "course": 1,
     "reverse": true,
     "word": "How",
-    "definition": ""
+    "definition": "c\u00f3mo"
   }
 },
 {
@@ -1518,7 +1672,7 @@
     "course": 1,
     "reverse": true,
     "word": "much",
-    "definition": ""
+    "definition": "mucho"
   }
 },
 {
@@ -1528,7 +1682,7 @@
     "course": 1,
     "reverse": true,
     "word": "is",
-    "definition": ""
+    "definition": "es"
   }
 },
 {
@@ -1558,7 +1712,7 @@
     "course": 1,
     "reverse": true,
     "word": "you",
-    "definition": ""
+    "definition": "t\u00fa"
   }
 },
 {
@@ -1578,7 +1732,7 @@
     "course": 1,
     "reverse": true,
     "word": "Have",
-    "definition": ""
+    "definition": "tengo\r\ntienes\r\ntenemos\r\nten\u00e9is\r\ntienen"
   }
 },
 {
@@ -1588,7 +1742,7 @@
     "course": 1,
     "reverse": true,
     "word": "a",
-    "definition": ""
+    "definition": "una (fem.), un (masc.)"
   }
 },
 {
@@ -1658,7 +1812,7 @@
     "course": 1,
     "reverse": true,
     "word": "go",
-    "definition": ""
+    "definition": "voy\r\nvas\r\nvamos\r\nvais\r\nvan"
   }
 },
 {
@@ -1668,7 +1822,7 @@
     "course": 1,
     "reverse": true,
     "word": "to",
-    "definition": ""
+    "definition": "a"
   }
 },
 {
@@ -1678,7 +1832,7 @@
     "course": 1,
     "reverse": true,
     "word": "the",
-    "definition": ""
+    "definition": "la (fem.), el (masc.)\r\nlas, los"
   }
 },
 {
@@ -1718,7 +1872,7 @@
     "course": 1,
     "reverse": true,
     "word": "Cecilia",
-    "definition": ""
+    "definition": "Cecilia"
   }
 },
 {
@@ -1728,7 +1882,7 @@
     "course": 1,
     "reverse": true,
     "word": "drinks",
-    "definition": ""
+    "definition": "bebe"
   }
 },
 {
@@ -1738,7 +1892,7 @@
     "course": 1,
     "reverse": true,
     "word": "water",
-    "definition": ""
+    "definition": "agua"
   }
 },
 {
@@ -1768,7 +1922,7 @@
     "course": 1,
     "reverse": true,
     "word": "Maria",
-    "definition": ""
+    "definition": "Mar\u00eda"
   }
 },
 {
@@ -1778,7 +1932,7 @@
     "course": 1,
     "reverse": true,
     "word": "beer",
-    "definition": ""
+    "definition": "cerveza"
   }
 },
 {
@@ -1808,7 +1962,7 @@
     "course": 1,
     "reverse": true,
     "word": "It's",
-    "definition": ""
+    "definition": "es"
   }
 },
 {
@@ -1838,7 +1992,7 @@
     "course": 1,
     "reverse": true,
     "word": "Oscar",
-    "definition": ""
+    "definition": "\u00d3scar"
   }
 },
 {
@@ -1858,7 +2012,7 @@
     "course": 1,
     "reverse": true,
     "word": "Max",
-    "definition": ""
+    "definition": "Max"
   }
 },
 {
@@ -1878,7 +2032,7 @@
     "course": 1,
     "reverse": true,
     "word": "drink",
-    "definition": ""
+    "definition": "bebo\r\nbebes\r\nbebemos\r\nbeb\u00e9is\r\nbeben"
   }
 },
 {
@@ -1908,7 +2062,7 @@
     "course": 1,
     "reverse": true,
     "word": "Jos\u00e9",
-    "definition": ""
+    "definition": "Jos\u00e9"
   }
 },
 {
@@ -1918,7 +2072,7 @@
     "course": 1,
     "reverse": true,
     "word": "eats",
-    "definition": ""
+    "definition": "come"
   }
 },
 {
@@ -1938,7 +2092,7 @@
     "course": 1,
     "reverse": true,
     "word": "eat",
-    "definition": ""
+    "definition": "como\r\ncomes\r\ncomemos\r\ncom\u00e9is\r\ncomen"
   }
 },
 {
@@ -1948,7 +2102,7 @@
     "course": 1,
     "reverse": false,
     "word": "El",
-    "definition": ""
+    "definition": "the (masc. sg.)"
   }
 },
 {
@@ -1958,7 +2112,7 @@
     "course": 1,
     "reverse": false,
     "word": "bonito",
-    "definition": ""
+    "definition": "beautiful (masc. sg.)"
   }
 },
 {
@@ -1968,7 +2122,7 @@
     "course": 1,
     "reverse": true,
     "word": "The",
-    "definition": ""
+    "definition": "la (fem.), el (masc.)\r\nlas, los"
   }
 },
 {
@@ -1978,7 +2132,7 @@
     "course": 1,
     "reverse": true,
     "word": "beautiful",
-    "definition": ""
+    "definition": "bonita (fem.), bonito (masc.)\r\nbonitas, bonitos"
   }
 },
 {
@@ -1988,7 +2142,7 @@
     "course": 1,
     "reverse": false,
     "word": "Los",
-    "definition": ""
+    "definition": "the (masc. pl.)"
   }
 },
 {
@@ -1998,7 +2152,7 @@
     "course": 1,
     "reverse": false,
     "word": "son",
-    "definition": ""
+    "definition": "(they) are"
   }
 },
 {
@@ -2008,7 +2162,7 @@
     "course": 1,
     "reverse": false,
     "word": "grandes",
-    "definition": ""
+    "definition": "big (pl.)"
   }
 },
 {
@@ -2018,7 +2172,7 @@
     "course": 1,
     "reverse": true,
     "word": "are",
-    "definition": ""
+    "definition": "eres\r\nsomos\r\nsois\r\nson"
   }
 },
 {
@@ -2028,7 +2182,7 @@
     "course": 1,
     "reverse": true,
     "word": "big",
-    "definition": ""
+    "definition": "grande\r\ngrandes (pl.)"
   }
 },
 {
@@ -2038,7 +2192,7 @@
     "course": 1,
     "reverse": false,
     "word": "La",
-    "definition": ""
+    "definition": "the (fem. sg.)"
   }
 },
 {
@@ -2048,7 +2202,7 @@
     "course": 1,
     "reverse": false,
     "word": "grande",
-    "definition": ""
+    "definition": "big (sg.)"
   }
 },
 {
@@ -2058,7 +2212,7 @@
     "course": 1,
     "reverse": false,
     "word": "peque\u00f1a",
-    "definition": ""
+    "definition": "small (fem. sg.)"
   }
 },
 {
@@ -2068,7 +2222,7 @@
     "course": 1,
     "reverse": true,
     "word": "small",
-    "definition": ""
+    "definition": "peque\u00f1a (fem.), peque\u00f1o (masc.)\r\npeque\u00f1as, peque\u00f1os"
   }
 },
 {
@@ -2078,7 +2232,7 @@
     "course": 1,
     "reverse": false,
     "word": "Soy",
-    "definition": ""
+    "definition": "(I) am"
   }
 },
 {
@@ -2088,7 +2242,7 @@
     "course": 1,
     "reverse": true,
     "word": "am",
-    "definition": ""
+    "definition": "soy"
   }
 },
 {
@@ -2098,7 +2252,7 @@
     "course": 1,
     "reverse": false,
     "word": "Eres",
-    "definition": ""
+    "definition": "(you (sg.)) are"
   }
 },
 {
@@ -2108,87 +2262,7 @@
     "course": 1,
     "reverse": true,
     "word": "You",
-    "definition": ""
-  }
-},
-{
-  "model": "course.dictionaryitem",
-  "pk": 159,
-  "fields": {
-    "course": 1,
-    "reverse": false,
-    "word": "The",
-    "definition": ""
-  }
-},
-{
-  "model": "course.dictionaryitem",
-  "pk": 160,
-  "fields": {
-    "course": 1,
-    "reverse": false,
-    "word": "horse",
-    "definition": ""
-  }
-},
-{
-  "model": "course.dictionaryitem",
-  "pk": 161,
-  "fields": {
-    "course": 1,
-    "reverse": false,
-    "word": "is",
-    "definition": ""
-  }
-},
-{
-  "model": "course.dictionaryitem",
-  "pk": 162,
-  "fields": {
-    "course": 1,
-    "reverse": false,
-    "word": "small",
-    "definition": ""
-  }
-},
-{
-  "model": "course.dictionaryitem",
-  "pk": 163,
-  "fields": {
-    "course": 1,
-    "reverse": true,
-    "word": "El",
-    "definition": ""
-  }
-},
-{
-  "model": "course.dictionaryitem",
-  "pk": 164,
-  "fields": {
-    "course": 1,
-    "reverse": true,
-    "word": "caballo",
-    "definition": ""
-  }
-},
-{
-  "model": "course.dictionaryitem",
-  "pk": 165,
-  "fields": {
-    "course": 1,
-    "reverse": true,
-    "word": "es",
-    "definition": ""
-  }
-},
-{
-  "model": "course.dictionaryitem",
-  "pk": 166,
-  "fields": {
-    "course": 1,
-    "reverse": true,
-    "word": "peque\u00f1o",
-    "definition": ""
+    "definition": "t\u00fa (sg.)\r\nvosotras, vosotros (pl.)"
   }
 },
 {
@@ -2198,7 +2272,7 @@
     "course": 1,
     "reverse": false,
     "word": "Yo",
-    "definition": ""
+    "definition": "I"
   }
 },
 {
@@ -2208,7 +2282,7 @@
     "course": 1,
     "reverse": false,
     "word": "como",
-    "definition": ""
+    "definition": "(I) eat"
   }
 },
 {
@@ -2218,7 +2292,7 @@
     "course": 1,
     "reverse": false,
     "word": "T\u00fa",
-    "definition": ""
+    "definition": "you"
   }
 },
 {
@@ -2228,7 +2302,7 @@
     "course": 1,
     "reverse": false,
     "word": "comes",
-    "definition": ""
+    "definition": "(you (sg.)) eat"
   }
 },
 {
@@ -2238,7 +2312,7 @@
     "course": 1,
     "reverse": false,
     "word": "Ella",
-    "definition": ""
+    "definition": "she"
   }
 },
 {
@@ -2248,7 +2322,7 @@
     "course": 1,
     "reverse": false,
     "word": "pizza",
-    "definition": ""
+    "definition": "pizza"
   }
 },
 {
@@ -2258,7 +2332,7 @@
     "course": 1,
     "reverse": true,
     "word": "She",
-    "definition": ""
+    "definition": "ella"
   }
 },
 {
@@ -2268,7 +2342,7 @@
     "course": 1,
     "reverse": true,
     "word": "pizza",
-    "definition": ""
+    "definition": "pizza"
   }
 },
 {
@@ -2278,7 +2352,7 @@
     "course": 1,
     "reverse": false,
     "word": "\u00c9l",
-    "definition": ""
+    "definition": "he"
   }
 },
 {
@@ -2288,7 +2362,7 @@
     "course": 1,
     "reverse": true,
     "word": "He",
-    "definition": ""
+    "definition": "\u00e9l"
   }
 },
 {
@@ -2298,7 +2372,7 @@
     "course": 1,
     "reverse": false,
     "word": "bebo",
-    "definition": ""
+    "definition": "(I) drink"
   }
 },
 {
@@ -2308,7 +2382,7 @@
     "course": 1,
     "reverse": false,
     "word": "bebes",
-    "definition": ""
+    "definition": "(you (sg.)) drink"
   }
 },
 {
@@ -2318,7 +2392,7 @@
     "course": 1,
     "reverse": false,
     "word": "Marina",
-    "definition": ""
+    "definition": "Marina"
   }
 },
 {
@@ -2328,7 +2402,7 @@
     "course": 1,
     "reverse": true,
     "word": "Marina",
-    "definition": ""
+    "definition": "Marina"
   }
 },
 {
@@ -2338,7 +2412,7 @@
     "course": 1,
     "reverse": false,
     "word": "Un",
-    "definition": ""
+    "definition": "a/an (masc.)"
   }
 },
 {
@@ -2348,7 +2422,7 @@
     "course": 1,
     "reverse": false,
     "word": "y",
-    "definition": ""
+    "definition": "and"
   }
 },
 {
@@ -2358,7 +2432,7 @@
     "course": 1,
     "reverse": true,
     "word": "A",
-    "definition": ""
+    "definition": "una (fem.), un (masc.)"
   }
 },
 {
@@ -2368,7 +2442,7 @@
     "course": 1,
     "reverse": true,
     "word": "and",
-    "definition": ""
+    "definition": "y"
   }
 },
 {
@@ -2378,7 +2452,7 @@
     "course": 1,
     "reverse": false,
     "word": "Nosotras",
-    "definition": ""
+    "definition": "we (fem. pl.)"
   }
 },
 {
@@ -2388,7 +2462,7 @@
     "course": 1,
     "reverse": false,
     "word": "comemos",
-    "definition": ""
+    "definition": "(we) eat"
   }
 },
 {
@@ -2398,7 +2472,7 @@
     "course": 1,
     "reverse": false,
     "word": "pl\u00e1tanos",
-    "definition": ""
+    "definition": "bananas"
   }
 },
 {
@@ -2408,7 +2482,7 @@
     "course": 1,
     "reverse": true,
     "word": "We",
-    "definition": ""
+    "definition": "nosotras (fem.), nosotros (masc.)"
   }
 },
 {
@@ -2418,7 +2492,7 @@
     "course": 1,
     "reverse": true,
     "word": "bananas",
-    "definition": ""
+    "definition": "pl\u00e1tanos"
   }
 },
 {
@@ -2428,7 +2502,7 @@
     "course": 1,
     "reverse": false,
     "word": "Vosotras",
-    "definition": ""
+    "definition": "you (fem. pl.)"
   }
 },
 {
@@ -2438,7 +2512,7 @@
     "course": 1,
     "reverse": false,
     "word": "com\u00e9is",
-    "definition": ""
+    "definition": "(you (pl.) eat"
   }
 },
 {
@@ -2448,7 +2522,7 @@
     "course": 1,
     "reverse": false,
     "word": "m\u00e1s",
-    "definition": ""
+    "definition": "more"
   }
 },
 {
@@ -2458,7 +2532,7 @@
     "course": 1,
     "reverse": true,
     "word": "more",
-    "definition": ""
+    "definition": "m\u00e1s"
   }
 },
 {
@@ -2468,7 +2542,7 @@
     "course": 1,
     "reverse": false,
     "word": "Ellas",
-    "definition": ""
+    "definition": "they (fem. pl.)"
   }
 },
 {
@@ -2478,7 +2552,7 @@
     "course": 1,
     "reverse": false,
     "word": "comen",
-    "definition": ""
+    "definition": "(they) eat"
   }
 },
 {
@@ -2488,7 +2562,7 @@
     "course": 1,
     "reverse": false,
     "word": "menos",
-    "definition": ""
+    "definition": "less"
   }
 },
 {
@@ -2498,7 +2572,7 @@
     "course": 1,
     "reverse": true,
     "word": "They",
-    "definition": ""
+    "definition": "ellas (fem.), ellos (masc.)"
   }
 },
 {
@@ -2508,17 +2582,7 @@
     "course": 1,
     "reverse": true,
     "word": "less",
-    "definition": ""
-  }
-},
-{
-  "model": "course.dictionaryitem",
-  "pk": 199,
-  "fields": {
-    "course": 1,
-    "reverse": false,
-    "word": "bebenos",
-    "definition": ""
+    "definition": "menos"
   }
 },
 {
@@ -2528,7 +2592,7 @@
     "course": 1,
     "reverse": false,
     "word": "mucho",
-    "definition": ""
+    "definition": "a lot, much"
   }
 },
 {
@@ -2538,7 +2602,687 @@
     "course": 1,
     "reverse": true,
     "word": "lot",
-    "definition": ""
+    "definition": "mucho"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 218,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Mar",
+    "definition": "sea"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 219,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "o",
+    "definition": "or"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 220,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "Sea",
+    "definition": "mar"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 221,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "or",
+    "definition": "o"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 222,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "bebemos",
+    "definition": "(we) drink"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 223,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "beb\u00e9is",
+    "definition": "(you (pl.)) drink"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 224,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "beben",
+    "definition": "(they) drink"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 225,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Nosotros",
+    "definition": "we (masc. pl.)"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 226,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "somos",
+    "definition": "(we) are"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 227,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "caballos",
+    "definition": "horses"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 228,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "horses",
+    "definition": "caballos"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 229,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Vosotros",
+    "definition": "you (masc. pl.)"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 230,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "sois",
+    "definition": "(you (pl.)) are"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 231,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "gatos",
+    "definition": "cats"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 232,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "cats",
+    "definition": "gatos"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 233,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Ellos",
+    "definition": "they (masc.)"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 234,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "perros",
+    "definition": "dogs"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 235,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "dogs",
+    "definition": "perros"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 236,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "verdes",
+    "definition": "green (pl.)\r\ngreen ones"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 237,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "green",
+    "definition": "verde (sg.)\r\nverdes (pl.)"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 238,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Playas",
+    "definition": "beaches"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 239,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "bonitas",
+    "definition": "beautiful (fem. pl.)"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 240,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "Beautiful",
+    "definition": "bonita (fem.), bonito (masc.)\r\nbonitas, bonitos"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 241,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "beaches",
+    "definition": "playas"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 242,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Las",
+    "definition": "the (fem. pl.)"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 243,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "camisas",
+    "definition": "shirts"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 244,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "rojas",
+    "definition": "red (fem. pl.), red ones"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 245,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "shirts",
+    "definition": "camisas"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 246,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "red",
+    "definition": "roja (fem.), rojo (masc.)\r\nrojas, rojos"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 247,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "estudiantes",
+    "definition": "students"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 248,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "students",
+    "definition": "estudiantes"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 249,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "gafas",
+    "definition": "glasses"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 250,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "glasses",
+    "definition": "gafas"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 251,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "patos",
+    "definition": "ducks"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 252,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "m\u00e9dicos",
+    "definition": "doctors (masc.)"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 253,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "ducks",
+    "definition": "patos"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 254,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "doctors",
+    "definition": "m\u00e9dicas (fem.), m\u00e9dicos (masc.)"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 255,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "m\u00e9dico",
+    "definition": "doctor (masc.)"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 256,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "doctor",
+    "definition": "m\u00e9dica (fem.), m\u00e9dico (masc.)"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 257,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "camarero",
+    "definition": "waiter (masc.)"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 258,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "trabaja",
+    "definition": "works"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 259,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "waiter",
+    "definition": "camarera (fem.), camarero (masc.)"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 260,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "works",
+    "definition": "trabaja"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 261,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "bomberas",
+    "definition": "firefighters (fem.)"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 262,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "llegan",
+    "definition": "(they) arrive"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 263,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "firefighters",
+    "definition": "bomberas (fem.), bomberos (masc.)"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 264,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "arrive",
+    "definition": "llego\r\nllegas\r\nllegamos\r\nlleg\u00e1is\r\nllegan"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 265,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "m\u00e9dica",
+    "definition": "doctor (fem.)"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 266,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "granjero",
+    "definition": "farmer"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 267,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "ve",
+    "definition": "sees"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 268,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "los",
+    "definition": "the (masc. pl.)"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 269,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "animales",
+    "definition": "animals"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 270,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "farmer",
+    "definition": "granjera (fem.), granjero (masc.)"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 271,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "sees",
+    "definition": "ve"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 272,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "animals",
+    "definition": "animales"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 273,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "enfermeros",
+    "definition": "nurses (masc. pl.)"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 274,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "viven",
+    "definition": "(they) live"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 275,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "aqu\u00ed",
+    "definition": "here"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 276,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "nurses",
+    "definition": "enfermeros (masc.), enfermeras (fem.)"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 277,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "live",
+    "definition": "vivo\r\nvives\r\nvivimos\r\nviv\u00eds\r\nviven"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 278,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "here",
+    "definition": "aqu\u00ed"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 279,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "cantante",
+    "definition": "singer"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 280,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "canta",
+    "definition": "sings"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 281,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "bien",
+    "definition": "well"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 282,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "singer",
+    "definition": "cantante"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 283,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "sings",
+    "definition": "canta"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 284,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "well",
+    "definition": "bien"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 285,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "peque\u00f1o",
+    "definition": "small (masc.)"
   }
 },
 {
@@ -2735,8 +3479,8 @@
   "pk": 22,
   "fields": {
     "skill": 9,
-    "meaningInSourceLanguage": "El caballo es peque\u00f1o",
-    "formInTargetLanguage": "The horse is small"
+    "meaningInSourceLanguage": "The horse is small",
+    "formInTargetLanguage": "El caballo es peque\u00f1o"
   }
 },
 {
@@ -2853,7 +3597,169 @@
   "fields": {
     "skill": 10,
     "meaningInSourceLanguage": "We drink a lot.",
-    "formInTargetLanguage": "Nosotras bebenos mucho."
+    "formInTargetLanguage": "Nosotras bebemos mucho."
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 36,
+  "fields": {
+    "skill": 8,
+    "meaningInSourceLanguage": "Sea or mountain?",
+    "formInTargetLanguage": "\u00bfMar o monta\u00f1a?"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 37,
+  "fields": {
+    "skill": 10,
+    "meaningInSourceLanguage": "You drink water.",
+    "formInTargetLanguage": "Vosotras beb\u00e9is agua."
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 38,
+  "fields": {
+    "skill": 10,
+    "meaningInSourceLanguage": "They drink beer.",
+    "formInTargetLanguage": "Ellas beben cerveza."
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 39,
+  "fields": {
+    "skill": 10,
+    "meaningInSourceLanguage": "We are horses.",
+    "formInTargetLanguage": "Nosotros somos caballos."
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 40,
+  "fields": {
+    "skill": 10,
+    "meaningInSourceLanguage": "You are cats.",
+    "formInTargetLanguage": "Vosotros sois gatos."
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 41,
+  "fields": {
+    "skill": 10,
+    "meaningInSourceLanguage": "They are dogs.",
+    "formInTargetLanguage": "Ellos son perros."
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 42,
+  "fields": {
+    "skill": 11,
+    "meaningInSourceLanguage": "The green cats",
+    "formInTargetLanguage": "Los gatos verdes"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 43,
+  "fields": {
+    "skill": 11,
+    "meaningInSourceLanguage": "Beautiful beaches",
+    "formInTargetLanguage": "Playas bonitas"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 44,
+  "fields": {
+    "skill": 11,
+    "meaningInSourceLanguage": "The shirts are red",
+    "formInTargetLanguage": "Las camisas son rojas"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 45,
+  "fields": {
+    "skill": 11,
+    "meaningInSourceLanguage": "The cats are students",
+    "formInTargetLanguage": "Los gatos son estudiantes"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 46,
+  "fields": {
+    "skill": 11,
+    "meaningInSourceLanguage": "The glasses are big",
+    "formInTargetLanguage": "Las gafas son grandes"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 47,
+  "fields": {
+    "skill": 11,
+    "meaningInSourceLanguage": "The ducks are doctors",
+    "formInTargetLanguage": "Los patos son m\u00e9dicos"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 48,
+  "fields": {
+    "skill": 12,
+    "meaningInSourceLanguage": "The doctor drinks water",
+    "formInTargetLanguage": "La m\u00e9dica bebe agua"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 49,
+  "fields": {
+    "skill": 12,
+    "meaningInSourceLanguage": "The waiter works",
+    "formInTargetLanguage": "El camarero trabaja"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 50,
+  "fields": {
+    "skill": 12,
+    "meaningInSourceLanguage": "The firefighters arrive",
+    "formInTargetLanguage": "Las bomberas llegan"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 51,
+  "fields": {
+    "skill": 12,
+    "meaningInSourceLanguage": "The farmer sees the animals",
+    "formInTargetLanguage": "El granjero ve los animales"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 52,
+  "fields": {
+    "skill": 12,
+    "meaningInSourceLanguage": "The nurses live here",
+    "formInTargetLanguage": "Los enfermeros viven aqu\u00ed"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 53,
+  "fields": {
+    "skill": 12,
+    "meaningInSourceLanguage": "The singer sings well",
+    "formInTargetLanguage": "El cantante canta bien"
   }
 },
 {
@@ -2996,6 +3902,30 @@
   "fields": {
     "module": 1,
     "name": "Verb plurals",
+    "order": 0,
+    "image1": null,
+    "image2": null,
+    "image3": null
+  }
+},
+{
+  "model": "course.skill",
+  "pk": 11,
+  "fields": {
+    "module": 1,
+    "name": "Plurals",
+    "order": 0,
+    "image1": "cat3",
+    "image2": "duck2",
+    "image3": "shirt2"
+  }
+},
+{
+  "model": "course.skill",
+  "pk": 12,
+  "fields": {
+    "module": 1,
+    "name": "Professions",
     "order": 0,
     "image1": null,
     "image2": null,

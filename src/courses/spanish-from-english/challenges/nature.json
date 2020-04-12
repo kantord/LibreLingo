@@ -21,10 +21,12 @@
     "translatesToSourceLanguage": false,
     "phrase": [
       {
-        "word": "Have"
+        "word": "Have",
+        "definition": "tengo\r\ntienes\r\ntenemos\r\ntenéis\r\ntienen"
       },
       {
-        "word": "a"
+        "word": "a",
+        "definition": "una (fem.), un (masc.)"
       },
       {
         "word": "good",
@@ -101,13 +103,16 @@
         "definition": "Vamos"
       },
       {
-        "word": "go"
+        "word": "go",
+        "definition": "voy\r\nvas\r\nvamos\r\nvais\r\nvan"
       },
       {
-        "word": "to"
+        "word": "to",
+        "definition": "a"
       },
       {
-        "word": "the"
+        "word": "the",
+        "definition": "la (fem.), el (masc.)\r\nlas, los"
       },
       {
         "word": "beach",
@@ -170,6 +175,84 @@
     "id": "3b7cb47dc5",
     "priority": 2,
     "group": "27fc594db1"
+  },
+  {
+    "type": "options",
+    "formInTargetLanguage": "¿Mar o montaña?",
+    "meaningInSourceLanguage": "Sea or mountain?",
+    "id": "fb4c1d410c",
+    "priority": 0,
+    "group": "6fdd8d99bb"
+  },
+  {
+    "type": "listeningExercise",
+    "answer": "¿Mar o montaña?",
+    "meaning": "Sea or mountain?",
+    "audio": "2b5700edfc78fcc2a027d4cd250088921a571a8a20d4bc012438a285644e4d77",
+    "id": "e2debc2a91",
+    "priority": 1,
+    "group": "6fdd8d99bb"
+  },
+  {
+    "type": "chips",
+    "translatesToSourceLanguage": false,
+    "phrase": [
+      {
+        "word": "Sea",
+        "definition": "mar"
+      },
+      {
+        "word": "or",
+        "definition": "o"
+      },
+      {
+        "word": "mountain?"
+      }
+    ],
+    "chips": [
+      "Mar",
+      "o",
+      "montaña"
+    ],
+    "solution": [
+      "Mar",
+      "o",
+      "montaña"
+    ],
+    "formattedSolution": "¿Mar o montaña?",
+    "id": "e13de317a2",
+    "priority": 2,
+    "group": "6fdd8d99bb"
+  },
+  {
+    "type": "chips",
+    "translatesToSourceLanguage": true,
+    "phrase": [
+      {
+        "word": "¿Mar"
+      },
+      {
+        "word": "o",
+        "definition": "or"
+      },
+      {
+        "word": "montaña?"
+      }
+    ],
+    "chips": [
+      "Sea",
+      "or",
+      "mountain"
+    ],
+    "solution": [
+      "Sea",
+      "or",
+      "mountain"
+    ],
+    "formattedSolution": "Sea or mountain?",
+    "id": "e13de317a2",
+    "priority": 2,
+    "group": "6fdd8d99bb"
   },
   {
     "type": "cards",

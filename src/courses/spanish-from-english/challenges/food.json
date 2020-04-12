@@ -21,13 +21,16 @@
     "translatesToSourceLanguage": false,
     "phrase": [
       {
-        "word": "Enjoy"
+        "word": "Enjoy",
+        "definition": "disfruto\r\ndisfrutas\r\ndisfrutamos\r\ndisfrutáis\r\ndisfrutan"
       },
       {
-        "word": "your"
+        "word": "your",
+        "definition": "tu"
       },
       {
-        "word": "meal"
+        "word": "meal",
+        "definition": "comida"
       }
     ],
     "chips": [
@@ -91,7 +94,8 @@
     "translatesToSourceLanguage": false,
     "phrase": [
       {
-        "word": "Please"
+        "word": "Please",
+        "definition": "por favor"
       }
     ],
     "chips": [
@@ -271,13 +275,16 @@
     "translatesToSourceLanguage": false,
     "phrase": [
       {
-        "word": "Cecilia"
+        "word": "Cecilia",
+        "definition": "Cecilia"
       },
       {
-        "word": "drinks"
+        "word": "drinks",
+        "definition": "bebe"
       },
       {
-        "word": "water"
+        "word": "water",
+        "definition": "agua"
       }
     ],
     "chips": [
@@ -329,7 +336,7 @@
   },
   {
     "type": "options",
-    "formInTargetLanguage": "Bebo cerveza",
+    "formInTargetLanguage": "Yo bebo cerveza",
     "meaningInSourceLanguage": "I drink beer",
     "id": "688b7a00c8",
     "priority": 0,
@@ -337,9 +344,9 @@
   },
   {
     "type": "listeningExercise",
-    "answer": "Bebo cerveza",
+    "answer": "Yo bebo cerveza",
     "meaning": "I drink beer",
-    "audio": "567748169e99d0ca8a64ab618b1d7b4a034640ce1a63813a4cfd05ef42f62333",
+    "audio": "b9dfd47aa7f28d0df827e08a09baa83d15296b382e4395906f3966e6c22d6296",
     "id": "581c5541f0",
     "priority": 1,
     "group": "1396179b42"
@@ -349,24 +356,29 @@
     "translatesToSourceLanguage": false,
     "phrase": [
       {
-        "word": "I"
+        "word": "I",
+        "definition": "yo\r\nme"
       },
       {
-        "word": "drink"
+        "word": "drink",
+        "definition": "bebo\r\nbebes\r\nbebemos\r\nbebéis\r\nbeben"
       },
       {
-        "word": "beer"
+        "word": "beer",
+        "definition": "cerveza"
       }
     ],
     "chips": [
-      "Bebo",
+      "Yo",
+      "bebo",
       "cerveza"
     ],
     "solution": [
-      "Bebo",
+      "Yo",
+      "bebo",
       "cerveza"
     ],
-    "formattedSolution": "Bebo cerveza",
+    "formattedSolution": "Yo bebo cerveza",
     "id": "0626518d14",
     "priority": 2,
     "group": "1396179b42"
@@ -376,8 +388,12 @@
     "translatesToSourceLanguage": true,
     "phrase": [
       {
-        "word": "Bebo",
-        "definition": "I drink"
+        "word": "Yo",
+        "definition": "I"
+      },
+      {
+        "word": "bebo",
+        "definition": "(I) drink"
       },
       {
         "word": "cerveza",
@@ -421,10 +437,12 @@
     "translatesToSourceLanguage": false,
     "phrase": [
       {
-        "word": "José"
+        "word": "José",
+        "definition": "José"
       },
       {
-        "word": "eats"
+        "word": "eats",
+        "definition": "come"
       },
       {
         "word": "bread",
@@ -480,7 +498,7 @@
   },
   {
     "type": "options",
-    "formInTargetLanguage": "Como pasta",
+    "formInTargetLanguage": "Yo como pasta",
     "meaningInSourceLanguage": "I eat pasta",
     "id": "4fe67adc4e",
     "priority": 0,
@@ -488,9 +506,9 @@
   },
   {
     "type": "listeningExercise",
-    "answer": "Como pasta",
+    "answer": "Yo como pasta",
     "meaning": "I eat pasta",
-    "audio": "17790a9cb94e719bdc4a9dddc47b991491f38996e6a5e6aaec665a94dc2d0d0a",
+    "audio": "b0448f201bd76d33ad9e94af545ff3e6bef0a2229cf7379900adb7402f6156b1",
     "id": "e8e9cc0716",
     "priority": 1,
     "group": "1e3cfabc3c"
@@ -500,10 +518,12 @@
     "translatesToSourceLanguage": false,
     "phrase": [
       {
-        "word": "I"
+        "word": "I",
+        "definition": "yo\r\nme"
       },
       {
-        "word": "eat"
+        "word": "eat",
+        "definition": "como\r\ncomes\r\ncomemos\r\ncoméis\r\ncomen"
       },
       {
         "word": "pasta",
@@ -511,14 +531,16 @@
       }
     ],
     "chips": [
-      "Como",
+      "Yo",
+      "como",
       "pasta"
     ],
     "solution": [
-      "Como",
+      "Yo",
+      "como",
       "pasta"
     ],
-    "formattedSolution": "Como pasta",
+    "formattedSolution": "Yo como pasta",
     "id": "96fc695e10",
     "priority": 2,
     "group": "1e3cfabc3c"
@@ -528,8 +550,12 @@
     "translatesToSourceLanguage": true,
     "phrase": [
       {
-        "word": "Como",
-        "definition": "I eat"
+        "word": "Yo",
+        "definition": "I"
+      },
+      {
+        "word": "como",
+        "definition": "(I) eat"
       },
       {
         "word": "pasta",

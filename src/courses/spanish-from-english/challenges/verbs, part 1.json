@@ -21,13 +21,16 @@
     "translatesToSourceLanguage": false,
     "phrase": [
       {
-        "word": "I"
+        "word": "I",
+        "definition": "yo\r\nme"
       },
       {
-        "word": "am"
+        "word": "am",
+        "definition": "soy"
       },
       {
-        "word": "a"
+        "word": "a",
+        "definition": "una (fem.), un (masc.)"
       },
       {
         "word": "cat",
@@ -54,7 +57,8 @@
     "translatesToSourceLanguage": true,
     "phrase": [
       {
-        "word": "Soy"
+        "word": "Soy",
+        "definition": "(I) am"
       },
       {
         "word": "un",
@@ -104,13 +108,16 @@
     "translatesToSourceLanguage": false,
     "phrase": [
       {
-        "word": "You"
+        "word": "You",
+        "definition": "tú (sg.)\r\nvosotras, vosotros (pl.)"
       },
       {
-        "word": "are"
+        "word": "are",
+        "definition": "eres\r\nsomos\r\nsois\r\nson"
       },
       {
-        "word": "big"
+        "word": "big",
+        "definition": "grande\r\ngrandes (pl.)"
       }
     ],
     "chips": [
@@ -131,10 +138,12 @@
     "translatesToSourceLanguage": true,
     "phrase": [
       {
-        "word": "Eres"
+        "word": "Eres",
+        "definition": "(you (sg.)) are"
       },
       {
-        "word": "grande"
+        "word": "grande",
+        "definition": "big (sg.)"
       }
     ],
     "chips": [
@@ -154,17 +163,17 @@
   },
   {
     "type": "options",
-    "formInTargetLanguage": "The horse is small",
-    "meaningInSourceLanguage": "El caballo es pequeño",
+    "formInTargetLanguage": "El caballo es pequeño",
+    "meaningInSourceLanguage": "The horse is small",
     "id": "7248c6779d",
     "priority": 0,
     "group": "eaeefa23e0"
   },
   {
     "type": "listeningExercise",
-    "answer": "The horse is small",
-    "meaning": "El caballo es pequeño",
-    "audio": "27c6f789973a719b600b06c5c4ca6ff8f8e865b59d3e77d25bc664fa0a3a8a3c",
+    "answer": "El caballo es pequeño",
+    "meaning": "The horse is small",
+    "audio": "b7cb244cfe377f12392fd7fe8681b4553748328c9a0c5f99693e02d394696be9",
     "id": "365939d58f",
     "priority": 1,
     "group": "eaeefa23e0"
@@ -174,50 +183,20 @@
     "translatesToSourceLanguage": false,
     "phrase": [
       {
-        "word": "El"
+        "word": "The",
+        "definition": "la (fem.), el (masc.)\r\nlas, los"
       },
       {
-        "word": "caballo"
+        "word": "horse",
+        "definition": "caballo"
       },
       {
-        "word": "es"
+        "word": "is",
+        "definition": "es"
       },
       {
-        "word": "pequeño"
-      }
-    ],
-    "chips": [
-      "The",
-      "horse",
-      "is",
-      "small"
-    ],
-    "solution": [
-      "The",
-      "horse",
-      "is",
-      "small"
-    ],
-    "formattedSolution": "The horse is small",
-    "id": "f344caf6cc",
-    "priority": 2,
-    "group": "eaeefa23e0"
-  },
-  {
-    "type": "chips",
-    "translatesToSourceLanguage": true,
-    "phrase": [
-      {
-        "word": "The"
-      },
-      {
-        "word": "horse"
-      },
-      {
-        "word": "is"
-      },
-      {
-        "word": "small"
+        "word": "small",
+        "definition": "pequeña (fem.), pequeño (masc.)\r\npequeñas, pequeños"
       }
     ],
     "chips": [
@@ -233,6 +212,44 @@
       "pequeño"
     ],
     "formattedSolution": "El caballo es pequeño",
+    "id": "f344caf6cc",
+    "priority": 2,
+    "group": "eaeefa23e0"
+  },
+  {
+    "type": "chips",
+    "translatesToSourceLanguage": true,
+    "phrase": [
+      {
+        "word": "El",
+        "definition": "the (masc. sg.)"
+      },
+      {
+        "word": "caballo",
+        "definition": "horse"
+      },
+      {
+        "word": "es",
+        "definition": "is"
+      },
+      {
+        "word": "pequeño",
+        "definition": "small (masc.)"
+      }
+    ],
+    "chips": [
+      "The",
+      "horse",
+      "is",
+      "small"
+    ],
+    "solution": [
+      "The",
+      "horse",
+      "is",
+      "small"
+    ],
+    "formattedSolution": "The horse is small",
     "id": "f344caf6cc",
     "priority": 2,
     "group": "eaeefa23e0"
@@ -259,10 +276,12 @@
     "translatesToSourceLanguage": false,
     "phrase": [
       {
-        "word": "I"
+        "word": "I",
+        "definition": "yo\r\nme"
       },
       {
-        "word": "eat"
+        "word": "eat",
+        "definition": "como\r\ncomes\r\ncomemos\r\ncoméis\r\ncomen"
       },
       {
         "word": "bread",
@@ -289,10 +308,12 @@
     "translatesToSourceLanguage": true,
     "phrase": [
       {
-        "word": "Yo"
+        "word": "Yo",
+        "definition": "I"
       },
       {
-        "word": "como"
+        "word": "como",
+        "definition": "(I) eat"
       },
       {
         "word": "pan",
@@ -336,10 +357,12 @@
     "translatesToSourceLanguage": false,
     "phrase": [
       {
-        "word": "You"
+        "word": "You",
+        "definition": "tú (sg.)\r\nvosotras, vosotros (pl.)"
       },
       {
-        "word": "eat"
+        "word": "eat",
+        "definition": "como\r\ncomes\r\ncomemos\r\ncoméis\r\ncomen"
       },
       {
         "word": "pasta",
@@ -366,10 +389,12 @@
     "translatesToSourceLanguage": true,
     "phrase": [
       {
-        "word": "Tú"
+        "word": "Tú",
+        "definition": "you"
       },
       {
-        "word": "comes"
+        "word": "comes",
+        "definition": "(you (sg.)) eat"
       },
       {
         "word": "pasta",
@@ -413,13 +438,16 @@
     "translatesToSourceLanguage": false,
     "phrase": [
       {
-        "word": "She"
+        "word": "She",
+        "definition": "ella"
       },
       {
-        "word": "eats"
+        "word": "eats",
+        "definition": "come"
       },
       {
-        "word": "pizza"
+        "word": "pizza",
+        "definition": "pizza"
       }
     ],
     "chips": [
@@ -442,14 +470,16 @@
     "translatesToSourceLanguage": true,
     "phrase": [
       {
-        "word": "Ella"
+        "word": "Ella",
+        "definition": "she"
       },
       {
         "word": "come",
         "definition": "eats"
       },
       {
-        "word": "pizza"
+        "word": "pizza",
+        "definition": "pizza"
       }
     ],
     "chips": [
@@ -489,10 +519,12 @@
     "translatesToSourceLanguage": false,
     "phrase": [
       {
-        "word": "He"
+        "word": "He",
+        "definition": "él"
       },
       {
-        "word": "eats"
+        "word": "eats",
+        "definition": "come"
       },
       {
         "word": "bread",
@@ -519,7 +551,8 @@
     "translatesToSourceLanguage": true,
     "phrase": [
       {
-        "word": "Él"
+        "word": "Él",
+        "definition": "he"
       },
       {
         "word": "come",
@@ -567,13 +600,16 @@
     "translatesToSourceLanguage": false,
     "phrase": [
       {
-        "word": "I"
+        "word": "I",
+        "definition": "yo\r\nme"
       },
       {
-        "word": "drink"
+        "word": "drink",
+        "definition": "bebo\r\nbebes\r\nbebemos\r\nbebéis\r\nbeben"
       },
       {
-        "word": "beer"
+        "word": "beer",
+        "definition": "cerveza"
       }
     ],
     "chips": [
@@ -596,10 +632,12 @@
     "translatesToSourceLanguage": true,
     "phrase": [
       {
-        "word": "Yo"
+        "word": "Yo",
+        "definition": "I"
       },
       {
-        "word": "bebo"
+        "word": "bebo",
+        "definition": "(I) drink"
       },
       {
         "word": "cerveza",
@@ -643,10 +681,12 @@
     "translatesToSourceLanguage": false,
     "phrase": [
       {
-        "word": "You"
+        "word": "You",
+        "definition": "tú (sg.)\r\nvosotras, vosotros (pl.)"
       },
       {
-        "word": "drink"
+        "word": "drink",
+        "definition": "bebo\r\nbebes\r\nbebemos\r\nbebéis\r\nbeben"
       },
       {
         "word": "milk",
@@ -673,10 +713,12 @@
     "translatesToSourceLanguage": true,
     "phrase": [
       {
-        "word": "Tú"
+        "word": "Tú",
+        "definition": "you"
       },
       {
-        "word": "bebes"
+        "word": "bebes",
+        "definition": "(you (sg.)) drink"
       },
       {
         "word": "leche",
@@ -720,13 +762,16 @@
     "translatesToSourceLanguage": false,
     "phrase": [
       {
-        "word": "Marina"
+        "word": "Marina",
+        "definition": "Marina"
       },
       {
-        "word": "drinks"
+        "word": "drinks",
+        "definition": "bebe"
       },
       {
-        "word": "beer"
+        "word": "beer",
+        "definition": "cerveza"
       }
     ],
     "chips": [
@@ -749,7 +794,8 @@
     "translatesToSourceLanguage": true,
     "phrase": [
       {
-        "word": "Marina"
+        "word": "Marina",
+        "definition": "Marina"
       },
       {
         "word": "bebe",
@@ -797,17 +843,20 @@
     "translatesToSourceLanguage": false,
     "phrase": [
       {
-        "word": "The"
+        "word": "The",
+        "definition": "la (fem.), el (masc.)\r\nlas, los"
       },
       {
         "word": "horse",
         "definition": "caballo"
       },
       {
-        "word": "drinks"
+        "word": "drinks",
+        "definition": "bebe"
       },
       {
-        "word": "water"
+        "word": "water",
+        "definition": "agua"
       }
     ],
     "chips": [
@@ -832,7 +881,8 @@
     "translatesToSourceLanguage": true,
     "phrase": [
       {
-        "word": "El"
+        "word": "El",
+        "definition": "the (masc. sg.)"
       },
       {
         "word": "caballo",

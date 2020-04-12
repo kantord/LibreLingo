@@ -21,10 +21,12 @@
     "translatesToSourceLanguage": false,
     "phrase": [
       {
-        "word": "It's"
+        "word": "It's",
+        "definition": "es"
       },
       {
-        "word": "a"
+        "word": "a",
+        "definition": "una (fem.), un (masc.)"
       },
       {
         "word": "horse",
@@ -100,13 +102,16 @@
     "translatesToSourceLanguage": false,
     "phrase": [
       {
-        "word": "Max"
+        "word": "Max",
+        "definition": "Max"
       },
       {
-        "word": "is"
+        "word": "is",
+        "definition": "es"
       },
       {
-        "word": "a"
+        "word": "a",
+        "definition": "una (fem.), un (masc.)"
       },
       {
         "word": "dog",
@@ -167,6 +172,111 @@
     "id": "3339371c31",
     "priority": 2,
     "group": "88d030806e"
+  },
+  {
+    "type": "options",
+    "formInTargetLanguage": "Un pato y un caballo",
+    "meaningInSourceLanguage": "A duck and a horse",
+    "id": "7df6afc6f4",
+    "priority": 0,
+    "group": "16372c3be3"
+  },
+  {
+    "type": "listeningExercise",
+    "answer": "Un pato y un caballo",
+    "meaning": "A duck and a horse",
+    "audio": "bfd554a3c8f7bf8cc33d7664e3fc25955266a72d179ee2cc1ccc98491b2f9682",
+    "id": "01a0b0eba4",
+    "priority": 1,
+    "group": "16372c3be3"
+  },
+  {
+    "type": "chips",
+    "translatesToSourceLanguage": false,
+    "phrase": [
+      {
+        "word": "A",
+        "definition": "una (fem.), un (masc.)"
+      },
+      {
+        "word": "duck",
+        "definition": "pato"
+      },
+      {
+        "word": "and",
+        "definition": "y"
+      },
+      {
+        "word": "a",
+        "definition": "una (fem.), un (masc.)"
+      },
+      {
+        "word": "horse",
+        "definition": "caballo"
+      }
+    ],
+    "chips": [
+      "Un",
+      "pato",
+      "y",
+      "un",
+      "caballo"
+    ],
+    "solution": [
+      "Un",
+      "pato",
+      "y",
+      "un",
+      "caballo"
+    ],
+    "formattedSolution": "Un pato y un caballo",
+    "id": "9068bd2d6b",
+    "priority": 2,
+    "group": "16372c3be3"
+  },
+  {
+    "type": "chips",
+    "translatesToSourceLanguage": true,
+    "phrase": [
+      {
+        "word": "Un",
+        "definition": "a/an (masc.)"
+      },
+      {
+        "word": "pato",
+        "definition": "duck"
+      },
+      {
+        "word": "y",
+        "definition": "and"
+      },
+      {
+        "word": "un",
+        "definition": "a"
+      },
+      {
+        "word": "caballo",
+        "definition": "horse"
+      }
+    ],
+    "chips": [
+      "A",
+      "duck",
+      "and",
+      "a",
+      "horse"
+    ],
+    "solution": [
+      "A",
+      "duck",
+      "and",
+      "a",
+      "horse"
+    ],
+    "formattedSolution": "A duck and a horse",
+    "id": "9068bd2d6b",
+    "priority": 2,
+    "group": "16372c3be3"
   },
   {
     "type": "cards",
