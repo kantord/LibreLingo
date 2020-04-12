@@ -127,7 +127,7 @@ class DictionaryItemForm(forms.ModelForm):
         exclude = []
         widgets = {
             'word': forms.TextInput(),
-            'definition': forms.Textarea(attrs={'rows':3, 'cols':45})
+            'definition': forms.Textarea(attrs={'rows': 3, 'cols': 45})
         }
 
 
@@ -182,7 +182,11 @@ class DictionaryItemAdmin(SubAdmin):
 
     def get_changelist_form(self, request, **kwargs):
         kwargs.setdefault('form', DictionaryItemForm)
-        return super(DictionaryItemAdmin, self).get_changelist_form(request, **kwargs)
+        return super(
+            DictionaryItemAdmin,
+            self).get_changelist_form(
+            request,
+            **kwargs)
 
     def word_(self, obj):
         lng = obj.course.source_language_name if obj.reverse else obj.course.language_name
