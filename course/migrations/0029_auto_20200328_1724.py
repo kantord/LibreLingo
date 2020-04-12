@@ -8,16 +8,24 @@ MATCH_NONWORD_CHARACTERS_END = re.compile('\\W+$')
 
 
 def clean_word(word):
-    return MATCH_NONWORD_CHARACTERS_BEGINNING.sub("", MATCH_NONWORD_CHARACTERS_END.sub("", word))
+    return MATCH_NONWORD_CHARACTERS_BEGINNING.sub(
+        "", MATCH_NONWORD_CHARACTERS_END.sub("", word))
 
 
 def ensure_word(item, word, reverse, DictionaryItem, meaning=""):
     word = clean_word(word)
     course = item.skill.module.course
     try:
-        DictionaryItem.objects.get(course=course, word__iexact=word, reverse=reverse)
-    except:
-        DictionaryItem.objects.create(course=course, word=word, reverse=reverse, definition=meaning)
+        DictionaryItem.objects.get(
+            course=course,
+            word__iexact=word,
+            reverse=reverse)
+    except BaseException:
+        DictionaryItem.objects.create(
+            course=course,
+            word=word,
+            reverse=reverse,
+            definition=meaning)
 
 
 def forwards_func(apps, schema_editor):
@@ -28,10 +36,20 @@ def forwards_func(apps, schema_editor):
 
     for item in LearnWord.objects.using(db_alias).all():
         for word in item.formInTargetLanguage.split():
-            ensure_word(item, word, False, DictionaryItem, item.meaningInSourceLanguage)
+            ensure_word(
+                item,
+                word,
+                False,
+                DictionaryItem,
+                item.meaningInSourceLanguage)
 
         for word in item.meaningInSourceLanguage.split():
-            ensure_word(item, word, True, DictionaryItem, item.formInTargetLanguage)
+            ensure_word(
+                item,
+                word,
+                True,
+                DictionaryItem,
+                item.formInTargetLanguage)
 
     for item in LearnSentence.objects.using(db_alias).all():
         for word in item.formInTargetLanguage.split():
@@ -39,7 +57,6 @@ def forwards_func(apps, schema_editor):
 
         for word in item.meaningInSourceLanguage.split():
             ensure_word(item, word, True, DictionaryItem)
-
 
 
 class Migration(migrations.Migration):

@@ -13,7 +13,9 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='course',
             name='special_characters',
-            field=models.TextField(default='', verbose_name='Space-separated list of haracters for the virtual keyboard'),
+            field=models.TextField(
+                default='',
+                verbose_name='Space-separated list of haracters for the virtual keyboard'),
             preserve_default=False,
         ),
     ]

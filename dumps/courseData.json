@@ -2332,6 +2332,216 @@
   }
 },
 {
+  "model": "course.dictionaryitem",
+  "pk": 181,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Un",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 182,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "y",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 183,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "A",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 184,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "and",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 185,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Nosotras",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 186,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "comemos",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 187,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "pl\u00e1tanos",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 188,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "We",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 189,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "bananas",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 190,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Vosotras",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 191,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "com\u00e9is",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 192,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "m\u00e1s",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 193,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "more",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 194,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Ellas",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 195,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "comen",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 196,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "menos",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 197,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "They",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 198,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "less",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 199,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "bebenos",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 200,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "mucho",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 201,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "lot",
+    "definition": ""
+  }
+},
+{
   "model": "course.learnsentence",
   "pk": 1,
   "fields": {
@@ -2427,7 +2637,7 @@
   "fields": {
     "skill": 1,
     "meaningInSourceLanguage": "I drink beer",
-    "formInTargetLanguage": "Bebo cerveza"
+    "formInTargetLanguage": "Yo bebo cerveza"
   }
 },
 {
@@ -2463,7 +2673,7 @@
   "fields": {
     "skill": 1,
     "meaningInSourceLanguage": "I eat pasta",
-    "formInTargetLanguage": "Como pasta"
+    "formInTargetLanguage": "Yo como pasta"
   }
 },
 {
@@ -2602,6 +2812,51 @@
   }
 },
 {
+  "model": "course.learnsentence",
+  "pk": 31,
+  "fields": {
+    "skill": 2,
+    "meaningInSourceLanguage": "A duck and a horse",
+    "formInTargetLanguage": "Un pato y un caballo"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 32,
+  "fields": {
+    "skill": 10,
+    "meaningInSourceLanguage": "We eat bananas.",
+    "formInTargetLanguage": "Nosotras comemos pl\u00e1tanos."
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 33,
+  "fields": {
+    "skill": 10,
+    "meaningInSourceLanguage": "You eat more.",
+    "formInTargetLanguage": "Vosotras com\u00e9is m\u00e1s."
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 34,
+  "fields": {
+    "skill": 10,
+    "meaningInSourceLanguage": "They eat less.",
+    "formInTargetLanguage": "Ellas comen menos."
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 35,
+  "fields": {
+    "skill": 10,
+    "meaningInSourceLanguage": "We drink a lot.",
+    "formInTargetLanguage": "Nosotras bebenos mucho."
+  }
+},
+{
   "model": "course.course",
   "pk": 1,
   "fields": {
@@ -2730,6 +2985,18 @@
     "module": 1,
     "name": "Verbs, part 1",
     "order": 5,
+    "image1": null,
+    "image2": null,
+    "image3": null
+  }
+},
+{
+  "model": "course.skill",
+  "pk": 10,
+  "fields": {
+    "module": 1,
+    "name": "Verb plurals",
+    "order": 0,
     "image1": null,
     "image2": null,
     "image3": null

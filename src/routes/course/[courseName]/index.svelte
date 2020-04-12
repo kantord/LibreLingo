@@ -10,7 +10,7 @@
 </script>
 
 <script>
-  import SkillCard from "../../../components/SkillCard.svelte"
+  import SkillCard from "../../../components/SkillCard"
   import NavBar from "../../../components/NavBar.svelte"
 
   export let courseName = null
