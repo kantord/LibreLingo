@@ -57,7 +57,7 @@ class LearnSentence(models.Model):
         course = self.skill.module.course
         try:
             DictionaryItem.objects.get(
-                course=course, word=word, reverse=reverse)
+                course=course, word=clean_word(word), reverse=reverse)
         except BaseException:
             DictionaryItem.objects.create(
                 course=course, word=clean_word(word), reverse=reverse)
