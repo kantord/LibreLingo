@@ -46,7 +46,7 @@ class DictionaryItem(models.Model):
     course = models.ForeignKey('Course', on_delete=models.CASCADE)
     reverse = models.BooleanField()
     word = models.TextField()
-    definition = models.TextField()
+    definition = models.TextField(blank=True)
 
 
 class LearnSentence(models.Model):
