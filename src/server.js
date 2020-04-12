@@ -13,8 +13,12 @@ polka() // You can also use Express
         "/",
         compression({ threshold: 0 }),
         sirv("static", { dev }),
-        sapper.middleware()
+        sapper.middleware({
+            session: req => ({
+                "user-agent": req.headers["user-agent"]
+            })
+        })
     )
-    .listen(PORT, (err) => {
+    .listen(PORT, err => {
         if (err) console.log("error", err)
     })
