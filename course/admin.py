@@ -126,7 +126,8 @@ class DictionaryItemForm(forms.ModelForm):
         model = DictionaryItem
         exclude = []
         widgets = {
-            'word': forms.TextInput()
+            'word': forms.TextInput(),
+            'definition': forms.Textarea(attrs={'rows':3, 'cols':45})
         }
 
 
@@ -173,8 +174,15 @@ class DictionaryItemAdmin(SubAdmin):
     model = DictionaryItem
     form = DictionaryItemForm
     list_display = ('word_', 'definition', )
+    list_editable = ('definition', )
+    readonly_fields = ["word", "reverse"]
     list_filter = (DictionaryReverseFilter, DictionaryIsEmptyFilter, )
     search_fields = ['word', 'definition']
+    list_per_page = 10
+
+    def get_changelist_form(self, request, **kwargs):
+        kwargs.setdefault('form', DictionaryItemForm)
+        return super(DictionaryItemAdmin, self).get_changelist_form(request, **kwargs)
 
     def word_(self, obj):
         lng = obj.course.source_language_name if obj.reverse else obj.course.language_name
