@@ -11,7 +11,7 @@ from course.management.commands.exportcourse import get_skill_data
 from course.management.commands.exportcourse import get_course_data
 from course.management.commands.exportcourse import opaqueId, audioId
 from course.management.commands.exportcourse import define_word
-from course.models import Course, Skill, Module, LearnWord , DictionaryItem
+from course.models import Course, Skill, Module, LearnWord, DictionaryItem
 
 
 class CommandTests(TestCase):
@@ -62,7 +62,7 @@ class CommandTests(TestCase):
 
     def test_non_existing_word(self):
         course = Course.objects.get(pk=1)
-        fooObject = { "word": "foo" }
+        fooObject = {"word": "foo"}
         self.assertEqual(define_word(course, "foo", True), fooObject)
 
     def test_existing_word(self):
@@ -72,6 +72,7 @@ class CommandTests(TestCase):
             'definition': "perro"
         }
         self.assertEqual(define_word(course, "dog", True), validObject)
+
 
 class GenerateChipsTest(TestCase):
     def test_empty_string(self):
