@@ -41,8 +41,19 @@ class CommandTests(TestCase):
                 stdout=StringIO(),
                 verbosity=3)
 
+
+class audioIdTest(TestCase):
+    fixtures = ["dumps/courseData.json"]
+
+    def test_audio_id_unique(self):
+        self.assertNotEqual(audioId("1", "foo"), audioId("2", "bar"))
+
     def test_audio_id_return_value(self):
         self.assertEqual(audioId("1", "foo"), "36d2a6c2d0e94f671e29b7f0f6223b977e495f08b2d067fde87ef18bd6222ec8")
+
+
+class opaqueIdTest(TestCase):
+    fixtures = ["dumps/courseData.json"]
 
     def test_opaque_id_return_value(self):
         learnWord = LearnWord.objects.get(pk=1)
@@ -57,21 +68,22 @@ class CommandTests(TestCase):
         learnword = LearnWord.objects.get(pk=1)
         self.assertNotEqual(opaqueId(learnword), opaqueId(learnword, "foo"))
 
-    def test_audio_id_unique(self):
-        self.assertNotEqual(audioId("1", "foo"), audioId("2", "bar"))
+
+class DefineWordTest(TestCase):
+    fixtures = ["dumps/courseData.json"]
 
     def test_non_existing_word(self):
         course = Course.objects.get(pk=1)
-        fooObject = {"word": "foo"}
-        self.assertEqual(define_word(course, "foo", True), fooObject)
+        expected_result = {"word": "foo"}
+        self.assertEqual(define_word(course, "foo", True), expected_result)
 
     def test_existing_word(self):
         course = Course.objects.get(pk=1)
-        validObject = {
+        expected_result = {
             'word': "dog",
             'definition': "perro"
         }
-        self.assertEqual(define_word(course, "dog", True), validObject)
+        self.assertEqual(define_word(course, "dog", True), expected_result)
 
 
 class GenerateChipsTest(TestCase):
