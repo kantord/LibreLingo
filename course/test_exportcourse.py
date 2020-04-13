@@ -9,8 +9,9 @@ from django.utils import translation
 from course.management.commands.exportcourse import generate_chips
 from course.management.commands.exportcourse import get_skill_data
 from course.management.commands.exportcourse import get_course_data
-from course.management.commands.exportcourse import  opaqueId, audioId
+from course.management.commands.exportcourse import opaqueId, audioId
 from course.models import Course, Skill, Module, LearnWord
+
 
 class CommandTests(TestCase):
     databases = '__all__'
@@ -39,18 +40,16 @@ class CommandTests(TestCase):
                 stdout=StringIO(),
                 verbosity=3)
 
-
-
-    def test_opaque_id_not_static(self):
+    def test_opaque_id_unique(self):
         learnword1 = LearnWord.objects.get(pk=1)
         learnword2 = LearnWord.objects.get(pk=2)
         self.assertNotEqual(opaqueId(learnword1), opaqueId(learnword2))
 
-    def test_opaque_id_not_static_with_salt(self):
+    def test_opaque_id_unique_with_salt(self):
         learnword = LearnWord.objects.get(pk=1)
         self.assertNotEqual(opaqueId(learnword), opaqueId(learnword, "foo"))
 
-    def test_audio_id_not_static(self):
+    def test_audio_id_unique(self):
         self.assertNotEqual(audioId("1", "foo"), audioId("2", "bar"))
 
 
