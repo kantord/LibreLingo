@@ -43,8 +43,6 @@ class CommandTests(TestCase):
 
 
 class AudioIdTest(TestCase):
-    fixtures = ["dumps/courseData.json"]
-
     def test_audio_id_unique(self):
         self.assertNotEqual(audioId("1", "foo"), audioId("2", "bar"))
 
