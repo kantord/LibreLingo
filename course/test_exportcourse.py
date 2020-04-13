@@ -40,6 +40,13 @@ class CommandTests(TestCase):
                 stdout=StringIO(),
                 verbosity=3)
 
+    def test_audio_id_return_value(self):
+        self.assertEqual(audioId("1", "foo"), "36d2a6c2d0e94f671e29b7f0f6223b977e495f08b2d067fde87ef18bd6222ec8")
+
+    def test_opaque_id_return_value(self):
+        learnWord = LearnWord.objects.get(pk=1)
+        self.assertEqual(opaqueId(learnWord), "759ec39eac")
+
     def test_opaque_id_unique(self):
         learnword1 = LearnWord.objects.get(pk=1)
         learnword2 = LearnWord.objects.get(pk=2)
