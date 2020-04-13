@@ -12,14 +12,6 @@ describe("Course page", () => {
             cy.visit(COURSE_PAGE_URL)
         })
 
-        it("Clean course page", function() {
-            cy.percySnapshot(this.test.fullTitle())
-        })
-
-        it("Animals skill should not be visible", () => {
-            cy.contains(/Animals/).should("be.visible")
-        })
-
         it("There should be 4 lessons that are not completed", () => {
             cy.get("[data-completed=false]").should("have.length", 4)
         })

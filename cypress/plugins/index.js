@@ -12,12 +12,9 @@
 // the project's config changing)
 
 const percyHealthCheck = require("@percy/cypress/task")
+const cucumber = require("cypress-cucumber-preprocessor").default
 
 module.exports = on => {
     on("task", percyHealthCheck)
-    on("task", require("@cypress/code-coverage/task"))
-    on(
-        "file:preprocessor",
-        require("@cypress/code-coverage/use-browserify-istanbul")
-    )
+    on("file:preprocessor", cucumber())
 }
