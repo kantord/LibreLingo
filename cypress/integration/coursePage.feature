@@ -23,3 +23,11 @@ Feature: Course page
     And course page with a completed skill looks correct
     And I see 3 skills that are not completed
     And I see a Practice Test button
+
+  Scenario: Strengthening stale skill
+    Given I open "/course/test"
+    Given I open "/course/test"
+    And I have a stale skill
+    Then I see a stale skill
+    Given I complete a lesson
+    Then I don't see any stale skills

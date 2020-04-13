@@ -32,12 +32,12 @@ Now you should be able to see your app on [http://localhost:3000/](http://localh
 
 ### Course editor (backend)
 
-Make sure you have `python` installed and you've [set up and activated a virtualenv.](https://docs.python.org/3/library/venv.html)
+Make sure you have `pipenv` installed.
 
-Install dependencies using `pip`:
+Install dependencies using `pipenv`:
 
 ```
-pip install -r requirements.txt
+pipenv install
 ```
 
 In order to configure the local database, simply create `.env` file with these contents:
