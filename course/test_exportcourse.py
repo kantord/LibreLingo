@@ -42,8 +42,7 @@ class CommandTests(TestCase):
                 verbosity=3)
 
 
-class audioIdTest(TestCase):
-    databases = '__all__'
+class AudioIdTest(TestCase):
     fixtures = ["dumps/courseData.json"]
 
     def test_audio_id_unique(self):
@@ -53,7 +52,7 @@ class audioIdTest(TestCase):
         self.assertEqual(audioId("1", "foo"), "36d2a6c2d0e94f671e29b7f0f6223b977e495f08b2d067fde87ef18bd6222ec8")
 
 
-class opaqueIdTest(TestCase):
+class OpaqueIdTest(TestCase):
     databases = '__all__'
     fixtures = ["dumps/courseData.json"]
 
