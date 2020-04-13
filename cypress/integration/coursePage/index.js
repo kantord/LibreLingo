@@ -49,6 +49,10 @@ Then("I see a stale skill", () => {
     cy.get(".svg-inline--fa").should("be.visible")
 })
 
+Then("I don't see any stale skills", () => {
+    cy.get("[data-completed=true][data-stale=true]").should("have.length", 0)
+})
+
 Given("I complete a lesson", () => {
     cy.visit(SKILL_PAGE_URL)
     cy.get("input[type=text]").type("el perro")
