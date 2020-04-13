@@ -10,7 +10,8 @@ from course.management.commands.exportcourse import generate_chips
 from course.management.commands.exportcourse import get_skill_data
 from course.management.commands.exportcourse import get_course_data
 from course.management.commands.exportcourse import opaqueId, audioId
-from course.models import Course, Skill, Module, LearnWord
+from course.management.commands.exportcourse import define_word
+from course.models import Course, Skill, Module, LearnWord, DictionaryItem
 
 
 class CommandTests(TestCase):
@@ -58,6 +59,19 @@ class CommandTests(TestCase):
 
     def test_audio_id_unique(self):
         self.assertNotEqual(audioId("1", "foo"), audioId("2", "bar"))
+
+    def test_non_existing_word(self):
+        course = Course.objects.get(pk=1)
+        fooObject = {"word": "foo"}
+        self.assertEqual(define_word(course, "foo", True), fooObject)
+
+    def test_existing_word(self):
+        course = Course.objects.get(pk=1)
+        validObject = {
+            'word': "dog",
+            'definition': "perro"
+        }
+        self.assertEqual(define_word(course, "dog", True), validObject)
 
 
 class GenerateChipsTest(TestCase):
