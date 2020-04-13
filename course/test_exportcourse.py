@@ -43,6 +43,7 @@ class CommandTests(TestCase):
 
 
 class audioIdTest(TestCase):
+    databases = '__all__'
     fixtures = ["dumps/courseData.json"]
 
     def test_audio_id_unique(self):
@@ -53,6 +54,7 @@ class audioIdTest(TestCase):
 
 
 class opaqueIdTest(TestCase):
+    databases = '__all__'
     fixtures = ["dumps/courseData.json"]
 
     def test_opaque_id_return_value(self):
@@ -70,6 +72,7 @@ class opaqueIdTest(TestCase):
 
 
 class DefineWordTest(TestCase):
+    databases = '__all__'
     fixtures = ["dumps/courseData.json"]
 
     def test_non_existing_word(self):
