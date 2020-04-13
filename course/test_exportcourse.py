@@ -45,7 +45,7 @@ class CommandTests(TestCase):
 
     def test_opaque_id_return_value(self):
         learnWord = LearnWord.objects.get(pk=1)
-        self.assertEqual(opaqueId(learnWord),"759ec39eac")
+        self.assertEqual(opaqueId(learnWord), "759ec39eac")
 
     def test_opaque_id_unique(self):
         learnword1 = LearnWord.objects.get(pk=1)
