@@ -4,6 +4,8 @@
   import hotkeys from "hotkeys-js"
   import { onMount } from "svelte"
   import { goto } from "@sapper/app"
+  import Icon from "./Icon"
+  console.log(Icon)
 
   export let rawChallenges
   export let courseURL
@@ -55,6 +57,8 @@
         You've completed {rawChallenges.length} challenges
       </h2>
       <a class="button primary" href="{courseURL}">Continue to course page</a>
+      <a class="button secondary" href=""></a>
+      <Icon icon="twitter" />
     </div>
   </div>
 </section>
