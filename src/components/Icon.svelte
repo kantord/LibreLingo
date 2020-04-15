@@ -3,11 +3,13 @@
   import {
     faVolumeUp,
     faCheckSquare,
-    faDumbbell
+    faDumbbell,
+    faTwitter
   } from "@fortawesome/free-solid-svg-icons"
   library.add(faVolumeUp)
   library.add(faCheckSquare)
   library.add(faDumbbell)
+  library.add(faTwitter)
   dom.watch()
 
   export let size = "medium"
