@@ -8,9 +8,12 @@ import {
     faCheckSquare,
     faDumbbell
 } from "@fortawesome/free-solid-svg-icons"
+import { faTwitter } from "@fortawesome/free-brands-svg-icons"
+
 library.add(faVolumeUp)
 library.add(faCheckSquare)
 library.add(faDumbbell)
+library.add(faTwitter)
 dom.watch()
 
 sapper.start({
