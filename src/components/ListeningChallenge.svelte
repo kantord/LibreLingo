@@ -5,6 +5,7 @@
   import levenshtein from "js-levenshtein"
   import shuffle from "lodash.shuffle"
   import ChallengePanel from "./ChallengePanel"
+  import Icon from "./Icon"
   import InputFieldWithVirtualKeyboard from "./InputFieldWithVirtualKeyboard"
   import playVoice from "../media/voice"
 
@@ -84,9 +85,7 @@
         class="button is-large is-primary"
         on:click="{playChallengeVoice}"
         type="button">
-        <span class="icon is-medium">
-          <i class="fas fa-volume-up "></i>
-        </span>
+        <Icon icon="volume-up" />
       </button>
     </div>
 
