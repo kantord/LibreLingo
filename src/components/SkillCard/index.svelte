@@ -26,9 +26,13 @@
 <div class="card" data-completed="{completed}" data-stale="{stale}">
   {#if completed}
     {#if stale}
-      <Icon icon="dumbbell" />
+      <span class="icon">
+        <Icon icon="dumbbell" />
+      </span>
     {:else}
-      <Icon icon="check-square" />
+      <span class="icon">
+        <Icon icon="check-square" />
+      </span>
     {/if}
   {/if}
   <div class="card-content">

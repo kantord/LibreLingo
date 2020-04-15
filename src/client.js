@@ -4,5 +4,5 @@ import "@openfonts/josefin-sans_all"
 import "./i18n"
 
 sapper.start({
-    target: document.querySelector("#sapper"),
+    target: document.querySelector("#sapper")
 })
