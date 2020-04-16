@@ -64,13 +64,15 @@
           <a class="button primary" href="{courseURL}">
             Continue to course page
           </a>
-          <a
-            class="button secondary twitter"
-            target="_blank"
-            href="https://twitter.com/intent/tweet?text=LibreLingo%20-%20an%20experiment%20to%20create%20a%20community-owned%20language%20learning%20tool%0Ahttps%3A%2F%2Flibrelingo.app">
-            <Icon icon="twitter" prefix="fab" />
-            <span>Tweet about LibreLingo</span>
-          </a>
+          <div class="bottom">
+            <a
+              class="button secondary twitter"
+              target="_blank"
+              href="https://twitter.com/intent/tweet?text=LibreLingo%20-%20an%20experiment%20to%20create%20a%20community-owned%20language%20learning%20tool%0Ahttps%3A%2F%2Flibrelingo.app">
+              <Icon icon="twitter" prefix="fab" />
+              <div>Tweet about LibreLingo</div>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -78,6 +80,10 @@
 </section>
 
 <style>
+  .bottom {
+    position: absolute;
+    bottom: 0;
+  }
   .twitter {
     background-color: #55acee;
     color: white;
