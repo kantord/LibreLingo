@@ -57,18 +57,19 @@
           <img src="images/mascot-jetpack.svg" alt="" />
         </div>
         <div class="column">
-          <h1 class="title">Lesson completed!</h1>
+          <h1 class="title is-2">Lesson completed!</h1>
           <h2 class="subtitle">
             You've completed {rawChallenges.length} challenges
           </h2>
-          <a class="button primary" href="{courseURL}">
+          <a class="button primary is-medium" href="{courseURL}">
             Continue to course page
           </a>
           <div class="bottom">
+            <h2 class="title is-5">Excited about LibreLingo?</h2>
             <a
               class="button secondary twitter"
               target="_blank"
-              href="https://twitter.com/intent/tweet?text=LibreLingo%20-%20an%20experiment%20to%20create%20a%20community-owned%20language%20learning%20tool%0Ahttps%3A%2F%2Flibrelingo.app">
+              href="https://twitter.com/intent/tweet?hashtags=LibreLingo%2Copensource&url=https%3A%2F%2Flibrelingo.app&text=LibreLingo%20-%20an%20experiment%20to%20create%20a%20community-owned%20language%20learning%20tool%0A">
               <Icon icon="twitter" prefix="fab" />
               <div>Tweet about LibreLingo</div>
             </a>
