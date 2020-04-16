@@ -5,6 +5,7 @@ Feature: Fanfare screen
   Scenario: Getting to the fanfare screen
     Given I get to the fanfare screen
     Then fanfare screen looks correct
+    Then fanfare screen looks cute
     And I read "Lesson completed!"
     And I see a Continue to course page button
     And I see a Tweet button
