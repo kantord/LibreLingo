@@ -1,6 +1,7 @@
 <script>
   import db from "../../db"
   import { isStale } from "./logic"
+  import Icon from "../Icon"
 
   export let title
   export let practiceHref
@@ -25,12 +26,12 @@
 <div class="card" data-completed="{completed}" data-stale="{stale}">
   {#if completed}
     {#if stale}
-      <span class="icon is-medium">
-        <i class="fas fa-dumbbell fa-2x"></i>
+      <span class="icon">
+        <Icon icon="dumbbell" size="large" />
       </span>
     {:else}
-      <span class="icon is-medium">
-        <i class="fas fa-check-square fa-2x"></i>
+      <span class="icon">
+        <Icon icon="check-square" size="large" />
       </span>
     {/if}
   {/if}
