@@ -1,7 +1,7 @@
 <script>
   import NavBar from "../components/NavBar"
-  import GitHubForkRibbon from "../components/GitHubForkRibbon"
   import Mascot from "../components/Mascot"
+  import LicenseLogo from "../components/LicenseLogo"
   import { _ } from "svelte-i18n"
 </script>
 
@@ -44,7 +44,9 @@
   </div>
 </section>
 
-<GitHubForkRibbon />
+<div class="license">
+  <LicenseLogo />
+</div>
 
 <style>
   @import "../variables";
@@ -62,5 +64,11 @@
         adjust-color($blue, $red: -20%) 81%,
         adjust-color($blue, $red: +40%) 100%
       ) !important;
+  }
+
+  .license {
+    position: absolute;
+    right: 1em;
+    bottom: 1em;
   }
 </style>

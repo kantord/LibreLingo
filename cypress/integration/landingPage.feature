@@ -10,3 +10,4 @@ Feature: Landing page
       And I read "LibreLingo"
       And I see a Start learning Spanish button
       And I see an About LibreLingo button
+      And "Licensed under AGPL - Free as in Freedom" is graphically represented
