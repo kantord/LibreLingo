@@ -1,4 +1,5 @@
 <script>
+  import GitHubButton from "./GitHubButton"
   export let dark = false
   export let is_hidden_mobile = false
 </script>
@@ -15,10 +16,10 @@
     </a>
   </div>
 
-  <div class="navbar-end is-hidden-tablet is-hidden-mobile">
-    <a class="navbar-item" href="https://github.com/kantord/LibreLingo">
-      GitHub
-    </a>
+  <div class="navbar-end">
+    <div class="navbar-item">
+      <GitHubButton />
+    </div>
   </div>
 </nav>
 
