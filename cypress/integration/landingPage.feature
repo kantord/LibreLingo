@@ -5,7 +5,8 @@ Feature: Landing page
 
     Scenario: Opening landing page
       Given I open "/"
-      Then landin page looks correct
+      Then landing page looks correct
+      Then landing page looks cute
       And I read "LibreLingo"
       And I see a Start learning Spanish button
       And I see an About LibreLingo button
