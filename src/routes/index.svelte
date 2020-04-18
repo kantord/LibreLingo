@@ -17,7 +17,7 @@
     <div class="container">
       <div class="columns">
         <div class="column is-one-quarter">
-          <Mascot shadow="{false}" />
+          <Mascot shadow="{false}" glow="{true}" />
         </div>
         <div class="column">
           <h1 class="title">
