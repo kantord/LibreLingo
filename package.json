@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "commit": "git-cz",
-    "dev": "sapper dev",
+    "dev": "sapper dev --no-hot",
     "build": "sapper build",
     "export": "sapper export",
     "deploy": "echo 'librelingo.app' > __sapper__/export/CNAME && gh-pages -d __sapper__/export",

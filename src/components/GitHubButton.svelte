@@ -13,10 +13,11 @@
   import { onMount } from "svelte"
   import Icon from "./Icon"
   const pMemoize = require("p-memoize")
-  export let stars = (process.browser === true ? window.stars : null) || 100
+  export let stars = (process.browser === true ? window.stars : null) || "   "
 
   onMount(async () => {
     if (process.browser === true && window.isCypress) {
+      stars = 999
       return
     }
 
