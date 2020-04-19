@@ -47,7 +47,8 @@ class AudioIdTest(TestCase):
         self.assertNotEqual(audioId("1", "foo"), audioId("2", "bar"))
 
     def test_audio_id_return_value(self):
-        self.assertEqual(audioId("1", "foo"), "36d2a6c2d0e94f671e29b7f0f6223b977e495f08b2d067fde87ef18bd6222ec8")
+        self.assertEqual(audioId(
+            "1", "foo"), "36d2a6c2d0e94f671e29b7f0f6223b977e495f08b2d067fde87ef18bd6222ec8")
 
 
 class OpaqueIdTest(TestCase):
@@ -56,7 +57,7 @@ class OpaqueIdTest(TestCase):
 
     def test_opaque_id_return_value(self):
         learnWord = LearnWord.objects.get(pk=1)
-        self.assertEqual(opaqueId(learnWord), "759ec39eac")
+        self.assertEqual(opaqueId(learnWord), "759ec39eacef")
 
     def test_opaque_id_unique(self):
         learnword1 = LearnWord.objects.get(pk=1)
@@ -120,7 +121,7 @@ class ExportSkillTest(TestCase):
         skill = Skill.objects.get(pk=1)
         language_id = "test"
         data = get_skill_data(skill, language_id, course)
-        self.assertMatchSnapshot(data[0:1])
+        self.assertMatchSnapshot(data["challenges"][0:1])
 
 
 class CourseDataTest(TestCase):

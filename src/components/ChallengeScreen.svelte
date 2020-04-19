@@ -16,7 +16,7 @@
   export let specialCharacters
   export let sortChallengeGroups
   export let courseURL
-  export let skill
+  export let skillId
   let challenges = sortChallengeGroups(shuffle(rawChallenges))
   let remainingChallenges = [...challenges]
   let currentChallenge = remainingChallenges.shift()
@@ -111,7 +111,7 @@
 
 {#if !currentChallenge}
   <div class="container">
-    <FanfareScreen {courseURL} {rawChallenges} {skill} />
+    <FanfareScreen {courseURL} {rawChallenges} {skillId} />
   </div>
 {/if}
 
