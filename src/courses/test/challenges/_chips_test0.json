@@ -1,28 +1,63 @@
-[
-      {
-        "id": 6663,
-        "type": "chips",
-        "phrase": [
-		{"word": "How"},
-		{"word": "are"},
-		{"word": "you"},
-		{"word": "today?"}
-	],
-	"chips": ["Como", "estás", "hoy"],
-	"solution": ["Como", "estás", "hoy"],
-        "formattedSolution": "¿Como, estás hoy?"
-      },
-      {
-        "id": 62,
-        "type": "chips",
-        "phrase": [
-		{"word": "How"},
-		{"word": "are"},
-		{"word": "you"},
-		{"word": "today?"}
-	],
-	"chips": ["Como", "estás", "hoy"],
-	"solution": ["Como", "estás", "hoy"],
-        "formattedSolution": "¿Como, estás hoy?"
-      }
-]
+{
+  "id": "434d43b3",
+  "challenges": [
+    {
+      "id": 6663,
+      "type": "chips",
+      "phrase": [
+        {
+          "word": "How"
+        },
+        {
+          "word": "are"
+        },
+        {
+          "word": "you"
+        },
+        {
+          "word": "today?"
+        }
+      ],
+      "chips": [
+        "Como",
+        "estás",
+        "hoy"
+      ],
+      "solution": [
+        "Como",
+        "estás",
+        "hoy"
+      ],
+      "formattedSolution": "¿Como, estás hoy?"
+    },
+    {
+      "id": 62,
+      "type": "chips",
+      "phrase": [
+        {
+          "word": "How"
+        },
+        {
+          "word": "are"
+        },
+        {
+          "word": "you"
+        },
+        {
+          "word": "today?"
+        }
+      ],
+      "chips": [
+        "Como",
+        "estás",
+        "hoy"
+      ],
+      "solution": [
+        "Como",
+        "estás",
+        "hoy"
+      ],
+      "formattedSolution": "¿Como, estás hoy?"
+    }
+  ]
+}
