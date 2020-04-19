@@ -6,6 +6,7 @@
   import { onMount } from "svelte"
   import { goto } from "@sapper/app"
   import Icon from "./Icon"
+  import Mascot from "./Mascot"
 
   export let rawChallenges
   export let courseURL
@@ -54,7 +55,7 @@
     <div class="container">
       <div class="columns" in:scale>
         <div class="column is-three-fifths">
-          <img src="images/mascot-jetpack.svg" alt="" />
+          <Mascot />
         </div>
         <div class="column">
           <h1 class="title is-2">Lesson completed!</h1>
