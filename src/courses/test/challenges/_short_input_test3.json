@@ -1,12 +1,25 @@
-[
-      {
-        "id": 662,
-        "type": "shortInput",
-        "phrase": [
-		{"word": "How"},
-		{"word": "are"},
-		{"word": "you?", "definition": "tu"}
-	],
-        "formInTargetLanguage": ["agua", "el agua"]
-      }
-    ]
+{
+  "id": "434d43b3",
+  "challenges": [
+    {
+      "id": 662,
+      "type": "shortInput",
+      "phrase": [
+        {
+          "word": "How"
+        },
+        {
+          "word": "are"
+        },
+        {
+          "word": "you?",
+          "definition": "tu"
+        }
+      ],
+      "formInTargetLanguage": [
+        "agua",
+        "el agua"
+      ]
+    }
+  ]
+}
