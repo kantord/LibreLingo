@@ -79,3 +79,8 @@ Feature: Short text input challange
     And I hit the enter key
     And I hit the enter key
     Then I don't see the challenge panel
+
+  Scenario: using the hover-over dictionary
+    Given I open "/course/test/skill/_short_input_test3"
+    Then I see a tooltip that says "tu"
+    Then The word "How" has no tooltip definition
