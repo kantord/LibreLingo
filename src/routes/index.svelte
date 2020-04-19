@@ -17,7 +17,9 @@
     <div class="container">
       <div class="columns">
         <div class="column is-one-quarter">
-          <Mascot shadow="{false}" glow="{true}" />
+          <div class="mascot">
+            <Mascot shadow="{false}" glow="{true}" />
+          </div>
         </div>
         <div class="column">
           <h1 class="title">
@@ -70,5 +72,13 @@
     position: absolute;
     right: 1em;
     bottom: 1em;
+  }
+
+  @include until($tablet) {
+    .mascot {
+      width: 45%;
+      margin: auto;
+      margin-top: -3em;
+    }
   }
 </style>
