@@ -34,7 +34,7 @@ Given("I have a stale skill", () => {
         cy.wrap(null).then(() => {
             return db
                 .put({
-                    _id: "/course/test/skill/_short_input_test0",
+                    _id: "skills/434d43b3",
                     practiced: [{ at: +dayjs().subtract(1, "day") }]
                 })
                 .then(() => {
