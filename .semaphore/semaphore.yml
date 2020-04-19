@@ -34,11 +34,14 @@ blocks:
           commands:
             - sem-version node 12
             - checkout
-            - yarn install
+            - cache restore
+            - rm -rf node_modules
+            - yarn install --check-files
             - yarn test
       secrets:
         - name: Percy token
-    dependencies: []
+    dependencies:
+      - Eslint Cypress
   - name: Eslint
     dependencies:
       - Install dependencies
@@ -61,7 +64,6 @@ blocks:
             - checkout
             - cache restore
             - yarn eslint cypress
-
   - name: Python Code Style Check
     dependencies: []
     task:
@@ -73,7 +75,6 @@ blocks:
             - pip install pipenv
             - pipenv install
             - pycodestyle . --exclude="course/migrations" --max-line-length 119
-
   - name: Django test
     dependencies: []
     task:
