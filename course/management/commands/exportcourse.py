@@ -88,11 +88,12 @@ def define_words_in_sentence(course, sentence, reverse):
     return [define_word(course, word, reverse) for word in sentence.split(" ")]
 
 
-def generate_learnword_challenged(
-        learnword,
-        formInTargetLanguage,
-        meaningInSourceLanguage,
-        language_id):
+def generate_learnword_challenge(
+    learnword,
+    formInTargetLanguage,
+    meaningInSourceLanguage,
+    language_id,
+        course):
     return [{"type": "cards",
              "pictures": ["{}.jpg".format(image_name) for image_name in [learnword.image1,
                                                                          learnword.image2,
@@ -109,7 +110,9 @@ def generate_learnword_challenged(
                                                                          learnword.image2,
                                                                          learnword.image3]],
              "formInTargetLanguage": [formInTargetLanguage],
-             "meaningInSourceLanguage": meaningInSourceLanguage,
+             "phrase": define_words_in_sentence(course,
+                                                learnword.meaningInSourceLanguage,
+                                                True),
              "id": opaqueId(learnword,
                             "shortInput"),
              "priority": 1,
@@ -185,17 +188,20 @@ def get_skill_data(skill, language_id, course):
                            ]
 
     for learnword in skill.learnword_set.all():
-        data = data + generate_learnword_challenged(
+        data = data + generate_learnword_challenge(
             learnword,
             learnword.formInTargetLanguage,
             learnword.meaningInSourceLanguage,
-            language_id)
+            language_id,
+            course
+        )
         if (learnword.formInTargetLanguage2):
-            data = data + generate_learnword_challenged(
+            data = data + generate_learnword_challenge(
                 learnword,
                 learnword.formInTargetLanguage2,
                 learnword.meaningInSourceLanguage2,
-                language_id)
+                language_id,
+                course)
 
     return data
 
