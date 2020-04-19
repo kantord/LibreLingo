@@ -48,14 +48,14 @@ Here's a rough sketch of how  I imagine the milestones of this project:
 * ☐ Course editor can be accessed by all course contributors
 * ☐ Statistics about course controbutors are collected and published
 * ☐ At least the basics of the Spanish course are ready
-* ☐ Most of the course building blocks are implemented
+* ☑️ Most of the course building blocks are implemented
 
 
 ### Beta release
 
 * ☐ All of the basic building blocks of courses are implemented
 * ☐ More advanced learning features (reading exercises)
-* ☐ Spaced repetition implemented
+* ☑️ Spaced repetition implemented
 * ☐ Spanish course is stable and useful
 
 ### Stable release(s)
