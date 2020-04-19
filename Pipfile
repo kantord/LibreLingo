@@ -23,6 +23,7 @@ pylint-plugin-utils = "==0.6"
 python-dotenv = "==0.12.0"
 snapshottest = "==0.5.1"
 whitenoise = "==5.0.1"
+python-slugify = "*"
 
 [requires]
 python_version = "3.8"
