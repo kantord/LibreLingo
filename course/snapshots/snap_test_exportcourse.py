@@ -7,17 +7,6 @@ from snapshottest import Snapshot
 
 snapshots = Snapshot()
 
-snapshots['ExportSkillTest::test_export_skill_correct_output_format 1'] = [
-    {
-        'formInTargetLanguage': '¡Buen provecho!',
-        'group': '2f4f49b572',
-        'id': 'fa83044ce0',
-        'meaningInSourceLanguage': 'Enjoy your meal',
-        'priority': 0,
-        'type': 'options'
-    }
-]
-
 snapshots['CourseDataTest::test_correct_output_format 1'] = {
     'languageCode': 'ES',
     'languageName': 'Spanish',
@@ -25,6 +14,7 @@ snapshots['CourseDataTest::test_correct_output_format 1'] = {
         {
             'skills': [
                 {
+                    'id': 1,
                     'imageSet': [
                         'water1',
                         'water2',
@@ -44,3 +34,14 @@ snapshots['CourseDataTest::test_correct_output_format 1'] = {
         'b'
     ]
 }
+
+snapshots['ExportSkillTest::test_export_skill_correct_output_format 1'] = [
+    {
+        'formInTargetLanguage': '¡Buen provecho!',
+        'group': '2f4f49b572',
+        'id': 'fa83044ce0',
+        'meaningInSourceLanguage': 'Enjoy your meal',
+        'priority': 0,
+        'type': 'options'
+    }
+]

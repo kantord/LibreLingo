@@ -10,14 +10,14 @@
 
   export let rawChallenges
   export let courseURL
-  export let skill
+  export let skillId
 
   onMount(async () => {
     sound.fanfare.play()
   })
 
   onMount(() => {
-    const _id = `${courseURL}/skill/${skill}`
+    const _id = `skills/${skillId}`
     db.get(_id)
       .then(function(doc) {
         db.put({
