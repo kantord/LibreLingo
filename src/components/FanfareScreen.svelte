@@ -55,10 +55,12 @@
     <div class="container">
       <div class="columns" in:scale>
         <div class="column is-three-fifths">
-          <Mascot />
+          <div class="mascot">
+            <Mascot />
+          </div>
         </div>
-        <div class="column">
-          <h1 class="title is-2">Lesson completed!</h1>
+        <div class="column is-centered-mobile">
+          <h1 class="title is-size-2 is-size-3-mobile">Lesson completed!</h1>
           <h2 class="subtitle">
             You've completed {rawChallenges.length} challenges
           </h2>
@@ -82,12 +84,33 @@
 </section>
 
 <style>
-  .bottom {
-    position: absolute;
-    bottom: 0;
-  }
+  @import "../variables";
+
   .twitter {
     background-color: #55acee;
     color: white;
+  }
+
+  @include from($tablet) {
+    .bottom {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+
+  @include until($tablet) {
+    .mascot {
+      width: 45%;
+      margin: auto;
+      margin-top: -3em;
+    }
+
+    .bottom {
+      margin-top: 4em;
+    }
+
+    .is-centered-mobile {
+      text-align: center;
+    }
   }
 </style>
