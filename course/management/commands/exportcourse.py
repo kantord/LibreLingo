@@ -2,7 +2,9 @@ import json
 import hashlib
 from pathlib import Path
 
+from slugify import slugify
 from django.core.management.base import BaseCommand, CommandError
+
 from course.models import Course
 from course.models import DictionaryItem
 from course.utils import clean_word
@@ -11,7 +13,7 @@ from course.utils import clean_word
 def opaqueId(obj, salt=""):
     hash = hashlib.sha256()
     hash.update((obj._meta.model_name + str(obj.pk) + salt).encode('utf-8'))
-    return hash.hexdigest()[0:10]
+    return hash.hexdigest()[0:12]
 
 
 def audioId(language_id, text):
@@ -53,7 +55,8 @@ def get_course_data(course):
             "skills": [{
                 **(get_imageset(skill)),
                 "summary": [word.formInTargetLanguage for word in skill.learnword_set.all()],
-                "practiceHref": skill.name.lower(),
+                "practiceHref": slugify(skill.name),
+                "id": opaqueId(skill, "Skill"),
                 "title": skill.name,
             } for skill in module.skill_set.all()]
         } for module in course.module_set.all()]
@@ -203,14 +206,17 @@ def get_skill_data(skill, language_id, course):
                 language_id,
                 course)
 
-    return data
+    return {
+        "id": opaqueId(skill, "Skill"),
+        "challenges": data
+    }
 
 
 def export_skill(export_path, skill, language_id, course):
     data = get_skill_data(skill, language_id, course)
     Path(Path(export_path) / "challenges").mkdir(parents=True, exist_ok=True)
 
-    with open(Path(export_path) / "challenges" / "{}.json".format(skill.name.lower()), 'w', encoding='utf-8') as f:
+    with open(Path(export_path) / "challenges" / "{}.json".format(slugify(skill.name)), 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 

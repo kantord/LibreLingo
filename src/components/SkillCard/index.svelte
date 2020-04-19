@@ -5,6 +5,7 @@
 
   export let title
   export let practiceHref
+  export let id
   export let imageSet = []
   export let summary
 
@@ -13,7 +14,7 @@
 
   db &&
     db
-      .get(practiceHref)
+      .get(`skills/${id}`)
       .then(function(doc) {
         completed = doc.practiced.length >= 1
         stale = isStale({ practices: doc.practiced })
