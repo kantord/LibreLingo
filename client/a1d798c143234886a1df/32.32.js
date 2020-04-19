@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[32],{271:function(e){e.exports=JSON.parse('[{"id":6663,"type":"listeningExercise","answer":"leche","audio":"leche","meaning":"asdfg"}]')}}]);
