@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[38],{277:function(o){o.exports=JSON.parse('[{"id":662,"type":"shortInput","phrase":[{"word":"How"},{"word":"are"},{"word":"you?","definition":"tu"}],"formInTargetLanguage":["agua","el agua"]}]')}}]);
