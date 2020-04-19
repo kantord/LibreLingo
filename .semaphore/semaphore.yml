@@ -26,7 +26,7 @@ blocks:
             - cache restore
             - yarn jest
     dependencies:
-      - Eslint Cypress
+      - Eslint
   - name: Cypress
     task:
       jobs:
@@ -55,7 +55,7 @@ blocks:
             - yarn eslint src
   - name: Eslint Cypress
     dependencies:
-      - Eslint
+      - Install dependencies
     task:
       jobs:
         - name: eslint
@@ -76,7 +76,8 @@ blocks:
             - pipenv install
             - pycodestyle . --exclude="course/migrations" --max-line-length 119
   - name: Django test
-    dependencies: []
+    dependencies:
+      - Python Code Style Check
     task:
       jobs:
         - name: manage.py test
