@@ -11,4 +11,4 @@ Feature: Landing page
       And I see a Start learning Spanish button
       And I see an About LibreLingo button
       And "Licensed under AGPL - Free as in Freedom" is graphically represented
-      And I see a Star on GitHub button
+      And I see a Fork me in GitHub
