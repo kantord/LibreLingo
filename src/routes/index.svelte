@@ -39,6 +39,11 @@
           <a class="button is-primary is-inverted is-outlined" href="about">
             {$_('index.about_librelingo')}
           </a>
+          <a
+            class="button is-primary is-inverted is-outlined"
+            href="development">
+            Development progress
+          </a>
         </div>
       </div>
     </div>
