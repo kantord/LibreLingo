@@ -46,7 +46,7 @@
       </span>
     </span>
   {/if}
-  <span>Star on GitHub</span>
+  <span>Fork me on GitHub</span>
 </a>
 
 <style>
