@@ -48,14 +48,14 @@ Here's a rough sketch of how  I imagine the milestones of this project:
 * ☐ Course editor can be accessed by all course contributors
 * ☐ Statistics about course controbutors are collected and published
 * ☐ At least the basics of the Spanish course are ready
-* ☐ Most of the course building blocks are implemented
+* ☑️ Most of the course building blocks are implemented
 
 
 ### Beta release
 
 * ☐ All of the basic building blocks of courses are implemented
 * ☐ More advanced learning features (reading exercises)
-* ☐ Spaced repetition implemented
+* ☑️ Spaced repetition implemented
 * ☐ Spanish course is stable and useful
 
 ### Stable release(s)
@@ -98,8 +98,11 @@ Testing is done using Jest and Cypress. Other technology in use include: bulma, 
 ## License
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fkantord%2FLibreLingo.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fkantord%2FLibreLingo?ref=badge_large)
 
+### Mascot
 
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Mascot images are released under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
 
+The mascot is designed by [@almostdesigner](https://github.com/almostdesigner).
 
 ## Contributors ✨
 
@@ -134,6 +137,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/slesingerm"><img src="https://avatars1.githubusercontent.com/u/62794315?v=4" width="100px;" alt=""/><br /><sub><b>slesingerm</b></sub></a><br /><a href="#ideas-slesingerm" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/kantord/LibreLingo/issues?q=author%3Aslesingerm" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/iasonasma"><img src="https://avatars3.githubusercontent.com/u/44037134?v=4" width="100px;" alt=""/><br /><sub><b>iasonasma</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/commits?author=iasonasma" title="Code">💻</a> <a href="https://github.com/kantord/LibreLingo/commits?author=iasonasma" title="Tests">⚠️</a></td>
     <td align="center"><a href="http://carolinedelesalle.com"><img src="https://avatars3.githubusercontent.com/u/19930411?v=4" width="100px;" alt=""/><br /><sub><b>Caroline Delesalle</b></sub></a><br /><a href="#design-almostdesigner" title="Design">🎨</a></td>
+    <td align="center"><a href="https://github.com/borbota"><img src="https://avatars3.githubusercontent.com/u/9154908?v=4" width="100px;" alt=""/><br /><sub><b>borbota</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/issues?q=author%3Aborbota" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 

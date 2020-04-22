@@ -64,22 +64,7 @@
         </a>
       </div>
       <div class="column">
-        <a
-          class="github-button"
-          href="https://github.com/kantord/LibreLingo"
-          data-size="large"
-          data-show-count="true"
-          aria-label="Star kantord/LibreLingo on GitHub">
-          Star
-        </a>
-        <a
-          class="github-button"
-          href="https://github.com/kantord/LibreLingo/issues"
-          data-size="large"
-          data-show-count="true"
-          aria-label="Issue kantord/LibreLingo on GitHub">
-          Issue
-        </a>
+
       </div>
     </div>
     <p></p>

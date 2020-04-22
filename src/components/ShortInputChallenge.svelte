@@ -1,10 +1,10 @@
 <script>
-  import { slide } from "svelte/transition"
   import { onMount } from "svelte"
   import hotkeys from "hotkeys-js"
   import levenshtein from "js-levenshtein"
   import shuffle from "lodash.shuffle"
   import ChallengePanel from "./ChallengePanel"
+  import Phrase from "./Phrase"
   import InputFieldWithVirtualKeyboard from "./InputFieldWithVirtualKeyboard"
 
   export let challenge
@@ -71,7 +71,7 @@
   <div class="section">
     <p class="is-size-1 is-size-2-tablet is-size-4-mobile has-text-centered">
       Type
-      <b>{challenge.meaningInSourceLanguage}</b>
+      <Phrase phrase="{challenge.phrase}" />
       in {languageName}!
     </p>
   </div>
