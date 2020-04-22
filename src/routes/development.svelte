@@ -28,12 +28,6 @@
   <title>LibreLingo - Development</title>
 </svelte:head>
 
-{#if issues === null}
-  <div class="pageloader is-active">
-    <span class="title">LibreLingo</span>
-  </div>
-{/if}
-
 <section class="hero is-primary is-bold">
   <div class="hero-head">
     <NavBar />
