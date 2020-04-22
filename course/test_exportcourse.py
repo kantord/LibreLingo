@@ -11,7 +11,7 @@ from course.management.commands.exportcourse import get_skill_data
 from course.management.commands.exportcourse import get_course_data
 from course.management.commands.exportcourse import opaqueId, audioId
 from course.management.commands.exportcourse import define_word
-from course.models import Course, Skill, Module, LearnWord, DictionaryItem
+from course.models import Course, Skill, Module, LearnWord, LearnSentence, DictionaryItem
 
 
 class CommandTests(TestCase):
@@ -157,3 +157,27 @@ class CourseDataTest(TestCase):
         self.skill.save()
         data = get_course_data(self.course)
         assert "imageSet" not in data["modules"][0]["skills"][0], "Has not imageset"
+
+    def test_correct_output_format_only_phrases(self):
+        self.sentence1 = LearnSentence.objects.create(
+            skill=self.skill,
+            meaningInSourceLanguage="Bread, please",
+            formInTargetLanguage="Pan, por favor"
+        )
+        self.sentence2 = LearnSentence.objects.create(
+            skill=self.skill,
+            meaningInSourceLanguage="Water, please",
+            formInTargetLanguage="Agua, por favor"
+        )
+        self.sentence3 = LearnSentence.objects.create(
+            skill=self.skill,
+            meaningInSourceLanguage="Let's go to the beach",
+            formInTargetLanguage="Vamos a la playa"
+        )
+        self.sentence4 = LearnSentence.objects.create(
+            skill=self.skill,
+            meaningInSourceLanguage="Thank you",
+            formInTargetLanguage="Gracias"
+        )
+        data = get_course_data(self.course)
+        self.assertMatchSnapshot(data)
