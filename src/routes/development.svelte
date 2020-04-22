@@ -38,35 +38,39 @@
   <div class="hero-head">
     <NavBar />
   </div>
-  <div class="container">
-    <div class="columns project-introduction">
-      <div class="column is-one-third">
-        <h1 class="title">
-          <img src="images/logo.svg" alt="LibreLingo" />
-        </h1>
-      </div>
-      <div class="column">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns project-introduction">
+        <div class="column is-one-third-desktop">
+          <h1 class="title">
+            <img src="images/logo.svg" alt="LibreLingo" />
+          </h1>
+        </div>
+        <div class="column">
 
-        <h2 class="subtitle">{$_('index.subtitle')}</h2>
-        <a
-          class="button is-primary is-inverted is-outlined"
-          href="course/spanish-from-english">
-          {$_('index.start_spanish_course')}
-        </a>
-        <a
-          class="button is-primary is-inverted is-outlined is-hidden"
-          href="course/german-from-english">
-          {$_('index.start_german_course')}
-        </a>
-        <a class="button is-primary is-inverted is-outlined" href="about">
-          {$_('index.about_librelingo')}
-        </a>
-        <TwitterButton />
+          <h2 class="subtitle">{$_('index.subtitle')}</h2>
+          <div class="buttons">
+            <a
+              class="button is-primary is-inverted is-outlined"
+              href="course/spanish-from-english">
+              {$_('index.start_spanish_course')}
+            </a>
+            <a
+              class="button is-primary is-inverted is-outlined is-hidden"
+              href="course/german-from-english">
+              {$_('index.start_german_course')}
+            </a>
+            <a class="button is-primary is-inverted is-outlined" href="about">
+              {$_('index.about_librelingo')}
+            </a>
+            <TwitterButton />
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="container">
-      <h2 class="is-size-2">Recent major new features</h2>
+      <h2 class="is-size-2 is-size-3-mobile">Recent major new features</h2>
 
       <div class="columns">
         <div class="column is-one-quarter">
@@ -77,7 +81,7 @@
 
         <div class="column is-centered-both-ways">
           <div>
-            <h3 class="is-size-3">
+            <h3 class="is-size-3 is-size-4-mobile">
               A new mascot designed by
               <a
                 href="https://carolinedelesalle.com/"
@@ -97,12 +101,12 @@
         </div>
       </div>
 
-      <div class="columns">
+      <div class="columns feature">
         <div class="column has-text-centered is-centered-both-ways">
           <h3 class="is-size-3">Spaced repetition</h3>
         </div>
 
-        <div class="column is-one-third">
+        <div class="column is-one-third-tablet">
           <img
             src="images/screenshot-spaced-repetition.png"
             alt=""
@@ -110,14 +114,12 @@
         </div>
       </div>
 
-      <div class="columns">
-        <div class="column is-one-third">
-          <div class="mascot">
-            <img
-              src="images/screenshot-chips-challenge.png"
-              alt=""
-              class="screenshot" />
-          </div>
+      <div class="columns feature reverse-column">
+        <div class="column is-one-third-tablet">
+          <img
+            src="images/screenshot-chips-challenge.png"
+            alt=""
+            class="screenshot" />
         </div>
 
         <div class="column is-centered-both-ways">
@@ -125,12 +127,12 @@
         </div>
       </div>
 
-      <div class="columns">
+      <div class="columns feature">
         <div class="column has-text-centered is-centered-both-ways">
           <h3 class="is-size-3">Course editor</h3>
         </div>
 
-        <div class="column is-one-third">
+        <div class="column is-one-third-tablet">
           <img
             src="images/screenshot-course-editor.png"
             alt=""
@@ -138,14 +140,12 @@
         </div>
       </div>
 
-      <div class="columns">
-        <div class="column is-one-third">
-          <div class="mascot">
-            <img
-              src="images/screenshot-dictionary.png"
-              alt=""
-              class="screenshot" />
-          </div>
+      <div class="columns feature reverse-column">
+        <div class="column is-one-third-tablet">
+          <img
+            src="images/screenshot-dictionary.png"
+            alt=""
+            class="screenshot" />
         </div>
 
         <div class="column is-centered-both-ways">
@@ -244,7 +244,7 @@
   }
 
   .hero {
-    padding-bottom: 10em;
+    padding-bottom: 5em;
     min-height: 100vh;
 
     .link {
@@ -269,7 +269,15 @@
     .mascot {
       width: 45%;
       margin: auto;
-      margin-top: -3em;
+    }
+
+    .reverse-column {
+      flex-direction: column-reverse;
+      display: flex;
+    }
+
+    .columns {
+      margin-bottom: 6em;
     }
   }
 </style>
