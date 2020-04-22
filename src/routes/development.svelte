@@ -1,7 +1,7 @@
 <script>
   import NavBar from "../components/NavBar"
   import Mascot from "../components/Mascot"
-  import LicenseLogo from "../components/LicenseLogo"
+  import TwitterButton from "../components/TwitterButton"
   import { _ } from "svelte-i18n"
 
   import shuffle from "lodash.shuffle"
@@ -10,14 +10,8 @@
   let issues = null
 
   if (process.browser === true) {
-    fetch(API_URL, {
-      mode: "no-cors",
-      method: "GET"
-    })
+    fetch(API_URL)
       .then(res => res.json())
-      .catch(err => {
-        issues = []
-      })
       .then(
         res =>
           (issues = shuffle(res)
@@ -67,6 +61,7 @@
         <a class="button is-primary is-inverted is-outlined" href="about">
           {$_('index.about_librelingo')}
         </a>
+        <TwitterButton />
       </div>
     </div>
 
@@ -143,17 +138,32 @@
         </div>
       </div>
 
+      <div class="columns">
+        <div class="column is-one-third">
+          <div class="mascot">
+            <img
+              src="images/screenshot-dictionary.png"
+              alt=""
+              class="screenshot" />
+          </div>
+        </div>
+
+        <div class="column is-centered-both-ways">
+          <h3 class="is-size-3">Built-in mini-dictionary</h3>
+        </div>
+      </div>
+
       <div class="development-progress">
-        <h3 class="is-size-4">Progress towards alpha release</h3>
+        <h3 class="is-size-3">Progress towards alpha release</h3>
         <progress class="progress is-medium is-info" value="75" max="100">
           45%
         </progress>
       </div>
 
-      {#if issues !== null}
+      {#if issues !== null && issues.length}
         <div class="container">
-          <h3 class="is-size-4">
-            Some issues that are looking for contributors
+          <h3 class="is-size-3">
+            Looking for a challange? Check out these issues:
           </h3>
           <div class="columns is-multiline">
             {#each issues as { title, html_url, labels }}
@@ -194,10 +204,6 @@
   </div>
 </section>
 
-<div class="license">
-  <LicenseLogo />
-</div>
-
 <style>
   @import "../variables";
 
@@ -218,6 +224,10 @@
     margin-bottom: 1em;
   }
 
+  h3 {
+    margin-bottom: 1em;
+  }
+
   .screenshot {
     box-shadow: 0 0 2em #ffffff42;
   }
@@ -231,10 +241,6 @@
   .development-progress {
     margin-top: 4em;
     margin-bottom: 4em;
-
-    h3 {
-      margin-bottom: 1em;
-    }
   }
 
   .hero {
@@ -257,12 +263,6 @@
         adjust-color($blue, $red: -20%) 81%,
         adjust-color($blue, $red: +40%) 100%
       ) !important;
-  }
-
-  .license {
-    position: absolute;
-    right: 1em;
-    bottom: 1em;
   }
 
   @include until($tablet) {
