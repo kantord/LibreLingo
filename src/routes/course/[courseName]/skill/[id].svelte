@@ -4,16 +4,20 @@
     const { languageName, languageCode, specialCharacters } = await import(
       `../../../../courses/${courseName}/courseData.json`
     )
-    const rawChallenges = await import(
+    const skillData = await import(
       `../../../../courses/${courseName}/challenges/${id}.json`
     )
 
+    const rawChallenges = skillData.challenges
+    const skillId = skillData.id
+
     return {
-      rawChallenges: Array.from(rawChallenges.default),
+      rawChallenges: Array.from(rawChallenges),
       languageName,
       languageCode,
       specialCharacters,
       id,
+      skillId,
       courseURL: `/course/${courseName}`
     }
   }
@@ -29,6 +33,7 @@
   export let specialCharacters
   export let id
   export let courseURL
+  export let skillId
 </script>
 
 <svelte:head>
@@ -38,7 +43,8 @@
 <NavBar dark is_hidden_mobile />
 
 <ChallengeScreen
-  skill={id}
+  skill="{id}"
+  {skillId}
   {rawChallenges}
   {languageName}
   {languageCode}
