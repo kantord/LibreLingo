@@ -54,7 +54,9 @@ def get_course_data(course):
             "title": module.name,
             "skills": [{
                 **(get_imageset(skill)),
-                "summary": [word.formInTargetLanguage for word in skill.learnword_set.all()],
+                "summary": [word.formInTargetLanguage
+                            for word in skill.learnword_set.all()] + [sentence.formInTargetLanguage
+                                                                      for sentence in skill.learnsentence_set.all()],
                 "practiceHref": slugify(skill.name),
                 "id": opaqueId(skill, "Skill"),
                 "title": skill.name,
