@@ -2,6 +2,7 @@
   import NavBar from "../components/NavBar"
   import Mascot from "../components/Mascot"
   import TwitterButton from "../components/TwitterButton"
+  import GitHubButton from "../components/GitHubButton"
   import { _ } from "svelte-i18n"
 
   import shuffle from "lodash.shuffle"
@@ -199,6 +200,16 @@
           </div>
         </div>
       {/if}
+
+      <div class="buttons">
+        <a
+          class="button is-primary is-inverted is-outlined"
+          href="https://librelingo.readthedocs.io/en/latest/">
+          Development documentation
+        </a>
+        <GitHubButton size="default" />
+        <TwitterButton />
+      </div>
 
     </div>
 
