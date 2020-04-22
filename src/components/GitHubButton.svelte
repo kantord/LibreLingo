@@ -14,6 +14,7 @@
   import Icon from "./Icon"
   const pMemoize = require("p-memoize")
   export let stars = (process.browser === true ? window.stars : null) || "   "
+  export let size = "small"
 
   onMount(async () => {
     if (process.browser === true && window.isCypress) {
@@ -35,7 +36,7 @@
 </script>
 
 <a
-  class="button is-outlined is-inverted is-info is-small"
+  class="{`button is-outlined is-inverted is-info is-${size}`}"
   href="https://github.com/kantord/LibreLingo"
   target="_blank">
   {#if stars}

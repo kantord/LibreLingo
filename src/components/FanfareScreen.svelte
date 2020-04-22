@@ -5,8 +5,8 @@
   import hotkeys from "hotkeys-js"
   import { onMount } from "svelte"
   import { goto } from "@sapper/app"
-  import Icon from "./Icon"
   import Mascot from "./Mascot"
+  import TwitterButton from "./TwitterButton"
 
   export let rawChallenges
   export let courseURL
@@ -69,13 +69,7 @@
           </a>
           <div class="bottom">
             <h2 class="title is-5">Excited about LibreLingo?</h2>
-            <a
-              class="button secondary twitter"
-              target="_blank"
-              href="https://twitter.com/intent/tweet?hashtags=LibreLingo%2Copensource&url=https%3A%2F%2Flibrelingo.app&text=LibreLingo%20-%20an%20experiment%20to%20create%20a%20community-owned%20language%20learning%20tool%0A">
-              <Icon icon="twitter" prefix="fab" />
-              <div>Tweet about LibreLingo</div>
-            </a>
+            <TwitterButton />
           </div>
         </div>
       </div>
@@ -85,11 +79,6 @@
 
 <style>
   @import "../variables";
-
-  .twitter {
-    background-color: #55acee;
-    color: white;
-  }
 
   @include from($tablet) {
     .bottom {

@@ -26,24 +26,26 @@
             <img src="images/logo.svg" alt="LibreLingo" />
           </h1>
           <h2 class="subtitle">{$_('index.subtitle')}</h2>
-          <a
-            class="button is-primary is-inverted is-outlined"
-            href="course/spanish-from-english">
-            {$_('index.start_spanish_course')}
-          </a>
-          <a
-            class="button is-primary is-inverted is-outlined is-hidden"
-            href="course/german-from-english">
-            {$_('index.start_german_course')}
-          </a>
-          <a class="button is-primary is-inverted is-outlined" href="about">
-            {$_('index.about_librelingo')}
-          </a>
-          <a
-            class="button is-primary is-inverted is-outlined"
-            href="development">
-            Development progress
-          </a>
+          <div class="buttons">
+            <a
+              class="button is-primary is-inverted is-outlined"
+              href="course/spanish-from-english">
+              {$_('index.start_spanish_course')}
+            </a>
+            <a
+              class="button is-primary is-inverted is-outlined is-hidden"
+              href="course/german-from-english">
+              {$_('index.start_german_course')}
+            </a>
+            <a class="button is-primary is-inverted is-outlined" href="about">
+              {$_('index.about_librelingo')}
+            </a>
+            <a
+              class="button is-primary is-inverted is-outlined"
+              href="development">
+              Development progress
+            </a>
+          </div>
         </div>
       </div>
     </div>
