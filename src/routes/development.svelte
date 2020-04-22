@@ -21,6 +21,7 @@
             )
             .slice(10))
       )
+      .catch(() => (issues = []))
   }
 </script>
 
