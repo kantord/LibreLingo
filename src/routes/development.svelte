@@ -201,7 +201,7 @@
         </div>
       {/if}
 
-      <div class="buttons">
+      <div class="buttons buttons-bottom">
         <a
           class="button is-primary is-inverted is-outlined"
           href="https://librelingo.readthedocs.io/en/latest/">
@@ -290,6 +290,12 @@
 
     .columns {
       margin-bottom: 6em;
+    }
+  }
+
+  @include from($tablet) {
+    .buttons-bottom {
+      margin-top: 6em;
     }
   }
 </style>
