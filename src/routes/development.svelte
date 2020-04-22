@@ -9,20 +9,24 @@
   const API_URL = "https://api.github.com/repos/kantord/LibreLingo/issues"
   let issues = null
 
-  fetch(API_URL)
-    .then(res => res.json())
-    .then(
-      res =>
-        (issues = shuffle(res)
-          .filter(
-            ({ state, pull_request, labels }) =>
-              state === "open" && !pull_request && labels.length !== 0
-          )
-          .slice(10))
-    )
-
-  $: {
-    console.log(issues)
+  if (process.browser === true) {
+    fetch(API_URL, {
+      mode: "no-cors",
+      method: "GET"
+    })
+      .then(res => res.json())
+      .catch(err => {
+        issues = []
+      })
+      .then(
+        res =>
+          (issues = shuffle(res)
+            .filter(
+              ({ state, pull_request, labels }) =>
+                state === "open" && !pull_request && labels.length !== 0
+            )
+            .slice(10))
+      )
   }
 </script>
 
