@@ -1,7 +1,7 @@
 <script>
   import NavBar from "../components/NavBar"
   import Mascot from "../components/Mascot"
-  import LicenseLogo from "../components/LicenseLogo"
+  import TwitterButton from "../components/TwitterButton"
   import { _ } from "svelte-i18n"
 
   import shuffle from "lodash.shuffle"
@@ -9,20 +9,18 @@
   const API_URL = "https://api.github.com/repos/kantord/LibreLingo/issues"
   let issues = null
 
-  fetch(API_URL)
-    .then(res => res.json())
-    .then(
-      res =>
-        (issues = shuffle(res)
-          .filter(
-            ({ state, pull_request, labels }) =>
-              state === "open" && !pull_request && labels.length !== 0
-          )
-          .slice(10))
-    )
-
-  $: {
-    console.log(issues)
+  if (process.browser === true) {
+    fetch(API_URL)
+      .then(res => res.json())
+      .then(
+        res =>
+          (issues = shuffle(res)
+            .filter(
+              ({ state, pull_request, labels }) =>
+                state === "open" && !pull_request && labels.length !== 0
+            )
+            .slice(10))
+      )
   }
 </script>
 
@@ -30,44 +28,43 @@
   <title>LibreLingo - Development</title>
 </svelte:head>
 
-{#if issues === null}
-  <div class="pageloader is-active">
-    <span class="title">LibreLingo</span>
-  </div>
-{/if}
-
 <section class="hero is-primary is-bold">
   <div class="hero-head">
     <NavBar />
   </div>
-  <div class="container">
-    <div class="columns project-introduction">
-      <div class="column is-one-third">
-        <h1 class="title">
-          <img src="images/logo.svg" alt="LibreLingo" />
-        </h1>
-      </div>
-      <div class="column">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns project-introduction">
+        <div class="column is-one-third-desktop">
+          <h1 class="title">
+            <img src="images/logo.svg" alt="LibreLingo" />
+          </h1>
+        </div>
+        <div class="column">
 
-        <h2 class="subtitle">{$_('index.subtitle')}</h2>
-        <a
-          class="button is-primary is-inverted is-outlined"
-          href="course/spanish-from-english">
-          {$_('index.start_spanish_course')}
-        </a>
-        <a
-          class="button is-primary is-inverted is-outlined is-hidden"
-          href="course/german-from-english">
-          {$_('index.start_german_course')}
-        </a>
-        <a class="button is-primary is-inverted is-outlined" href="about">
-          {$_('index.about_librelingo')}
-        </a>
+          <h2 class="subtitle">{$_('index.subtitle')}</h2>
+          <div class="buttons">
+            <a
+              class="button is-primary is-inverted is-outlined"
+              href="course/spanish-from-english">
+              {$_('index.start_spanish_course')}
+            </a>
+            <a
+              class="button is-primary is-inverted is-outlined is-hidden"
+              href="course/german-from-english">
+              {$_('index.start_german_course')}
+            </a>
+            <a class="button is-primary is-inverted is-outlined" href="about">
+              {$_('index.about_librelingo')}
+            </a>
+            <TwitterButton />
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="container">
-      <h2 class="is-size-2">Recent major new features</h2>
+      <h2 class="is-size-2 is-size-3-mobile">Recent major new features</h2>
 
       <div class="columns">
         <div class="column is-one-quarter">
@@ -78,7 +75,7 @@
 
         <div class="column is-centered-both-ways">
           <div>
-            <h3 class="is-size-3">
+            <h3 class="is-size-3 is-size-4-mobile">
               A new mascot designed by
               <a
                 href="https://carolinedelesalle.com/"
@@ -98,12 +95,12 @@
         </div>
       </div>
 
-      <div class="columns">
+      <div class="columns feature">
         <div class="column has-text-centered is-centered-both-ways">
           <h3 class="is-size-3">Spaced repetition</h3>
         </div>
 
-        <div class="column is-one-third">
+        <div class="column is-one-third-tablet">
           <img
             src="images/screenshot-spaced-repetition.png"
             alt=""
@@ -111,14 +108,12 @@
         </div>
       </div>
 
-      <div class="columns">
-        <div class="column is-one-third">
-          <div class="mascot">
-            <img
-              src="images/screenshot-chips-challenge.png"
-              alt=""
-              class="screenshot" />
-          </div>
+      <div class="columns feature reverse-column">
+        <div class="column is-one-third-tablet">
+          <img
+            src="images/screenshot-chips-challenge.png"
+            alt=""
+            class="screenshot" />
         </div>
 
         <div class="column is-centered-both-ways">
@@ -126,12 +121,12 @@
         </div>
       </div>
 
-      <div class="columns">
+      <div class="columns feature">
         <div class="column has-text-centered is-centered-both-ways">
           <h3 class="is-size-3">Course editor</h3>
         </div>
 
-        <div class="column is-one-third">
+        <div class="column is-one-third-tablet">
           <img
             src="images/screenshot-course-editor.png"
             alt=""
@@ -139,17 +134,30 @@
         </div>
       </div>
 
+      <div class="columns feature reverse-column">
+        <div class="column is-one-third-tablet">
+          <img
+            src="images/screenshot-dictionary.png"
+            alt=""
+            class="screenshot" />
+        </div>
+
+        <div class="column is-centered-both-ways">
+          <h3 class="is-size-3">Built-in mini-dictionary</h3>
+        </div>
+      </div>
+
       <div class="development-progress">
-        <h3 class="is-size-4">Progress towards alpha release</h3>
+        <h3 class="is-size-3">Progress towards alpha release</h3>
         <progress class="progress is-medium is-info" value="75" max="100">
           45%
         </progress>
       </div>
 
-      {#if issues !== null}
+      {#if issues !== null && issues.length}
         <div class="container">
-          <h3 class="is-size-4">
-            Some issues that are looking for contributors
+          <h3 class="is-size-3">
+            Looking for a challange? Check out these issues:
           </h3>
           <div class="columns is-multiline">
             {#each issues as { title, html_url, labels }}
@@ -190,10 +198,6 @@
   </div>
 </section>
 
-<div class="license">
-  <LicenseLogo />
-</div>
-
 <style>
   @import "../variables";
 
@@ -214,6 +218,10 @@
     margin-bottom: 1em;
   }
 
+  h3 {
+    margin-bottom: 1em;
+  }
+
   .screenshot {
     box-shadow: 0 0 2em #ffffff42;
   }
@@ -227,14 +235,10 @@
   .development-progress {
     margin-top: 4em;
     margin-bottom: 4em;
-
-    h3 {
-      margin-bottom: 1em;
-    }
   }
 
   .hero {
-    padding-bottom: 10em;
+    padding-bottom: 5em;
     min-height: 100vh;
 
     .link {
@@ -255,17 +259,19 @@
       ) !important;
   }
 
-  .license {
-    position: absolute;
-    right: 1em;
-    bottom: 1em;
-  }
-
   @include until($tablet) {
     .mascot {
       width: 45%;
       margin: auto;
-      margin-top: -3em;
+    }
+
+    .reverse-column {
+      flex-direction: column-reverse;
+      display: flex;
+    }
+
+    .columns {
+      margin-bottom: 6em;
     }
   }
 </style>
