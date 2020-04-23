@@ -11,7 +11,7 @@
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
-    "percypress": "percy exec -- $(npm bin)/knapsack-pro-cypress",
+    "percypress": "KNAPSACK_PRO_TEST_FILE_PATTERN=\"cypress/integration/**/*.{feature,features}\" percy exec -- $(npm bin)/knapsack-pro-cypress",
     "test": "run-p --race dev percypress",
     "eslintfix": "eslint src cypress --fix",
     "prettierfix": "yarn prettierfix:src && yarn prettierfix:cypress && yarn prettierfix:svelte",
