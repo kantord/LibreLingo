@@ -12,8 +12,8 @@ blocks:
           commands:
             - sem-version node 12
             - checkout
-            - cache restore
             - yarn install
+            - yarn run cypress verify
             - cache store
     dependencies: []
   - name: Jest
