@@ -13,7 +13,7 @@
 
 ## Project goal
 
-My goal is to start a community-driven language-learning platform that gives it's users and contributors a way to influence it's future and adapt it to special requirements.
+My goal is to start a community-driven language-learning platform that gives it's users and contributors a way to influence its future and adapt it to special requirements.
 
 To achieve that, I release all source code under the GPLv3 free software license, which guarantees end users the freedom to run, study, share, and modify the software.
 
@@ -44,9 +44,9 @@ Here's a rough sketch of how  I imagine the milestones of this project:
 
 ### Alpha release
 
-* ☐ Course progress can be properly syncronised across devices
+* ☐ Course progress can be properly synchronised across devices
 * ☐ Course editor can be accessed by all course contributors
-* ☐ Statistics about course controbutors are collected and published
+* ☐ Statistics about course contributors are collected and published
 * ☐ At least the basics of the Spanish course are ready
 * ☑️ Most of the course building blocks are implemented
 
