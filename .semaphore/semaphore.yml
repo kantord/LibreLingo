@@ -11,8 +11,13 @@ blocks:
         - name: yarn install
           commands:
             - sem-version node 12
+
             - checkout
-            - cache restore
+
+            - mkdir -p $SEMAPHORE_CACHE_DIR/Cypress
+            - mkdir -p ~/.cache || true
+            - ln -s $SEMAPHORE_CACHE_DIR/Cypress ~/.cache/Cypress
+
             - yarn install
             - cache store
     dependencies: []
@@ -31,6 +36,7 @@ blocks:
     task:
       jobs:
         - name: cypress
+          parallelism: 2
           commands:
             - sem-version node 12
             - checkout
@@ -40,6 +46,7 @@ blocks:
             - yarn test
       secrets:
         - name: Percy token
+        - name: KnapsackPro token
     dependencies:
       - Eslint Cypress
   - name: Eslint
