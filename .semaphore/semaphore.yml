@@ -31,6 +31,7 @@ blocks:
     task:
       jobs:
         - name: cypress
+          parallelism: 2
           commands:
             - sem-version node 12
             - checkout
@@ -40,6 +41,7 @@ blocks:
             - yarn test
       secrets:
         - name: Percy token
+        - name: KnapsackPro token
     dependencies:
       - Eslint Cypress
   - name: Eslint
