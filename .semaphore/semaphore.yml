@@ -13,7 +13,10 @@ blocks:
             - sem-version node 12
             - checkout
             - cache restore
+            - cache restore $SEMAPHORE_PROJECT_NAME-cypress,/home/semaphore/.cache/Cypress
             - yarn install
+            - yarn cypress install
+            - cache store $SEMAPHORE_PROJECT_NAME-cypress,/home/semaphore/.cache/Cypress
             - cache store
     dependencies: []
   - name: Jest
@@ -31,13 +34,12 @@ blocks:
     task:
       jobs:
         - name: cypress
-          parallelism: 2
+          parallelism: 3
           commands:
             - sem-version node 12
             - checkout
             - cache restore
-            - rm -rf node_modules
-            - yarn install --check-files
+            - cache restore $SEMAPHORE_PROJECT_NAME-cypress,/home/semaphore/.cache/Cypress
             - yarn test
       secrets:
         - name: Percy token
