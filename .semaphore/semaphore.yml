@@ -12,8 +12,8 @@ blocks:
           commands:
             - sem-version node 12
             - checkout
-            - cache restore
             - yarn install
+            - yarn run cypress verify
             - cache store
     dependencies: []
   - name: Jest
@@ -31,15 +31,15 @@ blocks:
     task:
       jobs:
         - name: cypress
+          parallelism: 3
           commands:
             - sem-version node 12
             - checkout
             - cache restore
-            - rm -rf node_modules
-            - yarn install --check-files
             - yarn test
       secrets:
         - name: Percy token
+        - name: KnapsackPro token
     dependencies:
       - Eslint Cypress
   - name: Eslint
