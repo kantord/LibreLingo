@@ -78,7 +78,7 @@ Open the course editor on [https://localhost:8000/admin](https://localhost:8000/
 If you've set up the course editor locally, you can load production course data into your local server using:
 
 ```
-python manage.py loaddata courseData.json
+python manage.py loaddata dumps/courseData.json
 ```
 
 ## Deployment to production
