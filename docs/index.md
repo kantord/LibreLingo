@@ -47,6 +47,12 @@ DATABASE_URL=sqlite:///db.sqlite3
 DEBUG=true
 ```
 
+You can now drop into a Pipenv shell so that you can make use of the dependencies you installed.
+
+```
+pipenv shell
+```
+
 To be able to run the course editor locally, first we have to install migrations in the local database:
 
 ```
