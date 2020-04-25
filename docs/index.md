@@ -47,6 +47,12 @@ DATABASE_URL=sqlite:///db.sqlite3
 DEBUG=true
 ```
 
+You can now drop into a Pipenv shell so that you can make use of the dependencies you installed.
+
+```
+pipenv shell
+```
+
 To be able to run the course editor locally, first we have to install migrations in the local database:
 
 ```
@@ -72,7 +78,7 @@ Open the course editor on [https://localhost:8000/admin](https://localhost:8000/
 If you've set up the course editor locally, you can load production course data into your local server using:
 
 ```
-python manage.py loaddata courseData.json
+python manage.py loaddata dumps/courseData.json
 ```
 
 ## Deployment to production
@@ -89,7 +95,6 @@ This will create a `__sapper__/export` folder with a production-ready build of y
 
 See Sapper's documentation for more detail: [https://sapper.svelte.dev/docs#Exporting](https://sapper.svelte.dev/docs#Exporting)
 
-
 ## Using the course editor
 
 The course editor is in a very early stage, and is only usable by developers. Since it's not publicly hosted yet, you can only use it for testing purposes.
@@ -99,5 +104,3 @@ The course editor is implemented as a django project in the `course_editor` fold
 If you want to set up your course editor with real data, you can find a database dump here: `src/courses/spanish-from-english/courseData.json`
 
 Check out Django's documentation about database dumps: [https://docs.djangoproject.com/en/3.0/ref/django-admin/#loaddata](https://docs.djangoproject.com/en/3.0/ref/django-admin/#loaddata)
-
-
