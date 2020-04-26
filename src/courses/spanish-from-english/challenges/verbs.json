@@ -90,7 +90,7 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Eres grande",
+      "formInTargetLanguage": "Tú eres grande",
       "meaningInSourceLanguage": "You are big",
       "id": "a875f55b003b",
       "priority": 0,
@@ -98,9 +98,9 @@
     },
     {
       "type": "listeningExercise",
-      "answer": "Eres grande",
+      "answer": "Tú eres grande",
       "meaning": "You are big",
-      "audio": "b97bc630c39580f096c0b101c2055be771f3dd7f29edb078d4b285af2a4565ca",
+      "audio": "d184e8c894e64c3b6edd5abef2af60a46402a5e4195310604ce4100620c37f62",
       "id": "f20799fd85c5",
       "priority": 1,
       "group": "36aca8a93563"
@@ -123,14 +123,16 @@
         }
       ],
       "chips": [
-        "Eres",
+        "Tú",
+        "eres",
         "grande"
       ],
       "solution": [
-        "Eres",
+        "Tú",
+        "eres",
         "grande"
       ],
-      "formattedSolution": "Eres grande",
+      "formattedSolution": "Tú eres grande",
       "id": "d0c5231b8556",
       "priority": 2,
       "group": "36aca8a93563"
@@ -140,8 +142,11 @@
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Eres",
-          "definition": "(you (sg.)) are"
+          "word": "Tú",
+          "definition": "you"
+        },
+        {
+          "word": "eres"
         },
         {
           "word": "grande",
