@@ -76,8 +76,8 @@
     "skill": 1,
     "meaningInSourceLanguage": "bread",
     "formInTargetLanguage": "pan",
-    "meaningInSourceLanguage2": "",
-    "formInTargetLanguage2": "",
+    "meaningInSourceLanguage2": "the bread",
+    "formInTargetLanguage2": "el pan",
     "image1": "bread1",
     "image2": "bread2",
     "image3": "bread3"
@@ -90,8 +90,8 @@
     "skill": 1,
     "meaningInSourceLanguage": "milk",
     "formInTargetLanguage": "leche",
-    "meaningInSourceLanguage2": "",
-    "formInTargetLanguage2": "",
+    "meaningInSourceLanguage2": "the milk",
+    "formInTargetLanguage2": "la leche",
     "image1": "milk1",
     "image2": "milk2",
     "image3": "milk3"
@@ -104,8 +104,8 @@
     "skill": 1,
     "meaningInSourceLanguage": "pasta",
     "formInTargetLanguage": "pasta",
-    "meaningInSourceLanguage2": "",
-    "formInTargetLanguage2": "",
+    "meaningInSourceLanguage2": "the pasta",
+    "formInTargetLanguage2": "la pasta",
     "image1": "pasta1",
     "image2": "pasta2",
     "image3": "pasta3"
@@ -118,8 +118,8 @@
     "skill": 1,
     "meaningInSourceLanguage": "couple",
     "formInTargetLanguage": "pareja",
-    "meaningInSourceLanguage2": "",
-    "formInTargetLanguage2": "",
+    "meaningInSourceLanguage2": "the couple",
+    "formInTargetLanguage2": "la pareja",
     "image1": "couple1",
     "image2": "couple2",
     "image3": "couple3"
@@ -440,8 +440,8 @@
     "skill": 8,
     "meaningInSourceLanguage": "sky",
     "formInTargetLanguage": "cielo",
-    "meaningInSourceLanguage2": "",
-    "formInTargetLanguage2": "",
+    "meaningInSourceLanguage2": "the sky",
+    "formInTargetLanguage2": "el cielo",
     "image1": "sky1",
     "image2": "sky2",
     "image3": "sky3"
@@ -454,8 +454,8 @@
     "skill": 8,
     "meaningInSourceLanguage": "river",
     "formInTargetLanguage": "r\u00edo",
-    "meaningInSourceLanguage2": "",
-    "formInTargetLanguage2": "",
+    "meaningInSourceLanguage2": "a river",
+    "formInTargetLanguage2": "un r\u00edo",
     "image1": "river1",
     "image2": "river2",
     "image3": "river3"
@@ -468,8 +468,8 @@
     "skill": 8,
     "meaningInSourceLanguage": "sun",
     "formInTargetLanguage": "sol",
-    "meaningInSourceLanguage2": "",
-    "formInTargetLanguage2": "",
+    "meaningInSourceLanguage2": "the sun",
+    "formInTargetLanguage2": "el sol",
     "image1": "sun1",
     "image2": "sun2",
     "image3": "sun3"
@@ -482,8 +482,8 @@
     "skill": 8,
     "meaningInSourceLanguage": "sea",
     "formInTargetLanguage": "mar",
-    "meaningInSourceLanguage2": "",
-    "formInTargetLanguage2": "",
+    "meaningInSourceLanguage2": "the sea",
+    "formInTargetLanguage2": "el mar",
     "image1": "sea1",
     "image2": "sea2",
     "image3": "sea3"
@@ -496,8 +496,8 @@
     "skill": 8,
     "meaningInSourceLanguage": "mountain",
     "formInTargetLanguage": "monta\u00f1a",
-    "meaningInSourceLanguage2": "",
-    "formInTargetLanguage2": "",
+    "meaningInSourceLanguage2": "the mountain",
+    "formInTargetLanguage2": "la monta\u00f1a",
     "image1": "mountain1",
     "image2": "mountain2",
     "image3": "mountain3"
@@ -510,8 +510,8 @@
     "skill": 8,
     "meaningInSourceLanguage": "lake",
     "formInTargetLanguage": "lago",
-    "meaningInSourceLanguage2": "",
-    "formInTargetLanguage2": "",
+    "meaningInSourceLanguage2": "a lake",
+    "formInTargetLanguage2": "un lago",
     "image1": "lake1",
     "image2": "lake2",
     "image3": "lake3"
@@ -524,8 +524,8 @@
     "skill": 8,
     "meaningInSourceLanguage": "beach",
     "formInTargetLanguage": "playa",
-    "meaningInSourceLanguage2": "",
-    "formInTargetLanguage2": "",
+    "meaningInSourceLanguage2": "the beach",
+    "formInTargetLanguage2": "la playa",
     "image1": "beach1",
     "image2": "beach2",
     "image3": "beach3"
@@ -3286,12 +3286,42 @@
   }
 },
 {
+  "model": "course.dictionaryitem",
+  "pk": 286,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "eres",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 287,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Gatos",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 288,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "Green",
+    "definition": ""
+  }
+},
+{
   "model": "course.learnsentence",
   "pk": 1,
   "fields": {
     "skill": 1,
     "meaningInSourceLanguage": "Enjoy your meal",
-    "formInTargetLanguage": "\u00a1Buen provecho!"
+    "formInTargetLanguage": "Buen provecho"
   }
 },
 {
@@ -3380,8 +3410,8 @@
   "pk": 11,
   "fields": {
     "skill": 1,
-    "meaningInSourceLanguage": "I drink beer",
-    "formInTargetLanguage": "Yo bebo cerveza"
+    "meaningInSourceLanguage": "The couple drinks beer",
+    "formInTargetLanguage": "La pareja bebe cerveza"
   }
 },
 {
@@ -3471,7 +3501,7 @@
   "fields": {
     "skill": 9,
     "meaningInSourceLanguage": "You are big",
-    "formInTargetLanguage": "Eres grande"
+    "formInTargetLanguage": "T\u00fa eres grande"
   }
 },
 {
@@ -3659,8 +3689,8 @@
   "pk": 42,
   "fields": {
     "skill": 11,
-    "meaningInSourceLanguage": "The green cats",
-    "formInTargetLanguage": "Los gatos verdes"
+    "meaningInSourceLanguage": "Green cats",
+    "formInTargetLanguage": "Gatos verdes"
   }
 },
 {
