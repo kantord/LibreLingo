@@ -1,14 +1,9 @@
-import { Then, Given } from "cypress-cucumber-preprocessor/steps"
+import { Then } from "cypress-cucumber-preprocessor/steps"
 
-Given("I submit solution", () => {
-    cy.get("input[type=text]").type("asdfg")
-    cy.contains("Submit").click()
-})
-
-Then("I see a virtual keyboard with 4 keys", () => {
+Then("I see a virtual keyboard with {int} keys", n => {
     cy.get(".keyboard")
         .find(".key")
-        .should("have.length", 16)
+        .should("have.length", n)
 })
 
 Then("the keys on the virtual keyboard have proper labels", () => {
@@ -31,9 +26,4 @@ Then("the virtual keyboard is inactive", () => {
         .find(".key")
         .contains("á")
         .should("be.disabled")
-})
-
-Then("I'm not able to submit", () => {
-    cy.get("form").submit()
-    cy.get(".panel").should("not.exist")
 })
