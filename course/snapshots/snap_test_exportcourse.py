@@ -37,7 +37,7 @@ snapshots['CourseDataTest::test_correct_output_format 1'] = {
 
 snapshots['ExportSkillTest::test_export_skill_correct_output_format 1'] = [
     {
-        'formInTargetLanguage': '¡Buen provecho!',
+        'formInTargetLanguage': 'Buen provecho',
         'group': '2f4f49b572eb',
         'id': 'fa83044ce0fe',
         'meaningInSourceLanguage': 'Enjoy your meal',
@@ -45,3 +45,35 @@ snapshots['ExportSkillTest::test_export_skill_correct_output_format 1'] = [
         'type': 'options'
     }
 ]
+
+snapshots['CourseDataTest::test_correct_output_format_only_phrases 1'] = {
+    'languageCode': 'ES',
+    'languageName': 'Spanish',
+    'modules': [
+        {
+            'skills': [
+                {
+                    'id': '569673478a3d',
+                    'imageSet': [
+                        'water1',
+                        'water2',
+                        'water3'
+                    ],
+                    'practiceHref': 'animals',
+                    'summary': [
+                        'Pan, por favor',
+                        'Agua, por favor',
+                        'Vamos a la playa',
+                        'Gracias'
+                    ],
+                    'title': 'Animals'
+                }
+            ],
+            'title': 'Basics'
+        }
+    ],
+    'specialCharacters': [
+        'a',
+        'b'
+    ]
+}
