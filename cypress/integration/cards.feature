@@ -1,8 +1,8 @@
-Feature: Cards challange
+Feature: Cards challenge
 
   A challenge type where the user has to select the correct card
 
-  Scenario: Gettings a cards challenge
+  Scenario: Getting a cards challenge
     Given I open "course/test/skill/_cards_test"
     Then cards challenge looks correct
     And I read "Which of these is"
