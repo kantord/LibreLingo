@@ -20,7 +20,7 @@ Feature: Short text input challange
     
   Scenario: Virtual keyboard for special characters
     Given I open "/course/test/skill/_short_input_test0"
-    Then I see a virtual keyboard with 4 keys
+    Then I see a virtual keyboard with 16 keys
     And the keys on the virtual keyboard have proper labels
     And clicking on a key types into the input field
     Given I submit solution
@@ -83,4 +83,5 @@ Feature: Short text input challange
   Scenario: using the hover-over dictionary
     Given I open "/course/test/skill/_short_input_test3"
     Then I see a tooltip that says "tu"
+    Then I don't see a tooltip that says "How"
     Then The word "How" has no tooltip definition
