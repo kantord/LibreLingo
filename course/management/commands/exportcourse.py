@@ -116,7 +116,7 @@ def generate_learnword_challenge(
                                                                          learnword.image3]],
              "formInTargetLanguage": [formInTargetLanguage],
              "phrase": define_words_in_sentence(course,
-                                                learnword.meaningInSourceLanguage,
+                                                meaningInSourceLanguage,
                                                 True),
              "id": opaqueId(learnword,
                             "shortInput"),
