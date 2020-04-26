@@ -83,4 +83,5 @@ Feature: Short text input challange
   Scenario: using the hover-over dictionary
     Given I open "/course/test/skill/_short_input_test3"
     Then I see a tooltip that says "tu"
+    Then I don't see a tooltip that says "How"
     Then The word "How" has no tooltip definition
