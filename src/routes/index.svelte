@@ -2,6 +2,7 @@
   import NavBar from "../components/NavBar"
   import Mascot from "../components/Mascot"
   import LicenseLogo from "../components/LicenseLogo"
+  import Button from "../components/ui-kit/Button"
   import { _ } from "svelte-i18n"
 </script>
 
@@ -27,24 +28,30 @@
           </h1>
           <h2 class="subtitle">{$_('index.subtitle')}</h2>
           <div class="buttons">
-            <a
-              class="button is-primary is-inverted is-outlined"
+            <Button
+              primary
+              inverted
+              outlined
               href="course/spanish-from-english">
               {$_('index.start_spanish_course')}
-            </a>
-            <a
-              class="button is-primary is-inverted is-outlined is-hidden"
+            </Button>
+
+            <Button
+              primary
+              inverted
+              outlined
+              hidden
               href="course/german-from-english">
               {$_('index.start_german_course')}
-            </a>
-            <a class="button is-primary is-inverted is-outlined" href="about">
+            </Button>
+
+            <Button primary inverted outlined href="about">
               {$_('index.about_librelingo')}
-            </a>
-            <a
-              class="button is-primary is-inverted is-outlined"
-              href="development">
+            </Button>
+
+            <Button primary inverted outlined href="development">
               Development progress
-            </a>
+            </Button>
           </div>
         </div>
       </div>
