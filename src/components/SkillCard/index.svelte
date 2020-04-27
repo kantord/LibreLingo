@@ -2,6 +2,7 @@
   import db from "../../db"
   import { isStale } from "./logic"
   import Icon from "../Icon"
+  import Button from "../ui-kit/Button"
 
   export let title
   export let practiceHref
@@ -55,13 +56,13 @@
     </div>
   </div>
   <footer class="card-footer">
-    <a href="{practiceHref}" class="card-footer-item">
+    <div class="card-footer-item">
       {#if completed}
-        <button class="button is-primary">Practice {title}</button>
+        <Button href="{practiceHref}">Practice {title}</Button>
       {:else}
-        <button class="button is-primary">Learn {title}</button>
+        <Button href="{practiceHref}">Learn {title}</Button>
       {/if}
-    </a>
+    </div>
   </footer>
 </div>
 
