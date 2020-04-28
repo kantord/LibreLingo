@@ -40,7 +40,7 @@ blocks:
             - checkout
             - cache restore
             - cache restore $SEMAPHORE_PROJECT_NAME-cypress,/home/semaphore/.cache/Cypress
-            - yarn test
+            - SEMAPHORE_BUILD_NUMBER=$SEMAPHORE_PIPELINE_ID SEMAPHORE_THREAD_COUNT=3 yarn test
       secrets:
         - name: Percy token
         - name: KnapsackPro token
