@@ -21,3 +21,5 @@ $body-background-color: $white-lighter;
 $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
+$done-color: lighten(desaturate($green, 15%), 20%);
+$stale-color: lighten(desaturate($green, 45%), 20%);
