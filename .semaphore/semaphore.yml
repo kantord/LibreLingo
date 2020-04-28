@@ -40,7 +40,7 @@ blocks:
             - checkout
             - cache restore
             - cache restore $SEMAPHORE_PROJECT_NAME-cypress,/home/semaphore/.cache/Cypress
-            - yarn test
+            - PERCY_PARALLEL_NONCE=$SEMAPHORE_JOB_ID PERCY_PARALLEL_TOTAL=3 yarn test
       secrets:
         - name: Percy token
         - name: KnapsackPro token
