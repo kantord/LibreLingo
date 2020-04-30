@@ -142,6 +142,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://decentral1.se/"><img src="https://avatars1.githubusercontent.com/u/1991377?v=4" width="100px;" alt=""/><br /><sub><b>decentral1se</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/commits?author=decentral1se" title="Documentation">📖</a></td>
     <td align="center"><a href="https://www.drought.gov/drought/data-maps-tools/software"><img src="https://avatars1.githubusercontent.com/u/1328158?v=4" width="100px;" alt=""/><br /><sub><b>James Adams</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/issues?q=author%3Amonocongo" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://innercircles.community"><img src="https://avatars3.githubusercontent.com/u/5111931?v=4" width="100px;" alt=""/><br /><sub><b>Arnold Schrijver</b></sub></a><br /><a href="#ideas-aschrijver" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
