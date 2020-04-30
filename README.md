@@ -3,6 +3,7 @@
 [![BCH compliance](https://bettercodehub.com/edge/badge/kantord/LibreLingo?branch=master)](https://bettercodehub.com/)
 ![GitHub PageSpeed](https://api.speedbadge.io/v1?url=librelingo.app)
 ![David](https://img.shields.io/david/kantord/LibreLingo)
+
  
 <h1 align="center">
 <img src="docs/logo_for_readme.svg" alt="LibreLingo" /></h1>
@@ -105,6 +106,10 @@ Testing is done using Jest and Cypress. Other technology in use include: bulma, 
 The mascot is designed by [@almostdesigner](https://github.com/almostdesigner).
 
 ## Contributors ✨
+
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-13-orange.svg?style=flat-square)](#contributors)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
