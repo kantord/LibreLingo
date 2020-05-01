@@ -12,6 +12,7 @@
 <script>
   import { onMount } from "svelte"
   import Icon from "./Icon"
+  import Button from "./ui-kit/Button"
   const pMemoize = require("p-memoize")
   export let stars = (process.browser === true ? window.stars : null) || "   "
   export let size = "small"
@@ -35,10 +36,13 @@
   })
 </script>
 
-<a
-  class="{`button is-outlined is-inverted is-info is-${size}`}"
-  href="https://github.com/kantord/LibreLingo"
-  target="_blank">
+<Button
+  target="_blank"
+  outlined
+  inverted
+  info
+  {size}
+  href="https://github.com/kantord/LibreLingo">
   {#if stars}
     <span class="tag is-white">
       <span class="stars">{stars}</span>
@@ -48,20 +52,14 @@
     </span>
   {/if}
   <span>Fork me on GitHub</span>
-</a>
+</Button>
 
 <style>
   @import "../variables";
-  $button-color: $text-strong !default;
-  $button-focus-color: $link-focus !default;
-  $button-active-color: $link-active !default;
-  $button-hover-color: $link-hover !default;
-  $button-focus-color: $link-focus !default;
 
   .tag {
-    color: $button-color;
+    color: inherit !important;
     padding-left: 0;
-    color: white !important;
     background: transparent !important;
 
     .stars {
@@ -71,27 +69,6 @@
 
     .icon {
       margin-left: 0 !important;
-    }
-  }
-
-  .button:active,
-  .button.is-active {
-    .tag {
-      color: $button-active-color !important;
-    }
-  }
-
-  .button:hover,
-  .button.is-hovered {
-    .tag {
-      color: $button-hover-color !important;
-    }
-  }
-
-  .button:focus,
-  .button.is-focused {
-    .tag {
-      color: $button-focus-color !important;
     }
   }
 </style>
