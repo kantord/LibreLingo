@@ -7,11 +7,17 @@
   export let color = "initial"
   export let textColor = "initial"
   export let target = "_self"
+  export let size = "default"
+
+  let styleTokens = `
+    --color:${color};
+    --textColor:${textColor};
+  `
 </script>
 
 <a
-  style="--color:{color}; --textColor:{textColor};"
-  class="button"
+  style="{styleTokens}"
+  class="button is-{size}"
   class:is-primary="{primary}"
   class:is-inverted="{inverted}"
   class:is-outlined="{outlined}"
