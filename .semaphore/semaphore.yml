@@ -39,7 +39,7 @@ blocks:
             - sem-version node 12
             - checkout
             - cache restore
-            - cache restore
+            - cache restore cypress
             - SEMAPHORE_BUILD_NUMBER=$SEMAPHORE_PIPELINE_ID SEMAPHORE_THREAD_COUNT=3 yarn test
       secrets:
         - name: Percy token
