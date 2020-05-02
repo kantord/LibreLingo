@@ -1,9 +1,7 @@
 <script>
-  import { slide } from "svelte/transition"
   import { onMount } from "svelte"
   import hotkeys from "hotkeys-js"
   import levenshtein from "js-levenshtein"
-  import shuffle from "lodash.shuffle"
   import ChallengePanel from "./ChallengePanel"
   import Icon from "./Icon"
   import InputFieldWithVirtualKeyboard from "./InputFieldWithVirtualKeyboard"
