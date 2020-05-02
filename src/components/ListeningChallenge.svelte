@@ -10,7 +10,6 @@
   export let challenge
   export let registerResult
   export let resolveChallenge
-  export let languageName
   export let languageCode
   export let specialCharacters
   let answer = null
