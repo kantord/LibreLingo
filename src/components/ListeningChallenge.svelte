@@ -123,10 +123,3 @@
   {/if}
 
 </form>
-
-<style>
-  .card {
-    max-width: 16em;
-    margin: auto;
-  }
-</style>
