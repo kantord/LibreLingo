@@ -52,6 +52,7 @@
   }
 </script>
 
+<!-- svelte-ignore a11y-autofocus -->
 <input
   tabindex="0"
   data-test="answer"
