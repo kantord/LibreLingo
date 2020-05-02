@@ -91,7 +91,6 @@
             {/if}
             {#if challenge.type === 'listeningExercise'}
               <ListeningChallenge
-                {languageName}
                 {languageCode}
                 {specialCharacters}
                 {registerResult}
