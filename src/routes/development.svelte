@@ -189,9 +189,9 @@
                       </div>
                     </div>
                     <footer class="card-footer">
-                      <a href="#" class="card-footer-item">
+                      <div class="card-footer-item">
                         Contribute to this issue
-                      </a>
+                      </div>
                     </footer>
                   </div>
                 </a>
