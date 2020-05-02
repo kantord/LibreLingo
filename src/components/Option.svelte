@@ -1,7 +1,6 @@
 <script>
   export let active
   export let inactive
-  export let picture
   export let correct
   export let formInTargetLanguage
 </script>
