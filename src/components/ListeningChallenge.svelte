@@ -1,9 +1,7 @@
 <script>
-  import { slide } from "svelte/transition"
   import { onMount } from "svelte"
   import hotkeys from "hotkeys-js"
   import levenshtein from "js-levenshtein"
-  import shuffle from "lodash.shuffle"
   import ChallengePanel from "./ChallengePanel"
   import Icon from "./Icon"
   import InputFieldWithVirtualKeyboard from "./InputFieldWithVirtualKeyboard"
@@ -12,7 +10,6 @@
   export let challenge
   export let registerResult
   export let resolveChallenge
-  export let languageName
   export let languageCode
   export let specialCharacters
   let answer = null
@@ -123,10 +120,3 @@
   {/if}
 
 </form>
-
-<style>
-  .card {
-    max-width: 16em;
-    margin: auto;
-  }
-</style>
