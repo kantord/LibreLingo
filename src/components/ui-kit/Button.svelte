@@ -5,10 +5,13 @@
   export let inverted = false
   export let outlined = false
   export let hidden = false
-  export let color = "initial"
-  export let textColor = "initial"
+  export let color = null
+  export let textColor = null
+  export let customColor = color != null
+  export let customTextColor = textColor != null
   export let target = "_self"
   export let size = "default"
+  export let type = null
 
   let styleTokens = `
     --color:${color};
@@ -16,18 +19,40 @@
   `
 </script>
 
-<a
-  style="{styleTokens}"
-  class="button is-{size}"
-  class:is-primary="{primary}"
-  class:is-info="{info}"
-  class:is-inverted="{inverted}"
-  class:is-outlined="{outlined}"
-  class:is-hidden="{hidden}"
-  {href}
-  {target}>
-  <slot />
-</a>
+{#if href}
+
+  <a
+    style="{styleTokens}"
+    class="button is-{size}"
+    class:is-primary="{primary}"
+    class:is-info="{info}"
+    class:is-inverted="{inverted}"
+    class:is-outlined="{outlined}"
+    class:is-hidden="{hidden}"
+    class:customColor
+    class:customTextColor
+    {href}
+    {target}>
+    <slot />
+  </a>
+{/if}
+
+{#if type}
+  <button
+    style="{styleTokens}"
+    class="button is-{size}"
+    class:is-primary="{primary}"
+    class:is-info="{info}"
+    class:is-inverted="{inverted}"
+    class:is-outlined="{outlined}"
+    class:is-hidden="{hidden}"
+    class:customColor
+    class:customTextColor
+    {type}>
+    <slot />
+  </button>
+
+{/if}
 
 <style>
   @import "../../variables";
@@ -37,8 +62,11 @@
   $button-hover-color: $link-hover !default;
   $button-focus-color: $link-focus !default;
 
-  .button {
+  .button.customColor {
     background-color: var(--color);
+  }
+
+  .button.customTextColor {
     color: var(--textColor);
   }
 </style>
