@@ -1,5 +1,6 @@
 <script>
   import { slide } from "svelte/transition"
+  import Button from "./ui-kit/Button"
 
   export let buttonText
   export let buttonAction = null
@@ -23,17 +24,16 @@
       {#if messageDetail}
         <p>{messageDetail}</p>
       {/if}
-      {#if buttonAction}
-        <button
-          class="button is-primary"
-          type="submit"
-          on:click="{buttonAction}">
-          {buttonText}
-        </button>
-      {/if}
-      {#if submit}
-        <button class="button is-primary" type="submit">Submit</button>
-      {/if}
+      <div class="right">
+        {#if buttonAction}
+          <Button primary type="submit" on:click="{buttonAction}">
+            {buttonText}
+          </Button>
+        {/if}
+        {#if submit}
+          <Button primary type="submit">Submit</Button>
+        {/if}
+      </div>
     </div>
   </div>
 </div>
@@ -60,7 +60,7 @@
     background: $pink;
   }
 
-  .panel button {
+  .panel .right {
     float: right;
   }
 
