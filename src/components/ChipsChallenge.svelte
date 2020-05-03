@@ -15,6 +15,15 @@
 
   const sortable = function(node, { items, options }) {
     options = Object.assign(options, {
+      store: {
+        get: function(sortable) {
+          return $answer
+        },
+
+        set: function(sortable) {
+          answer.set(sortable.toArray())
+        }
+      },
       onUpdate({ newIndex, oldIndex }) {
         items.update(oldItems =>
           swapArrayElements(oldItems, oldIndex, newIndex)
