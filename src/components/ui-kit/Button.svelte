@@ -4,6 +4,7 @@
   const dispatch = createEventDispatcher()
   export let href
   export let primary = false
+  export let light = false
   export let info = false
   export let inverted = false
   export let outlined = false
@@ -14,7 +15,10 @@
   export let customTextColor = textColor != null
   export let target = "_self"
   export let size = "default"
-  export let type = null
+  export let type = "button"
+  export let tabindex = 0
+  export let key = false
+  export let disabled = false
 
   let styleTokens = `
     --color:${color};
@@ -23,54 +27,57 @@
 </script>
 
 {#if href}
-
   <a
     style="{styleTokens}"
     class="button is-{size}"
     class:is-primary="{primary}"
+    class:is-light="{light}"
     class:is-info="{info}"
     class:is-inverted="{inverted}"
     class:is-outlined="{outlined}"
     class:is-hidden="{hidden}"
     class:customColor
     class:customTextColor
+    class:key
     {href}
+    {tabindex}
     {target}>
     <slot />
   </a>
-{/if}
-
-{#if type}
+{:else}
   <button
     style="{styleTokens}"
     class="button is-{size}"
     class:is-primary="{primary}"
+    class:is-light="{light}"
     class:is-info="{info}"
     class:is-inverted="{inverted}"
     class:is-outlined="{outlined}"
     class:is-hidden="{hidden}"
     class:customColor
     class:customTextColor
+    class:key
     on:click="{() => dispatch('click')}"
+    {tabindex}
+    {disabled}
     {type}>
     <slot />
   </button>
-
 {/if}
 
 <style>
-  @import "../../variables";
-  $button-color: $text-strong !default;
-  $button-focus-color: $link-focus !default;
-  $button-active-color: $link-active !default;
-  $button-hover-color: $link-hover !default;
-  $button-focus-color: $link-focus !default;
-
   .button.customColor {
     background-color: var(--color);
   }
 
   .button.customTextColor {
     color: var(--textColor);
+  }
+
+  .key {
+    font-family: monospace;
+    margin: 1em;
+    margin-left: 0;
+    margin-top: 0;
   }
 </style>
