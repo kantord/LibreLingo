@@ -1,4 +1,5 @@
 <script>
+  import Button from "./ui-kit/Button"
   export let value
   export let specialCharacters
   export let languageCode
@@ -70,26 +71,20 @@
 
 <div class="keyboard">
   {#each specialCharacters as specialCharacter}
-    <button
-      type="button"
+    <Button
       tabindex="-1"
-      class="button key is-small is-light"
+      light
+      key
+      size="small"
       {disabled}
       on:click="{handleVirtualKey(specialCharacter)}">
       {specialCharacter}
-    </button>
+    </Button>
   {/each}
 </div>
 
 <style>
   .keyboard {
     margin-top: 2em;
-
-    .key {
-      font-family: monospace;
-      margin: 1em;
-      margin-left: 0;
-      margin-top: 0;
-    }
   }
 </style>
