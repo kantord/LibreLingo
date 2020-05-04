@@ -7,6 +7,7 @@
   import { goto } from "@sapper/app"
   import Mascot from "./Mascot"
   import TwitterButton from "./TwitterButton"
+  import Button from "./ui-kit/Button"
 
   export let rawChallenges
   export let courseURL
@@ -64,9 +65,9 @@
           <h2 class="subtitle">
             You've completed {rawChallenges.length} challenges
           </h2>
-          <a class="button primary is-medium" href="{courseURL}">
+          <Button size="medium" href="{courseURL}">
             Continue to course page
-          </a>
+          </Button>
           <div class="bottom">
             <h2 class="title is-5">Excited about LibreLingo?</h2>
             <TwitterButton />
