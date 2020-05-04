@@ -6,6 +6,7 @@
   import Icon from "./Icon"
   import InputFieldWithVirtualKeyboard from "./InputFieldWithVirtualKeyboard"
   import playVoice from "../media/voice"
+  import Button from "./ui-kit/Button"
 
   export let challenge
   export let registerResult
@@ -77,13 +78,9 @@
   <div class="columns">
 
     <div class="column is-1">
-
-      <button
-        class="button is-large is-primary"
-        on:click="{playChallengeVoice}"
-        type="button">
+      <Button size="large" primary on:click="{playChallengeVoice}">
         <Icon icon="volume-up" />
-      </button>
+      </Button>
     </div>
 
     <div class="column">

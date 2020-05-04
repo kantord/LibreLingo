@@ -2,6 +2,7 @@
   import db from "../../db"
   import { isStale } from "./logic"
   import Icon from "../Icon"
+  import Button from "../ui-kit/Button"
 
   export let title
   export let practiceHref
@@ -55,13 +56,15 @@
     </div>
   </div>
   <footer class="card-footer">
-    <a href="{practiceHref}" class="card-footer-item">
-      {#if completed}
-        <button class="button is-primary">Practice {title}</button>
-      {:else}
-        <button class="button is-primary">Learn {title}</button>
-      {/if}
-    </a>
+    <div href="{practiceHref}" class="card-footer-item">
+      <div class="button-container">
+        {#if completed}
+          <Button primary href="{practiceHref}">Practice {title}</Button>
+        {:else}
+          <Button primary href="{practiceHref}">Learn {title}</Button>
+        {/if}
+      </div>
+    </div>
   </footer>
 </div>
 
@@ -112,7 +115,7 @@
       &[data-stale="true"] {
         background-color: $stale-color;
 
-        .button {
+        .button-container {
           color: darken($stale-color, 8%);
         }
 
@@ -129,7 +132,7 @@
         color: $white;
       }
 
-      .button {
+      .button-container {
         background-color: $white;
         color: darken($done-color, 8%);
       }
