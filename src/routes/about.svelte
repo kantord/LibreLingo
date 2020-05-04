@@ -22,6 +22,7 @@
 
 <script>
   import NavBar from "../components/NavBar"
+  import Button from "../components/ui-kit/Button"
 
   export let readmeHTML
 </script>
@@ -39,12 +40,9 @@
       <div class="section content box">
         {@html readmeHTML}
         <hr />
-
-        <a
-          class="button is-primary"
-          href="https://github.com/kantord/LibreLingo">
+        <Button primary href="https://github.com/kantord/LibreLingo">
           Continue reading on GitHub
-        </a>
+        </Button>
       </div>
     </div>
   </div>
