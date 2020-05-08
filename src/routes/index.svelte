@@ -3,6 +3,8 @@
   import Mascot from "../components/Mascot"
   import LicenseLogo from "../components/LicenseLogo"
   import Button from "../components/ui-kit/Button"
+  import Column from "../components/ui-kit/Column"
+  import Columns from "../components/ui-kit/Columns"
   import { _ } from "svelte-i18n"
 </script>
 
@@ -16,13 +18,13 @@
   </div>
   <div class="hero-body">
     <div class="container">
-      <div class="columns">
-        <div class="column is-one-quarter">
+      <Columns>
+        <Column size="one-quarter">
           <div class="mascot">
             <Mascot shadow="{false}" glow="{true}" />
           </div>
-        </div>
-        <div class="column">
+        </Column>
+        <Column>
           <h1 class="title">
             <img src="images/logo.svg" alt="LibreLingo" />
           </h1>
@@ -53,8 +55,8 @@
               Development progress
             </Button>
           </div>
-        </div>
-      </div>
+        </Column>
+      </Columns>
     </div>
 
   </div>
