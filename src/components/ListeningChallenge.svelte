@@ -7,6 +7,8 @@
   import InputFieldWithVirtualKeyboard from "./InputFieldWithVirtualKeyboard"
   import playVoice from "../media/voice"
   import Button from "./ui-kit/Button"
+  import Column from "./ui-kit/Column"
+  import Columns from "./ui-kit/Columns"
 
   export let challenge
   export let registerResult
@@ -75,23 +77,20 @@
     </p>
   </div>
 
-  <div class="columns">
-
-    <div class="column is-1">
+  <Columns>
+    <Column size="1">
       <Button size="large" primary on:click="{playChallengeVoice}">
         <Icon icon="volume-up" />
       </Button>
-    </div>
-
-    <div class="column">
+    </Column>
+    <Column>
       <InputFieldWithVirtualKeyboard
         {specialCharacters}
         {languageCode}
         disabled="{submitted}"
         bind:value="{answer}" />
-
-    </div>
-  </div>
+    </Column>
+  </Columns>
 
   {#if answer && !submitted}
     <ChallengePanel message="" buttonText="Submit" submit />
