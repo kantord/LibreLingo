@@ -6,6 +6,8 @@
   import ChallengePanel from "./ChallengePanel"
   import Phrase from "./Phrase"
   import InputFieldWithVirtualKeyboard from "./InputFieldWithVirtualKeyboard"
+  import Column from "./ui-kit/Column"
+  import Columns from "./ui-kit/Columns"
 
   export let challenge
   export let registerResult
@@ -75,15 +77,15 @@
       in {languageName}!
     </p>
   </div>
-  <div class="columns">
-    <div class="column">
+  <Columns>
+    <Column>
       <InputFieldWithVirtualKeyboard
         {specialCharacters}
         {languageCode}
         disabled="{submitted}"
         bind:value="{answer}" />
-    </div>
-    <div class="column is-one-fourth">
+    </Column>
+    <Column size="one-fourth">
       <div class="card">
         <div class="card-image">
           <figure class="image is-1by1">
@@ -91,8 +93,8 @@
           </figure>
         </div>
       </div>
-    </div>
-  </div>
+    </Column>
+  </Columns>
 
   {#if answer && !submitted}
     <ChallengePanel message="" buttonText="Submit" submit />
