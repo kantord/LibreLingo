@@ -8,6 +8,8 @@
   import Mascot from "./Mascot"
   import TwitterButton from "./TwitterButton"
   import Button from "./ui-kit/Button"
+  import Column from "./ui-kit/Column"
+  import Columns from "./ui-kit/Columns"
 
   export let rawChallenges
   export let courseURL
@@ -53,27 +55,29 @@
 
 <section class="hero is-fullheight-with-navbar">
   <div class="hero-body">
-    <div class="container">
-      <div class="columns" in:scale>
-        <div class="column is-three-fifths">
+    <div class="container" in:scale>
+      <Columns>
+        <Column size="three-fifths">
           <div class="mascot">
             <Mascot />
           </div>
-        </div>
-        <div class="column is-centered-mobile">
-          <h1 class="title is-size-2 is-size-3-mobile">Lesson completed!</h1>
-          <h2 class="subtitle">
-            You've completed {rawChallenges.length} challenges
-          </h2>
-          <Button size="medium" href="{courseURL}">
-            Continue to course page
-          </Button>
-          <div class="bottom">
-            <h2 class="title is-5">Excited about LibreLingo?</h2>
-            <TwitterButton />
+        </Column>
+        <Column>
+          <div class="is-centered-mobile">
+            <h1 class="title is-size-2 is-size-3-mobile">Lesson completed!</h1>
+            <h2 class="subtitle">
+              You've completed {rawChallenges.length} challenges
+            </h2>
+            <Button size="medium" href="{courseURL}">
+              Continue to course page
+            </Button>
+            <div class="bottom">
+              <h2 class="title is-5">Excited about LibreLingo?</h2>
+              <TwitterButton />
+            </div>
           </div>
-        </div>
-      </div>
+        </Column>
+      </Columns>
     </div>
   </div>
 </section>

@@ -12,6 +12,8 @@
 <script>
   import SkillCard from "../../../components/SkillCard"
   import NavBar from "../../../components/NavBar.svelte"
+  import Column from "../../../components/ui-kit/Column.svelte"
+  import Columns from "../../../components/ui-kit/Columns.svelte"
 
   export let courseName = null
   export let modules = null
@@ -28,24 +30,24 @@
   <section class="section">
     <div class="container">
       <h2 class="is-size-2">{title}</h2>
-      <div class="columns is-multiline">
+      <Columns multiline>
         {#each skills as skill}
-          <div class="column is-one-third-desktop is-half-tablet">
+          <Column sizeDesktop="one-third" sizeTablet="half">
+
             <SkillCard
               {...{ ...skill }}
               practiceHref="{`/course/${courseName}/skill/${skill.practiceHref}`}" />
-          </div>
+          </Column>
         {/each}
-      </div>
+      </Columns>
     </div>
   </section>
 {/each}
 
 <footer class="footer">
   <div class="content">
-
-    <div class="columns">
-      <div class="column">
+    <Columns>
+      <Column>
         <strong>LibreLingo</strong>
         by
         <a href="https://github.com/kantord">Dániel Kántor</a>
@@ -54,19 +56,17 @@
           various contributors
         </a>
         .
-      </div>
-      <div class="column">
+      </Column>
+      <Column>
         The source code is licensed
         <a href="https://opensource.org/licenses/AGPL-3.0">AGPL-3.0.</a>
         <br />
         <a href="https://github.com/kantord/LibreLingo">
           Source code available on GitHub.
         </a>
-      </div>
-      <div class="column">
-
-      </div>
-    </div>
+      </Column>
+      <Column />
+    </Columns>
     <p></p>
   </div>
 </footer>
