@@ -686,6 +686,48 @@
   }
 },
 {
+  "model": "course.learnword",
+  "pk": 58,
+  "fields": {
+    "skill": 13,
+    "meaningInSourceLanguage": "coffee",
+    "formInTargetLanguage": "caf\u00e9",
+    "meaningInSourceLanguage2": "a coffee",
+    "formInTargetLanguage2": "un caf\u00e9",
+    "image1": "coffee1",
+    "image2": "coffee2",
+    "image3": "coffee3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 59,
+  "fields": {
+    "skill": 13,
+    "meaningInSourceLanguage": "wine",
+    "formInTargetLanguage": "vino",
+    "meaningInSourceLanguage2": "the wine",
+    "formInTargetLanguage2": "el vino",
+    "image1": "wine1",
+    "image2": "wine2",
+    "image3": "wine3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 60,
+  "fields": {
+    "skill": 13,
+    "meaningInSourceLanguage": "beer",
+    "formInTargetLanguage": "cerveza",
+    "meaningInSourceLanguage2": "",
+    "formInTargetLanguage2": "",
+    "image1": "beer1",
+    "image2": "beer2",
+    "image3": "beer3"
+  }
+},
+{
   "model": "course.dictionaryitem",
   "pk": 1,
   "fields": {
@@ -3316,6 +3358,286 @@
   }
 },
 {
+  "model": "course.dictionaryitem",
+  "pk": 289,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Te",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 290,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "el",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 291,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "caf\u00e9",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 292,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "Do",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 293,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "coffee",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 294,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "I",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 295,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "don't",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 296,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "like",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 297,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "wine",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 298,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "No",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 299,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "me",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 300,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "gusta",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 301,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "el",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 302,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "vino",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 303,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "No",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 304,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "me",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 305,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "vino",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 306,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "don't",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 307,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "wine",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 308,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "no",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 309,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "carne",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 310,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "doesn't",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 311,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "meat",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 312,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Una",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 313,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "por",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 314,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "please",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 315,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "te",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 316,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "Don't",
+    "definition": ""
+  }
+},
+{
   "model": "course.learnsentence",
   "pk": 1,
   "fields": {
@@ -3793,6 +4115,96 @@
   }
 },
 {
+  "model": "course.learnsentence",
+  "pk": 54,
+  "fields": {
+    "skill": 13,
+    "meaningInSourceLanguage": "Do you like coffee?",
+    "formInTargetLanguage": "\u00bfTe gusta el caf\u00e9?"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 55,
+  "fields": {
+    "skill": 13,
+    "meaningInSourceLanguage": "I like pasta",
+    "formInTargetLanguage": "Me gusta la pasta"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 56,
+  "fields": {
+    "skill": 13,
+    "meaningInSourceLanguage": "I like beer",
+    "formInTargetLanguage": "Me gusta la cerveza"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 57,
+  "fields": {
+    "skill": 13,
+    "meaningInSourceLanguage": "I don't like wine",
+    "formInTargetLanguage": "No me gusta el vino"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 58,
+  "fields": {
+    "skill": 13,
+    "meaningInSourceLanguage": "He doesn't eat meat",
+    "formInTargetLanguage": "\u00c9l no come carne"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 59,
+  "fields": {
+    "skill": 13,
+    "meaningInSourceLanguage": "I drink wine",
+    "formInTargetLanguage": "Yo bebo vino"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 60,
+  "fields": {
+    "skill": 13,
+    "meaningInSourceLanguage": "Cecilia doesn't eat pasta",
+    "formInTargetLanguage": "Cecilia no come pasta"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 61,
+  "fields": {
+    "skill": 13,
+    "meaningInSourceLanguage": "A beer please!",
+    "formInTargetLanguage": "\u00a1Una cerveza, por favor!"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 62,
+  "fields": {
+    "skill": 13,
+    "meaningInSourceLanguage": "Do you like wine?",
+    "formInTargetLanguage": "\u00bfTe gusta el vino?"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 63,
+  "fields": {
+    "skill": 13,
+    "meaningInSourceLanguage": "Don't you like bread?",
+    "formInTargetLanguage": "\u00bfNo te gusta el pan?"
+  }
+},
+{
   "model": "course.course",
   "pk": 1,
   "fields": {
@@ -3828,6 +4240,15 @@
     "course": 2,
     "name": "Basics",
     "order": 1
+  }
+},
+{
+  "model": "course.module",
+  "pk": 5,
+  "fields": {
+    "course": 1,
+    "name": "Introduction",
+    "order": 2
   }
 },
 {
@@ -3960,6 +4381,18 @@
     "image1": null,
     "image2": null,
     "image3": null
+  }
+},
+{
+  "model": "course.skill",
+  "pk": 13,
+  "fields": {
+    "module": 5,
+    "name": "Preferences",
+    "order": 1,
+    "image1": "beer1",
+    "image2": "wine1",
+    "image3": "coffee3"
   }
 }
 ]
