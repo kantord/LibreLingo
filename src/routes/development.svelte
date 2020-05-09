@@ -3,6 +3,8 @@
   import Mascot from "../components/Mascot"
   import TwitterButton from "../components/TwitterButton"
   import GitHubButton from "../components/GitHubButton"
+  import Column from "../components/ui-kit/Column"
+  import Columns from "../components/ui-kit/Columns"
   import { _ } from "svelte-i18n"
 
   import shuffle from "lodash.shuffle"
@@ -43,13 +45,12 @@
   <div class="hero-body">
     <div class="container">
       <div class="columns project-introduction">
-        <div class="column is-one-third-desktop">
+        <Column size="one-third">
           <h1 class="title">
             <img src="images/logo.svg" alt="LibreLingo" />
           </h1>
-        </div>
-        <div class="column">
-
+        </Column>
+        <Column>
           <h2 class="subtitle">{$_('index.subtitle')}</h2>
           <div class="buttons">
             <a
@@ -67,93 +68,103 @@
             </a>
             <TwitterButton />
           </div>
-        </div>
+        </Column>
       </div>
     </div>
 
     <div class="container">
       <h2 class="is-size-2 is-size-3-mobile">Recent major new features</h2>
 
-      <div class="columns">
-        <div class="column is-one-quarter">
+      <Columns>
+        <Column size="one-quarter">
           <div class="mascot">
             <Mascot shadow="{false}" glow="{true}" />
           </div>
-        </div>
+        </Column>
 
-        <div class="column is-centered-both-ways">
-          <div>
-            <h3 class="is-size-3 is-size-4-mobile">
-              A new mascot designed by
-              <a
-                href="https://carolinedelesalle.com/"
-                target="_blank"
-                class="link">
-                Caroline Delesalle
-              </a>
-            </h3>
-            <p>
-              <a
-                href="https://github.com/kantord/LibreLingo/issues/367"
-                class="link">
-                Want to help naming it?
-              </a>
-            </p>
+        <Column>
+          <div class="is-centered-both-ways">
+            <div>
+              <h3 class="is-size-3 is-size-4-mobile">
+                A new mascot designed by
+                <a
+                  href="https://carolinedelesalle.com/"
+                  target="_blank"
+                  class="link">
+                  Caroline Delesalle
+                </a>
+              </h3>
+              <p>
+                <a
+                  href="https://github.com/kantord/LibreLingo/issues/367"
+                  class="link">
+                  Want to help naming it?
+                </a>
+              </p>
+            </div>
           </div>
-        </div>
-      </div>
+        </Column>
+      </Columns>
 
-      <div class="columns feature">
-        <div class="column has-text-centered is-centered-both-ways">
-          <h3 class="is-size-3">Spaced repetition</h3>
-        </div>
+      <Columns>
+        <Column>
+          <div class=" has-text-centered is-centered-both-ways">
+            <h3 class="is-size-3">Spaced repetition</h3>
+          </div>
+        </Column>
 
-        <div class="column is-one-third-tablet">
+        <Column sizeTablet="one-third">
           <img
             src="images/screenshot-spaced-repetition.png"
             alt=""
             class="screenshot" />
-        </div>
-      </div>
+        </Column>
+      </Columns>
 
-      <div class="columns feature reverse-column">
-        <div class="column is-one-third-tablet">
+      <Columns reversed>
+        <Column sizeTablet="one-third">
           <img
             src="images/screenshot-chips-challenge.png"
             alt=""
             class="screenshot" />
-        </div>
+        </Column>
 
-        <div class="column is-centered-both-ways">
-          <h3 class="is-size-3">Practice word order</h3>
-        </div>
-      </div>
+        <Column>
+          <div class="has-text-centered is-centered-both-ways">
+            <h3 class="is-size-3">Practice word order</h3>
+          </div>
+        </Column>
+      </Columns>
 
-      <div class="columns feature">
-        <div class="column has-text-centered is-centered-both-ways">
-          <h3 class="is-size-3">Course editor</h3>
-        </div>
+      <Columns>
+        <Column>
+          <div class="has-text-centered is-centered-both-ways">
+            <h3 class="is-size-3">Course editor</h3>
+          </div>
+        </Column>
 
-        <div class="column is-one-third-tablet">
+        <Column sizeTablet="one-third">
           <img
             src="images/screenshot-course-editor.png"
             alt=""
             class="screenshot" />
-        </div>
-      </div>
+        </Column>
+      </Columns>
 
-      <div class="columns feature reverse-column">
-        <div class="column is-one-third-tablet">
+      <Columns reversed="">
+        <Column sizeTablet="one-third">
           <img
             src="images/screenshot-dictionary.png"
             alt=""
             class="screenshot" />
-        </div>
+        </Column>
 
-        <div class="column is-centered-both-ways">
-          <h3 class="is-size-3">Built-in mini-dictionary</h3>
-        </div>
-      </div>
+        <Column>
+          <div class="has-text-centered is-centered-both-ways">
+            <h3 class="is-size-3">Built-in mini-dictionary</h3>
+          </div>
+        </Column>
+      </Columns>
 
       <div class="development-progress">
         <h3 class="is-size-3">Progress towards alpha release</h3>
@@ -248,6 +259,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100%;
   }
 
   .development-progress {
@@ -281,11 +293,6 @@
     .mascot {
       width: 45%;
       margin: auto;
-    }
-
-    .reverse-column {
-      flex-direction: column-reverse;
-      display: flex;
     }
 
     .columns {
