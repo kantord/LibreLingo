@@ -1,6 +1,6 @@
 import db from "../db"
 
-export default async ({ id }) => {
+export default async ({ id, correct, incorrect }) => {
     const _id = `skills/${id}`
     try {
         const doc = await db.get(_id)
@@ -9,7 +9,9 @@ export default async ({ id }) => {
             practiced: [
                 ...(doc.practiced || []),
                 {
-                    at: new Date().valueOf()
+                    at: new Date().valueOf(),
+                    correct,
+                    incorrect
                 }
             ]
         })
@@ -18,7 +20,9 @@ export default async ({ id }) => {
             _id,
             practiced: [
                 {
-                    at: new Date().valueOf()
+                    at: new Date().valueOf(),
+                    correct,
+                    incorrect
                 }
             ]
         })
