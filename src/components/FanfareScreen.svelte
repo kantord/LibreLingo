@@ -1,6 +1,7 @@
 <script>
   import { scale } from "svelte/transition"
   import db from "../db/db"
+  import savePractice from "../db/skill/savePractice"
   import sound from "../media/sound"
   import hotkeys from "hotkeys-js"
   import { onMount } from "svelte"
@@ -19,30 +20,8 @@
     sound.fanfare.play()
   })
 
-  onMount(() => {
-    const _id = `skills/${skillId}`
-    db.get(_id)
-      .then(function(doc) {
-        db.put({
-          ...doc,
-          practiced: [
-            ...(doc.practiced || []),
-            {
-              at: new Date().valueOf()
-            }
-          ]
-        })
-      })
-      .catch(function() {
-        db.put({
-          _id,
-          practiced: [
-            {
-              at: new Date().valueOf()
-            }
-          ]
-        })
-      })
+  onMount(async () => {
+    await savePractice({ id: skillId })
   })
 
   onMount(() => {
