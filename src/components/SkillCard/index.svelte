@@ -1,6 +1,5 @@
 <script>
-  import db from "../../db/db"
-  import { isStale } from "./logic"
+  import getSkillStats from "../../db/skill/getSkillStats"
   import Icon from "../Icon"
   import Button from "../ui-kit/Button"
 
@@ -13,16 +12,10 @@
   let completed = null
   let stale = null
 
-  db &&
-    db
-      .get(`skills/${id}`)
-      .then(function(doc) {
-        completed = doc.practiced.length >= 1
-        stale = isStale({ practices: doc.practiced })
-      })
-      .catch(function(error) {
-        completed = false
-      })
+  getSkillStats({ id }).then(stats => {
+    completed = stats.completed
+    stale = stats.stale
+  })
 </script>
 
 <div class="card" data-completed="{completed}" data-stale="{stale}">
