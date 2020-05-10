@@ -4,7 +4,7 @@ import {
     wouldBeStale,
     getLastPractice,
     isStale
-} from "./logic"
+} from "./_logic"
 
 const today = dayjs()
 const yesterday = dayjs().subtract(1, "day")
