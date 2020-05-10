@@ -12,10 +12,12 @@
   let completed = null
   let stale = null
 
-  getSkillStats({ id }).then(stats => {
-    completed = stats.completed
-    stale = stats.stale
-  })
+  getSkillStats({ id })
+    .then(stats => {
+      completed = stats.completed
+      stale = stats.stale
+    })
+    .catch(() => {})
 </script>
 
 <div class="card" data-completed="{completed}" data-stale="{stale}">
