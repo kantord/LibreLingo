@@ -3394,7 +3394,7 @@
     "course": 1,
     "reverse": true,
     "word": "Do",
-    "definition": ""
+    "definition": "hacer"
   }
 },
 {
@@ -3404,7 +3404,7 @@
     "course": 1,
     "reverse": true,
     "word": "coffee",
-    "definition": ""
+    "definition": "caf\u00e9"
   }
 },
 {
@@ -3454,7 +3454,7 @@
     "course": 1,
     "reverse": true,
     "word": "No",
-    "definition": ""
+    "definition": "no"
   }
 },
 {
@@ -3464,7 +3464,7 @@
     "course": 1,
     "reverse": true,
     "word": "me",
-    "definition": ""
+    "definition": "me"
   }
 },
 {
@@ -3484,7 +3484,7 @@
     "course": 1,
     "reverse": true,
     "word": "el",
-    "definition": ""
+    "definition": "the"
   }
 },
 {
@@ -3494,7 +3494,7 @@
     "course": 1,
     "reverse": true,
     "word": "vino",
-    "definition": ""
+    "definition": "wine"
   }
 },
 {
@@ -3534,7 +3534,7 @@
     "course": 1,
     "reverse": true,
     "word": "don't",
-    "definition": ""
+    "definition": "no"
   }
 },
 {
@@ -3544,7 +3544,7 @@
     "course": 1,
     "reverse": true,
     "word": "wine",
-    "definition": ""
+    "definition": "vino"
   }
 },
 {
@@ -3574,7 +3574,7 @@
     "course": 1,
     "reverse": true,
     "word": "doesn't",
-    "definition": ""
+    "definition": "no"
   }
 },
 {
@@ -3584,7 +3584,7 @@
     "course": 1,
     "reverse": true,
     "word": "meat",
-    "definition": ""
+    "definition": "carne"
   }
 },
 {
@@ -3614,7 +3614,7 @@
     "course": 1,
     "reverse": true,
     "word": "please",
-    "definition": ""
+    "definition": "por favor"
   }
 },
 {
@@ -3634,7 +3634,287 @@
     "course": 1,
     "reverse": true,
     "word": "Don't",
+    "definition": "no"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 317,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Buenos",
     "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 318,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "d\u00edas",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 319,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "Good",
+    "definition": "buen\r\nbueno\r\nbuena"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 320,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "morning",
+    "definition": "ma\u00f1ana\r\nd\u00eda\r\nd\u00edas"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 323,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "soy",
+    "definition": "I am"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 324,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "llamo",
+    "definition": "call"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 325,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "My",
+    "definition": "mi"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 326,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "name",
+    "definition": "nombre"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 327,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Qu\u00e9",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 328,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "tal",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 329,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "pasa",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 330,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "What\u2019s",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 331,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "up",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 332,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Mucho",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 333,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "gusto",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 334,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "Nice",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 335,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "meet",
+    "definition": "conocer"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 336,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Hasta",
+    "definition": "until"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 337,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "luego",
+    "definition": "later"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 338,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "See",
+    "definition": "ver\r\nveo\r\nvea\r\nvemos"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 339,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "later",
+    "definition": "m\u00e1s tarde\r\nluego"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 340,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "C\u00f3mo",
+    "definition": "how"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 341,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "llamas",
+    "definition": "called"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 342,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Buenas",
+    "definition": "good"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 343,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "tardes",
+    "definition": "evenings"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 344,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "evening",
+    "definition": "tarde"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 345,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "noches",
+    "definition": "nights"
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 346,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "night",
+    "definition": "noche"
   }
 },
 {
@@ -3894,8 +4174,8 @@
   "pk": 29,
   "fields": {
     "skill": 9,
-    "meaningInSourceLanguage": "Marina drinks beer",
-    "formInTargetLanguage": "Marina bebe cerveza"
+    "meaningInSourceLanguage": "Maria drinks beer",
+    "formInTargetLanguage": "Maria bebe cerveza"
   }
 },
 {
@@ -4205,6 +4485,96 @@
   }
 },
 {
+  "model": "course.learnsentence",
+  "pk": 64,
+  "fields": {
+    "skill": 14,
+    "meaningInSourceLanguage": "Good morning!",
+    "formInTargetLanguage": "\u00a1Buenos d\u00edas!"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 65,
+  "fields": {
+    "skill": 14,
+    "meaningInSourceLanguage": "Good morning, I am Cecilia!",
+    "formInTargetLanguage": "Good morning, soy Cecilia!"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 66,
+  "fields": {
+    "skill": 14,
+    "meaningInSourceLanguage": "My name is Jos\u00e9",
+    "formInTargetLanguage": "Me llamo Jos\u00e9"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 67,
+  "fields": {
+    "skill": 14,
+    "meaningInSourceLanguage": "How are you?",
+    "formInTargetLanguage": "\u00bfQu\u00e9 tal?"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 68,
+  "fields": {
+    "skill": 14,
+    "meaningInSourceLanguage": "What\u2019s up?",
+    "formInTargetLanguage": "\u00bfQu\u00e9 pasa?"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 69,
+  "fields": {
+    "skill": 14,
+    "meaningInSourceLanguage": "Nice to meet you",
+    "formInTargetLanguage": "Mucho gusto"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 70,
+  "fields": {
+    "skill": 14,
+    "meaningInSourceLanguage": "See you later!",
+    "formInTargetLanguage": "\u00a1Hasta luego!"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 71,
+  "fields": {
+    "skill": 14,
+    "meaningInSourceLanguage": "What\u2019s your name?",
+    "formInTargetLanguage": "\u00bfC\u00f3mo te llamas?"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 72,
+  "fields": {
+    "skill": 14,
+    "meaningInSourceLanguage": "Good evening!",
+    "formInTargetLanguage": "\u00a1Buenas tardes!"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 73,
+  "fields": {
+    "skill": 14,
+    "meaningInSourceLanguage": "Good night, Jos\u00e9!",
+    "formInTargetLanguage": "\u00a1Buenas noches, Jos\u00e9!"
+  }
+},
+{
   "model": "course.course",
   "pk": 1,
   "fields": {
@@ -4393,6 +4763,18 @@
     "image1": "beer1",
     "image2": "wine1",
     "image3": "coffee3"
+  }
+},
+{
+  "model": "course.skill",
+  "pk": 14,
+  "fields": {
+    "module": 5,
+    "name": "Phrases",
+    "order": 0,
+    "image1": null,
+    "image2": null,
+    "image3": null
   }
 }
 ]
