@@ -1,30 +1,28 @@
 import db from "../db"
 
-export default async ({ id, correct, incorrect }) => {
-    const _id = `skills/${id}`
+const getCurrentData = async _id => {
     try {
-        const doc = await db.get(_id)
-        await db.put({
-            ...doc,
-            practiced: [
-                ...(doc.practiced || []),
-                {
-                    at: new Date().valueOf(),
-                    correct,
-                    incorrect
-                }
-            ]
-        })
+        return await db.get(_id)
     } catch {
-        await db.put({
+        return {
             _id,
-            practiced: [
-                {
-                    at: new Date().valueOf(),
-                    correct,
-                    incorrect
-                }
-            ]
-        })
+            practiced: []
+        }
     }
+}
+
+export default async ({ id, correct, incorrect }) => {
+    const doc = await getCurrentData(`skills/${id}`)
+
+    await db.put({
+        ...doc,
+        practiced: [
+            ...doc.practiced,
+            {
+                at: new Date().valueOf(),
+                correct,
+                incorrect
+            }
+        ]
+    })
 }
