@@ -1,6 +1,6 @@
 <script>
   import { scale } from "svelte/transition"
-  import db from "../db"
+  import db from "../db/db"
   import sound from "../media/sound"
   import hotkeys from "hotkeys-js"
   import { onMount } from "svelte"

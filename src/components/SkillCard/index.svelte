@@ -1,5 +1,5 @@
 <script>
-  import db from "../../db"
+  import db from "../../db/db"
   import { isStale } from "./logic"
   import Icon from "../Icon"
   import Button from "../ui-kit/Button"
