@@ -69,3 +69,15 @@ Then("I see a completed skill", () => {
     cy.get("[data-completed=true][data-stale=false]").should("have.length", 1)
     cy.get(".svg-inline--fa").should("be.visible")
 })
+
+Given("practice statistics are saved correctly", () => {
+    cy.window().then(window => {
+        const db = window._DB
+        cy.wrap(null).then(() => {
+            return db.get("skills/434d43b3").then(doc => {
+                cy.wrap(doc.practiced[0].incorrect).should("equal", 0)
+                cy.wrap(doc.practiced[0].correct).should("equal", 1)
+            })
+        })
+    })
+})

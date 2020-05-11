@@ -22,6 +22,10 @@
   let currentChallenge = remainingChallenges.shift()
   let solvedChallenges = []
   let progress = 0
+  let stats = {
+    correct: 0,
+    incorrect: 0
+  }
 
   const preloadImage = imageName => {
     if (typeof Image === "undefined") return
@@ -38,9 +42,11 @@
 
   $: registerResult = isCorrect => {
     if (isCorrect) {
+      stats.correct++
       sound.correct.play()
       solvedChallenges.push(currentChallenge)
     } else {
+      stats.incorrect++
       sound.wrong.play()
       remainingChallenges.push(currentChallenge)
     }
@@ -110,7 +116,7 @@
 
 {#if !currentChallenge}
   <div class="container">
-    <FanfareScreen {courseURL} {rawChallenges} {skillId} />
+    <FanfareScreen {courseURL} {rawChallenges} {skillId} {stats} />
   </div>
 {/if}
 

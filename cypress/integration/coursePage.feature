@@ -18,7 +18,8 @@ Feature: Course page
 
   Scenario: Opening course page with a completed skill
     Given I complete a lesson
-    Then I'm redirected to the course page
+    Then practice statistics are saved correctly
+    And I'm redirected to the course page
     And I see a completed skill
     And course page with a completed skill looks correct
     And I see 3 skills that are not completed
