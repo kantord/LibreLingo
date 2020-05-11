@@ -62,7 +62,7 @@ class SkillInline(SortableInlineAdminMixin, admin.StackedInline):
         return mark_safe(
             '<a href="%s">Edit</a>' %
             ("/admin/course/course/%s/module/%s/skill/%s/change/" %
-             (obj.module.id, obj.module.id, obj.id)))
+             (obj.module.course.id, obj.module.id, obj.id)))
 
 
 class LearnWordInline(admin.TabularInline):
