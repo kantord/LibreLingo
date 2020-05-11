@@ -15,13 +15,14 @@
   export let rawChallenges
   export let courseURL
   export let skillId
+  export let stats
 
   onMount(async () => {
     sound.fanfare.play()
   })
 
   onMount(async () => {
-    await savePractice({ id: skillId })
+    await savePractice({ id: skillId, ...stats })
   })
 
   onMount(() => {
