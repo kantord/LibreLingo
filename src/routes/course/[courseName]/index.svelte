@@ -1,11 +1,11 @@
 <script context="module">
   export async function preload(page, session) {
-    const { courseName } = page.params
-    const { modules, languageName } = await import(
-      `../../../courses/${courseName}/courseData.json`
-    )
+      const { courseName } = page.params
+      const { modules, languageName } = await import(
+          `../../../courses/${courseName}/courseData.json`
+      )
 
-    return { courseName, modules, languageName }
+      return { courseName, modules, languageName }
   }
 </script>
 
