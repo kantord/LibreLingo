@@ -15,6 +15,9 @@ class LearnWord(models.Model):
     class Meta:
         verbose_name = "Learn a new word"
 
+    def __str__(self):
+        return self.formInTargetLanguage
+
     def clean(self):
         if (not self.meaningInSourceLanguage2 and self.formInTargetLanguage2) or (
                 not self.formInTargetLanguage2 and self.meaningInSourceLanguage2):
@@ -53,6 +56,9 @@ class LearnSentence(models.Model):
     class Meta:
         verbose_name = "Learn a new sentence"
 
+    def __str__(self):
+        return self.formInTargetLanguage
+
     def ensure_word(self, word, reverse):
         course = self.skill.module.course
         try:
@@ -80,16 +86,30 @@ class LearnSentence(models.Model):
         verbose_name="Meaning in target language")
 
 
-class AlternativeSolution(models.Model):
+class AlternativeSolutionInSourceLanguage(models.Model):
     class Meta:
-        verbose_name = "Alternative solution"
-        unique_together = ('sentence', 'word', 'reverse', 'solution')
+        verbose_name = "Alternative solution in source language"
+        verbose_name_plural = "Alternative solutions in source language"
+        unique_together = ('sentence', 'word', 'solution')
 
     sentence = models.ForeignKey(
         'LearnSentence', on_delete=models.CASCADE, null=True, blank=True)
     word = models.ForeignKey(
         'LearnWord', on_delete=models.CASCADE, null=True, blank=True)
-    reverse = models.BooleanField()
+    solution = models.TextField(
+        verbose_name="Alternative solution")
+
+
+class AlternativeSolutionInTargetLanguage(models.Model):
+    class Meta:
+        verbose_name = "Alternative solution in target language"
+        verbose_name_plural = "Alternative solutions in target language"
+        unique_together = ('sentence', 'word', 'solution')
+
+    sentence = models.ForeignKey(
+        'LearnSentence', on_delete=models.CASCADE, null=True, blank=True)
+    word = models.ForeignKey(
+        'LearnWord', on_delete=models.CASCADE, null=True, blank=True)
     solution = models.TextField(
         verbose_name="Alternative solution")
 
