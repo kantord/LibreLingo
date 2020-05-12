@@ -12,6 +12,7 @@ from .models import Course
 from .models import Module
 from .models import DictionaryItem
 from .models import Skill
+from .models import AlternativeSolution
 
 
 class SkillForm(forms.ModelForm):
@@ -33,8 +34,17 @@ class LearnSentenceForm(forms.ModelForm):
         }
 
 
-class LearnSentenceAdmin(admin.ModelAdmin):
+class AlternativeSolutionInline(admin.TabularInline):
+    model = AlternativeSolution
+    show_change_link = True
+
+
+class LearnSentenceAdmin(SubAdmin):
+    inlines = [
+        AlternativeSolutionInline
+    ]
     form = LearnSentenceForm
+    model = LearnSentence
     list_display = ('formInTargetLanguage', )
 
 
@@ -75,12 +85,22 @@ class LearnSentenceInline(admin.TabularInline):
     model = LearnSentence
     form = LearnSentenceForm
     show_change_link = True
+    readonly_fields = ('change_link',)
+
+    def change_link(self, obj):
+        if not obj.id:
+            return ""
+        return mark_safe(
+            '<a href="%s">Edit</a>' %
+            ("/admin/course/course/%s/module/%s/skill/%s/learnsentence/%s/change/" %
+             (obj.skill.module.course.id, obj.skill.module.id, obj.skill.id, obj.id, )))
 
 
 class SkillAdmin(SubAdmin):
     inlines = [
         LearnWordInline, LearnSentenceInline
     ]
+    subadmins = [LearnSentenceAdmin]
     model = Skill
     form = SkillForm
     list_display = ('name', )
