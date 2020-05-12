@@ -16,32 +16,32 @@
   let submitted = false
 
   $: options = prepareChallenge({
-    currentChallenge,
-    alternativeChallenges,
-    typeToSelect: "cards",
-    hasFakeOption: true
+      currentChallenge,
+      alternativeChallenges,
+      typeToSelect: "cards",
+      hasFakeOption: true
   })
 
   $: finishChallenge = () => {
-    selectedOption = null
-    submitted = false
-    resolveChallenge()
+      selectedOption = null
+      submitted = false
+      resolveChallenge()
   }
 
   $: submitChallenge = () => {
-    registerResult(options[selectedOption].correct)
-    submitted = true
+      registerResult(options[selectedOption].correct)
+      submitted = true
   }
 
   onMount(() => {
-    hotkeys.unbind("enter")
-    hotkeys("enter", () => {
-      if (submitted) {
-        finishChallenge()
-      } else {
-        submitChallenge()
-      }
-    })
+      hotkeys.unbind("enter")
+      hotkeys("enter", () => {
+          if (submitted) {
+              finishChallenge()
+          } else {
+              submitChallenge()
+          }
+      })
   })
 </script>
 

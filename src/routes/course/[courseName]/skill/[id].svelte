@@ -1,25 +1,25 @@
 <script context="module">
   export async function preload(page, session) {
-    const { id, courseName } = page.params
-    const { languageName, languageCode, specialCharacters } = await import(
-      `../../../../courses/${courseName}/courseData.json`
-    )
-    const skillData = await import(
-      `../../../../courses/${courseName}/challenges/${id}.json`
-    )
+      const { id, courseName } = page.params
+      const { languageName, languageCode, specialCharacters } = await import(
+          `../../../../courses/${courseName}/courseData.json`
+      )
+      const skillData = await import(
+          `../../../../courses/${courseName}/challenges/${id}.json`
+      )
 
-    const rawChallenges = skillData.challenges
-    const skillId = skillData.id
+      const rawChallenges = skillData.challenges
+      const skillId = skillData.id
 
-    return {
-      rawChallenges: Array.from(rawChallenges),
-      languageName,
-      languageCode,
-      specialCharacters,
-      id,
-      skillId,
-      courseURL: `/course/${courseName}`
-    }
+      return {
+          rawChallenges: Array.from(rawChallenges),
+          languageName,
+          languageCode,
+          specialCharacters,
+          id,
+          skillId,
+          courseURL: `/course/${courseName}`
+      }
   }
 </script>
 
