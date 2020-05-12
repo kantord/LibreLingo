@@ -80,16 +80,16 @@ class LearnSentence(models.Model):
         verbose_name="Meaning in target language")
 
 
-class AlternativeSolution(models.Model):
+class AlternativeSolutionInSourceLanguage(models.Model):
     class Meta:
-        verbose_name = "Alternative solution"
-        unique_together = ('sentence', 'word', 'reverse', 'solution')
+        verbose_name = "Alternative solution in source language"
+        verbose_name_plural = "Alternative solutions in source language"
+        unique_together = ('sentence', 'word', 'solution')
 
     sentence = models.ForeignKey(
         'LearnSentence', on_delete=models.CASCADE, null=True, blank=True)
     word = models.ForeignKey(
         'LearnWord', on_delete=models.CASCADE, null=True, blank=True)
-    reverse = models.BooleanField()
     solution = models.TextField(
         verbose_name="Alternative solution")
 
