@@ -3,9 +3,10 @@ Feature: Chips challenge
   A challenge type where the user has to reorder chips to form a correct sentence
 
   Scenario: Getting a chips challenge
-    Given I open "/course/test/skill/_chips_test0"
+    Given I open "/course/test/skill/_chips_test1"
     Then chips challenge looks correct
-    And I read "Translate"
+    Given I open "/course/test/skill/_chips_test0"
+    Then I read "Translate"
     And I read "How"
     And I read "are"
     And I read "you"
