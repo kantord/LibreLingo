@@ -12,7 +12,7 @@
     }
   }
 
-  const focusMe = el => {
+  const focusMe = (el) => {
     setTimeout(() => {
       if (el.disabled) {
         el.blur()
@@ -46,7 +46,7 @@
     }
   }
 
-  const handleVirtualKey = character => () => {
+  const handleVirtualKey = (character) => () => {
     inputFieldRef.focus()
     insertAtCaret(inputFieldRef, character)
     value = inputFieldRef.value
