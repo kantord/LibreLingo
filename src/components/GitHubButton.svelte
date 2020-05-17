@@ -4,7 +4,7 @@
 
     const { stargazers_count } = await repo.json()
     return {
-      stargazers_count
+      stargazers_count,
     }
   }
 </script>
@@ -26,7 +26,7 @@
     pMemoize(fetch, { maxAge: 5 * 60 * 1000 })(
       "https://api.github.com/repos/kantord/LibreLingo"
     )
-      .then(res => res.json())
+      .then((res) => res.json())
       .then(({ stargazers_count }) => {
         stars = stargazers_count
         if (process.browser === true) {

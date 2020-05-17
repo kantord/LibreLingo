@@ -13,7 +13,7 @@ if (process.env.JEST_WORKER_ID !== undefined) {
     db.__reset = async () => {
         const allDocs = await db.allDocs()
         await Promise.all(
-            allDocs.rows.map(function(row) {
+            allDocs.rows.map(function (row) {
                 return db.remove(row.id, row.value.rev)
             })
         )

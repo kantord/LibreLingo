@@ -5,7 +5,7 @@
   import ChallengePanel from "./ChallengePanel"
   import Phrase from "./Phrase"
 
-  const swapArrayElements = function(arr, indexA, indexB) {
+  const swapArrayElements = function (arr, indexA, indexB) {
     const temp = arr[indexA]
     const new_arr = [...arr]
     new_arr[indexA] = arr[indexB]
@@ -13,16 +13,16 @@
     return new_arr
   }
 
-  const sortable = function(node, { items, options }) {
+  const sortable = function (node, { items, options }) {
     options = Object.assign(options, {
       onUpdate({ newIndex, oldIndex }) {
-        items.update(oldItems =>
+        items.update((oldItems) =>
           swapArrayElements(oldItems, oldIndex, newIndex)
         )
       },
 
       onRemove({ oldIndex }) {
-        items.update(oldItems => {
+        items.update((oldItems) => {
           const newItems = [...oldItems]
           newItems.splice(oldIndex, 1)
           return newItems
@@ -30,12 +30,12 @@
       },
 
       onAdd({ newIndex, item }) {
-        items.update(oldItems => {
+        items.update((oldItems) => {
           const newItems = [...oldItems]
           newItems.splice(newIndex, 0, item.innerText)
           return newItems
         })
-      }
+      },
     })
 
     let sortable = new Sortable(node, options)
@@ -47,7 +47,7 @@
       },
       destroy() {
         sortable.destroy()
-      }
+      },
     }
   }
 

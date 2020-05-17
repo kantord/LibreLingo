@@ -26,7 +26,7 @@
     if (submitted) return
     correct = false
 
-    challenge.formInTargetLanguage.forEach(form => {
+    challenge.formInTargetLanguage.forEach((form) => {
       if (
         levenshtein(
           answer
