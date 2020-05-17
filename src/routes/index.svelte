@@ -19,7 +19,7 @@
   <div class="hero-body">
     <div class="container">
       <Columns>
-        <Column size="one-quarter">
+        <Column size="1/4">
           <div class="mascot">
             <Mascot shadow="{false}" glow="{true}" />
           </div>

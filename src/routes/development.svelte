@@ -45,7 +45,7 @@
   <div class="hero-body">
     <div class="container">
       <div class="columns project-introduction">
-        <Column size="one-third">
+        <Column size="1/3">
           <h1 class="title">
             <img src="images/logo.svg" alt="LibreLingo" />
           </h1>
@@ -76,7 +76,7 @@
       <h2 class="is-size-2 is-size-3-mobile">Recent major new features</h2>
 
       <Columns>
-        <Column size="one-quarter">
+        <Column size="1/4">
           <div class="mascot">
             <Mascot shadow="{false}" glow="{true}" />
           </div>
@@ -113,7 +113,7 @@
           </div>
         </Column>
 
-        <Column sizeTablet="one-third">
+        <Column sizeTablet="1/3">
           <img
             src="images/screenshot-spaced-repetition.png"
             alt=""
@@ -122,7 +122,7 @@
       </Columns>
 
       <Columns reversed>
-        <Column sizeTablet="one-third">
+        <Column sizeTablet="1/3">
           <img
             src="images/screenshot-chips-challenge.png"
             alt=""
@@ -143,7 +143,7 @@
           </div>
         </Column>
 
-        <Column sizeTablet="one-third">
+        <Column sizeTablet="1/3">
           <img
             src="images/screenshot-course-editor.png"
             alt=""
@@ -152,7 +152,7 @@
       </Columns>
 
       <Columns reversed="">
-        <Column sizeTablet="one-third">
+        <Column sizeTablet="1/3">
           <img
             src="images/screenshot-dictionary.png"
             alt=""
