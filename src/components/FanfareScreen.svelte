@@ -37,7 +37,7 @@
   <div class="hero-body">
     <div class="container" in:scale>
       <Columns>
-        <Column size="three-fifths">
+        <Column size="3/5">
           <div class="mascot">
             <Mascot />
           </div>

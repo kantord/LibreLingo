@@ -1,11 +1,11 @@
 <script context="module">
   export async function preload(page, session) {
-      const { courseName } = page.params
-      const { modules, languageName } = await import(
-          `../../../courses/${courseName}/courseData.json`
-      )
+    const { courseName } = page.params
+    const { modules, languageName } = await import(
+      `../../../courses/${courseName}/courseData.json`
+    )
 
-      return { courseName, modules, languageName }
+    return { courseName, modules, languageName }
   }
 </script>
 
@@ -32,7 +32,7 @@
       <h2 class="is-size-2">{title}</h2>
       <Columns multiline>
         {#each skills as skill}
-          <Column sizeDesktop="one-third" sizeTablet="half">
+          <Column sizeDesktop="1/3" sizeTablet="1/2">
 
             <SkillCard
               {...{ ...skill }}
