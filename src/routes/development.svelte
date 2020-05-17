@@ -3,6 +3,8 @@
   import Mascot from "../components/Mascot"
   import TwitterButton from "../components/TwitterButton"
   import GitHubButton from "../components/GitHubButton"
+  import Column from "../components/ui-kit/Column"
+  import Columns from "../components/ui-kit/Columns"
   import { _ } from "svelte-i18n"
 
   import shuffle from "lodash.shuffle"
@@ -43,13 +45,12 @@
   <div class="hero-body">
     <div class="container">
       <div class="columns project-introduction">
-        <div class="column is-one-third-desktop">
+        <Column size="one-third">
           <h1 class="title">
             <img src="images/logo.svg" alt="LibreLingo" />
           </h1>
-        </div>
-        <div class="column">
-
+        </Column>
+        <Column>
           <h2 class="subtitle">{$_('index.subtitle')}</h2>
           <div class="buttons">
             <a
@@ -67,14 +68,14 @@
             </a>
             <TwitterButton />
           </div>
-        </div>
+        </Column>
       </div>
     </div>
 
     <div class="container">
       <h2 class="is-size-2 is-size-3-mobile">Recent major new features</h2>
 
-      <div class="columns">
+      <Columns>
         <div class="column is-one-quarter">
           <div class="mascot">
             <Mascot shadow="{false}" glow="{true}" />
@@ -101,9 +102,9 @@
             </p>
           </div>
         </div>
-      </div>
+      </Columns>
 
-      <div class="columns feature">
+      <Columns>
         <div class="column has-text-centered is-centered-both-ways">
           <h3 class="is-size-3">Spaced repetition</h3>
         </div>
@@ -114,9 +115,9 @@
             alt=""
             class="screenshot" />
         </div>
-      </div>
+      </Columns>
 
-      <div class="columns feature reverse-column">
+      <Columns reversed>
         <div class="column is-one-third-tablet">
           <img
             src="images/screenshot-chips-challenge.png"
@@ -127,12 +128,14 @@
         <div class="column is-centered-both-ways">
           <h3 class="is-size-3">Practice word order</h3>
         </div>
-      </div>
+      </Columns>
 
-      <div class="columns feature">
-        <div class="column has-text-centered is-centered-both-ways">
-          <h3 class="is-size-3">Course editor</h3>
-        </div>
+      <Columns>
+        <Column>
+          <div class="has-text-centered is-centered-both-ways">
+            <h3 class="is-size-3">Course editor</h3>
+          </div>
+        </Column>
 
         <div class="column is-one-third-tablet">
           <img
@@ -140,7 +143,8 @@
             alt=""
             class="screenshot" />
         </div>
-      </div>
+
+      </Columns>
 
       <div class="columns feature reverse-column">
         <div class="column is-one-third-tablet">
@@ -281,11 +285,6 @@
     .mascot {
       width: 45%;
       margin: auto;
-    }
-
-    .reverse-column {
-      flex-direction: column-reverse;
-      display: flex;
     }
 
     .columns {
