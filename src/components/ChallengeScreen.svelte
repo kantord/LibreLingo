@@ -24,10 +24,10 @@
   let progress = 0
   let stats = {
     correct: 0,
-    incorrect: 0
+    incorrect: 0,
   }
 
-  const preloadImage = imageName => {
+  const preloadImage = (imageName) => {
     if (typeof Image === "undefined") return
     new Image().src = `images/${imageName}`
   }
@@ -40,7 +40,7 @@
     currentChallenge &&
     challenges.filter(({ id }) => id !== currentChallenge.id)
 
-  $: registerResult = isCorrect => {
+  $: registerResult = (isCorrect) => {
     if (isCorrect) {
       stats.correct++
       sound.correct.play()

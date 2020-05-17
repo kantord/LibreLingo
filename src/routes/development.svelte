@@ -12,9 +12,9 @@
 
   if (process.browser === true) {
     fetch(API_URL)
-      .then(res => res.json())
+      .then((res) => res.json())
       .then(
-        res =>
+        (res) =>
           (issues = shuffle(res)
             .filter(
               ({ state, pull_request, labels }) =>
