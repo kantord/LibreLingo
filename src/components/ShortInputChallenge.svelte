@@ -85,7 +85,7 @@
         disabled="{submitted}"
         bind:value="{answer}" />
     </Column>
-    <Column size="one-fourth">
+    <Column>
       <div class="card">
         <div class="card-image">
           <figure class="image is-1by1">
