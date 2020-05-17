@@ -69,17 +69,17 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Good morning, soy Cecilia!",
-      "meaningInSourceLanguage": "Good morning, I am Cecilia!",
+      "formInTargetLanguage": "Buenos días, yo soy Cecilia.",
+      "meaningInSourceLanguage": "Good morning, I am Cecilia.",
       "id": "8b0ccbc28655",
       "priority": 0,
       "group": "6a6bb538f7be"
     },
     {
       "type": "listeningExercise",
-      "answer": "Good morning, soy Cecilia!",
-      "meaning": "Good morning, I am Cecilia!",
-      "audio": "ab5d3d28fbd507003492dfc7b1690a724b3474c54e428d04c558b04e811131ac",
+      "answer": "Buenos días, yo soy Cecilia.",
+      "meaning": "Good morning, I am Cecilia.",
+      "audio": "505108e85d4ef00bc18b32f53a897a157d97153d919e8aba70970139d4bcbe02",
       "id": "fd24dea82123",
       "priority": 1,
       "group": "6a6bb538f7be"
@@ -104,22 +104,24 @@
           "definition": "soy"
         },
         {
-          "word": "Cecilia!"
+          "word": "Cecilia."
         }
       ],
       "chips": [
-        "Good",
-        "morning",
+        "Buenos",
+        "días",
+        "yo",
         "soy",
         "Cecilia"
       ],
       "solution": [
-        "Good",
-        "morning",
+        "Buenos",
+        "días",
+        "yo",
         "soy",
         "Cecilia"
       ],
-      "formattedSolution": "Good morning, soy Cecilia!",
+      "formattedSolution": "Buenos días, yo soy Cecilia.",
       "id": "f25213bcda4d",
       "priority": 2,
       "group": "6a6bb538f7be"
@@ -129,17 +131,20 @@
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Good"
+          "word": "Buenos"
         },
         {
-          "word": "morning,"
+          "word": "días,"
+        },
+        {
+          "word": "yo"
         },
         {
           "word": "soy",
           "definition": "I am"
         },
         {
-          "word": "Cecilia!"
+          "word": "Cecilia."
         }
       ],
       "chips": [
@@ -156,14 +161,14 @@
         "am",
         "Cecilia"
       ],
-      "formattedSolution": "Good morning, I am Cecilia!",
+      "formattedSolution": "Good morning, I am Cecilia.",
       "id": "f25213bcda4d",
       "priority": 2,
       "group": "6a6bb538f7be"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Me llamo José",
+      "formInTargetLanguage": "Yo me llamo José",
       "meaningInSourceLanguage": "My name is José",
       "id": "3cb756599292",
       "priority": 0,
@@ -171,9 +176,9 @@
     },
     {
       "type": "listeningExercise",
-      "answer": "Me llamo José",
+      "answer": "Yo me llamo José",
       "meaning": "My name is José",
-      "audio": "ed6d18fc51cd92a470b1473ee49c196b8181cde98873b84475416acd03cd0a3e",
+      "audio": "30df4bd4de133e35d3588492dc426b2f07c328a7408298b76d3397ae978a4c1d",
       "id": "26c31fb5e6ac",
       "priority": 1,
       "group": "be742faf3d53"
@@ -200,16 +205,18 @@
         }
       ],
       "chips": [
-        "Me",
+        "Yo",
+        "me",
         "llamo",
         "José"
       ],
       "solution": [
-        "Me",
+        "Yo",
+        "me",
         "llamo",
         "José"
       ],
-      "formattedSolution": "Me llamo José",
+      "formattedSolution": "Yo me llamo José",
       "id": "d07d533ce40c",
       "priority": 2,
       "group": "be742faf3d53"
@@ -219,8 +226,11 @@
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Me",
-          "definition": "I\r\nMe"
+          "word": "Yo",
+          "definition": "I"
+        },
+        {
+          "word": "me"
         },
         {
           "word": "llamo",

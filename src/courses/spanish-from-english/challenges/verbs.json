@@ -3,7 +3,7 @@
   "challenges": [
     {
       "type": "options",
-      "formInTargetLanguage": "Soy un gato",
+      "formInTargetLanguage": "Yo soy un gato",
       "meaningInSourceLanguage": "I am a cat",
       "id": "a72e9a41052b",
       "priority": 0,
@@ -11,9 +11,9 @@
     },
     {
       "type": "listeningExercise",
-      "answer": "Soy un gato",
+      "answer": "Yo soy un gato",
       "meaning": "I am a cat",
-      "audio": "4c8f10de752417c4805c4c2fa00bbfa9b0be8398cc009773a3ef6ea3ce948504",
+      "audio": "d15f72103e85dd6ad05d8333388c0868635e6111884235771deede827b097e88",
       "id": "98fd8442bbdc",
       "priority": 1,
       "group": "279a27c6d309"
@@ -40,16 +40,18 @@
         }
       ],
       "chips": [
-        "Soy",
+        "Yo",
+        "soy",
         "un",
         "gato"
       ],
       "solution": [
-        "Soy",
+        "Yo",
+        "soy",
         "un",
         "gato"
       ],
-      "formattedSolution": "Soy un gato",
+      "formattedSolution": "Yo soy un gato",
       "id": "ebf681f3c804",
       "priority": 2,
       "group": "279a27c6d309"
@@ -59,8 +61,12 @@
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Soy",
-          "definition": "(I) am"
+          "word": "Yo",
+          "definition": "I"
+        },
+        {
+          "word": "soy",
+          "definition": "I am"
         },
         {
           "word": "un",

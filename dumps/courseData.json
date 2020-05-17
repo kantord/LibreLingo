@@ -728,6 +728,48 @@
   }
 },
 {
+  "model": "course.learnword",
+  "pk": 61,
+  "fields": {
+    "skill": 15,
+    "meaningInSourceLanguage": "mouse",
+    "formInTargetLanguage": "rat\u00f3n",
+    "meaningInSourceLanguage2": "the mouse",
+    "formInTargetLanguage2": "el rat\u00f3n",
+    "image1": "mouse1",
+    "image2": "mouse2",
+    "image3": "mouse3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 62,
+  "fields": {
+    "skill": 15,
+    "meaningInSourceLanguage": "elephant",
+    "formInTargetLanguage": "elefante",
+    "meaningInSourceLanguage2": "the elephant",
+    "formInTargetLanguage2": "el elefante",
+    "image1": "elephant1",
+    "image2": "elephant2",
+    "image3": "elephant3"
+  }
+},
+{
+  "model": "course.learnword",
+  "pk": 63,
+  "fields": {
+    "skill": 15,
+    "meaningInSourceLanguage": "park",
+    "formInTargetLanguage": "parque",
+    "meaningInSourceLanguage2": "the park",
+    "formInTargetLanguage2": "el parque",
+    "image1": "park1",
+    "image2": "park2",
+    "image3": "park3"
+  }
+},
+{
   "model": "course.dictionaryitem",
   "pk": 1,
   "fields": {
@@ -3918,6 +3960,906 @@
   }
 },
 {
+  "model": "course.dictionaryitem",
+  "pk": 347,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "yo",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 348,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "alta",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 349,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "tall",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 350,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "alto",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 351,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "viejo",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 352,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "old",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 353,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "vieja",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 354,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "peque\u00f1os",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 355,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "viejos",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 356,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "ones",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 357,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "bajo",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 358,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "not",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 359,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "short",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 360,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "estudiante",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 361,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "student",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 362,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "estoy",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 363,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "en",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 364,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "escuela",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 365,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "at",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 366,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "school",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 367,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "enfermera",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 368,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "nurse",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 369,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "est\u00e1",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 370,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "enferma",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 371,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "ill",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 372,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "estamos",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 373,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "ciudad",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 374,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "in",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 375,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "city",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 376,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "limpio",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 377,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "clean",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 378,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "est\u00e1n",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 379,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "listos",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 380,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "ready",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 381,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "smart",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 382,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Est\u00e1is",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 383,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "contentas",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 384,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "Are",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 385,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "happy",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 386,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "parque",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 387,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "park",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 388,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "rat\u00f3n",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 389,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "mouse",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 390,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "elefantes",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 391,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "ratones",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 392,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "elephants",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 393,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "mice",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 394,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "trabajan",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 395,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "work",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 396,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Sois",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 397,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "m\u00e9dicas",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 398,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "cocinando",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 399,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "cena",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 400,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "cooking",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 401,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "dinner",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 402,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "haciendo",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 403,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "este",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 404,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "ejercicio",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 405,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "doing",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 406,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "this",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 407,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "exercise",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 408,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "jugando",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 409,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "playing",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 410,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Est\u00e1s",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 411,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "escuchando",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 412,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "listening",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 413,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "aprendiendo",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 414,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "learning",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 415,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "abrazando",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 416,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "al",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 417,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "hugging",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 418,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "nadando",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 419,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "swimming",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 420,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "comiendo",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 421,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "chocolate",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 422,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "eating",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 423,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "chocolate",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 424,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "Est\u00e1n",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 425,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "escribiendo",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 426,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "una",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 427,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "carta",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 428,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "they",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 429,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "writing",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 430,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "letter",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 431,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "vamos",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 432,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "going",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 433,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "cantando",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 434,
+  "fields": {
+    "course": 1,
+    "reverse": false,
+    "word": "canci\u00f3n",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 435,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "singing",
+    "definition": ""
+  }
+},
+{
+  "model": "course.dictionaryitem",
+  "pk": 436,
+  "fields": {
+    "course": 1,
+    "reverse": true,
+    "word": "song",
+    "definition": ""
+  }
+},
+{
   "model": "course.learnsentence",
   "pk": 1,
   "fields": {
@@ -4094,7 +5036,7 @@
   "fields": {
     "skill": 9,
     "meaningInSourceLanguage": "I am a cat",
-    "formInTargetLanguage": "Soy un gato"
+    "formInTargetLanguage": "Yo soy un gato"
   }
 },
 {
@@ -4498,8 +5440,8 @@
   "pk": 65,
   "fields": {
     "skill": 14,
-    "meaningInSourceLanguage": "Good morning, I am Cecilia!",
-    "formInTargetLanguage": "Good morning, soy Cecilia!"
+    "meaningInSourceLanguage": "Good morning, I am Cecilia.",
+    "formInTargetLanguage": "Buenos d\u00edas, yo soy Cecilia."
   }
 },
 {
@@ -4508,7 +5450,7 @@
   "fields": {
     "skill": 14,
     "meaningInSourceLanguage": "My name is Jos\u00e9",
-    "formInTargetLanguage": "Me llamo Jos\u00e9"
+    "formInTargetLanguage": "Yo me llamo Jos\u00e9"
   }
 },
 {
@@ -4575,6 +5517,366 @@
   }
 },
 {
+  "model": "course.learnsentence",
+  "pk": 74,
+  "fields": {
+    "skill": 15,
+    "meaningInSourceLanguage": "Cecilia is tall",
+    "formInTargetLanguage": "Cecilia es alta"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 75,
+  "fields": {
+    "skill": 15,
+    "meaningInSourceLanguage": "Max is tall",
+    "formInTargetLanguage": "Max es alto"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 76,
+  "fields": {
+    "skill": 15,
+    "meaningInSourceLanguage": "I am old",
+    "formInTargetLanguage": "Yo soy viejo"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 77,
+  "fields": {
+    "skill": 15,
+    "meaningInSourceLanguage": "She is old",
+    "formInTargetLanguage": "Ella es vieja"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 78,
+  "fields": {
+    "skill": 15,
+    "meaningInSourceLanguage": "He is old",
+    "formInTargetLanguage": "\u00c9l es viejo"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 79,
+  "fields": {
+    "skill": 15,
+    "meaningInSourceLanguage": "I am big",
+    "formInTargetLanguage": "Yo soy grande"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 80,
+  "fields": {
+    "skill": 15,
+    "meaningInSourceLanguage": "She is big",
+    "formInTargetLanguage": "Ella es grande"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 81,
+  "fields": {
+    "skill": 15,
+    "meaningInSourceLanguage": "We are big",
+    "formInTargetLanguage": "Nosotros somos grandes"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 82,
+  "fields": {
+    "skill": 15,
+    "meaningInSourceLanguage": "They are big",
+    "formInTargetLanguage": "Ellas son grandes"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 83,
+  "fields": {
+    "skill": 15,
+    "meaningInSourceLanguage": "They are small",
+    "formInTargetLanguage": "Ellos son peque\u00f1os"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 84,
+  "fields": {
+    "skill": 15,
+    "meaningInSourceLanguage": "The cats are small",
+    "formInTargetLanguage": "Los gatos son peque\u00f1os"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 85,
+  "fields": {
+    "skill": 15,
+    "meaningInSourceLanguage": "The old ones eat meat",
+    "formInTargetLanguage": "Los viejos comen carne"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 86,
+  "fields": {
+    "skill": 15,
+    "meaningInSourceLanguage": "Max is not short",
+    "formInTargetLanguage": "Max no es bajo"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 87,
+  "fields": {
+    "skill": 15,
+    "meaningInSourceLanguage": "The dog is small and old",
+    "formInTargetLanguage": "El perro es peque\u00f1o y viejo"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 88,
+  "fields": {
+    "skill": 16,
+    "meaningInSourceLanguage": "I am a student",
+    "formInTargetLanguage": "Yo soy un estudiante"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 89,
+  "fields": {
+    "skill": 16,
+    "meaningInSourceLanguage": "I am at school",
+    "formInTargetLanguage": "Yo estoy en la escuela"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 90,
+  "fields": {
+    "skill": 16,
+    "meaningInSourceLanguage": "She is a nurse",
+    "formInTargetLanguage": "Ella es enfermera"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 91,
+  "fields": {
+    "skill": 16,
+    "meaningInSourceLanguage": "She is ill",
+    "formInTargetLanguage": "Ella est\u00e1 enferma"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 92,
+  "fields": {
+    "skill": 16,
+    "meaningInSourceLanguage": "We are in the city",
+    "formInTargetLanguage": "Nosotras estamos en la ciudad"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 93,
+  "fields": {
+    "skill": 16,
+    "meaningInSourceLanguage": "The cat is clean",
+    "formInTargetLanguage": "El gato est\u00e1 limpio"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 94,
+  "fields": {
+    "skill": 16,
+    "meaningInSourceLanguage": "They are ready",
+    "formInTargetLanguage": "Ellos est\u00e1n listos"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 95,
+  "fields": {
+    "skill": 16,
+    "meaningInSourceLanguage": "They are smart",
+    "formInTargetLanguage": "Ellos son listos"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 96,
+  "fields": {
+    "skill": 16,
+    "meaningInSourceLanguage": "Are you happy?",
+    "formInTargetLanguage": "\u00bfEst\u00e1is contentas?"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 97,
+  "fields": {
+    "skill": 15,
+    "meaningInSourceLanguage": "The park is small",
+    "formInTargetLanguage": "El parque es peque\u00f1o"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 98,
+  "fields": {
+    "skill": 15,
+    "meaningInSourceLanguage": "The park is big",
+    "formInTargetLanguage": "El parque es grande"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 99,
+  "fields": {
+    "skill": 15,
+    "meaningInSourceLanguage": "The mouse is small",
+    "formInTargetLanguage": "El rat\u00f3n es peque\u00f1o"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 100,
+  "fields": {
+    "skill": 15,
+    "meaningInSourceLanguage": "The elephants are big, the mice are small",
+    "formInTargetLanguage": "Los elefantes son grandes, los ratones son peque\u00f1os"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 101,
+  "fields": {
+    "skill": 15,
+    "meaningInSourceLanguage": "The big mice work",
+    "formInTargetLanguage": "Los grandes ratones trabajan"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 102,
+  "fields": {
+    "skill": 16,
+    "meaningInSourceLanguage": "Are you doctors?",
+    "formInTargetLanguage": "\u00bfSois m\u00e9dicas?"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 103,
+  "fields": {
+    "skill": 17,
+    "meaningInSourceLanguage": "We are cooking dinner",
+    "formInTargetLanguage": "Nosotros estamos cocinando la cena"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 104,
+  "fields": {
+    "skill": 17,
+    "meaningInSourceLanguage": "I am doing this exercise",
+    "formInTargetLanguage": "Yo estoy haciendo este ejercicio"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 105,
+  "fields": {
+    "skill": 17,
+    "meaningInSourceLanguage": "They are playing",
+    "formInTargetLanguage": "Ellos est\u00e1n jugando"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 106,
+  "fields": {
+    "skill": 17,
+    "meaningInSourceLanguage": "Are you listening?",
+    "formInTargetLanguage": "Est\u00e1s escuchando?"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 107,
+  "fields": {
+    "skill": 17,
+    "meaningInSourceLanguage": "You are learning a lot",
+    "formInTargetLanguage": "Est\u00e1s aprendiendo mucho"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 108,
+  "fields": {
+    "skill": 17,
+    "meaningInSourceLanguage": "The duck is hugging the cat",
+    "formInTargetLanguage": "El pato est\u00e1 abrazando al gato"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 109,
+  "fields": {
+    "skill": 17,
+    "meaningInSourceLanguage": "She is swimming in the sea",
+    "formInTargetLanguage": "Ella est\u00e1 nadando en el mar"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 110,
+  "fields": {
+    "skill": 17,
+    "meaningInSourceLanguage": "He is eating chocolate",
+    "formInTargetLanguage": "\u00c9l est\u00e1 comiendo chocolate"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 111,
+  "fields": {
+    "skill": 17,
+    "meaningInSourceLanguage": "Are they writing a letter?",
+    "formInTargetLanguage": "Est\u00e1n escribiendo una carta?"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 112,
+  "fields": {
+    "skill": 17,
+    "meaningInSourceLanguage": "We are going to the park",
+    "formInTargetLanguage": "Nosotras vamos al parque"
+  }
+},
+{
+  "model": "course.learnsentence",
+  "pk": 113,
+  "fields": {
+    "skill": 17,
+    "meaningInSourceLanguage": "I am singing a song",
+    "formInTargetLanguage": "Yo estoy cantando una canci\u00f3n"
+  }
+},
+{
   "model": "course.course",
   "pk": 1,
   "fields": {
@@ -4619,6 +5921,15 @@
     "course": 1,
     "name": "Introduction",
     "order": 2
+  }
+},
+{
+  "model": "course.module",
+  "pk": 6,
+  "fields": {
+    "course": 1,
+    "name": "Activities",
+    "order": 3
   }
 },
 {
@@ -4772,6 +6083,42 @@
     "module": 5,
     "name": "Phrases",
     "order": 0,
+    "image1": null,
+    "image2": null,
+    "image3": null
+  }
+},
+{
+  "model": "course.skill",
+  "pk": 15,
+  "fields": {
+    "module": 5,
+    "name": "Adjectives",
+    "order": 0,
+    "image1": null,
+    "image2": null,
+    "image3": null
+  }
+},
+{
+  "model": "course.skill",
+  "pk": 16,
+  "fields": {
+    "module": 6,
+    "name": "Ser/estar",
+    "order": 1,
+    "image1": null,
+    "image2": null,
+    "image3": null
+  }
+},
+{
+  "model": "course.skill",
+  "pk": 17,
+  "fields": {
+    "module": 6,
+    "name": "Continuous",
+    "order": 2,
     "image1": null,
     "image2": null,
     "image3": null
