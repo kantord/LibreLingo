@@ -56,7 +56,7 @@ blocks:
             - sem-version node 12
             - checkout
             - cache restore
-            - yarn eslint src
+            - yarn eslint packages/*/src
   - name: Eslint Cypress
     dependencies:
       - Install dependencies
