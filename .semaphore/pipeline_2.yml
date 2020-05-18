@@ -9,6 +9,7 @@ blocks:
             - sem-version node 12
             - checkout
             - cache restore
+            - yarn install
             - NODE_ENV=production yarn export
             - git config --global user.email "gitlab@daniel-kantor.com"
             - git config --global user.name "Dániel Kántor"
