@@ -13,7 +13,7 @@ with open(Path('./docs/image_attributions.csv').resolve()) as f:
 
 class LearnWord(models.Model):
     class Meta:
-        verbose_name = "Learn a new word"
+        verbose_name = "Word"
 
     def __str__(self):
         return self.formInTargetLanguage
@@ -54,7 +54,7 @@ class DictionaryItem(models.Model):
 
 class LearnSentence(models.Model):
     class Meta:
-        verbose_name = "Learn a new sentence"
+        verbose_name = "Sentence"
 
     def __str__(self):
         return self.formInTargetLanguage
@@ -116,10 +116,10 @@ class AlternativeSolutionInTargetLanguage(models.Model):
 
 class Course(models.Model):
     class Meta:
-        verbose_name = "Language course"
+        verbose_name = "Course"
 
     def __str__(self):
-        return "{} for {} speakers course".format(
+        return "{} for {} speakers".format(
             self.language_name, self.source_language_name)
 
     language_name = models.TextField(verbose_name="Language name")
@@ -137,7 +137,7 @@ class Module(models.Model):
         ordering = ['order']
 
     def __str__(self):
-        return "{} in {} ".format(self.name, str(self.course))
+        return self.name
 
     course = models.ForeignKey('Course', on_delete=models.CASCADE)
     name = models.TextField(verbose_name="Module name")
@@ -150,7 +150,7 @@ class Skill(models.Model):
         ordering = ['order']
 
     def __str__(self):
-        return "{} in {} ".format(self.name, str(self.module))
+        return self.name
 
     def clean(self):
         images = [self.image1, self.image2, self.image3]
