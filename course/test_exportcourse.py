@@ -22,7 +22,7 @@ class CommandTests(TestCase):
         sys.stdout = out = StringIO()
         management.call_command('exportcourse', 1, stdout=out, verbosity=3)
         self.assertIn(
-            "Exporting course Spanish for English speakers course",
+            "Exporting course Spanish for English speakers",
             out.getvalue())
 
     def test_check_course_does_not_exists(self):
