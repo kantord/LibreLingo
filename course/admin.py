@@ -12,6 +12,8 @@ from .models import Course
 from .models import Module
 from .models import DictionaryItem
 from .models import Skill
+from .models import AlternativeSolutionInSourceLanguage
+from .models import AlternativeSolutionInTargetLanguage
 
 
 class SkillForm(forms.ModelForm):
@@ -33,8 +35,56 @@ class LearnSentenceForm(forms.ModelForm):
         }
 
 
-class LearnSentenceAdmin(admin.ModelAdmin):
+class LanguageSelect(forms.Select):
+    def __init__(self, attrs=None):
+        choices = (
+            ('true', ('Reverse')),
+            ('false', ('Not reverse')),
+        )
+        super().__init__(attrs, choices)
+
+
+class AlternativeSolutionInSourceLanguageForm(forms.ModelForm):
+    class Meta:
+        model = AlternativeSolutionInSourceLanguage
+        exclude = []
+        widgets = {
+            'solution': forms.TextInput(),
+            'reverse': LanguageSelect()
+        }
+
+
+class AlternativeSolutionInTargetLanguageForm(forms.ModelForm):
+    class Meta:
+        model = AlternativeSolutionInSourceLanguage
+        exclude = []
+        widgets = {
+            'solution': forms.TextInput(),
+            'reverse': LanguageSelect()
+        }
+
+
+class AlternativeSolutionInSourceLanguageInline(admin.TabularInline):
+    model = AlternativeSolutionInSourceLanguage
+    form = AlternativeSolutionInSourceLanguageForm
+    show_change_link = True
+    exclude = ("word", "sentence", )
+
+
+class AlternativeSolutionInTargetLanguageInline(admin.TabularInline):
+    model = AlternativeSolutionInTargetLanguage
+    form = AlternativeSolutionInTargetLanguageForm
+    show_change_link = True
+    exclude = ("word", "sentence", )
+
+
+class LearnSentenceAdmin(SubAdmin):
+    inlines = [
+        AlternativeSolutionInSourceLanguageInline,
+        AlternativeSolutionInTargetLanguageInline
+    ]
     form = LearnSentenceForm
+    model = LearnSentence
     list_display = ('formInTargetLanguage', )
 
 
@@ -69,18 +119,47 @@ class LearnWordInline(admin.TabularInline):
     model = LearnWord
     form = LearnWordForm
     show_change_link = True
+    readonly_fields = ('change_link',)
+
+    def change_link(self, obj):
+        if not obj.id:
+            return ""
+        return mark_safe(
+            '<a href="%s">Solutions</a>' %
+            ("/admin/course/course/%s/module/%s/skill/%s/learnword/%s/change/" %
+             (obj.skill.module.course.id, obj.skill.module.id, obj.skill.id, obj.id, )))
 
 
 class LearnSentenceInline(admin.TabularInline):
     model = LearnSentence
     form = LearnSentenceForm
     show_change_link = True
+    readonly_fields = ('change_link',)
+
+    def change_link(self, obj):
+        if not obj.id:
+            return ""
+        return mark_safe(
+            '<a href="%s">Edit additional solutions</a>' %
+            ("/admin/course/course/%s/module/%s/skill/%s/learnsentence/%s/change/" %
+             (obj.skill.module.course.id, obj.skill.module.id, obj.skill.id, obj.id, )))
+
+
+class LearnWordAdmin(SubAdmin):
+    form = LearnWordForm
+    model = LearnWord
+    list_display = ('formInTargetLanguage', )
+    inlines = [
+        AlternativeSolutionInSourceLanguageInline,
+        AlternativeSolutionInTargetLanguageInline
+    ]
 
 
 class SkillAdmin(SubAdmin):
     inlines = [
         LearnWordInline, LearnSentenceInline
     ]
+    subadmins = [LearnSentenceAdmin, LearnWordAdmin]
     model = Skill
     form = SkillForm
     list_display = ('name', )
@@ -214,8 +293,3 @@ class CourseAdmin(RootSubAdmin):
 
 
 admin.site.register(Course, CourseAdmin)
-
-
-class LearnWordAdmin(admin.ModelAdmin):
-    form = LearnWordForm
-    list_display = ('formInTargetLanguage', )
