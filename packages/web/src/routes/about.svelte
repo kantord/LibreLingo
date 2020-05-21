@@ -3,7 +3,7 @@
     const remark = await require("remark")
     const markdown = await import("remark-parse")
     const html = await import("rehype-stringify")
-    const readme = await import("../../README.md")
+    const readme = await import("../../../../README.md")
     const remark2rehype = await import("remark-rehype")
     const format = await import("rehype-format")
 
