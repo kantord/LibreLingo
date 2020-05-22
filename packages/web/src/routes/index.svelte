@@ -2,9 +2,9 @@
   import NavBar from "../components/NavBar"
   import Mascot from "../components/Mascot"
   import LicenseLogo from "../components/LicenseLogo"
-  import Button from "../components/ui-kit/Button"
-  import Column from "../components/ui-kit/Column"
-  import Columns from "../components/ui-kit/Columns"
+  import Button from "lluis/Button"
+  import Column from "lluis/Column"
+  import Columns from "lluis/Columns"
   import { _ } from "svelte-i18n"
 </script>
 

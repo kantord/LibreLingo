@@ -12,8 +12,8 @@
 <script>
   import SkillCard from "../../../components/SkillCard"
   import NavBar from "../../../components/NavBar.svelte"
-  import Column from "../../../components/ui-kit/Column.svelte"
-  import Columns from "../../../components/ui-kit/Columns.svelte"
+  import Column from "lluis/Column.svelte"
+  import Columns from "lluis/Columns.svelte"
 
   export let courseName = null
   export let modules = null

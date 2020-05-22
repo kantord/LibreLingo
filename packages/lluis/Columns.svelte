@@ -11,7 +11,7 @@
 </div>
 
 <style>
-  @import "../../variables";
+  @import './node_modules/bulma/sass/utilities/_all';
 
   @include until($tablet) {
     .is-reversed {

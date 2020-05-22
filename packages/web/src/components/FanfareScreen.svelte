@@ -8,9 +8,9 @@
   import { goto } from "@sapper/app"
   import Mascot from "./Mascot"
   import TwitterButton from "./TwitterButton"
-  import Button from "./ui-kit/Button"
-  import Column from "./ui-kit/Column"
-  import Columns from "./ui-kit/Columns"
+  import Button from "lluis/Button"
+  import Column from "lluis/Column"
+  import Columns from "lluis/Columns"
 
   export let rawChallenges
   export let courseURL
