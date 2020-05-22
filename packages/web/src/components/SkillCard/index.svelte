@@ -1,7 +1,7 @@
 <script>
   import getSkillStats from "../../db/skill/getSkillStats"
   import Icon from "../Icon"
-  import Button from "../ui-kit/Button"
+  import Button from "lluis/Button"
 
   export let title
   export let practiceHref
@@ -13,7 +13,7 @@
   let stale = null
 
   getSkillStats({ id })
-    .then(stats => {
+    .then((stats) => {
       completed = stats.completed
       stale = stats.stale
     })

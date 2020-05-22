@@ -6,9 +6,9 @@
   import Icon from "./Icon"
   import InputFieldWithVirtualKeyboard from "./InputFieldWithVirtualKeyboard"
   import playVoice from "../media/voice"
-  import Button from "./ui-kit/Button"
-  import Column from "./ui-kit/Column"
-  import Columns from "./ui-kit/Columns"
+  import Button from "lluis/Button"
+  import Column from "lluis/Column"
+  import Columns from "lluis/Columns"
 
   export let challenge
   export let registerResult

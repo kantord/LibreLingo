@@ -1,5 +1,5 @@
 <script>
-  import Button from "./ui-kit/Button"
+  import Button from "lluis/Button"
   export let value
   export let specialCharacters
   export let languageCode

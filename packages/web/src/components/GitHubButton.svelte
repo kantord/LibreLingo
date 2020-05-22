@@ -12,7 +12,7 @@
 <script>
   import { onMount } from "svelte"
   import Icon from "./Icon"
-  import Button from "./ui-kit/Button"
+  import Button from "lluis/Button"
   const pMemoize = require("p-memoize")
   export let stars = (process.browser === true ? window.stars : null) || "   "
   export let size = "small"

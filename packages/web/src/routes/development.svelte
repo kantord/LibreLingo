@@ -3,8 +3,8 @@
   import Mascot from "../components/Mascot"
   import TwitterButton from "../components/TwitterButton"
   import GitHubButton from "../components/GitHubButton"
-  import Column from "../components/ui-kit/Column"
-  import Columns from "../components/ui-kit/Columns"
+  import Column from "lluis/Column"
+  import Columns from "lluis/Columns"
   import { _ } from "svelte-i18n"
 
   import shuffle from "lodash.shuffle"

@@ -1,5 +1,5 @@
 <script>
-  import Button from "./ui-kit/Button"
+  import Button from "lluis/Button"
   import Icon from "./Icon"
 </script>
 
