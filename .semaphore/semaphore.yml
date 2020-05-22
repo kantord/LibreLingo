@@ -12,13 +12,14 @@ blocks:
           commands:
             - sem-version node 12
             - checkout
-            - cache clear
-            - cache clear cypress
+            - cache restore node-$(checksum yarn.lock)
+            - cache store cypress-$(checksum yarn.lock)
+            - cache store web-$(checksum yarn.lock)
             - yarn install
             - yarn cypress install
-            - cache store
-            - cache store cypress /home/semaphore/.cache/Cypress
-            - cache store web packages/web/node_modules
+            - cache store node-$(checksum yarn.lock) node_modules
+            - cache store cypress-$(checksum yarn.lock) /home/semaphore/.cache/Cypress
+            - cache store web-$(checksum yarn.lock) packages/web/node_modules
     dependencies: []
   - name: Jest
     task:
