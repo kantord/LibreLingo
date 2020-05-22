@@ -1,0 +1,32 @@
+{
+  "bundler": "webpack",
+  "shimport": null,
+  "assets": {
+    "about": "5282acc7921cda1900f1/about.about.js",
+    "about~course_$courseName~course_$courseName$93_skill_$91id~development~index": "5282acc7921cda1900f1/about~course_$courseName~course_$courseName$93_skill_$91id~development~index.about~course_$courseName~course_$courseName$93_skill_$91id~development~index.js",
+    "course_$courseName": "5282acc7921cda1900f1/course_$courseName.course_$courseName.js",
+    "course_$courseName$93_skill_$91id": "5282acc7921cda1900f1/course_$courseName$93_skill_$91id.course_$courseName$93_skill_$91id.js",
+    "course_$courseName~course_$courseName$93_skill_$91id~development~index": "5282acc7921cda1900f1/course_$courseName~course_$courseName$93_skill_$91id~development~index.course_$courseName~course_$courseName$93_skill_$91id~development~index.js",
+    "development": "5282acc7921cda1900f1/development.development.js",
+    "index": "5282acc7921cda1900f1/index.index.js",
+    "main": [
+      "css/mystyles.css",
+      "5282acc7921cda1900f1/main.js"
+    ],
+    "vendors~about": "5282acc7921cda1900f1/vendors~about.vendors~about.js",
+    "vendors~about~course_$courseName~course_$courseName$93_skill_$91id~development~index": "5282acc7921cda1900f1/vendors~about~course_$courseName~course_$courseName$93_skill_$91id~development~index.vendors~about~course_$courseName~course_$courseName$93_skill_$91id~development~index.js",
+    "vendors~course_$courseName$93_skill_$91id": "5282acc7921cda1900f1/vendors~course_$courseName$93_skill_$91id.vendors~course_$courseName$93_skill_$91id.js",
+    "vendors~course_$courseName$93_skill_$91id~development": "5282acc7921cda1900f1/vendors~course_$courseName$93_skill_$91id~development.vendors~course_$courseName$93_skill_$91id~development.js",
+    "vendors~course_$courseName~course_$courseName$93_skill_$91id": "5282acc7921cda1900f1/vendors~course_$courseName~course_$courseName$93_skill_$91id.vendors~course_$courseName~course_$courseName$93_skill_$91id.js"
+  },
+  "css": {
+    "main": "css/mystyles.css",
+    "chunks": {
+      "index.svelte": [],
+      "development.svelte": [],
+      "course/[courseName]/index.svelte": [],
+      "course/[courseName]/skill/[id].svelte": [],
+      "about.svelte": []
+    }
+  }
+}
