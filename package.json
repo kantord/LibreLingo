@@ -6,7 +6,8 @@
     "commit": "git-cz",
     "test": "yarn web test",
     "web": "yarn workspace web",
-    "stylefix": "yarn workspaces run prettierfix && yarn workspaces run eslintfix"
+    "stylefix": "yarn workspaces run prettierfix && yarn workspaces run eslintfix",
+    "docs": "mkdocs serve"
   },
   "workspaces": {
     "packages": [
