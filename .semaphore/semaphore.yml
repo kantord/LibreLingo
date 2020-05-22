@@ -18,6 +18,7 @@ blocks:
             - yarn cypress install
             - cache store
             - cache store cypress /home/semaphore/.cache/Cypress
+            - cache store web packages/web/node_modules
     dependencies: []
   - name: Jest
     task:
@@ -40,7 +41,7 @@ blocks:
             - checkout
             - cache restore
             - cache restore cypress
-            - yarn install
+            - cache restore web
             - SEMAPHORE_BUILD_NUMBER=$SEMAPHORE_PIPELINE_ID SEMAPHORE_THREAD_COUNT=3 yarn test
       secrets:
         - name: Percy token
