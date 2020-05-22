@@ -6,8 +6,8 @@
   import ChallengePanel from "./ChallengePanel"
   import Phrase from "./Phrase"
   import InputFieldWithVirtualKeyboard from "./InputFieldWithVirtualKeyboard"
-  import Column from "./ui-kit/Column"
-  import Columns from "./ui-kit/Columns"
+  import Column from "lluis/Column"
+  import Columns from "lluis/Columns"
 
   export let challenge
   export let registerResult

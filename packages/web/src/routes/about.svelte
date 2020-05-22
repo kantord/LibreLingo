@@ -22,7 +22,7 @@
 
 <script>
   import NavBar from "../components/NavBar"
-  import Button from "../components/ui-kit/Button"
+  import Button from "lluis/Button"
 
   export let readmeHTML
 </script>

@@ -1,6 +1,6 @@
 <script>
   import { slide } from "svelte/transition"
-  import Button from "./ui-kit/Button"
+  import Button from "lluis/Button"
 
   export let buttonText
   export let buttonAction = null
