@@ -1,0 +1,1 @@
+exports.ids=[30],exports.modules={78:function(e){e.exports=JSON.parse('{"id":"434d43b3","challenges":[{"id":6663,"type":"shortInput","phrase":[{"word":"Dog"}],"pictures":["dog1.jpg","dog1.jpg","dog1.jpg"],"formInTargetLanguage":["perro","el perro","can"]}]}')}};

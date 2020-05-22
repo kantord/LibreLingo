@@ -1,0 +1,1 @@
+exports.ids=[28],exports.modules={76:function(e){e.exports=JSON.parse('{"id":"434d43b3","challenges":[{"id":6663,"type":"listeningExercise","answer":"agua","audio":"agua","meaning":"asdfg"},{"id":6666,"type":"listeningExercise","answer":"agua","audio":"agua","meaning":"asdfg"}]}')}};

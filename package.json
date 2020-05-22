@@ -11,7 +11,7 @@
   },
   "workspaces": {
     "packages": [
-      "packages/*"
+      "workspaces/*"
     ],
     "nohoist": [
       "**/bulma",
