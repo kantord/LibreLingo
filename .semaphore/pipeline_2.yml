@@ -8,8 +8,8 @@ blocks:
           commands:
             - sem-version node 12
             - checkout
-            - cache restore
-            - cache restore web
+            - cache restore node-$(checksum yarn.lock)
+            - cache restore web-$(checksum yarn.lock)
             - NODE_ENV=production yarn export
             - git config --global user.email "gitlab@daniel-kantor.com"
             - git config --global user.name "Dániel Kántor"
