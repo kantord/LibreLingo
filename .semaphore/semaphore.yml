@@ -12,12 +12,14 @@ blocks:
           commands:
             - sem-version node 12
             - checkout
-            - cache clear
-            - cache clear cypress
+            - cache restore node-$(checksum yarn.lock)
+            - cache restore cypress-$(checksum yarn.lock)
+            - cache restore web-$(checksum yarn.lock)
             - yarn install
             - yarn cypress install
-            - cache store
-            - cache store cypress /home/semaphore/.cache/Cypress
+            - cache store node-$(checksum yarn.lock) node_modules
+            - cache store cypress-$(checksum yarn.lock) /home/semaphore/.cache/Cypress
+            - cache store web-$(checksum yarn.lock) packages/web/node_modules
     dependencies: []
   - name: Jest
     task:
@@ -26,7 +28,7 @@ blocks:
           commands:
             - sem-version node 12
             - checkout
-            - cache restore
+            - cache restore node-$(checksum yarn.lock)
             - yarn jest
     dependencies:
       - Eslint
@@ -38,9 +40,9 @@ blocks:
           commands:
             - sem-version node 12
             - checkout
-            - cache restore
-            - cache restore cypress
-            - yarn install
+            - cache restore node-$(checksum yarn.lock)
+            - cache restore cypress-$(checksum yarn.lock)
+            - cache restore web-$(checksum yarn.lock)
             - SEMAPHORE_BUILD_NUMBER=$SEMAPHORE_PIPELINE_ID SEMAPHORE_THREAD_COUNT=3 yarn test
       secrets:
         - name: Percy token
@@ -56,7 +58,7 @@ blocks:
           commands:
             - sem-version node 12
             - checkout
-            - cache restore
+            - cache restore node-$(checksum yarn.lock)
             - yarn eslint packages/*/src
   - name: Eslint Cypress
     dependencies:
@@ -67,7 +69,7 @@ blocks:
           commands:
             - sem-version node 12
             - checkout
-            - cache restore
+            - cache restore node-$(checksum yarn.lock)
             - yarn eslint packages/*/cypress
   - name: Python Code Style Check
     dependencies: []
