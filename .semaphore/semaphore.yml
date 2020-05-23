@@ -14,12 +14,12 @@ blocks:
             - checkout
             - cache restore node-$(checksum yarn.lock)
             - cache restore cypress-$(checksum yarn.lock)
-            - cache restore web-$(checksum yarn.lock)
+            - cache restore packages-web-$(checksum yarn.lock)
             - yarn install
             - yarn cypress install
             - cache store node-$(checksum yarn.lock) node_modules
             - cache store cypress-$(checksum yarn.lock) /home/semaphore/.cache/Cypress
-            - cache store web-$(checksum yarn.lock) packages/web/node_modules
+            - cache store packages-web-$(checksum yarn.lock) workspaces/web/node_modules
     dependencies: []
   - name: Jest
     task:
@@ -42,7 +42,8 @@ blocks:
             - checkout
             - cache restore node-$(checksum yarn.lock)
             - cache restore cypress-$(checksum yarn.lock)
-            - cache restore web-$(checksum yarn.lock)
+            - cache restore packages-web-$(checksum yarn.lock)
+            - yarn install
             - SEMAPHORE_BUILD_NUMBER=$SEMAPHORE_PIPELINE_ID SEMAPHORE_THREAD_COUNT=3 yarn test
       secrets:
         - name: Percy token
@@ -59,7 +60,7 @@ blocks:
             - sem-version node 12
             - checkout
             - cache restore node-$(checksum yarn.lock)
-            - yarn eslint packages/*/src
+            - yarn eslint workspaces/*/src
   - name: Eslint Cypress
     dependencies:
       - Install dependencies
@@ -70,7 +71,7 @@ blocks:
             - sem-version node 12
             - checkout
             - cache restore node-$(checksum yarn.lock)
-            - yarn eslint packages/*/cypress
+            - yarn eslint workspaces/*/cypress
   - name: Python Code Style Check
     dependencies: []
     task:
