@@ -41,3 +41,14 @@ Feature: Chips challenge
     And I see a Continue button
     Given I click "Continue"
     Then I don't see the challenge panel
+
+  Scenario: Submitting an alternative correct solution
+    Given I open "/course/test/skill/_chips_test0"
+    And I order words correctly, but in a different way
+    Then I see the challenge panel
+    Given I click "Submit"
+    Then I see the challenge panel
+    And I read "Correct solution"
+    And I see a Continue button
+    Given I click "Continue"
+    Then I don't see the challenge panel

@@ -64,6 +64,10 @@
       answer.update(() => ["Como", "estás", "hoy"])
     }
 
+    window.testSolution2 = () => {
+      answer.update(() => ["Tu", "como", "estás", "hoy"])
+    }
+
     window.testIncorrectSolution = () => {
       answer.update(() => ["Como", "hoy"])
     }
@@ -72,7 +76,11 @@
   $: submitChallenge = () => {
     if (!$answer) return
     if (submitted) return
-    correct = $answer.join(" ") === challenge.solution.join(" ")
+    correct = false
+    const answerForm = $answer.join(" ")
+    challenge.solutions.map((solution) => {
+      correct = correct || answerForm === solution.join(" ")
+    })
     registerResult(correct)
     submitted = true
   }
