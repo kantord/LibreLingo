@@ -48,6 +48,13 @@ Feature: Short text input challange
 
   Scenario: Submitting alternative correct answer
     Given I open "/course/test/skill/_short_input_test0"
+    And I type "can"
+    And I click "Submit"
+    Then I read "Correct solution"
+    And I see a Continue button
+
+  Scenario: Submitting alternative correct answer
+    Given I open "/course/test/skill/_short_input_test0"
     And I type "el perro"
     And I click "Submit"
     Then I read "Correct solution"
