@@ -5,7 +5,7 @@ from .models import Course, Skill, Module
 
 class SkillTests(TestCase):
     databases = '__all__'
-    fixtures = ["dumps/courseData.json"]
+    fixtures = ["courseData.json"]
 
     def setUp(self):
         self.course = Course.objects.create(
