@@ -5877,6 +5877,42 @@
   }
 },
 {
+  "model": "course.alternativesolutioninsourcelanguage",
+  "pk": 1,
+  "fields": {
+    "sentence": null,
+    "word": 1,
+    "solution": "hound"
+  }
+},
+{
+  "model": "course.alternativesolutioninsourcelanguage",
+  "pk": 2,
+  "fields": {
+    "sentence": 60,
+    "word": null,
+    "solution": "Cecilia does not eat pasta"
+  }
+},
+{
+  "model": "course.alternativesolutionintargetlanguage",
+  "pk": 1,
+  "fields": {
+    "sentence": null,
+    "word": 1,
+    "solution": "can"
+  }
+},
+{
+  "model": "course.alternativesolutionintargetlanguage",
+  "pk": 2,
+  "fields": {
+    "sentence": 13,
+    "word": null,
+    "solution": "Max es un can"
+  }
+},
+{
   "model": "course.course",
   "pk": 1,
   "fields": {
