@@ -114,7 +114,8 @@ def generate_learnword_challenge(
              "pictures": ["{}.jpg".format(image_name) for image_name in [learnword.image1,
                                                                          learnword.image2,
                                                                          learnword.image3]],
-             "formInTargetLanguage": [formInTargetLanguage],
+             "formInTargetLanguage": [formInTargetLanguage] + list(map(
+                 lambda x: x.solution, learnword.alternativesolutionintargetlanguage_set.all())),
              "phrase": define_words_in_sentence(course,
                                                 meaningInSourceLanguage,
                                                 True),
@@ -227,7 +228,8 @@ def export_course(course):
     language_id = course.language_name.lower()
     source_language_id = course.source_language_name.lower()
     course_id = "{}-from-{}".format(language_id, source_language_id)
-    export_path = Path("./src/courses/{}".format(course_id)).resolve()
+    export_path = Path(
+        "./workspaces/web/src/courses/{}".format(course_id)).resolve()
     print("Exporting to {}".format(export_path))
     print("Making sure course directory exists")
     Path(export_path).mkdir(parents=True, exist_ok=True)
