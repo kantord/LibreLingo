@@ -139,3 +139,5 @@ STATICFILES_DIRS = (
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 TEST_RUNNER = 'snapshottest.django.TestRunner'
+
+FIXTURE_DIRS = [os.path.join(os.getcwd(), "workspaces", "web", "dumps")]

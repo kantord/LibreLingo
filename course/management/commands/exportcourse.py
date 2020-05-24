@@ -26,6 +26,18 @@ def generate_chips(text):
     return [clean_word(w) for w in text.split()]
 
 
+def generate_chips_in_target_language(item):
+    return [generate_chips(item.formInTargetLanguage)] + \
+        [generate_chips(solution.solution)
+         for solution in item.alternativesolutionintargetlanguage_set.all()]
+
+
+def generate_chips_in_source_language(item):
+    return [generate_chips(item.meaningInSourceLanguage)] + \
+        [generate_chips(solution.solution)
+         for solution in item.alternativesolutioninsourcelanguage_set.all()]
+
+
 class Command(BaseCommand):
     help = 'Exports a given langauge course'
 
@@ -160,14 +172,14 @@ def get_skill_data(skill, language_id, course):
                         },
                        ]
 
-        if len(generate_chips(learnsentence.formInTargetLanguage)) >= 2:
+        if len(generate_chips_in_target_language(learnsentence)[0]) >= 2:
             data = data + [{"type": "chips",
                             "translatesToSourceLanguage": False,
                             "phrase": define_words_in_sentence(course,
                                                                learnsentence.meaningInSourceLanguage,
                                                                True),
-                            "chips": generate_chips(learnsentence.formInTargetLanguage),
-                            "solution": generate_chips(learnsentence.formInTargetLanguage),
+                            "chips": generate_chips_in_target_language(learnsentence)[0],
+                            "solutions": generate_chips_in_target_language(learnsentence),
                             "formattedSolution": learnsentence.formInTargetLanguage,
                             "id": opaqueId(learnsentence,
                                            "chips"),
@@ -176,15 +188,15 @@ def get_skill_data(skill, language_id, course):
                             },
                            ]
 
-        if len([clean_word(w)
-                for w in learnsentence.meaningInSourceLanguage.split()]) >= 2:
+        if len(generate_chips_in_source_language(learnsentence)[0]) >= 2:
             data = data + [{"type": "chips",
                             "translatesToSourceLanguage": True,
                             "phrase": define_words_in_sentence(course,
                                                                learnsentence.formInTargetLanguage,
+
                                                                False),
-                            "chips": generate_chips(learnsentence.meaningInSourceLanguage),
-                            "solution": generate_chips(learnsentence.meaningInSourceLanguage),
+                            "chips": generate_chips_in_source_language(learnsentence)[0],
+                            "solutions": generate_chips_in_source_language(learnsentence),
                             "formattedSolution": learnsentence.meaningInSourceLanguage,
                             "id": opaqueId(learnsentence,
                                            "chips"),

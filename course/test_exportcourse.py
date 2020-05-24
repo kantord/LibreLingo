@@ -16,7 +16,7 @@ from course.models import Course, Skill, Module, LearnWord, LearnSentence, Dicti
 
 class CommandTests(TestCase):
     databases = '__all__'
-    fixtures = ["packages/web/dumps/courseData.json"]
+    fixtures = ["courseData.json"]
 
     def test_exportcourse(self):
         sys.stdout = out = StringIO()
@@ -53,7 +53,7 @@ class AudioIdTest(TestCase):
 
 class OpaqueIdTest(TestCase):
     databases = '__all__'
-    fixtures = ["dumps/courseData.json"]
+    fixtures = ["courseData.json"]
 
     def test_opaque_id_return_value(self):
         learnWord = LearnWord.objects.get(pk=1)
@@ -71,7 +71,7 @@ class OpaqueIdTest(TestCase):
 
 class DefineWordTest(TestCase):
     databases = '__all__'
-    fixtures = ["dumps/courseData.json"]
+    fixtures = ["courseData.json"]
 
     def test_non_existing_word(self):
         course = Course.objects.get(pk=1)
@@ -114,7 +114,7 @@ class GenerateChipsTest(TestCase):
 
 class ExportSkillTest(TestCase):
     databases = '__all__'
-    fixtures = ["dumps/courseData.json"]
+    fixtures = ["courseData.json"]
 
     def test_export_skill_correct_output_format(self):
         course = Course.objects.get(pk=1)
