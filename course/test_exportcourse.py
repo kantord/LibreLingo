@@ -16,7 +16,7 @@ from course.models import Course, Skill, Module, LearnWord, LearnSentence, Dicti
 
 class CommandTests(TestCase):
     databases = '__all__'
-    fixtures = ["dumps/courseData.json"]
+    fixtures = ["packages/web/dumps/courseData.json"]
 
     def test_exportcourse(self):
         sys.stdout = out = StringIO()
