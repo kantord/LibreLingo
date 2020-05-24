@@ -18,21 +18,11 @@ class LearnWord(models.Model):
     def __str__(self):
         return self.formInTargetLanguage
 
-    def clean(self):
-        if (not self.meaningInSourceLanguage2 and self.formInTargetLanguage2) or (
-                not self.formInTargetLanguage2 and self.meaningInSourceLanguage2):
-            raise ValidationError(
-                'If there are alternative forms, they should exist in both languages.')
-
     skill = models.ForeignKey('Skill', on_delete=models.CASCADE)
     meaningInSourceLanguage = models.TextField(
         verbose_name="Meaning in source language")
     formInTargetLanguage = models.TextField(
         verbose_name="Meaning in target language")
-    meaningInSourceLanguage2 = models.TextField(
-        verbose_name="Alternative form in source language", null=True, blank=True)
-    formInTargetLanguage2 = models.TextField(
-        verbose_name="Alternative form in target language", null=True, blank=True)
     image1 = models.TextField(choices=VALID_IMAGE_NAMES)
     image2 = models.TextField(choices=VALID_IMAGE_NAMES)
     image3 = models.TextField(choices=VALID_IMAGE_NAMES)
