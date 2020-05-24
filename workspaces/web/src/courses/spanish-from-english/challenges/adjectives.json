@@ -1807,51 +1807,6 @@
     {
       "type": "cards",
       "pictures": [
-        "mouse1.jpg",
-        "mouse2.jpg",
-        "mouse3.jpg"
-      ],
-      "formInTargetLanguage": "el ratón",
-      "meaningInSourceLanguage": "the mouse",
-      "id": "51c68ba481b4",
-      "priority": 0,
-      "group": "274032fad914"
-    },
-    {
-      "type": "shortInput",
-      "pictures": [
-        "mouse1.jpg",
-        "mouse2.jpg",
-        "mouse3.jpg"
-      ],
-      "formInTargetLanguage": [
-        "el ratón"
-      ],
-      "phrase": [
-        {
-          "word": "the",
-          "definition": "la (fem.), el (masc.)\r\nlas, los"
-        },
-        {
-          "word": "mouse"
-        }
-      ],
-      "id": "0c3bcb790dff",
-      "priority": 1,
-      "group": "274032fad914"
-    },
-    {
-      "type": "listeningExercise",
-      "answer": "el ratón",
-      "meaning": "the mouse",
-      "audio": "824856b872c03f584a2bd540d90136365ebfdc75d4cf31a2a91cb6584fbcbe63",
-      "id": "d3f327d28742",
-      "priority": 1,
-      "group": "274032fad914"
-    },
-    {
-      "type": "cards",
-      "pictures": [
         "elephant1.jpg",
         "elephant2.jpg",
         "elephant3.jpg"
@@ -1886,51 +1841,6 @@
       "answer": "elefante",
       "meaning": "elephant",
       "audio": "5434620e3fd82ab049b3c282c42fad409cacb6b5098f9c715e7049f4afd6df9f",
-      "id": "150231ba781b",
-      "priority": 1,
-      "group": "1e56e94ee34c"
-    },
-    {
-      "type": "cards",
-      "pictures": [
-        "elephant1.jpg",
-        "elephant2.jpg",
-        "elephant3.jpg"
-      ],
-      "formInTargetLanguage": "el elefante",
-      "meaningInSourceLanguage": "the elephant",
-      "id": "ef0c2228360e",
-      "priority": 0,
-      "group": "1e56e94ee34c"
-    },
-    {
-      "type": "shortInput",
-      "pictures": [
-        "elephant1.jpg",
-        "elephant2.jpg",
-        "elephant3.jpg"
-      ],
-      "formInTargetLanguage": [
-        "el elefante"
-      ],
-      "phrase": [
-        {
-          "word": "the",
-          "definition": "la (fem.), el (masc.)\r\nlas, los"
-        },
-        {
-          "word": "elephant"
-        }
-      ],
-      "id": "9d8f53b75dd2",
-      "priority": 1,
-      "group": "1e56e94ee34c"
-    },
-    {
-      "type": "listeningExercise",
-      "answer": "el elefante",
-      "meaning": "the elephant",
-      "audio": "5b8c8b07f85267cedd10b991fd56c7ba086b66c1be25800a7d94717d06ec173c",
       "id": "150231ba781b",
       "priority": 1,
       "group": "1e56e94ee34c"
@@ -1979,15 +1889,60 @@
     {
       "type": "cards",
       "pictures": [
+        "mouse1.jpg",
+        "mouse2.jpg",
+        "mouse3.jpg"
+      ],
+      "formInTargetLanguage": "el ratón",
+      "meaningInSourceLanguage": "the mouse",
+      "id": "e8a3a6d81d55",
+      "priority": 0,
+      "group": "4a1687bf0ed0"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "mouse1.jpg",
+        "mouse2.jpg",
+        "mouse3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "el ratón"
+      ],
+      "phrase": [
+        {
+          "word": "the",
+          "definition": "la (fem.), el (masc.)\r\nlas, los"
+        },
+        {
+          "word": "mouse"
+        }
+      ],
+      "id": "aca68dd9c6db",
+      "priority": 1,
+      "group": "4a1687bf0ed0"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "el ratón",
+      "meaning": "the mouse",
+      "audio": "824856b872c03f584a2bd540d90136365ebfdc75d4cf31a2a91cb6584fbcbe63",
+      "id": "ada89281ed5b",
+      "priority": 1,
+      "group": "4a1687bf0ed0"
+    },
+    {
+      "type": "cards",
+      "pictures": [
         "park1.jpg",
         "park2.jpg",
         "park3.jpg"
       ],
       "formInTargetLanguage": "el parque",
       "meaningInSourceLanguage": "the park",
-      "id": "4a0ca1edd24d",
+      "id": "42c8972da5cb",
       "priority": 0,
-      "group": "61c797894166"
+      "group": "1257c02e38cd"
     },
     {
       "type": "shortInput",
@@ -2008,18 +1963,63 @@
           "word": "park"
         }
       ],
-      "id": "b684a0533eeb",
+      "id": "69a07f8f8f7e",
       "priority": 1,
-      "group": "61c797894166"
+      "group": "1257c02e38cd"
     },
     {
       "type": "listeningExercise",
       "answer": "el parque",
       "meaning": "the park",
       "audio": "31c887405449b1d348f66fa20205f669376e877c526c113853126bd7129a8345",
-      "id": "9e7f7dbd5b2e",
+      "id": "012841aca866",
       "priority": 1,
-      "group": "61c797894166"
+      "group": "1257c02e38cd"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "elephant1.jpg",
+        "elephant2.jpg",
+        "elephant3.jpg"
+      ],
+      "formInTargetLanguage": "el elefante",
+      "meaningInSourceLanguage": "the elephant",
+      "id": "e0f722d1bc0f",
+      "priority": 0,
+      "group": "83edc1392d35"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "elephant1.jpg",
+        "elephant2.jpg",
+        "elephant3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "el elefante"
+      ],
+      "phrase": [
+        {
+          "word": "the",
+          "definition": "la (fem.), el (masc.)\r\nlas, los"
+        },
+        {
+          "word": "elephant"
+        }
+      ],
+      "id": "b7299bbfd1aa",
+      "priority": 1,
+      "group": "83edc1392d35"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "el elefante",
+      "meaning": "the elephant",
+      "audio": "5b8c8b07f85267cedd10b991fd56c7ba086b66c1be25800a7d94717d06ec173c",
+      "id": "9c95cc98e3e7",
+      "priority": 1,
+      "group": "83edc1392d35"
     }
   ]
 }
