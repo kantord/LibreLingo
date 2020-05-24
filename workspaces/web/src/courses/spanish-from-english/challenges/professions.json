@@ -616,52 +616,6 @@
     {
       "type": "cards",
       "pictures": [
-        "doctor1.jpg",
-        "doctor2.jpg",
-        "doctor3.jpg"
-      ],
-      "formInTargetLanguage": "una médica",
-      "meaningInSourceLanguage": "a doctor",
-      "id": "a4629023941d",
-      "priority": 0,
-      "group": "569154cdd77d"
-    },
-    {
-      "type": "shortInput",
-      "pictures": [
-        "doctor1.jpg",
-        "doctor2.jpg",
-        "doctor3.jpg"
-      ],
-      "formInTargetLanguage": [
-        "una médica"
-      ],
-      "phrase": [
-        {
-          "word": "a",
-          "definition": "una (fem.), un (masc.)"
-        },
-        {
-          "word": "doctor",
-          "definition": "médica (fem.), médico (masc.)"
-        }
-      ],
-      "id": "7d743d7fc962",
-      "priority": 1,
-      "group": "569154cdd77d"
-    },
-    {
-      "type": "listeningExercise",
-      "answer": "una médica",
-      "meaning": "a doctor",
-      "audio": "e47c9e9d9138077e5518aa73b693875538c34ee6a5db12c8587fad63c0ab2124",
-      "id": "8c4f102e0ad7",
-      "priority": 1,
-      "group": "569154cdd77d"
-    },
-    {
-      "type": "cards",
-      "pictures": [
         "firefighter1.jpg",
         "firefighter2.jpg",
         "firefighter3.jpg"
@@ -696,47 +650,6 @@
       "answer": "bombera",
       "meaning": "firefighter",
       "audio": "a09f467ceae308c76aa28f22b5c5574a83470b434521b38ef0bbefe929ea2fef",
-      "id": "84382c40581d",
-      "priority": 1,
-      "group": "d79a277286e9"
-    },
-    {
-      "type": "cards",
-      "pictures": [
-        "firefighter1.jpg",
-        "firefighter2.jpg",
-        "firefighter3.jpg"
-      ],
-      "formInTargetLanguage": "bombero",
-      "meaningInSourceLanguage": "firefighter",
-      "id": "2cdc915bcef4",
-      "priority": 0,
-      "group": "d79a277286e9"
-    },
-    {
-      "type": "shortInput",
-      "pictures": [
-        "firefighter1.jpg",
-        "firefighter2.jpg",
-        "firefighter3.jpg"
-      ],
-      "formInTargetLanguage": [
-        "bombero"
-      ],
-      "phrase": [
-        {
-          "word": "firefighter"
-        }
-      ],
-      "id": "7347fb6c3ae1",
-      "priority": 1,
-      "group": "d79a277286e9"
-    },
-    {
-      "type": "listeningExercise",
-      "answer": "bombero",
-      "meaning": "firefighter",
-      "audio": "293c36957d38f541cafe59c2c8518217c4158a74557a25ae35a529e579235312",
       "id": "84382c40581d",
       "priority": 1,
       "group": "d79a277286e9"
@@ -786,15 +699,102 @@
     {
       "type": "cards",
       "pictures": [
+        "doctor1.jpg",
+        "doctor2.jpg",
+        "doctor3.jpg"
+      ],
+      "formInTargetLanguage": "una médica",
+      "meaningInSourceLanguage": "a doctor",
+      "id": "5aa4aa47b0d8",
+      "priority": 0,
+      "group": "8615e8ef3933"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "doctor1.jpg",
+        "doctor2.jpg",
+        "doctor3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "una médica"
+      ],
+      "phrase": [
+        {
+          "word": "a",
+          "definition": "una (fem.), un (masc.)"
+        },
+        {
+          "word": "doctor",
+          "definition": "médica (fem.), médico (masc.)"
+        }
+      ],
+      "id": "048f23adb755",
+      "priority": 1,
+      "group": "8615e8ef3933"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "una médica",
+      "meaning": "a doctor",
+      "audio": "e47c9e9d9138077e5518aa73b693875538c34ee6a5db12c8587fad63c0ab2124",
+      "id": "0df2fa5fe399",
+      "priority": 1,
+      "group": "8615e8ef3933"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "firefighter1.jpg",
+        "firefighter2.jpg",
+        "firefighter3.jpg"
+      ],
+      "formInTargetLanguage": "bombero",
+      "meaningInSourceLanguage": "firefighter",
+      "id": "c4ef928b4843",
+      "priority": 0,
+      "group": "11275e4f58d0"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "firefighter1.jpg",
+        "firefighter2.jpg",
+        "firefighter3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "bombero"
+      ],
+      "phrase": [
+        {
+          "word": "firefighter"
+        }
+      ],
+      "id": "7f4668e13c1a",
+      "priority": 1,
+      "group": "11275e4f58d0"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "bombero",
+      "meaning": "firefighter",
+      "audio": "293c36957d38f541cafe59c2c8518217c4158a74557a25ae35a529e579235312",
+      "id": "362ee34e8869",
+      "priority": 1,
+      "group": "11275e4f58d0"
+    },
+    {
+      "type": "cards",
+      "pictures": [
         "farmer1.jpg",
         "farmer2.jpg",
         "farmer3.jpg"
       ],
       "formInTargetLanguage": "granjeras",
       "meaningInSourceLanguage": "farmers",
-      "id": "b8cfe14b5955",
+      "id": "d7826f57cecf",
       "priority": 0,
-      "group": "bec8174273c9"
+      "group": "88a796a8e7b9"
     },
     {
       "type": "shortInput",
@@ -811,18 +811,18 @@
           "word": "farmers"
         }
       ],
-      "id": "502857c39852",
+      "id": "3cfc5cb42264",
       "priority": 1,
-      "group": "bec8174273c9"
+      "group": "88a796a8e7b9"
     },
     {
       "type": "listeningExercise",
       "answer": "granjeras",
       "meaning": "farmers",
       "audio": "cd009ca8498d37c8f29cd3ea35d02cc4adde210ea1efccaf0f7ae022d51597e6",
-      "id": "54c64058c2b6",
+      "id": "e34e56fe5310",
       "priority": 1,
-      "group": "bec8174273c9"
+      "group": "88a796a8e7b9"
     }
   ]
 }

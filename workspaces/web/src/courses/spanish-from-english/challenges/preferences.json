@@ -979,52 +979,6 @@
     {
       "type": "cards",
       "pictures": [
-        "coffee1.jpg",
-        "coffee2.jpg",
-        "coffee3.jpg"
-      ],
-      "formInTargetLanguage": "un café",
-      "meaningInSourceLanguage": "a coffee",
-      "id": "7af7c8987b5b",
-      "priority": 0,
-      "group": "51c4689652c2"
-    },
-    {
-      "type": "shortInput",
-      "pictures": [
-        "coffee1.jpg",
-        "coffee2.jpg",
-        "coffee3.jpg"
-      ],
-      "formInTargetLanguage": [
-        "un café"
-      ],
-      "phrase": [
-        {
-          "word": "a",
-          "definition": "una (fem.), un (masc.)"
-        },
-        {
-          "word": "coffee",
-          "definition": "café"
-        }
-      ],
-      "id": "75b7431883ef",
-      "priority": 1,
-      "group": "51c4689652c2"
-    },
-    {
-      "type": "listeningExercise",
-      "answer": "un café",
-      "meaning": "a coffee",
-      "audio": "278333a5d6868cb350812832f47df7f278dabf3bd95c9211a7ae6174a7037782",
-      "id": "78f0acda227c",
-      "priority": 1,
-      "group": "51c4689652c2"
-    },
-    {
-      "type": "cards",
-      "pictures": [
         "wine1.jpg",
         "wine2.jpg",
         "wine3.jpg"
@@ -1060,52 +1014,6 @@
       "answer": "vino",
       "meaning": "wine",
       "audio": "0df83620258093a0920955db051c69640431d93625350d5456b806c1c6468a0a",
-      "id": "36abed670a24",
-      "priority": 1,
-      "group": "7fa8507afd76"
-    },
-    {
-      "type": "cards",
-      "pictures": [
-        "wine1.jpg",
-        "wine2.jpg",
-        "wine3.jpg"
-      ],
-      "formInTargetLanguage": "el vino",
-      "meaningInSourceLanguage": "the wine",
-      "id": "631d834d2939",
-      "priority": 0,
-      "group": "7fa8507afd76"
-    },
-    {
-      "type": "shortInput",
-      "pictures": [
-        "wine1.jpg",
-        "wine2.jpg",
-        "wine3.jpg"
-      ],
-      "formInTargetLanguage": [
-        "el vino"
-      ],
-      "phrase": [
-        {
-          "word": "the",
-          "definition": "la (fem.), el (masc.)\r\nlas, los"
-        },
-        {
-          "word": "wine",
-          "definition": "vino"
-        }
-      ],
-      "id": "fcf935f092da",
-      "priority": 1,
-      "group": "7fa8507afd76"
-    },
-    {
-      "type": "listeningExercise",
-      "answer": "el vino",
-      "meaning": "the wine",
-      "audio": "59c52cdd01c3116d12f1d2dc341b6840f9cb0211f12f35be4cbef88aeeb866f8",
       "id": "36abed670a24",
       "priority": 1,
       "group": "7fa8507afd76"
@@ -1151,6 +1059,98 @@
       "id": "8d3ea5cc0a8c",
       "priority": 1,
       "group": "dab7b13fe598"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "coffee1.jpg",
+        "coffee2.jpg",
+        "coffee3.jpg"
+      ],
+      "formInTargetLanguage": "un café",
+      "meaningInSourceLanguage": "a coffee",
+      "id": "623b413ad344",
+      "priority": 0,
+      "group": "531a60960a8e"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "coffee1.jpg",
+        "coffee2.jpg",
+        "coffee3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "un café"
+      ],
+      "phrase": [
+        {
+          "word": "a",
+          "definition": "una (fem.), un (masc.)"
+        },
+        {
+          "word": "coffee",
+          "definition": "café"
+        }
+      ],
+      "id": "595609849e21",
+      "priority": 1,
+      "group": "531a60960a8e"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "un café",
+      "meaning": "a coffee",
+      "audio": "278333a5d6868cb350812832f47df7f278dabf3bd95c9211a7ae6174a7037782",
+      "id": "c2408ff5d009",
+      "priority": 1,
+      "group": "531a60960a8e"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "wine1.jpg",
+        "wine2.jpg",
+        "wine3.jpg"
+      ],
+      "formInTargetLanguage": "el vino",
+      "meaningInSourceLanguage": "the wine",
+      "id": "8ad8c953a2dc",
+      "priority": 0,
+      "group": "7541072cddd1"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "wine1.jpg",
+        "wine2.jpg",
+        "wine3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "el vino"
+      ],
+      "phrase": [
+        {
+          "word": "the",
+          "definition": "la (fem.), el (masc.)\r\nlas, los"
+        },
+        {
+          "word": "wine",
+          "definition": "vino"
+        }
+      ],
+      "id": "1c6938a727d2",
+      "priority": 1,
+      "group": "7541072cddd1"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "el vino",
+      "meaning": "the wine",
+      "audio": "59c52cdd01c3116d12f1d2dc341b6840f9cb0211f12f35be4cbef88aeeb866f8",
+      "id": "7b48c514241a",
+      "priority": 1,
+      "group": "7541072cddd1"
     }
   ]
 }

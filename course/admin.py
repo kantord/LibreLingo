@@ -94,9 +94,7 @@ class LearnWordForm(forms.ModelForm):
         exclude = []
         widgets = {
             'meaningInSourceLanguage': forms.TextInput(),
-            'formInTargetLanguage': forms.TextInput(),
-            'meaningInSourceLanguage2': forms.TextInput(),
-            'formInTargetLanguage2': forms.TextInput()
+            'formInTargetLanguage': forms.TextInput()
         }
 
 
