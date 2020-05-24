@@ -35,17 +35,6 @@ snapshots['CourseDataTest::test_correct_output_format 1'] = {
     ]
 }
 
-snapshots['ExportSkillTest::test_export_skill_correct_output_format 1'] = [
-    {
-        'formInTargetLanguage': 'Buen provecho',
-        'group': '2f4f49b572eb',
-        'id': 'fa83044ce0fe',
-        'meaningInSourceLanguage': 'Enjoy your meal',
-        'priority': 0,
-        'type': 'options'
-    }
-]
-
 snapshots['CourseDataTest::test_correct_output_format_only_phrases 1'] = {
     'languageCode': 'ES',
     'languageName': 'Spanish',
