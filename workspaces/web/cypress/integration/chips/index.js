@@ -5,27 +5,23 @@ Then("words with definitions have tooltips", () => {
 })
 
 Then("words without a definition have no tooltip", () => {
-    cy.get(".has-tooltip-bottom")
-        .contains("How")
-        .should("not.be.visible")
+    cy.get(".has-tooltip-bottom").contains("How").should("not.be.visible")
 })
 
 Then("I see the correct chips", () => {
-    cy.get(".chip")
-        .contains("Como")
-        .should("be.visible")
-    cy.get(".chip")
-        .contains("estás")
-        .should("be.visible")
-    cy.get(".chip")
-        .contains("hoy")
-        .should("be.visible")
+    cy.get(".chip").contains("Como").should("be.visible")
+    cy.get(".chip").contains("estás").should("be.visible")
+    cy.get(".chip").contains("hoy").should("be.visible")
 })
 
 Given("I order words incorrectly", () => {
-    cy.window().then(win => win.testIncorrectSolution())
+    cy.window().then((win) => win.testIncorrectSolution())
 })
 
 Given("I order words correctly", () => {
-    cy.window().then(win => win.testSolution())
+    cy.window().then((win) => win.testSolution())
+})
+
+Given("I order words correctly, but in a different way", () => {
+    cy.window().then((win) => win.testSolution2())
 })
