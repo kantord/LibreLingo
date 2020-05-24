@@ -213,13 +213,6 @@ def get_skill_data(skill, language_id, course):
             language_id,
             course
         )
-        if (learnword.formInTargetLanguage2):
-            data = data + generate_learnword_challenge(
-                learnword,
-                learnword.formInTargetLanguage2,
-                learnword.meaningInSourceLanguage2,
-                language_id,
-                course)
 
     return {
         "id": opaqueId(skill, "Skill"),
@@ -260,14 +253,6 @@ def export_course(course):
                             language_id,
                             learnword.formInTargetLanguage),
                         learnword.formInTargetLanguage))
-                if (learnword.formInTargetLanguage2):
-                    audios_to_fetch.append(
-                        "{}|{}|{}".format(
-                            language_id,
-                            audioId(
-                                language_id,
-                                learnword.formInTargetLanguage2),
-                            learnword.formInTargetLanguage2))
             for learnsentence in skill.learnsentence_set.all():
                 audios_to_fetch.append(
                     "{}|{}|{}".format(
