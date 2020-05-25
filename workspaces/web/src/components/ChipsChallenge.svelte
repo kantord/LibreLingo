@@ -5,20 +5,24 @@
   import ChallengePanel from "./ChallengePanel"
   import Phrase from "./Phrase"
 
-  const swapArrayElements = function (arr, indexA, indexB) {
-    const temp = arr[indexA]
-    const new_arr = [...arr]
-    new_arr[indexA] = arr[indexB]
-    new_arr[indexB] = temp
-    return new_arr
+  const swapArrayElements = (array, oldIndex, newIndex) => {
+    const arr = [...array]
+
+    // remove item at old place
+    arr.splice(oldIndex, oldIndex)
+
+    // insert item at new place
+    arr.splice(newIndex, 0, array[oldIndex])
+
+    return arr
   }
 
   const sortable = function (node, { items, options }) {
     options = Object.assign(options, {
       onUpdate({ newIndex, oldIndex }) {
-        items.update((oldItems) =>
-          swapArrayElements(oldItems, oldIndex, newIndex)
-        )
+        items.update((oldItems) => {
+          return swapArrayElements(oldItems, oldIndex, newIndex)
+        })
       },
 
       onRemove({ oldIndex }) {
