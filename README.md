@@ -46,9 +46,9 @@ Here's a rough sketch of how  I imagine the milestones of this project:
 ### Alpha release
 
 * ☐ Course progress can be properly synchronised across devices
-* ☐ Course editor can be accessed by all course contributors
+* ☑️ Course editor can be accessed by all course contributors
 * ☐ Statistics about course contributors are collected and published
-* ☐ At least the basics of the Spanish course are ready
+* ☑️ At least the basics of the Spanish course are ready
 * ☑️ Most of the course building blocks are implemented
 
 
@@ -58,6 +58,7 @@ Here's a rough sketch of how  I imagine the milestones of this project:
 * ☐ More advanced learning features (reading exercises)
 * ☑️ Spaced repetition implemented
 * ☐ Spanish course is stable and useful
+* ☐ Course editor publicly accessible 
 
 ### Stable release(s)
 
