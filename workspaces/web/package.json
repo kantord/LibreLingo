@@ -24,7 +24,6 @@
     "eslintfix": "eslint ./src --fix"
   },
   "dependencies": {
-    "lluis": "0.0.0",
     "@fortawesome/fontawesome-svg-core": "1.2.28",
     "@fortawesome/free-brands-svg-icons": "5.13.0",
     "@fortawesome/free-solid-svg-icons": "5.13.0",
@@ -37,7 +36,9 @@
     "github-fork-ribbon-css": "0.2.3",
     "hotkeys-js": "3.8.1",
     "howler": "2.2.0",
+    "js-cookie": "^2.2.1",
     "js-levenshtein": "1.1.6",
+    "lluis": "0.0.0",
     "lodash.shuffle": "4.2.0",
     "p-memoize": "4.0.0",
     "polka": "next",
@@ -65,6 +66,10 @@
     "cypress": "4.4.1",
     "cypress-cucumber-preprocessor": "2.3.1",
     "cz-conventional-changelog": "3.2.0",
+    "eslint": "6.8.0",
+    "eslint-plugin-cypress": "2.11.1",
+    "eslint-plugin-jest": "23.13.2",
+    "eslint-plugin-svelte3": "2.7.3",
     "extract-text-webpack-plugin": "4.0.0-beta.0",
     "file-loader": "6.0.0",
     "gh-pages": "3.0.0",
@@ -75,6 +80,8 @@
     "node-sass": "4.14.1",
     "npm-run-all": "4.1.5",
     "nyc": "15.0.1",
+    "prettier": "2.0.5",
+    "prettier-plugin-svelte": "1.1.0",
     "raw-loader": "4.0.1",
     "sapper": "0.27.13",
     "sass-loader": "8.0.2",
@@ -84,12 +91,6 @@
     "svelte-preprocess-sass": "0.2.0",
     "webpack": "4.43.0",
     "webpack-bundle-analyzer": "3.7.0",
-    "webpack-cli": "3.3.11",
-    "prettier": "2.0.5",
-    "prettier-plugin-svelte": "1.1.0",
-    "eslint": "6.8.0",
-    "eslint-plugin-cypress": "2.11.1",
-    "eslint-plugin-jest": "23.13.2",
-    "eslint-plugin-svelte3": "2.7.3"
+    "webpack-cli": "3.3.11"
   }
 }
