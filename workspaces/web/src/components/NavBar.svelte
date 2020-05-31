@@ -1,7 +1,11 @@
 <script>
+  import settings from "../settings"
+  import authStore from "../auth"
   import GitHubButton from "./GitHubButton"
+  import Button from "lluis/Button"
   export let dark = false
   export let is_hidden_mobile = false
+  export let hasAuth = false
 </script>
 
 <nav
@@ -21,6 +25,18 @@
   <div class="navbar-end">
     <div class="navbar-item">
       <GitHubButton />
+    </div>
+    <div class="navbar-item">
+      {#if hasAuth && settings.features.authEnabled}
+        {#if $authStore.user}
+          <Button>{$authStore.user.name}</Button>
+          <Button on:click="{() => window._Logout()}">Logout</Button>
+        {:else}
+          <Button on:click="{() => window._Login('jan', 'apple')}">
+            Login
+          </Button>
+        {/if}
+      {/if}
     </div>
   </div>
 </nav>
