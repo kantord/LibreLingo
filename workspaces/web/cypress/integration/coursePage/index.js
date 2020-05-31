@@ -1,4 +1,5 @@
 import dayjs from "dayjs"
+import settings from "../../../src/settings"
 import { Before, Then, Given } from "cypress-cucumber-preprocessor/steps"
 
 const COURSE_PAGE_URL = "/course/test"
@@ -6,13 +7,15 @@ const SKILL_PAGE_URL = `${COURSE_PAGE_URL}/skill/_short_input_test0`
 
 Before(() => {
     // Reset database
-    cy.window().then(window => {
-        cy.wrap(window.indexedDB.deleteDatabase("_pouch_localData"))
+    cy.window().then((window) => {
+        cy.wrap(
+            window.indexedDB.deleteDatabase(`_pouch_${settings.database.local}`)
+        )
     })
     cy.visit(COURSE_PAGE_URL)
 })
 
-Then("I see {int} skills that are not completed", number => {
+Then("I see {int} skills that are not completed", (number) => {
     cy.get("[data-completed=false]").should("have.length", number)
 })
 
@@ -29,13 +32,13 @@ Then("I see 3 skills that have an image set", () => {
 })
 
 Given("I have a stale skill", () => {
-    cy.window().then(window => {
+    cy.window().then((window) => {
         const db = window._DB
         cy.wrap(null).then(() => {
             return db
                 .put({
                     _id: "skills/434d43b3",
-                    practiced: [{ at: +dayjs().subtract(1, "day") }]
+                    practiced: [{ at: +dayjs().subtract(1, "day") }],
                 })
                 .then(() => {
                     cy.reload()
@@ -71,10 +74,10 @@ Then("I see a completed skill", () => {
 })
 
 Given("practice statistics are saved correctly", () => {
-    cy.window().then(window => {
+    cy.window().then((window) => {
         const db = window._DB
         cy.wrap(null).then(() => {
-            return db.get("skills/434d43b3").then(doc => {
+            return db.get("skills/434d43b3").then((doc) => {
                 cy.wrap(doc.practiced[0].incorrect).should("equal", 0)
                 cy.wrap(doc.practiced[0].correct).should("equal", 1)
             })

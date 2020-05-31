@@ -1,0 +1,18 @@
+{
+  "database": {
+    "production": {
+      "local": "localData",
+      "remote": "https://sync.librelingo.app",
+      "auth": {
+        "expireDays": 150
+      }
+    },
+    "development": {
+      "local": "localDataTesting",
+      "remote": "http://localhost:5984/",
+      "auth": {
+        "expireDays": 1
+      }
+    }
+  }
+}

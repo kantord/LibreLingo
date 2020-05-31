@@ -1,5 +1,6 @@
 <script context="module">
   import { waitLocale } from "svelte-i18n"
+  import authStore from "../auth"
 
   export async function preload() {
     return waitLocale()
@@ -30,7 +31,7 @@
 
 </svelte:head>
 
-{#if process.browser !== true}
+{#if process.browser !== true || $authStore.online === null}
   <div class="pageloader is-active">
     <span class="title">LibreLingo</span>
   </div>

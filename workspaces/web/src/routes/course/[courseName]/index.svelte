@@ -24,7 +24,7 @@
   <title>LibreLingo - learn {languageName} for free</title>
 </svelte:head>
 
-<NavBar dark />
+<NavBar dark hasAuth />
 
 {#each modules as { title, skills }}
   <section class="section">
