@@ -24,19 +24,23 @@
 
   <div class="navbar-end">
     <div class="navbar-item">
-      <GitHubButton />
-    </div>
-    <div class="navbar-item">
-      {#if hasAuth && settings.features.authEnabled}
-        {#if $authStore.user}
-          <Button>{$authStore.user.name}</Button>
-          <Button on:click="{() => window._Logout()}">Logout</Button>
-        {:else}
-          <Button on:click="{() => window._Login('jan', 'apple')}">
-            Login
-          </Button>
+      <div class="buttons">
+        <GitHubButton />
+        {#if hasAuth && settings.features.authEnabled}
+          {#if $authStore.user}
+            <Button>{$authStore.user.name}</Button>
+            <Button on:click="{() => window._Logout()}">Logout</Button>
+          {:else}
+            <Button
+              on:click="{() => window._Login('jan', 'apple')}"
+              size="small"
+              outlined
+              inverted>
+              Log in
+            </Button>
+          {/if}
         {/if}
-      {/if}
+      </div>
     </div>
   </div>
 </nav>
