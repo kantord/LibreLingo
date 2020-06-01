@@ -44,7 +44,7 @@ if (process.browser === true) {
 
     // Add login function
     window._Login = async (username, password) => {
-        await (
+        const response = await (
             await fetch(`${settings.database.remote}/_session`, {
                 method: "post",
                 headers: {
@@ -56,6 +56,13 @@ if (process.browser === true) {
                 }),
             })
         ).json()
+
+        if (response.error) {
+            if (response.error === "unauthorized") {
+                throw new Error("Username or password is incorrect")
+            }
+            throw new Error("Couldn't log in. Please try again later")
+        }
 
         authStore.update((value) => ({
             ...value,
