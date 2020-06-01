@@ -25,6 +25,7 @@ yarn
 Start the development server:
 
 ```
+cd workspaces/web
 yarn dev
 ```
 
