@@ -9,6 +9,7 @@ Feature: Course page
     And I see 4 skills that are not completed
     And I see a skill that has no image set
     And I see 3 skills that have an image set
+    And I see a Log in button
 
   Scenario: Opening course page with a stale skill
     Given I open "/course/test"
