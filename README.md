@@ -54,7 +54,7 @@ Here's a rough sketch of how  I imagine the milestones of this project:
 
 ### Beta release
 
-* ☐ All of the basic building blocks of courses are implemented
+* ☑️ All of the basic building blocks of courses are implemented
 * ☐ More advanced learning features (reading exercises)
 * ☑️ Spaced repetition implemented
 * ☐ Spanish course is stable and useful
