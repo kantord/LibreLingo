@@ -25,8 +25,7 @@ yarn
 Start the development server:
 
 ```
-cd workspaces/web
-yarn dev
+yarn web dev
 ```
 
 Now you should be able to see your app on [http://localhost:3000/](http://localhost:3000/)
