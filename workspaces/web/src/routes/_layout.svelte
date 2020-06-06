@@ -35,7 +35,7 @@
 
 </svelte:head>
 
-{#if process.browser !== true || ($authStore.online === null && settings.features.authEnabled)}
+{#if process.browser !== true}
   <div class="pageloader is-active">
     <span class="title">LibreLingo</span>
   </div>
