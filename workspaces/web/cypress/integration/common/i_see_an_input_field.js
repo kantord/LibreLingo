@@ -8,8 +8,11 @@ Then("the input field is focused", () => {
     cy.get("[data-test=answer]").should("be.focused")
 })
 
-Then("the input field has a {string} placeholder", text => {
-    cy.get("input[type=text]")
-        .first()
-        .should("have.attr", "placeholder", text)
+Then("the input field has a {string} placeholder", (text) => {
+    cy.get("input[type=text]").first().should("have.attr", "placeholder", text)
+})
+
+Then("the {string} field has the label {string}", (fieldName, labelText) => {
+    cy.get(`label[for=${fieldName}]`).should("contain", labelText)
+    cy.get(`#${fieldName}`).should("be.visible")
 })
