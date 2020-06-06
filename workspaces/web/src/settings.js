@@ -1,4 +1,3 @@
-import Cookies from "js-cookie"
 import settings from "../settings.json"
 
 const isDevelopment =
@@ -8,7 +7,7 @@ const database = !isDevelopment
     ? settings.database.production
     : settings.database.development
 
-const authEnabled = Cookies.get("authEnabled") === "true"
+const authEnabled = true
 
 export default {
     ...settings,

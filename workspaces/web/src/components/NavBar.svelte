@@ -29,15 +29,9 @@
         {#if hasAuth && settings.features.authEnabled}
           {#if $authStore.user}
             <Button>{$authStore.user.name}</Button>
-            <Button on:click="{() => window._Logout()}">Logout</Button>
+            <Button on:click="{() => window._Logout()}">Log out</Button>
           {:else}
-            <Button
-              on:click="{() => window._Login('jan', 'apple')}"
-              size="small"
-              outlined
-              inverted>
-              Log in
-            </Button>
+            <Button href="/login" size="small" outlined inverted>Log in</Button>
           {/if}
         {/if}
       </div>
