@@ -20,6 +20,15 @@ if (process.browser === true) {
     db = new PouchDB(settings.database.local)
     window._DB = db
 
+    // Detect fake user session
+    if (Cookies.get("loginDb") === getUserDbName("---fakeUser")) {
+        authStore.update((value) => ({
+            ...value,
+            user: { name: "---fakeUser" },
+            online: true,
+        }))
+    }
+
     // Detect existing user session
     if (Cookies.get("loginDb") && settings.features.authEnabled) {
         fetch(`${settings.database.remote}/_session`)
@@ -42,8 +51,24 @@ if (process.browser === true) {
         }))
     }
 
+    // Fake login for testing purposes
+    window._fakeLogin = () => {
+        Cookies.set("loginDb", getUserDbName("---fakeUser"), {
+            expires: settings.database.auth.expireDays,
+        })
+        window.location.href = "/course/spanish-from-english/"
+    }
+
     // Add login function
     window._Login = async (username, password) => {
+        if (window._test_credentials_correct === false) {
+            throw new Error("Incorrect username or password")
+        }
+
+        if (window._test_credentials_correct === true) {
+            return window._fakeLogin()
+        }
+
         const response = await (
             await fetch(`${settings.database.remote}/_session`, {
                 method: "post",
@@ -72,19 +97,27 @@ if (process.browser === true) {
             expires: settings.database.auth.expireDays,
         })
         window.location.reload(false)
+        window.location.href = "/course/spanish-from-english/"
     }
 
     // Logout
     window._Logout = async () => {
-        await syncHandler.cancel()
-        await fetch(`${settings.database.remote}/_session`, { method: "delete" })
-        Cookies.remove("loginDb")
-        authStore.update((value) => ({
-            ...value,
-            user: null,
-            online: null,
-        }))
-        window.location.reload(false)
+        try {
+            if (syncHandler) {
+                await syncHandler.cancel()
+                await fetch(`${settings.database.remote}/_session`, {
+                    method: "delete",
+                })
+            }
+        } finally {
+            Cookies.remove("loginDb")
+            authStore.update((value) => ({
+                ...value,
+                user: null,
+                online: null,
+            }))
+            window.location.reload(false)
+        }
     }
 
     // Keep databases in sync
