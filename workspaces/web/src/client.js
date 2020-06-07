@@ -7,7 +7,9 @@ import {
     faVolumeUp,
     faCheckSquare,
     faDumbbell,
-    faStar
+    faStar,
+    faUser,
+    faLock,
 } from "@fortawesome/free-solid-svg-icons"
 import { faTwitter } from "@fortawesome/free-brands-svg-icons"
 
@@ -16,8 +18,10 @@ library.add(faCheckSquare)
 library.add(faDumbbell)
 library.add(faTwitter)
 library.add(faStar)
+library.add(faUser)
+library.add(faLock)
 dom.watch()
 
 sapper.start({
-    target: document.querySelector("#sapper")
+    target: document.querySelector("#sapper"),
 })
