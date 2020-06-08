@@ -6531,10 +6531,10 @@ hast-util-phrasing@^1.0.0:
     hast-util-is-body-ok-link "^1.0.0"
     hast-util-is-element "^1.0.0"
 
-hast-util-to-html@^7.0.0:
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/hast-util-to-html/-/hast-util-to-html-7.1.0.tgz#aa580e7b846438ee1e7af2bee6a650062eb0c3ec"
-  integrity sha512-RjvNL41bYnxTOA+s8W8mjhVxH1J0dXza9hlakVHbghFsfj3JO/lsq3DsR/Md2HbynS8y89/LA7k0lhtnYJ1Yzw==
+hast-util-to-html@^7.1.1:
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/hast-util-to-html/-/hast-util-to-html-7.1.1.tgz#39818b8bbfcb8eaa87846a120b3875487b27d094"
+  integrity sha512-Ujqj0hGuo3dIQKilkbauAv5teOqPvhaSLEgs1lgApFT0812e114KiffV8XfE4ttR8dRPqxNOIJOMu6SKOVOGlg==
   dependencies:
     ccount "^1.0.0"
     comma-separated-tokens "^1.0.0"
@@ -6543,7 +6543,7 @@ hast-util-to-html@^7.0.0:
     html-void-elements "^1.0.0"
     property-information "^5.0.0"
     space-separated-tokens "^1.0.0"
-    stringify-entities "^3.0.0"
+    stringify-entities "^3.0.1"
     unist-util-is "^4.0.0"
     xtend "^4.0.0"
 
@@ -10307,13 +10307,12 @@ rehype-minify-whitespace@^3.0.0:
     unist-util-is "^4.0.0"
     unist-util-modify-children "^1.0.0"
 
-rehype-stringify@7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/rehype-stringify/-/rehype-stringify-7.0.0.tgz#abbb172b3a2784a5739394846f6092eefda0ae1f"
-  integrity sha512-u3dQI7mIWN2X1H0MBFPva425HbkXgB+M39C9SM5leUS2kh5hHUn2SxQs2c2yZN5eIHipoLMojC0NP5e8fptxvQ==
+rehype-stringify@8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/rehype-stringify/-/rehype-stringify-8.0.0.tgz#9b6afb599bcf3165f10f93fc8548f9a03d2ec2ba"
+  integrity sha512-VkIs18G0pj2xklyllrPSvdShAV36Ff3yE5PUO9u36f6+2qJFnn22Z5gKwBOwgXviux4UC7K+/j13AnZfPICi/g==
   dependencies:
-    hast-util-to-html "^7.0.0"
-    xtend "^4.0.0"
+    hast-util-to-html "^7.1.1"
 
 relateurl@^0.2.7:
   version "0.2.7"
@@ -11464,6 +11463,17 @@ stringify-entities@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/stringify-entities/-/stringify-entities-3.0.0.tgz#455abe501f8b7859ba5726a25a8872333c65b0a7"
   integrity sha512-h7NJJIssprqlyjHT2eQt2W1F+MCcNmwPGlKb0bWEdET/3N44QN3QbUF/ueKCgAssyKRZ3Br9rQ7FcXjHr0qLHw==
+  dependencies:
+    character-entities-html4 "^1.0.0"
+    character-entities-legacy "^1.0.0"
+    is-alphanumerical "^1.0.0"
+    is-decimal "^1.0.2"
+    is-hexadecimal "^1.0.0"
+
+stringify-entities@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/stringify-entities/-/stringify-entities-3.0.1.tgz#32154b91286ab0869ab2c07696223bd23b6dbfc0"
+  integrity sha512-Lsk3ISA2++eJYqBMPKcr/8eby1I6L0gP0NlxF8Zja6c05yr/yCYyb2c9PwXjd08Ib3If1vn1rbs1H5ZtVuOfvQ==
   dependencies:
     character-entities-html4 "^1.0.0"
     character-entities-legacy "^1.0.0"
