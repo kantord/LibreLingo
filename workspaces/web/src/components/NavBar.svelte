@@ -2,6 +2,7 @@
   import settings from "../settings"
   import authStore from "../auth"
   import GitHubButton from "./GitHubButton"
+  import Icon from "../components/Icon.svelte"
   import Button from "lluis/Button"
   export let dark = false
   export let is_hidden_mobile = false
@@ -24,19 +25,29 @@
 
   <div class="navbar-end">
     <div class="navbar-item">
-      <GitHubButton />
-    </div>
-    <div class="navbar-item">
-      {#if hasAuth && settings.features.authEnabled}
-        {#if $authStore.user}
-          <Button>{$authStore.user.name}</Button>
-          <Button on:click="{() => window._Logout()}">Logout</Button>
-        {:else}
-          <Button on:click="{() => window._Login('jan', 'apple')}">
-            Login
-          </Button>
+      <div class="buttons">
+        <GitHubButton />
+        {#if hasAuth && settings.features.authEnabled}
+          {#if $authStore.user}
+            <Button size="small" outlined inverted info>
+              <Icon size="small" icon="user" />
+              <span>{$authStore.user.name}</span>
+            </Button>
+            <Button
+              on:click="{() => window._Logout()}"
+              size="small"
+              outlined
+              inverted
+              info>
+              Log out
+            </Button>
+          {:else}
+            <Button href="/login" size="small" outlined inverted info>
+              Log in
+            </Button>
+          {/if}
         {/if}
-      {/if}
+      </div>
     </div>
   </div>
 </nav>
