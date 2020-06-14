@@ -1,4 +1,6 @@
 @charset "utf-8";
+@import "~bulmaswatch/lumen/variables.scss";
+@import "~bulmaswatch/lumen/variables.scss";
 @import "./custom_variables";
 
 @import "~bulma/sass/utilities/_all.sass";
@@ -52,3 +54,6 @@
 .footer {
     margin-top: 12em;
 }
+
+
+@import "~bulmaswatch/lumen/overrides.scss";
