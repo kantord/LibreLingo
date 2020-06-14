@@ -19,7 +19,7 @@
     margin: 0 0.15em;
 
     &.has-tooltip-bottom {
-      text-decoration: wavy underline rgba($blue, 0.5);
+      text-decoration: dotted underline rgba($blue, 0.5);
     }
 
     &:first-child {
