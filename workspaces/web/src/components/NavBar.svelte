@@ -61,6 +61,7 @@
   }
 
   .navbar {
+    border: 0;
     .navbar-end {
       position: absolute;
       right: 0;
