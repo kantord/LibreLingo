@@ -110,6 +110,8 @@
   .card {
     $done-color: lighten(desaturate($green, 15%), 20%);
     $stale-color: lighten(desaturate($green, 45%), 20%);
+    background: white;
+
     &[data-completed="true"] {
       background-color: $done-color;
 

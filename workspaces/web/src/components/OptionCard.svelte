@@ -35,6 +35,8 @@
   .card {
     transition: opacity 0.15s, outline 0.2s;
     cursor: pointer;
+    transition: transform 0.1s;
+    background: white;
   }
 
   li {
@@ -52,6 +54,7 @@
   .inactive .card {
     opacity: 0.65;
     outline: 1px solid rgba(0, 0, 0, 0);
+    transform: scale(0.95);
   }
 
   :hover .card {
@@ -61,6 +64,7 @@
   .active .card {
     outline: 1px solid $info;
     box-sizing: content-box;
+    transform: scale(1.05);
   }
 
   @include mobile {
