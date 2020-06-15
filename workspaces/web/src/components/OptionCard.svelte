@@ -33,8 +33,11 @@
   @import "../variables";
 
   .card {
-    transition: opacity 0.15s, outline 0.2s;
+    transition: opacity 0.15s, border-color 0.2s;
     cursor: pointer;
+    transition: transform 0.1s;
+    background: white;
+    overflow: hidden;
   }
 
   li {
@@ -47,20 +50,27 @@
 
   .card-image img {
     object-fit: cover;
+    border-radius: 0;
+    left: 8px;
+    right: 8px;
+    top: 8px;
+    width: calc(100% - 16px);
   }
 
   .inactive .card {
     opacity: 0.65;
-    outline: 1px solid rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+    transform: scale(0.95);
   }
 
   :hover .card {
-    outline: 1px solid $link-active-border;
+    border-color: $link-active-border;
   }
 
   .active .card {
-    outline: 1px solid $info;
+    border-color: $info;
     box-sizing: content-box;
+    transform: scale(1.05);
   }
 
   @include mobile {
