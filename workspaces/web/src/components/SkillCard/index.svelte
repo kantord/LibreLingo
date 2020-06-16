@@ -54,13 +54,7 @@
     <div href="{practiceHref}" class="card-footer-item">
       <div class="button-container">
         {#if completed}
-          <Button
-            primary
-            href="{practiceHref}"
-            color="white"
-            textColor="{stale ? '#afb2ab' : '#b2ca93'}">
-            Practice {title}
-          </Button>
+          <Button primary href="{practiceHref}">Practice {title}</Button>
         {:else}
           <Button primary href="{practiceHref}">Learn {title}</Button>
         {/if}
@@ -110,6 +104,8 @@
   .card {
     $done-color: lighten(desaturate($green, 15%), 20%);
     $stale-color: lighten(desaturate($green, 45%), 20%);
+    background: white;
+
     &[data-completed="true"] {
       background-color: $done-color;
 
