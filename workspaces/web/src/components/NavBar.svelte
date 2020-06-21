@@ -2,7 +2,7 @@
   import settings from "../settings"
   import authStore from "../auth"
   import GitHubButton from "./GitHubButton"
-  import Icon from "../components/Icon.svelte"
+  import Icon from "lluis/Icon.svelte"
   import Button from "lluis/Button"
   export let dark = false
   export let is_hidden_mobile = false
@@ -42,6 +42,9 @@
               Log out
             </Button>
           {:else}
+            <Button href="/sign-up" size="small" outlined inverted info>
+              Sign up
+            </Button>
             <Button href="/login" size="small" outlined inverted info>
               Log in
             </Button>
