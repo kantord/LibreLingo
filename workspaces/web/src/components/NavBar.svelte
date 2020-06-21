@@ -42,6 +42,9 @@
               Log out
             </Button>
           {:else}
+            <Button href="/sign-up" size="small" outlined inverted info>
+              Sign up
+            </Button>
             <Button href="/login" size="small" outlined inverted info>
               Log in
             </Button>

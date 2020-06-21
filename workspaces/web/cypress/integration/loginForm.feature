@@ -1,4 +1,4 @@
-Feature: Login system
+Feature: Login form
 
   LibreLingo has user management features. The user management features let the user create and
   use a user account. This permits the user to synchronize their progress among multiple devices.
