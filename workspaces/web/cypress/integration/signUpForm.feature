@@ -26,6 +26,77 @@ Feature: Sign up form
     When I open "/sign-up"
     And I click the "Sign up" button
     Then I read "Please choose a username"
-    Then I read "Please tell us your email address"
-    Then I read "Please choose a password"
-    Then I read "Please verify your chosen password by repeating it"
+    And I read "Please tell us your email address"
+    And I read "Please choose a password"
+
+  Scenario: Choosing correct username
+    When I open "/sign-up"
+    And I introduce "foobar" as "username"
+    And I click the "Sign up" button
+    Then I don't read "Please choose a username"
+    And  sign up form with errors looks correct
+
+  Scenario: Choosing a username that's too short
+    When I open "/sign-up"
+    And I introduce "foo" as "username"
+    And I click the "Sign up" button
+    Then I read "Please choose a username that has at least 4 characters"
+
+  Scenario: Choosing correct email
+    When I open "/sign-up"
+    And I introduce "foobar@gmail.com" as "email"
+    And I click the "Sign up" button
+    Then I don't read "Please tell us your email address"
+
+  Scenario: Choosing invalid email
+    When I open "/sign-up"
+    And I introduce "foobargmail.com" as "email"
+    And I click the "Sign up" button
+    Then I read "This does not look like a valid email address"
+
+  Scenario: Choosing correct password
+    When I open "/sign-up"
+    And I introduce "totallyFake-Password-@3" as "password"
+    And I click the "Sign up" button
+    Then I don't read "Please choose a password"
+
+  Scenario: Choosing correct password and confirmation
+    When I open "/sign-up"
+    And I introduce "totallyFake-Password-@3" as "password"
+    And I introduce "totallyFake-Password-@3" as "password_confirmation"
+    And I click the "Sign up" button
+    Then I don't read "Please verify your chosen password by repeating it"
+
+  Scenario: Choosing passwords that don't match
+    When I open "/sign-up"
+    And I introduce "totallyFake-Password-@3" as "password"
+    And I introduce "totallyFakepassword-@3" as "password_confirmation"
+    And I click the "Sign up" button
+    Then I read "The passwords don't match"
+
+
+  Scenario: Password is too short
+    When I open "/sign-up"
+    And I introduce "fooba" as "password"
+    And I introduce "fooba" as "password_confirmation"
+    And I click the "Sign up" button
+    Then I read "Your password is too short. Please choose a password that's at least 5 characters long."
+
+  Scenario: Submitting with correct values
+    When I open "/sign-up"
+    And I introduce "foobar" as "username"
+    And I introduce "foobar@gmail.com" as "email"
+    And I introduce "totallyFake-Password-@3" as "password"
+    And I introduce "totallyFake-Password-@3" as "password_confirmation"
+    And I click the "Sign up" button
+    Then I should be on "/sign-up-success"
+
+  Scenario: User already exists
+    When I open "/sign-up"
+    And I introduce "foobar" as "username"
+    And I introduce "foobar@gmail.com" as "email"
+    And I introduce "totallyFake-Password-@3" as "password"
+    And I introduce "totallyFake-Password-@3" as "password_confirmation"
+    Given user already exists
+    And I click the "Sign up" button
+    Then I read "User already exists. Please choose another username."
