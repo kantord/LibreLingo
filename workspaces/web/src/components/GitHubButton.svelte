@@ -11,7 +11,7 @@
 
 <script>
   import { onMount } from "svelte"
-  import Icon from "./Icon"
+  import Icon from "lluis/Icon"
   import Button from "lluis/Button"
   const pMemoize = require("p-memoize")
   export let stars = (process.browser === true ? window.stars : null) || "   "

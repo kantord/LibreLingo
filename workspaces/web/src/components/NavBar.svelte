@@ -2,7 +2,7 @@
   import settings from "../settings"
   import authStore from "../auth"
   import GitHubButton from "./GitHubButton"
-  import Icon from "../components/Icon.svelte"
+  import Icon from "lluis/Icon.svelte"
   import Button from "lluis/Button"
   export let dark = false
   export let is_hidden_mobile = false
