@@ -6303,6 +6303,16 @@
   }
 },
 {
+  "model": "course.course",
+  "pk": 3,
+  "fields": {
+    "language_name": "Toki Pona",
+    "source_language_name": "English",
+    "target_language_code": "art-x-tokipona",
+    "special_characters": "a e i o u p t k s m n l w j"
+  }
+},
+{
   "model": "course.module",
   "pk": 1,
   "fields": {
@@ -6336,6 +6346,15 @@
     "course": 1,
     "name": "Activities",
     "order": 3
+  }
+},
+{
+  "model": "course.module",
+  "pk": 7,
+  "fields": {
+    "course": 3,
+    "name": "Basics",
+    "order": 1
   }
 },
 {
@@ -6528,6 +6547,30 @@
     "image1": null,
     "image2": null,
     "image3": null
+  }
+},
+{
+  "model": "course.skill",
+  "pk": 18,
+  "fields": {
+    "module": 7,
+    "name": "Phrases",
+    "order": 1,
+    "image1": null,
+    "image2": null,
+    "image3": null
+  }
+},
+{
+  "model": "course.skill",
+  "pk": 19,
+  "fields": {
+    "module": 7,
+    "name": "Animals",
+    "order": 2,
+    "image1": "cat2",
+    "image2": "lion1",
+    "image3": "dog2"
   }
 }
 ]
