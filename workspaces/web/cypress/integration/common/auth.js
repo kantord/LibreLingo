@@ -5,3 +5,9 @@ Then("I am logged out", () => {
         cy.wrap(window._Logout())
     })
 })
+
+Then("user already exists", () => {
+    cy.window().then((window) => {
+        window._test_user_already_exists = true
+    })
+})
