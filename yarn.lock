@@ -3004,11 +3004,6 @@ array-ify@^1.0.0:
   resolved "https://registry.yarnpkg.com/array-ify/-/array-ify-1.0.0.tgz#9e528762b4a9066ad163a6962a364418e9626ece"
   integrity sha1-nlKHYrSpBmrRY6aWKjZEGOlibs4=
 
-array-iterate@^1.0.0:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/array-iterate/-/array-iterate-1.1.4.tgz#add1522e9dd9749bb41152d08b845bd08d6af8b7"
-  integrity sha512-sNRaPGh9nnmdC8Zf+pT3UqP8rnWj5Hf9wiFGsX3wUQ2yVSIhO2ShFwCoceIPpB41QF6i2OEmrHmCo36xronCVA==
-
 array-union@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/array-union/-/array-union-1.0.2.tgz#9a34410e4f4e3da23dea375be5be70f24778ec39"
@@ -6609,7 +6604,7 @@ hasha@^5.0.0:
     is-stream "^2.0.0"
     type-fest "^0.8.0"
 
-hast-util-embedded@^1.0.0, hast-util-embedded@^1.0.1:
+hast-util-embedded@^1.0.0:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/hast-util-embedded/-/hast-util-embedded-1.0.5.tgz#daeb84ffad67cdaf5117cf64cc0e13de5f0889b8"
   integrity sha512-0FfLHmfArWOizbdwjL+Rc9QIBzqP80juicNl4S4NEPq5OYWBCgYrtYDPUDoSyQQ9IQlBn9W7++fpYQNzZSq/wQ==
@@ -6660,7 +6655,7 @@ hast-util-to-html@^7.1.1:
     unist-util-is "^4.0.0"
     xtend "^4.0.0"
 
-hast-util-whitespace@^1.0.0:
+hast-util-whitespace@^1.0.0, hast-util-whitespace@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/hast-util-whitespace/-/hast-util-whitespace-1.0.4.tgz#e4fe77c4a9ae1cb2e6c25e02df0043d0164f6e41"
   integrity sha512-I5GTdSfhYfAPNztx2xJRQpG8cuDSNt599/7YUn7Gx/WxNMsG+a835k97TDkFgk123cwjfwINaZknkKkphx/f2A==
@@ -10369,31 +10364,30 @@ regjsparser@^0.6.4:
   dependencies:
     jsesc "~0.5.0"
 
-rehype-format@3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/rehype-format/-/rehype-format-3.0.1.tgz#b28da779e1847722facbb6865c4a44677c839fb6"
-  integrity sha512-rBIoIt63o+aKqIXyWV/lKE5dRoqXZkNjADvdVxHeSWqv862Y34FfcQJlXpLglhMIGrSW3GODEtdHyN+XTmdAHw==
+rehype-format@3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/rehype-format/-/rehype-format-3.1.0.tgz#3ed1214b4b0047cb7817e6b3471f3515caebab26"
+  integrity sha512-XC88CLU83x6ocwHbDsqbK/y+qNxqWcSp7gZdYeJzUZPQH05ABFke3Zb+H53UGsRAUTB2W95/UMMtn/pM+UFiKQ==
   dependencies:
-    hast-util-embedded "^1.0.1"
+    hast-util-embedded "^1.0.0"
+    hast-util-is-element "^1.0.0"
     hast-util-phrasing "^1.0.0"
+    hast-util-whitespace "^1.0.0"
     html-whitespace-sensitive-tag-names "^1.0.0"
-    rehype-minify-whitespace "^3.0.0"
-    repeat-string "^1.5.4"
+    rehype-minify-whitespace "^4.0.0"
+    repeat-string "^1.0.0"
     unist-util-visit-parents "^3.0.0"
 
-rehype-minify-whitespace@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/rehype-minify-whitespace/-/rehype-minify-whitespace-3.0.0.tgz#13475cd3b16d02fcf2eb228c9304c35a835d81e2"
-  integrity sha512-Z5NIG9FxTeK2Ta+eTWCnTVPXu1qC58eCXZA3m/Z7PPinKw82KSR+12c2l1sLLSg27QZOmZrrd9piS8dsAVfliQ==
+rehype-minify-whitespace@^4.0.0:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/rehype-minify-whitespace/-/rehype-minify-whitespace-4.0.3.tgz#8cd309f20669e25c7c1b7f33e457eabcb1c3e8ef"
+  integrity sha512-Iih7mVAJpSv3nNbpxgIKpxkJMfBljZDNW16zlMcADTyQR/WBnpvOGKSWFfw3DIxtYaYNStVNICfoH0Pba5hM1g==
   dependencies:
     collapse-white-space "^1.0.0"
     hast-util-embedded "^1.0.0"
-    hast-util-has-property "^1.0.0"
-    hast-util-is-body-ok-link "^1.0.0"
     hast-util-is-element "^1.0.0"
-    html-whitespace-sensitive-tag-names "^1.0.0"
+    hast-util-whitespace "^1.0.4"
     unist-util-is "^4.0.0"
-    unist-util-modify-children "^1.0.0"
 
 rehype-stringify@8.0.0:
   version "8.0.0"
@@ -12303,13 +12297,6 @@ unist-util-is@^4.0.0:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/unist-util-is/-/unist-util-is-4.0.2.tgz#c7d1341188aa9ce5b3cff538958de9895f14a5de"
   integrity sha512-Ofx8uf6haexJwI1gxWMGg6I/dLnF2yE+KibhD3/diOqY2TinLcqHXCV6OI5gFVn3xQqDH+u0M625pfKwIwgBKQ==
-
-unist-util-modify-children@^1.0.0:
-  version "1.1.6"
-  resolved "https://registry.yarnpkg.com/unist-util-modify-children/-/unist-util-modify-children-1.1.6.tgz#1587130ca0ab5c56155fa60837ff524c3fbfbfaa"
-  integrity sha512-TOA6W9QLil+BrHqIZNR4o6IA5QwGOveMbnQxnWYq+7EFORx9vz/CHrtzF36zWrW61E2UKw7sM1KPtIgeceVwXw==
-  dependencies:
-    array-iterate "^1.0.0"
 
 unist-util-position@^3.0.0:
   version "3.1.0"
