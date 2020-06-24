@@ -36,7 +36,9 @@ ALLOWED_HOSTS = [
     "127.0.0.1",
     "0.0.0.0",
     "localhost",
-    "librelingo-course-editor.herokuapp.com"
+    "librelingo-course-editor.herokuapp.com",
+    "editor.librelingo.app",
+    "auth.librelingo.app",
 ]
 
 
