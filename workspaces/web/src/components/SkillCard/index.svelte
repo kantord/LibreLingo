@@ -1,6 +1,6 @@
 <script>
   import getSkillStats from "../../db/skill/getSkillStats"
-  import Icon from "../Icon"
+  import Icon from "lluis/Icon"
   import Button from "lluis/Button"
 
   export let title
