@@ -24,6 +24,7 @@ Feature: Sign up form
 
   Scenario: Cannot submit empty form
     When I open "/sign-up"
+    And I am not really calling the registration API
     And I click the "Sign up" button
     Then I read "Please choose a username"
     And I read "Please tell us your email address"
@@ -31,6 +32,7 @@ Feature: Sign up form
 
   Scenario: Choosing correct username
     When I open "/sign-up"
+    And I am not really calling the registration API
     And I introduce "foobar" as "username"
     And I click the "Sign up" button
     Then I don't read "Please choose a username"
@@ -38,30 +40,39 @@ Feature: Sign up form
 
   Scenario: Choosing a username that's too short
     When I open "/sign-up"
+    And I am not really calling the registration API
     And I introduce "foo" as "username"
     And I click the "Sign up" button
     Then I read "Please choose a username that has at least 4 characters"
 
   Scenario: Choosing correct email
     When I open "/sign-up"
+    And I am not really calling the registration API
+    And I introduce "foo" as "username"
     And I introduce "foobar@gmail.com" as "email"
     And I click the "Sign up" button
     Then I don't read "Please tell us your email address"
 
   Scenario: Choosing invalid email
     When I open "/sign-up"
+    And I am not really calling the registration API
+    And I introduce "foo" as "username"
     And I introduce "foobargmail.com" as "email"
     And I click the "Sign up" button
     Then I read "This does not look like a valid email address"
 
   Scenario: Choosing correct password
     When I open "/sign-up"
+    And I am not really calling the registration API
+    And I introduce "foo" as "username"
     And I introduce "totallyFake-Password-@3" as "password"
     And I click the "Sign up" button
     Then I don't read "Please choose a password"
 
   Scenario: Choosing correct password and confirmation
     When I open "/sign-up"
+    And I am not really calling the registration API
+    And I introduce "foo" as "username"
     And I introduce "totallyFake-Password-@3" as "password"
     And I introduce "totallyFake-Password-@3" as "password_confirmation"
     And I click the "Sign up" button
@@ -69,6 +80,8 @@ Feature: Sign up form
 
   Scenario: Choosing passwords that don't match
     When I open "/sign-up"
+    And I am not really calling the registration API
+    And I introduce "foo" as "username"
     And I introduce "totallyFake-Password-@3" as "password"
     And I introduce "totallyFakepassword-@3" as "password_confirmation"
     And I click the "Sign up" button
@@ -77,6 +90,8 @@ Feature: Sign up form
 
   Scenario: Password is too short
     When I open "/sign-up"
+    And I am not really calling the registration API
+    And I introduce "foo" as "username"
     And I introduce "fooba" as "password"
     And I introduce "fooba" as "password_confirmation"
     And I click the "Sign up" button
@@ -84,6 +99,8 @@ Feature: Sign up form
 
   Scenario: Submitting with correct values
     When I open "/sign-up"
+    And I am not really calling the registration API
+    And I introduce "foo" as "username"
     And I introduce "foobar" as "username"
     And I introduce "foobar@gmail.com" as "email"
     And I introduce "totallyFake-Password-@3" as "password"
@@ -93,6 +110,8 @@ Feature: Sign up form
 
   Scenario: User already exists
     When I open "/sign-up"
+    And I am not really calling the registration API
+    And I introduce "foo" as "username"
     And I introduce "foobar" as "username"
     And I introduce "foobar@gmail.com" as "email"
     And I introduce "totallyFake-Password-@3" as "password"
