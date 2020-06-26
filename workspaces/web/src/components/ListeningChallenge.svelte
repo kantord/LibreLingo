@@ -3,7 +3,7 @@
   import hotkeys from "hotkeys-js"
   import levenshtein from "js-levenshtein"
   import ChallengePanel from "./ChallengePanel"
-  import Icon from "./Icon"
+  import Icon from "lluis/Icon"
   import InputFieldWithVirtualKeyboard from "./InputFieldWithVirtualKeyboard"
   import playVoice from "../media/voice"
   import Button from "lluis/Button"
