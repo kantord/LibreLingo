@@ -12,9 +12,6 @@
   let password = ""
   let password_confirmation = ""
   let errors = {}
-  let isFormValid = null
-
-  $: isFormValid = Object.keys(errors).length === 0
 
   const emailRegexp = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
 
@@ -99,12 +96,14 @@
   }
 
   const handleTestingFakes = () => {
-    if (window._test_user_already_exists) {
-      errors = {
-        ...errors,
-        _form: "User already exists. Please choose another username.",
+    if (window._test_fake_signup) {
+      if (window._test_user_already_exists) {
+        errors = {
+          ...errors,
+          _form: "User already exists. Please choose another username.",
+        }
+        return
       }
-      return
     }
   }
 
@@ -115,12 +114,31 @@
       validateEmail()
       validatePassword()
       handleTestingFakes()
+      const isFormValid = Object.keys(errors).length === 0
 
-      setTimeout(function () {
-        if (isFormValid === true) {
-          window.location = "/sign-up-success"
+      if (process.browser === true) {
+        if (window._test_fake_signup) {
+          setTimeout(function () {
+            if (isFormValid === true) {
+              window.location = "/sign-up-success"
+            }
+          }, 500)
+        } else {
+          fetch(`https://auth.librelingo.app/register`)
+            .then((data) => data.json())
+            .then(({ success, error }) => {
+              if (success) {
+                window.location = "/sign-up-success"
+              } else {
+                if (error.code === "invalid-payload") {
+                  errors = error.details
+                } else {
+                  errors = { _form: "Server error" }
+                }
+              }
+            })
         }
-      }, 500)
+      }
     }
   }
 
