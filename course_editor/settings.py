@@ -30,6 +30,8 @@ SECRET_KEY = '$+6&e^b5xgm&7a-&o0x5o+lda-%b1$ro_tb)2m0a@z^3$0huyf'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG') and os.getenv('DEBUG').lower() == 'true'
+COUCH_USER = os.getenv('COUCH_USER')
+COUCH_PASS = os.getenv('COUCH_PASS')
 
 ALLOWED_HOSTS = [
     "192.168.1.46",
