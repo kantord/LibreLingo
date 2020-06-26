@@ -10,6 +10,7 @@ import {
     faStar,
     faUser,
     faLock,
+    faEnvelope,
 } from "@fortawesome/free-solid-svg-icons"
 import { faTwitter } from "@fortawesome/free-brands-svg-icons"
 
@@ -20,6 +21,7 @@ library.add(faTwitter)
 library.add(faStar)
 library.add(faUser)
 library.add(faLock)
+library.add(faEnvelope)
 dom.watch()
 
 sapper.start({

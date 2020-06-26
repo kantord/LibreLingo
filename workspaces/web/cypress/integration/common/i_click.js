@@ -5,5 +5,5 @@ Then("I click {string}", (text) => {
 })
 
 Then("I click the {string} button", (text) => {
-    cy.get("button").contains(text).click()
+    cy.get("button, .button").contains(text).click()
 })
