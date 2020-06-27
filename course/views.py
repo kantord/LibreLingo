@@ -62,7 +62,7 @@ def register(request):
             })
         else:
             if response_data["error"] == "conflict":
-                return fail_with(error("invalid_payload", {"username": ["This username is taken"], "password": [], "email": [], "_form": []}))
+                return fail_with(error("invalid-payload", {"username": ["This username is taken"], "password": [], "email": [], "_form": []}))
             return fail_with(error("database-error", response_data))
     except Exception as server_error:
         return fail_with(error("server-error", str(server_error)))
