@@ -1,6 +1,7 @@
 {
   "database": {
     "production": {
+      "signUpEndpoint": "https://auth.librelingo.app/register",
       "local": "localData",
       "remote": "https://sync.librelingo.app",
       "auth": {
@@ -8,6 +9,7 @@
       }
     },
     "development": {
+      "signUpEndpoint": "http://localhost:8000/register",
       "local": "localDataTesting",
       "remote": "http://localhost:5984/",
       "auth": {
