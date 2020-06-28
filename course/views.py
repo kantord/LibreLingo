@@ -53,8 +53,9 @@ def register(request):
     try:
         headers = {'Content-Type': "application/json",
                    'Accept': "application/json"}
+        json_binary = json.dumps(couch_payload)
         response = requests.put(
-            'https://sync.librelingo.app/_users/org.couchdb.user:' + data["username"], json=couch_payload, headers=headers, auth=(settings.COUCH_USER, settings.COUCH_PASS))
+            'https://sync.librelingo.app/_users/org.couchdb.user:' + data["username"], data=json_binary, headers=headers, auth=(settings.COUCH_USER, settings.COUCH_PASS))
         response_data = response.json()
         if response.status_code == 201:
             return respond({

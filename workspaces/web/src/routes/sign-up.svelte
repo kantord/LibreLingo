@@ -1,5 +1,6 @@
 <script>
   import db from "../db/db.js"
+  import settings from "../settings"
   import { onMount } from "svelte"
   import hotkeys from "hotkeys-js"
   import NavBar from "../components/NavBar.svelte"
@@ -110,6 +111,7 @@
   let handleSignUp
   $: {
     handleSignUp = async () => {
+      errors = {}
       validateUsername()
       validateEmail()
       validatePassword()
@@ -124,19 +126,31 @@
             }
           }, 500)
         } else {
-          fetch(`https://auth.librelingo.app/register`)
-            .then((data) => data.json())
-            .then(({ success, error }) => {
-              if (success) {
-                window.location = "/sign-up-success"
-              } else {
-                if (error.code === "invalid-payload") {
-                  errors = error.details
-                } else {
-                  errors = { _form: "Server error" }
-                }
-              }
+          if (isFormValid) {
+            fetch(settings.database.signUpEndpoint, {
+              method: "post",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                username,
+                email,
+                password,
+              }),
             })
+              .then((data) => data.json())
+              .then(({ success, error }) => {
+                if (success) {
+                  /*window.location = "/sign-up-success"*/
+                } else {
+                  if (error.code === "invalid-payload") {
+                    errors = error.details
+                  } else {
+                    errors = { _form: "Server error" }
+                  }
+                }
+              })
+          }
         }
       }
     }
