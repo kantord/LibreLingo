@@ -1,6 +1,6 @@
 <script>
   import Button from "lluis/Button"
-  import Icon from "./Icon"
+  import Icon from "lluis/Icon"
 </script>
 
 <Button

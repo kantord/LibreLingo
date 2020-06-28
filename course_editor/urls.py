@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from course import views
 
 admin.site.site_header = "LibreLingo Course Editor"
 admin.site.site_title = "LibreLingo Course Editor"
@@ -24,6 +25,7 @@ admin.site.index_title = "Welcome to LibreLingo Course Editor"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('register', views.register),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

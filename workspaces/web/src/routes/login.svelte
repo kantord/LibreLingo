@@ -3,8 +3,8 @@
   import { onMount } from "svelte"
   import hotkeys from "hotkeys-js"
   import NavBar from "../components/NavBar.svelte"
-  import Icon from "../components/Icon.svelte"
   import Button from "lluis/Button"
+  import FormField from "lluis/FormField"
 
   let error = null
   let username = ""
@@ -35,31 +35,18 @@
     <form on:submit|preventDefault="{handleLogin}">
       <h2 class="is-size-2">Log in</h2>
 
-      <div class="field">
-        <label class="label" for="username">Username</label>
-        <div class="control has-icons-left">
-          <input
-            class="input"
-            type="text"
-            name="username"
-            id="username"
-            bind:value="{username}" />
-          <Icon size="small" icon="user" left />
-        </div>
-      </div>
+      <FormField
+        name="Username"
+        icon="user"
+        id="username"
+        bind:value="{username}" />
 
-      <div class="field">
-        <label class="label" for="password">Password</label>
-        <p class="control has-icons-left">
-          <input
-            class="input"
-            type="password"
-            name="password"
-            id="password"
-            bind:value="{password}" />
-          <Icon size="small" icon="lock" left />
-        </p>
-      </div>
+      <FormField
+        name="Password"
+        icon="lock"
+        id="password"
+        type="password"
+        bind:value="{password}" />
 
       {#if error !== null}
         <p class="help is-danger">{error}</p>
