@@ -48,14 +48,23 @@ def register(request):
                   **{"_form": form.non_field_errors()}}
         return fail_with(error("invalid-payload", errors))
     data = form.cleaned_data
-    couch_payload = {"name": data["username"], "password": data["password"], "email": data["email"], "created": datetime.datetime.now().isoformat(),
-                     "roles": [], "type": "user"}
+    couch_payload = {
+        "name": data["username"],
+        "password": data["password"],
+        "email": data["email"],
+        "created": datetime.datetime.now().isoformat(),
+        "roles": [],
+        "type": "user"}
     try:
         headers = {'Content-Type': "application/json",
                    'Accept': "application/json"}
         json_binary = json.dumps(couch_payload)
         response = requests.put(
-            'https://sync.librelingo.app/_users/org.couchdb.user:' + data["username"], data=json_binary, headers=headers, auth=(settings.COUCH_USER, settings.COUCH_PASS))
+            'https://sync.librelingo.app/_users/org.couchdb.user:' +
+            data["username"],
+            data=json_binary,
+            headers=headers,
+            auth=(settings.COUCH_USER, settings.COUCH_PASS))
         response_data = response.json()
         if response.status_code == 201:
             return respond({
@@ -63,7 +72,9 @@ def register(request):
             })
         else:
             if response_data["error"] == "conflict":
-                return fail_with(error("invalid-payload", {"username": ["This username is taken"], "password": [], "email": [], "_form": []}))
+                return fail_with(error("invalid-payload", {
+                    "username": ["This username is taken"],
+                    "password": [], "email": [], "_form": []}))
             return fail_with(error("database-error", response_data))
     except Exception as server_error:
         return fail_with(error("server-error", str(server_error)))
