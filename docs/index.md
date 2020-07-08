@@ -104,3 +104,18 @@ The course editor is implemented as a django project in the `course_editor` fold
 If you want to set up your course editor with real data, you can find a database dump here: `src/courses/spanish-from-english/courseData.json`
 
 Check out Django's documentation about database dumps: [https://docs.djangoproject.com/en/3.0/ref/django-admin/#loaddata](https://docs.djangoproject.com/en/3.0/ref/django-admin/#loaddata)
+
+
+## Setting up Semaphore CI in a clone
+
+In order for Semaphore CI to correctly operate, you will need to set up certain secrets.
+
+This might not be necessary for you in all cases, but it cannot be avoided if you want to fully fork the repo, or work on CI configuration related tasks.
+
+[Consult this page to read about setting up secrets in Semaphore CI.](https://docs.semaphoreci.com/essentials/using-secrets/)
+
+Here's a list of the tokens you need to set up. Each of them is a link to a page explaining how to obtain the token:
+
+- [GH_TOKEN](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token)
+- [KNAPSACK_PRO_TEST_SUITE_TOKEN_CYPRESS](https://www.npmjs.com/package/@knapsack-pro/cypress#configuration-steps)
+- [PERCY_TOKEN](https://docs.percy.io/docs/environment-variables)
