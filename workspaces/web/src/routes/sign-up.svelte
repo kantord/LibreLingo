@@ -12,6 +12,7 @@
   let email = ""
   let password = ""
   let password_confirmation = ""
+  let license_accepted = false
   let errors = {}
 
   const emailRegexp = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
@@ -96,6 +97,26 @@
     }
   }
 
+  const validateLicense = () => {
+    if (!license_accepted) {
+      errors = {
+        ...errors,
+        license: "You have to accept the agreements.",
+      }
+
+      return
+    }
+
+    if (username.length < 4) {
+      errors = {
+        ...errors,
+        username: "Please choose a username that has at least 4 characters",
+      }
+
+      return
+    }
+  }
+
   const handleTestingFakes = () => {
     if (window._test_fake_signup) {
       if (window._test_user_already_exists) {
@@ -115,6 +136,7 @@
       validateUsername()
       validateEmail()
       validatePassword()
+      validateLicense()
       handleTestingFakes()
       const isFormValid = Object.keys(errors).length === 0
 
@@ -199,6 +221,23 @@
         type="password"
         formStatus="{errors}"
         bind:value="{password_confirmation}" />
+
+      <div class="field">
+        <div class="control">
+          <label class="checkbox">
+            <input
+              type="checkbox"
+              name="license"
+              id="license"
+              bind:checked="{license_accepted}" />
+            I agree to the
+            <a href="#">Terms and Conditions</a>
+          </label>
+        </div>
+        {#if errors['license'] != null}
+          <p class="help is-danger">{errors['license']}</p>
+        {/if}
+      </div>
 
       {#if errors._form != null}
         <p class="help is-danger">{errors._form}</p>
