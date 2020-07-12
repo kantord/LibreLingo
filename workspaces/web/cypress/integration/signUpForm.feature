@@ -20,7 +20,10 @@ Feature: Sign up form
     And the "password" field has the label "Password"
     And I see a "password_confirmation" field
     And the "password_confirmation" field has the label "Repeat password"
+    And I see a "license" field
+    And I read "I agree to the Terms and Conditions"
     And I see a Sign up button
+    And the link "Terms and Conditions" points to "/tos"
 
   Scenario: Cannot submit empty form
     When I open "/sign-up"
@@ -105,6 +108,7 @@ Feature: Sign up form
     And I introduce "foobar@gmail.com" as "email"
     And I introduce "totallyFake-Password-@3" as "password"
     And I introduce "totallyFake-Password-@3" as "password_confirmation"
+    And I check the "license" checkbox
     And I click the "Sign up" button
     Then I should be on "/sign-up-success"
 
@@ -119,3 +123,11 @@ Feature: Sign up form
     Given user already exists
     And I click the "Sign up" button
     Then I read "User already exists. Please choose another username."
+
+  Scenario: License not accepted
+    When I open "/sign-up"
+    And I am not really calling the registration API
+    And I click the "Sign up" button
+    Then I read "You have to accept the agreements."
+
+
