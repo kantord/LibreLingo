@@ -231,7 +231,7 @@
               id="license"
               bind:checked="{license_accepted}" />
             I agree to the
-            <a href="#">Terms and Conditions</a>
+            <a href="/toc">Terms and Conditions</a>
           </label>
         </div>
         {#if errors['license'] != null}
