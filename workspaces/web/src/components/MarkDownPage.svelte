@@ -39,10 +39,6 @@
       <h1 class="title">About LibreLingo</h1>
       <div class="section content box">
         {@html readmeHTML}
-        <hr />
-        <Button primary href="https://github.com/kantord/LibreLingo">
-          Continue reading on GitHub
-        </Button>
       </div>
     </div>
   </div>
