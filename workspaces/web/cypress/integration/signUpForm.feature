@@ -23,7 +23,11 @@ Feature: Sign up form
     And I see a "license" field
     And I read "I agree to the Terms and Conditions"
     And I see a Sign up button
-    And the link "Terms and Conditions" points to "/tos"
+
+  Scenario: Opening Terms and Conditions
+    When I open "/sign-up"
+    And I click "Terms and Conditions"
+    Then I should be on "/tos"
 
   Scenario: Cannot submit empty form
     When I open "/sign-up"
