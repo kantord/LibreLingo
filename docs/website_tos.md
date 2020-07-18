@@ -4,7 +4,7 @@ LibreLingo ("Us" or "We") provides the librelingo.app website and various relate
 
 In addition, when using particular services or materials on this Website, Users shall be subject to any posted rules applicable to such services or materials that may contain terms and conditions in addition to those in these Terms of Service. All such guidelines or rules are hereby incorporated by reference into these Terms of Service.
 
-These Terms of Service are effective as of [DATE]. We expressly reserve the right to change these Terms of Service from time to time without notice to you. You acknowledge and agree that it is your responsibility to review this Website and these Terms of Service from time to time and to familiarize yourself with any modifications.
+These Terms of Service are effective as of 2020 Jul 18. We expressly reserve the right to change these Terms of Service from time to time without notice to you. You acknowledge and agree that it is your responsibility to review this Website and these Terms of Service from time to time and to familiarize yourself with any modifications.
 
 Your continued use of this Website after such modifications will constitute acknowledgement of the modified Terms of Service and agreement to abide and be bound by the modified Terms of Service. This Terms of Service was created by Terms of Service Template and the Terms and Conditions Generator.
 
