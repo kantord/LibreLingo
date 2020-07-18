@@ -36,7 +36,7 @@
 <section class="hero is-primary">
   <div class="hero-body">
     <div class="container">
-      <h1 class="title">About LibreLingo</h1>
+      <h1 class="title">{title}</h1>
       <div class="section content box">
         {@html readmeHTML}
       </div>
