@@ -4,7 +4,7 @@
   export async function preload(page, session) {
     return {
       readmeHTML: await getMarkDownData(
-        await import("../../../../docs/website_tos.md")
+        await import("../../../../docs/LICENSE.md")
       ),
     }
   }
@@ -14,4 +14,4 @@
   export let readmeHTML
 </script>
 
-<MarkDownPage {readmeHTML} title="Terms of Service" />
+<MarkDownPage {readmeHTML} title="License" />

@@ -232,6 +232,8 @@
               bind:checked="{license_accepted}" />
             I agree to the
             <a href="/tos">Terms and Conditions</a>
+            and the
+            <a href="/license">GNU Affero General Public License</a>
           </label>
         </div>
         {#if errors['license'] != null}

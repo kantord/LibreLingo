@@ -24,10 +24,11 @@
   import Button from "lluis/Button"
 
   export let readmeHTML
+  export let title
 </script>
 
 <svelte:head>
-  <title>LibreLingo - about LibreLingo</title>
+  <title>{title}</title>
 </svelte:head>
 
 <NavBar dark />
