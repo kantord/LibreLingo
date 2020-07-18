@@ -29,6 +29,11 @@ Feature: Sign up form
     And I click "Terms and Conditions"
     Then I should be on "/tos"
 
+  Scenario: Opening License
+    When I open "/sign-up"
+    And I click "GNU Affero General Public License"
+    Then I should be on "/license"
+
   Scenario: Cannot submit empty form
     When I open "/sign-up"
     And I am not really calling the registration API
