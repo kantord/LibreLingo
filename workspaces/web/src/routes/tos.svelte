@@ -4,7 +4,7 @@
   export async function preload(page, session) {
     return {
       readmeHTML: (
-        await getMarkDownData(await import("../../../../README.md"))
+        await getMarkDownData(await import("../../../../docs/website_tos.md"))
       ).contents.split("<h2>Tech stack</h2>")[0],
     }
   }
@@ -14,4 +14,4 @@
   export let readmeHTML
 </script>
 
-<MarkDownPage {readmeHTML} title="About LibreLingo" />
+<MarkDownPage {readmeHTML} />
