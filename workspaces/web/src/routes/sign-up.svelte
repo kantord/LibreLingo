@@ -8,6 +8,8 @@
   import Button from "lluis/Button"
   import FormField from "lluis/FormField"
 
+  let loading = false
+
   let username = ""
   let email = ""
   let password = ""
@@ -132,6 +134,7 @@
   let handleSignUp
   $: {
     handleSignUp = async () => {
+      loading = true
       errors = {}
       validateUsername()
       validateEmail()
@@ -144,6 +147,7 @@
         if (window._test_fake_signup) {
           setTimeout(function () {
             if (isFormValid === true) {
+              loading = false
               window.location = "/sign-up-success"
             }
           }, 500)
@@ -163,8 +167,10 @@
               .then((data) => data.json())
               .then(({ success, error }) => {
                 if (success) {
+                  loading = false
                   window.location = "/sign-up-success"
                 } else {
+                  loading = false
                   if (error.code === "invalid-payload") {
                     errors = error.details
                   } else {
@@ -172,6 +178,8 @@
                   }
                 }
               })
+          } else {
+            loading = false
           }
         }
       }
@@ -245,7 +253,7 @@
         <p class="help is-danger">{errors._form}</p>
       {/if}
 
-      <Button on:click="{handleSignUp}">Sign up</Button>
+      <Button on:click="{handleSignUp}" {loading}>Sign up</Button>
     </form>
   </div>
 
