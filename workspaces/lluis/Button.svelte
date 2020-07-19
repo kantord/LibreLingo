@@ -20,6 +20,7 @@
   export let key = false
   export let disabled = false
   export let loading = false
+  export let asHref = null
 
   let styleTokens = `
     --color:${color};
@@ -66,6 +67,9 @@
     {type}>
     <slot />
   </button>
+  {#if asHref}
+    <a class="is-hidden" href={asHref}>{asHref}</a>
+  {/if}
 {/if}
 
 <style>
