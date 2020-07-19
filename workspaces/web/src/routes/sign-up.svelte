@@ -149,6 +149,8 @@
             if (isFormValid === true) {
               loading = false
               window.location = "/sign-up-success"
+            } else {
+              loading = false
             }
           }, 500)
         } else {
