@@ -196,6 +196,10 @@
   })
 </script>
 
+<svelte:head>
+  <title>Sign up - LibreLingo</title>
+</svelte:head>
+
 <NavBar dark />
 
 <section class="section">

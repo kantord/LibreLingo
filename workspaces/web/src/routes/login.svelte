@@ -26,6 +26,10 @@
   })
 </script>
 
+<svelte:head>
+  <title>Log in - LibreLingo</title>
+</svelte:head>
+
 <NavBar dark />
 
 <section class="section">
