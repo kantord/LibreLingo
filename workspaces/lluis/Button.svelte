@@ -19,6 +19,7 @@
   export let tabindex = 0
   export let key = false
   export let disabled = false
+  export let loading = false
 
   let styleTokens = `
     --color:${color};
@@ -36,6 +37,7 @@
     class:is-inverted="{inverted}"
     class:is-outlined="{outlined}"
     class:is-hidden="{hidden}"
+    class:is-loading="{loading}"
     class:customColor
     class:customTextColor
     class:key
@@ -54,6 +56,7 @@
     class:is-inverted="{inverted}"
     class:is-outlined="{outlined}"
     class:is-hidden="{hidden}"
+    class:is-loading="{loading}"
     class:customColor
     class:customTextColor
     class:key
