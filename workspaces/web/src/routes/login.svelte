@@ -26,6 +26,8 @@
   })
 </script>
 
+<title>Log in - LibreLingo</title>
+
 <NavBar dark />
 
 <section class="section">
