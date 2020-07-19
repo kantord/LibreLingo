@@ -163,7 +163,7 @@
               .then((data) => data.json())
               .then(({ success, error }) => {
                 if (success) {
-                  /*window.location = "/sign-up-success"*/
+                  window.location = "/sign-up-success"
                 } else {
                   if (error.code === "invalid-payload") {
                     errors = error.details
