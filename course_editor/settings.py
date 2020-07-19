@@ -56,9 +56,11 @@ INSTALLED_APPS = [
     'course',
     'adminsortable2',
     'subadmin',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -145,3 +147,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 TEST_RUNNER = 'snapshottest.django.TestRunner'
 
 FIXTURE_DIRS = [os.path.join(os.getcwd(), "workspaces", "web", "dumps")]
+
+CORS_ORIGIN_WHITELIST = [
+    "https://librelingo.app",
+]
