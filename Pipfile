@@ -26,6 +26,7 @@ whitenoise = "==5.0.1"
 python-slugify = "*"
 psycopg2 = "*"
 requests = "*"
+django-cors-headers = "*"
 
 [requires]
 python_version = "3.8"
