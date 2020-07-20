@@ -1,6 +1,4 @@
 <script context="module">
-  import MarkDownPage from "../components/MarkDownPage"
-
   export async function getMarkDownData(markdownModule) {
     const remark = await require("remark")
     const markdown = await import("remark-parse")
@@ -21,7 +19,6 @@
 
 <script>
   import NavBar from "../components/NavBar"
-  import Button from "lluis/Button"
 
   export let readmeHTML
   export let title
