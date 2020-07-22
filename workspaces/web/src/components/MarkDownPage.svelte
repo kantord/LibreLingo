@@ -1,6 +1,4 @@
 <script context="module">
-  import MarkDownPage from "../components/MarkDownPage"
-
   export async function getMarkDownData(markdownModule) {
     const remark = await require("remark")
     const markdown = await import("remark-parse")
@@ -8,20 +6,17 @@
     const remark2rehype = await import("remark-rehype")
     const format = await import("rehype-format")
 
-    const readmeHTML = await remark()
-      .use(markdown.default, { gfm: true, commonmark: true })
-      .use(remark2rehype.default)
-      .use(format.default)
-      .use(html.default)
-      .process(markdownModule.default)
-
-    return readmeHTML
+    return await remark()
+            .use(markdown.default, {gfm: true, commonmark: true})
+            .use(remark2rehype.default)
+            .use(format.default)
+            .use(html.default)
+            .process(markdownModule.default)
   }
 </script>
 
 <script>
   import NavBar from "../components/NavBar"
-  import Button from "lluis/Button"
 
   export let readmeHTML
   export let title
