@@ -72,7 +72,7 @@ if (process.browser === true) {
         const response = await (
             await fetch(`${settings.database.remote}/_session`, {
                 method: "post",
-                credentials: 'include',
+                credentials: "include",
                 headers: {
                     "Content-Type": "application/json",
                 },
