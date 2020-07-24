@@ -7,11 +7,11 @@
     const format = await import("rehype-format")
 
     return await remark()
-            .use(markdown.default, {gfm: true, commonmark: true})
-            .use(remark2rehype.default)
-            .use(format.default)
-            .use(html.default)
-            .process(markdownModule.default)
+      .use(markdown.default, { gfm: true, commonmark: true })
+      .use(remark2rehype.default)
+      .use(format.default)
+      .use(html.default)
+      .process(markdownModule.default)
   }
 </script>
 
