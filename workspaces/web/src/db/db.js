@@ -31,7 +31,7 @@ if (process.browser === true) {
 
     // Detect existing user session
     if (Cookies.get("loginDb") && settings.features.authEnabled) {
-        fetch(`${settings.database.remote}/_session`)
+        fetch(`${settings.database.remote}/_session`, { credentials: "include" })
             .then((data) => data.json())
             .then((user) => {
                 if (user.userCtx.name === null) {
