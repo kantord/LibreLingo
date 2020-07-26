@@ -126,6 +126,7 @@ if (process.browser === true) {
                 user: null,
                 online: null,
             }))
+            clearLocalDB()
             window.location.reload(false)
         }
     }
