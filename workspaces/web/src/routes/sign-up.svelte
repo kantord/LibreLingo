@@ -1,10 +1,7 @@
 <script>
   import db from "../db/db.js"
   import settings from "../settings"
-  import { onMount } from "svelte"
-  import hotkeys from "hotkeys-js"
   import NavBar from "../components/NavBar.svelte"
-  import Icon from "lluis/Icon.svelte"
   import Button from "lluis/Button"
   import FormField from "lluis/FormField"
 
@@ -187,13 +184,6 @@
       }
     }
   }
-
-  onMount(() => {
-    hotkeys.unbind("enter")
-    hotkeys("enter", () => {
-      handleSignUp()
-    })
-  })
 </script>
 
 <svelte:head>
@@ -259,7 +249,7 @@
         <p class="help is-danger">{errors._form}</p>
       {/if}
 
-      <Button on:click="{handleSignUp}" {loading} asHref="/sign-up-success">
+      <Button on:click="{handleSignUp}" {loading} asHref="/sign-up-success" submit>
         Sign up
       </Button>
     </form>

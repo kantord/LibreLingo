@@ -21,6 +21,7 @@
   export let disabled = false
   export let loading = false
   export let asHref = null
+  export let submit = false
 
   let styleTokens = `
     --color:${color};
@@ -88,3 +89,7 @@
     margin-top: 0;
   }
 </style>
+
+{#if submit}
+  <button type="submit" class="is-hidden"></button>
+{/if}
