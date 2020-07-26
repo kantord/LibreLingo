@@ -1,4 +1,5 @@
 <script>
+  import live from "../../db/live"
   import getSkillStats from "../../db/skill/getSkillStats"
   import Icon from "lluis/Icon"
   import Button from "lluis/Button"
@@ -12,12 +13,14 @@
   let completed = null
   let stale = null
 
-  getSkillStats({ id })
+
+
+  live(() => getSkillStats({ id })
     .then((stats) => {
       completed = stats.completed
       stale = stats.stale
     })
-    .catch(() => {})
+    .catch(() => {}))
 </script>
 
 <div class="card" data-completed="{completed}" data-stale="{stale}">

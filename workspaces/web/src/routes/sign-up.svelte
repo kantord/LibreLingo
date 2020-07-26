@@ -249,7 +249,11 @@
         <p class="help is-danger">{errors._form}</p>
       {/if}
 
-      <Button on:click="{handleSignUp}" {loading} asHref="/sign-up-success" submit>
+      <Button
+        on:click="{handleSignUp}"
+        {loading}
+        asHref="/sign-up-success"
+        submit>
         Sign up
       </Button>
     </form>
