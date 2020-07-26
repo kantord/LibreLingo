@@ -6,6 +6,15 @@ let db
 let remoteDB
 let syncHandler
 
+export const clearLocalDB = async () => {
+    const allDocs = await db.allDocs()
+    await Promise.all(
+        allDocs.rows.map(function (row) {
+            return db.remove(row.id, row.value.rev)
+        })
+    )
+}
+
 if (process.browser === true) {
     const authStore = require("../auth").default
     const PouchDB = require("pouchdb").default
@@ -117,6 +126,7 @@ if (process.browser === true) {
                 user: null,
                 online: null,
             }))
+            await clearLocalDB()
             window.location.reload(false)
         }
     }

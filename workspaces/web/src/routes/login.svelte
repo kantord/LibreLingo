@@ -1,7 +1,5 @@
 <script>
   import db from "../db/db.js"
-  import { onMount } from "svelte"
-  import hotkeys from "hotkeys-js"
   import NavBar from "../components/NavBar.svelte"
   import Button from "lluis/Button"
   import FormField from "lluis/FormField"
@@ -17,13 +15,6 @@
       error = e
     }
   }
-
-  onMount(() => {
-    hotkeys.unbind("enter")
-    hotkeys("enter", () => {
-      handleLogin()
-    })
-  })
 </script>
 
 <svelte:head>
@@ -56,7 +47,7 @@
         <p class="help is-danger">{error}</p>
       {/if}
 
-      <Button on:click="{handleLogin}">Log in</Button>
+      <Button on:click="{handleLogin}" submit>Log in</Button>
     </form>
   </div>
 
