@@ -6,7 +6,8 @@
       "remote": "https://sync.librelingo.app",
       "auth": {
         "expireDays": 150
-      }
+      },
+      "maxNumberOfListeners": 5000
     },
     "development": {
       "signUpEndpoint": "http://localhost:8000/register",
@@ -14,7 +15,8 @@
       "remote": "http://localhost:5984/",
       "auth": {
         "expireDays": 1
-      }
+      },
+      "maxNumberOfListeners": 5000
     }
   }
 }

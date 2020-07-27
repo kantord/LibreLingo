@@ -26,7 +26,9 @@ if (process.browser === true) {
     )
 
     // Connect to local database
-    db = new PouchDB(settings.database.local)
+    db = new PouchDB(settings.database.local).setMaxListeners(
+        settings.database.maxNumberOfListeners
+    )
     window._DB = db
 
     // Detect fake user session
