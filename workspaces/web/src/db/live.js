@@ -1,13 +1,6 @@
-import db from "./db"
+import authStore from "../auth"
 
 export default (listener) => {
     listener()
-    db &&
-    db
-        .changes({
-            since: "now",
-            live: true,
-            include_docs: true,
-        })
-        .on("change", listener)
+    authStore.subscribe(listener)
 }
