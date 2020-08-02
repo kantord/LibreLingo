@@ -1,5 +1,5 @@
 <script>
-  import {onDestroy, onMount} from "svelte"
+  import { onDestroy, onMount } from "svelte"
 
   import live from "../../db/live"
   import getSkillStats from "../../db/skill/getSkillStats"
@@ -15,21 +15,16 @@
   let completed = null
   let stale = null
 
-  let databaseSubscription = null
-
   onMount(() => {
-    databaseSubscription = live(() => getSkillStats({ id })
-            .then((stats) => {
-              completed = stats.completed
-              stale = stats.stale
-            })
-            .catch(() => {}))
+    live(() =>
+      getSkillStats({ id })
+        .then((stats) => {
+          completed = stats.completed
+          stale = stats.stale
+        })
+        .catch(() => {})
+    )
   })
-
-  onDestroy(async () => {
-    await databaseSubscription.cancel()
-  })
-
 </script>
 
 <div class="card" data-completed="{completed}" data-stale="{stale}">
