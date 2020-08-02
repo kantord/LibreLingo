@@ -6,15 +6,6 @@ let db
 let remoteDB
 let syncHandler
 
-export const clearLocalDB = async () => {
-    const allDocs = await db.allDocs()
-    await Promise.all(
-        allDocs.rows.map(function (row) {
-            return db.remove(row.id, row.value.rev)
-        })
-    )
-}
-
 const createLocalPouchDb = (dbName) => {
     const PouchDB =
     process.env.JEST_WORKER_ID !== undefined
@@ -155,7 +146,7 @@ if (process.browser === true) {
                 user: null,
                 online: null,
             }))
-            await clearLocalDB()
+            await db.destroy()
             window.location.reload(false)
         }
     }
