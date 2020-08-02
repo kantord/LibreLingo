@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[52],{391:function(e){e.exports=JSON.parse('{"id":"434d43b3","challenges":[{"id":663,"type":"shortInput","phrase":[{"word":"foo"}],"formInTargetLanguage":["leche","la leche"]}]}')}}]);
