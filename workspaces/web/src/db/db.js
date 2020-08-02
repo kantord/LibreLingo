@@ -15,6 +15,35 @@ export const clearLocalDB = async () => {
     )
 }
 
+const createLocalPouchDb = (dbName) => {
+    const PouchDB =
+    process.env.JEST_WORKER_ID !== undefined
+        ? require("pouchdb")
+        : require("pouchdb").default
+    const newDb = new PouchDB(dbName).setMaxListeners(
+        settings.database.maxNumberOfListeners
+    )
+
+    newDb
+        .changes({
+            since: "now",
+            live: true,
+            include_docs: true,
+        })
+        .on("change", () => {
+            const authStore =
+        process.env.JEST_WORKER_ID !== undefined
+            ? require("../auth")
+            : require("../auth").default
+            authStore.update((value) => ({
+                ...value,
+                dbUpdatedAt: Date.now(),
+            }))
+        })
+
+    return newDb
+}
+
 if (process.browser === true) {
     const authStore = require("../auth").default
     const PouchDB = require("pouchdb").default
@@ -26,9 +55,7 @@ if (process.browser === true) {
     )
 
     // Connect to local database
-    db = new PouchDB(settings.database.local).setMaxListeners(
-        settings.database.maxNumberOfListeners
-    )
+    db = createLocalPouchDb(settings.database.local)
     window._DB = db
 
     // Detect fake user session
@@ -148,8 +175,7 @@ if (process.browser === true) {
 
 if (process.env.JEST_WORKER_ID !== undefined) {
     // This is a test database for Jest tests that can reset itself
-    const PouchDB = require("pouchdb")
-    db = new PouchDB(settings.database.local)
+    db = createLocalPouchDb(settings.database.local)
     db.__reset = async () => {
         const allDocs = await db.allDocs()
         await Promise.all(
