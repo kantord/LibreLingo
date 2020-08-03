@@ -1,13 +1,13 @@
 <script>
   import { onMount } from "svelte"
   import hotkeys from "hotkeys-js"
-  import levenshtein from "js-levenshtein"
   import shuffle from "lodash.shuffle"
   import ChallengePanel from "./ChallengePanel"
   import Phrase from "./Phrase"
   import InputFieldWithVirtualKeyboard from "./InputFieldWithVirtualKeyboard"
   import Column from "lluis/Column"
   import Columns from "lluis/Columns"
+  import evaluateAnswer from "answer-corrector"
 
   export let challenge
   export let registerResult
@@ -24,28 +24,14 @@
   $: submitChallenge = () => {
     if (!answer) return
     if (submitted) return
-    correct = false
 
-    challenge.formInTargetLanguage.forEach((form) => {
-      if (
-        levenshtein(
-          answer
-            .toLowerCase()
-            .replace(/^\s+|\s+$/g, "")
-            .replace(/\s+/g, " "),
-          form.toLowerCase()
-        ) <= 1
-      ) {
-        correct = true
-        spellingSuggestion =
-          form
-            .replace(/^\s+|\s+$/g, "")
-            .replace(/\s+/g, " ")
-            .toLowerCase() === answer.toLowerCase()
-            ? ""
-            : `You made a small error. Correct spelling: ${form}`
-      }
+    const validationResults = evaluateAnswer({
+      validAnswers: challenge.formInTargetLanguage,
+      answer: answer,
     })
+
+    correct = validationResults.correct
+    spellingSuggestion = validationResults.suggestion
 
     registerResult(correct)
     submitted = true
