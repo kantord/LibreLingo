@@ -21,4 +21,17 @@ describe("evaluateAnswer", () => {
             suggestion: "You made a small error. Correct spelling: bar"
         })
     })
+
+    it("returns correct suggestion - punctuation", () => {
+        expect(
+            evaluateAnswer({
+                answer: "foo bar lorem ipsum dolor sit amet baz",
+                validAnswers: ["foo", "¡foo bar lorem ipsum dolor sit amet baz!"]
+            })
+        ).toEqual({
+            correct: true,
+            suggestion:
+        "Watch out for punctuation! Correct spelling: ¡foo bar lorem ipsum dolor sit amet baz!"
+        })
+    })
 })
