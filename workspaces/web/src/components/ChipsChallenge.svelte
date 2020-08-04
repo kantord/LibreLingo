@@ -1,5 +1,7 @@
 <script>
+  import { onMount } from "svelte"
   import Sortable from "sortablejs"
+  import hotkeys from "hotkeys-js"
   import shuffle from "lodash.shuffle"
   import { writable, get } from "svelte/store"
   import ChallengePanel from "./ChallengePanel"
@@ -94,6 +96,17 @@
     submitted = false
     resolveChallenge()
   }
+
+  onMount(() => {
+    hotkeys.unbind("enter")
+    hotkeys("enter", () => {
+      if (submitted) {
+        finishChallenge()
+      } else {
+        submitChallenge()
+      }
+    })
+  })
 </script>
 
 <form on:submit|preventDefault="{submitChallenge}">
