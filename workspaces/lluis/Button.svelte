@@ -84,6 +84,8 @@
 
   .key {
     font-family: monospace;
+    border-radius: 8px;
+    text-transform: none;
     margin: 1em;
     margin-left: 0;
     margin-top: 0;
