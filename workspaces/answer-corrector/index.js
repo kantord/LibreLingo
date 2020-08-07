@@ -4,17 +4,18 @@ const id = x => x
 
 const ignorePunctuation = form => form.replace(/[!¡?¿,.]/g, "")
 const ignoreCasing = form => form.toLowerCase()
-const ignoreWhitespace = form => form
-    .replace(/^\s+|\s+$/g, "")
-    .replace(/\s+/g, " ")
+const ignoreWhitespace = form =>
+    form.replace(/^\s+|\s+$/g, "").replace(/\s+/g, " ")
 
-const areSentencesSimilar = (sentence1, sentence2)  => 
+const areSentencesSimilar = (sentence1, sentence2) =>
     levenshtein(
         ignoreWhitespace(ignoreCasing(sentence1)),
         ignoreWhitespace(ignoreCasing(sentence2))
     ) <= 1
 
-
+const areSentencesIdentical = (sentence1, sentence2) =>
+    ignoreWhitespace(ignoreCasing(sentence1)) ===
+  ignoreWhitespace(ignoreCasing(sentence2))
 
 const evaluateAnswerRaw = ({
     validAnswers,
@@ -31,9 +32,7 @@ const evaluateAnswerRaw = ({
         if (areSentencesSimilar(answer, mappedForm)) {
             correct = true
             suggestion = suggester(form)
-            if ( !alwaysSuggest && (ignoreWhitespace(ignoreCasing(mappedForm))
-                 === ignoreWhitespace(ignoreCasing(answer)))
-            ) {
+            if (!alwaysSuggest && areSentencesIdentical(answer, mappedForm)) {
                 suggestion = ""
             }
         }
