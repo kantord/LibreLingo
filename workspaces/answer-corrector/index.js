@@ -3,6 +3,28 @@ import levenshtein from "js-levenshtein"
 const id = x => x
 
 const ignorePunctuation = form => form.replace(/[!¡?¿,.]/g, "")
+const ignoreCasing = form => form.toLowerCase()
+const ignoreWhitespace = form =>
+    form.replace(/^\s+|\s+$/g, "").replace(/\s+/g, " ")
+
+const normalize = form => ignoreWhitespace(ignoreCasing(form))
+
+const areSentencesSimilar = (sentence1, sentence2) =>
+    levenshtein(normalize(sentence1), normalize(sentence2)) <= 1
+
+const areSentencesIdentical = (sentence1, sentence2) =>
+    normalize(sentence1) === normalize(sentence2)
+
+const getSuggestion = ({
+    alwaysSuggest,
+    answer,
+    mappedForm,
+    suggester,
+    form
+}) =>
+    !alwaysSuggest && areSentencesIdentical(answer, mappedForm)
+        ? ""
+        : suggester(form)
 
 const evaluateAnswerRaw = ({
     validAnswers,
@@ -16,24 +38,18 @@ const evaluateAnswerRaw = ({
 
     validAnswers.forEach(form => {
         const mappedForm = mapper(form)
-        if (
-            levenshtein(
-                answer
-                    .toLowerCase()
-                    .replace(/^\s+|\s+$/g, "")
-                    .replace(/\s+/g, " "),
-                mappedForm.toLowerCase()
-            ) <= 1
-        ) {
-            correct = true
-            suggestion = suggester(form)
-            if ( !alwaysSuggest & (mappedForm
-                .replace(/^\s+|\s+$/g, "")
-                .replace(/\s+/g, " ")
-                .toLowerCase() === answer.toLowerCase())
-            ) {
-                suggestion = ""
+        if (areSentencesSimilar(answer, mappedForm)) {
+            if (correct && !suggestion) {
+                return
             }
+            correct = true
+            suggestion = getSuggestion({
+                alwaysSuggest,
+                answer,
+                mappedForm,
+                suggester,
+                form
+            })
         }
     })
 
