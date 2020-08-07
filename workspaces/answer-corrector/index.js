@@ -3,6 +3,11 @@ import levenshtein from "js-levenshtein"
 const id = x => x
 
 const ignorePunctuation = form => form.replace(/[!¡?¿,.]/g, "")
+const ignoreCasing = form => form.toLowerCase()
+const ignoreWhitespace = form => form
+    .replace(/^\s+|\s+$/g, "")
+    .replace(/\s+/g, " ")
+
 
 const evaluateAnswerRaw = ({
     validAnswers,
@@ -18,19 +23,14 @@ const evaluateAnswerRaw = ({
         const mappedForm = mapper(form)
         if (
             levenshtein(
-                answer
-                    .toLowerCase()
-                    .replace(/^\s+|\s+$/g, "")
-                    .replace(/\s+/g, " "),
-                mappedForm.toLowerCase()
+                ignoreWhitespace(ignoreCasing(answer)),
+                ignoreWhitespace(ignoreCasing(mappedForm))
             ) <= 1
         ) {
             correct = true
             suggestion = suggester(form)
-            if ( !alwaysSuggest & (mappedForm
-                .replace(/^\s+|\s+$/g, "")
-                .replace(/\s+/g, " ")
-                .toLowerCase() === answer.toLowerCase())
+            if ( !alwaysSuggest & (ignoreWhitespace(ignoreCasing(mappedForm))
+                 === ignoreWhitespace(ignoreCasing(answer)))
             ) {
                 suggestion = ""
             }
