@@ -7,15 +7,13 @@ const ignoreCasing = form => form.toLowerCase()
 const ignoreWhitespace = form =>
     form.replace(/^\s+|\s+$/g, "").replace(/\s+/g, " ")
 
+const normalize = form => ignoreWhitespace(ignoreCasing(form))
+
 const areSentencesSimilar = (sentence1, sentence2) =>
-    levenshtein(
-        ignoreWhitespace(ignoreCasing(sentence1)),
-        ignoreWhitespace(ignoreCasing(sentence2))
-    ) <= 1
+    levenshtein(normalize(sentence1), normalize(sentence2)) <= 1
 
 const areSentencesIdentical = (sentence1, sentence2) =>
-    ignoreWhitespace(ignoreCasing(sentence1)) ===
-  ignoreWhitespace(ignoreCasing(sentence2))
+    normalize(sentence1) === normalize(sentence2)
 
 const evaluateAnswerRaw = ({
     validAnswers,
