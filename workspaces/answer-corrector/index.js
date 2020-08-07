@@ -28,6 +28,9 @@ const evaluateAnswerRaw = ({
     validAnswers.forEach(form => {
         const mappedForm = mapper(form)
         if (areSentencesSimilar(answer, mappedForm)) {
+            if (correct && !suggestion) {
+                return
+            }
             correct = true
             suggestion = suggester(form)
             if (!alwaysSuggest && areSentencesIdentical(answer, mappedForm)) {
