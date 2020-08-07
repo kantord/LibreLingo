@@ -15,6 +15,17 @@ const areSentencesSimilar = (sentence1, sentence2) =>
 const areSentencesIdentical = (sentence1, sentence2) =>
     normalize(sentence1) === normalize(sentence2)
 
+const getSuggestion = ({
+    alwaysSuggest,
+    answer,
+    mappedForm,
+    suggester,
+    form
+}) =>
+    !alwaysSuggest && areSentencesIdentical(answer, mappedForm)
+        ? ""
+        : suggester(form)
+
 const evaluateAnswerRaw = ({
     validAnswers,
     answer,
@@ -32,10 +43,13 @@ const evaluateAnswerRaw = ({
                 return
             }
             correct = true
-            suggestion = suggester(form)
-            if (!alwaysSuggest && areSentencesIdentical(answer, mappedForm)) {
-                suggestion = ""
-            }
+            suggestion = getSuggestion({
+                alwaysSuggest,
+                answer,
+                mappedForm,
+                suggester,
+                form
+            })
         }
     })
 
