@@ -8,6 +8,13 @@ const ignoreWhitespace = form => form
     .replace(/^\s+|\s+$/g, "")
     .replace(/\s+/g, " ")
 
+const areSentencesSimilar = (sentence1, sentence2)  => 
+    levenshtein(
+        ignoreWhitespace(ignoreCasing(sentence1)),
+        ignoreWhitespace(ignoreCasing(sentence2))
+    ) <= 1
+
+
 
 const evaluateAnswerRaw = ({
     validAnswers,
@@ -21,15 +28,10 @@ const evaluateAnswerRaw = ({
 
     validAnswers.forEach(form => {
         const mappedForm = mapper(form)
-        if (
-            levenshtein(
-                ignoreWhitespace(ignoreCasing(answer)),
-                ignoreWhitespace(ignoreCasing(mappedForm))
-            ) <= 1
-        ) {
+        if (areSentencesSimilar(answer, mappedForm)) {
             correct = true
             suggestion = suggester(form)
-            if ( !alwaysSuggest & (ignoreWhitespace(ignoreCasing(mappedForm))
+            if ( !alwaysSuggest && (ignoreWhitespace(ignoreCasing(mappedForm))
                  === ignoreWhitespace(ignoreCasing(answer)))
             ) {
                 suggestion = ""
