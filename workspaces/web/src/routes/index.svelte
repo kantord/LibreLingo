@@ -39,6 +39,7 @@
               </Button>
 
               <Button primary href="development">Development progress</Button>
+              <a href="/devtools" class="is-invisible"></a>
             </div>
           </Box>
         </Column>
