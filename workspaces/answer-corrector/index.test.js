@@ -22,6 +22,15 @@ describe("evaluateAnswer", () => {
         })
     })
 
+    it("returns no suggestion when there's a correct form", () => {
+        expect(
+            evaluateAnswer({ answer: "ba", validAnswers: ["ba", "foo", "bar",] })
+        ).toEqual({
+            correct: true,
+            suggestion: ""
+        })
+    })
+
     it("returns correct suggestion - punctuation", () => {
         expect(
             evaluateAnswer({
