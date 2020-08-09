@@ -5,7 +5,7 @@ export const changeArrayElementPosition = (array, oldIndex, newIndex) => {
     const arr = [...array]
 
     // remove item at old place
-    arr.splice(oldIndex, oldIndex)
+    arr.splice(oldIndex, 1)
 
     // insert item at new place
     arr.splice(newIndex, 0, array[oldIndex])

@@ -131,7 +131,6 @@
       {/each}
     </div>
   </div>
-  {JSON.stringify($answer)}
   {#if $answer.length > 0 && !submitted}
     <ChallengePanel message="" buttonText="Submit" submit />
   {/if}
