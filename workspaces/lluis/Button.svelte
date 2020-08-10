@@ -19,6 +19,9 @@
   export let tabindex = 0
   export let key = false
   export let disabled = false
+  export let loading = false
+  export let asHref = null
+  export let submit = false
 
   let styleTokens = `
     --color:${color};
@@ -36,6 +39,7 @@
     class:is-inverted="{inverted}"
     class:is-outlined="{outlined}"
     class:is-hidden="{hidden}"
+    class:is-loading="{loading}"
     class:customColor
     class:customTextColor
     class:key
@@ -54,6 +58,7 @@
     class:is-inverted="{inverted}"
     class:is-outlined="{outlined}"
     class:is-hidden="{hidden}"
+    class:is-loading="{loading}"
     class:customColor
     class:customTextColor
     class:key
@@ -63,6 +68,9 @@
     {type}>
     <slot />
   </button>
+  {#if asHref}
+    <a class="is-hidden" href={asHref}>{asHref}</a>
+  {/if}
 {/if}
 
 <style>
@@ -76,8 +84,14 @@
 
   .key {
     font-family: monospace;
+    border-radius: 8px;
+    text-transform: none;
     margin: 1em;
     margin-left: 0;
     margin-top: 0;
   }
 </style>
+
+{#if submit}
+  <button type="submit" class="is-hidden"></button>
+{/if}

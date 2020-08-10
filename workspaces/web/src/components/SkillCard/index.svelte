@@ -1,4 +1,7 @@
 <script>
+  import { onDestroy, onMount } from "svelte"
+
+  import live from "../../db/live"
   import getSkillStats from "../../db/skill/getSkillStats"
   import Icon from "lluis/Icon"
   import Button from "lluis/Button"
@@ -12,12 +15,16 @@
   let completed = null
   let stale = null
 
-  getSkillStats({ id })
-    .then((stats) => {
-      completed = stats.completed
-      stale = stats.stale
-    })
-    .catch(() => {})
+  onMount(() => {
+    live(() =>
+      getSkillStats({ id })
+        .then((stats) => {
+          completed = stats.completed
+          stale = stats.stale
+        })
+        .catch(() => {})
+    )
+  })
 </script>
 
 <div class="card" data-completed="{completed}" data-stale="{stale}">

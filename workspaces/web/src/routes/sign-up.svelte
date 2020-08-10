@@ -1,17 +1,17 @@
 <script>
   import db from "../db/db.js"
   import settings from "../settings"
-  import { onMount } from "svelte"
-  import hotkeys from "hotkeys-js"
   import NavBar from "../components/NavBar.svelte"
-  import Icon from "lluis/Icon.svelte"
   import Button from "lluis/Button"
   import FormField from "lluis/FormField"
+
+  let loading = false
 
   let username = ""
   let email = ""
   let password = ""
   let password_confirmation = ""
+  let license_accepted = false
   let errors = {}
 
   const emailRegexp = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
@@ -96,6 +96,26 @@
     }
   }
 
+  const validateLicense = () => {
+    if (!license_accepted) {
+      errors = {
+        ...errors,
+        license: "You have to accept the agreements.",
+      }
+
+      return
+    }
+
+    if (username.length < 4) {
+      errors = {
+        ...errors,
+        username: "Please choose a username that has at least 4 characters",
+      }
+
+      return
+    }
+  }
+
   const handleTestingFakes = () => {
     if (window._test_fake_signup) {
       if (window._test_user_already_exists) {
@@ -111,10 +131,12 @@
   let handleSignUp
   $: {
     handleSignUp = async () => {
+      loading = true
       errors = {}
       validateUsername()
       validateEmail()
       validatePassword()
+      validateLicense()
       handleTestingFakes()
       const isFormValid = Object.keys(errors).length === 0
 
@@ -122,7 +144,10 @@
         if (window._test_fake_signup) {
           setTimeout(function () {
             if (isFormValid === true) {
+              loading = false
               window.location = "/sign-up-success"
+            } else {
+              loading = false
             }
           }, 500)
         } else {
@@ -141,8 +166,10 @@
               .then((data) => data.json())
               .then(({ success, error }) => {
                 if (success) {
-                  /*window.location = "/sign-up-success"*/
+                  loading = false
+                  window.location = "/sign-up-success"
                 } else {
+                  loading = false
                   if (error.code === "invalid-payload") {
                     errors = error.details
                   } else {
@@ -150,19 +177,18 @@
                   }
                 }
               })
+          } else {
+            loading = false
           }
         }
       }
     }
   }
-
-  onMount(() => {
-    hotkeys.unbind("enter")
-    hotkeys("enter", () => {
-      handleSignUp()
-    })
-  })
 </script>
+
+<svelte:head>
+  <title>Sign up - LibreLingo</title>
+</svelte:head>
 
 <NavBar dark />
 
@@ -200,11 +226,36 @@
         formStatus="{errors}"
         bind:value="{password_confirmation}" />
 
+      <div class="field">
+        <div class="control">
+          <label class="checkbox">
+            <input
+              type="checkbox"
+              name="license"
+              id="license"
+              bind:checked="{license_accepted}" />
+            I agree to the
+            <a href="/tos">Terms and Conditions</a>
+            and the
+            <a href="/license">GNU Affero General Public License</a>
+          </label>
+        </div>
+        {#if errors['license'] != null}
+          <p class="help is-danger">{errors['license']}</p>
+        {/if}
+      </div>
+
       {#if errors._form != null}
         <p class="help is-danger">{errors._form}</p>
       {/if}
 
-      <Button on:click="{handleSignUp}">Sign up</Button>
+      <Button
+        on:click="{handleSignUp}"
+        {loading}
+        asHref="/sign-up-success"
+        submit>
+        Sign up
+      </Button>
     </form>
   </div>
 

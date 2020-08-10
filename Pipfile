@@ -6,7 +6,7 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-coverage = "==5.0.4"
+coverage = "==5.2.1"
 dj-database-url = "==0.5.0"
 django = "==3.0.7"
 django-admin-sortable2 = "==0.7.6"
@@ -18,14 +18,15 @@ gunicorn = "==20.0.4"
 mkdocs = "==1.1"
 pycodestyle = "==2.5.0"
 pylint = "==2.4.4"
-pylint-django = "==2.0.14"
+pylint-django = "==2.2.0"
 pylint-plugin-utils = "==0.6"
-python-dotenv = "==0.12.0"
+python-dotenv = "==0.14.0"
 snapshottest = "==0.5.1"
-whitenoise = "==5.0.1"
+whitenoise = "==5.2.0"
 python-slugify = "*"
 psycopg2 = "*"
 requests = "*"
+django-cors-headers = "*"
 
 [requires]
 python_version = "3.8"

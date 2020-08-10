@@ -51,7 +51,7 @@
       </span>
     </span>
   {/if}
-  <span>Fork me on GitHub</span>
+  <span class="is-hidden-mobile">GitHub</span>
 </Button>
 
 <style>

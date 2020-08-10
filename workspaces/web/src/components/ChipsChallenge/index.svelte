@@ -1,27 +1,18 @@
 <script>
+  import { onMount } from "svelte"
   import Sortable from "sortablejs"
+  import hotkeys from "hotkeys-js"
   import shuffle from "lodash.shuffle"
   import { writable, get } from "svelte/store"
-  import ChallengePanel from "./ChallengePanel"
-  import Phrase from "./Phrase"
-
-  const swapArrayElements = (array, oldIndex, newIndex) => {
-    const arr = [...array]
-
-    // remove item at old place
-    arr.splice(oldIndex, oldIndex)
-
-    // insert item at new place
-    arr.splice(newIndex, 0, array[oldIndex])
-
-    return arr
-  }
+  import ChallengePanel from "../ChallengePanel"
+  import Phrase from "../Phrase"
+  import { changeArrayElementPosition } from "./utils"
 
   const sortable = function (node, { items, options }) {
     options = Object.assign(options, {
       onUpdate({ newIndex, oldIndex }) {
         items.update((oldItems) => {
-          return swapArrayElements(oldItems, oldIndex, newIndex)
+          return changeArrayElementPosition(oldItems, oldIndex, newIndex)
         })
       },
 
@@ -94,6 +85,17 @@
     submitted = false
     resolveChallenge()
   }
+
+  onMount(() => {
+    hotkeys.unbind("enter")
+    hotkeys("enter", () => {
+      if (submitted) {
+        finishChallenge()
+      } else {
+        submitChallenge()
+      }
+    })
+  })
 </script>
 
 <form on:submit|preventDefault="{submitChallenge}">
@@ -129,7 +131,6 @@
       {/each}
     </div>
   </div>
-
   {#if $answer.length > 0 && !submitted}
     <ChallengePanel message="" buttonText="Submit" submit />
   {/if}
@@ -154,7 +155,7 @@
 </form>
 
 <style>
-  @import "../variables";
+  @import "../../variables";
 
   .chip {
     user-select: none;
