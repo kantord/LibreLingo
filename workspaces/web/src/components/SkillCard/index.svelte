@@ -1,8 +1,8 @@
 <script>
   import { onDestroy, onMount } from "svelte"
 
-  import live from "../../db/live"
-  import getSkillStats from "../../db/skill/getSkillStats"
+  import live from "librelingo-data-layer/db/live"
+  import getSkillStats from "librelingo-data-layer/db/skill/getSkillStats"
   import Icon from "lluis/Icon"
   import Button from "lluis/Button"
 

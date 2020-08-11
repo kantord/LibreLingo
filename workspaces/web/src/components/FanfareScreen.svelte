@@ -1,7 +1,7 @@
 <script>
   import { scale } from "svelte/transition"
-  import db from "../db/db"
-  import savePractice from "../db/skill/savePractice"
+  import db from "librelingo-data-layer/db/db"
+  import savePractice from "librelingo-data-layer/db/skill/savePractice"
   import sound from "../media/sound"
   import hotkeys from "hotkeys-js"
   import { onMount } from "svelte"
