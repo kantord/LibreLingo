@@ -1,5 +1,5 @@
 <script>
-  import db from "../db/db.js"
+  import db from "librelingo-data-layer/db/db.js"
   import { onMount } from "svelte"
   import hotkeys from "hotkeys-js"
   import NavBar from "../components/NavBar.svelte"

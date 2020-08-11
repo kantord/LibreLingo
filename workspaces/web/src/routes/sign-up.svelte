@@ -1,5 +1,5 @@
 <script>
-  import db from "../db/db.js"
+  import db from "librelingo-data-layer/db/db.js"
   import settings from "../settings"
   import NavBar from "../components/NavBar.svelte"
   import Button from "lluis/Button"
