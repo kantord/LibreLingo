@@ -1,78 +1,67 @@
-import levenshtein from "js-levenshtein"
-
-const id = x => x
-
-const ignorePunctuation = form => form.replace(/[!¡?¿,.]/g, "")
-const ignoreCasing = form => form.toLowerCase()
-const ignoreWhitespace = form =>
-    form.replace(/^\s+|\s+$/g, "").replace(/\s+/g, " ")
-
-const normalize = form => ignoreWhitespace(ignoreCasing(form))
-
-const areSentencesSimilar = (sentence1, sentence2) =>
-    levenshtein(normalize(sentence1), normalize(sentence2)) <= 1
-
-const areSentencesIdentical = (sentence1, sentence2) =>
-    normalize(sentence1) === normalize(sentence2)
-
-const getSuggestion = ({
-    alwaysSuggest,
-    answer,
-    mappedForm,
-    suggester,
-    form
-}) =>
-    !alwaysSuggest && areSentencesIdentical(answer, mappedForm)
-        ? ""
-        : suggester(form)
-
-const evaluateAnswerRaw = ({
-    validAnswers,
-    answer,
-    suggester,
-    alwaysSuggest,
-    mapper
-}) => {
-    let correct = false,
-        suggestion = ""
-
-    validAnswers.forEach(form => {
-        const mappedForm = mapper(form)
+"use strict";
+exports.__esModule = true;
+var js_levenshtein_1 = require("js-levenshtein");
+var id = function (x) { return x; };
+var ignorePunctuation = function (form) { return form.replace(/[!¡?¿,.]/g, ""); };
+var ignoreCasing = function (form) { return form.toLowerCase(); };
+var ignoreWhitespace = function (form) {
+    return form.replace(/^\s+|\s+$/g, "").replace(/\s+/g, " ");
+};
+var normalize = function (form) { return ignoreWhitespace(ignoreCasing(form)); };
+var areSentencesSimilar = function (sentence1, sentence2) {
+    return js_levenshtein_1["default"](normalize(sentence1), normalize(sentence2)) <= 1;
+};
+var areSentencesIdentical = function (sentence1, sentence2) {
+    return normalize(sentence1) === normalize(sentence2);
+};
+var getSuggestion = ({
+    alwaysSuggest: alwaysSuggest,
+    answer: answer,
+    mappedForm: mappedForm,
+    suggester: suggester,
+    form: form
+});
+!alwaysSuggest && areSentencesIdentical(answer, mappedForm)
+    ? ""
+    : suggester(form);
+var evaluateAnswerRaw = function (_a) {
+    var validAnswers = _a.validAnswers, answer = _a.answer, suggester = _a.suggester, alwaysSuggest = _a.alwaysSuggest, mapper = _a.mapper;
+    var correct = false, suggestion = "";
+    validAnswers.forEach(function (form) {
+        var mappedForm = mapper(form);
         if (areSentencesSimilar(answer, mappedForm)) {
             if (correct && !suggestion) {
-                return
+                return;
             }
-            correct = true
+            correct = true;
             suggestion = getSuggestion({
-                alwaysSuggest,
-                answer,
-                mappedForm,
-                suggester,
-                form
-            })
+                alwaysSuggest: alwaysSuggest,
+                answer: answer,
+                mappedForm: mappedForm,
+                suggester: suggester,
+                form: form
+            });
         }
-    })
-
-    return { correct, suggestion }
-}
-
-export default function evaluateAnswer({ validAnswers, answer }) {
-    let result = evaluateAnswerRaw({
+    });
+    return { correct: correct, suggestion: suggestion };
+};
+function evaluateAnswer(_a) {
+    var validAnswers = _a.validAnswers, answer = _a.answer;
+    var result = evaluateAnswerRaw({
         mapper: id,
-        validAnswers,
-        answer,
-        suggester: form => `You made a small error. Correct spelling: ${form}`
-    })
-
+        validAnswers: validAnswers,
+        answer: answer,
+        suggester: function (form) { return "You made a small error. Correct spelling: " + form; }
+    });
     if (!result.correct) {
         result = evaluateAnswerRaw({
             alwaysSuggest: true,
-            validAnswers,
+            validAnswers: validAnswers,
             mapper: ignorePunctuation,
-            answer,
-            suggester: form => `Watch out for punctuation! Correct spelling: ${form}`
-        })
+            answer: answer,
+            suggester: function (form) { return "Watch out for punctuation! Correct spelling: " + form; }
+        });
     }
-
-    return result
+    return result;
 }
+exports["default"] = evaluateAnswer;

@@ -23,6 +23,11 @@ module.exports = {
     module: {
       rules: [
         {
+          test: /\.tsx?$/,
+          use: "ts-loader",
+          exclude: [/node_modules/, /\.test.ts?$/],
+        },
+        {
           test: /\.md/i,
           use: "raw-loader",
         },
@@ -108,6 +113,11 @@ module.exports = {
     externals: Object.keys(pkg.dependencies).concat("encoding"),
     module: {
       rules: [
+        {
+          test: /\.tsx?$/,
+          use: "ts-loader",
+          exclude: [/node_modules/, /\.test.ts?$/],
+        },
         {
           test: /\.md/i,
           use: "raw-loader",

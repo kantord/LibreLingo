@@ -1,9 +1,12 @@
 {
   "name": "answer-corrector",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.ts",
   "license": "GPLv3",
   "dependencies": {
     "js-levenshtein": "1.1.6"
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.10.4"
   }
 }
