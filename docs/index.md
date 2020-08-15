@@ -59,6 +59,12 @@ To be able to run the course editor locally, first we have to install migrations
 python manage.py migrate
 ```
 
+On OSX, you will have to specifically use python3:
+
+```
+python3 manage.py migrate
+```
+
 You are able to run the course editor now, but you will need to create a user to actually log in into the interface. Let's do it:
 
 ```
