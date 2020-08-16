@@ -45,7 +45,7 @@ Here's a rough sketch of how  I imagine the milestones of this project:
 
 ### Alpha release
 
-* ☐ Course progress can be properly synchronised across devices
+* ☑️ Course progress can be properly synchronised across devices
 * ☑️ Course editor can be accessed by all course contributors
 * ☐ Statistics about course contributors are collected and published
 * ☑️ At least the basics of the Spanish course are ready
