@@ -1,14 +1,19 @@
-import db from "../db"
 import { isStale } from "./_logic"
 
-export default async ({ id }) => {
+export default async (db, { id }) => {
     if (!db) return null
 
     try {
         const { practiced } = await db.get(`skills/${id}`)
+        const validPractices = practiced.filter(({ correct }) => correct > 0)
+
+        if (validPractices.length === 0) {
+            return { completed: false, stale: null }
+        }
+
         return {
-            completed: practiced.length >= 1,
-            stale: isStale({ practices: practiced })
+            completed: validPractices.length >= 1,
+            stale: isStale({ practices: practiced }),
         }
     } catch {
         return { completed: false, stale: null }
