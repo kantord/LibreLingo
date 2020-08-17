@@ -9,6 +9,7 @@
   import ProgressBar from "./ProgressBar"
   import shuffle from "lodash.shuffle"
   import { fade, scale } from "svelte/transition"
+  import Button from "lluis/Button"
 
   export let rawChallenges
   export let languageName
@@ -25,6 +26,7 @@
   let stats = {
     correct: 0,
     incorrect: 0,
+    skipped: 0,
   }
 
   const preloadImage = (imageName) => {
@@ -50,14 +52,19 @@
       sound.wrong.play()
       remainingChallenges.push(currentChallenge)
     }
-
-    progress = solvedChallenges.length / challenges.length
   }
+
+  $: progress = (solvedChallenges.length + stats.skipped) / challenges.length
 
   $: resolveChallenge = () => {
     if (remainingChallenges) {
       currentChallenge = remainingChallenges.shift()
     }
+  }
+
+  $: skipChallenge = () => {
+    stats.skipped++
+    resolveChallenge()
   }
 </script>
 
@@ -109,6 +116,8 @@
           </div>
         {/if}
       {/each}
+
+      <Button on:click="{skipChallenge}">Skip</Button>
 
     </section>
   </div>
