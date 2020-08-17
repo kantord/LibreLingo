@@ -11,7 +11,20 @@ describe("db/skill/savePractice", () => {
         expect(await db.get("skills/fooBar")).toEqual({
             _id: "skills/fooBar",
             _rev: expect.anything(),
-            practiced: [{ at: expect.anything(), correct: 5, incorrect: 3 }]
+            practiced: [
+                { at: expect.anything(), correct: 5, incorrect: 3, skipped: 0 },
+            ],
+        })
+    })
+
+    it("correctly creates new data - with skipped", async () => {
+        await savePractice({ id: "fooBar", correct: 5, incorrect: 3, skipped: 1 })
+        expect(await db.get("skills/fooBar")).toEqual({
+            _id: "skills/fooBar",
+            _rev: expect.anything(),
+            practiced: [
+                { at: expect.anything(), correct: 5, incorrect: 3, skipped: 1 },
+            ],
         })
     })
 
@@ -22,9 +35,9 @@ describe("db/skill/savePractice", () => {
             _id: "skills/fooBar",
             _rev: expect.anything(),
             practiced: [
-                { at: expect.anything(), correct: 5, incorrect: 10 },
-                { at: expect.anything(), correct: 6, incorrect: 3 }
-            ]
+                { at: expect.anything(), correct: 5, incorrect: 10, skipped: 0 },
+                { at: expect.anything(), correct: 6, incorrect: 3, skipped: 0 },
+            ],
         })
     })
 })
