@@ -23,13 +23,20 @@
   @import "../variables";
 
   .option {
-    padding: 0.75em 0;
     transition: opacity 0.15s, outline 0.2s;
     cursor: pointer;
+    padding: 20px;
+    background-color: $grey-lighter;
+    border-radius: 40px;
+    margin: 20px;
   }
 
-  .inactive .option {
-    opacity: 0.65;
+  .active .option {
+    background-color: $purple-lighter;
+  }
+
+  input {
+    visibility: hidden;
   }
 
   @include mobile {

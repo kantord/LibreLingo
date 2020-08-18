@@ -59,7 +59,7 @@
   @import "../variables";
 
   .navbar.dark {
-    background: $blue;
+    background: $primary;
     color: $white-light;
   }
 

@@ -67,12 +67,6 @@
     padding: 1em;
   }
 
-  @include from($tablet) {
-    .fake {
-      display: none;
-    }
-  }
-
   @include until($tablet) {
     .options {
       flex-wrap: wrap;

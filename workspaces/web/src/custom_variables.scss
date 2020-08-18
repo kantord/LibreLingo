@@ -1,25 +1,30 @@
 // Set your brand colors
-$blue: #325f74;
-$pink: #ab2149;
-$green: #84b83f;
-$yellow: #fcb141;
+$purple: #9274ff;
+$purple-lighter: adjust-color($purple, $lightness: +25%);
+$blue: #4285f4;
+$pink: #ea4335;
+$green: #34a853;
+$yellow: #fbbc04;
 $white-light: #bfb5af;
 $white-lighter: adjust-color($white-light, $lightness: +20%);
+$grey-lighter: rgba(10, 10, 10, 0.075);
 
 // Update Bulma's global variables
-$family-sans-serif: 'Josefin Sans', sans-serif;
+$family-sans-serif: 'Roboto', sans-serif;
 $family-primary: $family-sans-serif;
-$grey-dark: $blue;
+$grey-dark: $purple;
 $grey-light: $white-light;
-$primary: $blue;
-$link: $pink;
+$primary: $purple;
+$link: $green;
 $widescreen-enabled: false;
 $fullhd-enabled: false;
 
 // Update some of Bulma's component variables
-$body-background-color: $white-lighter;
+$body-background-color: white;
 $control-border-width: 2px;
+$progress-border-radius: 20px;
 $input-border-color: transparent;
+$input-background-color: $grey-lighter;
 $input-shadow: none;
 $done-color: lighten(desaturate($green, 15%), 20%);
 $stale-color: lighten(desaturate($green, 45%), 20%);

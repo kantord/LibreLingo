@@ -100,7 +100,7 @@
 
 <form on:submit|preventDefault="{submitChallenge}">
   <div class="section">
-    <p class="is-size-1 is-size-2-tablet is-size-4-mobile has-text-centered">
+    <p class="challenge-title is-size-1 is-size-2-tablet is-size-4-mobile has-text-centered">
       Translate
       <Phrase phrase="{challenge.phrase}" />
     </p>
