@@ -22,7 +22,7 @@
   })
 
   onMount(async () => {
-    await savePractice({ id: skillId, ...stats })
+    await savePractice(db, { id: skillId, ...stats })
   })
 
   onMount(() => {
