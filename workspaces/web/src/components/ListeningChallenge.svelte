@@ -1,5 +1,5 @@
 <script>
-  import { onMount } from "svelte"
+  import { onMount, onDestroy, afterUpdate } from "svelte"
   import hotkeys from "hotkeys-js"
   import levenshtein from "js-levenshtein"
   import ChallengePanel from "./ChallengePanel"
@@ -15,7 +15,8 @@
   export let resolveChallenge
   export let languageCode
   export let specialCharacters
-  let answer = null
+  export let skipChallenge
+  let answer = ""
   let submitted = false
   let correct = null
   let spellingSuggestion = ""
@@ -58,6 +59,7 @@
   const playChallengeVoice = () => playVoice(challenge.audio)
 
   onMount(() => {
+    console.log("😁", "I was mounted")
     playChallengeVoice()
     hotkeys.unbind("enter")
     hotkeys("enter", () => {
@@ -67,6 +69,14 @@
         submitChallenge()
       }
     })
+  })
+
+  onDestroy(() => {
+    console.log("😑", "I was unmounted")
+  })
+
+  afterUpdate(() => {
+    console.log("😑", "I was updated")
   })
 </script>
 
@@ -92,10 +102,6 @@
     </Column>
   </Columns>
 
-  {#if answer && !submitted}
-    <ChallengePanel message="" buttonText="Submit" submit />
-  {/if}
-
   {#if submitted}
     {#if !correct}
       <ChallengePanel
@@ -105,6 +111,7 @@
         incorrect
         buttonAction="{finishChallenge}" />
     {/if}
+
     {#if correct}
       <ChallengePanel
         message="Correct solution!"
@@ -112,6 +119,21 @@
         buttonText="Continue"
         correct
         buttonAction="{finishChallenge}" />
+    {/if}
+  {:else}
+    {#if answer.length === 0}
+      <ChallengePanel
+        message="{null}"
+        buttonText="{null}"
+        skipAction="{skipChallenge}" />
+    {/if}
+
+    {#if answer.length > 0}
+      <ChallengePanel
+        message=""
+        buttonText="Submit"
+        submit
+        skipAction="{skipChallenge}" />
     {/if}
   {/if}
 
