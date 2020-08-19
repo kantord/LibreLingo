@@ -6,8 +6,8 @@ Feature: Listening exercise
     Given I open "/course/test/skill/_listening_test0"
     Then listening challenge looks correct
     And I read "Type what you hear"
-    And I don't see the challenge panel
-    And I don't see a Submit button
+    And I see a panel with only a skip button
+    And I don't see a "Submit" button
     And I'm not able to submit
     And I see an input field
     And the input field is focused
@@ -20,7 +20,7 @@ Feature: Listening exercise
   Scenario: Typing into the input field
     Given I open "/course/test/skill/_listening_test0"
     And I type "asdfg"
-    Then I see the challenge panel
+    Then I see the challenge panel with no skip button
 
   Scenario: Submitting incorrect answer
     Given I open "/course/test/skill/_listening_test0"
@@ -28,14 +28,14 @@ Feature: Listening exercise
     And I click "Submit"
     Then I read "Incorrect solution"
     And I read "Correct answer: perro"
-    And I see a Continue button
+    And I see a "Continue" button
     
   Scenario: Submitting correct answer
     Given I open "/course/test/skill/_listening_test0"
     And I type "perro"
     And I click "Submit"
     Then I read "Correct solution"
-    And I see a Continue button
+    And I see a "Continue" button
 
   Scenario: Submitting correct answer with a small typo
     Given I open "/course/test/skill/_listening_test0"
@@ -55,12 +55,13 @@ Feature: Listening exercise
     Given I open "/course/test/skill/_listening_test2"
     And I type "agua"
     And I click "Submit"
+    Then I don't see a "Skip" button
     And I click "Continue"
-    Then I don't see the challenge panel
+    Then I see a panel with only a skip button
 
   Scenario: Going to the next challenge with keyboard only
     Given I open "/course/test/skill/_listening_test2"
     And I type "agua"
     And I hit the enter key
     And I hit the enter key
-    Then I don't see the challenge panel
+    Then I see a panel with only a skip button

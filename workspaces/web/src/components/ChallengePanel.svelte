@@ -9,6 +9,7 @@
   export let message
   export let messageDetail = null
   export let submit = null
+  export let skipAction = null
 </script>
 
 <div
@@ -18,6 +19,9 @@
   transition:slide="{{ duration: 300 }}">
   <div class="panel-block">
     <div class="control">
+      {#if skipAction}
+        <Button on:click="{skipAction}">Skip</Button>
+      {/if}
       {#if message}
         <b>{message}</b>
       {/if}

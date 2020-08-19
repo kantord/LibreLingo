@@ -81,6 +81,7 @@
             out:fade|local="{{ duration: 300 }}">
             {#if challenge.type === 'cards'}
               <DeckChallenge
+                {skipChallenge}
                 {currentChallenge}
                 {alternativeChallenges}
                 {resolveChallenge}
@@ -88,6 +89,7 @@
             {/if}
             {#if challenge.type === 'options'}
               <OptionChallenge
+                {skipChallenge}
                 {currentChallenge}
                 {alternativeChallenges}
                 {resolveChallenge}
@@ -95,6 +97,7 @@
             {/if}
             {#if challenge.type === 'shortInput'}
               <ShortInputChallenge
+                {skipChallenge}
                 {languageName}
                 {languageCode}
                 {specialCharacters}
@@ -104,6 +107,7 @@
             {/if}
             {#if challenge.type === 'listeningExercise'}
               <ListeningChallenge
+                {skipChallenge}
                 {languageCode}
                 {specialCharacters}
                 {registerResult}
@@ -111,14 +115,15 @@
                 {challenge} />
             {/if}
             {#if challenge.type === 'chips'}
-              <ChipsChallenge {registerResult} {resolveChallenge} {challenge} />
+              <ChipsChallenge
+                {registerResult}
+                {resolveChallenge}
+                {challenge}
+                {skipChallenge} />
             {/if}
           </div>
         {/if}
       {/each}
-
-      <Button on:click="{skipChallenge}">Skip</Button>
-
     </section>
   </div>
 {/if}
