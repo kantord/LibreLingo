@@ -10,7 +10,7 @@ Feature: Course page
     And I see 4 skills that are not completed
     And I see a skill that has no image set
     And I see 3 skills that have an image set
-    And I see a Log in button
+    And I see a "Log in" button
 
   Scenario: Opening course page with a stale skill
     Given I open "/course/test"
@@ -25,7 +25,7 @@ Feature: Course page
     And I see a completed skill
     And course page with a completed skill looks correct
     And I see 3 skills that are not completed
-    And I see a Practice Test button
+    And I see a "Practice Test" button
 
   Scenario: Strengthening stale skill
     Given I open "/course/test"
