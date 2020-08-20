@@ -7,5 +7,5 @@ Given("I submit solution", () => {
 
 Then("I'm not able to submit", () => {
     cy.get("form").submit()
-    cy.get(".panel").should("not.exist")
+    cy.get(".panel button").contains("Submit").should("not.exist")
 })
