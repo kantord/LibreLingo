@@ -12,9 +12,6 @@ blocks:
           commands:
             - sem-version node 12
             - checkout
-            - cache restore node-$(checksum yarn.lock)
-            - cache restore cypress-$(checksum yarn.lock)
-            - cache restore packages-web-$(checksum yarn.lock)
             - yarn install --frozen-lockfile
             - yarn cypress install
             - cache store node-$(checksum yarn.lock) node_modules
