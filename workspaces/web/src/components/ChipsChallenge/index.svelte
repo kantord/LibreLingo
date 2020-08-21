@@ -49,6 +49,7 @@
   export let challenge
   export let registerResult
   export let resolveChallenge
+  export let skipChallenge
   let submitted = false
   let correct = null
   const answer = writable([])
@@ -131,8 +132,20 @@
       {/each}
     </div>
   </div>
+
+  {#if $answer.length === 0 && !submitted}
+    <ChallengePanel
+      message="{null}"
+      buttonText="{null}"
+      skipAction="{skipChallenge}" />
+  {/if}
+
   {#if $answer.length > 0 && !submitted}
-    <ChallengePanel message="" buttonText="Submit" submit />
+    <ChallengePanel
+      message=""
+      buttonText="Submit"
+      submit
+      skipAction="{skipChallenge}" />
   {/if}
 
   {#if submitted}
