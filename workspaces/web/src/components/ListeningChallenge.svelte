@@ -15,8 +15,7 @@
   export let resolveChallenge
   export let languageCode
   export let specialCharacters
-  export let skipChallenge
-  let answer = ""
+  let answer = null
   let submitted = false
   let correct = null
   let spellingSuggestion = ""
@@ -94,18 +93,7 @@
   </Columns>
 
   {#if answer && !submitted}
-    <ChallengePanel
-      message=""
-      buttonText="Submit"
-      submit
-      skipAction="{skipChallenge}" />
-  {/if}
-
-  {#if answer === '' && !submitted}
-    <ChallengePanel
-      message="{null}"
-      buttonText="{null}"
-      skipAction="{skipChallenge}" />
+    <ChallengePanel message="" buttonText="Submit" submit />
   {/if}
 
   {#if submitted}

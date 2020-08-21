@@ -22,10 +22,10 @@ const createLocalPouchDb = (dbName) => {
             include_docs: true,
         })
         .on("change", () => {
-            if (process.env.JEST_WORKER_ID !== undefined) {
-                return
-            }
-            const authStore = require("../auth").default
+            const authStore =
+        process.env.JEST_WORKER_ID !== undefined
+            ? require("../auth")
+            : require("../auth").default
             authStore.update((value) => ({
                 ...value,
                 dbUpdatedAt: Date.now(),

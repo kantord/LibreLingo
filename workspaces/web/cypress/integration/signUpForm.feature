@@ -22,7 +22,7 @@ Feature: Sign up form
     And the "password_confirmation" field has the label "Repeat password"
     And I see a "license" field
     And I read "I agree to the Terms and Conditions"
-    And I see a "Sign up" button
+    And I see a Sign up button
 
   Scenario: Opening Terms and Conditions
     When I open "/sign-up"

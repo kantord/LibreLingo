@@ -9,7 +9,6 @@
   import ProgressBar from "./ProgressBar"
   import shuffle from "lodash.shuffle"
   import { fade, scale } from "svelte/transition"
-  import Button from "lluis/Button"
 
   export let rawChallenges
   export let languageName
@@ -26,7 +25,6 @@
   let stats = {
     correct: 0,
     incorrect: 0,
-    skipped: 0,
   }
 
   const preloadImage = (imageName) => {
@@ -52,19 +50,14 @@
       sound.wrong.play()
       remainingChallenges.push(currentChallenge)
     }
-  }
 
-  $: progress = (solvedChallenges.length + stats.skipped) / challenges.length
+    progress = solvedChallenges.length / challenges.length
+  }
 
   $: resolveChallenge = () => {
     if (remainingChallenges) {
       currentChallenge = remainingChallenges.shift()
     }
-  }
-
-  $: skipChallenge = () => {
-    stats.skipped++
-    resolveChallenge()
   }
 </script>
 
@@ -77,11 +70,10 @@
         {#if challenge.id === currentChallenge.id}
           <div
             class="challenge"
-            in:fade|local="{{ duration: 300, delay: 350 }}"
+            in:fade|local="{{ duration: 300, delay: 300 }}"
             out:fade|local="{{ duration: 300 }}">
             {#if challenge.type === 'cards'}
               <DeckChallenge
-                {skipChallenge}
                 {currentChallenge}
                 {alternativeChallenges}
                 {resolveChallenge}
@@ -89,7 +81,6 @@
             {/if}
             {#if challenge.type === 'options'}
               <OptionChallenge
-                {skipChallenge}
                 {currentChallenge}
                 {alternativeChallenges}
                 {resolveChallenge}
@@ -97,7 +88,6 @@
             {/if}
             {#if challenge.type === 'shortInput'}
               <ShortInputChallenge
-                {skipChallenge}
                 {languageName}
                 {languageCode}
                 {specialCharacters}
@@ -107,7 +97,6 @@
             {/if}
             {#if challenge.type === 'listeningExercise'}
               <ListeningChallenge
-                {skipChallenge}
                 {languageCode}
                 {specialCharacters}
                 {registerResult}
@@ -115,15 +104,12 @@
                 {challenge} />
             {/if}
             {#if challenge.type === 'chips'}
-              <ChipsChallenge
-                {registerResult}
-                {resolveChallenge}
-                {challenge}
-                {skipChallenge} />
+              <ChipsChallenge {registerResult} {resolveChallenge} {challenge} />
             {/if}
           </div>
         {/if}
       {/each}
+
     </section>
   </div>
 {/if}

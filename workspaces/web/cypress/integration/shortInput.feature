@@ -10,9 +10,9 @@ Feature: Short text input challange
     And I read "in Test Language!"
     Given I open "/course/test/skill/_short_input_test1"
     Then I read "foo"
-    And I see a panel with only a skip button
+    And I don't see the challenge panel
     And I'm not able to submit
-    And I don't see a "Submit" button
+    And I don't see a Submit button
     And I see a card with an image
     And I see an input field
     And the input field is focused
@@ -30,8 +30,6 @@ Feature: Short text input challange
     Given I open "/course/test/skill/_short_input_test0"
     And I type "el perro"
     Then I see the challenge panel
-    And I see a "Skip" button
-    And I see a "Submit" button
     
   Scenario: Submitting incorrect answer
     Given I open "/course/test/skill/_short_input_test0"
@@ -39,21 +37,21 @@ Feature: Short text input challange
     And I click "Submit"
     Then I read "Incorrect solution"
     And I read "Correct answer: perro"
-    And I see a "Continue" button
+    And I see a Continue button
     
   Scenario: Submitting correct answer
     Given I open "/course/test/skill/_short_input_test0"
     And I type "perro"
     And I click "Submit"
     Then I read "Correct solution"
-    And I see a "Continue" button
+    And I see a Continue button
 
   Scenario: Submitting alternative correct answer
     Given I open "/course/test/skill/_short_input_test0"
     And I type "can"
     And I click "Submit"
     Then I read "Correct solution"
-    And I see a "Continue" button
+    And I see a Continue button
 
   Scenario: Submitting alternative correct answer
     Given I open "/course/test/skill/_short_input_test0"
@@ -80,14 +78,14 @@ Feature: Short text input challange
     And I type "agua"
     And I click "Submit"
     And I click "Continue"
-    Then I see a panel with only a skip button
+    Then I don't see the challenge panel
 
   Scenario: Going to the next challenge with keyboard only
     Given I open "/course/test/skill/_short_input_test2"
     And I type "agua"
     And I hit the enter key
     And I hit the enter key
-    Then I see a panel with only a skip button
+    Then I don't see the challenge panel
 
   Scenario: using the hover-over dictionary
     Given I open "/course/test/skill/_short_input_test3"

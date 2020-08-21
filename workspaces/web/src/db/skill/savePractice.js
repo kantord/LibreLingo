@@ -1,16 +1,18 @@
-const getCurrentData = async (db, _id) => {
+import db from "../db"
+
+const getCurrentData = async _id => {
     try {
         return await db.get(_id)
     } catch {
         return {
             _id,
-            practiced: [],
+            practiced: []
         }
     }
 }
 
-export default async (db, { id, correct, incorrect, skipped }) => {
-    const doc = await getCurrentData(db, `skills/${id}`)
+export default async ({ id, correct, incorrect }) => {
+    const doc = await getCurrentData(`skills/${id}`)
 
     await db.put({
         ...doc,
@@ -19,9 +21,8 @@ export default async (db, { id, correct, incorrect, skipped }) => {
             {
                 at: new Date().valueOf(),
                 correct,
-                incorrect,
-                skipped: skipped || 0,
-            },
-        ],
+                incorrect
+            }
+        ]
     })
 }

@@ -16,7 +16,7 @@ Feature: Login form
     And the "username" field has the label "Username"
     And I see a "password" field
     And the "password" field has the label "Password"
-    And I see a "Log in" button
+    And I see a Log in button
 
   Scenario: Introducing incorrect credentials
     When I open "/login"

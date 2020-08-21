@@ -9,8 +9,8 @@ Feature: Option selection challenge
     And I read "Which of these is"
     And I see 3 options
     And every option is inactive
-    Then I see a panel with only a skip button
-    And I don't see a "Submit" button
+    Then I don't see the challenge panel
+    And I don't see a Submit button
 
   Scenario: clicking an option
     Given I open "course/test/skill/_options_test"
@@ -24,11 +24,11 @@ Feature: Option selection challenge
     And I select the correct option
     And I click "Submit"
     Then I read "Correct solution"
-    And I see a "Continue" button
+    And I see a Continue button
 
   Scenario: Submitting incorrect answer
     Given I open "course/test/skill/_options_test"
     And I select an incorrect option
     And I click "Submit"
     Then I read "Incorrect solution"
-    And I see a "Continue" button
+    And I see a Continue button

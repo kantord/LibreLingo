@@ -9,20 +9,15 @@
   export let message
   export let messageDetail = null
   export let submit = null
-  export let skipAction = null
 </script>
 
 <div
   class:correct
   class:incorrect
   class="panel is-primary"
-  out:slide="{{ duration: 100 }}"
-  in:slide="{{ duration: 300, delay: 50 }}">
+  transition:slide="{{ duration: 300 }}">
   <div class="panel-block">
     <div class="control">
-      {#if skipAction}
-        <Button on:click="{skipAction}">Skip</Button>
-      {/if}
       {#if message}
         <b>{message}</b>
       {/if}

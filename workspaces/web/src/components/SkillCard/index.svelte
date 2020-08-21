@@ -16,8 +16,8 @@
   let stale = null
 
   onMount(() => {
-    live((db) =>
-      getSkillStats(db, { id })
+    live(() =>
+      getSkillStats({ id })
         .then((stats) => {
           completed = stats.completed
           stale = stats.stale
