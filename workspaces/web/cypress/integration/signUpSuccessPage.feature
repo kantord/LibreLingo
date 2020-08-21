@@ -8,7 +8,7 @@ Feature: Sign up success page
     Then sign up success page looks correct
     And I read "Registration successsful!"
     And I read "You can now log in."
-    And I see a Log in button
+    And I see a "Log in" button
 
   Scenario: Clicking the log in button
     When I open "/sign-up-success"
