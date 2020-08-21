@@ -1,6 +1,5 @@
 @charset "utf-8";
 @import "~bulmaswatch/lumen/variables.scss";
-@import "~bulmaswatch/lumen/variables.scss";
 @import "./custom_variables";
 
 @import "~bulma/sass/utilities/_all.sass";
@@ -51,9 +50,33 @@
 @import "~bulma-pageloader";
 @import "~bulma-tooltip";
 
+.challenge-title {
+    padding: 40px!important;
+}
+
+.input {
+    padding: 30px!important;
+    border-width: 0!important;
+    font-size: 18px!important;
+    box-shadow: none!important;
+}
+
+.box {
+    padding: 40px;
+    border-radius: 20px!important;
+    border-width: 2px!important;
+    overflow: hidden!important;
+}
+
+.button {
+    border-width: 0!important;
+    text-transform: none!important;
+    padding: 30px!important;
+    font-size: 18px!important;
+}
+
 .footer {
     margin-top: 12em;
 }
-
 
 @import "~bulmaswatch/lumen/overrides.scss";

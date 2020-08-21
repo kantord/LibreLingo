@@ -51,7 +51,7 @@
 {:else}
   <button
     style="{styleTokens}"
-    class="button is-{size}"
+    class="button is-rounded is-{size}"
     class:is-primary="{primary}"
     class:is-light="{light}"
     class:is-info="{info}"
@@ -69,8 +69,11 @@
     <slot />
   </button>
   {#if asHref}
-    <a class="is-hidden" href={asHref}>{asHref}</a>
+    <a class="is-hidden" href="{asHref}">{asHref}</a>
   {/if}
+{/if}
+{#if submit}
+  <button type="submit" class="is-hidden"></button>
 {/if}
 
 <style>
@@ -91,7 +94,3 @@
     margin-top: 0;
   }
 </style>
-
-{#if submit}
-  <button type="submit" class="is-hidden"></button>
-{/if}

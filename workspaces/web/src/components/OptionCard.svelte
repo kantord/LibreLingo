@@ -38,6 +38,8 @@
     transition: transform 0.1s;
     background: white;
     overflow: hidden;
+    border-radius: 20px;
+    border-width: 2px;
   }
 
   li {
@@ -50,7 +52,7 @@
 
   .card-image img {
     object-fit: cover;
-    border-radius: 0;
+    border-radius: 12px;
     left: 8px;
     right: 8px;
     top: 8px;
@@ -64,11 +66,13 @@
   }
 
   :hover .card {
-    border-color: $link-active-border;
+    border-color: $primary;
+    background-color: $purple-lighter;
   }
 
   .active .card {
-    border-color: $info;
+    border-color: $primary;
+    background-color: $purple-lighter;
     box-sizing: content-box;
     transform: scale(1.05);
   }

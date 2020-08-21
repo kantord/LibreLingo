@@ -46,7 +46,7 @@
   })
 </script>
 
-<p class="is-size-1 is-size-2-tablet is-size-4-mobile has-text-centered">
+<p class="challenge-title is-size-1 is-size-2-tablet is-size-4-mobile has-text-centered">
   Which of these is
   <strong>{currentChallenge.meaningInSourceLanguage}</strong>
   ?
