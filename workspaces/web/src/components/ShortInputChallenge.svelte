@@ -112,7 +112,6 @@
     max-width: 16em;
     margin: auto;
     border-radius: 20px;
-    margin: 0;
     overflow: hidden;
     box-shadow: none;
   }

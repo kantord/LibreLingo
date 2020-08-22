@@ -235,6 +235,14 @@
 
   .card {
     background: white;
+    border: 2px solid $grey-lighter;
+    box-shadow: none;
+    border-radius: 20px;
+
+    .card-header {
+      border-bottom: 1px solid $grey-lighter;
+      box-shadow: none;
+    }
   }
 
   .tag {
@@ -259,7 +267,7 @@
   }
 
   .screenshot {
-    box-shadow: 0 0 2em #ffffff42;
+    box-shadow: 0 0 2em #00000042;
   }
 
   .is-centered-both-ways {

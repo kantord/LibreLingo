@@ -14,11 +14,11 @@
 </script>
 
 <div class="field">
-  <label class="label" for="{id}">{name}</label>
+  <label class="label is-large" for="{id}">{name}</label>
   <div class="control has-icons-left">
     {#if type === 'text'}
       <input
-        class="input is-rounded"
+        class="input is-large is-rounded"
         type="text"
         name="{id}"
         {id}
@@ -27,7 +27,7 @@
     {/if}
     {#if type === 'password'}
       <input
-        class="input is-rounded"
+        class="input is-large is-rounded"
         type="password"
         name="{id}"
         {id}
@@ -40,3 +40,11 @@
     <p class="help is-danger">{error}</p>
   {/if}
 </div>
+
+<style>
+  input,
+  input:focus {
+    box-shadow: none;
+    border-width: 0;
+  }
+</style>

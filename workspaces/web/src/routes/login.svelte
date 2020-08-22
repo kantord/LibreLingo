@@ -47,7 +47,9 @@
         <p class="help is-danger">{error}</p>
       {/if}
 
-      <Button on:click="{handleLogin}" submit>Log in</Button>
+      <Button primary size="large" on:click="{handleLogin}" submit>
+        Log in
+      </Button>
     </form>
   </div>
 

@@ -54,10 +54,10 @@
   .card-image img {
     object-fit: cover;
     border-radius: 12px;
-    left: 8px;
-    right: 8px;
-    top: 8px;
-    width: calc(100% - 16px);
+    left: 12px;
+    right: 12px;
+    top: 12px;
+    width: calc(100% - 24px);
   }
 
   .inactive .card {
