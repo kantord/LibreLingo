@@ -54,6 +54,7 @@
     border-radius: 0;
     background: $white;
     border-top: 2px solid $grey-lighter;
+    box-shadow: none;
   }
 
   .correct {

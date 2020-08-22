@@ -58,7 +58,7 @@
   tabindex="0"
   data-test="answer"
   type="text"
-  class="input is-rounded"
+  class="input is-rounded is-large"
   autofocus
   placeholder="Type your answer…"
   {disabled}
@@ -85,6 +85,12 @@
 </div>
 
 <style>
+  input,
+  input:focus {
+    box-shadow: none;
+    border-width: 0;
+  }
+
   .keyboard {
     margin-top: 2em;
   }

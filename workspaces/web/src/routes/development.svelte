@@ -168,7 +168,10 @@
 
       <div class="development-progress">
         <h3 class="is-size-3">Progress towards alpha release</h3>
-        <progress class="progress is-medium is-info" value="75" max="100">
+        <progress
+          class="progress is-warning is-medium is-info"
+          value="75"
+          max="100">
           45%
         </progress>
       </div>

@@ -113,7 +113,8 @@
     $stale-color: lighten(desaturate($green, 45%), 20%);
     background: white;
     border-radius: 20px;
-    border-width: 2px;
+    border: 2px solid $grey-lighter;
+    box-shadow: none;
 
     &[data-completed="true"] {
       background-color: $done-color;

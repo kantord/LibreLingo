@@ -39,7 +39,8 @@
     background: white;
     overflow: hidden;
     border-radius: 20px;
-    border-width: 2px;
+    border: 2px solid $grey-lighter;
+    box-shadow: none;
   }
 
   li {
@@ -61,7 +62,6 @@
 
   .inactive .card {
     opacity: 0.65;
-    border-color: rgba(0, 0, 0, 0);
     transform: scale(0.95);
   }
 

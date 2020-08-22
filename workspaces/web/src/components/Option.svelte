@@ -25,10 +25,10 @@
   .option {
     transition: opacity 0.15s, outline 0.2s;
     cursor: pointer;
-    padding: 20px;
+    padding: 1.25rem;
     background-color: $grey-lighter;
     border-radius: 40px;
-    margin: 20px;
+    margin: 1.25rem;
   }
 
   .active .option {

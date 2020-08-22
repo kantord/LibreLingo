@@ -94,7 +94,7 @@
   }
 
   .key {
-    font-family: monospace;
+    font-family: "Roboto Mono", monospace;
     border-radius: 8px;
     text-transform: none;
     margin: 1em;
