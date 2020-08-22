@@ -8,18 +8,17 @@
 </script>
 
 <div>
-  <progress class="progress" value="{$progress}" max="1">
+  <progress class="progress is-warning" value="{$progress}" max="1">
     {$progress * 100}%
   </progress>
 </div>
 
 <style>
   @import "../variables";
-  div {
-    padding-bottom: $size-6;
+  progress {
+    border-radius: 20px;
   }
-
-  .progress {
-    border: 1px solid transparentize($blue, 0.9);
+  div {
+    padding: 30px 0;
   }
 </style>

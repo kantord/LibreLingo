@@ -40,6 +40,7 @@
     class:is-outlined="{outlined}"
     class:is-hidden="{hidden}"
     class:is-loading="{loading}"
+    class:is-rounded="{true}"
     class:customColor
     class:customTextColor
     class:key
@@ -52,6 +53,7 @@
   <button
     style="{styleTokens}"
     class="button is-{size}"
+    class:is-rounded="{true}"
     class:is-primary="{primary}"
     class:is-light="{light}"
     class:is-info="{info}"
@@ -69,8 +71,11 @@
     <slot />
   </button>
   {#if asHref}
-    <a class="is-hidden" href={asHref}>{asHref}</a>
+    <a class="is-hidden" href="{asHref}">{asHref}</a>
   {/if}
+{/if}
+{#if submit}
+  <button type="submit" class="is-hidden"></button>
 {/if}
 
 <style>
@@ -91,7 +96,3 @@
     margin-top: 0;
   }
 </style>
-
-{#if submit}
-  <button type="submit" class="is-hidden"></button>
-{/if}

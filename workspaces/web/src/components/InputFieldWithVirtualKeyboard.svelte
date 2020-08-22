@@ -58,7 +58,7 @@
   tabindex="0"
   data-test="answer"
   type="text"
-  class="input"
+  class="input is-rounded"
   autofocus
   placeholder="Type your answer…"
   {disabled}
