@@ -168,7 +168,10 @@
 
       <div class="development-progress">
         <h3 class="is-size-3">Progress towards alpha release</h3>
-        <progress class="progress is-medium is-info" value="75" max="100">
+        <progress
+          class="progress is-warning is-medium is-info"
+          value="75"
+          max="100">
           45%
         </progress>
       </div>
@@ -232,6 +235,14 @@
 
   .card {
     background: white;
+    border: 2px solid $grey-lighter;
+    box-shadow: none;
+    border-radius: 20px;
+
+    .card-header {
+      border-bottom: 1px solid $grey-lighter;
+      box-shadow: none;
+    }
   }
 
   .tag {
@@ -256,7 +267,7 @@
   }
 
   .screenshot {
-    box-shadow: 0 0 2em #ffffff42;
+    box-shadow: 0 0 2em #00000042;
   }
 
   .is-centered-both-ways {

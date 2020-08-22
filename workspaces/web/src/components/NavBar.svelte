@@ -29,25 +29,16 @@
         <GitHubButton />
         {#if hasAuth && settings.features.authEnabled}
           {#if $authStore.user}
-            <Button size="small" outlined inverted info>
+            <Button outlined inverted info>
               <Icon size="small" icon="user" />
               <span>{$authStore.user.name}</span>
             </Button>
-            <Button
-              on:click="{() => window._Logout()}"
-              size="small"
-              outlined
-              inverted
-              info>
+            <Button on:click="{() => window._Logout()}" outlined inverted info>
               Log out
             </Button>
           {:else}
-            <Button href="/sign-up" size="small" outlined inverted info>
-              Sign up
-            </Button>
-            <Button href="/login" size="small" outlined inverted info>
-              Log in
-            </Button>
+            <Button href="/sign-up" outlined inverted info>Sign up</Button>
+            <Button href="/login" outlined inverted info>Log in</Button>
           {/if}
         {/if}
       </div>
@@ -59,16 +50,11 @@
   @import "../variables";
 
   .navbar.dark {
-    background: $blue;
+    background: $primary;
     color: $white-light;
   }
 
   .navbar {
     border: 0;
-    .navbar-end {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
   }
 </style>

@@ -26,12 +26,17 @@
       {/if}
       <div class="right">
         {#if buttonAction}
-          <Button primary type="submit" on:click="{buttonAction}">
+          <Button
+            primary
+            size="medium"
+            inverted
+            type="submit"
+            on:click="{buttonAction}">
             {buttonText}
           </Button>
         {/if}
         {#if submit}
-          <Button primary type="submit">Submit</Button>
+          <Button primary size="medium" type="submit">Submit</Button>
         {/if}
       </div>
     </div>
@@ -48,6 +53,8 @@
     right: 0;
     border-radius: 0;
     background: $white;
+    border-top: 2px solid $grey-lighter;
+    box-shadow: none;
   }
 
   .correct {
@@ -66,5 +73,12 @@
 
   .panel-block {
     color: inherit;
+    max-width: 960px;
+    margin: auto;
+    padding: 24px;
+  }
+
+  .control {
+    font-size: 18px;
   }
 </style>

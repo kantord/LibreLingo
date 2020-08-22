@@ -38,6 +38,9 @@
     transition: transform 0.1s;
     background: white;
     overflow: hidden;
+    border-radius: 20px;
+    border: 2px solid $grey-lighter;
+    box-shadow: none;
   }
 
   li {
@@ -50,25 +53,26 @@
 
   .card-image img {
     object-fit: cover;
-    border-radius: 0;
-    left: 8px;
-    right: 8px;
-    top: 8px;
-    width: calc(100% - 16px);
+    border-radius: 12px;
+    left: 12px;
+    right: 12px;
+    top: 12px;
+    width: calc(100% - 24px);
   }
 
   .inactive .card {
     opacity: 0.65;
-    border-color: rgba(0, 0, 0, 0);
     transform: scale(0.95);
   }
 
   :hover .card {
-    border-color: $link-active-border;
+    border-color: $primary;
+    background-color: $purple-lighter;
   }
 
   .active .card {
-    border-color: $info;
+    border-color: $primary;
+    background-color: $purple-lighter;
     box-sizing: content-box;
     transform: scale(1.05);
   }

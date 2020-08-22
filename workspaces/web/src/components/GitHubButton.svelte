@@ -63,8 +63,7 @@
     background: transparent !important;
 
     .stars {
-      padding-top: 0.1em;
-      font-family: monospace;
+      font-family: "Roboto Mono", monospace;
     }
 
     .icon {

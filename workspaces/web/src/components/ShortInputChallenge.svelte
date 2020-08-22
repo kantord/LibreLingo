@@ -56,13 +56,13 @@
 </script>
 
 <form on:submit|preventDefault="{submitChallenge}">
-  <div class="section">
-    <p class="is-size-1 is-size-2-tablet is-size-4-mobile has-text-centered">
-      Type
-      <Phrase phrase="{challenge.phrase}" />
-      in {languageName}!
-    </p>
-  </div>
+  <p
+    class="challenge-title is-size-1 is-size-2-tablet is-size-4-mobile
+    has-text-centered">
+    Type
+    <Phrase phrase="{challenge.phrase}" />
+    in {languageName}!
+  </p>
   <Columns>
     <Column>
       <InputFieldWithVirtualKeyboard
@@ -111,5 +111,8 @@
   .card {
     max-width: 16em;
     margin: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: none;
   }
 </style>
