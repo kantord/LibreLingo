@@ -71,11 +71,11 @@
 </script>
 
 <form on:submit|preventDefault="{submitChallenge}">
-  <div class="section">
-    <p class="is-size-1 is-size-2-tablet is-size-4-mobile has-text-centered">
-      Type what you hear
-    </p>
-  </div>
+  <p
+    class="challenge-title is-size-1 is-size-2-tablet is-size-4-mobile
+    has-text-centered">
+    Type what you hear
+  </p>
 
   <Columns>
     <Column size="1">
