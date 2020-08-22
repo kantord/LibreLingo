@@ -76,7 +76,7 @@
       tabindex="-1"
       light
       key
-      size="small"
+      size="medium"
       {disabled}
       on:click="{handleVirtualKey(specialCharacter)}">
       {specialCharacter}

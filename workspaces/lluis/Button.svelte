@@ -79,6 +79,12 @@
 {/if}
 
 <style>
+  .button {
+    border-width: 0;
+    box-shadow: none;
+    text-transform: none;
+  }
+
   .button.customColor {
     background-color: var(--color);
   }

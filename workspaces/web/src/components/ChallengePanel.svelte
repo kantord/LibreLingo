@@ -26,12 +26,17 @@
       {/if}
       <div class="right">
         {#if buttonAction}
-          <Button primary inverted type="submit" on:click="{buttonAction}">
+          <Button
+            primary
+            size="medium"
+            inverted
+            type="submit"
+            on:click="{buttonAction}">
             {buttonText}
           </Button>
         {/if}
         {#if submit}
-          <Button primary type="submit">Submit</Button>
+          <Button primary size="medium" type="submit">Submit</Button>
         {/if}
       </div>
     </div>
