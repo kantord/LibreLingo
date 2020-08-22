@@ -17,6 +17,7 @@
 
   .phrase span {
     margin: 0 0.15em;
+    color: black;
 
     &.has-tooltip-bottom {
       text-decoration: dotted underline rgba($blue, 0.5);

@@ -100,7 +100,9 @@
 
 <form on:submit|preventDefault="{submitChallenge}">
   <div class="section">
-    <p class="is-size-1 is-size-2-tablet is-size-4-mobile has-text-centered">
+    <p
+      class="challenge-title is-size-1 is-size-2-tablet is-size-4-mobile
+      has-text-centered">
       Translate
       <Phrase phrase="{challenge.phrase}" />
     </p>
@@ -126,7 +128,7 @@
       use:sortable="{{ items: chips, options: { group: 'chips', forceFallback: true } }}">
       {#each get(chips) as chip}
         <span class="chip">
-          <spain class="tag is-medium">{chip}</spain>
+          <spain class="tag is-large is-rounded">{chip}</spain>
         </span>
       {/each}
     </div>
@@ -157,6 +159,10 @@
 <style>
   @import "../../variables";
 
+  .chips {
+    padding: 1rem 0;
+  }
+
   .chip {
     user-select: none;
     padding: 0.5em 0.1em;
@@ -164,10 +170,8 @@
 
   .solution {
     z-index: 10;
-    margin-top: -4em;
-    padding-top: 4em;
-    border-bottom: 2px solid rgba($blue, 0.1);
-    height: 6.2em;
+    border-bottom: 2px solid $grey-lighter;
+    height: 4rem;
   }
 
   .sub-instructions {

@@ -58,7 +58,7 @@
   tabindex="0"
   data-test="answer"
   type="text"
-  class="input"
+  class="input is-rounded"
   autofocus
   placeholder="Type your answer…"
   {disabled}
@@ -76,7 +76,7 @@
       tabindex="-1"
       light
       key
-      size="small"
+      size="medium"
       {disabled}
       on:click="{handleVirtualKey(specialCharacter)}">
       {specialCharacter}

@@ -73,6 +73,11 @@
 
 <style>
   @import "../../../variables";
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
   .container {
     padding-right: 20px;
     padding-left: 20px;
