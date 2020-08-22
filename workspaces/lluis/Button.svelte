@@ -40,6 +40,7 @@
     class:is-outlined="{outlined}"
     class:is-hidden="{hidden}"
     class:is-loading="{loading}"
+    class:is-rounded="{true}"
     class:customColor
     class:customTextColor
     class:key
@@ -51,7 +52,8 @@
 {:else}
   <button
     style="{styleTokens}"
-    class="button is-rounded is-{size}"
+    class="button is-{size}"
+    class:is-rounded="{true}"
     class:is-primary="{primary}"
     class:is-light="{light}"
     class:is-info="{info}"
