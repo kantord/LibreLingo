@@ -17,7 +17,7 @@
 </script>
 
 <ul class="options">
-  {#each options as { pictures, meaningInSourceLanguage, formInTargetLanguage, correct, fake }, i}
+  {#each options as { meaningInSourceLanguage, formInTargetLanguage, correct, fake }, i}
     <label for="{i}" class:fake="{fake && true}">
       <input
         type="radio"
@@ -30,7 +30,6 @@
         {correct}
         active="{selectedOption === i}"
         inactive="{selectedOption !== null && selectedOption !== i}"
-        picture="{shuffle(pictures)[0]}"
         {formInTargetLanguage} />
     </label>
   {/each}
