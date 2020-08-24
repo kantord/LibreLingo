@@ -72,7 +72,6 @@
 <div class="keyboard">
   {#each specialCharacters as specialCharacter}
     <Button
-      class="virtual-key"
       tabindex="-1"
       light
       key
