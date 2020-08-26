@@ -10930,14 +10930,15 @@ sane@^4.0.3:
     minimist "^1.1.1"
     walker "~1.0.5"
 
-sapper@0.28.0:
-  version "0.28.0"
-  resolved "https://registry.yarnpkg.com/sapper/-/sapper-0.28.0.tgz#1dfed31f68a5d684fc4bdf8c6a54b6dc79edf5b0"
-  integrity sha512-t5Qwaad4Zq0HFHqGVV5iw3M22B3cvczxyBzUJiQyMWuL2KY1wDi+6DslEEkpdfrOPejdphj2z4oVpE4X8iOc5w==
+sapper@0.28.1:
+  version "0.28.1"
+  resolved "https://registry.yarnpkg.com/sapper/-/sapper-0.28.1.tgz#79c1b8cf50ff52b26d8fbab849d68c449d12a236"
+  integrity sha512-eQ6Jul0Z4Vxyi0Fg6NUxaBctJE2TFlrpKEeiMdc0tojRxE0TjLYH+0YYuGZuR7ph48fno5yLu4U3oVtP8nMNew==
   dependencies:
     html-minifier "^4.0.0"
     http-link-header "^1.0.2"
     shimport "^1.0.1"
+    source-map "^0.6.1"
     sourcemap-codec "^1.4.6"
     string-hash "^1.1.3"
 
