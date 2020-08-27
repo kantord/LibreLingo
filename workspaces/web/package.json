@@ -18,6 +18,7 @@
     "exportCourse": "yarn loadCourseDataLocally && cd ../../ && pipenv run python manage.py exportcourse $1",
     "percypress": "KNAPSACK_PRO_TEST_FILE_PATTERN=\"cypress/integration/**/*.{feature,features}\" percy exec -- $(npm bin)/knapsack-pro-cypress",
     "test": "yarn dev & yarn percypress",
+    "test:ci": "yarn start & yarn percypress",
     "prettierfix": "yarn prettierfix:src && yarn prettierfix:svelte",
     "prettierfix:src": "prettier --write --plugin-search-dir=. ./src/**/*.js",
     "prettierfix:svelte": "prettier --write --plugin-search-dir=. ./src/**/*.svelte",

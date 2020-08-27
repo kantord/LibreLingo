@@ -43,13 +43,14 @@ blocks:
             - cache restore node-$(checksum yarn.lock)
             - cache restore cypress-$(checksum yarn.lock)
             - cache restore packages-web-$(checksum yarn.lock)
+            - cache restore sapper-build-$SEMAPHORE_GIT_PR_SHA
             - yarn install
             - SEMAPHORE_BUILD_NUMBER=$SEMAPHORE_PIPELINE_ID SEMAPHORE_THREAD_COUNT=3 yarn test
       secrets:
         - name: Percy token
         - name: KnapsackPro token
     dependencies:
-      - Eslint Cypress
+      - Sapper build
   - name: Eslint
     dependencies:
       - Install dependencies
@@ -95,6 +96,20 @@ blocks:
             - pip install pipenv
             - pipenv install
             - 'DATABASE_URL=sqlite:///db.sqlite3 python manage.py test'
+  - name: Sapper build
+    dependencies:
+      - Eslint Cypress
+    task:
+      jobs:
+        - name: yarn web build
+          commands:
+            - sem-version node 12
+            - checkout
+            - cache restore node-$(checksum yarn.lock)
+            - cache restore cypress-$(checksum yarn.lock)
+            - cache restore packages-web-$(checksum yarn.lock)
+            - yarn web build
+            - cache store sapper-build-$SEMAPHORE_GIT_PR_SHA workspaces/web/__sapper__
 promotions:
   - name: Deploy to production
     pipeline_file: pipeline_2.yml
