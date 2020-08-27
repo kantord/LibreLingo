@@ -4,6 +4,9 @@
   import GitHubButton from "./GitHubButton"
   import Icon from "lluis/Icon.svelte"
   import Button from "lluis/Button"
+
+  const { features } = settings()
+
   export let dark = false
   export let is_hidden_mobile = false
   export let hasAuth = false
@@ -27,7 +30,7 @@
     <div class="navbar-item">
       <div class="buttons">
         <GitHubButton />
-        {#if hasAuth && settings.features.authEnabled}
+        {#if hasAuth && features.authEnabled}
           {#if $authStore.user}
             <Button size="small" outlined inverted info>
               <Icon size="small" icon="user" />

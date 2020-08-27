@@ -18,5 +18,17 @@
       },
       "maxNumberOfListeners": 5000
     }
+  },
+  "tokens": {
+    "animationDelayShort": 50,
+    "animationDelayRegular": 350,
+    "animationDurationShort": 100,
+    "animationDurationRegular": 300
+  },
+  "cypressTokens": {
+    "animationDelayShort": 2,
+    "animationDelayRegular": 2,
+    "animationDurationShort": 1,
+    "animationDurationRegular": 1
   }
 }
