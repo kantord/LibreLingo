@@ -5,6 +5,7 @@
     "deploy": "echo 'librelingo.app' > __sapper__/export/CNAME && gh-pages -d __sapper__/export",
     "commit": "git-cz",
     "test": "yarn web test",
+    "test:ci": "yarn web test:ci",
     "web": "yarn workspace web",
     "stylefix": "yarn workspaces run prettierfix && yarn workspaces run eslintfix",
     "docs": "mkdocs serve"
