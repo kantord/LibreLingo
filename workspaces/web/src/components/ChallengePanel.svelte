@@ -2,6 +2,10 @@
   import { slide } from "svelte/transition"
   import Button from "lluis/Button"
 
+  import settings from "../settings"
+
+  const { tokens } = settings()
+
   export let buttonText
   export let buttonAction = null
   export let correct = false
@@ -16,8 +20,8 @@
   class:correct
   class:incorrect
   class="panel is-primary"
-  out:slide|local="{{ duration: 100 }}"
-  in:slide|local="{{ duration: 300, delay: 50 }}">
+  out:slide|local="{{ duration: tokens.animationDurationShort }}"
+  in:slide|local="{{ duration: tokens.animationDurationRegular, delay: tokens.animationDelayShort }}">
   <div class="panel-block">
     <div class="control">
       {#if skipAction}

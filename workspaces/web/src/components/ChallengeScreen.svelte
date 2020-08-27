@@ -10,6 +10,9 @@
   import shuffle from "lodash.shuffle"
   import { fade, scale } from "svelte/transition"
   import Button from "lluis/Button"
+  import settings from "../settings"
+
+  const { tokens } = settings
 
   export let rawChallenges
   export let languageName
@@ -77,8 +80,8 @@
         {#if challenge.id === currentChallenge.id}
           <div
             class="challenge"
-            in:fade|local="{{ duration: 300, delay: 350 }}"
-            out:fade|local="{{ duration: 300 }}">
+            in:fade|local="{{ duration: tokens.animationDurationRegular, delay: tokens.animationDelayRegular }}"
+            out:fade|local="{{ duration: tokens.animationDurationRegular }}">
             {#if challenge.type === 'cards'}
               <DeckChallenge
                 {skipChallenge}

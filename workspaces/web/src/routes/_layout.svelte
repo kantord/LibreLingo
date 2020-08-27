@@ -8,8 +8,6 @@
 </script>
 
 <script>
-  import settings from "../settings"
-
   export let segment
 </script>
 

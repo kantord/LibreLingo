@@ -6,13 +6,15 @@ let db
 let remoteDB
 let syncHandler
 
+const { database, features } = settings()
+
 const createLocalPouchDb = (dbName) => {
     const PouchDB =
     process.env.JEST_WORKER_ID !== undefined
         ? require("pouchdb")
         : require("pouchdb").default
     const newDb = new PouchDB(dbName).setMaxListeners(
-        settings.database.maxNumberOfListeners
+        database.maxNumberOfListeners
     )
 
     newDb
@@ -40,13 +42,13 @@ if (process.browser === true) {
     const PouchDB = require("pouchdb").default
 
     // Connect to remote database
-    remoteDB = new PouchDB(
-        `${settings.database.remote}/${Cookies.get("loginDb")}`,
-        { skip_setup: true, live: true }
-    )
+    remoteDB = new PouchDB(`${database.remote}/${Cookies.get("loginDb")}`, {
+        skip_setup: true,
+        live: true,
+    })
 
     // Connect to local database
-    db = createLocalPouchDb(settings.database.local)
+    db = createLocalPouchDb(database.local)
     window._DB = db
 
     // Detect fake user session
@@ -59,8 +61,8 @@ if (process.browser === true) {
     }
 
     // Detect existing user session
-    if (Cookies.get("loginDb") && settings.features.authEnabled) {
-        fetch(`${settings.database.remote}/_session`, { credentials: "include" })
+    if (Cookies.get("loginDb") && features.authEnabled) {
+        fetch(`${database.remote}/_session`, { credentials: "include" })
             .then((data) => data.json())
             .then((user) => {
                 if (user.userCtx.name === null) {
@@ -83,7 +85,7 @@ if (process.browser === true) {
     // Fake login for testing purposes
     window._fakeLogin = () => {
         Cookies.set("loginDb", getUserDbName("---fakeUser"), {
-            expires: settings.database.auth.expireDays,
+            expires: database.auth.expireDays,
         })
         window.location.href = "/course/spanish-from-english/"
     }
@@ -99,7 +101,7 @@ if (process.browser === true) {
         }
 
         const response = await (
-            await fetch(`${settings.database.remote}/_session`, {
+            await fetch(`${database.remote}/_session`, {
                 method: "post",
                 credentials: "include",
                 headers: {
@@ -124,7 +126,7 @@ if (process.browser === true) {
             online: null,
         }))
         Cookies.set("loginDb", getUserDbName(username), {
-            expires: settings.database.auth.expireDays,
+            expires: database.auth.expireDays,
         })
         window.location.reload(false)
         window.location.href = "/course/spanish-from-english/"
@@ -135,7 +137,7 @@ if (process.browser === true) {
         try {
             if (syncHandler) {
                 await syncHandler.cancel()
-                await fetch(`${settings.database.remote}/_session`, {
+                await fetch(`${database.remote}/_session`, {
                     method: "delete",
                 })
             }
@@ -166,7 +168,7 @@ if (process.browser === true) {
 
 if (process.env.JEST_WORKER_ID !== undefined) {
     // This is a test database for Jest tests that can reset itself
-    db = createLocalPouchDb(settings.database.local)
+    db = createLocalPouchDb(database.local)
     db.__reset = async () => {
         const allDocs = await db.allDocs()
         await Promise.all(

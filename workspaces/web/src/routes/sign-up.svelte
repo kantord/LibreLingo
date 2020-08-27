@@ -5,6 +5,12 @@
   import Button from "lluis/Button"
   import FormField from "lluis/FormField"
 
+  console.log("🤣")
+
+  const { database } = settings()
+
+  console.log("🤯", database)
+
   let loading = false
 
   let username = ""
@@ -152,7 +158,7 @@
           }, 500)
         } else {
           if (isFormValid) {
-            fetch(settings.database.signUpEndpoint, {
+            fetch(database.signUpEndpoint, {
               method: "post",
               headers: {
                 "Content-Type": "application/json",
