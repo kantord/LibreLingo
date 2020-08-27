@@ -43,7 +43,7 @@ blocks:
             - cache restore node-$(checksum yarn.lock)
             - cache restore cypress-$(checksum yarn.lock)
             - cache restore packages-web-$(checksum yarn.lock)
-            - cache restore sapper-build-$(checksum yarn.lock)
+            - cache restore sapper-build-$SEMAPHORE_GIT_PR_SHA
             - yarn install
             - SEMAPHORE_BUILD_NUMBER=$SEMAPHORE_PIPELINE_ID SEMAPHORE_THREAD_COUNT=3 yarn test
       secrets:
@@ -109,7 +109,7 @@ blocks:
             - cache restore cypress-$(checksum yarn.lock)
             - cache restore packages-web-$(checksum yarn.lock)
             - yarn web build
-            - cache store sapper-build-$(checksum yarn.lock) workspaces/web/__sapper__
+            - cache store sapper-build-$SEMAPHORE_GIT_PR_SHA workspaces/web/__sapper__
 promotions:
   - name: Deploy to production
     pipeline_file: pipeline_2.yml
