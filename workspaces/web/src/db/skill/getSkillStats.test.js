@@ -9,7 +9,7 @@ describe("getSkillStats", function () {
     it("return correct value - never practiced", async () => {
         const fakeDb = createFakeDb({ practiced: [] })
         expect(await getSkillStats(fakeDb, { id: "foo" })).toEqual({
-            completed: false,
+            started: false,
             stale: null,
         })
     })
@@ -25,7 +25,7 @@ describe("getSkillStats", function () {
             ],
         })
         expect(await getSkillStats(fakeDb, { id: "foo" })).toEqual({
-            completed: true,
+            started: true,
             stale: false,
         })
     })
@@ -42,7 +42,7 @@ describe("getSkillStats", function () {
             ],
         })
         expect(await getSkillStats(fakeDb, { id: "foo" })).toEqual({
-            completed: false,
+            started: false,
             stale: null,
         })
     })
@@ -58,7 +58,7 @@ describe("getSkillStats", function () {
             ],
         })
         expect(await getSkillStats(fakeDb, { id: "foo" })).toEqual({
-            completed: true,
+            started: true,
             stale: true,
         })
     })
