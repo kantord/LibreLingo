@@ -53,6 +53,14 @@ class Command(BaseCommand):
             raise CommandError('Course "%s" does not exist' % course_id)
 
 
+def get_levels(skill):
+    new_words = skill.learnword_set.count()
+    new_sentences = skill.learnsentence_set.count()
+    print(new_words, new_sentences)
+
+    return round(1 + (new_words / 5) + (new_sentences / 3))
+
+
 def get_course_data(course):
     def get_imageset(skill):
         images = [skill.image1, skill.image2, skill.image3]
@@ -72,6 +80,7 @@ def get_course_data(course):
                 "practiceHref": slugify(skill.name),
                 "id": opaqueId(skill, "Skill"),
                 "title": skill.name,
+                "levels": get_levels(skill),
             } for skill in module.skill_set.all()]
         } for module in course.module_set.all()]
     }
