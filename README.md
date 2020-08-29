@@ -16,9 +16,9 @@
 
 My goal is to start a community-driven language-learning platform that gives it's users and contributors a way to influence its future and adapt it to special requirements.
 
-To achieve that, I release all source code under the GPLv3 free software license, which guarantees end users the freedom to run, study, share, and modify the software.
+To achieve that, I release all source code under the AGPLv3 free software license, which guarantees end users the freedom to run, study, share, and modify the software.
 
-In addition to licensing the software under a free software license, the course content will be decoupled from the software itself, and the development of GPLv3 or public domain course content will be encouraged. This should allow course developers to retain the freedom to choose how they use their work.
+In addition to licensing the software under a free software license, the course content will be decoupled from the software itself, and the development of AGPLv3 or public domain course content will be encouraged. This should allow course developers to retain the freedom to choose how they use their work.
 
 Once course content is properly decoupled from the software, it should be possible to experiment with alternative ways of using course content: for example, the creation of audiobooks or print material.
 
