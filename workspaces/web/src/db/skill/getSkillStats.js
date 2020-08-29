@@ -10,14 +10,19 @@ export default async (db, { id }) => {
         )
 
         if (validPractices.length === 0) {
-            return { started: false, stale: null }
+            return { started: false, stale: null, progress: 0 }
         }
 
         return {
             started: validPractices.length >= 1,
             stale: isStale({ practices: practiced }),
+            progress: validPractices.reduce(
+                (acc, { correct, skipped }) =>
+                    acc + correct / (correct + (skipped || 0)),
+                0
+            ),
         }
     } catch {
-        return { started: false, stale: null }
+        return { started: false, stale: null, progress: 0 }
     }
 }
