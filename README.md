@@ -78,11 +78,15 @@ Here's a rough sketch of how  I imagine the milestones of this project:
 If you are interested in contributing to course development, please fill the following form: https://danielkantor196881.typeform.com/to/V00Paz. The project is in a very early stage right now, so you might not be able to contribute right away. Your work will be released in this GitHub repository and you will show up as a contributor here.
 
 ### Development and other forms of contribution
-[Development documentation is available on Read the Docs](https://librelingo.readthedocs.io/en/latest/)
+
+- [Getting started](https://github.com/kantord/LibreLingo/blob/master/docs/CONTRIBUTING.md)
+- [Delopment documentation is available on Read the Docs](https://librelingo.readthedocs.io/en/latest/)
 
 You can help LibreLingo by testing it and submitting feature requests or bug reports: https://github.com/kantord/LibreLingo/issues/new. If you want to get in touch, you can use my contact details on [my GitHub profile](https://github.com/kantord).
 
-There is also a Matrix/FreeNode IRC channel `#LibreLingo`, instructions for joining:
+#### Confused? Have a question?
+
+There is a Matrix/FreeNode IRC channel `#LibreLingo`, instructions for joining:
 
 * Matrix: [`#LibreLingo`](https://riot.im/app/#/room/#librelingo:matrix.org) on `matrix.org`
 * IRC: connect to `irc.freenode.net` with your favourite client and join `#LibreLingo`
