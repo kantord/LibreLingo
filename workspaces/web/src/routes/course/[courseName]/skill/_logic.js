@@ -1,13 +1,28 @@
+import shuffle from "lodash.shuffle"
+import uniq from "lodash.uniq"
+
 export const removeAlternatives = (challenges) =>
     Object.values(
         Object.fromEntries(challenges.map((challenge) => [challenge.id, challenge]))
     )
 
-export const sortChallengeGroups = (challenges) => {
+export const sortChallengeGroups = (challenges, expectedNumberOfChallenges) => {
     // This is a very inefficient sorting algorithm to make sure that random order is preserved
     // as much as possible while also priorities are respected within groups
     // this is useful because some challenges should precede others
-    const challengesWithPosition = removeAlternatives(challenges).map(
+
+    const allGroups = uniq(challenges.map(({ group }) => group))
+    const challengesPerGroup = Math.round(challenges.length / allGroups.length)
+    const expectedNumberOfGroups = Math.max(
+        1,
+        Math.round(expectedNumberOfChallenges / challengesPerGroup)
+    )
+    const acceptedGroups = shuffle(allGroups).slice(0, expectedNumberOfGroups)
+
+    const allowedChallenges = challenges.filter(({ group }) =>
+        acceptedGroups.includes(group)
+    )
+    const challengesWithPosition = removeAlternatives(allowedChallenges).map(
         (item, index) => ({
             item,
             index,
