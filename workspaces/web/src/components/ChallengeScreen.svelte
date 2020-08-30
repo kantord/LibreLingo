@@ -18,7 +18,12 @@
   export let sortChallengeGroups
   export let courseURL
   export let skillId
-  let challenges = sortChallengeGroups(shuffle(rawChallenges))
+  export let expectedNumberOfChallenges
+
+  let challenges = sortChallengeGroups(
+    shuffle(rawChallenges),
+    expectedNumberOfChallenges
+  )
   let remainingChallenges = [...challenges]
   let currentChallenge = remainingChallenges.shift()
   let solvedChallenges = []
