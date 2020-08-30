@@ -46,7 +46,7 @@
           <div class="is-centered-mobile">
             <h1 class="title is-size-2 is-size-3-mobile">Lesson completed!</h1>
             <h2 class="subtitle">
-              You've completed {rawChallenges.length - stats.skipped} challenges
+              You've completed {stats.correct} challenges
             </h2>
             <Button size="medium" href="{courseURL}">
               Continue to course page
