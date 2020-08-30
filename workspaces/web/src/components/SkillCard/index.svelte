@@ -19,7 +19,7 @@
     live((db) =>
       getSkillStats(db, { id })
         .then((stats) => {
-          completed = stats.completed
+          completed = stats.started
           stale = stats.stale
         })
         .catch(() => {})
