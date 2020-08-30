@@ -18,7 +18,12 @@
   export let sortChallengeGroups
   export let courseURL
   export let skillId
-  let challenges = sortChallengeGroups(shuffle(rawChallenges))
+  export let expectedNumberOfChallenges
+
+  let challenges = sortChallengeGroups(
+    shuffle(rawChallenges),
+    expectedNumberOfChallenges
+  )
   let remainingChallenges = [...challenges]
   let currentChallenge = remainingChallenges.shift()
   let solvedChallenges = []
@@ -40,7 +45,7 @@
 
   $: alternativeChallenges =
     currentChallenge &&
-    challenges.filter(({ id }) => id !== currentChallenge.id)
+    rawChallenges.filter(({ id }) => id !== currentChallenge.id)
 
   $: registerResult = (isCorrect) => {
     if (isCorrect) {
