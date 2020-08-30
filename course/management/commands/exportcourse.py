@@ -225,6 +225,7 @@ def get_skill_data(skill, language_id, course):
 
     return {
         "id": opaqueId(skill, "Skill"),
+        "levels": get_levels(skill),
         "challenges": data
     }
 
