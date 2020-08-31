@@ -109,6 +109,8 @@ The course editor is implemented as a django project in the `course_editor` fold
 
 If you want to set up your course editor with real data, you can find a database dump here: `src/courses/spanish-from-english/courseData.json`
 
+To export a course created from the course editor directly to the frontend, use the command `pipenv run python manage.py exportcourse $COURSE_ID`, where `$COURSE_ID` is the ID of the course in the database.
+
 Check out Django's documentation about database dumps: [https://docs.djangoproject.com/en/3.0/ref/django-admin/#loaddata](https://docs.djangoproject.com/en/3.0/ref/django-admin/#loaddata)
 
 
