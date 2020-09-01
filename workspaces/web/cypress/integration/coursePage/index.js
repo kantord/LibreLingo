@@ -1,6 +1,6 @@
 import dayjs from "dayjs"
 import settings from "../../../src/settings"
-import { Before, Then, Given } from "cypress-cucumber-preprocessor/steps"
+import { Before, Then, Given, And } from "cypress-cucumber-preprocessor/steps"
 
 const COURSE_PAGE_URL = "/course/test"
 const SKILL_PAGE_URL = `${COURSE_PAGE_URL}/skill/_short_input_test0`
@@ -15,8 +15,8 @@ Before(() => {
     cy.visit(COURSE_PAGE_URL)
 })
 
-Then("I see {int} skills that are not completed", (number) => {
-    cy.get("[data-completed=false]").should("have.length", number)
+Then("I see {int} skills that are not started", (number) => {
+    cy.get("[data-started=false]").should("have.length", number)
 })
 
 Then("I see a skill that has no image set", () => {
@@ -38,7 +38,10 @@ Given("I have a stale skill", () => {
             return db
                 .put({
                     _id: "skills/434d43b3",
-                    practiced: [{ at: +dayjs().subtract(1, "day") }],
+                    practiced: [
+                        { at: +dayjs().subtract(1, "year") },
+                        { at: +dayjs().subtract(1, "month") },
+                    ],
                 })
                 .then(() => {
                     cy.reload()
@@ -71,6 +74,16 @@ Then("I'm redirected to the course page", () => {
 Then("I see a completed skill", () => {
     cy.get("[data-completed=true][data-stale=false]").should("have.length", 1)
     cy.get(".svg-inline--fa").should("be.visible")
+})
+
+Then("I see a started skill", () => {
+    cy.get("[data-started=true][data-stale=false]").should("have.length", 1)
+    cy.get(".svg-inline--fa").should("be.visible")
+})
+
+And("I see a skill with 50% progress", () => {
+    cy.get("[data-test='skill card'] progress").should("have.value", 1)
+    cy.get("[data-test='skill card'] progress").should("have.attr", "max", "2")
 })
 
 Given("practice statistics are saved correctly", () => {

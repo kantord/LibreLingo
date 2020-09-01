@@ -7,19 +7,26 @@
   import Button from "lluis/Button"
 
   export let title
+  export let levels
   export let practiceHref
   export let id
   export let imageSet = []
   export let summary
 
   let completed = null
+  let started = null
   let stale = null
+  let progress = null
+
+  $: console.log("🍎", { title, levels, progress, completed, stale, started })
 
   onMount(() => {
     live((db) =>
       getSkillStats(db, { id })
         .then((stats) => {
-          completed = stats.started
+          completed = stats.progress >= levels
+          progress = stats.progress
+          started = stats.started
           stale = stats.stale
         })
         .catch(() => {})
@@ -27,7 +34,12 @@
   })
 </script>
 
-<div class="card" data-completed="{completed}" data-stale="{stale}">
+<div
+  class="card"
+  data-test="skill card"
+  data-started="{started}"
+  data-completed="{completed}"
+  data-stale="{stale}">
   {#if completed}
     {#if stale}
       <span class="icon">
@@ -52,7 +64,15 @@
       {/if}
       <div class="media-content">
         <p class="title is-4">{title}</p>
-        <p class="is-6 clamp">Learn: {summary.join(', ')}</p>
+        {#if completed || !started}
+          <p class="is-6 clamp">Learn: {summary.join(', ')}</p>
+        {/if}
+        {#if !completed && started}
+          <progress
+            class="progress"
+            value="{progress}"
+            max="{levels}"></progress>
+        {/if}
       </div>
 
     </div>
@@ -62,6 +82,8 @@
       <div class="button-container">
         {#if completed}
           <Button primary href="{practiceHref}">Practice {title}</Button>
+        {:else if started}
+          <Button primary href="{practiceHref}">Continue {title}</Button>
         {:else}
           <Button primary href="{practiceHref}">Learn {title}</Button>
         {/if}
