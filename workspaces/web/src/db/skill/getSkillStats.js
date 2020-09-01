@@ -13,14 +13,16 @@ export default async (db, { id }) => {
             return { started: false, stale: null, progress: 0 }
         }
 
+        const progress = validPractices.reduce(
+            (acc, { correct, skipped }) =>
+                acc + (correct || 1) / ((correct || 1) + (skipped || 0)),
+            0
+        )
+
         return {
             started: validPractices.length >= 1,
             stale: isStale({ practices: practiced }),
-            progress: validPractices.reduce(
-                (acc, { correct, skipped }) =>
-                    acc + correct / (correct + (skipped || 0)),
-                0
-            ),
+            progress,
         }
     } catch {
         return { started: false, stale: null, progress: 0 }
