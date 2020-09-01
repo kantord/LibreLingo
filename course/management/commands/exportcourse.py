@@ -58,7 +58,7 @@ def get_levels(skill):
     new_sentences = skill.learnsentence_set.count()
     print(new_words, new_sentences)
 
-    return round(1 + (new_words / 5) + (new_sentences / 3))
+    return round(1 + (new_words / 7) + (new_sentences / 5))
 
 
 def get_course_data(course):
