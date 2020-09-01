@@ -10,14 +10,23 @@ export default async (db, { id }) => {
         )
 
         if (validPractices.length === 0) {
-            return { completed: false, stale: null }
+            return { started: false, stale: null, progress: 0 }
         }
 
+        const progress = validPractices.reduce(
+            (acc, { correct, skipped }) =>
+                acc + (correct || 1) / ((correct || 1) + (skipped || 0)),
+            0
+        )
+
+        console.log("🍌", validPractices, progress)
+
         return {
-            completed: validPractices.length >= 1,
+            started: validPractices.length >= 1,
             stale: isStale({ practices: practiced }),
+            progress,
         }
     } catch {
-        return { completed: false, stale: null }
+        return { started: false, stale: null, progress: 0 }
     }
 }
