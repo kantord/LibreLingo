@@ -10932,6 +10932,11 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^3.0.0"
     inherits "^2.0.1"
 
+rollup-dependency-tree@0.0.10:
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/rollup-dependency-tree/-/rollup-dependency-tree-0.0.10.tgz#03fea43f41c88c6284edb86f4d68708ec173adbc"
+  integrity sha512-xgnV7DomkPLkQDFzfa5b3JW3kLQrrY8QiI4qbz/4uBk8NPj5sTjI12xQbEIzzvrLvhUSk/3WBscSVYHkgDxmvA==
+
 rsvp@^4.8.4:
   version "4.8.5"
   resolved "https://registry.yarnpkg.com/rsvp/-/rsvp-4.8.5.tgz#c8f155311d167f68f21e168df71ec5b083113734"
@@ -11000,14 +11005,16 @@ sane@^4.0.3:
     minimist "^1.1.1"
     walker "~1.0.5"
 
-sapper@0.28.0:
-  version "0.28.0"
-  resolved "https://registry.yarnpkg.com/sapper/-/sapper-0.28.0.tgz#1dfed31f68a5d684fc4bdf8c6a54b6dc79edf5b0"
-  integrity sha512-t5Qwaad4Zq0HFHqGVV5iw3M22B3cvczxyBzUJiQyMWuL2KY1wDi+6DslEEkpdfrOPejdphj2z4oVpE4X8iOc5w==
+sapper@0.28.4:
+  version "0.28.4"
+  resolved "https://registry.yarnpkg.com/sapper/-/sapper-0.28.4.tgz#e2486dfd40decb0b8ee70639ac9ae0ce1a946dab"
+  integrity sha512-+6nw10RiMylt8SEXFbY49TWv37TX7x6clTeBKGsAfdlWmIXha8q/Mu9ruVK/Kwsiupv62MREU9vvwtuvLWBtqg==
   dependencies:
     html-minifier "^4.0.0"
     http-link-header "^1.0.2"
+    rollup-dependency-tree "0.0.10"
     shimport "^1.0.1"
+    source-map "^0.6.1"
     sourcemap-codec "^1.4.6"
     string-hash "^1.1.3"
 
