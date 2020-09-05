@@ -17,12 +17,15 @@ describe("removeAlternatives", () => {
 describe("sortChallengeGroups", () => {
     it("returns correct value", () => {
         expect(
-            sortChallengeGroups([
-                {
-                    group: "a",
-                    priority: 0,
-                },
-            ])
+            sortChallengeGroups(
+                [
+                    {
+                        group: "a",
+                        priority: 0,
+                    },
+                ],
+                10
+            )
         ).toEqual([
             {
                 group: "a",
@@ -33,28 +36,31 @@ describe("sortChallengeGroups", () => {
 
     it("returns correct value 2", () => {
         expect(
-            sortChallengeGroups([
-                {
-                    id: "a1",
-                    group: "a",
-                    priority: 1,
-                },
-                {
-                    id: "b1",
-                    group: "b",
-                    priority: 1,
-                },
-                {
-                    id: "c0",
-                    group: "c",
-                    priority: 0,
-                },
-                {
-                    id: "a0",
-                    group: "a",
-                    priority: 0,
-                },
-            ])
+            sortChallengeGroups(
+                [
+                    {
+                        id: "a1",
+                        group: "a",
+                        priority: 1,
+                    },
+                    {
+                        id: "b1",
+                        group: "b",
+                        priority: 1,
+                    },
+                    {
+                        id: "c0",
+                        group: "c",
+                        priority: 0,
+                    },
+                    {
+                        id: "a0",
+                        group: "a",
+                        priority: 0,
+                    },
+                ],
+                10
+            )
         ).toEqual([
             {
                 id: "b1",
@@ -81,18 +87,21 @@ describe("sortChallengeGroups", () => {
 
     it("returns correct value 3", () => {
         expect(
-            sortChallengeGroups([
-                {
-                    id: "b1",
-                    group: "b",
-                    priority: 1,
-                },
-                {
-                    id: "a0",
-                    group: "a",
-                    priority: 0,
-                },
-            ])
+            sortChallengeGroups(
+                [
+                    {
+                        id: "b1",
+                        group: "b",
+                        priority: 1,
+                    },
+                    {
+                        id: "a0",
+                        group: "a",
+                        priority: 0,
+                    },
+                ],
+                10
+            )
         ).toEqual([
             {
                 id: "b1",
