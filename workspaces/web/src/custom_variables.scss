@@ -7,14 +7,16 @@ $white-light: #bfb5af;
 $white-lighter: adjust-color($white-light, $lightness: +20%);
 
 // Update Bulma's global variables
-$family-sans-serif: 'Josefin Sans', sans-serif;
-$family-primary: $family-sans-serif;
 $grey-dark: $blue;
 $grey-light: $white-light;
 $primary: $blue;
 $link: $pink;
 $widescreen-enabled: false;
 $fullhd-enabled: false;
+$family-sans-serif: "Noto Sans", sans-serif;
+$family-primary: $family-sans-serif;
+$family-secondary: $family-sans-serif;
+$family-monospace: monospace;
 
 // Update some of Bulma's component variables
 $body-background-color: $white-lighter;
