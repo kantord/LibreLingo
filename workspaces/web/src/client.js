@@ -1,7 +1,7 @@
 import * as sapper from "@sapper/app"
 import "./mystyles.scss"
-import "@openfonts/josefin-sans_all"
 import "./i18n"
+import "@openfonts/noto-sans_all"
 import { library, dom } from "@fortawesome/fontawesome-svg-core"
 import {
     faVolumeUp,
