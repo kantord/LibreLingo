@@ -8,6 +8,7 @@ from django.core.management.base import BaseCommand, CommandError
 from course.models import Course
 from course.models import DictionaryItem
 from course.utils import clean_word
+from course.models import LICENSES
 
 
 def opaqueId(obj, salt=""):
@@ -56,7 +57,6 @@ class Command(BaseCommand):
 def get_levels(skill):
     new_words = skill.learnword_set.count()
     new_sentences = skill.learnsentence_set.count()
-    print(new_words, new_sentences)
 
     return round(1 + (new_words / 7) + (new_sentences / 5))
 
@@ -70,6 +70,9 @@ def get_course_data(course):
         "languageName": course.language_name,
         "languageCode": course.target_language_code,
         "specialCharacters": course.special_characters.split(' '),
+        "license": course.license,
+        "licenseFullName": LICENSES[course.license]["full_name"],
+        "licenseLink": LICENSES[course.license]["link"],
         "modules": [{
             "title": module.name,
             "skills": [{
