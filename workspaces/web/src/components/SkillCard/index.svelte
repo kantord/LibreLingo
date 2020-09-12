@@ -5,6 +5,7 @@
   import getSkillStats from "../../db/skill/getSkillStats"
   import Icon from "lluis/Icon"
   import Button from "lluis/Button"
+  import Summary from "./Summary"
 
   export let title
   export let levels
@@ -63,7 +64,7 @@
       <div class="media-content">
         <p class="title is-4">{title}</p>
         {#if completed || !started}
-          <p class="is-6 clamp">Learn: {summary.join(', ')}</p>
+          <Summary summary="{summary}" />
         {/if}
         {#if !completed && started}
           <progress
@@ -72,7 +73,6 @@
             max="{levels}"></progress>
         {/if}
       </div>
-
     </div>
   </div>
   <footer class="card-footer">
