@@ -121,13 +121,6 @@
     height: 147px;
   }
 
-  .clamp {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-  }
-
   .card {
     $done-color: lighten(desaturate($green, 15%), 20%);
     $stale-color: lighten(desaturate($green, 45%), 20%);
