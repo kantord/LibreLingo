@@ -5,6 +5,8 @@
   import getSkillStats from "../../db/skill/getSkillStats"
   import Icon from "lluis/Icon"
   import Button from "lluis/Button"
+  import Summary from "./Summary"
+  import ContentLeft from "./ContentLeft"
 
   export let title
   export let levels
@@ -51,19 +53,14 @@
   {/if}
   <div class="card-content">
     <div class="media">
-      {#if imageSet && imageSet.length}
-        <div class="media-left">
-          <figure class="image image-set is-96x96">
-            <img src="{`images/${imageSet[0]}_tinier.jpg`}" alt="" />
-            <img src="{`images/${imageSet[1]}_tinier.jpg`}" alt="" />
-            <img src="{`images/${imageSet[2]}_tiny.jpg`}" alt="" />
-          </figure>
-        </div>
-      {/if}
+      <ContentLeft
+        imageSet="{imageSet}"
+        stale="{stale}"
+        completed="{completed}" />
       <div class="media-content">
         <p class="title is-4">{title}</p>
         {#if completed || !started}
-          <p class="is-6 clamp">Learn: {summary.join(', ')}</p>
+          <Summary summary="{summary}" />
         {/if}
         {#if !completed && started}
           <progress
@@ -72,7 +69,6 @@
             max="{levels}"></progress>
         {/if}
       </div>
-
     </div>
   </div>
   <footer class="card-footer">
@@ -93,39 +89,8 @@
 <style>
   @import "../../variables";
 
-  .image-set {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .image-set img {
-    left: 15%;
-    top: 15%;
-    width: 70%;
-    position: absolute;
-  }
-
-  .image-set img:first-child {
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-
-  .image-set img:last-child {
-    position: absolute;
-    left: 30%;
-    top: 30%;
-  }
-
   .card-content {
     height: 147px;
-  }
-
-  .clamp {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
   }
 
   .card {
@@ -150,19 +115,6 @@
       .media-content,
       .icon {
         color: $white;
-      }
-
-      .media-left {
-        mix-blend-mode: screen;
-
-        .image-set {
-          filter: saturate(0);
-
-          img {
-            box-sizing: border-box;
-            border: 1px solid rgba($white, 0.3);
-          }
-        }
       }
     }
 
