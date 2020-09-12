@@ -1,11 +1,11 @@
 <script>
-  export let images
+  export let imageSet
 </script>
 
 <figure class="image image-set is-96x96">
-  <img src="{images[0]}" alt="" />
-  <img src="{images[1]}" alt="" />
-  <img src="{images[2]}" alt="" />
+  <img src="{`images/${imageSet[0]}_tinier.jpg`}" alt="" />
+  <img src="{`images/${imageSet[1]}_tinier.jpg`}" alt="" />
+  <img src="{`images/${imageSet[2]}_tiny.jpg`}" alt="" />
 </figure>
 
 <style>

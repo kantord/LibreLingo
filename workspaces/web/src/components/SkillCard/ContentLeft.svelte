@@ -9,8 +9,7 @@
 {#if imageSet && imageSet.length}
   <div class="media-left" class:stale class:completed>
     <div class="image-set">
-      <ImageSet
-        images="{[`images/${imageSet[0]}_tinier.jpg`, `images/${imageSet[1]}_tinier.jpg`, `images/${imageSet[2]}_tiny.jpg`]}" />
+      <ImageSet imageSet="{imageSet}" />
     </div>
   </div>
 {/if}
