@@ -1,14 +1,18 @@
 <script>
   export let imageSet
+  export let completed
+  export let stale
 </script>
 
-<figure class="image image-set is-96x96">
+<figure class="image image-set is-96x96" class:completed class:stale>
   <img src="{`images/${imageSet[0]}_tinier.jpg`}" alt="" />
   <img src="{`images/${imageSet[1]}_tinier.jpg`}" alt="" />
   <img src="{`images/${imageSet[2]}_tiny.jpg`}" alt="" />
 </figure>
 
 <style>
+  @import "../../variables";
+
   .image-set {
     position: relative;
     overflow: hidden;
@@ -31,5 +35,13 @@
     position: absolute;
     left: 30%;
     top: 30%;
+  }
+
+  .stale,
+  .completed {
+    img {
+      box-sizing: border-box;
+      border: 1px solid rgba($white, 0.3);
+    }
   }
 </style>

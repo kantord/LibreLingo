@@ -9,7 +9,7 @@
 {#if imageSet && imageSet.length}
   <div class="media-left" class:stale class:completed>
     <div class="image-set">
-      <ImageSet imageSet="{imageSet}" />
+      <ImageSet imageSet="{imageSet}" stale="{stale}" completed="{completed}" />
     </div>
   </div>
 {/if}
@@ -23,11 +23,6 @@
 
     .image-set {
       filter: saturate(0);
-
-      img {
-        box-sizing: border-box;
-        border: 1px solid rgba($white, 0.3);
-      }
     }
   }
 </style>

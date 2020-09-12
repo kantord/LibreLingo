@@ -5,8 +5,8 @@
   import getSkillStats from "../../db/skill/getSkillStats"
   import Icon from "lluis/Icon"
   import Button from "lluis/Button"
-  import Summary from "./Summary"
   import ContentLeft from "./ContentLeft"
+  import ContentCenter from "./ContentCenter"
 
   export let title
   export let levels
@@ -57,18 +57,14 @@
         imageSet="{imageSet}"
         stale="{stale}"
         completed="{completed}" />
-      <div class="media-content">
-        <p class="title is-4">{title}</p>
-        {#if completed || !started}
-          <Summary summary="{summary}" />
-        {/if}
-        {#if !completed && started}
-          <progress
-            class="progress"
-            value="{progress}"
-            max="{levels}"></progress>
-        {/if}
-      </div>
+      <ContentCenter
+        progress="{progress}"
+        stale="{stale}"
+        levels="{levels}"
+        title="{title}"
+        completed="{completed}"
+        started="{started}"
+        summary="{summary}" />
     </div>
   </div>
   <footer class="card-footer">
@@ -94,12 +90,12 @@
   }
 
   .card {
-    $done-color: lighten(desaturate($green, 15%), 20%);
+    $completed-color: lighten(desaturate($green, 15%), 20%);
     $stale-color: lighten(desaturate($green, 45%), 20%);
     background: white;
 
     &[data-completed="true"] {
-      background-color: $done-color;
+      background-color: $completed-color;
 
       &[data-stale="true"] {
         background-color: $stale-color;
