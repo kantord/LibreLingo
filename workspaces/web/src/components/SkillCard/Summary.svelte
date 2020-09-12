@@ -1,5 +1,7 @@
 <script>
+  import ClampedText from "lluis/ClampedText"
+
   export let summary
 </script>
 
-<p class="is-6 clamp">Learn: {summary.join(', ')}</p>
+<ClampedText text="{`Learn: ${summary.join(', ')}`}" />
