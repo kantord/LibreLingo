@@ -5,6 +5,8 @@
   import getSkillStats from "../../db/skill/getSkillStats"
   import Icon from "lluis/Icon"
   import Button from "lluis/Button"
+  import ContentLeft from "./ContentLeft"
+  import ContentCenter from "./ContentCenter"
 
   export let title
   export let levels
@@ -51,28 +53,18 @@
   {/if}
   <div class="card-content">
     <div class="media">
-      {#if imageSet && imageSet.length}
-        <div class="media-left">
-          <figure class="image image-set is-96x96">
-            <img src="{`images/${imageSet[0]}_tinier.jpg`}" alt="" />
-            <img src="{`images/${imageSet[1]}_tinier.jpg`}" alt="" />
-            <img src="{`images/${imageSet[2]}_tiny.jpg`}" alt="" />
-          </figure>
-        </div>
-      {/if}
-      <div class="media-content">
-        <p class="title is-4">{title}</p>
-        {#if completed || !started}
-          <p class="is-6 clamp">Learn: {summary.join(', ')}</p>
-        {/if}
-        {#if !completed && started}
-          <progress
-            class="progress"
-            value="{progress}"
-            max="{levels}"></progress>
-        {/if}
-      </div>
-
+      <ContentLeft
+        imageSet="{imageSet}"
+        stale="{stale}"
+        completed="{completed}" />
+      <ContentCenter
+        progress="{progress}"
+        stale="{stale}"
+        levels="{levels}"
+        title="{title}"
+        completed="{completed}"
+        started="{started}"
+        summary="{summary}" />
     </div>
   </div>
   <footer class="card-footer">
@@ -93,48 +85,17 @@
 <style>
   @import "../../variables";
 
-  .image-set {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .image-set img {
-    left: 15%;
-    top: 15%;
-    width: 70%;
-    position: absolute;
-  }
-
-  .image-set img:first-child {
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-
-  .image-set img:last-child {
-    position: absolute;
-    left: 30%;
-    top: 30%;
-  }
-
   .card-content {
     height: 147px;
   }
 
-  .clamp {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-  }
-
   .card {
-    $done-color: lighten(desaturate($green, 15%), 20%);
+    $completed-color: lighten(desaturate($green, 15%), 20%);
     $stale-color: lighten(desaturate($green, 45%), 20%);
     background: white;
 
     &[data-completed="true"] {
-      background-color: $done-color;
+      background-color: $completed-color;
 
       &[data-stale="true"] {
         background-color: $stale-color;
@@ -150,19 +111,6 @@
       .media-content,
       .icon {
         color: $white;
-      }
-
-      .media-left {
-        mix-blend-mode: screen;
-
-        .image-set {
-          filter: saturate(0);
-
-          img {
-            box-sizing: border-box;
-            border: 1px solid rgba($white, 0.3);
-          }
-        }
       }
     }
 
