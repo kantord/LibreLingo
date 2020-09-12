@@ -4,7 +4,7 @@
   import live from "../../db/live"
   import getSkillStats from "../../db/skill/getSkillStats"
   import Icon from "lluis/Icon"
-  import Button from "lluis/Button"
+  import Buttons from "./Buttons.svelte"
   import ContentLeft from "./ContentLeft"
   import ContentCenter from "./ContentCenter"
 
@@ -69,15 +69,11 @@
   </div>
   <footer class="card-footer">
     <div href="{practiceHref}" class="card-footer-item">
-      <div class="button-container">
-        {#if completed}
-          <Button primary href="{practiceHref}">Practice {title}</Button>
-        {:else if started}
-          <Button primary href="{practiceHref}">Continue {title}</Button>
-        {:else}
-          <Button primary href="{practiceHref}">Learn {title}</Button>
-        {/if}
-      </div>
+      <Buttons
+        title="{title}"
+        practiceHref="{practiceHref}"
+        started="{started}"
+        completed="{completed}" />
     </div>
   </footer>
 </div>
