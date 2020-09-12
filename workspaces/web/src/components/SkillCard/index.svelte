@@ -6,7 +6,7 @@
   import Icon from "lluis/Icon"
   import Button from "lluis/Button"
   import Summary from "./Summary"
-  import ImageSet from "./ImageSet"
+  import ContentLeft from "./ContentLeft"
 
   export let title
   export let levels
@@ -53,14 +53,10 @@
   {/if}
   <div class="card-content">
     <div class="media">
-      {#if imageSet && imageSet.length}
-        <div class="media-left">
-          <div class="image-set">
-            <ImageSet
-              images="{[`images/${imageSet[0]}_tinier.jpg`, `images/${imageSet[1]}_tinier.jpg`, `images/${imageSet[2]}_tiny.jpg`]}" />
-          </div>
-        </div>
-      {/if}
+      <ContentLeft
+        imageSet="{imageSet}"
+        stale="{stale}"
+        completed="{completed}" />
       <div class="media-content">
         <p class="title is-4">{title}</p>
         {#if completed || !started}
@@ -119,19 +115,6 @@
       .media-content,
       .icon {
         color: $white;
-      }
-
-      .media-left {
-        mix-blend-mode: screen;
-
-        .image-set {
-          filter: saturate(0);
-
-          img {
-            box-sizing: border-box;
-            border: 1px solid rgba($white, 0.3);
-          }
-        }
       }
     }
 
