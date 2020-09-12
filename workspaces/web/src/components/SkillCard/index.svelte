@@ -6,6 +6,7 @@
   import Icon from "lluis/Icon"
   import Button from "lluis/Button"
   import Summary from "./Summary"
+  import ImageSet from "./ImageSet"
 
   export let title
   export let levels
@@ -54,11 +55,10 @@
     <div class="media">
       {#if imageSet && imageSet.length}
         <div class="media-left">
-          <figure class="image image-set is-96x96">
-            <img src="{`images/${imageSet[0]}_tinier.jpg`}" alt="" />
-            <img src="{`images/${imageSet[1]}_tinier.jpg`}" alt="" />
-            <img src="{`images/${imageSet[2]}_tiny.jpg`}" alt="" />
-          </figure>
+          <div class="image-set">
+            <ImageSet
+              images="{[`images/${imageSet[0]}_tinier.jpg`, `images/${imageSet[1]}_tinier.jpg`, `images/${imageSet[2]}_tiny.jpg`]}" />
+          </div>
         </div>
       {/if}
       <div class="media-content">
@@ -92,30 +92,6 @@
 
 <style>
   @import "../../variables";
-
-  .image-set {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .image-set img {
-    left: 15%;
-    top: 15%;
-    width: 70%;
-    position: absolute;
-  }
-
-  .image-set img:first-child {
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-
-  .image-set img:last-child {
-    position: absolute;
-    left: 30%;
-    top: 30%;
-  }
 
   .card-content {
     height: 147px;
