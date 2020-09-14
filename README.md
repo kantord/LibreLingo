@@ -79,7 +79,7 @@ If you are interested in contributing to course development, please fill the fol
 ### Development and other forms of contribution
 
 - [Getting started](https://github.com/kantord/LibreLingo/blob/master/docs/CONTRIBUTING.md)
-- [Delopment documentation is available on Read the Docs](https://librelingo.readthedocs.io/en/latest/)
+- [Development documentation is available on Read the Docs](https://librelingo.readthedocs.io/en/latest/)
 
 You can help LibreLingo by testing it and submitting feature requests or bug reports: https://github.com/kantord/LibreLingo/issues/new. If you want to get in touch, you can use my contact details on [my GitHub profile](https://github.com/kantord).
 
