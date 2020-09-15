@@ -27,7 +27,7 @@
           completed = stats.progress >= levels
           progress = stats.progress
           started = stats.started
-          stale = stats.stale
+          stale = stats.stale && completed
         })
         .catch(() => {})
     )
