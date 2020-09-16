@@ -29,10 +29,10 @@ Once course content is properly decoupled from the software, it should be possib
 ## Screenshots
  
 <p align="center">
-    <img src="/docs/screenshots/screenshot1.png" width="200px"></img> 
-    <img src="/docs/screenshots/screenshot2.png" width="200px"></img>   
-    <img src="/docs/screenshots/screenshot3.png" width="200px"></img> 
-    <img src="/docs/screenshots/screenshot4.png" width="200px"></img> 
+    <img src="/docs/screenshots/screenshot1.png" width="20%"></img> 
+    <img src="/docs/screenshots/screenshot2.png" width="20%"></img>   
+    <img src="/docs/screenshots/screenshot3.png" width="20%"></img> 
+    <img src="/docs/screenshots/screenshot4.png" width="20%"></img> 
 </p>
 
 ## Milestones
