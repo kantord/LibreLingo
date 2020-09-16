@@ -5,12 +5,16 @@
 [![Donate via PayPal](https://img.shields.io/badge/donate-via%20paypal-brightgreen)](https://www.paypal.com/pools/c/8np3GCVeiF)
 
  
-<h1 align="center">
-<img src="docs/logo_for_readme.svg" alt="LibreLingo" /></h1>
+<h1 align="center">LibreLingo</h1>
+
 <p align="center"><em>an experiment to create a community-driven language-learning platform</em></p>
+<p align="center">
+  <a href="https://librelingo.app/">Start learning!</a> •
+  <a href="https://riot.im/app/#/room/#librelingo:matrix.org">Chat with us!</a> •
+  <a href="#become-a-contributor">Become a contributor!</a>
+</p>
 
-
-[Click here for live demo](https://librelingo.app/)
+<h1 align="center"><img src="/docs/branding/LibreLingo_Mascot/LightShadow/Turtle1_jetPack.svg" alt="" height="250" /></h1>
 
 ## Project goal
 
