@@ -14,7 +14,7 @@
   <a href="#become-a-contributor">Become a contributor!</a>
 </p>
 
-<h1 align="center"><img src="/docs/branding/LibreLingo_Mascot/LightShadow/Turtle1_jetPack.svg" alt="" height="250" /></h1>
+<p align="center"><img src="/docs/branding/LibreLingo_Mascot/LightShadow/Turtle1_jetPack.svg" alt="" height="250" /></p>
 
 ## Project goal
 
