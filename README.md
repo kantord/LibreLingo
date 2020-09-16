@@ -27,14 +27,13 @@ In addition to licensing the software under a free software license, the course 
 Once course content is properly decoupled from the software, it should be possible to experiment with alternative ways of using course content: for example, the creation of audiobooks or print material.
 
 ## Screenshots
-
-<div align="center">
-    <img src="/docs/screenshots/screenshot1.png" width="400px"></img> 
-    <img src="/docs/screenshots/screenshot2.png" width="400px"></img> 
-    <img src="/docs/screenshots/screenshot3.png" width="400px"></img> 
-    <img src="/docs/screenshots/screenshot4.png" width="400px"></img> 
-</div>
-
+ 
+<p align="center">
+    <img src="/docs/screenshots/screenshot1.png" width="200px"></img> 
+    <img src="/docs/screenshots/screenshot2.png" width="200px"></img>   
+    <img src="/docs/screenshots/screenshot3.png" width="200px"></img> 
+    <img src="/docs/screenshots/screenshot4.png" width="200px"></img> 
+</p>
 
 ## Milestones
 
