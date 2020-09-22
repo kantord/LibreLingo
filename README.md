@@ -2,6 +2,7 @@
 [![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/LibreLingo/LibreLingo)
 [![BCH compliance](https://bettercodehub.com/edge/badge/kantord/LibreLingo?branch=master)](https://bettercodehub.com/)
 ![David](https://img.shields.io/david/kantord/LibreLingo)
+
  
 <h1 align="center">LibreLingo</h1>
 
@@ -9,7 +10,8 @@
 <p align="center">
   <a href="https://librelingo.app/">Start learning!</a> •
   <a href="https://riot.im/app/#/room/#librelingo:matrix.org">Chat with us!</a> •
-  <a href="#become-a-contributor">Become a contributor!</a>
+  <a href="#become-a-contributor">Become a contributor!</a> •
+  <a href="https://dev.to/kantord/why-i-built-librelingo-280o">Why I built LibreLingo</a>
 </p>
 
 <p align="center"><img src="/docs/branding/LibreLingo_Mascot/LightShadow/Turtle1_jetPack.svg" alt="" height="250" /></p>
@@ -104,6 +106,10 @@ Testing is done using Jest and Cypress. Other technology in use include: bulma, 
 
 ## License
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fkantord%2FLibreLingo.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fkantord%2FLibreLingo?ref=badge_large)
+
+### Articles
+
+- [Why I built LibreLingo](https://dev.to/kantord/why-i-built-librelingo-280o)
 
 ### Mascot
 
