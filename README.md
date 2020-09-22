@@ -2,9 +2,6 @@
 [![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/LibreLingo/LibreLingo)
 [![BCH compliance](https://bettercodehub.com/edge/badge/kantord/LibreLingo?branch=master)](https://bettercodehub.com/)
 ![David](https://img.shields.io/david/kantord/LibreLingo)
-
-<iframe src="https://github.com/sponsors/kantord/button" title="Sponsor kantord" height="35" width="116" style="border: 0;"></iframe>
-
  
 <h1 align="center">LibreLingo</h1>
 
