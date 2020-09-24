@@ -11120,14 +11120,14 @@ sane@^4.0.3:
     minimist "^1.1.1"
     walker "~1.0.5"
 
-sapper@0.28.7:
-  version "0.28.7"
-  resolved "https://registry.yarnpkg.com/sapper/-/sapper-0.28.7.tgz#cfc621ddeb513f8a3852e472a7ffbae9750f48ea"
-  integrity sha512-/ijwEGHY2xpo9lDF5IUPaEfS00ekXOIZqo89QJoptn3K7K2SPYPjpLK76MasDa5FlIBhWeiUwg4W67X6O4goUw==
+sapper@0.28.8:
+  version "0.28.8"
+  resolved "https://registry.yarnpkg.com/sapper/-/sapper-0.28.8.tgz#90674bda8bbae3f6915688421ebbeb558c51af04"
+  integrity sha512-CLXI2mlTBWC5ztk8l/2bqJRvzWpkZzzCDJLPOHrvU3z5pfc2M4UlENMXACDLd8kf8vq3xmWnOfmO5MmhNyJB8w==
   dependencies:
     html-minifier "^4.0.0"
     http-link-header "^1.0.2"
-    shimport "^1.0.1"
+    shimport "^2.0.3"
     source-map "^0.6.1"
     sourcemap-codec "^1.4.6"
     string-hash "^1.1.3"
@@ -11387,10 +11387,10 @@ shellwords@^0.1.1:
   resolved "https://registry.yarnpkg.com/shellwords/-/shellwords-0.1.1.tgz#d6b9181c1a48d397324c84871efbcfc73fc0654b"
   integrity sha512-vFwSUfQvqybiICwZY5+DAWIPLKsWO31Q91JSKl3UYv+K5c2QRPzn0qzec6QPu1Qc9eHYItiP3NdJqNVqetYAww==
 
-shimport@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/shimport/-/shimport-1.0.1.tgz#32ea5637e7707fdfa9037516f8c2a97786fc9031"
-  integrity sha512-Imf4gH+8WQmT1GvxS/x79qpmfnE6m50hyN1ucatX+7oMCgmaF8obZWCPIzSUe6+P+YmXM46lkP2pxiV2/lt9Og==
+shimport@^2.0.3:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/shimport/-/shimport-2.0.4.tgz#02a36fbe53b141c39732df54f8338f3c8b31146d"
+  integrity sha512-5YOyQqYkOFSkPFnpS87De6BYzDiZBc8FS4/aTuGZiST+WmXSwWRoaNRHqyVOeEpSx9wlgYWg9WYfCuzD/11/qA==
 
 signal-exit@^3.0.0, signal-exit@^3.0.2:
   version "3.0.2"
