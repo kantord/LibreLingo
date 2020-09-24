@@ -2162,21 +2162,21 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@knapsack-pro/core@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@knapsack-pro/core/-/core-3.0.0.tgz#71fc1c104070dadda4b65ab24ef8448d47107f8b"
-  integrity sha512-0OrEfb1abjpwbgjP21MRBLdDJxkmt/SPzDjQzUtnYts5U1Wt+AbKFrvPA+dxH847Vfvfskz6jBUcqWA3WJJHdw==
+"@knapsack-pro/core@^3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@knapsack-pro/core/-/core-3.0.1.tgz#c253231719132faaed09f108cafc5546b4c77489"
+  integrity sha512-R1N/e/OSGEJSeZoZneNwkr0s80EF1FH157YY34PDgFZkYcWuO8o+DWBQcq2kKKs+qQVEkUZepCncTjdQIxz38g==
   dependencies:
     axios "0.18.1"
     axios-retry "^3.1.2"
     winston "^3.3.3"
 
-"@knapsack-pro/cypress@4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@knapsack-pro/cypress/-/cypress-4.0.0.tgz#45f4ee0b17bef7c42d0a74ce158efbfc61376578"
-  integrity sha512-AdNV+eX/buC23a5xOHZlZRNIQFXHjMNATWl584Jb9BdetNpUKRjKa4wdYxlZVBcebC12+kyVZXwyh2bnJH0ogw==
+"@knapsack-pro/cypress@4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@knapsack-pro/cypress/-/cypress-4.0.1.tgz#d47986676210e0a04a70523d4ab6c5e210be8a2b"
+  integrity sha512-izNPBM1e7gmnk3ZtoBocSG/UNCo2Xk4HM+5W212M6QMXXq24YN/3RBM5xIXET/2y6L1ZrNefUqAJOPUEuJ/Q2w==
   dependencies:
-    "@knapsack-pro/core" "^3.0.0"
+    "@knapsack-pro/core" "^3.0.1"
     glob "^7.1.6"
     minimist "^1.2.5"
 
