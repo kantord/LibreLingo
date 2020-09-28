@@ -46,8 +46,12 @@
     margin-right: -0.5em;
     user-select: none;
   }
-
   input {
-    display: none;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  label {
+    display: flex;
+    align-items: center;
   }
 </style>
