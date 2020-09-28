@@ -12,7 +12,6 @@
     data-test-correct="{correct}">
     <div class="option-content">
       <div class="is-size-5 is-size-6-mobile">
-        <input type="radio" checked="{active}" />
         {formInTargetLanguage}
       </div>
     </div>
