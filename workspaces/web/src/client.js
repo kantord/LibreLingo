@@ -1,7 +1,6 @@
 import * as sapper from "@sapper/app"
 import "./mystyles.scss"
 import "./i18n"
-import "@openfonts/noto-sans_all"
 import { library, dom } from "@fortawesome/fontawesome-svg-core"
 import {
     faVolumeUp,
@@ -27,3 +26,8 @@ dom.watch()
 sapper.start({
     target: document.querySelector("#sapper"),
 })
+
+
+if (!window.isCypress) {
+    require("@openfonts/noto-sans_all")
+}
