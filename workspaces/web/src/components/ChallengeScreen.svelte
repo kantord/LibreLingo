@@ -10,6 +10,8 @@
   import shuffle from "lodash.shuffle"
   import { fade, scale } from "svelte/transition"
   import Button from "lluis/Button"
+  import db from "../db/db"
+  import savePractice from "../db/skill/savePractice"
 
   export let rawChallenges
   export let languageName
@@ -27,6 +29,7 @@
   let remainingChallenges = [...challenges]
   let currentChallenge = remainingChallenges.shift()
   let solvedChallenges = []
+  let skipAllChallenges = null
   let progress = 0
   let stats = {
     correct: 0,
@@ -50,6 +53,7 @@
   $: registerResult = (isCorrect) => {
     if (isCorrect) {
       stats.correct++
+      skipAllChallenges = skipAllChallengesFunc
       sound.correct.play()
       solvedChallenges.push(currentChallenge)
     } else {
@@ -71,6 +75,14 @@
     stats.skipped++
     resolveChallenge()
   }
+
+  $: skipAllChallengesFunc = async () => {
+    stats.skipped++
+    remainingChallenges.forEach(() => stats.skipped++)
+
+    await savePractice(db, { id: skillId, ...stats })
+    window.location = courseURL
+  }
 </script>
 
 {#if currentChallenge}
@@ -90,7 +102,9 @@
                 {currentChallenge}
                 {alternativeChallenges}
                 {resolveChallenge}
-                {registerResult} />
+                {registerResult}
+                {skipAllChallenges}
+              />
             {/if}
             {#if challenge.type === 'options'}
               <OptionChallenge
@@ -98,7 +112,9 @@
                 {currentChallenge}
                 {alternativeChallenges}
                 {resolveChallenge}
-                {registerResult} />
+                {registerResult}
+                {skipAllChallenges}
+              />
             {/if}
             {#if challenge.type === 'shortInput'}
               <ShortInputChallenge
@@ -108,7 +124,9 @@
                 {specialCharacters}
                 {registerResult}
                 {resolveChallenge}
-                {challenge} />
+                {challenge}
+                {skipAllChallenges}
+              />
             {/if}
             {#if challenge.type === 'listeningExercise'}
               <ListeningChallenge
@@ -117,14 +135,18 @@
                 {specialCharacters}
                 {registerResult}
                 {resolveChallenge}
-                {challenge} />
+                {challenge} 
+                {skipAllChallenges}
+              />
             {/if}
             {#if challenge.type === 'chips'}
               <ChipsChallenge
                 {registerResult}
                 {resolveChallenge}
                 {challenge}
-                {skipChallenge} />
+                {skipChallenge}
+                {skipAllChallenges}
+              />
             {/if}
           </div>
         {/if}

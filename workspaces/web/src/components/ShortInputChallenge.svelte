@@ -16,6 +16,8 @@
   export let languageCode
   export let specialCharacters
   export let skipChallenge
+  export let skipAllChallenges
+  
   let answer = ""
   let submitted = false
   let correct = null
@@ -88,14 +90,16 @@
       message=""
       buttonText="Submit"
       submit
-      skipAction="{skipChallenge}" />
+      skipAction="{skipChallenge}"
+      skipAllAction="{skipAllChallenges}" />
   {/if}
 
   {#if answer === '' && !submitted}
     <ChallengePanel
       message="{null}"
       buttonText="{null}"
-      skipAction="{skipChallenge}" />
+      skipAction="{skipChallenge}"
+      skipAllAction="{skipAllChallenges}" />
   {/if}
 
   {#if submitted}
