@@ -30,6 +30,7 @@
 
 <svelte:head>
   <title>LibreLingo - Development</title>
+  <meta name="description" content="{$_('development.meta.description')}"/>
 </svelte:head>
 
 {#if issues === null}
