@@ -79,9 +79,7 @@
   $: skipAllChallengesFunc = async () => {
     stats.skipped++
     remainingChallenges.forEach(() => stats.skipped++)
-
-    await savePractice(db, { id: skillId, ...stats })
-    window.location = courseURL
+    currentChallenge = undefined
   }
 </script>
 
