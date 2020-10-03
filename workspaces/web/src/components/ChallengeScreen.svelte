@@ -10,8 +10,6 @@
   import shuffle from "lodash.shuffle"
   import { fade, scale } from "svelte/transition"
   import Button from "lluis/Button"
-  import db from "../db/db"
-  import savePractice from "../db/skill/savePractice"
 
   export let rawChallenges
   export let languageName
@@ -79,9 +77,7 @@
   $: skipAllChallengesFunc = async () => {
     stats.skipped++
     remainingChallenges.forEach(() => stats.skipped++)
-
-    await savePractice(db, { id: skillId, ...stats })
-    window.location = courseURL
+    currentChallenge = undefined
   }
 </script>
 
