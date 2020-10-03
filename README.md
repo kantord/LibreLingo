@@ -116,6 +116,7 @@ Testing is done using Jest and Cypress. Other technology in use include: bulma, 
 LibreLingo is licensed under the AGPL-3.0 License. Course content and other creative content might be licensed under other licenses, such as CC.
 
 This image shows a summary of the licensing of our dependencies:
+
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fkantord%2FLibreLingo.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fkantord%2FLibreLingo?ref=badge_large)
 
 ### Mascot
