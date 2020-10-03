@@ -1,5 +1,6 @@
 <script context="module">
   import MarkDownPage, { getMarkDownData } from "../components/MarkDownPage"
+  import { _ } from "svelte-i18n"
 
   export async function preload(page, session) {
     return {
@@ -14,4 +15,4 @@
   export let readmeHTML
 </script>
 
-<MarkDownPage {readmeHTML} title="About LibreLingo" />
+<MarkDownPage {readmeHTML} title="About LibreLingo" description="{$_('about.meta.description')}" />

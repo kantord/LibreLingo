@@ -10,7 +10,7 @@
 
 <section class="section">
   <div class="container">
-    <h2 class="is-size-2">Registration successsful!</h2>
+    <h2 class="is-size-2">Registration successful!</h2>
     <p>You can now log in.</p>
     <Button href="/login">Log in</Button>
   </div>

@@ -4,6 +4,7 @@
   import NavBar from "../components/NavBar.svelte"
   import Button from "lluis/Button"
   import FormField from "lluis/FormField"
+  import { _ } from "svelte-i18n"
 
   let loading = false
 
@@ -188,6 +189,7 @@
 
 <svelte:head>
   <title>Sign up - LibreLingo</title>
+  <meta name="description" content="{$_('sign-up.meta.description')}"/>
 </svelte:head>
 
 <NavBar dark />

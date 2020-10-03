@@ -10,6 +10,7 @@
 
 <svelte:head>
   <title>{$_('meta.title')}</title>
+  <meta name="description" content="{$_('index.meta.description')}"/>
 </svelte:head>
 
 <section class="hero is-bold is-fullheight">
