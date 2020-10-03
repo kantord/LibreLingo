@@ -13,6 +13,8 @@
   export let resolveChallenge
   export let registerResult
   export let skipChallenge
+  export let skipAllChallenges
+
   let selectedOption = null
   let submitted = false
 
@@ -59,7 +61,8 @@
     <ChallengePanel
       message="{null}"
       buttonText="{null}"
-      skipAction="{skipChallenge}" />
+      skipAction="{skipChallenge}"
+      skipAllAction="{skipAllChallenges}" />
   {/if}
 
   {#if !submitted && selectedOption !== null}
@@ -67,7 +70,8 @@
       message=""
       buttonText="Submit"
       submit
-      skipAction="{skipChallenge}" />
+      skipAction="{skipChallenge}"
+      skipAllAction="{skipAllChallenges}" />
   {/if}
 
   {#if submitted}
