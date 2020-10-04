@@ -12,7 +12,7 @@
   <a href="https://riot.im/app/#/room/#librelingo:matrix.org">Chat with us!</a> •
   <a href="#become-a-contributor">Become a contributor!</a> •
   <a href="https://dev.to/kantord/why-i-built-librelingo-280o">Why I built LibreLingo</a> •
-  <a href="https://github.com/kantord/LibreLingo/issues?q=is%3Aopen+is%3Aissue+label%3AHacktoberfest+no%3Aassignee">Hacktoberfest!</a>
+  <a href="https://github.com/kantord/LibreLingo/projects/9">Hacktoberfest!</a>
 </p>
 
 <p align="center"><img src="/docs/branding/LibreLingo_Mascot/LightShadow/Turtle1_jetPack.svg" alt="" height="250" /></p>
