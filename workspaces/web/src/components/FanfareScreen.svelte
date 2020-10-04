@@ -18,7 +18,7 @@
   export let stats
 
   onMount(async () => {
-    sound.fanfare.play()
+    sound.fanfare()
   })
 
   onMount(async () => {
