@@ -10,6 +10,7 @@
   export let messageDetail = null
   export let submit = null
   export let skipAction = null
+  export let skipAllAction = null
 </script>
 
 <div
@@ -22,6 +23,9 @@
     <div class="control">
       {#if skipAction}
         <Button on:click="{skipAction}">Skip</Button>
+      {/if}
+      {#if skipAllAction}
+        <Button on:click="{skipAllAction}">Finish early</Button>
       {/if}
       {#if message}
         <b>{message}</b>
