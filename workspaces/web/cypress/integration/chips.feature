@@ -40,7 +40,7 @@ Feature: Chips challenge
     And I read "Correct solution"
     And I see a "Continue" button
     Given I click "Continue"
-    Then I see a panel with only a skip button
+    Then I see a panel with only a skip and a finish early button
 
   Scenario: Submitting an alternative correct solution
     Given I open "/course/test/skill/_chips_test0"
@@ -51,4 +51,4 @@ Feature: Chips challenge
     And I read "Correct solution"
     And I see a "Continue" button
     Given I click "Continue"
-    Then I see a panel with only a skip button
+    Then I see a panel with only a skip and a finish early button
