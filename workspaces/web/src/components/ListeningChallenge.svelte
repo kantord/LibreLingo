@@ -5,7 +5,7 @@
   import ChallengePanel from "./ChallengePanel"
   import Icon from "lluis/Icon"
   import InputFieldWithVirtualKeyboard from "./InputFieldWithVirtualKeyboard"
-  import playVoice from "../media/voice"
+  import { playAudio } from "../media/sound"
   import Button from "lluis/Button"
   import Column from "lluis/Column"
   import Columns from "lluis/Columns"
@@ -58,7 +58,7 @@
     resolveChallenge()
   }
 
-  const playChallengeVoice = () => playVoice(challenge.audio)
+  const playChallengeVoice = () => playAudio("voice",challenge.audio)
 
   onMount(() => {
     playChallengeVoice()
