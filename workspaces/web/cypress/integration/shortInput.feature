@@ -80,14 +80,14 @@ Feature: Short text input challange
     And I type "agua"
     And I click "Submit"
     And I click "Continue"
-    Then I see a panel with only a skip button
+    Then I see a panel with only a skip and a finish early button
 
   Scenario: Going to the next challenge with keyboard only
     Given I open "/course/test/skill/_short_input_test2"
     And I type "agua"
     And I hit the enter key
     And I hit the enter key
-    Then I see a panel with only a skip button
+    Then I see a panel with only a skip and a finish early button
 
   Scenario: using the hover-over dictionary
     Given I open "/course/test/skill/_short_input_test3"

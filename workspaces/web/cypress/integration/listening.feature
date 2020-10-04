@@ -59,11 +59,11 @@ Feature: Listening exercise
     And I click "Submit"
     Then I don't see a "Skip" button
     And I click "Continue"
-    Then I see a panel with only a skip button
+    Then I see a panel with only a skip and a finish early button
 
   Scenario: Going to the next challenge with keyboard only
     Given I open "/course/test/skill/_listening_test2"
     And I type "agua"
     And I hit the enter key
     And I hit the enter key
-    Then I see a panel with only a skip button
+    Then I see a panel with only a skip and a finish early button
