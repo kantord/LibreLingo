@@ -14,3 +14,10 @@ Then("I see a panel with only a skip button", () => {
     cy.get(".panel button").contains("Skip").should("be.visible")
     cy.get(".panel ").find("button").should("have.length", 1)
 })
+
+Then("I see a panel with only a skip and a finish early button", () => {
+    cy.wait(500) // This is necessary due to the animation
+    cy.get(".panel button").contains("Skip").should("be.visible")
+    cy.get(".panel button").contains("Finish early").should("be.visible")
+    cy.get(".panel ").find("button").should("have.length", 2)
+})
