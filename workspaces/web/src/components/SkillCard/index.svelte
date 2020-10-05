@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
   import { onDestroy, onMount } from "svelte"
 
   import live from "../../db/live"
@@ -78,7 +78,7 @@
   </footer>
 </div>
 
-<style>
+<style type="text/scss">
   @import "../../variables";
 
   .card-content {

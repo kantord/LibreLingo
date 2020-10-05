@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
   import { slide } from "svelte/transition"
   import Button from "lluis/Button"
 

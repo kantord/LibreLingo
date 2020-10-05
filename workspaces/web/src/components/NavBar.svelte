@@ -1,4 +1,5 @@
-<script>
+<script lang="typescript">
+
   import settings from "../settings"
   import authStore from "../auth"
   import GitHubButton from "./GitHubButton"
@@ -55,7 +56,7 @@
   </div>
 </nav>
 
-<style>
+<style type="text/scss">
   @import "../variables";
 
   .navbar.dark {

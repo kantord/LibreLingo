@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
   import Button from "lluis/Button"
   export let value
   export let specialCharacters
@@ -83,7 +83,7 @@
   {/each}
 </div>
 
-<style>
+<style type="text/scss">
   .keyboard {
     margin-top: 2em;
   }

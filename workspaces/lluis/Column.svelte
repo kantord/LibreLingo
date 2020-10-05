@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
   export let size = null
   export let sizeDesktop = null
   export let sizeTablet = null
