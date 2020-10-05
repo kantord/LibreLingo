@@ -54,11 +54,11 @@
     if (isCorrect) {
       stats.correct++
       skipAllChallenges = skipAllChallengesFunc
-      sound.correct()
+      sound.correct.play()
       solvedChallenges.push(currentChallenge)
     } else {
       stats.incorrect++
-      sound.wrong()
+      sound.wrong.play()
       remainingChallenges.push(currentChallenge)
     }
   }
