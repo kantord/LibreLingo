@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
   import { tweened } from "svelte/motion"
 
   export let value
@@ -13,7 +13,7 @@
   </progress>
 </div>
 
-<style>
+<style type="text/scss">
   @import "../variables";
   div {
     padding-bottom: $size-6;

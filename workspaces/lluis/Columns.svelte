@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
   export let multiline = false
   export let reversed = false
 </script>
@@ -10,7 +10,7 @@
   <slot />
 </div>
 
-<style>
+<style type="text/scss">
   @import './node_modules/bulma/sass/utilities/_all';
 
   @include until($tablet) {

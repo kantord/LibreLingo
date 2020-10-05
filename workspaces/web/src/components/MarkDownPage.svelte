@@ -1,4 +1,4 @@
-<script context="module">
+<script lang="typescript" context="module">
   export async function getMarkDownData(markdownModule) {
     const remark = await require("remark")
     const markdown = await import("remark-parse")
@@ -15,7 +15,7 @@
   }
 </script>
 
-<script>
+<script lang="typescript">
   import NavBar from "../components/NavBar"
 
   export let readmeHTML

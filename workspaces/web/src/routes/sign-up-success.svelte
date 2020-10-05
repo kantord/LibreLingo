@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
   import db from "../db/db.js"
   import { onMount } from "svelte"
   import hotkeys from "hotkeys-js"

@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
   import ClampedText from "lluis/ClampedText"
 
   export let summary
@@ -10,7 +10,7 @@
   <ClampedText text="{`Learn: ${summary.join(', ')}`}" />
 </div>
 
-<style>
+<style type="text/scss">
   @import "../../variables";
 
   .completed,

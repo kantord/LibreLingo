@@ -1,4 +1,4 @@
-<script context="module">
+<script lang="typescript" context="module">
   import { waitLocale } from "svelte-i18n"
   import authStore from "../auth"
 
@@ -7,7 +7,7 @@
   }
 </script>
 
-<script>
+<script lang="typescript">
   import settings from "../settings"
 
   export let segment
