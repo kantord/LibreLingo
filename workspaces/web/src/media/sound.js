@@ -1,9 +1,9 @@
 import { Howl , Howler } from "howler"
 
 const disableHowlerForCypress = () => {
-    if (Howler.volume() !== 0 && typeof window !== 'undefined' && window.Cypress) {
-        Howler.volume(0);
-        console.log('Sounds while testing with cypress are disabled')
+    if (Howler.volume() !== 0 && typeof window !== "undefined" && window.Cypress) {
+        Howler.volume(0)
+        console.log("Sounds while testing with cypress are disabled")
     }
 }
 
