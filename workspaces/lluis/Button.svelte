@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
   import { createEventDispatcher } from "svelte"
 
   const dispatch = createEventDispatcher()
@@ -73,7 +73,7 @@
   {/if}
 {/if}
 
-<style>
+<style type="text/scss">
   .button.customColor {
     background-color: var(--color);
   }

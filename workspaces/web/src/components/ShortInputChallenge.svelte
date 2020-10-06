@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
   import { onMount } from "svelte"
   import hotkeys from "hotkeys-js"
   import shuffle from "lodash.shuffle"
@@ -123,7 +123,7 @@
 
 </form>
 
-<style>
+<style type="text/scss">
   .card {
     max-width: 16em;
     margin: auto;

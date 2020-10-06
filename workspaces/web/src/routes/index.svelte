@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
   import Mascot from "../components/Mascot"
   import LicenseLogo from "../components/LicenseLogo"
   import Button from "lluis/Button"
@@ -54,7 +54,7 @@
   <LicenseLogo />
 </div>
 
-<style>
+<style type="text/scss">
   @import "../variables";
 
   .title img {
