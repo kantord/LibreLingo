@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
   export let phrase
 </script>
 
@@ -12,7 +12,7 @@
   {/each}
 </b>
 
-<style>
+<style type="text/scss">
   @import "../variables";
 
   .phrase span {

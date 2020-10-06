@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
   import { scale } from "svelte/transition"
   import db from "../db/db"
   import savePractice from "../db/skill/savePractice"
@@ -62,7 +62,7 @@
   </div>
 </section>
 
-<style>
+<style type="text/scss">
   @import "../variables";
 
   @include from($tablet) {

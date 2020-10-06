@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
   import sound from "../media/sound"
   import DeckChallenge from "./DeckChallenge"
   import OptionChallenge from "./OptionChallenge"
@@ -159,7 +159,7 @@
   </div>
 {/if}
 
-<style>
+<style type="text/scss">
   .section {
     padding: 1.5em;
   }

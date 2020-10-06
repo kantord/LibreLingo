@@ -1,4 +1,4 @@
-<script context="module">
+<script lang="typescript" context="module">
   export async function preload(page, session) {
     if (!process.browser) {
       const fs = require("fs")
@@ -14,7 +14,7 @@
   }
 </script>
 
-<script>
+<script lang="typescript">
   import NavBar from "../components/NavBar"
   import Mascot from "../components/Mascot"
   import TwitterButton from "../components/TwitterButton"

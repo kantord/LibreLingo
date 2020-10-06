@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
   import ImageSet from "./ImageSet"
 
   export let imageSet
@@ -14,7 +14,7 @@
   </div>
 {/if}
 
-<style>
+<style type="text/scss">
   @import "../../variables";
 
   .stale,

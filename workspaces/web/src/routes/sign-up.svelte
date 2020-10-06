@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
   import db from "../db/db.js"
   import settings from "../settings"
   import NavBar from "../components/NavBar.svelte"

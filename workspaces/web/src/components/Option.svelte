@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
   export let active
   export let inactive
   export let correct
@@ -18,7 +18,7 @@
   </div>
 </li>
 
-<style>
+<style type="text/scss">
   @import "../variables";
 
   .option {
