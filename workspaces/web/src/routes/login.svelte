@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
   import db from "../db/db.js"
   import NavBar from "../components/NavBar.svelte"
   import Button from "lluis/Button"

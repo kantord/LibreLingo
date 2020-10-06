@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
   import NavBar from "../components/NavBar"
   import Mascot from "../components/Mascot"
   import TwitterButton from "../components/TwitterButton"
@@ -228,7 +228,7 @@
   </section>
 {/if}
 
-<style>
+<style type="text/scss">
   @import "../variables";
 
   .card {

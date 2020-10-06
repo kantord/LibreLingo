@@ -1,4 +1,4 @@
-<script context="module">
+<script lang="typescript" context="module">
   import MarkDownPage, { getMarkDownData } from "../components/MarkDownPage"
   import { _ } from "svelte-i18n"
 
@@ -11,7 +11,7 @@
   }
 </script>
 
-<script>
+<script lang="typescript">
   export let readmeHTML
 </script>
 

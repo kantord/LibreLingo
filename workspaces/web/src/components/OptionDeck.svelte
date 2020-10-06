@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
   import { onMount } from "svelte"
   import hotkeys from "hotkeys-js"
   import shuffle from "lodash.shuffle"
@@ -44,7 +44,7 @@
   {/each}
 </ul>
 
-<style>
+<style type="text/scss">
   @import "../variables";
 
   .options {
