@@ -1,5 +1,4 @@
 <script lang="typescript">
-
   import settings from "../settings"
   import authStore from "../auth"
   import GitHubButton from "./GitHubButton"

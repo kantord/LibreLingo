@@ -84,7 +84,6 @@
 </script>
 
 {#if currentChallenge}
-
   <div class="container" in:scale>
     <section class="section">
       <ProgressBar value="{progress}" />
@@ -96,55 +95,50 @@
             out:fade|local="{{ duration: 300 }}">
             {#if challenge.type === 'cards'}
               <DeckChallenge
-                {skipChallenge}
-                {currentChallenge}
-                {alternativeChallenges}
-                {resolveChallenge}
-                {registerResult}
-                {skipAllChallenges}
-              />
+                skipChallenge="{skipChallenge}"
+                currentChallenge="{currentChallenge}"
+                alternativeChallenges="{alternativeChallenges}"
+                resolveChallenge="{resolveChallenge}"
+                registerResult="{registerResult}"
+                skipAllChallenges="{skipAllChallenges}" />
             {/if}
             {#if challenge.type === 'options'}
               <OptionChallenge
-                {skipChallenge}
-                {currentChallenge}
-                {alternativeChallenges}
-                {resolveChallenge}
-                {registerResult}
-                {skipAllChallenges}
-              />
+                skipChallenge="{skipChallenge}"
+                currentChallenge="{currentChallenge}"
+                alternativeChallenges="{alternativeChallenges}"
+                resolveChallenge="{resolveChallenge}"
+                registerResult="{registerResult}"
+                skipAllChallenges="{skipAllChallenges}" />
             {/if}
             {#if challenge.type === 'shortInput'}
               <ShortInputChallenge
-                {skipChallenge}
-                {languageName}
-                {languageCode}
-                {specialCharacters}
-                {registerResult}
-                {resolveChallenge}
-                {challenge}
-                {skipAllChallenges}
-              />
+                skipChallenge="{skipChallenge}"
+                languageName="{languageName}"
+                languageCode="{languageCode}"
+                specialCharacters="{specialCharacters}"
+                registerResult="{registerResult}"
+                resolveChallenge="{resolveChallenge}"
+                challenge="{challenge}"
+                skipAllChallenges="{skipAllChallenges}" />
             {/if}
             {#if challenge.type === 'listeningExercise'}
               <ListeningChallenge
-                {skipChallenge}
-                {languageCode}
-                {specialCharacters}
-                {registerResult}
-                {resolveChallenge}
-                {challenge} 
-                {skipAllChallenges}
-              />
+                skipChallenge="{skipChallenge}"
+                languageCode="{languageCode}"
+                specialCharacters="{specialCharacters}"
+                registerResult="{registerResult}"
+                resolveChallenge="{resolveChallenge}"
+                challenge="{challenge}"
+                skipAllChallenges="{skipAllChallenges}" />
             {/if}
             {#if challenge.type === 'chips'}
               <ChipsChallenge
-                {registerResult}
-                {resolveChallenge}
-                {challenge}
-                {skipChallenge}
-                {skipAllChallenges}
-              />
+                registerResult="{registerResult}"
+                resolveChallenge="{resolveChallenge}"
+                challenge="{challenge}"
+                skipChallenge="{skipChallenge}"
+                skipAllChallenges="{skipAllChallenges}" />
             {/if}
           </div>
         {/if}
@@ -155,7 +149,11 @@
 
 {#if !currentChallenge}
   <div class="container">
-    <FanfareScreen {courseURL} {rawChallenges} {skillId} {stats} />
+    <FanfareScreen
+      courseURL="{courseURL}"
+      rawChallenges="{rawChallenges}"
+      skillId="{skillId}"
+      stats="{stats}" />
   </div>
 {/if}
 

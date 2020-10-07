@@ -32,14 +32,14 @@
         value="{i}"
         name="{i}"
         id="{i}"
-        {disabled} />
+        disabled="{disabled}" />
       <OptionCard
-        {correct}
+        correct="{correct}"
         active="{selectedOption === i}"
         inactive="{selectedOption !== null && selectedOption !== i}"
         picture="{shuffle(pictures)[0]}"
         number="{i + 1 - (keymap[i] - i) + 1}"
-        {formInTargetLanguage} />
+        formInTargetLanguage="{formInTargetLanguage}" />
     </label>
   {/each}
 </ul>

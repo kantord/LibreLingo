@@ -17,7 +17,7 @@
   export let specialCharacters
   export let skipChallenge
   export let skipAllChallenges
-  
+
   let answer = ""
   let submitted = false
   let correct = null
@@ -63,14 +63,15 @@
     <p class="is-size-1 is-size-2-tablet is-size-4-mobile has-text-centered">
       Type
       <Phrase phrase="{challenge.phrase}" />
-      in {languageName}!
+      in
+      {languageName}!
     </p>
   </div>
   <Columns>
     <Column>
       <InputFieldWithVirtualKeyboard
-        {specialCharacters}
-        {languageCode}
+        specialCharacters="{specialCharacters}"
+        languageCode="{languageCode}"
         disabled="{submitted}"
         bind:value="{answer}" />
     </Column>
@@ -120,7 +121,6 @@
         buttonAction="{finishChallenge}" />
     {/if}
   {/if}
-
 </form>
 
 <style type="text/scss">
