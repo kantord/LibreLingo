@@ -30,13 +30,11 @@
 
 <svelte:head>
   <title>LibreLingo - Development</title>
-  <meta name="description" content="{$_('development.meta.description')}"/>
+  <meta name="description" content="{$_('development.meta.description')}" />
 </svelte:head>
 
 {#if issues === null}
-  <div class="pageloader is-active">
-    <span class="title">LibreLingo</span>
-  </div>
+  <div class="pageloader is-active"><span class="title">LibreLingo</span></div>
 {/if}
 
 <section class="hero is-primary">
@@ -47,9 +45,7 @@
     <div class="container">
       <div class="columns project-introduction">
         <Column size="1/3">
-          <h1 class="title">
-            <img src="images/logo.svg" alt="LibreLingo" />
-          </h1>
+          <h1 class="title"><img src="images/logo.svg" alt="LibreLingo" /></h1>
         </Column>
         <Column>
           <h2 class="subtitle">{$_('index.subtitle')}</h2>
@@ -183,9 +179,7 @@
         <GitHubButton size="default" />
         <TwitterButton />
       </div>
-
     </div>
-
   </div>
 </section>
 

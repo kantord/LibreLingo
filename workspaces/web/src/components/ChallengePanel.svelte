@@ -27,9 +27,7 @@
       {#if skipAllAction}
         <Button on:click="{skipAllAction}">Finish early</Button>
       {/if}
-      {#if message}
-        <b>{message}</b>
-      {/if}
+      {#if message}<b>{message}</b>{/if}
       {#if messageDetail}
         <p>{messageDetail}</p>
       {/if}

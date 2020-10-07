@@ -22,7 +22,11 @@
     "prettierfix": "yarn prettierfix:src && yarn prettierfix:svelte",
     "prettierfix:src": "prettier --write --plugin-search-dir=. ./src/**/*.js",
     "prettierfix:svelte": "prettier --write --plugin-search-dir=. ./src/**/*.svelte",
-    "eslintfix": "eslint ./src --fix"
+    "eslintfix": "eslint ./src --fix",
+    "prettiercheck": "yarn prettiercheck:src && yarn prettiercheck:svelte",
+    "prettiercheck:src": "prettier --plugin-search-dir=. ./src/**/*.js",
+    "prettiercheck:svelte": "prettier --plugin-search-dir=. ./src/**/*.svelte",
+    "eslintcheck": "eslint ./src"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.32",
