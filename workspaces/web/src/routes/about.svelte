@@ -15,4 +15,7 @@
   export let readmeHTML
 </script>
 
-<MarkDownPage {readmeHTML} title="About LibreLingo" description="{$_('about.meta.description')}" />
+<MarkDownPage
+  readmeHTML="{readmeHTML}"
+  title="About LibreLingo"
+  description="{$_('about.meta.description')}" />

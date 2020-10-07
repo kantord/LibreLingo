@@ -76,7 +76,7 @@
       light
       key
       size="small"
-      {disabled}
+      disabled="{disabled}"
       on:click="{handleVirtualKey(specialCharacter)}">
       {specialCharacter}
     </Button>
