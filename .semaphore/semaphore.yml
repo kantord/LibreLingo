@@ -75,7 +75,7 @@ blocks:
             - yarn eslint workspaces/*/cypress
   - name: Eslint typescript check
     dependencies:
-      - Install dependencies
+      - Eslint
     task:
       jobs:
         - name: typescript check
