@@ -24,9 +24,7 @@
 <NavBar dark />
 
 <section class="section">
-
   <div class="container">
-
     <form on:submit|preventDefault="{handleLogin}">
       <h2 class="is-size-2">Log in</h2>
 
@@ -50,5 +48,4 @@
       <Button on:click="{handleLogin}" submit>Log in</Button>
     </form>
   </div>
-
 </section>

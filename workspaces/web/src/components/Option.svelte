@@ -11,9 +11,7 @@
     data-test="{active ? 'active' : inactive ? 'inactive' : 'neutral'}"
     data-test-correct="{correct}">
     <div class="option-content">
-      <div class="is-size-5 is-size-6-mobile">
-        {formInTargetLanguage}
-      </div>
+      <div class="is-size-5 is-size-6-mobile">{formInTargetLanguage}</div>
     </div>
   </div>
 </li>

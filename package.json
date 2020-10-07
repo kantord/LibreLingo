@@ -7,7 +7,8 @@
     "test": "yarn web test",
     "test:ci": "yarn web test:ci",
     "web": "yarn workspace web",
-    "stylefix": "yarn workspaces run prettierfix && yarn workspaces run eslintfix",
+    "stylefix": "yarn web run prettierfix && yarn web run eslintfix",
+    "stylecheck": "yarn web run prettiercheck && yarn web run eslintcheck",
     "docs": "mkdocs serve"
   },
   "workspaces": {
