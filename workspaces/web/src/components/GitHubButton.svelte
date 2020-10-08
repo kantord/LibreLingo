@@ -41,7 +41,7 @@
   outlined
   inverted
   info
-  {size}
+  size="{size}"
   href="https://github.com/kantord/LibreLingo">
   {#if stars}
     <span class="tag is-white">

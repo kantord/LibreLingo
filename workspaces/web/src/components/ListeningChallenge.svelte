@@ -58,7 +58,7 @@
     resolveChallenge()
   }
 
-  const playChallengeVoice = () => playAudio("voice",challenge.audio)
+  const playChallengeVoice = () => playAudio("voice", challenge.audio)
 
   onMount(() => {
     playChallengeVoice()
@@ -88,8 +88,8 @@
     </Column>
     <Column>
       <InputFieldWithVirtualKeyboard
-        {specialCharacters}
-        {languageCode}
+        specialCharacters="{specialCharacters}"
+        languageCode="{languageCode}"
         disabled="{submitted}"
         bind:value="{answer}" />
     </Column>
@@ -130,5 +130,4 @@
         buttonAction="{finishChallenge}" />
     {/if}
   {/if}
-
 </form>

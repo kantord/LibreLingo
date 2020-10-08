@@ -34,13 +34,10 @@
   <meta
     property="og:image"
     content="https://librelingo.app/images/social_cover_1.png" />
-
 </svelte:head>
 
 {#if process.browser !== true}
-  <div class="pageloader is-active">
-    <span class="title">LibreLingo</span>
-  </div>
+  <div class="pageloader is-active"><span class="title">LibreLingo</span></div>
 {/if}
 
 <main>
