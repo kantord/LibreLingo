@@ -78,7 +78,7 @@ blocks:
       - Eslint
     task:
       jobs:
-        - name: typecodestype
+        - name: typecodestyle
           commands:
             - sem-version node 12
             - checkout
