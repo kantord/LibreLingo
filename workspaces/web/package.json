@@ -16,7 +16,7 @@
     "downloadCourseData": "heroku run -a librelingo-course-editor python manage.py dumpdata course --indent=2 > ./dumps/courseData.json",
     "loadCourseDataLocally": "yarn downloadCourseData && cd ../../ && rm -f db.sqlite3 && python manage.py migrate && python manage.py loaddata ./workspaces/web/dumps/courseData.json && cd -",
     "exportCourse": "yarn loadCourseDataLocally && cd ../../ && pipenv run python manage.py exportcourse $1",
-    "percypress": "KNAPSACK_PRO_TEST_FILE_PATTERN=\"cypress/integration/**/*.{feature,features}\" percy exec -- $(npm bin)/knapsack-pro-cypress",
+    "percypress": "sh ./percypress.sh",
     "test": "yarn dev & yarn percypress",
     "test:ci": "yarn start & yarn percypress",
     "prettierfix": "yarn prettierfix:src && yarn prettierfix:svelte",
