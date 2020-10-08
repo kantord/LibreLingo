@@ -19,7 +19,7 @@
 
 ## Project goal
 
-My goal is to start a community-driven language-learning platform that gives it's users and contributors a way to influence its future and adapt it to special requirements.
+My goal is to start a community-driven language-learning platform that gives its users and contributors a way to influence its future and adapt it to special requirements.
 
 To achieve that, I release all source code under the AGPLv3 free software license, which guarantees end users the freedom to run, study, share, and modify the software.
 
