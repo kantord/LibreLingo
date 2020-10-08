@@ -14,4 +14,4 @@
   export let readmeHTML
 </script>
 
-<MarkDownPage {readmeHTML} title="Terms of Service" />
+<MarkDownPage readmeHTML="{readmeHTML}" title="Terms of Service" />
