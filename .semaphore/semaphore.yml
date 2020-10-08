@@ -73,6 +73,18 @@ blocks:
             - checkout
             - cache restore node-$(checksum yarn.lock)
             - yarn eslint workspaces/*/cypress
+  - name: Typescript Code Style Check
+    dependencies:
+      - Eslint
+    task:
+      jobs:
+        - name: typecodestyle
+          commands:
+            - sem-version node 12
+            - checkout
+            - cache restore node-$(checksum yarn.lock)
+            - cache restore packages-web-$(checksum yarn.lock)
+            - yarn stylecheck
   - name: Python Code Style Check
     dependencies: []
     task:

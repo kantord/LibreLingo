@@ -25,12 +25,12 @@
         value="{i}"
         name="{i}"
         id="{i}"
-        {disabled} />
+        disabled="{disabled}" />
       <Option
-        {correct}
+        correct="{correct}"
         active="{selectedOption === i}"
         inactive="{selectedOption !== null && selectedOption !== i}"
-        {formInTargetLanguage} />
+        formInTargetLanguage="{formInTargetLanguage}" />
     </label>
   {/each}
 </ul>
