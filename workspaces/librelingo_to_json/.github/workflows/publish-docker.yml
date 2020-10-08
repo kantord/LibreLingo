@@ -1,0 +1,19 @@
+name: Publish docker image
+
+on:
+  push:
+    tags: "*"
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Publish to GitHub packages
+      uses: whoan/docker-build-with-cache-action@v2
+      with:
+        registry: docker.pkg.github.com
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+        image_name: ${{ github.repository }}/librelingo_to_json
