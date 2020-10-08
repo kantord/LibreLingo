@@ -1,0 +1,51 @@
+[tool.poetry]
+name = "liblili2json"
+version = "0.0.0"
+description = "LibreLingo to JSON"
+authors = ["Dániel Kántor <github@daniel-kantor.com>"]
+license = "MIT"
+readme = "README.rst"
+homepage = "https://github.com/kantord/liblili2json"
+repository = "https://github.com/kantord/liblili2json"
+documentation = "https://liblili2json.readthedocs.io"
+classifiers = [
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+]
+
+[tool.poetry.urls]
+Changelog = "https://github.com/kantord/liblili2json/releases"
+
+[tool.poetry.dependencies]
+python = "^3.6.1"
+click = "^7.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.4.3"
+coverage = {extras = ["toml"], version = "^5.1"}
+safety = "^1.9.0"
+mypy = "^0.780"
+typeguard = "^2.9.1"
+xdoctest = "^0.12.0"
+sphinx = "^3.1.0"
+sphinx-autobuild = "^0.7.1"
+pre-commit = "^2.5.1"
+
+[tool.poetry.scripts]
+liblili2json = "liblili2json.__main__:main"
+
+[tool.coverage.paths]
+source = ["src", "*/site-packages"]
+
+[tool.coverage.run]
+branch = true
+source = ["liblili2json"]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 100
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

@@ -1,0 +1,1 @@
+"""LibreLingo to JSON."""
