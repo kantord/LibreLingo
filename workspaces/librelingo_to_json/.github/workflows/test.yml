@@ -1,0 +1,41 @@
+name: Test
+
+on: 
+  pull_request: {}
+  push:
+    branches: master
+    tags: "*"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
+
+      - name: Install dependencies with pipenv
+        run: |
+          pip install pipenv
+          pipenv install --deploy --dev
+
+      - run: pipenv run isort --recursive --diff .
+      - run: pipenv run black --check .
+      - run: pipenv run flake8
+      - run: pipenv run mypy
+      - run: pipenv run pytest --cov --cov-fail-under=100
+
+  docker-image:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build docker image
+        run: docker build . -t librelingo_to_json:test
+
+      - name: Smoke test docker image
+        run: |
+          docker run --rm librelingo_to_json:test 10
