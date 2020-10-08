@@ -11,9 +11,9 @@ from course.utils import clean_word
 from course.models import LICENSES
 
 
-def opaqueId(obj, salt=""):
+def opaqueId(model_name, id_, salt=""):
     hash = hashlib.sha256()
-    hash.update((obj._meta.model_name + str(obj.pk) + salt).encode('utf-8'))
+    hash.update((model_name + str(id_) + salt).encode('utf-8'))
     return hash.hexdigest()[0:12]
 
 
@@ -81,7 +81,7 @@ def get_course_data(course):
                             for word in skill.learnword_set.all()] + [sentence.formInTargetLanguage
                                                                       for sentence in skill.learnsentence_set.all()],
                 "practiceHref": slugify(skill.name),
-                "id": opaqueId(skill, "Skill"),
+                "id": opaqueId(skill._meta.model_name, "Skill"),
                 "title": skill.name,
                 "levels": get_levels(skill),
             } for skill in module.skill_set.all()]
@@ -129,10 +129,10 @@ def generate_learnword_challenge(
                                                                          learnword.image3]],
              "formInTargetLanguage": formInTargetLanguage,
              "meaningInSourceLanguage": meaningInSourceLanguage,
-             "id": opaqueId(learnword,
+             "id": opaqueId(learnword._meta.model_name,
                             "cards"),
              "priority": 0,
-             "group": opaqueId(learnword),
+             "group": opaqueId(learnword._meta.model_name),
              },
             {"type": "shortInput",
              "pictures": ["{}.jpg".format(image_name) for image_name in [learnword.image1,
@@ -143,20 +143,20 @@ def generate_learnword_challenge(
              "phrase": define_words_in_sentence(course,
                                                 meaningInSourceLanguage,
                                                 True),
-             "id": opaqueId(learnword,
+             "id": opaqueId(learnword._meta.model_name,
                             "shortInput"),
              "priority": 1,
-             "group": opaqueId(learnword),
+             "group": opaqueId(learnword._meta.model_name),
              },
             {"type": "listeningExercise",
              "answer": formInTargetLanguage,
              "meaning": meaningInSourceLanguage,
              "audio": audioId(language_id,
                               formInTargetLanguage),
-             "id": opaqueId(learnword,
+             "id": opaqueId(learnword._meta.model_name,
                             "listeningExercise"),
              "priority": 1,
-             "group": opaqueId(learnword),
+             "group": opaqueId(learnword._meta.model_name),
              },
             ]
 
