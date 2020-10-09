@@ -45,7 +45,7 @@
           .replace(/\s+/g, " ")
           .toLowerCase() === answer.toLowerCase()
           ? ""
-          : `You made a small error. Correct spelling: ${form}`
+          : `Correct spelling: ${form}`
     }
 
     registerResult(correct)
@@ -121,13 +121,25 @@
         incorrect
         buttonAction="{finishChallenge}" />
     {/if}
+
     {#if correct}
-      <ChallengePanel
+      {#if !spellingSuggestion}
+        <ChallengePanel
         message="Correct solution!"
+        messageDetail="{`Meaning: "${challenge.meaning}"`}"
+        buttonText="Continue"
+        correct
+        buttonAction="{finishChallenge}" />
+      {/if}
+
+      {#if spellingSuggestion}
+        <ChallengePanel
+        message="You have a typo!"
         messageDetail="{spellingSuggestion || `Meaning: "${challenge.meaning}"`}"
         buttonText="Continue"
         correct
         buttonAction="{finishChallenge}" />
+      {/if}
     {/if}
   {/if}
 </form>
