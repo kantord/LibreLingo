@@ -18,7 +18,7 @@ describe("evaluateAnswer", () => {
             evaluateAnswer({ answer: "ba", validAnswers: ["foo", "bar"] })
         ).toEqual({
             correct: true,
-            suggestion: "You made a small error. Correct spelling: bar"
+            suggestion: "Correct spelling: bar"
         })
     })
 
