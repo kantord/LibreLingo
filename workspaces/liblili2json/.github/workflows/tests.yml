@@ -1,0 +1,97 @@
+name: Tests
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  tests:
+    name: ${{ matrix.session }} ${{ matrix.python-version }} / ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { python-version: 3.8, os: ubuntu-latest, session: "pre-commit" }
+          - { python-version: 3.8, os: ubuntu-latest, session: "safety" }
+          - { python-version: 3.8, os: ubuntu-latest, session: "mypy" }
+          - { python-version: 3.7, os: ubuntu-latest, session: "mypy" }
+          - { python-version: 3.6, os: ubuntu-latest, session: "mypy" }
+          - { python-version: 3.8, os: ubuntu-latest, session: "tests" }
+          - { python-version: 3.7, os: ubuntu-latest, session: "tests" }
+          - { python-version: 3.6, os: ubuntu-latest, session: "tests" }
+          - { python-version: 3.8, os: windows-latest, session: "tests" }
+          - { python-version: 3.8, os: macos-latest, session: "tests" }
+          - { python-version: 3.8, os: ubuntu-latest, session: "typeguard" }
+          - { python-version: 3.8, os: ubuntu-latest, session: "docs" }
+
+    env:
+      NOXSESSION: ${{ matrix.session }}
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v2.2.0
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Upgrade pip
+        run: |
+          pip install --constraint=.github/workflows/constraints.txt pip
+          pip --version
+
+      - name: Install Poetry
+        run: |
+          pip install --constraint=.github/workflows/constraints.txt poetry
+          poetry --version
+
+      - name: Install Nox
+        run: |
+          pip install --constraint=.github/workflows/constraints.txt nox
+          nox --version
+
+      - name: Compute pre-commit cache key
+        if: matrix.session == 'pre-commit'
+        id: pre-commit-cache
+        shell: python
+        run: |
+          import hashlib
+          import sys
+
+          python = "py{}.{}".format(*sys.version_info[:2])
+          payload = sys.version.encode() + sys.executable.encode()
+          digest = hashlib.sha256(payload).hexdigest()
+          result = "${{ runner.os }}-{}-{}-pre-commit".format(python, digest[:8])
+
+          print("::set-output name=result::{}".format(result))
+
+      - name: Restore pre-commit cache
+        uses: actions/cache@v2
+        if: matrix.session == 'pre-commit'
+        with:
+          path: ~/.cache/pre-commit
+          key: ${{ steps.pre-commit-cache.outputs.result }}-${{ hashFiles('.pre-commit-config.yaml') }}
+          restore-keys: |
+            ${{ steps.pre-commit-cache.outputs.result }}-
+
+      - name: Run Nox
+        run: |
+          nox --force-color --python=${{ matrix.python-version }}
+
+      - name: Upload documentation
+        if: matrix.session == 'docs'
+        uses: actions/upload-artifact@v2
+        with:
+          name: docs
+          path: docs/_build
+
+      - name: Create coverage report
+        if: always() && matrix.session == 'tests'
+        run: |
+          nox --force-color --session=coverage -- xml
+
+      - name: Upload coverage report
+        if: always() && matrix.session == 'tests'
+        uses: codecov/codecov-action@v1.0.7
