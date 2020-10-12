@@ -1,18 +1,18 @@
 import levenshtein from "js-levenshtein"
 
-const id = x => x
+const id = (x: string): string => x
 
-const ignorePunctuation = form => form.replace(/[!¡?¿,.]/g, "")
-const ignoreCasing = form => form.toLowerCase()
-const ignoreWhitespace = form =>
+const ignorePunctuation = (form: string): string => form.replace(/[!¡?¿,.]/g, "")
+const ignoreCasing = (form: string): string => form.toLowerCase()
+const ignoreWhitespace = (form: string): string =>
     form.replace(/^\s+|\s+$/g, "").replace(/\s+/g, " ")
 
-const normalize = form => ignoreWhitespace(ignoreCasing(form))
+const normalize = (form: string): string => ignoreWhitespace(ignoreCasing(form))
 
-const areSentencesSimilar = (sentence1, sentence2) =>
+const areSentencesSimilar = (sentence1: string, sentence2: string): boolean =>
     levenshtein(normalize(sentence1), normalize(sentence2)) <= 1
 
-const areSentencesIdentical = (sentence1, sentence2) =>
+const areSentencesIdentical = (sentence1: string, sentence2: string): boolean =>
     normalize(sentence1) === normalize(sentence2)
 
 const getSuggestion = ({
@@ -21,7 +21,13 @@ const getSuggestion = ({
     mappedForm,
     suggester,
     form
-}) =>
+}: {
+    alwaysSuggest: boolean,
+    answer: string,
+    mappedForm: string,
+    suggester: (form: string) => string,
+    form: string,
+}): string =>
     !alwaysSuggest && areSentencesIdentical(answer, mappedForm)
         ? ""
         : suggester(form)
@@ -32,7 +38,13 @@ const evaluateAnswerRaw = ({
     suggester,
     alwaysSuggest,
     mapper
-}) => {
+}: {
+    validAnswers: string[],
+    answer: string,
+    suggester: (form: string) => string,
+    alwaysSuggest?: boolean,
+    mapper: (form: string) => string,
+}): { correct: boolean; suggestion: string; } => {
     let correct = false,
         suggestion = ""
 
@@ -56,7 +68,7 @@ const evaluateAnswerRaw = ({
     return { correct, suggestion }
 }
 
-export default function evaluateAnswer({ validAnswers, answer }) {
+export default function evaluateAnswer({ validAnswers, answer }: { validAnswers: string[], answer: string }): { correct: boolean; suggestion: string; } {
     let result = evaluateAnswerRaw({
         mapper: id,
         validAnswers,
