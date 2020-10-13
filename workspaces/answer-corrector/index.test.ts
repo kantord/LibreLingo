@@ -1,4 +1,3 @@
-import 'jest';
 import evaluateAnswer from "."
 
 describe("evaluateAnswer", () => {
