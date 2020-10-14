@@ -13,12 +13,12 @@
 
 const percyHealthCheck = require("@percy/cypress/task")
 const cucumber = require("cypress-cucumber-preprocessor").default
-const { renameSync } = require('fs');
+const { renameSync } = require("fs")
 
-module.exports = on => {
+module.exports = (on) => {
     on("task", percyHealthCheck)
     on("file:preprocessor", cucumber())
-		on('after:screenshot', ({ path }) => {
-			renameSync(path, path.replace(/ \(\d*\)/i, ''));
-    });
+    on("after:screenshot", ({ path }) => {
+        renameSync(path, path.replace(/ \(\d*\)/i, ""))
+    })
 }

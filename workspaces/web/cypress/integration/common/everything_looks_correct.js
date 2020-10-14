@@ -5,5 +5,5 @@ Then("{} looks correct", (snapshotsName) => {
     cy.document().its("fonts.status").should("equal", "loaded")
     cy.percySnapshot(snapshotsName)
 
-		cy.generateTranslationScreenshots()
+    cy.generateTranslationScreenshots()
 })
