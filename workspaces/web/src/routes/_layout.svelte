@@ -10,7 +10,6 @@
 <script lang="typescript">
   import settings from "../settings"
 
-  export let segment
 </script>
 
 <svelte:head>

@@ -12,7 +12,6 @@
   import Column from "lluis/Column"
   import Columns from "lluis/Columns"
 
-  export let rawChallenges
   export let courseURL
   export let skillId
   export let stats

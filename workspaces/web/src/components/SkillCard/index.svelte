@@ -90,26 +90,6 @@
     $stale-color: lighten(desaturate($green, 45%), 20%);
     background: white;
 
-    &[data-completed="true"] {
-      background-color: $completed-color;
-
-      &[data-stale="true"] {
-        background-color: $stale-color;
-
-        & > .icon {
-          position: absolute;
-          right: 1em;
-          top: 0.5em;
-        }
-      }
-
-      .title,
-      .media-content,
-      .icon {
-        color: $white;
-      }
-    }
-
     & > .icon {
       position: absolute;
       right: 0.5em;

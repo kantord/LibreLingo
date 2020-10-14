@@ -40,7 +40,7 @@
               </Button>
 
               <Button primary href="development">Development progress</Button>
-              <a href="/devtools" class="is-invisible"></a>
+              <a href="/devtools" class="is-invisible">Dev Tools</a>
             </div>
           </Box>
         </Column>
@@ -56,9 +56,6 @@
 <style type="text/scss">
   @import "../variables";
 
-  .title img {
-    height: 3em;
-  }
 
   .hero {
     background-color: $primary;
