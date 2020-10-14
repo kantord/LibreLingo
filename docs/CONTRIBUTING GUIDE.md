@@ -6,7 +6,7 @@ If you are interested in contributing to course development, please fill the [th
 
 ### Development and other forms of contribution
 
-Check the latest **Development documentation** is available on [Read the Docs](https://librelingo.readthedocs.io/en/latest/)
+Check the latest **Development documentation** on [Read the Docs](https://librelingo.readthedocs.io/en/latest/)
 
 This project has 2 main components
 
