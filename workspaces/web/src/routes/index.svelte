@@ -6,6 +6,7 @@
   import Column from "lluis/Column"
   import Columns from "lluis/Columns"
   import { _ } from "svelte-i18n"
+  import Translate from "../Translate.svelte"
 </script>
 
 <svelte:head>
@@ -25,21 +26,36 @@
         <Column>
           <Box>
             <h1 class="title">LibreLingo</h1>
-            <h2 class="subtitle">{$_('index.subtitle')}</h2>
+            <h2 class="subtitle">
+              <Translate key="index.subtitle">
+                an experiment to create a community driven language-learning
+                platform
+              </Translate>
+            </h2>
             <div class="buttons">
               <Button primary href="course/spanish-from-english">
-                {$_('index.start_spanish_course')}
+                <Translate key="index.start_spanish_course">
+                  Start learning Spanish
+                </Translate>
               </Button>
 
               <Button primary hidden href="course/german-from-english">
-                {$_('index.start_german_course')}
+                <Translate key="index.start_german_course">
+                  Start learning German
+                </Translate>
               </Button>
 
               <Button primary href="about">
-                {$_('index.about_librelingo')}
+                <Translate key="index.about_librelingo">
+                  About LibreLingo
+                </Translate>
               </Button>
 
-              <Button primary href="development">Development progress</Button>
+              <Button primary href="development">
+                <Translate key="index.development_progress">
+                  About LibreLingo
+                </Translate>
+              </Button>
               <a href="/devtools" class="is-invisible">Dev Tools</a>
             </div>
           </Box>
