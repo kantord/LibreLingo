@@ -2,6 +2,7 @@
   "name": "web",
   "description": "TODO",
   "version": "0.0.1",
+  "private": true,
   "scripts": {
     "cy:run": "cypress run",
     "cy:open": "cypress open",
