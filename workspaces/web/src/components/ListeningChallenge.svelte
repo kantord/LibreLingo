@@ -57,7 +57,7 @@
     submitted = false
     resolveChallenge()
   }
-
+  
   const playChallengeVoice = () => playAudio("voice", challenge.audio)
 
   onMount(() => {
@@ -137,7 +137,7 @@
         message="You have a typo!"
         messageDetail="{spellingSuggestion || `Meaning: "${challenge.meaning}"`}"
         buttonText="Continue"
-        correct
+        typo
         buttonAction="{finishChallenge}" />
       {/if}
     {/if}

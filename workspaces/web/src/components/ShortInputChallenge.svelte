@@ -127,7 +127,7 @@
           message="You have a typo!"
           messageDetail="{spellingSuggestion}"
           buttonText="Continue"
-          correct
+          typo
           buttonAction="{finishChallenge}" />
       {/if}
     {/if}
