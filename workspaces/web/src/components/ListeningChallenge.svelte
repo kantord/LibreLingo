@@ -45,7 +45,7 @@
           .replace(/\s+/g, " ")
           .toLowerCase() === answer.toLowerCase()
           ? ""
-          : `You made a small error. Correct spelling: ${form}`
+          : `Correct spelling: ${form}`
     }
 
     registerResult(correct)
@@ -57,7 +57,7 @@
     submitted = false
     resolveChallenge()
   }
-
+  
   const playChallengeVoice = () => playAudio("voice", challenge.audio)
 
   onMount(() => {
@@ -121,13 +121,25 @@
         incorrect
         buttonAction="{finishChallenge}" />
     {/if}
+
     {#if correct}
-      <ChallengePanel
+      {#if !spellingSuggestion}
+        <ChallengePanel
         message="Correct solution!"
-        messageDetail="{spellingSuggestion || `Meaning: "${challenge.meaning}"`}"
+        messageDetail="{`Meaning: "${challenge.meaning}"`}"
         buttonText="Continue"
         correct
         buttonAction="{finishChallenge}" />
+      {/if}
+
+      {#if spellingSuggestion}
+        <ChallengePanel
+        message="You have a typo!"
+        messageDetail="{spellingSuggestion || `Meaning: "${challenge.meaning}"`}"
+        buttonText="Continue"
+        typo
+        buttonAction="{finishChallenge}" />
+      {/if}
     {/if}
   {/if}
 </form>

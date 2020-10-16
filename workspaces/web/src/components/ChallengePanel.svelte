@@ -6,6 +6,7 @@
   export let buttonAction = null
   export let correct = false
   export let incorrect = false
+  export let typo = false
   export let message
   export let messageDetail = null
   export let submit = null
@@ -16,6 +17,7 @@
 <div
   class:correct
   class:incorrect
+  class:typo
   class="panel is-primary"
   out:slide|local="{{ duration: 100 }}"
   in:slide|local="{{ duration: 300, delay: 50 }}">
@@ -65,6 +67,11 @@
   .incorrect {
     color: $text-invert;
     background: $pink;
+  }
+
+  .typo {
+    color: $text-invert;
+    background: $yellow;
   }
 
   .panel .right {

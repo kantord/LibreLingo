@@ -43,15 +43,15 @@ Feature: Listening exercise
     Given I open "/course/test/skill/_listening_test0"
     And I type "          pierro      "
     And I click "Submit"
-    Then I read "Correct solution"
-    And I read "You made a small error. Correct spelling: perro"
+    Then I read "You have a typo!"
+    And I read "Correct spelling: perro"
 
   Scenario: Submitting correct answer with a small casing error
     Given I open "/course/test/skill/_listening_test0"
     And I type "PerRo"
     And I click "Submit"
-    Then I read "Correct solution"
-    And I don't read "You made a small error. Correct spelling: perro"
+    Then I read "Correct solution!"
+    And I don't read "Correct spelling: perro"
 
   Scenario: Going to the next challenge
     Given I open "/course/test/skill/_listening_test2"
