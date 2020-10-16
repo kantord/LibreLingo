@@ -10,7 +10,7 @@ import {
     faUser,
     faLock,
     faEnvelope,
-	faHeart,
+    faHeart,
 } from "@fortawesome/free-solid-svg-icons"
 import { faTwitter } from "@fortawesome/free-brands-svg-icons"
 
