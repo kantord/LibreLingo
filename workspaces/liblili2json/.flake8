@@ -1,0 +1,7 @@
+[flake8]
+select = B,B9,C,D,DAR,E,F,N,RST,S,W
+ignore = E203,E501,W503
+max-line-length = 80
+max-complexity = 10
+docstring-convention = google
+per-file-ignores = tests/*:S101
