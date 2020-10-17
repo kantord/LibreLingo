@@ -29,7 +29,7 @@ blocks:
             - sem-version node 12
             - checkout
             - cache restore node-$(checksum yarn.lock)
-            - yarn jest
+            - yarn ts-jest
     dependencies:
       - Eslint
   - name: Cypress
