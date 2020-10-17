@@ -23,16 +23,18 @@
   in:slide|local="{{ duration: 300, delay: 50 }}">
   <div class="panel-block">
     <div class="control">
-      {#if skipAction}
-        <Button on:click="{skipAction}">Skip</Button>
-      {/if}
-      {#if skipAllAction}
-        <Button on:click="{skipAllAction}">Finish early</Button>
-      {/if}
-      {#if message}<b>{message}</b>{/if}
-      {#if messageDetail}
-        <p>{messageDetail}</p>
-      {/if}
+      <div class="left">
+        {#if skipAction}
+          <Button on:click="{skipAction}">Skip</Button>
+        {/if}
+        {#if skipAllAction}
+          <Button on:click="{skipAllAction}">Finish early</Button>
+        {/if}
+        {#if message}<b>{message}</b>{/if}
+        {#if messageDetail}
+          <p>{messageDetail}</p>
+        {/if}
+      </div>
       <div class="right">
         {#if buttonAction}
           <Button primary type="submit" on:click="{buttonAction}">
@@ -52,6 +54,7 @@
 
   .panel {
     position: fixed;
+    min-height: 12vh;
     left: 0;
     bottom: 0;
     right: 0;
@@ -73,12 +76,19 @@
     color: $text-invert;
     background: $yellow;
   }
-
-  .panel .right {
+  .left {
+    float: left;
+  }
+  .right {
     float: right;
   }
 
   .panel-block {
     color: inherit;
+    padding-top: 1em;
+    margin: 0 10em;
+    @include mobile {
+      margin: 0;
+    }
   }
 </style>
