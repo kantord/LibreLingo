@@ -73,7 +73,7 @@ export default function evaluateAnswer({ validAnswers, answer }: { validAnswers:
         mapper: id,
         validAnswers,
         answer,
-        suggester: form => `You made a small error. Correct spelling: ${form}`
+        suggester: form => `Correct spelling: ${form}`
     })
 
     if (!result.correct) {
