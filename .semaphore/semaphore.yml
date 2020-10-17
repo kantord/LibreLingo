@@ -122,6 +122,18 @@ blocks:
             - cache restore packages-web-$(checksum yarn.lock)
             - yarn web build
             - cache store sapper-build-$SEMAPHORE_GIT_PR_SHA workspaces/web/__sapper__
+  - name: Python dependencies
+    dependencies: []
+    task:
+      jobs:
+        - name: poetry install
+          commands:
+            - sem-version python 3.8
+            - checkout
+            - pip install poetry
+            - cd ./workspaces/liblili2json
+            - poetry install
+            - pycodestyle . --exclude="course/migrations" --max-line-length 119
 promotions:
   - name: Deploy to production
     pipeline_file: pipeline_2.yml
