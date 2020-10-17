@@ -40,7 +40,7 @@
 
   .options {
     list-style: none;
-    padding: 0;
+    padding-top: 1.5em;
     margin: 0;
     margin-left: -0.5em;
     margin-right: -0.5em;

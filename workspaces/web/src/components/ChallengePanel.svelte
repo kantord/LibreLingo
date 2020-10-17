@@ -52,6 +52,7 @@
 
   .panel {
     position: fixed;
+    min-height: 12vh;
     left: 0;
     bottom: 0;
     right: 0;
@@ -80,5 +81,10 @@
 
   .panel-block {
     color: inherit;
+    padding-top: 1em;
+      margin: 0 10em;
+    @include mobile {
+      margin: 0;
+    }
   }
 </style>
