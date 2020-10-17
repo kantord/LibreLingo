@@ -161,4 +161,7 @@
   .section {
     padding: 1.5em;
   }
+  .challenge {
+    padding: 2em 0;
+  }
 </style>
