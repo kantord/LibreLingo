@@ -1,3 +1,7 @@
+"""
+Export LibreLingo courses in the JSON format expected by the web app
+"""
+
 from collections import namedtuple
 
 __version__ = '0.1.0'
@@ -10,6 +14,10 @@ Course = namedtuple("Course", [
 
 
 def get_course_data(course):
+    """
+    Format Course according to the JSON structure
+    """
+
     return {
         "languageName": course.language_name,
         "languageCode": course.language_code,
