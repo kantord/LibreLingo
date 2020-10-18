@@ -113,12 +113,23 @@
         buttonAction="{finishChallenge}" />
     {/if}
     {#if correct}
+      {#if !spellingSuggestion}
       <ChallengePanel
         message="Correct solution!"
-        messageDetail="{spellingSuggestion}"
+        messageDetail=""
         buttonText="Continue"
         correct
         buttonAction="{finishChallenge}" />
+      {/if}
+
+      {#if spellingSuggestion}
+        <ChallengePanel
+          message="You have a typo!"
+          messageDetail="{spellingSuggestion}"
+          buttonText="Continue"
+          typo
+          buttonAction="{finishChallenge}" />
+      {/if}
     {/if}
   {/if}
 </form>

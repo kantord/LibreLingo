@@ -1,6 +1,7 @@
 <script lang="typescript">
   import settings from "../settings"
   import authStore from "../auth"
+  import SponsorButton from "./SponsorButton"
   import GitHubButton from "./GitHubButton"
   import Icon from "lluis/Icon.svelte"
   import Button from "lluis/Button"
@@ -26,7 +27,8 @@
   <div class="navbar-end">
     <div class="navbar-item">
       <div class="buttons">
-        <GitHubButton />
+		<SponsorButton />
+        <GitHubButton />		
         {#if hasAuth && settings.features.authEnabled}
           {#if $authStore.user}
             <Button size="small" outlined inverted info>
