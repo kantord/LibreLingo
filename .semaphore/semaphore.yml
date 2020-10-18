@@ -122,6 +122,33 @@ blocks:
             - cache restore packages-web-$(checksum yarn.lock)
             - yarn web build
             - cache store sapper-build-$SEMAPHORE_GIT_PR_SHA workspaces/web/__sapper__
+  - name: Python dependencies
+    dependencies: []
+    task:
+      jobs:
+        - name: poetry install
+          commands:
+            - sem-version python 3.8
+            - checkout
+            - cache restore python-dependencies
+            - pip install poetry
+            - cd ./workspaces/liblili2json
+            - poetry install
+            - cache store python-dependencies
+  - name: Python lint
+    dependencies:
+      - Python dependencies
+    task:
+      jobs:
+        - name: pylint
+          commands:
+            - sem-version python 3.8
+            - checkout
+            - cache restore python-dependencies
+            - cd ./workspaces/liblili2json
+            - poetry run pylint liblili2json
+            - poetry run pylint tests
+            - cache store python-dependencies
 promotions:
   - name: Deploy to production
     pipeline_file: pipeline_2.yml
