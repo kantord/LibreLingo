@@ -11,6 +11,7 @@
   export let submit = null
   export let skipAction = null
   export let skipAllAction = null
+  export let skipAllVoice = null
 </script>
 
 <div
@@ -26,6 +27,9 @@
       {/if}
       {#if skipAllAction}
         <Button on:click="{skipAllAction}">Finish early</Button>
+      {/if}
+      {#if skipAllVoice}
+      <Button on:click="{skipAllVoice}">Can't listen now</Button>
       {/if}
       {#if message}
         <b>{message}</b>
