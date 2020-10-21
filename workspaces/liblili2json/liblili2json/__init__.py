@@ -10,7 +10,19 @@ Course = namedtuple("Course", [
     "language_name",
     "language_code",
     "special_characters",
+    "modules"
 ])
+
+Module = namedtuple("Module", [
+    "title",
+    "skills",
+])
+
+
+def get_module_summary(module):
+    return {
+        "title": module.title
+    }
 
 
 def get_course_data(course):
@@ -21,5 +33,8 @@ def get_course_data(course):
     return {
         "languageName": course.language_name,
         "languageCode": course.language_code,
-        "specialCharacters": course.special_characters
+        "specialCharacters": course.special_characters,
+        "modules": [
+            get_module_summary(module) for module in course.modules
+        ]
     }
