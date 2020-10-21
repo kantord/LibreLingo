@@ -60,11 +60,9 @@ Feature: Listening exercise
     And I click "Submit"
     Then I don't see a "Skip" button
     And I click "Continue"
-    Then I see a "Skip" button
-    And I see a "Can't listen now" button
-    And I see a "Finish early" button
+    Then I see a panel with only a skip and a can't listen now and a finish early button
 
-  Scenario: Skipping a listening excercise
+  Scenario: Going to the next challenge with keyboard only
     Given I open "/course/test/skill/_listening_test2"
     And I type "agua"
     And I hit the enter key
