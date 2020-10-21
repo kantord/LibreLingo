@@ -89,8 +89,8 @@
     </Column>
     <Column>
       <InputFieldWithVirtualKeyboard
-        {specialCharacters}
-        {languageCode}
+        specialCharacters="{specialCharacters}"
+        languageCode="{languageCode}"
         disabled="{submitted}"
         bind:value="{answer}" />
     </Column>
@@ -133,5 +133,4 @@
         buttonAction="{finishChallenge}" />
     {/if}
   {/if}
-
 </form>

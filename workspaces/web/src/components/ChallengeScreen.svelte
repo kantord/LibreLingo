@@ -30,7 +30,7 @@
   let currentChallenge = remainingChallenges.shift()
   let solvedChallenges = []
   let skipAllChallenges = null
-  
+
   let progress = 0
   let stats = {
     correct: 0,
@@ -84,16 +84,22 @@
   }
 
   $: skipAllVoice = () => {
-    let filteredRemainingChallenges = remainingChallenges.filter((challenge) => {
-      if (challenge.type === "listeningExercise") {
-        stats.skipped++
-        return false
-      } else {
-        return true
+    let filteredRemainingChallenges = remainingChallenges.filter(
+      (challenge) => {
+        if (challenge.type === "listeningExercise") {
+          stats.skipped++
+          return false
+        } else {
+          return true
+        }
       }
-    })
+    )
 
-    remainingChallenges.splice(0, remainingChallenges.length, ...filteredRemainingChallenges)
+    remainingChallenges.splice(
+      0,
+      remainingChallenges.length,
+      ...filteredRemainingChallenges
+    )
     stats.skipped++
     resolveChallenge()
   }
@@ -111,56 +117,51 @@
             out:fade|local="{{ duration: 300 }}">
             {#if challenge.type === 'cards'}
               <DeckChallenge
-                {skipChallenge}
-                {currentChallenge}
-                {alternativeChallenges}
-                {resolveChallenge}
-                {registerResult}
-                {skipAllChallenges}
-              />
+                skipChallenge="{skipChallenge}"
+                currentChallenge="{currentChallenge}"
+                alternativeChallenges="{alternativeChallenges}"
+                resolveChallenge="{resolveChallenge}"
+                registerResult="{registerResult}"
+                skipAllChallenges="{skipAllChallenges}" />
             {/if}
             {#if challenge.type === 'options'}
               <OptionChallenge
-                {skipChallenge}
-                {currentChallenge}
-                {alternativeChallenges}
-                {resolveChallenge}
-                {registerResult}
-                {skipAllChallenges}
-              />
+                skipChallenge="{skipChallenge}"
+                currentChallenge="{currentChallenge}"
+                alternativeChallenges="{alternativeChallenges}"
+                resolveChallenge="{resolveChallenge}"
+                registerResult="{registerResult}"
+                skipAllChallenges="{skipAllChallenges}" />
             {/if}
             {#if challenge.type === 'shortInput'}
               <ShortInputChallenge
-                {skipChallenge}
-                {languageName}
-                {languageCode}
-                {specialCharacters}
-                {registerResult}
-                {resolveChallenge}
-                {challenge}
-                {skipAllChallenges}
-              />
+                skipChallenge="{skipChallenge}"
+                languageName="{languageName}"
+                languageCode="{languageCode}"
+                specialCharacters="{specialCharacters}"
+                registerResult="{registerResult}"
+                resolveChallenge="{resolveChallenge}"
+                challenge="{challenge}"
+                skipAllChallenges="{skipAllChallenges}" />
             {/if}
             {#if challenge.type === 'listeningExercise'}
               <ListeningChallenge
-                {skipChallenge}
-                {languageCode}
-                {specialCharacters}
-                {registerResult}
-                {resolveChallenge}
-                {challenge} 
-                {skipAllChallenges}
-                {skipAllVoice}
-              />
+                skipChallenge="{skipChallenge}"
+                languageCode="{languageCode}"
+                specialCharacters="{specialCharacters}"
+                registerResult="{registerResult}"
+                resolveChallenge="{resolveChallenge}"
+                challenge="{challenge}"
+                skipAllChallenges="{skipAllChallenges}"
+                skipAllVoice="{skipAllVoice}" />
             {/if}
             {#if challenge.type === 'chips'}
               <ChipsChallenge
-                {registerResult}
-                {resolveChallenge}
-                {challenge}
-                {skipChallenge}
-                {skipAllChallenges}
-              />
+                registerResult="{registerResult}"
+                resolveChallenge="{resolveChallenge}"
+                challenge="{challenge}"
+                skipChallenge="{skipChallenge}"
+                skipAllChallenges="{skipAllChallenges}" />
             {/if}
           </div>
         {/if}
@@ -171,7 +172,11 @@
 
 {#if !currentChallenge}
   <div class="container">
-    <FanfareScreen {courseURL} {rawChallenges} {skillId} {stats} />
+    <FanfareScreen
+      courseURL="{courseURL}"
+      rawChallenges="{rawChallenges}"
+      skillId="{skillId}"
+      stats="{stats}" />
   </div>
 {/if}
 

@@ -29,11 +29,9 @@
         <Button on:click="{skipAllAction}">Finish early</Button>
       {/if}
       {#if skipAllVoice}
-      <Button on:click="{skipAllVoice}">Can't listen now</Button>
+        <Button on:click="{skipAllVoice}">Can't listen now</Button>
       {/if}
-      {#if message}
-        <b>{message}</b>
-      {/if}
+      {#if message}<b>{message}</b>{/if}
       {#if messageDetail}
         <p>{messageDetail}</p>
       {/if}
