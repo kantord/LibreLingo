@@ -3,7 +3,7 @@ const path = require("path")
 const config = require("sapper/config/webpack.js")
 const pkg = require("./package.json")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
-const sass = require("svelte-preprocess-sass").sass
+const {typescript, sass} = require("svelte-preprocess")
 const CopyPlugin = require("copy-webpack-plugin")
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
     .BundleAnalyzerPlugin
@@ -12,7 +12,7 @@ const mode = process.env.NODE_ENV
 const dev = mode === "development"
 
 const alias = { svelte: path.resolve("node_modules", "svelte") }
-const extensions = [".mjs", ".js", ".json", ".svelte", ".html"]
+const extensions = [".mjs", ".js", ".ts", ".json", ".svelte", ".html"]
 const mainFields = ["svelte", "module", "browser", "main"]
 
 module.exports = {
@@ -63,14 +63,21 @@ module.exports = {
                     use: {
                         loader: "svelte-loader",
                         options: {
-                            preprocess: {
-                                style: sass({}, { all: true }),
-                            },
+                            preprocess: [
+                                // TO-DO: config?
+                                typescript({}),
+                                sass({}),
+                            ],
                             dev,
                             hydratable: true,
                             hotReload: false, // pending https://github.com/sveltejs/svelte/issues/2377
                         },
                     },
+                },
+                // TO-DO: config?
+                { 
+                    test: /\.ts$/, 
+                    loader: "ts-loader" ,
                 },
             ],
         },
@@ -117,14 +124,21 @@ module.exports = {
                     use: {
                         loader: "svelte-loader",
                         options: {
-                            preprocess: {
-                                style: sass({}, { all: true }),
-                            },
+                            preprocess: [
+                                // TO-DO: config?
+                                typescript({}),
+                                sass({}),
+                            ],
                             css: false,
                             generate: "ssr",
                             dev,
                         },
                     },
+                },
+                // TO-DO: config?
+                { 
+                    test: /\.ts$/, 
+                    loader: "ts-loader" ,
                 },
             ],
         },

@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
   export let imageSet
   export let completed
   export let stale
@@ -10,7 +10,7 @@
   <img src="{`images/${imageSet[2]}_tiny.jpg`}" alt="" />
 </figure>
 
-<style>
+<style type="text/scss">
   @import "../../variables";
 
   .image-set {

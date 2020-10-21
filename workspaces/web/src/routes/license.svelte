@@ -1,4 +1,4 @@
-<script context="module">
+<script lang="typescript" context="module">
   import MarkDownPage, { getMarkDownData } from "../components/MarkDownPage"
 
   export async function preload(page, session) {
@@ -10,8 +10,8 @@
   }
 </script>
 
-<script>
+<script lang="typescript">
   export let readmeHTML
 </script>
 
-<MarkDownPage {readmeHTML} title="License" />
+<MarkDownPage readmeHTML="{readmeHTML}" title="License" />

@@ -1,11 +1,11 @@
-<script>
+<script lang="typescript">
   import { onMount } from "svelte"
   import hotkeys from "hotkeys-js"
   import levenshtein from "js-levenshtein"
   import ChallengePanel from "./ChallengePanel"
   import Icon from "lluis/Icon"
   import InputFieldWithVirtualKeyboard from "./InputFieldWithVirtualKeyboard"
-  import playVoice from "../media/voice"
+  import { playAudio } from "../media/sound"
   import Button from "lluis/Button"
   import Column from "lluis/Column"
   import Columns from "lluis/Columns"
@@ -46,7 +46,7 @@
           .replace(/\s+/g, " ")
           .toLowerCase() === answer.toLowerCase()
           ? ""
-          : `You made a small error. Correct spelling: ${form}`
+          : `Correct spelling: ${form}`
     }
 
     registerResult(correct)
@@ -58,8 +58,8 @@
     submitted = false
     resolveChallenge()
   }
-
-  const playChallengeVoice = () => playVoice(challenge.audio)
+  
+  const playChallengeVoice = () => playAudio("voice", challenge.audio)
 
   onMount(() => {
     playChallengeVoice()
@@ -124,13 +124,25 @@
         incorrect
         buttonAction="{finishChallenge}" />
     {/if}
+
     {#if correct}
-      <ChallengePanel
+      {#if !spellingSuggestion}
+        <ChallengePanel
         message="Correct solution!"
-        messageDetail="{spellingSuggestion || `Meaning: "${challenge.meaning}"`}"
+        messageDetail="{`Meaning: "${challenge.meaning}"`}"
         buttonText="Continue"
         correct
         buttonAction="{finishChallenge}" />
+      {/if}
+
+      {#if spellingSuggestion}
+        <ChallengePanel
+        message="You have a typo!"
+        messageDetail="{spellingSuggestion || `Meaning: "${challenge.meaning}"`}"
+        buttonText="Continue"
+        typo
+        buttonAction="{finishChallenge}" />
+      {/if}
     {/if}
   {/if}
 </form>

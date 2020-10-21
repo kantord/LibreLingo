@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
   import db from "../db/db.js"
   import NavBar from "../components/NavBar.svelte"
   import Button from "lluis/Button"
@@ -24,9 +24,7 @@
 <NavBar dark />
 
 <section class="section">
-
   <div class="container">
-
     <form on:submit|preventDefault="{handleLogin}">
       <h2 class="is-size-2">Log in</h2>
 
@@ -50,5 +48,4 @@
       <Button on:click="{handleLogin}" submit>Log in</Button>
     </form>
   </div>
-
 </section>
