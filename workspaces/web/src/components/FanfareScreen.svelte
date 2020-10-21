@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
   import { scale } from "svelte/transition"
   import db from "../db/db"
   import savePractice from "../db/skill/savePractice"
@@ -22,7 +22,7 @@
   })
 
   onMount(async () => {
-    await savePractice({ id: skillId, ...stats })
+    await savePractice(db, { id: skillId, ...stats })
   })
 
   onMount(() => {
@@ -46,7 +46,9 @@
           <div class="is-centered-mobile">
             <h1 class="title is-size-2 is-size-3-mobile">Lesson completed!</h1>
             <h2 class="subtitle">
-              You've completed {rawChallenges.length} challenges
+              You've completed
+              {stats.correct}
+              challenges
             </h2>
             <Button size="medium" href="{courseURL}">
               Continue to course page
@@ -62,7 +64,7 @@
   </div>
 </section>
 
-<style>
+<style type="text/scss">
   @import "../variables";
 
   @include from($tablet) {

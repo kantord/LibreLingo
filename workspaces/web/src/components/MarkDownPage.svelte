@@ -1,4 +1,4 @@
-<script context="module">
+<script lang="typescript" context="module">
   export async function getMarkDownData(markdownModule) {
     const remark = await require("remark")
     const markdown = await import("remark-parse")
@@ -15,15 +15,17 @@
   }
 </script>
 
-<script>
+<script lang="typescript">
   import NavBar from "../components/NavBar"
 
   export let readmeHTML
   export let title
+  export let description
 </script>
 
 <svelte:head>
   <title>{title}</title>
+  <meta name="description" content="{description}" />
 </svelte:head>
 
 <NavBar dark />

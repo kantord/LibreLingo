@@ -1,8 +1,8 @@
-<script>
+<script lang="typescript">
   import { createEventDispatcher } from "svelte"
 
   const dispatch = createEventDispatcher()
-  export let href
+  export let href = null
   export let primary = false
   export let light = false
   export let info = false
@@ -73,7 +73,7 @@
   {/if}
 {/if}
 
-<style>
+<style type="text/scss">
   .button.customColor {
     background-color: var(--color);
   }

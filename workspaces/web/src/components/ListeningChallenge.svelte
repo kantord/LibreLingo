@@ -1,11 +1,11 @@
-<script>
+<script lang="typescript">
   import { onMount } from "svelte"
   import hotkeys from "hotkeys-js"
   import levenshtein from "js-levenshtein"
   import ChallengePanel from "./ChallengePanel"
   import Icon from "lluis/Icon"
   import InputFieldWithVirtualKeyboard from "./InputFieldWithVirtualKeyboard"
-  import playVoice from "../media/voice"
+  import { playAudio } from "../media/sound"
   import Button from "lluis/Button"
   import Column from "lluis/Column"
   import Columns from "lluis/Columns"
@@ -15,7 +15,11 @@
   export let resolveChallenge
   export let languageCode
   export let specialCharacters
-  let answer = null
+  export let skipChallenge
+  export let skipAllChallenges
+  export let skipAllVoice
+
+  let answer = ""
   let submitted = false
   let correct = null
   let spellingSuggestion = ""
@@ -42,7 +46,7 @@
           .replace(/\s+/g, " ")
           .toLowerCase() === answer.toLowerCase()
           ? ""
-          : `You made a small error. Correct spelling: ${form}`
+          : `Correct spelling: ${form}`
     }
 
     registerResult(correct)
@@ -54,8 +58,8 @@
     submitted = false
     resolveChallenge()
   }
-
-  const playChallengeVoice = () => playVoice(challenge.audio)
+  
+  const playChallengeVoice = () => playAudio("voice", challenge.audio)
 
   onMount(() => {
     playChallengeVoice()
@@ -85,15 +89,30 @@
     </Column>
     <Column>
       <InputFieldWithVirtualKeyboard
-        {specialCharacters}
-        {languageCode}
+        specialCharacters="{specialCharacters}"
+        languageCode="{languageCode}"
         disabled="{submitted}"
         bind:value="{answer}" />
     </Column>
   </Columns>
 
   {#if answer && !submitted}
-    <ChallengePanel message="" buttonText="Submit" submit />
+    <ChallengePanel
+      message=""
+      buttonText="Submit"
+      submit
+      skipAction="{skipChallenge}"
+      skipAllAction="{skipAllChallenges}"
+      skipAllVoice="{skipAllVoice}" />
+  {/if}
+
+  {#if answer === '' && !submitted}
+    <ChallengePanel
+      message="{null}"
+      buttonText="{null}"
+      skipAction="{skipChallenge}"
+      skipAllAction="{skipAllChallenges}"
+      skipAllVoice="{skipAllVoice}" />
   {/if}
 
   {#if submitted}
@@ -105,14 +124,25 @@
         incorrect
         buttonAction="{finishChallenge}" />
     {/if}
+
     {#if correct}
-      <ChallengePanel
+      {#if !spellingSuggestion}
+        <ChallengePanel
         message="Correct solution!"
-        messageDetail="{spellingSuggestion || `Meaning: "${challenge.meaning}"`}"
+        messageDetail="{`Meaning: "${challenge.meaning}"`}"
         buttonText="Continue"
         correct
         buttonAction="{finishChallenge}" />
+      {/if}
+
+      {#if spellingSuggestion}
+        <ChallengePanel
+        message="You have a typo!"
+        messageDetail="{spellingSuggestion || `Meaning: "${challenge.meaning}"`}"
+        buttonText="Continue"
+        typo
+        buttonAction="{finishChallenge}" />
+      {/if}
     {/if}
   {/if}
-
 </form>

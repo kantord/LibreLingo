@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
   export let status
   export let error
 
@@ -17,7 +17,7 @@
   <pre>{error.stack}</pre>
 {/if}
 
-<style>
+<style type="text/scss">
   h1,
   p {
     margin: 0 auto;

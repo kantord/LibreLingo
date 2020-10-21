@@ -59,6 +59,12 @@ To be able to run the course editor locally, first we have to install migrations
 python manage.py migrate
 ```
 
+On OSX, you will have to specifically use python3:
+
+```
+python3 manage.py migrate
+```
+
 You are able to run the course editor now, but you will need to create a user to actually log in into the interface. Let's do it:
 
 ```
@@ -102,6 +108,8 @@ The course editor is in a very early stage, and is only usable by developers. Si
 The course editor is implemented as a django project in the `course_editor` folder.
 
 If you want to set up your course editor with real data, you can find a database dump here: `src/courses/spanish-from-english/courseData.json`
+
+To export a course created from the course editor directly to the frontend, use the command `pipenv run python manage.py exportcourse $COURSE_ID`, where `$COURSE_ID` is the ID of the course in the database.
 
 Check out Django's documentation about database dumps: [https://docs.djangoproject.com/en/3.0/ref/django-admin/#loaddata](https://docs.djangoproject.com/en/3.0/ref/django-admin/#loaddata)
 

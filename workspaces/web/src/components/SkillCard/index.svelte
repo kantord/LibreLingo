@@ -1,33 +1,45 @@
-<script>
+<script lang="typescript">
   import { onDestroy, onMount } from "svelte"
 
   import live from "../../db/live"
   import getSkillStats from "../../db/skill/getSkillStats"
   import Icon from "lluis/Icon"
-  import Button from "lluis/Button"
+  import Buttons from "./Buttons.svelte"
+  import ContentLeft from "./ContentLeft"
+  import ContentCenter from "./ContentCenter"
 
   export let title
+  export let levels
   export let practiceHref
   export let id
   export let imageSet = []
   export let summary
 
   let completed = null
+  let started = null
   let stale = null
+  let progress = null
 
   onMount(() => {
-    live(() =>
-      getSkillStats({ id })
+    live((db) =>
+      getSkillStats(db, { id })
         .then((stats) => {
-          completed = stats.completed
-          stale = stats.stale
+          completed = stats.progress >= levels
+          progress = stats.progress
+          started = stats.started
+          stale = stats.stale && completed
         })
         .catch(() => {})
     )
   })
 </script>
 
-<div class="card" data-completed="{completed}" data-stale="{stale}">
+<div
+  class="card"
+  data-test="skill card"
+  data-started="{started}"
+  data-completed="{completed}"
+  data-stale="{stale}">
   {#if completed}
     {#if stale}
       <span class="icon">
@@ -41,80 +53,45 @@
   {/if}
   <div class="card-content">
     <div class="media">
-      {#if imageSet && imageSet.length}
-        <div class="media-left">
-          <figure class="image image-set is-96x96">
-            <img src="{`images/${imageSet[0]}_tinier.jpg`}" alt="" />
-            <img src="{`images/${imageSet[1]}_tinier.jpg`}" alt="" />
-            <img src="{`images/${imageSet[2]}_tiny.jpg`}" alt="" />
-          </figure>
-        </div>
-      {/if}
-      <div class="media-content">
-        <p class="title is-4">{title}</p>
-        <p class="is-6 clamp">Learn: {summary.join(', ')}</p>
-      </div>
-
+      <ContentLeft
+        imageSet="{imageSet}"
+        stale="{stale}"
+        completed="{completed}" />
+      <ContentCenter
+        progress="{progress}"
+        stale="{stale}"
+        levels="{levels}"
+        title="{title}"
+        completed="{completed}"
+        started="{started}"
+        summary="{summary}" />
     </div>
   </div>
   <footer class="card-footer">
     <div href="{practiceHref}" class="card-footer-item">
-      <div class="button-container">
-        {#if completed}
-          <Button primary href="{practiceHref}">Practice {title}</Button>
-        {:else}
-          <Button primary href="{practiceHref}">Learn {title}</Button>
-        {/if}
-      </div>
+      <Buttons
+        title="{title}"
+        practiceHref="{practiceHref}"
+        started="{started}"
+        completed="{completed}" />
     </div>
   </footer>
 </div>
 
-<style>
+<style type="text/scss">
   @import "../../variables";
-
-  .image-set {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .image-set img {
-    left: 15%;
-    top: 15%;
-    width: 70%;
-    position: absolute;
-  }
-
-  .image-set img:first-child {
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-
-  .image-set img:last-child {
-    position: absolute;
-    left: 30%;
-    top: 30%;
-  }
 
   .card-content {
     height: 147px;
   }
 
-  .clamp {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-  }
-
   .card {
-    $done-color: lighten(desaturate($green, 15%), 20%);
+    $completed-color: lighten(desaturate($green, 15%), 20%);
     $stale-color: lighten(desaturate($green, 45%), 20%);
     background: white;
 
     &[data-completed="true"] {
-      background-color: $done-color;
+      background-color: $completed-color;
 
       &[data-stale="true"] {
         background-color: $stale-color;
@@ -130,19 +107,6 @@
       .media-content,
       .icon {
         color: $white;
-      }
-
-      .media-left {
-        mix-blend-mode: screen;
-
-        .image-set {
-          filter: saturate(0);
-
-          img {
-            box-sizing: border-box;
-            border: 1px solid rgba($white, 0.3);
-          }
-        }
       }
     }
 

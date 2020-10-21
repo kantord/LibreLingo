@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
   import { slide } from "svelte/transition"
   import Button from "lluis/Button"
 
@@ -6,21 +6,34 @@
   export let buttonAction = null
   export let correct = false
   export let incorrect = false
+  export let typo = false
   export let message
   export let messageDetail = null
   export let submit = null
+  export let skipAction = null
+  export let skipAllAction = null
+  export let skipAllVoice = null
 </script>
 
 <div
   class:correct
   class:incorrect
+  class:typo
   class="panel is-primary"
-  transition:slide="{{ duration: 300 }}">
+  out:slide|local="{{ duration: 100 }}"
+  in:slide|local="{{ duration: 300, delay: 50 }}">
   <div class="panel-block">
     <div class="control">
-      {#if message}
-        <b>{message}</b>
+      {#if skipAction}
+        <Button on:click="{skipAction}">Skip</Button>
       {/if}
+      {#if skipAllAction}
+        <Button on:click="{skipAllAction}">Finish early</Button>
+      {/if}
+      {#if skipAllVoice}
+        <Button on:click="{skipAllVoice}">Can't listen now</Button>
+      {/if}
+      {#if message}<b>{message}</b>{/if}
       {#if messageDetail}
         <p>{messageDetail}</p>
       {/if}
@@ -58,6 +71,11 @@
   .incorrect {
     color: $text-invert;
     background: $pink;
+  }
+
+  .typo {
+    color: $text-invert;
+    background: $yellow;
   }
 
   .panel .right {

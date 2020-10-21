@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
   import { onMount } from "svelte"
   import Sortable from "sortablejs"
   import hotkeys from "hotkeys-js"
@@ -49,6 +49,9 @@
   export let challenge
   export let registerResult
   export let resolveChallenge
+  export let skipChallenge
+  export let skipAllChallenges
+  
   let submitted = false
   let correct = null
   const answer = writable([])
@@ -131,8 +134,22 @@
       {/each}
     </div>
   </div>
+
+  {#if $answer.length === 0 && !submitted}
+    <ChallengePanel
+      message="{null}"
+      buttonText="{null}"
+      skipAction="{skipChallenge}"
+      skipAllAction="{skipAllChallenges}" />
+  {/if}
+
   {#if $answer.length > 0 && !submitted}
-    <ChallengePanel message="" buttonText="Submit" submit />
+    <ChallengePanel
+      message=""
+      buttonText="Submit"
+      submit
+      skipAction="{skipChallenge}"
+      skipAllAction="{skipAllChallenges}" />
   {/if}
 
   {#if submitted}
@@ -154,7 +171,7 @@
   {/if}
 </form>
 
-<style>
+<style type="text/scss">
   @import "../../variables";
 
   .chip {

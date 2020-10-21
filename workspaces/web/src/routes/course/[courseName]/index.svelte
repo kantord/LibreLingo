@@ -1,4 +1,4 @@
-<script context="module">
+<script lang="typescript" context="module">
   export async function preload(page, session) {
     const { courseName } = page.params
     const { modules, languageName } = await import(
@@ -9,7 +9,7 @@
   }
 </script>
 
-<script>
+<script lang="typescript">
   import SkillCard from "../../../components/SkillCard"
   import NavBar from "../../../components/NavBar.svelte"
   import Column from "lluis/Column.svelte"
@@ -71,7 +71,7 @@
   </div>
 </footer>
 
-<style>
+<style type="text/scss">
   @import "../../../variables";
   .container {
     padding-right: 20px;

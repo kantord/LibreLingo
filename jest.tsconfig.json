@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "esnext",
+    "sourceMap": false,
+    "experimentalDecorators": true,
+    "noImplicitUseStrict": true,
+    "removeComments": true,
+    "moduleResolution": "node",
+    "lib": ["es2017", "dom"],
+    "typeRoots": ["node_modules/@types", "src/@types"],
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true
+  },
+  "exclude": ["node_modules"]
+}

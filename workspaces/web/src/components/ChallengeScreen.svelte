@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
   import sound from "../media/sound"
   import DeckChallenge from "./DeckChallenge"
   import OptionChallenge from "./OptionChallenge"
@@ -9,6 +9,9 @@
   import ProgressBar from "./ProgressBar"
   import shuffle from "lodash.shuffle"
   import { fade, scale } from "svelte/transition"
+  import Button from "lluis/Button"
+  import db from "../db/db"
+  import savePractice from "../db/skill/savePractice"
 
   export let rawChallenges
   export let languageName
@@ -17,14 +20,22 @@
   export let sortChallengeGroups
   export let courseURL
   export let skillId
-  let challenges = sortChallengeGroups(shuffle(rawChallenges))
+  export let expectedNumberOfChallenges
+
+  let challenges = sortChallengeGroups(
+    shuffle(rawChallenges),
+    expectedNumberOfChallenges
+  )
   let remainingChallenges = [...challenges]
   let currentChallenge = remainingChallenges.shift()
   let solvedChallenges = []
+  let skipAllChallenges = null
+
   let progress = 0
   let stats = {
     correct: 0,
     incorrect: 0,
+    skipped: 0,
   }
 
   const preloadImage = (imageName) => {
@@ -38,11 +49,12 @@
 
   $: alternativeChallenges =
     currentChallenge &&
-    challenges.filter(({ id }) => id !== currentChallenge.id)
+    rawChallenges.filter(({ id }) => id !== currentChallenge.id)
 
   $: registerResult = (isCorrect) => {
     if (isCorrect) {
       stats.correct++
+      skipAllChallenges = skipAllChallengesFunc
       sound.correct.play()
       solvedChallenges.push(currentChallenge)
     } else {
@@ -50,19 +62,50 @@
       sound.wrong.play()
       remainingChallenges.push(currentChallenge)
     }
-
-    progress = solvedChallenges.length / challenges.length
   }
+
+  $: progress = (solvedChallenges.length + stats.skipped) / challenges.length
 
   $: resolveChallenge = () => {
     if (remainingChallenges) {
       currentChallenge = remainingChallenges.shift()
     }
   }
+
+  $: skipChallenge = () => {
+    stats.skipped++
+    resolveChallenge()
+  }
+
+  $: skipAllChallengesFunc = async () => {
+    stats.skipped++
+    remainingChallenges.forEach(() => stats.skipped++)
+    currentChallenge = undefined
+  }
+
+  $: skipAllVoice = () => {
+    let filteredRemainingChallenges = remainingChallenges.filter(
+      (challenge) => {
+        if (challenge.type === "listeningExercise") {
+          stats.skipped++
+          return false
+        } else {
+          return true
+        }
+      }
+    )
+
+    remainingChallenges.splice(
+      0,
+      remainingChallenges.length,
+      ...filteredRemainingChallenges
+    )
+    stats.skipped++
+    resolveChallenge()
+  }
 </script>
 
 {#if currentChallenge}
-
   <div class="container" in:scale>
     <section class="section">
       <ProgressBar value="{progress}" />
@@ -70,57 +113,74 @@
         {#if challenge.id === currentChallenge.id}
           <div
             class="challenge"
-            in:fade|local="{{ duration: 300, delay: 300 }}"
+            in:fade|local="{{ duration: 300, delay: 350 }}"
             out:fade|local="{{ duration: 300 }}">
             {#if challenge.type === 'cards'}
               <DeckChallenge
-                {currentChallenge}
-                {alternativeChallenges}
-                {resolveChallenge}
-                {registerResult} />
+                skipChallenge="{skipChallenge}"
+                currentChallenge="{currentChallenge}"
+                alternativeChallenges="{alternativeChallenges}"
+                resolveChallenge="{resolveChallenge}"
+                registerResult="{registerResult}"
+                skipAllChallenges="{skipAllChallenges}" />
             {/if}
             {#if challenge.type === 'options'}
               <OptionChallenge
-                {currentChallenge}
-                {alternativeChallenges}
-                {resolveChallenge}
-                {registerResult} />
+                skipChallenge="{skipChallenge}"
+                currentChallenge="{currentChallenge}"
+                alternativeChallenges="{alternativeChallenges}"
+                resolveChallenge="{resolveChallenge}"
+                registerResult="{registerResult}"
+                skipAllChallenges="{skipAllChallenges}" />
             {/if}
             {#if challenge.type === 'shortInput'}
               <ShortInputChallenge
-                {languageName}
-                {languageCode}
-                {specialCharacters}
-                {registerResult}
-                {resolveChallenge}
-                {challenge} />
+                skipChallenge="{skipChallenge}"
+                languageName="{languageName}"
+                languageCode="{languageCode}"
+                specialCharacters="{specialCharacters}"
+                registerResult="{registerResult}"
+                resolveChallenge="{resolveChallenge}"
+                challenge="{challenge}"
+                skipAllChallenges="{skipAllChallenges}" />
             {/if}
             {#if challenge.type === 'listeningExercise'}
               <ListeningChallenge
-                {languageCode}
-                {specialCharacters}
-                {registerResult}
-                {resolveChallenge}
-                {challenge} />
+                skipChallenge="{skipChallenge}"
+                languageCode="{languageCode}"
+                specialCharacters="{specialCharacters}"
+                registerResult="{registerResult}"
+                resolveChallenge="{resolveChallenge}"
+                challenge="{challenge}"
+                skipAllChallenges="{skipAllChallenges}"
+                skipAllVoice="{skipAllVoice}" />
             {/if}
             {#if challenge.type === 'chips'}
-              <ChipsChallenge {registerResult} {resolveChallenge} {challenge} />
+              <ChipsChallenge
+                registerResult="{registerResult}"
+                resolveChallenge="{resolveChallenge}"
+                challenge="{challenge}"
+                skipChallenge="{skipChallenge}"
+                skipAllChallenges="{skipAllChallenges}" />
             {/if}
           </div>
         {/if}
       {/each}
-
     </section>
   </div>
 {/if}
 
 {#if !currentChallenge}
   <div class="container">
-    <FanfareScreen {courseURL} {rawChallenges} {skillId} {stats} />
+    <FanfareScreen
+      courseURL="{courseURL}"
+      rawChallenges="{rawChallenges}"
+      skillId="{skillId}"
+      stats="{stats}" />
   </div>
 {/if}
 
-<style>
+<style type="text/scss">
   .section {
     padding: 1.5em;
   }

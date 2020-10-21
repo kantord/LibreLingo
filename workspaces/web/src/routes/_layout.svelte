@@ -1,4 +1,4 @@
-<script context="module">
+<script lang="typescript" context="module">
   import { waitLocale } from "svelte-i18n"
   import authStore from "../auth"
 
@@ -7,8 +7,10 @@
   }
 </script>
 
-<script>
+<script lang="typescript">
   import settings from "../settings"
+
+  export let segment
 </script>
 
 <svelte:head>
@@ -32,13 +34,10 @@
   <meta
     property="og:image"
     content="https://librelingo.app/images/social_cover_1.png" />
-
 </svelte:head>
 
 {#if process.browser !== true}
-  <div class="pageloader is-active">
-    <span class="title">LibreLingo</span>
-  </div>
+  <div class="pageloader is-active"><span class="title">LibreLingo</span></div>
 {/if}
 
 <main>

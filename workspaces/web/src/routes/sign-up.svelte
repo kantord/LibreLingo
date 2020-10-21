@@ -1,9 +1,10 @@
-<script>
+<script lang="typescript">
   import db from "../db/db.js"
   import settings from "../settings"
   import NavBar from "../components/NavBar.svelte"
   import Button from "lluis/Button"
   import FormField from "lluis/FormField"
+  import { _ } from "svelte-i18n"
 
   let loading = false
 
@@ -188,14 +189,13 @@
 
 <svelte:head>
   <title>Sign up - LibreLingo</title>
+  <meta name="description" content="{$_('sign-up.meta.description')}" />
 </svelte:head>
 
 <NavBar dark />
 
 <section class="section">
-
   <div class="container">
-
     <form on:submit|preventDefault="{handleSignUp}">
       <h2 class="is-size-2">Sign up</h2>
 
@@ -251,12 +251,11 @@
 
       <Button
         on:click="{handleSignUp}"
-        {loading}
+        loading="{loading}"
         asHref="/sign-up-success"
         submit>
         Sign up
       </Button>
     </form>
   </div>
-
 </section>

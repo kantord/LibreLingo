@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
   export let phrase
 </script>
 
@@ -6,13 +6,11 @@
   {#each phrase as { word, definition }}
     {#if definition}
       <span class="has-tooltip-bottom" data-tooltip="{definition}">{word}</span>
-    {:else}
-      <span>{word}</span>
-    {/if}
+    {:else}<span>{word}</span>{/if}
   {/each}
 </b>
 
-<style>
+<style type="text/scss">
   @import "../variables";
 
   .phrase span {

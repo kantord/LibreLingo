@@ -6,9 +6,9 @@ Feature: Sign up success page
   Scenario: Getting to the sign up success page
     When I open "/sign-up-success"
     Then sign up success page looks correct
-    And I read "Registration successsful!"
+    And I read "Registration successful!"
     And I read "You can now log in."
-    And I see a Log in button
+    And I see a "Log in" button
 
   Scenario: Clicking the log in button
     When I open "/sign-up-success"

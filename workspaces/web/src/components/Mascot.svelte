@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
   export let shadow = true
   export let glow = false
   let imageURL =
@@ -9,7 +9,7 @@
 
 <img data-test="mascot-jetpack" src="{imageURL}" alt="" class:glow />
 
-<style>
+<style type="text/scss">
   .glow {
     filter: drop-shadow(0 0 2em #ffffff1c);
   }

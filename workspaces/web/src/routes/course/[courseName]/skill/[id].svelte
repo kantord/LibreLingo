@@ -1,32 +1,38 @@
-<script context="module">
+<script lang="typescript" context="module">
   export async function preload(page, session) {
-      const { id, courseName } = page.params
-      const { languageName, languageCode, specialCharacters } = await import(
-          `../../../../courses/${courseName}/courseData.json`
-      )
-      const skillData = await import(
-          `../../../../courses/${courseName}/challenges/${id}.json`
-      )
+    const { id, courseName } = page.params
+    const {
+      languageName,
+      languageCode,
+      specialCharacters,
+      modules,
+    } = await import(`../../../../courses/${courseName}/courseData.json`)
+    const skillData = await import(
+      `../../../../courses/${courseName}/challenges/${id}.json`
+    )
+    const rawChallenges = skillData.challenges
+    const challengesPerLevel = skillData.challenges.length / skillData.levels
 
-      const rawChallenges = skillData.challenges
-      const skillId = skillData.id
+    const skillId = skillData.id
 
-      return {
-          rawChallenges: Array.from(rawChallenges),
-          languageName,
-          languageCode,
-          specialCharacters,
-          id,
-          skillId,
-          courseURL: `/course/${courseName}`
-      }
+    return {
+      rawChallenges: Array.from(rawChallenges),
+      languageName,
+      languageCode,
+      specialCharacters,
+      id,
+      skillId,
+      challengesPerLevel,
+      courseURL: `/course/${courseName}`,
+    }
   }
 </script>
 
-<script>
+<script lang="typescript">
   import ChallengeScreen from "../../../../components/ChallengeScreen"
   import NavBar from "../../../../components/NavBar"
   import { sortChallengeGroups } from "./_logic"
+
   export let rawChallenges
   export let languageName
   export let languageCode
@@ -34,6 +40,12 @@
   export let id
   export let courseURL
   export let skillId
+  export let challengesPerLevel
+
+  let expectedNumberOfChallenges = Math.max(
+    4,
+    Math.round(challengesPerLevel * 1.2)
+  )
 </script>
 
 <svelte:head>
@@ -43,7 +55,7 @@
 <NavBar dark is_hidden_mobile />
 
 <ChallengeScreen
-  skill="{id}"
+  {expectedNumberOfChallenges}
   {skillId}
   {rawChallenges}
   {languageName}

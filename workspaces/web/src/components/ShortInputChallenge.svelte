@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
   import { onMount } from "svelte"
   import hotkeys from "hotkeys-js"
   import shuffle from "lodash.shuffle"
@@ -15,7 +15,10 @@
   export let languageName
   export let languageCode
   export let specialCharacters
-  let answer = null
+  export let skipChallenge
+  export let skipAllChallenges
+
+  let answer = ""
   let submitted = false
   let correct = null
   let spellingSuggestion = ""
@@ -60,14 +63,15 @@
     <p class="is-size-1 is-size-2-tablet is-size-4-mobile has-text-centered">
       Type
       <Phrase phrase="{challenge.phrase}" />
-      in {languageName}!
+      in
+      {languageName}!
     </p>
   </div>
   <Columns>
     <Column>
       <InputFieldWithVirtualKeyboard
-        {specialCharacters}
-        {languageCode}
+        specialCharacters="{specialCharacters}"
+        languageCode="{languageCode}"
         disabled="{submitted}"
         bind:value="{answer}" />
     </Column>
@@ -83,7 +87,20 @@
   </Columns>
 
   {#if answer && !submitted}
-    <ChallengePanel message="" buttonText="Submit" submit />
+    <ChallengePanel
+      message=""
+      buttonText="Submit"
+      submit
+      skipAction="{skipChallenge}"
+      skipAllAction="{skipAllChallenges}" />
+  {/if}
+
+  {#if answer === '' && !submitted}
+    <ChallengePanel
+      message="{null}"
+      buttonText="{null}"
+      skipAction="{skipChallenge}"
+      skipAllAction="{skipAllChallenges}" />
   {/if}
 
   {#if submitted}
@@ -96,18 +113,28 @@
         buttonAction="{finishChallenge}" />
     {/if}
     {#if correct}
+      {#if !spellingSuggestion}
       <ChallengePanel
         message="Correct solution!"
-        messageDetail="{spellingSuggestion}"
+        messageDetail=""
         buttonText="Continue"
         correct
         buttonAction="{finishChallenge}" />
+      {/if}
+
+      {#if spellingSuggestion}
+        <ChallengePanel
+          message="You have a typo!"
+          messageDetail="{spellingSuggestion}"
+          buttonText="Continue"
+          typo
+          buttonAction="{finishChallenge}" />
+      {/if}
     {/if}
   {/if}
-
 </form>
 
-<style>
+<style type="text/scss">
   .card {
     max-width: 16em;
     margin: auto;

@@ -2,7 +2,7 @@
   src="images/agpl-logo.svg"
   alt="Licensed under AGPL - Free as in Freedom" />
 
-<style>
+<style type="text/scss">
   img {
     height: 2.5em;
     mix-blend-mode: multiply;

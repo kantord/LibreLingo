@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
   import { onMount } from "svelte"
   import hotkeys from "hotkeys-js"
   import shuffle from "lodash.shuffle"
@@ -17,7 +17,7 @@
 </script>
 
 <ul class="options">
-  {#each options as { pictures, meaningInSourceLanguage, formInTargetLanguage, correct, fake }, i}
+  {#each options as { meaningInSourceLanguage, formInTargetLanguage, correct, fake }, i}
     <label for="{i}" class:fake="{fake && true}">
       <input
         type="radio"
@@ -25,18 +25,17 @@
         value="{i}"
         name="{i}"
         id="{i}"
-        {disabled} />
+        disabled="{disabled}" />
       <Option
-        {correct}
+        correct="{correct}"
         active="{selectedOption === i}"
         inactive="{selectedOption !== null && selectedOption !== i}"
-        picture="{shuffle(pictures)[0]}"
-        {formInTargetLanguage} />
+        formInTargetLanguage="{formInTargetLanguage}" />
     </label>
   {/each}
 </ul>
 
-<style>
+<style type="text/scss">
   @import "../variables";
 
   .options {
@@ -47,8 +46,12 @@
     margin-right: -0.5em;
     user-select: none;
   }
-
   input {
-    display: none;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  label {
+    display: flex;
+    align-items: center;
   }
 </style>
