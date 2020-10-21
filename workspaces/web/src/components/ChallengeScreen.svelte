@@ -30,6 +30,7 @@
   let currentChallenge = remainingChallenges.shift()
   let solvedChallenges = []
   let skipAllChallenges = null
+
   let progress = 0
   let stats = {
     correct: 0,
@@ -81,6 +82,27 @@
     remainingChallenges.forEach(() => stats.skipped++)
     currentChallenge = undefined
   }
+
+  $: skipAllVoice = () => {
+    let filteredRemainingChallenges = remainingChallenges.filter(
+      (challenge) => {
+        if (challenge.type === "listeningExercise") {
+          stats.skipped++
+          return false
+        } else {
+          return true
+        }
+      }
+    )
+
+    remainingChallenges.splice(
+      0,
+      remainingChallenges.length,
+      ...filteredRemainingChallenges
+    )
+    stats.skipped++
+    resolveChallenge()
+  }
 </script>
 
 {#if currentChallenge}
@@ -130,7 +152,8 @@
                 registerResult="{registerResult}"
                 resolveChallenge="{resolveChallenge}"
                 challenge="{challenge}"
-                skipAllChallenges="{skipAllChallenges}" />
+                skipAllChallenges="{skipAllChallenges}"
+                skipAllVoice="{skipAllVoice}" />
             {/if}
             {#if challenge.type === 'chips'}
               <ChipsChallenge
