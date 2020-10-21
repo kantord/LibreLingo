@@ -1,5 +1,6 @@
 .DS_Store
 /node_modules/
+**/node_modules/
 /src/node_modules/@sapper/
 yarn-error.log
 /cypress/screenshots/
@@ -28,3 +29,4 @@ git_stats/
 /.idea/vcs.xml
 /.idea/workspace.xml
 workspaces/web/static/files/noto-*
+workspaces/web/cypress/screenshots/**/__tkey-*.png

@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
   import Button from "lluis/Button"
 
   export let practiceHref

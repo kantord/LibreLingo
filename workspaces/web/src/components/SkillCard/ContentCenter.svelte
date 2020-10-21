@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
   import Summary from "./Summary"
 
   export let title
@@ -20,7 +20,7 @@
   {/if}
 </div>
 
-<style>
+<style type="text/scss">
   @import "../../variables";
 
   .completed,

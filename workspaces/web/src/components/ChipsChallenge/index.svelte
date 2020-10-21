@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
   import { onMount } from "svelte"
   import Sortable from "sortablejs"
   import hotkeys from "hotkeys-js"
@@ -171,7 +171,7 @@
   {/if}
 </form>
 
-<style>
+<style type="text/scss">
   @import "../../variables";
 
   .chip {

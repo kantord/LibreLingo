@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
   export let active
   export let inactive
   export let number
@@ -29,7 +29,7 @@
   </div>
 </li>
 
-<style>
+<style type="text/scss">
   @import "../variables";
 
   .card {

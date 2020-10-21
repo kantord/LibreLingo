@@ -1,4 +1,4 @@
-<script context="module">
+<script lang="typescript" context="module">
   export async function preload(page, session) {
     const { id, courseName } = page.params
     const {
@@ -28,7 +28,7 @@
   }
 </script>
 
-<script>
+<script lang="typescript">
   import ChallengeScreen from "../../../../components/ChallengeScreen"
   import NavBar from "../../../../components/NavBar"
   import { sortChallengeGroups } from "./_logic"

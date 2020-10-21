@@ -1,4 +1,4 @@
-<script context="module">
+<script lang="typescript" context="module">
   export async function preload(page, session) {
     if (!process.browser) {
       const fs = require("fs")
@@ -14,7 +14,7 @@
   }
 </script>
 
-<script>
+<script lang="typescript">
   import NavBar from "../components/NavBar"
   import Mascot from "../components/Mascot"
   import TwitterButton from "../components/TwitterButton"
@@ -37,9 +37,7 @@
       <h1 class="is-size-1">Development tools</h1>
       <h2 class="is-size-2">Test pages</h2>
       <ul>
-        <li>
-          <a href="/course/test">Test course</a>
-        </li>
+        <li><a href="/course/test">Test course</a></li>
         {#each testSkills as testSkill}
           <li>
             <a target="_blank" href="/course/test/skill/{testSkill}">

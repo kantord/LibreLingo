@@ -1,4 +1,4 @@
-<script context="module">
+<script lang="typescript" context="module">
   export async function preload(page) {
     const repo = await fetch("https://api.github.com/repos/kantord/LibreLingo")
 
@@ -9,7 +9,7 @@
   }
 </script>
 
-<script>
+<script lang="typescript">
   import { onMount } from "svelte"
   import Icon from "lluis/Icon"
   import Button from "lluis/Button"
@@ -41,7 +41,7 @@
   outlined
   inverted
   info
-  {size}
+  size="{size}"
   href="https://github.com/kantord/LibreLingo">
   {#if stars}
     <span class="tag is-white">
@@ -54,7 +54,7 @@
   <span class="is-hidden-mobile">GitHub</span>
 </Button>
 
-<style>
+<style type="text/scss">
   @import "../variables";
 
   .tag {
