@@ -3,6 +3,7 @@ Export LibreLingo courses in the JSON format expected by the web app
 """
 
 from collections import namedtuple
+from slugify import slugify
 
 __version__ = '0.1.0'
 
@@ -18,10 +19,26 @@ Module = namedtuple("Module", [
     "skills",
 ])
 
+Skill = namedtuple("Skill", [
+    "name",
+    "id",
+    "words",
+    "phrases",
+])
+
 
 def get_module_summary(module):
+    """
+    Get a module summary for the course meta data
+    """
     return {
-        "title": module.title
+        "title": module.title,
+        "skills": [
+            {
+                "title": skill.name,
+                "practiceHref": slugify(skill.name)
+            } for skill in module.skills
+        ]
     }
 
 
