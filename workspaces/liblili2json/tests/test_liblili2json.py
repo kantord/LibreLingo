@@ -1,4 +1,5 @@
 from liblili2json import get_course_data
+from liblili2json import calculate_number_of_levels
 from liblili2json import Course
 from liblili2json import Module
 from liblili2json import Skill
@@ -51,8 +52,8 @@ fakeCourse1 = Course(
             Skill(
                 name="Feminine",
                 id=3,
-                words=[fakeWord1, fakeWord2, fakePhrase1],
-                phrases=[],
+                words=[fakeWord1, fakeWord2, fakeWord1, fakeWord2],
+                phrases=[fakePhrase1],
                 image_set=["woman1", "woman2", "girl1"]
             ),
             Skill(
@@ -103,18 +104,21 @@ def test_get_course_data_return_value():
                         "practiceHref": "masculine",
                         "summary": ["lorem ipsum"],
                         "imageSet": ["man1", "man2", "boy1"],
+                        "levels": 1,
                     },
                     {
                         "title": "Feminine",
                         "practiceHref": "feminine",
                         "imageSet": ["woman1", "woman2", "girl1"],
-                        "summary": ["foous", "apfel", "foous barus"]
+                        "summary": ["foous", "apfel",  "foous", "apfel", "foous barus"],
+                        "levels": 2,
                     },
                     {
                         "title": "Neuter",
                         "summary": [],
                         "practiceHref": "neuter",
                         "imageSet": ["foo1", "bar1", "bar2"],
+                        "levels": 1,
                     },
                 ]
             },
@@ -142,9 +146,23 @@ def test_get_course_data_return_value_2():
                     {
                         "title": "Mammals and birds",
                         "practiceHref": "mammals-and-birds",
-                        "summary": ["foous"]
+                        "summary": ["foous"],
+                        "levels": 1,
                     }
                 ]
             },
         ]
     }
+
+
+def test_calculate_number_of_levels():
+    examples = [
+        {"words": 0, "phrases": 0, "result": 1},
+        {"words": 10, "phrases": 0, "result": 2},
+        {"words": 0, "phrases": 10, "result": 3},
+        {"words": 10, "phrases": 10, "result": 4},
+    ]
+
+    for example in examples:
+        assert calculate_number_of_levels(
+            example["words"], example["phrases"]) == example["result"]
