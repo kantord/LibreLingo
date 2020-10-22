@@ -39,13 +39,21 @@ Phrase = namedtuple("Phrase", [
 ])
 
 
-def opaqueId(obj, salt=""):
-    hash = hashlib.sha256()
-    hash.update((type(obj).__name__ + str(obj.id) + salt).encode('utf-8'))
-    return hash.hexdigest()[0:12]
+def get_opaque_id(obj, salt=""):
+    """
+    Generate a unique, opaque ID based on a type and a type specific 
+    id
+    """
+    sha256 = hashlib.sha256()
+    sha256.update((type(obj).__name__ + str(obj.id) + salt).encode('utf-8'))
+
+    return sha256.hexdigest()[0:12]
 
 
 def calculate_number_of_levels(nwords, nphrases):
+    """
+    Calculates how many levels a skill should have
+    """
     return round(1 + (nwords / 7) + (nphrases / 5))
 
 
@@ -74,7 +82,7 @@ def get_module_summary(module):
                 "practiceHref": slugify(skill.name),
                 "summary": get_summary(skill.words, skill.phrases),
                 "levels": get_levels(skill.words, skill.phrases),
-                "id": opaqueId(skill, "Skill"),
+                "id": get_opaque_id(skill, "Skill"),
                 **(get_imageset(skill.image_set))
             } for skill in module.skills
         ]
