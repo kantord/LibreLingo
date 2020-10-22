@@ -1,5 +1,9 @@
 version: v1.0
 name: Pipeline 2
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
 blocks:
   - name: GitHub pages
     task:
@@ -16,7 +20,3 @@ blocks:
             - 'yarn deploy --repo=https://$GH_TOKEN@github.com/kantord/LibreLingo.git'
       secrets:
         - name: GitHub token
-agent:
-  machine:
-    type: e1-standard-2
-    os_image: ubuntu1804
