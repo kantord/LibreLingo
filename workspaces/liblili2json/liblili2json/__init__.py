@@ -2,6 +2,7 @@
 Export LibreLingo courses in the JSON format expected by the web app
 """
 
+import hashlib
 from collections import namedtuple
 from slugify import slugify
 
@@ -38,6 +39,12 @@ Phrase = namedtuple("Phrase", [
 ])
 
 
+def opaqueId(obj, salt=""):
+    hash = hashlib.sha256()
+    hash.update((type(obj).__name__ + str(obj.id) + salt).encode('utf-8'))
+    return hash.hexdigest()[0:12]
+
+
 def calculate_number_of_levels(nwords, nphrases):
     return round(1 + (nwords / 7) + (nphrases / 5))
 
@@ -67,6 +74,7 @@ def get_module_summary(module):
                 "practiceHref": slugify(skill.name),
                 "summary": get_summary(skill.words, skill.phrases),
                 "levels": get_levels(skill.words, skill.phrases),
+                "id": opaqueId(skill, "Skill"),
                 **(get_imageset(skill.image_set))
             } for skill in module.skills
         ]
