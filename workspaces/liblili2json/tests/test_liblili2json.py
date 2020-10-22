@@ -104,6 +104,7 @@ def test_get_course_data_return_value():
                         "practiceHref": "masculine",
                         "summary": ["lorem ipsum"],
                         "imageSet": ["man1", "man2", "boy1"],
+                        'id': '5e436b04ec5d',
                         "levels": 1,
                     },
                     {
@@ -111,6 +112,7 @@ def test_get_course_data_return_value():
                         "practiceHref": "feminine",
                         "imageSet": ["woman1", "woman2", "girl1"],
                         "summary": ["foous", "apfel",  "foous", "apfel", "foous barus"],
+                        'id': '5e436b04ec5d',
                         "levels": 2,
                     },
                     {
@@ -118,6 +120,7 @@ def test_get_course_data_return_value():
                         "summary": [],
                         "practiceHref": "neuter",
                         "imageSet": ["foo1", "bar1", "bar2"],
+                        'id': '5e436b04ec5d',
                         "levels": 1,
                     },
                 ]
@@ -144,6 +147,7 @@ def test_get_course_data_return_value_2():
                 "title": "Animals",
                 "skills": [
                     {
+                        'id': '5e436b04ec5d',
                         "title": "Mammals and birds",
                         "practiceHref": "mammals-and-birds",
                         "summary": ["foous"],
