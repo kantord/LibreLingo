@@ -11,7 +11,7 @@ Course = namedtuple("Course", [
     "language_name",
     "language_code",
     "special_characters",
-    "modules"
+    "modules",
 ])
 
 Module = namedtuple("Module", [
@@ -24,6 +24,17 @@ Skill = namedtuple("Skill", [
     "id",
     "words",
     "phrases",
+    "image_set"
+])
+
+Word = namedtuple("Word", [
+    "in_target_langauge",
+    "in_source_langauge",
+])
+
+Phrase = namedtuple("Phrase", [
+    "in_target_langauge",
+    "in_source_langauge",
 ])
 
 
@@ -31,12 +42,24 @@ def get_module_summary(module):
     """
     Get a module summary for the course meta data
     """
+
+    def get_imageset(images):
+        return {"imageSet": images} if images else {}
+
+    def get_summary(words, phrases):
+        words = [word.in_target_langauge for word in words]
+        phrases = [phrase.in_target_langauge for phrase in phrases]
+
+        return words + phrases
+
     return {
         "title": module.title,
         "skills": [
             {
                 "title": skill.name,
-                "practiceHref": slugify(skill.name)
+                "practiceHref": slugify(skill.name),
+                "summary": get_summary(skill.words, skill.phrases),
+                **(get_imageset(skill.image_set))
             } for skill in module.skills
         ]
     }
