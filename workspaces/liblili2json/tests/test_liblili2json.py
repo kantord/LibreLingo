@@ -2,6 +2,38 @@ from liblili2json import get_course_data
 from liblili2json import Course
 from liblili2json import Module
 from liblili2json import Skill
+from liblili2json import Phrase
+from liblili2json import Word
+
+fakePhrase1 = Phrase(
+    in_target_langauge="foous barus",
+    in_source_langauge="foo bar",
+)
+
+fakePhrase2 = Phrase(
+    in_target_langauge="lorem ipsum",
+    in_source_langauge="john smith",
+)
+
+fakeWord1 = Word(
+    in_target_langauge="foous",
+    in_source_langauge="foo",
+)
+
+fakeWord1 = Word(
+    in_target_langauge="foous",
+    in_source_langauge="foo",
+)
+
+fakeWord1 = Word(
+    in_target_langauge="foous",
+    in_source_langauge="foo",
+)
+
+fakeWord2 = Word(
+    in_target_langauge="apfel",
+    in_source_langauge="apple",
+)
 
 fakeCourse1 = Course(
     language_name="my language",
@@ -12,20 +44,23 @@ fakeCourse1 = Course(
             Skill(
                 name="Masculine",
                 id=3,
+                phrases=[fakePhrase2],
                 words=[],
-                phrases=[]
+                image_set=["man1", "man2", "boy1"]
             ),
             Skill(
                 name="Feminine",
                 id=3,
-                words=[],
-                phrases=[]
+                words=[fakeWord1, fakeWord2, fakePhrase1],
+                phrases=[],
+                image_set=["woman1", "woman2", "girl1"]
             ),
             Skill(
                 name="Neuter",
                 id=3,
                 words=[],
-                phrases=[]
+                phrases=[],
+                image_set=["foo1", "bar1", "bar2"]
             )
         ]),
         Module(title="Phrases", skills=[]),
@@ -41,8 +76,9 @@ fakeCourse2 = Course(
             Skill(
                 name="Mammals and birds",
                 id=3,
-                words=[],
-                phrases=[]
+                words=[fakeWord1],
+                phrases=[],
+                image_set=[]
             )
         ]),
     ]
@@ -50,6 +86,10 @@ fakeCourse2 = Course(
 
 
 def test_get_course_data_return_value():
+    """
+    Tests the return value of get_course_data with the
+    fakeCourse1 object
+    """
     assert get_course_data(fakeCourse1) == {
         "languageName": "my language",
         "languageCode": "de",
@@ -61,14 +101,20 @@ def test_get_course_data_return_value():
                     {
                         "title": "Masculine",
                         "practiceHref": "masculine",
+                        "summary": ["lorem ipsum"],
+                        "imageSet": ["man1", "man2", "boy1"],
                     },
                     {
                         "title": "Feminine",
                         "practiceHref": "feminine",
+                        "imageSet": ["woman1", "woman2", "girl1"],
+                        "summary": ["foous", "apfel", "foous barus"]
                     },
                     {
                         "title": "Neuter",
+                        "summary": [],
                         "practiceHref": "neuter",
+                        "imageSet": ["foo1", "bar1", "bar2"],
                     },
                 ]
             },
@@ -81,6 +127,10 @@ def test_get_course_data_return_value():
 
 
 def test_get_course_data_return_value_2():
+    """
+    Tests the return value of get_course_data with the
+    fakeCourse2 object
+    """
     assert get_course_data(fakeCourse2) == {
         "languageName": "another language",
         "languageCode": "tr",
@@ -91,7 +141,8 @@ def test_get_course_data_return_value_2():
                 "skills": [
                     {
                         "title": "Mammals and birds",
-                        "practiceHref": "mammals-and-birds"
+                        "practiceHref": "mammals-and-birds",
+                        "summary": ["foous"]
                     }
                 ]
             },
