@@ -38,6 +38,10 @@ Phrase = namedtuple("Phrase", [
 ])
 
 
+def calculate_number_of_levels(nwords, nphrases):
+    return round(1 + (nwords / 7) + (nphrases / 5))
+
+
 def get_module_summary(module):
     """
     Get a module summary for the course meta data
@@ -52,6 +56,9 @@ def get_module_summary(module):
 
         return words + phrases
 
+    def get_levels(words, phrases):
+        return calculate_number_of_levels(len(words), len(phrases))
+
     return {
         "title": module.title,
         "skills": [
@@ -59,6 +66,7 @@ def get_module_summary(module):
                 "title": skill.name,
                 "practiceHref": slugify(skill.name),
                 "summary": get_summary(skill.words, skill.phrases),
+                "levels": get_levels(skill.words, skill.phrases),
                 **(get_imageset(skill.image_set))
             } for skill in module.skills
         ]
