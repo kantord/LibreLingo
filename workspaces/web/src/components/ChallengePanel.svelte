@@ -86,9 +86,15 @@
   .panel-block {
     color: inherit;
     padding-top: 1em;
-    margin: 0 10em;
     @include mobile {
       margin: 0;
+    }
+    @include tablet-only {
+      margin: 0 24px;
+    }
+    @include desktop {
+      max-width: 920px;
+      margin: auto;
     }
   }
 </style>
