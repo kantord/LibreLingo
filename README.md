@@ -193,7 +193,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/zinovik"><img src="https://avatars1.githubusercontent.com/u/26196125?v=4" width="100px;" alt=""/><br /><sub><b>zinovik</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/commits?author=zinovik" title="Code">💻</a></td>
   </tr>
   <tr>
-    <td align="center"><a href="https://himankpathak.me"><img src="https://avatars0.githubusercontent.com/u/26011845?v=4" width="100px;" alt=""/><br /><sub><b>Himank Pathak</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/commits?author=himankpathak" title="Code">💻</a></td>
+    <td align="center"><a href="https://himankpathak.me"><img src="https://avatars0.githubusercontent.com/u/26011845?v=4" width="100px;" alt=""/><br /><sub><b>Himank Pathak</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/commits?author=himankpathak" title="Code">💻</a> <a href="https://github.com/kantord/LibreLingo/issues?q=author%3Ahimankpathak" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
