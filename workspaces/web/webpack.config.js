@@ -144,7 +144,9 @@ module.exports = {
         },
         mode: process.env.NODE_ENV,
         performance: {
-            hints: false, // it doesn't matter if server.js is large
+            hints: "error",
+            maxEntrypointSize: 256000,
+            maxAssetSize: 256000
         },
     },
 
@@ -152,5 +154,10 @@ module.exports = {
         entry: config.serviceworker.entry(),
         output: config.serviceworker.output(),
         mode: process.env.NODE_ENV,
+        performance: {
+            hints: "error",
+            maxEntrypointSize: 1024,
+            maxAssetSize: 1024
+        },
     },
 }
