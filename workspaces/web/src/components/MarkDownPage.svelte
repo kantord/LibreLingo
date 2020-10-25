@@ -17,6 +17,7 @@
 
 <script lang="typescript">
   import NavBar from "../components/NavBar"
+  import Content from "lluis/Content"
 
   export let readmeHTML
   export let title
@@ -34,9 +35,9 @@
   <div class="hero-body">
     <div class="container">
       <h1 class="title">{title}</h1>
-      <div class="section content box">
+      <Content additionalClasses="section box">
         {@html readmeHTML}
-      </div>
+      </Content>
     </div>
   </div>
 </section>
