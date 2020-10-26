@@ -97,7 +97,7 @@ There is a Matrix/FreeNode IRC channel `#LibreLingo`, instructions for joining:
 Frontend| Svelte        | Django Admin* |
 Backend | CouchDB       |               |
 
-\* Djando Admin might be replaced in the future
+\* Django Admin might be replaced in the future
 
 Testing is done using Jest and Cypress. Other technology in use include: bulma, webpack, etc.
 
