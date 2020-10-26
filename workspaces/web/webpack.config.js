@@ -105,6 +105,11 @@ module.exports = {
             }),
         ].filter(Boolean),
         devtool: dev && "inline-source-map",
+        performance: {
+            hints: "error",
+            maxEntrypointSize: 370000,
+            maxAssetSize: 256000
+        },
     },
 
     server: {
@@ -144,7 +149,7 @@ module.exports = {
         },
         mode: process.env.NODE_ENV,
         performance: {
-            hints: false, // it doesn't matter if server.js is large
+            hints: false,
         },
     },
 
