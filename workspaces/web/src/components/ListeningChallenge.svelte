@@ -17,6 +17,7 @@
   export let specialCharacters
   export let skipChallenge
   export let skipAllChallenges
+  export let skipAllVoice
 
   let answer = ""
   let submitted = false
@@ -45,7 +46,7 @@
           .replace(/\s+/g, " ")
           .toLowerCase() === answer.toLowerCase()
           ? ""
-          : `You made a small error. Correct spelling: ${form}`
+          : `Correct spelling: ${form}`
     }
 
     registerResult(correct)
@@ -57,7 +58,7 @@
     submitted = false
     resolveChallenge()
   }
-
+  
   const playChallengeVoice = () => playAudio("voice", challenge.audio)
 
   onMount(() => {
@@ -101,7 +102,8 @@
       buttonText="Submit"
       submit
       skipAction="{skipChallenge}"
-      skipAllAction="{skipAllChallenges}" />
+      skipAllAction="{skipAllChallenges}"
+      skipAllVoice="{skipAllVoice}" />
   {/if}
 
   {#if answer === '' && !submitted}
@@ -109,7 +111,8 @@
       message="{null}"
       buttonText="{null}"
       skipAction="{skipChallenge}"
-      skipAllAction="{skipAllChallenges}" />
+      skipAllAction="{skipAllChallenges}"
+      skipAllVoice="{skipAllVoice}" />
   {/if}
 
   {#if submitted}
@@ -121,13 +124,25 @@
         incorrect
         buttonAction="{finishChallenge}" />
     {/if}
+
     {#if correct}
-      <ChallengePanel
+      {#if !spellingSuggestion}
+        <ChallengePanel
         message="Correct solution!"
-        messageDetail="{spellingSuggestion || `Meaning: "${challenge.meaning}"`}"
+        messageDetail="{`Meaning: "${challenge.meaning}"`}"
         buttonText="Continue"
         correct
         buttonAction="{finishChallenge}" />
+      {/if}
+
+      {#if spellingSuggestion}
+        <ChallengePanel
+        message="You have a typo!"
+        messageDetail="{spellingSuggestion || `Meaning: "${challenge.meaning}"`}"
+        buttonText="Continue"
+        typo
+        buttonAction="{finishChallenge}" />
+      {/if}
     {/if}
   {/if}
 </form>
