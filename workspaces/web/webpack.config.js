@@ -105,6 +105,11 @@ module.exports = {
             }),
         ].filter(Boolean),
         devtool: dev && "inline-source-map",
+        performance: {
+            hints: "error",
+            maxEntrypointSize: 370000,
+            maxAssetSize: 256000
+        },
     },
 
     server: {
@@ -144,9 +149,7 @@ module.exports = {
         },
         mode: process.env.NODE_ENV,
         performance: {
-            hints: "error",
-            maxEntrypointSize: 256000,
-            maxAssetSize: 256000
+            hints: false,
         },
     },
 
@@ -154,10 +157,5 @@ module.exports = {
         entry: config.serviceworker.entry(),
         output: config.serviceworker.output(),
         mode: process.env.NODE_ENV,
-        performance: {
-            hints: "error",
-            maxEntrypointSize: 1024,
-            maxAssetSize: 1024
-        },
     },
 }
