@@ -77,7 +77,7 @@ Here's a rough sketch of how  I imagine the milestones of this project:
 
 ## Become a contributor
 
-We welcome contributions for course material as well development contributions.In order to know more regarding your contributions to our project please checkout the [contributing guide](https://github.com/yash2189/LibreLingo/blob/fixing-doc/docs/CONTRIBUTING%20GUIDE.md)
+We welcome contributions for course material as well development contributions.In order to know more regarding your contributions to our project please checkout the [contributing guide](https://github.com/yash2189/LibreLingo/blob/fixing-doc/docs/contribution_details/CONTRIBUTING_GUIDE.md)
 
 ### UI translation
 
