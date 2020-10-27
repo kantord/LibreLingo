@@ -1,7 +1,7 @@
 # Contributing
 
 We welcome all contributions right from development to the course material.
-In order to contribute to LibreLingo you can check our detailed [contributing guide](https://github.com/yash2189/LibreLingo/blob/fixing-doc/docs/contribution_details/CONTRIBUTING_GUIDE.md)
+In order to contribute to LibreLingo you can check our detailed [contributing guide](https://github.com/yash2189/LibreLingo/blob/fixing-doc/docs/CONTRIBUTING_GUIDE.md)
 
 ## Getting started
 
