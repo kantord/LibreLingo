@@ -77,19 +77,15 @@ Here's a rough sketch of how  I imagine the milestones of this project:
 
 ## Become a contributor
 
-### Contribute to course material
-If you are interested in contributing to course development, please fill the following form: https://danielkantor196881.typeform.com/to/V00Paz. The project is in a very early stage right now, so you might not be able to contribute right away. Your work will be released in this GitHub repository and you will show up as a contributor here.
+We welcome contributions for course material as well as development contributions. In order to know more regarding your contributions to our project please checkout the [contributing guide](CONTRIBUTING_GUIDE.md)
+
+## CODE OF CONDUCT
+
+We follow certain guidelines in order to maintain this repository. Before you start contributing we highly urge you to read our guidelines here
 
 ### UI translation
 
 [See docs](https://librelingo.readthedocs.io/en/latest/translation/#translation)
-
-### Development and other forms of contribution
-
-- [Getting started](https://github.com/kantord/LibreLingo/blob/master/docs/CONTRIBUTING.md)
-- [Development documentation is available on Read the Docs](https://librelingo.readthedocs.io/en/latest/)
-
-You can help LibreLingo by testing it and submitting feature requests or bug reports: https://github.com/kantord/LibreLingo/issues/new. If you want to get in touch, you can use my contact details on [my GitHub profile](https://github.com/kantord).
 
 #### Confused? Have a question?
 
@@ -105,7 +101,7 @@ There is a Matrix/FreeNode IRC channel `#LibreLingo`, instructions for joining:
 Frontend| Svelte        | Django Admin* |
 Backend | CouchDB       |               |
 
-\* Djando Admin might be replaced in the future
+\* Django Admin might be replaced in the future
 
 Testing is done using Jest and Cypress. Other technology in use include: bulma, webpack, etc.
 
