@@ -4,7 +4,7 @@
   export async function preload(page, session) {
     return {
       readmeHTML: await getMarkDownData(
-        await import("../../../../docs/LICENSE.md")
+        await import("../../../../LICENSE.md")
       ),
     }
   }
