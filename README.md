@@ -81,7 +81,7 @@ We welcome contributions for course material as well as development contribution
 
 ## CODE OF CONDUCT
 
-We follow certain guidelines in order to maintain this repository. Before you start contributing we highly urge you to read our guidelines here
+We follow certain guidelines in order to maintain this repository. Before you start contributing we highly urge you to read our guidelines [here](https://librelingo.readthedocs.io/en/latest/CODE_OF_CONDUCT/)
 
 ### UI translation
 
