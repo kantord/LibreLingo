@@ -11,6 +11,7 @@
   import Button from "lluis/Button"
   import Column from "lluis/Column"
   import Columns from "lluis/Columns"
+  import Title from "lluis/Title"
 
   export let rawChallenges
   export let courseURL
@@ -44,17 +45,17 @@
         </Column>
         <Column>
           <div class="is-centered-mobile">
-            <h1 class="title is-size-2 is-size-3-mobile">Lesson completed!</h1>
-            <h2 class="subtitle">
+            <Title size={2} sizeMobile={3}>Lesson completed!</Title>
+            <Title size={2} isSubtitle={true}>
               You've completed
               {stats.correct}
               challenges
-            </h2>
+            </Title>
             <Button size="medium" href="{courseURL}">
               Continue to course page
             </Button>
             <div class="bottom">
-              <h2 class="title is-5">Excited about LibreLingo?</h2>
+              <Title size={5}>Excited about LibreLingo?</Title>
               <TwitterButton />
             </div>
           </div>

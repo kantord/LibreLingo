@@ -1,5 +1,6 @@
 <script lang="typescript">
   import Summary from "./Summary"
+  import Title from 'lluis/Title'
 
   export let title
   export let completed
@@ -11,7 +12,7 @@
 </script>
 
 <div class="media-content" class:completed class:stale>
-  <p class="title is-4">{title}</p>
+  <Title size={4}>{title}</Title>
   {#if completed || !started}
     <Summary summary="{summary}" stale="{stale}" completed="{completed}" />
   {/if}
