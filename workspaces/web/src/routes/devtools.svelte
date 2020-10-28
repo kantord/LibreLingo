@@ -21,7 +21,7 @@
   import GitHubButton from "../components/GitHubButton"
   import Column from "lluis/Column"
   import Columns from "lluis/Columns"
-  import Content from "Iluis/Content"
+  import Content from "lluis/Content"
 
   export let testSkills = []
 </script>

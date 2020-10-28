@@ -14,7 +14,7 @@
   import NavBar from "../../../components/NavBar.svelte"
   import Column from "lluis/Column.svelte"
   import Columns from "lluis/Columns.svelte"
-  import Content from "iluis/Content.svelte"
+  import Content from "lluis/Content.svelte"
 
   export let courseName = null
   export let modules = null

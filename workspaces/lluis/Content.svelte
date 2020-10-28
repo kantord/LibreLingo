@@ -1,11 +1,10 @@
-<script lang="typescript">
-  export let additionalClasses = ""
-</script>
-
-<div class="{`content ${additionalClasses || ''}`}">
+<div class="content">
   <slot />
 </div>
 
 <style type="text/scss">
-  @import "./node_modules/bulma/sass/elements/content.sass";
+  @import "./node_modules/bulma/sass/utilities/initial-variables";
+  @import "./node_modules/bulma/sass/utilities/derived-variables";
+  @import "./node_modules/bulma/sass/utilities/mixins";
+  @import "./node_modules/bulma/sass/elements/content";
 </style>

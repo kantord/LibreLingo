@@ -35,9 +35,11 @@
   <div class="hero-body">
     <div class="container">
       <h1 class="title">{title}</h1>
-      <Content additionalClasses="section box">
-        {@html readmeHTML}
-      </Content>
+      <div class="section box">
+        <Content>
+          {@html readmeHTML}
+        </Content>
+      </div>
     </div>
   </div>
 </section>
