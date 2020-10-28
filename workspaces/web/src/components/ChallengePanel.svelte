@@ -24,30 +24,32 @@
   in:slide|local="{{ duration: 300, delay: 50 }}">
   <div class="panel-block">
     <div class="control">
-      <div class="left">
-        {#if skipAction}
-          <Button on:click="{skipAction}">Skip</Button>
-        {/if}
-        {#if skipAllAction}
-          <Button on:click="{skipAllAction}">Finish early</Button>
-        {/if}
-        {#if skipAllVoice}
-          <Button on:click="{skipAllVoice}">Can't listen now</Button>
-        {/if}
-        {#if message}<b>{message}</b>{/if}
-        {#if messageDetail}
-          <p>{messageDetail}</p>
-        {/if}
-      </div>
-      <div class="right">
-        {#if buttonAction}
-          <Button primary type="submit" on:click="{buttonAction}">
-            {buttonText}
-          </Button>
-        {/if}
-        {#if submit}
-          <Button primary type="submit">Submit</Button>
-        {/if}
+      <div class="container">
+        <div>
+          {#if skipAction}
+            <Button on:click="{skipAction}">Skip</Button>
+          {/if}
+          {#if skipAllAction}
+            <Button on:click="{skipAllAction}">Finish early</Button>
+          {/if}
+          {#if skipAllVoice}
+            <Button on:click="{skipAllVoice}">Can't listen now</Button>
+          {/if}
+          {#if message}<b>{message}</b>{/if}
+          {#if messageDetail}
+            <p>{messageDetail}</p>
+          {/if}
+        </div>
+        <div>
+          {#if buttonAction}
+            <Button primary type="submit" on:click="{buttonAction}">
+              {buttonText}
+            </Button>
+          {/if}
+          {#if submit}
+            <Button primary type="submit">Submit</Button>
+          {/if}
+        </div>
       </div>
     </div>
   </div>
@@ -80,11 +82,8 @@
     color: $text-invert;
     background: $yellow;
   }
-  .left {
-    float: left;
-  }
-  .right {
-    float: right;
+  .container {
+    display: flex;
   }
 
   .panel-block {
