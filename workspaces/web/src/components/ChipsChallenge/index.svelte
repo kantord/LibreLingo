@@ -4,6 +4,7 @@
   import hotkeys from "hotkeys-js"
   import shuffle from "lodash.shuffle"
   import { writable, get } from "svelte/store"
+  import Tag from "lluis/Tag"
   import ChallengePanel from "../ChallengePanel"
   import Phrase from "../Phrase"
   import { changeArrayElementPosition } from "./utils"
@@ -51,7 +52,7 @@
   export let resolveChallenge
   export let skipChallenge
   export let skipAllChallenges
-  
+
   let submitted = false
   let correct = null
   const answer = writable([])
@@ -116,7 +117,7 @@
         use:sortable="{{ items: answer, options: { group: 'chips', forceFallback: true } }}">
         {#each get(answer) as chip}
           <span class="chip">
-            <spain class="tag is-medium">{chip}</spain>
+            <Tag size="medium">{chip}</Tag>
           </span>
         {/each}
       </div>
@@ -129,7 +130,7 @@
       use:sortable="{{ items: chips, options: { group: 'chips', forceFallback: true } }}">
       {#each get(chips) as chip}
         <span class="chip">
-          <spain class="tag is-medium">{chip}</spain>
+          <Tag size="medium">{chip}</Tag>
         </span>
       {/each}
     </div>
