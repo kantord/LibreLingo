@@ -5,6 +5,7 @@
   import GitHubButton from "../components/GitHubButton"
   import Column from "lluis/Column"
   import Columns from "lluis/Columns"
+  import Image from "lluis/Image"
   import { _ } from "svelte-i18n"
 
   import shuffle from "lodash.shuffle"
@@ -45,7 +46,7 @@
     <div class="container">
       <div class="columns project-introduction">
         <Column size="1/3">
-          <h1 class="title"><img src="images/logo.svg" alt="LibreLingo" /></h1>
+          <h1 class="title"><Image src="images/logo.svg" alt="LibreLingo" /></h1>
         </Column>
         <Column>
           <h2 class="subtitle">{$_('index.subtitle')}</h2>
@@ -111,19 +112,19 @@
         </Column>
 
         <Column sizeTablet="1/3">
-          <img
+          <Image
             src="images/screenshot-spaced-repetition.png"
             alt=""
-            class="screenshot" />
+            className="screenshot" />
         </Column>
       </Columns>
 
       <Columns reversed>
         <Column sizeTablet="1/3">
-          <img
+          <Image
             src="images/screenshot-chips-challenge.png"
             alt=""
-            class="screenshot" />
+            className="screenshot" />
         </Column>
 
         <Column>
@@ -141,19 +142,19 @@
         </Column>
 
         <Column sizeTablet="1/3">
-          <img
+          <Image
             src="images/screenshot-course-editor.png"
             alt=""
-            class="screenshot" />
+            className="screenshot" />
         </Column>
       </Columns>
 
       <Columns reversed="">
         <Column sizeTablet="1/3">
-          <img
+          <Image
             src="images/screenshot-dictionary.png"
             alt=""
-            class="screenshot" />
+            className="screenshot" />
         </Column>
 
         <Column>
@@ -250,9 +251,6 @@
     margin-bottom: 1em;
   }
 
-  .screenshot {
-    box-shadow: 0 0 2em #ffffff42;
-  }
 
   .is-centered-both-ways {
     display: flex;

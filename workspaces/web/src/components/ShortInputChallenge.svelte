@@ -7,6 +7,7 @@
   import InputFieldWithVirtualKeyboard from "./InputFieldWithVirtualKeyboard"
   import Column from "lluis/Column"
   import Columns from "lluis/Columns"
+  import Image from "lluis/Image"
   import evaluateAnswer from "answer-corrector"
 
   export let challenge
@@ -78,9 +79,7 @@
     <Column>
       <div class="card">
         <div class="card-image">
-          <figure class="image is-1by1">
-            <img src="images/{picture}" alt="" />
-          </figure>
+          <Image src="images/{picture}" alt="" size="1by1" />
         </div>
       </div>
     </Column>
