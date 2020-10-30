@@ -14,6 +14,7 @@
   import NavBar from "../../../components/NavBar.svelte"
   import Column from "lluis/Column.svelte"
   import Columns from "lluis/Columns.svelte"
+  import Content from "lluis/Content.svelte"
 
   export let courseName = null
   export let modules = null
@@ -33,7 +34,6 @@
       <Columns multiline>
         {#each skills as skill}
           <Column sizeDesktop="1/3" sizeTablet="1/2">
-
             <SkillCard
               {...{ ...skill }}
               practiceHref="{`/course/${courseName}/skill/${skill.practiceHref}`}" />
@@ -45,7 +45,7 @@
 {/each}
 
 <footer class="footer">
-  <div class="content">
+  <Content>
     <Columns>
       <Column>
         <strong>LibreLingo</strong>
@@ -68,7 +68,7 @@
       <Column />
     </Columns>
     <p></p>
-  </div>
+  </Content>
 </footer>
 
 <style type="text/scss">
