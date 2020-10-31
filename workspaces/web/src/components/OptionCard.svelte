@@ -1,5 +1,5 @@
 <script lang="typescript">
-  import Image from "lluis/Image"
+  import Figure from "lluis/Figure"
   export let active
   export let inactive
   export let number
@@ -14,7 +14,9 @@
     data-test="{active ? 'active' : inactive ? 'inactive' : 'neutral'}"
     data-test-correct="{correct}">
     <div class="card-image">
-      <Image src="{`images/${picture}`}" alt="" size="1by1" />
+      <Figure size="1by1">
+        <img src="{`images/${picture}`}" alt="" />
+      </Figure>
     </div>
     <div class="card-content">
       <div class="is-size-5 has-text-centered is-size-6-mobile">
