@@ -4,7 +4,7 @@
   import TwitterButton from "../components/TwitterButton"
   import GitHubButton from "../components/GitHubButton"
   import Tag from "lluis/Tag"
-  import Tag from "lluis/Tag"
+  import Tags from "lluis/Tags"
   import Column from "lluis/Column"
   import Columns from "lluis/Columns"
   import { _ } from "svelte-i18n"
@@ -201,11 +201,11 @@
                 </header>
                 <div class="card-content">
                   <div class="content">
-                    <Tag isContainer={true}>
+                    <Tags>
                       {#each labels as { name, color }}
                         <Tag style="{`background-color: #${color}`}">{name}</Tag>
                       {/each}
-                    </Tag>
+                    </Tags>
                   </div>
                 </div>
                 <footer class="card-footer">
