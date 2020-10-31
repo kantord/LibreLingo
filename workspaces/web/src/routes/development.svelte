@@ -5,6 +5,7 @@
   import GitHubButton from "../components/GitHubButton"
   import Column from "lluis/Column"
   import Columns from "lluis/Columns"
+  import Title from 'lluis/Title'
   import { _ } from "svelte-i18n"
 
   import shuffle from "lodash.shuffle"
@@ -34,7 +35,7 @@
 </svelte:head>
 
 {#if issues === null}
-  <div class="pageloader is-active"><span class="title">LibreLingo</span></div>
+  <div class="pageloader is-active"><Title>LibreLingo</Title></div>
 {/if}
 
 <section class="hero is-primary">
@@ -45,10 +46,10 @@
     <div class="container">
       <div class="columns project-introduction">
         <Column size="1/3">
-          <h1 class="title"><img src="images/logo.svg" alt="LibreLingo" /></h1>
+          <Title><img src="images/logo.svg" alt="LibreLingo" /></Title>
         </Column>
         <Column>
-          <h2 class="subtitle">{$_('index.subtitle')}</h2>
+          <Title size={2} isSubtitle={true}>{$_('index.subtitle')}</Title>
           <div class="buttons">
             <a
               class="button is-primary is-inverted is-outlined"
@@ -70,7 +71,7 @@
     </div>
 
     <div class="container">
-      <h2 class="is-size-2 is-size-3-mobile">Recent major new features</h2>
+      <Title size={2} sizeMobile={3}>Recent major new features</Title>
 
       <Columns>
         <Column size="1/4">
@@ -106,7 +107,7 @@
       <Columns>
         <Column>
           <div class=" has-text-centered is-centered-both-ways">
-            <h3 class="is-size-3">Spaced repetition</h3>
+            <Title size={3}>Spaced repetition</Title>
           </div>
         </Column>
 
@@ -128,7 +129,7 @@
 
         <Column>
           <div class="has-text-centered is-centered-both-ways">
-            <h3 class="is-size-3">Practice word order</h3>
+            <Title size={3}>Practice word order</Title>
           </div>
         </Column>
       </Columns>
@@ -136,7 +137,7 @@
       <Columns>
         <Column>
           <div class="has-text-centered is-centered-both-ways">
-            <h3 class="is-size-3">Course editor</h3>
+            <Title size={3}>Course editor</Title>
           </div>
         </Column>
 
@@ -158,13 +159,13 @@
 
         <Column>
           <div class="has-text-centered is-centered-both-ways">
-            <h3 class="is-size-3">Built-in mini-dictionary</h3>
+            <Title size={3}>Built-in mini-dictionary</Title>
           </div>
         </Column>
       </Columns>
 
       <div class="development-progress">
-        <h3 class="is-size-3">Progress towards alpha release</h3>
+        <Title size={3}>Progress towards alpha release</Title>
         <progress class="progress is-medium is-info" value="75" max="100">
           45%
         </progress>
@@ -186,9 +187,9 @@
 {#if issues !== null && issues.length}
   <section class="section">
     <div class="container">
-      <h3 class="is-size-3">
+      <Title size={3}>
         Looking for a challange? Check out these issues:
-      </h3>
+      </Title>
       <div class="columns is-multiline">
         {#each issues as { title, html_url, labels }}
           <div class="column is-one-third">
