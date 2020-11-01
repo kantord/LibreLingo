@@ -3,6 +3,8 @@
   import Mascot from "../components/Mascot"
   import TwitterButton from "../components/TwitterButton"
   import GitHubButton from "../components/GitHubButton"
+  import Tag from "lluis/Tag"
+  import Tags from "lluis/Tags"
   import Column from "lluis/Column"
   import Columns from "lluis/Columns"
   import Title from 'lluis/Title'
@@ -200,15 +202,11 @@
                 </header>
                 <div class="card-content">
                   <div class="content">
-                    <div class="tags">
+                    <Tags>
                       {#each labels as { name, color }}
-                        <div
-                          class="tag"
-                          style="{`background-color: #${color}`}">
-                          {name}
-                        </div>
+                        <Tag style="{`background-color: #${color}`}">{name}</Tag>
                       {/each}
-                    </div>
+                    </Tags>
                   </div>
                 </div>
                 <footer class="card-footer">

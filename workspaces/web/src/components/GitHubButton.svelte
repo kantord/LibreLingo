@@ -13,6 +13,7 @@
   import { onMount } from "svelte"
   import Icon from "lluis/Icon"
   import Button from "lluis/Button"
+  import Tag from "lluis/Tag"
   const pMemoize = require("p-memoize")
   export let stars = (process.browser === true ? window.stars : null) || "   "
   export let size = "small"
@@ -44,12 +45,12 @@
   size="{size}"
   href="https://github.com/kantord/LibreLingo">
   {#if stars}
-    <span class="tag is-white">
+    <Tag color="white">
       <span class="stars">{stars}</span>
       <span class="icon">
         <Icon icon="star" />
       </span>
-    </span>
+    </Tag>
   {/if}
   <span class="is-hidden-mobile">GitHub</span>
 </Button>
