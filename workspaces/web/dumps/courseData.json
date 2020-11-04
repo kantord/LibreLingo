@@ -1140,6 +1140,18 @@
   }
 },
 {
+  "model": "course.learnword",
+  "pk": 104,
+  "fields": {
+    "skill": 3,
+    "meaningInSourceLanguage": "The shirts",
+    "formInTargetLanguage": "Die Hemde",
+    "image1": "shirt1",
+    "image2": "shirt2",
+    "image3": "shirt3"
+  }
+},
+{
   "model": "course.dictionaryitem",
   "pk": 1,
   "fields": {
@@ -6289,7 +6301,8 @@
     "language_name": "Spanish",
     "source_language_name": "English",
     "target_language_code": "es",
-    "special_characters": "\u00e1 \u00c1 \u00e9 \u00c9 \u00ed \u00cd \u00f3 \u00d3 \u00fa \u00da \u00fc \u00dc \u00f1 \u00d1 \u00bf \u00a1"
+    "special_characters": "\u00e1 \u00c1 \u00e9 \u00c9 \u00ed \u00cd \u00f3 \u00d3 \u00fa \u00da \u00fc \u00dc \u00f1 \u00d1 \u00bf \u00a1",
+    "license": "CC BY-SA 4.0"
   }
 },
 {
@@ -6299,7 +6312,8 @@
     "language_name": "German",
     "source_language_name": "English",
     "target_language_code": "de",
-    "special_characters": "\u00e4 \u00c4 \u00f6 \u00d6 \u00fc \u00dc \u00df \u1e9e"
+    "special_characters": "\u00e4 \u00c4 \u00f6 \u00d6 \u00fc \u00dc \u00df \u1e9e",
+    "license": "CC BY-SA 4.0"
   }
 },
 {
@@ -6309,7 +6323,8 @@
     "language_name": "Toki Pona",
     "source_language_name": "English",
     "target_language_code": "art-x-tokipona",
-    "special_characters": "a e i o u p t k s m n l w j"
+    "special_characters": "a e i o u p t k s m n l w j",
+    "license": "CC BY-SA 4.0"
   }
 },
 {
@@ -6386,7 +6401,7 @@
   "pk": 3,
   "fields": {
     "module": 2,
-    "name": "Clothes",
+    "name": "Clothing",
     "order": 1,
     "image1": "t-shirt2",
     "image2": "dress2",
@@ -6574,4 +6589,3 @@
   }
 }
 ]
-
