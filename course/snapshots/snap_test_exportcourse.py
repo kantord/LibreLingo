@@ -10,6 +10,9 @@ snapshots = Snapshot()
 snapshots['CourseDataTest::test_correct_output_format 1'] = {
     'languageCode': 'ES',
     'languageName': 'Spanish',
+    'license': '',
+    'licenseFullName': '',
+    'licenseLink': '',
     'modules': [
         {
             'skills': [
@@ -39,6 +42,9 @@ snapshots['CourseDataTest::test_correct_output_format 1'] = {
 snapshots['CourseDataTest::test_correct_output_format_only_phrases 1'] = {
     'languageCode': 'ES',
     'languageName': 'Spanish',
+    'license': '',
+    'licenseFullName': '',
+    'licenseLink': '',
     'modules': [
         {
             'skills': [
