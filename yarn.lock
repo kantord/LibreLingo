@@ -4506,11 +4506,6 @@ commander@^2.18.0, commander@^2.19.0, commander@^2.20.0, commander@^2.9.0, comma
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
   integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
 
-commander@^4.0.1:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/commander/-/commander-4.1.1.tgz#9fd602bd936294e9e9ef46a3f4d6964044b18068"
-  integrity sha512-NOKm8xhkzAjzFx8B2v5OAHT+u5pRQc2UCa2Vq9jYL/31o2wi9mxBA7LIFs3sV5VSC49z6pEhfbMULvShKj26WA==
-
 commander@^6.2.0:
   version "6.2.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-6.2.0.tgz#b990bfb8ac030aedc6d11bc04d1488ffef56db75"
@@ -5372,6 +5367,11 @@ dir-glob@^3.0.1:
   integrity sha512-WkrWp9GR4KXfKGYzOLmTuGVi1UWFfws377n9cc55/tb6DuqyF6pcQ5AbiHEshaDpY9v6oaSr2XCDidGmMwdzIA==
   dependencies:
     path-type "^4.0.0"
+
+dlv@^1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/dlv/-/dlv-1.1.3.tgz#5c198a8a11453596e751494d49874bc7732f2e79"
+  integrity sha512-+HlytyjlPKnIG8XuRG8WvmBP8xs8P71y+SKKS6ZXWoEgLuePxtDoUEiH7WkdePWrQ5JBpE6aoVqfZfJUQkjXwA==
 
 doctrine@^3.0.0:
   version "3.0.0"
@@ -9427,6 +9427,11 @@ move-concurrently@^1.0.1:
     rimraf "^2.5.4"
     run-queue "^1.0.3"
 
+mri@^1.1.0:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/mri/-/mri-1.1.6.tgz#49952e1044db21dbf90f6cd92bc9c9a777d415a6"
+  integrity sha512-oi1b3MfbyGa7FJMP9GmLTttni5JoICpYBRlq+x5V16fZbLsnL9N3wFqqIm/nIG43FjUFkFh9Epzp/kzUGUnJxQ==
+
 ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
@@ -11350,6 +11355,13 @@ rxjs@^6.3.3, rxjs@^6.4.0, rxjs@^6.5.3:
   dependencies:
     tslib "^1.9.0"
 
+sade@^1.7.4:
+  version "1.7.4"
+  resolved "https://registry.yarnpkg.com/sade/-/sade-1.7.4.tgz#ea681e0c65d248d2095c90578c03ca0bb1b54691"
+  integrity sha512-y5yauMD93rX840MwUJr7C1ysLFBgMspsdTo4UVrDg3fXDvtwOyIqykhVAAm6fk/3au77773itJStObgK+LKaiA==
+  dependencies:
+    mri "^1.1.0"
+
 safe-buffer@5.1.2, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   version "5.1.2"
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.2.tgz#991ec69d296e0313747d59bdfd2b745c35f8828d"
@@ -12305,14 +12317,16 @@ svelte-dev-helper@^1.1.9:
   resolved "https://registry.yarnpkg.com/svelte-dev-helper/-/svelte-dev-helper-1.1.9.tgz#7d187db5c6cdbbd64d75a32f91b8998bde3273c3"
   integrity sha1-fRh9tcbNu9ZNdaMvkbiZi94yc8M=
 
-svelte-i18n@3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/svelte-i18n/-/svelte-i18n-3.0.3.tgz#1f46820411639eb3689eb3e7d969bb15a8e1e90d"
-  integrity sha512-2pJZwrMuXW8UtkzQGdld0AuwMDnzekDGXSPUdbTu+Th5ByPXYRnOZip3nIVruFzskta1JppYwUZ0U8vvgirkQg==
+svelte-i18n@3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/svelte-i18n/-/svelte-i18n-3.2.1.tgz#e8312c22f85d4063e0953eeb87edf93eb7824909"
+  integrity sha512-23Dn572uO7Qtw5VxtaJ7/6DEJBhiC2o19kx5VOlKEe3xFNqWhZCchoc7wmIM9cDu8vWZNBY2/+t9aTg7CXAmCw==
   dependencies:
-    commander "^4.0.1"
+    deepmerge "^4.2.2"
+    dlv "^1.1.3"
     estree-walker "^0.9.0"
     intl-messageformat "^7.5.2"
+    sade "^1.7.4"
     tiny-glob "^0.2.6"
 
 svelte-loader@2.13.6:
