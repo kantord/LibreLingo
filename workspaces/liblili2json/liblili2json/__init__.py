@@ -13,6 +13,13 @@ Course = namedtuple("Course", [
     "language_code",
     "special_characters",
     "modules",
+    "license",
+])
+
+License = namedtuple("License", [
+    "name",
+    "full_name",
+    "link",
 ])
 
 Module = namedtuple("Module", [
@@ -45,7 +52,8 @@ def get_opaque_id(obj, salt=""):
     id
     """
     sha256 = hashlib.sha256()
-    sha256.update((type(obj).__name__ + str(obj.id) + salt).encode('utf-8'))
+    sha256.update((type(obj).__name__.lower() +
+                   str(obj.id) + salt).encode('utf-8'))
 
     return sha256.hexdigest()[0:12]
 
@@ -63,7 +71,10 @@ def get_module_summary(module):
     """
 
     def get_imageset(images):
-        return {"imageSet": images} if images else {}
+        if images and len(images) == 3 and all(images):
+            return {"imageSet": images}
+        else:
+            return {}
 
     def get_summary(words, phrases):
         words = [word.in_target_langauge for word in words]
@@ -78,12 +89,12 @@ def get_module_summary(module):
         "title": module.title,
         "skills": [
             {
-                "title": skill.name,
-                "practiceHref": slugify(skill.name),
+                **(get_imageset(skill.image_set)),
                 "summary": get_summary(skill.words, skill.phrases),
-                "levels": get_levels(skill.words, skill.phrases),
+                "practiceHref": slugify(skill.name),
                 "id": get_opaque_id(skill, "Skill"),
-                **(get_imageset(skill.image_set))
+                "title": skill.name,
+                "levels": get_levels(skill.words, skill.phrases),
             } for skill in module.skills
         ]
     }
@@ -98,6 +109,9 @@ def get_course_data(course):
         "languageName": course.language_name,
         "languageCode": course.language_code,
         "specialCharacters": course.special_characters,
+        "license": course.license.name,
+        "licenseFullName": course.license.full_name,
+        "licenseLink": course.license.link,
         "modules": [
             get_module_summary(module) for module in course.modules
         ]
