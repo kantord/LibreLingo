@@ -110,9 +110,13 @@ def test_get_course_data_return_value():
         "languageName": "my language",
         "languageCode": "de",
         "specialCharacters": ["ä", "ß"],
-        "license": "foo",
-        "licenseFullName": "foo bar license",
-        "licenseLink": None,
+        "license": {
+            "name": {
+                "short": "foo",
+                "full": "foo bar license",
+            },
+            "link": None,
+        },
         "modules": [
             {
                 "title": "Basics",
@@ -160,9 +164,13 @@ def test_get_course_data_return_value_2():
         "languageName": "another language",
         "languageCode": "tr",
         "specialCharacters": ["ç", "ş"],
-        "license": "lorem",
-        "licenseFullName": "ipsum lorem license",
-        "licenseLink": "https://example.com/lipsum_license",
+        "license": {
+            "name": {
+                "short":  "lorem",
+                "full": "ipsum lorem license"
+            },
+            "link":  "https://example.com/lipsum_license",
+        },
         "modules": [
             {
                 "title": "Animals",
