@@ -5,6 +5,7 @@ from liblili2json import Module
 from liblili2json import Skill
 from liblili2json import Phrase
 from liblili2json import Word
+from liblili2json import License
 
 fakePhrase1 = Phrase(
     in_target_langauge="foous barus",
@@ -31,6 +32,18 @@ fakeWord1 = Word(
     in_source_langauge="foo",
 )
 
+fakeLicense1 = License(
+    name="foo",
+    full_name="foo bar license",
+    link=None
+)
+
+fakeLicense2 = License(
+    name="lorem",
+    full_name="ipsum lorem license",
+    link="https://example.com/lipsum_license"
+)
+
 fakeWord2 = Word(
     in_target_langauge="apfel",
     in_source_langauge="apple",
@@ -40,6 +53,7 @@ fakeCourse1 = Course(
     language_name="my language",
     language_code="de",
     special_characters=["ä", "ß"],
+    license=fakeLicense1,
     modules=[
         Module(title="Basics", skills=[
             Skill(
@@ -72,6 +86,7 @@ fakeCourse2 = Course(
     language_name="another language",
     language_code="tr",
     special_characters=["ç", "ş"],
+    license=fakeLicense2,
     modules=[
         Module(title="Animals", skills=[
             Skill(
@@ -79,7 +94,7 @@ fakeCourse2 = Course(
                 id=3,
                 words=[fakeWord1],
                 phrases=[],
-                image_set=[]
+                image_set=["just_one_image"]
             )
         ]),
     ]
@@ -95,6 +110,9 @@ def test_get_course_data_return_value():
         "languageName": "my language",
         "languageCode": "de",
         "specialCharacters": ["ä", "ß"],
+        "license": "foo",
+        "licenseFullName": "foo bar license",
+        "licenseLink": None,
         "modules": [
             {
                 "title": "Basics",
@@ -104,7 +122,7 @@ def test_get_course_data_return_value():
                         "practiceHref": "masculine",
                         "summary": ["lorem ipsum"],
                         "imageSet": ["man1", "man2", "boy1"],
-                        'id': '5e436b04ec5d',
+                        'id': 'd7279e4777cd',
                         "levels": 1,
                     },
                     {
@@ -112,7 +130,7 @@ def test_get_course_data_return_value():
                         "practiceHref": "feminine",
                         "imageSet": ["woman1", "woman2", "girl1"],
                         "summary": ["foous", "apfel",  "foous", "apfel", "foous barus"],
-                        'id': '5e436b04ec5d',
+                        'id': 'd7279e4777cd',
                         "levels": 2,
                     },
                     {
@@ -120,7 +138,7 @@ def test_get_course_data_return_value():
                         "summary": [],
                         "practiceHref": "neuter",
                         "imageSet": ["foo1", "bar1", "bar2"],
-                        'id': '5e436b04ec5d',
+                        'id': 'd7279e4777cd',
                         "levels": 1,
                     },
                 ]
@@ -142,12 +160,15 @@ def test_get_course_data_return_value_2():
         "languageName": "another language",
         "languageCode": "tr",
         "specialCharacters": ["ç", "ş"],
+        "license": "lorem",
+        "licenseFullName": "ipsum lorem license",
+        "licenseLink": "https://example.com/lipsum_license",
         "modules": [
             {
                 "title": "Animals",
                 "skills": [
                     {
-                        'id': '5e436b04ec5d',
+                        'id': 'd7279e4777cd',
                         "title": "Mammals and birds",
                         "practiceHref": "mammals-and-birds",
                         "summary": ["foous"],
