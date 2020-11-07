@@ -6,7 +6,7 @@ Feature: Listening exercise
     Given I open "/course/test/skill/_listening_test0"
     Then listening challenge looks correct
     And I read "Type what you hear"
-    And I see a panel with only a skip button
+    And I see a panel with only a skip button and a can't listen now button
     And I don't see a "Submit" button
     And I'm not able to submit
     And I see an input field
@@ -23,6 +23,7 @@ Feature: Listening exercise
     Then I see the challenge panel
     And I see a "Skip" button
     And I see a "Submit" button
+    And I see a "Can't listen now" button
 
   Scenario: Submitting incorrect answer
     Given I open "/course/test/skill/_listening_test0"
@@ -59,11 +60,19 @@ Feature: Listening exercise
     And I click "Submit"
     Then I don't see a "Skip" button
     And I click "Continue"
-    Then I see a panel with only a skip and a finish early button
+    Then I see a panel with only a skip and a can't listen now and a finish early button
 
   Scenario: Going to the next challenge with keyboard only
     Given I open "/course/test/skill/_listening_test2"
     And I type "agua"
     And I hit the enter key
     And I hit the enter key
-    Then I see a panel with only a skip and a finish early button
+    Then I see a panel with only a skip and a can't listen now and a finish early button
+
+  Scenario: Skipping all listening excercises
+    Given I open "/course/test/skill/_listening_test2"
+    And I see a "Skip" button
+    And I see a "Can't listen now" button
+    And I click "Can't listen now"
+    Then I read "Lesson completed!"
+    And I read "You've completed 0 challenges"

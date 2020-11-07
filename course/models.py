@@ -11,6 +11,20 @@ with open(Path('./docs/image_attributions.csv').resolve()) as f:
                          for o in csv.DictReader(f)]
 
 
+LICENSES = {
+    "CC BY-SA 4.0": {
+        "full_name": "Attribution-ShareAlike 4.0 International",
+        "link": "https://creativecommons.org/licenses/by-sa/4.0/legalcode"
+    },
+    "": {
+        "full_name": "",
+        "link": ""
+    }
+}
+
+LICENSE_CHOICES = [[key, key] for key in LICENSES.keys()]
+
+
 class LearnWord(models.Model):
     class Meta:
         verbose_name = "Word"
@@ -119,6 +133,7 @@ class Course(models.Model):
         verbose_name="Target langauge IETF BCP 47 code")
     special_characters = models.TextField(
         verbose_name="Space-separated list of characters for the virtual keyboard")
+    license = models.TextField(verbose_name="License", choices=LICENSE_CHOICES)
 
 
 class Module(models.Model):

@@ -5,6 +5,7 @@
   import Box from "lluis/Box"
   import Column from "lluis/Column"
   import Columns from "lluis/Columns"
+  import Title from "lluis/Title"
   import { _ } from "svelte-i18n"
   import Translate from "../Translate.svelte"
 </script>
@@ -25,7 +26,7 @@
         </Column>
         <Column>
           <Box>
-            <h1 class="title">LibreLingo</h1>
+            <Title class="title">LibreLingo</Title>
             <h2 class="subtitle">
               <Translate key="index.subtitle">
                 an experiment to create a community driven language-learning
