@@ -121,3 +121,20 @@ def get_course_data(course):
             get_module_summary(module) for module in course.modules
         ]
     }
+
+
+def get_challenges_data(skill):
+    return []
+
+
+def get_skill_data(skill):
+    """
+    Format Course according to the JSON structure
+    """
+
+    return {
+        "id": get_opaque_id(skill, "Skill"),
+        "levels": calculate_number_of_levels(
+            len(skill.words), len(skill.phrases)),
+        "challenges": get_challenges_data(skill)
+    }
