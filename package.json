@@ -9,7 +9,9 @@
     "web": "yarn workspace web",
     "stylefix": "yarn web run prettierfix && yarn web run eslintfix",
     "stylecheck": "yarn web run prettiercheck && yarn web run eslintcheck",
-    "docs": "mkdocs serve"
+    "docs": "mkdocs serve",
+    "storybook": "start-storybook -p 6006 -c workspaces/.storybook",
+    "build-storybook": "build-storybook -c workspaces/.storybook"
   },
   "workspaces": {
     "packages": [
@@ -30,6 +32,12 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@storybook/addon-actions": "^6.0.26",
+    "@storybook/addon-essentials": "^6.0.26",
+    "@storybook/addon-links": "^6.0.26",
+    "@storybook/svelte": "^6.0.26",
+    "babel-loader": "^8.1.0",
     "eslint": "6.8.0",
     "eslint-plugin-cypress": "2.11.2",
     "eslint-plugin-jest": "24.1.0",
