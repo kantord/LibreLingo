@@ -49,6 +49,37 @@ fakeWord2 = Word(
     in_source_langauge="apple",
 )
 
+fakeSkills = [
+    Skill(
+        name="Masculine",
+        id=3,
+        phrases=[fakePhrase2],
+        words=[],
+        image_set=["man1", "man2", "boy1"]
+    ),
+    Skill(
+        name="Feminine",
+        id=3,
+        words=[fakeWord1, fakeWord2, fakeWord1, fakeWord2],
+        phrases=[fakePhrase1],
+        image_set=["woman1", "woman2", "girl1"]
+    ),
+    Skill(
+        name="Neuter",
+        id=3,
+        words=[],
+        phrases=[],
+        image_set=["foo1", "bar1", "bar2"]
+    ),
+    Skill(
+        name="Mammals and birds",
+        id=3,
+        words=[fakeWord1],
+        phrases=[],
+        image_set=["just_one_image"]
+    )
+]
+
 fakeCourse1 = Course(
     language_name="my language",
     language_code="de",
@@ -56,27 +87,9 @@ fakeCourse1 = Course(
     license=fakeLicense1,
     modules=[
         Module(title="Basics", skills=[
-            Skill(
-                name="Masculine",
-                id=3,
-                phrases=[fakePhrase2],
-                words=[],
-                image_set=["man1", "man2", "boy1"]
-            ),
-            Skill(
-                name="Feminine",
-                id=3,
-                words=[fakeWord1, fakeWord2, fakeWord1, fakeWord2],
-                phrases=[fakePhrase1],
-                image_set=["woman1", "woman2", "girl1"]
-            ),
-            Skill(
-                name="Neuter",
-                id=3,
-                words=[],
-                phrases=[],
-                image_set=["foo1", "bar1", "bar2"]
-            )
+            fakeSkills[0],
+            fakeSkills[1],
+            fakeSkills[2],
         ]),
         Module(title="Phrases", skills=[]),
     ]
@@ -89,13 +102,7 @@ fakeCourse2 = Course(
     license=fakeLicense2,
     modules=[
         Module(title="Animals", skills=[
-            Skill(
-                name="Mammals and birds",
-                id=3,
-                words=[fakeWord1],
-                phrases=[],
-                image_set=["just_one_image"]
-            )
+            fakeSkills[3]
         ]),
     ]
 )
