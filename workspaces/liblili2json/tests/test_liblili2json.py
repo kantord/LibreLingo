@@ -2,6 +2,7 @@ from unittest.mock import patch
 from unittest import TestCase
 from liblili2json import get_course_data
 from liblili2json import get_skill_data
+from liblili2json import get_challenges_data
 from liblili2json import calculate_number_of_levels
 from liblili2json import Course
 from liblili2json import Module
@@ -53,14 +54,59 @@ fakeWord2 = Word(
     in_source_langauge="apple",
 )
 
+emptyFakeSkill = Skill(
+    name="Neuter",
+    id=3,
+    words=[],
+    phrases=[],
+    image_set=["foo1", "bar1", "bar2"]
+)
+
+fakeSkillWithPhrase = Skill(
+    name="Masculine",
+    id=3,
+    phrases=[fakePhrase2],
+    words=[],
+    image_set=["man1", "man2", "boy1"]
+)
+
+
+fakeSkillWithWord = Skill(
+    name="Masculine",
+    id=3,
+    phrases=[],
+    words=[fakeWord1],
+    image_set=["man1", "man2", "boy1"]
+)
+
+
+fakeSkillWithPhraseAndWord = Skill(
+    name="Masculine",
+    id=3,
+    phrases=[fakePhrase2],
+    words=[fakeWord1],
+    image_set=["man1", "man2", "boy1"]
+)
+
+
+fakeSkillWith3Words = Skill(
+    name="Masculine",
+    id=3,
+    phrases=[],
+    words=[fakeWord1, fakeWord2, fakeWord2],
+    image_set=["man1", "man2", "boy1"]
+)
+
+fakeSkillWith3Phrases = Skill(
+    name="Masculine",
+    id=3,
+    phrases=[fakePhrase1, fakePhrase2, fakePhrase2],
+    words=[],
+    image_set=["man1", "man2", "boy1"]
+)
+
 fakeSkills = [
-    Skill(
-        name="Masculine",
-        id=3,
-        phrases=[fakePhrase2],
-        words=[],
-        image_set=["man1", "man2", "boy1"]
-    ),
+    fakeSkillWithPhrase,
     Skill(
         name="Feminine",
         id=3,
@@ -68,13 +114,7 @@ fakeSkills = [
         phrases=[fakePhrase1],
         image_set=["woman1", "woman2", "girl1"]
     ),
-    Skill(
-        name="Neuter",
-        id=3,
-        words=[],
-        phrases=[],
-        image_set=["foo1", "bar1", "bar2"]
-    ),
+    emptyFakeSkill,
     Skill(
         name="Mammals and birds",
         id=3,
@@ -83,7 +123,6 @@ fakeSkills = [
         image_set=["just_one_image"]
     )
 ]
-emptyFakeSkill = fakeSkills[2]
 
 fakeCourse1 = Course(
     language_name="my language",
@@ -213,7 +252,7 @@ def test_calculate_number_of_levels():
             example["words"], example["phrases"]) == example["result"]
 
 
-class TestStringMethods(TestCase):
+class TestGetSkillData(TestCase):
     def test_empty_skill(self):
         assert get_skill_data(fakeSkills[0]) == {
             "id": "d7279e4777cd",
@@ -244,3 +283,40 @@ class TestStringMethods(TestCase):
     def test_formats_challenges_correctly(self, mock):
         get_skill_data(fakeSkills[1])
         mock.assert_called_with(fakeSkills[1])
+
+
+class TestGetChallengesData(TestCase):
+    def test_empty_skill(self):
+        assert get_challenges_data(emptyFakeSkill) == []
+
+    @patch('liblili2json.get_phrase_challenges_data')
+    def test_generates_phrase_challenges_correctly(self, mock):
+        get_challenges_data(fakeSkillWithPhrase)
+        mock.assert_called_with(fakePhrase2)
+
+    @patch('liblili2json.get_phrase_challenges_data')
+    def test_includes_every_phrase(self, mock):
+        get_challenges_data(fakeSkillWith3Phrases)
+        assert mock.call_count == 3
+
+    @patch('liblili2json.get_word_challenges_data')
+    def test_generates_word_challenges_correctly(self, mock):
+        get_challenges_data(fakeSkillWithWord)
+        mock.assert_called_with(fakeWord1)
+
+    @patch('liblili2json.get_word_challenges_data')
+    def test_includes_every_word(self, mock):
+        get_challenges_data(fakeSkillWith3Words)
+        assert mock.call_count == 3
+
+    @patch('liblili2json.get_phrase_challenges_data')
+    @patch('liblili2json.get_word_challenges_data')
+    def test_returns_correct_challenges(self, mock1, mock2):
+        fakeChallenge1 = "fakeChallenge1"
+        fakeChallenge2 = "fakeChallenge2"
+        fakeChallenge3 = "fakeChallenge3"
+        fakeChallenge4 = "fakeChallenge4"
+        mock1.return_value = [fakeChallenge1, fakeChallenge2]
+        mock2.return_value = [fakeChallenge3, fakeChallenge4]
+        assert get_challenges_data(fakeSkillWithPhraseAndWord) == [
+            fakeChallenge1, fakeChallenge2, fakeChallenge3, fakeChallenge4]

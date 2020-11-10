@@ -3,6 +3,7 @@ Export LibreLingo courses in the JSON format expected by the web app
 """
 
 import hashlib
+import itertools
 from collections import namedtuple
 from slugify import slugify
 
@@ -123,8 +124,18 @@ def get_course_data(course):
     }
 
 
-def get_challenges_data(skill):
+def get_phrase_challenges_data(phrase):
     return []
+
+
+def get_word_challenges_data(phrase):
+    return []
+
+
+def get_challenges_data(skill):
+    return list(itertools.chain(*[get_phrase_challenges_data(phrase) for phrase in skill.phrases])) + \
+        list(itertools.chain(*[get_word_challenges_data(word)
+                               for word in skill.words]))
 
 
 def get_skill_data(skill):
