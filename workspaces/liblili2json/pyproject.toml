@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "liblili2json"
+version = "0.1.0"
+description = "Export LibreLingo courses to the JSON format supported by the web fronted"
+authors = ["Dániel Kántor <git@daniel-kantor.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+python-slugify = "^4.0.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.1.1"
+pytest-watch = "^4.2.0"
+pylint = "^2.6.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
