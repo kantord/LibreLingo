@@ -3,47 +3,23 @@ Export LibreLingo courses in the JSON format expected by the web app
 """
 
 import hashlib
-from collections import namedtuple
+import itertools
 from slugify import slugify
+from .types import Course, License, Module, Skill, Word, Phrase
 
 __version__ = '0.1.0'
 
-Course = namedtuple("Course", [
-    "language_name",
-    "language_code",
-    "special_characters",
-    "modules",
-    "license",
-])
 
-License = namedtuple("License", [
-    "name",
-    "full_name",
-    "link",
-])
+def get_dumb_opaque_id(name, id_, salt=""):
+    """
+    Generate a unique, opaque ID based on a name, and id_ and a salt
+    id
+    """
+    sha256 = hashlib.sha256()
+    sha256.update((name +
+                   str(id_) + salt).encode('utf-8'))
 
-Module = namedtuple("Module", [
-    "title",
-    "skills",
-])
-
-Skill = namedtuple("Skill", [
-    "name",
-    "id",
-    "words",
-    "phrases",
-    "image_set"
-])
-
-Word = namedtuple("Word", [
-    "in_target_langauge",
-    "in_source_langauge",
-])
-
-Phrase = namedtuple("Phrase", [
-    "in_target_langauge",
-    "in_source_langauge",
-])
+    return sha256.hexdigest()[0:12]
 
 
 def get_opaque_id(obj, salt=""):
@@ -51,11 +27,13 @@ def get_opaque_id(obj, salt=""):
     Generate a unique, opaque ID based on a type and a type specific
     id
     """
-    sha256 = hashlib.sha256()
-    sha256.update((type(obj).__name__.lower() +
-                   str(obj.id) + salt).encode('utf-8'))
+    return get_dumb_opaque_id(type(obj).__name__.lower(), str(obj.id), salt)
 
-    return sha256.hexdigest()[0:12]
+
+def audio_id(language_id, text):
+    hash = hashlib.sha256()
+    hash.update((language_id + "|" + text).encode('utf-8'))
+    return hash.hexdigest()
 
 
 def calculate_number_of_levels(nwords, nphrases):
@@ -123,11 +101,68 @@ def get_course_data(course):
     }
 
 
-def get_challenges_data(skill):
+def get_listening_challenge(source, course):
+    return {
+        "type": "listeningExercise",
+        "answer": source.in_target_langauge,
+        "meaning": source.in_source_langauge,
+        "priority": 1,
+        "audio": audio_id(course.language_code,
+                          source.in_target_langauge),
+        "group": get_dumb_opaque_id("Word", source),
+        "id": get_dumb_opaque_id("Word", source, "listeningExercise")
+    }
+
+
+def get_short_input_challenge(source, _):
+    return {
+        "type": "shortInput",
+        "formInTargetLanguage": source.in_target_langauge,
+        "phrase": source.in_source_langauge,
+        "priority": 1,
+        "group": get_dumb_opaque_id("Word", source),
+        "id": get_dumb_opaque_id("Word", source, "shortInput")
+    }
+
+
+def get_cards_challenge(word, _):
+    return {
+        "type": "cards",
+        'pictures': word.pictures,
+        "formInTargetLanguage": word.in_target_langauge,
+        "meaningInSourceLanguage": word.in_source_langauge,
+        "priority": 0,
+        "group": get_dumb_opaque_id("Word", word),
+        "id": get_dumb_opaque_id("Word", word, "cards")
+    }
+
+
+def get_phrase_challenges(phrase, _):
     return []
 
 
-def get_skill_data(skill):
+def get_word_challenges(word, course):
+    challenge_types = [
+        get_cards_challenge,
+        get_short_input_challenge,
+        get_listening_challenge]
+
+    return list(map(lambda f: f(word, course), challenge_types))
+
+
+def make_challenges_using(callback, data_source, course):
+    return list(itertools.chain(
+        *map(lambda item: callback(item, course), data_source)))
+
+
+def get_challenges_data(skill, course):
+    return sum([
+        make_challenges_using(get_phrase_challenges, skill.phrases, course),
+        make_challenges_using(get_word_challenges, skill.words, course),
+    ], start=[])
+
+
+def get_skill_data(skill, course):
     """
     Format Course according to the JSON structure
     """
@@ -136,5 +171,5 @@ def get_skill_data(skill):
         "id": get_opaque_id(skill, "Skill"),
         "levels": calculate_number_of_levels(
             len(skill.words), len(skill.phrases)),
-        "challenges": get_challenges_data(skill)
+        "challenges": get_challenges_data(skill, course),
     }
