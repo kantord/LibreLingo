@@ -3,47 +3,23 @@ Export LibreLingo courses in the JSON format expected by the web app
 """
 
 import hashlib
-from collections import namedtuple
+import itertools
 from slugify import slugify
+from .types import Course, License, Module, Skill, Word, Phrase
 
 __version__ = '0.1.0'
 
-Course = namedtuple("Course", [
-    "language_name",
-    "language_code",
-    "special_characters",
-    "modules",
-    "license",
-])
 
-License = namedtuple("License", [
-    "name",
-    "full_name",
-    "link",
-])
+def get_dumb_opaque_id(name, id_, salt=""):
+    """
+    Generate a unique, opaque ID based on a name, and id_ and a salt
+    id
+    """
+    sha256 = hashlib.sha256()
+    sha256.update((name +
+                   str(id_) + salt).encode('utf-8'))
 
-Module = namedtuple("Module", [
-    "title",
-    "skills",
-])
-
-Skill = namedtuple("Skill", [
-    "name",
-    "id",
-    "words",
-    "phrases",
-    "image_set"
-])
-
-Word = namedtuple("Word", [
-    "in_target_langauge",
-    "in_source_langauge",
-])
-
-Phrase = namedtuple("Phrase", [
-    "in_target_langauge",
-    "in_source_langauge",
-])
+    return sha256.hexdigest()[0:12]
 
 
 def get_opaque_id(obj, salt=""):
@@ -51,11 +27,7 @@ def get_opaque_id(obj, salt=""):
     Generate a unique, opaque ID based on a type and a type specific
     id
     """
-    sha256 = hashlib.sha256()
-    sha256.update((type(obj).__name__.lower() +
-                   str(obj.id) + salt).encode('utf-8'))
-
-    return sha256.hexdigest()[0:12]
+    return get_dumb_opaque_id(type(obj).__name__.lower(), str(obj.id), salt)
 
 
 def calculate_number_of_levels(nwords, nphrases):
@@ -123,8 +95,35 @@ def get_course_data(course):
     }
 
 
-def get_challenges_data(skill):
+def get_cards_challenge(word):
+    return {
+        "type": "cards",
+        'pictures': word.pictures,
+        "formInTargetLanguage": word.in_target_langauge,
+        "meaningInSourceLanguage": word.in_source_langauge,
+        "priority": 0,
+        "group": get_dumb_opaque_id("Word", word),
+        "id": get_dumb_opaque_id("Word", word, "cards")
+    }
+
+
+def get_phrase_challenges(phrase):
     return []
+
+
+def get_word_challenges(word):
+    return [get_cards_challenge(word)]
+
+
+def make_challenges_using(callback, data_source):
+    return list(itertools.chain(*map(callback, data_source)))
+
+
+def get_challenges_data(skill):
+    return sum([
+        make_challenges_using(get_phrase_challenges, skill.phrases),
+        make_challenges_using(get_word_challenges, skill.words),
+    ], start=[])
 
 
 def get_skill_data(skill):
@@ -136,5 +135,5 @@ def get_skill_data(skill):
         "id": get_opaque_id(skill, "Skill"),
         "levels": calculate_number_of_levels(
             len(skill.words), len(skill.phrases)),
-        "challenges": get_challenges_data(skill)
+        "challenges": get_challenges_data(skill),
     }
