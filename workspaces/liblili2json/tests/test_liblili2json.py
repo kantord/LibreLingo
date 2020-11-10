@@ -1,4 +1,5 @@
 from unittest.mock import patch
+from unittest import TestCase
 from liblili2json import get_course_data
 from liblili2json import get_skill_data
 from liblili2json import calculate_number_of_levels
@@ -212,37 +213,34 @@ def test_calculate_number_of_levels():
             example["words"], example["phrases"]) == example["result"]
 
 
-def test_get_skill_data_empty_skill():
-    assert get_skill_data(fakeSkills[0]) == {
-        "id": "d7279e4777cd",
-        "levels": 1,
-        "challenges": []
-    }
+class TestStringMethods(TestCase):
+    def test_empty_skill(self):
+        assert get_skill_data(fakeSkills[0]) == {
+            "id": "d7279e4777cd",
+            "levels": 1,
+            "challenges": []
+        }
 
+    @patch('liblili2json.calculate_number_of_levels')
+    def test_correct_number_of_levels(self, mock):
+        FAKE_NUMBER = "fake number"
+        mock.return_value = FAKE_NUMBER
+        converted_skill = get_skill_data(emptyFakeSkill)
+        assert converted_skill["levels"] == FAKE_NUMBER
 
-@patch('liblili2json.calculate_number_of_levels')
-def test_get_skill_data_correct_number_of_levels(mock):
-    FAKE_NUMBER = "fake number"
-    mock.return_value = FAKE_NUMBER
-    converted_skill = get_skill_data(emptyFakeSkill)
-    assert converted_skill["levels"] == FAKE_NUMBER
+    @patch('liblili2json.calculate_number_of_levels')
+    def test_calculates_levels_correctly(self, mock):
+        get_skill_data(fakeSkills[1])
+        mock.assert_called_with(4, 1)
 
+    @patch('liblili2json.get_challenges_data')
+    def test_correct_challenges(self, mock):
+        FAKE_CHALLENGES = "fake challenges"
+        mock.return_value = FAKE_CHALLENGES
+        converted_skill = get_skill_data(fakeSkills[1])
+        assert converted_skill["challenges"] == FAKE_CHALLENGES
 
-@patch('liblili2json.calculate_number_of_levels')
-def test_get_skill_data_calculates_levels_correctly(mock):
-    converted_skill = get_skill_data(fakeSkills[1])
-    mock.assert_called_with(4, 1)
-
-
-@patch('liblili2json.get_challenges_data')
-def test_get_skill_data_correct_challenges(mock):
-    FAKE_CHALLENGES = "fake challenges"
-    mock.return_value = FAKE_CHALLENGES
-    converted_skill = get_skill_data(fakeSkills[1])
-    assert converted_skill["challenges"] == FAKE_CHALLENGES
-
-
-@patch('liblili2json.get_challenges_data')
-def test_get_skill_data_formats_challenges_correctly(mock):
-    get_skill_data(fakeSkills[1])
-    mock.assert_called_with(fakeSkills[1])
+    @patch('liblili2json.get_challenges_data')
+    def test_formats_challenges_correctly(self, mock):
+        get_skill_data(fakeSkills[1])
+        mock.assert_called_with(fakeSkills[1])
