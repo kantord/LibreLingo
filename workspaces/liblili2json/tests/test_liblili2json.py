@@ -2,123 +2,17 @@ from unittest.mock import patch
 from unittest import TestCase
 from liblili2json import get_course_data
 from liblili2json import get_skill_data
+from liblili2json import get_challenges_data
 from liblili2json import calculate_number_of_levels
-from liblili2json import Course
-from liblili2json import Module
-from liblili2json import Skill
-from liblili2json import Phrase
-from liblili2json import Word
-from liblili2json import License
-
-
-fakePhrase1 = Phrase(
-    in_target_langauge="foous barus",
-    in_source_langauge="foo bar",
-)
-
-fakePhrase2 = Phrase(
-    in_target_langauge="lorem ipsum",
-    in_source_langauge="john smith",
-)
-
-fakeWord1 = Word(
-    in_target_langauge="foous",
-    in_source_langauge="foo",
-)
-
-fakeWord1 = Word(
-    in_target_langauge="foous",
-    in_source_langauge="foo",
-)
-
-fakeWord1 = Word(
-    in_target_langauge="foous",
-    in_source_langauge="foo",
-)
-
-fakeLicense1 = License(
-    name="foo",
-    full_name="foo bar license",
-    link=None
-)
-
-fakeLicense2 = License(
-    name="lorem",
-    full_name="ipsum lorem license",
-    link="https://example.com/lipsum_license"
-)
-
-fakeWord2 = Word(
-    in_target_langauge="apfel",
-    in_source_langauge="apple",
-)
-
-fakeSkills = [
-    Skill(
-        name="Masculine",
-        id=3,
-        phrases=[fakePhrase2],
-        words=[],
-        image_set=["man1", "man2", "boy1"]
-    ),
-    Skill(
-        name="Feminine",
-        id=3,
-        words=[fakeWord1, fakeWord2, fakeWord1, fakeWord2],
-        phrases=[fakePhrase1],
-        image_set=["woman1", "woman2", "girl1"]
-    ),
-    Skill(
-        name="Neuter",
-        id=3,
-        words=[],
-        phrases=[],
-        image_set=["foo1", "bar1", "bar2"]
-    ),
-    Skill(
-        name="Mammals and birds",
-        id=3,
-        words=[fakeWord1],
-        phrases=[],
-        image_set=["just_one_image"]
-    )
-]
-emptyFakeSkill = fakeSkills[2]
-
-fakeCourse1 = Course(
-    language_name="my language",
-    language_code="de",
-    special_characters=["ä", "ß"],
-    license=fakeLicense1,
-    modules=[
-        Module(title="Basics", skills=[
-            fakeSkills[0],
-            fakeSkills[1],
-            fakeSkills[2],
-        ]),
-        Module(title="Phrases", skills=[]),
-    ]
-)
-
-fakeCourse2 = Course(
-    language_name="another language",
-    language_code="tr",
-    special_characters=["ç", "ş"],
-    license=fakeLicense2,
-    modules=[
-        Module(title="Animals", skills=[
-            fakeSkills[3]
-        ]),
-    ]
-)
+from . import fakes
 
 
 def test_get_course_data_return_value():
     """
     Tests the return value of get_course_data with the
-    fakeCourse1 object
+    fakes.course1 object
     """
-    assert get_course_data(fakeCourse1) == {
+    assert get_course_data(fakes.course1) == {
         "languageName": "my language",
         "languageCode": "de",
         "specialCharacters": ["ä", "ß"],
@@ -170,9 +64,9 @@ def test_get_course_data_return_value():
 def test_get_course_data_return_value_2():
     """
     Tests the return value of get_course_data with the
-    fakeCourse2 object
+    fakes.course2 object
     """
-    assert get_course_data(fakeCourse2) == {
+    assert get_course_data(fakes.course2) == {
         "languageName": "another language",
         "languageCode": "tr",
         "specialCharacters": ["ç", "ş"],
@@ -213,9 +107,9 @@ def test_calculate_number_of_levels():
             example["words"], example["phrases"]) == example["result"]
 
 
-class TestStringMethods(TestCase):
+class TestGetSkillData(TestCase):
     def test_empty_skill(self):
-        assert get_skill_data(fakeSkills[0]) == {
+        assert get_skill_data(fakes.skills[0]) == {
             "id": "d7279e4777cd",
             "levels": 1,
             "challenges": []
@@ -225,22 +119,56 @@ class TestStringMethods(TestCase):
     def test_correct_number_of_levels(self, mock):
         FAKE_NUMBER = "fake number"
         mock.return_value = FAKE_NUMBER
-        converted_skill = get_skill_data(emptyFakeSkill)
+        converted_skill = get_skill_data(fakes.emptySkill)
         assert converted_skill["levels"] == FAKE_NUMBER
 
     @patch('liblili2json.calculate_number_of_levels')
     def test_calculates_levels_correctly(self, mock):
-        get_skill_data(fakeSkills[1])
+        get_skill_data(fakes.skills[1])
         mock.assert_called_with(4, 1)
 
     @patch('liblili2json.get_challenges_data')
     def test_correct_challenges(self, mock):
         FAKE_CHALLENGES = "fake challenges"
         mock.return_value = FAKE_CHALLENGES
-        converted_skill = get_skill_data(fakeSkills[1])
+        converted_skill = get_skill_data(fakes.skills[1])
         assert converted_skill["challenges"] == FAKE_CHALLENGES
 
     @patch('liblili2json.get_challenges_data')
     def test_formats_challenges_correctly(self, mock):
-        get_skill_data(fakeSkills[1])
-        mock.assert_called_with(fakeSkills[1])
+        get_skill_data(fakes.skills[1])
+        mock.assert_called_with(fakes.skills[1])
+
+
+class TestGetChallengesData(TestCase):
+    def test_empty_skill(self):
+        assert get_challenges_data(fakes.emptySkill) == []
+
+    @patch('liblili2json.get_phrase_challenges')
+    def test_generates_phrase_challenges_correctly(self, mock):
+        get_challenges_data(fakes.skillWithPhrase)
+        mock.assert_called_with(fakes.phrase2)
+
+    @patch('liblili2json.get_phrase_challenges')
+    def test_includes_every_phrase(self, mock):
+        get_challenges_data(fakes.skillWith3Phrases)
+        assert mock.call_count == 3
+
+    @patch('liblili2json.get_word_challenges')
+    def test_generates_word_challenges_correctly(self, mock):
+        get_challenges_data(fakes.skillWithWord)
+        mock.assert_called_with(fakes.word1)
+
+    @patch('liblili2json.get_word_challenges')
+    def test_includes_every_word(self, mock):
+        get_challenges_data(fakes.skillWith3Words)
+        assert mock.call_count == 3
+
+    @patch('liblili2json.get_word_challenges')
+    @patch('liblili2json.get_phrase_challenges')
+    def test_returns_correct_challenges(self, mock1, mock2):
+
+        mock1.return_value = [fakes.challenge1, fakes.challenge2]
+        mock2.return_value = [fakes.challenge3, fakes.challenge4]
+        assert get_challenges_data(fakes.skillWithPhraseAndWord) == [
+            fakes.challenge1, fakes.challenge2, fakes.challenge3, fakes.challenge4]
