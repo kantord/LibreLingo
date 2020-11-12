@@ -2181,14 +2181,15 @@
     axios-retry "^3.1.2"
     winston "^3.3.3"
 
-"@knapsack-pro/cypress@4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@knapsack-pro/cypress/-/cypress-4.0.1.tgz#d47986676210e0a04a70523d4ab6c5e210be8a2b"
-  integrity sha512-izNPBM1e7gmnk3ZtoBocSG/UNCo2Xk4HM+5W212M6QMXXq24YN/3RBM5xIXET/2y6L1ZrNefUqAJOPUEuJ/Q2w==
+"@knapsack-pro/cypress@4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@knapsack-pro/cypress/-/cypress-4.0.2.tgz#d3773a05f79c4ae98d87da74598cacba25ee795c"
+  integrity sha512-zJ6wJHeMoLvAWuD27G/5sTcFRJLspWq1dkhe342jatyn0fQ65joVaZ5xUN3Fer/Mu4SYvij5yOR7mSB7UUpiDQ==
   dependencies:
     "@knapsack-pro/core" "^3.0.1"
     glob "^7.1.6"
     minimist "^1.2.5"
+    uuid "^8.3.1"
 
 "@nodelib/fs.scandir@2.1.3":
   version "2.1.3"
@@ -13067,6 +13068,11 @@ uuid@^8.3.0:
   version "8.3.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.0.tgz#ab738085ca22dc9a8c92725e459b1d507df5d6ea"
   integrity sha512-fX6Z5o4m6XsXBdli9g7DtWgAx+osMsRRZFKma1mIUsLCz6vRvv+pz5VNbyu9UEDzpMWulZfvpgb/cmDXVulYFQ==
+
+uuid@^8.3.1:
+  version "8.3.1"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.1.tgz#2ba2e6ca000da60fce5a196954ab241131e05a31"
+  integrity sha512-FOmRr+FmWEIG8uhZv6C2bTgEVXsHk08kE7mPlrBbEe+c3r9pjceVPgupIfNIhc4yx55H69OXANrUaSuu9eInKg==
 
 v8-compile-cache@^2.0.3:
   version "2.1.0"
