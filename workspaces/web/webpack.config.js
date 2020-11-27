@@ -110,7 +110,8 @@ module.exports = {
                 "process.env.NODE_ENV": JSON.stringify(mode),
             }),
             new webpack.EnvironmentPlugin({
-                IS_SSR: false
+                IS_SSR: false,
+                "process.env.NODE_ENV": JSON.stringify(mode),
             }),
         ].filter(Boolean),
         devtool: dev && "inline-source-map",
@@ -159,7 +160,8 @@ module.exports = {
         },
         plugins: [
             new webpack.EnvironmentPlugin({
-                IS_SSR: true
+                IS_SSR: true,
+                "process.env.NODE_ENV": JSON.stringify(mode),
             }),
         ],
         mode: process.env.NODE_ENV,
