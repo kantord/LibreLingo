@@ -109,6 +109,9 @@ module.exports = {
                 "process.browser": true,
                 "process.env.NODE_ENV": JSON.stringify(mode),
             }),
+            new webpack.EnvironmentPlugin({
+                IS_SSR: false
+            }),
         ].filter(Boolean),
         devtool: dev && "inline-source-map",
     },
@@ -154,6 +157,11 @@ module.exports = {
                 },
             ],
         },
+        plugins: [
+            new webpack.EnvironmentPlugin({
+                IS_SSR: true
+            }),
+        ],
         mode: process.env.NODE_ENV,
         performance: {
             hints: false, // it doesn't matter if server.js is large
