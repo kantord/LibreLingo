@@ -23,6 +23,12 @@ module.exports = {
         module: {
             rules: [
                 {
+                    test: /\.m?js/,
+                    resolve: {
+                        fullySpecified: false
+                    }
+                },
+                {
                     test: /\.md/i,
                     use: "raw-loader",
                 },
@@ -103,6 +109,10 @@ module.exports = {
                 "process.browser": true,
                 "process.env.NODE_ENV": JSON.stringify(mode),
             }),
+            new webpack.EnvironmentPlugin({
+                IS_SSR: false,
+                "process.env.NODE_ENV": JSON.stringify(mode),
+            }),
         ].filter(Boolean),
         devtool: dev && "inline-source-map",
     },
@@ -115,6 +125,12 @@ module.exports = {
         externals: Object.keys(pkg.dependencies).concat("encoding"),
         module: {
             rules: [
+                {
+                    test: /\.m?js/,
+                    resolve: {
+                        fullySpecified: false
+                    }
+                },
                 {
                     test: /\.md/i,
                     use: "raw-loader",
@@ -142,6 +158,12 @@ module.exports = {
                 },
             ],
         },
+        plugins: [
+            new webpack.EnvironmentPlugin({
+                IS_SSR: true,
+                "process.env.NODE_ENV": JSON.stringify(mode),
+            }),
+        ],
         mode: process.env.NODE_ENV,
         performance: {
             hints: false, // it doesn't matter if server.js is large
