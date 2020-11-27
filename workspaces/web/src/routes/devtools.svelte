@@ -21,6 +21,7 @@
   import GitHubButton from "../components/GitHubButton"
   import Column from "lluis/Column"
   import Columns from "lluis/Columns"
+  import Content from "lluis/Content"
 
   export let testSkills = []
 </script>
@@ -33,7 +34,7 @@
 
 <section class="section">
   <div class="container">
-    <div class="content">
+    <Content>
       <h1 class="is-size-1">Development tools</h1>
       <h2 class="is-size-2">Test pages</h2>
       <ul>
@@ -47,6 +48,6 @@
           </li>
         {/each}
       </ul>
-    </div>
+    </Content>
   </div>
 </section>

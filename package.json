@@ -32,12 +32,12 @@
   "devDependencies": {
     "eslint": "6.8.0",
     "eslint-plugin-cypress": "2.11.2",
-    "eslint-plugin-jest": "24.1.0",
+    "eslint-plugin-jest": "24.1.3",
     "eslint-plugin-svelte3": "2.7.3",
-    "svelte": "3.29.3",
-    "svelte-preprocess": "4.5.2",
-    "ts-jest": "26.4.2",
-    "typescript": "4.0.3"
+    "svelte": "3.30.0",
+    "svelte-preprocess": "4.6.1",
+    "ts-jest": "26.4.4",
+    "typescript": "4.1.2"
   },
   "nyc": {
     "report-dir": "cypress-coverage",
@@ -62,8 +62,7 @@
     "nonGlobalStepDefinitions": true
   },
   "dependencies": {
-    "path": "^0.12.7",
-    "source-map-loader": "1.1.1",
-    "ts-loader": "8.0.7"
+    "source-map-loader": "1.1.2",
+    "ts-loader": "8.0.11"
   }
 }

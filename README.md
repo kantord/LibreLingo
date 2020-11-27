@@ -12,7 +12,7 @@
   <a href="https://riot.im/app/#/room/#librelingo:matrix.org">Chat with us!</a> •
   <a href="#become-a-contributor">Become a contributor!</a> •
   <a href="https://dev.to/kantord/why-i-built-librelingo-280o">Why I built LibreLingo</a> •
-  <a href="https://github.com/kantord/LibreLingo/projects/9">Hacktoberfest!</a>
+  <a href="https://github.com/kantord/LibreLingo/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22">Good first issues!</a>
 </p>
 
 <p align="center"><img src="/docs/branding/LibreLingo_Mascot/LightShadow/Turtle1_jetPack.svg" alt="" height="250" /></p>
@@ -129,7 +129,7 @@ The mascot is designed by [@almostdesigner](https://github.com/almostdesigner).
 ## Contributors ✨
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-43-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-45-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
@@ -194,6 +194,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://himankpathak.me"><img src="https://avatars0.githubusercontent.com/u/26011845?v=4" width="100px;" alt=""/><br /><sub><b>Himank Pathak</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/commits?author=himankpathak" title="Code">💻</a> <a href="https://github.com/kantord/LibreLingo/issues?q=author%3Ahimankpathak" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/x4th"><img src="https://avatars0.githubusercontent.com/u/12177451?v=4" width="100px;" alt=""/><br /><sub><b>x4th</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/commits?author=x4th" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/kenanchristian"><img src="https://avatars1.githubusercontent.com/u/11202498?v=4" width="100px;" alt=""/><br /><sub><b>Christian Dimas</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/commits?author=kenanchristian" title="Code">💻</a></td>
   </tr>
 </table>
 

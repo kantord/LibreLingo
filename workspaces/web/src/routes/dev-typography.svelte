@@ -1,5 +1,6 @@
 <script lang="typescript" context="module">
   import NavBar from "../components/NavBar.svelte"
+  import Title from 'lluis/Title.svelte'
 </script>
 
 <svelte:head>
@@ -12,20 +13,20 @@
     <div class="tile is-ancestor">
       <div class="tile is-vertical is-8">
           <div class="tile is-parent is-vertical">
-            <h1 class="is-size-2 has-text-centered title">Fonts Visual Guide</h1>
+            <Title size={2} align="centered">Fonts Visual Guide</Title>
             <article class="tile is-child notification is-primary p-4">
-              <h1 class="is-size-3 has-text-weight-semibold">Types of headings</h1>    
-              <h1 class="title">Title</h1>
-              <h2 class="subtitle">Subtitle</h2>
+              <Title size={3} textWeight="semibold">Types of headings</Title>
+              <Title>Title</Title>
+              <Title isSubtitle={true}>Subtitle</Title>
             </article>
             <article class="tile is-child notification is-primary p-4">
-              <h1 class="is-size-3 has-text-weight-semibold">Sizes</h1>
-              <h1 class="title is-1">Title 1</h1>
-              <h2 class="title is-2">Title 2</h2>
-              <h3 class="title is-3">Title 3</h3>
-              <h4 class="title is-4">Title 4</h4>
-              <h5 class="title is-5">Title 5</h5>
-              <h6 class="title is-6">Title 6</h6>
+              <Title size={3} textWeight="semibold">Sizes</Title>
+              <Title size={1}>Title 1</Title>
+              <Title size={2}>Title 2</Title>
+              <Title size={3}>Title 3</Title>
+              <Title size={4}>Title 4</Title>
+              <Title size={5}>Title 5</Title>
+              <Title size={6}>Title 6</Title>
             </article>
           </div>
       </div>
