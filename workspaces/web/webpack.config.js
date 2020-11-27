@@ -23,6 +23,12 @@ module.exports = {
         module: {
             rules: [
                 {
+                    test: /\.m?js/,
+                    resolve: {
+                        fullySpecified: false
+                    }
+                },
+                {
                     test: /\.md/i,
                     use: "raw-loader",
                 },
@@ -115,6 +121,12 @@ module.exports = {
         externals: Object.keys(pkg.dependencies).concat("encoding"),
         module: {
             rules: [
+                {
+                    test: /\.m?js/,
+                    resolve: {
+                        fullySpecified: false
+                    }
+                },
                 {
                     test: /\.md/i,
                     use: "raw-loader",
