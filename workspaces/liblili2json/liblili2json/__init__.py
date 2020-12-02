@@ -149,7 +149,15 @@ def get_options_challenge(phrase, _):
 
 
 def get_chips_challenge(phrase, _):
-    return {}
+    return {
+        "type": "chips",
+        'id': '3103322a15da',
+        'group': 'b95c785ddf3e',
+        "priority": 2,
+        "chips": phrase.in_target_langauge.split(),
+        "solutions": [phrase.in_target_langauge],
+        "formattedSolution": phrase.in_target_langauge,
+    }
 
 
 def get_phrase_challenges(phrase, course):

@@ -329,3 +329,29 @@ class TestListeningChallenge(TestCase):
             'group': 'f2b9d8b7c65a',
             'audio': '509a5b154ef93cd2abac6b6d673f80ded6cd2319902a8d83f15f98c8aaf1cabb'
         }
+
+
+class TestChipsChallenge(TestCase):
+    def test_returns_correct_value1(self):
+        challenge = get_chips_challenge(fakes.phrase1, fakes.course1)
+        assert challenge == {
+            "type": "chips",
+            'id': '3103322a15da',
+            'group': 'b95c785ddf3e',
+            "priority": 2,
+            "chips": ["foous", "barus"],
+            "solutions": ["foous barus"],
+            "formattedSolution": "foous barus",
+        }
+
+    def test_returns_correct_value2(self):
+        challenge = get_chips_challenge(fakes.phrase2, fakes.course1)
+        assert challenge == {
+            "type": "chips",
+            'id': '3103322a15da',
+            'group': 'b95c785ddf3e',
+            "priority": 2,
+            "chips": ["lorem", "ipsum"],
+            "solutions": ["lorem ipsum"],
+            "formattedSolution": "lorem ipsum",
+        }
