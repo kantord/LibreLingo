@@ -148,36 +148,40 @@ def get_options_challenge(phrase, _):
     }
 
 
+def get_chips(phrase):
+    return phrase.split()
+
+
 def get_chips_challenge(phrase, _):
     return {
         "type": "chips",
         'id': '3103322a15da',
         'group': 'b95c785ddf3e',
         "priority": 2,
-        "chips": phrase.in_target_langauge.split(),
-        "solutions": [phrase.in_target_langauge],
+        "chips": get_chips(phrase.in_target_langauge),
+        "solutions": [get_chips(phrase.in_target_langauge)],
         "formattedSolution": phrase.in_target_langauge,
     }
 
 
+def map_challenge_creators(item, course, challenge_types):
+    return list(map(lambda f: f(item, course), challenge_types))
+
+
 def get_phrase_challenges(phrase, course):
-    challenge_types = [
+    return map_challenge_creators(phrase, course, [
         get_options_challenge,
         get_listening_challenge,
         get_chips_challenge,
         get_chips_challenge,
-    ]
-
-    return list(map(lambda f: f(phrase, course), challenge_types))
+    ])
 
 
 def get_word_challenges(word, course):
-    challenge_types = [
+    return map_challenge_creators(word, course, [
         get_cards_challenge,
         get_short_input_challenge,
-        get_listening_challenge]
-
-    return list(map(lambda f: f(word, course), challenge_types))
+        get_listening_challenge])
 
 
 def make_challenges_using(callback, data_source, course):

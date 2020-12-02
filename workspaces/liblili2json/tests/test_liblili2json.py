@@ -11,6 +11,7 @@ from liblili2json import get_short_input_challenge
 from liblili2json import get_listening_challenge
 from liblili2json import get_chips_challenge
 from liblili2json import get_options_challenge
+from liblili2json.types import Phrase
 from . import fakes
 
 
@@ -340,18 +341,29 @@ class TestChipsChallenge(TestCase):
             'group': 'b95c785ddf3e',
             "priority": 2,
             "chips": ["foous", "barus"],
-            "solutions": ["foous barus"],
+            "solutions": [["foous", "barus"]],
             "formattedSolution": "foous barus",
         }
 
-    def test_returns_correct_value2(self):
+    @patch('liblili2json.get_chips')
+    def test_returns_correct_value2(self, get_chips):
+        get_chips.return_value = fakes.fake_value()
         challenge = get_chips_challenge(fakes.phrase2, fakes.course1)
         assert challenge == {
             "type": "chips",
             'id': '3103322a15da',
             'group': 'b95c785ddf3e',
             "priority": 2,
-            "chips": ["lorem", "ipsum"],
-            "solutions": ["lorem ipsum"],
+            "chips": get_chips.return_value,
+            "solutions": [get_chips.return_value],
             "formattedSolution": "lorem ipsum",
         }
+
+    @patch('liblili2json.get_chips')
+    def test_calls_get_chips_with_correct_value(self, get_chips):
+        fake_phrase = Phrase(
+            in_target_langauge=fakes.fake_value(),
+            in_source_langauge=""
+        )
+        get_chips_challenge(fake_phrase, fakes.course1)
+        get_chips.assert_called_with(fake_phrase.in_target_langauge)
