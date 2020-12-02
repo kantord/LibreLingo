@@ -78,9 +78,13 @@ def get_course_data(course):
                 liblili2json.Skill(
                     name=skill.name,
                     words=[liblili2json.Word(
-                        in_target_langauge=word.formInTargetLanguage, in_source_langauge=word.meaningInSourceLanguage) for word in skill.learnword_set.all()],
+                        in_target_langauge=word.formInTargetLanguage,
+                        in_source_langauge=word.meaningInSourceLanguage,
+                        pictures=[]) for word in skill.learnword_set.all()],
                     phrases=[liblili2json.Phrase(
-                        in_target_langauge=sentence.formInTargetLanguage, in_source_langauge=sentence.meaningInSourceLanguage) for sentence in skill.learnsentence_set.all()],
+                        in_target_langauge=sentence.formInTargetLanguage,
+                        in_source_langauge=sentence.meaningInSourceLanguage)
+                        for sentence in skill.learnsentence_set.all()],
                     image_set=[skill.image1, skill.image2, skill.image3],
                     id=skill.pk,
                 ) for skill in module.skill_set.all()
