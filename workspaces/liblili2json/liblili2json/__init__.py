@@ -138,14 +138,27 @@ def get_cards_challenge(word, _):
 
 
 def get_options_challenge(phrase, _):
+    return {
+        "type": "options",
+        "formInTargetLanguage": phrase.in_target_langauge,
+        "meaningInSourceLanguage": phrase.in_source_langauge,
+        "priority": 0,
+        "group": get_dumb_opaque_id("Options", phrase),
+        "id": get_dumb_opaque_id("Options", phrase, "cards")
+    }
+
+
+def get_chips_challenge(phrase, _):
     return {}
 
 
 def get_phrase_challenges(phrase, course):
     challenge_types = [
         get_options_challenge,
-        get_short_input_challenge,
-        get_listening_challenge]
+        get_listening_challenge,
+        get_chips_challenge,
+        get_chips_challenge,
+    ]
 
     return list(map(lambda f: f(phrase, course), challenge_types))
 

@@ -9,6 +9,8 @@ from liblili2json import get_phrase_challenges
 from liblili2json import get_cards_challenge
 from liblili2json import get_short_input_challenge
 from liblili2json import get_listening_challenge
+from liblili2json import get_chips_challenge
+from liblili2json import get_options_challenge
 from . import fakes
 
 
@@ -207,19 +209,26 @@ class TestGetPhraseChallenges(TestCase):
         assert get_phrase_challenges(
             fakes.phrase1, fakes.course1)[0] == fake_value
 
-    @patch('liblili2json.get_short_input_challenge')
-    def test_includes_short_input_challenges(self, mock):
-        fake_value = fakes.fake_value()
-        mock.return_value = fake_value
-        assert get_phrase_challenges(
-            fakes.phrase1, fakes.course1)[1] == fake_value
-
     @ patch('liblili2json.get_listening_challenge')
     def test_includes_listening_challenge(self, mock):
         fake_value = fakes.fake_value()
         mock.return_value = fake_value
         assert get_phrase_challenges(
+            fakes.phrase1, fakes.course1)[1] == fake_value
+
+    @ patch('liblili2json.get_chips_challenge')
+    def test_includes_chips_challenge(self, mock):
+        fake_value = fakes.fake_value()
+        mock.return_value = fake_value
+        assert get_phrase_challenges(
             fakes.phrase1, fakes.course1)[2] == fake_value
+
+    @ patch('liblili2json.get_chips_challenge')
+    def test_includes_reverse_chips_challenge(self, mock):
+        fake_value = fakes.fake_value()
+        mock.return_value = fake_value
+        assert get_phrase_challenges(
+            fakes.phrase1, fakes.course1)[3] == fake_value
 
 
 class TestGetCardsChallenge(TestCase):
@@ -245,6 +254,30 @@ class TestGetCardsChallenge(TestCase):
             "priority": 0,
             'group': 'f2b9d8b7c65a',
             'pictures': ['1', '2', '3']
+        }
+
+
+class TestGetOptionsChallenge(TestCase):
+    def test_returns_correct_value1(self):
+        challenge = get_options_challenge(fakes.word1, fakes.course1)
+        assert challenge == {
+            'id': 'e1cacf67191f',
+            "type": "options",
+            "formInTargetLanguage": "foous",
+            "meaningInSourceLanguage": "foo",
+            "priority": 0,
+            'group': '7c0b175a060c',
+        }
+
+    def test_returns_correct_value2(self):
+        challenge = get_options_challenge(fakes.word2, fakes.course1)
+        assert challenge == {
+            'id': '042a45e89943',
+            "type": "options",
+            "formInTargetLanguage": "apfel",
+            "meaningInSourceLanguage": "apple",
+            "priority": 0,
+            'group': 'da01c2c189a9',
         }
 
 
