@@ -11,6 +11,7 @@ from liblili2json import get_short_input_challenge
 from liblili2json import get_listening_challenge
 from liblili2json import get_chips_challenge
 from liblili2json import get_options_challenge
+from liblili2json import get_chips
 from liblili2json.types import Phrase
 from . import fakes
 
@@ -367,3 +368,27 @@ class TestChipsChallenge(TestCase):
         )
         get_chips_challenge(fake_phrase, fakes.course1)
         get_chips.assert_called_with(fake_phrase.in_target_langauge)
+
+
+class GetChipsTest(TestCase):
+    def test_empty_string(self):
+        assert get_chips('') == []
+
+    @patch('liblili2json.clean_word')
+    def test_empty_string_doesnt_call_clean_word(self, clean_word):
+        get_chips('')
+        assert not clean_word.called
+
+    @patch('liblili2json.clean_word')
+    def test_calls_clean_word_with_correct_argument(self, clean_word):
+        get_chips('foo')
+        clean_word.assert_called_with('foo')
+
+    @patch('liblili2json.clean_word')
+    def test_returns_correct_value(self, clean_word):
+        clean_word.return_value = fakes.fake_value()
+        assert get_chips('foo') == [clean_word.return_value]
+
+    @patch('liblili2json.clean_word')
+    def test_returns_correct_number_of_words(self, clean_word):
+        assert len(get_chips('foo bar')) == 2
