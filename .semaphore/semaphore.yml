@@ -135,8 +135,8 @@ blocks:
             - cd ./workspaces/liblili2json
             - poetry install --no-interaction
             - poetry run pytest
-            - poetry run pylint ./liblili2json
-            - poetry run pylint ./test
+            #- poetry run pylint ./liblili2json
+            #- poetry run pylint ./test
             - cache store python-$(checksum yarn.lock) /home/semaphore/.cache/pypoetry
 promotions:
   - name: Deploy to production

@@ -4,6 +4,7 @@ Export LibreLingo courses in the JSON format expected by the web app
 
 import hashlib
 import itertools
+import re
 from slugify import slugify
 from .types import Course, License, Module, Skill, Word, Phrase
 
@@ -149,7 +150,7 @@ def get_options_challenge(phrase, _):
 
 
 def get_chips(phrase):
-    return phrase.split()
+    return list(map(clean_word, phrase.split()))
 
 
 def get_chips_challenge(phrase, _):
@@ -164,24 +165,28 @@ def get_chips_challenge(phrase, _):
     }
 
 
-def map_challenge_creators(item, course, challenge_types):
-    return list(map(lambda f: f(item, course), challenge_types))
+def challenge_mapper(challenge_types):
+    def map_challenge_creators(item, course):
+        return list(map(lambda f: f(item, course), challenge_types))
+
+    return map_challenge_creators
 
 
 def get_phrase_challenges(phrase, course):
-    return map_challenge_creators(phrase, course, [
+    return challenge_mapper([
         get_options_challenge,
         get_listening_challenge,
         get_chips_challenge,
-        get_chips_challenge,
-    ])
+        get_chips_challenge, ]
+    )(phrase, course)
 
 
 def get_word_challenges(word, course):
-    return map_challenge_creators(word, course, [
+    return challenge_mapper([
         get_cards_challenge,
         get_short_input_challenge,
-        get_listening_challenge])
+        get_listening_challenge]
+    )(word, course)
 
 
 def make_challenges_using(callback, data_source, course):
@@ -196,6 +201,13 @@ def get_challenges_data(skill, course):
     ], start=[])
 
 
+def clean_word(word):
+    MATCH_NON_WORD_CHARACTERS_BEGINNING = re.compile("^[^\\w']+")
+    MATCH_NON_WORD_CHARACTERS_END = re.compile("[^\\w']+$")
+    return MATCH_NON_WORD_CHARACTERS_BEGINNING.sub(
+        "", MATCH_NON_WORD_CHARACTERS_END.sub("", word))
+
+
 def get_skill_data(skill, course):
     """
     Format Course according to the JSON structure
@@ -207,3 +219,11 @@ def get_skill_data(skill, course):
             len(skill.words), len(skill.phrases)),
         "challenges": get_challenges_data(skill, course),
     }
+
+
+def define_words_in_sentence(course, sentence, reverse):
+    return [define_word(course, word, reverse) for word in sentence.split()]
+
+
+def define_word(course, word, reverse):
+    pass
