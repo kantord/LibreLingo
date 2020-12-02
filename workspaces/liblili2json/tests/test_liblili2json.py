@@ -5,6 +5,7 @@ from liblili2json import get_skill_data
 from liblili2json import get_challenges_data
 from liblili2json import calculate_number_of_levels
 from liblili2json import get_word_challenges
+from liblili2json import get_phrase_challenges
 from liblili2json import get_cards_challenge
 from liblili2json import get_short_input_challenge
 from liblili2json import get_listening_challenge
@@ -113,7 +114,7 @@ def test_calculate_number_of_levels():
 
 class TestGetSkillData(TestCase):
     def test_empty_skill(self):
-        assert get_skill_data(fakes.skills[0], fakes.course1) == {
+        assert get_skill_data(fakes.emptySkill, fakes.courseEmpty) == {
             "id": "d7279e4777cd",
             "levels": 1,
             "challenges": []
@@ -196,6 +197,29 @@ class TestGetWordChallenges(TestCase):
         fake_value = fakes.fake_value()
         mock.return_value = fake_value
         assert get_word_challenges(fakes.word1, fakes.course1)[2] == fake_value
+
+
+class TestGetPhraseChallenges(TestCase):
+    @patch('liblili2json.get_options_challenge')
+    def test_includes_options_challenges(self, mock):
+        fake_value = fakes.fake_value()
+        mock.return_value = fake_value
+        assert get_phrase_challenges(
+            fakes.phrase1, fakes.course1)[0] == fake_value
+
+    @patch('liblili2json.get_short_input_challenge')
+    def test_includes_short_input_challenges(self, mock):
+        fake_value = fakes.fake_value()
+        mock.return_value = fake_value
+        assert get_phrase_challenges(
+            fakes.phrase1, fakes.course1)[1] == fake_value
+
+    @ patch('liblili2json.get_listening_challenge')
+    def test_includes_listening_challenge(self, mock):
+        fake_value = fakes.fake_value()
+        mock.return_value = fake_value
+        assert get_phrase_challenges(
+            fakes.phrase1, fakes.course1)[2] == fake_value
 
 
 class TestGetCardsChallenge(TestCase):

@@ -117,6 +117,15 @@ skills = [
     )
 ]
 
+courseEmpty = Course(
+    language_name="my language",
+    language_code="de",
+    special_characters=["ä", "ß"],
+    license=license1,
+    modules=[]
+)
+
+
 course1 = Course(
     language_name="my language",
     language_code="de",
