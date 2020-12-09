@@ -19,9 +19,13 @@
     "¿",
     "¡"
   ],
-  "license": "CC BY-SA 4.0",
-  "licenseFullName": "Attribution-ShareAlike 4.0 International",
-  "licenseLink": "https://creativecommons.org/licenses/by-sa/4.0/legalcode",
+  "license": {
+    "name": {
+      "short": "CC BY-SA 4.0",
+      "full": "Attribution-ShareAlike 4.0 International"
+    },
+    "link": "https://creativecommons.org/licenses/by-sa/4.0/legalcode"
+  },
   "modules": [
     {
       "title": "Basics",
