@@ -6,6 +6,7 @@ Course = namedtuple("Course", [
     "special_characters",
     "modules",
     "license",
+    "dictionary"
 ])
 
 License = namedtuple("License", [
