@@ -16,6 +16,9 @@ from liblili2json import clean_word
 from liblili2json import define_words_in_sentence
 from liblili2json import define_word
 from liblili2json.types import Phrase
+from liblili2json.types import Course
+from liblili2json.types import Word
+from liblili2json.types import DictionaryItem
 from . import fakes
 
 
@@ -463,4 +466,91 @@ class TestDefineWord(TestCase):
         word = fakes.fake_value()
         assert define_word(fakes.course1, word, reverse=False) == {
             "word": word
+        }
+
+    def test_includes_definition(self):
+        word = fakes.fake_value()
+        meaning = fakes.fake_value()
+        reverse = fakes.fake_value()
+        my_course = Course(
+            **{
+                **(fakes.course1._asdict()),
+                "dictionary": [
+                    DictionaryItem(
+                        word=word,
+                        definition=meaning,
+                        reverse=reverse
+                    ),
+                ]
+            },
+        )
+        assert define_word(my_course, word, reverse=reverse) == {
+            "word": word,
+            "definition": meaning
+        }
+
+    def test_doesnt_include_definition_with_different_word(self):
+        word = fakes.fake_value()
+        meaning = fakes.fake_value()
+        reverse = fakes.fake_value()
+        my_course = Course(
+            **{
+                **(fakes.course1._asdict()),
+                "dictionary": [
+                    DictionaryItem(
+                        word=word,
+                        definition=meaning,
+                        reverse=reverse
+                    ),
+                ]
+            },
+        )
+        assert define_word(my_course, "asd", reverse=reverse) == {
+            "word": "asd",
+        }
+
+    def test_doesnt_include_definition_with_different_reverse(self):
+        word = fakes.fake_value()
+        meaning = fakes.fake_value()
+        reverse = fakes.fake_value()
+        my_course = Course(
+            **{
+                **(fakes.course1._asdict()),
+                "dictionary": [
+                    DictionaryItem(
+                        word=word,
+                        definition=meaning,
+                        reverse=False
+                    ),
+                ]
+            },
+        )
+        assert define_word(my_course, word, reverse=reverse) == {
+            "word": word,
+        }
+
+    def test_skips_non_matching_definitions(self):
+        word = fakes.fake_value()
+        meaning = fakes.fake_value()
+        reverse = fakes.fake_value()
+        my_course = Course(
+            **{
+                **(fakes.course1._asdict()),
+                "dictionary": [
+                    DictionaryItem(
+                        word=None,
+                        definition=None,
+                        reverse=None
+                    ),
+                    DictionaryItem(
+                        word=word,
+                        definition=meaning,
+                        reverse=reverse
+                    ),
+                ]
+            },
+        )
+        assert define_word(my_course, word, reverse=reverse) == {
+            "word": word,
+            "definition": meaning
         }
