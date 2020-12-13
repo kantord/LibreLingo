@@ -6,7 +6,7 @@ import hashlib
 import itertools
 import re
 from slugify import slugify
-from .types import Course, License, Module, Skill, Word, Phrase
+from .types import Course, License, Module, Skill, Word, Phrase, DictionaryItem
 
 __version__ = '0.1.0'
 
@@ -227,4 +227,14 @@ def define_words_in_sentence(course, sentence, reverse):
 
 
 def define_word(course, word, reverse):
+    dictionary_item = list(
+        filter(
+            lambda item: item.word == word and item.reverse == reverse,
+            course.dictionary))
+    if dictionary_item:
+        return {
+            "word": word,
+            "definition": dictionary_item[0].definition
+        }
+
     return {"word": word}
