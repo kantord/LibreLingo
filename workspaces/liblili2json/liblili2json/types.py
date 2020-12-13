@@ -6,6 +6,7 @@ Course = namedtuple("Course", [
     "special_characters",
     "modules",
     "license",
+    "dictionary"
 ])
 
 License = namedtuple("License", [
@@ -36,4 +37,10 @@ Word = namedtuple("Word", [
 Phrase = namedtuple("Phrase", [
     "in_target_langauge",
     "in_source_langauge",
+])
+
+DictionaryItem = namedtuple("DictionaryItem", [
+    "word",
+    "definition",
+    "reverse"
 ])
