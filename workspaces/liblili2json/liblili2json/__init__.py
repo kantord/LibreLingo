@@ -153,9 +153,10 @@ def get_chips(phrase):
     return list(map(clean_word, phrase.split()))
 
 
-def get_chips_challenge(phrase, _):
+def get_chips_challenge(phrase, course):
     return {
         "type": "chips",
+        "phrase": define_words_in_sentence(course, phrase.in_source_langauge, reverse=False),
         'id': '3103322a15da',
         'group': 'b95c785ddf3e',
         "priority": 2,
@@ -226,4 +227,4 @@ def define_words_in_sentence(course, sentence, reverse):
 
 
 def define_word(course, word, reverse):
-    pass
+    return {"word": word}
