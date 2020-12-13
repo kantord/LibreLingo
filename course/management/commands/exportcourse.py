@@ -10,6 +10,8 @@ from course.models import DictionaryItem
 from course.utils import clean_word
 from course.models import LICENSES
 
+import workspaces.liblili2json.liblili2json as liblili2json
+
 
 def opaqueId(obj, salt=""):
     hash = hashlib.sha256()
@@ -62,31 +64,34 @@ def get_levels(skill):
 
 
 def get_course_data(course):
-    def get_imageset(skill):
-        images = [skill.image1, skill.image2, skill.image3]
-        return {"imageSet": images} if all(images) else {}
-
-    return {
-        "languageName": course.language_name,
-        "languageCode": course.target_language_code,
-        "specialCharacters": course.special_characters.split(' '),
-        "license": course.license,
-        "licenseFullName": LICENSES[course.license]["full_name"],
-        "licenseLink": LICENSES[course.license]["link"],
-        "modules": [{
-            "title": module.name,
-            "skills": [{
-                **(get_imageset(skill)),
-                "summary": [word.formInTargetLanguage
-                            for word in skill.learnword_set.all()] + [sentence.formInTargetLanguage
-                                                                      for sentence in skill.learnsentence_set.all()],
-                "practiceHref": slugify(skill.name),
-                "id": opaqueId(skill, "Skill"),
-                "title": skill.name,
-                "levels": get_levels(skill),
-            } for skill in module.skill_set.all()]
-        } for module in course.module_set.all()]
-    }
+    converted_course = liblili2json.Course(
+        language_code=course.target_language_code,
+        language_name=course.language_name,
+        special_characters=course.special_characters.split(' '),
+        license=liblili2json.License(
+            name=course.license,
+            full_name=LICENSES[course.license]["full_name"],
+            link=LICENSES[course.license]["link"],),
+        modules=[liblili2json.Module(
+            title=module.name,
+            skills=[
+                liblili2json.Skill(
+                    name=skill.name,
+                    words=[liblili2json.Word(
+                        in_target_langauge=word.formInTargetLanguage,
+                        in_source_langauge=word.meaningInSourceLanguage,
+                        pictures=[]) for word in skill.learnword_set.all()],
+                    phrases=[liblili2json.Phrase(
+                        in_target_langauge=sentence.formInTargetLanguage,
+                        in_source_langauge=sentence.meaningInSourceLanguage)
+                        for sentence in skill.learnsentence_set.all()],
+                    image_set=[skill.image1, skill.image2, skill.image3],
+                    id=skill.pk,
+                ) for skill in module.skill_set.all()
+            ]
+        ) for module in course.module_set.all()]
+    )
+    return liblili2json.get_course_data(converted_course)
 
 
 def export_course_data(export_path, course):
