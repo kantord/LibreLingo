@@ -56,7 +56,6 @@ INSTALLED_APPS = [
     'course',
     'adminsortable2',
     'subadmin',
-    'corsheaders',
 ]
 
 MIDDLEWARE = [
