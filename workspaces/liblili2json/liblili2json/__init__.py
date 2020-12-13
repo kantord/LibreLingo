@@ -6,7 +6,7 @@ import hashlib
 import itertools
 import re
 from slugify import slugify
-from .types import Course, License, Module, Skill, Word, Phrase
+from .types import Course, License, Module, Skill, Word, Phrase, DictionaryItem
 
 __version__ = '0.1.0'
 
@@ -153,9 +153,10 @@ def get_chips(phrase):
     return list(map(clean_word, phrase.split()))
 
 
-def get_chips_challenge(phrase, _):
+def get_chips_challenge(phrase, course):
     return {
         "type": "chips",
+        "phrase": define_words_in_sentence(course, phrase.in_source_langauge, reverse=False),
         'id': '3103322a15da',
         'group': 'b95c785ddf3e',
         "priority": 2,
@@ -226,4 +227,14 @@ def define_words_in_sentence(course, sentence, reverse):
 
 
 def define_word(course, word, reverse):
-    pass
+    dictionary_item = list(
+        filter(
+            lambda item: item.word == word and item.reverse == reverse,
+            course.dictionary))
+    if dictionary_item:
+        return {
+            "word": word,
+            "definition": dictionary_item[0].definition
+        }
+
+    return {"word": word}
