@@ -14,6 +14,7 @@ from liblili2json import get_options_challenge
 from liblili2json import get_chips
 from liblili2json import clean_word
 from liblili2json import define_words_in_sentence
+from liblili2json import define_word
 from liblili2json.types import Phrase
 from . import fakes
 
@@ -340,6 +341,10 @@ class TestChipsChallenge(TestCase):
         challenge = get_chips_challenge(fakes.phrase1, fakes.course1)
         assert challenge == {
             "type": "chips",
+            "phrase": [
+                {"word": "foo"},
+                {"word": "bar"},
+            ],
             'id': '3103322a15da',
             'group': 'b95c785ddf3e',
             "priority": 2,
@@ -354,6 +359,10 @@ class TestChipsChallenge(TestCase):
         challenge = get_chips_challenge(fakes.phrase2, fakes.course1)
         assert challenge == {
             "type": "chips",
+            "phrase": [
+                {"word": "john"},
+                {"word": "smith"},
+            ],
             'id': '3103322a15da',
             'group': 'b95c785ddf3e',
             "priority": 2,
@@ -447,3 +456,11 @@ class DefineWordsInSentenceTest(TestCase):
         define_word.return_value = fakes.fake_value()
         assert define_words_in_sentence(
             fakes.course1, "foo bar", True) == [define_word.return_value, define_word.return_value]
+
+
+class TestDefineWord(TestCase):
+    def test_definition_not_found(self):
+        word = fakes.fake_value()
+        assert define_word(fakes.course1, word, reverse=False) == {
+            "word": word
+        }

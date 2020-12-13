@@ -38,3 +38,9 @@ Phrase = namedtuple("Phrase", [
     "in_target_langauge",
     "in_source_langauge",
 ])
+
+DictionaryItem = namedtuple("DictionaryItem", [
+    "word",
+    "definition",
+    "reverse"
+])
