@@ -122,7 +122,8 @@ courseEmpty = Course(
     language_code="de",
     special_characters=["ä", "ß"],
     license=license1,
-    modules=[]
+    modules=[],
+    dictionary=[]
 )
 
 
@@ -138,7 +139,8 @@ course1 = Course(
             skills[2],
         ]),
         Module(title="Phrases", skills=[]),
-    ]
+    ],
+    dictionary=[]
 )
 
 course2 = Course(
@@ -150,7 +152,8 @@ course2 = Course(
         Module(title="Animals", skills=[
             skills[3]
         ]),
-    ]
+    ],
+    dictionary=[]
 )
 
 
