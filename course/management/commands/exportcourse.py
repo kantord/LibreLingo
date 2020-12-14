@@ -89,7 +89,8 @@ def get_course_data(course):
                     id=skill.pk,
                 ) for skill in module.skill_set.all()
             ]
-        ) for module in course.module_set.all()]
+        ) for module in course.module_set.all()],
+        dictionary=[]
     )
     return liblili2json.get_course_data(converted_course)
 

@@ -122,7 +122,8 @@ courseEmpty = Course(
     language_code="de",
     special_characters=["ä", "ß"],
     license=license1,
-    modules=[]
+    modules=[],
+    dictionary=[]
 )
 
 
@@ -138,7 +139,8 @@ course1 = Course(
             skills[2],
         ]),
         Module(title="Phrases", skills=[]),
-    ]
+    ],
+    dictionary=[]
 )
 
 course2 = Course(
@@ -150,10 +152,20 @@ course2 = Course(
         Module(title="Animals", skills=[
             skills[3]
         ]),
-    ]
+    ],
+    dictionary=[]
 )
 
 
 def fake_value():
     FakeValue = namedtuple("FakeValue", ["id"])
     return FakeValue(random.randint(0, 10000))
+
+
+def customize(fake, **kwargs):
+    return type(fake)(
+        **{
+            **(fake._asdict()),
+            **kwargs
+        },
+    )

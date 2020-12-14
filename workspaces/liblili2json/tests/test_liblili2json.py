@@ -14,7 +14,11 @@ from liblili2json import get_options_challenge
 from liblili2json import get_chips
 from liblili2json import clean_word
 from liblili2json import define_words_in_sentence
+from liblili2json import define_word
 from liblili2json.types import Phrase
+from liblili2json.types import Course
+from liblili2json.types import Word
+from liblili2json.types import DictionaryItem
 from . import fakes
 
 
@@ -227,7 +231,7 @@ class TestGetPhraseChallenges(TestCase):
         assert get_phrase_challenges(
             fakes.phrase1, fakes.course1)[2] == fake_value
 
-    @ patch('liblili2json.get_chips_challenge')
+    @ patch('liblili2json.get_reverse_chips_challenge')
     def test_includes_reverse_chips_challenge(self, mock):
         fake_value = fakes.fake_value()
         mock.return_value = fake_value
@@ -340,8 +344,13 @@ class TestChipsChallenge(TestCase):
         challenge = get_chips_challenge(fakes.phrase1, fakes.course1)
         assert challenge == {
             "type": "chips",
-            'id': '3103322a15da',
-            'group': 'b95c785ddf3e',
+            "translatesToSourceLanguage": False,
+            "phrase": [
+                {"word": "foo"},
+                {"word": "bar"},
+            ],
+            'id': '70b9d4521a12',
+            'group': 'f4d8b42d5c38',
             "priority": 2,
             "chips": ["foous", "barus"],
             "solutions": [["foous", "barus"]],
@@ -354,8 +363,13 @@ class TestChipsChallenge(TestCase):
         challenge = get_chips_challenge(fakes.phrase2, fakes.course1)
         assert challenge == {
             "type": "chips",
-            'id': '3103322a15da',
-            'group': 'b95c785ddf3e',
+            "translatesToSourceLanguage": False,
+            "phrase": [
+                {"word": "john"},
+                {"word": "smith"},
+            ],
+            'id': 'dfc4568d5158',
+            'group': '90a642f99d21',
             "priority": 2,
             "chips": get_chips.return_value,
             "solutions": [get_chips.return_value],
@@ -447,3 +461,88 @@ class DefineWordsInSentenceTest(TestCase):
         define_word.return_value = fakes.fake_value()
         assert define_words_in_sentence(
             fakes.course1, "foo bar", True) == [define_word.return_value, define_word.return_value]
+
+
+class TestDefineWord(TestCase):
+    def test_definition_not_found(self):
+        word = fakes.fake_value()
+        assert define_word(fakes.course1, word, reverse=False) == {
+            "word": word
+        }
+
+    def test_includes_definition(self):
+        word = fakes.fake_value()
+        meaning = fakes.fake_value()
+        reverse = fakes.fake_value()
+        my_course = Course(
+            **{
+                **(fakes.course1._asdict()),
+                "dictionary": [
+                    DictionaryItem(
+                        word=word,
+                        definition=meaning,
+                        reverse=reverse
+                    ),
+                ]
+            },
+        )
+        assert define_word(my_course, word, reverse=reverse) == {
+            "word": word,
+            "definition": meaning
+        }
+
+    def test_doesnt_include_definition_with_different_word(self):
+        word = fakes.fake_value()
+        meaning = fakes.fake_value()
+        reverse = fakes.fake_value()
+        my_course = Course(
+            **{
+                **(fakes.course1._asdict()),
+                "dictionary": [
+                    DictionaryItem(
+                        word=word,
+                        definition=meaning,
+                        reverse=reverse
+                    ),
+                ]
+            },
+        )
+        assert define_word(my_course, "asd", reverse=reverse) == {
+            "word": "asd",
+        }
+
+    def test_doesnt_include_definition_with_different_reverse(self):
+        word = fakes.fake_value()
+        meaning = fakes.fake_value()
+        reverse = fakes.fake_value()
+        my_course = fakes.customize(fakes.course1, dictionary=[
+            DictionaryItem(
+                word=word,
+                definition=meaning,
+                reverse=False
+            ),
+        ])
+        assert define_word(my_course, word, reverse=reverse) == {
+            "word": word,
+        }
+
+    def test_skips_non_matching_definitions(self):
+        word = fakes.fake_value()
+        meaning = fakes.fake_value()
+        reverse = fakes.fake_value()
+        my_course = fakes.customize(fakes.course1, dictionary=[
+            DictionaryItem(
+                word=None,
+                definition=None,
+                reverse=None
+            ),
+            DictionaryItem(
+                word=word,
+                definition=meaning,
+                reverse=reverse
+            ),
+        ])
+        assert define_word(my_course, word, reverse=reverse) == {
+            "word": word,
+            "definition": meaning
+        }
