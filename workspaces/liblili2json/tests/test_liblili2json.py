@@ -231,7 +231,7 @@ class TestGetPhraseChallenges(TestCase):
         assert get_phrase_challenges(
             fakes.phrase1, fakes.course1)[2] == fake_value
 
-    @ patch('liblili2json.get_chips_challenge')
+    @ patch('liblili2json.get_reverse_chips_challenge')
     def test_includes_reverse_chips_challenge(self, mock):
         fake_value = fakes.fake_value()
         mock.return_value = fake_value
@@ -344,6 +344,7 @@ class TestChipsChallenge(TestCase):
         challenge = get_chips_challenge(fakes.phrase1, fakes.course1)
         assert challenge == {
             "type": "chips",
+            "translatesToSourceLanguage": False,
             "phrase": [
                 {"word": "foo"},
                 {"word": "bar"},
@@ -362,6 +363,7 @@ class TestChipsChallenge(TestCase):
         challenge = get_chips_challenge(fakes.phrase2, fakes.course1)
         assert challenge == {
             "type": "chips",
+            "translatesToSourceLanguage": False,
             "phrase": [
                 {"word": "john"},
                 {"word": "smith"},

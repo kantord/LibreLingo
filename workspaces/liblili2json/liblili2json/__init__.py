@@ -153,17 +153,31 @@ def get_chips(phrase):
     return list(map(clean_word, phrase.split()))
 
 
-def get_chips_challenge(phrase, course):
-    return {
-        "type": "chips",
-        "phrase": define_words_in_sentence(course, phrase.in_source_langauge, reverse=False),
-        'id': '3103322a15da',
-        'group': 'b95c785ddf3e',
-        "priority": 2,
-        "chips": get_chips(phrase.in_target_langauge),
-        "solutions": [get_chips(phrase.in_target_langauge)],
-        "formattedSolution": phrase.in_target_langauge,
-    }
+def create_chips_challenge_generator(reverse):
+    def get_input_text(phrase):
+        return phrase.in_source_langauge if reverse else phrase.in_target_langauge
+
+    def get_phrase_text(phrase):
+        return phrase.in_target_langauge if reverse else phrase.in_source_langauge
+
+    def get_chips_challenge(phrase, course):
+        return {
+            "type": "chips",
+            "translatesToSourceLanguage": reverse,
+            "phrase": define_words_in_sentence(course, get_phrase_text(phrase), reverse),
+            'id': '3103322a15da',
+            'group': 'b95c785ddf3e',
+            "priority": 2,
+            "chips": get_chips(get_input_text(phrase)),
+            "solutions": [get_chips(get_input_text(phrase))],
+            "formattedSolution": phrase.in_target_langauge,
+        }
+
+    return get_chips_challenge
+
+
+get_chips_challenge = create_chips_challenge_generator(False)
+get_reverse_chips_challenge = create_chips_challenge_generator(True)
 
 
 def challenge_mapper(challenge_types):
@@ -178,7 +192,7 @@ def get_phrase_challenges(phrase, course):
         get_options_challenge,
         get_listening_challenge,
         get_chips_challenge,
-        get_chips_challenge, ]
+        get_reverse_chips_challenge, ]
     )(phrase, course)
 
 
