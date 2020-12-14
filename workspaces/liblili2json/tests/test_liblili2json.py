@@ -14,7 +14,11 @@ from liblili2json import get_options_challenge
 from liblili2json import get_chips
 from liblili2json import clean_word
 from liblili2json import define_words_in_sentence
+from liblili2json import define_word
 from liblili2json.types import Phrase
+from liblili2json.types import Course
+from liblili2json.types import Word
+from liblili2json.types import DictionaryItem
 from . import fakes
 
 
@@ -340,6 +344,10 @@ class TestChipsChallenge(TestCase):
         challenge = get_chips_challenge(fakes.phrase1, fakes.course1)
         assert challenge == {
             "type": "chips",
+            "phrase": [
+                {"word": "foo"},
+                {"word": "bar"},
+            ],
             'id': '3103322a15da',
             'group': 'b95c785ddf3e',
             "priority": 2,
@@ -354,6 +362,10 @@ class TestChipsChallenge(TestCase):
         challenge = get_chips_challenge(fakes.phrase2, fakes.course1)
         assert challenge == {
             "type": "chips",
+            "phrase": [
+                {"word": "john"},
+                {"word": "smith"},
+            ],
             'id': '3103322a15da',
             'group': 'b95c785ddf3e',
             "priority": 2,
@@ -447,3 +459,88 @@ class DefineWordsInSentenceTest(TestCase):
         define_word.return_value = fakes.fake_value()
         assert define_words_in_sentence(
             fakes.course1, "foo bar", True) == [define_word.return_value, define_word.return_value]
+
+
+class TestDefineWord(TestCase):
+    def test_definition_not_found(self):
+        word = fakes.fake_value()
+        assert define_word(fakes.course1, word, reverse=False) == {
+            "word": word
+        }
+
+    def test_includes_definition(self):
+        word = fakes.fake_value()
+        meaning = fakes.fake_value()
+        reverse = fakes.fake_value()
+        my_course = Course(
+            **{
+                **(fakes.course1._asdict()),
+                "dictionary": [
+                    DictionaryItem(
+                        word=word,
+                        definition=meaning,
+                        reverse=reverse
+                    ),
+                ]
+            },
+        )
+        assert define_word(my_course, word, reverse=reverse) == {
+            "word": word,
+            "definition": meaning
+        }
+
+    def test_doesnt_include_definition_with_different_word(self):
+        word = fakes.fake_value()
+        meaning = fakes.fake_value()
+        reverse = fakes.fake_value()
+        my_course = Course(
+            **{
+                **(fakes.course1._asdict()),
+                "dictionary": [
+                    DictionaryItem(
+                        word=word,
+                        definition=meaning,
+                        reverse=reverse
+                    ),
+                ]
+            },
+        )
+        assert define_word(my_course, "asd", reverse=reverse) == {
+            "word": "asd",
+        }
+
+    def test_doesnt_include_definition_with_different_reverse(self):
+        word = fakes.fake_value()
+        meaning = fakes.fake_value()
+        reverse = fakes.fake_value()
+        my_course = fakes.customize(fakes.course1, dictionary=[
+            DictionaryItem(
+                word=word,
+                definition=meaning,
+                reverse=False
+            ),
+        ])
+        assert define_word(my_course, word, reverse=reverse) == {
+            "word": word,
+        }
+
+    def test_skips_non_matching_definitions(self):
+        word = fakes.fake_value()
+        meaning = fakes.fake_value()
+        reverse = fakes.fake_value()
+        my_course = fakes.customize(fakes.course1, dictionary=[
+            DictionaryItem(
+                word=None,
+                definition=None,
+                reverse=None
+            ),
+            DictionaryItem(
+                word=word,
+                definition=meaning,
+                reverse=reverse
+            ),
+        ])
+        assert define_word(my_course, word, reverse=reverse) == {
+            "word": word,
+            "definition": meaning
+        }
