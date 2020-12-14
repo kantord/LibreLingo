@@ -160,3 +160,12 @@ course2 = Course(
 def fake_value():
     FakeValue = namedtuple("FakeValue", ["id"])
     return FakeValue(random.randint(0, 10000))
+
+
+def customize(fake, **kwargs):
+    return type(fake)(
+        **{
+            **(fake._asdict()),
+            **kwargs
+        },
+    )
