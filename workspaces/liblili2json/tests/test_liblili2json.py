@@ -513,18 +513,13 @@ class TestDefineWord(TestCase):
         word = fakes.fake_value()
         meaning = fakes.fake_value()
         reverse = fakes.fake_value()
-        my_course = Course(
-            **{
-                **(fakes.course1._asdict()),
-                "dictionary": [
-                    DictionaryItem(
-                        word=word,
-                        definition=meaning,
-                        reverse=False
-                    ),
-                ]
-            },
-        )
+        my_course = fakes.customize(fakes.course1, dictionary=[
+            DictionaryItem(
+                word=word,
+                definition=meaning,
+                reverse=False
+            ),
+        ])
         assert define_word(my_course, word, reverse=reverse) == {
             "word": word,
         }
@@ -533,23 +528,18 @@ class TestDefineWord(TestCase):
         word = fakes.fake_value()
         meaning = fakes.fake_value()
         reverse = fakes.fake_value()
-        my_course = Course(
-            **{
-                **(fakes.course1._asdict()),
-                "dictionary": [
-                    DictionaryItem(
-                        word=None,
-                        definition=None,
-                        reverse=None
-                    ),
-                    DictionaryItem(
-                        word=word,
-                        definition=meaning,
-                        reverse=reverse
-                    ),
-                ]
-            },
-        )
+        my_course = fakes.customize(fakes.course1, dictionary=[
+            DictionaryItem(
+                word=None,
+                definition=None,
+                reverse=None
+            ),
+            DictionaryItem(
+                word=word,
+                definition=meaning,
+                reverse=reverse
+            ),
+        ])
         assert define_word(my_course, word, reverse=reverse) == {
             "word": word,
             "definition": meaning
