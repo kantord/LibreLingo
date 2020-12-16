@@ -45,8 +45,8 @@
         </Column>
         <Column>
           <div class="is-centered-mobile">
-            <Title size={2} sizeMobile={3}>Lesson completed!</Title>
-            <Title size={2} isSubtitle={true}>
+            <Title size="{2}" sizeMobile="{3}">Lesson completed!</Title>
+            <Title size="{2}" isSubtitle="{true}">
               You've completed
               {stats.correct}
               challenges
@@ -55,7 +55,7 @@
               Continue to course page
             </Button>
             <div class="bottom">
-              <Title size={5}>Excited about LibreLingo?</Title>
+              <Title size="{5}">Excited about LibreLingo?</Title>
               <TwitterButton />
             </div>
           </div>
