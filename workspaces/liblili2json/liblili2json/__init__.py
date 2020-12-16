@@ -107,11 +107,11 @@ def get_listening_challenge(source, course):
         "type": "listeningExercise",
         "answer": source.in_target_langauge,
         "meaning": source.in_source_langauge,
-        "priority": 1,
         "audio": audio_id(course.language_code,
                           source.in_target_langauge),
+        "id": get_dumb_opaque_id("Word", source, "listeningExercise"),
+        "priority": 1,
         "group": get_dumb_opaque_id("Word", source),
-        "id": get_dumb_opaque_id("Word", source, "listeningExercise")
     }
 
 
@@ -143,9 +143,9 @@ def get_options_challenge(phrase, _):
         "type": "options",
         "formInTargetLanguage": phrase.in_target_langauge,
         "meaningInSourceLanguage": phrase.in_source_langauge,
+        "id": get_dumb_opaque_id("Options", phrase, "cards"),
         "priority": 0,
         "group": get_dumb_opaque_id("Options", phrase),
-        "id": get_dumb_opaque_id("Options", phrase, "cards")
     }
 
 
@@ -165,12 +165,12 @@ def create_chips_challenge_generator(reverse):
             "type": "chips",
             "translatesToSourceLanguage": reverse,
             "phrase": define_words_in_sentence(course, get_phrase_text(phrase), reverse),
-            "group": get_dumb_opaque_id("Chips", phrase),
-            "id": get_dumb_opaque_id("Chips", phrase, "cards"),
-            "priority": 2,
             "chips": get_chips(get_input_text(phrase)),
             "solutions": [get_chips(get_input_text(phrase))],
             "formattedSolution": phrase.in_target_langauge,
+            "id": get_dumb_opaque_id("Chips", phrase, "cards"),
+            "priority": 2,
+            "group": get_dumb_opaque_id("Chips", phrase),
         }
 
     return get_chips_challenge
@@ -192,7 +192,8 @@ def get_phrase_challenges(phrase, course):
         get_options_challenge,
         get_listening_challenge,
         get_chips_challenge,
-        get_reverse_chips_challenge, ]
+        get_reverse_chips_challenge,
+    ]
     )(phrase, course)
 
 
