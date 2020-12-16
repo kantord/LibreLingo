@@ -295,8 +295,9 @@ class TestGetShortInputChallenge(TestCase):
         assert challenge == {
             'id': '98eca012f981',
             "type": "shortInput",
-            "formInTargetLanguage": "foous",
-            "phrase": "foo",
+            'pictures': ['foo', 'bar', 'baz'],
+            "formInTargetLanguage": ["foous"],
+            'phrase': [{'word': 'foo'}],
             "priority": 1,
             'group': 'b95c785ddf3e',
         }
@@ -306,8 +307,9 @@ class TestGetShortInputChallenge(TestCase):
         assert challenge == {
             'id': '1a196242f155',
             "type": "shortInput",
-            "formInTargetLanguage": "apfel",
-            "phrase": "apple",
+            'pictures': ['1', '2', '3'],
+            "formInTargetLanguage": ["apfel"],
+            'phrase': [{'word': 'apple'}],
             "priority": 1,
             'group': 'f2b9d8b7c65a',
         }
@@ -545,4 +547,18 @@ class TestDefineWord(TestCase):
         assert define_word(my_course, word, reverse=reverse) == {
             "word": word,
             "definition": meaning
+        }
+
+    def test_skips_empty_definition(self):
+        word = fakes.fake_value()
+        meaning = fakes.fake_value()
+        my_course = fakes.customize(fakes.course1, dictionary=[
+            DictionaryItem(
+                word=word,
+                definition="",
+                reverse=False
+            ),
+        ])
+        assert define_word(my_course, word, reverse=False) == {
+            "word": word,
         }
