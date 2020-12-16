@@ -5,7 +5,7 @@
   import GitHubButton from "../components/GitHubButton"
   import Column from "lluis/Column"
   import Columns from "lluis/Columns"
-  import Title from 'lluis/Title'
+  import Title from "lluis/Title"
   import { _ } from "svelte-i18n"
 
   import shuffle from "lodash.shuffle"
@@ -35,7 +35,9 @@
 </svelte:head>
 
 {#if issues === null}
-  <div class="pageloader is-active"><Title>LibreLingo</Title></div>
+  <div class="pageloader is-active">
+    <Title>LibreLingo</Title>
+  </div>
 {/if}
 
 <section class="hero is-primary">
@@ -49,7 +51,7 @@
           <Title><img src="images/logo.svg" alt="LibreLingo" /></Title>
         </Column>
         <Column>
-          <Title size={2} isSubtitle={true}>{$_('index.subtitle')}</Title>
+          <Title size="{2}" isSubtitle="{true}">{$_('index.subtitle')}</Title>
           <div class="buttons">
             <a
               class="button is-primary is-inverted is-outlined"
@@ -71,7 +73,7 @@
     </div>
 
     <div class="container">
-      <Title size={2} sizeMobile={3}>Recent major new features</Title>
+      <Title size="{2}" sizeMobile="{3}">Recent major new features</Title>
 
       <Columns>
         <Column size="1/4">
@@ -107,7 +109,7 @@
       <Columns>
         <Column>
           <div class=" has-text-centered is-centered-both-ways">
-            <Title size={3}>Spaced repetition</Title>
+            <Title size="{3}">Spaced repetition</Title>
           </div>
         </Column>
 
@@ -129,7 +131,7 @@
 
         <Column>
           <div class="has-text-centered is-centered-both-ways">
-            <Title size={3}>Practice word order</Title>
+            <Title size="{3}">Practice word order</Title>
           </div>
         </Column>
       </Columns>
@@ -137,7 +139,7 @@
       <Columns>
         <Column>
           <div class="has-text-centered is-centered-both-ways">
-            <Title size={3}>Course editor</Title>
+            <Title size="{3}">Course editor</Title>
           </div>
         </Column>
 
@@ -159,13 +161,13 @@
 
         <Column>
           <div class="has-text-centered is-centered-both-ways">
-            <Title size={3}>Built-in mini-dictionary</Title>
+            <Title size="{3}">Built-in mini-dictionary</Title>
           </div>
         </Column>
       </Columns>
 
       <div class="development-progress">
-        <Title size={3}>Progress towards alpha release</Title>
+        <Title size="{3}">Progress towards alpha release</Title>
         <progress class="progress is-medium is-info" value="75" max="100">
           45%
         </progress>
@@ -187,9 +189,7 @@
 {#if issues !== null && issues.length}
   <section class="section">
     <div class="container">
-      <Title size={3}>
-        Looking for a challange? Check out these issues:
-      </Title>
+      <Title size="{3}">Looking for a challange? Check out these issues:</Title>
       <div class="columns is-multiline">
         {#each issues as { title, html_url, labels }}
           <div class="column is-one-third">

@@ -114,12 +114,12 @@
     {/if}
     {#if correct}
       {#if !spellingSuggestion}
-      <ChallengePanel
-        message="Correct solution!"
-        messageDetail=""
-        buttonText="Continue"
-        correct
-        buttonAction="{finishChallenge}" />
+        <ChallengePanel
+          message="Correct solution!"
+          messageDetail=""
+          buttonText="Continue"
+          correct
+          buttonAction="{finishChallenge}" />
       {/if}
 
       {#if spellingSuggestion}
