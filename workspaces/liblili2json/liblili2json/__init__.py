@@ -33,7 +33,7 @@ def get_opaque_id(obj, salt=""):
 
 def audio_id(language_id, text):
     hash = hashlib.sha256()
-    hash.update((language_id + "|" + text).encode('utf-8'))
+    hash.update((language_id.lower() + "|" + text).encode('utf-8'))
     return hash.hexdigest()
 
 
@@ -107,22 +107,23 @@ def get_listening_challenge(source, course):
         "type": "listeningExercise",
         "answer": source.in_target_langauge,
         "meaning": source.in_source_langauge,
-        "priority": 1,
-        "audio": audio_id(course.language_code,
+        "audio": audio_id(course.language_name,
                           source.in_target_langauge),
+        "id": get_dumb_opaque_id("Word", source, "listeningExercise"),
+        "priority": 1,
         "group": get_dumb_opaque_id("Word", source),
-        "id": get_dumb_opaque_id("Word", source, "listeningExercise")
     }
 
 
-def get_short_input_challenge(source, _):
+def get_short_input_challenge(source, course):
     return {
         "type": "shortInput",
-        "formInTargetLanguage": source.in_target_langauge,
-        "phrase": source.in_source_langauge,
+        'pictures': source.pictures,
+        "formInTargetLanguage": [source.in_target_langauge],
+        "phrase": define_words_in_sentence(course, source.in_source_langauge, reverse=False),
+        "id": get_dumb_opaque_id("Word", source, "shortInput"),
         "priority": 1,
         "group": get_dumb_opaque_id("Word", source),
-        "id": get_dumb_opaque_id("Word", source, "shortInput")
     }
 
 
@@ -132,9 +133,9 @@ def get_cards_challenge(word, _):
         'pictures': word.pictures,
         "formInTargetLanguage": word.in_target_langauge,
         "meaningInSourceLanguage": word.in_source_langauge,
+        "id": get_dumb_opaque_id("Word", word, "cards"),
         "priority": 0,
         "group": get_dumb_opaque_id("Word", word),
-        "id": get_dumb_opaque_id("Word", word, "cards")
     }
 
 
@@ -143,9 +144,9 @@ def get_options_challenge(phrase, _):
         "type": "options",
         "formInTargetLanguage": phrase.in_target_langauge,
         "meaningInSourceLanguage": phrase.in_source_langauge,
+        "id": get_dumb_opaque_id("Options", phrase, "cards"),
         "priority": 0,
         "group": get_dumb_opaque_id("Options", phrase),
-        "id": get_dumb_opaque_id("Options", phrase, "cards")
     }
 
 
@@ -165,12 +166,12 @@ def create_chips_challenge_generator(reverse):
             "type": "chips",
             "translatesToSourceLanguage": reverse,
             "phrase": define_words_in_sentence(course, get_phrase_text(phrase), reverse),
-            "group": get_dumb_opaque_id("Chips", phrase),
-            "id": get_dumb_opaque_id("Chips", phrase, "cards"),
-            "priority": 2,
             "chips": get_chips(get_input_text(phrase)),
             "solutions": [get_chips(get_input_text(phrase))],
-            "formattedSolution": phrase.in_target_langauge,
+            "formattedSolution": get_input_text(phrase),
+            "id": get_dumb_opaque_id("Chips", phrase, "cards"),
+            "priority": 2,
+            "group": get_dumb_opaque_id("Chips", phrase),
         }
 
     return get_chips_challenge
@@ -192,7 +193,8 @@ def get_phrase_challenges(phrase, course):
         get_options_challenge,
         get_listening_challenge,
         get_chips_challenge,
-        get_reverse_chips_challenge, ]
+        get_reverse_chips_challenge,
+    ]
     )(phrase, course)
 
 
@@ -251,7 +253,7 @@ def get_dictionary_item(course, word, reverse):
 
 def define_word(course, word, reverse):
     dictionary_item = get_dictionary_item(course, word, reverse)
-    if dictionary_item:
+    if dictionary_item and dictionary_item.definition:
         return {
             "word": word,
             "definition": dictionary_item.definition
