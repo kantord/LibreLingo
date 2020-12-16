@@ -63,8 +63,14 @@ def get_levels(skill):
     return round(1 + (new_words / 7) + (new_sentences / 5))
 
 
-def get_course_data(course):
-    converted_course = liblili2json.Course(
+def generate_imageset(item):
+    return ["{}.jpg".format(image_name) for image_name in [item.image1,
+                                                           item.image2,
+                                                           item.image3]]
+
+
+def convert_course(course):
+    return liblili2json.Course(
         language_code=course.target_language_code,
         language_name=course.language_name,
         special_characters=course.special_characters.split(' '),
@@ -80,7 +86,7 @@ def get_course_data(course):
                     words=[liblili2json.Word(
                         in_target_langauge=word.formInTargetLanguage,
                         in_source_langauge=word.meaningInSourceLanguage,
-                        pictures=[]) for word in skill.learnword_set.all()],
+                        pictures=generate_imageset(word)) for word in skill.learnword_set.all()],
                     phrases=[liblili2json.Phrase(
                         in_target_langauge=sentence.formInTargetLanguage,
                         in_source_langauge=sentence.meaningInSourceLanguage)
@@ -90,9 +96,20 @@ def get_course_data(course):
                 ) for skill in module.skill_set.all()
             ]
         ) for module in course.module_set.all()],
-        dictionary=[]
+        dictionary=list(
+            map(
+                lambda x: liblili2json.DictionaryItem(
+                    word=x.word,
+                    definition=x.definition,
+                    reverse=(not x.reverse)
+                ),
+                DictionaryItem.objects.filter(course__id=course.id))
+        )
     )
-    return liblili2json.get_course_data(converted_course)
+
+
+def get_course_data(course):
+    return liblili2json.get_course_data(convert_course(course))
 
 
 def export_course_data(export_path, course):
@@ -123,124 +140,8 @@ def define_words_in_sentence(course, sentence, reverse):
     return [define_word(course, word, reverse) for word in sentence.split(" ")]
 
 
-def generate_learnword_challenge(
-    learnword,
-    formInTargetLanguage,
-    meaningInSourceLanguage,
-    language_id,
-        course):
-    return [{"type": "cards",
-             "pictures": ["{}.jpg".format(image_name) for image_name in [learnword.image1,
-                                                                         learnword.image2,
-                                                                         learnword.image3]],
-             "formInTargetLanguage": formInTargetLanguage,
-             "meaningInSourceLanguage": meaningInSourceLanguage,
-             "id": opaqueId(learnword,
-                            "cards"),
-             "priority": 0,
-             "group": opaqueId(learnword),
-             },
-            {"type": "shortInput",
-             "pictures": ["{}.jpg".format(image_name) for image_name in [learnword.image1,
-                                                                         learnword.image2,
-                                                                         learnword.image3]],
-             "formInTargetLanguage": [formInTargetLanguage] + list(map(
-                 lambda x: x.solution, learnword.alternativesolutionintargetlanguage_set.all())),
-             "phrase": define_words_in_sentence(course,
-                                                meaningInSourceLanguage,
-                                                True),
-             "id": opaqueId(learnword,
-                            "shortInput"),
-             "priority": 1,
-             "group": opaqueId(learnword),
-             },
-            {"type": "listeningExercise",
-             "answer": formInTargetLanguage,
-             "meaning": meaningInSourceLanguage,
-             "audio": audioId(language_id,
-                              formInTargetLanguage),
-             "id": opaqueId(learnword,
-                            "listeningExercise"),
-             "priority": 1,
-             "group": opaqueId(learnword),
-             },
-            ]
-
-
-def get_skill_data(skill, language_id, course):
-    data = []
-    for learnsentence in skill.learnsentence_set.all():
-        data = data + [{"type": "options",
-                        "formInTargetLanguage": learnsentence.formInTargetLanguage,
-                        "meaningInSourceLanguage": learnsentence.meaningInSourceLanguage,
-                        "id": opaqueId(learnsentence,
-                                       "options"),
-                        "priority": 0,
-                        "group": opaqueId(learnsentence),
-                        },
-                       {"type": "listeningExercise",
-                        "answer": learnsentence.formInTargetLanguage,
-                        "meaning": learnsentence.meaningInSourceLanguage,
-                        "audio": audioId(language_id,
-                                         learnsentence.formInTargetLanguage),
-                        "id": opaqueId(learnsentence,
-                                       "listeningExercise"),
-                        "priority": 1,
-                        "group": opaqueId(learnsentence),
-                        },
-                       ]
-
-        if len(generate_chips_in_target_language(learnsentence)[0]) >= 2:
-            data = data + [{"type": "chips",
-                            "translatesToSourceLanguage": False,
-                            "phrase": define_words_in_sentence(course,
-                                                               learnsentence.meaningInSourceLanguage,
-                                                               True),
-                            "chips": generate_chips_in_target_language(learnsentence)[0],
-                            "solutions": generate_chips_in_target_language(learnsentence),
-                            "formattedSolution": learnsentence.formInTargetLanguage,
-                            "id": opaqueId(learnsentence,
-                                           "chips"),
-                            "priority": 2,
-                            "group": opaqueId(learnsentence),
-                            },
-                           ]
-
-        if len(generate_chips_in_source_language(learnsentence)[0]) >= 2:
-            data = data + [{"type": "chips",
-                            "translatesToSourceLanguage": True,
-                            "phrase": define_words_in_sentence(course,
-                                                               learnsentence.formInTargetLanguage,
-
-                                                               False),
-                            "chips": generate_chips_in_source_language(learnsentence)[0],
-                            "solutions": generate_chips_in_source_language(learnsentence),
-                            "formattedSolution": learnsentence.meaningInSourceLanguage,
-                            "id": opaqueId(learnsentence,
-                                           "chips"),
-                            "priority": 2,
-                            "group": opaqueId(learnsentence),
-                            },
-                           ]
-
-    for learnword in skill.learnword_set.all():
-        data = data + generate_learnword_challenge(
-            learnword,
-            learnword.formInTargetLanguage,
-            learnword.meaningInSourceLanguage,
-            language_id,
-            course
-        )
-
-    return {
-        "id": opaqueId(skill, "Skill"),
-        "levels": get_levels(skill),
-        "challenges": data
-    }
-
-
 def export_skill(export_path, skill, language_id, course):
-    data = get_skill_data(skill, language_id, course)
+    data = liblili2json.get_skill_data(skill, course)
     Path(Path(export_path) / "challenges").mkdir(parents=True, exist_ok=True)
 
     with open(Path(export_path) / "challenges" / "{}.json".format(slugify(skill.name)), 'w', encoding='utf-8') as f:
@@ -260,10 +161,14 @@ def export_course(course):
     export_course_data(export_path, course)
     audios_to_fetch = []
 
+    converted_course = convert_course(course)
+    for module in converted_course.modules:
+        for skill in module.skills:
+            print("Exporting skill {}".format(str(skill.name)))
+            export_skill(export_path, skill, language_id, converted_course)
     for module in course.module_set.all():
         for skill in module.skill_set.all():
-            print("Exporting skill {}".format(str(skill)))
-            export_skill(export_path, skill, language_id, course)
+            print("Fetching audios for skill {}".format(str(skill)))
             for learnword in skill.learnword_set.all():
                 audios_to_fetch.append(
                     "{}|{}|{}".format(
