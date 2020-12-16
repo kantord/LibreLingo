@@ -30,8 +30,6 @@ blocks:
             - checkout
             - cache restore node-$(checksum yarn.lock)
             - yarn jest
-    dependencies:
-      - Eslint
   - name: Cypress
     task:
       jobs:
@@ -61,18 +59,7 @@ blocks:
             - sem-version node 12
             - checkout
             - cache restore node-$(checksum yarn.lock)
-            - yarn eslint workspaces/*/src
-  - name: Eslint Cypress
-    dependencies:
-      - Install dependencies
-    task:
-      jobs:
-        - name: eslint
-          commands:
-            - sem-version node 12
-            - checkout
-            - cache restore node-$(checksum yarn.lock)
-            - yarn eslint workspaces/*/cypress
+            - yarn stylecheck
   - name: Typescript Code Style Check
     dependencies:
       - Eslint
@@ -109,8 +96,6 @@ blocks:
             - pipenv install
             - 'DATABASE_URL=sqlite:///db.sqlite3 python manage.py test'
   - name: Sapper build
-    dependencies:
-      - Eslint Cypress
     task:
       jobs:
         - name: yarn web build
