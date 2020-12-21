@@ -25,52 +25,52 @@
   let spellingSuggestion = ""
 
   $: submitChallenge = () => {
-    if (!answer) return
-    if (submitted) return
-    const form = challenge.answer
-    correct = false
+      if (!answer) return
+      if (submitted) return
+      const form = challenge.answer
+      correct = false
 
-    if (
-      levenshtein(
-        answer
-          .toLowerCase()
-          .replace(/^\s+|\s+$/g, "")
-          .replace(/\s+/g, " "),
-        form.toLowerCase()
-      ) <= 1
-    ) {
-      correct = true
-      spellingSuggestion =
+      if (
+          levenshtein(
+              answer
+                  .toLowerCase()
+                  .replace(/^\s+|\s+$/g, "")
+                  .replace(/\s+/g, " "),
+              form.toLowerCase()
+          ) <= 1
+      ) {
+          correct = true
+          spellingSuggestion =
         form
-          .replace(/^\s+|\s+$/g, "")
-          .replace(/\s+/g, " ")
-          .toLowerCase() === answer.toLowerCase()
-          ? ""
-          : `Correct spelling: ${form}`
-    }
+            .replace(/^\s+|\s+$/g, "")
+            .replace(/\s+/g, " ")
+            .toLowerCase() === answer.toLowerCase()
+            ? ""
+            : `Correct spelling: ${form}`
+      }
 
-    registerResult(correct)
-    submitted = true
+      registerResult(correct)
+      submitted = true
   }
 
   $: finishChallenge = () => {
-    answer = null
-    submitted = false
-    resolveChallenge()
+      answer = null
+      submitted = false
+      resolveChallenge()
   }
 
   const playChallengeVoice = () => playAudio("voice", challenge.audio)
 
   onMount(() => {
-    playChallengeVoice()
-    hotkeys.unbind("enter")
-    hotkeys("enter", () => {
-      if (submitted) {
-        finishChallenge()
-      } else {
-        submitChallenge()
-      }
-    })
+      playChallengeVoice()
+      hotkeys.unbind("enter")
+      hotkeys("enter", () => {
+          if (submitted) {
+              finishChallenge()
+          } else {
+              submitChallenge()
+          }
+      })
   })
 </script>
 
@@ -106,7 +106,7 @@
       skipAllVoice="{skipAllVoice}" />
   {/if}
 
-  {#if answer === '' && !submitted}
+  {#if answer === "" && !submitted}
     <ChallengePanel
       message="{null}"
       buttonText="{null}"

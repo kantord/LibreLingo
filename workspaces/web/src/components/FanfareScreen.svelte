@@ -19,18 +19,18 @@
   export let stats
 
   onMount(async () => {
-    sound.fanfare.play()
+      sound.fanfare.play()
   })
 
   onMount(async () => {
-    await savePractice(db, { id: skillId, ...stats })
+      await savePractice(db, { id: skillId, ...stats })
   })
 
   onMount(() => {
-    hotkeys.unbind("enter")
-    hotkeys("enter", () => {
-      goto(courseURL)
-    })
+      hotkeys.unbind("enter")
+      hotkeys("enter", () => {
+          goto(courseURL)
+      })
   })
 </script>
 

@@ -1,17 +1,17 @@
 <script lang="typescript" context="module">
   export async function getMarkDownData(markdownModule) {
-    const remark = await require("remark")
-    const markdown = await import("remark-parse")
-    const html = await import("rehype-stringify")
-    const remark2rehype = await import("remark-rehype")
-    const format = await import("rehype-format")
+      const remark = await require("remark")
+      const markdown = await import("remark-parse")
+      const html = await import("rehype-stringify")
+      const remark2rehype = await import("remark-rehype")
+      const format = await import("rehype-format")
 
-    return await remark()
-      .use(markdown.default, { gfm: true, commonmark: true })
-      .use(remark2rehype.default)
-      .use(format.default)
-      .use(html.default)
-      .process(markdownModule.default)
+      return await remark()
+          .use(markdown.default, { gfm: true, commonmark: true })
+          .use(remark2rehype.default)
+          .use(format.default)
+          .use(html.default)
+          .process(markdownModule.default)
   }
 </script>
 

@@ -1,5 +1,5 @@
 <script lang="typescript">
-  import { onDestroy, onMount } from "svelte"
+  import {  onMount } from "svelte"
 
   import live from "../../db/live"
   import getSkillStats from "../../db/skill/getSkillStats"
@@ -21,16 +21,16 @@
   let progress = null
 
   onMount(() => {
-    live((db) =>
-      getSkillStats(db, { id })
-        .then((stats) => {
-          completed = stats.progress >= levels
-          progress = stats.progress
-          started = stats.started
-          stale = stats.stale && completed
-        })
-        .catch(() => {})
-    )
+      live((db) =>
+          getSkillStats(db, { id })
+              .then((stats) => {
+                  completed = stats.progress >= levels
+                  progress = stats.progress
+                  started = stats.started
+                  stale = stats.stale && completed
+              })
+              .catch(() => {})
+      )
   })
 </script>
 

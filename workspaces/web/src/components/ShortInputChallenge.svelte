@@ -25,36 +25,36 @@
   let picture = shuffle(challenge.pictures)[0]
 
   $: submitChallenge = () => {
-    if (!answer) return
-    if (submitted) return
+      if (!answer) return
+      if (submitted) return
 
-    const validationResults = evaluateAnswer({
-      validAnswers: challenge.formInTargetLanguage,
-      answer: answer,
-    })
+      const validationResults = evaluateAnswer({
+          validAnswers: challenge.formInTargetLanguage,
+          answer: answer,
+      })
 
-    correct = validationResults.correct
-    spellingSuggestion = validationResults.suggestion
+      correct = validationResults.correct
+      spellingSuggestion = validationResults.suggestion
 
-    registerResult(correct)
-    submitted = true
+      registerResult(correct)
+      submitted = true
   }
 
   $: finishChallenge = () => {
-    answer = null
-    submitted = false
-    resolveChallenge()
+      answer = null
+      submitted = false
+      resolveChallenge()
   }
 
   onMount(() => {
-    hotkeys.unbind("enter")
-    hotkeys("enter", () => {
-      if (submitted) {
-        finishChallenge()
-      } else {
-        submitChallenge()
-      }
-    })
+      hotkeys.unbind("enter")
+      hotkeys("enter", () => {
+          if (submitted) {
+              finishChallenge()
+          } else {
+              submitChallenge()
+          }
+      })
   })
 </script>
 
@@ -95,7 +95,7 @@
       skipAllAction="{skipAllChallenges}" />
   {/if}
 
-  {#if answer === '' && !submitted}
+  {#if answer === "" && !submitted}
     <ChallengePanel
       message="{null}"
       buttonText="{null}"

@@ -15,17 +15,17 @@
   let issues = null
 
   if (process.browser === true) {
-    fetch(API_URL)
-      .then((res) => res.json())
-      .then((res) => {
-        issues = shuffle(res)
-          .filter(
-            ({ state, pull_request, labels }) =>
-              state === "open" && !pull_request && labels.length !== 0
-          )
-          .slice(0, 10)
-      })
-      .catch(() => (issues = []))
+      fetch(API_URL)
+          .then((res) => res.json())
+          .then((res) => {
+              issues = shuffle(res)
+                  .filter(
+                      ({ state, pull_request, labels }) =>
+                          state === "open" && !pull_request && labels.length !== 0
+                  )
+                  .slice(0, 10)
+          })
+          .catch(() => (issues = []))
   }
 </script>
 
@@ -51,20 +51,20 @@
           <Title><img src="images/logo.svg" alt="LibreLingo" /></Title>
         </Column>
         <Column>
-          <Title size="{2}" isSubtitle="{true}">{$_('index.subtitle')}</Title>
+          <Title size="{2}" isSubtitle="{true}">{$_("index.subtitle")}</Title>
           <div class="buttons">
             <a
               class="button is-primary is-inverted is-outlined"
               href="course/spanish-from-english">
-              {$_('index.start_spanish_course')}
+              {$_("index.start_spanish_course")}
             </a>
             <a
               class="button is-primary is-inverted is-outlined is-hidden"
               href="course/german-from-english">
-              {$_('index.start_german_course')}
+              {$_("index.start_german_course")}
             </a>
             <a class="button is-primary is-inverted is-outlined" href="about">
-              {$_('index.about_librelingo')}
+              {$_("index.about_librelingo")}
             </a>
             <TwitterButton />
           </div>
