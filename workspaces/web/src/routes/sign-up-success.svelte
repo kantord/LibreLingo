@@ -1,7 +1,7 @@
 <script lang="typescript">
+  // TODO: deal with this ignore comment
+  // eslint-disable-next-line no-unused-vars
   import db from "../db/db.js"
-  import { onMount } from "svelte"
-  import hotkeys from "hotkeys-js"
   import NavBar from "../components/NavBar.svelte"
   import Button from "lluis/Button"
 </script>
