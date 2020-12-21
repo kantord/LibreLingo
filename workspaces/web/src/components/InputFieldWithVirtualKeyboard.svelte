@@ -61,7 +61,7 @@
   class="input"
   autofocus
   placeholder="Type your answer…"
-  {disabled}
+  disabled="{disabled}"
   spellcheck="false"
   autocapitalize="none"
   lang="{languageCode}"
