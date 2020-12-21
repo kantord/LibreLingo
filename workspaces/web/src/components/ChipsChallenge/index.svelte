@@ -9,41 +9,41 @@
   import { changeArrayElementPosition } from "./utils"
 
   const sortable = function (node, { items, options }) {
-    options = Object.assign(options, {
-      onUpdate({ newIndex, oldIndex }) {
-        items.update((oldItems) => {
-          return changeArrayElementPosition(oldItems, oldIndex, newIndex)
-        })
-      },
+      options = Object.assign(options, {
+          onUpdate({ newIndex, oldIndex }) {
+              items.update((oldItems) => {
+                  return changeArrayElementPosition(oldItems, oldIndex, newIndex)
+              })
+          },
 
-      onRemove({ oldIndex }) {
-        items.update((oldItems) => {
-          const newItems = [...oldItems]
-          newItems.splice(oldIndex, 1)
-          return newItems
-        })
-      },
+          onRemove({ oldIndex }) {
+              items.update((oldItems) => {
+                  const newItems = [...oldItems]
+                  newItems.splice(oldIndex, 1)
+                  return newItems
+              })
+          },
 
-      onAdd({ newIndex, item }) {
-        items.update((oldItems) => {
-          const newItems = [...oldItems]
-          newItems.splice(newIndex, 0, item.innerText)
-          return newItems
-        })
-      },
-    })
+          onAdd({ newIndex, item }) {
+              items.update((oldItems) => {
+                  const newItems = [...oldItems]
+                  newItems.splice(newIndex, 0, item.innerText)
+                  return newItems
+              })
+          },
+      })
 
-    let sortable = new Sortable(node, options)
+      let sortable = new Sortable(node, options)
 
-    return {
-      update(items) {
-        sortable.destroy()
-        sortable = new Sortable(node, options)
-      },
-      destroy() {
-        sortable.destroy()
-      },
-    }
+      return {
+          update() {
+              sortable.destroy()
+              sortable = new Sortable(node, options)
+          },
+          destroy() {
+              sortable.destroy()
+          },
+      }
   }
 
   export let challenge
@@ -58,46 +58,46 @@
   const chips = writable(shuffle(challenge.chips))
 
   if (process.browser === true) {
-    window.testSolution = () => {
-      answer.update(() => ["Como", "estás", "hoy"])
-    }
+      window.testSolution = () => {
+          answer.update(() => ["Como", "estás", "hoy"])
+      }
 
-    window.testSolution2 = () => {
-      answer.update(() => ["Tu", "como", "estás", "hoy"])
-    }
+      window.testSolution2 = () => {
+          answer.update(() => ["Tu", "como", "estás", "hoy"])
+      }
 
-    window.testIncorrectSolution = () => {
-      answer.update(() => ["Como", "hoy"])
-    }
+      window.testIncorrectSolution = () => {
+          answer.update(() => ["Como", "hoy"])
+      }
   }
 
   $: submitChallenge = () => {
-    if (!$answer) return
-    if (submitted) return
-    correct = false
-    const answerForm = $answer.join(" ")
-    challenge.solutions.map((solution) => {
-      correct = correct || answerForm === solution.join(" ")
-    })
-    registerResult(correct)
-    submitted = true
+      if (!$answer) return
+      if (submitted) return
+      correct = false
+      const answerForm = $answer.join(" ")
+      challenge.solutions.map((solution) => {
+          correct = correct || answerForm === solution.join(" ")
+      })
+      registerResult(correct)
+      submitted = true
   }
 
   $: finishChallenge = () => {
-    $answer = false
-    submitted = false
-    resolveChallenge()
+      $answer = false
+      submitted = false
+      resolveChallenge()
   }
 
   onMount(() => {
-    hotkeys.unbind("enter")
-    hotkeys("enter", () => {
-      if (submitted) {
-        finishChallenge()
-      } else {
-        submitChallenge()
-      }
-    })
+      hotkeys.unbind("enter")
+      hotkeys("enter", () => {
+          if (submitted) {
+              finishChallenge()
+          } else {
+              submitChallenge()
+          }
+      })
   })
 </script>
 

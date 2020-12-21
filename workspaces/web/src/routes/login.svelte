@@ -1,4 +1,6 @@
 <script lang="typescript">
+  // TODO: deal with this ignore comment
+  // eslint-disable-next-line no-unused-vars
   import db from "../db/db.js"
   import NavBar from "../components/NavBar.svelte"
   import Button from "lluis/Button"
@@ -9,11 +11,11 @@
   let password = ""
 
   const handleLogin = async () => {
-    try {
-      await window._Login(username, password)
-    } catch (e) {
-      error = e
-    }
+      try {
+          await window._Login(username, password)
+      } catch (e) {
+          error = e
+      }
   }
 </script>
 

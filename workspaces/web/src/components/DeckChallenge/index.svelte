@@ -1,9 +1,6 @@
 <script lang="typescript">
   import { onMount } from "svelte"
   import hotkeys from "hotkeys-js"
-  import shuffle from "lodash.shuffle"
-  import { slide } from "svelte/transition"
-  import { fade } from "svelte/transition"
   import OptionDeck from "../OptionDeck"
   import ChallengePanel from "../ChallengePanel"
   import { prepareChallenge } from "../../logic"
@@ -19,32 +16,32 @@
   let submitted = false
 
   $: options = prepareChallenge({
-    currentChallenge,
-    alternativeChallenges,
-    typeToSelect: "cards",
-    hasFakeOption: true,
+      currentChallenge,
+      alternativeChallenges,
+      typeToSelect: "cards",
+      hasFakeOption: true,
   })
 
   $: finishChallenge = () => {
-    selectedOption = null
-    submitted = false
-    resolveChallenge()
+      selectedOption = null
+      submitted = false
+      resolveChallenge()
   }
 
   $: submitChallenge = () => {
-    registerResult(options[selectedOption].correct)
-    submitted = true
+      registerResult(options[selectedOption].correct)
+      submitted = true
   }
 
   onMount(() => {
-    hotkeys.unbind("enter")
-    hotkeys("enter", () => {
-      if (submitted) {
-        finishChallenge()
-      } else {
-        submitChallenge()
-      }
-    })
+      hotkeys.unbind("enter")
+      hotkeys("enter", () => {
+          if (submitted) {
+              finishChallenge()
+          } else {
+              submitChallenge()
+          }
+      })
   })
 </script>
 
