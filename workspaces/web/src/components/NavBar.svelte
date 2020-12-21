@@ -27,8 +27,8 @@
   <div class="navbar-end">
     <div class="navbar-item">
       <div class="buttons">
-		<SponsorButton />
-        <GitHubButton />		
+        <SponsorButton />
+        <GitHubButton />
         {#if hasAuth && settings.features.authEnabled}
           {#if $authStore.user}
             <Button size="small" outlined inverted info>

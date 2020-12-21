@@ -9,9 +9,9 @@
   import ProgressBar from "./ProgressBar"
   import shuffle from "lodash.shuffle"
   import { fade, scale } from "svelte/transition"
-  import Button from "lluis/Button"
+  // TODO: deal with this ignore comment
+  // eslint-disable-next-line no-unused-vars
   import db from "../db/db"
-  import savePractice from "../db/skill/savePractice"
 
   export let rawChallenges
   export let languageName
@@ -23,8 +23,8 @@
   export let expectedNumberOfChallenges
 
   let challenges = sortChallengeGroups(
-    shuffle(rawChallenges),
-    expectedNumberOfChallenges
+      shuffle(rawChallenges),
+      expectedNumberOfChallenges
   )
   let remainingChallenges = [...challenges]
   let currentChallenge = remainingChallenges.shift()
@@ -33,75 +33,75 @@
 
   let progress = 0
   let stats = {
-    correct: 0,
-    incorrect: 0,
-    skipped: 0,
+      correct: 0,
+      incorrect: 0,
+      skipped: 0,
   }
 
   const preloadImage = (imageName) => {
-    if (typeof Image === "undefined") return
-    new Image().src = `images/${imageName}`
+      if (typeof Image === "undefined") return
+      new Image().src = `images/${imageName}`
   }
 
   challenges
-    .filter(({ type }) => type === "card")
-    .map(({ pictures }) => pictures.map(preloadImage))
+      .filter(({ type }) => type === "card")
+      .map(({ pictures }) => pictures.map(preloadImage))
 
   $: alternativeChallenges =
     currentChallenge &&
     rawChallenges.filter(({ id }) => id !== currentChallenge.id)
 
   $: registerResult = (isCorrect) => {
-    if (isCorrect) {
-      stats.correct++
-      skipAllChallenges = skipAllChallengesFunc
-      sound.correct.play()
-      solvedChallenges.push(currentChallenge)
-    } else {
-      stats.incorrect++
-      sound.wrong.play()
-      remainingChallenges.push(currentChallenge)
-    }
+      if (isCorrect) {
+          stats.correct++
+          skipAllChallenges = skipAllChallengesFunc
+          sound.correct.play()
+          solvedChallenges.push(currentChallenge)
+      } else {
+          stats.incorrect++
+          sound.wrong.play()
+          remainingChallenges.push(currentChallenge)
+      }
   }
 
   $: progress = (solvedChallenges.length + stats.skipped) / challenges.length
 
   $: resolveChallenge = () => {
-    if (remainingChallenges) {
-      currentChallenge = remainingChallenges.shift()
-    }
+      if (remainingChallenges) {
+          currentChallenge = remainingChallenges.shift()
+      }
   }
 
   $: skipChallenge = () => {
-    stats.skipped++
-    resolveChallenge()
+      stats.skipped++
+      resolveChallenge()
   }
 
   $: skipAllChallengesFunc = async () => {
-    stats.skipped++
-    remainingChallenges.forEach(() => stats.skipped++)
-    currentChallenge = undefined
+      stats.skipped++
+      remainingChallenges.forEach(() => stats.skipped++)
+      currentChallenge = undefined
   }
 
   $: skipAllVoice = () => {
-    let filteredRemainingChallenges = remainingChallenges.filter(
-      (challenge) => {
-        if (challenge.type === "listeningExercise") {
-          stats.skipped++
-          return false
-        } else {
-          return true
-        }
-      }
-    )
+      let filteredRemainingChallenges = remainingChallenges.filter(
+          (challenge) => {
+              if (challenge.type === "listeningExercise") {
+                  stats.skipped++
+                  return false
+              } else {
+                  return true
+              }
+          }
+      )
 
-    remainingChallenges.splice(
-      0,
-      remainingChallenges.length,
-      ...filteredRemainingChallenges
-    )
-    stats.skipped++
-    resolveChallenge()
+      remainingChallenges.splice(
+          0,
+          remainingChallenges.length,
+          ...filteredRemainingChallenges
+      )
+      stats.skipped++
+      resolveChallenge()
   }
 </script>
 
@@ -115,7 +115,7 @@
             class="challenge"
             in:fade|local="{{ duration: 300, delay: 350 }}"
             out:fade|local="{{ duration: 300 }}">
-            {#if challenge.type === 'cards'}
+            {#if challenge.type === "cards"}
               <DeckChallenge
                 skipChallenge="{skipChallenge}"
                 currentChallenge="{currentChallenge}"
@@ -124,7 +124,7 @@
                 registerResult="{registerResult}"
                 skipAllChallenges="{skipAllChallenges}" />
             {/if}
-            {#if challenge.type === 'options'}
+            {#if challenge.type === "options"}
               <OptionChallenge
                 skipChallenge="{skipChallenge}"
                 currentChallenge="{currentChallenge}"
@@ -133,7 +133,7 @@
                 registerResult="{registerResult}"
                 skipAllChallenges="{skipAllChallenges}" />
             {/if}
-            {#if challenge.type === 'shortInput'}
+            {#if challenge.type === "shortInput"}
               <ShortInputChallenge
                 skipChallenge="{skipChallenge}"
                 languageName="{languageName}"
@@ -144,7 +144,7 @@
                 challenge="{challenge}"
                 skipAllChallenges="{skipAllChallenges}" />
             {/if}
-            {#if challenge.type === 'listeningExercise'}
+            {#if challenge.type === "listeningExercise"}
               <ListeningChallenge
                 skipChallenge="{skipChallenge}"
                 languageCode="{languageCode}"
@@ -155,7 +155,7 @@
                 skipAllChallenges="{skipAllChallenges}"
                 skipAllVoice="{skipAllVoice}" />
             {/if}
-            {#if challenge.type === 'chips'}
+            {#if challenge.type === "chips"}
               <ChipsChallenge
                 registerResult="{registerResult}"
                 resolveChallenge="{resolveChallenge}"

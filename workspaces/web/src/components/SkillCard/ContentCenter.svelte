@@ -1,6 +1,6 @@
 <script lang="typescript">
   import Summary from "./Summary"
-  import Title from 'lluis/Title'
+  import Title from "lluis/Title"
 
   export let title
   export let completed

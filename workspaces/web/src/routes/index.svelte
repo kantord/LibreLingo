@@ -11,7 +11,7 @@
 </script>
 
 <svelte:head>
-  <title>{$_('meta.title')}</title>
+  <title>{$_("meta.title")}</title>
   <meta name="description" content="{$_('index.meta.description')}" />
 </svelte:head>
 

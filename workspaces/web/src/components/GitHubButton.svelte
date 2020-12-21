@@ -1,11 +1,11 @@
 <script lang="typescript" context="module">
-  export async function preload(page) {
-    const repo = await fetch("https://api.github.com/repos/kantord/LibreLingo")
+  export async function preload() {
+      const repo = await fetch("https://api.github.com/repos/kantord/LibreLingo")
 
-    const { stargazers_count } = await repo.json()
-    return {
-      stargazers_count,
-    }
+      const { stargazers_count } = await repo.json()
+      return {
+          stargazers_count,
+      }
   }
 </script>
 
@@ -18,21 +18,21 @@
   export let size = "small"
 
   onMount(async () => {
-    if (process.browser === true && window.isCypress) {
-      stars = 999
-      return
-    }
+      if (process.browser === true && window.isCypress) {
+          stars = 999
+          return
+      }
 
-    pMemoize(fetch, { maxAge: 5 * 60 * 1000 })(
-      "https://api.github.com/repos/kantord/LibreLingo"
-    )
-      .then((res) => res.json())
-      .then(({ stargazers_count }) => {
-        stars = stargazers_count
-        if (process.browser === true) {
-          window.star_count = stargazers_count
-        }
-      })
+      pMemoize(fetch, { maxAge: 5 * 60 * 1000 })(
+          "https://api.github.com/repos/kantord/LibreLingo"
+      )
+          .then((res) => res.json())
+          .then(({ stargazers_count }) => {
+              stars = stargazers_count
+              if (process.browser === true) {
+                  window.star_count = stargazers_count
+              }
+          })
   })
 </script>
 
