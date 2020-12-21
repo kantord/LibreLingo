@@ -2,5 +2,10 @@
   "baseUrl": "http://localhost:3000",
   "video": false,
   "projectId": "6pycst",
-  "testFiles": "**/*.{feature,features}"
+  "testFiles": "**/*.{feature,features}",
+  "retries": {
+    "runMode": 2,
+    "openMode": 0
+  }
 }
+
