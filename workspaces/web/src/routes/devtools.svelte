@@ -1,26 +1,21 @@
 <script lang="typescript" context="module">
-  export async function preload(page, session) {
-    if (!process.browser) {
-      const fs = require("fs")
-      const util = require("util")
-      const readdir = util.promisify(fs.readdir)
+  export async function preload() {
+      if (!process.browser) {
+          const fs = require("fs")
+          const util = require("util")
+          const readdir = util.promisify(fs.readdir)
 
-      return {
-        testSkills: (await readdir("./src/courses/test/challenges")).map(
-          (fname) => fname.split(".")[0]
-        ),
+          return {
+              testSkills: (await readdir("./src/courses/test/challenges")).map(
+                  (fname) => fname.split(".")[0]
+              ),
+          }
       }
-    }
   }
 </script>
 
 <script lang="typescript">
   import NavBar from "../components/NavBar"
-  import Mascot from "../components/Mascot"
-  import TwitterButton from "../components/TwitterButton"
-  import GitHubButton from "../components/GitHubButton"
-  import Column from "lluis/Column"
-  import Columns from "lluis/Columns"
   import Content from "lluis/Content"
 
   export let testSkills = []

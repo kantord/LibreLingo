@@ -1,15 +1,12 @@
 <script lang="typescript" context="module">
   import { waitLocale } from "svelte-i18n"
-  import authStore from "../auth"
 
   export async function preload() {
-    return waitLocale()
+      return waitLocale()
   }
 </script>
 
 <script lang="typescript">
-  import settings from "../settings"
-
   export let segment
 </script>
 
