@@ -12,6 +12,7 @@ from liblili2json import get_listening_challenge
 from liblili2json import get_chips_challenge
 from liblili2json import get_options_challenge
 from liblili2json import get_chips
+from liblili2json import get_dumb_opaque_id
 from liblili2json import clean_word
 from liblili2json import define_words_in_sentence
 from liblili2json import define_word
@@ -229,38 +230,51 @@ class TestGetPhraseChallenges(TestCase):
         fake_value = fakes.fake_value()
         mock.return_value = fake_value
         assert get_phrase_challenges(
-            fakes.phrase1, fakes.course1)[2] == fake_value
+            fakes.long_phrase, fakes.course1)[2] == fake_value
 
     @ patch('liblili2json.get_reverse_chips_challenge')
     def test_includes_reverse_chips_challenge(self, mock):
         fake_value = fakes.fake_value()
         mock.return_value = fake_value
         assert get_phrase_challenges(
-            fakes.phrase1, fakes.course1)[3] == fake_value
+            fakes.long_phrase, fakes.course1)[3] == fake_value
+
+    def test_returns_correct_number_of_challenged(self):
+        assert len(get_phrase_challenges(
+            fakes.long_phrase, fakes.course1)) == 4
+
+    def test_doesnt_include_chips_if_sentence_is_short(self):
+        assert len(list(filter(
+            lambda x: x["type"] == "chips", get_phrase_challenges(
+                fakes.customize(
+                    fakes.phrase1,
+                    in_target_language=["foo"],
+                    in_source_language=["bar"],
+                ), fakes.course1)))) == 0
 
 
 class TestGetCardsChallenge(TestCase):
     def test_returns_correct_value1(self):
         challenge = get_cards_challenge(fakes.word1, fakes.course1)
         assert challenge == {
-            'id': '9287bb2f7029',
+            'id': '95e24ac99aa9',
             "type": "cards",
             "formInTargetLanguage": "foous",
             "meaningInSourceLanguage": "foo",
             "priority": 0,
-            'group': 'b95c785ddf3e',
+            'group': 'aab69500f014',
             'pictures': ['foo', 'bar', 'baz']
         }
 
     def test_returns_correct_value2(self):
         challenge = get_cards_challenge(fakes.word2, fakes.course1)
         assert challenge == {
-            'id': '91877ee773d8',
+            'id': '22bd7b11c2c9',
             "type": "cards",
             "formInTargetLanguage": "apfel",
             "meaningInSourceLanguage": "apple",
             "priority": 0,
-            'group': 'f2b9d8b7c65a',
+            'group': '9dbe235cb2d6',
             'pictures': ['1', '2', '3']
         }
 
@@ -269,23 +283,23 @@ class TestGetOptionsChallenge(TestCase):
     def test_returns_correct_value1(self):
         challenge = get_options_challenge(fakes.word1, fakes.course1)
         assert challenge == {
-            'id': 'e1cacf67191f',
+            'id': 'db8fd4cec19f',
             "type": "options",
             "formInTargetLanguage": "foous",
             "meaningInSourceLanguage": "foo",
             "priority": 0,
-            'group': '7c0b175a060c',
+            'group': 'aab69500f014',
         }
 
     def test_returns_correct_value2(self):
         challenge = get_options_challenge(fakes.word2, fakes.course1)
         assert challenge == {
-            'id': '042a45e89943',
+            'id': 'e50475a646e2',
             "type": "options",
             "formInTargetLanguage": "apfel",
             "meaningInSourceLanguage": "apple",
             "priority": 0,
-            'group': 'da01c2c189a9',
+            'group': '9dbe235cb2d6',
         }
 
 
@@ -293,25 +307,25 @@ class TestGetShortInputChallenge(TestCase):
     def test_returns_correct_value1(self):
         challenge = get_short_input_challenge(fakes.word1, fakes.course1)
         assert challenge == {
-            'id': '98eca012f981',
+            'id': '749e7c734898',
             "type": "shortInput",
             'pictures': ['foo', 'bar', 'baz'],
             "formInTargetLanguage": ["foous"],
             'phrase': [{'word': 'foo'}],
             "priority": 1,
-            'group': 'b95c785ddf3e',
+            'group': 'aab69500f014',
         }
 
     def test_returns_correct_value2(self):
         challenge = get_short_input_challenge(fakes.word2, fakes.course1)
         assert challenge == {
-            'id': '1a196242f155',
+            'id': '5f1b4778039c',
             "type": "shortInput",
             'pictures': ['1', '2', '3'],
             "formInTargetLanguage": ["apfel"],
             'phrase': [{'word': 'apple'}],
             "priority": 1,
-            'group': 'f2b9d8b7c65a',
+            'group': '9dbe235cb2d6',
         }
 
 
@@ -319,24 +333,24 @@ class TestListeningChallenge(TestCase):
     def test_returns_correct_value1(self):
         challenge = get_listening_challenge(fakes.word1, fakes.course1)
         assert challenge == {
-            'id': '3103322a15da',
+            'id': 'ae89bd25c323',
             "type": "listeningExercise",
             "answer": "foous",
             "meaning": "foo",
             "priority": 1,
-            'group': 'b95c785ddf3e',
+            'group': 'aab69500f014',
             'audio': '3f981d854531e9f376ae06cb8449a6e997972d3c1b598f9a00b481ef307a469d'
         }
 
     def test_returns_correct_value2(self):
         challenge = get_listening_challenge(fakes.word2, fakes.course1)
         assert challenge == {
-            'id': '9fc6514922a6',
+            'id': '7de4d5b7f106',
             "type": "listeningExercise",
             "answer": "apfel",
             "meaning": "apple",
             "priority": 1,
-            'group': 'f2b9d8b7c65a',
+            'group': '9dbe235cb2d6',
             'audio': 'f38b5ac2a5e36c336eed306d56ed517bfd78a728321be0b87db5def8ff8abc3d'
         }
 
@@ -351,8 +365,8 @@ class TestChipsChallenge(TestCase):
                 {"word": "foo"},
                 {"word": "bar"},
             ],
-            'id': '70b9d4521a12',
-            'group': 'f4d8b42d5c38',
+            'id': '9f9b09771a07',
+            'group': '930c4c4e7552',
             "priority": 2,
             "chips": ["foous", "barus"],
             "solutions": [["foous", "barus"]],
@@ -362,30 +376,33 @@ class TestChipsChallenge(TestCase):
     @patch('liblili2json.get_chips')
     def test_returns_correct_value2(self, get_chips):
         get_chips.return_value = fakes.fake_value()
-        challenge = get_chips_challenge(fakes.phrase2, fakes.course1)
+        challenge = get_chips_challenge(
+            fakes.phrase_with_alternatives, fakes.course1)
         assert challenge == {
             "type": "chips",
             "translatesToSourceLanguage": False,
             "phrase": [
-                {"word": "john"},
-                {"word": "smith"},
+                {"word": "foo"},
+                {"word": "bar"},
+                {"word": "foo"},
+                {"word": "bar"},
             ],
-            'id': 'dfc4568d5158',
-            'group': '90a642f99d21',
+            'id': '4b0e9208ce1b',
+            'group': '66a39e74a2c8',
             "priority": 2,
+            "solutions": [get_chips.return_value, get_chips.return_value],
             "chips": get_chips.return_value,
-            "solutions": [get_chips.return_value],
-            "formattedSolution": "lorem ipsum",
+            "formattedSolution": "foous barus foous barus ",
         }
 
     @patch('liblili2json.get_chips')
     def test_calls_get_chips_with_correct_value(self, get_chips):
         fake_phrase = Phrase(
-            in_target_langauge=fakes.fake_value(),
-            in_source_langauge=""
+            in_target_language=[fakes.fake_value()],
+            in_source_language=[""]
         )
         get_chips_challenge(fake_phrase, fakes.course1)
-        get_chips.assert_called_with(fake_phrase.in_target_langauge)
+        get_chips.assert_called_with(fake_phrase.in_target_language[0])
 
 
 class GetChipsTest(TestCase):
@@ -551,7 +568,6 @@ class TestDefineWord(TestCase):
 
     def test_skips_empty_definition(self):
         word = fakes.fake_value()
-        meaning = fakes.fake_value()
         my_course = fakes.customize(fakes.course1, dictionary=[
             DictionaryItem(
                 word=word,
@@ -562,3 +578,76 @@ class TestDefineWord(TestCase):
         assert define_word(my_course, word, reverse=False) == {
             "word": word,
         }
+
+
+class TestGetDumbOpaqueId(TestCase):
+    def test_word_only_first_meaning_matters_1(self):
+        x, y = "foo", "bar"
+        z = str(fakes.fake_value())
+        p1 = fakes.customize(fakes.word1, in_source_language=[x])
+        p2 = fakes.customize(fakes.word1, in_source_language=[x, y])
+        assert get_dumb_opaque_id(z, p1) == get_dumb_opaque_id(z, p2)
+
+    def test_phrase_only_first_meaning_matters_1(self):
+        x, y = "foo", "bar"
+        z = str(fakes.fake_value())
+        p1 = fakes.customize(fakes.phrase1, in_source_language=[x])
+        p2 = fakes.customize(fakes.phrase1, in_source_language=[x, y])
+        assert get_dumb_opaque_id(z, p1) == get_dumb_opaque_id(z, p2)
+
+    def test_word_only_first_meaning_matters_2(self):
+        x, y = "foo", "bar"
+        z = str(fakes.fake_value())
+        p1 = fakes.customize(fakes.word1, in_target_language=[x])
+        p2 = fakes.customize(fakes.word1, in_target_language=[x, y])
+        assert get_dumb_opaque_id(z, p1) == get_dumb_opaque_id(z, p2)
+
+    def test_phrase_only_first_meaning_matters_2(self):
+        x, y = "foo", "bar"
+        z = str(fakes.fake_value())
+        p1 = fakes.customize(fakes.phrase1, in_target_language=[x])
+        p2 = fakes.customize(fakes.phrase1, in_target_language=[x, y])
+        assert get_dumb_opaque_id(z, p1) == get_dumb_opaque_id(z, p2)
+
+    def test_the_first_meaning_does_matter(self):
+        x, y = "foo", "bar"
+        z = str(fakes.fake_value())
+        p1 = fakes.customize(fakes.phrase1, in_target_language=[x])
+        p2 = fakes.customize(fakes.phrase1, in_target_language=[y])
+        assert get_dumb_opaque_id(z, p1) != get_dumb_opaque_id(z, p2)
+
+
+class TestGroupAndIdPhrase(TestCase):
+    def setUp(self):
+        self.groups = []
+        self.ids = []
+        challenges = get_phrase_challenges(fakes.phrase1, fakes.course1)
+        for challenge in challenges:
+            self.groups.append(challenge["group"])
+            self.ids.append(challenge["id"])
+        assert len(self.groups) > 1
+        assert len(self.ids) > 1
+
+    def test_group_is_the_same_in_each_challenge_type(self):
+        assert len(set(self.groups)) == 1
+
+    def test_id_is_different_in_each_challenge_type(self):
+        assert len(set(self.ids)) == len(self.ids)
+
+
+class TestGroupAndIdWord(TestCase):
+    def setUp(self):
+        self.groups = []
+        self.ids = []
+        challenges = get_word_challenges(fakes.word1, fakes.course1)
+        for challenge in challenges:
+            self.groups.append(challenge["group"])
+            self.ids.append(challenge["id"])
+        assert len(self.groups) > 1
+        assert len(self.ids) > 1
+
+    def test_group_is_the_same_in_each_challenge_type(self):
+        assert len(set(self.groups)) == 1
+
+    def test_id_is_different_in_each_challenge_type(self):
+        assert len(set(self.ids)) == len(self.ids)
