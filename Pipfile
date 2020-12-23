@@ -4,6 +4,7 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+autopep8 = "*"
 
 [packages]
 coverage = "==5.2.1"
@@ -30,4 +31,4 @@ requests = "*"
 django-cors-headers = "*"
 
 [requires]
-python_version = "3.8"
+python_version = "3.9.1"
