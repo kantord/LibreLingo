@@ -17,6 +17,16 @@ def get_dumb_opaque_id(name, id_, salt=""):
     id
     """
     sha256 = hashlib.sha256()
+
+    if (type(id_)) in [Phrase, Word]:
+        id_ = type(id_)(
+            **{
+                **(id_._asdict()),
+                "in_source_language": id_.in_source_language[0],
+                "in_target_language": id_.in_target_language[0],
+            },
+        )
+
     sha256.update((name +
                    str(id_) + salt).encode('utf-8'))
 
@@ -56,8 +66,8 @@ def get_module_summary(module):
             return {}
 
     def get_summary(words, phrases):
-        words = [word.in_target_langauge for word in words]
-        phrases = [phrase.in_target_langauge for phrase in phrases]
+        words = [word.in_target_language[0] for word in words]
+        phrases = [phrase.in_target_language[0] for phrase in phrases]
 
         return words + phrases
 
@@ -105,13 +115,13 @@ def get_course_data(course):
 def get_listening_challenge(source, course):
     return {
         "type": "listeningExercise",
-        "answer": source.in_target_langauge,
-        "meaning": source.in_source_langauge,
+        "answer": source.in_target_language[0],
+        "meaning": source.in_source_language[0],
         "audio": audio_id(course.language_name,
-                          source.in_target_langauge),
+                          source.in_target_language[0]),
         "id": get_dumb_opaque_id("Word", source, "listeningExercise"),
         "priority": 1,
-        "group": get_dumb_opaque_id("Word", source),
+        "group": get_dumb_opaque_id("Group", source),
     }
 
 
@@ -119,11 +129,11 @@ def get_short_input_challenge(source, course):
     return {
         "type": "shortInput",
         'pictures': source.pictures,
-        "formInTargetLanguage": [source.in_target_langauge],
-        "phrase": define_words_in_sentence(course, source.in_source_langauge, reverse=False),
+        "formInTargetLanguage": source.in_target_language,
+        "phrase": define_words_in_sentence(course, source.in_source_language[0], reverse=False),
         "id": get_dumb_opaque_id("Word", source, "shortInput"),
         "priority": 1,
-        "group": get_dumb_opaque_id("Word", source),
+        "group": get_dumb_opaque_id("Group", source),
     }
 
 
@@ -131,22 +141,22 @@ def get_cards_challenge(word, _):
     return {
         "type": "cards",
         'pictures': word.pictures,
-        "formInTargetLanguage": word.in_target_langauge,
-        "meaningInSourceLanguage": word.in_source_langauge,
+        "formInTargetLanguage": word.in_target_language[0],
+        "meaningInSourceLanguage": word.in_source_language[0],
         "id": get_dumb_opaque_id("Word", word, "cards"),
         "priority": 0,
-        "group": get_dumb_opaque_id("Word", word),
+        "group": get_dumb_opaque_id("Group", word),
     }
 
 
 def get_options_challenge(phrase, _):
     return {
         "type": "options",
-        "formInTargetLanguage": phrase.in_target_langauge,
-        "meaningInSourceLanguage": phrase.in_source_langauge,
-        "id": get_dumb_opaque_id("Options", phrase, "cards"),
+        "formInTargetLanguage": phrase.in_target_language[0],
+        "meaningInSourceLanguage": phrase.in_source_language[0],
+        "id": get_dumb_opaque_id("Options", phrase, "options"),
         "priority": 0,
-        "group": get_dumb_opaque_id("Options", phrase),
+        "group": get_dumb_opaque_id("Group", phrase),
     }
 
 
@@ -155,11 +165,17 @@ def get_chips(phrase):
 
 
 def create_chips_challenge_generator(reverse):
+    def get_input_texts(phrase):
+        return phrase.in_source_language if reverse else phrase.in_target_language
+
+    def get_phrase_texts(phrase):
+        return phrase.in_target_language if reverse else phrase.in_source_language
+
     def get_input_text(phrase):
-        return phrase.in_source_langauge if reverse else phrase.in_target_langauge
+        return get_input_texts(phrase)[0]
 
     def get_phrase_text(phrase):
-        return phrase.in_target_langauge if reverse else phrase.in_source_langauge
+        return get_phrase_texts(phrase)[0]
 
     def get_chips_challenge(phrase, course):
         return {
@@ -167,11 +183,11 @@ def create_chips_challenge_generator(reverse):
             "translatesToSourceLanguage": reverse,
             "phrase": define_words_in_sentence(course, get_phrase_text(phrase), reverse),
             "chips": get_chips(get_input_text(phrase)),
-            "solutions": [get_chips(get_input_text(phrase))],
+            "solutions": [get_chips(x) for x in get_input_texts(phrase)],
             "formattedSolution": get_input_text(phrase),
-            "id": get_dumb_opaque_id("Chips", phrase, "cards"),
+            "id": get_dumb_opaque_id("Chips", phrase, "reverse chips" if reverse else "chips"),
             "priority": 2,
-            "group": get_dumb_opaque_id("Chips", phrase),
+            "group": get_dumb_opaque_id("Group", phrase),
         }
 
     return get_chips_challenge
@@ -188,12 +204,21 @@ def challenge_mapper(challenge_types):
     return map_challenge_creators
 
 
+def is_long_enough_to_have_chips(phrase):
+    if len(phrase.in_source_language[0].split()) < 2:
+        return False
+    if len(phrase.in_target_language[0].split()) < 2:
+        return False
+    return True
+
+
 def get_phrase_challenges(phrase, course):
     return challenge_mapper([
         get_options_challenge,
         get_listening_challenge,
-        get_chips_challenge,
-        get_reverse_chips_challenge,
+        *(
+            [get_chips_challenge, get_reverse_chips_challenge]
+            if is_long_enough_to_have_chips(phrase) else [])
     ]
     )(phrase, course)
 
