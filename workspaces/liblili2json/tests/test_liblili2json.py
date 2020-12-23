@@ -12,6 +12,7 @@ from liblili2json import get_listening_challenge
 from liblili2json import get_chips_challenge
 from liblili2json import get_options_challenge
 from liblili2json import get_chips
+from liblili2json import get_dumb_opaque_id
 from liblili2json import clean_word
 from liblili2json import define_words_in_sentence
 from liblili2json import define_word
@@ -381,11 +382,11 @@ class TestChipsChallenge(TestCase):
     @patch('liblili2json.get_chips')
     def test_calls_get_chips_with_correct_value(self, get_chips):
         fake_phrase = Phrase(
-            in_target_langauge=fakes.fake_value(),
-            in_source_langauge=""
+            in_target_language=[fakes.fake_value()],
+            in_source_language=[""]
         )
         get_chips_challenge(fake_phrase, fakes.course1)
-        get_chips.assert_called_with(fake_phrase.in_target_langauge)
+        get_chips.assert_called_with(fake_phrase.in_target_language[0])
 
 
 class GetChipsTest(TestCase):
@@ -562,3 +563,76 @@ class TestDefineWord(TestCase):
         assert define_word(my_course, word, reverse=False) == {
             "word": word,
         }
+
+
+class TestGetDumbOpaqueId(TestCase):
+    def test_word_only_first_meaning_matters_1(self):
+        x, y = "foo", "bar"
+        z = str(fakes.fake_value())
+        p1 = fakes.customize(fakes.word1, in_source_language=[x])
+        p2 = fakes.customize(fakes.word1, in_source_language=[x, y])
+        assert get_dumb_opaque_id(z, p1) == get_dumb_opaque_id(z, p2)
+
+    def test_phrase_only_first_meaning_matters_1(self):
+        x, y = "foo", "bar"
+        z = str(fakes.fake_value())
+        p1 = fakes.customize(fakes.phrase1, in_source_language=[x])
+        p2 = fakes.customize(fakes.phrase1, in_source_language=[x, y])
+        assert get_dumb_opaque_id(z, p1) == get_dumb_opaque_id(z, p2)
+
+    def test_word_only_first_meaning_matters_2(self):
+        x, y = "foo", "bar"
+        z = str(fakes.fake_value())
+        p1 = fakes.customize(fakes.word1, in_target_language=[x])
+        p2 = fakes.customize(fakes.word1, in_target_language=[x, y])
+        assert get_dumb_opaque_id(z, p1) == get_dumb_opaque_id(z, p2)
+
+    def test_phrase_only_first_meaning_matters_2(self):
+        x, y = "foo", "bar"
+        z = str(fakes.fake_value())
+        p1 = fakes.customize(fakes.phrase1, in_target_language=[x])
+        p2 = fakes.customize(fakes.phrase1, in_target_language=[x, y])
+        assert get_dumb_opaque_id(z, p1) == get_dumb_opaque_id(z, p2)
+
+    def test_the_first_meaning_does_matter(self):
+        x, y = "foo", "bar"
+        z = str(fakes.fake_value())
+        p1 = fakes.customize(fakes.phrase1, in_target_language=[x])
+        p2 = fakes.customize(fakes.phrase1, in_target_language=[y])
+        assert get_dumb_opaque_id(z, p1) != get_dumb_opaque_id(z, p2)
+
+
+def TestGroupAndIdPhrase(TestCase):
+    def setup_method(self):
+        self.groups = []
+        self.ids = []
+        challenges = get_phrase_challenges(fakes.phrase1)
+        for challenge in challenges:
+            self.groups.append(challenge["group"])
+            self.ids.append(challenge["id"])
+        assert len(self.groups) > 1
+        assert len(self.ids) > 1
+
+    def test_group_is_the_same_in_each_challenge_type(self):
+        assert len(set(self.groups)) == 1
+
+    def test_id_is_different_in_each_challenge_type(self):
+        assert len(set(self.ids)) == len(self.ids)
+
+
+def TestGroupAndIdWord(TestCase):
+    def setup_method(self):
+        self.groups = []
+        self.ids = []
+        challenges = get_word_challenges(fakes.word1)
+        for challenge in challenges:
+            self.groups.append(challenge["group"])
+            self.ids.append(challenge["id"])
+        assert len(self.groups) > 1
+        assert len(self.ids) > 1
+
+    def test_group_is_the_same_in_each_challenge_type(self):
+        assert len(set(self.groups)) == 1
+
+    def test_id_is_different_in_each_challenge_type(self):
+        assert len(set(self.ids)) == len(self.ids)
