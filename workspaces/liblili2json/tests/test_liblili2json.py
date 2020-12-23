@@ -381,11 +381,11 @@ class TestChipsChallenge(TestCase):
     @patch('liblili2json.get_chips')
     def test_calls_get_chips_with_correct_value(self, get_chips):
         fake_phrase = Phrase(
-            in_target_langauge=fakes.fake_value(),
-            in_source_langauge=""
+            in_target_language=[fakes.fake_value()],
+            in_source_language=[""]
         )
         get_chips_challenge(fake_phrase, fakes.course1)
-        get_chips.assert_called_with(fake_phrase.in_target_langauge)
+        get_chips.assert_called_with(fake_phrase.in_target_language[0])
 
 
 class GetChipsTest(TestCase):

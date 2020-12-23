@@ -84,12 +84,12 @@ def convert_course(course):
                 liblili2json.Skill(
                     name=skill.name,
                     words=[liblili2json.Word(
-                        in_target_langauge=word.formInTargetLanguage,
-                        in_source_langauge=word.meaningInSourceLanguage,
+                        in_target_language=[word.formInTargetLanguage],
+                        in_source_language=[word.meaningInSourceLanguage],
                         pictures=generate_imageset(word)) for word in skill.learnword_set.all()],
                     phrases=[liblili2json.Phrase(
-                        in_target_langauge=sentence.formInTargetLanguage,
-                        in_source_langauge=sentence.meaningInSourceLanguage)
+                        in_target_language=[sentence.formInTargetLanguage],
+                        in_source_language=[sentence.meaningInSourceLanguage])
                         for sentence in skill.learnsentence_set.all()],
                     image_set=[skill.image1, skill.image2, skill.image3],
                     id=skill.pk,
