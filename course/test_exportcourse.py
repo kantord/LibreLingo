@@ -7,7 +7,6 @@ from unittest.mock import patch
 
 from django.utils import translation
 from course.management.commands.exportcourse import generate_chips
-from course.management.commands.exportcourse import get_skill_data
 from course.management.commands.exportcourse import get_course_data
 from course.management.commands.exportcourse import opaqueId, audioId
 from course.management.commands.exportcourse import define_word
@@ -110,18 +109,6 @@ class GenerateChipsTest(TestCase):
     def test_calls_clean_word_correct_times(self, clean_word):
         generate_chips('foo bar bazz')
         self.assertEqual(clean_word.call_count, 3)
-
-
-class ExportSkillTest(TestCase):
-    databases = '__all__'
-    fixtures = ["courseData.json"]
-
-    def test_export_skill_correct_output_format(self):
-        course = Course.objects.get(pk=1)
-        skill = Skill.objects.get(pk=1)
-        language_id = "test"
-        data = get_skill_data(skill, language_id, course)
-        self.assertMatchSnapshot(data["challenges"][0:1])
 
 
 class CourseDataTest(TestCase):
