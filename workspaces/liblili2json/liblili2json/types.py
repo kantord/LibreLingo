@@ -29,14 +29,14 @@ Skill = namedtuple("Skill", [
 ])
 
 Word = namedtuple("Word", [
-    "in_target_langauge",
-    "in_source_langauge",
-    "pictures"
+    "in_target_language",
+    "in_source_language",
+    "pictures",
 ])
 
 Phrase = namedtuple("Phrase", [
-    "in_target_langauge",
-    "in_source_langauge",
+    "in_target_language",
+    "in_source_language",
 ])
 
 DictionaryItem = namedtuple("DictionaryItem", [
