@@ -14,18 +14,18 @@ challenge3 = "challenge3"
 challenge4 = "challenge4"
 
 phrase1 = Phrase(
-    in_target_langauge="foous barus",
-    in_source_langauge="foo bar",
+    in_target_language=["foous barus"],
+    in_source_language=["foo bar"],
 )
 
 phrase2 = Phrase(
-    in_target_langauge="lorem ipsum",
-    in_source_langauge="john smith",
+    in_target_language=["lorem ipsum"],
+    in_source_language=["john smith"],
 )
 
 word1 = Word(
-    in_target_langauge="foous",
-    in_source_langauge="foo",
+    in_target_language=["foous"],
+    in_source_language=["foo"],
     pictures=['foo', 'bar', 'baz']
 )
 
@@ -42,8 +42,8 @@ license2 = License(
 )
 
 word2 = Word(
-    in_target_langauge="apfel",
-    in_source_langauge="apple",
+    in_target_language=["apfel"],
+    in_source_language=["apple"],
     pictures=['1', '2', '3']
 )
 
