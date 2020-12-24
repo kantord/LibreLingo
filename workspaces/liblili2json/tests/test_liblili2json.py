@@ -12,6 +12,7 @@ from liblili2json import get_listening_challenge
 from liblili2json import get_chips_challenge
 from liblili2json import get_options_challenge
 from liblili2json import get_chips
+from liblili2json import get_dumb_opaque_id
 from liblili2json import clean_word
 from liblili2json import define_words_in_sentence
 from liblili2json import define_word
@@ -295,8 +296,9 @@ class TestGetShortInputChallenge(TestCase):
         assert challenge == {
             'id': '98eca012f981',
             "type": "shortInput",
-            "formInTargetLanguage": "foous",
-            "phrase": "foo",
+            'pictures': ['foo', 'bar', 'baz'],
+            "formInTargetLanguage": ["foous"],
+            'phrase': [{'word': 'foo'}],
             "priority": 1,
             'group': 'b95c785ddf3e',
         }
@@ -306,8 +308,9 @@ class TestGetShortInputChallenge(TestCase):
         assert challenge == {
             'id': '1a196242f155',
             "type": "shortInput",
-            "formInTargetLanguage": "apfel",
-            "phrase": "apple",
+            'pictures': ['1', '2', '3'],
+            "formInTargetLanguage": ["apfel"],
+            'phrase': [{'word': 'apple'}],
             "priority": 1,
             'group': 'f2b9d8b7c65a',
         }
@@ -323,7 +326,7 @@ class TestListeningChallenge(TestCase):
             "meaning": "foo",
             "priority": 1,
             'group': 'b95c785ddf3e',
-            'audio': 'b8975c2df0e621d68c96bf1620389a1ae04bc4514aeff6f7a36131daf51f0c62'
+            'audio': '3f981d854531e9f376ae06cb8449a6e997972d3c1b598f9a00b481ef307a469d'
         }
 
     def test_returns_correct_value2(self):
@@ -335,7 +338,7 @@ class TestListeningChallenge(TestCase):
             "meaning": "apple",
             "priority": 1,
             'group': 'f2b9d8b7c65a',
-            'audio': '509a5b154ef93cd2abac6b6d673f80ded6cd2319902a8d83f15f98c8aaf1cabb'
+            'audio': 'f38b5ac2a5e36c336eed306d56ed517bfd78a728321be0b87db5def8ff8abc3d'
         }
 
 
@@ -379,11 +382,11 @@ class TestChipsChallenge(TestCase):
     @patch('liblili2json.get_chips')
     def test_calls_get_chips_with_correct_value(self, get_chips):
         fake_phrase = Phrase(
-            in_target_langauge=fakes.fake_value(),
-            in_source_langauge=""
+            in_target_language=[fakes.fake_value()],
+            in_source_language=[""]
         )
         get_chips_challenge(fake_phrase, fakes.course1)
-        get_chips.assert_called_with(fake_phrase.in_target_langauge)
+        get_chips.assert_called_with(fake_phrase.in_target_language[0])
 
 
 class GetChipsTest(TestCase):
@@ -546,3 +549,90 @@ class TestDefineWord(TestCase):
             "word": word,
             "definition": meaning
         }
+
+    def test_skips_empty_definition(self):
+        word = fakes.fake_value()
+        meaning = fakes.fake_value()
+        my_course = fakes.customize(fakes.course1, dictionary=[
+            DictionaryItem(
+                word=word,
+                definition="",
+                reverse=False
+            ),
+        ])
+        assert define_word(my_course, word, reverse=False) == {
+            "word": word,
+        }
+
+
+class TestGetDumbOpaqueId(TestCase):
+    def test_word_only_first_meaning_matters_1(self):
+        x, y = "foo", "bar"
+        z = str(fakes.fake_value())
+        p1 = fakes.customize(fakes.word1, in_source_language=[x])
+        p2 = fakes.customize(fakes.word1, in_source_language=[x, y])
+        assert get_dumb_opaque_id(z, p1) == get_dumb_opaque_id(z, p2)
+
+    def test_phrase_only_first_meaning_matters_1(self):
+        x, y = "foo", "bar"
+        z = str(fakes.fake_value())
+        p1 = fakes.customize(fakes.phrase1, in_source_language=[x])
+        p2 = fakes.customize(fakes.phrase1, in_source_language=[x, y])
+        assert get_dumb_opaque_id(z, p1) == get_dumb_opaque_id(z, p2)
+
+    def test_word_only_first_meaning_matters_2(self):
+        x, y = "foo", "bar"
+        z = str(fakes.fake_value())
+        p1 = fakes.customize(fakes.word1, in_target_language=[x])
+        p2 = fakes.customize(fakes.word1, in_target_language=[x, y])
+        assert get_dumb_opaque_id(z, p1) == get_dumb_opaque_id(z, p2)
+
+    def test_phrase_only_first_meaning_matters_2(self):
+        x, y = "foo", "bar"
+        z = str(fakes.fake_value())
+        p1 = fakes.customize(fakes.phrase1, in_target_language=[x])
+        p2 = fakes.customize(fakes.phrase1, in_target_language=[x, y])
+        assert get_dumb_opaque_id(z, p1) == get_dumb_opaque_id(z, p2)
+
+    def test_the_first_meaning_does_matter(self):
+        x, y = "foo", "bar"
+        z = str(fakes.fake_value())
+        p1 = fakes.customize(fakes.phrase1, in_target_language=[x])
+        p2 = fakes.customize(fakes.phrase1, in_target_language=[y])
+        assert get_dumb_opaque_id(z, p1) != get_dumb_opaque_id(z, p2)
+
+
+def TestGroupAndIdPhrase(TestCase):
+    def setup_method(self):
+        self.groups = []
+        self.ids = []
+        challenges = get_phrase_challenges(fakes.phrase1)
+        for challenge in challenges:
+            self.groups.append(challenge["group"])
+            self.ids.append(challenge["id"])
+        assert len(self.groups) > 1
+        assert len(self.ids) > 1
+
+    def test_group_is_the_same_in_each_challenge_type(self):
+        assert len(set(self.groups)) == 1
+
+    def test_id_is_different_in_each_challenge_type(self):
+        assert len(set(self.ids)) == len(self.ids)
+
+
+def TestGroupAndIdWord(TestCase):
+    def setup_method(self):
+        self.groups = []
+        self.ids = []
+        challenges = get_word_challenges(fakes.word1)
+        for challenge in challenges:
+            self.groups.append(challenge["group"])
+            self.ids.append(challenge["id"])
+        assert len(self.groups) > 1
+        assert len(self.ids) > 1
+
+    def test_group_is_the_same_in_each_challenge_type(self):
+        assert len(set(self.groups)) == 1
+
+    def test_id_is_different_in_each_challenge_type(self):
+        assert len(set(self.ids)) == len(self.ids)
