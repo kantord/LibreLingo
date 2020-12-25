@@ -27,6 +27,9 @@ In addition to licensing the software under a free software license, the course 
 
 Once course content is properly decoupled from the software, it should be possible to experiment with alternative ways of using course content: for example, the creation of audiobooks or print material.
 
+ If you want to learn more
+about LibreLingo's background, [I recommend reading my article](https://dev.to/kantord/why-i-built-librelingo-280o).
+
 ## Screenshots
  
 <p align="center">
