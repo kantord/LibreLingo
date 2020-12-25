@@ -18,7 +18,7 @@
 """
 
 
-def get_dictionary_item(course, word, reverse):
+def get_raw_dictionary_item(course, word, reverse):
     """
         Find the matching raw dictionary item for a word.
     """
@@ -34,7 +34,7 @@ def define_word(course, word, reverse):
     """
         Creates the definition object for a word.
     """
-    dictionary_item = get_dictionary_item(course, word, reverse)
+    dictionary_item = get_raw_dictionary_item(course, word, reverse)
     if dictionary_item and dictionary_item.definition:
         return {
             "word": word,
@@ -49,3 +49,6 @@ def define_words_in_sentence(course, sentence, reverse):
         Converts a sentence into a list of definition objects.
     """
     return [define_word(course, word, reverse) for word in sentence.split()]
+
+
+get_raw_dictionary_item
