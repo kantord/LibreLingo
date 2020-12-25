@@ -1,5 +1,10 @@
 # Development
 
+## Why does this project exits?
+This project exists to create a beginner-friendly, community-oriented,
+free software licensed language learning application. If you want to learn more
+about LibreLingo's background, [I recommend reading my article](https://dev.to/kantord/why-i-built-librelingo-280o).
+
 ## Setting up the development environment
 
 Clone the repository:
