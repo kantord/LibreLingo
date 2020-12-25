@@ -2,7 +2,6 @@
 Export LibreLingo courses in the JSON format expected by the web app
 """
 
-import hashlib
 import itertools
 from slugify import slugify
 from .types import *
@@ -10,42 +9,6 @@ from .utils import *
 from .dictionary import *
 
 __version__ = '0.1.0'
-
-
-def get_dumb_opaque_id(name, id_, salt=""):
-    """
-    Generate a unique, opaque ID based on a name, and id_ and a salt
-    id
-    """
-    sha256 = hashlib.sha256()
-
-    if (type(id_)) in [Phrase, Word]:
-        id_ = type(id_)(
-            **{
-                **(id_._asdict()),
-                "in_source_language": id_.in_source_language[0],
-                "in_target_language": id_.in_target_language[0],
-            },
-        )
-
-    sha256.update((name +
-                   str(id_) + salt).encode('utf-8'))
-
-    return sha256.hexdigest()[0:12]
-
-
-def get_opaque_id(obj, salt=""):
-    """
-    Generate a unique, opaque ID based on a type and a type specific
-    id
-    """
-    return get_dumb_opaque_id(type(obj).__name__.lower(), str(obj.id), salt)
-
-
-def audio_id(language_id, text):
-    hash = hashlib.sha256()
-    hash.update((language_id.lower() + "|" + text).encode('utf-8'))
-    return hash.hexdigest()
 
 
 def calculate_number_of_levels(nwords, nphrases):
