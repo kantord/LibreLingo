@@ -49,6 +49,3 @@ def define_words_in_sentence(course, sentence, reverse):
         Converts a sentence into a list of definition objects.
     """
     return [define_word(course, word, reverse) for word in sentence.split()]
-
-
-get_raw_dictionary_item

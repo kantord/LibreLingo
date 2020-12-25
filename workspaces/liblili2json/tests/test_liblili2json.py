@@ -191,19 +191,19 @@ class TestGetChallengesData(TestCase):
 
 
 class TestGetWordChallenges(TestCase):
-    @patch('liblili2json.get_cards_challenge')
+    @patch('liblili2json.challenge_types.get_cards_challenge')
     def test_includes_cards_challenges(self, mock):
         fake_value = fakes.fake_value()
         mock.return_value = fake_value
         assert get_word_challenges(fakes.word1, fakes.course1)[0] == fake_value
 
-    @patch('liblili2json.get_short_input_challenge')
+    @patch('liblili2json.challenge_types.get_short_input_challenge')
     def test_includes_short_input_challenges(self, mock):
         fake_value = fakes.fake_value()
         mock.return_value = fake_value
         assert get_word_challenges(fakes.word1, fakes.course1)[1] == fake_value
 
-    @patch('liblili2json.get_listening_challenge')
+    @patch('liblili2json.challenge_types.get_listening_challenge')
     def test_includes_listening_challenge(self, mock):
         fake_value = fakes.fake_value()
         mock.return_value = fake_value
@@ -211,28 +211,28 @@ class TestGetWordChallenges(TestCase):
 
 
 class TestGetPhraseChallenges(TestCase):
-    @patch('liblili2json.get_options_challenge')
+    @patch('liblili2json.challenge_types.get_options_challenge')
     def test_includes_options_challenges(self, mock):
         fake_value = fakes.fake_value()
         mock.return_value = fake_value
         assert get_phrase_challenges(
             fakes.phrase1, fakes.course1)[0] == fake_value
 
-    @ patch('liblili2json.get_listening_challenge')
+    @ patch('liblili2json.challenge_types.get_listening_challenge')
     def test_includes_listening_challenge(self, mock):
         fake_value = fakes.fake_value()
         mock.return_value = fake_value
         assert get_phrase_challenges(
             fakes.phrase1, fakes.course1)[1] == fake_value
 
-    @ patch('liblili2json.get_chips_challenge')
+    @ patch('liblili2json.challenge_types.get_chips_challenge')
     def test_includes_chips_challenge(self, mock):
         fake_value = fakes.fake_value()
         mock.return_value = fake_value
         assert get_phrase_challenges(
             fakes.long_phrase, fakes.course1)[2] == fake_value
 
-    @ patch('liblili2json.get_reverse_chips_challenge')
+    @ patch('liblili2json.challenge_types.get_reverse_chips_challenge')
     def test_includes_reverse_chips_challenge(self, mock):
         fake_value = fakes.fake_value()
         mock.return_value = fake_value
@@ -373,7 +373,7 @@ class TestChipsChallenge(TestCase):
             "formattedSolution": "foous barus",
         }
 
-    @patch('liblili2json.get_chips')
+    @patch('liblili2json.challenge_types.get_chips')
     def test_returns_correct_value2(self, get_chips):
         get_chips.return_value = fakes.fake_value()
         challenge = get_chips_challenge(
@@ -395,7 +395,7 @@ class TestChipsChallenge(TestCase):
             "formattedSolution": "foous barus foous barus ",
         }
 
-    @patch('liblili2json.get_chips')
+    @patch('liblili2json.challenge_types.get_chips')
     def test_calls_get_chips_with_correct_value(self, get_chips):
         fake_phrase = Phrase(
             in_target_language=[fakes.fake_value()],
@@ -409,22 +409,22 @@ class GetChipsTest(TestCase):
     def test_empty_string(self):
         assert get_chips('') == []
 
-    @patch('liblili2json.clean_word')
+    @patch('liblili2json.challenge_types.clean_word')
     def test_empty_string_doesnt_call_clean_word(self, clean_word):
         get_chips('')
         assert not clean_word.called
 
-    @patch('liblili2json.clean_word')
+    @patch('liblili2json.challenge_types.clean_word')
     def test_calls_clean_word_with_correct_argument(self, clean_word):
         get_chips('foo')
         clean_word.assert_called_with('foo')
 
-    @patch('liblili2json.clean_word')
+    @patch('liblili2json.challenge_types.clean_word')
     def test_returns_correct_value(self, clean_word):
         clean_word.return_value = fakes.fake_value()
         assert get_chips('foo') == [clean_word.return_value]
 
-    @patch('liblili2json.clean_word')
+    @patch('liblili2json.challenge_types.clean_word')
     def test_returns_correct_number_of_words(self, clean_word):
         assert len(get_chips('foo bar')) == 2
 
