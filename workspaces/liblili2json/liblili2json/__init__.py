@@ -4,9 +4,9 @@ Export LibreLingo courses in the JSON format expected by the web app
 
 import hashlib
 import itertools
-import re
 from slugify import slugify
-from .types import Course, License, Module, Skill, Word, Phrase, DictionaryItem
+from .types import *
+from .utils import *
 
 __version__ = '0.1.0'
 
@@ -241,13 +241,6 @@ def get_challenges_data(skill, course):
         make_challenges_using(get_phrase_challenges, skill.phrases, course),
         make_challenges_using(get_word_challenges, skill.words, course),
     ], start=[])
-
-
-def clean_word(word):
-    MATCH_NON_WORD_CHARACTERS_BEGINNING = re.compile("^[^\\w']+")
-    MATCH_NON_WORD_CHARACTERS_END = re.compile("[^\\w']+$")
-    return MATCH_NON_WORD_CHARACTERS_BEGINNING.sub(
-        "", MATCH_NON_WORD_CHARACTERS_END.sub("", word))
 
 
 def get_skill_data(skill, course):
