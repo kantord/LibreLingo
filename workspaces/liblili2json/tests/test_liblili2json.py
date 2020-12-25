@@ -456,12 +456,12 @@ class DefineWordsInSentenceTest(TestCase):
     def test_empty_sentence(self):
         assert define_words_in_sentence(fakes.course1, "", False) == []
 
-    @patch('liblili2json.define_word')
+    @patch('liblili2json.dictionary.define_word')
     def test_calls_define_word_the_correct_number_of_times(self, define_word):
         define_words_in_sentence(fakes.course1, "foo bar baz", False) == []
         assert define_word.call_count == 3
 
-    @patch('liblili2json.define_word')
+    @patch('liblili2json.dictionary.define_word')
     def test_calls_define_word_with_the_correct_data(self, define_word):
         reverse = fakes.fake_value()
         fake_word = str(fakes.fake_value())
@@ -469,13 +469,13 @@ class DefineWordsInSentenceTest(TestCase):
             fakes.course1, fake_word, reverse) == []
         define_word.assert_called_with(fakes.course1, fake_word, reverse)
 
-    @patch('liblili2json.define_word')
+    @patch('liblili2json.dictionary.define_word')
     def test_returns_correct_value(self, define_word):
         define_word.return_value = fakes.fake_value()
         assert define_words_in_sentence(
             fakes.course1, "foo", True) == [define_word.return_value]
 
-    @ patch('liblili2json.define_word')
+    @ patch('liblili2json.dictionary.define_word')
     def test_defines_every_word(self, define_word):
         define_word.return_value = fakes.fake_value()
         assert define_words_in_sentence(
