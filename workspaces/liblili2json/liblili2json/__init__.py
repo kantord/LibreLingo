@@ -8,5 +8,6 @@ from .dictionary import *
 from .challenge_types import *
 from .module import *
 from .course import *
+from .skills import *
 
 __version__ = '0.1.0'
