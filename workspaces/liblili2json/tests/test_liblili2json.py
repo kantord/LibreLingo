@@ -1,6 +1,6 @@
 from unittest.mock import patch
 from unittest import TestCase
-from liblili2json import get_course_data
+from liblili2json.course import get_course_data
 from liblili2json import get_skill_data
 from liblili2json import get_challenges_data
 from liblili2json.utils import calculate_number_of_levels

@@ -8,31 +8,9 @@ from .utils import *
 from .dictionary import *
 from .challenge_types import *
 from .module import *
+from .course import *
 
 __version__ = '0.1.0'
-
-
-def get_course_data(course):
-    """
-    Format Course according to the JSON structure
-    """
-
-    return {
-        "languageName": course.language_name,
-        "languageCode": course.language_code,
-        "specialCharacters": course.special_characters,
-        "license": {
-            "name": {
-                "short": course.license.name,
-                "full": course.license.full_name,
-
-            },
-            "link": course.license.link,
-        },
-        "modules": [
-            get_module_summary(module) for module in course.modules
-        ]
-    }
 
 
 def make_challenges_using(callback, data_source, course):
