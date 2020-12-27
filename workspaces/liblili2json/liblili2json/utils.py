@@ -3,6 +3,13 @@ import hashlib
 from .types import Phrase, Word
 
 
+def calculate_number_of_levels(nwords, nphrases):
+    """
+    Calculates how many levels a skill should have
+    """
+    return round(1 + (nwords / 7) + (nphrases / 5))
+
+
 def clean_word(word):
     """
         Remove punctuation and other special characters from a word.
