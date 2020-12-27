@@ -3,7 +3,7 @@ from unittest import TestCase
 from liblili2json import get_course_data
 from liblili2json import get_skill_data
 from liblili2json import get_challenges_data
-from liblili2json import calculate_number_of_levels
+from liblili2json.utils import calculate_number_of_levels
 from liblili2json import get_word_challenges
 from liblili2json import get_phrase_challenges
 from liblili2json import get_cards_challenge
