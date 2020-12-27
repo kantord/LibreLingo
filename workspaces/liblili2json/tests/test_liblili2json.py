@@ -1,21 +1,21 @@
 from unittest.mock import patch
 from unittest import TestCase
-from liblili2json import get_course_data
-from liblili2json import get_skill_data
+from liblili2json.course import get_course_data
+from liblili2json.skills import get_skill_data
 from liblili2json import get_challenges_data
-from liblili2json import calculate_number_of_levels
-from liblili2json import get_word_challenges
-from liblili2json import get_phrase_challenges
-from liblili2json import get_cards_challenge
-from liblili2json import get_short_input_challenge
-from liblili2json import get_listening_challenge
-from liblili2json import get_chips_challenge
-from liblili2json import get_options_challenge
-from liblili2json import get_chips
-from liblili2json import get_dumb_opaque_id
-from liblili2json import clean_word
-from liblili2json import define_words_in_sentence
-from liblili2json import define_word
+from liblili2json.utils import calculate_number_of_levels
+from liblili2json.challenge_types import get_word_challenges
+from liblili2json.challenge_types import get_phrase_challenges
+from liblili2json.challenge_types import get_cards_challenge
+from liblili2json.challenge_types import get_short_input_challenge
+from liblili2json.challenge_types import get_listening_challenge
+from liblili2json.challenge_types import get_chips_challenge
+from liblili2json.challenge_types import get_options_challenge
+from liblili2json.challenge_types import get_chips
+from liblili2json.utils import get_dumb_opaque_id
+from liblili2json.utils import clean_word
+from liblili2json.dictionary import define_words_in_sentence
+from liblili2json.dictionary import define_word
 from liblili2json.types import Phrase
 from liblili2json.types import Course
 from liblili2json.types import Word
@@ -131,26 +131,26 @@ class TestGetSkillData(TestCase):
             "challenges": []
         }
 
-    @patch('liblili2json.calculate_number_of_levels')
+    @patch('liblili2json.skills.calculate_number_of_levels')
     def test_correct_number_of_levels(self, mock):
         FAKE_NUMBER = "fake number"
         mock.return_value = FAKE_NUMBER
         converted_skill = get_skill_data(fakes.emptySkill, fakes.course1)
         assert converted_skill["levels"] == FAKE_NUMBER
 
-    @patch('liblili2json.calculate_number_of_levels')
+    @patch('liblili2json.skills.calculate_number_of_levels')
     def test_calculates_levels_correctly(self, mock):
         get_skill_data(fakes.skills[1], fakes.course1)
         mock.assert_called_with(4, 1)
 
-    @patch('liblili2json.get_challenges_data')
+    @patch('liblili2json.skills.get_challenges_data')
     def test_correct_challenges(self, mock):
         FAKE_CHALLENGES = "fake challenges"
         mock.return_value = FAKE_CHALLENGES
         converted_skill = get_skill_data(fakes.skills[1], fakes.course1)
         assert converted_skill["challenges"] == FAKE_CHALLENGES
 
-    @patch('liblili2json.get_challenges_data')
+    @patch('liblili2json.skills.get_challenges_data')
     def test_formats_challenges_correctly(self, mock):
         get_skill_data(fakes.skills[1], fakes.course1)
         mock.assert_called_with(fakes.skills[1], fakes.course1)
