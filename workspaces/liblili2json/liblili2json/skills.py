@@ -1,5 +1,5 @@
 from .utils import get_opaque_id, calculate_number_of_levels
-from . import get_challenges_data
+from .challenges import get_challenges_data
 
 
 def get_skill_data(skill, course):

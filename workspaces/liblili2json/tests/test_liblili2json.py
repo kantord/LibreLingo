@@ -2,10 +2,10 @@ from unittest.mock import patch
 from unittest import TestCase
 from liblili2json.course import get_course_data
 from liblili2json.skills import get_skill_data
-from liblili2json import get_challenges_data
+from liblili2json.challenges import get_challenges_data
 from liblili2json.utils import calculate_number_of_levels
-from liblili2json.challenge_types import get_word_challenges
-from liblili2json.challenge_types import get_phrase_challenges
+from liblili2json.challenges import get_word_challenges
+from liblili2json.challenges import get_phrase_challenges
 from liblili2json.challenge_types import get_cards_challenge
 from liblili2json.challenge_types import get_short_input_challenge
 from liblili2json.challenge_types import get_listening_challenge
@@ -160,28 +160,28 @@ class TestGetChallengesData(TestCase):
     def test_empty_skill(self):
         assert get_challenges_data(fakes.emptySkill, fakes.course1) == []
 
-    @patch('liblili2json.get_phrase_challenges')
+    @patch('liblili2json.challenges.get_phrase_challenges')
     def test_generates_phrase_challenges_correctly(self, mock):
         get_challenges_data(fakes.skillWithPhrase, fakes.course1)
         mock.assert_called_with(fakes.phrase2, fakes.course1)
 
-    @patch('liblili2json.get_phrase_challenges')
+    @patch('liblili2json.challenges.get_phrase_challenges')
     def test_includes_every_phrase(self, mock):
         get_challenges_data(fakes.skillWith3Phrases, fakes.course1)
         assert mock.call_count == 3
 
-    @patch('liblili2json.get_word_challenges')
+    @patch('liblili2json.challenges.get_word_challenges')
     def test_generates_word_challenges_correctly(self, mock):
         get_challenges_data(fakes.skillWithWord, fakes.course1)
         mock.assert_called_with(fakes.word1, fakes.course1)
 
-    @patch('liblili2json.get_word_challenges')
+    @patch('liblili2json.challenges.get_word_challenges')
     def test_includes_every_word(self, mock):
         get_challenges_data(fakes.skillWith3Words, fakes.course1)
         assert mock.call_count == 3
 
-    @patch('liblili2json.get_word_challenges')
-    @patch('liblili2json.get_phrase_challenges')
+    @patch('liblili2json.challenges.get_word_challenges')
+    @patch('liblili2json.challenges.get_phrase_challenges')
     def test_returns_correct_challenges(self, mock1, mock2):
 
         mock1.return_value = [fakes.challenge1, fakes.challenge2]
@@ -191,19 +191,19 @@ class TestGetChallengesData(TestCase):
 
 
 class TestGetWordChallenges(TestCase):
-    @patch('liblili2json.challenge_types.get_cards_challenge')
+    @patch('liblili2json.challenges.get_cards_challenge')
     def test_includes_cards_challenges(self, mock):
         fake_value = fakes.fake_value()
         mock.return_value = fake_value
         assert get_word_challenges(fakes.word1, fakes.course1)[0] == fake_value
 
-    @patch('liblili2json.challenge_types.get_short_input_challenge')
+    @patch('liblili2json.challenges.get_short_input_challenge')
     def test_includes_short_input_challenges(self, mock):
         fake_value = fakes.fake_value()
         mock.return_value = fake_value
         assert get_word_challenges(fakes.word1, fakes.course1)[1] == fake_value
 
-    @patch('liblili2json.challenge_types.get_listening_challenge')
+    @patch('liblili2json.challenges.get_listening_challenge')
     def test_includes_listening_challenge(self, mock):
         fake_value = fakes.fake_value()
         mock.return_value = fake_value
@@ -211,28 +211,28 @@ class TestGetWordChallenges(TestCase):
 
 
 class TestGetPhraseChallenges(TestCase):
-    @patch('liblili2json.challenge_types.get_options_challenge')
+    @patch('liblili2json.challenges.get_options_challenge')
     def test_includes_options_challenges(self, mock):
         fake_value = fakes.fake_value()
         mock.return_value = fake_value
         assert get_phrase_challenges(
             fakes.phrase1, fakes.course1)[0] == fake_value
 
-    @ patch('liblili2json.challenge_types.get_listening_challenge')
+    @patch('liblili2json.challenges.get_listening_challenge')
     def test_includes_listening_challenge(self, mock):
         fake_value = fakes.fake_value()
         mock.return_value = fake_value
         assert get_phrase_challenges(
             fakes.phrase1, fakes.course1)[1] == fake_value
 
-    @ patch('liblili2json.challenge_types.get_chips_challenge')
+    @patch('liblili2json.challenges.get_chips_challenge')
     def test_includes_chips_challenge(self, mock):
         fake_value = fakes.fake_value()
         mock.return_value = fake_value
         assert get_phrase_challenges(
             fakes.long_phrase, fakes.course1)[2] == fake_value
 
-    @ patch('liblili2json.challenge_types.get_reverse_chips_challenge')
+    @patch('liblili2json.challenges.get_reverse_chips_challenge')
     def test_includes_reverse_chips_challenge(self, mock):
         fake_value = fakes.fake_value()
         mock.return_value = fake_value
@@ -475,7 +475,7 @@ class DefineWordsInSentenceTest(TestCase):
         assert define_words_in_sentence(
             fakes.course1, "foo", True) == [define_word.return_value]
 
-    @ patch('liblili2json.dictionary.define_word')
+    @patch('liblili2json.dictionary.define_word')
     def test_defines_every_word(self, define_word):
         define_word.return_value = fakes.fake_value()
         assert define_words_in_sentence(
