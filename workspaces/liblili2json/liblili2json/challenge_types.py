@@ -93,29 +93,3 @@ def is_long_enough_to_have_chips(phrase):
     if len(phrase.in_target_language[0].split()) < 2:
         return False
     return True
-
-
-def challenge_mapper(challenge_types):
-    def map_challenge_creators(item, course):
-        return list(map(lambda f: f(item, course), challenge_types))
-
-    return map_challenge_creators
-
-
-def get_phrase_challenges(phrase, course):
-    return challenge_mapper([
-        get_options_challenge,
-        get_listening_challenge,
-        *(
-            [get_chips_challenge, get_reverse_chips_challenge]
-            if is_long_enough_to_have_chips(phrase) else [])
-    ]
-    )(phrase, course)
-
-
-def get_word_challenges(word, course):
-    return challenge_mapper([
-        get_cards_challenge,
-        get_short_input_challenge,
-        get_listening_challenge]
-    )(word, course)
