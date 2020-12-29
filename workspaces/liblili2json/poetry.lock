@@ -127,6 +127,14 @@ optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [[package]]
+name = "pyfakefs"
+version = "4.3.3"
+description = "pyfakefs implements a fake file system that mocks the Python file system modules."
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
+[[package]]
 name = "pylint"
 version = "2.6.0"
 description = "python code static checker"
@@ -208,6 +216,14 @@ optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
+name = "slugify"
+version = "0.0.1"
+description = "A generic slugifier."
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "text-unidecode"
 version = "1.3"
 description = "The most basic Text::Unidecode port"
@@ -248,7 +264,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.0"
 python-versions = "^3.8"
-content-hash = "cb0874e0d4def5e6a8ef7e3fe3965f7415a12a15bf2fd48aacfc99dc101c68a5"
+content-hash = "6ca232fd599045a458be7fee976965c10ada3bda687442a07d56c2c093cf2e5d"
 
 [metadata.files]
 astroid = [
@@ -320,6 +336,10 @@ py = [
     {file = "py-1.9.0-py2.py3-none-any.whl", hash = "sha256:366389d1db726cd2fcfc79732e75410e5fe4d31db13692115529d34069a043c2"},
     {file = "py-1.9.0.tar.gz", hash = "sha256:9ca6883ce56b4e8da7e79ac18787889fa5206c79dcc67fb065376cd2fe03f342"},
 ]
+pyfakefs = [
+    {file = "pyfakefs-4.3.3-py3-none-any.whl", hash = "sha256:b2bc190ea65b5b6274c6d1a90c4d71ede9b3178e1ff9bb74c86daf69ffccd185"},
+    {file = "pyfakefs-4.3.3.tar.gz", hash = "sha256:ffb2ab264a0b83af548a2db0c509798e208361df39601ba898ae65cecfb59cbb"},
+]
 pylint = [
     {file = "pylint-2.6.0-py3-none-any.whl", hash = "sha256:bfe68f020f8a0fece830a22dd4d5dddb4ecc6137db04face4c3420a46a52239f"},
     {file = "pylint-2.6.0.tar.gz", hash = "sha256:bb4a908c9dadbc3aac18860550e870f58e1a02c9f2c204fdf5693d73be061210"},
@@ -341,6 +361,9 @@ python-slugify = [
 six = [
     {file = "six-1.15.0-py2.py3-none-any.whl", hash = "sha256:8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced"},
     {file = "six-1.15.0.tar.gz", hash = "sha256:30639c035cdb23534cd4aa2dd52c3bf48f06e5f4a941509c8bafd8ce11080259"},
+]
+slugify = [
+    {file = "slugify-0.0.1.tar.gz", hash = "sha256:c5703cc11c1a6947536f3ce8bb306766b8bb5a84a53717f5a703ce0f18235e4c"},
 ]
 text-unidecode = [
     {file = "text-unidecode-1.3.tar.gz", hash = "sha256:bad6603bb14d279193107714b288be206cac565dfa49aa5b105294dd5c4aab93"},
