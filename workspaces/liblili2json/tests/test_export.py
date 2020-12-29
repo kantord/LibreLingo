@@ -1,12 +1,49 @@
 import pytest
-from unittest.mock import patch
+from unittest.mock import patch, call
 import json
 import os
 import random
 from pathlib import Path
 from pyfakefs.fake_filesystem_unittest import TestCase as FakeFsTestCase
 from . import fakes
-from liblili2json.export import export_skill
+from liblili2json.export import export_skill, export_course_skills
+from liblili2json.types import Module
+
+
+def get_fake_skill():
+    randomname = str(random.randint(0, 5000))
+    return randomname, fakes.customize(
+        fakes.skillWithPhraseAndWord,
+        name="Animals {}".format(randomname),
+    )
+
+
+class TestExportCourse(FakeFsTestCase):
+    def setUp(self):
+        self.setUpPyfakefs()
+        self.export_path = Path("./path{}".format(random.randint(0, 5000)))
+
+    @patch('liblili2json.export.export_skill')
+    def test_exports_all_skills(self, export_skill):
+        _, fake_skill_1 = get_fake_skill()
+        _, fake_skill_2 = get_fake_skill()
+        _, fake_skill_3 = get_fake_skill()
+        fake_module_1 = Module(title="", skills=[
+            fake_skill_1,
+            fake_skill_2,
+        ])
+        fake_module_2 = Module(title="", skills=[
+            fake_skill_3,
+        ])
+        fake_course = fakes.customize(fakes.course1, modules=[
+            fake_module_1, fake_module_2
+        ])
+        export_course_skills(self.export_path, fake_course)
+        export_skill.assert_has_calls([
+            call(self.export_path, fake_skill_1,  fake_course),
+            call(self.export_path, fake_skill_2,  fake_course),
+            call(self.export_path, fake_skill_3,  fake_course),
+        ], any_order=True)
 
 
 class TestExportSkill(FakeFsTestCase):
@@ -15,11 +52,7 @@ class TestExportSkill(FakeFsTestCase):
         self.export_path = Path("./path{}".format(random.randint(0, 5000)))
 
     def test_creates_the_correct_file(self):
-        randomname = str(random.randint(0, 5000))
-        fake_skill = fakes.customize(
-            fakes.skillWithPhraseAndWord,
-            name="Animals {}".format(randomname),
-        )
+        randomname, fake_skill = get_fake_skill()
         export_skill(self.export_path,
                      fake_skill, fakes.course1)
         self.assertTrue(os.path.exists(self.export_path / "challenges" /
