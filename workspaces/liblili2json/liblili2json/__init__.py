@@ -9,5 +9,6 @@ from .challenge_types import *
 from .module import *
 from .course import *
 from .skills import *
+from .export import *
 
 __version__ = '0.1.0'
