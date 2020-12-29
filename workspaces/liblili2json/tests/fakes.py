@@ -1,3 +1,4 @@
+from pathlib import Path
 import random
 from collections import namedtuple
 from liblili2json import Course
@@ -179,3 +180,7 @@ def customize(fake, **kwargs):
             **kwargs
         },
     )
+
+
+def path():
+    return Path("./path{}".format(random.randint(0, 5000)))

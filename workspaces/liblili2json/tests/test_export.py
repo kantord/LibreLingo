@@ -3,7 +3,6 @@ from unittest.mock import patch, call
 import json
 import os
 import random
-from pathlib import Path
 from pyfakefs.fake_filesystem_unittest import TestCase as FakeFsTestCase
 from . import fakes
 from liblili2json.export import export_skill, export_course_skills
@@ -21,7 +20,7 @@ def get_fake_skill():
 class TestExportCourse(FakeFsTestCase):
     def setUp(self):
         self.setUpPyfakefs()
-        self.export_path = Path("./path{}".format(random.randint(0, 5000)))
+        self.export_path = fakes.path()
 
     @patch('liblili2json.export.export_skill')
     def test_exports_all_skills(self, export_skill):
@@ -49,7 +48,7 @@ class TestExportCourse(FakeFsTestCase):
 class TestExportSkill(FakeFsTestCase):
     def setUp(self):
         self.setUpPyfakefs()
-        self.export_path = Path("./path{}".format(random.randint(0, 5000)))
+        self.export_path = fakes.path()
 
     def test_creates_the_correct_file(self):
         randomname, fake_skill = get_fake_skill()
