@@ -8,6 +8,9 @@ logger = logging.getLogger("liblili2json")
 
 
 def export_skill(export_path, skill, course):
+    """
+        Writes the given skill to a JSON file in the specified path
+    """
     logger.info("Writing skill {}".format(repr(skill.name)))
     skill_data = get_skill_data(skill, course)
     slug = slugify(skill.name)
