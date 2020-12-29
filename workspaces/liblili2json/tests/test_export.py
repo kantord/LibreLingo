@@ -67,23 +67,20 @@ class TestExportSkill(FakeFsTestCase):
 
     @patch('liblili2json.export.get_skill_data')
     def test_writes_correct_value_into_json_file(self, get_skill_data):
-        fake_value = {
-            "fake_value": random.randint(0, 1000)
+        fake_skill_data = {
+            "fake_skill_data": random.randint(0, 1000)
         }
-        get_skill_data.return_value = fake_value
+        get_skill_data.return_value = fake_skill_data
         export_skill(self.export_path,
                      fakes.skillWithPhraseAndWord, fakes.course1)
         with open(self.export_path /
                   "challenges" / "masculine.json") as f:
-            assert json.loads(f.read()) == fake_value
+            assert json.loads(f.read()) == fake_skill_data
 
     def test_assert_logs_correctly(self):
         with self.assertLogs("liblili2json", level="INFO") as log:
             randomname = str(random.randint(0, 5000))
-            fake_skill = fakes.customize(
-                fakes.skillWithPhraseAndWord,
-                name="Animals {}".format(randomname),
-            )
+            _, fake_skill = get_fake_skill()
             export_skill(self.export_path,
                          fake_skill, fakes.course1)
             assert log.output[0] == \
