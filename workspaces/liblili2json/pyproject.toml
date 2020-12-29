@@ -7,6 +7,7 @@ authors = ["Dániel Kántor <git@daniel-kantor.com>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 python-slugify = "^4.0.1"
+pyfakefs = "^4.3.3"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.1.1"
