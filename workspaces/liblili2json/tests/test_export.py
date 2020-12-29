@@ -44,3 +44,16 @@ class TestExportSkill(FakeFsTestCase):
         with open(self.export_path /
                   "challenges" / "masculine.json") as f:
             assert json.loads(f.read()) == fake_value
+
+    def test_assert_logs_correctly(self):
+        with self.assertLogs("liblili2json", level="INFO") as log:
+            randomname = str(random.randint(0, 5000))
+            fake_skill = fakes.customize(
+                fakes.skillWithPhraseAndWord,
+                name="Animals {}".format(randomname),
+            )
+            export_skill(self.export_path,
+                         fake_skill, fakes.course1)
+            assert log.output[0] == \
+                "INFO:liblili2json:Writing skill '{}'".format(
+                fake_skill.name)
