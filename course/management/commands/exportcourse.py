@@ -150,11 +150,7 @@ def define_words_in_sentence(course, sentence, reverse):
 
 
 def export_skill(export_path, skill, language_id, course):
-    data = liblili2json.get_skill_data(skill, course)
-    Path(Path(export_path) / "challenges").mkdir(parents=True, exist_ok=True)
-
-    with open(Path(export_path) / "challenges" / "{}.json".format(slugify(skill.name)), 'w', encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+    liblili2json.export_skill(export_path, skill, course)
 
 
 def export_course(course):
