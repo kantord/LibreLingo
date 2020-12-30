@@ -7,6 +7,7 @@ Language = namedtuple("Language", [
 
 Course = namedtuple("Course", [
     "target_language",
+    "source_language",
     "special_characters",
     "modules",
     "license",

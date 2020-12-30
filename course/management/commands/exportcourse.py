@@ -75,6 +75,10 @@ def convert_course(course):
             code=course.target_language_code,
             name=course.language_name,
         ),
+        source_language=liblili2json.Language(
+            name=course.source_language_name,
+            code=None,
+        ),
         special_characters=course.special_characters.split(' '),
         license=liblili2json.License(
             name=course.license,

@@ -116,14 +116,20 @@ class TestExportCourseData(FakeFsTestCase):
 
     def test_assert_logs_correctly(self):
         with self.assertLogs("liblili2json", level="INFO") as log:
-            randomname = str(random.randint(0, 5000))
+            randomname1 = str(random.randint(0, 5000))
+            randomname2 = str(random.randint(0, 5000))
             fake_course = fakes.customize(
                 fakes.course1,
                 target_language=Language(
-                    name=randomname,
+                    name=randomname1,
+                    code=""
+                ),
+                source_language=Language(
+                    name=randomname2,
                     code=""
                 )
             )
             export_course_data(self.export_path, fake_course)
             assert log.output[0] == \
-                "INFO:liblili2json:Writing course '{}'".format(randomname)
+                "INFO:liblili2json:Writing course '{}' for '{}' speakers".format(
+                    randomname1, randomname2)
