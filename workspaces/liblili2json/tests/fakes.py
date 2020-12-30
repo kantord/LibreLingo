@@ -7,6 +7,7 @@ from liblili2json import Skill
 from liblili2json import Phrase
 from liblili2json import Word
 from liblili2json import License
+from liblili2json import Language
 
 
 challenge1 = "challenge1"
@@ -128,9 +129,19 @@ skills = [
     )
 ]
 
+language_1 = Language(
+    name="my language",
+    code="de",
+)
+
+
+language_2 = Language(
+    name="another language",
+    code="tr",
+)
+
 courseEmpty = Course(
-    language_name="my language",
-    language_code="de",
+    target_language=language_1,
     special_characters=["ä", "ß"],
     license=license1,
     modules=[],
@@ -139,8 +150,7 @@ courseEmpty = Course(
 
 
 course1 = Course(
-    language_name="my language",
-    language_code="de",
+    target_language=language_1,
     special_characters=["ä", "ß"],
     license=license1,
     modules=[
@@ -155,8 +165,8 @@ course1 = Course(
 )
 
 course2 = Course(
-    language_name="another language",
-    language_code="tr",
+
+    target_language=language_2,
     special_characters=["ç", "ş"],
     license=license2,
     modules=[

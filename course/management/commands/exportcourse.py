@@ -71,8 +71,10 @@ def generate_imageset(item):
 
 def convert_course(course):
     return liblili2json.Course(
-        language_code=course.target_language_code,
-        language_name=course.language_name,
+        target_language=liblili2json.Language(
+            code=course.target_language_code,
+            name=course.language_name,
+        ),
         special_characters=course.special_characters.split(' '),
         license=liblili2json.License(
             name=course.license,
