@@ -117,15 +117,8 @@ def convert_course(course):
     )
 
 
-def get_course_data(course):
-    return liblili2json.get_course_data(convert_course(course))
-
-
 def export_course_data(export_path, course):
-    print("Exporting course meta data")
-    data = get_course_data(course)
-    with open(Path(export_path) / "courseData.json", 'w', encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+    liblili2json.export_course_data(export_path, convert_course(course))
 
 
 def define_word(course, word, reverse):
@@ -150,11 +143,7 @@ def define_words_in_sentence(course, sentence, reverse):
 
 
 def export_skill(export_path, skill, language_id, course):
-    data = liblili2json.get_skill_data(skill, course)
-    Path(Path(export_path) / "challenges").mkdir(parents=True, exist_ok=True)
-
-    with open(Path(export_path) / "challenges" / "{}.json".format(slugify(skill.name)), 'w', encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+    liblili2json.export_skill(export_path, skill, course)
 
 
 def export_course(course):
@@ -164,17 +153,11 @@ def export_course(course):
     course_id = "{}-from-{}".format(language_id, source_language_id)
     export_path = Path(
         "./workspaces/web/src/courses/{}".format(course_id)).resolve()
-    print("Exporting to {}".format(export_path))
-    print("Making sure course directory exists")
-    Path(export_path).mkdir(parents=True, exist_ok=True)
     export_course_data(export_path, course)
     audios_to_fetch = []
 
     converted_course = convert_course(course)
-    for module in converted_course.modules:
-        for skill in module.skills:
-            print("Exporting skill {}".format(str(skill.name)))
-            export_skill(export_path, skill, language_id, converted_course)
+    liblili2json.export_course_skills(export_path, converted_course)
     for module in course.module_set.all():
         for skill in module.skill_set.all():
             print("Fetching audios for skill {}".format(str(skill)))

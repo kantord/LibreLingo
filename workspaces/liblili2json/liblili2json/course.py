@@ -7,8 +7,8 @@ def get_course_data(course):
     """
 
     return {
-        "languageName": course.language_name,
-        "languageCode": course.language_code,
+        "languageName": course.target_language.name,
+        "languageCode": course.target_language.code,
         "specialCharacters": course.special_characters,
         "license": {
             "name": {
