@@ -167,10 +167,7 @@ def export_course(course):
     audios_to_fetch = []
 
     converted_course = convert_course(course)
-    for module in converted_course.modules:
-        for skill in module.skills:
-            print("Exporting skill {}".format(str(skill.name)))
-            export_skill(export_path, skill, language_id, converted_course)
+    liblili2json.export_course_skills(export_path, converted_course)
     for module in course.module_set.all():
         for skill in module.skill_set.all():
             print("Fetching audios for skill {}".format(str(skill)))
