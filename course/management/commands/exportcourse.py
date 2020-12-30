@@ -150,11 +150,7 @@ def define_words_in_sentence(course, sentence, reverse):
 
 
 def export_skill(export_path, skill, language_id, course):
-    data = liblili2json.get_skill_data(skill, course)
-    Path(Path(export_path) / "challenges").mkdir(parents=True, exist_ok=True)
-
-    with open(Path(export_path) / "challenges" / "{}.json".format(slugify(skill.name)), 'w', encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+    liblili2json.export_skill(export_path, skill, course)
 
 
 def export_course(course):
@@ -171,10 +167,7 @@ def export_course(course):
     audios_to_fetch = []
 
     converted_course = convert_course(course)
-    for module in converted_course.modules:
-        for skill in module.skills:
-            print("Exporting skill {}".format(str(skill.name)))
-            export_skill(export_path, skill, language_id, converted_course)
+    liblili2json.export_course_skills(export_path, converted_course)
     for module in course.module_set.all():
         for skill in module.skill_set.all():
             print("Fetching audios for skill {}".format(str(skill)))
