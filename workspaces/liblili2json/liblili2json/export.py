@@ -34,7 +34,13 @@ def export_skill(export_path, skill, course):
 
 
 def export_course_data(export_path, course):
-    logger.info("Writing course {}".format(repr(course.target_language.name)))
+    """
+        Writes the metadata of a course to a JSON file in the specified path.
+        You probably don't need to call this function directly, because you
+        can export the entire course as a whole into a JSON using export_course
+    """
+    logger.info("Writing course {} for {} speakers".format(
+        repr(course.target_language.name), repr(course.source_language.name)))
     course_data = get_course_data(course)
     Path(Path(export_path)).mkdir(parents=True, exist_ok=True)
     with open(Path(export_path) / "courseData.json", 'w', encoding='utf-8') as f:
