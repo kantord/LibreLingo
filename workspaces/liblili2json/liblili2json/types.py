@@ -1,8 +1,12 @@
 from collections import namedtuple
 
+Language = namedtuple("Language", [
+    "name",
+    "code",
+])
+
 Course = namedtuple("Course", [
-    "language_name",
-    "language_code",
+    "target_language",
     "special_characters",
     "modules",
     "license",
