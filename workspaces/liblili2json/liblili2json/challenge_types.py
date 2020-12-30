@@ -7,7 +7,7 @@ def get_listening_challenge(source, course):
         "type": "listeningExercise",
         "answer": source.in_target_language[0],
         "meaning": source.in_source_language[0],
-        "audio": audio_id(course.language_name,
+        "audio": audio_id(course.target_language.name,
                           source.in_target_language[0]),
         "id": get_dumb_opaque_id("Word", source, "listeningExercise"),
         "priority": 1,

@@ -7,7 +7,6 @@ from unittest.mock import patch
 
 from django.utils import translation
 from course.management.commands.exportcourse import generate_chips
-from course.management.commands.exportcourse import get_course_data
 from course.management.commands.exportcourse import opaqueId, audioId
 from course.management.commands.exportcourse import define_word
 from course.models import Course, Skill, Module, LearnWord, LearnSentence, DictionaryItem
@@ -109,62 +108,3 @@ class GenerateChipsTest(TestCase):
     def test_calls_clean_word_correct_times(self, clean_word):
         generate_chips('foo bar bazz')
         self.assertEqual(clean_word.call_count, 3)
-
-
-class CourseDataTest(TestCase):
-    databases = '__all__'
-
-    def setUp(self):
-        self.course = Course.objects.create(
-            language_name="Spanish",
-            source_language_name="English",
-            target_language_code="ES",
-            special_characters="a b"
-        )
-        self.module = Module.objects.create(
-            course=self.course,
-            name="Basics"
-        )
-        self.skill = Skill.objects.create(
-            module=self.module,
-            name="Animals",
-            image1="water1",
-            image2="water2",
-            image3="water3",
-        )
-
-    def test_correct_output_format(self):
-        data = get_course_data(self.course)
-        self.assertMatchSnapshot(data)
-
-    def test_imageset_optional(self):
-        self.skill.image1 = None
-        self.skill.image2 = None
-        self.skill.image3 = None
-        self.skill.save()
-        data = get_course_data(self.course)
-        assert "imageSet" not in data["modules"][0]["skills"][0], "Has not imageset"
-
-    def test_correct_output_format_only_phrases(self):
-        self.sentence1 = LearnSentence.objects.create(
-            skill=self.skill,
-            meaningInSourceLanguage="Bread, please",
-            formInTargetLanguage="Pan, por favor"
-        )
-        self.sentence2 = LearnSentence.objects.create(
-            skill=self.skill,
-            meaningInSourceLanguage="Water, please",
-            formInTargetLanguage="Agua, por favor"
-        )
-        self.sentence3 = LearnSentence.objects.create(
-            skill=self.skill,
-            meaningInSourceLanguage="Let's go to the beach",
-            formInTargetLanguage="Vamos a la playa"
-        )
-        self.sentence4 = LearnSentence.objects.create(
-            skill=self.skill,
-            meaningInSourceLanguage="Thank you",
-            formInTargetLanguage="Gracias"
-        )
-        data = get_course_data(self.course)
-        self.assertMatchSnapshot(data)
