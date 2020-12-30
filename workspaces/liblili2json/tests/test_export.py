@@ -7,7 +7,7 @@ from pyfakefs.fake_filesystem_unittest import TestCase as FakeFsTestCase
 from . import fakes
 from liblili2json.export import export_course_skills, export_skill, \
     export_course_data
-from liblili2json.types import Module
+from liblili2json.types import Module, Language
 
 
 def get_fake_skill():
@@ -119,7 +119,10 @@ class TestExportCourseData(FakeFsTestCase):
             randomname = str(random.randint(0, 5000))
             fake_course = fakes.customize(
                 fakes.course1,
-                language_name=randomname,
+                target_language=Language(
+                    name=randomname,
+                    code=""
+                )
             )
             export_course_data(self.export_path, fake_course)
             assert log.output[0] == \

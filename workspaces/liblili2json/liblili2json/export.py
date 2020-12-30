@@ -34,7 +34,7 @@ def export_skill(export_path, skill, course):
 
 
 def export_course_data(export_path, course):
-    logger.info("Writing course {}".format(repr(course.language_name)))
+    logger.info("Writing course {}".format(repr(course.target_language.name)))
     course_data = get_course_data(course)
     Path(Path(export_path)).mkdir(parents=True, exist_ok=True)
     with open(Path(export_path) / "courseData.json", 'w', encoding='utf-8') as f:
