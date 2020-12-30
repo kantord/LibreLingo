@@ -5,7 +5,7 @@ import os
 import random
 from pyfakefs.fake_filesystem_unittest import TestCase as FakeFsTestCase
 from . import fakes
-from liblili2json.export import export_skill, export_course_skills
+from liblili2json.export import *
 from liblili2json.types import Module
 
 
@@ -17,7 +17,7 @@ def get_fake_skill():
     )
 
 
-class TestExportCourse(FakeFsTestCase):
+class TestExportCourseSkills(FakeFsTestCase):
     def setUp(self):
         self.setUpPyfakefs()
         self.export_path = fakes.path()
@@ -86,3 +86,41 @@ class TestExportSkill(FakeFsTestCase):
             assert log.output[0] == \
                 "INFO:liblili2json:Writing skill '{}'".format(
                 fake_skill.name)
+
+
+class TestExportCourseData(FakeFsTestCase):
+    def setUp(self):
+        self.setUpPyfakefs()
+        self.export_path = fakes.path()
+
+    def test_creates_the_correct_file(self):
+        randomname, fake_skill = get_fake_skill()
+        export_course_data(self.export_path, fakes.course1)
+        self.assertTrue(os.path.exists(self.export_path / "courseData.json"))
+
+    @patch('liblili2json.export.get_course_data')
+    def test_calls_get_course_data_with_correct_value(self, get_course_data):
+        get_course_data.return_value = []
+        export_course_data(self.export_path, fakes.course1)
+        get_course_data.assert_called_with(fakes.course1)
+
+    @patch('liblili2json.export.get_course_data')
+    def test_writes_correct_value_into_json_file(self, get_course_data):
+        fake_course_data = {
+            "fake_course_data": random.randint(0, 1000)
+        }
+        get_course_data.return_value = fake_course_data
+        export_course_data(self.export_path, fakes.course1)
+        with open(self.export_path / "courseData.json") as f:
+            assert json.loads(f.read()) == fake_course_data
+
+    def test_assert_logs_correctly(self):
+        with self.assertLogs("liblili2json", level="INFO") as log:
+            randomname = str(random.randint(0, 5000))
+            fake_course = fakes.customize(
+                fakes.course1,
+                language_name=randomname,
+            )
+            export_course_data(self.export_path, fake_course)
+            assert log.output[0] == \
+                "INFO:liblili2json:Writing course '{}'".format(randomname)
