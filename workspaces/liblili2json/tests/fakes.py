@@ -142,6 +142,7 @@ language_2 = Language(
 
 courseEmpty = Course(
     target_language=language_1,
+    source_language=language_2,
     special_characters=["ä", "ß"],
     license=license1,
     modules=[],
@@ -151,6 +152,7 @@ courseEmpty = Course(
 
 course1 = Course(
     target_language=language_1,
+    source_language=language_2,
     special_characters=["ä", "ß"],
     license=license1,
     modules=[
@@ -165,8 +167,8 @@ course1 = Course(
 )
 
 course2 = Course(
-
     target_language=language_2,
+    source_language=language_1,
     special_characters=["ç", "ş"],
     license=license2,
     modules=[
