@@ -5,7 +5,8 @@ import os
 import random
 from pyfakefs.fake_filesystem_unittest import TestCase as FakeFsTestCase
 from . import fakes
-from liblili2json.export import *
+from liblili2json.export import export_course_skills, export_skill, \
+    export_course_data
 from liblili2json.types import Module
 
 
@@ -79,7 +80,6 @@ class TestExportSkill(FakeFsTestCase):
 
     def test_assert_logs_correctly(self):
         with self.assertLogs("liblili2json", level="INFO") as log:
-            randomname = str(random.randint(0, 5000))
             _, fake_skill = get_fake_skill()
             export_skill(self.export_path,
                          fake_skill, fakes.course1)
