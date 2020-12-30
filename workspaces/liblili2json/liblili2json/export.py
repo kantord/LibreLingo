@@ -3,6 +3,7 @@ import json
 from pathlib import Path
 from slugify import slugify
 from .skills import get_skill_data
+from .course import get_course_data
 
 logger = logging.getLogger("liblili2json")
 
@@ -30,3 +31,11 @@ def export_skill(export_path, skill, course):
     Path(Path(export_path) / "challenges").mkdir(parents=True, exist_ok=True)
     with open(Path(export_path) / "challenges" / "{}.json".format(slug), 'w', encoding='utf-8') as f:
         json.dump(skill_data, f, ensure_ascii=False, indent=2)
+
+
+def export_course_data(export_path, course):
+    logger.info("Writing course {}".format(repr(course.language_name)))
+    course_data = get_course_data(course)
+    Path(Path(export_path)).mkdir(parents=True, exist_ok=True)
+    with open(Path(export_path) / "courseData.json", 'w', encoding='utf-8') as f:
+        json.dump(course_data, f, ensure_ascii=False, indent=2)
