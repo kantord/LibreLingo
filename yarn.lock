@@ -6216,7 +6216,7 @@ expect@^26.6.2:
     jest-message-util "^26.6.2"
     jest-regex-util "^26.0.0"
 
-express@^4.16.3, express@^4.17.1:
+express@^4.16.3:
   version "4.17.1"
   resolved "https://registry.yarnpkg.com/express/-/express-4.17.1.tgz#4491fc38605cf51f8629d39c2b5d026f98a4c134"
   integrity sha512-mHJ9O79RqluphRrcw2X/GTh3k9tVv8YcoyY4Kkh4WDMUYKRZUq0h1o0w2rrrxBqM7VoeUVqgb27xlEMXTnYt4g==
@@ -6499,11 +6499,6 @@ filenamify@^1.0.0:
     filename-reserved-regex "^1.0.0"
     strip-outer "^1.0.0"
     trim-repeated "^1.0.0"
-
-filesize@^6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/filesize/-/filesize-6.1.0.tgz#e81bdaa780e2451d714d71c0d7a4f3238d37ad00"
-  integrity sha512-LpCHtPQ3sFx67z+uh2HnSyWSLLu5Jxo21795uRDuar/EOuYWXib5EmPaGIBuSnRqH2IODiKA2k5re/K9OnN/Yg==
 
 fill-range@^4.0.0:
   version "4.0.0"
@@ -11953,7 +11948,7 @@ simple-swizzle@^0.2.2:
   dependencies:
     is-arrayish "^0.3.1"
 
-sirv@1.0.10:
+sirv@1.0.10, sirv@^1.0.7:
   version "1.0.10"
   resolved "https://registry.yarnpkg.com/sirv/-/sirv-1.0.10.tgz#3e591f5a9ae2520f50d5830f5fae38d97e7be194"
   integrity sha512-H5EZCoZaggEUQy8ocKsF7WAToGuZhjJlLvM3XOef46CbdIgbNeQ1p32N1PCuCjkVYwrAVOSMacN6CXXgIzuspg==
@@ -13522,20 +13517,19 @@ webidl-conversions@^6.1.0:
   resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-6.1.0.tgz#9111b4d7ea80acd40f5270d666621afa78b69514"
   integrity sha512-qBIvFLGiBpLjfwmYAaHPXsn+ho5xZnGvyGvsarywGNc8VyQJUMHJ8OBKGGrPER0okBeMDaan4mNBlgBROxuI8w==
 
-webpack-bundle-analyzer@4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/webpack-bundle-analyzer/-/webpack-bundle-analyzer-4.2.0.tgz#f19ed40e1767ab35cad78c517529596e885bf64a"
-  integrity sha512-gmjpdL/AJeGAftSzA+bjIPiChUffjBelcH2+3woCUiRpQfuwrTJuWRyZuqegiwBAroMJp7gIwcJaGeol039zbQ==
+webpack-bundle-analyzer@4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/webpack-bundle-analyzer/-/webpack-bundle-analyzer-4.3.0.tgz#2f3c0ca9041d5ee47fa418693cf56b4a518b578b"
+  integrity sha512-J3TPm54bPARx6QG8z4cKBszahnUglcv70+N+8gUqv2I5KOFHJbzBiLx+pAp606so0X004fxM7hqRu10MLjJifA==
   dependencies:
     acorn "^8.0.4"
     acorn-walk "^8.0.0"
     chalk "^4.1.0"
     commander "^6.2.0"
-    express "^4.17.1"
-    filesize "^6.1.0"
     gzip-size "^6.0.0"
     lodash "^4.17.20"
     opener "^1.5.2"
+    sirv "^1.0.7"
     ws "^7.3.1"
 
 webpack-cli@4.3.1:
