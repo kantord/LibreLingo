@@ -1,9 +1,12 @@
 # This file contains generic meta-data about the course
 
 Course:
-  Name: French
-  IETF BCP 47: fr
-  For speakers of: English
+  Language:
+    Name: French
+    IETF BCP 47: fr
+  For speakers of:
+    Name: English
+    IETF BCP 47: en
   License: CC BY 3.0
   Special characters:
     - Ç
