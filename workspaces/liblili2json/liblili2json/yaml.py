@@ -28,8 +28,15 @@ def load_dictionary():
     return []
 
 
-def load_skills():
+def load_skill():
     return []
+
+
+def load_skills(path, skills):
+    """
+    Load each YAML skill specified in the list
+    """
+    return [load_skill(Path(path) / "skills" / skill) for skill in skills]
 
 
 def load_module(path):
