@@ -3,9 +3,9 @@ from pathlib import Path
 from unittest.mock import patch
 from unittest import TestCase
 from pyfakefs.fake_filesystem_unittest import TestCase as FakeFsTestCase
-from liblili2json.types import Course, License, Module
+from liblili2json.types import Course, License, Module, Skill
 from liblili2json.yaml import load_course, convert_license, load_module, \
-    load_modules, load_skills
+    load_modules, load_skills, load_skill
 from . import fakes
 
 
@@ -241,3 +241,91 @@ class TestLoadSkills(TestCase):
     def test_calls_load_skills_with_correct_arguments(self, load_skill):
         load_skills("foo", ["bar.yaml"])
         load_skill.assert_called_with(Path("foo/skills/bar.yaml"))
+
+
+class TestLoadSkill(YamlImportTestCase):
+
+    def get_fake_skill_yaml(self, **kwargs):
+        return """
+Skill:
+  Name: {skill_name}
+  Id: {skill_id}
+  Thumbnails:
+    - {img1}
+    - {img2}
+    - {img3}
+New words: {fake_words}
+Phrases: {fake_phrases}
+
+Mini-dictionary:
+  French:
+    - dit: says
+    - bonjour:
+      - hello
+      - hi
+    - L'homme: the man
+
+  English:
+    - says: dit
+    - hello:
+      - bonjour
+      - salut
+    """.format(**kwargs)
+
+    def create_fake_skill_meta(self, path, **kwargs):
+        with open(Path(path) / "food.yaml", "w") as f:
+            f.write(self.get_fake_skill_yaml(**kwargs))
+
+    def get_fake_values(self):
+        return {
+            "skill_name": str(fakes.fake_value()),
+            "skill_id": str(fakes.fake_value()),
+            "img1": str(fakes.fake_value()),
+            "img2": str(fakes.fake_value()),
+            "img3": str(fakes.fake_value()),
+            "fake_words": str(fakes.fake_value()),
+            "fake_phrases": str(fakes.fake_value()),
+        }
+
+    def set_up_patches(self):
+        self.convert_words = self.create_patch(
+            "liblili2json.yaml.convert_words")
+        self.convert_phrases = self.create_patch(
+            "liblili2json.yaml.convert_phrases")
+
+    def call_function(self):
+        self.fake_path = self.fake_path / "skills"
+        self.fake_path.mkdir(parents=True)
+        self.create_fake_skill_meta(self.fake_path, **{
+            **self.fake_values,
+        })
+        self.result = load_skill(self.fake_path / "food.yaml")
+
+    def test_returns_a_correctly_types_course(self):
+        assert type(self.result) == Skill
+
+    def test_returned_object_has_correct_name(self):
+        assert self.result.name == self.fake_values["skill_name"]
+
+    def test_returned_object_has_correct_id(self):
+        assert self.result.id == self.fake_values["skill_id"]
+
+    def test_returned_object_has_correct_image_set(self):
+        assert self.result.image_set == [
+            self.fake_values["img1"],
+            self.fake_values["img2"],
+            self.fake_values["img3"],
+        ]
+
+    def test_returned_object_has_correct_words(self):
+        assert self.result.words == self.convert_words.return_value
+
+    def test_returned_object_has_correct_phrases(self):
+        assert self.result.phrases == self.convert_phrases.return_value
+
+    def test_calls_convert_words_with_correct_values(self):
+        self.convert_words.assert_called_with(self.fake_values["fake_words"])
+
+    def test_calls_convert_phrases_with_correct_values(self):
+        self.convert_phrases.assert_called_with(
+            self.fake_values["fake_phrases"])
