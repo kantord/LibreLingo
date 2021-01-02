@@ -9,48 +9,6 @@ from liblili2json.yaml import load_course, convert_license, load_module, \
 from . import fakes
 
 
-def get_fake_course_yaml(**kwargs):
-    return """
-Course:
-  Language:
-    Name: {target_language_name}
-    IETF BCP 47: {target_language_code}
-  For speakers of:
-    Name: {source_language_name}
-    IETF BCP 47: {source_language_code}
-  License:
-    Name: {license_full_name}
-    Short name: {license_name}
-    Link: {license_link}
-  Special characters:
-    - {first_special_character}
-    - {second_special_character}
-
-Modules:
-  - {fake_module}
-""".format(**kwargs)
-
-
-def get_fake_module_yaml(**kwargs):
-    return """
-Module:
-    Name: {module_name}
-
-Skills:
-  - {skill_name}
-""".format(**kwargs)
-
-
-def create_fake_course_meta(path, **kwargs):
-    with open(Path(path) / "course.yaml", "w") as f:
-        f.write(get_fake_course_yaml(**kwargs))
-
-
-def create_fake_module_meta(path, **kwargs):
-    with open(Path(path) / "module.yaml", "w") as f:
-        f.write(get_fake_module_yaml(**kwargs))
-
-
 class YamlImportTestCase(FakeFsTestCase):
     def create_patch(self, module):
         patcher = patch(module)
@@ -73,6 +31,30 @@ class YamlImportTestCase(FakeFsTestCase):
 
 
 class TestLoadCourseMeta(YamlImportTestCase):
+    def create_fake_course_meta(self, path, **kwargs):
+        with open(Path(path) / "course.yaml", "w") as f:
+            f.write(self.get_fake_course_yaml(**kwargs))
+
+    def get_fake_course_yaml(self, **kwargs):
+        return """
+    Course:
+      Language:
+        Name: {target_language_name}
+        IETF BCP 47: {target_language_code}
+      For speakers of:
+        Name: {source_language_name}
+        IETF BCP 47: {source_language_code}
+      License:
+        Name: {license_full_name}
+        Short name: {license_name}
+        Link: {license_link}
+      Special characters:
+        - {first_special_character}
+        - {second_special_character}
+
+    Modules:
+      - {fake_module}
+    """.format(**kwargs)
 
     def get_fake_values(self):
         return {
@@ -97,7 +79,7 @@ class TestLoadCourseMeta(YamlImportTestCase):
             "liblili2json.yaml.convert_license")
 
     def call_function(self):
-        create_fake_course_meta(self.fake_path, **{
+        self.create_fake_course_meta(self.fake_path, **{
             **self.fake_values,
         })
         self.result = load_course(self.fake_path)
@@ -179,6 +161,19 @@ class TestConvertLicense(YamlImportTestCase):
 
 class TestLoadModuleMeta(YamlImportTestCase):
 
+    def get_fake_module_yaml(self, **kwargs):
+        return """
+    Module:
+        Name: {module_name}
+
+    Skills:
+      - {skill_name}
+    """.format(**kwargs)
+
+    def create_fake_module_meta(self, path, **kwargs):
+        with open(Path(path) / "module.yaml", "w") as f:
+            f.write(self.get_fake_module_yaml(**kwargs))
+
     def get_fake_values(self):
         return {
             "module_name": str(fakes.fake_value()),
@@ -192,7 +187,7 @@ class TestLoadModuleMeta(YamlImportTestCase):
     def call_function(self):
         self.fake_path = self.fake_path / "modules" / "foo"
         self.fake_path.mkdir(parents=True)
-        create_fake_module_meta(self.fake_path, **{
+        self.create_fake_module_meta(self.fake_path, **{
             **self.fake_values,
         })
         self.result = load_module(self.fake_path)
