@@ -5,7 +5,7 @@ from unittest import TestCase
 from pyfakefs.fake_filesystem_unittest import TestCase as FakeFsTestCase
 from liblili2json.types import Course, License, Module
 from liblili2json.yaml import load_course, convert_license, load_module, \
-    load_modules
+    load_modules, load_skills
 from . import fakes
 
 
@@ -223,3 +223,21 @@ class LoadModulesTestCase(TestCase):
     def test_calls_load_modules_with_correct_arguments(self, load_module):
         load_modules("foo", ["bar"])
         load_module.assert_called_with(Path("foo/bar"))
+
+
+class TestLoadSkills(TestCase):
+    @patch('liblili2json.yaml.load_skill')
+    def test_returns_correct_value(self, load_skill):
+        load_skill.return_value = fakes.fake_value()
+        assert load_skills("foo", ["bar"]) == [load_skill.return_value]
+
+    @patch('liblili2json.yaml.load_skill')
+    def test_handles_every_module(self, load_skill):
+        load_skill.return_value = fakes.fake_value()
+        assert load_skills("foo", ["bar", "baz"]) == [
+            load_skill.return_value] * 2
+
+    @patch('liblili2json.yaml.load_skill')
+    def test_calls_load_skills_with_correct_arguments(self, load_skill):
+        load_skills("foo", ["bar.yaml"])
+        load_skill.assert_called_with(Path("foo/skills/bar.yaml"))
