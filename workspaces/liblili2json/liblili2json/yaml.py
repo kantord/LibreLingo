@@ -5,7 +5,7 @@ try:
 except ImportError:
     from yaml import Loader
 
-from liblili2json.types import Course, Language, License, Module
+from liblili2json.types import Course, Language, License, Module, Skill
 
 
 def load_yaml(path):
@@ -28,8 +28,27 @@ def load_dictionary():
     return []
 
 
-def load_skill():
-    return []
+def convert_words():
+    pass
+
+
+def convert_phrases():
+    pass
+
+
+def load_skill(path):
+    data = load_yaml(path)
+    skill = data["Skill"]
+    words = data["New words"]
+    phrases = data["Phrases"]
+
+    return Skill(
+        name=skill["Name"],
+        id=skill["Id"],
+        words=convert_words(words),
+        phrases=convert_phrases(phrases),
+        image_set=skill["Thumbnails"]
+    )
 
 
 def load_skills(path, skills):
