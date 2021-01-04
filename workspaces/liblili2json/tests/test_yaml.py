@@ -5,7 +5,7 @@ from unittest import TestCase
 from pyfakefs.fake_filesystem_unittest import TestCase as FakeFsTestCase
 from liblili2json.types import Course, License, Module, Skill
 from liblili2json.yaml import load_course, convert_license, load_module, \
-    load_modules, load_skills, load_skill
+    load_modules, load_skills, load_skill, convert_words
 from . import fakes
 
 
@@ -244,7 +244,6 @@ class TestLoadSkills(TestCase):
 
 
 class TestLoadSkill(YamlImportTestCase):
-
     def get_fake_skill_yaml(self, **kwargs):
         return """
 Skill:
@@ -329,3 +328,25 @@ Mini-dictionary:
     def test_calls_convert_phrases_with_correct_values(self):
         self.convert_phrases.assert_called_with(
             self.fake_values["fake_phrases"])
+
+
+class TestConvertWords(TestCase):
+    def test_returns_a_list(self):
+        assert type(convert_words([])) == list
+
+    def test_converts_every_word(self):
+        raw_words = [None] * random.randint(0, 1000)
+        assert len(convert_words(raw_words)) == len(raw_words)
+
+    @patch('liblili2json.yaml.convert_word')
+    def test_returns_correct_value(self, convert_word):
+        convert_word.return_value = fakes.fake_value()
+        assert convert_words([None]) == [convert_word.return_value]
+
+    @patch('liblili2json.yaml.convert_word')
+    def test_returns_correct_value(self, convert_word):
+        word1 = fakes.fake_value()
+        word2 = fakes.fake_value()
+        convert_words([word1, word2])
+        convert_word.assert_any_call(word1)
+        convert_word.assert_any_call(word2)
