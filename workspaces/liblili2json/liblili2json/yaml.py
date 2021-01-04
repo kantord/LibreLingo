@@ -28,8 +28,15 @@ def load_dictionary():
     return []
 
 
-def convert_words():
+def convert_word(raw_word):
     pass
+
+
+def convert_words(raw_words):
+    """
+    Converts each YAML word definition into Word() objects
+    """
+    return list(map(convert_word, raw_words))
 
 
 def convert_phrases():
