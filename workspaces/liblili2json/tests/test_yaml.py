@@ -3,9 +3,9 @@ from pathlib import Path
 from unittest.mock import patch
 from unittest import TestCase
 from pyfakefs.fake_filesystem_unittest import TestCase as FakeFsTestCase
-from liblili2json.types import Course, License, Module, Skill
+from liblili2json.types import Course, License, Module, Skill, Word
 from liblili2json.yaml import load_course, convert_license, load_module, \
-    load_modules, load_skills, load_skill, convert_words
+    load_modules, load_skills, load_skill, convert_words, convert_word
 from . import fakes
 
 
@@ -334,7 +334,8 @@ class TestConvertWords(TestCase):
     def test_returns_a_list(self):
         assert type(convert_words([])) == list
 
-    def test_converts_every_word(self):
+    @patch('liblili2json.yaml.convert_word')
+    def test_converts_every_word(self, convert_word):
         raw_words = [None] * random.randint(0, 1000)
         assert len(convert_words(raw_words)) == len(raw_words)
 
@@ -350,3 +351,56 @@ class TestConvertWords(TestCase):
         convert_words([word1, word2])
         convert_word.assert_any_call(word1)
         convert_word.assert_any_call(word2)
+
+
+class TestConvertWord(TestCase):
+    def setUp(self):
+        self.fakeWord = {
+            "Images": fakes.fake_value(),
+            "Word": fakes.fake_value(),
+            "Synonyms": [
+                fakes.fake_value(),
+                fakes.fake_value(),
+            ],
+            "Translation": fakes.fake_value(),
+            "Also accepted": [
+                fakes.fake_value(),
+                fakes.fake_value(),
+            ]
+        }
+
+    def test_returns_a_word_object(self):
+        assert type(convert_word(self.fakeWord)) == Word
+
+    def test_includes_the_correct_pictures(self):
+        assert convert_word(self.fakeWord).pictures == self.fakeWord["Images"]
+
+    def test_pictures_are_optional(self):
+        del self.fakeWord["Images"]
+        assert convert_word(self.fakeWord).pictures == None
+
+    def test_includes_main_word(self):
+        assert convert_word(
+            self.fakeWord).in_target_language[0] == self.fakeWord["Word"]
+
+    def test_includes_synonyms(self):
+        result = convert_word(self.fakeWord).in_target_language
+        assert self.fakeWord["Synonyms"][0] in result
+        assert self.fakeWord["Synonyms"][1] in result
+
+    def test_synonyms_are_optional(self):
+        del self.fakeWord["Synonyms"]
+        assert len(convert_word(self.fakeWord).in_target_language) == 1
+
+    def test_includes_translation(self):
+        assert convert_word(
+            self.fakeWord).in_source_language[0] == self.fakeWord["Translation"]
+
+    def test_includes_alternative_translations(self):
+        result = convert_word(self.fakeWord).in_source_language
+        assert self.fakeWord["Also accepted"][0] in result
+        assert self.fakeWord["Also accepted"][1] in result
+
+    def test_alternative_translations_are_optional(self):
+        del self.fakeWord["Also accepted"]
+        assert len(convert_word(self.fakeWord).in_source_language) == 1
