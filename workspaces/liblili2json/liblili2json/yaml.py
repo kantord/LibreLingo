@@ -5,7 +5,7 @@ try:
 except ImportError:
     from yaml import Loader
 
-from liblili2json.types import Course, Language, License, Module, Skill
+from liblili2json.types import Course, Language, License, Module, Skill, Word
 
 
 def load_yaml(path):
@@ -28,8 +28,34 @@ def load_dictionary():
     return []
 
 
+def alternatives_from_yaml(raw_object, key):
+    """
+    Returns alternative solutions based on the key, or an empty list if 
+    there are no alternative solutions specified
+    """
+    return (raw_object[key]
+            if key in raw_object else [])
+
+
+def solution_from_yaml(raw_object, solution_key, alternatives_key):
+    """
+    Converts a solution and it's alternatives into a single list, where
+    the alternatives are optional
+    """
+    solution = raw_object[solution_key]
+    return [solution, *alternatives_from_yaml(raw_object, alternatives_key)]
+
+
 def convert_word(raw_word):
-    pass
+    """
+    Converts a YAML word definition into a Word() object
+    """
+    return Word(
+        in_target_language=solution_from_yaml(raw_word, "Word", "Synonyms"),
+        in_source_language=solution_from_yaml(
+            raw_word, "Translation", "Also accepted"),
+        pictures=raw_word["Images"] if "Images" in raw_word else None,
+    )
 
 
 def convert_words(raw_words):
