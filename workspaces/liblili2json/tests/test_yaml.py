@@ -378,7 +378,7 @@ class TestConvertWord(TestCase):
 
     def test_pictures_are_optional(self):
         del self.fakeWord["Images"]
-        assert convert_word(self.fakeWord).pictures == None
+        assert convert_word(self.fakeWord).pictures is None
 
     def test_includes_main_word(self):
         assert convert_word(
