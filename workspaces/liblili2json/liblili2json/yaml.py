@@ -31,7 +31,7 @@ def load_dictionary():
 
 def alternatives_from_yaml(raw_object, key):
     """
-    Returns alternative solutions based on the key, or an empty list if 
+    Returns alternative solutions based on the key, or an empty list if
     there are no alternative solutions specified
     """
     return (raw_object[key]
