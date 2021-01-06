@@ -3,9 +3,10 @@ from pathlib import Path
 from unittest.mock import patch
 from unittest import TestCase
 from pyfakefs.fake_filesystem_unittest import TestCase as FakeFsTestCase
-from liblili2json.types import Course, License, Module, Skill, Word
+from liblili2json.types import Course, License, Module, Skill, Word, Phrase
 from liblili2json.yaml import load_course, convert_license, load_module, \
-    load_modules, load_skills, load_skill, convert_words, convert_word
+    load_modules, load_skills, load_skill, convert_words, convert_word, \
+    convert_phrases, convert_phrase
 from . import fakes
 
 
@@ -345,7 +346,7 @@ class TestConvertWords(TestCase):
         assert convert_words([None]) == [convert_word.return_value]
 
     @patch('liblili2json.yaml.convert_word')
-    def test_returns_correct_value(self, convert_word):
+    def test_calls_convert_word_with_correct_values(self, convert_word):
         word1 = fakes.fake_value()
         word2 = fakes.fake_value()
         convert_words([word1, word2])
@@ -404,3 +405,71 @@ class TestConvertWord(TestCase):
     def test_alternative_translations_are_optional(self):
         del self.fakeWord["Also accepted"]
         assert len(convert_word(self.fakeWord).in_source_language) == 1
+
+
+class TestConvertPhrases(TestCase):
+    def test_returns_a_list(self):
+        assert type(convert_phrases([])) == list
+
+    @patch('liblili2json.yaml.convert_phrase')
+    def test_converts_every_word(self, convert_phrase):
+        raw_words = [None] * random.randint(0, 1000)
+        assert len(convert_phrases(raw_words)) == len(raw_words)
+
+    @patch('liblili2json.yaml.convert_phrase')
+    def test_returns_correct_value(self, convert_phrase):
+        convert_phrase.return_value = fakes.fake_value()
+        assert convert_phrases([None]) == [convert_phrase.return_value]
+
+    @patch('liblili2json.yaml.convert_phrase')
+    def test_calls_convert_phrases_with_correct_values(self, convert_phrase):
+        word1 = fakes.fake_value()
+        word2 = fakes.fake_value()
+        convert_phrases([word1, word2])
+        convert_phrase.assert_any_call(word1)
+        convert_phrase.assert_any_call(word2)
+
+
+class TestConvertPhrase(TestCase):
+    def setUp(self):
+        self.fakePhrase = {
+            "Phrase": fakes.fake_value(),
+            "Alternative versions": [
+                fakes.fake_value(),
+                fakes.fake_value(),
+            ],
+            "Translation": fakes.fake_value(),
+            "Alternative translations": [
+                fakes.fake_value(),
+                fakes.fake_value(),
+            ]
+        }
+
+    def test_returns_a_phrase_object(self):
+        assert type(convert_phrase(self.fakePhrase)) == Phrase
+
+    def test_includes_main_version(self):
+        assert convert_phrase(
+            self.fakePhrase).in_target_language[0] == self.fakePhrase["Phrase"]
+
+    def test_includes_alternative_versions(self):
+        result = convert_phrase(self.fakePhrase).in_target_language
+        assert self.fakePhrase["Alternative versions"][0] in result
+        assert self.fakePhrase["Alternative versions"][1] in result
+
+    def test_alternative_versions_are_optional(self):
+        del self.fakePhrase["Alternative versions"]
+        assert len(convert_phrase(self.fakePhrase).in_target_language) == 1
+
+    def test_includes_translation(self):
+        assert convert_phrase(
+            self.fakePhrase).in_source_language[0] == self.fakePhrase["Translation"]
+
+    def test_includes_alternative_translations(self):
+        result = convert_phrase(self.fakePhrase).in_source_language
+        assert self.fakePhrase["Alternative translations"][0] in result
+        assert self.fakePhrase["Alternative translations"][1] in result
+
+    def test_alternative_translations_are_optional(self):
+        del self.fakePhrase["Alternative translations"]
+        assert len(convert_phrase(self.fakePhrase).in_source_language) == 1
