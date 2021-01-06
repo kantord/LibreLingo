@@ -25,7 +25,7 @@ def convert_language(raw_language):
     )
 
 
-def load_dictionary():
+def load_dictionary(dummy):
     return []
 
 
