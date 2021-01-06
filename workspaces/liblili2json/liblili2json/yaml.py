@@ -5,7 +5,8 @@ try:
 except ImportError:
     from yaml import Loader
 
-from liblili2json.types import Course, Language, License, Module, Skill, Word
+from liblili2json.types import Course, Language, License, Module, Skill, \
+    Word, Phrase
 
 
 def load_yaml(path):
@@ -65,8 +66,23 @@ def convert_words(raw_words):
     return list(map(convert_word, raw_words))
 
 
-def convert_phrases():
-    pass
+def convert_phrase(raw_phrase):
+    """
+    Converts a YAML phrase definition into a Phrase() object
+    """
+    return Phrase(
+        in_target_language=solution_from_yaml(
+            raw_phrase, "Phrase", "Alternative versions"),
+        in_source_language=solution_from_yaml(
+            raw_phrase, "Translation", "Alternative translations"),
+    )
+
+
+def convert_phrases(raw_phrases):
+    """
+    Converts each YAML phrase definition into Phrase() objects
+    """
+    return list(map(convert_phrase, raw_phrases))
 
 
 def load_skill(path):
