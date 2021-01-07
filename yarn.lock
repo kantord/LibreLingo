@@ -2297,21 +2297,21 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@knapsack-pro/core@^3.1.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@knapsack-pro/core/-/core-3.1.0.tgz#7e55d8b8edd6aadf7d54778c556fcea9ff2a9cab"
-  integrity sha512-RND7pt6GzOZwyHAI3rO48MUGceUxaG69U0O37Yb818szgwzzfzSqR+5bTWyxRg2InfK9qgPgLHgy+b+PHcrW8A==
+"@knapsack-pro/core@^3.1.1":
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@knapsack-pro/core/-/core-3.1.1.tgz#fe6f8c8c970cf3b80cc5410ae22f66f3c899ccf2"
+  integrity sha512-yn5PrrM7lAXMr+fr44COOvszzy19ZWoKwD9toRQoZICARfaYGXnYxxBEzdoxkOKk3tJTcYyHGNLc7pn94VNmbg==
   dependencies:
-    axios "0.18.1"
-    axios-retry "^3.1.2"
+    axios "0.21.1"
+    axios-retry "^3.1.9"
     winston "^3.3.3"
 
-"@knapsack-pro/cypress@4.2.0":
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/@knapsack-pro/cypress/-/cypress-4.2.0.tgz#d903bce7322d02f66adfb33a870b995eaebacaab"
-  integrity sha512-0QXujC847Irt/mdQ9WnMOCM6etCOgyUvQNbWh85MNlfkgnisj+C+Q0rjGsDD2aVVrps1L4AEfPbCDKwuy+Gl4w==
+"@knapsack-pro/cypress@4.2.1":
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/@knapsack-pro/cypress/-/cypress-4.2.1.tgz#0eef46caf4c21c7c3fe198d1ef08a5eabdd6e37c"
+  integrity sha512-r2mdSTWj433GtoBwVFyP/bd1AzUxtY4Txr6H0qaUsBqEKWQ/YkEUQTk5mfQbeJeIl0ZbkTSKqQsRDu+VXqR9wg==
   dependencies:
-    "@knapsack-pro/core" "^3.1.0"
+    "@knapsack-pro/core" "^3.1.1"
     glob "^7.1.6"
     minimist "^1.2.5"
     uuid "^8.3.1"
@@ -3444,20 +3444,19 @@ aws4@^1.8.0:
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.9.1.tgz#7e33d8f7d449b3f673cd72deb9abdc552dbe528e"
   integrity sha512-wMHVg2EOHaMRxbzgFJ9gtjOOCrI80OHLG14rxi28XwOW8ux6IiEbRCGGGqCtdAIg4FQCbW20k9RsT4y3gJlFug==
 
-axios-retry@^3.1.2:
-  version "3.1.7"
-  resolved "https://registry.yarnpkg.com/axios-retry/-/axios-retry-3.1.7.tgz#600e234f88d38dd86e2e46d620ccace4ab03d3de"
-  integrity sha512-iF8yLLiS96MKaG4qSXhoDEpkZaA4XVs7FErWgIdYpy2RrVl+Hwc3JJ0lsFtPnL7ZAlE02Ocx56j/woxCh6iKHw==
+axios-retry@^3.1.9:
+  version "3.1.9"
+  resolved "https://registry.yarnpkg.com/axios-retry/-/axios-retry-3.1.9.tgz#6c30fc9aeb4519aebaec758b90ef56fa03fe72e8"
+  integrity sha512-NFCoNIHq8lYkJa6ku4m+V1837TP6lCa7n79Iuf8/AqATAHYB0ISaAS1eyIenDOfHOLtym34W65Sjke2xjg2fsA==
   dependencies:
     is-retry-allowed "^1.1.0"
 
-axios@0.18.1:
-  version "0.18.1"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-0.18.1.tgz#ff3f0de2e7b5d180e757ad98000f1081b87bcea3"
-  integrity sha512-0BfJq4NSfQXd+SkFdrvFbG7addhYSBA2mQwISr46pD6E5iqkWg02RAs8vyTT/j0RTnoYmeXauBuSv1qKwR179g==
+axios@0.21.1:
+  version "0.21.1"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.1.tgz#22563481962f4d6bde9a76d516ef0e5d3c09b2b8"
+  integrity sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==
   dependencies:
-    follow-redirects "1.5.10"
-    is-buffer "^2.0.2"
+    follow-redirects "^1.10.0"
 
 axios@^0.19.0:
   version "0.19.2"
@@ -7651,7 +7650,7 @@ is-buffer@^1.1.0, is-buffer@^1.1.5:
   resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-1.1.6.tgz#efaa2ea9daa0d7ab2ea13a97b2b8ad51fefbe8be"
   integrity sha512-NcdALwpXkTm5Zvvbk7owOUSvVvBKDgKP5/ewfXEznmQFfs4ZRmanOeKBTjRVjka3QFoN6XJ+9F3USqfHqTaU5w==
 
-is-buffer@^2.0.0, is-buffer@^2.0.2:
+is-buffer@^2.0.0:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-2.0.4.tgz#3e572f23c8411a5cfd9557c849e3665e0b290623"
   integrity sha512-Kq1rokWXOPXWuaMAqZiJW4XxsmD9zGx9q4aePabbn3qCRGedtH7Cm+zV8WETitMfu1wdh+Rvd6w5egwSngUX2A==
