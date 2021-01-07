@@ -2,7 +2,7 @@ import os
 import json
 import glob
 from liblili2json.yaml import load_course
-from liblili2json.export import export_course_data, export_course_skills
+from liblili2json.export import export_course
 
 
 def read_json_file(path):
@@ -16,8 +16,7 @@ def test_loaded_yaml_is_exported_to_correct_json(fs, snapshot):
     fs.add_real_directory(fixture_path)
     fs.create_dir("output")
     course = load_course(fixture_path)
-    export_course_data("./output", course)
-    export_course_skills("./output", course)
+    export_course("./output", course)
     files = glob.glob("./output/**/*")
     data = {
         fname: read_json_file(fname) for fname in files

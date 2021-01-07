@@ -1,4 +1,5 @@
 import pytest
+
 from unittest.mock import patch, call
 import json
 import os
@@ -6,7 +7,7 @@ import random
 from pyfakefs.fake_filesystem_unittest import TestCase as FakeFsTestCase
 from . import fakes
 from liblili2json.export import export_course_skills, export_skill, \
-    export_course_data
+    export_course_data, export_course
 from liblili2json.types import Module, Language
 
 
@@ -133,3 +134,20 @@ class TestExportCourseData(FakeFsTestCase):
             assert log.output[0] == \
                 "INFO:liblili2json:Writing course '{}' for '{}' speakers".format(
                     randomname1, randomname2)
+
+
+class TestExportCourse(FakeFsTestCase):
+    def setUp(self):
+        self.setUpPyfakefs()
+        self.export_path = fakes.path()
+
+    @patch('liblili2json.export.export_course_data')
+    def test_calls_export_course_data_with_correct_value(self, export_course_data):
+        export_course(self.export_path, fakes.course1)
+        export_course_data.assert_called_with(self.export_path, fakes.course1)
+
+    @patch('liblili2json.export.export_course_skills')
+    def test_calls_export_course_skills_with_correct_value(self, export_course_skills):
+        export_course(self.export_path, fakes.course1)
+        export_course_skills.assert_called_with(
+            self.export_path, fakes.course1)

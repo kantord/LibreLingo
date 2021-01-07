@@ -45,3 +45,11 @@ def export_course_data(export_path, course):
     Path(Path(export_path)).mkdir(parents=True, exist_ok=True)
     with open(Path(export_path) / "courseData.json", 'w', encoding='utf-8') as f:
         json.dump(course_data, f, ensure_ascii=False, indent=2)
+
+
+def export_course(export_path, course):
+    """
+        Writes the course to JSON files in the specified path.
+    """
+    export_course_data(export_path, course)
+    export_course_skills(export_path, course)
