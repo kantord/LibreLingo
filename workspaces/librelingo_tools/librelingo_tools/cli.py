@@ -12,7 +12,7 @@ def cli(input_path, output_path):
         Convert a YAML course into a JSON course.
     """
     course = load_course(input_path)
-    Path(output_path).mkdir(parents=True)
+    Path(output_path).mkdir(parents=True, exist_ok=True)
     export_course(output_path, course)
 
 
