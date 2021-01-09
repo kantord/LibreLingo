@@ -1,7 +1,7 @@
 import os
 import json
 import glob
-from liblili2json.yaml import load_course
+from liblili2json.yaml_loader import load_course
 from liblili2json.export import export_course
 
 

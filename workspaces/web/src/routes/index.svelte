@@ -46,6 +46,12 @@
                 </Translate>
               </Button>
 
+              <Button primary hidden href="course/french-from-english">
+                <Translate key="index.start_french_course">
+                  Start learning French
+                </Translate>
+              </Button>
+
               <Button primary href="about">
                 <Translate key="index.about_librelingo">
                   About LibreLingo

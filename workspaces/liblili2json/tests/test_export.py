@@ -8,7 +8,7 @@ from pyfakefs.fake_filesystem_unittest import TestCase as FakeFsTestCase
 from . import fakes
 from liblili2json.export import export_course_skills, export_skill, \
     export_course_data, export_course
-from liblili2json.types import Module, Language
+from liblili2json.data_types import Module, Language
 
 
 def get_fake_skill():
