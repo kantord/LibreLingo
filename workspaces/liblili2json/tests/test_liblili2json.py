@@ -9,8 +9,8 @@ from liblili2json.utils import get_dumb_opaque_id
 from liblili2json.utils import clean_word
 from liblili2json.dictionary import define_words_in_sentence
 from liblili2json.dictionary import define_word
-from liblili2json.types import Course
-from liblili2json.types import DictionaryItem
+from liblili2json.data_types import Course
+from liblili2json.data_types import DictionaryItem
 from . import fakes
 
 
