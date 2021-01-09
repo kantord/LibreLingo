@@ -11,11 +11,13 @@ pyfakefs = "^4.3.3"
 slugify = "^0.0.1"
 pyyaml = "^5.3.1"
 snapshottest = "^0.6.0"
+click = "^7.1.2"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.1.1"
 pytest-watch = "^4.2.0"
 pylint = "^2.6.0"
+pytest-mock = "^3.5.0"
 
 [build-system]
 requires = ["poetry>=0.12"]
