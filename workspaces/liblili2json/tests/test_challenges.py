@@ -9,7 +9,7 @@ from liblili2json.challenge_types import get_listening_challenge
 from liblili2json.challenge_types import get_chips_challenge
 from liblili2json.challenge_types import get_options_challenge
 from liblili2json.challenge_types import get_chips
-from liblili2json.types import Phrase
+from liblili2json.data_types import Phrase
 from . import fakes
 
 
