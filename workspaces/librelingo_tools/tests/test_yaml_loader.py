@@ -4,9 +4,9 @@ from pathlib import Path
 from unittest.mock import patch
 from unittest import TestCase
 from pyfakefs.fake_filesystem_unittest import TestCase as FakeFsTestCase
-from liblili2json.data_types import Course, License, Module, Skill, Word, Phrase, \
+from librelingo_tools.data_types import Course, License, Module, Skill, Word, Phrase, \
     Language
-from liblili2json.yaml_loader import load_course, convert_license, \
+from librelingo_tools.yaml_loader import load_course, convert_license, \
     load_module, load_modules, load_skills, load_skill, convert_words, \
     convert_word, convert_phrases, convert_phrase
 from . import fakes
@@ -75,11 +75,11 @@ class TestLoadCourseMeta(YamlImportTestCase):
 
     def set_up_patches(self):
         self.load_dictionary = self.create_patch(
-            "liblili2json.yaml_loader.load_dictionary")
+            "librelingo_tools.yaml_loader.load_dictionary")
         self.load_modules = self.create_patch(
-            "liblili2json.yaml_loader.load_modules")
+            "librelingo_tools.yaml_loader.load_modules")
         self.convert_license = self.create_patch(
-            "liblili2json.yaml_loader.convert_license")
+            "librelingo_tools.yaml_loader.convert_license")
 
     def call_function(self):
         self.create_fake_course_meta(self.fake_path, **{
@@ -239,7 +239,7 @@ class TestLoadModuleMeta(YamlImportTestCase):
 
     def set_up_patches(self):
         self.load_skills = self.create_patch(
-            "liblili2json.yaml_loader.load_skills")
+            "librelingo_tools.yaml_loader.load_skills")
 
     def call_function(self):
         self.fake_path = self.fake_path / "modules" / "foo"
@@ -265,36 +265,36 @@ class TestLoadModuleMeta(YamlImportTestCase):
 
 
 class LoadModulesTestCase(TestCase):
-    @ patch('liblili2json.yaml_loader.load_module')
+    @ patch('librelingo_tools.yaml_loader.load_module')
     def test_returns_correct_value(self, load_module):
         load_module.return_value = fakes.fake_value()
         assert load_modules("foo", ["bar"]) == [load_module.return_value]
 
-    @ patch('liblili2json.yaml_loader.load_module')
+    @ patch('librelingo_tools.yaml_loader.load_module')
     def test_handles_every_module(self, load_module):
         load_module.return_value = fakes.fake_value()
         assert load_modules("foo", ["bar", "baz"]) == [
             load_module.return_value] * 2
 
-    @ patch('liblili2json.yaml_loader.load_module')
+    @ patch('librelingo_tools.yaml_loader.load_module')
     def test_calls_load_modules_with_correct_arguments(self, load_module):
         load_modules("foo", ["bar"])
         load_module.assert_called_with(Path("foo/bar"))
 
 
 class TestLoadSkills(TestCase):
-    @ patch('liblili2json.yaml_loader.load_skill')
+    @ patch('librelingo_tools.yaml_loader.load_skill')
     def test_returns_correct_value(self, load_skill):
         load_skill.return_value = fakes.fake_value()
         assert load_skills("foo", ["bar"]) == [load_skill.return_value]
 
-    @ patch('liblili2json.yaml_loader.load_skill')
+    @ patch('librelingo_tools.yaml_loader.load_skill')
     def test_handles_every_module(self, load_skill):
         load_skill.return_value = fakes.fake_value()
         assert load_skills("foo", ["bar", "baz"]) == [
             load_skill.return_value] * 2
 
-    @ patch('liblili2json.yaml_loader.load_skill')
+    @ patch('librelingo_tools.yaml_loader.load_skill')
     def test_calls_load_skills_with_correct_arguments(self, load_skill):
         load_skills("foo", ["bar.yaml"])
         load_skill.assert_called_with(Path("foo/skills/bar.yaml"))
@@ -345,9 +345,9 @@ Mini-dictionary:
 
     def set_up_patches(self):
         self.convert_words = self.create_patch(
-            "liblili2json.yaml_loader.convert_words")
+            "librelingo_tools.yaml_loader.convert_words")
         self.convert_phrases = self.create_patch(
-            "liblili2json.yaml_loader.convert_phrases")
+            "librelingo_tools.yaml_loader.convert_phrases")
 
     def call_function(self):
         self.fake_path = self.fake_path / "skills"
@@ -391,17 +391,17 @@ class TestConvertWords(TestCase):
     def test_returns_a_list(self):
         assert type(convert_words([])) == list
 
-    @ patch('liblili2json.yaml_loader.convert_word')
+    @ patch('librelingo_tools.yaml_loader.convert_word')
     def test_converts_every_word(self, convert_word):
         raw_words = [None] * random.randint(0, 1000)
         assert len(convert_words(raw_words)) == len(raw_words)
 
-    @ patch('liblili2json.yaml_loader.convert_word')
+    @ patch('librelingo_tools.yaml_loader.convert_word')
     def test_returns_correct_value(self, convert_word):
         convert_word.return_value = fakes.fake_value()
         assert convert_words([None]) == [convert_word.return_value]
 
-    @ patch('liblili2json.yaml_loader.convert_word')
+    @ patch('librelingo_tools.yaml_loader.convert_word')
     def test_calls_convert_word_with_correct_values(self, convert_word):
         word1 = fakes.fake_value()
         word2 = fakes.fake_value()
@@ -467,17 +467,17 @@ class TestConvertPhrases(TestCase):
     def test_returns_a_list(self):
         assert type(convert_phrases([])) == list
 
-    @patch('liblili2json.yaml_loader.convert_phrase')
+    @patch('librelingo_tools.yaml_loader.convert_phrase')
     def test_converts_every_word(self, convert_phrase):
         raw_words = [None] * random.randint(0, 1000)
         assert len(convert_phrases(raw_words)) == len(raw_words)
 
-    @patch('liblili2json.yaml_loader.convert_phrase')
+    @patch('librelingo_tools.yaml_loader.convert_phrase')
     def test_returns_correct_value(self, convert_phrase):
         convert_phrase.return_value = fakes.fake_value()
         assert convert_phrases([None]) == [convert_phrase.return_value]
 
-    @patch('liblili2json.yaml_loader.convert_phrase')
+    @patch('librelingo_tools.yaml_loader.convert_phrase')
     def test_calls_convert_phrases_with_correct_values(self, convert_phrase):
         word1 = fakes.fake_value()
         word2 = fakes.fake_value()

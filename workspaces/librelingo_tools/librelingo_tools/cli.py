@@ -1,7 +1,7 @@
 from pathlib import Path
 import click
-from liblili2json.yaml_loader import load_course
-from liblili2json.export import export_course
+from librelingo_tools.yaml_loader import load_course
+from librelingo_tools.export import export_course
 
 
 @click.command()
