@@ -176,15 +176,14 @@ class DefineWordsInSentenceTest(TestCase):
 
     @patch('librelingo_tools.dictionary.define_word')
     def test_calls_define_word_the_correct_number_of_times(self, define_word):
-        define_words_in_sentence(fakes.course1, "foo bar baz", False) == []
+        define_words_in_sentence(fakes.course1, "foo bar baz", False)
         assert define_word.call_count == 3
 
     @patch('librelingo_tools.dictionary.define_word')
     def test_calls_define_word_with_the_correct_data(self, define_word):
         reverse = fakes.fake_value()
         fake_word = str(fakes.fake_value())
-        define_words_in_sentence(
-            fakes.course1, fake_word, reverse) == []
+        define_words_in_sentence(fakes.course1, fake_word, reverse)
         define_word.assert_called_with(fakes.course1, fake_word, reverse)
 
     @patch('librelingo_tools.dictionary.define_word')
