@@ -2,7 +2,7 @@
 Export LibreLingo courses in the JSON format expected by the web app
 """
 
-from .types import *
+from .data_types import *
 from .utils import *
 from .dictionary import *
 from .challenge_types import *
