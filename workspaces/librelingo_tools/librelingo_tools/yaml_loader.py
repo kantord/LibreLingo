@@ -5,7 +5,7 @@ try:
 except ImportError:
     from yaml import Loader
 
-from liblili2json.data_types import Course, Language, License, Module, Skill, \
+from librelingo_tools.data_types import Course, Language, License, Module, Skill, \
     Word, Phrase
 
 

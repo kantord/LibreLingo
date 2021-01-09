@@ -5,7 +5,7 @@ from slugify import slugify
 from .skills import get_skill_data
 from .course import get_course_data
 
-logger = logging.getLogger("liblili2json")
+logger = logging.getLogger("librelingo_tools")
 
 
 def export_course_skills(export_path, course):

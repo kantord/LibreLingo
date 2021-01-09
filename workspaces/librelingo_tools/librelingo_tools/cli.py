@@ -1,7 +1,7 @@
 from pathlib import Path
 import click
-from liblili2json.yaml_loader import load_course
-from liblili2json.export import export_course
+from librelingo_tools.yaml_loader import load_course
+from librelingo_tools.export import export_course
 
 
 @click.command()
@@ -12,7 +12,7 @@ def cli(input_path, output_path):
         Convert a YAML course into a JSON course.
     """
     course = load_course(input_path)
-    Path(output_path).mkdir(parents=True)
+    Path(output_path).mkdir(parents=True, exist_ok=True)
     export_course(output_path, course)
 
 
