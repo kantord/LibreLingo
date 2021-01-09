@@ -1,16 +1,16 @@
 from unittest.mock import patch
 from unittest import TestCase
-from liblili2json.course import get_course_data
-from liblili2json.skills import get_skill_data
-from liblili2json.utils import calculate_number_of_levels
-from liblili2json.challenges import get_word_challenges
-from liblili2json.challenges import get_phrase_challenges
-from liblili2json.utils import get_dumb_opaque_id
-from liblili2json.utils import clean_word
-from liblili2json.dictionary import define_words_in_sentence
-from liblili2json.dictionary import define_word
-from liblili2json.data_types import Course
-from liblili2json.data_types import DictionaryItem
+from librelingo_tools.course import get_course_data
+from librelingo_tools.skills import get_skill_data
+from librelingo_tools.utils import calculate_number_of_levels
+from librelingo_tools.challenges import get_word_challenges
+from librelingo_tools.challenges import get_phrase_challenges
+from librelingo_tools.utils import get_dumb_opaque_id
+from librelingo_tools.utils import clean_word
+from librelingo_tools.dictionary import define_words_in_sentence
+from librelingo_tools.dictionary import define_word
+from librelingo_tools.data_types import Course
+from librelingo_tools.data_types import DictionaryItem
 from . import fakes
 
 
@@ -122,26 +122,26 @@ class TestGetSkillData(TestCase):
             "challenges": []
         }
 
-    @patch('liblili2json.skills.calculate_number_of_levels')
+    @patch('librelingo_tools.skills.calculate_number_of_levels')
     def test_correct_number_of_levels(self, mock):
         FAKE_NUMBER = "fake number"
         mock.return_value = FAKE_NUMBER
         converted_skill = get_skill_data(fakes.emptySkill, fakes.course1)
         assert converted_skill["levels"] == FAKE_NUMBER
 
-    @patch('liblili2json.skills.calculate_number_of_levels')
+    @patch('librelingo_tools.skills.calculate_number_of_levels')
     def test_calculates_levels_correctly(self, mock):
         get_skill_data(fakes.skills[1], fakes.course1)
         mock.assert_called_with(4, 1)
 
-    @patch('liblili2json.skills.get_challenges_data')
+    @patch('librelingo_tools.skills.get_challenges_data')
     def test_correct_challenges(self, mock):
         FAKE_CHALLENGES = "fake challenges"
         mock.return_value = FAKE_CHALLENGES
         converted_skill = get_skill_data(fakes.skills[1], fakes.course1)
         assert converted_skill["challenges"] == FAKE_CHALLENGES
 
-    @patch('liblili2json.skills.get_challenges_data')
+    @patch('librelingo_tools.skills.get_challenges_data')
     def test_formats_challenges_correctly(self, mock):
         get_skill_data(fakes.skills[1], fakes.course1)
         mock.assert_called_with(fakes.skills[1], fakes.course1)
@@ -174,12 +174,12 @@ class DefineWordsInSentenceTest(TestCase):
     def test_empty_sentence(self):
         assert define_words_in_sentence(fakes.course1, "", False) == []
 
-    @patch('liblili2json.dictionary.define_word')
+    @patch('librelingo_tools.dictionary.define_word')
     def test_calls_define_word_the_correct_number_of_times(self, define_word):
         define_words_in_sentence(fakes.course1, "foo bar baz", False) == []
         assert define_word.call_count == 3
 
-    @patch('liblili2json.dictionary.define_word')
+    @patch('librelingo_tools.dictionary.define_word')
     def test_calls_define_word_with_the_correct_data(self, define_word):
         reverse = fakes.fake_value()
         fake_word = str(fakes.fake_value())
@@ -187,13 +187,13 @@ class DefineWordsInSentenceTest(TestCase):
             fakes.course1, fake_word, reverse) == []
         define_word.assert_called_with(fakes.course1, fake_word, reverse)
 
-    @patch('liblili2json.dictionary.define_word')
+    @patch('librelingo_tools.dictionary.define_word')
     def test_returns_correct_value(self, define_word):
         define_word.return_value = fakes.fake_value()
         assert define_words_in_sentence(
             fakes.course1, "foo", True) == [define_word.return_value]
 
-    @patch('liblili2json.dictionary.define_word')
+    @patch('librelingo_tools.dictionary.define_word')
     def test_defines_every_word(self, define_word):
         define_word.return_value = fakes.fake_value()
         assert define_words_in_sentence(

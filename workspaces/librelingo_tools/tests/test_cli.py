@@ -2,7 +2,7 @@ import os
 import random
 import pytest
 from click.testing import CliRunner
-from liblili2json.cli import cli
+from librelingo_tools.cli import cli
 from . import fakes
 
 
@@ -13,11 +13,11 @@ def inputs():
 
 @pytest.fixture
 def mocks(mocker):
-    load_course = mocker.patch("liblili2json.cli.load_course")
+    load_course = mocker.patch("librelingo_tools.cli.load_course")
     load_course.return_value = fakes.fake_value()
     return {
         "load_course": load_course,
-        "export_course": mocker.patch("liblili2json.cli.export_course")
+        "export_course": mocker.patch("librelingo_tools.cli.export_course")
     }
 
 
