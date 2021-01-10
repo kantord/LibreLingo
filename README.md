@@ -3,10 +3,13 @@
 [![BCH compliance](https://bettercodehub.com/edge/badge/kantord/LibreLingo?branch=master)](https://bettercodehub.com/)
 ![David](https://img.shields.io/david/kantord/LibreLingo)
 
- 
-<h1 align="center">LibreLingo</h1>
+<img align="right" src="/docs/branding/LibreLingo_Mascot/LightShadow/Turtle1_jetPack.svg" alt="" height="250" />
 
-<p align="center"><em>an experiment to create a community-driven language-learning platform</em></p>
+<p align="center">
+ <h1 align="center">LibreLingo</h1>
+ <em>an experiment to create a community-driven language-learning platform</em>
+</p>
+
 <p align="center">
   <a href="https://librelingo.app/">Start learning!</a> •
   <a href="https://riot.im/app/#/room/#librelingo:matrix.org">Chat with us!</a> •
@@ -15,7 +18,7 @@
   <a href="https://github.com/kantord/LibreLingo/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22">Good first issues!</a>
 </p>
 
-<p align="center"><img src="/docs/branding/LibreLingo_Mascot/LightShadow/Turtle1_jetPack.svg" alt="" height="250" /></p>
+<p align="center"></p>
 
 ## Project goal
 
