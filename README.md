@@ -21,7 +21,7 @@
 
 ## About LibreLingo
 
-LibreLingo's mission is to create a modern language-learning platform that is owned by the community of it's users. All source code is license under the AGPLv3 free software license, which guarantees end users the freedom to run, study, share, and modify the software. Course authors are encouraged to release their courses with free licenses.
+LibreLingo's mission is to create a modern language-learning platform that is owned by the community of it's users. All software is licensed under AGPLv3, which guarantees the freedom to run, study, share, and modify the software. Course authors are encouraged to release their courses with free licenses.
 
  If you want to know why I built LibreLingo, [I recommend reading my article](https://dev.to/kantord/why-i-built-librelingo-280o).
 
@@ -30,8 +30,14 @@ LibreLingo's mission is to create a modern language-learning platform that is ow
   <ol>
     <li>
       <a href="#about-librelingo">About LibreLingo</a>
+    </li>
+    <li>
       <a href="#screenshots">Screenshots</a>
-      <a href="#milestones">Milestones</a>
+    </li>
+    <li>
+     <a href="#milestones">Milestones</a>
+   </li>
+    <li>
       <a href="#become-a-contributor">Become a contributor</a>
     </li>
   </ol>
