@@ -41,9 +41,9 @@ class TestExportCourseSkills(FakeFsTestCase):
         ])
         export_course_skills(self.export_path, fake_course)
         export_skill.assert_has_calls([
-            call(self.export_path, fake_skill_1,  fake_course),
-            call(self.export_path, fake_skill_2,  fake_course),
-            call(self.export_path, fake_skill_3,  fake_course),
+            call(self.export_path, fake_skill_1,  fake_course, None),
+            call(self.export_path, fake_skill_2,  fake_course, None),
+            call(self.export_path, fake_skill_3,  fake_course, None),
         ], any_order=True)
 
 
@@ -144,10 +144,11 @@ class TestExportCourse(FakeFsTestCase):
     @patch('librelingo_tools.export.export_course_data')
     def test_calls_export_course_data_with_correct_value(self, export_course_data):
         export_course(self.export_path, fakes.course1)
-        export_course_data.assert_called_with(self.export_path, fakes.course1)
+        export_course_data.assert_called_with(self.export_path, fakes.course1,
+                                              None)
 
     @patch('librelingo_tools.export.export_course_skills')
     def test_calls_export_course_skills_with_correct_value(self, export_course_skills):
         export_course(self.export_path, fakes.course1)
         export_course_skills.assert_called_with(
-            self.export_path, fakes.course1)
+            self.export_path, fakes.course1, None)
