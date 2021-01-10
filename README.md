@@ -17,18 +17,25 @@
   <a href="https://github.com/sponsors/kantord">💵 Sponsor</a>
 </p>
 
-## Project goal
 
-My goal is to start a community-driven language-learning platform that gives its users and contributors a way to influence its future and adapt it to special requirements.
 
-To achieve that, I release all source code under the AGPLv3 free software license, which guarantees end users the freedom to run, study, share, and modify the software.
+## About LibreLingo
 
-In addition to licensing the software under a free software license, the course content will be decoupled from the software itself, and the development of AGPLv3 or public domain course content will be encouraged. This should allow course developers to retain the freedom to choose how they use their work.
+LibreLingo's mission is to create a modern language-learning platform that is owned by the community of it's users. All source code is license under the AGPLv3 free software license, which guarantees end users the freedom to run, study, share, and modify the software. Course authors are encouraged to release their courses with free licenses.
 
-Once course content is properly decoupled from the software, it should be possible to experiment with alternative ways of using course content: for example, the creation of audiobooks or print material.
+ If you want to know why I built LibreLingo, [I recommend reading my article](https://dev.to/kantord/why-i-built-librelingo-280o).
 
- If you want to learn more
-about LibreLingo's background, [I recommend reading my article](https://dev.to/kantord/why-i-built-librelingo-280o).
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-librelingo">About LibreLingo</a>
+      <a href="#screenshots">Screenshots</a>
+      <a href="#milestones">Milestones</a>
+      <a href="#become-a-contributor">Become a contributor</a>
+    </li>
+  </ol>
+</details>
 
 ## Screenshots
  
