@@ -32,7 +32,10 @@ LibreLingo's mission is to create a modern language-learning platform that is ow
       <a href="#about-librelingo">About LibreLingo</a>
     </li>
     <li>
-      <a href="#screenshots">Screenshots</a>
+      <a href="#platform">Platform</a>
+      <ul>
+        <li><a href="#web-app">Web app</a></li>
+      </ul>
     </li>
     <li>
      <a href="#milestones">Milestones</a>
@@ -43,13 +46,27 @@ LibreLingo's mission is to create a modern language-learning platform that is ow
   </ol>
 </details>
 
-## Screenshots
+## Platform
+
+### Web app
+
+The [LibreLingo web app](https://librelingo.app/) is a lightweight, interactive web app for learning
+foreign languages using LibreLingo courses.
+
+Features:
+* 🎯 practice using interactive exercises
+* 🗓️ spaced repetition
+* 💾 save and monitor progress
+* 🔁 synchronise progress across multiple devices
+* 📱 works on various devices such as phones, tablets and desktop computers
+
+#### Screenshots
  
 <p align="center">
-    <img src="/docs/screenshots/screenshot1.png" width="20%"></img> 
-    <img src="/docs/screenshots/screenshot2.png" width="20%"></img>   
-    <img src="/docs/screenshots/screenshot3.png" width="20%"></img> 
-    <img src="/docs/screenshots/screenshot4.png" width="20%"></img> 
+    <img src="/docs/screenshots/screenshot1.png" width="15%"></img> 
+    <img src="/docs/screenshots/screenshot2.png" width="15%"></img>   
+    <img src="/docs/screenshots/screenshot3.png" width="15%"></img> 
+    <img src="/docs/screenshots/screenshot4.png" width="15%"></img> 
 </p>
 
 ## Milestones
