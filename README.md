@@ -7,7 +7,7 @@
 
 <p align="center">
  <h1 align="center">LibreLingo</h1>
- <em>a community-owned language-learning platform</em>
+ <p align="right"><em>a community-owned language-learning platform</em></p>
  <h4 align="center">»<a href="https://librelingo.app/">&nbsp;Try&nbsp;LibreLingo&nbsp;now!&nbsp;</a>«</h4>
 </p>
 
