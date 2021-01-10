@@ -8,10 +8,10 @@
 <p align="center">
  <h1 align="center">LibreLingo</h1>
  <em>an experiment to create a community-driven language-learning platform</em>
+ <h4 align="center">»<a href="https://librelingo.app/">&nbsp;Try&nbsp;LibreLingo&nbsp;now!&nbsp;</a>«</h4>
 </p>
 
 <p align="center">
-  <a href="https://librelingo.app/">Start learning!</a> •
   <a href="https://riot.im/app/#/room/#librelingo:matrix.org">Chat with us!</a> •
   <a href="#become-a-contributor">Become a contributor!</a> •
   <a href="https://dev.to/kantord/why-i-built-librelingo-280o">Why I built LibreLingo</a> •
