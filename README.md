@@ -12,13 +12,10 @@
 </p>
 
 <p align="center">
-  <a href="https://riot.im/app/#/room/#librelingo:matrix.org">Chat with us!</a> •
-  <a href="#become-a-contributor">Become a contributor!</a> •
-  <a href="https://dev.to/kantord/why-i-built-librelingo-280o">Why I built LibreLingo</a> •
-  <a href="https://github.com/kantord/LibreLingo/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22">Good first issues!</a>
+  <a href="https://riot.im/app/#/room/#librelingo:matrix.org">💬 Chat</a> •
+  <a href="#become-a-contributor">👩‍💻 Contribute!</a> •
+  <a href="https://github.com/sponsors/kantord">💵 Sponsor</a>
 </p>
-
-<p align="center"></p>
 
 ## Project goal
 
