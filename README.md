@@ -35,6 +35,7 @@ LibreLingo's mission is to create a modern language-learning platform that is ow
       <a href="#platform">Platform</a>
       <ul>
         <li><a href="#web-app">Web app</a></li>
+        <li><a href="#librelingo-tools">librelingo-tools</a></li>
       </ul>
     </li>
     <li>
@@ -68,6 +69,47 @@ Features:
     <img src="/docs/screenshots/screenshot3.png" width="15%"></img> 
     <img src="/docs/screenshots/screenshot4.png" width="15%"></img> 
 </p>
+
+
+### librelingo-tools
+
+[librelingo-tools](https://pypi.org/project/librelingo-tools/) is a Python 🐍 package that contains modules that help
+working with LibreLingo courses.
+
+#### Setup
+[librelingo-tools](https://pypi.org/project/librelingo-tools/) can be installed using pip:
+
+```
+pip install librelingo-tools
+```
+
+#### Exporting courses to JSON
+[librelingo-tools](https://pypi.org/project/librelingo-tools/) has a command line program that can export YAML-based LibreLingo
+courses into the JSON format used by the web app.
+
+```
+Usage: cli.py [OPTIONS] INPUT_PATH OUTPUT_PATH
+
+  Convert a YAML course into a JSON course.
+
+Options:
+  --dry-run / --no-dry-run
+  --help                    Show this message and exit.
+```
+
+
+#### Loading courses in a Python program
+
+You can use librelingo-tools to load YAML-based LibreLingo courses in your
+Python program.
+
+```python
+from librelingo_tools import yaml_loader
+
+course = yaml_loader.load_course("./path/to/my/course")
+```
+
+`load_course` returns a [Course()](https://github.com/kantord/LibreLingo/blob/master/workspaces/librelingo_tools/librelingo_tools/data_types.py) object
 
 ## Milestones
 

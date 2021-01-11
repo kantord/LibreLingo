@@ -10,5 +10,6 @@ from .module import *
 from .course import *
 from .skills import *
 from .export import *
+from . import yaml_loader
 
-__version__ = '0.1.0'
+__version__ = '0.1.1'
