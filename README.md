@@ -103,6 +103,14 @@ Options:
 You can use librelingo-tools to load YAML-based LibreLingo courses in your
 Python program.
 
+```python
+from librelingo_tools import yaml_loader
+
+course = yaml_loader.load_course("./path/to/my/course")
+```
+
+`load_course` returns a [Course()](https://github.com/kantord/LibreLingo/blob/master/workspaces/librelingo_tools/librelingo_tools/data_types.py) object
+
 ## Milestones
 
 Here's a rough sketch of how  I imagine the milestones of this project:

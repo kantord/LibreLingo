@@ -10,7 +10,7 @@ from course.models import DictionaryItem
 from course.utils import clean_word
 from course.models import LICENSES
 
-import workspaces.librelingo_tools.librelingo_tools as librelingo_tools
+import librelingo_tools
 
 
 def opaqueId(obj, salt=""):
@@ -70,26 +70,26 @@ def generate_imageset(item):
 
 
 def convert_course(course):
-    return librelingo_tools.Course(
-        target_language=librelingo_tools.Language(
+    return librelingo_tools.data_types.Course(
+        target_language=librelingo_tools.data_types.Language(
             code=course.target_language_code,
             name=course.language_name,
         ),
-        source_language=librelingo_tools.Language(
+        source_language=librelingo_tools.data_types.Language(
             name=course.source_language_name,
             code=None,
         ),
         special_characters=course.special_characters.split(' '),
-        license=librelingo_tools.License(
+        license=librelingo_tools.data_types.License(
             name=course.license,
             full_name=LICENSES[course.license]["full_name"],
             link=LICENSES[course.license]["link"],),
-        modules=[librelingo_tools.Module(
+        modules=[librelingo_tools.data_types.Module(
             title=module.name,
             skills=[
-                librelingo_tools.Skill(
+                librelingo_tools.data_types.Skill(
                     name=skill.name,
-                    words=[librelingo_tools.Word(
+                    words=[librelingo_tools.data_types.Word(
                         in_target_language=(
                             [word.formInTargetLanguage] + list(map(
                                 lambda x: x.solution, word.alternativesolutionintargetlanguage_set.all()))
@@ -98,7 +98,7 @@ def convert_course(course):
                             lambda x: x.solution, word.alternativesolutioninsourcelanguage_set.all()))
                         ),
                         pictures=generate_imageset(word)) for word in skill.learnword_set.all()],
-                    phrases=[librelingo_tools.Phrase(
+                    phrases=[librelingo_tools.data_types.Phrase(
                         in_target_language=([sentence.formInTargetLanguage] + list(map(
                             lambda x: x.solution, sentence.alternativesolutionintargetlanguage_set.all()))
                         ),
@@ -113,7 +113,7 @@ def convert_course(course):
         ) for module in course.module_set.all()],
         dictionary=list(
             map(
-                lambda x: librelingo_tools.DictionaryItem(
+                lambda x: librelingo_tools.data_types.DictionaryItem(
                     word=x.word,
                     definition=x.definition,
                     reverse=(not x.reverse)
@@ -124,7 +124,8 @@ def convert_course(course):
 
 
 def export_course_data(export_path, course):
-    librelingo_tools.export_course_data(export_path, convert_course(course))
+    librelingo_tools.export.export_course_data(
+        export_path, convert_course(course))
 
 
 def define_word(course, word, reverse):
@@ -149,7 +150,7 @@ def define_words_in_sentence(course, sentence, reverse):
 
 
 def export_skill(export_path, skill, language_id, course):
-    librelingo_tools.export_skill(export_path, skill, course)
+    librelingo_tools.export.export_skill(export_path, skill, course)
 
 
 def export_course(course):
@@ -163,7 +164,7 @@ def export_course(course):
     audios_to_fetch = []
 
     converted_course = convert_course(course)
-    librelingo_tools.export_course_skills(export_path, converted_course)
+    librelingo_tools.export.export_course_skills(export_path, converted_course)
     for module in course.module_set.all():
         for skill in module.skill_set.all():
             print("Fetching audios for skill {}".format(str(skill)))
