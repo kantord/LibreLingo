@@ -1,13 +1,13 @@
 from pathlib import Path
 import random
 from collections import namedtuple
-from librelingo_tools import Course
-from librelingo_tools import Module
-from librelingo_tools import Skill
-from librelingo_tools import Phrase
-from librelingo_tools import Word
-from librelingo_tools import License
-from librelingo_tools import Language
+from librelingo_tools.data_types import Course
+from librelingo_tools.data_types import Module
+from librelingo_tools.data_types import Skill
+from librelingo_tools.data_types import Phrase
+from librelingo_tools.data_types import Word
+from librelingo_tools.data_types import License
+from librelingo_tools.data_types import Language
 
 
 challenge1 = "challenge1"
