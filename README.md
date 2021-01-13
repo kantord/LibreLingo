@@ -205,12 +205,19 @@ course = yaml_loader.load_course("./path/to/my/course")
 
 ## Become a contributor
 
+
+<table>
+  <tr>
+    <td>
+      <h3>🌍 UI translation</h3>
+      [See docs](https://librelingo.readthedocs.io/en/latest/translation/#translation)
+    </td>
+  </tr>
+</table>
+
+
 ### Contribute to course material
 If you are interested in contributing to course development, please fill the following form: https://danielkantor196881.typeform.com/to/V00Paz. The project is in a very early stage right now, so you might not be able to contribute right away. Your work will be released in this GitHub repository and you will show up as a contributor here.
-
-### UI translation
-
-[See docs](https://librelingo.readthedocs.io/en/latest/translation/#translation)
 
 ### Development and other forms of contribution
 
