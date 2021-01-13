@@ -168,42 +168,40 @@ course = yaml_loader.load_course("./path/to/my/course")
 
 ## Milestones
 
-Here's a rough sketch of how  I imagine the milestones of this project:
+<p align="center">
+  <table>
+    <thead>
+      <tr>
+        <td>
+        <h3>
+          Current focus
+        </h3>
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+        <p>
+          Make it possible to contribute to courses through GitHub
+        </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</p>
 
-### First demo
+* 🏁 Demo course content in Spanish for English speakers
+* 🏁 Some basic building blocks of course content implemented
+* 🏁 Developers can use course editor
+* 🏁 Basic theme/branding
+* 🏁 Course progress can be properly synchronised across devices
+* 🏁 Course editor can be accessed by all course contributors
+* 🏁 At least the basics of the Spanish course are ready
+* 🏁 Most of the course building blocks are implemented
+* 🏁 All of the basic building blocks of courses are implemented
+* 🏁 Spaced repetition implemented
 
-* ☑️ Demo course content in Spanish for English speakers
-* ☑️ Some basic building blocks of course content implemented
-* ☑️ Developers can use course editor
-* ☑️ Basic theme/branding
-
-### Alpha release
-
-* ☑️ Course progress can be properly synchronised across devices
-* ☑️ Course editor can be accessed by all course contributors
-* ☐ Statistics about course contributors are collected and published
-* ☑️ At least the basics of the Spanish course are ready
-* ☑️ Most of the course building blocks are implemented
-
-
-### Beta release
-
-* ☑️ All of the basic building blocks of courses are implemented
-* ☐ More advanced learning features (reading exercises)
-* ☑️ Spaced repetition implemented
-* ☐ Spanish course is stable and useful
-* ☐ Course editor publicly accessible 
-
-### Stable release(s)
-
-* ☐ Any user can build their own course
-* ☐ Users can suggest changes to course content
-* ☐ There's a marketplace for "unofficial" courses
-* ☐ Multiple stable courses available
-* ☐ Mobile apps available
-* ☐ Wiki features
-* ☐ Dictionary
-* ☐ Speaking exercises
 
 ## Become a contributor
 
