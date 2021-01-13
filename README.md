@@ -49,7 +49,19 @@ LibreLingo's mission is to create a modern language-learning platform that is ow
 
 ## Platform
 
+<table>
+<tbody>
+<thead>
+<tr>
+<td>
+ 
 ### Web app
+
+</td>
+</tr>
+</thead>
+<tr>
+<td>
 
 The [LibreLingo web app](https://librelingo.app/) is a lightweight, interactive web app for learning
 foreign languages using LibreLingo courses.
@@ -71,7 +83,41 @@ Features:
 </p>
 
 
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+</thead>
+<tr>
+<td>
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+
+<table>
+<tbody>
+<thead>
+<tr>
+<td>
+ 
+ 
 ### librelingo-tools
+ 
+</td>
+</tr>
+</thead>
+<tr>
+<td>
+
 
 [librelingo-tools](https://pypi.org/project/librelingo-tools/) is a Python 🐍 package that contains modules that help
 working with LibreLingo courses.
@@ -110,6 +156,15 @@ course = yaml_loader.load_course("./path/to/my/course")
 ```
 
 `load_course` returns a [Course()](https://github.com/kantord/LibreLingo/blob/master/workspaces/librelingo_tools/librelingo_tools/data_types.py) object
+
+</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
 
 ## Milestones
 
