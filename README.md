@@ -42,6 +42,12 @@ LibreLingo's mission is to create a modern language-learning platform that is ow
      <a href="#milestones">Milestones</a>
    </li>
     <li>
+     <a href="#attributions">Attributions</a>
+   </li>
+    <li>
+     <a href="#articles">Articles</a>
+   </li>
+    <li>
       <a href="#become-a-contributor">Become a contributor</a>
     </li>
   </ol>
@@ -205,17 +211,66 @@ course = yaml_loader.load_course("./path/to/my/course")
 
 ## Become a contributor
 
-### Contribute to course material
-If you are interested in contributing to course development, please fill the following form: https://danielkantor196881.typeform.com/to/V00Paz. The project is in a very early stage right now, so you might not be able to contribute right away. Your work will be released in this GitHub repository and you will show up as a contributor here.
 
-### UI translation
-
-[See docs](https://librelingo.readthedocs.io/en/latest/translation/#translation)
-
-### Development and other forms of contribution
-
-- [Getting started](https://github.com/kantord/LibreLingo/blob/master/docs/CONTRIBUTING.md)
-- [Development documentation is available on Read the Docs](https://librelingo.readthedocs.io/en/latest/)
+<table>
+  <tr>
+    <td>
+      <table>
+        <tr>
+          <td>
+            <h3>🌍 UI translation</h3>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <ul>
+              <li>
+                <a href="https://librelingo.readthedocs.io/en/latest/translation/#translation">🔗 Join the translation project on POEditor!</a>
+              </li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td>
+      <table>
+        <tr>
+          <td>
+            <h3>📖 Course content</h3>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <ul>
+              <li>Coming soon</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td>
+      <table>
+        <tr>
+          <td>
+                <h3>👩🏾‍💻 Development</h3>
+          </td>
+        </tr>
+        <tr>
+          <td>
+              <ul>
+                <li>
+                  <a href="https://github.com/kantord/LibreLingo/blob/master/docs/CONTRIBUTING.md">🌟 Getting started</a>
+                </li>
+                <li>
+                  <a href="https://librelingo.readthedocs.io/en/latest/">📜 Development documentation</a>
+                </li>
+              </ul>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
 
 You can help LibreLingo by testing it and submitting feature requests or bug reports: https://github.com/kantord/LibreLingo/issues/new. If you want to get in touch, you can use my contact details on [my GitHub profile](https://github.com/kantord).
 
@@ -225,17 +280,6 @@ There is a Matrix/FreeNode IRC channel `#LibreLingo`, instructions for joining:
 
 * Matrix: [`#LibreLingo`](https://riot.im/app/#/room/#librelingo:matrix.org) on `matrix.org`
 * IRC: connect to `irc.freenode.net` with your favourite client and join `#LibreLingo`
-
-## Tech stack
-
-​       | Web app/PWA   | Course editor |
---------| ------------- | ------------- |
-Frontend| Svelte        | Django Admin* |
-Backend | CouchDB       |               |
-
-\* Djando Admin might be replaced in the future
-
-Testing is done using Jest and Cypress. Other technology in use include: bulma, webpack, etc.
 
 ## Articles
 
@@ -248,7 +292,8 @@ This image shows a summary of the licensing of our dependencies:
 
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fkantord%2FLibreLingo.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fkantord%2FLibreLingo?ref=badge_large)
 
-### Mascot
+### Attributions
+#### Mascot
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Mascot images are released under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
 
