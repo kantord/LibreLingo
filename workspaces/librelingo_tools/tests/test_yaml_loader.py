@@ -1,5 +1,6 @@
 import os
 import random
+import pytest
 from pathlib import Path
 from unittest.mock import patch
 from unittest import TestCase
@@ -529,3 +530,50 @@ class TestConvertPhrase(TestCase):
     def test_alternative_translations_are_optional(self):
         del self.fakePhrase["Alternative translations"]
         assert len(convert_phrase(self.fakePhrase).in_source_language) == 1
+
+
+@patch('librelingo_tools.yaml_loader.load_yaml')
+def test_load_module_complains_about_an_empty_file(load_yaml):
+    randomPath = str(random.randint(0, 1000))
+    load_yaml.return_value = None
+    with pytest.raises(RuntimeError, match='Module file "{}/module.yaml" is empty or does not exist'.format(randomPath)):
+        load_module(randomPath)
+
+
+@patch('librelingo_tools.yaml_loader.load_yaml')
+def test_load_module_complains_missing_module_key(load_yaml):
+    randomPath = str(random.randint(0, 1000))
+    load_yaml.return_value = {}
+    expected_error = 'Module file "{}/module.yaml" needs to have a "Module" key'.format(
+        randomPath)
+    with pytest.raises(RuntimeError, match=expected_error):
+        load_module(randomPath)
+
+
+@patch('librelingo_tools.yaml_loader.load_yaml')
+def test_load_module_complains_missing_skills_key(load_yaml):
+    randomPath = str(random.randint(0, 1000))
+    load_yaml.return_value = {"Module": {}}
+    expected_error = 'Module file "{}/module.yaml" needs to have a "Skills" key'.format(
+        randomPath)
+    with pytest.raises(RuntimeError, match=expected_error):
+        load_module(randomPath)
+
+
+@patch('librelingo_tools.yaml_loader.load_yaml')
+def test_load_module_complains_missing_module_name(load_yaml):
+    randomPath = str(random.randint(0, 1000))
+    load_yaml.return_value = {"Module": {}, "Skills": []}
+    expected_error = 'Module file "{}/module.yaml" needs to have module name'.format(
+        randomPath)
+    with pytest.raises(RuntimeError, match=expected_error):
+        load_module(randomPath)
+
+
+@patch('librelingo_tools.yaml_loader.load_yaml')
+def test_load_skills_complains_missing_skills(load_yaml):
+    randomPath = str(random.randint(0, 1000))
+    expected_error = 'Module file "{}/module.yaml" needs to have a list of skills'.format(
+        randomPath)
+    with pytest.raises(RuntimeError, match=expected_error):
+        load_skills(randomPath, skills=None)
