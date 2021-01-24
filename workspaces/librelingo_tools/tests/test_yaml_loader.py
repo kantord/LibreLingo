@@ -154,10 +154,10 @@ def test_load_course_output_matches_value(fs):
     assert result.license == License(name='CC BY 3.0', full_name='CC BY 3.0',
                                      link='https://www.example.com/license')
     assert result.dictionary == [
-        DictionaryItem("the man", ["l'homme"], False),
-        DictionaryItem("l'homme", ["the man"], True),
-        DictionaryItem("the woman", ["la femme"], False),
-        DictionaryItem("la femme", ["the woman"], True),
+        DictionaryItem("the man", "l'homme", False),
+        DictionaryItem("l'homme", "the man", True),
+        DictionaryItem("the woman", "la femme", False),
+        DictionaryItem("la femme", "the woman", True),
     ]
     assert len(result.modules) == 1
     assert result.modules[0].title == "Basics"
@@ -574,7 +574,7 @@ def test_load_dictionary_includes_word_from_new_word(module_with_word):
     _, in_source_language, in_target_language = module_with_word
     dict_item = DictionaryItem(
         word=in_source_language[0],
-        definition=in_target_language,
+        definition=in_target_language[0],
         reverse=False
     )
     assert dict_item in load_dictionary([module_with_word[0]])
@@ -584,7 +584,7 @@ def test_load_dictionary_includes_reverse_word_from_new_word(module_with_word):
     _, in_source_language, in_target_language = module_with_word
     dict_item = DictionaryItem(
         word=in_target_language[0],
-        definition=in_source_language,
+        definition=in_source_language[0],
         reverse=True
     )
     assert dict_item in load_dictionary([module_with_word[0]])
@@ -620,6 +620,10 @@ def test_load_dictionary_includes_duplicate_words_only_once(module_with_word):
     assert len(load_dictionary([module_with_word[0], new_module])) == 2
 
 
+def test_load_dictionary_has_a_single_string_definition(module_with_word):
+    assert type(load_dictionary([module_with_word[0]])[0].definition) == str
+
+
 def test_load_dictionary_includes_duplicate_words_includes_multiple_definitions(module_with_word):
     random_new_word = get_fake_word()[0]
     existing_word = module_with_word[0].skills[0].words[0]
@@ -633,7 +637,150 @@ def test_load_dictionary_includes_duplicate_words_includes_multiple_definitions(
             duplicate_word
         ], [], [])
     ])
-    assert set(load_dictionary([module_with_word[0], new_module])[0].definition) == \
-        set(
-        random_new_word.in_target_language +
-        existing_word.in_target_language)
+    definition = load_dictionary([module_with_word[0], new_module])[
+        0].definition
+    assert random_new_word.in_target_language[0] in definition and \
+        existing_word.in_target_language[0] in definition
+
+
+@patch('librelingo_tools.yaml_loader.load_yaml')
+def test_load_module_complains_about_an_empty_file(load_yaml):
+    randomPath = str(random.randint(0, 1000))
+    load_yaml.return_value = None
+    with pytest.raises(
+        RuntimeError,
+        match='Module file "{}/module.yaml" is empty or does not exist'
+            .format(randomPath)):
+        load_module(randomPath)
+
+
+@patch('librelingo_tools.yaml_loader.load_yaml')
+def test_load_module_complains_missing_module_key(load_yaml):
+    randomPath = str(random.randint(0, 1000))
+    load_yaml.return_value = {}
+    expected_error = 'Module file "{}/module.yaml" needs to have a "Module" key'.format(
+        randomPath)
+    with pytest.raises(RuntimeError, match=expected_error):
+        load_module(randomPath)
+
+
+@patch('librelingo_tools.yaml_loader.load_yaml')
+def test_load_module_complains_missing_skills_key(load_yaml):
+    randomPath = str(random.randint(0, 1000))
+    load_yaml.return_value = {"Module": {}}
+    expected_error = 'Module file "{}/module.yaml" needs to have a "Skills" key'.format(
+        randomPath)
+    with pytest.raises(RuntimeError, match=expected_error):
+        load_module(randomPath)
+
+
+@patch('librelingo_tools.yaml_loader.load_yaml')
+def test_load_module_complains_missing_module_name(load_yaml):
+    randomPath = str(random.randint(0, 1000))
+    load_yaml.return_value = {"Module": {}, "Skills": []}
+    expected_error = 'Module file "{}/module.yaml" needs to have module name'.format(
+        randomPath)
+    with pytest.raises(RuntimeError, match=expected_error):
+        load_module(randomPath)
+
+
+@patch('librelingo_tools.yaml_loader.load_yaml')
+def test_load_skills_complains_missing_skills(load_yaml):
+    randomPath = str(random.randint(0, 1000))
+    expected_error = 'Module file "{}/module.yaml" needs to have a list of skills'.format(
+        randomPath)
+    with pytest.raises(RuntimeError, match=expected_error):
+        load_skills(randomPath, skills=None)
+
+
+@patch('librelingo_tools.yaml_loader.load_yaml')
+def test_load_skill_complains_about_an_empty_file(load_yaml):
+    randomPath = str(random.randint(0, 1000))
+    load_yaml.return_value = None
+    with pytest.raises(RuntimeError, match='Skill file "{}" is empty or does not exist'.format(randomPath)):
+        load_skill(randomPath)
+
+
+@patch('librelingo_tools.yaml_loader.load_yaml')
+def test_load_skill_complains_missing_skills_key(load_yaml):
+    randomPath = str(random.randint(0, 1000))
+    load_yaml.return_value = {}
+    expected_error = 'Skill file "{}" needs to have a "Skill" key'.format(
+        randomPath)
+    with pytest.raises(RuntimeError, match=expected_error):
+        load_skill(randomPath)
+
+
+@patch('librelingo_tools.yaml_loader.load_yaml')
+def test_load_skill_complains_missing_new_words_key(load_yaml):
+    randomPath = str(random.randint(0, 1000))
+    load_yaml.return_value = {"Skill": []}
+    expected_error = 'Skill file "{}" needs to have a "New words" key'.format(
+        randomPath)
+    with pytest.raises(RuntimeError, match=expected_error):
+        load_skill(randomPath)
+
+
+@patch('librelingo_tools.yaml_loader.load_yaml')
+def test_load_skill_complains_missing_skill_name(load_yaml):
+    randomPath = str(random.randint(0, 1000))
+    load_yaml.return_value = {"Skill": {}, "New words": [], "Phrases": []}
+    expected_error = 'Skill file "{}" needs to have skill name'.format(
+        randomPath)
+    with pytest.raises(RuntimeError, match=expected_error):
+        load_skill(randomPath)
+
+
+@patch('librelingo_tools.yaml_loader.load_yaml')
+def test_load_skill_complains_missing_skill_id(load_yaml):
+    randomPath = str(random.randint(0, 1000))
+    load_yaml.return_value = {
+        "Skill": {"Name": "asd"}, "New words": [], "Phrases": []}
+    expected_error = 'Skill file "{}" needs to have skill id'.format(
+        randomPath)
+    with pytest.raises(RuntimeError, match=expected_error):
+        load_skill(randomPath)
+
+
+@patch('librelingo_tools.yaml_loader.load_yaml')
+def test_load_skill_doesnt_fail_without_thumnails(load_yaml):
+    randomPath = str(random.randint(0, 1000))
+    load_yaml.return_value = {
+        "Skill": {"Name": "asd", "Id": "4234234"}, "New words": [], "Phrases": []}
+    load_skill(randomPath)
+
+
+@patch('librelingo_tools.yaml_loader.load_yaml')
+def test_load_skill_complains_about_invalid_phrase(load_yaml):
+    randomPath = str(random.randint(0, 1000))
+    load_yaml.return_value = {
+        "Skill": {"Name": "asd", "Id": 32423423}, "New words": [], "Phrases": [
+            ""
+        ]}
+    expected_error = 'Skill file "{}" has an invalid phrase'.format(
+        randomPath)
+    with pytest.raises(RuntimeError, match=expected_error):
+        load_skill(randomPath)
+
+
+@patch('librelingo_tools.yaml_loader.load_yaml')
+def test_load_skill_complains_about_invalid_word(load_yaml):
+    randomPath = str(random.randint(0, 1000))
+    load_yaml.return_value = {
+        "Skill": {"Name": "asd", "Id": 32423423}, "Phrases": [], "New words": [
+            ""
+        ]}
+    expected_error = 'Skill file "{}" has an invalid word'.format(
+        randomPath)
+    with pytest.raises(RuntimeError, match=expected_error):
+        load_skill(randomPath)
+
+
+def test_convert_phrase_complains_about_missing_translation():
+    randomPhrase = str(random.randint(0, 1000))
+    expected_error = 'Phrase "{}" needs to have a "Translation".'.format(
+        randomPhrase)
+    with pytest.raises(RuntimeError, match=expected_error):
+        convert_phrase({
+            "Phrase": randomPhrase
+        })

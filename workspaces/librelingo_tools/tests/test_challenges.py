@@ -120,7 +120,7 @@ class TestGetCardsChallenge(TestCase):
             "meaningInSourceLanguage": "foo",
             "priority": 0,
             'group': 'aab69500f014',
-            'pictures': ['foo', 'bar', 'baz']
+            'pictures': ['foo.jpg', 'bar.jpg', 'baz.jpg']
         }
 
     def test_returns_correct_value2(self):
@@ -132,7 +132,7 @@ class TestGetCardsChallenge(TestCase):
             "meaningInSourceLanguage": "apple",
             "priority": 0,
             'group': '9dbe235cb2d6',
-            'pictures': ['1', '2', '3']
+            'pictures': ['1.jpg', '2.jpg', '3.jpg']
         }
 
 
@@ -166,7 +166,7 @@ class TestGetShortInputChallenge(TestCase):
         assert challenge == {
             'id': '749e7c734898',
             "type": "shortInput",
-            'pictures': ['foo', 'bar', 'baz'],
+            'pictures': ['foo.jpg', 'bar.jpg', 'baz.jpg'],
             "formInTargetLanguage": ["foous"],
             'phrase': [{'word': 'foo'}],
             "priority": 1,
@@ -178,7 +178,7 @@ class TestGetShortInputChallenge(TestCase):
         assert challenge == {
             'id': '5f1b4778039c',
             "type": "shortInput",
-            'pictures': ['1', '2', '3'],
+            'pictures': ['1.jpg', '2.jpg', '3.jpg'],
             "formInTargetLanguage": ["apfel"],
             'phrase': [{'word': 'apple'}],
             "priority": 1,
