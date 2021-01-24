@@ -6,6 +6,8 @@ verify_ssl = true
 [dev-packages]
 autopep8 = "*"
 rope = "*"
+mkdocs = "*"
+mkdocs-material = "*"
 
 [packages]
 coverage = "==5.2.1"

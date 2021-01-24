@@ -1,9 +1,6 @@
-site_name: LibreLingo Dev Docs
+site_name: LibreLingo Documentation
 repo_url: https://github.com/kantord/LibreLingo
 theme:
-    name: readthedocs
-    highlightjs: true
-    hljs_languages:
-        - python
-        - bash
-        - javascript
+    name: material
+    features:
+        - navigation.instant
