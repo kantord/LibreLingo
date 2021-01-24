@@ -18,7 +18,9 @@ def get_listening_challenge(source, course):
 def get_short_input_challenge(source, course):
     return {
         "type": "shortInput",
-        'pictures': source.pictures,
+        'pictures':
+            [pic + ".jpg" for pic in source.pictures] if source.pictures
+            else None,
         "formInTargetLanguage": source.in_target_language,
         "phrase": define_words_in_sentence(course, source.in_source_language[0], reverse=False),
         "id": get_dumb_opaque_id("Word", source, "shortInput"),
@@ -30,7 +32,9 @@ def get_short_input_challenge(source, course):
 def get_cards_challenge(word, _):
     return {
         "type": "cards",
-        'pictures': word.pictures,
+        'pictures':
+            [pic + ".jpg" for pic in word.pictures] if word.pictures
+            else None,
         "formInTargetLanguage": word.in_target_language[0],
         "meaningInSourceLanguage": word.in_source_language[0],
         "id": get_dumb_opaque_id("Word", word, "cards"),
