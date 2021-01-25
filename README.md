@@ -225,7 +225,7 @@ course = yaml_loader.load_course("./path/to/my/course")
           <td>
             <ul>
               <li>
-                <a href="https://librelingo.readthedocs.io/en/latest/translation/#translation">🔗 POEditor translation project!</a>
+                <a href="https://poeditor.com/join/project?hash=jKiKfen2Ye">🔗 POEditor translation project!</a>
               </li>
               <li></li>
             </ul>
