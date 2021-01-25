@@ -130,6 +130,16 @@ Mini-dictionary:
     - L'homme: the man
 ```
 
+### Creating new skills
+
+Creating new skills is a matter of creating their corresponding YAML file.
+That being said, there are a couple things to keep in mind:
+
+- Skills should have a unique `Id`. Such identifiers can be generated using
+  [this website]().
+- Before skills will actually show up in the web app, they need to be added to
+  a module. See the section below.
+
 ## Editing modules
 
 Modules are simply groups of skills. Their YAML files are quite straightforward.
@@ -145,4 +155,8 @@ Skills:
 ```
 
 Keep in mind that the order in which the skills appear in this YAML file is
+the order they are meant to appear in the web app as well.
+the order they are meant to appear in the web app as well.
+the order they are meant to appear in the web app as well.
+the order they are meant to appear in the web app as well.
 the order they are meant to appear in the web app as well.
