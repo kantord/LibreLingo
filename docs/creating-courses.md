@@ -156,3 +156,28 @@ Skills:
 
 Keep in mind that the order in which the skills appear in this YAML file is
 the order they are meant to appear in the web app as well.
+
+### Creating new modules
+
+As with creating new skills, creating new modules is also mainly about creating
+their corresponding YAML file. You have to keep in mind that the module will
+only show up in the web app, if it's also listed in the course's
+`course.yaml` file. Here's how you'd add it:
+
+```diff
+Course:
+  Language:
+    Name: French
+    IETF BCP 47: fr
+  For speakers of:
+    Name: English
+    IETF BCP 47: en
+  License:
+    Name: CC BY 3.0
+    Short name: CC BY 3.0
+    Link: https://creativecommons.org/licenses/by/3.0/
+
+Modules:
+  - basics/
++ - animals/
+```
