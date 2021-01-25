@@ -243,7 +243,7 @@ course = yaml_loader.load_course("./path/to/my/course")
         <tr>
           <td>
             <ul>
-              <li>Coming soon</li>
+              <li><a href="https://github.com/kantord/LibreLingo/tree/master/docs/courses">Getting started</a></li>
               <li></li>
             </ul>
           </td>
