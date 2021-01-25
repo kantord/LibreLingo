@@ -94,13 +94,6 @@
                   Caroline Delesalle
                 </a>
               </h3>
-              <p>
-                <a
-                  href="https://github.com/kantord/LibreLingo/issues/367"
-                  class="link">
-                  Want to help naming it?
-                </a>
-              </p>
             </div>
           </div>
         </Column>
