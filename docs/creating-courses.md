@@ -27,7 +27,6 @@ guides:
 - [Creating new files on GitHub](https://docs.github.com/en/github/managing-files-in-a-repository/creating-new-files)
 - [Editing files on GitHub](https://docs.github.com/en/github/managing-files-in-a-repository/editing-files-in-another-users-repository)
 
-
 ## Editing skills
 
 If you are contributing to existing courses, the thing create you are most likely
@@ -82,23 +81,23 @@ Mini-dictionary:
   French:
     - dit: says
     - bonjour:
-      - hello
-      - hi
+        - hello
+        - hi
     - L'homme: the man
 
   English:
     - says: dit
     - hello:
-      - bonjour
-      - salut
+        - bonjour
+        - salut
 ```
 
 While the meaning of this file should be relatively straight-forward, here's
 a couple things to keep in mind:
 
-* `Skill:`
-	* `Id:` never change this value. This value identifies the skill uniquely, thus changing it will effectively create a new skill and delete the old one.
-	* `Thumbnails:` these thumbnails can be used to illustrate the skill on the course summary page
+- `Skill:`
+  - `Id:` never change this value. This value identifies the skill uniquely, thus changing it will effectively create a new skill and delete the old one.
+  - `Thumbnails:` these thumbnails can be used to illustrate the skill on the course summary page
 
 ### By example
 
@@ -130,3 +129,20 @@ Mini-dictionary:
       - hi
     - L'homme: the man
 ```
+
+## Editing modules
+
+Modules are simply groups of skills. Their YAML files are quite straightforward.
+
+See `courses/french-from-english/basics/module.yaml` from the example above:
+
+```
+Module:
+  Name: Basics
+
+Skills:
+  - hello.yaml
+```
+
+Keep in mind that the order in which the skills appear in this YAML file is
+the order they are meant to appear in the web app as well.
