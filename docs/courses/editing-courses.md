@@ -29,7 +29,7 @@ guides:
 
 ## Editing skills
 
-If you are contributing to existing courses, the thing create you are most likely
+If you are contributing to existing courses, the thing you are most likely
 to do is edit existing skills.
 
 Skills are written as YAML files with a specific structure. From our example
@@ -38,7 +38,7 @@ above, the YAML file corresponding to the "hello" skill would be
 
 The structure of `hello.yaml` is as follows:
 
-```
+```yaml
 Skill:
   Id: 33bfee7d-de74-4362-bf15-ce165add2dc8
   Name: Hello
@@ -136,7 +136,7 @@ Creating new skills is a matter of creating their corresponding YAML file.
 That being said, there are a couple things to keep in mind:
 
 - Skills should have a unique `Id`. Such identifiers can be generated using
-  [this website]().
+  [this website](https://www.uuidgenerator.net/version4).
 - Before skills will actually show up in the web app, they need to be added to
   a module. See the section below.
 
@@ -146,7 +146,7 @@ Modules are simply groups of skills. Their YAML files are quite straightforward.
 
 See `courses/french-from-english/basics/module.yaml` from the example above:
 
-```
+```yaml
 Module:
   Name: Basics
 

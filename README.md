@@ -21,7 +21,7 @@
 
 ## About LibreLingo
 
-LibreLingo's mission is to create a modern language-learning platform that is owned by the community of it's users. All software is licensed under AGPLv3, which guarantees the freedom to run, study, share, and modify the software. Course authors are encouraged to release their courses with free licenses.
+LibreLingo's mission is to create a modern language-learning platform that is owned by the community of its users. All software is licensed under AGPLv3, which guarantees the freedom to run, study, share, and modify the software. Course authors are encouraged to release their courses with free licenses.
 
  If you want to know why I built LibreLingo, [I recommend reading my article](https://dev.to/kantord/why-i-built-librelingo-280o). If you agree with LibreLingo's mission, [consider helping to build and maintain it](#become-a-contributor), and [please consider making a monetary contribution](https://github.com/sponsors/kantord).
 
@@ -131,7 +131,7 @@ working with LibreLingo courses.
 #### Setup
 [librelingo-tools](https://pypi.org/project/librelingo-tools/) can be installed using pip:
 
-```
+```sh
 pip install librelingo-tools
 ```
 
