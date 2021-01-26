@@ -1,6 +1,6 @@
 # Development
 
-## Why does this project exits?
+## Why does this project exist?
 This project exists to create a beginner-friendly, community-oriented,
 free software licensed language learning application. If you want to learn more
 about LibreLingo's background, [I recommend reading my article](https://dev.to/kantord/why-i-built-librelingo-280o).
@@ -9,13 +9,13 @@ about LibreLingo's background, [I recommend reading my article](https://dev.to/k
 
 Clone the repository:
 
-```
+```sh
 git clone git@github.com:kantord/LibreLingo.git
 ```
 
 Move into the repo directory:
 
-```
+```sh
 cd LibreLingo
 ```
 
@@ -23,13 +23,13 @@ cd LibreLingo
 
 Install dependencies:
 
-```
+```sh
 yarn
 ```
 
 Start the development server:
 
-```
+```sh
 yarn web dev
 ```
 
@@ -41,7 +41,7 @@ Make sure you have `pipenv` installed.
 
 Install dependencies using `pipenv`:
 
-```
+```sh
 pipenv install
 ```
 
@@ -54,31 +54,31 @@ DEBUG=true
 
 You can now drop into a Pipenv shell so that you can make use of the dependencies you installed.
 
-```
+```sh
 pipenv shell
 ```
 
 To be able to run the course editor locally, first we have to install migrations in the local database:
 
-```
+```sh
 python manage.py migrate
 ```
 
 On OSX, you will have to specifically use python3:
 
-```
+```sh
 python3 manage.py migrate
 ```
 
 You are able to run the course editor now, but you will need to create a user to actually log in into the interface. Let's do it:
 
-```
+```sh
 python manage.py createsuperuser
 ```
 
 Now you should be able to launch the course editor server using:
 
-```
+```sh
 python manage.py runserver
 ```
 
@@ -88,7 +88,7 @@ Open the course editor on [https://localhost:8000/admin](https://localhost:8000/
 
 If you've set up the course editor locally, you can load production course data into your local server using:
 
-```
+```sh
 python manage.py loaddata dumps/courseData.json
 ```
 
@@ -98,7 +98,7 @@ LibreLingo's frontend is a static site, therefore you can simply deploy it using
 
 To generate the static files (assuming that you have set up a working development mode), you just have to export them using:
 
-```
+```sh
 yarn export
 ```
 
@@ -110,7 +110,7 @@ See Sapper's documentation for more detail: [https://sapper.svelte.dev/docs#Expo
 
 The course editor is in a very early stage, and is only usable by developers. Since it's not publicly hosted yet, you can only use it for testing purposes.
 
-The course editor is implemented as a django project in the `course_editor` folder.
+The course editor is implemented as a Django project in the `course_editor` folder.
 
 If you want to set up your course editor with real data, you can find a database dump here: `src/courses/spanish-from-english/courseData.json`
 

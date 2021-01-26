@@ -14,7 +14,7 @@ are organized in a specific directory structure.
 
 Before creating a new course, it's recommended that you first contribute to
 existing courses. [Learn how to edit or create courses](editing-courses.md). In order to create a
-new course and get it published, you'll probably need some technical assitance
+new course and get it published, you'll probably need some technical assistance
 as at this stage, several things might not be automated.
 
 You can start off by creating your pull request. I'll get to help with the
@@ -25,4 +25,4 @@ pull requests as soon as possible.
 Currently LibreLingo doesn't have enough features to support teaching new
 alphabets. Solving this is a priority, but will take time. Technically in most
 cases, language pairs that use the same alphabet (for example Ukranian for
-Russian spakers) should work just fine, but it hasn't tested yet.
+Russian spakers) should work just fine, but it hasn't been tested yet.
