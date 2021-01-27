@@ -304,7 +304,7 @@ The mascot is designed by [@almostdesigner](https://github.com/almostdesigner).
 ## Contributors ✨
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-48-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-49-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
@@ -374,6 +374,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/ciampix"><img src="https://avatars2.githubusercontent.com/u/372887?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Marco Ciampa</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/issues?q=author%3Aciampix" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://blog.dc7ia.eu"><img src="https://avatars.githubusercontent.com/u/26351852?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Joshua &#124; DC7IA</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/issues?q=author%3ADC7IA" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://reyzadren.neocities.org/"><img src="https://avatars.githubusercontent.com/u/38787026?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Reyzadren</b></sub></a><br /><a href="#ideas-Reyzadren" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/saeub"><img src="https://avatars.githubusercontent.com/u/38892775?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Andreas</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/commits?author=saeub" title="Documentation">📖</a></td>
   </tr>
 </table>
 
