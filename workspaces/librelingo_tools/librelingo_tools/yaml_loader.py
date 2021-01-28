@@ -86,17 +86,36 @@ def convert_phrases(raw_phrases):
 
 
 def load_skill(path):
-    data = load_yaml(path)
-    skill = data["Skill"]
-    words = data["New words"]
-    phrases = data["Phrases"]
+    try:
+        data = load_yaml(path)
+        skill = data["Skill"]
+        words = data["New words"]
+        phrases = data["Phrases"]
+    except TypeError:
+        raise RuntimeError(
+            'Skill file "{}" is empty or does not exist'.format(path))
+    except KeyError as error:
+        raise RuntimeError(
+            'Skill file "{}" needs to have a "{}" key'.format(path, error.args[0]))
+
+    try:
+        name = skill["Name"]
+    except Exception:
+        raise RuntimeError(
+            'Skill file "{}" needs to have skill name'.format(path))
+
+    try:
+        skill_id = skill["Id"]
+    except Exception:
+        raise RuntimeError(
+            'Skill file "{}" needs to have skill id'.format(path))
 
     return Skill(
-        name=skill["Name"],
-        id=skill["Id"],
+        name=name,
+        id=skill_id,
         words=convert_words(words),
         phrases=convert_phrases(phrases),
-        image_set=skill["Thumbnails"]
+        image_set=skill["Thumbnails"] if "Thumbnails" in skill else []
     )
 
 
@@ -104,19 +123,37 @@ def load_skills(path, skills):
     """
     Load each YAML skill specified in the list
     """
-    return [load_skill(Path(path) / "skills" / skill) for skill in skills]
+    try:
+        return [load_skill(Path(path) / "skills" / skill) for skill in skills]
+    except TypeError:
+        raise RuntimeError(
+            'Module file "{}/module.yaml" needs to have a list of skills'.format(path))
 
 
 def load_module(path):
     """
     Load a YAML module
     """
-    data = load_yaml(Path(path) / "module.yaml")
-    module = data["Module"]
-    skills = data["Skills"]
+    filepath = Path(path) / "module.yaml"
+    data = load_yaml(filepath)
+    try:
+        module = data["Module"]
+        skills = data["Skills"]
+    except TypeError:
+        raise RuntimeError(
+            'Module file "{}" is empty or does not exist'.format(filepath))
+    except KeyError as error:
+        raise RuntimeError(
+            'Module file "{}" needs to have a "{}" key'.format(filepath, error.args[0]))
+
+    try:
+        title = module["Name"]
+    except Exception:
+        raise RuntimeError(
+            'Module file "{}" needs to have module name'.format(filepath))
 
     return Module(
-        title=module["Name"],
+        title=title,
         skills=load_skills(path, skills)
     )
 
