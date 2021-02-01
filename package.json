@@ -9,10 +9,13 @@
     "web": "yarn workspace web",
     "stylefix": "yarn web run prettierfix && yarn web run eslintfix",
     "stylecheck": "yarn web run prettiercheck && yarn web run eslintcheck",
+    "exportAllCourses": "./scripts/exportAllYamlCourses.sh",
     "docs": "pipenv run mkdocs serve"
   },
   "workspaces": {
-    "packages": ["workspaces/*"],
+    "packages": [
+      "workspaces/*"
+    ],
     "nohoist": [
       "**/bulma",
       "**/bulma/**",
@@ -39,7 +42,10 @@
   },
   "nyc": {
     "report-dir": "cypress-coverage",
-    "extension": [".js", ".svelte"],
+    "extension": [
+      ".js",
+      ".svelte"
+    ],
     "all": true,
     "cache": false
   },
