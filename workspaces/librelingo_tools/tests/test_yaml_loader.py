@@ -1,5 +1,6 @@
 import os
 import random
+import pytest
 from pathlib import Path
 from unittest.mock import patch
 from unittest import TestCase
@@ -529,3 +530,143 @@ class TestConvertPhrase(TestCase):
     def test_alternative_translations_are_optional(self):
         del self.fakePhrase["Alternative translations"]
         assert len(convert_phrase(self.fakePhrase).in_source_language) == 1
+
+
+@patch('librelingo_tools.yaml_loader.load_yaml')
+def test_load_module_complains_about_an_empty_file(load_yaml):
+    randomPath = str(random.randint(0, 1000))
+    load_yaml.return_value = None
+    with pytest.raises(RuntimeError, match='Module file "{}/module.yaml" is empty or does not exist'.format(randomPath)):
+        load_module(randomPath)
+
+
+@patch('librelingo_tools.yaml_loader.load_yaml')
+def test_load_module_complains_missing_module_key(load_yaml):
+    randomPath = str(random.randint(0, 1000))
+    load_yaml.return_value = {}
+    expected_error = 'Module file "{}/module.yaml" needs to have a "Module" key'.format(
+        randomPath)
+    with pytest.raises(RuntimeError, match=expected_error):
+        load_module(randomPath)
+
+
+@patch('librelingo_tools.yaml_loader.load_yaml')
+def test_load_module_complains_missing_skills_key(load_yaml):
+    randomPath = str(random.randint(0, 1000))
+    load_yaml.return_value = {"Module": {}}
+    expected_error = 'Module file "{}/module.yaml" needs to have a "Skills" key'.format(
+        randomPath)
+    with pytest.raises(RuntimeError, match=expected_error):
+        load_module(randomPath)
+
+
+@patch('librelingo_tools.yaml_loader.load_yaml')
+def test_load_module_complains_missing_module_name(load_yaml):
+    randomPath = str(random.randint(0, 1000))
+    load_yaml.return_value = {"Module": {}, "Skills": []}
+    expected_error = 'Module file "{}/module.yaml" needs to have module name'.format(
+        randomPath)
+    with pytest.raises(RuntimeError, match=expected_error):
+        load_module(randomPath)
+
+
+@patch('librelingo_tools.yaml_loader.load_yaml')
+def test_load_skills_complains_missing_skills(load_yaml):
+    randomPath = str(random.randint(0, 1000))
+    expected_error = 'Module file "{}/module.yaml" needs to have a list of skills'.format(
+        randomPath)
+    with pytest.raises(RuntimeError, match=expected_error):
+        load_skills(randomPath, skills=None)
+
+
+@patch('librelingo_tools.yaml_loader.load_yaml')
+def test_load_skill_complains_about_an_empty_file(load_yaml):
+    randomPath = str(random.randint(0, 1000))
+    load_yaml.return_value = None
+    with pytest.raises(RuntimeError, match='Skill file "{}" is empty or does not exist'.format(randomPath)):
+        load_skill(randomPath)
+
+
+@patch('librelingo_tools.yaml_loader.load_yaml')
+def test_load_skill_complains_missing_skills_key(load_yaml):
+    randomPath = str(random.randint(0, 1000))
+    load_yaml.return_value = {}
+    expected_error = 'Skill file "{}" needs to have a "Skill" key'.format(
+        randomPath)
+    with pytest.raises(RuntimeError, match=expected_error):
+        load_skill(randomPath)
+
+
+@patch('librelingo_tools.yaml_loader.load_yaml')
+def test_load_skill_complains_missing_new_words_key(load_yaml):
+    randomPath = str(random.randint(0, 1000))
+    load_yaml.return_value = {"Skill": []}
+    expected_error = 'Skill file "{}" needs to have a "New words" key'.format(
+        randomPath)
+    with pytest.raises(RuntimeError, match=expected_error):
+        load_skill(randomPath)
+
+
+@patch('librelingo_tools.yaml_loader.load_yaml')
+def test_load_skill_complains_missing_skill_name(load_yaml):
+    randomPath = str(random.randint(0, 1000))
+    load_yaml.return_value = {"Skill": {}, "New words": [], "Phrases": []}
+    expected_error = 'Skill file "{}" needs to have skill name'.format(
+        randomPath)
+    with pytest.raises(RuntimeError, match=expected_error):
+        load_skill(randomPath)
+
+
+@patch('librelingo_tools.yaml_loader.load_yaml')
+def test_load_skill_complains_missing_skill_id(load_yaml):
+    randomPath = str(random.randint(0, 1000))
+    load_yaml.return_value = {
+        "Skill": {"Name": "asd"}, "New words": [], "Phrases": []}
+    expected_error = 'Skill file "{}" needs to have skill id'.format(
+        randomPath)
+    with pytest.raises(RuntimeError, match=expected_error):
+        load_skill(randomPath)
+
+
+@patch('librelingo_tools.yaml_loader.load_yaml')
+def test_load_skill_doesnt_fail_without_thumnails(load_yaml):
+    randomPath = str(random.randint(0, 1000))
+    load_yaml.return_value = {
+        "Skill": {"Name": "asd", "Id": "4234234"}, "New words": [], "Phrases": []}
+    load_skill(randomPath)
+
+
+@patch('librelingo_tools.yaml_loader.load_yaml')
+def test_load_skill_complains_about_invalid_phrase(load_yaml):
+    randomPath = str(random.randint(0, 1000))
+    load_yaml.return_value = {
+        "Skill": {"Name": "asd", "Id": 32423423}, "New words": [], "Phrases": [
+            ""
+        ]}
+    expected_error = 'Skill file "{}" has an invalid phrase'.format(
+        randomPath)
+    with pytest.raises(RuntimeError, match=expected_error):
+        load_skill(randomPath)
+
+
+@patch('librelingo_tools.yaml_loader.load_yaml')
+def test_load_skill_complains_about_invalid_word(load_yaml):
+    randomPath = str(random.randint(0, 1000))
+    load_yaml.return_value = {
+        "Skill": {"Name": "asd", "Id": 32423423}, "Phrases": [], "New words": [
+            ""
+        ]}
+    expected_error = 'Skill file "{}" has an invalid word'.format(
+        randomPath)
+    with pytest.raises(RuntimeError, match=expected_error):
+        load_skill(randomPath)
+
+
+def test_convert_phrase_complains_about_missing_translation():
+    randomPhrase = str(random.randint(0, 1000))
+    expected_error = 'Phrase "{}" needs to have a "Translation".'.format(
+        randomPhrase)
+    with pytest.raises(RuntimeError, match=expected_error):
+        convert_phrase({
+            "Phrase": randomPhrase
+        })
