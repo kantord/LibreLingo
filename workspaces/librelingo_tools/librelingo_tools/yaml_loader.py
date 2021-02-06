@@ -30,8 +30,8 @@ def get_dictionary_items(modules):
     for module in modules:
         for skill in module.skills:
             for word in skill.words:
-                yield word.in_source_language, word.in_target_language, False
-                yield word.in_target_language, word.in_source_language, True
+                yield word.in_source_language[0], word.in_target_language[0], False
+                yield word.in_target_language[0], word.in_source_language[0], True
 
 
 def merge_dictionary_definitions(items_generator):
