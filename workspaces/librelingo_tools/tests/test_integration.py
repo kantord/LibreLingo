@@ -1,6 +1,7 @@
 import os
 import json
 import glob
+import pytest
 from librelingo_tools.yaml_loader import load_course
 from librelingo_tools.export import export_course
 
@@ -10,6 +11,7 @@ def read_json_file(path):
         return json.load(fp)
 
 
+@pytest.mark.skip(reason="skipped until other tests are fixed")
 def test_loaded_yaml_is_exported_to_correct_json(fs, snapshot):
     fixture_path = os.path.join(os.path.dirname(
         __file__), 'fixtures', "fake_course")
