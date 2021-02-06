@@ -1,3 +1,4 @@
+import collections
 from pathlib import Path
 from yaml import load
 try:
@@ -26,14 +27,14 @@ def convert_language(raw_language):
 
 
 def get_dictionary_items(modules):
-    items = {}
+    items = collections.defaultdict(set)
     for module in modules:
         for skill in module.skills:
             for word in skill.words:
-                items[(word.in_source_language, False)] = [
-                    word.in_target_language]
-                items[(word.in_target_language, True)] = [
-                    word.in_source_language]
+                items[(word.in_source_language, False)].add(
+                    word.in_target_language)
+                items[(word.in_target_language, True)].add(
+                    word.in_source_language)
 
     return list(items.items())
 
@@ -44,7 +45,7 @@ def load_dictionary(modules):
         word, reverse = key
         items.append(DictionaryItem(
             word=word,
-            definition=definition,
+            definition=list(sorted(definition)),
             reverse=reverse,
         ))
     return items

@@ -614,3 +614,22 @@ def test_load_dictionary_includes_duplicate_words_only_once(module_with_word):
         ], [], [])
     ])
     assert len(load_dictionary([module_with_word[0], new_module])) == 2
+
+
+def test_load_dictionary_includes_duplicate_words_includes_multiple_definitions(module_with_word):
+    random_new_word = get_fake_word()[0]
+    existing_word = module_with_word[0].skills[0].words[0]
+    duplicate_word = Word(
+        in_source_language=existing_word.in_source_language,
+        in_target_language=random_new_word.in_target_language,
+        pictures=[]
+    )
+    new_module = Module("", [
+        Skill("", "", [
+            duplicate_word
+        ], [], [])
+    ])
+    assert set(load_dictionary([module_with_word[0], new_module])[0].definition) == set([
+        random_new_word.in_target_language,
+        existing_word.in_target_language,
+    ])
