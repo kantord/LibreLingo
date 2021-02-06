@@ -27,21 +27,28 @@ def convert_language(raw_language):
 
 
 def get_dictionary_items(modules):
-    items = collections.defaultdict(set)
     for module in modules:
         for skill in module.skills:
             for word in skill.words:
-                items[(word.in_source_language, False)].add(
-                    word.in_target_language)
-                items[(word.in_target_language, True)].add(
-                    word.in_source_language)
+                yield word.in_source_language, word.in_target_language, False
+                yield word.in_target_language, word.in_source_language, True
 
+
+def merge_dictionary_definitions(items_generator):
+    items = collections.defaultdict(set)
+    for word, definition, reverse in items_generator:
+        items[(word, reverse)].add(
+            definition)
     return list(items.items())
+
+
+def get_merged_dictionary_items(modules):
+    return merge_dictionary_definitions(get_dictionary_items(modules))
 
 
 def load_dictionary(modules):
     items = []
-    for key, definition in get_dictionary_items(modules):
+    for key, definition in get_merged_dictionary_items(modules):
         word, reverse = key
         items.append(DictionaryItem(
             word=word,
