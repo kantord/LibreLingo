@@ -25,17 +25,28 @@ def convert_language(raw_language):
     )
 
 
-def load_dictionary(modules):
-    items = []
-    import pprint
-    pprint.pprint(modules)
+def get_dictionary_items(modules):
+    items = {}
     for module in modules:
         for skill in module.skills:
             for word in skill.words:
-                items.append(DictionaryItem(word.in_source_language,
-                                            [word.in_target_language], False))
-                items.append(DictionaryItem(word.in_target_language,
-                                            [word.in_source_language], True))
+                items[(word.in_source_language, False)] = [
+                    word.in_target_language]
+                items[(word.in_target_language, True)] = [
+                    word.in_source_language]
+
+    return list(items.items())
+
+
+def load_dictionary(modules):
+    items = []
+    for key, definition in get_dictionary_items(modules):
+        word, reverse = key
+        items.append(DictionaryItem(
+            word=word,
+            definition=definition,
+            reverse=reverse,
+        ))
     return items
 
 
