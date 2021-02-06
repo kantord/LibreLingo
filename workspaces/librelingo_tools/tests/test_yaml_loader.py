@@ -139,7 +139,6 @@ class TestLoadCourseMeta(YamlImportTestCase):
         ]
 
 
-@pytest.mark.skip(reason="skipped until other tests are fixed")
 def test_load_course_output_matches_value(fs):
     fixture_path = os.path.join(os.path.dirname(
         __file__), 'fixtures', "fake_course")
@@ -154,7 +153,12 @@ def test_load_course_output_matches_value(fs):
         code="en")
     assert result.license == License(name='CC BY 3.0', full_name='CC BY 3.0',
                                      link='https://www.example.com/license')
-    assert result.dictionary == []
+    assert result.dictionary == [
+        DictionaryItem("the man", ["l'homme"], False),
+        DictionaryItem("l'homme", ["the man"], True),
+        DictionaryItem("the woman", ["la femme"], False),
+        DictionaryItem("la femme", ["the woman"], True),
+    ]
     assert len(result.modules) == 1
     assert result.modules[0].title == "Basics"
     assert len(result.modules[0].skills) == 1
@@ -534,8 +538,8 @@ class TestConvertPhrase(TestCase):
 
 
 def get_fake_word_values():
-    in_target_language = str(random.randint(0, 1000))
-    in_source_language = str(random.randint(0, 1000))
+    in_target_language = [str(random.randint(0, 1000))]
+    in_source_language = [str(random.randint(0, 1000))]
 
     return in_source_language, in_target_language
 
@@ -569,8 +573,8 @@ def test_load_dictionary_returns_a_list_of_dictionary_items(module_with_word):
 def test_load_dictionary_includes_word_from_new_word(module_with_word):
     _, in_source_language, in_target_language = module_with_word
     dict_item = DictionaryItem(
-        word=in_source_language,
-        definition=[in_target_language],
+        word=in_source_language[0],
+        definition=in_target_language,
         reverse=False
     )
     assert dict_item in load_dictionary([module_with_word[0]])
@@ -579,8 +583,8 @@ def test_load_dictionary_includes_word_from_new_word(module_with_word):
 def test_load_dictionary_includes_reverse_word_from_new_word(module_with_word):
     _, in_source_language, in_target_language = module_with_word
     dict_item = DictionaryItem(
-        word=in_target_language,
-        definition=[in_source_language],
+        word=in_target_language[0],
+        definition=in_source_language,
         reverse=True
     )
     assert dict_item in load_dictionary([module_with_word[0]])
@@ -629,7 +633,7 @@ def test_load_dictionary_includes_duplicate_words_includes_multiple_definitions(
             duplicate_word
         ], [], [])
     ])
-    assert set(load_dictionary([module_with_word[0], new_module])[0].definition) == set([
-        random_new_word.in_target_language,
-        existing_word.in_target_language,
-    ])
+    assert set(load_dictionary([module_with_word[0], new_module])[0].definition) == \
+        set(
+        random_new_word.in_target_language +
+        existing_word.in_target_language)
