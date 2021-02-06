@@ -1,3 +1,4 @@
+import collections
 from pathlib import Path
 from yaml import load
 try:
@@ -6,7 +7,7 @@ except ImportError:
     from yaml import Loader
 
 from librelingo_tools.data_types import Course, Language, License, Module, Skill, \
-    Word, Phrase
+    Word, Phrase, DictionaryItem
 
 
 def load_yaml(path):
@@ -25,8 +26,29 @@ def convert_language(raw_language):
     )
 
 
-def load_dictionary(dummy):
-    return []
+def get_dictionary_items(modules):
+    items = collections.defaultdict(set)
+    for module in modules:
+        for skill in module.skills:
+            for word in skill.words:
+                items[(word.in_source_language, False)].add(
+                    word.in_target_language)
+                items[(word.in_target_language, True)].add(
+                    word.in_source_language)
+
+    return list(items.items())
+
+
+def load_dictionary(modules):
+    items = []
+    for key, definition in get_dictionary_items(modules):
+        word, reverse = key
+        items.append(DictionaryItem(
+            word=word,
+            definition=list(sorted(definition)),
+            reverse=reverse,
+        ))
+    return items
 
 
 def alternatives_from_yaml(raw_object, key):
@@ -146,13 +168,14 @@ def load_course(path):
     """
     data = load_yaml(Path(path) / "course.yaml")
     course = data["Course"]
-    modules = data["Modules"]
+    raw_modules = data["Modules"]
+    modules = load_modules(path, raw_modules)
 
     return Course(
         target_language=convert_language(course["Language"]),
         source_language=convert_language(course["For speakers of"]),
         license=convert_license(course["License"]),
-        dictionary=load_dictionary(path),
-        modules=load_modules(path, modules),
+        dictionary=load_dictionary(modules),
+        modules=modules,
         special_characters=course["Special characters"],
     )
