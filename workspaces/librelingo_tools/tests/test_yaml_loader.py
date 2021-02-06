@@ -605,3 +605,12 @@ def test_load_dictionary_handles_multiple_modules(module_with_word):
         ], [], [])
     ])
     assert len(load_dictionary([module_with_word[0], new_module])) == 4
+
+
+def test_load_dictionary_includes_duplicate_words_only_once(module_with_word):
+    new_module = Module("", [
+        Skill("", "", [
+            module_with_word[0].skills[0].words[0]
+        ], [], [])
+    ])
+    assert len(load_dictionary([module_with_word[0], new_module])) == 2
