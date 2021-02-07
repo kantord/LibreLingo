@@ -168,6 +168,7 @@ def test_load_course_output_matches_value(fs):
         image_set=["people1", "woman1", "man1"],
         phrases=result.modules[0].skills[0].phrases,
         words=result.modules[0].skills[0].words,
+        dictionary=None,
     )
     assert result.modules[0].skills[0].phrases == [
         Phrase(
@@ -556,7 +557,7 @@ def module_with_word():
     my_module = Module("", skills=[
         Skill("", "", [
             word
-        ], [], [])
+        ], [], [], None)
     ])
 
     return my_module, in_source_language, in_target_language
@@ -598,7 +599,7 @@ def test_load_dictionary_handles_multiple_word_per_skill(module_with_word):
 def test_load_dictionary_handles_multiple_skills_per_module(module_with_word):
     module_with_word[0].skills.append(Skill("", "", [
         get_fake_word()[0]
-    ], [], []))
+    ], [], [], None))
     assert len(load_dictionary([module_with_word[0]])) == 4
 
 
@@ -606,7 +607,7 @@ def test_load_dictionary_handles_multiple_modules(module_with_word):
     new_module = Module("", [
         Skill("", "", [
             get_fake_word()[0]
-        ], [], [])
+        ], [], [], None)
     ])
     assert len(load_dictionary([module_with_word[0], new_module])) == 4
 
@@ -615,7 +616,7 @@ def test_load_dictionary_includes_duplicate_words_only_once(module_with_word):
     new_module = Module("", [
         Skill("", "", [
             module_with_word[0].skills[0].words[0]
-        ], [], [])
+        ], [], [], None)
     ])
     assert len(load_dictionary([module_with_word[0], new_module])) == 2
 
@@ -635,7 +636,7 @@ def test_load_dictionary_includes_duplicate_words_includes_multiple_definitions(
     new_module = Module("", [
         Skill("", "", [
             duplicate_word
-        ], [], [])
+        ], [], [], None)
     ])
     definition = load_dictionary([module_with_word[0], new_module])[
         0].definition
