@@ -161,7 +161,8 @@ def load_skill(path):
         id=skill_id,
         words=words,
         phrases=phrases,
-        image_set=skill["Thumbnails"] if "Thumbnails" in skill else []
+        image_set=skill["Thumbnails"] if "Thumbnails" in skill else [],
+        dictionary=None,
     )
 
 
