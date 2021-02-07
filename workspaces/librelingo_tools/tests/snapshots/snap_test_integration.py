@@ -212,9 +212,9 @@ snapshots['test_loaded_yaml_is_exported_to_correct_json 1'] = {
                 'id': '765f2efca3b5',
                 'meaningInSourceLanguage': 'the man',
                 'pictures': [
-                    'man1',
-                    'man2',
-                    'man3'
+                    'man1.jpg',
+                    'man2.jpg',
+                    'man3.jpg'
                 ],
                 'priority': 0,
                 'type': 'cards'
@@ -234,9 +234,9 @@ snapshots['test_loaded_yaml_is_exported_to_correct_json 1'] = {
                     }
                 ],
                 'pictures': [
-                    'man1',
-                    'man2',
-                    'man3'
+                    'man1.jpg',
+                    'man2.jpg',
+                    'man3.jpg'
                 ],
                 'priority': 1,
                 'type': 'shortInput'
