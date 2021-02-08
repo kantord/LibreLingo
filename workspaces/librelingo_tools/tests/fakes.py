@@ -64,7 +64,8 @@ emptySkill = Skill(
     id=3,
     words=[],
     phrases=[],
-    image_set=["foo1", "bar1", "bar2"]
+    image_set=["foo1", "bar1", "bar2"],
+    dictionary=[],
 )
 
 skillWithPhrase = Skill(
@@ -72,7 +73,8 @@ skillWithPhrase = Skill(
     id=3,
     phrases=[phrase2],
     words=[],
-    image_set=["man1", "man2", "boy1"]
+    image_set=["man1", "man2", "boy1"],
+    dictionary=[],
 )
 
 
@@ -81,7 +83,8 @@ skillWithWord = Skill(
     id=3,
     phrases=[],
     words=[word1],
-    image_set=["man1", "man2", "boy1"]
+    image_set=["man1", "man2", "boy1"],
+    dictionary=[],
 )
 
 
@@ -90,7 +93,8 @@ skillWithPhraseAndWord = Skill(
     id=3,
     phrases=[phrase2],
     words=[word1],
-    image_set=["man1", "man2", "boy1"]
+    image_set=["man1", "man2", "boy1"],
+    dictionary=[],
 )
 
 
@@ -99,7 +103,8 @@ skillWith3Words = Skill(
     id=3,
     phrases=[],
     words=[word1, word2, word2],
-    image_set=["man1", "man2", "boy1"]
+    image_set=["man1", "man2", "boy1"],
+    dictionary=[],
 )
 
 skillWith3Phrases = Skill(
@@ -107,7 +112,8 @@ skillWith3Phrases = Skill(
     id=3,
     phrases=[phrase1, phrase2, phrase2],
     words=[],
-    image_set=["man1", "man2", "boy1"]
+    image_set=["man1", "man2", "boy1"],
+    dictionary=[],
 )
 
 skills = [
@@ -117,7 +123,8 @@ skills = [
         id=3,
         words=[word1, word2, word1, word2],
         phrases=[phrase1],
-        image_set=["woman1", "woman2", "girl1"]
+        image_set=["woman1", "woman2", "girl1"],
+        dictionary=[],
     ),
     emptySkill,
     Skill(
@@ -125,7 +132,8 @@ skills = [
         id=3,
         words=[word1],
         phrases=[],
-        image_set=["just_one_image"]
+        image_set=["just_one_image"],
+        dictionary=[],
     )
 ]
 

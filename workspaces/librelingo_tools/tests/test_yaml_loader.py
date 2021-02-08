@@ -127,7 +127,7 @@ class TestLoadCourseMeta(YamlImportTestCase):
 
     def test_calls_load_modules_with_correct_arguments(self):
         self.load_modules.assert_called_with(self.fake_path, [
-            self.fake_values["fake_module"], ])
+            self.fake_values["fake_module"], ], self.load_modules.call_args.args[2])
 
     def test_calls_load_dictionary_with_correct_argumetns(self):
         self.load_dictionary.assert_called_with(self.load_modules.return_value)
@@ -168,6 +168,7 @@ def test_load_course_output_matches_value(fs):
         image_set=["people1", "woman1", "man1"],
         phrases=result.modules[0].skills[0].phrases,
         words=result.modules[0].skills[0].words,
+        dictionary=result.modules[0].skills[0].dictionary,
     )
     assert result.modules[0].skills[0].phrases == [
         Phrase(
@@ -253,7 +254,7 @@ class TestLoadModuleMeta(YamlImportTestCase):
         self.create_fake_module_meta(self.fake_path, **{
             **self.fake_values,
         })
-        self.result = load_module(self.fake_path)
+        self.result = load_module(self.fake_path, fakes.course1)
 
     def test_returns_a_correctly_types_course(self):
         assert type(self.result) == Module
@@ -267,43 +268,46 @@ class TestLoadModuleMeta(YamlImportTestCase):
     def test_calls_load_skills_with_the_correct_arguments(self):
         self.load_skills.assert_called_with(self.fake_path, [
             self.fake_values["skill_name"],
-        ])
+        ], fakes.course1)
 
 
 class LoadModulesTestCase(TestCase):
     @ patch('librelingo_tools.yaml_loader.load_module')
     def test_returns_correct_value(self, load_module):
         load_module.return_value = fakes.fake_value()
-        assert load_modules("foo", ["bar"]) == [load_module.return_value]
+        assert load_modules("foo", ["bar"], fakes.course1) == [
+            load_module.return_value]
 
     @ patch('librelingo_tools.yaml_loader.load_module')
     def test_handles_every_module(self, load_module):
         load_module.return_value = fakes.fake_value()
-        assert load_modules("foo", ["bar", "baz"]) == [
+        assert load_modules("foo", ["bar", "baz"], fakes.course1) == [
             load_module.return_value] * 2
 
     @ patch('librelingo_tools.yaml_loader.load_module')
     def test_calls_load_modules_with_correct_arguments(self, load_module):
-        load_modules("foo", ["bar"])
-        load_module.assert_called_with(Path("foo/bar"))
+        load_modules("foo", ["bar"], fakes.course1)
+        load_module.assert_called_with(Path("foo/bar"), fakes.course1)
 
 
 class TestLoadSkills(TestCase):
     @ patch('librelingo_tools.yaml_loader.load_skill')
     def test_returns_correct_value(self, load_skill):
         load_skill.return_value = fakes.fake_value()
-        assert load_skills("foo", ["bar"]) == [load_skill.return_value]
+        assert load_skills("foo", ["bar"], fakes.course1) == [
+            load_skill.return_value]
 
     @ patch('librelingo_tools.yaml_loader.load_skill')
     def test_handles_every_module(self, load_skill):
         load_skill.return_value = fakes.fake_value()
-        assert load_skills("foo", ["bar", "baz"]) == [
+        assert load_skills("foo", ["bar", "baz"], fakes.course1) == [
             load_skill.return_value] * 2
 
     @ patch('librelingo_tools.yaml_loader.load_skill')
     def test_calls_load_skills_with_correct_arguments(self, load_skill):
-        load_skills("foo", ["bar.yaml"])
-        load_skill.assert_called_with(Path("foo/skills/bar.yaml"))
+        load_skills("foo", ["bar.yaml"], fakes.course1)
+        load_skill.assert_called_with(
+            Path("foo/skills/bar.yaml"), fakes.course1)
 
 
 class TestLoadSkill(YamlImportTestCase):
@@ -318,17 +322,15 @@ Skill:
     - {img3}
 New words: {fake_words}
 Phrases: {fake_phrases}
-
 Mini-dictionary:
-  French:
-    - dit: says
-    - bonjour:
+  {word3}:
+    - {word2}: {word1}
+    - {word4}:
       - hello
-      - hi
+      - {word5}
     - L'homme: the man
-
   English:
-    - says: dit
+    - {word6}: dit
     - hello:
       - bonjour
       - salut
@@ -347,6 +349,12 @@ Mini-dictionary:
             "img3": str(fakes.fake_value()),
             "fake_words": str(fakes.fake_value()),
             "fake_phrases": str(fakes.fake_value()),
+            "word1": str(fakes.fake_value()),
+            "word2": str(fakes.fake_value()),
+            "word3": str(fakes.fake_value()),
+            "word4": str(fakes.fake_value()),
+            "word5": str(fakes.fake_value()),
+            "word6": str(fakes.fake_value()),
         }
 
     def set_up_patches(self):
@@ -361,7 +369,11 @@ Mini-dictionary:
         self.create_fake_skill_meta(self.fake_path, **{
             **self.fake_values,
         })
-        self.result = load_skill(self.fake_path / "food.yaml")
+        french = Language(self.fake_values["word3"], "")
+        english = Language("English", "")
+        self.fake_course = Course(french, english, [], [], None, None)
+        self.result = load_skill(
+            self.fake_path / "food.yaml", self.fake_course)
 
     def test_returns_a_correctly_types_course(self):
         assert type(self.result) == Skill
@@ -384,6 +396,33 @@ Mini-dictionary:
 
     def test_returned_object_has_correct_phrases(self):
         assert self.result.phrases == self.convert_phrases.return_value
+
+    def test_dictionary_is_a_list_of_dictionary_items(self):
+        assert type(self.result.dictionary) == list and all(
+            type(x) == tuple for x in self.result.dictionary
+        )
+
+    def test_dictionary_is_a_contains_reverse_and_normal_items(self):
+        assert set(
+            x[2] for x in self.result.dictionary
+        ) == {True, False}
+
+    def test_includes_all_dictionary_items(self):
+        assert len(self.result.dictionary) == 5
+
+    def test_includes_all_reverse_dictionary_items(self):
+        assert len([x for x in self.result.dictionary if x[2]]) == 2
+
+    def test_includes_items_based_on_yaml_file_1(self):
+        assert (self.fake_values["word2"], [
+                self.fake_values["word1"]], False, ) in self.result.dictionary
+
+    def test_includes_items_based_on_yaml_file_2(self):
+        assert (self.fake_values["word4"], [
+                "hello", self.fake_values["word5"]], False, ) in self.result.dictionary
+
+    def test_includes_items_based_on_yaml_file_3(self):
+        assert (self.fake_values["word6"], [ "dit"], True, ) in self.result.dictionary
 
     def test_calls_convert_words_with_correct_values(self):
         self.convert_words.assert_called_with(self.fake_values["fake_words"])
@@ -556,7 +595,7 @@ def module_with_word():
     my_module = Module("", skills=[
         Skill("", "", [
             word
-        ], [], [])
+        ], [], [], None)
     ])
 
     return my_module, in_source_language, in_target_language
@@ -598,7 +637,7 @@ def test_load_dictionary_handles_multiple_word_per_skill(module_with_word):
 def test_load_dictionary_handles_multiple_skills_per_module(module_with_word):
     module_with_word[0].skills.append(Skill("", "", [
         get_fake_word()[0]
-    ], [], []))
+    ], [], [], None))
     assert len(load_dictionary([module_with_word[0]])) == 4
 
 
@@ -606,7 +645,7 @@ def test_load_dictionary_handles_multiple_modules(module_with_word):
     new_module = Module("", [
         Skill("", "", [
             get_fake_word()[0]
-        ], [], [])
+        ], [], [], None)
     ])
     assert len(load_dictionary([module_with_word[0], new_module])) == 4
 
@@ -615,7 +654,7 @@ def test_load_dictionary_includes_duplicate_words_only_once(module_with_word):
     new_module = Module("", [
         Skill("", "", [
             module_with_word[0].skills[0].words[0]
-        ], [], [])
+        ], [], [], None)
     ])
     assert len(load_dictionary([module_with_word[0], new_module])) == 2
 
@@ -635,7 +674,7 @@ def test_load_dictionary_includes_duplicate_words_includes_multiple_definitions(
     new_module = Module("", [
         Skill("", "", [
             duplicate_word
-        ], [], [])
+        ], [], [], None)
     ])
     definition = load_dictionary([module_with_word[0], new_module])[
         0].definition
@@ -651,7 +690,7 @@ def test_load_module_complains_about_an_empty_file(load_yaml):
         RuntimeError,
         match='Module file "{}/module.yaml" is empty or does not exist'
             .format(randomPath)):
-        load_module(randomPath)
+        load_module(randomPath, fakes.course1)
 
 
 @patch('librelingo_tools.yaml_loader.load_yaml')
@@ -661,7 +700,7 @@ def test_load_module_complains_missing_module_key(load_yaml):
     expected_error = 'Module file "{}/module.yaml" needs to have a "Module" key'.format(
         randomPath)
     with pytest.raises(RuntimeError, match=expected_error):
-        load_module(randomPath)
+        load_module(randomPath, fakes.course1)
 
 
 @patch('librelingo_tools.yaml_loader.load_yaml')
@@ -671,7 +710,7 @@ def test_load_module_complains_missing_skills_key(load_yaml):
     expected_error = 'Module file "{}/module.yaml" needs to have a "Skills" key'.format(
         randomPath)
     with pytest.raises(RuntimeError, match=expected_error):
-        load_module(randomPath)
+        load_module(randomPath, fakes.course1)
 
 
 @patch('librelingo_tools.yaml_loader.load_yaml')
@@ -681,7 +720,7 @@ def test_load_module_complains_missing_module_name(load_yaml):
     expected_error = 'Module file "{}/module.yaml" needs to have module name'.format(
         randomPath)
     with pytest.raises(RuntimeError, match=expected_error):
-        load_module(randomPath)
+        load_module(randomPath, fakes.course1)
 
 
 @patch('librelingo_tools.yaml_loader.load_yaml')
@@ -690,7 +729,7 @@ def test_load_skills_complains_missing_skills(load_yaml):
     expected_error = 'Module file "{}/module.yaml" needs to have a list of skills'.format(
         randomPath)
     with pytest.raises(RuntimeError, match=expected_error):
-        load_skills(randomPath, skills=None)
+        load_skills(randomPath, skills=None, course=fakes.course1)
 
 
 @patch('librelingo_tools.yaml_loader.load_yaml')
@@ -698,7 +737,7 @@ def test_load_skill_complains_about_an_empty_file(load_yaml):
     randomPath = str(random.randint(0, 1000))
     load_yaml.return_value = None
     with pytest.raises(RuntimeError, match='Skill file "{}" is empty or does not exist'.format(randomPath)):
-        load_skill(randomPath)
+        load_skill(randomPath, fakes.course1)
 
 
 @patch('librelingo_tools.yaml_loader.load_yaml')
@@ -708,7 +747,7 @@ def test_load_skill_complains_missing_skills_key(load_yaml):
     expected_error = 'Skill file "{}" needs to have a "Skill" key'.format(
         randomPath)
     with pytest.raises(RuntimeError, match=expected_error):
-        load_skill(randomPath)
+        load_skill(randomPath, fakes.course1)
 
 
 @patch('librelingo_tools.yaml_loader.load_yaml')
@@ -718,7 +757,7 @@ def test_load_skill_complains_missing_new_words_key(load_yaml):
     expected_error = 'Skill file "{}" needs to have a "New words" key'.format(
         randomPath)
     with pytest.raises(RuntimeError, match=expected_error):
-        load_skill(randomPath)
+        load_skill(randomPath, fakes.course1)
 
 
 @patch('librelingo_tools.yaml_loader.load_yaml')
@@ -728,7 +767,7 @@ def test_load_skill_complains_missing_skill_name(load_yaml):
     expected_error = 'Skill file "{}" needs to have skill name'.format(
         randomPath)
     with pytest.raises(RuntimeError, match=expected_error):
-        load_skill(randomPath)
+        load_skill(randomPath, fakes.course1)
 
 
 @patch('librelingo_tools.yaml_loader.load_yaml')
@@ -739,7 +778,7 @@ def test_load_skill_complains_missing_skill_id(load_yaml):
     expected_error = 'Skill file "{}" needs to have skill id'.format(
         randomPath)
     with pytest.raises(RuntimeError, match=expected_error):
-        load_skill(randomPath)
+        load_skill(randomPath, fakes.course1)
 
 
 @patch('librelingo_tools.yaml_loader.load_yaml')
@@ -747,7 +786,7 @@ def test_load_skill_doesnt_fail_without_thumnails(load_yaml):
     randomPath = str(random.randint(0, 1000))
     load_yaml.return_value = {
         "Skill": {"Name": "asd", "Id": "4234234"}, "New words": [], "Phrases": []}
-    load_skill(randomPath)
+    load_skill(randomPath, fakes.course1)
 
 
 @patch('librelingo_tools.yaml_loader.load_yaml')
@@ -760,7 +799,7 @@ def test_load_skill_complains_about_invalid_phrase(load_yaml):
     expected_error = 'Skill file "{}" has an invalid phrase'.format(
         randomPath)
     with pytest.raises(RuntimeError, match=expected_error):
-        load_skill(randomPath)
+        load_skill(randomPath, fakes.course1)
 
 
 @patch('librelingo_tools.yaml_loader.load_yaml')
@@ -773,7 +812,7 @@ def test_load_skill_complains_about_invalid_word(load_yaml):
     expected_error = 'Skill file "{}" has an invalid word'.format(
         randomPath)
     with pytest.raises(RuntimeError, match=expected_error):
-        load_skill(randomPath)
+        load_skill(randomPath, fakes.course1)
 
 
 def test_convert_phrase_complains_about_missing_translation():

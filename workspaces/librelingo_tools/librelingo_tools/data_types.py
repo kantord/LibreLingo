@@ -30,7 +30,8 @@ Skill = namedtuple("Skill", [
     "id",
     "words",
     "phrases",
-    "image_set"
+    "image_set",
+    "dictionary",
 ])
 
 Word = namedtuple("Word", [
