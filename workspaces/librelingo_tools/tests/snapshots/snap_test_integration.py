@@ -45,9 +45,12 @@ snapshots['test_loaded_yaml_is_exported_to_correct_json 1'] = {
                         'word': 'woman'
                     },
                     {
+                        'definition': 'dit',
                         'word': 'says'
                     },
                     {
+                        'definition': '''bonjour
+salut''',
                         'word': 'hello'
                     }
                 ],
@@ -87,9 +90,12 @@ snapshots['test_loaded_yaml_is_exported_to_correct_json 1'] = {
                         'word': 'femme'
                     },
                     {
+                        'definition': 'says',
                         'word': 'dit'
                     },
                     {
+                        'definition': '''hello
+hi''',
                         'word': 'bonjour'
                     }
                 ],
@@ -145,9 +151,12 @@ snapshots['test_loaded_yaml_is_exported_to_correct_json 1'] = {
                         'word': 'man'
                     },
                     {
+                        'definition': 'dit',
                         'word': 'says'
                     },
                     {
+                        'definition': '''bonjour
+salut''',
                         'word': 'hello'
                     }
                 ],
@@ -179,12 +188,16 @@ snapshots['test_loaded_yaml_is_exported_to_correct_json 1'] = {
                 'id': '2d6b05be7089',
                 'phrase': [
                     {
+                        'definition': 'the man',
                         'word': "L'homme"
                     },
                     {
+                        'definition': 'says',
                         'word': 'dit'
                     },
                     {
+                        'definition': '''hello
+hi''',
                         'word': 'bonjour'
                     }
                 ],

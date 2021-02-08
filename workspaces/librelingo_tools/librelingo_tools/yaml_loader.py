@@ -30,8 +30,14 @@ def get_dictionary_items(modules):
     for module in modules:
         for skill in module.skills:
             for word in skill.words:
-                yield word.in_source_language[0], word.in_target_language[0], False
-                yield word.in_target_language[0], word.in_source_language[0], True
+                yield word.in_source_language[0], word.in_target_language[0], True
+                yield word.in_target_language[0], word.in_source_language[0], False
+
+            if skill.dictionary is not None:
+                for dictionary_item in skill.dictionary:
+                    word, definitions, reverse = dictionary_item
+                    for definition in definitions:
+                        yield word, definition, reverse
 
 
 def merge_dictionary_definitions(items_generator):
@@ -119,7 +125,21 @@ def convert_phrases(raw_phrases):
     return list(map(convert_phrase, raw_phrases))
 
 
-def load_skill(path):
+def convert_mini_dictionary(raw_mini_dictionary, course):
+    configurations = (
+        (course.target_language.name, True),
+        (course.source_language.name, False),
+    )
+    for language_name, reverse in configurations:
+        for item in raw_mini_dictionary[language_name]:
+            word = list(item.keys())[0]
+            raw_definition = list(item.values())[0]
+            definition = raw_definition if type(
+                raw_definition) == list else [raw_definition]
+            yield (word, tuple(definition), reverse)
+
+
+def load_skill(path, course):
     try:
         data = load_yaml(path)
         skill = data["Skill"]
@@ -162,22 +182,24 @@ def load_skill(path):
         words=words,
         phrases=phrases,
         image_set=skill["Thumbnails"] if "Thumbnails" in skill else [],
-        dictionary=None,
+        dictionary=list(convert_mini_dictionary(
+            data["Mini-dictionary"], course))
+        if "Mini-dictionary" in data else [],
     )
 
 
-def load_skills(path, skills):
+def load_skills(path, skills, course):
     """
     Load each YAML skill specified in the list
     """
     try:
-        return [load_skill(Path(path) / "skills" / skill) for skill in skills]
+        return [load_skill(Path(path) / "skills" / skill, course) for skill in skills]
     except TypeError:
         raise RuntimeError(
             'Module file "{}/module.yaml" needs to have a list of skills'.format(path))
 
 
-def load_module(path):
+def load_module(path, course):
     """
     Load a YAML module
     """
@@ -201,15 +223,15 @@ def load_module(path):
 
     return Module(
         title=title,
-        skills=load_skills(path, skills)
+        skills=load_skills(path, skills, course)
     )
 
 
-def load_modules(path, modules):
+def load_modules(path, modules, course):
     """
     Load each YAML module specifed in the list
     """
-    return [load_module(Path(path) / module) for module in modules]
+    return [load_module(Path(path) / module, course) for module in modules]
 
 
 def convert_license(raw_license):
@@ -231,13 +253,20 @@ def load_course(path):
     data = load_yaml(Path(path) / "course.yaml")
     course = data["Course"]
     raw_modules = data["Modules"]
-    modules = load_modules(path, raw_modules)
-
-    return Course(
+    dumb_course = Course(
         target_language=convert_language(course["Language"]),
         source_language=convert_language(course["For speakers of"]),
         license=convert_license(course["License"]),
-        dictionary=load_dictionary(modules),
-        modules=modules,
         special_characters=course["Special characters"],
+        dictionary=[],
+        modules=[],
+    )
+    modules = load_modules(path, raw_modules, dumb_course)
+
+    return Course(
+        **{
+            **dumb_course._asdict(),
+            "dictionary": load_dictionary(modules),
+            "modules": modules,
+        }
     )
