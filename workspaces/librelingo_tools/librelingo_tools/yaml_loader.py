@@ -26,12 +26,17 @@ def convert_language(raw_language):
     )
 
 
+def get_dictionary_items_from_new_words(skill):
+    for word in skill.words:
+        yield word.in_source_language[0], word.in_target_language[0], True
+        yield word.in_target_language[0], word.in_source_language[0], False
+
+
 def get_dictionary_items(modules):
     for module in modules:
         for skill in module.skills:
-            for word in skill.words:
-                yield word.in_source_language[0], word.in_target_language[0], True
-                yield word.in_target_language[0], word.in_source_language[0], False
+            for item in get_dictionary_items_from_new_words(skill):
+                yield item
 
             if skill.dictionary is not None:
                 for dictionary_item in skill.dictionary:
