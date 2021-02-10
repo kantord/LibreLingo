@@ -126,6 +126,9 @@ def convert_phrases(raw_phrases):
 
 
 def convert_mini_dictionary(raw_mini_dictionary, course):
+    """
+    Handles loading the mini-dictionary form the YAML format
+    """
     configurations = (
         (course.target_language.name, True),
         (course.source_language.name, False),
