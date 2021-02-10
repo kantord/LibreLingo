@@ -41,6 +41,10 @@ def get_dictionary_items(modules):
 
 
 def merge_dictionary_definitions(items_generator):
+    """
+    Merges dictionary items, meaning that multiple definitions of the same word
+    are compressed into one definition that has a multiple meanings listed.
+    """
     items = collections.defaultdict(set)
     for word, definition, is_in_target_language in items_generator:
         items[(word, is_in_target_language)].add(
