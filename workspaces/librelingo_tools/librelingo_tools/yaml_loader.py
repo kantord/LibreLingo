@@ -26,40 +26,82 @@ def convert_language(raw_language):
     )
 
 
-def get_dictionary_items(modules):
+def get_dictionary_items_from_new_words(skill):
+    """
+    Extract new words in a skill as dictionar items
+    """
+    for word in skill.words:
+        yield word.in_source_language[0], word.in_target_language[0], True
+        yield word.in_target_language[0], word.in_source_language[0], False
+
+
+def get_dictionary_items_from_skill_mini_dictionary(skill):
+    """
+    Iterate over all dictionary items from the mini-dictionary of a skill
+    """
+    for dictionary_item in skill.dictionary:
+        word, definitions, is_in_target_language = dictionary_item
+        for definition in definitions:
+            yield word, definition, is_in_target_language
+
+
+def get_all_skills(modules):
+    """
+    Iterate over all skills in the supplied list of modules
+    """
     for module in modules:
         for skill in module.skills:
-            for word in skill.words:
-                yield word.in_source_language[0], word.in_target_language[0], True
-                yield word.in_target_language[0], word.in_source_language[0], False
+            yield skill
 
-            if skill.dictionary is not None:
-                for dictionary_item in skill.dictionary:
-                    word, definitions, reverse = dictionary_item
-                    for definition in definitions:
-                        yield word, definition, reverse
+
+def get_dictionary_items(modules):
+    """
+    Extract all dictionary items from every module in the supplied list
+    """
+    for skill in get_all_skills(modules):
+        for item in get_dictionary_items_from_new_words(skill):
+            yield item
+
+        if skill.dictionary is not None:
+            for item in get_dictionary_items_from_skill_mini_dictionary(skill):
+                yield item
 
 
 def merge_dictionary_definitions(items_generator):
+    """
+    Merges dictionary items, meaning that multiple definitions of the same word
+    are compressed into one definition that has a multiple meanings listed.
+    """
     items = collections.defaultdict(set)
-    for word, definition, reverse in items_generator:
-        items[(word, reverse)].add(
+    for word, definition, is_in_target_language in items_generator:
+        items[(word, is_in_target_language)].add(
             definition)
     return list(items.items())
 
 
 def get_merged_dictionary_items(modules):
+    """
+    Generates merged dictionary items using every skill in every module that is
+    passed in the argument.
+
+    Merging dictionary items means that multiple definitions of the same word
+    are compressed into one definition that has a multiple meanings listed.
+    """
     return merge_dictionary_definitions(get_dictionary_items(modules))
 
 
 def load_dictionary(modules):
+    """
+    Generates a dictionary using every skill in every module that is
+    passed in the argument
+    """
     items = []
     for key, definition in get_merged_dictionary_items(modules):
-        word, reverse = key
+        word, is_in_target_language = key
         items.append(DictionaryItem(
             word=word,
             definition="\n".join(sorted(definition)),
-            reverse=reverse,
+            is_in_target_language=is_in_target_language,
         ))
     return items
 
@@ -126,17 +168,20 @@ def convert_phrases(raw_phrases):
 
 
 def convert_mini_dictionary(raw_mini_dictionary, course):
+    """
+    Handles loading the mini-dictionary form the YAML format
+    """
     configurations = (
         (course.target_language.name, True),
         (course.source_language.name, False),
     )
-    for language_name, reverse in configurations:
+    for language_name, is_in_target_language in configurations:
         for item in raw_mini_dictionary[language_name]:
             word = list(item.keys())[0]
             raw_definition = list(item.values())[0]
             definition = raw_definition if type(
                 raw_definition) == list else [raw_definition]
-            yield (word, tuple(definition), reverse)
+            yield (word, tuple(definition), is_in_target_language)
 
 
 def load_skill(path, course):

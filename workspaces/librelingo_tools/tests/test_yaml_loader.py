@@ -621,7 +621,7 @@ def test_load_dictionary_includes_word_from_new_word(module_with_word):
     dict_item = DictionaryItem(
         word=in_source_language[0],
         definition=in_target_language[0],
-        reverse=True
+        is_in_target_language=True
     )
     assert dict_item in load_dictionary([module_with_word[0]])
 
@@ -631,7 +631,7 @@ def test_load_dictionary_includes_reverse_word_from_new_word(module_with_word):
     dict_item = DictionaryItem(
         word=in_target_language[0],
         definition=in_source_language[0],
-        reverse=False
+        is_in_target_language=False
     )
     assert dict_item in load_dictionary([module_with_word[0]])
 
