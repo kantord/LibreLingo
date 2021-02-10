@@ -39,15 +39,20 @@ def get_dictionary_items_from_skill_mini_dictionary(skill):
             yield word, definition, is_in_target_language
 
 
-def get_dictionary_items(modules):
+def get_all_skills(modules):
     for module in modules:
         for skill in module.skills:
-            for item in get_dictionary_items_from_new_words(skill):
-                yield item
+            yield skill
 
-            if skill.dictionary is not None:
-                for item in get_dictionary_items_from_skill_mini_dictionary(skill):
-                    yield item
+
+def get_dictionary_items(modules):
+    for skill in get_all_skills(modules):
+        for item in get_dictionary_items_from_new_words(skill):
+            yield item
+
+        if skill.dictionary is not None:
+            for item in get_dictionary_items_from_skill_mini_dictionary(skill):
+                yield item
 
 
 def merge_dictionary_definitions(items_generator):
