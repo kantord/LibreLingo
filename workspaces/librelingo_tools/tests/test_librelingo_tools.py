@@ -181,10 +181,12 @@ class DefineWordsInSentenceTest(TestCase):
 
     @patch('librelingo_tools.dictionary.define_word')
     def test_calls_define_word_with_the_correct_data(self, define_word):
-        reverse = fakes.fake_value()
+        is_in_target_language = fakes.fake_value()
         fake_word = str(fakes.fake_value())
-        define_words_in_sentence(fakes.course1, fake_word, reverse)
-        define_word.assert_called_with(fakes.course1, fake_word, reverse)
+        define_words_in_sentence(
+            fakes.course1, fake_word, is_in_target_language)
+        define_word.assert_called_with(
+            fakes.course1, fake_word, is_in_target_language)
 
     @patch('librelingo_tools.dictionary.define_word')
     def test_returns_correct_value(self, define_word):
@@ -202,14 +204,14 @@ class DefineWordsInSentenceTest(TestCase):
 class TestDefineWord(TestCase):
     def test_definition_not_found(self):
         word = fakes.fake_value()
-        assert define_word(fakes.course1, word, reverse=False) == {
+        assert define_word(fakes.course1, word, is_in_target_language=False) == {
             "word": word
         }
 
     def test_includes_definition(self):
         word = fakes.fake_value()
         meaning = fakes.fake_value()
-        reverse = fakes.fake_value()
+        is_in_target_language = fakes.fake_value()
         my_course = Course(
             **{
                 **(fakes.course1._asdict()),
@@ -217,12 +219,12 @@ class TestDefineWord(TestCase):
                     DictionaryItem(
                         word=word,
                         definition=meaning,
-                        reverse=reverse
+                        is_in_target_language=is_in_target_language
                     ),
                 ]
             },
         )
-        assert define_word(my_course, word, reverse=reverse) == {
+        assert define_word(my_course, word, is_in_target_language=is_in_target_language) == {
             "word": word,
             "definition": meaning
         }
@@ -230,7 +232,7 @@ class TestDefineWord(TestCase):
     def test_doesnt_include_definition_with_different_word(self):
         word = fakes.fake_value()
         meaning = fakes.fake_value()
-        reverse = fakes.fake_value()
+        is_in_target_language = fakes.fake_value()
         my_course = Course(
             **{
                 **(fakes.course1._asdict()),
@@ -238,47 +240,47 @@ class TestDefineWord(TestCase):
                     DictionaryItem(
                         word=word,
                         definition=meaning,
-                        reverse=reverse
+                        is_in_target_language=is_in_target_language
                     ),
                 ]
             },
         )
-        assert define_word(my_course, "asd", reverse=reverse) == {
+        assert define_word(my_course, "asd", is_in_target_language=is_in_target_language) == {
             "word": "asd",
         }
 
-    def test_doesnt_include_definition_with_different_reverse(self):
+    def test_doesnt_include_definition_with_different_is_in_target_language(self):
         word = fakes.fake_value()
         meaning = fakes.fake_value()
-        reverse = fakes.fake_value()
+        is_in_target_language = fakes.fake_value()
         my_course = fakes.customize(fakes.course1, dictionary=[
             DictionaryItem(
                 word=word,
                 definition=meaning,
-                reverse=False
+                is_in_target_language=False
             ),
         ])
-        assert define_word(my_course, word, reverse=reverse) == {
+        assert define_word(my_course, word, is_in_target_language=is_in_target_language) == {
             "word": word,
         }
 
     def test_skips_non_matching_definitions(self):
         word = fakes.fake_value()
         meaning = fakes.fake_value()
-        reverse = fakes.fake_value()
+        is_in_target_language = fakes.fake_value()
         my_course = fakes.customize(fakes.course1, dictionary=[
             DictionaryItem(
                 word=None,
                 definition=None,
-                reverse=None
+                is_in_target_language=None
             ),
             DictionaryItem(
                 word=word,
                 definition=meaning,
-                reverse=reverse
+                is_in_target_language=is_in_target_language
             ),
         ])
-        assert define_word(my_course, word, reverse=reverse) == {
+        assert define_word(my_course, word, is_in_target_language=is_in_target_language) == {
             "word": word,
             "definition": meaning
         }
@@ -289,10 +291,10 @@ class TestDefineWord(TestCase):
             DictionaryItem(
                 word=word,
                 definition="",
-                reverse=False
+                is_in_target_language=False
             ),
         ])
-        assert define_word(my_course, word, reverse=False) == {
+        assert define_word(my_course, word, is_in_target_language=False) == {
             "word": word,
         }
 
