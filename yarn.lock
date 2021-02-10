@@ -4130,7 +4130,7 @@ check-more-types@2.24.0:
   resolved "https://registry.yarnpkg.com/check-more-types/-/check-more-types-2.24.0.tgz#1420ffb10fd444dcfc79b43891bbfffd32a84600"
   integrity sha1-FCD/sQ/URNz8ebQ4kbv//TKoRgA=
 
-chokidar@^2.0.4, chokidar@^2.1.1, chokidar@^2.1.8:
+chokidar@2.1.8, chokidar@^2.0.4, chokidar@^2.1.1, chokidar@^2.1.8:
   version "2.1.8"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-2.1.8.tgz#804b3a7b6a99358c3c5c61e71d8728f041cff917"
   integrity sha512-ZmZUazfOzf0Nve7duiCKD23PFSCs4JPoYyccjUFF3aQkQadqBhfzhjkwBH2mNOG9cTBwhamM37EIsIkZw3nRgg==
@@ -4153,21 +4153,6 @@ chokidar@^3.4.1:
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.4.1.tgz#e905bdecf10eaa0a0b1db0c664481cc4cbc22ba1"
   integrity sha512-TQTJyr2stihpC4Sya9hs2Xh+O2wf+igjL36Y75xx2WdHuiICcn/XJza46Jwt0eT5hVpQOzo3FpY3cj3RVYLX0g==
-  dependencies:
-    anymatch "~3.1.1"
-    braces "~3.0.2"
-    glob-parent "~5.1.0"
-    is-binary-path "~2.1.0"
-    is-glob "~4.0.1"
-    normalize-path "~3.0.0"
-    readdirp "~3.4.0"
-  optionalDependencies:
-    fsevents "~2.1.2"
-
-chokidar@^3.4.2:
-  version "3.4.2"
-  resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.4.2.tgz#38dc8e658dec3809741eb3ef7bb0a47fe424232d"
-  integrity sha512-IZHaDeBeI+sZJRX7lGcXsdzgvZqKv6sECqsbErJA4mHWfpRrD8B97kSFN4cQz6nGBGiuFia1MKR4d6c1o8Cv7A==
   dependencies:
     anymatch "~3.1.1"
     braces "~3.0.2"
@@ -4973,14 +4958,14 @@ cyclist@^1.0.1:
   resolved "https://registry.yarnpkg.com/cyclist/-/cyclist-1.0.1.tgz#596e9698fd0c80e12038c2b82d6eb1b35b6224d9"
   integrity sha1-WW6WmP0MgOEgOMK4LW6xs1tiJNk=
 
-cypress-cucumber-preprocessor@4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/cypress-cucumber-preprocessor/-/cypress-cucumber-preprocessor-4.0.0.tgz#e44dee5cb2c2bd0d501e190b55ffba4a0603da99"
-  integrity sha512-+Eo25Os8oyKAYxEH9OsPvFPqgVbT/+VM3R0Yjf3eFQtiJ/MewMyyMcIFx7Agm5uKKw0xwAvW6Zs1+VsiRmoq8A==
+cypress-cucumber-preprocessor@4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/cypress-cucumber-preprocessor/-/cypress-cucumber-preprocessor-4.0.1.tgz#e0b78107dfb0db2e3200ca11e46a86624dff6de8"
+  integrity sha512-t2vt0UeBiaLq3OqaPfqouWWJsiuNv8FDxlw50CTGQJ1bNj4GalUtQDSwPe3d/ebLR4QwD9KmtNytIG+ntyjb7Q==
   dependencies:
     "@cypress/browserify-preprocessor" "^3.0.1"
     chai "^4.2.0"
-    chokidar "^3.4.2"
+    chokidar "2.1.8"
     cosmiconfig "^4.0.0"
     cucumber "^4.2.1"
     cucumber-expressions "^6.0.1"
