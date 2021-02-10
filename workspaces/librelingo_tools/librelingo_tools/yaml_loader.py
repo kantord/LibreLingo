@@ -53,10 +53,21 @@ def merge_dictionary_definitions(items_generator):
 
 
 def get_merged_dictionary_items(modules):
+    """
+    Generates merged dictionary items using every skill in every module that is
+    passed in the argument.
+
+    Merging dictionary items means that multiple definitions of the same word
+    are compressed into one definition that has a multiple meanings listed.
+    """
     return merge_dictionary_definitions(get_dictionary_items(modules))
 
 
 def load_dictionary(modules):
+    """
+    Generates a dictionary using every skill in every module that is
+    passed in the argument
+    """
     items = []
     for key, definition in get_merged_dictionary_items(modules):
         word, is_in_target_language = key
