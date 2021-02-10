@@ -35,15 +35,15 @@ def get_dictionary_items(modules):
 
             if skill.dictionary is not None:
                 for dictionary_item in skill.dictionary:
-                    word, definitions, reverse = dictionary_item
+                    word, definitions, is_in_target_language = dictionary_item
                     for definition in definitions:
-                        yield word, definition, reverse
+                        yield word, definition, is_in_target_language
 
 
 def merge_dictionary_definitions(items_generator):
     items = collections.defaultdict(set)
-    for word, definition, reverse in items_generator:
-        items[(word, reverse)].add(
+    for word, definition, is_in_target_language in items_generator:
+        items[(word, is_in_target_language)].add(
             definition)
     return list(items.items())
 
@@ -55,11 +55,11 @@ def get_merged_dictionary_items(modules):
 def load_dictionary(modules):
     items = []
     for key, definition in get_merged_dictionary_items(modules):
-        word, reverse = key
+        word, is_in_target_language = key
         items.append(DictionaryItem(
             word=word,
             definition="\n".join(sorted(definition)),
-            reverse=reverse,
+            is_in_target_language=is_in_target_language,
         ))
     return items
 
@@ -133,13 +133,13 @@ def convert_mini_dictionary(raw_mini_dictionary, course):
         (course.target_language.name, True),
         (course.source_language.name, False),
     )
-    for language_name, reverse in configurations:
+    for language_name, is_in_target_language in configurations:
         for item in raw_mini_dictionary[language_name]:
             word = list(item.keys())[0]
             raw_definition = list(item.values())[0]
             definition = raw_definition if type(
                 raw_definition) == list else [raw_definition]
-            yield (word, tuple(definition), reverse)
+            yield (word, tuple(definition), is_in_target_language)
 
 
 def load_skill(path, course):
