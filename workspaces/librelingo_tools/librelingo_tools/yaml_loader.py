@@ -27,12 +27,18 @@ def convert_language(raw_language):
 
 
 def get_dictionary_items_from_new_words(skill):
+    """
+    Extract new words in a skill as dictionar items
+    """
     for word in skill.words:
         yield word.in_source_language[0], word.in_target_language[0], True
         yield word.in_target_language[0], word.in_source_language[0], False
 
 
 def get_dictionary_items_from_skill_mini_dictionary(skill):
+    """
+    Iterate over all dictionary items from the mini-dictionary of a skill
+    """
     for dictionary_item in skill.dictionary:
         word, definitions, is_in_target_language = dictionary_item
         for definition in definitions:
@@ -40,12 +46,18 @@ def get_dictionary_items_from_skill_mini_dictionary(skill):
 
 
 def get_all_skills(modules):
+    """
+    Iterate over all skills in the supplied list of modules
+    """
     for module in modules:
         for skill in module.skills:
             yield skill
 
 
 def get_dictionary_items(modules):
+    """
+    Extract all dictionary items from every module in the supplied list
+    """
     for skill in get_all_skills(modules):
         for item in get_dictionary_items_from_new_words(skill):
             yield item
