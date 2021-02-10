@@ -18,23 +18,24 @@
 """
 
 
-def get_raw_dictionary_item(course, word, reverse):
+def get_raw_dictionary_item(course, word, is_in_target_language):
     """
         Find the matching raw dictionary item for a word.
     """
     dictionary_item = list(
         filter(
-            lambda item: item.word == word and item.reverse == reverse,
+            lambda item: item.word == word and item.is_in_target_language == is_in_target_language,
             course.dictionary))
 
     return dictionary_item[0] if dictionary_item else None
 
 
-def define_word(course, word, reverse):
+def define_word(course, word, is_in_target_language):
     """
         Creates the definition object for a word.
     """
-    dictionary_item = get_raw_dictionary_item(course, word, reverse)
+    dictionary_item = get_raw_dictionary_item(
+        course, word, is_in_target_language)
     if dictionary_item and dictionary_item.definition:
         return {
             "word": word,
