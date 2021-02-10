@@ -48,5 +48,5 @@ Phrase = namedtuple("Phrase", [
 DictionaryItem = namedtuple("DictionaryItem", [
     "word",
     "definition",
-    "reverse"
+    "is_in_target_language"
 ])
