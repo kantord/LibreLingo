@@ -25,7 +25,7 @@
       "phrase": [
         {
           "word": "I",
-          "definition": "yo\r\nme"
+          "definition": "yo"
         },
         {
           "word": "am",
@@ -33,7 +33,7 @@
         },
         {
           "word": "a",
-          "definition": "una (fem.), un (masc.)"
+          "definition": "un\nuna"
         },
         {
           "word": "cat",
@@ -52,6 +52,11 @@
           "soy",
           "un",
           "gato"
+        ],
+        [
+          "Soy",
+          "un",
+          "gato"
         ]
       ],
       "formattedSolution": "Yo soy un gato",
@@ -65,7 +70,7 @@
       "phrase": [
         {
           "word": "Yo",
-          "definition": "I"
+          "definition": "I\nme"
         },
         {
           "word": "soy",
@@ -73,7 +78,7 @@
         },
         {
           "word": "un",
-          "definition": "a"
+          "definition": "a/an (masc.)"
         },
         {
           "word": "gato",
@@ -122,15 +127,15 @@
       "phrase": [
         {
           "word": "You",
-          "definition": "tú (sg.)\r\nvosotras, vosotros (pl.)"
+          "definition": "tú\nusted"
         },
         {
           "word": "are",
-          "definition": "eres\r\nsomos\r\nsois\r\nson"
+          "definition": "son"
         },
         {
           "word": "big",
-          "definition": "grande\r\ngrandes (pl.)"
+          "definition": "grande\ngrandes"
         }
       ],
       "chips": [
@@ -142,6 +147,10 @@
         [
           "Tú",
           "eres",
+          "grande"
+        ],
+        [
+          "Eres",
           "grande"
         ]
       ],
@@ -164,7 +173,7 @@
         },
         {
           "word": "grande",
-          "definition": "big (sg.)"
+          "definition": "big"
         }
       ],
       "chips": [
@@ -207,7 +216,7 @@
       "phrase": [
         {
           "word": "The",
-          "definition": "la (fem.), el (masc.)\r\nlas, los"
+          "definition": "el\nla"
         },
         {
           "word": "horse",
@@ -219,7 +228,7 @@
         },
         {
           "word": "small",
-          "definition": "pequeña (fem.), pequeño (masc.)\r\npequeñas, pequeños"
+          "definition": "pequeña\npequeño"
         }
       ],
       "chips": [
@@ -247,7 +256,7 @@
       "phrase": [
         {
           "word": "El",
-          "definition": "the (masc. sg.)"
+          "definition": "the"
         },
         {
           "word": "caballo",
@@ -259,7 +268,7 @@
         },
         {
           "word": "pequeño",
-          "definition": "small (masc.)"
+          "definition": "small"
         }
       ],
       "chips": [
@@ -304,11 +313,11 @@
       "phrase": [
         {
           "word": "I",
-          "definition": "yo\r\nme"
+          "definition": "yo"
         },
         {
           "word": "eat",
-          "definition": "como\r\ncomes\r\ncomemos\r\ncoméis\r\ncomen"
+          "definition": "come\ncomer"
         },
         {
           "word": "bread",
@@ -338,11 +347,11 @@
       "phrase": [
         {
           "word": "Yo",
-          "definition": "I"
+          "definition": "I\nme"
         },
         {
           "word": "como",
-          "definition": "(I) eat"
+          "definition": "I eat\nlike"
         },
         {
           "word": "pan",
@@ -389,11 +398,11 @@
       "phrase": [
         {
           "word": "You",
-          "definition": "tú (sg.)\r\nvosotras, vosotros (pl.)"
+          "definition": "tú\nusted"
         },
         {
           "word": "eat",
-          "definition": "como\r\ncomes\r\ncomemos\r\ncoméis\r\ncomen"
+          "definition": "come\ncomer"
         },
         {
           "word": "pasta",
@@ -427,7 +436,7 @@
         },
         {
           "word": "comes",
-          "definition": "(you (sg.)) eat"
+          "definition": "you eat"
         },
         {
           "word": "pasta",
@@ -644,11 +653,11 @@
       "phrase": [
         {
           "word": "I",
-          "definition": "yo\r\nme"
+          "definition": "yo"
         },
         {
           "word": "drink",
-          "definition": "bebo\r\nbebes\r\nbebemos\r\nbebéis\r\nbeben"
+          "definition": "bebemos\nbebida\nbebo"
         },
         {
           "word": "beer",
@@ -678,11 +687,11 @@
       "phrase": [
         {
           "word": "Yo",
-          "definition": "I"
+          "definition": "I\nme"
         },
         {
           "word": "bebo",
-          "definition": "(I) drink"
+          "definition": "I drink"
         },
         {
           "word": "cerveza",
@@ -729,11 +738,11 @@
       "phrase": [
         {
           "word": "You",
-          "definition": "tú (sg.)\r\nvosotras, vosotros (pl.)"
+          "definition": "tú\nusted"
         },
         {
           "word": "drink",
-          "definition": "bebo\r\nbebes\r\nbebemos\r\nbebéis\r\nbeben"
+          "definition": "bebemos\nbebida\nbebo"
         },
         {
           "word": "milk",
@@ -749,6 +758,10 @@
         [
           "Tú",
           "bebes",
+          "leche"
+        ],
+        [
+          "Bebes",
           "leche"
         ]
       ],
@@ -767,7 +780,7 @@
         },
         {
           "word": "bebes",
-          "definition": "(you (sg.)) drink"
+          "definition": "you drink"
         },
         {
           "word": "leche",
@@ -814,11 +827,11 @@
       "phrase": [
         {
           "word": "Maria",
-          "definition": "María"
+          "definition": "Maria (name)"
         },
         {
           "word": "drinks",
-          "definition": "bebe"
+          "definition": "bebe\nbebidas"
         },
         {
           "word": "beer",
@@ -848,7 +861,7 @@
       "phrase": [
         {
           "word": "Maria",
-          "definition": "Maria"
+          "definition": "Maria (name)"
         },
         {
           "word": "bebe",
@@ -899,7 +912,7 @@
       "phrase": [
         {
           "word": "The",
-          "definition": "la (fem.), el (masc.)\r\nlas, los"
+          "definition": "el\nla"
         },
         {
           "word": "horse",
@@ -907,7 +920,7 @@
         },
         {
           "word": "drinks",
-          "definition": "bebe"
+          "definition": "bebe\nbebidas"
         },
         {
           "word": "water",
@@ -939,7 +952,7 @@
       "phrase": [
         {
           "word": "El",
-          "definition": "the (masc. sg.)"
+          "definition": "the"
         },
         {
           "word": "caballo",
