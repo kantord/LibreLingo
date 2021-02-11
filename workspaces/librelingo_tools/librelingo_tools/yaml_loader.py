@@ -31,8 +31,8 @@ def get_dictionary_items_from_new_words(skill):
     Extract new words in a skill as dictionar items
     """
     for word in skill.words:
-        yield word.in_source_language[0], word.in_target_language[0], True
-        yield word.in_target_language[0], word.in_source_language[0], False
+        yield word.in_source_language[0], word.in_target_language[0], False
+        yield word.in_target_language[0], word.in_source_language[0], True
 
 
 def get_dictionary_items_from_skill_mini_dictionary(skill):

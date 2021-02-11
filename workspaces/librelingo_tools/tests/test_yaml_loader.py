@@ -154,10 +154,10 @@ def test_load_course_output_matches_value(fs):
     assert result.license == License(name='CC BY 3.0', full_name='CC BY 3.0',
                                      link='https://www.example.com/license')
     assert set(result.dictionary) == set([
-        DictionaryItem("the man", "l'homme", True),
-        DictionaryItem("l'homme", "the man", False),
-        DictionaryItem("the woman", "la femme", True),
-        DictionaryItem("la femme", "the woman", False),
+        DictionaryItem("the man", "l'homme", False),
+        DictionaryItem("l'homme", "the man", True),
+        DictionaryItem("the woman", "la femme", False),
+        DictionaryItem("la femme", "the woman", True),
         DictionaryItem("dit", "says", True),
         DictionaryItem("bonjour", "hello\nhi", True),
         DictionaryItem("L'homme", "the man", True),
@@ -621,7 +621,7 @@ def test_load_dictionary_includes_word_from_new_word(module_with_word):
     dict_item = DictionaryItem(
         word=in_source_language[0],
         definition=in_target_language[0],
-        is_in_target_language=True
+        is_in_target_language=False
     )
     assert dict_item in load_dictionary([module_with_word[0]])
 
@@ -631,7 +631,7 @@ def test_load_dictionary_includes_reverse_word_from_new_word(module_with_word):
     dict_item = DictionaryItem(
         word=in_target_language[0],
         definition=in_source_language[0],
-        is_in_target_language=False
+        is_in_target_language=True
     )
     assert dict_item in load_dictionary([module_with_word[0]])
 
@@ -844,3 +844,5 @@ def test_convert_phrase_complains_about_missing_translation():
         convert_phrase({
             "Phrase": randomPhrase
         })
+
+
