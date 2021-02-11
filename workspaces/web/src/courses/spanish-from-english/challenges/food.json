@@ -25,11 +25,11 @@
       "phrase": [
         {
           "word": "Enjoy",
-          "definition": "disfruto\r\ndisfrutas\r\ndisfrutamos\r\ndisfrutáis\r\ndisfrutan"
+          "definition": "disfruta"
         },
         {
           "word": "your",
-          "definition": "tu"
+          "definition": "su\ntu"
         },
         {
           "word": "meal",
@@ -61,7 +61,7 @@
         },
         {
           "word": "provecho",
-          "definition": "benefit"
+          "definition": "profit"
         }
       ],
       "chips": [
@@ -120,7 +120,8 @@
       "translatesToSourceLanguage": false,
       "phrase": [
         {
-          "word": "Bread,"
+          "word": "Bread,",
+          "definition": "pan"
         },
         {
           "word": "please",
@@ -149,10 +150,12 @@
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Pan,"
+          "word": "Pan,",
+          "definition": "bread"
         },
         {
-          "word": "por"
+          "word": "por",
+          "definition": "for"
         },
         {
           "word": "favor",
@@ -196,7 +199,8 @@
       "translatesToSourceLanguage": false,
       "phrase": [
         {
-          "word": "Water,"
+          "word": "Water,",
+          "definition": "agua"
         },
         {
           "word": "please",
@@ -225,10 +229,12 @@
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Agua,"
+          "word": "Agua,",
+          "definition": "water"
         },
         {
-          "word": "por"
+          "word": "por",
+          "definition": "for"
         },
         {
           "word": "favor",
@@ -273,11 +279,11 @@
       "phrase": [
         {
           "word": "Cecilia",
-          "definition": "Cecilia"
+          "definition": "Cecilia (name)"
         },
         {
           "word": "drinks",
-          "definition": "bebe"
+          "definition": "bebe\nbebidas"
         },
         {
           "word": "water",
@@ -307,7 +313,7 @@
       "phrase": [
         {
           "word": "Cecilia",
-          "definition": "Cecilia"
+          "definition": "Cecilia (name)"
         },
         {
           "word": "bebe",
@@ -358,7 +364,7 @@
       "phrase": [
         {
           "word": "The",
-          "definition": "la (fem.), el (masc.)\r\nlas, los"
+          "definition": "el\nla"
         },
         {
           "word": "couple",
@@ -366,7 +372,7 @@
         },
         {
           "word": "drinks",
-          "definition": "bebe"
+          "definition": "bebe\nbebidas"
         },
         {
           "word": "beer",
@@ -398,7 +404,7 @@
       "phrase": [
         {
           "word": "La",
-          "definition": "the (fem. sg.)"
+          "definition": "the"
         },
         {
           "word": "pareja",
@@ -455,7 +461,7 @@
       "phrase": [
         {
           "word": "José",
-          "definition": "José"
+          "definition": "José (name)"
         },
         {
           "word": "eats",
@@ -489,7 +495,7 @@
       "phrase": [
         {
           "word": "José",
-          "definition": "José"
+          "definition": "José (name)"
         },
         {
           "word": "come",
@@ -540,11 +546,11 @@
       "phrase": [
         {
           "word": "I",
-          "definition": "yo\r\nme"
+          "definition": "yo"
         },
         {
           "word": "eat",
-          "definition": "como\r\ncomes\r\ncomemos\r\ncoméis\r\ncomen"
+          "definition": "come\ncomer"
         },
         {
           "word": "pasta",
@@ -574,11 +580,11 @@
       "phrase": [
         {
           "word": "Yo",
-          "definition": "I"
+          "definition": "I\nme"
         },
         {
           "word": "como",
-          "definition": "(I) eat"
+          "definition": "I eat\nlike"
         },
         {
           "word": "pasta",
@@ -611,9 +617,9 @@
       ],
       "formInTargetLanguage": "pan",
       "meaningInSourceLanguage": "bread",
-      "id": "7720157635f2",
+      "id": "24d5d2fef7e4",
       "priority": 0,
-      "group": "3fb3cbe7250d"
+      "group": "d46133b941b8"
     },
     {
       "type": "shortInput",
@@ -631,18 +637,18 @@
           "definition": "pan"
         }
       ],
-      "id": "eb38cdc04c77",
+      "id": "4dad6511c99a",
       "priority": 1,
-      "group": "3fb3cbe7250d"
+      "group": "d46133b941b8"
     },
     {
       "type": "listeningExercise",
       "answer": "pan",
       "meaning": "bread",
       "audio": "e4cb0d417c7fb80188f03fa2c71a3615310bce041cc46cb23fb92816fe7d75cc",
-      "id": "5380c6e32058",
+      "id": "b10e990aca42",
       "priority": 1,
-      "group": "3fb3cbe7250d"
+      "group": "d46133b941b8"
     },
     {
       "type": "cards",
@@ -653,9 +659,9 @@
       ],
       "formInTargetLanguage": "leche",
       "meaningInSourceLanguage": "milk",
-      "id": "6b093d668e88",
+      "id": "54b2db93b157",
       "priority": 0,
-      "group": "9116a2f893c3"
+      "group": "4883754f833b"
     },
     {
       "type": "shortInput",
@@ -673,18 +679,18 @@
           "definition": "leche"
         }
       ],
-      "id": "a0dbefbb67d7",
+      "id": "ce9eb661bc64",
       "priority": 1,
-      "group": "9116a2f893c3"
+      "group": "4883754f833b"
     },
     {
       "type": "listeningExercise",
       "answer": "leche",
       "meaning": "milk",
       "audio": "525030eedc708fac5baedfcf633f1bc8b87fecd8f5b0002429c92b6b2450faf2",
-      "id": "1799259bd6e0",
+      "id": "2a4171ec322c",
       "priority": 1,
-      "group": "9116a2f893c3"
+      "group": "4883754f833b"
     },
     {
       "type": "cards",
@@ -695,9 +701,9 @@
       ],
       "formInTargetLanguage": "pasta",
       "meaningInSourceLanguage": "pasta",
-      "id": "133c7765fa81",
+      "id": "7462b968fe79",
       "priority": 0,
-      "group": "b641eadcff9c"
+      "group": "933aadc2f3ba"
     },
     {
       "type": "shortInput",
@@ -715,18 +721,18 @@
           "definition": "pasta"
         }
       ],
-      "id": "e8e8ab8ef67f",
+      "id": "4081674085bb",
       "priority": 1,
-      "group": "b641eadcff9c"
+      "group": "933aadc2f3ba"
     },
     {
       "type": "listeningExercise",
       "answer": "pasta",
       "meaning": "pasta",
       "audio": "76fc7b73c6388e0d7dd698573d5a760a408e9c3ae4e7b53f1872e731000e9f9c",
-      "id": "79a094d0f9a1",
+      "id": "b406076677a2",
       "priority": 1,
-      "group": "b641eadcff9c"
+      "group": "933aadc2f3ba"
     },
     {
       "type": "cards",
@@ -737,9 +743,9 @@
       ],
       "formInTargetLanguage": "pareja",
       "meaningInSourceLanguage": "couple",
-      "id": "9ec3c8fccf43",
+      "id": "0e05a473ef0b",
       "priority": 0,
-      "group": "ff03770a227d"
+      "group": "0b311888e659"
     },
     {
       "type": "shortInput",
@@ -757,18 +763,18 @@
           "definition": "pareja"
         }
       ],
-      "id": "2bd55c559b96",
+      "id": "cdb0f0556649",
       "priority": 1,
-      "group": "ff03770a227d"
+      "group": "0b311888e659"
     },
     {
       "type": "listeningExercise",
       "answer": "pareja",
       "meaning": "couple",
       "audio": "732bc73f737caa7da7615d6ea544f6b705071699be926ad99681d9eaf4b752dd",
-      "id": "6851a55cfa99",
+      "id": "5229001e5800",
       "priority": 1,
-      "group": "ff03770a227d"
+      "group": "0b311888e659"
     },
     {
       "type": "cards",
@@ -779,9 +785,9 @@
       ],
       "formInTargetLanguage": "el pan",
       "meaningInSourceLanguage": "the bread",
-      "id": "cb739906f4a9",
+      "id": "e923b747759f",
       "priority": 0,
-      "group": "10f6d408be04"
+      "group": "247eed4dcf6d"
     },
     {
       "type": "shortInput",
@@ -796,25 +802,25 @@
       "phrase": [
         {
           "word": "the",
-          "definition": "la (fem.), el (masc.)\r\nlas, los"
+          "definition": "el\nla"
         },
         {
           "word": "bread",
           "definition": "pan"
         }
       ],
-      "id": "58f3777dc017",
+      "id": "0c5f5da3a849",
       "priority": 1,
-      "group": "10f6d408be04"
+      "group": "247eed4dcf6d"
     },
     {
       "type": "listeningExercise",
       "answer": "el pan",
       "meaning": "the bread",
       "audio": "3a0435799c6d59a5b30600cd8f4514f044c566b492a3a42cfd48f88ba8399244",
-      "id": "4f848ac73289",
+      "id": "9c0dc367c0a2",
       "priority": 1,
-      "group": "10f6d408be04"
+      "group": "247eed4dcf6d"
     },
     {
       "type": "cards",
@@ -825,9 +831,9 @@
       ],
       "formInTargetLanguage": "la leche",
       "meaningInSourceLanguage": "the milk",
-      "id": "d7515574b8e9",
+      "id": "c28f1d4b6152",
       "priority": 0,
-      "group": "b6a3b1cbf504"
+      "group": "7e9eab0c6f1f"
     },
     {
       "type": "shortInput",
@@ -842,25 +848,25 @@
       "phrase": [
         {
           "word": "the",
-          "definition": "la (fem.), el (masc.)\r\nlas, los"
+          "definition": "el\nla"
         },
         {
           "word": "milk",
           "definition": "leche"
         }
       ],
-      "id": "1712d813c55a",
+      "id": "a36d16ddd5b8",
       "priority": 1,
-      "group": "b6a3b1cbf504"
+      "group": "7e9eab0c6f1f"
     },
     {
       "type": "listeningExercise",
       "answer": "la leche",
       "meaning": "the milk",
       "audio": "dafaaf408547a8004bd718a10ad33ca6ee5ab0af212eed79e92ba05f63c48282",
-      "id": "3801208660b6",
+      "id": "8da23dcb1ea6",
       "priority": 1,
-      "group": "b6a3b1cbf504"
+      "group": "7e9eab0c6f1f"
     },
     {
       "type": "cards",
@@ -871,9 +877,9 @@
       ],
       "formInTargetLanguage": "la pasta",
       "meaningInSourceLanguage": "the pasta",
-      "id": "721ef6ff6402",
+      "id": "bc21c01852d3",
       "priority": 0,
-      "group": "9f9e6214c594"
+      "group": "9a71dd9d4c1d"
     },
     {
       "type": "shortInput",
@@ -888,25 +894,25 @@
       "phrase": [
         {
           "word": "the",
-          "definition": "la (fem.), el (masc.)\r\nlas, los"
+          "definition": "el\nla"
         },
         {
           "word": "pasta",
           "definition": "pasta"
         }
       ],
-      "id": "ac47607f5336",
+      "id": "d649017f9046",
       "priority": 1,
-      "group": "9f9e6214c594"
+      "group": "9a71dd9d4c1d"
     },
     {
       "type": "listeningExercise",
       "answer": "la pasta",
       "meaning": "the pasta",
       "audio": "32d5f41e65ceeca9b196be048f57d5786eb6b12e14718c594e372efc7db20eef",
-      "id": "d93a8f151fc9",
+      "id": "896bc08e3c93",
       "priority": 1,
-      "group": "9f9e6214c594"
+      "group": "9a71dd9d4c1d"
     },
     {
       "type": "cards",
@@ -917,9 +923,9 @@
       ],
       "formInTargetLanguage": "la pareja",
       "meaningInSourceLanguage": "the couple",
-      "id": "964ba42f18a0",
+      "id": "534cae24ae78",
       "priority": 0,
-      "group": "db0e78bae512"
+      "group": "6ba2e1f7bec9"
     },
     {
       "type": "shortInput",
@@ -934,25 +940,25 @@
       "phrase": [
         {
           "word": "the",
-          "definition": "la (fem.), el (masc.)\r\nlas, los"
+          "definition": "el\nla"
         },
         {
           "word": "couple",
           "definition": "pareja"
         }
       ],
-      "id": "168508420b20",
+      "id": "06b90dca21ab",
       "priority": 1,
-      "group": "db0e78bae512"
+      "group": "6ba2e1f7bec9"
     },
     {
       "type": "listeningExercise",
       "answer": "la pareja",
       "meaning": "the couple",
       "audio": "3732f6ba87647d0987360e6a190dc797b26b6c7df03d97d4ccb972c59c5c6f8b",
-      "id": "de62ce78ad3e",
+      "id": "06d339d49bd8",
       "priority": 1,
-      "group": "db0e78bae512"
+      "group": "6ba2e1f7bec9"
     }
   ]
 }
