@@ -844,5 +844,3 @@ def test_convert_phrase_complains_about_missing_translation():
         convert_phrase({
             "Phrase": randomPhrase
         })
-
-
