@@ -1,0 +1,53 @@
+Skill:
+  Id: 49bdd5c6-6ca3-11eb-9439-0242ac130002
+  Name: Hello
+  Thumbnails:
+    - people1
+    - woman1
+    - man1
+
+New words:
+  - Word: Der Mann
+    Translation: the man
+    Images:
+      - man1
+      - man2
+      - man3
+
+  - Word: Die Frau
+    Synonyms:
+      - Die Dame
+    Translation: the woman
+    Also accepted:
+      - the female
+
+Phrases:
+  - Phrase: Die Frau sagt hallo
+    Alternative versions:
+      - Die Frau sagt hi
+      - Die Frau sagt guten Tag
+    Translation: The woman says hello
+    Alternative translations:
+      - The woman says hi
+  - Phrase: Der Mann sagt hallo
+    Alternative versions:
+      - Der Mann sagt hi
+      - Der Mann sagt guten Tag
+    Translation: The man says hello
+    Alternative translations:
+      - The man says hi
+
+Mini-dictionary:
+  German:
+    - sagt: says
+    - hallo:
+      - hello
+      - hi
+    - Der Mann: the man
+
+  English:
+    - says: sagt
+    - hello:
+      - hallo
+      - hi
+      - guten Tag
