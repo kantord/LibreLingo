@@ -1,0 +1,311 @@
+{
+  "id": "380f3001d9ea",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Die Frau sagt hallo",
+      "meaningInSourceLanguage": "The woman says hello",
+      "id": "94d531dbc9bc",
+      "priority": 0,
+      "group": "a85c3c4fc802"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Die Frau sagt hallo",
+      "meaning": "The woman says hello",
+      "audio": "a28b176cd2456204de44858effa8880c7242a1ee93b929e5fb0a5ffc4ab5d2b0",
+      "id": "b15f93120955",
+      "priority": 1,
+      "group": "a85c3c4fc802"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "The"
+        },
+        {
+          "word": "woman"
+        },
+        {
+          "word": "says",
+          "definition": "sagt"
+        },
+        {
+          "word": "hello",
+          "definition": "guten Tag\nhallo\nhi"
+        }
+      ],
+      "chips": [
+        "Die",
+        "Frau",
+        "sagt",
+        "hallo"
+      ],
+      "solutions": [
+        [
+          "Die",
+          "Frau",
+          "sagt",
+          "hallo"
+        ],
+        [
+          "Die",
+          "Frau",
+          "sagt",
+          "hi"
+        ],
+        [
+          "Die",
+          "Frau",
+          "sagt",
+          "guten",
+          "Tag"
+        ]
+      ],
+      "formattedSolution": "Die Frau sagt hallo",
+      "id": "c93babf881c8",
+      "priority": 2,
+      "group": "a85c3c4fc802"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Die"
+        },
+        {
+          "word": "Frau"
+        },
+        {
+          "word": "sagt",
+          "definition": "says"
+        },
+        {
+          "word": "hallo",
+          "definition": "hello\nhi"
+        }
+      ],
+      "chips": [
+        "The",
+        "woman",
+        "says",
+        "hello"
+      ],
+      "solutions": [
+        [
+          "The",
+          "woman",
+          "says",
+          "hello"
+        ],
+        [
+          "The",
+          "woman",
+          "says",
+          "hi"
+        ]
+      ],
+      "formattedSolution": "The woman says hello",
+      "id": "73ed88b43327",
+      "priority": 2,
+      "group": "a85c3c4fc802"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Der Mann sagt hallo",
+      "meaningInSourceLanguage": "The man says hello",
+      "id": "a1ff58a04f46",
+      "priority": 0,
+      "group": "92bf2f2d2a96"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Der Mann sagt hallo",
+      "meaning": "The man says hello",
+      "audio": "d9ede7f99f5d442ad3a41855b49f844c4a56b8ff6add5debc87b60d3a680393a",
+      "id": "dc09a377d04a",
+      "priority": 1,
+      "group": "92bf2f2d2a96"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "The"
+        },
+        {
+          "word": "man"
+        },
+        {
+          "word": "says",
+          "definition": "sagt"
+        },
+        {
+          "word": "hello",
+          "definition": "guten Tag\nhallo\nhi"
+        }
+      ],
+      "chips": [
+        "Der",
+        "Mann",
+        "sagt",
+        "hallo"
+      ],
+      "solutions": [
+        [
+          "Der",
+          "Mann",
+          "sagt",
+          "hallo"
+        ],
+        [
+          "Der",
+          "Mann",
+          "sagt",
+          "hi"
+        ],
+        [
+          "Der",
+          "Mann",
+          "sagt",
+          "guten",
+          "Tag"
+        ]
+      ],
+      "formattedSolution": "Der Mann sagt hallo",
+      "id": "23fc737d6f8b",
+      "priority": 2,
+      "group": "92bf2f2d2a96"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Der"
+        },
+        {
+          "word": "Mann"
+        },
+        {
+          "word": "sagt",
+          "definition": "says"
+        },
+        {
+          "word": "hallo",
+          "definition": "hello\nhi"
+        }
+      ],
+      "chips": [
+        "The",
+        "man",
+        "says",
+        "hello"
+      ],
+      "solutions": [
+        [
+          "The",
+          "man",
+          "says",
+          "hello"
+        ],
+        [
+          "The",
+          "man",
+          "says",
+          "hi"
+        ]
+      ],
+      "formattedSolution": "The man says hello",
+      "id": "9b88ec09eb0d",
+      "priority": 2,
+      "group": "92bf2f2d2a96"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "man1.jpg",
+        "man2.jpg",
+        "man3.jpg"
+      ],
+      "formInTargetLanguage": "Der Mann",
+      "meaningInSourceLanguage": "the man",
+      "id": "1503f5893e3d",
+      "priority": 0,
+      "group": "8371a46ddb1e"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "man1.jpg",
+        "man2.jpg",
+        "man3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "Der Mann"
+      ],
+      "phrase": [
+        {
+          "word": "the"
+        },
+        {
+          "word": "man"
+        }
+      ],
+      "id": "ca04464ffb93",
+      "priority": 1,
+      "group": "8371a46ddb1e"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Der Mann",
+      "meaning": "the man",
+      "audio": "64c8cdfa3dd311e3a10dd86ccb325e4f6e4c75dbb41ce960eb853a3d8cf89a01",
+      "id": "bd83b83db1e3",
+      "priority": 1,
+      "group": "8371a46ddb1e"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Die Frau",
+      "meaningInSourceLanguage": "the woman",
+      "id": "840d90aea650",
+      "priority": 0,
+      "group": "2d6a9b3b659b"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "Die Frau",
+        "Die Dame"
+      ],
+      "phrase": [
+        {
+          "word": "the"
+        },
+        {
+          "word": "woman"
+        }
+      ],
+      "id": "5cd545eaebe8",
+      "priority": 1,
+      "group": "2d6a9b3b659b"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Die Frau",
+      "meaning": "the woman",
+      "audio": "609a9b428b8d731096abd531a6a40d22f5bf8d9155b5113185fc99286e83cae4",
+      "id": "70dd782a5072",
+      "priority": 1,
+      "group": "2d6a9b3b659b"
+    }
+  ]
+}
