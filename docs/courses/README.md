@@ -9,7 +9,7 @@ are organized in a specific directory structure.
 ### For English speakers
 
 - [French for English speakers](https://github.com/kantord/LibreLingo/tree/master/courses/french-from-english)
-- [German for English speakers](https://github.com/kantord/LibreLingo/tree/master/courses/german-from-english)
+- [German for English speakers](https://github.com/kantord/LibreLingo/tree/master/courses/german-from-english) ([Preview](https://librelingo.app/course/german-from-english/))
 
 ## Creating a new course
 
