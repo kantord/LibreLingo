@@ -25,14 +25,15 @@
       "phrase": [
         {
           "word": "I",
-          "definition": "yo\r\nme"
+          "definition": "yo"
         },
         {
           "word": "like",
-          "definition": "gusta"
+          "definition": "como\ngusta"
         },
         {
-          "word": "it!"
+          "word": "it!",
+          "definition": "eso\nlo"
         }
       ],
       "chips": [
@@ -55,10 +56,12 @@
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "¡Me"
+          "word": "¡Me",
+          "definition": "I\nme"
         },
         {
-          "word": "gusta!"
+          "word": "gusta!",
+          "definition": "gusta\ntaste"
         }
       ],
       "chips": [
@@ -105,14 +108,15 @@
         },
         {
           "word": "much",
-          "definition": "mucho"
+          "definition": "mucha\nmucho\nmuy"
         },
         {
           "word": "is",
           "definition": "es"
         },
         {
-          "word": "it?"
+          "word": "it?",
+          "definition": "eso\nlo"
         }
       ],
       "chips": [
@@ -135,10 +139,12 @@
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "¿Cuánto"
+          "word": "¿Cuánto",
+          "definition": "how many\nhow much"
         },
         {
-          "word": "cuesta?"
+          "word": "cuesta?",
+          "definition": "cost\ncosts"
         }
       ],
       "chips": [
@@ -200,7 +206,7 @@
       "phrase": [
         {
           "word": "The",
-          "definition": "la (fem.), el (masc.)\r\nlas, los"
+          "definition": "el\nla"
         },
         {
           "word": "dress",
@@ -212,7 +218,7 @@
         },
         {
           "word": "beautiful",
-          "definition": "bonita (fem.), bonito (masc.)\r\nbonitas, bonitos"
+          "definition": "bonita\nbonito\nhermosa\nhermoso"
         }
       ],
       "chips": [
@@ -240,7 +246,7 @@
       "phrase": [
         {
           "word": "El",
-          "definition": "the (masc. sg.)"
+          "definition": "the"
         },
         {
           "word": "vestido",
@@ -252,7 +258,7 @@
         },
         {
           "word": "bonito",
-          "definition": "beautiful (masc. sg.)"
+          "definition": "beautiful"
         }
       ],
       "chips": [
@@ -297,7 +303,7 @@
       "phrase": [
         {
           "word": "The",
-          "definition": "la (fem.), el (masc.)\r\nlas, los"
+          "definition": "el\nla"
         },
         {
           "word": "shoes",
@@ -305,11 +311,11 @@
         },
         {
           "word": "are",
-          "definition": "eres\r\nsomos\r\nsois\r\nson"
+          "definition": "son"
         },
         {
           "word": "big",
-          "definition": "grande\r\ngrandes (pl.)"
+          "definition": "grande\ngrandes"
         }
       ],
       "chips": [
@@ -337,7 +343,7 @@
       "phrase": [
         {
           "word": "Los",
-          "definition": "the (masc. pl.)"
+          "definition": "the"
         },
         {
           "word": "zapatos",
@@ -345,11 +351,11 @@
         },
         {
           "word": "son",
-          "definition": "(they) are"
+          "definition": "are"
         },
         {
           "word": "grandes",
-          "definition": "big (pl.)"
+          "definition": "big"
         }
       ],
       "chips": [
@@ -394,7 +400,7 @@
       "phrase": [
         {
           "word": "The",
-          "definition": "la (fem.), el (masc.)\r\nlas, los"
+          "definition": "el\nla"
         },
         {
           "word": "t-shirt",
@@ -406,7 +412,7 @@
         },
         {
           "word": "big",
-          "definition": "grande\r\ngrandes (pl.)"
+          "definition": "grande\ngrandes"
         }
       ],
       "chips": [
@@ -434,7 +440,7 @@
       "phrase": [
         {
           "word": "La",
-          "definition": "the (fem. sg.)"
+          "definition": "the"
         },
         {
           "word": "camiseta",
@@ -446,7 +452,7 @@
         },
         {
           "word": "grande",
-          "definition": "big (sg.)"
+          "definition": "big"
         }
       ],
       "chips": [
@@ -491,7 +497,7 @@
       "phrase": [
         {
           "word": "The",
-          "definition": "la (fem.), el (masc.)\r\nlas, los"
+          "definition": "el\nla"
         },
         {
           "word": "skirt",
@@ -503,7 +509,7 @@
         },
         {
           "word": "small",
-          "definition": "pequeña (fem.), pequeño (masc.)\r\npequeñas, pequeños"
+          "definition": "pequeña\npequeño"
         }
       ],
       "chips": [
@@ -531,7 +537,7 @@
       "phrase": [
         {
           "word": "La",
-          "definition": "the (fem. sg.)"
+          "definition": "the"
         },
         {
           "word": "falda",
@@ -543,7 +549,7 @@
         },
         {
           "word": "pequeña",
-          "definition": "small (fem. sg.)"
+          "definition": "small"
         }
       ],
       "chips": [
@@ -568,22 +574,22 @@
     {
       "type": "cards",
       "pictures": [
+        "dress1.jpg",
         "dress2.jpg",
-        "dress3.jpg",
-        "dress1.jpg"
+        "dress3.jpg"
       ],
       "formInTargetLanguage": "vestido",
       "meaningInSourceLanguage": "dress",
-      "id": "d069942dfddd",
+      "id": "7399df07ff7c",
       "priority": 0,
-      "group": "cedbba468d44"
+      "group": "035790896cec"
     },
     {
       "type": "shortInput",
       "pictures": [
+        "dress1.jpg",
         "dress2.jpg",
-        "dress3.jpg",
-        "dress1.jpg"
+        "dress3.jpg"
       ],
       "formInTargetLanguage": [
         "vestido"
@@ -594,38 +600,38 @@
           "definition": "vestido"
         }
       ],
-      "id": "739ccb2475d3",
+      "id": "88e378563ad7",
       "priority": 1,
-      "group": "cedbba468d44"
+      "group": "035790896cec"
     },
     {
       "type": "listeningExercise",
       "answer": "vestido",
       "meaning": "dress",
       "audio": "50f05ff517851c75447042e3ccbc534b3b0cce08db250473d4fb8ccc9b8a834f",
-      "id": "47fb5501b884",
+      "id": "a08208228c98",
       "priority": 1,
-      "group": "cedbba468d44"
+      "group": "035790896cec"
     },
     {
       "type": "cards",
       "pictures": [
         "t-shirt1.jpg",
-        "t-shirt3.jpg",
-        "t-shirt2.jpg"
+        "t-shirt2.jpg",
+        "t-shirt3.jpg"
       ],
       "formInTargetLanguage": "camiseta",
       "meaningInSourceLanguage": "t-shirt",
-      "id": "f941583c88de",
+      "id": "149292658a9b",
       "priority": 0,
-      "group": "d767b8b286be"
+      "group": "87215f81fccb"
     },
     {
       "type": "shortInput",
       "pictures": [
         "t-shirt1.jpg",
-        "t-shirt3.jpg",
-        "t-shirt2.jpg"
+        "t-shirt2.jpg",
+        "t-shirt3.jpg"
       ],
       "formInTargetLanguage": [
         "camiseta"
@@ -636,18 +642,18 @@
           "definition": "camiseta"
         }
       ],
-      "id": "aa3595fe8077",
+      "id": "689f2493a69c",
       "priority": 1,
-      "group": "d767b8b286be"
+      "group": "87215f81fccb"
     },
     {
       "type": "listeningExercise",
       "answer": "camiseta",
       "meaning": "t-shirt",
       "audio": "aceb4b19e4b586ee1064fad9c364c84bbbe15dca882456fa9e5ff78b389f30c1",
-      "id": "150e90438530",
+      "id": "b073d4a45917",
       "priority": 1,
-      "group": "d767b8b286be"
+      "group": "87215f81fccb"
     },
     {
       "type": "cards",
@@ -658,9 +664,9 @@
       ],
       "formInTargetLanguage": "gorro",
       "meaningInSourceLanguage": "hat",
-      "id": "40d752e7d46b",
+      "id": "61ca4aa57a80",
       "priority": 0,
-      "group": "05472cdb218f"
+      "group": "fbe509fca63e"
     },
     {
       "type": "shortInput",
@@ -678,38 +684,38 @@
           "definition": "gorro"
         }
       ],
-      "id": "8586297e15f5",
+      "id": "8362e40fe4cc",
       "priority": 1,
-      "group": "05472cdb218f"
+      "group": "fbe509fca63e"
     },
     {
       "type": "listeningExercise",
       "answer": "gorro",
       "meaning": "hat",
       "audio": "8e3e662ec4dd32fad183838f17960f6e9470274a16ebacd4fdc0c3edf5f74084",
-      "id": "6d1efa54bc64",
+      "id": "aca1d19cdd30",
       "priority": 1,
-      "group": "05472cdb218f"
+      "group": "fbe509fca63e"
     },
     {
       "type": "cards",
       "pictures": [
-        "shoes3.jpg",
+        "shoes1.jpg",
         "shoes2.jpg",
-        "shoes1.jpg"
+        "shoes3.jpg"
       ],
       "formInTargetLanguage": "zapatos",
       "meaningInSourceLanguage": "shoes",
-      "id": "82825ef8d399",
+      "id": "739774a19c7b",
       "priority": 0,
-      "group": "3695de15ed75"
+      "group": "0afd9c5da6a1"
     },
     {
       "type": "shortInput",
       "pictures": [
-        "shoes3.jpg",
+        "shoes1.jpg",
         "shoes2.jpg",
-        "shoes1.jpg"
+        "shoes3.jpg"
       ],
       "formInTargetLanguage": [
         "zapatos"
@@ -720,38 +726,38 @@
           "definition": "zapatos"
         }
       ],
-      "id": "28dedc5b8d26",
+      "id": "4b9ee54313ce",
       "priority": 1,
-      "group": "3695de15ed75"
+      "group": "0afd9c5da6a1"
     },
     {
       "type": "listeningExercise",
       "answer": "zapatos",
       "meaning": "shoes",
       "audio": "51997900c9d9503eaf14747f2d6780a28e562d6854b996ce8359c0e572d8dc7e",
-      "id": "52582f0a9ce8",
+      "id": "9fca1ff2eff5",
       "priority": 1,
-      "group": "3695de15ed75"
+      "group": "0afd9c5da6a1"
     },
     {
       "type": "cards",
       "pictures": [
         "shirt1.jpg",
-        "shirt3.jpg",
-        "shirt2.jpg"
+        "shirt2.jpg",
+        "shirt3.jpg"
       ],
       "formInTargetLanguage": "camisa",
       "meaningInSourceLanguage": "shirt",
-      "id": "52eb49513db6",
+      "id": "90f3413de1c9",
       "priority": 0,
-      "group": "290bbb02bb2d"
+      "group": "9091306eeb40"
     },
     {
       "type": "shortInput",
       "pictures": [
         "shirt1.jpg",
-        "shirt3.jpg",
-        "shirt2.jpg"
+        "shirt2.jpg",
+        "shirt3.jpg"
       ],
       "formInTargetLanguage": [
         "camisa"
@@ -762,18 +768,18 @@
           "definition": "camisa"
         }
       ],
-      "id": "6f4d490f0a0a",
+      "id": "f16fe8d76d81",
       "priority": 1,
-      "group": "290bbb02bb2d"
+      "group": "9091306eeb40"
     },
     {
       "type": "listeningExercise",
       "answer": "camisa",
       "meaning": "shirt",
       "audio": "e78369c6d1df8ff193301b0fb1a955f6efec07e76cc1455bef49e8eaee392cd0",
-      "id": "adde620e7043",
+      "id": "5fb78add3adc",
       "priority": 1,
-      "group": "290bbb02bb2d"
+      "group": "9091306eeb40"
     },
     {
       "type": "cards",
@@ -784,9 +790,9 @@
       ],
       "formInTargetLanguage": "falda",
       "meaningInSourceLanguage": "skirt",
-      "id": "e3117a60c745",
+      "id": "62bedaa39234",
       "priority": 0,
-      "group": "6a85a1284870"
+      "group": "e28f0dba5f51"
     },
     {
       "type": "shortInput",
@@ -804,37 +810,37 @@
           "definition": "falda"
         }
       ],
-      "id": "8e4575d0d57b",
+      "id": "7cd737f8725f",
       "priority": 1,
-      "group": "6a85a1284870"
+      "group": "e28f0dba5f51"
     },
     {
       "type": "listeningExercise",
       "answer": "falda",
       "meaning": "skirt",
       "audio": "87aacfcb42489f28b11cb2872900e0c936421ed3cb477ab735fec0087a857481",
-      "id": "45d60b06772b",
+      "id": "61de644a1f0b",
       "priority": 1,
-      "group": "6a85a1284870"
+      "group": "e28f0dba5f51"
     },
     {
       "type": "cards",
       "pictures": [
-        "socks2.jpg",
         "socks1.jpg",
+        "socks2.jpg",
         "socks3.jpg"
       ],
       "formInTargetLanguage": "calcetines",
       "meaningInSourceLanguage": "socks",
-      "id": "df292f09b99d",
+      "id": "32cbfde6a9f7",
       "priority": 0,
-      "group": "e6059e68bcfc"
+      "group": "5a6b9e82fdd3"
     },
     {
       "type": "shortInput",
       "pictures": [
-        "socks2.jpg",
         "socks1.jpg",
+        "socks2.jpg",
         "socks3.jpg"
       ],
       "formInTargetLanguage": [
@@ -846,38 +852,38 @@
           "definition": "calcetines"
         }
       ],
-      "id": "c0e66949503c",
+      "id": "bcea0850d11c",
       "priority": 1,
-      "group": "e6059e68bcfc"
+      "group": "5a6b9e82fdd3"
     },
     {
       "type": "listeningExercise",
       "answer": "calcetines",
       "meaning": "socks",
       "audio": "f9eed1ce5529687afeb0ac8f65768c0c4ba57ca9d302903707d448de8cbf02be",
-      "id": "94fe13239739",
+      "id": "978c57c2ce18",
       "priority": 1,
-      "group": "e6059e68bcfc"
+      "group": "5a6b9e82fdd3"
     },
     {
       "type": "cards",
       "pictures": [
+        "dress1.jpg",
         "dress2.jpg",
-        "dress3.jpg",
-        "dress1.jpg"
+        "dress3.jpg"
       ],
       "formInTargetLanguage": "el vestido",
       "meaningInSourceLanguage": "the dress",
-      "id": "28f7b1997e0e",
+      "id": "34a480762d4e",
       "priority": 0,
-      "group": "24a211767c1e"
+      "group": "07163e661c7f"
     },
     {
       "type": "shortInput",
       "pictures": [
+        "dress1.jpg",
         "dress2.jpg",
-        "dress3.jpg",
-        "dress1.jpg"
+        "dress3.jpg"
       ],
       "formInTargetLanguage": [
         "el vestido"
@@ -885,45 +891,45 @@
       "phrase": [
         {
           "word": "the",
-          "definition": "la (fem.), el (masc.)\r\nlas, los"
+          "definition": "el\nla"
         },
         {
           "word": "dress",
           "definition": "vestido"
         }
       ],
-      "id": "ddb29b9e4d4e",
+      "id": "94aea74485c2",
       "priority": 1,
-      "group": "24a211767c1e"
+      "group": "07163e661c7f"
     },
     {
       "type": "listeningExercise",
       "answer": "el vestido",
       "meaning": "the dress",
       "audio": "dc2e90bea69b8f5db7a78ce380dc7786b15307f8557aa0815ca32d7b805e7b3f",
-      "id": "b2318f1dfefd",
+      "id": "20c4ae140bdf",
       "priority": 1,
-      "group": "24a211767c1e"
+      "group": "07163e661c7f"
     },
     {
       "type": "cards",
       "pictures": [
         "t-shirt1.jpg",
-        "t-shirt3.jpg",
-        "t-shirt2.jpg"
+        "t-shirt2.jpg",
+        "t-shirt3.jpg"
       ],
       "formInTargetLanguage": "la camiseta",
       "meaningInSourceLanguage": "the t-shirt",
-      "id": "536d806d8a7d",
+      "id": "a6ce432638d3",
       "priority": 0,
-      "group": "b3192e64c7ec"
+      "group": "a64a7a0b1590"
     },
     {
       "type": "shortInput",
       "pictures": [
         "t-shirt1.jpg",
-        "t-shirt3.jpg",
-        "t-shirt2.jpg"
+        "t-shirt2.jpg",
+        "t-shirt3.jpg"
       ],
       "formInTargetLanguage": [
         "la camiseta"
@@ -931,25 +937,25 @@
       "phrase": [
         {
           "word": "the",
-          "definition": "la (fem.), el (masc.)\r\nlas, los"
+          "definition": "el\nla"
         },
         {
           "word": "t-shirt",
           "definition": "camiseta"
         }
       ],
-      "id": "97247f5d14ac",
+      "id": "5ab37a2c2bfa",
       "priority": 1,
-      "group": "b3192e64c7ec"
+      "group": "a64a7a0b1590"
     },
     {
       "type": "listeningExercise",
       "answer": "la camiseta",
       "meaning": "the t-shirt",
       "audio": "664a18210f69dcdd29181c54460202ef7f21ea523e895a57e574a709b3d8068b",
-      "id": "6fe148512cbf",
+      "id": "8ed7bcae9768",
       "priority": 1,
-      "group": "b3192e64c7ec"
+      "group": "a64a7a0b1590"
     },
     {
       "type": "cards",
@@ -960,9 +966,9 @@
       ],
       "formInTargetLanguage": "un gorro",
       "meaningInSourceLanguage": "a hat",
-      "id": "8afeda5e0832",
+      "id": "16a1f2244c3f",
       "priority": 0,
-      "group": "bbc411ab53ec"
+      "group": "7b24e4e8f50a"
     },
     {
       "type": "shortInput",
@@ -977,45 +983,45 @@
       "phrase": [
         {
           "word": "a",
-          "definition": "una (fem.), un (masc.)"
+          "definition": "un\nuna"
         },
         {
           "word": "hat",
           "definition": "gorro"
         }
       ],
-      "id": "8653367a72d9",
+      "id": "9be68cce9649",
       "priority": 1,
-      "group": "bbc411ab53ec"
+      "group": "7b24e4e8f50a"
     },
     {
       "type": "listeningExercise",
       "answer": "un gorro",
       "meaning": "a hat",
       "audio": "ebf0e51909771e7f712c0202f5ec384bbea8846f28cb757888e0c219f0d81f75",
-      "id": "1a7f7be032f4",
+      "id": "c4c4a68a208c",
       "priority": 1,
-      "group": "bbc411ab53ec"
+      "group": "7b24e4e8f50a"
     },
     {
       "type": "cards",
       "pictures": [
-        "shoes3.jpg",
+        "shoes1.jpg",
         "shoes2.jpg",
-        "shoes1.jpg"
+        "shoes3.jpg"
       ],
       "formInTargetLanguage": "los zapatos",
       "meaningInSourceLanguage": "the shoes",
-      "id": "e6cbabc04a7c",
+      "id": "e51d79a10694",
       "priority": 0,
-      "group": "e6a373f8368e"
+      "group": "571ca4187e4f"
     },
     {
       "type": "shortInput",
       "pictures": [
-        "shoes3.jpg",
+        "shoes1.jpg",
         "shoes2.jpg",
-        "shoes1.jpg"
+        "shoes3.jpg"
       ],
       "formInTargetLanguage": [
         "los zapatos"
@@ -1023,45 +1029,45 @@
       "phrase": [
         {
           "word": "the",
-          "definition": "la (fem.), el (masc.)\r\nlas, los"
+          "definition": "el\nla"
         },
         {
           "word": "shoes",
           "definition": "zapatos"
         }
       ],
-      "id": "2f98bef3c0e1",
+      "id": "f031532b38fd",
       "priority": 1,
-      "group": "e6a373f8368e"
+      "group": "571ca4187e4f"
     },
     {
       "type": "listeningExercise",
       "answer": "los zapatos",
       "meaning": "the shoes",
       "audio": "c5ebe9ccd88374ffd5bbed0937aaf8cc081263a0d211e1e84cc2a4fccdca3036",
-      "id": "cd25afdafdae",
+      "id": "361f35e36a99",
       "priority": 1,
-      "group": "e6a373f8368e"
+      "group": "571ca4187e4f"
     },
     {
       "type": "cards",
       "pictures": [
         "shirt1.jpg",
-        "shirt3.jpg",
-        "shirt2.jpg"
+        "shirt2.jpg",
+        "shirt3.jpg"
       ],
       "formInTargetLanguage": "una camisa",
       "meaningInSourceLanguage": "a shirt",
-      "id": "504bd711c1a6",
+      "id": "0fb9cd997f9d",
       "priority": 0,
-      "group": "f1945d5433b6"
+      "group": "d913eb35cba7"
     },
     {
       "type": "shortInput",
       "pictures": [
         "shirt1.jpg",
-        "shirt3.jpg",
-        "shirt2.jpg"
+        "shirt2.jpg",
+        "shirt3.jpg"
       ],
       "formInTargetLanguage": [
         "una camisa"
@@ -1069,25 +1075,25 @@
       "phrase": [
         {
           "word": "a",
-          "definition": "una (fem.), un (masc.)"
+          "definition": "un\nuna"
         },
         {
           "word": "shirt",
           "definition": "camisa"
         }
       ],
-      "id": "6e8b812070a4",
+      "id": "2dcba14ccc42",
       "priority": 1,
-      "group": "f1945d5433b6"
+      "group": "d913eb35cba7"
     },
     {
       "type": "listeningExercise",
       "answer": "una camisa",
       "meaning": "a shirt",
       "audio": "093c2ed63cf53f0f71dc2f0a70b8c3aafd4182bb0a47a312ac6ec871321dec2c",
-      "id": "de18b13dd40a",
+      "id": "0d21e2d15be5",
       "priority": 1,
-      "group": "f1945d5433b6"
+      "group": "d913eb35cba7"
     },
     {
       "type": "cards",
@@ -1098,9 +1104,9 @@
       ],
       "formInTargetLanguage": "la falda",
       "meaningInSourceLanguage": "the skirt",
-      "id": "17840185a684",
+      "id": "6cb330d0dc81",
       "priority": 0,
-      "group": "e4a4f4c7925b"
+      "group": "4a774914f7bc"
     },
     {
       "type": "shortInput",
@@ -1115,44 +1121,44 @@
       "phrase": [
         {
           "word": "the",
-          "definition": "la (fem.), el (masc.)\r\nlas, los"
+          "definition": "el\nla"
         },
         {
           "word": "skirt",
           "definition": "falda"
         }
       ],
-      "id": "13e2de6329b0",
+      "id": "62d1c17d3440",
       "priority": 1,
-      "group": "e4a4f4c7925b"
+      "group": "4a774914f7bc"
     },
     {
       "type": "listeningExercise",
       "answer": "la falda",
       "meaning": "the skirt",
       "audio": "759b484ae2f7cb533642409f13720be475f51df4f16f900a0c5d01135dad913f",
-      "id": "2d558486b08c",
+      "id": "932be365514c",
       "priority": 1,
-      "group": "e4a4f4c7925b"
+      "group": "4a774914f7bc"
     },
     {
       "type": "cards",
       "pictures": [
-        "socks2.jpg",
         "socks1.jpg",
+        "socks2.jpg",
         "socks3.jpg"
       ],
       "formInTargetLanguage": "los calcetines",
       "meaningInSourceLanguage": "the socks",
-      "id": "4e017a7ccc27",
+      "id": "55d99f86f3da",
       "priority": 0,
-      "group": "ee173a0a7a5e"
+      "group": "1484663e476f"
     },
     {
       "type": "shortInput",
       "pictures": [
-        "socks2.jpg",
         "socks1.jpg",
+        "socks2.jpg",
         "socks3.jpg"
       ],
       "formInTargetLanguage": [
@@ -1161,25 +1167,25 @@
       "phrase": [
         {
           "word": "the",
-          "definition": "la (fem.), el (masc.)\r\nlas, los"
+          "definition": "el\nla"
         },
         {
           "word": "socks",
           "definition": "calcetines"
         }
       ],
-      "id": "230dd7dba500",
+      "id": "2de4bfd2696b",
       "priority": 1,
-      "group": "ee173a0a7a5e"
+      "group": "1484663e476f"
     },
     {
       "type": "listeningExercise",
       "answer": "los calcetines",
       "meaning": "the socks",
       "audio": "3039666601b25c068be538f7c02cc825446b74e164c68339738ca002b4e61d0e",
-      "id": "e1d38faa51c0",
+      "id": "c94b91397b09",
       "priority": 1,
-      "group": "ee173a0a7a5e"
+      "group": "1484663e476f"
     }
   ]
 }
