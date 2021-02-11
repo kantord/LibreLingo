@@ -25,7 +25,7 @@
       "phrase": [
         {
           "word": "I",
-          "definition": "yo\r\nme"
+          "definition": "yo"
         },
         {
           "word": "am",
@@ -33,10 +33,11 @@
         },
         {
           "word": "a",
-          "definition": "una (fem.), un (masc.)"
+          "definition": "un\nuna"
         },
         {
-          "word": "student"
+          "word": "student",
+          "definition": "estudiante"
         }
       ],
       "chips": [
@@ -51,6 +52,26 @@
           "soy",
           "un",
           "estudiante"
+        ],
+        [
+          "Soy",
+          "estudiante"
+        ],
+        [
+          "Soy",
+          "un",
+          "estudiante"
+        ],
+        [
+          "Soy",
+          "una",
+          "estudiante"
+        ],
+        [
+          "Yo",
+          "soy",
+          "una",
+          "estudiante"
         ]
       ],
       "formattedSolution": "Yo soy un estudiante",
@@ -64,7 +85,7 @@
       "phrase": [
         {
           "word": "Yo",
-          "definition": "I"
+          "definition": "I\nme"
         },
         {
           "word": "soy",
@@ -72,10 +93,11 @@
         },
         {
           "word": "un",
-          "definition": "a"
+          "definition": "a/an (masc.)"
         },
         {
-          "word": "estudiante"
+          "word": "estudiante",
+          "definition": "student"
         }
       ],
       "chips": [
@@ -88,6 +110,11 @@
         [
           "I",
           "am",
+          "a",
+          "student"
+        ],
+        [
+          "I'm",
           "a",
           "student"
         ]
@@ -120,17 +147,19 @@
       "phrase": [
         {
           "word": "I",
-          "definition": "yo\r\nme"
+          "definition": "yo"
         },
         {
           "word": "am",
           "definition": "soy"
         },
         {
-          "word": "at"
+          "word": "at",
+          "definition": "en"
         },
         {
-          "word": "school"
+          "word": "school",
+          "definition": "escuela"
         }
       ],
       "chips": [
@@ -147,6 +176,12 @@
           "en",
           "la",
           "escuela"
+        ],
+        [
+          "Estoy",
+          "en",
+          "la",
+          "escuela"
         ]
       ],
       "formattedSolution": "Yo estoy en la escuela",
@@ -160,20 +195,23 @@
       "phrase": [
         {
           "word": "Yo",
-          "definition": "I"
+          "definition": "I\nme"
         },
         {
-          "word": "estoy"
+          "word": "estoy",
+          "definition": "I am\nI'm"
         },
         {
-          "word": "en"
+          "word": "en",
+          "definition": "at\nin\non"
         },
         {
           "word": "la",
           "definition": "the"
         },
         {
-          "word": "escuela"
+          "word": "escuela",
+          "definition": "school"
         }
       ],
       "chips": [
@@ -187,6 +225,12 @@
           "I",
           "am",
           "at",
+          "school"
+        ],
+        [
+          "I",
+          "am",
+          "in",
           "school"
         ]
       ],
@@ -226,10 +270,11 @@
         },
         {
           "word": "a",
-          "definition": "una (fem.), un (masc.)"
+          "definition": "un\nuna"
         },
         {
-          "word": "nurse"
+          "word": "nurse",
+          "definition": "enfermera\nenfermero"
         }
       ],
       "chips": [
@@ -241,6 +286,10 @@
         [
           "Ella",
           "es",
+          "enfermera"
+        ],
+        [
+          "Es",
           "enfermera"
         ]
       ],
@@ -262,7 +311,8 @@
           "definition": "is"
         },
         {
-          "word": "enfermera"
+          "word": "enfermera",
+          "definition": "nurse"
         }
       ],
       "chips": [
@@ -277,6 +327,11 @@
           "is",
           "a",
           "nurse"
+        ],
+        [
+          "She's",
+          "a",
+          "nurse"
         ]
       ],
       "formattedSolution": "She is a nurse",
@@ -287,34 +342,31 @@
     {
       "type": "options",
       "formInTargetLanguage": "Ella está enferma",
-      "meaningInSourceLanguage": "She is ill",
-      "id": "270c2cc5cf3d",
+      "meaningInSourceLanguage": "She's ill",
+      "id": "400197583f08",
       "priority": 0,
-      "group": "40e101a2ba90"
+      "group": "a6682f9906c8"
     },
     {
       "type": "listeningExercise",
       "answer": "Ella está enferma",
-      "meaning": "She is ill",
+      "meaning": "She's ill",
       "audio": "fc68ea3d55ef479e685f61faa5b0596dc70a733df4c5c7ab64f4af410e55abc1",
-      "id": "3ab2ab8ee31f",
+      "id": "9067d4a34c3b",
       "priority": 1,
-      "group": "40e101a2ba90"
+      "group": "a6682f9906c8"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
         {
-          "word": "She",
-          "definition": "ella"
+          "word": "She's",
+          "definition": "ella es\nella está"
         },
         {
-          "word": "is",
-          "definition": "es"
-        },
-        {
-          "word": "ill"
+          "word": "ill",
+          "definition": "enferma\nenfermo"
         }
       ],
       "chips": [
@@ -327,12 +379,16 @@
           "Ella",
           "está",
           "enferma"
+        ],
+        [
+          "Está",
+          "enferma"
         ]
       ],
       "formattedSolution": "Ella está enferma",
-      "id": "31bdc0021933",
+      "id": "571ffc386936",
       "priority": 2,
-      "group": "40e101a2ba90"
+      "group": "a6682f9906c8"
     },
     {
       "type": "chips",
@@ -343,28 +399,42 @@
           "definition": "she"
         },
         {
-          "word": "está"
+          "word": "está",
+          "definition": "is"
         },
         {
-          "word": "enferma"
+          "word": "enferma",
+          "definition": "ill\nsick"
         }
       ],
       "chips": [
-        "She",
-        "is",
+        "She's",
         "ill"
       ],
       "solutions": [
         [
+          "She's",
+          "ill"
+        ],
+        [
           "She",
           "is",
           "ill"
+        ],
+        [
+          "She's",
+          "sick"
+        ],
+        [
+          "She",
+          "is",
+          "sick"
         ]
       ],
-      "formattedSolution": "She is ill",
-      "id": "2ca12c794bc2",
+      "formattedSolution": "She's ill",
+      "id": "4d8bcd060f57",
       "priority": 2,
-      "group": "40e101a2ba90"
+      "group": "a6682f9906c8"
     },
     {
       "type": "options",
@@ -389,21 +459,23 @@
       "phrase": [
         {
           "word": "We",
-          "definition": "nosotras (fem.), nosotros (masc.)"
+          "definition": "nosotras\nnosotros"
         },
         {
           "word": "are",
-          "definition": "eres\r\nsomos\r\nsois\r\nson"
+          "definition": "son"
         },
         {
-          "word": "in"
+          "word": "in",
+          "definition": "en"
         },
         {
           "word": "the",
-          "definition": "la (fem.), el (masc.)\r\nlas, los"
+          "definition": "el\nla"
         },
         {
-          "word": "city"
+          "word": "city",
+          "definition": "ciudad"
         }
       ],
       "chips": [
@@ -416,6 +488,19 @@
       "solutions": [
         [
           "Nosotras",
+          "estamos",
+          "en",
+          "la",
+          "ciudad"
+        ],
+        [
+          "Estamos",
+          "en",
+          "la",
+          "ciudad"
+        ],
+        [
+          "Nosotros",
           "estamos",
           "en",
           "la",
@@ -433,20 +518,23 @@
       "phrase": [
         {
           "word": "Nosotras",
-          "definition": "we (fem. pl.)"
+          "definition": "us\nwe"
         },
         {
-          "word": "estamos"
+          "word": "estamos",
+          "definition": "we are\nwe're"
         },
         {
-          "word": "en"
+          "word": "en",
+          "definition": "at\nin\non"
         },
         {
           "word": "la",
           "definition": "the"
         },
         {
-          "word": "ciudad"
+          "word": "ciudad",
+          "definition": "city"
         }
       ],
       "chips": [
@@ -460,6 +548,12 @@
         [
           "We",
           "are",
+          "in",
+          "the",
+          "city"
+        ],
+        [
+          "We're",
           "in",
           "the",
           "city"
@@ -493,7 +587,7 @@
       "phrase": [
         {
           "word": "The",
-          "definition": "la (fem.), el (masc.)\r\nlas, los"
+          "definition": "el\nla"
         },
         {
           "word": "cat",
@@ -504,7 +598,8 @@
           "definition": "es"
         },
         {
-          "word": "clean"
+          "word": "clean",
+          "definition": "limpia\nlimpiar\nlimpio"
         }
       ],
       "chips": [
@@ -519,6 +614,12 @@
           "gato",
           "está",
           "limpio"
+        ],
+        [
+          "La",
+          "gata",
+          "está",
+          "limpia"
         ]
       ],
       "formattedSolution": "El gato está limpio",
@@ -532,17 +633,19 @@
       "phrase": [
         {
           "word": "El",
-          "definition": "the (masc. sg.)"
+          "definition": "the"
         },
         {
           "word": "gato",
           "definition": "cat"
         },
         {
-          "word": "está"
+          "word": "está",
+          "definition": "is"
         },
         {
-          "word": "limpio"
+          "word": "limpio",
+          "definition": "clean"
         }
       ],
       "chips": [
@@ -556,6 +659,11 @@
           "The",
           "cat",
           "is",
+          "clean"
+        ],
+        [
+          "The",
+          "cat's",
           "clean"
         ]
       ],
@@ -587,14 +695,15 @@
       "phrase": [
         {
           "word": "They",
-          "definition": "ellas (fem.), ellos (masc.)"
+          "definition": "ellas\nellos"
         },
         {
           "word": "are",
-          "definition": "eres\r\nsomos\r\nsois\r\nson"
+          "definition": "son"
         },
         {
-          "word": "ready"
+          "word": "ready",
+          "definition": "lista\nlistas\nlisto\nlistos\npreparar"
         }
       ],
       "chips": [
@@ -606,6 +715,10 @@
         [
           "Ellos",
           "están",
+          "listos"
+        ],
+        [
+          "Están",
           "listos"
         ]
       ],
@@ -620,13 +733,15 @@
       "phrase": [
         {
           "word": "Ellos",
-          "definition": "they (masc.)"
+          "definition": "they"
         },
         {
-          "word": "están"
+          "word": "están",
+          "definition": "they are\nthey're\nyou are\nyou're"
         },
         {
-          "word": "listos"
+          "word": "listos",
+          "definition": "ready"
         }
       ],
       "chips": [
@@ -638,6 +753,10 @@
         [
           "They",
           "are",
+          "ready"
+        ],
+        [
+          "They're",
           "ready"
         ]
       ],
@@ -669,14 +788,15 @@
       "phrase": [
         {
           "word": "They",
-          "definition": "ellas (fem.), ellos (masc.)"
+          "definition": "ellas\nellos"
         },
         {
           "word": "are",
-          "definition": "eres\r\nsomos\r\nsois\r\nson"
+          "definition": "son"
         },
         {
-          "word": "smart"
+          "word": "smart",
+          "definition": "lista\nlistas\nlisto\nlistos"
         }
       ],
       "chips": [
@@ -688,6 +808,10 @@
         [
           "Ellos",
           "son",
+          "listos"
+        ],
+        [
+          "Son",
           "listos"
         ]
       ],
@@ -702,14 +826,15 @@
       "phrase": [
         {
           "word": "Ellos",
-          "definition": "they (masc.)"
+          "definition": "they"
         },
         {
           "word": "son",
-          "definition": "(they) are"
+          "definition": "are"
         },
         {
-          "word": "listos"
+          "word": "listos",
+          "definition": "ready"
         }
       ],
       "chips": [
@@ -722,87 +847,16 @@
           "They",
           "are",
           "smart"
+        ],
+        [
+          "They're",
+          "smart"
         ]
       ],
       "formattedSolution": "They are smart",
       "id": "28220060cbbb",
       "priority": 2,
       "group": "980081d1f734"
-    },
-    {
-      "type": "options",
-      "formInTargetLanguage": "¿Estáis contentas?",
-      "meaningInSourceLanguage": "Are you happy?",
-      "id": "ebabc3cb6aff",
-      "priority": 0,
-      "group": "06856eb5d2aa"
-    },
-    {
-      "type": "listeningExercise",
-      "answer": "¿Estáis contentas?",
-      "meaning": "Are you happy?",
-      "audio": "2a8cd6c33a66c53d5eda66985af0b016528764165c4abc1500701eeb8699e916",
-      "id": "3c3a23500db8",
-      "priority": 1,
-      "group": "06856eb5d2aa"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": false,
-      "phrase": [
-        {
-          "word": "Are"
-        },
-        {
-          "word": "you",
-          "definition": "tú"
-        },
-        {
-          "word": "happy?"
-        }
-      ],
-      "chips": [
-        "Estáis",
-        "contentas"
-      ],
-      "solutions": [
-        [
-          "Estáis",
-          "contentas"
-        ]
-      ],
-      "formattedSolution": "¿Estáis contentas?",
-      "id": "758c70ea98b7",
-      "priority": 2,
-      "group": "06856eb5d2aa"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": true,
-      "phrase": [
-        {
-          "word": "¿Estáis"
-        },
-        {
-          "word": "contentas?"
-        }
-      ],
-      "chips": [
-        "Are",
-        "you",
-        "happy"
-      ],
-      "solutions": [
-        [
-          "Are",
-          "you",
-          "happy"
-        ]
-      ],
-      "formattedSolution": "Are you happy?",
-      "id": "2110ed9eb031",
-      "priority": 2,
-      "group": "06856eb5d2aa"
     },
     {
       "type": "options",
@@ -826,14 +880,16 @@
       "translatesToSourceLanguage": false,
       "phrase": [
         {
-          "word": "Are"
+          "word": "Are",
+          "definition": "son"
         },
         {
           "word": "you",
-          "definition": "tú"
+          "definition": "tú\nusted"
         },
         {
-          "word": "doctors?"
+          "word": "doctors?",
+          "definition": "médicos"
         }
       ],
       "chips": [
@@ -844,6 +900,20 @@
         [
           "Sois",
           "médicas"
+        ],
+        [
+          "Vosotras",
+          "sois",
+          "médicas"
+        ],
+        [
+          "Sois",
+          "médicos"
+        ],
+        [
+          "Vosotros",
+          "sois",
+          "médicos"
         ]
       ],
       "formattedSolution": "¿Sois médicas?",
@@ -856,10 +926,12 @@
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "¿Sois"
+          "word": "¿Sois",
+          "definition": "you are"
         },
         {
-          "word": "médicas?"
+          "word": "médicas?",
+          "definition": "doctors"
         }
       ],
       "chips": [
@@ -878,6 +950,155 @@
       "id": "9dc93172768c",
       "priority": 2,
       "group": "ee15bd56759c"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "¿Estáis contentas?",
+      "meaningInSourceLanguage": "Are you happy?",
+      "id": "ebabc3cb6aff",
+      "priority": 0,
+      "group": "06856eb5d2aa"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "¿Estáis contentas?",
+      "meaning": "Are you happy?",
+      "audio": "2a8cd6c33a66c53d5eda66985af0b016528764165c4abc1500701eeb8699e916",
+      "id": "3c3a23500db8",
+      "priority": 1,
+      "group": "06856eb5d2aa"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Are",
+          "definition": "son"
+        },
+        {
+          "word": "you",
+          "definition": "tú\nusted"
+        },
+        {
+          "word": "happy?",
+          "definition": "contenta\ncontentas\ncontento\ncontentos"
+        }
+      ],
+      "chips": [
+        "Estáis",
+        "contentas"
+      ],
+      "solutions": [
+        [
+          "Estáis",
+          "contentas"
+        ],
+        [
+          "Vosotras",
+          "estáis",
+          "contentas"
+        ],
+        [
+          "Vosotras",
+          "estáis",
+          "felices"
+        ],
+        [
+          "Vosotras",
+          "estáis",
+          "satisfechas"
+        ],
+        [
+          "Vosotras",
+          "estáis",
+          "alegres"
+        ],
+        [
+          "Estáis",
+          "felices"
+        ],
+        [
+          "Estáis",
+          "satisfechas"
+        ],
+        [
+          "Estáis",
+          "alegres"
+        ],
+        [
+          "Estáis",
+          "contentos"
+        ],
+        [
+          "Vosotros",
+          "estáis",
+          "contentos"
+        ],
+        [
+          "Vosotros",
+          "estáis",
+          "felices"
+        ],
+        [
+          "Vosotros",
+          "estáis",
+          "satisfechos"
+        ],
+        [
+          "Vosotros",
+          "estáis",
+          "alegres"
+        ],
+        [
+          "Estáis",
+          "satisfechos"
+        ]
+      ],
+      "formattedSolution": "¿Estáis contentas?",
+      "id": "758c70ea98b7",
+      "priority": 2,
+      "group": "06856eb5d2aa"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "¿Estáis",
+          "definition": "you are\nyou're"
+        },
+        {
+          "word": "contentas?",
+          "definition": "happy"
+        }
+      ],
+      "chips": [
+        "Are",
+        "you",
+        "happy"
+      ],
+      "solutions": [
+        [
+          "Are",
+          "you",
+          "happy"
+        ],
+        [
+          "Are",
+          "you",
+          "content"
+        ],
+        [
+          "Are",
+          "you",
+          "satisfied"
+        ]
+      ],
+      "formattedSolution": "Are you happy?",
+      "id": "2110ed9eb031",
+      "priority": 2,
+      "group": "06856eb5d2aa"
     }
   ]
 }
