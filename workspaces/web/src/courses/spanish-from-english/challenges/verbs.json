@@ -24,16 +24,13 @@
       "translatesToSourceLanguage": false,
       "phrase": [
         {
-          "word": "I",
-          "definition": "yo\r\nme"
+          "word": "I"
         },
         {
-          "word": "am",
-          "definition": "soy"
+          "word": "am"
         },
         {
-          "word": "a",
-          "definition": "una (fem.), un (masc.)"
+          "word": "a"
         },
         {
           "word": "cat",
@@ -52,6 +49,11 @@
           "soy",
           "un",
           "gato"
+        ],
+        [
+          "Soy",
+          "un",
+          "gato"
         ]
       ],
       "formattedSolution": "Yo soy un gato",
@@ -64,16 +66,14 @@
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Yo",
-          "definition": "I"
+          "word": "Yo"
         },
         {
-          "word": "soy",
-          "definition": "I am"
+          "word": "soy"
         },
         {
           "word": "un",
-          "definition": "a"
+          "definition": "a/an (masc.)"
         },
         {
           "word": "gato",
@@ -121,16 +121,13 @@
       "translatesToSourceLanguage": false,
       "phrase": [
         {
-          "word": "You",
-          "definition": "tú (sg.)\r\nvosotras, vosotros (pl.)"
+          "word": "You"
         },
         {
-          "word": "are",
-          "definition": "eres\r\nsomos\r\nsois\r\nson"
+          "word": "are"
         },
         {
-          "word": "big",
-          "definition": "grande\r\ngrandes (pl.)"
+          "word": "big"
         }
       ],
       "chips": [
@@ -142,6 +139,10 @@
         [
           "Tú",
           "eres",
+          "grande"
+        ],
+        [
+          "Eres",
           "grande"
         ]
       ],
@@ -155,16 +156,13 @@
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Tú",
-          "definition": "you"
+          "word": "Tú"
         },
         {
-          "word": "eres",
-          "definition": "you are"
+          "word": "eres"
         },
         {
-          "word": "grande",
-          "definition": "big (sg.)"
+          "word": "grande"
         }
       ],
       "chips": [
@@ -206,20 +204,17 @@
       "translatesToSourceLanguage": false,
       "phrase": [
         {
-          "word": "The",
-          "definition": "la (fem.), el (masc.)\r\nlas, los"
+          "word": "The"
         },
         {
           "word": "horse",
           "definition": "caballo"
         },
         {
-          "word": "is",
-          "definition": "es"
+          "word": "is"
         },
         {
-          "word": "small",
-          "definition": "pequeña (fem.), pequeño (masc.)\r\npequeñas, pequeños"
+          "word": "small"
         }
       ],
       "chips": [
@@ -246,20 +241,17 @@
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "El",
-          "definition": "the (masc. sg.)"
+          "word": "El"
         },
         {
           "word": "caballo",
           "definition": "horse"
         },
         {
-          "word": "es",
-          "definition": "is"
+          "word": "es"
         },
         {
-          "word": "pequeño",
-          "definition": "small (masc.)"
+          "word": "pequeño"
         }
       ],
       "chips": [
@@ -303,12 +295,10 @@
       "translatesToSourceLanguage": false,
       "phrase": [
         {
-          "word": "I",
-          "definition": "yo\r\nme"
+          "word": "I"
         },
         {
-          "word": "eat",
-          "definition": "como\r\ncomes\r\ncomemos\r\ncoméis\r\ncomen"
+          "word": "eat"
         },
         {
           "word": "bread",
@@ -337,12 +327,10 @@
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Yo",
-          "definition": "I"
+          "word": "Yo"
         },
         {
-          "word": "como",
-          "definition": "(I) eat"
+          "word": "como"
         },
         {
           "word": "pan",
@@ -388,12 +376,10 @@
       "translatesToSourceLanguage": false,
       "phrase": [
         {
-          "word": "You",
-          "definition": "tú (sg.)\r\nvosotras, vosotros (pl.)"
+          "word": "You"
         },
         {
-          "word": "eat",
-          "definition": "como\r\ncomes\r\ncomemos\r\ncoméis\r\ncomen"
+          "word": "eat"
         },
         {
           "word": "pasta",
@@ -422,12 +408,10 @@
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Tú",
-          "definition": "you"
+          "word": "Tú"
         },
         {
-          "word": "comes",
-          "definition": "(you (sg.)) eat"
+          "word": "comes"
         },
         {
           "word": "pasta",
@@ -473,16 +457,13 @@
       "translatesToSourceLanguage": false,
       "phrase": [
         {
-          "word": "She",
-          "definition": "ella"
+          "word": "She"
         },
         {
-          "word": "eats",
-          "definition": "come"
+          "word": "eats"
         },
         {
-          "word": "pizza",
-          "definition": "pizza"
+          "word": "pizza"
         }
       ],
       "chips": [
@@ -507,16 +488,13 @@
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Ella",
-          "definition": "she"
+          "word": "Ella"
         },
         {
-          "word": "come",
-          "definition": "eats"
+          "word": "come"
         },
         {
-          "word": "pizza",
-          "definition": "pizza"
+          "word": "pizza"
         }
       ],
       "chips": [
@@ -558,12 +536,10 @@
       "translatesToSourceLanguage": false,
       "phrase": [
         {
-          "word": "He",
-          "definition": "él"
+          "word": "He"
         },
         {
-          "word": "eats",
-          "definition": "come"
+          "word": "eats"
         },
         {
           "word": "bread",
@@ -592,12 +568,10 @@
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Él",
-          "definition": "he"
+          "word": "Él"
         },
         {
-          "word": "come",
-          "definition": "eats"
+          "word": "come"
         },
         {
           "word": "pan",
@@ -643,16 +617,13 @@
       "translatesToSourceLanguage": false,
       "phrase": [
         {
-          "word": "I",
-          "definition": "yo\r\nme"
+          "word": "I"
         },
         {
-          "word": "drink",
-          "definition": "bebo\r\nbebes\r\nbebemos\r\nbebéis\r\nbeben"
+          "word": "drink"
         },
         {
-          "word": "beer",
-          "definition": "cerveza"
+          "word": "beer"
         }
       ],
       "chips": [
@@ -677,16 +648,13 @@
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Yo",
-          "definition": "I"
+          "word": "Yo"
         },
         {
-          "word": "bebo",
-          "definition": "(I) drink"
+          "word": "bebo"
         },
         {
-          "word": "cerveza",
-          "definition": "beer"
+          "word": "cerveza"
         }
       ],
       "chips": [
@@ -728,12 +696,10 @@
       "translatesToSourceLanguage": false,
       "phrase": [
         {
-          "word": "You",
-          "definition": "tú (sg.)\r\nvosotras, vosotros (pl.)"
+          "word": "You"
         },
         {
-          "word": "drink",
-          "definition": "bebo\r\nbebes\r\nbebemos\r\nbebéis\r\nbeben"
+          "word": "drink"
         },
         {
           "word": "milk",
@@ -750,6 +716,10 @@
           "Tú",
           "bebes",
           "leche"
+        ],
+        [
+          "Bebes",
+          "leche"
         ]
       ],
       "formattedSolution": "Tú bebes leche",
@@ -762,12 +732,10 @@
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Tú",
-          "definition": "you"
+          "word": "Tú"
         },
         {
-          "word": "bebes",
-          "definition": "(you (sg.)) drink"
+          "word": "bebes"
         },
         {
           "word": "leche",
@@ -813,16 +781,13 @@
       "translatesToSourceLanguage": false,
       "phrase": [
         {
-          "word": "Maria",
-          "definition": "María"
+          "word": "Maria"
         },
         {
-          "word": "drinks",
-          "definition": "bebe"
+          "word": "drinks"
         },
         {
-          "word": "beer",
-          "definition": "cerveza"
+          "word": "beer"
         }
       ],
       "chips": [
@@ -847,16 +812,13 @@
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Maria",
-          "definition": "Maria"
+          "word": "Maria"
         },
         {
-          "word": "bebe",
-          "definition": "drinks"
+          "word": "bebe"
         },
         {
-          "word": "cerveza",
-          "definition": "beer"
+          "word": "cerveza"
         }
       ],
       "chips": [
@@ -898,20 +860,17 @@
       "translatesToSourceLanguage": false,
       "phrase": [
         {
-          "word": "The",
-          "definition": "la (fem.), el (masc.)\r\nlas, los"
+          "word": "The"
         },
         {
           "word": "horse",
           "definition": "caballo"
         },
         {
-          "word": "drinks",
-          "definition": "bebe"
+          "word": "drinks"
         },
         {
-          "word": "water",
-          "definition": "agua"
+          "word": "water"
         }
       ],
       "chips": [
@@ -938,20 +897,17 @@
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "El",
-          "definition": "the (masc. sg.)"
+          "word": "El"
         },
         {
           "word": "caballo",
           "definition": "horse"
         },
         {
-          "word": "bebe",
-          "definition": "drinks"
+          "word": "bebe"
         },
         {
-          "word": "agua",
-          "definition": "water"
+          "word": "agua"
         }
       ],
       "chips": [
