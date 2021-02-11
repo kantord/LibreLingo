@@ -2,68 +2,41 @@
   "languageName": "German",
   "languageCode": "de",
   "specialCharacters": [
-    "ä",
     "Ä",
-    "ö",
+    "ä",
     "Ö",
-    "ü",
+    "ö",
     "Ü",
-    "ß",
-    "ẞ"
+    "ü",
+    "ß"
   ],
+  "license": {
+    "name": {
+      "short": "CC BY 3.0",
+      "full": "CC BY 3.0"
+    },
+    "link": "https://creativecommons.org/licenses/by/3.0/"
+  },
   "modules": [
     {
       "title": "Basics",
       "skills": [
         {
           "imageSet": [
-            "t-shirt2",
-            "dress2",
-            "trousers3"
+            "people1",
+            "woman1",
+            "man1"
           ],
           "summary": [
-            "Das Hemd",
-            "Das Kleid",
-            "Die Hose"
+            "Der Mann",
+            "Die Frau",
+            "Die Frau sagt hallo",
+            "Der Mann sagt hallo"
           ],
-          "practiceHref": "clothes",
-          "id": "d7279e4777cd",
-          "title": "Clothes"
-        },
-        {
-          "imageSet": [
-            "pineapple2",
-            "banana1",
-            "strawberry3"
-          ],
-          "summary": [
-            "Die Ananas",
-            "Die Banane",
-            "Die Erdbeere"
-          ],
-          "practiceHref": "fruits",
-          "id": "379dca1c8ae9",
-          "title": "Fruits"
-        },
-        {
-          "imageSet": [
-            "sky2",
-            "sun2",
-            "rock2"
-          ],
-          "summary": [
-            "Der Himmel",
-            "Die Sonne",
-            "Der Stein",
-            "Der Fluss",
-            "Das Meer",
-            "Der Baum",
-            "Der Berg",
-            "Der See"
-          ],
-          "practiceHref": "nature",
-          "id": "e859eeaa5871",
-          "title": "Nature"
+          "practiceHref": "hello",
+          "id": "40724768fcf9",
+          "title": "Hello",
+          "levels": 2
         }
       ]
     }
