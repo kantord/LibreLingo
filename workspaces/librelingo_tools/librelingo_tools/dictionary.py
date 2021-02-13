@@ -45,8 +45,12 @@ def define_word(course, word, is_in_target_language):
             "definition": dictionary_item.definition
         }
 
+    language_name = course.target_language.name if is_in_target_language else course.source_language.name
     raise ValueError(
-        'The word "{}" does not have a definition. Please add it to the mini-dictionary.'.format(word))
+        'The {} word "{}" does not have a definition. Please add it to the mini-dictionary.'.format(
+            language_name,
+            word,
+        ))
 
 
 def define_words_in_sentence(course, sentence, reverse):
