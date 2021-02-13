@@ -8,12 +8,25 @@ from librelingo_tools.data_types import Phrase
 from librelingo_tools.data_types import Word
 from librelingo_tools.data_types import License
 from librelingo_tools.data_types import Language
+from librelingo_tools.data_types import DictionaryItem
 
 
 challenge1 = "challenge1"
 challenge2 = "challenge2"
 challenge3 = "challenge3"
 challenge4 = "challenge4"
+
+fake_dictionary = [
+    DictionaryItem("foo", "barrus", False),
+    DictionaryItem("bar", "furrrr", False),
+    DictionaryItem("foous", "lipsum", True),
+    DictionaryItem("barus", "aaa", True),
+    DictionaryItem("apple", "red fruit", False),
+    DictionaryItem("john", "red fruit", False),
+    DictionaryItem("smith", "red fruit", False),
+    DictionaryItem("lorem", "red fruit", True),
+    DictionaryItem("ipsum", "red fruit", True),
+]
 
 phrase1 = Phrase(
     in_target_language=["foous barus"],
@@ -65,7 +78,7 @@ emptySkill = Skill(
     words=[],
     phrases=[],
     image_set=["foo1", "bar1", "bar2"],
-    dictionary=[],
+    dictionary=fake_dictionary,
 )
 
 skillWithPhrase = Skill(
@@ -74,7 +87,7 @@ skillWithPhrase = Skill(
     phrases=[phrase2],
     words=[],
     image_set=["man1", "man2", "boy1"],
-    dictionary=[],
+    dictionary=fake_dictionary,
 )
 
 
@@ -84,7 +97,7 @@ skillWithWord = Skill(
     phrases=[],
     words=[word1],
     image_set=["man1", "man2", "boy1"],
-    dictionary=[],
+    dictionary=fake_dictionary,
 )
 
 
@@ -94,7 +107,7 @@ skillWithPhraseAndWord = Skill(
     phrases=[phrase2],
     words=[word1],
     image_set=["man1", "man2", "boy1"],
-    dictionary=[],
+    dictionary=fake_dictionary,
 )
 
 
@@ -104,7 +117,7 @@ skillWith3Words = Skill(
     phrases=[],
     words=[word1, word2, word2],
     image_set=["man1", "man2", "boy1"],
-    dictionary=[],
+    dictionary=fake_dictionary,
 )
 
 skillWith3Phrases = Skill(
@@ -113,7 +126,7 @@ skillWith3Phrases = Skill(
     phrases=[phrase1, phrase2, phrase2],
     words=[],
     image_set=["man1", "man2", "boy1"],
-    dictionary=[],
+    dictionary=fake_dictionary,
 )
 
 skills = [
@@ -124,7 +137,7 @@ skills = [
         words=[word1, word2, word1, word2],
         phrases=[phrase1],
         image_set=["woman1", "woman2", "girl1"],
-        dictionary=[],
+        dictionary=fake_dictionary,
     ),
     emptySkill,
     Skill(
@@ -133,7 +146,7 @@ skills = [
         words=[word1],
         phrases=[],
         image_set=["just_one_image"],
-        dictionary=[],
+        dictionary=fake_dictionary,
     )
 ]
 
@@ -154,7 +167,7 @@ courseEmpty = Course(
     special_characters=["ä", "ß"],
     license=license1,
     modules=[],
-    dictionary=[]
+    dictionary=fake_dictionary
 )
 
 
@@ -171,7 +184,7 @@ course1 = Course(
         ]),
         Module(title="Phrases", skills=[]),
     ],
-    dictionary=[]
+    dictionary=fake_dictionary
 )
 
 course2 = Course(
@@ -184,7 +197,7 @@ course2 = Course(
             skills[3]
         ]),
     ],
-    dictionary=[]
+    dictionary=fake_dictionary
 )
 
 
