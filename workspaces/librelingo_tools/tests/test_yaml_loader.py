@@ -163,6 +163,18 @@ def test_load_course_output_matches_value(fs):
         DictionaryItem("L'homme", "the man", True),
         DictionaryItem("says", "dit", False),
         DictionaryItem("hello", "bonjour\nsalut", False),
+        DictionaryItem(word='woman', definition='femme',
+                       is_in_target_language=False),
+        DictionaryItem(word='man', definition='homme',
+                       is_in_target_language=False),
+        DictionaryItem(word='The', definition='la\nle',
+                       is_in_target_language=False),
+        DictionaryItem(word='femme', definition='woman',
+                       is_in_target_language=True),
+        DictionaryItem(word='the', definition='la\nle',
+                       is_in_target_language=False),
+        DictionaryItem(word='La', definition='the',
+                       is_in_target_language=True),
     ])
     assert len(result.modules) == 1
     assert result.modules[0].title == "Basics"
