@@ -17,6 +17,8 @@
     the output JSON files.
 """
 
+from .utils import clean_word
+
 
 def get_raw_dictionary_item(course, word, is_in_target_language):
     """
@@ -24,7 +26,7 @@ def get_raw_dictionary_item(course, word, is_in_target_language):
     """
     dictionary_item = list(
         filter(
-            lambda item: item.word.lower() == word.lower(
+            lambda item: clean_word(item.word).lower() == clean_word(word).lower(
             ) and item.is_in_target_language == is_in_target_language,
             course.dictionary))
 
@@ -43,8 +45,12 @@ def define_word(course, word, is_in_target_language):
             "definition": dictionary_item.definition
         }
 
+    language_name = course.target_language.name if is_in_target_language else course.source_language.name
     raise ValueError(
-        'The word "{}" does not have a definition. Please add it to the mini-dictionary.'.format(word))
+        'The {} word "{}" does not have a definition. Please add it to the mini-dictionary.'.format(
+            language_name,
+            word,
+        ))
 
 
 def define_words_in_sentence(course, sentence, reverse):
