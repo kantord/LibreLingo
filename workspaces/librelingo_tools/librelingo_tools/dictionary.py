@@ -17,6 +17,8 @@
     the output JSON files.
 """
 
+from .utils import clean_word
+
 
 def get_raw_dictionary_item(course, word, is_in_target_language):
     """
@@ -24,7 +26,7 @@ def get_raw_dictionary_item(course, word, is_in_target_language):
     """
     dictionary_item = list(
         filter(
-            lambda item: item.word.lower() == word.lower(
+            lambda item: clean_word(item.word).lower() == clean_word(word).lower(
             ) and item.is_in_target_language == is_in_target_language,
             course.dictionary))
 
