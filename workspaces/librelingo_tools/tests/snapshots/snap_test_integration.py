@@ -39,9 +39,12 @@ snapshots['test_loaded_yaml_is_exported_to_correct_json 1'] = {
                 'id': '2e3fc4b0103a',
                 'phrase': [
                     {
+                        'definition': '''la
+le''',
                         'word': 'The'
                     },
                     {
+                        'definition': 'femme',
                         'word': 'woman'
                     },
                     {
@@ -84,9 +87,11 @@ salut''',
                 'id': '038fe486182d',
                 'phrase': [
                     {
+                        'definition': 'the',
                         'word': 'La'
                     },
                     {
+                        'definition': 'woman',
                         'word': 'femme'
                     },
                     {
@@ -145,9 +150,12 @@ hi''',
                 'id': '5ebdd684bc01',
                 'phrase': [
                     {
+                        'definition': '''la
+le''',
                         'word': 'The'
                     },
                     {
+                        'definition': 'homme',
                         'word': 'man'
                     },
                     {
@@ -240,9 +248,12 @@ hi''',
                 'id': 'ee2a7de8342b',
                 'phrase': [
                     {
+                        'definition': '''la
+le''',
                         'word': 'the'
                     },
                     {
+                        'definition': 'homme',
                         'word': 'man'
                     }
                 ],
@@ -281,9 +292,12 @@ hi''',
                 'id': '19a877a0955d',
                 'phrase': [
                     {
+                        'definition': '''la
+le''',
                         'word': 'the'
                     },
                     {
+                        'definition': 'femme',
                         'word': 'woman'
                     }
                 ],
