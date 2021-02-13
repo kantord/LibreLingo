@@ -24,7 +24,8 @@ def get_raw_dictionary_item(course, word, is_in_target_language):
     """
     dictionary_item = list(
         filter(
-            lambda item: item.word == word and item.is_in_target_language == is_in_target_language,
+            lambda item: item.word.lower() == word.lower(
+            ) and item.is_in_target_language == is_in_target_language,
             course.dictionary))
 
     return dictionary_item[0] if dictionary_item else None
@@ -42,7 +43,8 @@ def define_word(course, word, is_in_target_language):
             "definition": dictionary_item.definition
         }
 
-    return {"word": word}
+    raise ValueError(
+        'The word "{}" does not have a definition. Please add it to the mini-dictionary.'.format(word))
 
 
 def define_words_in_sentence(course, sentence, reverse):

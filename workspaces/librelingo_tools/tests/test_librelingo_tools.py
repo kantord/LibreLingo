@@ -1,5 +1,7 @@
+import re
 from unittest.mock import patch
 from unittest import TestCase
+import pytest
 from librelingo_tools.course import get_course_data
 from librelingo_tools.skills import get_skill_data
 from librelingo_tools.utils import calculate_number_of_levels
@@ -157,10 +159,10 @@ class CleanWordTest(TestCase):
     def test_removes_comma(self):
         assert clean_word("foo,") == "foo"
 
-    def test_doesnt_remove_parts_of_word(self):
+    def test_doesnt_remove_parts_of_word_1(self):
         assert clean_word("ba-ar") == "ba-ar"
 
-    def test_doesnt_remove_parts_of_word(self):
+    def test_doesnt_remove_parts_of_word_2(self):
         assert clean_word("L'Hospitalet") == "L'Hospitalet"
 
     def test_removes_exclamation_mark(self):
@@ -203,14 +205,18 @@ class DefineWordsInSentenceTest(TestCase):
 
 class TestDefineWord(TestCase):
     def test_definition_not_found(self):
-        word = fakes.fake_value()
-        assert define_word(fakes.course1, word, is_in_target_language=False) == {
-            "word": word
-        }
+        word = str(fakes.fake_value())
+        pattern = re.escape(
+            'The word "{}" does not have a definition. Please add it to the mini-dictionary.'.format(word))
+        with pytest.raises(
+                ValueError,
+                match=pattern):
+            assert define_word(fakes.course1, word,
+                               is_in_target_language=False)
 
     def test_includes_definition(self):
-        word = fakes.fake_value()
-        meaning = fakes.fake_value()
+        word = str(fakes.fake_value())
+        meaning = str(fakes.fake_value())
         is_in_target_language = fakes.fake_value()
         my_course = Course(
             **{
@@ -229,9 +235,27 @@ class TestDefineWord(TestCase):
             "definition": meaning
         }
 
+    def test_matches_definitions_in_a_case_insensitive_way(self):
+        my_course = Course(
+            **{
+                **(fakes.course1._asdict()),
+                "dictionary": [
+                    DictionaryItem(
+                        word="Easier",
+                        definition="by a lot",
+                        is_in_target_language=True
+                    ),
+                ]
+            },
+        )
+        assert define_word(my_course, "easier", is_in_target_language=True) == {
+            "word": "easier",
+            "definition": "by a lot"
+        }
+
     def test_doesnt_include_definition_with_different_word(self):
-        word = fakes.fake_value()
-        meaning = fakes.fake_value()
+        word = str(fakes.fake_value())
+        meaning = str(fakes.fake_value())
         is_in_target_language = fakes.fake_value()
         my_course = Course(
             **{
@@ -245,13 +269,13 @@ class TestDefineWord(TestCase):
                 ]
             },
         )
-        assert define_word(my_course, "asd", is_in_target_language=is_in_target_language) == {
-            "word": "asd",
-        }
+        with pytest.raises(ValueError):
+            define_word(my_course, "asd",
+                        is_in_target_language=is_in_target_language)
 
     def test_doesnt_include_definition_with_different_is_in_target_language(self):
-        word = fakes.fake_value()
-        meaning = fakes.fake_value()
+        word = str(fakes.fake_value())
+        meaning = str(fakes.fake_value())
         is_in_target_language = fakes.fake_value()
         my_course = fakes.customize(fakes.course1, dictionary=[
             DictionaryItem(
@@ -260,19 +284,19 @@ class TestDefineWord(TestCase):
                 is_in_target_language=False
             ),
         ])
-        assert define_word(my_course, word, is_in_target_language=is_in_target_language) == {
-            "word": word,
-        }
+        with pytest.raises(ValueError):
+            define_word(my_course, word,
+                        is_in_target_language=is_in_target_language)
 
     def test_skips_non_matching_definitions(self):
-        word = fakes.fake_value()
-        meaning = fakes.fake_value()
+        word = str(fakes.fake_value())
+        meaning = str(fakes.fake_value())
         is_in_target_language = fakes.fake_value()
         my_course = fakes.customize(fakes.course1, dictionary=[
             DictionaryItem(
-                word=None,
-                definition=None,
-                is_in_target_language=None
+                word="random shit",
+                definition="random shit",
+                is_in_target_language="random shit"
             ),
             DictionaryItem(
                 word=word,
@@ -286,7 +310,7 @@ class TestDefineWord(TestCase):
         }
 
     def test_skips_empty_definition(self):
-        word = fakes.fake_value()
+        word = str(fakes.fake_value())
         my_course = fakes.customize(fakes.course1, dictionary=[
             DictionaryItem(
                 word=word,
@@ -294,9 +318,8 @@ class TestDefineWord(TestCase):
                 is_in_target_language=False
             ),
         ])
-        assert define_word(my_course, word, is_in_target_language=False) == {
-            "word": word,
-        }
+        with pytest.raises(ValueError):
+            define_word(my_course, word, is_in_target_language=False)
 
 
 class TestGetDumbOpaqueId(TestCase):

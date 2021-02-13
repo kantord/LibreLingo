@@ -168,7 +168,7 @@ class TestGetShortInputChallenge(TestCase):
             "type": "shortInput",
             'pictures': ['foo.jpg', 'bar.jpg', 'baz.jpg'],
             "formInTargetLanguage": ["foous"],
-            'phrase': [{'word': 'foo'}],
+            'phrase': [{'word': 'foo', "definition": "barrus"}],
             "priority": 1,
             'group': 'aab69500f014',
         }
@@ -180,7 +180,7 @@ class TestGetShortInputChallenge(TestCase):
             "type": "shortInput",
             'pictures': ['1.jpg', '2.jpg', '3.jpg'],
             "formInTargetLanguage": ["apfel"],
-            'phrase': [{'word': 'apple'}],
+            'phrase': [{'word': 'apple', "definition": "red fruit"}],
             "priority": 1,
             'group': '9dbe235cb2d6',
         }
@@ -219,8 +219,8 @@ class TestChipsChallenge(TestCase):
             "type": "chips",
             "translatesToSourceLanguage": False,
             "phrase": [
-                {"word": "foo"},
-                {"word": "bar"},
+                {"word": "foo", "definition": "barrus"},
+                {"word": "bar", "definition": "furrrr"},
             ],
             'id': '9f9b09771a07',
             'group': '930c4c4e7552',
@@ -239,10 +239,10 @@ class TestChipsChallenge(TestCase):
             "type": "chips",
             "translatesToSourceLanguage": False,
             "phrase": [
-                {"word": "foo"},
-                {"word": "bar"},
-                {"word": "foo"},
-                {"word": "bar"},
+                {"word": "foo", "definition": "barrus"},
+                {"word": "bar", "definition": "furrrr"},
+                {"word": "foo", "definition": "barrus"},
+                {"word": "bar", "definition": "furrrr"},
             ],
             'id': '4b0e9208ce1b',
             'group': '66a39e74a2c8',
