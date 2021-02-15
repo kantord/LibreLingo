@@ -25,15 +25,15 @@
       "phrase": [
         {
           "word": "We",
-          "definition": "nosotras (fem.), nosotros (masc.)"
+          "definition": "nosotras\nnosotros"
         },
         {
           "word": "eat",
-          "definition": "como\r\ncomes\r\ncomemos\r\ncoméis\r\ncomen"
+          "definition": "come\ncomer"
         },
         {
           "word": "bananas",
-          "definition": "plátanos"
+          "definition": "bananas\nplátanos"
         }
       ],
       "chips": [
@@ -46,6 +46,34 @@
           "Nosotras",
           "comemos",
           "plátanos"
+        ],
+        [
+          "Nosotras",
+          "comemos",
+          "plátanos"
+        ],
+        [
+          "Nosotros",
+          "comemos",
+          "plátanos"
+        ],
+        [
+          "Comemos",
+          "plátanos"
+        ],
+        [
+          "Nosotras",
+          "comemos",
+          "bananas"
+        ],
+        [
+          "Nosotros",
+          "comemos",
+          "bananas"
+        ],
+        [
+          "Comemos",
+          "bananas"
         ]
       ],
       "formattedSolution": "Nosotras comemos plátanos",
@@ -59,11 +87,11 @@
       "phrase": [
         {
           "word": "Nosotras",
-          "definition": "we (fem. pl.)"
+          "definition": "us\nwe"
         },
         {
           "word": "comemos",
-          "definition": "(we) eat"
+          "definition": "we eat"
         },
         {
           "word": "plátanos",
@@ -110,11 +138,11 @@
       "phrase": [
         {
           "word": "You",
-          "definition": "tú (sg.)\r\nvosotras, vosotros (pl.)"
+          "definition": "tú\nusted"
         },
         {
           "word": "eat",
-          "definition": "como\r\ncomes\r\ncomemos\r\ncoméis\r\ncomen"
+          "definition": "come\ncomer"
         },
         {
           "word": "more",
@@ -131,6 +159,20 @@
           "Vosotras",
           "coméis",
           "más"
+        ],
+        [
+          "Vosotras",
+          "coméis",
+          "más"
+        ],
+        [
+          "Vosotros",
+          "coméis",
+          "más"
+        ],
+        [
+          "Coméis",
+          "más"
         ]
       ],
       "formattedSolution": "Vosotras coméis más",
@@ -144,11 +186,11 @@
       "phrase": [
         {
           "word": "Vosotras",
-          "definition": "you (fem. pl.)"
+          "definition": "you (plural)"
         },
         {
           "word": "coméis",
-          "definition": "(you (pl.) eat"
+          "definition": "you eat"
         },
         {
           "word": "más",
@@ -174,91 +216,6 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Ellas comen menos",
-      "meaningInSourceLanguage": "They eat less",
-      "id": "e67c7bc1f330",
-      "priority": 0,
-      "group": "9123eba150cd"
-    },
-    {
-      "type": "listeningExercise",
-      "answer": "Ellas comen menos",
-      "meaning": "They eat less",
-      "audio": "448c7da7895b8540b3214c3a8d09010f578e96a9e66bd27b1a621cc6a4bbfcab",
-      "id": "89c372a9f923",
-      "priority": 1,
-      "group": "9123eba150cd"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": false,
-      "phrase": [
-        {
-          "word": "They",
-          "definition": "ellas (fem.), ellos (masc.)"
-        },
-        {
-          "word": "eat",
-          "definition": "como\r\ncomes\r\ncomemos\r\ncoméis\r\ncomen"
-        },
-        {
-          "word": "less",
-          "definition": "menos"
-        }
-      ],
-      "chips": [
-        "Ellas",
-        "comen",
-        "menos"
-      ],
-      "solutions": [
-        [
-          "Ellas",
-          "comen",
-          "menos"
-        ]
-      ],
-      "formattedSolution": "Ellas comen menos",
-      "id": "11d4eab5139a",
-      "priority": 2,
-      "group": "9123eba150cd"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": true,
-      "phrase": [
-        {
-          "word": "Ellas",
-          "definition": "they (fem. pl.)"
-        },
-        {
-          "word": "comen",
-          "definition": "(they) eat"
-        },
-        {
-          "word": "menos",
-          "definition": "less"
-        }
-      ],
-      "chips": [
-        "They",
-        "eat",
-        "less"
-      ],
-      "solutions": [
-        [
-          "They",
-          "eat",
-          "less"
-        ]
-      ],
-      "formattedSolution": "They eat less",
-      "id": "49fcbc425b0b",
-      "priority": 2,
-      "group": "9123eba150cd"
-    },
-    {
-      "type": "options",
       "formInTargetLanguage": "Nosotras bebemos mucho",
       "meaningInSourceLanguage": "We drink a lot",
       "id": "acf65d3b4ac3",
@@ -280,15 +237,15 @@
       "phrase": [
         {
           "word": "We",
-          "definition": "nosotras (fem.), nosotros (masc.)"
+          "definition": "nosotras\nnosotros"
         },
         {
           "word": "drink",
-          "definition": "bebo\r\nbebes\r\nbebemos\r\nbebéis\r\nbeben"
+          "definition": "bebemos\nbebida\nbebo"
         },
         {
           "word": "a",
-          "definition": "una (fem.), un (masc.)"
+          "definition": "un\nuna"
         },
         {
           "word": "lot",
@@ -305,6 +262,20 @@
           "Nosotras",
           "bebemos",
           "mucho"
+        ],
+        [
+          "Nosotras",
+          "bebemos",
+          "mucho"
+        ],
+        [
+          "Nosotros",
+          "bebemos",
+          "mucho"
+        ],
+        [
+          "Bebemos",
+          "mucho"
         ]
       ],
       "formattedSolution": "Nosotras bebemos mucho",
@@ -318,15 +289,15 @@
       "phrase": [
         {
           "word": "Nosotras",
-          "definition": "we (fem. pl.)"
+          "definition": "us\nwe"
         },
         {
           "word": "bebemos",
-          "definition": "(we) drink"
+          "definition": "we drink"
         },
         {
           "word": "mucho",
-          "definition": "a lot, much"
+          "definition": "a lot"
         }
       ],
       "chips": [
@@ -371,11 +342,11 @@
       "phrase": [
         {
           "word": "You",
-          "definition": "tú (sg.)\r\nvosotras, vosotros (pl.)"
+          "definition": "tú\nusted"
         },
         {
           "word": "drink",
-          "definition": "bebo\r\nbebes\r\nbebemos\r\nbebéis\r\nbeben"
+          "definition": "bebemos\nbebida\nbebo"
         },
         {
           "word": "water",
@@ -392,6 +363,15 @@
           "Vosotras",
           "bebéis",
           "agua"
+        ],
+        [
+          "Vosotros",
+          "bebéis",
+          "agua"
+        ],
+        [
+          "Bebéis",
+          "agua"
         ]
       ],
       "formattedSolution": "Vosotras bebéis agua",
@@ -405,11 +385,11 @@
       "phrase": [
         {
           "word": "Vosotras",
-          "definition": "you (fem. pl.)"
+          "definition": "you (plural)"
         },
         {
           "word": "bebéis",
-          "definition": "(you (pl.)) drink"
+          "definition": "you drink"
         },
         {
           "word": "agua",
@@ -456,11 +436,11 @@
       "phrase": [
         {
           "word": "They",
-          "definition": "ellas (fem.), ellos (masc.)"
+          "definition": "ellas\nellos"
         },
         {
           "word": "drink",
-          "definition": "bebo\r\nbebes\r\nbebemos\r\nbebéis\r\nbeben"
+          "definition": "bebemos\nbebida\nbebo"
         },
         {
           "word": "beer",
@@ -477,6 +457,15 @@
           "Ellas",
           "beben",
           "cerveza"
+        ],
+        [
+          "Ellos",
+          "beben",
+          "cerveza"
+        ],
+        [
+          "Beben",
+          "cerveza"
         ]
       ],
       "formattedSolution": "Ellas beben cerveza",
@@ -490,11 +479,11 @@
       "phrase": [
         {
           "word": "Ellas",
-          "definition": "they (fem. pl.)"
+          "definition": "they"
         },
         {
           "word": "beben",
-          "definition": "(they) drink"
+          "definition": "drink"
         },
         {
           "word": "cerveza",
@@ -541,11 +530,11 @@
       "phrase": [
         {
           "word": "We",
-          "definition": "nosotras (fem.), nosotros (masc.)"
+          "definition": "nosotras\nnosotros"
         },
         {
           "word": "are",
-          "definition": "eres\r\nsomos\r\nsois\r\nson"
+          "definition": "son"
         },
         {
           "word": "horses",
@@ -562,6 +551,15 @@
           "Nosotros",
           "somos",
           "caballos"
+        ],
+        [
+          "Nosotras",
+          "somos",
+          "caballos"
+        ],
+        [
+          "Somos",
+          "caballos"
         ]
       ],
       "formattedSolution": "Nosotros somos caballos",
@@ -575,11 +573,11 @@
       "phrase": [
         {
           "word": "Nosotros",
-          "definition": "we (masc. pl.)"
+          "definition": "us\nwe"
         },
         {
           "word": "somos",
-          "definition": "(we) are"
+          "definition": "we are"
         },
         {
           "word": "caballos",
@@ -626,11 +624,11 @@
       "phrase": [
         {
           "word": "You",
-          "definition": "tú (sg.)\r\nvosotras, vosotros (pl.)"
+          "definition": "tú\nusted"
         },
         {
           "word": "are",
-          "definition": "eres\r\nsomos\r\nsois\r\nson"
+          "definition": "son"
         },
         {
           "word": "cats",
@@ -647,6 +645,15 @@
           "Vosotros",
           "sois",
           "gatos"
+        ],
+        [
+          "Vosotras",
+          "sois",
+          "gatos"
+        ],
+        [
+          "Sois",
+          "gatos"
         ]
       ],
       "formattedSolution": "Vosotros sois gatos",
@@ -660,11 +667,11 @@
       "phrase": [
         {
           "word": "Vosotros",
-          "definition": "you (masc. pl.)"
+          "definition": "you (plural)"
         },
         {
           "word": "sois",
-          "definition": "(you (pl.)) are"
+          "definition": "you are"
         },
         {
           "word": "gatos",
@@ -691,19 +698,19 @@
     {
       "type": "options",
       "formInTargetLanguage": "Ellos son perros",
-      "meaningInSourceLanguage": "They are dogs",
-      "id": "92c32276c20b",
+      "meaningInSourceLanguage": "They are cats",
+      "id": "ae9e1a2d4105",
       "priority": 0,
-      "group": "344b012e812e"
+      "group": "5ae9493058e2"
     },
     {
       "type": "listeningExercise",
       "answer": "Ellos son perros",
-      "meaning": "They are dogs",
+      "meaning": "They are cats",
       "audio": "7e2a761b9de0544e59159eb873ddf3da7332181fd10d21e14d8a6d14507e7943",
-      "id": "e0d53d603618",
+      "id": "f4e3b5fd8d81",
       "priority": 1,
-      "group": "344b012e812e"
+      "group": "5ae9493058e2"
     },
     {
       "type": "chips",
@@ -711,15 +718,15 @@
       "phrase": [
         {
           "word": "They",
-          "definition": "ellas (fem.), ellos (masc.)"
+          "definition": "ellas\nellos"
         },
         {
           "word": "are",
-          "definition": "eres\r\nsomos\r\nsois\r\nson"
+          "definition": "son"
         },
         {
-          "word": "dogs",
-          "definition": "perros"
+          "word": "cats",
+          "definition": "gatos"
         }
       ],
       "chips": [
@@ -732,12 +739,16 @@
           "Ellos",
           "son",
           "perros"
+        ],
+        [
+          "Son",
+          "perros"
         ]
       ],
       "formattedSolution": "Ellos son perros",
-      "id": "2a3d3a115621",
+      "id": "d6efb5a54295",
       "priority": 2,
-      "group": "344b012e812e"
+      "group": "5ae9493058e2"
     },
     {
       "type": "chips",
@@ -745,11 +756,11 @@
       "phrase": [
         {
           "word": "Ellos",
-          "definition": "they (masc.)"
+          "definition": "they"
         },
         {
           "word": "son",
-          "definition": "(they) are"
+          "definition": "are"
         },
         {
           "word": "perros",
@@ -759,19 +770,19 @@
       "chips": [
         "They",
         "are",
-        "dogs"
+        "cats"
       ],
       "solutions": [
         [
           "They",
           "are",
-          "dogs"
+          "cats"
         ]
       ],
-      "formattedSolution": "They are dogs",
-      "id": "ba1bd32e3826",
+      "formattedSolution": "They are cats",
+      "id": "f9902031ee2d",
       "priority": 2,
-      "group": "344b012e812e"
+      "group": "5ae9493058e2"
     }
   ]
 }
