@@ -25,14 +25,15 @@
       "phrase": [
         {
           "word": "Cecilia",
-          "definition": "Cecilia"
+          "definition": "Cecilia (name)"
         },
         {
           "word": "is",
           "definition": "es"
         },
         {
-          "word": "tall"
+          "word": "tall",
+          "definition": "alta\naltas\nalto\naltos"
         }
       ],
       "chips": [
@@ -58,14 +59,15 @@
       "phrase": [
         {
           "word": "Cecilia",
-          "definition": "Cecilia"
+          "definition": "Cecilia (name)"
         },
         {
           "word": "es",
           "definition": "is"
         },
         {
-          "word": "alta"
+          "word": "alta",
+          "definition": "tall"
         }
       ],
       "chips": [
@@ -108,14 +110,15 @@
       "phrase": [
         {
           "word": "Max",
-          "definition": "Max"
+          "definition": "Max (name)"
         },
         {
           "word": "is",
           "definition": "es"
         },
         {
-          "word": "tall"
+          "word": "tall",
+          "definition": "alta\naltas\nalto\naltos"
         }
       ],
       "chips": [
@@ -141,14 +144,15 @@
       "phrase": [
         {
           "word": "Max",
-          "definition": "Max"
+          "definition": "Max (name)"
         },
         {
           "word": "es",
           "definition": "is"
         },
         {
-          "word": "alto"
+          "word": "alto",
+          "definition": "tall"
         }
       ],
       "chips": [
@@ -191,14 +195,15 @@
       "phrase": [
         {
           "word": "I",
-          "definition": "yo\r\nme"
+          "definition": "yo"
         },
         {
           "word": "am",
           "definition": "soy"
         },
         {
-          "word": "old"
+          "word": "old",
+          "definition": "vieja\nviejas\nviejo\nviejos"
         }
       ],
       "chips": [
@@ -224,14 +229,15 @@
       "phrase": [
         {
           "word": "Yo",
-          "definition": "I"
+          "definition": "I\nme"
         },
         {
           "word": "soy",
           "definition": "I am"
         },
         {
-          "word": "viejo"
+          "word": "viejo",
+          "definition": "old"
         }
       ],
       "chips": [
@@ -281,7 +287,8 @@
           "definition": "es"
         },
         {
-          "word": "old"
+          "word": "old",
+          "definition": "vieja\nviejas\nviejo\nviejos"
         }
       ],
       "chips": [
@@ -294,6 +301,14 @@
           "Ella",
           "es",
           "vieja"
+        ],
+        [
+          "Es",
+          "vieja"
+        ],
+        [
+          "Es",
+          "viejo"
         ]
       ],
       "formattedSolution": "Ella es vieja",
@@ -314,7 +329,8 @@
           "definition": "is"
         },
         {
-          "word": "vieja"
+          "word": "vieja",
+          "definition": "old"
         }
       ],
       "chips": [
@@ -364,7 +380,8 @@
           "definition": "es"
         },
         {
-          "word": "old"
+          "word": "old",
+          "definition": "vieja\nviejas\nviejo\nviejos"
         }
       ],
       "chips": [
@@ -376,6 +393,14 @@
         [
           "Él",
           "es",
+          "viejo"
+        ],
+        [
+          "Es",
+          "vieja"
+        ],
+        [
+          "Es",
           "viejo"
         ]
       ],
@@ -397,7 +422,8 @@
           "definition": "is"
         },
         {
-          "word": "viejo"
+          "word": "viejo",
+          "definition": "old"
         }
       ],
       "chips": [
@@ -440,7 +466,7 @@
       "phrase": [
         {
           "word": "I",
-          "definition": "yo\r\nme"
+          "definition": "yo"
         },
         {
           "word": "am",
@@ -448,7 +474,7 @@
         },
         {
           "word": "big",
-          "definition": "grande\r\ngrandes (pl.)"
+          "definition": "grande\ngrandes"
         }
       ],
       "chips": [
@@ -460,6 +486,10 @@
         [
           "Yo",
           "soy",
+          "grande"
+        ],
+        [
+          "Soy",
           "grande"
         ]
       ],
@@ -474,7 +504,7 @@
       "phrase": [
         {
           "word": "Yo",
-          "definition": "I"
+          "definition": "I\nme"
         },
         {
           "word": "soy",
@@ -482,7 +512,7 @@
         },
         {
           "word": "grande",
-          "definition": "big (sg.)"
+          "definition": "big"
         }
       ],
       "chips": [
@@ -495,6 +525,10 @@
           "I",
           "am",
           "big"
+        ],
+        [
+          "I'm",
+          "big"
         ]
       ],
       "formattedSolution": "I am big",
@@ -505,35 +539,31 @@
     {
       "type": "options",
       "formInTargetLanguage": "Ella es grande",
-      "meaningInSourceLanguage": "She is big",
-      "id": "9914cd7e5828",
+      "meaningInSourceLanguage": "She's big",
+      "id": "8142e21543d0",
       "priority": 0,
-      "group": "20c9e5addb2f"
+      "group": "60fa7447f1c6"
     },
     {
       "type": "listeningExercise",
       "answer": "Ella es grande",
-      "meaning": "She is big",
+      "meaning": "She's big",
       "audio": "c5969dac8912dbed61a17143c23bdc6050801748f73bfacc08452cf377be2bfa",
-      "id": "c7218f116312",
+      "id": "36f9a5d99498",
       "priority": 1,
-      "group": "20c9e5addb2f"
+      "group": "60fa7447f1c6"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
         {
-          "word": "She",
-          "definition": "ella"
-        },
-        {
-          "word": "is",
-          "definition": "es"
+          "word": "She's",
+          "definition": "ella es\nella está"
         },
         {
           "word": "big",
-          "definition": "grande\r\ngrandes (pl.)"
+          "definition": "grande\ngrandes"
         }
       ],
       "chips": [
@@ -546,12 +576,16 @@
           "Ella",
           "es",
           "grande"
+        ],
+        [
+          "Es",
+          "grande"
         ]
       ],
       "formattedSolution": "Ella es grande",
-      "id": "2afeab94728e",
+      "id": "c5ad4af61f79",
       "priority": 2,
-      "group": "20c9e5addb2f"
+      "group": "60fa7447f1c6"
     },
     {
       "type": "chips",
@@ -567,58 +601,57 @@
         },
         {
           "word": "grande",
-          "definition": "big (sg.)"
+          "definition": "big"
         }
       ],
       "chips": [
-        "She",
-        "is",
+        "She's",
         "big"
       ],
       "solutions": [
+        [
+          "She's",
+          "big"
+        ],
         [
           "She",
           "is",
           "big"
         ]
       ],
-      "formattedSolution": "She is big",
-      "id": "3ac7f84c55ee",
+      "formattedSolution": "She's big",
+      "id": "f04741c79168",
       "priority": 2,
-      "group": "20c9e5addb2f"
+      "group": "60fa7447f1c6"
     },
     {
       "type": "options",
       "formInTargetLanguage": "Nosotros somos grandes",
-      "meaningInSourceLanguage": "We are big",
-      "id": "1add7750ce79",
+      "meaningInSourceLanguage": "We're big",
+      "id": "ad43e599731b",
       "priority": 0,
-      "group": "4a1a39181532"
+      "group": "e66380e253bd"
     },
     {
       "type": "listeningExercise",
       "answer": "Nosotros somos grandes",
-      "meaning": "We are big",
+      "meaning": "We're big",
       "audio": "dd649d62b63f5d7a1d4b7f194cf4d1c0f89e4f49fe0c0de3e68a898aed3ade20",
-      "id": "4694560d5e42",
+      "id": "39cad230cf4a",
       "priority": 1,
-      "group": "4a1a39181532"
+      "group": "e66380e253bd"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
         {
-          "word": "We",
-          "definition": "nosotras (fem.), nosotros (masc.)"
-        },
-        {
-          "word": "are",
-          "definition": "eres\r\nsomos\r\nsois\r\nson"
+          "word": "We're",
+          "definition": "estamos\nsomos"
         },
         {
           "word": "big",
-          "definition": "grande\r\ngrandes (pl.)"
+          "definition": "grande\ngrandes"
         }
       ],
       "chips": [
@@ -631,12 +664,16 @@
           "Nosotros",
           "somos",
           "grandes"
+        ],
+        [
+          "Somos",
+          "grandes"
         ]
       ],
       "formattedSolution": "Nosotros somos grandes",
-      "id": "152bfa44fc59",
+      "id": "361b4b9d3577",
       "priority": 2,
-      "group": "4a1a39181532"
+      "group": "e66380e253bd"
     },
     {
       "type": "chips",
@@ -644,33 +681,36 @@
       "phrase": [
         {
           "word": "Nosotros",
-          "definition": "we (masc. pl.)"
+          "definition": "us\nwe"
         },
         {
           "word": "somos",
-          "definition": "(we) are"
+          "definition": "we are"
         },
         {
           "word": "grandes",
-          "definition": "big (pl.)"
+          "definition": "big"
         }
       ],
       "chips": [
-        "We",
-        "are",
+        "We're",
         "big"
       ],
       "solutions": [
+        [
+          "We're",
+          "big"
+        ],
         [
           "We",
           "are",
           "big"
         ]
       ],
-      "formattedSolution": "We are big",
-      "id": "e6c83e4aec7e",
+      "formattedSolution": "We're big",
+      "id": "1698aac01cc4",
       "priority": 2,
-      "group": "4a1a39181532"
+      "group": "e66380e253bd"
     },
     {
       "type": "options",
@@ -695,15 +735,15 @@
       "phrase": [
         {
           "word": "They",
-          "definition": "ellas (fem.), ellos (masc.)"
+          "definition": "ellas\nellos"
         },
         {
           "word": "are",
-          "definition": "eres\r\nsomos\r\nsois\r\nson"
+          "definition": "son"
         },
         {
           "word": "big",
-          "definition": "grande\r\ngrandes (pl.)"
+          "definition": "grande\ngrandes"
         }
       ],
       "chips": [
@@ -715,6 +755,10 @@
         [
           "Ellas",
           "son",
+          "grandes"
+        ],
+        [
+          "Son",
           "grandes"
         ]
       ],
@@ -729,15 +773,15 @@
       "phrase": [
         {
           "word": "Ellas",
-          "definition": "they (fem. pl.)"
+          "definition": "they"
         },
         {
           "word": "son",
-          "definition": "(they) are"
+          "definition": "are"
         },
         {
           "word": "grandes",
-          "definition": "big (pl.)"
+          "definition": "big"
         }
       ],
       "chips": [
@@ -760,35 +804,31 @@
     {
       "type": "options",
       "formInTargetLanguage": "Ellos son pequeños",
-      "meaningInSourceLanguage": "They are small",
-      "id": "cdc938d98f7f",
+      "meaningInSourceLanguage": "They're small",
+      "id": "94ba9cdf2dea",
       "priority": 0,
-      "group": "8fbb02a0248a"
+      "group": "8cfcc21a1a33"
     },
     {
       "type": "listeningExercise",
       "answer": "Ellos son pequeños",
-      "meaning": "They are small",
+      "meaning": "They're small",
       "audio": "30882bbfa16dac26081b58b213cce85a0419daa04fcc87a82c4ee9b80e0cd185",
-      "id": "44dc6a0a224b",
+      "id": "d6e7411fd064",
       "priority": 1,
-      "group": "8fbb02a0248a"
+      "group": "8cfcc21a1a33"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
         {
-          "word": "They",
-          "definition": "ellas (fem.), ellos (masc.)"
-        },
-        {
-          "word": "are",
-          "definition": "eres\r\nsomos\r\nsois\r\nson"
+          "word": "They're",
+          "definition": "ellas son\nellos son\nson"
         },
         {
           "word": "small",
-          "definition": "pequeña (fem.), pequeño (masc.)\r\npequeñas, pequeños"
+          "definition": "pequeña\npequeño"
         }
       ],
       "chips": [
@@ -801,12 +841,16 @@
           "Ellos",
           "son",
           "pequeños"
+        ],
+        [
+          "Son",
+          "pequeños"
         ]
       ],
       "formattedSolution": "Ellos son pequeños",
-      "id": "38c63bb16b95",
+      "id": "fb037135e5e2",
       "priority": 2,
-      "group": "8fbb02a0248a"
+      "group": "8cfcc21a1a33"
     },
     {
       "type": "chips",
@@ -814,32 +858,36 @@
       "phrase": [
         {
           "word": "Ellos",
-          "definition": "they (masc.)"
+          "definition": "they"
         },
         {
           "word": "son",
-          "definition": "(they) are"
+          "definition": "are"
         },
         {
-          "word": "pequeños"
+          "word": "pequeños",
+          "definition": "small"
         }
       ],
       "chips": [
-        "They",
-        "are",
+        "They're",
         "small"
       ],
       "solutions": [
+        [
+          "They're",
+          "small"
+        ],
         [
           "They",
           "are",
           "small"
         ]
       ],
-      "formattedSolution": "They are small",
-      "id": "fcd71b63ac2c",
+      "formattedSolution": "They're small",
+      "id": "4d7a3249bff5",
       "priority": 2,
-      "group": "8fbb02a0248a"
+      "group": "8cfcc21a1a33"
     },
     {
       "type": "options",
@@ -864,7 +912,7 @@
       "phrase": [
         {
           "word": "The",
-          "definition": "la (fem.), el (masc.)\r\nlas, los"
+          "definition": "el\nla"
         },
         {
           "word": "cats",
@@ -872,11 +920,11 @@
         },
         {
           "word": "are",
-          "definition": "eres\r\nsomos\r\nsois\r\nson"
+          "definition": "son"
         },
         {
           "word": "small",
-          "definition": "pequeña (fem.), pequeño (masc.)\r\npequeñas, pequeños"
+          "definition": "pequeña\npequeño"
         }
       ],
       "chips": [
@@ -904,7 +952,7 @@
       "phrase": [
         {
           "word": "Los",
-          "definition": "the (masc. pl.)"
+          "definition": "the"
         },
         {
           "word": "gatos",
@@ -912,10 +960,11 @@
         },
         {
           "word": "son",
-          "definition": "(they) are"
+          "definition": "are"
         },
         {
-          "word": "pequeños"
+          "word": "pequeños",
+          "definition": "small"
         }
       ],
       "chips": [
@@ -960,17 +1009,19 @@
       "phrase": [
         {
           "word": "The",
-          "definition": "la (fem.), el (masc.)\r\nlas, los"
+          "definition": "el\nla"
         },
         {
-          "word": "old"
+          "word": "old",
+          "definition": "vieja\nviejas\nviejo\nviejos"
         },
         {
-          "word": "ones"
+          "word": "ones",
+          "definition": "unos"
         },
         {
           "word": "eat",
-          "definition": "como\r\ncomes\r\ncomemos\r\ncoméis\r\ncomen"
+          "definition": "come\ncomer"
         },
         {
           "word": "meat",
@@ -1002,17 +1053,19 @@
       "phrase": [
         {
           "word": "Los",
-          "definition": "the (masc. pl.)"
+          "definition": "the"
         },
         {
-          "word": "viejos"
+          "word": "viejos",
+          "definition": "old\nold ones"
         },
         {
           "word": "comen",
-          "definition": "(they) eat"
+          "definition": "eat\nthey eat\nyou eat"
         },
         {
-          "word": "carne"
+          "word": "carne",
+          "definition": "meat"
         }
       ],
       "chips": [
@@ -1027,6 +1080,12 @@
           "The",
           "old",
           "ones",
+          "eat",
+          "meat"
+        ],
+        [
+          "The",
+          "old",
           "eat",
           "meat"
         ]
@@ -1059,17 +1118,19 @@
       "phrase": [
         {
           "word": "Max",
-          "definition": "Max"
+          "definition": "Max (name)"
         },
         {
           "word": "is",
           "definition": "es"
         },
         {
-          "word": "not"
+          "word": "not",
+          "definition": "no"
         },
         {
-          "word": "short"
+          "word": "short",
+          "definition": "baja\nbajo\ncorta\ncorto"
         }
       ],
       "chips": [
@@ -1097,17 +1158,19 @@
       "phrase": [
         {
           "word": "Max",
-          "definition": "Max"
+          "definition": "Max (name)"
         },
         {
-          "word": "no"
+          "word": "no",
+          "definition": "no"
         },
         {
           "word": "es",
           "definition": "is"
         },
         {
-          "word": "bajo"
+          "word": "bajo",
+          "definition": "below\nlow\nshort"
         }
       ],
       "chips": [
@@ -1121,6 +1184,11 @@
           "Max",
           "is",
           "not",
+          "short"
+        ],
+        [
+          "Max",
+          "isn't",
           "short"
         ]
       ],
@@ -1152,7 +1220,7 @@
       "phrase": [
         {
           "word": "The",
-          "definition": "la (fem.), el (masc.)\r\nlas, los"
+          "definition": "el\nla"
         },
         {
           "word": "dog",
@@ -1164,14 +1232,15 @@
         },
         {
           "word": "small",
-          "definition": "pequeña (fem.), pequeño (masc.)\r\npequeñas, pequeños"
+          "definition": "pequeña\npequeño"
         },
         {
           "word": "and",
           "definition": "y"
         },
         {
-          "word": "old"
+          "word": "old",
+          "definition": "vieja\nviejas\nviejo\nviejos"
         }
       ],
       "chips": [
@@ -1203,7 +1272,7 @@
       "phrase": [
         {
           "word": "El",
-          "definition": "the (masc. sg.)"
+          "definition": "the"
         },
         {
           "word": "perro",
@@ -1215,14 +1284,15 @@
         },
         {
           "word": "pequeño",
-          "definition": "small (masc.)"
+          "definition": "small"
         },
         {
           "word": "y",
           "definition": "and"
         },
         {
-          "word": "viejo"
+          "word": "viejo",
+          "definition": "old"
         }
       ],
       "chips": [
@@ -1238,6 +1308,13 @@
           "The",
           "dog",
           "is",
+          "small",
+          "and",
+          "old"
+        ],
+        [
+          "The",
+          "dog's",
           "small",
           "and",
           "old"
@@ -1271,10 +1348,11 @@
       "phrase": [
         {
           "word": "The",
-          "definition": "la (fem.), el (masc.)\r\nlas, los"
+          "definition": "el\nla"
         },
         {
-          "word": "park"
+          "word": "park",
+          "definition": "parque"
         },
         {
           "word": "is",
@@ -1282,7 +1360,7 @@
         },
         {
           "word": "small",
-          "definition": "pequeña (fem.), pequeño (masc.)\r\npequeñas, pequeños"
+          "definition": "pequeña\npequeño"
         }
       ],
       "chips": [
@@ -1310,10 +1388,11 @@
       "phrase": [
         {
           "word": "El",
-          "definition": "the (masc. sg.)"
+          "definition": "the"
         },
         {
-          "word": "parque"
+          "word": "parque",
+          "definition": "park"
         },
         {
           "word": "es",
@@ -1321,7 +1400,7 @@
         },
         {
           "word": "pequeño",
-          "definition": "small (masc.)"
+          "definition": "small"
         }
       ],
       "chips": [
@@ -1335,6 +1414,11 @@
           "The",
           "park",
           "is",
+          "small"
+        ],
+        [
+          "The",
+          "park's",
           "small"
         ]
       ],
@@ -1366,10 +1450,11 @@
       "phrase": [
         {
           "word": "The",
-          "definition": "la (fem.), el (masc.)\r\nlas, los"
+          "definition": "el\nla"
         },
         {
-          "word": "park"
+          "word": "park",
+          "definition": "parque"
         },
         {
           "word": "is",
@@ -1377,7 +1462,7 @@
         },
         {
           "word": "big",
-          "definition": "grande\r\ngrandes (pl.)"
+          "definition": "grande\ngrandes"
         }
       ],
       "chips": [
@@ -1405,10 +1490,11 @@
       "phrase": [
         {
           "word": "El",
-          "definition": "the (masc. sg.)"
+          "definition": "the"
         },
         {
-          "word": "parque"
+          "word": "parque",
+          "definition": "park"
         },
         {
           "word": "es",
@@ -1416,7 +1502,7 @@
         },
         {
           "word": "grande",
-          "definition": "big (sg.)"
+          "definition": "big"
         }
       ],
       "chips": [
@@ -1430,6 +1516,11 @@
           "The",
           "park",
           "is",
+          "big"
+        ],
+        [
+          "The",
+          "park's",
           "big"
         ]
       ],
@@ -1461,10 +1552,11 @@
       "phrase": [
         {
           "word": "The",
-          "definition": "la (fem.), el (masc.)\r\nlas, los"
+          "definition": "el\nla"
         },
         {
-          "word": "mouse"
+          "word": "mouse",
+          "definition": "ratón"
         },
         {
           "word": "is",
@@ -1472,7 +1564,7 @@
         },
         {
           "word": "small",
-          "definition": "pequeña (fem.), pequeño (masc.)\r\npequeñas, pequeños"
+          "definition": "pequeña\npequeño"
         }
       ],
       "chips": [
@@ -1500,10 +1592,11 @@
       "phrase": [
         {
           "word": "El",
-          "definition": "the (masc. sg.)"
+          "definition": "the"
         },
         {
-          "word": "ratón"
+          "word": "ratón",
+          "definition": "mouse"
         },
         {
           "word": "es",
@@ -1511,7 +1604,7 @@
         },
         {
           "word": "pequeño",
-          "definition": "small (masc.)"
+          "definition": "small"
         }
       ],
       "chips": [
@@ -1525,6 +1618,11 @@
           "The",
           "mouse",
           "is",
+          "small"
+        ],
+        [
+          "The",
+          "mouse's",
           "small"
         ]
       ],
@@ -1556,32 +1654,35 @@
       "phrase": [
         {
           "word": "The",
-          "definition": "la (fem.), el (masc.)\r\nlas, los"
+          "definition": "el\nla"
         },
         {
-          "word": "elephants"
+          "word": "elephants",
+          "definition": "elefantes"
         },
         {
           "word": "are",
-          "definition": "eres\r\nsomos\r\nsois\r\nson"
+          "definition": "son"
         },
         {
-          "word": "big,"
+          "word": "big,",
+          "definition": "grande\ngrandes"
         },
         {
           "word": "the",
-          "definition": "la (fem.), el (masc.)\r\nlas, los"
+          "definition": "el\nla"
         },
         {
-          "word": "mice"
+          "word": "mice",
+          "definition": "ratones"
         },
         {
           "word": "are",
-          "definition": "eres\r\nsomos\r\nsois\r\nson"
+          "definition": "son"
         },
         {
           "word": "small",
-          "definition": "pequeña (fem.), pequeño (masc.)\r\npequeñas, pequeños"
+          "definition": "pequeña\npequeño"
         }
       ],
       "chips": [
@@ -1617,31 +1718,35 @@
       "phrase": [
         {
           "word": "Los",
-          "definition": "the (masc. pl.)"
+          "definition": "the"
         },
         {
-          "word": "elefantes"
+          "word": "elefantes",
+          "definition": "elephants"
         },
         {
           "word": "son",
-          "definition": "(they) are"
+          "definition": "are"
         },
         {
-          "word": "grandes,"
+          "word": "grandes,",
+          "definition": "big"
         },
         {
           "word": "los",
-          "definition": "the (masc. pl.)"
+          "definition": "the"
         },
         {
-          "word": "ratones"
+          "word": "ratones",
+          "definition": "mice"
         },
         {
           "word": "son",
-          "definition": "(they) are"
+          "definition": "are"
         },
         {
-          "word": "pequeños"
+          "word": "pequeños",
+          "definition": "small"
         }
       ],
       "chips": [
@@ -1661,6 +1766,14 @@
           "are",
           "big",
           "the",
+          "mice",
+          "are",
+          "small"
+        ],
+        [
+          "Elephants",
+          "are",
+          "big",
           "mice",
           "are",
           "small"
@@ -1694,17 +1807,19 @@
       "phrase": [
         {
           "word": "The",
-          "definition": "la (fem.), el (masc.)\r\nlas, los"
+          "definition": "el\nla"
         },
         {
           "word": "big",
-          "definition": "grande\r\ngrandes (pl.)"
+          "definition": "grande\ngrandes"
         },
         {
-          "word": "mice"
+          "word": "mice",
+          "definition": "ratones"
         },
         {
-          "word": "work"
+          "word": "work",
+          "definition": "trabajan\ntrabajo"
         }
       ],
       "chips": [
@@ -1732,17 +1847,19 @@
       "phrase": [
         {
           "word": "Los",
-          "definition": "the (masc. pl.)"
+          "definition": "the"
         },
         {
           "word": "grandes",
-          "definition": "big (pl.)"
+          "definition": "big"
         },
         {
-          "word": "ratones"
+          "word": "ratones",
+          "definition": "mice"
         },
         {
-          "word": "trabajan"
+          "word": "trabajan",
+          "definition": "they work\nyou work"
         }
       ],
       "chips": [
@@ -1773,9 +1890,9 @@
       ],
       "formInTargetLanguage": "ratón",
       "meaningInSourceLanguage": "mouse",
-      "id": "d264fe72a7c3",
+      "id": "cc225d0c05cb",
       "priority": 0,
-      "group": "7fc832d90547"
+      "group": "1500c13fddbc"
     },
     {
       "type": "shortInput",
@@ -1789,21 +1906,22 @@
       ],
       "phrase": [
         {
-          "word": "mouse"
+          "word": "mouse",
+          "definition": "ratón"
         }
       ],
-      "id": "003cbc591de9",
+      "id": "3a24fa62d4f9",
       "priority": 1,
-      "group": "7fc832d90547"
+      "group": "1500c13fddbc"
     },
     {
       "type": "listeningExercise",
       "answer": "ratón",
       "meaning": "mouse",
       "audio": "73409cbbbf05f5f103992263b0307c4ae9cf4b2b3b97175d9c1f5a8bfc1eb08f",
-      "id": "5c1bd301b687",
+      "id": "8e5a10492570",
       "priority": 1,
-      "group": "7fc832d90547"
+      "group": "1500c13fddbc"
     },
     {
       "type": "cards",
@@ -1814,9 +1932,9 @@
       ],
       "formInTargetLanguage": "elefante",
       "meaningInSourceLanguage": "elephant",
-      "id": "dc78a0e2f625",
+      "id": "bdeb3ecd5350",
       "priority": 0,
-      "group": "c352089b00ed"
+      "group": "43348c2af779"
     },
     {
       "type": "shortInput",
@@ -1830,21 +1948,22 @@
       ],
       "phrase": [
         {
-          "word": "elephant"
+          "word": "elephant",
+          "definition": "elefante"
         }
       ],
-      "id": "f165c22b60eb",
+      "id": "01121084384c",
       "priority": 1,
-      "group": "c352089b00ed"
+      "group": "43348c2af779"
     },
     {
       "type": "listeningExercise",
       "answer": "elefante",
       "meaning": "elephant",
       "audio": "5434620e3fd82ab049b3c282c42fad409cacb6b5098f9c715e7049f4afd6df9f",
-      "id": "b2284ecc015c",
+      "id": "4a889bf55aad",
       "priority": 1,
-      "group": "c352089b00ed"
+      "group": "43348c2af779"
     },
     {
       "type": "cards",
@@ -1855,9 +1974,9 @@
       ],
       "formInTargetLanguage": "parque",
       "meaningInSourceLanguage": "park",
-      "id": "1bbf158c03bf",
+      "id": "6d5cec375f3a",
       "priority": 0,
-      "group": "16d71702f436"
+      "group": "baa3ef3018cd"
     },
     {
       "type": "shortInput",
@@ -1871,21 +1990,22 @@
       ],
       "phrase": [
         {
-          "word": "park"
+          "word": "park",
+          "definition": "parque"
         }
       ],
-      "id": "e6d56d140637",
+      "id": "a7b5322d10f8",
       "priority": 1,
-      "group": "16d71702f436"
+      "group": "baa3ef3018cd"
     },
     {
       "type": "listeningExercise",
       "answer": "parque",
       "meaning": "park",
       "audio": "e74a2ada412cf4be63b3e7a7d7f3b797952483cabd762ade8737516ab219a6f9",
-      "id": "6501dbc34fac",
+      "id": "16a85d7798ca",
       "priority": 1,
-      "group": "16d71702f436"
+      "group": "baa3ef3018cd"
     },
     {
       "type": "cards",
@@ -1896,9 +2016,9 @@
       ],
       "formInTargetLanguage": "el ratón",
       "meaningInSourceLanguage": "the mouse",
-      "id": "ed8dcf047440",
+      "id": "391fced32eef",
       "priority": 0,
-      "group": "0fa8aaa6feca"
+      "group": "f3527000a851"
     },
     {
       "type": "shortInput",
@@ -1913,69 +2033,25 @@
       "phrase": [
         {
           "word": "the",
-          "definition": "la (fem.), el (masc.)\r\nlas, los"
+          "definition": "el\nla"
         },
         {
-          "word": "mouse"
+          "word": "mouse",
+          "definition": "ratón"
         }
       ],
-      "id": "3a291bfda2c6",
+      "id": "ceb7d08047b8",
       "priority": 1,
-      "group": "0fa8aaa6feca"
+      "group": "f3527000a851"
     },
     {
       "type": "listeningExercise",
       "answer": "el ratón",
       "meaning": "the mouse",
       "audio": "824856b872c03f584a2bd540d90136365ebfdc75d4cf31a2a91cb6584fbcbe63",
-      "id": "c62973508632",
+      "id": "b4074c8d7e77",
       "priority": 1,
-      "group": "0fa8aaa6feca"
-    },
-    {
-      "type": "cards",
-      "pictures": [
-        "park1.jpg",
-        "park2.jpg",
-        "park3.jpg"
-      ],
-      "formInTargetLanguage": "el parque",
-      "meaningInSourceLanguage": "the park",
-      "id": "18195234853a",
-      "priority": 0,
-      "group": "93ea5a7228ee"
-    },
-    {
-      "type": "shortInput",
-      "pictures": [
-        "park1.jpg",
-        "park2.jpg",
-        "park3.jpg"
-      ],
-      "formInTargetLanguage": [
-        "el parque"
-      ],
-      "phrase": [
-        {
-          "word": "the",
-          "definition": "la (fem.), el (masc.)\r\nlas, los"
-        },
-        {
-          "word": "park"
-        }
-      ],
-      "id": "d6b103acd830",
-      "priority": 1,
-      "group": "93ea5a7228ee"
-    },
-    {
-      "type": "listeningExercise",
-      "answer": "el parque",
-      "meaning": "the park",
-      "audio": "31c887405449b1d348f66fa20205f669376e877c526c113853126bd7129a8345",
-      "id": "486920a775df",
-      "priority": 1,
-      "group": "93ea5a7228ee"
+      "group": "f3527000a851"
     },
     {
       "type": "cards",
@@ -1986,9 +2062,9 @@
       ],
       "formInTargetLanguage": "el elefante",
       "meaningInSourceLanguage": "the elephant",
-      "id": "95f211eb2957",
+      "id": "d95b7e669eb2",
       "priority": 0,
-      "group": "564489112c3e"
+      "group": "05cd32f9d039"
     },
     {
       "type": "shortInput",
@@ -2003,24 +2079,71 @@
       "phrase": [
         {
           "word": "the",
-          "definition": "la (fem.), el (masc.)\r\nlas, los"
+          "definition": "el\nla"
         },
         {
-          "word": "elephant"
+          "word": "elephant",
+          "definition": "elefante"
         }
       ],
-      "id": "e8ca5926da2b",
+      "id": "8340461f8077",
       "priority": 1,
-      "group": "564489112c3e"
+      "group": "05cd32f9d039"
     },
     {
       "type": "listeningExercise",
       "answer": "el elefante",
       "meaning": "the elephant",
       "audio": "5b8c8b07f85267cedd10b991fd56c7ba086b66c1be25800a7d94717d06ec173c",
-      "id": "b3b60f8bc426",
+      "id": "ec50e67eb54b",
       "priority": 1,
-      "group": "564489112c3e"
+      "group": "05cd32f9d039"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "park1.jpg",
+        "park2.jpg",
+        "park3.jpg"
+      ],
+      "formInTargetLanguage": "el parque",
+      "meaningInSourceLanguage": "the park",
+      "id": "7acaed3a682a",
+      "priority": 0,
+      "group": "1364c1d5b8b6"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "park1.jpg",
+        "park2.jpg",
+        "park3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "el parque"
+      ],
+      "phrase": [
+        {
+          "word": "the",
+          "definition": "el\nla"
+        },
+        {
+          "word": "park",
+          "definition": "parque"
+        }
+      ],
+      "id": "f05aeef4d3ae",
+      "priority": 1,
+      "group": "1364c1d5b8b6"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "el parque",
+      "meaning": "the park",
+      "audio": "31c887405449b1d348f66fa20205f669376e877c526c113853126bd7129a8345",
+      "id": "3282bae6e189",
+      "priority": 1,
+      "group": "1364c1d5b8b6"
     }
   ]
 }
