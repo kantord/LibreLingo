@@ -25,18 +25,19 @@
       "phrase": [
         {
           "word": "Do",
-          "definition": "hacer"
+          "definition": "hace\nhacemos\nhaces\nhago"
         },
         {
           "word": "you",
-          "definition": "tú"
+          "definition": "tú\nusted"
         },
         {
           "word": "like",
-          "definition": "gusta"
+          "definition": "como\ngusta"
         },
         {
-          "word": "coffee?"
+          "word": "coffee?",
+          "definition": "café"
         }
       ],
       "chips": [
@@ -48,6 +49,14 @@
       "solutions": [
         [
           "Te",
+          "gusta",
+          "el",
+          "café"
+        ],
+        [
+          "A",
+          "ti",
+          "te",
           "gusta",
           "el",
           "café"
@@ -63,17 +72,20 @@
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "¿Te"
+          "word": "¿Te",
+          "definition": "you"
         },
         {
           "word": "gusta",
-          "definition": "like"
+          "definition": "gusta\ntaste"
         },
         {
-          "word": "el"
+          "word": "el",
+          "definition": "the"
         },
         {
-          "word": "café?"
+          "word": "café?",
+          "definition": "coffee"
         }
       ],
       "chips": [
@@ -118,11 +130,11 @@
       "phrase": [
         {
           "word": "I",
-          "definition": "yo\r\nme"
+          "definition": "yo"
         },
         {
           "word": "like",
-          "definition": "gusta"
+          "definition": "como\ngusta"
         },
         {
           "word": "pasta",
@@ -141,6 +153,14 @@
           "gusta",
           "la",
           "pasta"
+        ],
+        [
+          "A",
+          "mí",
+          "me",
+          "gusta",
+          "la",
+          "pasta"
         ]
       ],
       "formattedSolution": "Me gusta la pasta",
@@ -154,11 +174,11 @@
       "phrase": [
         {
           "word": "Me",
-          "definition": "I\r\nMe"
+          "definition": "I\nme"
         },
         {
           "word": "gusta",
-          "definition": "like"
+          "definition": "gusta\ntaste"
         },
         {
           "word": "la",
@@ -209,11 +229,11 @@
       "phrase": [
         {
           "word": "I",
-          "definition": "yo\r\nme"
+          "definition": "yo"
         },
         {
           "word": "like",
-          "definition": "gusta"
+          "definition": "como\ngusta"
         },
         {
           "word": "beer",
@@ -232,6 +252,14 @@
           "gusta",
           "la",
           "cerveza"
+        ],
+        [
+          "A",
+          "mí",
+          "me",
+          "gusta",
+          "la",
+          "cerveza"
         ]
       ],
       "formattedSolution": "Me gusta la cerveza",
@@ -245,11 +273,11 @@
       "phrase": [
         {
           "word": "Me",
-          "definition": "I\r\nMe"
+          "definition": "I\nme"
         },
         {
           "word": "gusta",
-          "definition": "like"
+          "definition": "gusta\ntaste"
         },
         {
           "word": "la",
@@ -300,7 +328,7 @@
       "phrase": [
         {
           "word": "I",
-          "definition": "yo\r\nme"
+          "definition": "yo"
         },
         {
           "word": "don't",
@@ -308,7 +336,7 @@
         },
         {
           "word": "like",
-          "definition": "gusta"
+          "definition": "como\ngusta"
         },
         {
           "word": "wine",
@@ -329,6 +357,15 @@
           "gusta",
           "el",
           "vino"
+        ],
+        [
+          "A",
+          "mí",
+          "no",
+          "me",
+          "gusta",
+          "el",
+          "vino"
         ]
       ],
       "formattedSolution": "No me gusta el vino",
@@ -341,20 +378,24 @@
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "No"
+          "word": "No",
+          "definition": "no"
         },
         {
-          "word": "me"
+          "word": "me",
+          "definition": "I\nme"
         },
         {
           "word": "gusta",
-          "definition": "like"
+          "definition": "gusta\ntaste"
         },
         {
-          "word": "el"
+          "word": "el",
+          "definition": "the"
         },
         {
-          "word": "vino"
+          "word": "vino",
+          "definition": "wine"
         }
       ],
       "chips": [
@@ -407,7 +448,7 @@
         },
         {
           "word": "eat",
-          "definition": "como\r\ncomes\r\ncomemos\r\ncoméis\r\ncomen"
+          "definition": "come\ncomer"
         },
         {
           "word": "meat",
@@ -426,6 +467,11 @@
           "no",
           "come",
           "carne"
+        ],
+        [
+          "No",
+          "come",
+          "carne"
         ]
       ],
       "formattedSolution": "Él no come carne",
@@ -442,14 +488,16 @@
           "definition": "he"
         },
         {
-          "word": "no"
+          "word": "no",
+          "definition": "no"
         },
         {
           "word": "come",
           "definition": "eats"
         },
         {
-          "word": "carne"
+          "word": "carne",
+          "definition": "meat"
         }
       ],
       "chips": [
@@ -494,11 +542,11 @@
       "phrase": [
         {
           "word": "I",
-          "definition": "yo\r\nme"
+          "definition": "yo"
         },
         {
           "word": "drink",
-          "definition": "bebo\r\nbebes\r\nbebemos\r\nbebéis\r\nbeben"
+          "definition": "bebemos\nbebida\nbebo"
         },
         {
           "word": "wine",
@@ -515,6 +563,10 @@
           "Yo",
           "bebo",
           "vino"
+        ],
+        [
+          "Bebo",
+          "vino"
         ]
       ],
       "formattedSolution": "Yo bebo vino",
@@ -528,14 +580,15 @@
       "phrase": [
         {
           "word": "Yo",
-          "definition": "I"
+          "definition": "I\nme"
         },
         {
           "word": "bebo",
-          "definition": "(I) drink"
+          "definition": "I drink"
         },
         {
-          "word": "vino"
+          "word": "vino",
+          "definition": "wine"
         }
       ],
       "chips": [
@@ -578,7 +631,7 @@
       "phrase": [
         {
           "word": "Cecilia",
-          "definition": "Cecilia"
+          "definition": "Cecilia (name)"
         },
         {
           "word": "doesn't",
@@ -586,7 +639,7 @@
         },
         {
           "word": "eat",
-          "definition": "como\r\ncomes\r\ncomemos\r\ncoméis\r\ncomen"
+          "definition": "come\ncomer"
         },
         {
           "word": "pasta",
@@ -618,10 +671,11 @@
       "phrase": [
         {
           "word": "Cecilia",
-          "definition": "Cecilia"
+          "definition": "Cecilia (name)"
         },
         {
-          "word": "no"
+          "word": "no",
+          "definition": "no"
         },
         {
           "word": "come",
@@ -642,13 +696,6 @@
         [
           "Cecilia",
           "doesn't",
-          "eat",
-          "pasta"
-        ],
-        [
-          "Cecilia",
-          "does",
-          "not",
           "eat",
           "pasta"
         ]
@@ -681,14 +728,15 @@
       "phrase": [
         {
           "word": "A",
-          "definition": "una (fem.), un (masc.)"
+          "definition": "un\nuna"
         },
         {
           "word": "beer",
           "definition": "cerveza"
         },
         {
-          "word": "please!"
+          "word": "please!",
+          "definition": "por favor"
         }
       ],
       "chips": [
@@ -715,16 +763,20 @@
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "¡Una"
+          "word": "¡Una",
+          "definition": "a\none"
         },
         {
-          "word": "cerveza,"
+          "word": "cerveza,",
+          "definition": "beer"
         },
         {
-          "word": "por"
+          "word": "por",
+          "definition": "for"
         },
         {
-          "word": "favor!"
+          "word": "favor!",
+          "definition": "favor"
         }
       ],
       "chips": [
@@ -767,18 +819,19 @@
       "phrase": [
         {
           "word": "Do",
-          "definition": "hacer"
+          "definition": "hace\nhacemos\nhaces\nhago"
         },
         {
           "word": "you",
-          "definition": "tú"
+          "definition": "tú\nusted"
         },
         {
           "word": "like",
-          "definition": "gusta"
+          "definition": "como\ngusta"
         },
         {
-          "word": "wine?"
+          "word": "wine?",
+          "definition": "vino"
         }
       ],
       "chips": [
@@ -805,17 +858,20 @@
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "¿Te"
+          "word": "¿Te",
+          "definition": "you"
         },
         {
           "word": "gusta",
-          "definition": "like"
+          "definition": "gusta\ntaste"
         },
         {
-          "word": "el"
+          "word": "el",
+          "definition": "the"
         },
         {
-          "word": "vino?"
+          "word": "vino?",
+          "definition": "wine"
         }
       ],
       "chips": [
@@ -864,14 +920,15 @@
         },
         {
           "word": "you",
-          "definition": "tú"
+          "definition": "tú\nusted"
         },
         {
           "word": "like",
-          "definition": "gusta"
+          "definition": "como\ngusta"
         },
         {
-          "word": "bread?"
+          "word": "bread?",
+          "definition": "pan"
         }
       ],
       "chips": [
@@ -900,20 +957,24 @@
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "¿No"
+          "word": "¿No",
+          "definition": "no"
         },
         {
-          "word": "te"
+          "word": "te",
+          "definition": "you"
         },
         {
           "word": "gusta",
-          "definition": "like"
+          "definition": "gusta\ntaste"
         },
         {
-          "word": "el"
+          "word": "el",
+          "definition": "the"
         },
         {
-          "word": "pan?"
+          "word": "pan?",
+          "definition": "bread"
         }
       ],
       "chips": [
@@ -926,6 +987,12 @@
         [
           "Don't",
           "you",
+          "like",
+          "bread"
+        ],
+        [
+          "You",
+          "don't",
           "like",
           "bread"
         ]
@@ -944,9 +1011,9 @@
       ],
       "formInTargetLanguage": "café",
       "meaningInSourceLanguage": "coffee",
-      "id": "817ab56f5523",
+      "id": "93717f68a14f",
       "priority": 0,
-      "group": "9547d0b5282f"
+      "group": "c5adf627d743"
     },
     {
       "type": "shortInput",
@@ -964,18 +1031,18 @@
           "definition": "café"
         }
       ],
-      "id": "132c156e3085",
+      "id": "700478c02bbb",
       "priority": 1,
-      "group": "9547d0b5282f"
+      "group": "c5adf627d743"
     },
     {
       "type": "listeningExercise",
       "answer": "café",
       "meaning": "coffee",
       "audio": "073960e6becce276cefc285e779cd3abd34b831c2ac501c2e2cceffec5117ffe",
-      "id": "294541b3fe3c",
+      "id": "82a62fdf5fd8",
       "priority": 1,
-      "group": "9547d0b5282f"
+      "group": "c5adf627d743"
     },
     {
       "type": "cards",
@@ -986,9 +1053,9 @@
       ],
       "formInTargetLanguage": "vino",
       "meaningInSourceLanguage": "wine",
-      "id": "e19ef7a53b5f",
+      "id": "642bf02c9cde",
       "priority": 0,
-      "group": "be4f256abf8d"
+      "group": "d521c8374d3a"
     },
     {
       "type": "shortInput",
@@ -1006,18 +1073,18 @@
           "definition": "vino"
         }
       ],
-      "id": "9f2c6c42019e",
+      "id": "4f0b2dc04e7b",
       "priority": 1,
-      "group": "be4f256abf8d"
+      "group": "d521c8374d3a"
     },
     {
       "type": "listeningExercise",
       "answer": "vino",
       "meaning": "wine",
       "audio": "0df83620258093a0920955db051c69640431d93625350d5456b806c1c6468a0a",
-      "id": "7f58bf60aea2",
+      "id": "25775f56f06f",
       "priority": 1,
-      "group": "be4f256abf8d"
+      "group": "d521c8374d3a"
     },
     {
       "type": "cards",
@@ -1028,9 +1095,9 @@
       ],
       "formInTargetLanguage": "cerveza",
       "meaningInSourceLanguage": "beer",
-      "id": "dc390e467ac9",
+      "id": "447177ab64fe",
       "priority": 0,
-      "group": "9db225604111"
+      "group": "13c77e5ee5d9"
     },
     {
       "type": "shortInput",
@@ -1048,18 +1115,18 @@
           "definition": "cerveza"
         }
       ],
-      "id": "6cc2a8a25cfa",
+      "id": "9574c3ab1635",
       "priority": 1,
-      "group": "9db225604111"
+      "group": "13c77e5ee5d9"
     },
     {
       "type": "listeningExercise",
       "answer": "cerveza",
       "meaning": "beer",
       "audio": "2469b4256c74a73588106e72a39d160ac62b1cb5d51bb43fb587f09edea20c7f",
-      "id": "bffd0ef80e38",
+      "id": "5a6b182a9832",
       "priority": 1,
-      "group": "9db225604111"
+      "group": "13c77e5ee5d9"
     },
     {
       "type": "cards",
@@ -1070,9 +1137,9 @@
       ],
       "formInTargetLanguage": "un café",
       "meaningInSourceLanguage": "a coffee",
-      "id": "0e5f98c3b85e",
+      "id": "1e11f98478d0",
       "priority": 0,
-      "group": "a4998817bf8a"
+      "group": "6a626c207f0d"
     },
     {
       "type": "shortInput",
@@ -1087,25 +1154,25 @@
       "phrase": [
         {
           "word": "a",
-          "definition": "una (fem.), un (masc.)"
+          "definition": "un\nuna"
         },
         {
           "word": "coffee",
           "definition": "café"
         }
       ],
-      "id": "13dfa9296b59",
+      "id": "3518df694c09",
       "priority": 1,
-      "group": "a4998817bf8a"
+      "group": "6a626c207f0d"
     },
     {
       "type": "listeningExercise",
       "answer": "un café",
       "meaning": "a coffee",
       "audio": "278333a5d6868cb350812832f47df7f278dabf3bd95c9211a7ae6174a7037782",
-      "id": "b696b6f547fd",
+      "id": "79c2edee600f",
       "priority": 1,
-      "group": "a4998817bf8a"
+      "group": "6a626c207f0d"
     },
     {
       "type": "cards",
@@ -1116,9 +1183,9 @@
       ],
       "formInTargetLanguage": "el vino",
       "meaningInSourceLanguage": "the wine",
-      "id": "1cf14eb3a9ba",
+      "id": "bf243b4ef03f",
       "priority": 0,
-      "group": "ea1d30e6b9e4"
+      "group": "4c70ec608302"
     },
     {
       "type": "shortInput",
@@ -1133,25 +1200,25 @@
       "phrase": [
         {
           "word": "the",
-          "definition": "la (fem.), el (masc.)\r\nlas, los"
+          "definition": "el\nla"
         },
         {
           "word": "wine",
           "definition": "vino"
         }
       ],
-      "id": "faf8202bf154",
+      "id": "a72142eddc44",
       "priority": 1,
-      "group": "ea1d30e6b9e4"
+      "group": "4c70ec608302"
     },
     {
       "type": "listeningExercise",
       "answer": "el vino",
       "meaning": "the wine",
       "audio": "59c52cdd01c3116d12f1d2dc341b6840f9cb0211f12f35be4cbef88aeeb866f8",
-      "id": "f480c8085477",
+      "id": "4ec013b14526",
       "priority": 1,
-      "group": "ea1d30e6b9e4"
+      "group": "4c70ec608302"
     }
   ]
 }

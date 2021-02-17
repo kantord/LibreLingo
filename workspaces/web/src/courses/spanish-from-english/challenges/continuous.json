@@ -25,17 +25,19 @@
       "phrase": [
         {
           "word": "We",
-          "definition": "nosotras (fem.), nosotros (masc.)"
+          "definition": "nosotras\nnosotros"
         },
         {
           "word": "are",
-          "definition": "eres\r\nsomos\r\nsois\r\nson"
+          "definition": "son"
         },
         {
-          "word": "cooking"
+          "word": "cooking",
+          "definition": "cocinando"
         },
         {
-          "word": "dinner"
+          "word": "dinner",
+          "definition": "cena"
         }
       ],
       "chips": [
@@ -52,6 +54,19 @@
           "cocinando",
           "la",
           "cena"
+        ],
+        [
+          "Nosotras",
+          "estamos",
+          "cocinando",
+          "la",
+          "cena"
+        ],
+        [
+          "Estamos",
+          "cocinando",
+          "la",
+          "cena"
         ]
       ],
       "formattedSolution": "Nosotros estamos cocinando la cena",
@@ -65,20 +80,23 @@
       "phrase": [
         {
           "word": "Nosotros",
-          "definition": "we (masc. pl.)"
+          "definition": "us\nwe"
         },
         {
-          "word": "estamos"
+          "word": "estamos",
+          "definition": "we are\nwe're"
         },
         {
-          "word": "cocinando"
+          "word": "cocinando",
+          "definition": "cooking"
         },
         {
           "word": "la",
           "definition": "the"
         },
         {
-          "word": "cena"
+          "word": "cena",
+          "definition": "cooking"
         }
       ],
       "chips": [
@@ -91,6 +109,11 @@
         [
           "We",
           "are",
+          "cooking",
+          "dinner"
+        ],
+        [
+          "We're",
           "cooking",
           "dinner"
         ]
@@ -123,20 +146,23 @@
       "phrase": [
         {
           "word": "I",
-          "definition": "yo\r\nme"
+          "definition": "yo"
         },
         {
           "word": "am",
           "definition": "soy"
         },
         {
-          "word": "doing"
+          "word": "doing",
+          "definition": "haciendo"
         },
         {
-          "word": "this"
+          "word": "this",
+          "definition": "esta\neste\nesto\ntan"
         },
         {
-          "word": "exercise"
+          "word": "exercise",
+          "definition": "ejercicio\nentrenamiento"
         }
       ],
       "chips": [
@@ -166,19 +192,23 @@
       "phrase": [
         {
           "word": "Yo",
-          "definition": "I"
+          "definition": "I\nme"
         },
         {
-          "word": "estoy"
+          "word": "estoy",
+          "definition": "I am\nI'm"
         },
         {
-          "word": "haciendo"
+          "word": "haciendo",
+          "definition": "doing"
         },
         {
-          "word": "este"
+          "word": "este",
+          "definition": "this"
         },
         {
-          "word": "ejercicio"
+          "word": "ejercicio",
+          "definition": "exercise"
         }
       ],
       "chips": [
@@ -192,6 +222,12 @@
         [
           "I",
           "am",
+          "doing",
+          "this",
+          "exercise"
+        ],
+        [
+          "I'm",
           "doing",
           "this",
           "exercise"
@@ -225,14 +261,15 @@
       "phrase": [
         {
           "word": "They",
-          "definition": "ellas (fem.), ellos (masc.)"
+          "definition": "ellas\nellos"
         },
         {
           "word": "are",
-          "definition": "eres\r\nsomos\r\nsois\r\nson"
+          "definition": "son"
         },
         {
-          "word": "playing"
+          "word": "playing",
+          "definition": "jugando"
         }
       ],
       "chips": [
@@ -243,6 +280,15 @@
       "solutions": [
         [
           "Ellos",
+          "están",
+          "jugando"
+        ],
+        [
+          "Están",
+          "jugando"
+        ],
+        [
+          "Ellas",
           "están",
           "jugando"
         ]
@@ -258,13 +304,15 @@
       "phrase": [
         {
           "word": "Ellos",
-          "definition": "they (masc.)"
+          "definition": "they"
         },
         {
-          "word": "están"
+          "word": "están",
+          "definition": "they are\nthey're\nyou are\nyou're"
         },
         {
-          "word": "jugando"
+          "word": "jugando",
+          "definition": "playing"
         }
       ],
       "chips": [
@@ -276,6 +324,10 @@
         [
           "They",
           "are",
+          "playing"
+        ],
+        [
+          "They're",
           "playing"
         ]
       ],
@@ -306,14 +358,16 @@
       "translatesToSourceLanguage": false,
       "phrase": [
         {
-          "word": "Are"
+          "word": "Are",
+          "definition": "son"
         },
         {
           "word": "you",
-          "definition": "tú"
+          "definition": "tú\nusted"
         },
         {
-          "word": "listening?"
+          "word": "listening?",
+          "definition": "escuchando"
         }
       ],
       "chips": [
@@ -323,6 +377,11 @@
       "solutions": [
         [
           "Estás",
+          "escuchando"
+        ],
+        [
+          "Tú",
+          "estás",
           "escuchando"
         ]
       ],
@@ -336,10 +395,12 @@
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Estás"
+          "word": "Estás",
+          "definition": "you are"
         },
         {
-          "word": "escuchando?"
+          "word": "escuchando?",
+          "definition": "listening"
         }
       ],
       "chips": [
@@ -382,18 +443,19 @@
       "phrase": [
         {
           "word": "You",
-          "definition": "tú (sg.)\r\nvosotras, vosotros (pl.)"
+          "definition": "tú\nusted"
         },
         {
           "word": "are",
-          "definition": "eres\r\nsomos\r\nsois\r\nson"
+          "definition": "son"
         },
         {
-          "word": "learning"
+          "word": "learning",
+          "definition": "aprendiendo"
         },
         {
           "word": "a",
-          "definition": "una (fem.), un (masc.)"
+          "definition": "un\nuna"
         },
         {
           "word": "lot",
@@ -410,6 +472,12 @@
           "Estás",
           "aprendiendo",
           "mucho"
+        ],
+        [
+          "Tú",
+          "estás",
+          "aprendiendo",
+          "mucho"
         ]
       ],
       "formattedSolution": "Estás aprendiendo mucho",
@@ -422,14 +490,16 @@
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Estás"
+          "word": "Estás",
+          "definition": "you are"
         },
         {
-          "word": "aprendiendo"
+          "word": "aprendiendo",
+          "definition": "learning"
         },
         {
           "word": "mucho",
-          "definition": "a lot, much"
+          "definition": "a lot"
         }
       ],
       "chips": [
@@ -443,6 +513,12 @@
         [
           "You",
           "are",
+          "learning",
+          "a",
+          "lot"
+        ],
+        [
+          "You're",
           "learning",
           "a",
           "lot"
@@ -476,7 +552,7 @@
       "phrase": [
         {
           "word": "The",
-          "definition": "la (fem.), el (masc.)\r\nlas, los"
+          "definition": "el\nla"
         },
         {
           "word": "duck",
@@ -487,11 +563,12 @@
           "definition": "es"
         },
         {
-          "word": "hugging"
+          "word": "hugging",
+          "definition": "abrazando"
         },
         {
           "word": "the",
-          "definition": "la (fem.), el (masc.)\r\nlas, los"
+          "definition": "el\nla"
         },
         {
           "word": "cat",
@@ -527,20 +604,23 @@
       "phrase": [
         {
           "word": "El",
-          "definition": "the (masc. sg.)"
+          "definition": "the"
         },
         {
           "word": "pato",
           "definition": "duck"
         },
         {
-          "word": "está"
+          "word": "está",
+          "definition": "is"
         },
         {
-          "word": "abrazando"
+          "word": "abrazando",
+          "definition": "hugging"
         },
         {
-          "word": "al"
+          "word": "al",
+          "definition": "to the"
         },
         {
           "word": "gato",
@@ -600,14 +680,16 @@
           "definition": "es"
         },
         {
-          "word": "swimming"
+          "word": "swimming",
+          "definition": "nadando"
         },
         {
-          "word": "in"
+          "word": "in",
+          "definition": "en"
         },
         {
           "word": "the",
-          "definition": "la (fem.), el (masc.)\r\nlas, los"
+          "definition": "el\nla"
         },
         {
           "word": "sea",
@@ -630,6 +712,13 @@
           "en",
           "el",
           "mar"
+        ],
+        [
+          "Está",
+          "nadando",
+          "en",
+          "el",
+          "mar"
         ]
       ],
       "formattedSolution": "Ella está nadando en el mar",
@@ -646,16 +735,20 @@
           "definition": "she"
         },
         {
-          "word": "está"
+          "word": "está",
+          "definition": "is"
         },
         {
-          "word": "nadando"
+          "word": "nadando",
+          "definition": "swimming"
         },
         {
-          "word": "en"
+          "word": "en",
+          "definition": "at\nin\non"
         },
         {
-          "word": "el"
+          "word": "el",
+          "definition": "the"
         },
         {
           "word": "mar",
@@ -678,6 +771,73 @@
           "in",
           "the",
           "sea"
+        ],
+        [
+          "S"
+        ],
+        [
+          "h"
+        ],
+        [
+          "e"
+        ],
+        [
+          "'"
+        ],
+        [
+          "s"
+        ],
+        [],
+        [
+          "s"
+        ],
+        [
+          "w"
+        ],
+        [
+          "i"
+        ],
+        [
+          "m"
+        ],
+        [
+          "m"
+        ],
+        [
+          "i"
+        ],
+        [
+          "n"
+        ],
+        [
+          "g"
+        ],
+        [],
+        [
+          "i"
+        ],
+        [
+          "n"
+        ],
+        [],
+        [
+          "t"
+        ],
+        [
+          "h"
+        ],
+        [
+          "e"
+        ],
+        [],
+        [
+          "s"
+        ],
+        [
+          "e"
+        ],
+        [
+          "a"
         ]
       ],
       "formattedSolution": "She is swimming in the sea",
@@ -715,10 +875,12 @@
           "definition": "es"
         },
         {
-          "word": "eating"
+          "word": "eating",
+          "definition": "comiendo"
         },
         {
-          "word": "chocolate"
+          "word": "chocolate",
+          "definition": "chocolate"
         }
       ],
       "chips": [
@@ -731,6 +893,11 @@
         [
           "Él",
           "está",
+          "comiendo",
+          "chocolate"
+        ],
+        [
+          "Está",
           "comiendo",
           "chocolate"
         ]
@@ -749,13 +916,16 @@
           "definition": "he"
         },
         {
-          "word": "está"
+          "word": "está",
+          "definition": "is"
         },
         {
-          "word": "comiendo"
+          "word": "comiendo",
+          "definition": "eating"
         },
         {
-          "word": "chocolate"
+          "word": "chocolate",
+          "definition": "chocolate"
         }
       ],
       "chips": [
@@ -770,6 +940,11 @@
           "is",
           "eating",
           "chocolate"
+        ],
+        [
+          "He's",
+          "eating",
+          "chocolate"
         ]
       ],
       "formattedSolution": "He is eating chocolate",
@@ -779,40 +954,44 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Están escribiendo una carta?",
+      "formInTargetLanguage": "̉̌̉̉¿Están escribiendo una carta?",
       "meaningInSourceLanguage": "Are they writing a letter?",
-      "id": "f7ff4adf918d",
+      "id": "d109060e0d83",
       "priority": 0,
-      "group": "b15784f2a6da"
+      "group": "68da0c6bcd48"
     },
     {
       "type": "listeningExercise",
-      "answer": "Están escribiendo una carta?",
+      "answer": "̉̌̉̉¿Están escribiendo una carta?",
       "meaning": "Are they writing a letter?",
-      "audio": "4f0ac8002e210abf5461eae921450b15afb45d5ac24db36d6dd71ad2d3ff2f46",
-      "id": "d4606f1b68e3",
+      "audio": "8dfd41662fb9fb12eedb824c558def29464d7b398eac2136622876ccab028ed5",
+      "id": "91eec5d34a18",
       "priority": 1,
-      "group": "b15784f2a6da"
+      "group": "68da0c6bcd48"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
         {
-          "word": "Are"
+          "word": "Are",
+          "definition": "son"
         },
         {
-          "word": "they"
+          "word": "they",
+          "definition": "ellas\nellos"
         },
         {
-          "word": "writing"
+          "word": "writing",
+          "definition": "escribiendo"
         },
         {
           "word": "a",
-          "definition": "una (fem.), un (masc.)"
+          "definition": "un\nuna"
         },
         {
-          "word": "letter?"
+          "word": "letter?",
+          "definition": "carta"
         }
       ],
       "chips": [
@@ -827,28 +1006,46 @@
           "escribiendo",
           "una",
           "carta"
+        ],
+        [
+          "Ellos",
+          "están",
+          "escribiendo",
+          "una",
+          "carta"
+        ],
+        [
+          "Ellas",
+          "están",
+          "escribiendo",
+          "una",
+          "carta"
         ]
       ],
-      "formattedSolution": "Están escribiendo una carta?",
-      "id": "95da96819264",
+      "formattedSolution": "̉̌̉̉¿Están escribiendo una carta?",
+      "id": "f11f83418fdd",
       "priority": 2,
-      "group": "b15784f2a6da"
+      "group": "68da0c6bcd48"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Están"
+          "word": "̉̌̉̉¿Están",
+          "definition": "they are\nthey're\nyou are\nyou're"
         },
         {
-          "word": "escribiendo"
+          "word": "escribiendo",
+          "definition": "writing"
         },
         {
-          "word": "una"
+          "word": "una",
+          "definition": "a\none"
         },
         {
-          "word": "carta?"
+          "word": "carta?",
+          "definition": "letter"
         }
       ],
       "chips": [
@@ -868,9 +1065,9 @@
         ]
       ],
       "formattedSolution": "Are they writing a letter?",
-      "id": "6695642cd416",
+      "id": "1ab5aae19d38",
       "priority": 2,
-      "group": "b15784f2a6da"
+      "group": "68da0c6bcd48"
     },
     {
       "type": "options",
@@ -895,14 +1092,15 @@
       "phrase": [
         {
           "word": "We",
-          "definition": "nosotras (fem.), nosotros (masc.)"
+          "definition": "nosotras\nnosotros"
         },
         {
           "word": "are",
-          "definition": "eres\r\nsomos\r\nsois\r\nson"
+          "definition": "son"
         },
         {
-          "word": "going"
+          "word": "going",
+          "definition": "yendo"
         },
         {
           "word": "to",
@@ -910,10 +1108,11 @@
         },
         {
           "word": "the",
-          "definition": "la (fem.), el (masc.)\r\nlas, los"
+          "definition": "el\nla"
         },
         {
-          "word": "park"
+          "word": "park",
+          "definition": "parque"
         }
       ],
       "chips": [
@@ -926,6 +1125,17 @@
         [
           "Nosotras",
           "vamos",
+          "al",
+          "parque"
+        ],
+        [
+          "Nosotros",
+          "vamos",
+          "al",
+          "parque"
+        ],
+        [
+          "Vamos",
           "al",
           "parque"
         ]
@@ -941,16 +1151,19 @@
       "phrase": [
         {
           "word": "Nosotras",
-          "definition": "we (fem. pl.)"
+          "definition": "us\nwe"
         },
         {
-          "word": "vamos"
+          "word": "vamos",
+          "definition": "Let's\nwe are going\nwe go\nwe're going"
         },
         {
-          "word": "al"
+          "word": "al",
+          "definition": "to the"
         },
         {
-          "word": "parque"
+          "word": "parque",
+          "definition": "park"
         }
       ],
       "chips": [
@@ -965,6 +1178,13 @@
         [
           "We",
           "are",
+          "going",
+          "to",
+          "the",
+          "park"
+        ],
+        [
+          "We're",
           "going",
           "to",
           "the",
@@ -999,21 +1219,23 @@
       "phrase": [
         {
           "word": "I",
-          "definition": "yo\r\nme"
+          "definition": "yo"
         },
         {
           "word": "am",
           "definition": "soy"
         },
         {
-          "word": "singing"
+          "word": "singing",
+          "definition": "cantando"
         },
         {
           "word": "a",
-          "definition": "una (fem.), un (masc.)"
+          "definition": "un\nuna"
         },
         {
-          "word": "song"
+          "word": "song",
+          "definition": "canción"
         }
       ],
       "chips": [
@@ -1030,6 +1252,12 @@
           "cantando",
           "una",
           "canción"
+        ],
+        [
+          "Estoy",
+          "cantando",
+          "una",
+          "canción"
         ]
       ],
       "formattedSolution": "Yo estoy cantando una canción",
@@ -1043,19 +1271,23 @@
       "phrase": [
         {
           "word": "Yo",
-          "definition": "I"
+          "definition": "I\nme"
         },
         {
-          "word": "estoy"
+          "word": "estoy",
+          "definition": "I am\nI'm"
         },
         {
-          "word": "cantando"
+          "word": "cantando",
+          "definition": "singing"
         },
         {
-          "word": "una"
+          "word": "una",
+          "definition": "a\none"
         },
         {
-          "word": "canción"
+          "word": "canción",
+          "definition": "song"
         }
       ],
       "chips": [
@@ -1069,6 +1301,12 @@
         [
           "I",
           "am",
+          "singing",
+          "a",
+          "song"
+        ],
+        [
+          "I'm",
           "singing",
           "a",
           "song"
