@@ -207,7 +207,8 @@ class TestDefineWord(TestCase):
     def test_definition_not_found(self):
         word = str(fakes.fake_value())
         pattern = re.escape(
-            'The another language word "{}" does not have a definition. Please add it to the mini-dictionary.'.format(word))
+            'The another language word "{}" does not have a definition. Please add it to the mini-dictionary.'
+            .format(word))
         with pytest.raises(
                 ValueError,
                 match=pattern):
