@@ -26,7 +26,11 @@ def export_skill(export_path, skill, course, settings=None):
         can export the entire course as a whole into a JSON using export_course
     """
     logger.info("Writing skill {}".format(repr(skill.name)))
-    skill_data = get_skill_data(skill, course)
+    try:
+        skill_data = get_skill_data(skill, course)
+    except Exception as error:
+        raise RuntimeError(
+            'Error while exporting skill "{}": {}'.format(skill.name, error))
     slug = slugify(skill.name)
     Path(Path(export_path) / "challenges").mkdir(parents=True, exist_ok=True)
     with open(Path(export_path) / "challenges" / "{}.json".format(slug), 'w', encoding='utf-8') as f:

@@ -207,7 +207,7 @@ class TestDefineWord(TestCase):
     def test_definition_not_found(self):
         word = str(fakes.fake_value())
         pattern = re.escape(
-            'The word "{}" does not have a definition. Please add it to the mini-dictionary.'.format(word))
+            'The another language word "{}" does not have a definition. Please add it to the mini-dictionary.'.format(word))
         with pytest.raises(
                 ValueError,
                 match=pattern):
@@ -232,6 +232,27 @@ class TestDefineWord(TestCase):
         )
         assert define_word(my_course, word, is_in_target_language=is_in_target_language) == {
             "word": word,
+            "definition": meaning
+        }
+
+    def test_normalizes_words(self):
+        word = str(fakes.fake_value())
+        meaning = str(fakes.fake_value())
+        is_in_target_language = fakes.fake_value()
+        my_course = Course(
+            **{
+                **(fakes.course1._asdict()),
+                "dictionary": [
+                    DictionaryItem(
+                        word=word,
+                        definition=meaning,
+                        is_in_target_language=is_in_target_language
+                    ),
+                ]
+            },
+        )
+        assert define_word(my_course, word + ",", is_in_target_language=is_in_target_language) == {
+            "word": word + ",",
             "definition": meaning
         }
 
