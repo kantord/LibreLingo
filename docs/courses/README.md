@@ -10,7 +10,7 @@ are organized in a specific directory structure.
 
 - [Spanish for English speakers](https://github.com/kantord/LibreLingo/tree/master/courses/spanish-from-english) ([Preview](https://librelingo.app/course/spanish-from-english/))
 - [German for English speakers](https://github.com/kantord/LibreLingo/tree/master/courses/german-from-english) ([Preview](https://librelingo.app/course/german-from-english/))
-- - [French for English speakers](https://github.com/kantord/LibreLingo/tree/master/courses/french-from-english)
+- [French for English speakers](https://github.com/kantord/LibreLingo/tree/master/courses/french-from-english)
 
 ## Creating a new course
 
