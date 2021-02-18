@@ -30,6 +30,9 @@
     "prettiercheck:svelte": "prettier --plugin-search-dir=. ./src/**/*.svelte",
     "eslintcheck": "eslint ./src"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.34",
     "@fortawesome/free-brands-svg-icons": "5.15.2",
