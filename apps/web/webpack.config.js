@@ -11,6 +11,7 @@ const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
 const mode = process.env.NODE_ENV
 const dev = mode === "development"
 
+
 const alias = { svelte: path.resolve("node_modules", "svelte") }
 const extensions = [".mjs", ".js", ".ts", ".json", ".svelte", ".html"]
 const mainFields = ["svelte", "module", "browser", "main"]
