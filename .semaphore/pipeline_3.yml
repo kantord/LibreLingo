@@ -1,5 +1,5 @@
 version: v1.0
-name: Pipeline 3
+name: Releasing packages
 agent:
   machine:
     type: e1-standard-2
@@ -17,3 +17,6 @@ blocks:
             - git config --global user.email "gitlab@daniel-kantor.com"
             - git config --global user.name "Dániel Kántor"
             - npx semantic-release
+      secrets:
+        - name: NPM token
+        - name: GitHub token

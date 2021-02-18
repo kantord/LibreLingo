@@ -141,7 +141,7 @@ promotions:
     pipeline_file: pipeline_2.yml
     auto_promote:
       when: branch = 'main' AND result = 'passed'
-  - name: Release all packages to npm
+  - name: Release packages
     pipeline_file: pipeline_3.yml
     auto_promote:
       when: branch = 'main' AND result = 'passed'
