@@ -10,7 +10,8 @@
     "stylefix": "yarn web run prettierfix && yarn web run eslintfix",
     "stylecheck": "yarn web run prettiercheck && yarn web run eslintcheck",
     "exportAllCourses": "./scripts/exportAllYamlCourses.sh",
-    "docs": "pipenv run mkdocs serve"
+    "docs": "pipenv run mkdocs serve",
+    "web": "yarn workspace @librelingo/web"
   },
   "workspaces": {
     "packages": [
