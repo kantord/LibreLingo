@@ -16,7 +16,7 @@ blocks:
             - cache restore packages-web-$(checksum yarn.lock)
             - git config --global user.email "gitlab@daniel-kantor.com"
             - git config --global user.name "Dániel Kántor"
-            - npx semantic-release
+            - yarn run semantic-release -e semantic-release-monorepo
       secrets:
         - name: NPM token
         - name: GitHub token
