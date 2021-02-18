@@ -6,12 +6,11 @@
     "commit": "git-cz",
     "test": "yarn web test",
     "test:ci": "yarn web test:ci",
-    "web": "yarn workspace web",
+    "web": "yarn workspace @librelingo/web",
     "stylefix": "yarn web run prettierfix && yarn web run eslintfix",
     "stylecheck": "yarn web run prettiercheck && yarn web run eslintcheck",
     "exportAllCourses": "./scripts/exportAllYamlCourses.sh",
-    "docs": "pipenv run mkdocs serve",
-    "web": "yarn workspace @librelingo/web"
+    "docs": "pipenv run mkdocs serve"
   },
   "workspaces": {
     "packages": [
@@ -36,6 +35,8 @@
     "eslint-plugin-cypress": "2.11.2",
     "eslint-plugin-jest": "24.1.5",
     "eslint-plugin-svelte3": "3.1.1",
+    "semantic-release": "^17.3.9",
+    "semantic-release-monorepo": "^7.0.4",
     "svelte": "3.32.3",
     "svelte-preprocess": "4.6.9",
     "ts-jest": "26.5.1",
@@ -66,5 +67,9 @@
   "dependencies": {
     "source-map-loader": "2.0.1",
     "ts-loader": "8.0.17"
+  },
+  "release": {
+    "extends": "semantic-release-monorepo",
+    "branches": ["main"]
   }
 }
