@@ -135,11 +135,13 @@ blocks:
             - cd ./apps/librelingo_tools
             - poetry install --no-interaction
             - poetry run pytest
-            #- poetry run pylint ./librelingo_tools
-            #- poetry run pylint ./test
             - cache store python-$(checksum yarn.lock) /home/semaphore/.cache/pypoetry
 promotions:
   - name: Deploy to production
     pipeline_file: pipeline_2.yml
+    auto_promote:
+      when: branch = 'main' AND result = 'passed'
+  - name: Release all packages to npm
+    pipeline_file: pipeline_3.yml
     auto_promote:
       when: branch = 'main' AND result = 'passed'
