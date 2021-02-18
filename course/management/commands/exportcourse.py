@@ -159,7 +159,7 @@ def export_course(course):
     source_language_id = course.source_language_name.lower()
     course_id = "{}-from-{}".format(language_id, source_language_id)
     export_path = Path(
-        "./workspaces/web/src/courses/{}".format(course_id)).resolve()
+        "./apps/web/src/courses/{}".format(course_id)).resolve()
     export_course_data(export_path, course)
     audios_to_fetch = []
 

@@ -14,7 +14,7 @@
     "fetchAudios": "./scripts/fetchAudios.sh",
     "updateAllCourseData": "./scripts/updateAllCourseData.sh",
     "downloadCourseData": "heroku run -a librelingo-course-editor python manage.py dumpdata course --indent=2 > ./dumps/courseData.json",
-    "loadCourseDataLocally": "yarn downloadCourseData && cd ../../ && rm -f db.sqlite3 && python manage.py migrate && python manage.py loaddata ./workspaces/web/dumps/courseData.json && cd -",
+    "loadCourseDataLocally": "yarn downloadCourseData && cd ../../ && rm -f db.sqlite3 && python manage.py migrate && python manage.py loaddata ./apps/web/dumps/courseData.json && cd -",
     "exportCourse": "yarn loadCourseDataLocally && cd ../../ && pipenv run python manage.py exportcourse $1",
     "percypress": "sh ./percypress.sh",
     "test": "yarn dev & yarn percypress",
