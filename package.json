@@ -1,4 +1,5 @@
 {
+  "name": "@librelingo/monorepo",
   "private": true,
   "scripts": {
     "export": "yarn web export && mv ./apps/web/__sapper__/ .",
