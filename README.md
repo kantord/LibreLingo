@@ -1,6 +1,6 @@
 ![Build status](https://kantord.semaphoreci.com/badges/LibreLingo.svg?style=shields "Build status")
 [![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/LibreLingo/LibreLingo)
-[![BCH compliance](https://bettercodehub.com/edge/badge/kantord/LibreLingo?branch=master)](https://bettercodehub.com/)
+[![BCH compliance](https://bettercodehub.com/edge/badge/kantord/LibreLingo?branch=main)](https://bettercodehub.com/)
 ![David](https://img.shields.io/david/kantord/LibreLingo)
 
 <img align="right" src="/docs/branding/LibreLingo_Mascot/LightShadow/Turtle1_jetPack.svg" alt="" height="250" />
@@ -161,7 +161,7 @@ from librelingo_tools import yaml_loader
 course = yaml_loader.load_course("./path/to/my/course")
 ```
 
-`load_course` returns a [Course()](https://github.com/kantord/LibreLingo/blob/master/workspaces/librelingo_tools/librelingo_tools/data_types.py) object
+`load_course` returns a [Course()](https://github.com/kantord/LibreLingo/blob/main/workspaces/librelingo_tools/librelingo_tools/data_types.py) object
 
 </td>
 </tr>
@@ -243,7 +243,7 @@ course = yaml_loader.load_course("./path/to/my/course")
         <tr>
           <td>
             <ul>
-              <li><a href="https://github.com/kantord/LibreLingo/tree/master/docs/courses">Getting started</a></li>
+              <li><a href="https://github.com/kantord/LibreLingo/tree/main/docs/courses">Getting started</a></li>
               <li></li>
             </ul>
           </td>
@@ -261,7 +261,7 @@ course = yaml_loader.load_course("./path/to/my/course")
           <td>
               <ul>
                 <li>
-                  <a href="https://github.com/kantord/LibreLingo/blob/master/docs/CONTRIBUTING.md">🌟 Getting started</a>
+                  <a href="https://github.com/kantord/LibreLingo/blob/main/docs/CONTRIBUTING.md">🌟 Getting started</a>
                 </li>
                 <li>
                   <a href="https://librelingo.readthedocs.io/en/latest/">📜 Development documentation</a>
