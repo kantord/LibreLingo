@@ -19,7 +19,7 @@ blocks:
             - yarn cypress install
             - cache store node-$(checksum yarn.lock) node_modules
             - cache store cypress-$(checksum yarn.lock) /home/semaphore/.cache/Cypress
-            - cache store packages-web-$(checksum yarn.lock) workspaces/web/node_modules
+            - cache store packages-web-$(checksum yarn.lock) apps/web/node_modules
     dependencies: []
   - name: Jest
     task:
@@ -61,7 +61,7 @@ blocks:
             - sem-version node 12
             - checkout
             - cache restore node-$(checksum yarn.lock)
-            - yarn eslint workspaces/*/src
+            - yarn eslint apps/*/src
   - name: Eslint Cypress
     dependencies:
       - Install dependencies
@@ -72,7 +72,7 @@ blocks:
             - sem-version node 12
             - checkout
             - cache restore node-$(checksum yarn.lock)
-            - yarn eslint workspaces/*/cypress
+            - yarn eslint apps/*/cypress
   - name: Typescript Code Style Check
     dependencies:
       - Eslint
@@ -121,7 +121,7 @@ blocks:
             - cache restore cypress-$(checksum yarn.lock)
             - cache restore packages-web-$(checksum yarn.lock)
             - yarn web build
-            - cache store sapper-build-$SEMAPHORE_GIT_PR_SHA workspaces/web/__sapper__
+            - cache store sapper-build-$SEMAPHORE_GIT_PR_SHA apps/web/__sapper__
   - name: librelingo_tools
     dependencies: []
     task:
@@ -132,7 +132,7 @@ blocks:
             - checkout
             - cache restore python-$(checksum yarn.lock)
             - pip install poetry
-            - cd ./workspaces/librelingo_tools
+            - cd ./apps/librelingo_tools
             - poetry install --no-interaction
             - poetry run pytest
             #- poetry run pylint ./librelingo_tools

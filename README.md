@@ -161,7 +161,7 @@ from librelingo_tools import yaml_loader
 course = yaml_loader.load_course("./path/to/my/course")
 ```
 
-`load_course` returns a [Course()](https://github.com/kantord/LibreLingo/blob/main/workspaces/librelingo_tools/librelingo_tools/data_types.py) object
+`load_course` returns a [Course()](https://github.com/kantord/LibreLingo/blob/main/apps/librelingo_tools/librelingo_tools/data_types.py) object
 
 </td>
 </tr>
