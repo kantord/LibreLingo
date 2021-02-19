@@ -61,7 +61,7 @@ blocks:
             - sem-version node 12
             - checkout
             - cache restore node-$(checksum yarn.lock)
-            - yarn eslint apps/*/src
+            - yarn eslint apps/*/src --no-error-on-unmatched-pattern
   - name: Eslint Cypress
     dependencies:
       - Install dependencies
