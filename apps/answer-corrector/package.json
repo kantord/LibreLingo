@@ -7,6 +7,9 @@
   "scripts": {
     "build": "tsc --build"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "js-levenshtein": "1.1.6"
   },
