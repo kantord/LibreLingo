@@ -98,6 +98,7 @@ blocks:
             - cache restore cypress-$(checksum yarn.lock)
             - cache restore packages-web-$(checksum yarn.lock)
             - yarn web build
+            - ls apps/web/__sapper__
             - cache store sapper-build-$SEMAPHORE_GIT_PR_SHA apps/web/__sapper__
   - name: librelingo_tools
     dependencies: []
