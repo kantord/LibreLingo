@@ -1,7 +1,6 @@
 {
     "$schema": "https://json.schemastore.org/tsconfig",
     "display": "Svelte",
-
     "compilerOptions": {
         "moduleResolution": "node",
         "target": "es2017",
@@ -17,8 +16,10 @@
         */
         "sourceMap": true,
         /** Requests the runtime types from the svelte modules by default. Needed for TS files or else you get errors. */
-        "types": ["svelte", "jest"],
-
+        "types": [
+            "svelte",
+            "jest"
+        ],
         "strict": false,
         "esModuleInterop": true,
         "skipLibCheck": true,
