@@ -7,7 +7,7 @@
   import InputFieldWithVirtualKeyboard from "./InputFieldWithVirtualKeyboard"
   import Column from "lluis/Column"
   import Columns from "lluis/Columns"
-  import evaluateAnswer from "@librelingo/answer-corrector"
+  import evaluateAnswer from "@librelingo/answer-corrector/src/index.ts"
 
   export let challenge
   export let registerResult

@@ -3,12 +3,15 @@
   "private": false,
   "version": "1.0.0",
   "main": "index.js",
-  "license": "GPLv3",
+  "license": "AGPL-3.0-or-later",
+  "scripts": {
+    "build": "tsc --build"
+  },
   "dependencies": {
     "js-levenshtein": "1.1.6"
   },
   "devDependencies": {
-    "@types/jest": "26.0.20",
+    "@types/jest": "^26.0.20",
     "@types/js-levenshtein": "1.1.0"
   }
 }
