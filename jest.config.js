@@ -62,7 +62,7 @@ module.exports = {
     "globals": {
         "ts-jest": {
             "babelConfig": true,
-            "tsConfig": "jest.tsconfig.json"
+            "tsconfig": "jest.tsconfig.json"
         }
     },
 
