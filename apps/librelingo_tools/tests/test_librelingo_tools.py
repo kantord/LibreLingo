@@ -11,8 +11,8 @@ from librelingo_tools.utils import get_dumb_opaque_id
 from librelingo_tools.utils import clean_word
 from librelingo_tools.dictionary import define_words_in_sentence
 from librelingo_tools.dictionary import define_word
-from librelingo_tools.data_types import Course
-from librelingo_tools.data_types import DictionaryItem
+from librelingo_types import Course
+from librelingo_types import DictionaryItem
 from . import fakes
 
 

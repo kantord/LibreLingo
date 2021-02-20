@@ -9,7 +9,7 @@ from librelingo_tools.challenge_types import get_listening_challenge
 from librelingo_tools.challenge_types import get_chips_challenge
 from librelingo_tools.challenge_types import get_options_challenge
 from librelingo_tools.challenge_types import get_chips
-from librelingo_tools.data_types import Phrase
+from librelingo_types import Phrase
 from . import fakes
 
 
