@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "librelingo_types"
+version = "0.1.1"
+description = "Data types to be used in Python packages for LibreLingo"
+authors = ["Dániel Kántor <git@daniel-kantor.com>"]
+license = "GPLv3"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

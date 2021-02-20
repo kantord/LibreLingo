@@ -1,6 +1,6 @@
 import re
 import hashlib
-from .data_types import Phrase, Word
+from librelingo_types.data_types import Phrase, Word
 
 
 def calculate_number_of_levels(nwords, nphrases):

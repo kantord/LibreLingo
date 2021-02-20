@@ -5,7 +5,7 @@ from pathlib import Path
 from unittest.mock import patch
 from unittest import TestCase
 from pyfakefs.fake_filesystem_unittest import TestCase as FakeFsTestCase
-from librelingo_tools.data_types import Course, License, Module, Skill, Word, Phrase, \
+from librelingo_types import Course, License, Module, Skill, Word, Phrase, \
     Language, DictionaryItem
 from librelingo_tools.yaml_loader import load_course, convert_license, \
     load_module, load_modules, load_skills, load_skill, convert_words, \
