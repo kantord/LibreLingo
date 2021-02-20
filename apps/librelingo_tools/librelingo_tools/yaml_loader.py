@@ -6,7 +6,7 @@ try:
 except ImportError:
     from yaml import Loader
 
-from librelingo_tools.data_types import Course, Language, License, Module, Skill, \
+from librelingo_types import Course, Language, License, Module, Skill, \
     Word, Phrase, DictionaryItem
 
 

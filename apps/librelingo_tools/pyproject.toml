@@ -5,13 +5,14 @@ description = "Tools for authoring LibreLingo courses"
 authors = ["Dániel Kántor <git@daniel-kantor.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.9"
 python-slugify = "^4.0.1"
 pyfakefs = "^4.3.3"
 slugify = "^0.0.1"
 pyyaml = "^5.3.1"
 snapshottest = "^0.6.0"
 click = "^7.1.2"
+librelingo-types = "^0.1.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.1.1"
