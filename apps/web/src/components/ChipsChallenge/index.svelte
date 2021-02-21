@@ -1,50 +1,10 @@
 <script lang="typescript">
   import { onMount } from "svelte"
-  import Sortable from "sortablejs"
   import hotkeys from "hotkeys-js"
   import shuffle from "lodash.shuffle"
-  import { writable, get } from "svelte/store"
+  import { writable } from "svelte/store"
   import ChallengePanel from "../ChallengePanel"
   import Phrase from "../Phrase"
-  import { changeArrayElementPosition } from "./utils"
-
-  const sortable = function (node, { items, options }) {
-      options = Object.assign(options, {
-          onUpdate({ newIndex, oldIndex }) {
-              items.update((oldItems) => {
-                  return changeArrayElementPosition(oldItems, oldIndex, newIndex)
-              })
-          },
-
-          onRemove({ oldIndex }) {
-              items.update((oldItems) => {
-                  const newItems = [...oldItems]
-                  newItems.splice(oldIndex, 1)
-                  return newItems
-              })
-          },
-
-          onAdd({ newIndex, item }) {
-              items.update((oldItems) => {
-                  const newItems = [...oldItems]
-                  newItems.splice(newIndex, 0, item.innerText)
-                  return newItems
-              })
-          },
-      })
-
-      let sortable = new Sortable(node, options)
-
-      return {
-          update() {
-              sortable.destroy()
-              sortable = new Sortable(node, options)
-          },
-          destroy() {
-              sortable.destroy()
-          },
-      }
-  }
 
   export let challenge
   export let registerResult
@@ -84,9 +44,29 @@
   }
 
   $: finishChallenge = () => {
-      $answer = false
+      $answer = []
       submitted = false
       resolveChallenge()
+  }
+
+  $: handleOptionClick = (chip, index) => {
+      if (submitted) return
+      chips.update(oldItems => {
+          const newItems = [...oldItems]
+          newItems.splice(index, 1)
+          return newItems
+      })
+      answer.update(oldItems => [...oldItems, chip])
+  }
+
+  $: handleAnswerClick = (chip, index) => {
+      if (submitted) return
+      answer.update(oldItems => {
+          const newItems = [...oldItems]
+          newItems.splice(index, 1)
+          return newItems
+      })
+      chips.update(oldItems => [...oldItems, chip])
   }
 
   onMount(() => {
@@ -111,11 +91,9 @@
 
   <div>
     <div class="solution">
-      <div
-        class="chips"
-        use:sortable="{{ items: answer, options: { group: 'chips', forceFallback: true } }}">
-        {#each get(answer) as chip}
-          <span class="chip">
+      <div class="chips">
+        {#each $answer as chip, index}
+          <span class="chip" on:click="{() => handleAnswerClick(chip, index)}">
             <spain class="tag is-medium">{chip}</spain>
           </span>
         {/each}
@@ -124,11 +102,9 @@
     </div>
 
     <p class="sub-instructions">Use these words:</p>
-    <div
-      class="chips"
-      use:sortable="{{ items: chips, options: { group: 'chips', forceFallback: true } }}">
-      {#each get(chips) as chip}
-        <span class="chip">
+    <div class="chips">
+      {#each $chips as chip, index}
+        <span class="chip" on:click="{() => handleOptionClick(chip, index)}">
           <spain class="tag is-medium">{chip}</spain>
         </span>
       {/each}
@@ -176,7 +152,8 @@
 
   .chip {
     user-select: none;
-    padding: 0.5em 0.1em;
+    margin: 0.5em 0.3em;
+    cursor: pointer;
   }
 
   .solution {
