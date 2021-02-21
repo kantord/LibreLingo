@@ -105,7 +105,7 @@ blocks:
       jobs:
         - name: test librelingo_tools
           commands:
-            - sem-version python 3.8
+            - sem-version python 3.9
             - checkout
             - cache restore python-$(checksum yarn.lock)
             - pip install poetry
