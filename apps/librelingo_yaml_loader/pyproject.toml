@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "librelingo_tools"
-version = "0.1.4"
-description = "DEPRECATED: Tools for authoring LibreLingo courses"
+name = "librelingo_yaml_loader"
+version = "0.1.0"
+description = "Load YAML-based LibreLingo courses in your Python project."
 authors = ["Dániel Kántor <git@daniel-kantor.com>"]
 
 [tool.poetry.dependencies]
