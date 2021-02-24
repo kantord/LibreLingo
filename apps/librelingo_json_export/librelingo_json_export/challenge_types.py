@@ -1,4 +1,4 @@
-from .utils import get_dumb_opaque_id, audio_id, clean_word
+from librelingo_utils import get_dumb_opaque_id, audio_id, clean_word
 from .dictionary import define_words_in_sentence
 
 
