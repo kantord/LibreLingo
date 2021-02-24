@@ -10,7 +10,7 @@ from librelingo_types import Course, License, Module, Skill, Word, Phrase, \
 from librelingo_tools.yaml_loader import load_course, convert_license, \
     load_module, load_modules, load_skills, load_skill, convert_words, \
     convert_word, convert_phrases, convert_phrase, load_dictionary
-from . import fakes
+from librelingo_fakes import fakes
 
 
 class YamlImportTestCase(FakeFsTestCase):

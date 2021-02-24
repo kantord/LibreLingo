@@ -17,7 +17,7 @@
     the output JSON files.
 """
 
-from .utils import clean_word
+from librelingo_utils import clean_word
 
 
 def get_raw_dictionary_item(course, word, is_in_target_language):
