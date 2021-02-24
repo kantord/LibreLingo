@@ -380,7 +380,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/myxor"><img src="https://avatars.githubusercontent.com/u/1397377?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Marco H</b></sub></a><br /><a href="#content-myxor" title="Content">🖋</a></td>
     <td align="center"><a href="https://www.learncube.com"><img src="https://avatars.githubusercontent.com/u/1441472?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dan OReilly</b></sub></a><br /><a href="#ideas-diydan" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/douglasferlini"><img src="https://avatars.githubusercontent.com/u/1099602?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Douglas Ferlini</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/commits?author=douglasferlini" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/chickendude"><img src="https://avatars.githubusercontent.com/u/2564517?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Michael Nock</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/commits?author=chickendude" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/chickendude"><img src="https://avatars.githubusercontent.com/u/2564517?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Michael Nock</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/commits?author=chickendude" title="Code">💻</a> <a href="#ideas-chickendude" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
