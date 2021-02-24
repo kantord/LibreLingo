@@ -14,7 +14,8 @@
 <p align="center">
   <a href="https://riot.im/app/#/room/#librelingo:matrix.org">💬 Chat</a> •
   <a href="#become-a-contributor">👩‍💻 Contribute!</a> •
-  <a href="https://github.com/sponsors/kantord">💵 Sponsor</a>
+  <a href="https://github.com/sponsors/kantord">💵 Sponsor</a>  •
+  <a href="https://app.harmonizely.com/harmonizely-uoicqk">☎️ Schedule a call about Librelingo</a>
 </p>
 
 
