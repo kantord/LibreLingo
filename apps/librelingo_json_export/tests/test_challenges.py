@@ -10,7 +10,7 @@ from librelingo_tools.challenge_types import get_chips_challenge
 from librelingo_tools.challenge_types import get_options_challenge
 from librelingo_tools.challenge_types import get_chips
 from librelingo_types import Phrase
-from . import fakes
+from librelingo_fakes import fakes
 
 
 class TestGetChallengesData(TestCase):
