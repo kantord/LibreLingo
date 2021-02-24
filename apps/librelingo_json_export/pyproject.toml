@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "librelingo_json_export"
+version = "0.1.3"
+description = "Export LibreLingo courses in the JSON format used by the web app"
+authors = ["Dániel Kántor <git@daniel-kantor.com>"]
+license = "AGPLv3"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+librelingo-types = "^0.1.1"
+librelingo-utils = "^0.1.2"
+python-slugify = "^4.0.1"
+librelingo-yaml-loader = "^0.1.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.2"
+pytest-watch = "^4.2.0"
+pyfakefs = "^4.3.3"
+librelingo-fakes = "^0.1.1"
+pytest-mock = "^3.5.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

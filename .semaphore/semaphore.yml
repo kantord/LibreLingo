@@ -99,17 +99,16 @@ blocks:
             - cache restore packages-web-$(checksum yarn.lock)
             - yarn web build
             - cache store sapper-build-$SEMAPHORE_GIT_PR_SHA apps/web/__sapper__
-  - name: librelingo_tools
+  - name: python packages
     dependencies: []
     task:
       jobs:
-        - name: test librelingo_tools
+        - name: test python packages
           commands:
             - sem-version python 3.9
             - checkout
             - cache restore python-$(checksum yarn.lock)
             - pip install poetry
-            - cd ./apps/librelingo_tools
             - poetry install --no-interaction
             - poetry run pytest
             - cache store python-$(checksum yarn.lock) /home/semaphore/.cache/pypoetry
