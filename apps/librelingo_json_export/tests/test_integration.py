@@ -1,8 +1,8 @@
 import os
 import json
 import glob
-from librelingo_tools.yaml_loader import load_course
-from librelingo_tools.export import export_course
+from librelingo_yaml_loader import load_course
+from librelingo_json_export.export import export_course
 
 
 def read_json_file(path):
