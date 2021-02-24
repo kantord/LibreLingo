@@ -72,23 +72,6 @@ optional = false
 python-versions = ">=3.9,<4.0"
 
 [[package]]
-name = "librelingo-tools"
-version = "0.1.3"
-description = "Tools for authoring LibreLingo courses"
-category = "main"
-optional = false
-python-versions = ">=3.9,<4.0"
-
-[package.dependencies]
-click = ">=7.1.2,<8.0.0"
-librelingo-types = ">=0.1.0,<0.2.0"
-pyfakefs = ">=4.3.3,<5.0.0"
-python-slugify = ">=4.0.1,<5.0.0"
-pyyaml = ">=5.3.1,<6.0.0"
-slugify = ">=0.0.1,<0.0.2"
-snapshottest = ">=0.6.0,<0.7.0"
-
-[[package]]
 name = "librelingo-types"
 version = "0.1.1"
 description = "Data types to be used in Python packages for LibreLingo"
@@ -106,6 +89,23 @@ python-versions = ">=3.9,<4.0"
 
 [package.dependencies]
 librelingo-types = ">=0.1.1,<0.2.0"
+
+[[package]]
+name = "librelingo-yaml-loader"
+version = "0.1.0"
+description = "Load YAML-based LibreLingo courses in your Python project."
+category = "main"
+optional = false
+python-versions = ">=3.9,<4.0"
+
+[package.dependencies]
+click = ">=7.1.2,<8.0.0"
+librelingo-types = ">=0.1.0,<0.2.0"
+pyfakefs = ">=4.3.3,<5.0.0"
+python-slugify = ">=4.0.1,<5.0.0"
+pyyaml = ">=5.3.1,<6.0.0"
+slugify = ">=0.0.1,<0.0.2"
+snapshottest = ">=0.6.0,<0.7.0"
 
 [[package]]
 name = "packaging"
@@ -304,7 +304,7 @@ watchmedo = ["PyYAML (>=3.10)", "argh (>=0.24.1)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "10867528187881ea0277dd7d6407047199d9c157febbc8a6283318966311226b"
+content-hash = "9dafd1d92c1dfda36f1e603b5600faf84a6f782cfb497523376d0c543d739f1a"
 
 [metadata.files]
 atomicwrites = [
@@ -337,10 +337,6 @@ librelingo-fakes = [
     {file = "librelingo_fakes-0.1.2-py3-none-any.whl", hash = "sha256:39401db657ca3c09f0af345071c634554889b1a9190e9d064252a3b4cfdcf26a"},
     {file = "librelingo_fakes-0.1.2.tar.gz", hash = "sha256:4aa09be122bdcd31a37b81b2f6dd72a293f0cd4e410482d00f59b698d076f7f2"},
 ]
-librelingo-tools = [
-    {file = "librelingo_tools-0.1.3-py3-none-any.whl", hash = "sha256:47d09b5768e85286ac59ccd410487d193ccc80dc623dee8c2517beda7c88d972"},
-    {file = "librelingo_tools-0.1.3.tar.gz", hash = "sha256:654adf896646a8c93ca287b31c112272b21c810f3f60cdbd85b6ed4820372daa"},
-]
 librelingo-types = [
     {file = "librelingo_types-0.1.1-py3-none-any.whl", hash = "sha256:630f5a5e09682d1cac0ca030f978a1a1a8ef81b8929c29c88de08e835fa1ce24"},
     {file = "librelingo_types-0.1.1.tar.gz", hash = "sha256:eff361df0687a28195aca817c0407cfacbee45a737e71225297b5de8a55cc5a6"},
@@ -348,6 +344,10 @@ librelingo-types = [
 librelingo-utils = [
     {file = "librelingo_utils-0.1.2-py3-none-any.whl", hash = "sha256:0d2022f2842e6a6a7421d9bc9356e143862dad10604a71038acbfe5d77c45d85"},
     {file = "librelingo_utils-0.1.2.tar.gz", hash = "sha256:8b0e64cf2a9de71698ad4aecb7b8efb95b6cc34feb0f8d594257cce33cc4ae14"},
+]
+librelingo-yaml-loader = [
+    {file = "librelingo_yaml_loader-0.1.0-py3-none-any.whl", hash = "sha256:bff28b3b1393021f0d00053e67d907b14b961e05e5acf51893339ffca05fa43d"},
+    {file = "librelingo_yaml_loader-0.1.0.tar.gz", hash = "sha256:99bcf828c0a48d8c5dce7709748132ba8d98d29e4d05ba6240ca2be25dd2f6b3"},
 ]
 packaging = [
     {file = "packaging-20.9-py2.py3-none-any.whl", hash = "sha256:67714da7f7bc052e064859c05c595155bd1ee9f69f76557e21f051443c20947a"},
