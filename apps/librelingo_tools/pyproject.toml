@@ -19,6 +19,7 @@ pytest = "^6.1.1"
 pytest-watch = "^4.2.0"
 pylint = "^2.6.0"
 pytest-mock = "^3.5.0"
+librelingo-fakes = "^0.1.2"
 
 [build-system]
 requires = ["poetry>=0.12"]
