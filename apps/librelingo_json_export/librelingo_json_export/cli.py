@@ -1,8 +1,8 @@
 from pathlib import Path
 import click
 import collections
-from librelingo_tools.yaml_loader import load_course
-from librelingo_tools.export import export_course
+from librelingo_yaml_loader import load_course
+from librelingo_json_export.export import export_course
 
 
 Settings = collections.namedtuple("Settings", [
@@ -23,7 +23,7 @@ def ensure_output_directory(output_path, settings):
 @click.argument('input_path')
 @click.argument('output_path')
 @click.option('--dry-run/--no-dry-run', default=DEFAULT_SETTINGS.dry_run)
-def cli(input_path, output_path, dry_run):
+def command(input_path, output_path, dry_run):
     """
         Convert a YAML course into a JSON course.
     """
@@ -36,4 +36,4 @@ def cli(input_path, output_path, dry_run):
 
 
 if __name__ == '__main__':
-    cli()
+    command()

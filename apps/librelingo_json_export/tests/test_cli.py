@@ -2,8 +2,8 @@ import os
 import random
 import pytest
 from click.testing import CliRunner
-from librelingo_tools.cli import cli, DEFAULT_SETTINGS
-from . import fakes
+from librelingo_json_export.cli import command, DEFAULT_SETTINGS
+from librelingo_fakes import fakes
 
 
 @pytest.fixture
@@ -13,19 +13,19 @@ def inputs():
 
 @pytest.fixture
 def mocks(mocker):
-    load_course = mocker.patch("librelingo_tools.cli.load_course")
+    load_course = mocker.patch("librelingo_json_export.cli.load_course")
     load_course.return_value = fakes.fake_value()
     return {
         "load_course": load_course,
-        "export_course": mocker.patch("librelingo_tools.cli.export_course")
+        "export_course": mocker.patch("librelingo_json_export.cli.export_course")
     }
 
 
 @pytest.fixture
-def invoke(fs):
+def invoke(mocks, fs):
     def f(args):
         runner = CliRunner()
-        return runner.invoke(cli, args)
+        return runner.invoke(command, args)
 
     return f
 
@@ -42,7 +42,7 @@ def test_yaml_to_json_exports_correct_course(mocks, inputs, invoke):
 
 
 def test_yaml_to_json_has_help_text(mocks, inputs, invoke):
-    assert cli.help
+    assert command.help
 
 
 def test_creates_output_directory_if_it_doesnt_exist(mocks, inputs, invoke, fs):
