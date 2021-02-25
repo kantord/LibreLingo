@@ -1,4 +1,4 @@
-version: v1.0
+2ersion: v1.0
 name: Node JS
 agent:
   machine:
@@ -109,9 +109,18 @@ blocks:
             - checkout
             - cache restore python-$(checksum yarn.lock)
             - pip install poetry
-            - cd ./apps/librelingo_tools
+            - cd ./apps/librelingo_json_export
             - poetry install --no-interaction
             - poetry run pytest
+            - cd -
+            - cd ./apps/librelingo_utils
+            - poetry install --no-interaction
+            - poetry run pytest
+            - cd -
+            - cd ./apps/librelingo_yaml_loader
+            - poetry install --no-interaction
+            - poetry run pytest
+            - cd -
             - cache store python-$(checksum yarn.lock) /home/semaphore/.cache/pypoetry
 promotions:
   - name: Deploy to production
