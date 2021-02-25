@@ -1,0 +1,18 @@
+[[package]]
+name = "librelingo-types"
+version = "0.1.1"
+description = "Data types to be used in Python packages for LibreLingo"
+category = "main"
+optional = false
+python-versions = ">=3.9,<4.0"
+
+[metadata]
+lock-version = "1.1"
+python-versions = "^3.9"
+content-hash = "4f94327bae91a4d2264fe650bc281eb052b06791e0cc69753fe485748fa2b658"
+
+[metadata.files]
+librelingo-types = [
+    {file = "librelingo_types-0.1.1-py3-none-any.whl", hash = "sha256:630f5a5e09682d1cac0ca030f978a1a1a8ef81b8929c29c88de08e835fa1ce24"},
+    {file = "librelingo_types-0.1.1.tar.gz", hash = "sha256:eff361df0687a28195aca817c0407cfacbee45a737e71225297b5de8a55cc5a6"},
+]

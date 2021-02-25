@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "librelingo"
+version = "0.1.0"
+description = ""
+authors = ["Dániel Kántor <git@daniel-kantor.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+librelingo-yaml-loader = "^0.1.0"
+librelingo-json-export = "^0.1.2"
+librelingo-fakes = "^0.1.2"
+librelingo-utils = "^0.1.2"
+pytest = "^6.2.2"
+pytest-mock = "^3.5.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
