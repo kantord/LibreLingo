@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "librelingo_tools"
-version = "0.1.4"
-description = "DEPRECATED: Tools for authoring LibreLingo courses"
+name = "librelingo_yaml_loader"
+version = "0.1.0"
+description = "Load YAML-based LibreLingo courses in your Python project."
 authors = ["Dániel Kántor <git@daniel-kantor.com>"]
 
 [tool.poetry.dependencies]
@@ -19,6 +19,7 @@ pytest = "^6.1.1"
 pytest-watch = "^4.2.0"
 pylint = "^2.6.0"
 pytest-mock = "^3.5.0"
+librelingo-fakes = "^0.1.2"
 
 [build-system]
 requires = ["poetry>=0.12"]

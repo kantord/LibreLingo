@@ -1,4 +1,4 @@
-from .utils import get_opaque_id, calculate_number_of_levels
+from librelingo_utils import get_opaque_id, calculate_number_of_levels
 from .challenges import get_challenges_data
 
 
