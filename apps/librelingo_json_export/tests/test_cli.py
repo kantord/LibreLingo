@@ -3,7 +3,7 @@ import random
 import pytest
 from click.testing import CliRunner
 from librelingo_tools.cli import cli, DEFAULT_SETTINGS
-from . import fakes
+from librelingo_fakes import fakes
 
 
 @pytest.fixture
