@@ -1,9 +1,10 @@
 [tool.poetry]
 name = "librelingo_fakes"
-version = "0.1.2"
+version = "0.1.4"
 description = "Fake data for testing LibreLingo-related packages"
 authors = ["Dániel Kántor <git@daniel-kantor.com>"]
 license = "GPLv3"
+readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.9"
