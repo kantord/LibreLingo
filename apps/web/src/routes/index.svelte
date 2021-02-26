@@ -11,7 +11,7 @@
 </script>
 
 <svelte:head>
-  <title>{$_("meta.title")}</title>
+  <title>{$_('meta.title')}</title>
   <meta name="description" content="{$_('index.meta.description')}" />
 </svelte:head>
 
@@ -49,6 +49,12 @@
               <Button primary hidden href="course/french-from-english">
                 <Translate key="index.start_french_course">
                   Start learning French
+                </Translate>
+              </Button>
+
+              <Button primary hidden href="course/bangla-from-english">
+                <Translate key="index.start_french_course">
+                  Start learning Bangla
                 </Translate>
               </Button>
 
