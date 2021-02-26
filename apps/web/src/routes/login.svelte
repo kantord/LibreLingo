@@ -34,14 +34,16 @@
         name="Username"
         icon="user"
         id="username"
-        bind:value="{username}" />
+        bind:value="{username}"
+      />
 
       <FormField
         name="Password"
         icon="lock"
         id="password"
         type="password"
-        bind:value="{password}" />
+        bind:value="{password}"
+      />
 
       {#if error !== null}
         <p class="help is-danger">{error}</p>

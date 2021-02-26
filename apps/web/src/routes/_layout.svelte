@@ -15,22 +15,26 @@
   <meta
     name="twitter:description"
     content="an experiment to create a community-owned language-learning
-    platform" />
+    platform"
+  />
   <meta name="twitter:title" content="LibreLingo" />
 
   <meta
     name="twitter:image"
-    content="https://librelingo.app/images/social_cover_1.png" />
+    content="https://librelingo.app/images/social_cover_1.png"
+  />
   <meta name="twitter:creator" content="@cacophonism" />
 
   <meta property="og:title" content="LibreLingo" />
   <meta
     property="og:description"
     content="an experiment to create a community-driven language-learning
-    platform" />
+    platform"
+  />
   <meta
     property="og:image"
-    content="https://librelingo.app/images/social_cover_1.png" />
+    content="https://librelingo.app/images/social_cover_1.png"
+  />
 </svelte:head>
 
 {#if process.browser !== true}

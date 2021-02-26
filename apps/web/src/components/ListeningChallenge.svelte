@@ -92,7 +92,8 @@
         specialCharacters="{specialCharacters}"
         languageCode="{languageCode}"
         disabled="{submitted}"
-        bind:value="{answer}" />
+        bind:value="{answer}"
+      />
     </Column>
   </Columns>
 
@@ -103,7 +104,8 @@
       submit
       skipAction="{skipChallenge}"
       skipAllAction="{skipAllChallenges}"
-      skipAllVoice="{skipAllVoice}" />
+      skipAllVoice="{skipAllVoice}"
+    />
   {/if}
 
   {#if answer === "" && !submitted}
@@ -112,7 +114,8 @@
       buttonText="{null}"
       skipAction="{skipChallenge}"
       skipAllAction="{skipAllChallenges}"
-      skipAllVoice="{skipAllVoice}" />
+      skipAllVoice="{skipAllVoice}"
+    />
   {/if}
 
   {#if submitted}
@@ -122,7 +125,8 @@
         messageDetail="{`Correct answer: ${challenge.answer}`}"
         buttonText="Continue"
         incorrect
-        buttonAction="{finishChallenge}" />
+        buttonAction="{finishChallenge}"
+      />
     {/if}
 
     {#if correct}
@@ -132,16 +136,19 @@
           messageDetail="{`Meaning: "${challenge.meaning}"`}"
           buttonText="Continue"
           correct
-          buttonAction="{finishChallenge}" />
+          buttonAction="{finishChallenge}"
+        />
       {/if}
 
       {#if spellingSuggestion}
         <ChallengePanel
           message="You have a typo!"
-          messageDetail="{spellingSuggestion || `Meaning: "${challenge.meaning}"`}"
+          messageDetail="{spellingSuggestion ||
+            `Meaning: "${challenge.meaning}"`}"
           buttonText="Continue"
           typo
-          buttonAction="{finishChallenge}" />
+          buttonAction="{finishChallenge}"
+        />
       {/if}
     {/if}
   {/if}

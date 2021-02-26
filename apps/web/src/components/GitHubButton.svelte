@@ -42,7 +42,8 @@
   inverted
   info
   size="{size}"
-  href="https://github.com/kantord/LibreLingo">
+  href="https://github.com/kantord/LibreLingo"
+>
   {#if stars}
     <span class="tag is-white">
       <span class="stars">{stars}</span>

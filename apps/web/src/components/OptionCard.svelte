@@ -11,7 +11,8 @@
   <div
     class="card"
     data-test="{active ? 'active' : inactive ? 'inactive' : 'neutral'}"
-    data-test-correct="{correct}">
+    data-test-correct="{correct}"
+  >
     <div class="card-image">
       <figure class="image is-1by1">
         <img src="{`images/${picture}`}" alt="" />
@@ -22,7 +23,8 @@
         {formInTargetLanguage}
       </div>
       <div
-        class="is-size-6 has-text-centered is-hidden-touch is-hidden-tablet-only">
+        class="is-size-6 has-text-centered is-hidden-touch is-hidden-tablet-only"
+      >
         {number}
       </div>
     </div>

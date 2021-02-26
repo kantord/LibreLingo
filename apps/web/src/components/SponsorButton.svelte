@@ -8,7 +8,8 @@
   size="small"
   outlined
   inverted
-  info>
+  info
+>
   <Icon icon="heart" />
   <div>Sponsor</div>
 </Button>

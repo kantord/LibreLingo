@@ -15,7 +15,8 @@
   class:dark
   class:is-hidden-mobile="{is_hidden_mobile}"
   role="navigation"
-  aria-label="main navigation">
+  aria-label="main navigation"
+>
   <div class="navbar-brand">
     <a class="navbar-item" href="/">
       <img src="/images/logo.svg" alt="LibreLingo" />
@@ -40,7 +41,8 @@
               size="small"
               outlined
               inverted
-              info>
+              info
+            >
               Log out
             </Button>
           {:else}

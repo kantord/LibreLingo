@@ -73,7 +73,8 @@
         specialCharacters="{specialCharacters}"
         languageCode="{languageCode}"
         disabled="{submitted}"
-        bind:value="{answer}" />
+        bind:value="{answer}"
+      />
     </Column>
     <Column>
       <div class="card">
@@ -92,7 +93,8 @@
       buttonText="Submit"
       submit
       skipAction="{skipChallenge}"
-      skipAllAction="{skipAllChallenges}" />
+      skipAllAction="{skipAllChallenges}"
+    />
   {/if}
 
   {#if answer === "" && !submitted}
@@ -100,7 +102,8 @@
       message="{null}"
       buttonText="{null}"
       skipAction="{skipChallenge}"
-      skipAllAction="{skipAllChallenges}" />
+      skipAllAction="{skipAllChallenges}"
+    />
   {/if}
 
   {#if submitted}
@@ -110,7 +113,8 @@
         messageDetail="{`Correct answer: ${challenge.formInTargetLanguage[0]}`}"
         buttonText="Continue"
         incorrect
-        buttonAction="{finishChallenge}" />
+        buttonAction="{finishChallenge}"
+      />
     {/if}
     {#if correct}
       {#if !spellingSuggestion}
@@ -119,7 +123,8 @@
           messageDetail=""
           buttonText="Continue"
           correct
-          buttonAction="{finishChallenge}" />
+          buttonAction="{finishChallenge}"
+        />
       {/if}
 
       {#if spellingSuggestion}
@@ -128,7 +133,8 @@
           messageDetail="{spellingSuggestion}"
           buttonText="Continue"
           typo
-          buttonAction="{finishChallenge}" />
+          buttonAction="{finishChallenge}"
+        />
       {/if}
     {/if}
   {/if}

@@ -67,7 +67,8 @@
   lang="{languageCode}"
   use:focusMe
   bind:value
-  bind:this="{inputFieldRef}" />
+  bind:this="{inputFieldRef}"
+/>
 
 <div class="keyboard">
   {#each specialCharacters as specialCharacter}
@@ -77,7 +78,8 @@
       key
       size="small"
       disabled="{disabled}"
-      on:click="{handleVirtualKey(specialCharacter)}">
+      on:click="{handleVirtualKey(specialCharacter)}"
+    >
       {specialCharacter}
     </Button>
   {/each}

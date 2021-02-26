@@ -1,194 +1,194 @@
 <script lang="typescript">
-// TODO: deal with this ignore comment
-// eslint-disable-next-line no-unused-vars
-import db from "../db/db.js"
-import settings from "../settings"
-import NavBar from "../components/NavBar.svelte"
-import Button from "lluis/Button"
-import FormField from "lluis/FormField"
-import { _ } from "svelte-i18n"
+  // TODO: deal with this ignore comment
+  // eslint-disable-next-line no-unused-vars
+  import db from "../db/db.js"
+  import settings from "../settings"
+  import NavBar from "../components/NavBar.svelte"
+  import Button from "lluis/Button"
+  import FormField from "lluis/FormField"
+  import { _ } from "svelte-i18n"
 
-let loading = false
+  let loading = false
 
-let username = ""
-let email = ""
-let password = ""
-let password_confirmation = ""
-let license_accepted = false
-let errors = {}
+  let username = ""
+  let email = ""
+  let password = ""
+  let password_confirmation = ""
+  let license_accepted = false
+  let errors = {}
 
-// TODO: deal with this ignore comment
-// eslint-disable-next-line no-useless-escape
-const emailRegexp = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+  // TODO: deal with this ignore comment
+  // eslint-disable-next-line no-useless-escape
+  const emailRegexp = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
 
-const validateUsername = () => {
-    if (!username) {
-        errors = {
-            ...errors,
-            username: "Please choose a username",
-        }
+  const validateUsername = () => {
+      if (!username) {
+          errors = {
+              ...errors,
+              username: "Please choose a username",
+          }
 
-        return
-    }
+          return
+      }
 
-    if (username.length < 4) {
-        errors = {
-            ...errors,
-            username: "Please choose a username that has at least 4 characters",
-        }
+      if (username.length < 4) {
+          errors = {
+              ...errors,
+              username: "Please choose a username that has at least 4 characters",
+          }
 
-        return
-    }
-}
+          return
+      }
+  }
 
-const validateEmail = () => {
-    if (!email) {
-        errors = {
-            ...errors,
-            email: "Please tell us your email address",
-        }
+  const validateEmail = () => {
+      if (!email) {
+          errors = {
+              ...errors,
+              email: "Please tell us your email address",
+          }
 
-        return
-    }
+          return
+      }
 
-    if (!emailRegexp.test(email)) {
-        errors = {
-            ...errors,
-            email: "This does not look like a valid email address",
-        }
+      if (!emailRegexp.test(email)) {
+          errors = {
+              ...errors,
+              email: "This does not look like a valid email address",
+          }
 
-        return
-    }
-}
+          return
+      }
+  }
 
-const validatePassword = () => {
-    if (!password) {
-        errors = {
-            ...errors,
-            password: "Please choose a password",
-        }
+  const validatePassword = () => {
+      if (!password) {
+          errors = {
+              ...errors,
+              password: "Please choose a password",
+          }
 
-        return
-    }
+          return
+      }
 
-    if (password.length < 6) {
-        errors = {
-            ...errors,
-            password:
+      if (password.length < 6) {
+          errors = {
+              ...errors,
+              password:
           "Your password is too short. Please choose a password that's at least 5 characters long.",
-        }
+          }
 
-        return
-    }
+          return
+      }
 
-    if (!password_confirmation) {
-        errors = {
-            ...errors,
-            password_confirmation:
+      if (!password_confirmation) {
+          errors = {
+              ...errors,
+              password_confirmation:
           "Please verify your chosen password by repeating it",
-        }
+          }
 
-        return
-    }
+          return
+      }
 
-    if (password !== password_confirmation) {
-        errors = {
-            ...errors,
-            password_confirmation: "The passwords don't match",
-        }
+      if (password !== password_confirmation) {
+          errors = {
+              ...errors,
+              password_confirmation: "The passwords don't match",
+          }
 
-        return
-    }
-}
+          return
+      }
+  }
 
-const validateLicense = () => {
-    if (!license_accepted) {
-        errors = {
-            ...errors,
-            license: "You have to accept the agreements.",
-        }
+  const validateLicense = () => {
+      if (!license_accepted) {
+          errors = {
+              ...errors,
+              license: "You have to accept the agreements.",
+          }
 
-        return
-    }
+          return
+      }
 
-    if (username.length < 4) {
-        errors = {
-            ...errors,
-            username: "Please choose a username that has at least 4 characters",
-        }
+      if (username.length < 4) {
+          errors = {
+              ...errors,
+              username: "Please choose a username that has at least 4 characters",
+          }
 
-        return
-    }
-}
+          return
+      }
+  }
 
-const handleTestingFakes = () => {
-    if (window._test_fake_signup) {
-        if (window._test_user_already_exists) {
-            errors = {
-                ...errors,
-                _form: "User already exists. Please choose another username.",
-            }
-            return
-        }
-    }
-}
+  const handleTestingFakes = () => {
+      if (window._test_fake_signup) {
+          if (window._test_user_already_exists) {
+              errors = {
+                  ...errors,
+                  _form: "User already exists. Please choose another username.",
+              }
+              return
+          }
+      }
+  }
 
-let handleSignUp
-$: {
-    handleSignUp = async () => {
-        loading = true
-        errors = {}
-        validateUsername()
-        validateEmail()
-        validatePassword()
-        validateLicense()
-        handleTestingFakes()
-        const isFormValid = Object.keys(errors).length === 0
+  let handleSignUp
+  $: {
+      handleSignUp = async () => {
+          loading = true
+          errors = {}
+          validateUsername()
+          validateEmail()
+          validatePassword()
+          validateLicense()
+          handleTestingFakes()
+          const isFormValid = Object.keys(errors).length === 0
 
-        if (process.browser === true) {
-            if (window._test_fake_signup) {
-                setTimeout(function () {
-                    if (isFormValid === true) {
-                        loading = false
-                        window.location = "/sign-up-success"
-                    } else {
-                        loading = false
-                    }
-                }, 500)
-            } else {
-                if (isFormValid) {
-                    fetch(settings.database.signUpEndpoint, {
-                        method: "post",
-                        headers: {
-                            "Content-Type": "application/json",
-                        },
-                        body: JSON.stringify({
-                            username,
-                            email,
-                            password,
-                        }),
-                    })
-                        .then((data) => data.json())
-                        .then(({ success, error }) => {
-                            if (success) {
-                                loading = false
-                                window.location = "/sign-up-success"
-                            } else {
-                                loading = false
-                                if (error.code === "invalid-payload") {
-                                    errors = error.details
-                                } else {
-                                    errors = { _form: "Server error" }
-                                }
-                            }
-                        })
-                } else {
-                    loading = false
-                }
-            }
-        }
-    }
-}
+          if (process.browser === true) {
+              if (window._test_fake_signup) {
+                  setTimeout(function () {
+                      if (isFormValid === true) {
+                          loading = false
+                          window.location = "/sign-up-success"
+                      } else {
+                          loading = false
+                      }
+                  }, 500)
+              } else {
+                  if (isFormValid) {
+                      fetch(settings.database.signUpEndpoint, {
+                          method: "post",
+                          headers: {
+                              "Content-Type": "application/json",
+                          },
+                          body: JSON.stringify({
+                              username,
+                              email,
+                              password,
+                          }),
+                      })
+                          .then((data) => data.json())
+                          .then(({ success, error }) => {
+                              if (success) {
+                                  loading = false
+                                  window.location = "/sign-up-success"
+                              } else {
+                                  loading = false
+                                  if (error.code === "invalid-payload") {
+                                      errors = error.details
+                                  } else {
+                                      errors = { _form: "Server error" }
+                                  }
+                              }
+                          })
+                  } else {
+                      loading = false
+                  }
+              }
+          }
+      }
+  }
 </script>
 
 <svelte:head>
@@ -208,27 +208,31 @@ $: {
         icon="user"
         id="username"
         formStatus="{errors}"
-        bind:value="{username}" />
+        bind:value="{username}"
+      />
       <FormField
         name="Email"
         icon="envelope"
         id="email"
         formStatus="{errors}"
-        bind:value="{email}" />
+        bind:value="{email}"
+      />
       <FormField
         name="Password"
         icon="lock"
         id="password"
         type="password"
         formStatus="{errors}"
-        bind:value="{password}" />
+        bind:value="{password}"
+      />
       <FormField
         name="Repeat password"
         icon="lock"
         id="password_confirmation"
         type="password"
         formStatus="{errors}"
-        bind:value="{password_confirmation}" />
+        bind:value="{password_confirmation}"
+      />
 
       <div class="field">
         <div class="control">
@@ -237,7 +241,8 @@ $: {
               type="checkbox"
               name="license"
               id="license"
-              bind:checked="{license_accepted}" />
+              bind:checked="{license_accepted}"
+            />
             I agree to the
             <a href="/tos">Terms and Conditions</a>
             and the
@@ -257,7 +262,8 @@ $: {
         on:click="{handleSignUp}"
         loading="{loading}"
         asHref="/sign-up-success"
-        submit>
+        submit
+      >
         Sign up
       </Button>
     </form>

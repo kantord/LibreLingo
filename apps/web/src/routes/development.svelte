@@ -55,12 +55,14 @@
           <div class="buttons">
             <a
               class="button is-primary is-inverted is-outlined"
-              href="course/spanish-from-english">
+              href="course/spanish-from-english"
+            >
               {$_("index.start_spanish_course")}
             </a>
             <a
               class="button is-primary is-inverted is-outlined is-hidden"
-              href="course/german-from-english">
+              href="course/german-from-english"
+            >
               {$_("index.start_german_course")}
             </a>
             <a class="button is-primary is-inverted is-outlined" href="about">
@@ -90,7 +92,8 @@
                 <a
                   href="https://carolinedelesalle.com/"
                   target="_blank"
-                  class="link">
+                  class="link"
+                >
                   Caroline Delesalle
                 </a>
               </h3>
@@ -110,7 +113,8 @@
           <img
             src="images/screenshot-spaced-repetition.png"
             alt=""
-            class="screenshot" />
+            class="screenshot"
+          />
         </Column>
       </Columns>
 
@@ -119,7 +123,8 @@
           <img
             src="images/screenshot-chips-challenge.png"
             alt=""
-            class="screenshot" />
+            class="screenshot"
+          />
         </Column>
 
         <Column>
@@ -140,7 +145,8 @@
           <img
             src="images/screenshot-course-editor.png"
             alt=""
-            class="screenshot" />
+            class="screenshot"
+          />
         </Column>
       </Columns>
 
@@ -149,7 +155,8 @@
           <img
             src="images/screenshot-dictionary.png"
             alt=""
-            class="screenshot" />
+            class="screenshot"
+          />
         </Column>
 
         <Column>
@@ -169,7 +176,8 @@
       <div class="buttons buttons-bottom">
         <a
           class="button is-primary is-inverted is-outlined"
-          href="https://librelingo.readthedocs.io/en/latest/">
+          href="https://librelingo.readthedocs.io/en/latest/"
+        >
           Development documentation
         </a>
         <GitHubButton size="default" />
@@ -197,7 +205,8 @@
                       {#each labels as { name, color }}
                         <div
                           class="tag"
-                          style="{`background-color: #${color}`}">
+                          style="{`background-color: #${color}`}"
+                        >
                           {name}
                         </div>
                       {/each}

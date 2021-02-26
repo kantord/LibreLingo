@@ -18,4 +18,5 @@
 <MarkDownPage
   readmeHTML="{readmeHTML}"
   title="About LibreLingo"
-  description="{$_('about.meta.description')}" />
+  description="{$_('about.meta.description')}"
+/>

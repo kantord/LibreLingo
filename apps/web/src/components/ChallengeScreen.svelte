@@ -114,7 +114,8 @@
           <div
             class="challenge"
             in:fade|local="{{ duration: 300, delay: 350 }}"
-            out:fade|local="{{ duration: 300 }}">
+            out:fade|local="{{ duration: 300 }}"
+          >
             {#if challenge.type === "cards"}
               <DeckChallenge
                 skipChallenge="{skipChallenge}"
@@ -122,7 +123,8 @@
                 alternativeChallenges="{alternativeChallenges}"
                 resolveChallenge="{resolveChallenge}"
                 registerResult="{registerResult}"
-                skipAllChallenges="{skipAllChallenges}" />
+                skipAllChallenges="{skipAllChallenges}"
+              />
             {/if}
             {#if challenge.type === "options"}
               <OptionChallenge
@@ -131,7 +133,8 @@
                 alternativeChallenges="{alternativeChallenges}"
                 resolveChallenge="{resolveChallenge}"
                 registerResult="{registerResult}"
-                skipAllChallenges="{skipAllChallenges}" />
+                skipAllChallenges="{skipAllChallenges}"
+              />
             {/if}
             {#if challenge.type === "shortInput"}
               <ShortInputChallenge
@@ -142,7 +145,8 @@
                 registerResult="{registerResult}"
                 resolveChallenge="{resolveChallenge}"
                 challenge="{challenge}"
-                skipAllChallenges="{skipAllChallenges}" />
+                skipAllChallenges="{skipAllChallenges}"
+              />
             {/if}
             {#if challenge.type === "listeningExercise"}
               <ListeningChallenge
@@ -153,7 +157,8 @@
                 resolveChallenge="{resolveChallenge}"
                 challenge="{challenge}"
                 skipAllChallenges="{skipAllChallenges}"
-                skipAllVoice="{skipAllVoice}" />
+                skipAllVoice="{skipAllVoice}"
+              />
             {/if}
             {#if challenge.type === "chips"}
               <ChipsChallenge
@@ -161,7 +166,8 @@
                 resolveChallenge="{resolveChallenge}"
                 challenge="{challenge}"
                 skipChallenge="{skipChallenge}"
-                skipAllChallenges="{skipAllChallenges}" />
+                skipAllChallenges="{skipAllChallenges}"
+              />
             {/if}
           </div>
         {/if}
@@ -176,7 +182,8 @@
       courseURL="{courseURL}"
       rawChallenges="{rawChallenges}"
       skillId="{skillId}"
-      stats="{stats}" />
+      stats="{stats}"
+    />
   </div>
 {/if}
 
