@@ -305,7 +305,7 @@ The mascot is designed by [@almostdesigner](https://github.com/almostdesigner).
 ## Contributors ✨
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-53-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-54-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
@@ -382,6 +382,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://www.learncube.com"><img src="https://avatars.githubusercontent.com/u/1441472?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dan OReilly</b></sub></a><br /><a href="#ideas-diydan" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/douglasferlini"><img src="https://avatars.githubusercontent.com/u/1099602?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Douglas Ferlini</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/commits?author=douglasferlini" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/chickendude"><img src="https://avatars.githubusercontent.com/u/2564517?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Michael Nock</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/commits?author=chickendude" title="Code">💻</a> <a href="#ideas-chickendude" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://codeberg.org/davidak"><img src="https://avatars.githubusercontent.com/u/91113?v=4?s=100" width="100px;" alt=""/><br /><sub><b>davidak</b></sub></a><br /><a href="#ideas-davidak" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
