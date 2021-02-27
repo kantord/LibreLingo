@@ -27,4 +27,4 @@ pull requests as soon as possible.
 Currently LibreLingo doesn't have enough features to support teaching new
 alphabets. Solving this is a priority, but will take time. Technically in most
 cases, language pairs that use the same alphabet (for example Ukranian for
-Russian spakers) should work just fine, but it hasn't been tested yet.
+Russian speakers) should work just fine, but it hasn't been tested yet.
