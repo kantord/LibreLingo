@@ -11,7 +11,10 @@ blocks:
         - name: gh-pages
           commands:
             - sem-version node 12
+            - sem-version python 3.9
             - checkout
+            - pip install poetry
+            - poetry install --no-interaction
             - cache restore node-$(checksum yarn.lock)
             - cache restore packages-web-$(checksum yarn.lock)
             - NODE_ENV=production yarn export
