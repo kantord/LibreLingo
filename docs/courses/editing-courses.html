@@ -1,0 +1,722 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.3">
+    
+    
+      
+        <title>Creating and editing LibreLingo courses - LibreLingo Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1655a90d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#creating-and-editing-librelingo-courses" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+  
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="LibreLingo Documentation" class="md-header__button md-logo" aria-label="LibreLingo Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LibreLingo Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Creating and editing LibreLingo courses
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/kantord/LibreLingo/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="LibreLingo Documentation" class="md-nav__button md-logo" aria-label="LibreLingo Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    LibreLingo Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/kantord/LibreLingo/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        Development
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CODE_OF_CONDUCT.html" class="md-nav__link">
+        Contributor Covenant Code of Conduct
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CONTRIBUTING.html" class="md-nav__link">
+        Contributing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LICENSE.html" class="md-nav__link">
+        LICENSE
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../attributions.html" class="md-nav__link">
+        Media attributions
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../website_tos.html" class="md-nav__link">
+        Website tos
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+      
+      <label class="md-nav__link" for="__nav_7">
+        Courses
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Courses" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Courses
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        Contributing to LibreLingo courses
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Creating and editing LibreLingo courses
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="editing-courses.html" class="md-nav__link md-nav__link--active">
+        Creating and editing LibreLingo courses
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#editing-skills" class="md-nav__link">
+    Editing skills
+  </a>
+  
+    <nav class="md-nav" aria-label="Editing skills">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#by-example" class="md-nav__link">
+    By example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-new-skills" class="md-nav__link">
+    Creating new skills
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editing-modules" class="md-nav__link">
+    Editing modules
+  </a>
+  
+    <nav class="md-nav" aria-label="Editing modules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-new-modules" class="md-nav__link">
+    Creating new modules
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#editing-skills" class="md-nav__link">
+    Editing skills
+  </a>
+  
+    <nav class="md-nav" aria-label="Editing skills">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#by-example" class="md-nav__link">
+    By example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-new-skills" class="md-nav__link">
+    Creating new skills
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editing-modules" class="md-nav__link">
+    Editing modules
+  </a>
+  
+    <nav class="md-nav" aria-label="Editing modules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-new-modules" class="md-nav__link">
+    Creating new modules
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/kantord/LibreLingo/edit/master/docs/courses/editing-courses.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="creating-and-editing-librelingo-courses">Creating and editing LibreLingo courses</h1>
+<p>LibreLingo courses consist of files that contain course content. These files
+are organized in a specific directory structure.</p>
+<p>A simplified example of the directory structure of a LibreLingo course:</p>
+<pre><code>courses/french-from-english/
+courses/french-from-english/basics
+courses/french-from-english/basics/module.yaml
+courses/french-from-english/basics/skills
+courses/french-from-english/basics/skills/hello.yaml
+courses/french-from-english/course.yaml
+</code></pre>
+<p>LibreLingo courses can be published in different formats. One such format is
+the LibreLingo web app.</p>
+<p>When you are working with LibreLingo courses, you'll be mostly editing the
+<code>.yaml</code> files as seen above. The standard way of editing LibreLingo courses is
+using GitHub.</p>
+<p>If you don't know how to use GitHub, it might be useful to check out these
+guides:</p>
+<ul>
+<li><a href="https://docs.github.com/en/github/managing-files-in-a-repository/creating-new-files">Creating new files on GitHub</a></li>
+<li><a href="https://docs.github.com/en/github/managing-files-in-a-repository/editing-files-in-another-users-repository">Editing files on GitHub</a></li>
+</ul>
+<h2 id="editing-skills">Editing skills</h2>
+<p>If you are contributing to existing courses, the thing you are most likely
+to do is edit existing skills.</p>
+<p>Skills are written as YAML files with a specific structure. From our example
+above, the YAML file corresponding to the "hello" skill would be
+<code>courses/french-from-english/basics/skills/hello.yaml</code>.</p>
+<p>The structure of <code>hello.yaml</code> is as follows:</p>
+<pre><code class="language-yaml">Skill:
+  Id: 33bfee7d-de74-4362-bf15-ce165add2dc8
+  Name: Hello
+  Thumbnails:
+    - people1
+    - woman1
+    - man1
+
+New words:
+  - Word: l'homme
+    Translation: the man
+    Images:
+      - man1
+      - man2
+      - man3
+
+  - Word: la femme
+    Synonyms:
+      - la dame
+    Translation: the woman
+    Also accepted:
+      - the female
+
+Phrases:
+  - Phrase: La femme dit bonjour
+    Alternative versions:
+      - la femme dit salut
+    Translation: The woman says hello
+    Alternative translations:
+      - The woman says hi
+
+  - Phrase: L'homme dit bonjour
+    Alternative versions:
+      - L'homme dit salut
+    Translation: The man says hello
+    Alternative translations:
+      - The man says hi
+
+Mini-dictionary:
+  French:
+    - dit: says
+    - bonjour:
+        - hello
+        - hi
+    - L'homme: the man
+
+  English:
+    - says: dit
+    - hello:
+        - bonjour
+        - salut
+</code></pre>
+<p>While the meaning of this file should be relatively straight-forward, here's
+a couple things to keep in mind:</p>
+<ul>
+<li><code>Skill:</code></li>
+<li><code>Id:</code> never change this value. This value identifies the skill uniquely, thus changing it will effectively create a new skill and delete the old one.</li>
+<li><code>Thumbnails:</code> these thumbnails can be used to illustrate the skill on the course summary page</li>
+</ul>
+<h3 id="by-example">By example</h3>
+<p>For example, this is how you'd want to add a new alternative version to the
+phrase "La femme dit bonjour":</p>
+<pre><code class="language-diff">Phrases:
+  - Phrase: La femme dit bonjour
+    Alternative versions:
+      - La femme dit salut
++     - La madame dit salut
+    Translation: The woman says hello
+    Alternative translations:
+      - The woman says hi
+</code></pre>
+<p>Keep in mind that when you add a new phrase, or a new version or translation
+to a phrase, it's not automatically updating to the mini-dictionary. So you'd
+want to add any new words there:</p>
+<pre><code class="language-diff">Mini-dictionary:
+  French:
+    - dit: says
++   - madame: lady
+    - bonjour:
+      - hello
+      - hi
+    - L'homme: the man
+</code></pre>
+<h3 id="creating-new-skills">Creating new skills</h3>
+<p>Creating new skills is a matter of creating their corresponding YAML file.
+That being said, there are a couple things to keep in mind:</p>
+<ul>
+<li>Skills should have a unique <code>Id</code>. Such identifiers can be generated using
+  <a href="https://www.uuidgenerator.net/version4">this website</a>.</li>
+<li>Before skills will actually show up in the web app, they need to be added to
+  a module. See the section below.</li>
+</ul>
+<h2 id="editing-modules">Editing modules</h2>
+<p>Modules are simply groups of skills. Their YAML files are quite straightforward.</p>
+<p>See <code>courses/french-from-english/basics/module.yaml</code> from the example above:</p>
+<pre><code class="language-yaml">Module:
+  Name: Basics
+
+Skills:
+  - hello.yaml
+</code></pre>
+<p>Keep in mind that the order in which the skills appear in this YAML file is
+the order they are meant to appear in the web app as well.</p>
+<h3 id="creating-new-modules">Creating new modules</h3>
+<p>As with creating new skills, creating new modules is also mainly about creating
+their corresponding YAML file. You have to keep in mind that the module will
+only show up in the web app, if it's also listed in the course's
+<code>course.yaml</code> file. Here's how you'd add it:</p>
+<pre><code class="language-diff">Course:
+  Language:
+    Name: French
+    IETF BCP 47: fr
+  For speakers of:
+    Name: English
+    IETF BCP 47: en
+  License:
+    Name: CC BY 3.0
+    Short name: CC BY 3.0
+    Link: https://creativecommons.org/licenses/by/3.0/
+
+Modules:
+  - basics/
++ - animals/
+</code></pre>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="index.html" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Contributing to LibreLingo courses
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.ca5457b8.min.js"></script>
+      
+    
+  </body>
+</html>
