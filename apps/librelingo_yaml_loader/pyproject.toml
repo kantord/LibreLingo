@@ -1,8 +1,9 @@
 [tool.poetry]
 name = "librelingo_yaml_loader"
-version = "0.1.2"
+version = "0.1.3"
 description = "Load YAML-based LibreLingo courses in your Python project."
 authors = ["Dániel Kántor <git@daniel-kantor.com>"]
+readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.9"
