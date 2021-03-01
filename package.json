@@ -2,7 +2,8 @@
   "name": "@librelingo/monorepo",
   "private": true,
   "scripts": {
-    "export": "yarn web export && yarn docs:build && mv ./apps/web/__sapper__/ .",
+    "export:withDocs": "yarn web export && yarn docs:build && mv ./apps/web/__sapper__/ .",
+    "export": "yarn web export && mv ./apps/web/__sapper__/ .",
     "deploy": "echo 'librelingo.app' > __sapper__/export/CNAME && gh-pages -d __sapper__/export",
     "commit": "git-cz",
     "test": "yarn web test",
