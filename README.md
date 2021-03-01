@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  <a href="https://riot.im/app/#/room/#librelingo:matrix.org">💬 Chat</a> •
+  <a href="https://riot.im/app/#/group/+librelingo:matrix.org">💬 Chat</a> •
   <a href="#become-a-contributor">👩‍💻 Contribute!</a> •
   <a href="https://github.com/sponsors/kantord">💵 Sponsor</a>  •
   <a href="https://app.harmonizely.com/harmonizely-uoicqk">☎️ Schedule a call about Librelingo</a>
@@ -281,7 +281,7 @@ You can help LibreLingo by testing it and submitting feature requests or bug rep
 
 There is a Matrix/FreeNode IRC channel `#LibreLingo`, instructions for joining:
 
-* Matrix: [`#LibreLingo`](https://riot.im/app/#/room/#librelingo:matrix.org) on `matrix.org`
+* Matrix: [`#LibreLingo`](https://riot.im/app/#/group/+librelingo:matrix.org) on `matrix.org`
 * IRC: connect to `irc.freenode.net` with your favourite client and join `#LibreLingo`
 
 ## Articles
