@@ -15,6 +15,7 @@
   <a href="https://riot.im/app/#/group/+librelingo:matrix.org">💬 Chat</a> •
   <a href="#become-a-contributor">👩‍💻 Contribute!</a> •
   <a href="https://github.com/sponsors/kantord">💵 Sponsor</a>  •
+  <a href="https://librelingo.app/docs/">📄 Development docs</a>  •
   <a href="https://app.harmonizely.com/harmonizely-uoicqk">☎️ Schedule a call about Librelingo</a>
 </p>
 
