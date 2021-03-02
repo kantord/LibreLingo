@@ -1,7 +1,8 @@
 <a name="librelingo_utils"></a>
 # librelingo\_utils
 
-Utilities for implementing LibreLingo-related packages
+librelingo-utils contains utility functions that are meant to make it easier
+to create Python software that works with LibreLingo courses.
 
 <a name="librelingo_utils.utils"></a>
 # librelingo\_utils.utils
