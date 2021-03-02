@@ -11,6 +11,7 @@ else
 	echo "The following files were outdated:"
 	git diff --name-only 
 	echo "Run the following script to automatically update the readme files:"
+	echo
 	echo "./scripts/updatePypiReadmeFiles.sh"
 	exit 1
 fi

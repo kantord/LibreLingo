@@ -13,5 +13,5 @@ Load YAML-based LibreLingo courses in your Python project.
 load_course(path)
 ```
 
-Load a YAML based course into a Course() object
+Load a YAML-based course into a Course() object
 
