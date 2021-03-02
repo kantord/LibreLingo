@@ -18,7 +18,7 @@ def _load_yaml(path):
 
 def _convert_language(raw_language):
     """
-    Convert a YAML langauge description into a Language() object
+    Convert a YAML langauge description to a Language() object
     """
     return Language(
         name=raw_language["Name"],

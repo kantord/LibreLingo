@@ -3,7 +3,8 @@
 for directory in $(find apps/ -name pyproject.toml | xargs -n1 dirname); do
 	echo "Updating README.md for Python package '$(basename $directory)'..."
 	cd $directory
-	make README.md
+	poetry install
+	make README.md $1
 	cd -
 	echo
 done
