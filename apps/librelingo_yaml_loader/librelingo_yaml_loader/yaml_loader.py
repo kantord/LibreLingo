@@ -11,14 +11,14 @@ from librelingo_types import Course, Language, License, Module, Skill, \
 
 
 def _load_yaml(path):
-    """Helper function for simply loading a YAML file"""
+    """Helper function for reading a YAML file"""
     with open(path) as f:
         return load(f, Loader=Loader)
 
 
 def _convert_language(raw_language):
     """
-    Convert a YAML langauge description into a Language() object
+    Convert a YAML langauge description to a Language() object
     """
     return Language(
         name=raw_language["Name"],
