@@ -1,5 +1,5 @@
 from librelingo_utils import get_dumb_opaque_id, audio_id, clean_word
-from .dictionary import define_words_in_sentence
+from .dictionary import _define_words_in_sentence
 
 
 def get_listening_challenge(source, course):
@@ -22,7 +22,7 @@ def get_short_input_challenge(source, course):
             [pic + ".jpg" for pic in source.pictures] if source.pictures
             else None,
         "formInTargetLanguage": source.in_target_language,
-        "phrase": define_words_in_sentence(course, source.in_source_language[0], reverse=False),
+        "phrase": _define_words_in_sentence(course, source.in_source_language[0], reverse=False),
         "id": get_dumb_opaque_id("Word", source, "shortInput"),
         "priority": 1,
         "group": get_dumb_opaque_id("Group", source),
@@ -75,7 +75,7 @@ def create_chips_challenge_generator(reverse):
         return {
             "type": "chips",
             "translatesToSourceLanguage": reverse,
-            "phrase": define_words_in_sentence(course, get_phrase_text(phrase), reverse),
+            "phrase": _define_words_in_sentence(course, get_phrase_text(phrase), reverse),
             "chips": get_chips(get_input_text(phrase)),
             "solutions": [get_chips(x) for x in get_input_texts(phrase)],
             "formattedSolution": get_input_text(phrase),
