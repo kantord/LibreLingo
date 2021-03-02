@@ -5,3 +5,7 @@ theme:
   name: material
   palette:
     primary: #325f74;
+
+plugins:
+    - search
+    - mermaid2
