@@ -11,7 +11,7 @@ The site is statically built and hosted on GitHub pages, therefore there's no re
 ## Getting started
 
 Please check out our development documentation for instructions on
-[setting up the development environment.](https://librelingo.readthedocs.io/en/latest/#setting-up-the-development-environment)
+[setting up the development environment.](https://librelingo.app/docs/#setting-up-the-development-environment)
 
 ### Pick an issue
 
