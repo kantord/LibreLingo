@@ -1,16 +1,17 @@
-# librelingo-yaml-loader
+<a name="librelingo_yaml_loader"></a>
+# librelingo\_yaml\_loader
 
-librelingo-yaml-loader can be used to load YAML-based LibreLingo courses in Python programs.
+Load YAML-based LibreLingo courses in your Python project.
 
-The course is loaded into the types from `[libreling-types](https://pypi.org/project/librelingo-types/).
+<a name="librelingo_yaml_loader.yaml_loader"></a>
+# librelingo\_yaml\_loader.yaml\_loader
 
-## Usage
+<a name="librelingo_yaml_loader.yaml_loader.load_course"></a>
+#### load\_course
 
 ```python
-from librelingo_yaml_loader import yaml_loader
-
-course = yaml_loader.load_course("./path/to/my/course")
+load_course(path)
 ```
 
-`load_course` returns a [Course()](https://github.com/kantord/LibreLingo/blob/main/apps/librelingo_yaml_loader/librelingo_yaml_loader/data_types.py) object
+Load a YAML based course into a Course() object
 

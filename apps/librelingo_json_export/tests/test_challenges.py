@@ -1,8 +1,8 @@
 from unittest.mock import patch
 from unittest import TestCase
 from librelingo_json_export.challenges import get_challenges_data
-from librelingo_json_export.challenges import get_word_challenges
-from librelingo_json_export.challenges import get_phrase_challenges
+from librelingo_json_export.challenges import _get_word_challenges
+from librelingo_json_export.challenges import _get_phrase_challenges
 from librelingo_json_export.challenge_types import get_cards_challenge
 from librelingo_json_export.challenge_types import get_short_input_challenge
 from librelingo_json_export.challenge_types import get_listening_challenge
@@ -17,28 +17,28 @@ class TestGetChallengesData(TestCase):
     def test_empty_skill(self):
         assert get_challenges_data(fakes.emptySkill, fakes.course1) == []
 
-    @patch('librelingo_json_export.challenges.get_phrase_challenges')
+    @patch('librelingo_json_export.challenges._get_phrase_challenges')
     def test_generates_phrase_challenges_correctly(self, mock):
         get_challenges_data(fakes.skillWithPhrase, fakes.course1)
         mock.assert_called_with(fakes.phrase2, fakes.course1)
 
-    @patch('librelingo_json_export.challenges.get_phrase_challenges')
+    @patch('librelingo_json_export.challenges._get_phrase_challenges')
     def test_includes_every_phrase(self, mock):
         get_challenges_data(fakes.skillWith3Phrases, fakes.course1)
         assert mock.call_count == 3
 
-    @patch('librelingo_json_export.challenges.get_word_challenges')
+    @patch('librelingo_json_export.challenges._get_word_challenges')
     def test_generates_word_challenges_correctly(self, mock):
         get_challenges_data(fakes.skillWithWord, fakes.course1)
         mock.assert_called_with(fakes.word1, fakes.course1)
 
-    @patch('librelingo_json_export.challenges.get_word_challenges')
+    @patch('librelingo_json_export.challenges._get_word_challenges')
     def test_includes_every_word(self, mock):
         get_challenges_data(fakes.skillWith3Words, fakes.course1)
         assert mock.call_count == 3
 
-    @patch('librelingo_json_export.challenges.get_word_challenges')
-    @patch('librelingo_json_export.challenges.get_phrase_challenges')
+    @patch('librelingo_json_export.challenges._get_word_challenges')
+    @patch('librelingo_json_export.challenges._get_phrase_challenges')
     def test_returns_correct_challenges(self, mock1, mock2):
 
         mock1.return_value = [fakes.challenge1, fakes.challenge2]
@@ -52,19 +52,19 @@ class TestGetWordChallenges(TestCase):
     def test_includes_cards_challenges(self, mock):
         fake_value = fakes.fake_value()
         mock.return_value = fake_value
-        assert get_word_challenges(fakes.word1, fakes.course1)[0] == fake_value
+        assert _get_word_challenges(fakes.word1, fakes.course1)[0] == fake_value
 
     @patch('librelingo_json_export.challenges.get_short_input_challenge')
     def test_includes_short_input_challenges(self, mock):
         fake_value = fakes.fake_value()
         mock.return_value = fake_value
-        assert get_word_challenges(fakes.word1, fakes.course1)[1] == fake_value
+        assert _get_word_challenges(fakes.word1, fakes.course1)[1] == fake_value
 
     @patch('librelingo_json_export.challenges.get_listening_challenge')
     def test_includes_listening_challenge(self, mock):
         fake_value = fakes.fake_value()
         mock.return_value = fake_value
-        assert get_word_challenges(fakes.word1, fakes.course1)[2] == fake_value
+        assert _get_word_challenges(fakes.word1, fakes.course1)[2] == fake_value
 
 
 class TestGetPhraseChallenges(TestCase):
@@ -72,37 +72,37 @@ class TestGetPhraseChallenges(TestCase):
     def test_includes_options_challenges(self, mock):
         fake_value = fakes.fake_value()
         mock.return_value = fake_value
-        assert get_phrase_challenges(
+        assert _get_phrase_challenges(
             fakes.phrase1, fakes.course1)[0] == fake_value
 
     @patch('librelingo_json_export.challenges.get_listening_challenge')
     def test_includes_listening_challenge(self, mock):
         fake_value = fakes.fake_value()
         mock.return_value = fake_value
-        assert get_phrase_challenges(
+        assert _get_phrase_challenges(
             fakes.phrase1, fakes.course1)[1] == fake_value
 
     @patch('librelingo_json_export.challenges.get_chips_challenge')
     def test_includes_chips_challenge(self, mock):
         fake_value = fakes.fake_value()
         mock.return_value = fake_value
-        assert get_phrase_challenges(
+        assert _get_phrase_challenges(
             fakes.long_phrase, fakes.course1)[2] == fake_value
 
     @patch('librelingo_json_export.challenges.get_reverse_chips_challenge')
     def test_includes_reverse_chips_challenge(self, mock):
         fake_value = fakes.fake_value()
         mock.return_value = fake_value
-        assert get_phrase_challenges(
+        assert _get_phrase_challenges(
             fakes.long_phrase, fakes.course1)[3] == fake_value
 
     def test_returns_correct_number_of_challenged(self):
-        assert len(get_phrase_challenges(
+        assert len(_get_phrase_challenges(
             fakes.long_phrase, fakes.course1)) == 4
 
     def test_doesnt_include_chips_if_sentence_is_short(self):
         assert len(list(filter(
-            lambda x: x["type"] == "chips", get_phrase_challenges(
+            lambda x: x["type"] == "chips", _get_phrase_challenges(
                 fakes.customize(
                     fakes.phrase1,
                     in_target_language=["foo"],
