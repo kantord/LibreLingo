@@ -2,7 +2,7 @@ import os
 import random
 import pytest
 from click.testing import CliRunner
-from librelingo_json_export.cli import command, DEFAULT_SETTINGS
+from librelingo_json_export.cli import _command, DEFAULT_SETTINGS
 from librelingo_fakes import fakes
 
 
@@ -25,7 +25,7 @@ def mocks(mocker):
 def invoke(mocks, fs):
     def f(args):
         runner = CliRunner()
-        return runner.invoke(command, args)
+        return runner.invoke(_command, args)
 
     return f
 
@@ -42,7 +42,7 @@ def test_yaml_to_json_exports_correct_course(mocks, inputs, invoke):
 
 
 def test_yaml_to_json_has_help_text(mocks, inputs, invoke):
-    assert command.help
+    assert _command.help
 
 
 def test_creates_output_directory_if_it_doesnt_exist(mocks, inputs, invoke, fs):

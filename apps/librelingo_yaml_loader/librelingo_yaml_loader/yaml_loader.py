@@ -164,7 +164,7 @@ def _convert_phrases(raw_phrases):
     """
     Converts each YAML phrase definition into Phrase() objects
     """
-    return list(map(convert_phrase, raw_phrases))
+    return list(map(_convert_phrase, raw_phrases))
 
 
 def _convert_mini_dictionary(raw_mini_dictionary, course):
