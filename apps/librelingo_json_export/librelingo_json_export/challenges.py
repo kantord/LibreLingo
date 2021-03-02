@@ -9,12 +9,12 @@ def make_challenges_using(callback, data_source, course):
 
 def get_challenges_data(skill, course):
     return sum([
-        make_challenges_using(get_phrase_challenges, skill.phrases, course),
-        make_challenges_using(get_word_challenges, skill.words, course),
+        make_challenges_using(_get_phrase_challenges, skill.phrases, course),
+        make_challenges_using(_get_word_challenges, skill.words, course),
     ], start=[])
 
 
-def get_phrase_challenges(phrase, course):
+def _get_phrase_challenges(phrase, course):
     return challenge_mapper([
         get_options_challenge,
         get_listening_challenge,
@@ -25,7 +25,7 @@ def get_phrase_challenges(phrase, course):
     )(phrase, course)
 
 
-def get_word_challenges(word, course):
+def _get_word_challenges(word, course):
     return challenge_mapper([
         get_cards_challenge,
         get_short_input_challenge,

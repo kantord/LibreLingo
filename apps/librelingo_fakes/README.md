@@ -1,8 +1,12 @@
-# librelingo-fakes
+<a name="librelingo_fakes"></a>
+# librelingo\_fakes
+
+<a name="librelingo_fakes.fakes"></a>
+# librelingo\_fakes.fakes
 
 This package contains fake data for testing LibreLingo-related packages.
 
-The fake data is returned using the types from `[libreling-types](https://pypi.org/project/librelingo-types/).
+The fake data is returned using the types from [librelingo-types](https://pypi.org/project/librelingo-types/).
 
 ## Usage
 ```python
@@ -26,5 +30,4 @@ fake_course = fakes.customize(fakes.course1, modules=[
     fake_module_1, fake_module_2
 ])
 ```
-
 

@@ -2,13 +2,13 @@ import logging
 import json
 from pathlib import Path
 from slugify import slugify
-from .skills import get_skill_data
-from .course import get_course_data
+from .skills import _get_skill_data
+from .course import _get_course_data
 
 logger = logging.getLogger("librelingo_json_export")
 
 
-def export_course_skills(export_path, course, settings=None):
+def _export_course_skills(export_path, course, settings=None):
     """
         Writes every skill in a course into separate JSON files.
         You probably don't need to call this function directly, because you
@@ -16,10 +16,10 @@ def export_course_skills(export_path, course, settings=None):
     """
     for module in course.modules:
         for skill in module.skills:
-            export_skill(export_path, skill, course, settings)
+            _export_skill(export_path, skill, course, settings)
 
 
-def export_skill(export_path, skill, course, settings=None):
+def _export_skill(export_path, skill, course, settings=None):
     """
         Writes the given skill to a JSON file in the specified path.
         You probably don't need to call this function directly, because you
@@ -27,7 +27,7 @@ def export_skill(export_path, skill, course, settings=None):
     """
     logger.info("Writing skill {}".format(repr(skill.name)))
     try:
-        skill_data = get_skill_data(skill, course)
+        skill_data = _get_skill_data(skill, course)
     except Exception as error:
         raise RuntimeError(
             'Error while exporting skill "{}": {}'.format(skill.name, error))
@@ -40,7 +40,7 @@ def export_skill(export_path, skill, course, settings=None):
             json.dump(skill_data, f, ensure_ascii=False, indent=2)
 
 
-def export_course_data(export_path, course, settings=None):
+def _export_course_data(export_path, course, settings=None):
     """
         Writes the metadata of a course to a JSON file in the specified path.
         You probably don't need to call this function directly, because you
@@ -48,7 +48,7 @@ def export_course_data(export_path, course, settings=None):
     """
     logger.info("Writing course {} for {} speakers".format(
         repr(course.target_language.name), repr(course.source_language.name)))
-    course_data = get_course_data(course)
+    course_data = _get_course_data(course)
     Path(Path(export_path)).mkdir(parents=True, exist_ok=True)
     with open(Path(export_path) / "courseData.json", 'w', encoding='utf-8') as f:
         if settings is not None and settings.dry_run:
@@ -60,6 +60,16 @@ def export_course_data(export_path, course, settings=None):
 def export_course(export_path, course, settings=None):
     """
         Writes the course to JSON files in the specified path.
+        
+        ### Usage example:
+
+        ```python
+        from librelingo_yaml_loader import load_course
+        from librelingo_json_export.export import export_course
+
+        course = load_course("./courses/french-from-english")
+        export_course("./apps/web/src/courses/french-from-english", course)
+        ```
     """
-    export_course_data(export_path, course, settings)
-    export_course_skills(export_path, course, settings)
+    _export_course_data(export_path, course, settings)
+    _export_course_skills(export_path, course, settings)
