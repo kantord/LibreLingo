@@ -13,7 +13,7 @@
     "stylecheck": "yarn web run prettiercheck && yarn web run eslintcheck",
     "exportAllCourses": "./scripts/exportAllYamlCourses.sh",
     "docs": "poetry run mkdocs serve",
-    "docs:build": "rm -rf ./apps/web/__sapper__/export && poetry run mkdocs build --site-dir ./apps/web/__sapper__/export/docs/"
+    "docs:build": "poetry run mkdocs build --site-dir ./apps/web/__sapper__/export/docs/"
   },
   "workspaces": {
     "packages": [
