@@ -1,7 +1,7 @@
 """
-Export LibreLingo courses in the JSON format expected by the web app
+Load YAML-based LibreLingo courses in your Python project.
 """
 
 from librelingo_yaml_loader.yaml_loader import load_course
 
-__version__ = '0.1.3'
+__version__ = '0.1.4'
