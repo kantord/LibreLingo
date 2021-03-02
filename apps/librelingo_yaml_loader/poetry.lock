@@ -146,7 +146,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [[package]]
 name = "librelingo-fakes"
-version = "0.1.4"
+version = "0.1.7"
 description = "Fake data for testing LibreLingo-related packages"
 category = "dev"
 optional = false
@@ -154,7 +154,7 @@ python-versions = ">=3.9,<4.0"
 
 [[package]]
 name = "librelingo-types"
-version = "0.1.1"
+version = "0.1.2"
 description = "Data types to be used in Python packages for LibreLingo"
 category = "main"
 optional = false
@@ -661,12 +661,12 @@ lazy-object-proxy = [
     {file = "lazy_object_proxy-1.5.2-cp39-cp39-win_amd64.whl", hash = "sha256:37d9c34b96cca6787fe014aeb651217944a967a5b165e2cacb6b858d2997ab84"},
 ]
 librelingo-fakes = [
-    {file = "librelingo_fakes-0.1.4-py3-none-any.whl", hash = "sha256:db54f894aef0edb495231c6cff8d61a7a97d3dce39d9835949c2af94c926d9d3"},
-    {file = "librelingo_fakes-0.1.4.tar.gz", hash = "sha256:11739c4be5cf75d982f2a39e026d7567fce0b4a715cafe3b67d9eca012fb87c1"},
+    {file = "librelingo_fakes-0.1.7-py3-none-any.whl", hash = "sha256:aed8460bc2af12d5090bfba75288bfa67932262874a1e2bc0075d9186ffb8ec0"},
+    {file = "librelingo_fakes-0.1.7.tar.gz", hash = "sha256:e91ab363c96ecb723218413723cb5c79df6d5d333726a417ba9cb570b65842cd"},
 ]
 librelingo-types = [
-    {file = "librelingo_types-0.1.1-py3-none-any.whl", hash = "sha256:630f5a5e09682d1cac0ca030f978a1a1a8ef81b8929c29c88de08e835fa1ce24"},
-    {file = "librelingo_types-0.1.1.tar.gz", hash = "sha256:eff361df0687a28195aca817c0407cfacbee45a737e71225297b5de8a55cc5a6"},
+    {file = "librelingo_types-0.1.2-py3-none-any.whl", hash = "sha256:132b7e926a2a6a07c80bb815ea1cc6040b2b6610657beac9505bcc05eaf7d9f9"},
+    {file = "librelingo_types-0.1.2.tar.gz", hash = "sha256:991d76c44c640a7f45d831beb28597b8b4027ac223453f0085854a3958b5644c"},
 ]
 mccabe = [
     {file = "mccabe-0.6.1-py2.py3-none-any.whl", hash = "sha256:ab8a6258860da4b6677da4bd2fe5dc2c659cff31b3ee4f7f5d64e79735b80d42"},
