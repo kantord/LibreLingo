@@ -5,6 +5,31 @@ This project exists to create a beginner-friendly, community-oriented,
 free software licensed language learning application. If you want to learn more
 about LibreLingo's background, [I recommend reading my article](https://dev.to/kantord/why-i-built-librelingo-280o).
 
+## Project structure
+
+### Clickable flow chart
+``` mermaid
+graph LR
+ YAML[YAML course] --> LOAD
+ LOAD[librelingo-yaml-loader] --> EXPORT[librelingo-json-export]
+ EXPORT -->|JSON files| APP
+ LOAD -->|TODO| AUDIO
+ LOAD -->|TODO| IMAGE
+ AUDIO[Audio files] --> APP
+ IMAGE[Image files] --> APP
+ TYPES[librelingo-types] --> LOAD
+ UTILS[librelingo-utils] --> LOAD
+
+ click APP "https://github.com/kantord/LibreLingo/tree/main/apps/web"
+ click EXPORT "https://pypi.org/project/librelingo-json-export/"
+ click UTILS "https://pypi.org/project/librelingo-utils/"
+ click TYPES "https://pypi.org/project/librelingo-types/"
+ click IMAGE "https://github.com/kantord/LibreLingo/tree/main/apps/web/static/images"
+ click AUDIO "https://github.com/kantord/LibreLingo/tree/main/apps/web/static/voice"
+ click LOAD "https://pypi.org/project/librelingo-yaml-loader/"
+ click YAML "https://github.com/kantord/LibreLingo/tree/main/courses"
+```
+
 ## Setting up the development environment
 
 Clone the repository:
