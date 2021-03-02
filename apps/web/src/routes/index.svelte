@@ -11,7 +11,7 @@
 </script>
 
 <svelte:head>
-  <title>{$_("meta.title")}</title>
+  <title>{$_('meta.title')}</title>
   <meta name="description" content="{$_('index.meta.description')}" />
 </svelte:head>
 
@@ -64,9 +64,9 @@
                 </Translate>
               </Button>
 
-              <Button primary href="development">
-                <Translate key="index.development_progress">
-                  About LibreLingo
+              <Button primary href="https://librelingo.app/docs/">
+                <Translate key="index.development_docs">
+                  Development documentation
                 </Translate>
               </Button>
               <a href="/devtools" class="is-invisible"></a>
