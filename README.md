@@ -265,7 +265,7 @@ course = yaml_loader.load_course("./path/to/my/course")
                   <a href="https://github.com/kantord/LibreLingo/blob/main/docs/CONTRIBUTING.md">🌟 Getting started</a>
                 </li>
                 <li>
-                  <a href="https://librelingo.readthedocs.io/en/latest/">📜 Development documentation</a>
+                  <a href="https://librelingo.app/docs/">📜 Development documentation</a>
                 </li>
               </ul>
           </td>

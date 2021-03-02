@@ -176,7 +176,7 @@
       <div class="buttons buttons-bottom">
         <a
           class="button is-primary is-inverted is-outlined"
-          href="https://librelingo.readthedocs.io/en/latest/"
+          href="https://librelingo.app/docs/"
         >
           Development documentation
         </a>
