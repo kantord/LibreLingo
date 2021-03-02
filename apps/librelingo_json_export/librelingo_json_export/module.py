@@ -2,7 +2,7 @@ from slugify import slugify
 from librelingo_utils import get_opaque_id, calculate_number_of_levels
 
 
-def get_module_summary(module):
+def _get_module_summary(module):
     """
     Get a module summary for the course meta data
     """
