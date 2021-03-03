@@ -31,6 +31,7 @@ blocks:
             - pip install poetry
             - poetry config virtualenvs.path .venv
             - poetry install --no-interaction
+            - find .venv
             - cache store
             - cache store python-$(checksum poetry.lock) .venv
     dependencies: []
