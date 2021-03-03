@@ -12,11 +12,13 @@ blocks:
           commands:
             - sem-version node 12
             - checkout
+            - cache restore
             - cache restore node-$(checksum yarn.lock)
             - cache restore cypress-$(checksum yarn.lock)
             - cache restore packages-web-$(checksum yarn.lock)
             - yarn install --frozen-lockfile
             - yarn cypress install
+            - cache store
             - cache store node-$(checksum yarn.lock) node_modules
             - cache store cypress-$(checksum yarn.lock) /home/semaphore/.cache/Cypress
             - cache store packages-web-$(checksum yarn.lock) apps/web/node_modules
@@ -24,10 +26,12 @@ blocks:
           commands:
             - sem-version python 3.9
             - checkout
+            - cache restore
             - cache restore python-$(checksum poetry.lock)
             - pip install poetry
             - poetry install --no-interaction
             - poetry run pytest
+            - cache store
             - cache store python-$(checksum poetry.lock) /home/semaphore/.cache/pypoetry
     dependencies: []
   - name: Jest
