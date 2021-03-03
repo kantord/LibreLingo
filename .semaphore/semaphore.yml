@@ -29,10 +29,10 @@ blocks:
             - cache restore
             - cache restore python-$(checksum poetry.lock)
             - pip install poetry
+            - poetry config settings.virtualenvs.in-project true
             - poetry install --no-interaction
-            - poetry run pytest
             - cache store
-            - cache store python-$(checksum poetry.lock) /home/semaphore/.cache/pypoetry
+            - cache store python-$(checksum poetry.lock) .venv
     dependencies: []
   - name: Jest
     task:
