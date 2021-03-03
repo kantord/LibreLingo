@@ -124,6 +124,7 @@ blocks:
             - cache restore
             - cache restore python-$(checksum yarn.lock)
             - pip install poetry
+            - poetry install
             - poetry run pytest
   - name: PyPi readme
     dependencies: []
