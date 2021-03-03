@@ -29,7 +29,7 @@ blocks:
             - cache restore
             - cache restore python-$(checksum poetry.lock)
             - pip install poetry
-            - poetry config settings.virtualenvs.in-project true
+            - poetry config virtualenvs.path .venv
             - poetry install --no-interaction
             - cache store
             - cache store python-$(checksum poetry.lock) .venv
