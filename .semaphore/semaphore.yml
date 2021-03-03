@@ -121,6 +121,7 @@ blocks:
           commands:
             - sem-version python 3.9
             - checkout
+            - cache restore
             - cache restore python-$(checksum yarn.lock)
             - poetry run pytest
   - name: PyPi readme
