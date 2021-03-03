@@ -22,18 +22,6 @@ blocks:
             - cache store node-$(checksum yarn.lock) node_modules
             - cache store cypress-$(checksum yarn.lock) /home/semaphore/.cache/Cypress
             - cache store packages-web-$(checksum yarn.lock) apps/web/node_modules
-        - name: poetry install
-          commands:
-            - sem-version python 3.9
-            - checkout
-            - cache restore
-            - cache restore python-$(checksum poetry.lock)
-            - pip install poetry
-            - poetry config virtualenvs.path .venv
-            - poetry install --no-interaction
-            - find .venv
-            - cache store
-            - cache store python-$(checksum poetry.lock) .venv
     dependencies: []
   - name: Jest
     task:
@@ -114,8 +102,7 @@ blocks:
             - yarn web build
             - cache store sapper-build-$SEMAPHORE_GIT_PR_SHA apps/web/__sapper__
   - name: python packages
-    dependencies:
-      - Set up dependencies
+    dependencies: []
     task:
       jobs:
         - name: test python packages
@@ -123,7 +110,6 @@ blocks:
             - sem-version python 3.9
             - checkout
             - cache restore
-            - cache restore python-$(checksum yarn.lock)
             - pip install poetry
             - poetry install
             - poetry run pytest
