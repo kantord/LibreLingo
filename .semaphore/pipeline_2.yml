@@ -17,7 +17,7 @@ blocks:
             - poetry install --no-interaction
             - cache restore node-$(checksum yarn.lock)
             - cache restore packages-web-$(checksum yarn.lock)
-            - NODE_ENV=production yarn export:withDocs
+            - 'NODE_ENV=production yarn export:withDocs'
             - git config --global user.email "gitlab@daniel-kantor.com"
             - git config --global user.name "Dániel Kántor"
             - 'yarn deploy --repo=https://$GH_TOKEN@github.com/kantord/LibreLingo.git'

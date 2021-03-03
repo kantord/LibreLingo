@@ -5,7 +5,7 @@ agent:
     type: e1-standard-2
     os_image: ubuntu1804
 blocks:
-  - name: Install dependencies
+  - name: Set up dependencies
     task:
       jobs:
         - name: yarn install
@@ -20,6 +20,15 @@ blocks:
             - cache store node-$(checksum yarn.lock) node_modules
             - cache store cypress-$(checksum yarn.lock) /home/semaphore/.cache/Cypress
             - cache store packages-web-$(checksum yarn.lock) apps/web/node_modules
+        - name: poetry install
+          commands:
+            - sem-version python 3.9
+            - checkout
+            - cache restore python-$(checksum poetry.lock)
+            - pip install poetry
+            - poetry install --no-interaction
+            - poetry run pytest
+            - cache store python-$(checksum poetry.lock) /home/semaphore/.cache/pypoetry
     dependencies: []
   - name: Jest
     task:
@@ -53,7 +62,7 @@ blocks:
       - Sapper build
   - name: Eslint
     dependencies:
-      - Install dependencies
+      - Set up dependencies
     task:
       jobs:
         - name: eslint
@@ -64,7 +73,7 @@ blocks:
             - yarn eslint apps/*/src --no-error-on-unmatched-pattern
   - name: Eslint Cypress
     dependencies:
-      - Install dependencies
+      - Set up dependencies
     task:
       jobs:
         - name: eslint
@@ -100,7 +109,8 @@ blocks:
             - yarn web build
             - cache store sapper-build-$SEMAPHORE_GIT_PR_SHA apps/web/__sapper__
   - name: python packages
-    dependencies: []
+    dependencies:
+      - Set up dependencies
     task:
       jobs:
         - name: test python packages
@@ -108,10 +118,7 @@ blocks:
             - sem-version python 3.9
             - checkout
             - cache restore python-$(checksum yarn.lock)
-            - pip install poetry
-            - poetry install --no-interaction
             - poetry run pytest
-            - cache store python-$(checksum yarn.lock) /home/semaphore/.cache/pypoetry
   - name: PyPi readme
     dependencies: []
     task:
