@@ -30,7 +30,7 @@ This is also a good resource if you just want to learn about the course system i
 
 - Totally new to LibreLingo? Head to the [Basics](#basics) section! It will give you a general understanding about things.
 - Want to edit or improve existing courses? Check out [this page about editing courses](editing-courses.md).
-- If you want to create new courses (typically suited for course designers or advanced users), go to [this page](creating-courses.md).
+- Want to create a new course? Read out [this guide on how to create new courses](creating-courses.md). (Advanced)
 
 
 ## Basics
