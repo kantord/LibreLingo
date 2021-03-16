@@ -13,6 +13,7 @@ librelingo-yaml-loader = { path = "./apps/librelingo_yaml_loader/" }
 librelingo-json-export = { path = "./apps/librelingo_json_export" }
 librelingo-fakes = { path = "./apps/librelingo_fakes" }
 librelingo-utils = { path = "./apps/librelingo_utils" }
+librelingo-audios = { path = "./apps/librelingo_audios" }
 pytest = "^6.2.2"
 pytest-mock = "^3.5.1"
 pytest-watch = "^4.2.0"
