@@ -1,183 +1,153 @@
-# Creating and editing LibreLingo courses
+# Editing LibreLingo courses
 
-LibreLingo courses consist of files that contain course content. These files
-are organized in a specific directory structure.
+Thank you for your interest in contributing to LibreLingo. This document is here to guide you for editing or translating existing courses.
 
-A simplified example of the directory structure of a LibreLingo course:
+To get a better understanding, we recommend you read the [course basics](README.md#basics) first.
 
-```
-courses/french-from-english/
-courses/french-from-english/basics
-courses/french-from-english/basics/module.yaml
-courses/french-from-english/basics/skills
-courses/french-from-english/basics/skills/hello.yaml
-courses/french-from-english/course.yaml
-```
+---
 
-LibreLingo courses can be published in different formats. One such format is
-the LibreLingo web app.
+**Confused?**
+[Ask people](https://github.com/kantord/LibreLingo/discussions) on GitHub Discussions.
 
-When you are working with LibreLingo courses, you'll be mostly editing the
-`.yaml` files as seen above. The standard way of editing LibreLingo courses is
-using GitHub.
+---
 
-If you don't know how to use GitHub, it might be useful to check out these
-guides:
+**Table of Contents:**
+- [Setup](#setup)
+  - [Pulling code and branching](#pulling-and-branching)
+  - [Pushing code and creating Pull Request](#pushing-and-pr)
+  - [Following up with responses](#following-up-pr)
+- [Translating based on an existing course](#translating)
+- [Editing existing courses](#editing-existing)
 
-- [Creating new files on GitHub](https://docs.github.com/en/github/managing-files-in-a-repository/creating-new-files)
-- [Editing files on GitHub](https://docs.github.com/en/github/managing-files-in-a-repository/editing-files-in-another-users-repository)
+## Setup
 
-## Editing skills
+<a id="pulling-and-branching"></a>
+### Pulling code and branching
 
-If you are contributing to existing courses, the thing you are most likely
-to do is edit existing skills.
+LibreLingo uses Git repository for maintaining code. In order to contribute changes, you need to first fork this project. To fork:
+- [login](https://github.com/login) to GitHub
+- then go to [LibreLingo repository](https://github.com/kantord/LibreLingo/)
+- click the "Fork" button (beside Watch and Star)
 
-Skills are written as YAML files with a specific structure. From our example
-above, the YAML file corresponding to the "hello" skill would be
-`courses/french-from-english/basics/skills/hello.yaml`.
+In a moment you will be taken to a new repository. Closely notice the url as it will be `https://github.com/<your github username>/LibreLingo/` instead of `https://github.com/kantord/LibreLingo/`. Now you should have a copy of the project source code under your name.
 
-The structure of `hello.yaml` is as follows:
+This is called "[forking](https://guides.github.com/activities/forking/)". Forking allows you to apply your changes without directly changing the original project.
 
-```yaml
-Skill:
-  Id: 33bfee7d-de74-4362-bf15-ce165add2dc8
-  Name: Hello
-  Thumbnails:
-    - people1
-    - woman1
-    - man1
+Now click the Green "Code" button and copy the HTTPS clone URL.
 
-New words:
-  - Word: l'homme
-    Translation: the man
-    Images:
-      - man1
-      - man2
-      - man3
+Make sure you have Git installed on your computer. If not, follow [these instructions](https://www.linode.com/docs/guides/how-to-install-git-on-linux-mac-and-windows/) to install it on your operating system.
 
-  - Word: la femme
-    Synonyms:
-      - la dame
-    Translation: the woman
-    Also accepted:
-      - the female
+If you are not used to command line programs, there are also graphical interface applications for Git, like [Git Cola](https://git-cola.github.io/), [TortoiseGit](https://tortoisegit.org/) etc. They can basically do the same thing but graphically. But we'll focus on the command line here. If you want to use them, consult their documentation to get your way around them.
 
-Phrases:
-  - Phrase: La femme dit bonjour
-    Alternative versions:
-      - la femme dit salut
-    Translation: The woman says hello
-    Alternative translations:
-      - The woman says hi
+To clone the repository you forked into earlier:
 
-  - Phrase: L'homme dit bonjour
-    Alternative versions:
-      - L'homme dit salut
-    Translation: The man says hello
-    Alternative translations:
-      - The man says hi
-
-Mini-dictionary:
-  French:
-    - dit: says
-    - bonjour:
-        - hello
-        - hi
-    - L'homme: the man
-
-  English:
-    - says: dit
-    - hello:
-        - bonjour
-        - salut
+```sh
+git clone <URL you copied>
+cd LibreLingo
 ```
 
-While the meaning of this file should be relatively straight-forward, here's
-a couple things to keep in mind:
+The first command will download the forked repository on your computer so that you can make edits. Second one will go inside the repository directory for future `git` commands to work.
 
-- `Skill:`
-  - `Id:` never change this value. This value identifies the skill uniquely, thus changing it will effectively create a new skill and delete the old one.
-  - `Thumbnails:` these thumbnails can be used to illustrate the skill on the course summary page
+In order to add your name and email to the changes you do later, git would need to know them before you apply any changes to the code. You can add these by running:
 
-### By example
-
-For example, this is how you'd want to add a new alternative version to the
-phrase "La femme dit bonjour":
-
-```diff
-Phrases:
-  - Phrase: La femme dit bonjour
-    Alternative versions:
-      - La femme dit salut
-+     - La madame dit salut
-    Translation: The woman says hello
-    Alternative translations:
-      - The woman says hi
+```sh
+git config --global user.name "John Doe"
+git config --global user.email "john@example.com"
 ```
 
-Keep in mind that when you add a new phrase, or a new version or translation
-to a phrase, it's not automatically updating to the mini-dictionary. So you'd
-want to add any new words there:
+_**NOTE:** Replace the name and email above to match yours. Setting `--global` sets these values globally for any repo on the machine. You can run it without the `--global` parameter to set it for this repo only._
 
-```diff
-Mini-dictionary:
-  French:
-    - dit: says
-+   - madame: lady
-    - bonjour:
-      - hello
-      - hi
-    - L'homme: the man
+Now create a new branch for your changes:
+
+```sh
+git checkout -b my-awesome-branch main
 ```
 
-### Creating new skills
+This is creating a new branch named `my-awesome-branch` from `main` branch and switches to the new branch. The branch name doesn't matter that much. You just need to be able to recognize it yourself from a list of other branches.
 
-Creating new skills is a matter of creating their corresponding YAML file.
-That being said, there are a couple things to keep in mind:
+You can just name it as your language name if you want, but without spaces (e.g. `korean`, `ancient-greek`). You can check which branch you are on by running `git status` and checking the "On branch" line.
 
-- Skills should have a unique `Id`. Such identifiers can be generated using
-  [this website](https://www.uuidgenerator.net/version4).
-- Before skills will actually show up in the web app, they need to be added to
-  a module. See the section below.
+You are now ready to make changes.
 
-## Editing modules
+<a id="pushing-and-pr"></a>
+### Pushing code and creating Pull Request
 
-Modules are simply groups of skills. Their YAML files are quite straightforward.
+These instructions are written to be used after making the changes. So you can read the rest of the page and continue from here if you want.
 
-See `courses/french-from-english/basics/module.yaml` from the example above:
+After you made your changes, add the files and commit your changes:
 
-```yaml
-Module:
-  Name: Basics
-
-Skills:
-  - hello.yaml
+```sh
+git add courses/
+git commit -m "Add Example language"
 ```
 
-Keep in mind that the order in which the skills appear in this YAML file is
-the order they are meant to appear in the web app as well.
+_**NOTE:** Replace the commit message to describe what it does in your case. Another thing is that make your changes only on one commit because it will be easier to maintain and apply possible changes into later. If you want to add something else to the commit, just use the `--ammend` command below._
 
-### Creating new modules
+This hasn't yet been sent to the repo online. The changes are only on your machine. If you feel like you've missed something, there is a chance you can make the changes and run:
 
-As with creating new skills, creating new modules is also mainly about creating
-their corresponding YAML file. You have to keep in mind that the module will
-only show up in the web app, if it's also listed in the course's
-`course.yaml` file. Here's how you'd add it:
-
-```diff
-Course:
-  Language:
-    Name: French
-    IETF BCP 47: fr
-  For speakers of:
-    Name: English
-    IETF BCP 47: en
-  License:
-    Name: CC BY 3.0
-    Short name: CC BY 3.0
-    Link: https://creativecommons.org/licenses/by/3.0/
-
-Modules:
-  - basics/
-+ - animals/
+```sh
+git add courses/
+git commit --amend --no-edit
 ```
+
+This will add (amend) the new changes to the last commit that you did earlier. To see what changes are included in your last commit, run `git show -1` and use Page up and Page down key to scroll through it all or q to quit.
+
+When you are ready to push the changes:
+
+```sh
+git push origin HEAD
+# or
+git push origin my-awesome-branch
+```
+
+You may be asked to enter your GitHub username and password.
+
+**NOTE:** It's recommended that you [create an access token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token) and use it instead of the password due to security reasons. Due to a change in GitHub's policy, using passwords [will not work](https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/) from August 13, 2021 and may not work on certain times during June and July.
+
+Now go to your fork of the project (e.g. `https://github.com/<your github username>/LibreLingo/`). You'll see a message above the file list saying something like "my-awesome-branch had recent pushes less than a minute ago" offering you to "Compare & pull request" with a button. Click the button and explain what your changes are about and post a pull request.
+
+A pull request is a request to apply your changes to the original project. Such a request is not immediately applied, rather goes through a review process.
+
+After you posted the pull request, project maintainers will look into your changes and respond. When they do, you'll get a [notification](https://github.com/notifications) on GitHub.
+
+<a id="following-up-pr"></a>
+### Following up with PR responses
+
+Depending on the Pull Request (PR) you made earlier, you can either get accepted right away (in that case it will be "merged") or you may need to make some changes (you'll get comments). If the project maintainers ask for a change, do this:
+
+- `cd` into the git repository directory, or open a terminal on the directory
+- Make sure you're on the branch in which you made changes earlier. Check with `git status` and if not on proper branch, switch to it with:
+```sh
+git checkout my-awesome-branch
+```
+- **NOTE:** If you don't remember which branch you were in, check the Pull request you made or run `git branch -a` to find out and switch to it.
+- Make the changes requested.
+- Check that the changes are what you were asked to do by running `git diff` (Page up/down to scroll, q to quit).
+- When ready:
+```sh
+git add courses/
+git commit --amend --no-edit
+git push origin HEAD -f
+```
+
+The `-f` switch is to force push so that the existing commit gets updated. **NOTE:** The `git commit --amend` command amends (or updates) the changes into the last commit you made. So it is important that you keep your changes in a branch on a single commit (if you followed the instructions above you should be fine).
+
+<a id="translating"></a>
+## Translating based on an existing course
+
+If you just want to translate an existing course, the simplest way is to copy an existing course. Right now `spanish-from-english` is the most complete. So:
+
+- Go to `courses` directory on the repository you [cloned](#pulling-and-branching) earlier. Make sure you also do the `git checkout` command to create a new branch.
+- Copy `spanish-from-english` and rename the copy as `yourlanguageslug-from-english` (replace `yourlanguageslug` to [your language slug](README.md#things-new-contributors))
+- Edit `yourlanguageslug-from-english/course.yaml` to change keys under `Language` ([details here](course.md#data-breakdown))
+- Now keep editing Spanish parts to translate into your language with a text editor
+- If you need more details, consult [Course](course.md), [Module](module.md) or [Skill](skill.md) documentation
+
+_**NOTE:** When editing existing skill yaml files, do not change the skill IDs since you are just editing existing courses. If you change skill IDs it may create issues. New skill IDs are only needed in case if you create [new skills](skill.md#creating-new)._
+
+When you are done, you can continue to the [pull request section](#pushing-and-pr) to submit the changes.
+
+<a id="editing-existing"></a>
+## Editing existing courses
+
+If you want to make edits to course data, consult [Course](course.md), [Module](module.md) or [Skill](skill.md) documentation for details or [discuss](https://github.com/kantord/LibreLingo/discussions) if you're unsure on how to do something.
