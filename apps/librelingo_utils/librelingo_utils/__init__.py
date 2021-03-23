@@ -6,4 +6,4 @@ to create Python software that works with LibreLingo courses.
 
 from librelingo_utils.utils import *
 
-__version__ = '0.1.5'
+__version__ = '1.0.0'
