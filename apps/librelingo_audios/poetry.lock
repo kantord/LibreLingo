@@ -72,6 +72,17 @@ optional = false
 python-versions = ">=3.9,<4.0"
 
 [[package]]
+name = "librelingo-utils"
+version = "1.0.0"
+description = "Utilities to be used in LibreLingo-related-packages"
+category = "main"
+optional = false
+python-versions = ">=3.9,<4.0"
+
+[package.dependencies]
+librelingo-types = ">=0.1.1,<0.2.0"
+
+[[package]]
 name = "librelingo-yaml-loader"
 version = "0.1.5"
 description = "Load YAML-based LibreLingo courses in your Python project."
@@ -154,6 +165,20 @@ toml = "*"
 
 [package.extras]
 testing = ["argcomplete", "hypothesis (>=3.56)", "mock", "nose", "requests", "xmlschema"]
+
+[[package]]
+name = "pytest-mock"
+version = "3.5.1"
+description = "Thin-wrapper around the mock package for easier use with pytest"
+category = "dev"
+optional = false
+python-versions = ">=3.5"
+
+[package.dependencies]
+pytest = ">=5.0"
+
+[package.extras]
+dev = ["pre-commit", "tox", "pytest-asyncio"]
 
 [[package]]
 name = "python-slugify"
@@ -246,7 +271,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "5a6f7a2da6056b5bf14d7d47d1c0eea6844873fee61cdaf058503a5f054cc536"
+content-hash = "c85db89cafebdb33ee60952ee797d1695b559da9453d7cc55864f12f928a8edd"
 
 [metadata.files]
 atomicwrites = [
@@ -280,6 +305,10 @@ librelingo-types = [
     {file = "librelingo_types-0.1.2-py3-none-any.whl", hash = "sha256:132b7e926a2a6a07c80bb815ea1cc6040b2b6610657beac9505bcc05eaf7d9f9"},
     {file = "librelingo_types-0.1.2.tar.gz", hash = "sha256:991d76c44c640a7f45d831beb28597b8b4027ac223453f0085854a3958b5644c"},
 ]
+librelingo-utils = [
+    {file = "librelingo_utils-1.0.0-py3-none-any.whl", hash = "sha256:a29ce6d7adb15313b5c10f5f83fa0c961156ab08b2e8535b05aaa6ec67233885"},
+    {file = "librelingo_utils-1.0.0.tar.gz", hash = "sha256:f78ed2aed3c0f08520b7515b38f869c7638196b3fd198a159de4626fc25a368a"},
+]
 librelingo-yaml-loader = [
     {file = "librelingo_yaml_loader-0.1.5-py3-none-any.whl", hash = "sha256:c1b9ca9502c9c387392987b204387c66d57a738a1a322555c2605b5b67a4c1ad"},
     {file = "librelingo_yaml_loader-0.1.5.tar.gz", hash = "sha256:3ca4292dc49f110b5d373ac680840c28321d695277527df6826b4c38e5c681b6"},
@@ -307,6 +336,10 @@ pyparsing = [
 pytest = [
     {file = "pytest-6.2.2-py3-none-any.whl", hash = "sha256:b574b57423e818210672e07ca1fa90aaf194a4f63f3ab909a2c67ebb22913839"},
     {file = "pytest-6.2.2.tar.gz", hash = "sha256:9d1edf9e7d0b84d72ea3dbcdfd22b35fb543a5e8f2a60092dd578936bf63d7f9"},
+]
+pytest-mock = [
+    {file = "pytest-mock-3.5.1.tar.gz", hash = "sha256:a1e2aba6af9560d313c642dae7e00a2a12b022b80301d9d7fc8ec6858e1dd9fc"},
+    {file = "pytest_mock-3.5.1-py3-none-any.whl", hash = "sha256:379b391cfad22422ea2e252bdfc008edd08509029bcde3c25b2c0bd741e0424e"},
 ]
 python-slugify = [
     {file = "python-slugify-4.0.1.tar.gz", hash = "sha256:69a517766e00c1268e5bbfc0d010a0a8508de0b18d30ad5a1ff357f8ae724270"},
