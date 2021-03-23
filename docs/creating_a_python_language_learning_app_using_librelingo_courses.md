@@ -529,3 +529,667 @@ def list_missing_audios(course):
                 text = phrase.in_target_language[0]
                 yield [None, text]
 ```
+
+Now we also need to make sure that if someone create a software that will create these audio files, then they'll be 
+able to save it under a filename that other LibreLingo-related software will also recognize.
+
+In order to do achieve that, we can use the `audio_id` function from [librelingo-utils](https://pypi.org/project/librelingo-utils/).
+
+Let's start simple. First let's make sure that the IDs are string:
+
+```python
+def test_audio_id_is_a_string():
+    assert [type(result[0]) for result in list_missing_audios(fakes.course1)] == [str, str]
+```
+
+```
+==================================== test session starts =====================================
+platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
+rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
+plugins: pyfakefs-4.4.0, snapshottest-0.6.0
+collected 5 items                                                                            
+
+tests/test_list_missing_audios.py ....F                                                [100%]
+
+========================================== FAILURES ==========================================
+_________________________________ test_audio_id_is_a_string __________________________________
+
+    def test_audio_id_is_a_string():
+>       assert [type(result[0]) for result in list_missing_audios(fakes.course1)] == [str, str]
+E       AssertionError: assert [<class 'None...s 'NoneType'>] == [<class 'str'>, <class 'str'>]
+E         At index 0 diff: <class 'NoneType'> != <class 'str'>
+E         Use -v to get the full diff
+
+tests/test_list_missing_audios.py:24: AssertionError
+================================== short test summary info ===================================
+FAILED tests/test_list_missing_audios.py::test_audio_id_is_a_string - AssertionError: asser...
+================================ 1 failed, 4 passed in 0.04s =================================
+```
+
+
+However we can still easily cheat by simply returning an empty string:
+
+
+```python
+def list_missing_audios(course):
+    for module in course.modules:
+        for skill in module.skills:
+            for phrase in skill.phrases:
+                # Returning only the first version because
+                # the other versions never need audio.
+                text = phrase.in_target_language[0]
+                yield ["", text]
+```
+
+Now lets install librelingo-utils:
+
+```
+poetry add librelingo-utils
+```
+
+And make sure that our function calls `audio_id`:
+
+
+```python
+def test_calls_audio_id_to_get_the_id(mocker):
+    audio_id = mocker.patch('librelingo_audios.list_missing_audios.audio_id')
+    list_missing_audios(fakes.course1)
+    assert audio_id.call_count == 2
+
+```
+
+
+```
+==================================== test session starts =====================================
+platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
+rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
+plugins: pyfakefs-4.4.0, mock-3.5.1, snapshottest-0.6.0
+collected 6 items                                                                            
+
+tests/test_list_missing_audios.py .....F                                               [100%]
+
+========================================== FAILURES ==========================================
+_____________________________ test_calls_audio_id_to_get_the_id ______________________________
+
+mocker = <pytest_mock.plugin.MockerFixture object at 0x7ff94ee398e0>
+
+    def test_calls_audio_id_to_get_the_id(mocker):
+>       audio_id = mocker.patch('librelingo_audios.list_missing_audios.audio_id')
+
+tests/test_list_missing_audios.py:29: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/home/kdani/.cache/pypoetry/virtualenvs/librelingo-audios-yD2wurwN-py3.9/lib/python3.9/site-packages/pytest_mock/plugin.py:352: in __call__
+    return self._start_patch(
+/home/kdani/.cache/pypoetry/virtualenvs/librelingo-audios-yD2wurwN-py3.9/lib/python3.9/site-packages/pytest_mock/plugin.py:161: in _start_patch
+    mocked = p.start()  # type: unittest.mock.MagicMock
+/usr/lib/python3.9/unittest/mock.py:1541: in start
+    result = self.__enter__()
+/usr/lib/python3.9/unittest/mock.py:1405: in __enter__
+    original, local = self.get_original()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <unittest.mock._patch object at 0x7ff94ee39a00>
+
+    def get_original(self):
+        target = self.getter()
+        name = self.attribute
+    
+        original = DEFAULT
+        local = False
+    
+        try:
+            original = target.__dict__[name]
+        except (AttributeError, KeyError):
+            original = getattr(target, name, DEFAULT)
+        else:
+            local = True
+    
+        if name in _builtins and isinstance(target, ModuleType):
+            self.create = True
+    
+        if not self.create and original is DEFAULT:
+>           raise AttributeError(
+                "%s does not have the attribute %r" % (target, name)
+            )
+E           AttributeError: <function list_missing_audios at 0x7ff94ee4c5e0> does not have the attribute 'audio_id'
+
+/usr/lib/python3.9/unittest/mock.py:1378: AttributeError
+================================== short test summary info ===================================
+FAILED tests/test_list_missing_audios.py::test_calls_audio_id_to_get_the_id - AttributeErro...
+================================ 1 failed, 5 passed in 0.13s =================================
+```
+
+Oops, we can mock this because Python thinks that we are mocking an attribute of the function, not a function in the file.
+
+Let's rename `list_missing_audios.py` to `functions.py`. We'll put more functions here anyway.
+
+
+In our test file, let's change the import:
+
+```python
+from librelingo_audios.functions import list_missing_audios
+```
+
+Let's change the mock:
+
+```python
+def test_calls_audio_id_to_get_the_id(mocker):
+    audio_id = mocker.patch('librelingo_audios.functions.audio_id')
+    list_missing_audios(fakes.course1)
+    assert audio_id.call_count == 2
+```
+
+Let's also change the import in `__init__.py`:
+
+```python
+__version__ = '0.1.0'
+
+from librelingo_audios.functions import list_missing_audios
+```
+
+Now if we run our tests, we see the failure that we expect:
+
+
+```
+==================================== test session starts =====================================
+platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
+rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
+plugins: pyfakefs-4.4.0, mock-3.5.1, snapshottest-0.6.0
+collected 6 items                                                                            
+
+tests/test_list_missing_audios.py .....F                                               [100%]
+
+========================================== FAILURES ==========================================
+_____________________________ test_calls_audio_id_to_get_the_id ______________________________
+
+mocker = <pytest_mock.plugin.MockerFixture object at 0x7f458c9cc8e0>
+
+    def test_calls_audio_id_to_get_the_id(mocker):
+        audio_id = mocker.patch('librelingo_audios.functions.audio_id')
+        list_missing_audios(fakes.course1)
+>       assert audio_id.call_count == 2
+E       AssertionError: assert 0 == 2
+E        +  where 0 = <MagicMock name='audio_id' id='139936688556448'>.call_count
+
+tests/test_list_missing_audios.py:31: AssertionError
+================================== short test summary info ===================================
+FAILED tests/test_list_missing_audios.py::test_calls_audio_id_to_get_the_id - AssertionErro...
+================================ 1 failed, 5 passed in 0.04s =================================
+```
+
+Whoops, our test forgot to actually iterate over the result, lets fix that.
+
+```python
+def test_calls_audio_id_to_get_the_id(mocker):
+    audio_id = mocker.patch('librelingo_audios.functions.audio_id')
+    list(list_missing_audios(fakes.course1))
+    assert audio_id.call_count == 2
+```
+
+
+Now our tests are passing:
+
+```
+==================================== test session starts =====================================
+platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
+rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
+plugins: pyfakefs-4.4.0, mock-3.5.1, snapshottest-0.6.0
+collected 6 items                                                                            
+
+tests/test_list_missing_audios.py ......                                               [100%]
+
+===================================== 6 passed in 0.02s ======================================
+```
+
+
+You might have noticed that we are actually passing the source language instead of the target langauge. Also it is calling it with an empty string instead of the actual string.
+
+```python
+audio_id(course.source_language, "")
+```
+
+Let's write a test case to fix that:
+
+```python
+def test_calls_audio_id_with_the_correct_arguments(mocker):
+    audio_id = mocker.patch('librelingo_audios.functions.audio_id')
+    list(list_missing_audios(fakes.course1))
+    expected_call = mocker.call(fakes.course1.target_language, fakes.course1.modules[0].skills[0].phrases[0].in_target_language[0])
+    audio_id.assert_has_calls([expected_call])
+```
+
+```
+==================================== test session starts =====================================
+platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
+rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
+plugins: pyfakefs-4.4.0, mock-3.5.1, snapshottest-0.6.0
+collected 7 items                                                                            
+
+tests/test_list_missing_audios.py ......F                                              [100%]
+
+========================================== FAILURES ==========================================
+_______________________ test_calls_audio_id_with_the_correct_arguments _______________________
+
+__wrapped_mock_method__ = <function NonCallableMock.assert_has_calls at 0x7f41f5658280>
+args = (<MagicMock name='audio_id' id='139921258244032'>, [call(Language(name='my language', code='de'), 'lorem ipsum')])
+kwargs = {}, __tracebackhide__ = True
+msg = "Calls not found.\nExpected: [call(Language(name='my language', code='de'), 'lorem ipsum')]\nActual: [call(Language(na...uage(name='my language', code='de'), 'lorem ipsum')]\n  Left contains one more item: ''\n  Use -v to get the full diff"
+__mock_self = <MagicMock name='audio_id' id='139921258244032'>
+actual_args = (Language(name='another language', code='tr'), ''), actual_kwargs = {}
+introspection = "\nArgs:\nassert (Language(nam...ode='tr'), '') == ([call(Langua...rem ipsum')],)\n  At index 0 diff: Language(name='a...uage(name='my language', code='de'), 'lorem ipsum')]\n  Left contains one more item: ''\n  Use -v to get the full diff"
+@py_assert2 = ([call(Language(name='my language', code='de'), 'lorem ipsum')],)
+@py_assert1 = None
+@py_format4 = "(Language(nam...ode='tr'), '') == ([call(Langua...rem ipsum')],)\n~At index 0 diff: Language(name='another language',...nguage(name='my language', code='de'), 'lorem ipsum')]\n~Left contains one more item: ''\n~Use -v to get the full diff"
+
+    def assert_wrapper(
+        __wrapped_mock_method__: Callable[..., Any], *args: Any, **kwargs: Any
+    ) -> None:
+        __tracebackhide__ = True
+        try:
+>           __wrapped_mock_method__(*args, **kwargs)
+
+/home/kdani/.cache/pypoetry/virtualenvs/librelingo-audios-yD2wurwN-py3.9/lib/python3.9/site-packages/pytest_mock/plugin.py:392: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <MagicMock name='audio_id' id='139921258244032'>
+calls = [call(Language(name='my language', code='de'), 'lorem ipsum')], any_order = False
+
+    def assert_has_calls(self, calls, any_order=False):
+        """assert the mock has been called with the specified calls.
+        The `mock_calls` list is checked for the calls.
+    
+        If `any_order` is False (the default) then the calls must be
+        sequential. There can be extra calls before or after the
+        specified calls.
+    
+        If `any_order` is True then the calls can be in any order, but
+        they must all appear in `mock_calls`."""
+        expected = [self._call_matcher(c) for c in calls]
+        cause = next((e for e in expected if isinstance(e, Exception)), None)
+        all_calls = _CallList(self._call_matcher(c) for c in self.mock_calls)
+        if not any_order:
+            if expected not in all_calls:
+                if cause is None:
+                    problem = 'Calls not found.'
+                else:
+                    problem = ('Error processing expected calls.\n'
+                               'Errors: {}').format(
+                                   [e if isinstance(e, Exception) else None
+                                    for e in expected])
+>               raise AssertionError(
+                    f'{problem}\n'
+                    f'Expected: {_CallList(calls)}'
+                    f'{self._calls_repr(prefix="Actual").rstrip(".")}'
+                ) from cause
+E               AssertionError: Calls not found.
+E               Expected: [call(Language(name='my language', code='de'), 'lorem ipsum')]
+E               Actual: [call(Language(name='another language', code='tr'), ''),
+E                call(Language(name='another language', code='tr'), '')]
+
+/usr/lib/python3.9/unittest/mock.py:944: AssertionError
+
+During handling of the above exception, another exception occurred:
+
+mocker = <pytest_mock.plugin.MockerFixture object at 0x7f41f4eae6a0>
+
+    def test_calls_audio_id_with_the_correct_arguments(mocker):
+        audio_id = mocker.patch('librelingo_audios.functions.audio_id')
+        list(list_missing_audios(fakes.course1))
+        expected_call = mocker.call(fakes.course1.target_language, fakes.course1.modules[0].skills[0].phrases[0].in_target_language[0])
+>       assert audio_id.assert_has_calls([expected_call])
+E       AssertionError: Calls not found.
+E       Expected: [call(Language(name='my language', code='de'), 'lorem ipsum')]
+E       Actual: [call(Language(name='another language', code='tr'), ''),
+E        call(Language(name='another language', code='tr'), '')]
+E       
+E       pytest introspection follows:
+E       
+E       Args:
+E       assert (Language(nam...ode='tr'), '') == ([call(Langua...rem ipsum')],)
+E         At index 0 diff: Language(name='another language', code='tr') != [call(Language(name='my language', code='de'), 'lorem ipsum')]
+E         Left contains one more item: ''
+E         Use -v to get the full diff
+
+tests/test_list_missing_audios.py:38: AssertionError
+================================== short test summary info ===================================
+FAILED tests/test_list_missing_audios.py::test_calls_audio_id_with_the_correct_arguments - ...
+================================ 1 failed, 6 passed in 0.09s =================================
+
+```
+
+
+Lets make that test pass:
+
+```python
+def list_missing_audios(course):
+    for module in course.modules:
+        for skill in module.skills:
+            for phrase in skill.phrases:
+                # Returning only the first version because
+                # the other versions never need audio.
+                text = phrase.in_target_language[0]
+                audio_id(course.target_language, "lorem ipsum")
+                yield ["", text]
+```
+
+```
+==================================== test session starts =====================================
+platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
+rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
+plugins: pyfakefs-4.4.0, mock-3.5.1, snapshottest-0.6.0
+collected 7 items                                                                            
+
+tests/test_list_missing_audios.py .......                                              [100%]
+
+===================================== 7 passed in 0.03s ======================================
+```
+
+
+But you'll notice this is still cheating, because we're always using `"lorem ipsum"` as tthe text.
+Let's extend our test case to fix that.
+
+```python
+
+def test_calls_audio_id_with_the_correct_arguments(mocker):
+    audio_id = mocker.patch('librelingo_audios.functions.audio_id')
+    list(list_missing_audios(fakes.course1))
+    expected_call_1 = mocker.call(fakes.course1.target_language, fakes.course1.modules[0].skills[0].phrases[0].in_target_language[0])
+    expected_call_2 = mocker.call(fakes.course1.target_language, fakes.course1.modules[0].skills[1].phrases[0].in_target_language[0])
+    audio_id.assert_has_calls([expected_call_1, expected_call_2])
+
+
+```
+
+
+Yup, our tests are failing again:
+
+```
+==================================== test session starts =====================================
+platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
+rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
+plugins: pyfakefs-4.4.0, mock-3.5.1, snapshottest-0.6.0
+collected 7 items                                                                            
+
+tests/test_list_missing_audios.py ......F                                              [100%]
+
+========================================== FAILURES ==========================================
+_______________________ test_calls_audio_id_with_the_correct_arguments _______________________
+
+__wrapped_mock_method__ = <function NonCallableMock.assert_has_calls at 0x7f826b69c280>
+args = (<MagicMock name='audio_id' id='140198116202384'>, [call(Language(name='my language', code='de'), 'lorem ipsum'), call(Language(name='my language', code='de'), 'foous barus')])
+kwargs = {}, __tracebackhide__ = True
+msg = "Calls not found.\nExpected: [call(Language(name='my language', code='de'), 'lorem ipsum'),\n call(Language(name='my l...my language', code='de'), 'foous barus')]\n  Left contains one more item: 'lorem ipsum'\n  Use -v to get the full diff"
+__mock_self = <MagicMock name='audio_id' id='140198116202384'>
+actual_args = (Language(name='my language', code='de'), 'lorem ipsum'), actual_kwargs = {}
+introspection = "\nArgs:\nassert (Language(nam...'lorem ipsum') == ([call(Langua...ous barus')],)\n  At index 0 diff: Language(name='m...my language', code='de'), 'foous barus')]\n  Left contains one more item: 'lorem ipsum'\n  Use -v to get the full diff"
+@py_assert2 = ([call(Language(name='my language', code='de'), 'lorem ipsum'), call(Language(name='my language', code='de'), 'foous barus')],)
+@py_assert1 = None
+@py_format4 = "(Language(nam...'lorem ipsum') == ([call(Langua...ous barus')],)\n~At index 0 diff: Language(name='my language', code...='my language', code='de'), 'foous barus')]\n~Left contains one more item: 'lorem ipsum'\n~Use -v to get the full diff"
+
+    def assert_wrapper(
+        __wrapped_mock_method__: Callable[..., Any], *args: Any, **kwargs: Any
+    ) -> None:
+        __tracebackhide__ = True
+        try:
+>           __wrapped_mock_method__(*args, **kwargs)
+
+/home/kdani/.cache/pypoetry/virtualenvs/librelingo-audios-yD2wurwN-py3.9/lib/python3.9/site-packages/pytest_mock/plugin.py:392: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <MagicMock name='audio_id' id='140198116202384'>
+calls = [call(Language(name='my language', code='de'), 'lorem ipsum'), call(Language(name='my language', code='de'), 'foous barus')]
+any_order = False
+
+    def assert_has_calls(self, calls, any_order=False):
+        """assert the mock has been called with the specified calls.
+        The `mock_calls` list is checked for the calls.
+    
+        If `any_order` is False (the default) then the calls must be
+        sequential. There can be extra calls before or after the
+        specified calls.
+    
+        If `any_order` is True then the calls can be in any order, but
+        they must all appear in `mock_calls`."""
+        expected = [self._call_matcher(c) for c in calls]
+        cause = next((e for e in expected if isinstance(e, Exception)), None)
+        all_calls = _CallList(self._call_matcher(c) for c in self.mock_calls)
+        if not any_order:
+            if expected not in all_calls:
+                if cause is None:
+                    problem = 'Calls not found.'
+                else:
+                    problem = ('Error processing expected calls.\n'
+                               'Errors: {}').format(
+                                   [e if isinstance(e, Exception) else None
+                                    for e in expected])
+>               raise AssertionError(
+                    f'{problem}\n'
+                    f'Expected: {_CallList(calls)}'
+                    f'{self._calls_repr(prefix="Actual").rstrip(".")}'
+                ) from cause
+E               AssertionError: Calls not found.
+E               Expected: [call(Language(name='my language', code='de'), 'lorem ipsum'),
+E                call(Language(name='my language', code='de'), 'foous barus')]
+E               Actual: [call(Language(name='my language', code='de'), 'lorem ipsum'),
+E                call(Language(name='my language', code='de'), 'lorem ipsum')]
+
+/usr/lib/python3.9/unittest/mock.py:944: AssertionError
+
+During handling of the above exception, another exception occurred:
+
+mocker = <pytest_mock.plugin.MockerFixture object at 0x7f826aef1a90>
+
+    def test_calls_audio_id_with_the_correct_arguments(mocker):
+        audio_id = mocker.patch('librelingo_audios.functions.audio_id')
+        list(list_missing_audios(fakes.course1))
+        expected_call_1 = mocker.call(fakes.course1.target_language, fakes.course1.modules[0].skills[0].phrases[0].in_target_language[0])
+        expected_call_2 = mocker.call(fakes.course1.target_language, fakes.course1.modules[0].skills[1].phrases[0].in_target_language[0])
+>       audio_id.assert_has_calls([expected_call_1, expected_call_2])
+E       AssertionError: Calls not found.
+E       Expected: [call(Language(name='my language', code='de'), 'lorem ipsum'),
+E        call(Language(name='my language', code='de'), 'foous barus')]
+E       Actual: [call(Language(name='my language', code='de'), 'lorem ipsum'),
+E        call(Language(name='my language', code='de'), 'lorem ipsum')]
+E       
+E       pytest introspection follows:
+E       
+E       Args:
+E       assert (Language(nam...'lorem ipsum') == ([call(Langua...ous barus')],)
+E         At index 0 diff: Language(name='my language', code='de') != [call(Language(name='my language', code='de'), 'lorem ipsum'), call(Language(name='my language', code='de'), 'foous barus')]
+E         Left contains one more item: 'lorem ipsum'
+E         Use -v to get the full diff
+
+tests/test_list_missing_audios.py:39: AssertionError
+================================== short test summary info ===================================
+FAILED tests/test_list_missing_audios.py::test_calls_audio_id_with_the_correct_arguments - ...
+================================ 1 failed, 6 passed in 0.08s =================================
+
+```
+
+
+
+Let's make them pass:
+
+```python
+def list_missing_audios(course):
+    for module in course.modules:
+        for skill in module.skills:
+            for phrase in skill.phrases:
+                # Returning only the first version because
+                # the other versions never need audio.
+                text = phrase.in_target_language[0]
+                audio_id(course.target_language, phrase.in_target_language[0])
+                yield ["", text]
+```
+
+
+This looks good, but we're still not returning the ID! You guessed it, that's a new test case for us!
+
+
+
+```python
+def test_returns_correct_audio_id(mocker):
+    audio_id = mocker.patch('librelingo_audios.functions.audio_id')
+    audio_id.return_value = "omg"
+    assert list(list_missing_audios(fakes.course1))[0][0] == "omg"
+```
+
+```
+==================================== test session starts =====================================
+platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
+rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
+plugins: pyfakefs-4.4.0, mock-3.5.1, snapshottest-0.6.0
+collected 8 items                                                                            
+
+tests/test_list_missing_audios.py .......F                                             [100%]
+
+========================================== FAILURES ==========================================
+_______________________________ test_returns_correct_audio_id ________________________________
+
+mocker = <pytest_mock.plugin.MockerFixture object at 0x7fe9191977f0>
+
+    def test_returns_correct_audio_id(mocker):
+        audio_id = mocker.patch('librelingo_audios.functions.audio_id')
+        audio_id.return_value = "omg"
+>       assert list(list_missing_audios(fakes.course1))[0][0] == "omg"
+E       AssertionError: assert '' == 'omg'
+E         - omg
+
+tests/test_list_missing_audios.py:45: AssertionError
+================================== short test summary info ===================================
+FAILED tests/test_list_missing_audios.py::test_returns_correct_audio_id - AssertionError: a...
+================================ 1 failed, 7 passed in 0.04s =================================
+```
+
+Let's cheat again to make the test pass:
+
+```python
+def list_missing_audios(course):
+    for module in course.modules:
+        for skill in module.skills:
+            for phrase in skill.phrases:
+                # Returning only the first version because
+                # the other versions never need audio.
+                text = phrase.in_target_language[0]
+                audio_id(course.target_language, phrase.in_target_language[0])
+                yield ["omg", text]
+```
+
+Let's make another test case to make it impossible to cheat. This makes it impossible to cheat because
+we are mocking the same function with a different return value, and it's impossible for the code
+to decide which mock we're using:
+
+```python
+def test_returns_correct_audio_id_2(mocker):
+    audio_id = mocker.patch('librelingo_audios.functions.audio_id')
+    audio_id.return_value = "foobar"
+    assert list(list_missing_audios(fakes.course1))[0][0] == "foobar"
+```
+
+
+```
+==================================== test session starts =====================================
+platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
+rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
+plugins: pyfakefs-4.4.0, mock-3.5.1, snapshottest-0.6.0
+collected 9 items                                                                            
+
+tests/test_list_missing_audios.py ........F                                            [100%]
+
+========================================== FAILURES ==========================================
+______________________________ test_returns_correct_audio_id_2 _______________________________
+
+mocker = <pytest_mock.plugin.MockerFixture object at 0x7f83d4646a00>
+
+    def test_returns_correct_audio_id_2(mocker):
+        audio_id = mocker.patch('librelingo_audios.functions.audio_id')
+        audio_id.return_value = "foobar"
+>       assert list(list_missing_audios(fakes.course1))[0][0] == "foobar"
+E       AssertionError: assert 'omg' == 'foobar'
+E         - foobar
+E         + omg
+
+tests/test_list_missing_audios.py:51: AssertionError
+================================== short test summary info ===================================
+FAILED tests/test_list_missing_audios.py::test_returns_correct_audio_id_2 - AssertionError:...
+================================ 1 failed, 8 passed in 0.05s =================================
+```
+
+
+Let's fix our implementation:
+
+
+```python
+from librelingo_utils import audio_id
+
+def list_missing_audios(course):
+    for module in course.modules:
+        for skill in module.skills:
+            for phrase in skill.phrases:
+                # Returning only the first version because
+                # the other versions never need audio.
+                text = phrase.in_target_language[0]
+                id_ = audio_id(course.target_language, phrase.in_target_language[0])
+                yield [id_, text]
+```
+
+Now let's do a little bit of refactoring. I don't really want to shove more functionality
+into this function, so let's rename it to `list_required_audios` in all files.
+
+Later we can create a `list_missing_audios` which will actually list only the audio files
+that are missing.
+
+
+```python
+from librelingo_utils import audio_id
+
+def list_required_audios(course):
+    for module in course.modules:
+        for skill in module.skills:
+            for phrase in skill.phrases:
+                # Returning only the first version because
+                # the other versions never need audio.
+                text = phrase.in_target_language[0]
+                id_ = audio_id(course.target_language, phrase.in_target_language[0])
+                yield [id_, text]
+```
+
+Let's make sure our tests still pass:
+
+
+```
+==================================== test session starts =====================================
+platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
+rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
+plugins: pyfakefs-4.4.0, mock-3.5.1, snapshottest-0.6.0
+collected 9 items                                                                            
+
+tests/test_list_missing_audios.py .........                                            [100%]
+
+===================================== 9 passed in 0.03s ======================================
+
+```
+
+Now let's extract the iteration part in order to simplify our function:
+
+
+```python
+from librelingo_utils import audio_id
+
+def _iterate_phrases(course):
+    '"Flatten" a course into a sequence of phrases'
+    for module in course.modules:
+        for skill in module.skills:
+            for phrase in skill.phrases:
+                yield phrase
+
+
+def list_required_audios(course):
+    for phrase in _iterate_phrases(course):
+        # Returning only the first version because
+        # the other versions never need audio.
+        text = phrase.in_target_language[0]
+        id_ = audio_id(course.target_language, phrase.in_target_language[0])
+        yield [id_, text]
+```
+
