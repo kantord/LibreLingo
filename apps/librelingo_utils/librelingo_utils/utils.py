@@ -50,10 +50,10 @@ def get_opaque_id(obj, salt=""):
     return get_dumb_opaque_id(type(obj).__name__.lower(), str(obj.id), salt)
 
 
-def audio_id(language_id, text):
+def audio_id(language, text):
     """
     Generate the ID that will identify the audio file of a sentence.
     """
     hash = hashlib.sha256()
-    hash.update((language_id.lower() + "|" + text).encode('utf-8'))
+    hash.update((language.name.lower() + "|" + text).encode('utf-8'))
     return hash.hexdigest()
