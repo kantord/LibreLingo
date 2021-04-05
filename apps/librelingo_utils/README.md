@@ -49,7 +49,7 @@ id
 #### audio\_id
 
 ```python
-audio_id(language_id, text)
+audio_id(language, text)
 ```
 
 Generate the ID that will identify the audio file of a sentence.
