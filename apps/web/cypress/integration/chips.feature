@@ -22,8 +22,9 @@ Feature: Chips challenge
     
   Scenario: Submitting an incorrect solution
     Given I open "/course/test/skill/_chips_test0"
-    And I order words incorrectly
-    Then I see the challenge panel with no skip button
+    And I click "estás"
+    And I click "hoy"
+    And I click "Como"
     Given I click "Submit"
     Then I read "Incorrect solution"
     And I read "Correct answer: ¿Como, estás hoy?"
@@ -33,8 +34,9 @@ Feature: Chips challenge
 
   Scenario: Submitting a correct solution
     Given I open "/course/test/skill/_chips_test0"
-    And I order words correctly
-    Then I see the challenge panel with no skip button
+    And I click "Como"
+    And I click "estás"
+    And I click "hoy"
     Given I click "Submit"
     Then I see the challenge panel with no skip button
     And I read "Correct solution"
@@ -44,8 +46,10 @@ Feature: Chips challenge
 
   Scenario: Submitting an alternative correct solution
     Given I open "/course/test/skill/_chips_test0"
-    And I order words correctly, but in a different way
-    Then I see the challenge panel with no skip button
+    And I click "Tu"
+    And I click "Como"
+    And I click "estás"
+    And I click "hoy"
     Given I click "Submit"
     Then I see the challenge panel with no skip button
     And I read "Correct solution"
