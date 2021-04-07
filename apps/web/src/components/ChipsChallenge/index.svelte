@@ -1,5 +1,6 @@
 <script lang="typescript">
   import { onMount } from "svelte"
+  import Sortable from 'sortablejs';
   import hotkeys from "hotkeys-js"
   import shuffle from "lodash.shuffle"
   import { writable } from "svelte/store"
@@ -14,8 +15,12 @@
   
   let submitted = false
   let correct = null
+  let chipsElement: HTMLElement
+  let answerElement: HTMLElement
   const answer = writable([])
-  const chips = writable(shuffle(challenge.chips))
+  const initialChips = shuffle(challenge.chips)
+  const initialAnswer = []
+  const chips = writable(initialChips)
 
   if (process.browser === true) {
       window.testSolution = () => {
@@ -69,6 +74,34 @@
       chips.update(oldItems => [...oldItems, chip])
   }
 
+  const initializeSortable1 = () =>
+    Sortable.create(chipsElement, {
+        group: 'chips',
+        store: {
+          get: function(sortable) {
+            return $chips
+          },
+          set: function(sortable) {
+            chips.set(sortable.toArray())
+            return sortable.toArray()
+          }
+        }
+      });
+
+  const initializeSortable2 = () =>
+    Sortable.create(answerElement, {
+        group: 'chips',
+        store: {
+          get: function(sortable) {
+            return $answer
+          },
+          set: function(sortable) {
+            answer.set(sortable.toArray())
+            return sortable.toArray()
+          }
+        }
+      });
+
   onMount(() => {
       hotkeys.unbind("enter")
       hotkeys("enter", () => {
@@ -78,6 +111,9 @@
               submitChallenge()
           }
       })
+
+      initializeSortable1()
+      initializeSortable2()
   })
 </script>
 
@@ -89,11 +125,12 @@
     </p>
   </div>
 
+    {JSON.stringify($answer)}
   <div>
     <div class="solution">
-      <div class="chips">
-        {#each $answer as chip, index}
-          <span class="chip" on:click="{() => handleAnswerClick(chip, index)}">
+      <div class="chips" bind:this={answerElement}>
+        {#each initialAnswer as chip, index}
+          <span class="chip" data-id={chip} on:click="{() => handleAnswerClick(chip, index)}">
             <spain class="tag is-medium">{chip}</spain>
           </span>
         {/each}
@@ -101,10 +138,11 @@
 
     </div>
 
+    {JSON.stringify($chips)}
     <p class="sub-instructions">Use these words:</p>
-    <div class="chips">
-      {#each $chips as chip, index}
-        <span class="chip" on:click="{() => handleOptionClick(chip, index)}">
+    <div id="chips" class="chips" bind:this={chipsElement}>
+      {#each initialChips as chip, index}
+        <span class="chip" data-id={chip} on:click="{() => handleOptionClick(chip, index)}">
           <spain class="tag is-medium">{chip}</spain>
         </span>
       {/each}
