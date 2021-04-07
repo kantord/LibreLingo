@@ -20,9 +20,9 @@ module.exports = {
     parserOptions: {
         ecmaVersion: 2020,
         sourceType: "module",
-        extraFileExtensions: [".svelte"]
+        extraFileExtensions: [".svelte"],
     },
-    plugins: ["svelte3", "jest", "cypress", '@typescript-eslint'],
+    plugins: ["svelte3", "jest", "cypress", "@typescript-eslint"],
     overrides: [
         {
             files: ["**/*.svelte"],
