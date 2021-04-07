@@ -1,5 +1,6 @@
 <script lang="typescript">
   import { onMount } from "svelte"
+  import Sortable from 'sortablejs';
   import hotkeys from "hotkeys-js"
   import shuffle from "lodash.shuffle"
   import { writable } from "svelte/store"
@@ -14,29 +15,19 @@
   
   let submitted = false
   let correct = null
+  let chipsElement: HTMLElement
+  let answerElement: HTMLElement
   const answer = writable([])
-  const chips = writable(shuffle(challenge.chips))
-
-  if (process.browser === true) {
-      window.testSolution = () => {
-          answer.update(() => ["Como", "estás", "hoy"])
-      }
-
-      window.testSolution2 = () => {
-          answer.update(() => ["Tu", "como", "estás", "hoy"])
-      }
-
-      window.testIncorrectSolution = () => {
-          answer.update(() => ["Como", "hoy"])
-      }
-  }
+  let answerToRender = []
+  let chipsToRender = shuffle(challenge.chips)
+  const chips = writable(chipsToRender)
 
   $: submitChallenge = () => {
       if (!$answer) return
       if (submitted) return
       correct = false
       const answerForm = $answer.join(" ")
-      challenge.solutions.map((solution) => {
+      challenge.solutions.map((solution: string[]) => {
           correct = correct || answerForm === solution.join(" ")
       })
       registerResult(correct)
@@ -49,25 +40,66 @@
       resolveChallenge()
   }
 
-  $: handleOptionClick = (chip, index) => {
+  $: handleChipClick = (chip, index, event) => {
       if (submitted) return
-      chips.update(oldItems => {
-          const newItems = [...oldItems]
-          newItems.splice(index, 1)
-          return newItems
-      })
-      answer.update(oldItems => [...oldItems, chip])
+      const type = event.target.parentElement.id || event.target.parentElement.parentElement.id
+      if (type === "chips") {
+        chips.update(oldItems => {
+            const newItems = [...oldItems]
+            newItems.splice(index, 1)
+            return newItems
+        })
+        answer.update(oldItems => [...oldItems, chip])
+      }
+
+      if (type === "answer") {
+        answer.update(oldItems => {
+            const newItems = [...oldItems]
+            newItems.splice(index, 1)
+            return newItems
+        })
+        chips.update(oldItems => [...oldItems, chip])
+      }
+
+      chipsSortable.destroy()
+      answerSortable.destroy()
+      answerToRender = $answer
+      chipsToRender = $chips
+      setTimeout(() => {
+        initializeSortable1()
+        initializeSortable2()
+      }, 0)
   }
 
-  $: handleAnswerClick = (chip, index) => {
-      if (submitted) return
-      answer.update(oldItems => {
-          const newItems = [...oldItems]
-          newItems.splice(index, 1)
-          return newItems
-      })
-      chips.update(oldItems => [...oldItems, chip])
-  }
+  let chipsSortable
+  let answerSortable
+
+  const initializeSortable1 = () => {
+    chipsSortable = Sortable.create(chipsElement, {
+        group: 'chips',
+        store: {
+          get: function(sortable) {
+            return $chips
+          },
+          set: function(sortable) {
+            chips.set(sortable.toArray())
+          }
+        }
+      });
+    }
+
+  const initializeSortable2 = () =>
+    answerSortable = Sortable.create(answerElement, {
+        group: 'chips',
+        store: {
+          get: function(sortable) {
+            return $answer
+          },
+          set: function(sortable) {
+            answer.set(sortable.toArray())
+          }
+        }
+      });
 
   onMount(() => {
       hotkeys.unbind("enter")
@@ -78,6 +110,9 @@
               submitChallenge()
           }
       })
+
+      initializeSortable1()
+      initializeSortable2()
   })
 </script>
 
@@ -90,22 +125,27 @@
   </div>
 
   <div>
+    {JSON.stringify($answer)}
+    {JSON.stringify(answerToRender)}
     <div class="solution">
-      <div class="chips">
-        {#each $answer as chip, index}
-          <span class="chip" on:click="{() => handleAnswerClick(chip, index)}">
-            <spain class="tag is-medium">{chip}</spain>
+      <div id="answer" class="chips" bind:this={answerElement}>
+        {#each answerToRender as chip, index}
+          <span class="chip" data-id={chip} on:click="{(event) => handleChipClick(chip, index, event)}">
+            <span class="tag is-medium">{chip}</span>
           </span>
         {/each}
       </div>
 
     </div>
 
+
+    {JSON.stringify($chips)}
+    {JSON.stringify(chipsToRender)}
     <p class="sub-instructions">Use these words:</p>
-    <div class="chips">
-      {#each $chips as chip, index}
-        <span class="chip" on:click="{() => handleOptionClick(chip, index)}">
-          <spain class="tag is-medium">{chip}</spain>
+    <div id="chips" class="chips" bind:this={chipsElement}>
+      {#each chipsToRender as chip, index}
+        <span class="chip" data-id={chip} on:click="{(event) => handleChipClick(chip, index, event)}">
+          <span class="tag is-medium">{chip}</span>
         </span>
       {/each}
     </div>
