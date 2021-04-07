@@ -1,0 +1,1125 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="assets/images/favicon.png" rel="shortcut icon"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-7.0.3" name="generator"/>
+<title>Create your own language learning app using Python and LibreLingo (TDD) - LibreLingo Documentation</title>
+<link href="assets/stylesheets/main.1655a90d.min.css" rel="stylesheet"/>
+<link href="assets/stylesheets/palette.7fa14f5b.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+</head>
+<body data-md-color-accent="" data-md-color-primary="none" data-md-color-scheme="" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#create-your-own-language-learning-app-using-python-and-librelingo-tdd">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="LibreLingo Documentation" class="md-header__button md-logo" href="./index.html" title="LibreLingo Documentation">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            LibreLingo Documentation
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Create your own language learning app using Python and LibreLingo (TDD)
+            
+          </span>
+</div>
+</div>
+</div>
+<div class="md-header__options">
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/kantord/LibreLingo/" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="LibreLingo Documentation" class="md-nav__button md-logo" href="./index.html" title="LibreLingo Documentation">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"></path></svg>
+</a>
+    LibreLingo Documentation
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/kantord/LibreLingo/" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="index.html">
+        Development
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="CODE_OF_CONDUCT.html">
+        Contributor Covenant Code of Conduct
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="CONTRIBUTING.html">
+        Contributing
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="LICENSE.html">
+        LICENSE
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="attributions.html">
+        Media attributions
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Create your own language learning app using Python and LibreLingo (TDD)
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="creating_a_python_language_learning_app_using_librelingo_courses.html">
+        Create your own language learning app using Python and LibreLingo (TDD)
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#requirements">
+    Requirements
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setting-up-your-project">
+    Setting up your project
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#loading-librelingo-courses">
+    Loading LibreLingo courses
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-some-tests">
+    Adding some tests
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="website_tos.html">
+        Website tos
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8">
+        Courses
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Courses" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+          Courses
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="courses/index.html">
+        LibreLingo Course Documentation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="courses/course.html">
+        LibreLingo Documentation on Course
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="courses/creating-courses.html">
+        Creating courses
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="courses/editing-courses.html">
+        Editing LibreLingo courses
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="courses/module.html">
+        LibreLingo Documentation on Module
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="courses/skill.html">
+        LibreLingo Documentation on Skill
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#requirements">
+    Requirements
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setting-up-your-project">
+    Setting up your project
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#loading-librelingo-courses">
+    Loading LibreLingo courses
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-some-tests">
+    Adding some tests
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<a class="md-content__button md-icon" href="https://github.com/kantord/LibreLingo/edit/master/docs/creating_a_python_language_learning_app_using_librelingo_courses.md" title="Edit this page">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
+</a>
+<h1 id="create-your-own-language-learning-app-using-python-and-librelingo-tdd">Create your own language learning app using Python and LibreLingo (TDD)</h1>
+<p>In this tutorial you'll learn how to use LibreLingo course data to create
+language-learning apps in Python.</p>
+<p>We'll build a simple function that lists the audio files required by
+a LibreLingo course. (Whether they exist or not yet)</p>
+<p>LibreLingo comes with some tools that make it easier to build such
+programs and also to test them. I structured the tutorial as a small
+Test-Driven-Development session so that you'll see how to use these tools.</p>
+<p>By the end of the tutorial you should have a good basis to build
+your own apps, APIs or software using LibreLingo, or to contribute
+to LibreLingo or existing LibreLingo-based software.</p>
+<h2 id="requirements">Requirements</h2>
+<p>To enjoy this tutorial, you'll need to have some experience with
+Python, and you also need to have Python 3.9 installed on your system,
+as well as the <a href="https://python-poetry.org/">poetry dependency management tool</a>.</p>
+<h2 id="setting-up-your-project">Setting up your project</h2>
+<p>To set up our project, we're going to first create an empty folder.</p>
+<p>If you are creating your app inside the LibreLingo monorepo,
+that's how you'd do it:</p>
+<pre><code class="language-bash">cd apps/
+mkdir librelingo_audios
+cd librelingo_audios/
+</code></pre>
+<p>Let's initialize our project using <code>poetry</code>:</p>
+<pre><code class="language-bash">poetry init
+</code></pre>
+<p>If you want to learn more about <code>poetry</code>, you can check out their
+documentation on <a href="https://python-poetry.org/docs/basic-usage/#project-setup">initializing your project</a>.</p>
+<p>Let's create the basic folder structure of our project:</p>
+<pre><code class="language-bash">mkdir librelingo_audios
+mkdir tests
+touch librelingo_audios/__init__.py
+</code></pre>
+<p>We want to test our app, so we need to install <code>pytest</code> as a development
+dependency of our project:</p>
+<pre><code class="language-bash">poetry add --dev pytest
+</code></pre>
+<p>Let's see if <code>pytest</code> works:</p>
+<pre><code class="language-bash">poetry run pytest
+</code></pre>
+<p>The output is:</p>
+<pre><code class="language-console">==================================== test session starts =====================================
+platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
+rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
+collected 0 items                                                                            
+
+=================================== no tests ran in 0.00s ====================================
+</code></pre>
+<p>Looks like <code>pytest</code> works and we can start writing our tests!</p>
+<p>Let's create <code>tests/test_list_missing_audios.py</code> with this simple test case:</p>
+<pre><code class="language-python">from librelingo_audios import list_missing_audios
+
+def test_returns_hello_world():
+    assert list_missing_audios() == "Hello World"
+</code></pre>
+<p>Let's try running this test:</p>
+<pre><code class="language-bash">poetry run pytest
+</code></pre>
+<p>We get this error:</p>
+<pre><code class="language-console">==================================== test session starts =====================================
+platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
+rootdir: /home/kdani/repos/LibreLingo
+plugins: pyfakefs-4.4.0, mock-3.5.1, snapshottest-0.6.0
+collected 178 items / 1 error / 177 selected                                                 
+
+=========================================== ERRORS ===========================================
+_________ ERROR collecting apps/librelingo_audios/tests/test_list_missing_audios.py __________
+ImportError while importing test module '/home/kdani/repos/LibreLingo/apps/librelingo_audios/tests/test_list_missing_audios.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.9/importlib/__init__.py:127: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+apps/librelingo_audios/tests/test_list_missing_audios.py:1: in &lt;module&gt;
+    from librelingo_audios import list_missing_audios
+E   ModuleNotFoundError: No module named 'librelingo_audios'
+================================== short test summary info ===================================
+ERROR apps/librelingo_audios/tests/test_list_missing_audios.py
+!!!!!!!!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!!!!!!!!
+====================================== 1 error in 0.88s ======================================
+</code></pre>
+<p>Makes sense, because we haven't created our implementation yet!</p>
+<p>Lets create <code>librelingo_audios/list_missing_audios.py</code> with the following content:</p>
+<pre><code class="language-python">def list_missing_audios():
+    return "Hello World"
+</code></pre>
+<p>We need to be able to import that in our test, so let's create <code>librelingo_audios/__init__.py</code>:</p>
+<pre><code class="language-python">__version__ = '0.1.0'
+
+from librelingo_audios.list_missing_audios import list_missing_audios
+</code></pre>
+<p>If you did that, this is how your directory structure should look like now:</p>
+<pre><code class="language-console">├── librelingo_audios
+│   ├── __init__.py
+│   ├── list_missing_audios.py
+├── poetry.lock
+├── pyproject.toml
+└── tests
+    └── test_list_missing_audios.py
+</code></pre>
+<p>Let's try running our tests again:</p>
+<pre><code class="language-bash">poetry run pytest
+</code></pre>
+<p>You'll get the following output:</p>
+<pre><code class="language-console">==================================== test session starts =====================================
+platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
+rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
+collected 1 item                                                                             
+
+tests/test_list_missing_audios.py .                                                    [100%]
+
+===================================== 1 passed in 0.01s ======================================
+</code></pre>
+<h2 id="loading-librelingo-courses">Loading LibreLingo courses</h2>
+<p>LibreLingo comes with a Python package that facilitates loading courses in
+Python programs. Let's install it:</p>
+<pre><code class="language-bash">poetry add librelingo_yaml_loader
+</code></pre>
+<p>Let's play around with this library in <code>ipython</code> to see how it works:</p>
+<pre><code class="language-bash">poetry run ipython
+</code></pre>
+<pre><code class="language-python">In [1]: import librelingo_yaml_loader
+In [2]: course = librelingo_yaml_loader.load_course('../../courses/spanish-from-english/')
+</code></pre>
+<p>We've loaded our course into the variable <code>course</code>.
+Now you should be able to access course data.</p>
+<p>For example, we can see what the target language of the course is:</p>
+<pre><code class="language-python">In [3]: course.target_language.name
+Out[3]: 'Spanish'
+</code></pre>
+<p>We can see what the title of the first Module is:</p>
+<pre><code class="language-python">In [4]: course.modules[0].title
+Out[4]: 'Basics'
+</code></pre>
+<p>We can list the Phrase objects included in
+the second Skill of the first Module like so:</p>
+<pre><code class="language-python">In [6]: course.modules[0].skills[1].phrases
+Out[6]: 
+[Phrase(in_target_language=['Buen provecho'], in_source_language=['Enjoy your meal']),
+ Phrase(in_target_language=['Por favor'], in_source_language=['Please']),
+ Phrase(in_target_language=['Pan, por favor'], in_source_language=['Bread, please']),
+ Phrase(in_target_language=['Agua, por favor'], in_source_language=['Water, please']),
+ Phrase(in_target_language=['Cecilia bebe agua'], in_source_language=['Cecilia drinks water']),
+ Phrase(in_target_language=['La pareja bebe cerveza'], in_source_language=['The couple drinks beer']),
+ Phrase(in_target_language=['José come pan'], in_source_language=['José eats bread']),
+ Phrase(in_target_language=['Yo como pasta'], in_source_language=['I eat pasta'])]
+</code></pre>
+<h2 id="adding-some-tests">Adding some tests</h2>
+<p>We'll need some data to write our tests. We could use real data here, but hat
+would have some disadvantages:</p>
+<ul>
+<li>Real courses evolve over time, so they might break our tests in the future</li>
+<li>A real course can be difficult to navigate due to it's size</li>
+<li>A real course can take up a lot of memory</li>
+<li>Loading real courses could slow our tests down</li>
+</ul>
+<p>Thankfully, LibreLingo comes with a library that has fake data to simplify
+writing tests! Let's install it:</p>
+<pre><code class="language-bash">poetry add --dev librelingo-fakes
+</code></pre>
+<p>Let's <em>remove</em> our existing test:</p>
+<pre><code class="language-python">
+def test_returns_hello_world():
+    assert list_missing_audios() == "Hello World"
+</code></pre>
+<p>And replace it with a real test that verifies that an empty course doesn't
+need any audio files:</p>
+<pre><code class="language-python">from librelingo_fakes import fakes
+
+from librelingo_audios.list_missing_audios import list_missing_audios
+
+
+def test_an_empty_course_does_not_have_any_audios():
+    assert list(list_missing_audios(fakes.courseEmpty)) == []
+</code></pre>
+<p>If we run our tests again, we see the following failure:</p>
+<pre><code class="language-console">==================================== test session starts =====================================
+platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
+rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
+plugins: pyfakefs-4.4.0, snapshottest-0.6.0
+collected 1 item                                                                             
+
+tests/test_list_missing_audios.py F                                                    [100%]
+
+========================================== FAILURES ==========================================
+_______________________ test_an_empty_course_does_not_have_any_audios ________________________
+
+    def test_an_empty_course_does_not_have_any_audios():
+&gt;       assert list(list_missing_audios(fakes.courseEmpty)) == []
+E       TypeError: list_missing_audios() takes 0 positional arguments but 1 was given
+
+tests/test_list_missing_audios.py:7: TypeError
+================================== short test summary info ===================================
+FAILED tests/test_list_missing_audios.py::test_an_empty_course_does_not_have_any_audios - T...
+===================================== 1 failed in 0.03s ======================================
+
+</code></pre>
+<p>Let's cheat a little bit to make that test pass:</p>
+<pre><code class="language-python">def list_missing_audios(course):
+    return []
+</code></pre>
+<p>This shows us that our "implementation" already works for empty courses, but
+that's a rather unrealistic edge-case. So we need to come up with some
+more precise test cases to force ourselves to write the correct implementation.</p>
+<p>Let's look at the first fake course. By running this code,
+we figure out that this course has <code>2</code> phrases in total:</p>
+<pre><code class="language-python">In [41]: count = 0
+
+In [42]: for module in fakes.course1.modules:
+    ...:     for skill in module.skills:
+    ...:         count += len(skill.phrases)
+    ...: 
+
+In [43]: count
+Out[43]: 2
+</code></pre>
+<p>Every phrase has one corresponding audio, so this means our fake course
+is going to need 2 audios.</p>
+<p>We expect our function to return 2 items:</p>
+<pre><code class="language-python">def test_a_course_with_2_phrases_needs_2_audios():
+    assert len(list(list_missing_audios(fakes.course1))) == 2
+</code></pre>
+<p>Let's cheat again to make that test pass:</p>
+<pre><code class="language-python">def list_missing_audios(course):
+    if not course.modules:
+        return []
+
+    return ["foo", 42]
+</code></pre>
+<p>By further exploration, we learn that the second fake course doesn't have
+any phrases:</p>
+<pre><code class="language-python">In [41]: count = 0
+
+In [42]: for module in fakes.course2.modules:
+    ...:     for skill in module.skills:
+    ...:         count += len(skill.phrases)
+    ...: 
+
+In [43]: count
+Out[43]: 0
+</code></pre>
+<p>Lets change the test for the empty course to instead use course2:</p>
+<pre><code class="language-python">def test_a_course_with_0_phrases_needs_zero_audios():
+    assert len(list(list_missing_audios(fakes.course2))) == 0
+</code></pre>
+<p>Our tests are failing again:</p>
+<pre><code class="language-console">==================================== test session starts =====================================
+platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
+rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
+plugins: pyfakefs-4.4.0, snapshottest-0.6.0
+collected 2 items                                                                            
+
+tests/test_list_missing_audios.py F.                                                   [100%]
+
+========================================== FAILURES ==========================================
+_______________________ test_a_course_with_0_phrases_needs_zero_audios _______________________
+
+    def test_a_course_with_0_phrases_needs_zero_audios():
+&gt;       assert len(list(list_missing_audios(fakes.course2))) == 0
+E       AssertionError: assert 2 == 0
+E        +  where 2 = len(['foo', 42])
+E        +    where ['foo', 42] = list(['foo', 42])
+E        +      where ['foo', 42] = list_missing_audios(Course(target_language=Language(name='another language', code='tr'), source_language=Language(name='my language', code...fruit', is_in_target_language=True), DictionaryItem(word='ipsum', definition='red fruit', is_in_target_language=True)]))
+E        +        where Course(target_language=Language(name='another language', code='tr'), source_language=Language(name='my language', code...fruit', is_in_target_language=True), DictionaryItem(word='ipsum', definition='red fruit', is_in_target_language=True)]) = fakes.course2
+
+tests/test_list_missing_audios.py:7: AssertionError
+================================== short test summary info ===================================
+FAILED tests/test_list_missing_audios.py::test_a_course_with_0_phrases_needs_zero_audios - ...
+================================ 1 failed, 1 passed in 0.03s =================================
+</code></pre>
+<p>Since <code>course2</code> has modules (all with no phrases) this time it's not as easy to
+cheat with the implementation.</p>
+<p>The simplest way to make the test pass is probably actually
+implementing the iteration:</p>
+<pre><code class="language-python">def list_missing_audios(course):
+    for module in course.modules:
+        for skill in module.skills:
+            for phrase in skill.phrases:
+                yield None
+</code></pre>
+<p>Our tests are now passing!</p>
+<p>One problem is that although now every phrase is there,
+the output format is still useless.</p>
+<p>We need to include the text of each phrase in the target language
+of the course. Let's make sure it's always the second item in the output:</p>
+<pre><code class="language-python">def test_result_includes_the_phrase_in_the_target_language():
+    result = list(list_missing_audios(fakes.course1))
+    # We are using in_target_language[0] because only the first version is used for audios
+    assert result[0][1] == fakes.course1.modules[0].skills[0].phrases[0].in_target_language[0]
+
+</code></pre>
+<p>Let's run our tests again:</p>
+<pre><code class="language-console">==================================== test session starts =====================================
+platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
+rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
+plugins: pyfakefs-4.4.0, snapshottest-0.6.0
+collected 3 items                                                                            
+
+tests/test_list_missing_audios.py ..F                                                  [100%]
+
+========================================== FAILURES ==========================================
+___________________ test_result_includes_the_phrase_in_the_target_language ___________________
+
+    def test_result_includes_the_phrase_in_the_target_language():
+        result = list(list_missing_audios(fakes.course1))
+&gt;       assert result[0][1] == fakes.course1.modules[0].skills[0].phrases[0].in_target_language
+E       TypeError: 'NoneType' object is not subscriptable
+
+tests/test_list_missing_audios.py:16: TypeError
+================================== short test summary info ===================================
+FAILED tests/test_list_missing_audios.py::test_result_includes_the_phrase_in_the_target_language
+================================ 1 failed, 2 passed in 0.03s =================================
+</code></pre>
+<p>Let's try cheating with the implementation:</p>
+<pre><code class="language-python">def list_missing_audios(course):
+    for module in course.modules:
+        for skill in module.skills:
+            for phrase in skill.phrases:
+                yield [None, ""]
+</code></pre>
+<p>Now we get this error:</p>
+<pre><code class="language-console">==================================== test session starts =====================================
+platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
+rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
+plugins: pyfakefs-4.4.0, snapshottest-0.6.0
+collected 3 items                                                                            
+
+tests/test_list_missing_audios.py ..F                                                  [100%]
+
+========================================== FAILURES ==========================================
+___________________ test_result_includes_the_phrase_in_the_target_language ___________________
+
+    def test_result_includes_the_phrase_in_the_target_language():
+        result = list(list_missing_audios(fakes.course1))
+&gt;       assert result[0][1] == fakes.course1.modules[0].skills[0].phrases[0].in_target_language
+E       AssertionError: assert '' == ['lorem ipsum']
+E        +  where ['lorem ipsum'] = Phrase(in_target_language=['lorem ipsum'], in_source_language=['john smith']).in_target_language
+
+tests/test_list_missing_audios.py:16: AssertionError
+================================== short test summary info ===================================
+FAILED tests/test_list_missing_audios.py::test_result_includes_the_phrase_in_the_target_language
+================================ 1 failed, 2 passed in 0.03s =================================
+</code></pre>
+<p>We can continue cheating though:</p>
+<pre><code class="language-python">def list_missing_audios(course):
+    for module in course.modules:
+        for skill in module.skills:
+            for phrase in skill.phrases:
+                yield [None, "lorem ipsum"]
+</code></pre>
+<p>Our tests are now passing again 🎉!</p>
+<p>This shows our test wasn't specific enough. Let's add another example:</p>
+<pre><code class="language-python">def test_result_includes_the_phrase_in_the_target_language_2():
+    result = list(list_missing_audios(fakes.course1))
+    assert result[1][1] == fakes.course1.modules[0].skills[1].phrases[0].in_target_language[0]
+
+</code></pre>
+<p>We get the following failure:</p>
+<pre><code class="language-console">==================================== test session starts =====================================
+platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
+rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
+plugins: pyfakefs-4.4.0, snapshottest-0.6.0
+collected 4 items                                                                            
+
+tests/test_list_missing_audios.py ...F                                                 [100%]
+
+========================================== FAILURES ==========================================
+__________________ test_result_includes_the_phrase_in_the_target_language_2 __________________
+
+    def test_result_includes_the_phrase_in_the_target_language_2():
+        result = list(list_missing_audios(fakes.course1))
+&gt;       assert result[1][1] == fakes.course1.modules[0].skills[1].phrases[0].in_target_language[0]
+E       AssertionError: assert 'lorem ipsum' == 'foous barus'
+E         - foous barus
+E         + lorem ipsum
+
+tests/test_list_missing_audios.py:21: AssertionError
+================================== short test summary info ===================================
+FAILED tests/test_list_missing_audios.py::test_result_includes_the_phrase_in_the_target_language_2
+================================ 1 failed, 3 passed in 0.03s =================================
+</code></pre>
+<p>This time around writing the actual implementation is easier than
+trying to trick the tests:</p>
+<pre><code class="language-python">def list_missing_audios(course):
+    for module in course.modules:
+        for skill in module.skills:
+            for phrase in skill.phrases:
+                # Returning only the first version because
+                # the other versions never need audio.
+                yield [None, phrase.in_target_language[0]]
+</code></pre>
+<p>Let's refactor a bit: we extract the text to a new variable!</p>
+<pre><code class="language-python">def list_missing_audios(course):
+    for module in course.modules:
+        for skill in module.skills:
+            for phrase in skill.phrases:
+                # Returning only the first version because
+                # the other versions never need audio.
+                text = phrase.in_target_language[0]
+                yield [None, text]
+</code></pre>
+<p>The reason anyone would call the function <code>list_missing_audios</code> is probably because
+they want to download/create those audios somehow.</p>
+<p>If they want to create those files, then for practical reasons the filenames
+should follow a standardized system that other LibreLingo-related software
+can also recognize.</p>
+<p>To achieve that, we can use the <code>audio_id</code> function from <a href="https://pypi.org/project/librelingo-utils/">librelingo-utils</a>.</p>
+<p>Let's start simple. First let's make sure that the IDs are string:</p>
+<pre><code class="language-python">def test_audio_id_is_a_string():
+    assert [type(result[0]) for result in list_missing_audios(fakes.course1)] == [str, str]
+</code></pre>
+<pre><code class="language-console">==================================== test session starts =====================================
+platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
+rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
+plugins: pyfakefs-4.4.0, snapshottest-0.6.0
+collected 5 items                                                                            
+
+tests/test_list_missing_audios.py ....F                                                [100%]
+
+========================================== FAILURES ==========================================
+_________________________________ test_audio_id_is_a_string __________________________________
+
+    def test_audio_id_is_a_string():
+&gt;       assert [type(result[0]) for result in list_missing_audios(fakes.course1)] == [str, str]
+E       AssertionError: assert [&lt;class 'None...s 'NoneType'&gt;] == [&lt;class 'str'&gt;, &lt;class 'str'&gt;]
+E         At index 0 diff: &lt;class 'NoneType'&gt; != &lt;class 'str'&gt;
+E         Use -v to get the full diff
+
+tests/test_list_missing_audios.py:24: AssertionError
+================================== short test summary info ===================================
+FAILED tests/test_list_missing_audios.py::test_audio_id_is_a_string - AssertionError: asser...
+================================ 1 failed, 4 passed in 0.04s =================================
+</code></pre>
+<p>We can still cheat by returning an empty string:</p>
+<pre><code class="language-python">def list_missing_audios(course):
+    for module in course.modules:
+        for skill in module.skills:
+            for phrase in skill.phrases:
+                # Returning only the first version because
+                # the other versions never need audio.
+                text = phrase.in_target_language[0]
+                yield ["", text]
+</code></pre>
+<p>And out tests are passing again... We better make sure somehow that
+<code>audio_id</code> is actually used to perform the filename-logic.</p>
+<p>First let's install <code>librelingo-utils</code>:</p>
+<pre><code class="language-bash">poetry add librelingo-utils
+</code></pre>
+<p>And write a tests that only passes if our function calls <code>audio_id</code>.</p>
+<p>To do that, we'll need to install <code>pytest-mock</code>:</p>
+<pre><code class="language-bash">poetry add --dev pytest-mock
+</code></pre>
+<p>We can now write our test:</p>
+<pre><code class="language-python">def test_calls_audio_id_to_get_the_id(mocker):
+    audio_id = mocker.patch('librelingo_audios.list_missing_audios.audio_id')
+    list_missing_audios(fakes.course1)
+    assert audio_id.call_count == 2
+
+</code></pre>
+<p>This will mock the <code>audio_id</code> function and see how many times it has been called.
+We assert that it has to run twice, since there are 2 phrases that need audio files.</p>
+<pre><code class="language-console">==================================== test session starts =====================================
+platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
+rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
+plugins: pyfakefs-4.4.0, mock-3.5.1, snapshottest-0.6.0
+collected 6 items                                                                            
+
+tests/test_list_missing_audios.py .....F                                               [100%]
+
+========================================== FAILURES ==========================================
+_____________________________ test_calls_audio_id_to_get_the_id ______________________________
+
+mocker = &lt;pytest_mock.plugin.MockerFixture object at 0x7ff94ee398e0&gt;
+
+    def test_calls_audio_id_to_get_the_id(mocker):
+&gt;       audio_id = mocker.patch('librelingo_audios.list_missing_audios.audio_id')
+
+tests/test_list_missing_audios.py:29: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/home/kdani/.cache/pypoetry/virtualenvs/librelingo-audios-yD2wurwN-py3.9/lib/python3.9/site-packages/pytest_mock/plugin.py:352: in __call__
+    return self._start_patch(
+/home/kdani/.cache/pypoetry/virtualenvs/librelingo-audios-yD2wurwN-py3.9/lib/python3.9/site-packages/pytest_mock/plugin.py:161: in _start_patch
+    mocked = p.start()  # type: unittest.mock.MagicMock
+/usr/lib/python3.9/unittest/mock.py:1541: in start
+    result = self.__enter__()
+/usr/lib/python3.9/unittest/mock.py:1405: in __enter__
+    original, local = self.get_original()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;unittest.mock._patch object at 0x7ff94ee39a00&gt;
+
+    def get_original(self):
+        target = self.getter()
+        name = self.attribute
+
+        original = DEFAULT
+        local = False
+
+        try:
+            original = target.__dict__[name]
+        except (AttributeError, KeyError):
+            original = getattr(target, name, DEFAULT)
+        else:
+            local = True
+
+        if name in _builtins and isinstance(target, ModuleType):
+            self.create = True
+
+        if not self.create and original is DEFAULT:
+&gt;           raise AttributeError(
+                "%s does not have the attribute %r" % (target, name)
+            )
+E           AttributeError: &lt;function list_missing_audios at 0x7ff94ee4c5e0&gt; does not have the attribute 'audio_id'
+
+/usr/lib/python3.9/unittest/mock.py:1378: AttributeError
+================================== short test summary info ===================================
+FAILED tests/test_list_missing_audios.py::test_calls_audio_id_to_get_the_id - AttributeErro...
+================================ 1 failed, 5 passed in 0.13s =================================
+</code></pre>
+<p>That's not exactly what I expected. Looks like mocking is problematic in Python when your
+file name is the same of a function name, because it will try to mock an attribute of the
+function instead of the file.</p>
+<p>After some Googling I couldn't find an easy and clean solution for this, so
+let's just rename <code>list_missing_audios.py</code> to <code>functions.py</code> to avoid trouble.</p>
+<p>I'm planning to put more functions here anyway.</p>
+<p>In our test file, let's change the import:</p>
+<pre><code class="language-python">from librelingo_audios.functions import list_missing_audios
+</code></pre>
+<p>Let's change the mock:</p>
+<pre><code class="language-python">def test_calls_audio_id_to_get_the_id(mocker):
+    audio_id = mocker.patch('librelingo_audios.functions.audio_id')
+    list_missing_audios(fakes.course1)
+    assert audio_id.call_count == 2
+</code></pre>
+<p>Let's also change the import in <code>__init__.py</code>:</p>
+<pre><code class="language-python">__version__ = '0.1.0'
+
+from librelingo_audios.functions import list_missing_audios
+</code></pre>
+<p>Now if we run our tests, we see the failure that I originally expected, or at least something similar:</p>
+<pre><code class="language-console">==================================== test session starts =====================================
+platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
+rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
+plugins: pyfakefs-4.4.0, mock-3.5.1, snapshottest-0.6.0
+collected 6 items                                                                            
+
+tests/test_list_missing_audios.py .....F                                               [100%]
+
+========================================== FAILURES ==========================================
+_____________________________ test_calls_audio_id_to_get_the_id ______________________________
+
+mocker = &lt;pytest_mock.plugin.MockerFixture object at 0x7f458c9cc8e0&gt;
+
+    def test_calls_audio_id_to_get_the_id(mocker):
+        audio_id = mocker.patch('librelingo_audios.functions.audio_id')
+        list_missing_audios(fakes.course1)
+&gt;       assert audio_id.call_count == 2
+E       AssertionError: assert 0 == 2
+E        +  where 0 = &lt;MagicMock name='audio_id' id='139936688556448'&gt;.call_count
+
+tests/test_list_missing_audios.py:31: AssertionError
+================================== short test summary info ===================================
+FAILED tests/test_list_missing_audios.py::test_calls_audio_id_to_get_the_id - AssertionErro...
+================================ 1 failed, 5 passed in 0.04s =================================
+</code></pre>
+<p>Whoops, our test forgot to actually iterate over the result, lets wrap the function call in
+<code>list()</code> to fix that.</p>
+<pre><code class="language-python">def test_calls_audio_id_to_get_the_id(mocker):
+    audio_id = mocker.patch('librelingo_audios.functions.audio_id')
+    list(list_missing_audios(fakes.course1))
+    assert audio_id.call_count == 2
+</code></pre>
+<p>Now let's change the implementation so that it actually calls <code>audio_id</code>:</p>
+<pre><code class="language-python">def list_missing_audios(course):
+    for module in course.modules:
+        for skill in module.skills:
+            for phrase in skill.phrases:
+                # Returning only the first version because
+                # the other versions never need audio.
+                text = phrase.in_target_language[0]
+                audio_id(course.source_language, "lorem ipsum")
+                yield ["", text]
+</code></pre>
+<p>Our tests are now passing:</p>
+<pre><code class="language-console">==================================== test session starts =====================================
+platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
+rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
+plugins: pyfakefs-4.4.0, mock-3.5.1, snapshottest-0.6.0
+collected 6 items                                                                            
+
+tests/test_list_missing_audios.py ......                                               [100%]
+
+===================================== 6 passed in 0.02s ======================================
+</code></pre>
+<p>Notice though, we are actually passing the source language instead of
+the target language! Also we're calling it with an empty string instead of
+the actual string:</p>
+<pre><code class="language-python">audio_id(course.source_language, "")
+</code></pre>
+<p>We need to be a lot stricter in our tests so let's fix that:</p>
+<pre><code class="language-python">def test_calls_audio_id_with_the_correct_arguments(mocker):
+    audio_id = mocker.patch('librelingo_audios.functions.audio_id')
+    list(list_missing_audios(fakes.course1))
+    expected_call = mocker.call(fakes.course1.target_language, fakes.course1.modules[0].skills[0].phrases[0].in_target_language[0])
+    audio_id.assert_has_calls([expected_call])
+</code></pre>
+<p>That causes our tests to fail so let's update the implementation:</p>
+<pre><code class="language-python">def list_missing_audios(course):
+    for module in course.modules:
+        for skill in module.skills:
+            for phrase in skill.phrases:
+                # Returning only the first version because
+                # the other versions never need audio.
+                text = phrase.in_target_language[0]
+                audio_id(course.target_language, "lorem ipsum")
+                yield ["", text]
+</code></pre>
+<pre><code class="language-console">==================================== test session starts =====================================
+platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
+rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
+plugins: pyfakefs-4.4.0, mock-3.5.1, snapshottest-0.6.0
+collected 7 items                                                                            
+
+tests/test_list_missing_audios.py .......                                              [100%]
+
+===================================== 7 passed in 0.03s ======================================
+</code></pre>
+<p>But you'll notice this is still cheating, because we're always using
+<code>"lorem ipsum"</code> as the text.  Let's extend our test case to fix that.</p>
+<pre><code class="language-python">def test_calls_audio_id_with_the_correct_arguments(mocker):
+    audio_id = mocker.patch('librelingo_audios.functions.audio_id')
+    list(list_missing_audios(fakes.course1))
+    expected_call_1 = mocker.call(fakes.course1.target_language, fakes.course1.modules[0].skills[0].phrases[0].in_target_language[0])
+    expected_call_2 = mocker.call(fakes.course1.target_language, fakes.course1.modules[0].skills[1].phrases[0].in_target_language[0])
+    audio_id.assert_has_calls([expected_call_1, expected_call_2])
+</code></pre>
+<p>Yup, our tests are failing again!</p>
+<p>Let's make them pass:</p>
+<pre><code class="language-python">def list_missing_audios(course):
+    for module in course.modules:
+        for skill in module.skills:
+            for phrase in skill.phrases:
+                # Returning only the first version because
+                # the other versions never need audio.
+                text = phrase.in_target_language[0]
+                audio_id(course.target_language, phrase.in_target_language[0])
+                yield ["", text]
+</code></pre>
+<p>This looks good, but we're still not returning the ID!
+You guessed it, that's a new test case for us!</p>
+<p>We will make our mock function return a fake value and we'll
+assert that value shows up in the result.</p>
+<pre><code class="language-python">def test_returns_correct_audio_id(mocker):
+    audio_id = mocker.patch('librelingo_audios.functions.audio_id')
+    audio_id.return_value = "omg"
+    assert list(list_missing_audios(fakes.course1))[0][0] == "omg"
+</code></pre>
+<p>If we run the tests we get the error that we expected:</p>
+<pre><code class="language-console">==================================== test session starts =====================================
+platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
+rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
+plugins: pyfakefs-4.4.0, mock-3.5.1, snapshottest-0.6.0
+collected 8 items                                                                            
+
+tests/test_list_missing_audios.py .......F                                             [100%]
+
+========================================== FAILURES ==========================================
+_______________________________ test_returns_correct_audio_id ________________________________
+
+mocker = &lt;pytest_mock.plugin.MockerFixture object at 0x7fe9191977f0&gt;
+
+    def test_returns_correct_audio_id(mocker):
+        audio_id = mocker.patch('librelingo_audios.functions.audio_id')
+        audio_id.return_value = "omg"
+&gt;       assert list(list_missing_audios(fakes.course1))[0][0] == "omg"
+E       AssertionError: assert '' == 'omg'
+E         - omg
+
+tests/test_list_missing_audios.py:45: AssertionError
+================================== short test summary info ===================================
+FAILED tests/test_list_missing_audios.py::test_returns_correct_audio_id - AssertionError: a...
+================================ 1 failed, 7 passed in 0.04s =================================
+</code></pre>
+<p>Let's cheat again to make the test pass:</p>
+<pre><code class="language-python">def list_missing_audios(course):
+    for module in course.modules:
+        for skill in module.skills:
+            for phrase in skill.phrases:
+                # Returning only the first version because
+                # the other versions never need audio.
+                text = phrase.in_target_language[0]
+                audio_id(course.target_language, phrase.in_target_language[0])
+                yield ["omg", text]
+</code></pre>
+<p>Our tests now pass, but we are still returning the wrong output.</p>
+<p>Let's make another test case to make it impossible to cheat.</p>
+<p>Since the return value of the mock function is entirely determined by the fake
+value that we supply in our test case, this is a value the implementation can
+only reproduce by actually calling the function and taking the return value.</p>
+<p>The only one way our implementation can cheat is if the return value is
+one simple static example, which is exactly what we have right now.</p>
+<p>The most straightforward way to avoid that is by adding an identical test case
+with a different mock value:</p>
+<pre><code class="language-python">def test_returns_correct_audio_id_2(mocker):
+    audio_id = mocker.patch('librelingo_audios.functions.audio_id')
+    audio_id.return_value = "foobar"
+    assert list(list_missing_audios(fakes.course1))[0][0] == "foobar"
+</code></pre>
+<pre><code class="language-console">==================================== test session starts =====================================
+platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
+rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
+plugins: pyfakefs-4.4.0, mock-3.5.1, snapshottest-0.6.0
+collected 9 items                                                                            
+
+tests/test_list_missing_audios.py ........F                                            [100%]
+
+========================================== FAILURES ==========================================
+______________________________ test_returns_correct_audio_id_2 _______________________________
+
+mocker = &lt;pytest_mock.plugin.MockerFixture object at 0x7f83d4646a00&gt;
+
+    def test_returns_correct_audio_id_2(mocker):
+        audio_id = mocker.patch('librelingo_audios.functions.audio_id')
+        audio_id.return_value = "foobar"
+&gt;       assert list(list_missing_audios(fakes.course1))[0][0] == "foobar"
+E       AssertionError: assert 'omg' == 'foobar'
+E         - foobar
+E         + omg
+
+tests/test_list_missing_audios.py:51: AssertionError
+================================== short test summary info ===================================
+FAILED tests/test_list_missing_audios.py::test_returns_correct_audio_id_2 - AssertionError:...
+================================ 1 failed, 8 passed in 0.05s =================================
+</code></pre>
+<p>Let's fix our implementation:</p>
+<pre><code class="language-python">from librelingo_utils import audio_id
+
+def list_missing_audios(course):
+    for module in course.modules:
+        for skill in module.skills:
+            for phrase in skill.phrases:
+                # Returning only the first version because
+                # the other versions never need audio.
+                text = phrase.in_target_language[0]
+                id_ = audio_id(course.target_language, phrase.in_target_language[0])
+                yield [id_, text]
+</code></pre>
+<p>Now let's do a little bit of refactoring. I don't want to shove more functionality
+into this function, so let's rename it to <code>list_required_audios</code> across all files.</p>
+<p>Later I can create a <code>list_missing_audios</code> which will actually filter out all
+the audio files that already exist.</p>
+<pre><code class="language-python">from librelingo_utils import audio_id
+
+def list_required_audios(course):
+    for module in course.modules:
+        for skill in module.skills:
+            for phrase in skill.phrases:
+                # Returning only the first version because
+                # the other versions never need audio.
+                text = phrase.in_target_language[0]
+                id_ = audio_id(course.target_language, phrase.in_target_language[0])
+                yield [id_, text]
+</code></pre>
+<p>Just checking that the tests still pass...</p>
+<pre><code>==================================== test session starts =====================================
+platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
+rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
+plugins: pyfakefs-4.4.0, mock-3.5.1, snapshottest-0.6.0
+collected 9 items                                                                            
+
+tests/test_list_missing_audios.py .........                                            [100%]
+
+===================================== 9 passed in 0.03s ======================================
+
+</code></pre>
+<p>Now let's extract the iteration part to simplify our function:</p>
+<pre><code class="language-python">from librelingo_utils import audio_id
+
+def _iterate_phrases(course):
+    '"Flatten" a course into a sequence of phrases'
+    for module in course.modules:
+        for skill in module.skills:
+            for phrase in skill.phrases:
+                yield phrase
+
+
+def list_required_audios(course):
+    for phrase in _iterate_phrases(course):
+        # Returning only the first version because
+        # the other versions never need audio.
+        text = phrase.in_target_language[0]
+        id_ = audio_id(course.target_language, phrase.in_target_language[0])
+        yield [id_, text]
+</code></pre>
+<p>That concludes this tutorial! If you are interested in learning more about
+how <a href="https://librelingo.app/">LibreLingo</a> works,
+check out our <a href="https://github.com/kantord/LibreLingo">source code on GitHub</a>,
+our <a href="https://librelingo.app/docs/">development documentation</a> or
+<a href="https://riot.im/app/#/group/+librelingo:matrix.org">join our chat</a>.</p>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a class="md-footer__link md-footer__link--prev" href="attributions.html" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Previous
+              </span>
+              Media attributions
+            </div>
+</div>
+</a>
+<a class="md-footer__link md-footer__link--next" href="website_tos.html" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Next
+              </span>
+              Website tos
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": ".", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
+<script src="assets/javascripts/bundle.ca5457b8.min.js"></script>
+</body>
+</html>
