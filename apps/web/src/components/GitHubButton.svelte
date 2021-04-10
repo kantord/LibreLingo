@@ -11,15 +11,23 @@
 
 <script lang="typescript">
   import { onMount } from "svelte"
-  import Icon from "lluis/Icon"
-  import Button from "lluis/Button"
+  import isBrowser from "../utils/isBrowser"
+  import Icon from "lluis/Icon.svelte"
+  import Button from "lluis/Button.svelte"
+  import isCypress from "../utils/isCypress"
   // eslint-disable-next-line @typescript-eslint/no-var-requires
   const pMemoize = require("p-memoize")
-  export let stars = (process.browser === true ? window.stars : null) || "   "
+
+  type WindowWithStars = Window & {
+    stars: number,
+    star_count: number,
+  }
+
+  export let stars = (isBrowser() === true ? (window as unknown as WindowWithStars).stars : null) || "   "
   export let size = "small"
 
   onMount(async () => {
-      if (process.browser === true && window.isCypress) {
+      if (isBrowser() === true && isCypress()) {
           stars = 999
           return
       }
@@ -30,8 +38,8 @@
           .then((res) => res.json())
           .then(({ stargazers_count }) => {
               stars = stargazers_count
-              if (process.browser === true) {
-                  window.star_count = stargazers_count
+              if (isBrowser() === true) {
+                  (window as unknown as WindowWithStars).star_count = stargazers_count
               }
           })
   })
