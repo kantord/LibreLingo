@@ -1,15 +1,27 @@
-const getActualParent = node => node.parentElement.id ? node.parentElement : node.parentElement.parentElement
+const getActualParent = (node: HTMLElement): HTMLElement => {
+    if (node?.parentElement?.id) {
+        return node.parentElement
+    }
+    
+    if (node?.parentElement?.parentElement) {
+        return node.parentElement.parentElement
+    }
 
-export const getNodeType = node => getActualParent(node).id
+    throw new Error("Invalid <Chip />")
+}
 
-export const getChipIndex = node => {
-    if (!node.classList.contains("chip")) {
+export const getNodeType = (node: HTMLElement): string => getActualParent(node).id
+
+export const getChipIndex = (node: HTMLElement): number => {
+    if (!node.classList.contains("chip") && node.parentElement) {
         return getChipIndex(node.parentElement)
     }
 
-    if (!node.previousSibling) {
-        return 0
+
+    if (node.previousSibling !== null) {
+        return 1 + getChipIndex(node.previousSibling as HTMLElement)
     }
 
-    return 1 + getChipIndex(node.previousSibling)
+    return 0
+
 }
