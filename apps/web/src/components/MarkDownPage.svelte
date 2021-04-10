@@ -19,9 +19,9 @@
   import NavBar from "../components/NavBar"
   import Content from "lluis/Content"
 
-  export let readmeHTML
-  export let title
-  export let description
+  export let readmeHTML: string
+  export let title: ?string
+  export let description: ?string
 </script>
 
 <svelte:head>
