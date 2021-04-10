@@ -16,12 +16,12 @@
 </script>
 
 <script lang="typescript">
-  import NavBar from "../components/NavBar"
-  import Content from "lluis/Content"
+  import NavBar from "../components/NavBar.svelte"
+  import Content from "lluis/Content.svelte"
 
-  export let readmeHTML
-  export let title
-  export let description
+  export let readmeHTML: string
+  export let title: string | null
+  export let description: string | null
 </script>
 
 <svelte:head>
