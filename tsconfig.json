@@ -1,4 +1,5 @@
 {
+    "extends": "@tsconfig/svelte/tsconfig.json",
     "$schema": "https://json.schemastore.org/tsconfig",
     "display": "Svelte",
     "compilerOptions": {
@@ -20,9 +21,9 @@
             "svelte",
             "jest"
         ],
-        "strict": false,
+        "strict": true,
         "esModuleInterop": true,
-        "skipLibCheck": true,
+        "skipLibCheck": false,
         "forceConsistentCasingInFileNames": true
     }
 }
