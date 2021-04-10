@@ -1,18 +1,18 @@
 <script lang="typescript" context="module">
   export async function preload() {
-      if (!process.browser) {
+    if (!process.browser) {
       // eslint-disable-next-line @typescript-eslint/no-var-requires
-          const fs = require("fs")
-          // eslint-disable-next-line @typescript-eslint/no-var-requires
-          const util = require("util")
-          const readdir = util.promisify(fs.readdir)
+      const fs = require("fs")
+      // eslint-disable-next-line @typescript-eslint/no-var-requires
+      const util = require("util")
+      const readdir = util.promisify(fs.readdir)
 
-          return {
-              testSkills: (await readdir("./src/courses/test/challenges")).map(
-                  (fname) => fname.split(".")[0]
-              ),
-          }
+      return {
+        testSkills: (await readdir("./src/courses/test/challenges")).map(
+          (fname) => fname.split(".")[0]
+        ),
       }
+    }
   }
 </script>
 
@@ -36,7 +36,7 @@
       <h2 class="is-size-2">Test pages</h2>
       <ul>
         <li><a href="/course/test">Test course</a></li>
-        {#each testSkills as testSkill}
+        {#each                     testSkills as testSkill}
           <li>
             <a target="_blank" href="/course/test/skill/{testSkill}">
               Test skill:

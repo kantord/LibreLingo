@@ -51,22 +51,22 @@
 
   $: handleOptionClick = (chip, index) => {
       if (submitted) return
-      chips.update(oldItems => {
+      chips.update((oldItems) => {
           const newItems = [...oldItems]
           newItems.splice(index, 1)
           return newItems
       })
-      answer.update(oldItems => [...oldItems, chip])
+      answer.update((oldItems) => [...oldItems, chip])
   }
 
   $: handleAnswerClick = (chip, index) => {
       if (submitted) return
-      answer.update(oldItems => {
+      answer.update((oldItems) => {
           const newItems = [...oldItems]
           newItems.splice(index, 1)
           return newItems
       })
-      chips.update(oldItems => [...oldItems, chip])
+      chips.update((oldItems) => [...oldItems, chip])
   }
 
   onMount(() => {
@@ -92,7 +92,7 @@
   <div>
     <div class="solution">
       <div class="chips">
-        {#each $answer as chip, index}
+        {#each                                         $answer as chip, index}
           <span class="chip" on:click="{() => handleAnswerClick(chip, index)}">
             <spain class="tag is-medium">{chip}</spain>
           </span>
@@ -103,7 +103,7 @@
 
     <p class="sub-instructions">Use these words:</p>
     <div class="chips">
-      {#each $chips as chip, index}
+      {#each                                         $chips as chip, index}
         <span class="chip" on:click="{() => handleOptionClick(chip, index)}">
           <spain class="tag is-medium">{chip}</spain>
         </span>

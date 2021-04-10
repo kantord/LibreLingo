@@ -1,29 +1,27 @@
 <script lang="typescript" context="module">
   export async function preload(page) {
-      const { id, courseName } = page.params
-      const {
-          languageName,
-          languageCode,
-          specialCharacters,
-      } = await import(`../../../../courses/${courseName}/courseData.json`)
-      const skillData = await import(
-          `../../../../courses/${courseName}/challenges/${id}.json`
-      )
-      const rawChallenges = skillData.challenges
-      const challengesPerLevel = skillData.challenges.length / skillData.levels
+    const { id, courseName } = page.params
+    const { languageName, languageCode, specialCharacters } = await import(
+    `../../../../courses/${courseName}/courseData.json`a.json`)
+    )
+  const skillData = await import(
+      `../../../../courses/${courseName}/challenges/${id}.json`
+    )
+    const rawChallenges = skillData.challenges
+    const challengesPerLevel = skillData.challenges.length / skillData.levels
 
-      const skillId = skillData.id
+    const skillId = skillData.id
 
-      return {
-          rawChallenges: Array.from(rawChallenges),
-          languageName,
-          languageCode,
-          specialCharacters,
-          id,
-          skillId,
-          challengesPerLevel,
-          courseURL: `/course/${courseName}`,
-      }
+    return {
+      rawChallenges: Array.from(rawChallenges),
+      languageName,
+      languageCode,
+      specialCharacters,
+      id,
+      skillId,
+      challengesPerLevel,
+      courseURL: `/course/${courseName}`,
+    }
   }
 </script>
 
@@ -42,8 +40,8 @@
   export let challengesPerLevel
 
   let expectedNumberOfChallenges = Math.max(
-      4,
-      Math.round(challengesPerLevel * 1.2)
+    4,
+    Math.round(challengesPerLevel * 1.2)
   )
 </script>
 

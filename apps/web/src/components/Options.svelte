@@ -7,16 +7,16 @@
   export let disabled
 
   onMount(() => {
-      hotkeys.unbind("1,2,3")
-      hotkeys("1,2,3", (_, { key }) => {
-          if (disabled) return
-          selectedOption = parseInt(key) - 1
-      })
+    hotkeys.unbind("1,2,3")
+    hotkeys("1,2,3", (_, { key }) => {
+      if (disabled) return
+      selectedOption = parseInt(key) - 1
+    })
   })
 </script>
 
 <ul class="options">
-  {#each options as { meaningInSourceLanguage, formInTargetLanguage, correct, fake }, i}
+  {#each                     options as { meaningInSourceLanguage, formInTargetLanguage, correct, fake }, i}
     <label for="{i}" class:fake="{fake && true}">
       <input
         type="radio"

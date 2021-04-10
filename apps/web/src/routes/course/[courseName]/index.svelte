@@ -1,11 +1,11 @@
 <script lang="typescript" context="module">
   export async function preload(page) {
-      const { courseName } = page.params
-      const { modules, languageName } = await import(
-          `../../../courses/${courseName}/courseData.json`
-      )
+    const { courseName } = page.params
+    const { modules, languageName } = await import(
+      `../../../courses/${courseName}/courseData.json`
+    )
 
-      return { courseName, modules, languageName }
+    return { courseName, modules, languageName }
   }
 </script>
 
@@ -27,16 +27,16 @@
 
 <NavBar dark hasAuth />
 
-{#each modules as { title, skills }}
+{#each   modules as { title, skills }}
   <section class="section">
     <div class="container">
       <h2 class="is-size-2">{title}</h2>
       <Columns multiline>
-        {#each skills as skill}
+        {#each     skills as skill}
           <Column sizeDesktop="1/3" sizeTablet="1/2">
             <SkillCard
               {...{ ...skill }}
-              practiceHref="{`/course/${courseName}/skill/${skill.practiceHref}`}" />
+              practiceHref="{    ;`/course/${courseName}/skill/${skill.practiceHref}`}" />
           </Column>
         {/each}
       </Columns>

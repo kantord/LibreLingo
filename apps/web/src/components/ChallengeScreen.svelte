@@ -23,8 +23,8 @@
   export let expectedNumberOfChallenges
 
   let challenges = sortChallengeGroups(
-      shuffle(rawChallenges),
-      expectedNumberOfChallenges
+    shuffle(rawChallenges),
+    expectedNumberOfChallenges
   )
   let remainingChallenges = [...challenges]
   let currentChallenge = remainingChallenges.shift()
@@ -33,75 +33,73 @@
 
   let progress = 0
   let stats = {
-      correct: 0,
-      incorrect: 0,
-      skipped: 0,
+    correct: 0,
+    incorrect: 0,
+    skipped: 0,
   }
 
   const preloadImage = (imageName) => {
-      if (typeof Image === "undefined") return
-      new Image().src = `images/${imageName}`
+    if (typeof Image === "undefined") return
+    new Image().src = `images/${imageName}`
   }
 
   challenges
-      .filter(({ type }) => type === "card")
-      .map(({ pictures }) => pictures.map(preloadImage))
+    .filter(({ type }) => type === "card")
+    .map(({ pictures }) => pictures.map(preloadImage))
 
   $: alternativeChallenges =
     currentChallenge &&
     rawChallenges.filter(({ id }) => id !== currentChallenge.id)
 
   $: registerResult = (isCorrect) => {
-      if (isCorrect) {
-          stats.correct++
-          skipAllChallenges = skipAllChallengesFunc
-          sound.correct.play()
-          solvedChallenges.push(currentChallenge)
-      } else {
-          stats.incorrect++
-          sound.wrong.play()
-          remainingChallenges.push(currentChallenge)
-      }
+    if (isCorrect) {
+      stats.correct++
+      skipAllChallenges = skipAllChallengesFunc
+      sound.correct.play()
+      solvedChallenges.push(currentChallenge)
+    } else {
+      stats.incorrect++
+      sound.wrong.play()
+      remainingChallenges.push(currentChallenge)
+    }
   }
 
   $: progress = (solvedChallenges.length + stats.skipped) / challenges.length
 
   $: resolveChallenge = () => {
-      if (remainingChallenges) {
-          currentChallenge = remainingChallenges.shift()
-      }
+    if (remainingChallenges) {
+      currentChallenge = remainingChallenges.shift()
+    }
   }
 
   $: skipChallenge = () => {
-      stats.skipped++
-      resolveChallenge()
+    stats.skipped++
+    resolveChallenge()
   }
 
   $: skipAllChallengesFunc = async () => {
-      stats.skipped++
-      remainingChallenges.forEach(() => stats.skipped++)
-      currentChallenge = undefined
+    stats.skipped++
+    remainingChallenges.forEach(() => stats.skipped++)
+    currentChallenge = undefined
   }
 
   $: skipAllVoice = () => {
-      let filteredRemainingChallenges = remainingChallenges.filter(
-          (challenge) => {
-              if (challenge.type === "listeningExercise") {
-                  stats.skipped++
-                  return false
-              } else {
-                  return true
-              }
+    let filteredRemainingChallenges = remainingChallenges.filter((challenge) => {
+      if (challenge.type === "listeningExercise") {
+              stats.skipped++
+              return false
+          } else {
+        return true
           }
-      )
+      })
 
-      remainingChallenges.splice(
-          0,
-          remainingChallenges.length,
-          ...filteredRemainingChallenges
-      )
-      stats.skipped++
-      resolveChallenge()
+    remainingChallenges.splice(
+      0,
+      remainingChallenges.length,
+      ...filteredRemainingChallenges
+    )
+    stats.skipped++
+    resolveChallenge()
   }
 </script>
 
@@ -109,14 +107,14 @@
   <div class="container" in:scale>
     <section class="section">
       <ProgressBar value="{progress}" />
-      {#each challenges as challenge, i (challenge.id)}
+      {#each                     challenges as challenge, i (challenge.id)}
         {#if challenge.id === currentChallenge.id}
           <div
             class="challenge"
             in:fade|local="{{ duration: 300, delay: 350 }}"
             out:fade|local="{{ duration: 300 }}"
           >
-            {#if challenge.type === "cards"}
+            {#if                     challenge.type === "cards"}
               <DeckChallenge
                 skipChallenge="{skipChallenge}"
                 currentChallenge="{currentChallenge}"

@@ -11,11 +11,11 @@
   let password = ""
 
   const handleLogin = async () => {
-      try {
-          await window._Login(username, password)
-      } catch (e) {
-          error = e
-      }
+    try {
+      await window._Login(username, password)
+    } catch (e) {
+      error = e
+    }
   }
 </script>
 

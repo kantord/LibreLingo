@@ -10,21 +10,21 @@
   // determines which keys correspond to which card
   // skips a number for the fake item (i. e. invisible on desktop)
   let keymap = options.reduce(
-      (acc, item) => [...acc, (acc.slice(-1)[0] || 0) + (item.fake ? 2 : 1)],
-      []
+    (acc, item) => [...acc, (acc.slice(-1)[0] || 0) + (item.fake ? 2 : 1)],
+    []
   )
 
   onMount(() => {
-      hotkeys.unbind("1,2,3")
-      hotkeys("1,2,3", (_, { key }) => {
-          if (disabled) return
-          selectedOption = keymap[parseInt(key) - 1] - 1
-      })
+    hotkeys.unbind("1,2,3")
+    hotkeys("1,2,3", (_, { key }) => {
+      if (disabled) return
+      selectedOption = keymap[parseInt(key) - 1] - 1
+    })
   })
 </script>
 
 <ul class="options">
-  {#each options as { pictures, meaningInSourceLanguage, formInTargetLanguage, correct, fake }, i}
+  {#each                     options as { pictures, meaningInSourceLanguage, formInTargetLanguage, correct, fake }, i}
     <label for="{i}" class:fake="{fake && true}" class:real="{!(fake && true)}">
       <input
         type="radio"

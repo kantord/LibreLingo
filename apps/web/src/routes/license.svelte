@@ -2,13 +2,12 @@
   import MarkDownPage, { getMarkDownData } from "../components/MarkDownPage"
 
   export async function preload() {
-      return {
-          readmeHTML: await getMarkDownData(
-              await import("../../../../docs/LICENSE.md")
-          ),
-      }
-  }
-</script>
+    return {
+      readmeHTML: await getMarkDownData(
+        await import("../../../../docs/LICENSE.md")
+      ),
+    }
+  }</script>
 
 <script lang="typescript">
   export let readmeHTML
