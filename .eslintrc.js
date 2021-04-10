@@ -1,4 +1,5 @@
 module.exports = {
+    parser: "@typescript-eslint/parser",
     ignorePatterns: ["node_modules/"],
     env: {
         browser: true,
@@ -7,7 +8,10 @@ module.exports = {
         "jest/globals": true,
         "cypress/globals": true,
     },
-    extends: ["eslint:recommended"],
+    extends: [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+    ],
     globals: {
         Atomics: "readonly",
         SharedArrayBuffer: "readonly",

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 import settings from "../settings"
 import getUserDbName from "./getUserDbName"
 import Cookies from "js-cookie"

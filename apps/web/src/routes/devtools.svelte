@@ -1,7 +1,9 @@
 <script lang="typescript" context="module">
   export async function preload() {
       if (!process.browser) {
+      // eslint-disable-next-line @typescript-eslint/no-var-requires
           const fs = require("fs")
+          // eslint-disable-next-line @typescript-eslint/no-var-requires
           const util = require("util")
           const readdir = util.promisify(fs.readdir)
 
