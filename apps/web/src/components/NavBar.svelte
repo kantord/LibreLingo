@@ -1,13 +1,18 @@
 <script lang="typescript">
   import settings from "../settings"
   import authStore from "../auth"
-  import SponsorButton from "./SponsorButton"
-  import GitHubButton from "./GitHubButton"
+  import SponsorButton from "./SponsorButton.svelte"
+  import GitHubButton from "./GitHubButton.svelte"
   import Icon from "lluis/Icon.svelte"
-  import Button from "lluis/Button"
+  import Button from "lluis/Button.svelte"
   export let dark = false
   export let is_hidden_mobile = false
   export let hasAuth = false
+
+  type WindowWithLogout = Window & {
+    _Logout: () => void
+  }
+  const _Logout = () => (window as unknown as WindowWithLogout)._Logout()
 </script>
 
 <nav
@@ -37,7 +42,7 @@
               <span>{$authStore.user.name}</span>
             </Button>
             <Button
-              on:click="{() => window._Logout()}"
+              on:click="{() => _Logout()}"
               size="small"
               outlined
               inverted
