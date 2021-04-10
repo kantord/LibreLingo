@@ -29,7 +29,6 @@ sapper.start({
     target: document.querySelector("#sapper"),
 })
 
-
 if (!window.isCypress) {
     require("@openfonts/noto-sans_all")
 }

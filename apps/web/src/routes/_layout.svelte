@@ -2,12 +2,11 @@
   import { waitLocale } from "svelte-i18n"
 
   export async function preload() {
-      return waitLocale()
+    return waitLocale()
   }
 </script>
 
-<script lang="typescript">
-  export let segment
+<script lang="typescript">  export let segment
 </script>
 
 <svelte:head>

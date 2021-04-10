@@ -3,7 +3,7 @@
 </script>
 
 <b class="phrase">
-  {#each phrase as { word, definition }}
+  {#each                     phrase as { word, definition }}
     {#if definition}
       <span class="has-tooltip-bottom" data-tooltip="{definition}">{word}</span>
     {:else}<span>{word}</span>{/if}

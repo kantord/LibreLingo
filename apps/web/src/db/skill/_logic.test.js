@@ -3,7 +3,7 @@ import {
     daysUntilNextPractice,
     wouldBeStale,
     getLastPractice,
-    isStale
+    isStale,
 } from "./_logic"
 
 const today = dayjs()
@@ -15,7 +15,7 @@ describe("daysUntilNextPractice", () => {
         { practicesSoFar: 1, expectedOutput: 1 },
         { practicesSoFar: 2, expectedOutput: 2 },
         { practicesSoFar: 3, expectedOutput: 3 },
-        { practicesSoFar: 4, expectedOutput: 5 }
+        { practicesSoFar: 4, expectedOutput: 5 },
     ]
 
     tests.forEach(({ practicesSoFar, expectedOutput }) => {
@@ -31,20 +31,20 @@ describe("wouldBeStale", () => {
             description: "expired after first practice",
             lastPractice: yesterday,
             practicesSoFar: 1,
-            expectedOutput: true
+            expectedOutput: true,
         },
         {
             description: "not expired after second practice",
             lastPractice: yesterday,
             practicesSoFar: 2,
-            expectedOutput: false
+            expectedOutput: false,
         },
         {
             description: "expired after second practice",
             lastPractice: dayBeforeYesterday,
             practicesSoFar: 2,
-            expectedOutput: true
-        }
+            expectedOutput: true,
+        },
     ]
 
     tests.forEach(
@@ -62,16 +62,16 @@ describe("getLastPractice", () => {
     const tests = [
         {
             practices: [{ at: dayBeforeYesterday }],
-            expectedOutput: dayBeforeYesterday
+            expectedOutput: dayBeforeYesterday,
         },
         {
             practices: [{ at: dayBeforeYesterday }, { at: yesterday }],
-            expectedOutput: yesterday
+            expectedOutput: yesterday,
         },
         {
             practices: [{ at: yesterday }, { at: today }, { at: dayBeforeYesterday }],
-            expectedOutput: today
-        }
+            expectedOutput: today,
+        },
     ]
 
     tests.forEach(({ practices, expectedOutput }) => {
@@ -86,18 +86,18 @@ describe("isStale", () => {
         {
             description: "expired after first practice",
             practices: [{ at: +dayBeforeYesterday }],
-            expectedOutput: true
+            expectedOutput: true,
         },
         {
             description: "not expired after second practice",
             practices: [{ at: +dayBeforeYesterday }, { at: +yesterday }],
-            expectedOutput: false
+            expectedOutput: false,
         },
         {
             description: "not expired after second practice",
             practices: [{ at: +dayBeforeYesterday }, { at: +dayBeforeYesterday }],
-            expectedOutput: true
-        }
+            expectedOutput: true,
+        },
     ]
 
     tests.forEach(({ practices, expectedOutput, description }) => {

@@ -9,8 +9,8 @@ module.exports = {
         "cypress/globals": true,
     },
     extends: [
-        "eslint:recommended",
-        "plugin:@typescript-eslint/recommended",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
     ],
     globals: {
         Atomics: "readonly",
@@ -20,9 +20,9 @@ module.exports = {
     parserOptions: {
         ecmaVersion: 2020,
         sourceType: "module",
-        extraFileExtensions: [".svelte"]
+        extraFileExtensions: [".svelte"],
     },
-    plugins: ["svelte3", "jest", "cypress", '@typescript-eslint'],
+    plugins: ["svelte3", "jest", "cypress", "@typescript-eslint", "prettier"],
     overrides: [
         {
             files: ["**/*.svelte"],
@@ -41,10 +41,12 @@ module.exports = {
         "linebreak-style": ["error", "unix"],
         quotes: ["error", "double"],
         semi: ["error", "never"],
+        "prettier/prettier": "error",
+        "arrow-body-style": "off",
+        "prefer-arrow-callback": "off"
     },
     settings: {
         "svelte3/ignore-styles": () => true,
         "svelte3/typescript": require("typescript"),
     },
 }
-
