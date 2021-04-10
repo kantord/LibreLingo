@@ -1,6 +1,6 @@
 <script lang="typescript">
-  import Button from "lluis/Button"
-  import Icon from "lluis/Icon"
+  import Button from "lluis/Button.svelte"
+  import Icon from "lluis/Icon.svelte"
 </script>
 
 <Button

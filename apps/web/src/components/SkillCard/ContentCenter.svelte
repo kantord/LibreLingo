@@ -1,6 +1,6 @@
 <script lang="typescript">
-  import Summary from "./Summary"
-  import Title from "lluis/Title"
+  import Summary from "./Summary.svelte"
+  import Title from "lluis/Title.svelte"
 
   export let title
   export let completed

@@ -2,13 +2,13 @@
   import { onMount } from "svelte"
   import hotkeys from "hotkeys-js"
   import levenshtein from "js-levenshtein"
-  import ChallengePanel from "./ChallengePanel"
-  import Icon from "lluis/Icon"
-  import InputFieldWithVirtualKeyboard from "./InputFieldWithVirtualKeyboard"
+  import ChallengePanel from "./ChallengePanel.svelte"
+  import Icon from "lluis/Icon.svelte"
+  import InputFieldWithVirtualKeyboard from "./InputFieldWithVirtualKeyboard.svelte"
   import { playAudio } from "../media/sound"
-  import Button from "lluis/Button"
-  import Column from "lluis/Column"
-  import Columns from "lluis/Columns"
+  import Button from "lluis/Button.svelte"
+  import Column from "lluis/Column.svelte"
+  import Columns from "lluis/Columns.svelte"
 
   export let challenge
   export let registerResult
