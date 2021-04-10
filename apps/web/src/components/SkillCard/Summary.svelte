@@ -1,5 +1,5 @@
 <script lang="typescript">
-  import ClampedText from "lluis/ClampedText"
+  import ClampedText from "lluis/ClampedText.svelte"
 
   export let summary
   export let stale
