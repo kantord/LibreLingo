@@ -1,6 +1,6 @@
 <script lang="typescript">
   // TODO: deal with this ignore comment
-  // eslint-disable-next-line no-unused-vars
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   import db from "../db/db.js"
   import NavBar from "../components/NavBar.svelte"
   import Button from "lluis/Button"

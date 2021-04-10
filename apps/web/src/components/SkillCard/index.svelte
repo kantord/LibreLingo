@@ -29,6 +29,7 @@
                   started = stats.started
                   stale = stats.stale && completed
               })
+              // eslint-disable-next-line @typescript-eslint/no-empty-function
               .catch(() => {})
       )
   })
