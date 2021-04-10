@@ -1,5 +1,6 @@
 <script lang="typescript">
   import { onMount } from "svelte"
+  import Sortable from 'sortablejs';
   import hotkeys from "hotkeys-js"
   import shuffle from "lodash.shuffle"
   import { writable } from "svelte/store"
@@ -14,29 +15,19 @@
   
   let submitted = false
   let correct = null
+  let chipsElement: HTMLElement
+  let answerElement: HTMLElement
   const answer = writable([])
-  const chips = writable(shuffle(challenge.chips))
-
-  if (process.browser === true) {
-      window.testSolution = () => {
-          answer.update(() => ["Como", "estás", "hoy"])
-      }
-
-      window.testSolution2 = () => {
-          answer.update(() => ["Tu", "como", "estás", "hoy"])
-      }
-
-      window.testIncorrectSolution = () => {
-          answer.update(() => ["Como", "hoy"])
-      }
-  }
+  const initialChips = shuffle(challenge.chips)
+  const initialAnswer = []
+  const chips = writable(initialChips)
 
   $: submitChallenge = () => {
       if (!$answer) return
       if (submitted) return
       correct = false
       const answerForm = $answer.join(" ")
-      challenge.solutions.map((solution) => {
+      challenge.solutions.map((solution: string[]) => {
           correct = correct || answerForm === solution.join(" ")
       })
       registerResult(correct)
@@ -49,7 +40,7 @@
       resolveChallenge()
   }
 
-  $: handleOptionClick = (chip, index) => {
+  $: handleChipClick = (chip, index, event) => {
       if (submitted) return
       chips.update(oldItems => {
           const newItems = [...oldItems]
@@ -57,9 +48,12 @@
           return newItems
       })
       answer.update(oldItems => [...oldItems, chip])
+      const chipElement = event.target
+      chipElement.remove()
+      answerElement.appendChild(chipElement)
   }
 
-  $: handleAnswerClick = (chip, index) => {
+  $: handleAnswerClick = (chip, index, event) => {
       if (submitted) return
       answer.update(oldItems => {
           const newItems = [...oldItems]
@@ -67,7 +61,39 @@
           return newItems
       })
       chips.update(oldItems => [...oldItems, chip])
+      event.target.remove()
   }
+
+  let chipsSortable
+
+  const initializeSortable1 = () => {
+    chipsSortable = Sortable.create(chipsElement, {
+        group: 'chips',
+        store: {
+          get: function(sortable) {
+            return $chips
+          },
+          set: function(sortable) {
+            chips.set(sortable.toArray())
+            return sortable.toArray()
+          }
+        }
+      });
+    }
+
+  const initializeSortable2 = () =>
+    Sortable.create(answerElement, {
+        group: 'chips',
+        store: {
+          get: function(sortable) {
+            return $answer
+          },
+          set: function(sortable) {
+            answer.set(sortable.toArray())
+            return sortable.toArray()
+          }
+        }
+      });
 
   onMount(() => {
       hotkeys.unbind("enter")
@@ -78,6 +104,9 @@
               submitChallenge()
           }
       })
+
+      initializeSortable1()
+      initializeSortable2()
   })
 </script>
 
@@ -89,11 +118,12 @@
     </p>
   </div>
 
+    {JSON.stringify($answer)}
   <div>
     <div class="solution">
-      <div class="chips">
-        {#each $answer as chip, index}
-          <span class="chip" on:click="{() => handleAnswerClick(chip, index)}">
+      <div class="chips" bind:this={answerElement}>
+        {#each initialAnswer as chip, index}
+          <span class="chip" data-id={chip} on:click="{(event) => handleAnswerClick(chip, index, event)}">
             <spain class="tag is-medium">{chip}</spain>
           </span>
         {/each}
@@ -101,10 +131,11 @@
 
     </div>
 
+    {JSON.stringify($chips)}
     <p class="sub-instructions">Use these words:</p>
-    <div class="chips">
-      {#each $chips as chip, index}
-        <span class="chip" on:click="{() => handleOptionClick(chip, index)}">
+    <div id="chips" class="chips" bind:this={chipsElement}>
+      {#each initialChips as chip, index}
+        <span class="chip" data-id={chip} on:click="{(event) => handleChipClick(chip, index, event)}">
           <spain class="tag is-medium">{chip}</spain>
         </span>
       {/each}
