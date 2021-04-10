@@ -9,6 +9,7 @@
     "test": "yarn web test",
     "test:ci": "yarn web test:ci",
     "web": "yarn workspace @librelingo/web",
+    "types": "yarn workspaces run types",
     "stylefix": "yarn web run prettierfix && yarn web run eslintfix",
     "stylecheck": "yarn web run prettiercheck && yarn web run eslintcheck",
     "exportAllCourses": "./scripts/exportAllYamlCourses.sh",
