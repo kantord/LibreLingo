@@ -5,6 +5,7 @@
   import { writable } from "svelte/store"
   import ChallengePanel from "../ChallengePanel"
   import Phrase from "../Phrase"
+  import Chip from "./Chip"
   import { createSortable } from "./sortable"
   import { getNodeType, getChipIndex } from "./chips"
 
@@ -128,9 +129,7 @@
     <div class="solution">
       <div id="answer" class="chips" bind:this={answerElement}>
         {#each answerToRender as chip, index}
-          <span class="chip" data-id={chip} on:click="{handleChipClick}">
-            <span class="tag is-medium">{chip}</span>
-          </span>
+          <Chip text={chip} on:click={handleChipClick} />
         {/each}
       </div>
     </div>
@@ -138,9 +137,7 @@
     <p class="sub-instructions">Use these words:</p>
     <div id="chips" class="chips" bind:this={chipsElement}>
       {#each chipsToRender as chip, index}
-        <span class="chip" data-id={chip} on:click="{handleChipClick}">
-          <span class="tag is-medium">{chip}</span>
-        </span>
+        <Chip text={chip} on:click={handleChipClick} />
       {/each}
     </div>
   </div>
