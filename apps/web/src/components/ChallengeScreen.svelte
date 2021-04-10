@@ -10,7 +10,7 @@
   import shuffle from "lodash.shuffle"
   import { fade, scale } from "svelte/transition"
   // TODO: deal with this ignore comment
-  // eslint-disable-next-line no-unused-vars
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   import db from "../db/db"
 
   export let rawChallenges

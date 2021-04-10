@@ -13,6 +13,7 @@
   import { onMount } from "svelte"
   import Icon from "lluis/Icon"
   import Button from "lluis/Button"
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
   const pMemoize = require("p-memoize")
   export let stars = (process.browser === true ? window.stars : null) || "   "
   export let size = "small"
