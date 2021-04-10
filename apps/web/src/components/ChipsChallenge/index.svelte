@@ -1,5 +1,6 @@
 <script lang="typescript">
   import { onMount } from "svelte"
+  import Sortable from 'sortablejs';
   import hotkeys from "hotkeys-js"
   import shuffle from "lodash.shuffle"
   import { writable } from "svelte/store"
@@ -14,29 +15,19 @@
   
   let submitted = false
   let correct = null
+  let chipsElement: HTMLElement
+  let answerElement: HTMLElement
   const answer = writable([])
-  const chips = writable(shuffle(challenge.chips))
-
-  if (process.browser === true) {
-      window.testSolution = () => {
-          answer.update(() => ["Como", "estás", "hoy"])
-      }
-
-      window.testSolution2 = () => {
-          answer.update(() => ["Tu", "como", "estás", "hoy"])
-      }
-
-      window.testIncorrectSolution = () => {
-          answer.update(() => ["Como", "hoy"])
-      }
-  }
+  let answerToRender = []
+  let chipsToRender = shuffle(challenge.chips)
+  const chips = writable(chipsToRender)
 
   $: submitChallenge = () => {
       if (!$answer) return
       if (submitted) return
       correct = false
       const answerForm = $answer.join(" ")
-      challenge.solutions.map((solution) => {
+      challenge.solutions.map((solution: string[]) => {
           correct = correct || answerForm === solution.join(" ")
       })
       registerResult(correct)
@@ -49,25 +40,86 @@
       resolveChallenge()
   }
 
-  $: handleOptionClick = (chip, index) => {
-      if (submitted) return
-      chips.update(oldItems => {
-          const newItems = [...oldItems]
-          newItems.splice(index, 1)
-          return newItems
-      })
-      answer.update(oldItems => [...oldItems, chip])
+  const getActualParent = node => node.parentElement.id ? node.parentElement : node.parentElement.parentElement
+  const getNodeType = node => getActualParent(node).id
+  const getChipIndex = node => {
+    if (!node.classList.contains("chip")) {
+      return getChipIndex(node.parentElement)
+    }
+
+    if (!node.previousSibling) {
+      return 0
+    }
+
+    return 1 + getChipIndex(node.previousSibling)
   }
 
-  $: handleAnswerClick = (chip, index) => {
+  $: handleChipClick = (event) => {
       if (submitted) return
-      answer.update(oldItems => {
-          const newItems = [...oldItems]
-          newItems.splice(index, 1)
-          return newItems
-      })
-      chips.update(oldItems => [...oldItems, chip])
+      const node = event.target
+      const chipType = getNodeType(node)
+      const chipText = node.innerText
+      const chipIndex = getChipIndex(node)
+
+      console.log('🐀', chipType, chipText, chipIndex)
+
+      if (chipType === "chips") {
+        chips.update(oldItems => {
+            const newItems = [...oldItems]
+            newItems.splice(chipIndex, 1)
+            return newItems
+        })
+        answer.update(oldItems => [...oldItems, chipText])
+      }
+
+      if (chipType === "answer") {
+        answer.update(oldItems => {
+            const newItems = [...oldItems]
+            newItems.splice(chipIndex, 1)
+            return newItems
+        })
+        chips.update(oldItems => [...oldItems, chipText])
+      }
+
+      chipsSortable.destroy()
+      answerSortable.destroy()
+      answerToRender = $answer
+      chipsToRender = $chips
+      setTimeout(() => {
+        initializeSortable1()
+        initializeSortable2()
+      }, 0)
   }
+
+  let chipsSortable
+  let answerSortable
+
+  const initializeSortable1 = () => {
+    chipsSortable = Sortable.create(chipsElement, {
+        group: 'chips',
+        store: {
+          get: function(sortable) {
+            return $chips
+          },
+          set: function(sortable) {
+            chips.set(sortable.toArray())
+          }
+        }
+      });
+    }
+
+  const initializeSortable2 = () =>
+    answerSortable = Sortable.create(answerElement, {
+        group: 'chips',
+        store: {
+          get: function(sortable) {
+            return $answer
+          },
+          set: function(sortable) {
+            answer.set(sortable.toArray())
+          }
+        }
+      });
 
   onMount(() => {
       hotkeys.unbind("enter")
@@ -78,6 +130,9 @@
               submitChallenge()
           }
       })
+
+      initializeSortable1()
+      initializeSortable2()
   })
 </script>
 
@@ -91,21 +146,20 @@
 
   <div>
     <div class="solution">
-      <div class="chips">
-        {#each $answer as chip, index}
-          <span class="chip" on:click="{() => handleAnswerClick(chip, index)}">
-            <spain class="tag is-medium">{chip}</spain>
+      <div id="answer" class="chips" bind:this={answerElement}>
+        {#each answerToRender as chip, index}
+          <span class="chip" data-id={chip} on:click="{handleChipClick}">
+            <span class="tag is-medium">{chip}</span>
           </span>
         {/each}
       </div>
-
     </div>
 
     <p class="sub-instructions">Use these words:</p>
-    <div class="chips">
-      {#each $chips as chip, index}
-        <span class="chip" on:click="{() => handleOptionClick(chip, index)}">
-          <spain class="tag is-medium">{chip}</spain>
+    <div id="chips" class="chips" bind:this={chipsElement}>
+      {#each chipsToRender as chip, index}
+        <span class="chip" data-id={chip} on:click="{handleChipClick}">
+          <span class="tag is-medium">{chip}</span>
         </span>
       {/each}
     </div>
