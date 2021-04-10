@@ -1,8 +1,8 @@
 <script lang="typescript">
   import { onMount } from "svelte"
   import hotkeys from "hotkeys-js"
-  import Options from "../Options"
-  import ChallengePanel from "../ChallengePanel"
+  import Options from "../Options.svelte"
+  import ChallengePanel from "../ChallengePanel.svelte"
   import { prepareChallenge } from "../../logic"
 
   export let currentChallenge
