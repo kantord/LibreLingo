@@ -5,6 +5,8 @@
   import { writable } from "svelte/store"
   import ChallengePanel from "../ChallengePanel"
   import Phrase from "../Phrase"
+  import { createSortable } from "./sortable"
+  import { getNodeType, getChipIndex } from "./chips"
 
   export let challenge
   export let registerResult
@@ -14,29 +16,19 @@
   
   let submitted = false
   let correct = null
+  let chipsElement: HTMLElement
+  let answerElement: HTMLElement
   const answer = writable([])
-  const chips = writable(shuffle(challenge.chips))
-
-  if (process.browser === true) {
-      window.testSolution = () => {
-          answer.update(() => ["Como", "estás", "hoy"])
-      }
-
-      window.testSolution2 = () => {
-          answer.update(() => ["Tu", "como", "estás", "hoy"])
-      }
-
-      window.testIncorrectSolution = () => {
-          answer.update(() => ["Como", "hoy"])
-      }
-  }
+  let answerToRender = []
+  let chipsToRender = shuffle(challenge.chips)
+  const chips = writable(chipsToRender)
 
   $: submitChallenge = () => {
       if (!$answer) return
       if (submitted) return
       correct = false
       const answerForm = $answer.join(" ")
-      challenge.solutions.map((solution) => {
+      challenge.solutions.map((solution: string[]) => {
           correct = correct || answerForm === solution.join(" ")
       })
       registerResult(correct)
@@ -49,24 +41,65 @@
       resolveChallenge()
   }
 
-  $: handleOptionClick = (chip, index) => {
+  
+
+  $: handleChipClick = (event) => {
       if (submitted) return
-      chips.update(oldItems => {
-          const newItems = [...oldItems]
-          newItems.splice(index, 1)
-          return newItems
-      })
-      answer.update(oldItems => [...oldItems, chip])
+      const node = event.target
+      const chipType = getNodeType(node)
+      const chipText = node.innerText
+      const chipIndex = getChipIndex(node)
+
+      if (chipType === "chips") {
+          chips.update(oldItems => {
+              const newItems = [...oldItems]
+              newItems.splice(chipIndex, 1)
+              return newItems
+          })
+          answer.update(oldItems => [...oldItems, chipText])
+      }
+
+      if (chipType === "answer") {
+          answer.update(oldItems => {
+              const newItems = [...oldItems]
+              newItems.splice(chipIndex, 1)
+              return newItems
+          })
+          chips.update(oldItems => [...oldItems, chipText])
+      }
+
+      rerenderSortables()
+
   }
 
-  $: handleAnswerClick = (chip, index) => {
-      if (submitted) return
-      answer.update(oldItems => {
-          const newItems = [...oldItems]
-          newItems.splice(index, 1)
-          return newItems
-      })
-      chips.update(oldItems => [...oldItems, chip])
+  const rerenderSortables = () => {
+      chipsSortable.destroy()
+      answerSortable.destroy()
+      answerToRender = $answer
+      chipsToRender = $chips
+
+      /*
+        Need to wait for the re-rendering of the chips
+        otherwise the svelte store and the sortable
+        store will be out of sync
+      */
+      setTimeout(initializeDragAndDrop, 0)
+  }
+
+  let chipsSortable
+  let answerSortable
+
+  const initializeSortable1 = () =>  {
+      chipsSortable = createSortable(chipsElement, chips)
+  }
+
+  const initializeSortable2 = () => {
+      answerSortable = createSortable(answerElement, answer)
+  }
+
+  const initializeDragAndDrop = () => {
+      initializeSortable1()
+      initializeSortable2()
   }
 
   onMount(() => {
@@ -78,6 +111,8 @@
               submitChallenge()
           }
       })
+
+      initializeDragAndDrop()
   })
 </script>
 
@@ -91,21 +126,20 @@
 
   <div>
     <div class="solution">
-      <div class="chips">
-        {#each $answer as chip, index}
-          <span class="chip" on:click="{() => handleAnswerClick(chip, index)}">
-            <spain class="tag is-medium">{chip}</spain>
+      <div id="answer" class="chips" bind:this={answerElement}>
+        {#each answerToRender as chip, index}
+          <span class="chip" data-id={chip} on:click="{handleChipClick}">
+            <span class="tag is-medium">{chip}</span>
           </span>
         {/each}
       </div>
-
     </div>
 
     <p class="sub-instructions">Use these words:</p>
-    <div class="chips">
-      {#each $chips as chip, index}
-        <span class="chip" on:click="{() => handleOptionClick(chip, index)}">
-          <spain class="tag is-medium">{chip}</spain>
+    <div id="chips" class="chips" bind:this={chipsElement}>
+      {#each chipsToRender as chip, index}
+        <span class="chip" data-id={chip} on:click="{handleChipClick}">
+          <span class="tag is-medium">{chip}</span>
         </span>
       {/each}
     </div>

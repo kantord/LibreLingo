@@ -1,4 +1,4 @@
-import { Given, Then } from "cypress-cucumber-preprocessor/steps"
+import { Then } from "cypress-cucumber-preprocessor/steps"
 
 Then("words with definitions have tooltips", () => {
     cy.get(".has-tooltip-bottom[data-tooltip=tu]").should("be.visible")
@@ -12,16 +12,4 @@ Then("I see the correct chips", () => {
     cy.get(".chip").contains("Como").should("be.visible")
     cy.get(".chip").contains("estás").should("be.visible")
     cy.get(".chip").contains("hoy").should("be.visible")
-})
-
-Given("I order words incorrectly", () => {
-    cy.window().then((win) => win.testIncorrectSolution())
-})
-
-Given("I order words correctly", () => {
-    cy.window().then((win) => win.testSolution())
-})
-
-Given("I order words correctly, but in a different way", () => {
-    cy.window().then((win) => win.testSolution2())
 })
