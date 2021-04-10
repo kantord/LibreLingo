@@ -3,9 +3,9 @@
   import hotkeys from "hotkeys-js"
   import shuffle from "lodash.shuffle"
   import { writable } from "svelte/store"
-  import ChallengePanel from "../ChallengePanel"
   import Phrase from "../Phrase"
   import Chip from "./Chip"
+  import ChipsChallengePanel from "./ChipsChallengePanel"
   import { createSortable } from "./sortable"
   import { getNodeType, getChipIndex } from "./chips"
 
@@ -142,40 +142,15 @@
     </div>
   </div>
 
-  {#if $answer.length === 0 && !submitted}
-    <ChallengePanel
-      message="{null}"
-      buttonText="{null}"
-      skipAction="{skipChallenge}"
-      skipAllAction="{skipAllChallenges}" />
-  {/if}
-
-  {#if $answer.length > 0 && !submitted}
-    <ChallengePanel
-      message=""
-      buttonText="Submit"
-      submit
-      skipAction="{skipChallenge}"
-      skipAllAction="{skipAllChallenges}" />
-  {/if}
-
-  {#if submitted}
-    {#if !correct}
-      <ChallengePanel
-        message="Incorrect solution!"
-        messageDetail="{`Correct answer: ${challenge.formattedSolution}`}"
-        buttonText="Continue"
-        incorrect
-        buttonAction="{finishChallenge}" />
-    {/if}
-    {#if correct}
-      <ChallengePanel
-        message="Correct solution!"
-        buttonText="Continue"
-        correct
-        buttonAction="{finishChallenge}" />
-    {/if}
-  {/if}
+  <ChipsChallengePanel
+    hasAnswer={$answer.length > 0}
+    submitted={submitted}
+    skipChallenge={skipChallenge}
+    skipAllChallenges={skipAllChallenges}
+    finishChallenge={finishChallenge}
+    challenge={challenge}
+    correct={correct}
+  />
 </form>
 
 <style type="text/scss">

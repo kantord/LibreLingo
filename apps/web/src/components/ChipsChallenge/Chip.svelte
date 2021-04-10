@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
   import { createEventDispatcher } from "svelte"
 
   export let text
