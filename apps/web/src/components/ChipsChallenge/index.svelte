@@ -3,8 +3,9 @@
   import hotkeys from "hotkeys-js"
   import shuffle from "lodash.shuffle"
   import { writable } from "svelte/store"
-  import ChallengePanel from "../ChallengePanel"
   import Phrase from "../Phrase"
+  import Chip from "./Chip"
+  import ChipsChallengePanel from "./ChipsChallengePanel"
   import { createSortable } from "./sortable"
   import { getNodeType, getChipIndex } from "./chips"
 
@@ -128,9 +129,7 @@
     <div class="solution">
       <div id="answer" class="chips" bind:this={answerElement}>
         {#each answerToRender as chip, index}
-          <span class="chip" data-id={chip} on:click="{handleChipClick}">
-            <span class="tag is-medium">{chip}</span>
-          </span>
+          <Chip text={chip} on:click={handleChipClick} />
         {/each}
       </div>
     </div>
@@ -138,47 +137,20 @@
     <p class="sub-instructions">Use these words:</p>
     <div id="chips" class="chips" bind:this={chipsElement}>
       {#each chipsToRender as chip, index}
-        <span class="chip" data-id={chip} on:click="{handleChipClick}">
-          <span class="tag is-medium">{chip}</span>
-        </span>
+        <Chip text={chip} on:click={handleChipClick} />
       {/each}
     </div>
   </div>
 
-  {#if $answer.length === 0 && !submitted}
-    <ChallengePanel
-      message="{null}"
-      buttonText="{null}"
-      skipAction="{skipChallenge}"
-      skipAllAction="{skipAllChallenges}" />
-  {/if}
-
-  {#if $answer.length > 0 && !submitted}
-    <ChallengePanel
-      message=""
-      buttonText="Submit"
-      submit
-      skipAction="{skipChallenge}"
-      skipAllAction="{skipAllChallenges}" />
-  {/if}
-
-  {#if submitted}
-    {#if !correct}
-      <ChallengePanel
-        message="Incorrect solution!"
-        messageDetail="{`Correct answer: ${challenge.formattedSolution}`}"
-        buttonText="Continue"
-        incorrect
-        buttonAction="{finishChallenge}" />
-    {/if}
-    {#if correct}
-      <ChallengePanel
-        message="Correct solution!"
-        buttonText="Continue"
-        correct
-        buttonAction="{finishChallenge}" />
-    {/if}
-  {/if}
+  <ChipsChallengePanel
+    hasAnswer={$answer.length > 0}
+    submitted={submitted}
+    skipChallenge={skipChallenge}
+    skipAllChallenges={skipAllChallenges}
+    finishChallenge={finishChallenge}
+    challenge={challenge}
+    correct={correct}
+  />
 </form>
 
 <style type="text/scss">
