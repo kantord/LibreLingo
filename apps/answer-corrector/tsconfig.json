@@ -4,13 +4,11 @@
     "declarationMap": true,
     "sourceMap": true,
     "composite": true,
-    "outDir": "dist",
-    "rootDir": "src",
     "esModuleInterop": true,
     "skipLibCheck": true
   },
   "include": [
-    "src/index.ts"
+    "src/**/*.ts"
   ],
   "exclude": [
     "node_modules",
