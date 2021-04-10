@@ -10,14 +10,15 @@
 </script>
 
 <script lang="typescript">
-  import SkillCard from "../../../components/SkillCard"
+  import SkillCard from "../../../components/SkillCard/index.svelte"
   import NavBar from "../../../components/NavBar.svelte"
   import Column from "lluis/Column.svelte"
   import Columns from "lluis/Columns.svelte"
   import Content from "lluis/Content.svelte"
+  import type { ModulesType } from "../../../types/ModulesType"
 
   export let courseName = null
-  export let modules = null
+  export let modules: ModulesType = null
   export let languageName = null
 </script>
 

@@ -8,7 +8,7 @@ const database = !isDevelopment
     ? settings.database.production
     : settings.database.development
 
-const authEnabled = Cookies.get("authEnabled") !== "false" || !process.browser
+const authEnabled = Cookies.get("authEnabled") !== "false" || process.browser
 
 export default {
     ...settings,
