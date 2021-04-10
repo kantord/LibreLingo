@@ -1,5 +1,5 @@
 <script lang="typescript" context="module">
-  import MarkDownPage, { getMarkDownData } from "../components/MarkDownPage"
+  import MarkDownPage, { getMarkDownData } from "../components/MarkDownPage.svelte"
   import { _ } from "svelte-i18n"
 
   export async function preload() {

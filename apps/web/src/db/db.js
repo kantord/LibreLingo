@@ -36,7 +36,7 @@ const createLocalPouchDb = (dbName) => {
     return newDb
 }
 
-if (process.browser === true) {
+if (isBrowser() === true) {
     const authStore = require("../auth").default
     const PouchDB = require("pouchdb").default
 

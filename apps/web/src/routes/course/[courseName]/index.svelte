@@ -10,14 +10,15 @@
 </script>
 
 <script lang="typescript">
-  import SkillCard from "../../../components/SkillCard"
+  import SkillCard from "../../../components/SkillCard.svelte"
   import NavBar from "../../../components/NavBar.svelte"
   import Column from "lluis/Column.svelte"
   import Columns from "lluis/Columns.svelte"
   import Content from "lluis/Content.svelte"
+  import type { ModulesType } from "../../../types/ModulesType"
 
   export let courseName = null
-  export let modules = null
+  export let modules: ModulesType = null
   export let languageName = null
 </script>
 
@@ -30,7 +31,7 @@
 {#each modules as { title, skills }}
   <section class="section">
     <div class="container">
-      <h2 class="is-size-2">{title}</h2>
+      <h2 class="is-sizem-2">{title}</h2>
       <Columns multiline>
         {#each skills as skill}
           <Column sizeDesktop="1/3" sizeTablet="1/2">

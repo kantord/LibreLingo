@@ -1,5 +1,5 @@
 <script lang="typescript">
-  import Button from "lluis/Button"
+  import Button from "lluis/Button.svelte"
   export let value
   export let specialCharacters
   export let languageCode

@@ -1,10 +1,10 @@
 <script lang="typescript">
   import settings from "../settings"
   import authStore from "../auth"
-  import SponsorButton from "./SponsorButton"
-  import GitHubButton from "./GitHubButton"
+  import SponsorButton from "./SponsorButton.svelte"
+  import GitHubButton from "./GitHubButton.svelte"
   import Icon from "lluis/Icon.svelte"
-  import Button from "lluis/Button"
+  import Button from "lluis/Button.svelte"
   export let dark = false
   export let is_hidden_mobile = false
   export let hasAuth = false
