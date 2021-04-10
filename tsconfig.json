@@ -20,9 +20,9 @@
             "svelte",
             "jest"
         ],
-        "strict": false,
+        "strict": true,
         "esModuleInterop": true,
-        "skipLibCheck": true,
+        "skipLibCheck": false,
         "forceConsistentCasingInFileNames": true
     }
 }
