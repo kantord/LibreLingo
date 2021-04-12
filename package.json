@@ -9,6 +9,7 @@
     "test": "yarn web test",
     "test:ci": "yarn web test:ci",
     "web": "yarn workspace @librelingo/web",
+    "types": "yarn workspaces run types",
     "stylefix": "yarn web run prettierfix && yarn web run eslintfix",
     "stylecheck": "yarn web run prettiercheck && yarn web run eslintcheck",
     "exportAllCourses": "./scripts/exportAllYamlCourses.sh",
@@ -34,6 +35,7 @@
     ]
   },
   "devDependencies": {
+    "@tsconfig/svelte": "^1.0.10",
     "@typescript-eslint/eslint-plugin": "4.21.0",
     "@typescript-eslint/parser": "4.21.0",
     "eslint": "7.24.0",
@@ -43,6 +45,7 @@
     "semantic-release": "17.4.2",
     "semantic-release-monorepo": "7.0.4",
     "svelte": "3.37.0",
+    "svelte-check": "^1.4.0",
     "svelte-preprocess": "4.7.0",
     "ts-jest": "26.5.4",
     "typescript": "4.2.4"
