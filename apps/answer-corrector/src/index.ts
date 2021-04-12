@@ -22,7 +22,7 @@ const getSuggestion = ({
     suggester,
     form
 }: {
-    alwaysSuggest: boolean,
+    alwaysSuggest?: boolean,
     answer: string,
     mappedForm: string,
     suggester: (form: string) => string,
