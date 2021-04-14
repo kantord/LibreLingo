@@ -37,7 +37,7 @@
   />
 </svelte:head>
 
-{#if process.browser !== true}
+{#if isBrowser() !== true}
   <div class="pageloader is-active"><span class="title">LibreLingo</span></div>
 {/if}
 

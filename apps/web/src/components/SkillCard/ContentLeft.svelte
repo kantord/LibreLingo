@@ -1,5 +1,5 @@
 <script lang="typescript">
-  import ImageSet from "./ImageSet"
+  import ImageSet from "./ImageSet.svelte"
 
   export let imageSet
   export let stale
