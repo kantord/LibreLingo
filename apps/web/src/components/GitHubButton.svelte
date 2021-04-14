@@ -15,11 +15,11 @@
   import Button from "lluis/Button"
   // eslint-disable-next-line @typescript-eslint/no-var-requires
   const pMemoize = require("p-memoize")
-  export let stars = (process.browser === true ? window.stars : null) || "   "
+  export let stars = (isBrowser() === true ? window.stars : null) || "   "
   export let size = "small"
 
   onMount(async () => {
-      if (process.browser === true && window.isCypress) {
+      if (isBrowser() === true && window.isCypress) {
           stars = 999
           return
       }
@@ -30,7 +30,7 @@
           .then((res) => res.json())
           .then(({ stargazers_count }) => {
               stars = stargazers_count
-              if (process.browser === true) {
+              if (isBrowser() === true) {
                   window.star_count = stargazers_count
               }
           })

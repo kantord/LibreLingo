@@ -1,6 +1,6 @@
 <script lang="typescript" context="module">
   export async function preload() {
-      if (!process.browser) {
+      if (!isBrowser()) {
       // eslint-disable-next-line @typescript-eslint/no-var-requires
           const fs = require("fs")
           // eslint-disable-next-line @typescript-eslint/no-var-requires

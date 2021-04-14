@@ -1,9 +1,11 @@
 {
+    "extends": "@tsconfig/svelte/tsconfig.json",
     "$schema": "https://json.schemastore.org/tsconfig",
     "display": "Svelte",
     "compilerOptions": {
         "moduleResolution": "node",
         "target": "es2017",
+        "outDir": "dist",
         /**
         Svelte Preprocess cannot figure out whether you have a value or a type, so tell TypeScript
         to enforce using `import type` instead of `import` for Types.
@@ -22,7 +24,7 @@
         ],
         "strict": false,
         "esModuleInterop": true,
-        "skipLibCheck": true,
+        "skipLibCheck": false,
         "forceConsistentCasingInFileNames": true
     }
 }
