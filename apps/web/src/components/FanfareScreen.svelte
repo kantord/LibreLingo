@@ -5,13 +5,17 @@
   import sound from "../media/sound"
   import hotkeys from "hotkeys-js"
   import { onMount } from "svelte"
+  // TODO: fix this, no idea why it's happening
+  // although we might get rid of sapper itself soon 🤷
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
   import { goto } from "@sapper/app"
-  import Mascot from "./Mascot"
-  import TwitterButton from "./TwitterButton"
-  import Button from "lluis/Button"
-  import Column from "lluis/Column"
-  import Columns from "lluis/Columns"
-  import Title from "lluis/Title"
+  import Mascot from "./Mascot.svelte"
+  import TwitterButton from "./TwitterButton.svelte"
+  import Button from "lluis/Button.svelte"
+  import Column from "lluis/Column.svelte"
+  import Columns from "lluis/Columns.svelte"
+  import Title from "lluis/Title.svelte"
 
   export let rawChallenges
   export let courseURL

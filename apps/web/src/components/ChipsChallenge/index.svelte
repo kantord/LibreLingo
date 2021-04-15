@@ -3,8 +3,8 @@
   import hotkeys from "hotkeys-js"
   import shuffle from "lodash.shuffle"
   import { writable } from "svelte/store"
-  import ChallengePanel from "../ChallengePanel"
-  import Phrase from "../Phrase"
+  import ChallengePanel from "../ChallengePanel.svelte"
+  import Phrase from "../Phrase.svelte"
   import { createSortable } from "./sortable"
   import { getNodeType, getChipIndex } from "./chips"
 
