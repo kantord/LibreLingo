@@ -1,7 +1,7 @@
 <script lang="typescript" context="module">
   export async function preload() {
-      if (!process.browser) {
-      // eslint-disable-next-line @typescript-eslint/no-var-requires
+      try {
+          // eslint-disable-next-line @typescript-eslint/no-var-requires
           const fs = require("fs")
           // eslint-disable-next-line @typescript-eslint/no-var-requires
           const util = require("util")
@@ -12,13 +12,15 @@
                   (fname) => fname.split(".")[0]
               ),
           }
+      } catch(error) {
+          // do nothing
       }
   }
 </script>
 
 <script lang="typescript">
-  import NavBar from "../components/NavBar"
-  import Content from "lluis/Content"
+  import NavBar from "../components/NavBar.svelte"
+  import Content from "lluis/Content.svelte"
 
   export let testSkills = []
 </script>

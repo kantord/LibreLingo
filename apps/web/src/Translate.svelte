@@ -1,11 +1,12 @@
-<script>
+<script lang="typescript">
   import { format } from "svelte-i18n"
+  import isBrowser from "./utils/isBrowser"
 
-  export let key
+  export let key: string
 </script>
 
 <span data-tkey={key}>
-  {#if process.browser === false && process.env.WEBPACK_MODE === "development"}
+  {#if isBrowser() === false && process.env.WEBPACK_MODE === "development"}
     <slot />
   {:else}
     {$format(key)}

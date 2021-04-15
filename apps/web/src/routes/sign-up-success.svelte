@@ -3,7 +3,7 @@
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   import db from "../db/db.js"
   import NavBar from "../components/NavBar.svelte"
-  import Button from "lluis/Button"
+  import Button from "lluis/Button.svelte"
 </script>
 
 <NavBar dark />
