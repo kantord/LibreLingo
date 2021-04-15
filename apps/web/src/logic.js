@@ -4,7 +4,7 @@ export const prepareChallenge = ({
     currentChallenge,
     alternativeChallenges,
     typeToSelect,
-    hasFakeOption,
+    hasFakeOption = null,
 }) => {
     const numberOfCards = hasFakeOption ? 4 : 3
     const correctOption = {

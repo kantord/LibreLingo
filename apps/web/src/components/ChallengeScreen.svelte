@@ -1,12 +1,12 @@
 <script lang="typescript">
   import sound from "../media/sound"
-  import DeckChallenge from "./DeckChallenge"
-  import OptionChallenge from "./OptionChallenge"
-  import ShortInputChallenge from "./ShortInputChallenge"
-  import ListeningChallenge from "./ListeningChallenge"
-  import ChipsChallenge from "./ChipsChallenge"
-  import FanfareScreen from "./FanfareScreen"
-  import ProgressBar from "./ProgressBar"
+  import DeckChallenge from "./DeckChallenge/index.svelte"
+  import OptionChallenge from "./OptionChallenge/index.svelte"
+  import ShortInputChallenge from "./ShortInputChallenge.svelte"
+  import ListeningChallenge from "./ListeningChallenge.svelte"
+  import ChipsChallenge from "./ChipsChallenge/index.svelte"
+  import FanfareScreen from "./FanfareScreen.svelte"
+  import ProgressBar from "./ProgressBar.svelte"
   import shuffle from "lodash.shuffle"
   import { fade, scale } from "svelte/transition"
   // TODO: deal with this ignore comment
@@ -22,7 +22,40 @@
   export let skillId
   export let expectedNumberOfChallenges
 
-  let challenges = sortChallengeGroups(
+  type CardChallengeType = {
+    id: string,
+    type: "cards",
+    pictures: Array<string>
+  }
+
+  type ListeningChallengeType = {
+    id: string,
+    type: "listeningExercise",
+  }
+
+  type OptionsChallengeType = {
+    id: string,
+    type: "options",
+  }
+
+  type ShortInputChallengeType = {
+    id: string,
+    type: "shortInput",
+  }
+
+  type ChipsChallengeType = {
+    id: string,
+    type: "chips",
+  }
+
+  type ChallengeType =
+      | CardChallengeType
+      | ListeningChallengeType
+      | OptionsChallengeType
+      | ShortInputChallengeType
+      | ChipsChallengeType
+
+  let challenges: Array<ChallengeType> = sortChallengeGroups(
       shuffle(rawChallenges),
       expectedNumberOfChallenges
   )
@@ -38,20 +71,20 @@
       skipped: 0,
   }
 
-  const preloadImage = (imageName) => {
+  const preloadImage = (imageName: string) => {
       if (typeof Image === "undefined") return
       new Image().src = `images/${imageName}`
   }
 
   challenges
-      .filter(({ type }) => type === "card")
-      .map(({ pictures }) => pictures.map(preloadImage))
+      .filter(({ type }) => type === "cards")
+      .map(({ pictures }: CardChallengeType) => pictures.map(preloadImage))
 
   $: alternativeChallenges =
     currentChallenge &&
     rawChallenges.filter(({ id }) => id !== currentChallenge.id)
 
-  $: registerResult = (isCorrect) => {
+  $: registerResult = (isCorrect: boolean) => {
       if (isCorrect) {
           stats.correct++
           skipAllChallenges = skipAllChallengesFunc
