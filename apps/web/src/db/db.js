@@ -2,6 +2,7 @@
 import settings from "../settings"
 import getUserDbName from "./getUserDbName"
 import Cookies from "js-cookie"
+import isBrowser from "../utils/isBrowser"
 
 let db
 let remoteDB
@@ -36,7 +37,7 @@ const createLocalPouchDb = (dbName) => {
     return newDb
 }
 
-if (process.browser === true) {
+if (isBrowser() === true) {
     const authStore = require("../auth").default
     const PouchDB = require("pouchdb").default
 

@@ -1,5 +1,6 @@
 <script lang="typescript" context="module">
   import { waitLocale } from "svelte-i18n"
+  import isBrowser from "../utils/isBrowser"
 
   export async function preload() {
       return waitLocale()
@@ -37,7 +38,7 @@
   />
 </svelte:head>
 
-{#if process.browser !== true}
+{#if isBrowser() !== true}
   <div class="pageloader is-active"><span class="title">LibreLingo</span></div>
 {/if}
 

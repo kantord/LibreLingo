@@ -1,6 +1,6 @@
 <script lang="typescript">
   import { slide } from "svelte/transition"
-  import Button from "lluis/Button"
+  import Button from "lluis/Button.svelte"
 
   export let buttonText
   export let buttonAction = null
