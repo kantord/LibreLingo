@@ -1,7 +1,9 @@
 <script lang="typescript" context="module">
+  import isBrowser from "../utils/isBrowser"
+
   export async function preload() {
-      if (!process.browser) {
-      // eslint-disable-next-line @typescript-eslint/no-var-requires
+      if (!isBrowser()) {
+          // eslint-disable-next-line @typescript-eslint/no-var-requires
           const fs = require("fs")
           // eslint-disable-next-line @typescript-eslint/no-var-requires
           const util = require("util")
@@ -17,8 +19,8 @@
 </script>
 
 <script lang="typescript">
-  import NavBar from "../components/NavBar"
-  import Content from "lluis/Content"
+  import NavBar from "../components/NavBar.svelte"
+  import Content from "lluis/Content.svelte"
 
   export let testSkills = []
 </script>

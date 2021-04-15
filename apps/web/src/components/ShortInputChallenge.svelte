@@ -2,12 +2,12 @@
   import { onMount } from "svelte"
   import hotkeys from "hotkeys-js"
   import shuffle from "lodash.shuffle"
-  import ChallengePanel from "./ChallengePanel"
-  import Phrase from "./Phrase"
-  import InputFieldWithVirtualKeyboard from "./InputFieldWithVirtualKeyboard"
-  import Column from "lluis/Column"
-  import Columns from "lluis/Columns"
-  import evaluateAnswer from "@librelingo/answer-corrector/src/index.ts"
+  import ChallengePanel from "./ChallengePanel.svelte"
+  import Phrase from "./Phrase.svelte"
+  import InputFieldWithVirtualKeyboard from "./InputFieldWithVirtualKeyboard.svelte"
+  import Column from "lluis/Column.svelte"
+  import Columns from "lluis/Columns.svelte"
+  import evaluateAnswer from "@librelingo/answer-corrector/src/index"
 
   export let challenge
   export let registerResult
