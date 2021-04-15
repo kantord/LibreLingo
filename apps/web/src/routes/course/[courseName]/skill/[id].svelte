@@ -28,8 +28,8 @@
 </script>
 
 <script lang="typescript">
-  import ChallengeScreen from "../../../../components/ChallengeScreen"
-  import NavBar from "../../../../components/NavBar"
+  import ChallengeScreen from "../../../../components/ChallengeScreen.svelte"
+  import NavBar from "../../../../components/NavBar.svelte"
   import { sortChallengeGroups } from "./_logic"
 
   export let rawChallenges
