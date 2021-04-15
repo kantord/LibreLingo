@@ -1,5 +1,5 @@
 <script lang="typescript">
-  import Button from "lluis/Button"
+  import Button from "lluis/Button.svelte"
   export let value
   export let specialCharacters
   export let languageCode
@@ -55,7 +55,7 @@
 
 <!-- svelte-ignore a11y-autofocus -->
 <input
-  tabindex="0"
+  tabindex={0}
   data-test="answer"
   type="text"
   class="input"
@@ -73,7 +73,7 @@
 <div class="keyboard">
   {#each specialCharacters as specialCharacter}
     <Button
-      tabindex="-1"
+      tabindex={-1}
       light
       key
       size="small"
