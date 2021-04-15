@@ -4,9 +4,25 @@
   import db from "../db/db.js"
   import settings from "../settings"
   import NavBar from "../components/NavBar.svelte"
-  import Button from "lluis/Button"
-  import FormField from "lluis/FormField"
+  import Button from "lluis/Button.svelte"
+  import FormField from "lluis/FormField.svelte"
   import { _ } from "svelte-i18n"
+  import isBrowser from "../utils/isBrowser"
+
+
+  type ErrorsType = {
+    _form?: string,
+    username?: string,
+    email?: string,
+    license?: string,
+    password?: string,
+    password_confirmation?: string,
+  }
+
+  interface ExtendedWindow extends Window {
+    _test_fake_signup: boolean,
+    _test_user_already_exists: boolean,
+  }
 
   let loading = false
 
@@ -15,7 +31,7 @@
   let password = ""
   let password_confirmation = ""
   let license_accepted = false
-  let errors = {}
+  let errors: ErrorsType = {}
 
   // TODO: deal with this ignore comment
   // eslint-disable-next-line no-useless-escape
@@ -122,8 +138,8 @@
   }
 
   const handleTestingFakes = () => {
-      if (window._test_fake_signup) {
-          if (window._test_user_already_exists) {
+      if ((window as unknown as ExtendedWindow)?._test_fake_signup) {
+          if ((window as unknown as ExtendedWindow)?._test_user_already_exists) {
               errors = {
                   ...errors,
                   _form: "User already exists. Please choose another username.",
@@ -133,7 +149,7 @@
       }
   }
 
-  let handleSignUp
+  let handleSignUp: () => Promise<void>
   $: {
       handleSignUp = async () => {
           loading = true
@@ -145,12 +161,12 @@
           handleTestingFakes()
           const isFormValid = Object.keys(errors).length === 0
 
-          if (process.browser === true) {
-              if (window._test_fake_signup) {
+          if (isBrowser() === true) {
+              if ((window as unknown as ExtendedWindow)?._test_fake_signup) {
                   setTimeout(function () {
                       if (isFormValid === true) {
                           loading = false
-                          window.location = "/sign-up-success"
+                          window.location.href = "/sign-up-success"
                       } else {
                           loading = false
                       }
@@ -172,7 +188,7 @@
                           .then(({ success, error }) => {
                               if (success) {
                                   loading = false
-                                  window.location = "/sign-up-success"
+                                  window.location.href = "/sign-up-success"
                               } else {
                                   loading = false
                                   if (error.code === "invalid-payload") {

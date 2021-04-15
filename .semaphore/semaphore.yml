@@ -75,18 +75,18 @@ blocks:
             - checkout
             - cache restore node-$(checksum yarn.lock)
             - yarn eslint apps/*/cypress
-  - name: Typescript Code Style Check
+  - name: TypeScript check
     dependencies:
       - Eslint
     task:
       jobs:
-        - name: typecodestyle
+        - name: tsc
           commands:
             - sem-version node 12
             - checkout
             - cache restore node-$(checksum yarn.lock)
             - cache restore packages-web-$(checksum yarn.lock)
-            - yarn stylecheck
+            - yarn types
   - name: Sapper build
     dependencies:
       - Eslint Cypress
