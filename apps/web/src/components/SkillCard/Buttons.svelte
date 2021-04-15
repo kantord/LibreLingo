@@ -1,5 +1,5 @@
 <script lang="typescript">
-  import Button from "lluis/Button"
+  import Button from "lluis/Button.svelte"
 
   export let practiceHref
   export let completed
