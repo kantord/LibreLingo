@@ -1,11 +1,11 @@
 <script lang="typescript">
-  import Mascot from "../components/Mascot"
-  import LicenseLogo from "../components/LicenseLogo"
-  import Button from "lluis/Button"
-  import Box from "lluis/Box"
-  import Column from "lluis/Column"
-  import Columns from "lluis/Columns"
-  import Title from "lluis/Title"
+  import Mascot from "../components/Mascot.svelte"
+  import LicenseLogo from "../components/LicenseLogo.svelte"
+  import Button from "lluis/Button.svelte"
+  import Box from "lluis/Box.svelte"
+  import Column from "lluis/Column.svelte"
+  import Columns from "lluis/Columns.svelte"
+  import Title from "lluis/Title.svelte"
   import { _ } from "svelte-i18n"
   import Translate from "../Translate.svelte"
 </script>
@@ -26,7 +26,7 @@
         </Column>
         <Column>
           <Box>
-            <Title class="title">LibreLingo</Title>
+            <Title>LibreLingo</Title>
             <h2 class="subtitle">
               <Translate key="index.subtitle">
                 an experiment to create a community driven language-learning
