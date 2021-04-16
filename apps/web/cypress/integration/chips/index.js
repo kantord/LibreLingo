@@ -5,7 +5,7 @@ Then("words with definitions have tooltips", () => {
 })
 
 Then("words without a definition have no tooltip", () => {
-    cy.get(".has-tooltip-bottom").contains("How").should("not.be.visible")
+    cy.get(".has-tooltip-bottom").contains("How").should("not.exist")
 })
 
 Then("I see the correct chips", () => {

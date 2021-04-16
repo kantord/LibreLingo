@@ -5,5 +5,5 @@ Given("I read {string}", (text) => {
 })
 
 Given("I don't read {string}", (text) => {
-    cy.contains(text).should("not.be.visible")
+    cy.contains(text).should("not.exist")
 })

@@ -5,11 +5,11 @@ Given("I see a tooltip that says {string}", text => {
 })
 
 Given("I don't see a tooltip that says {string}", text => {
-    cy.get(`.has-tooltip-bottom[data-tooltip="${text}"]`).should("not.be.visible")
+    cy.get(`.has-tooltip-bottom[data-tooltip="${text}"]`).should("not.exist")
 })
 
 Given("The word {string} has no tooltip definition", text => {
     cy.get(".has-tooltip-bottom")
         .contains(text)
-        .should("not.be.visible")
+        .should("not.exist")
 })
