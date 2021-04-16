@@ -45,7 +45,7 @@
         </Column>
         <Column>
           <div class="is-centered-mobile">
-            <Title size="{2}" sizeMobile="{3}">Lesson completed!</Title>
+            <Title size="{2}" sizeMobile="3">Lesson completed!</Title>
             <Title size="{2}" isSubtitle="{true}">
               You've completed
               {stats.correct}
