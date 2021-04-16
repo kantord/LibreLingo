@@ -16,14 +16,14 @@
 </script>
 
 <ul class="options">
-  {#each options as { meaningInSourceLanguage, formInTargetLanguage, correct, fake }, i}
-    <label for="{i}" class:fake="{fake && true}">
+  {#each options as { formInTargetLanguage, correct, fake }, i}
+    <label for="{i.toString()}" class:fake="{fake && true}">
       <input
         type="radio"
         bind:group="{selectedOption}"
         value="{i}"
-        name="{i}"
-        id="{i}"
+        name="{i.toString()}"
+        id="{i.toString()}"
         disabled="{disabled}"
       />
       <Option
