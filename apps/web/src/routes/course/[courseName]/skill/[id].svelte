@@ -33,13 +33,13 @@
   import { sortChallengeGroups } from "./_logic"
 
   export let rawChallenges
-  export let languageName
-  export let languageCode
-  export let specialCharacters
-  export let id
-  export let courseURL
-  export let skillId
-  export let challengesPerLevel
+  export let languageName: string
+  export let languageCode: string
+  export let specialCharacters: Array<string>
+  export let id: string
+  export let courseURL: string
+  export let skillId: string
+  export let challengesPerLevel: number
 
   let expectedNumberOfChallenges = Math.max(
       4,

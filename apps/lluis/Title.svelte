@@ -1,12 +1,14 @@
 <script lang="typescript">
-  export let sizeMobile = null
-  export let sizeTablet = null
-  export let sizeDesktop = null
+  import type { SizeType } from "./types"
+
+  export let sizeMobile: null | SizeType = null
+  export let sizeTablet: null | SizeType = null
+  export let sizeDesktop: null | SizeType = null
   export let isSubtitle = false
   export let isSpaced = false
   export let size = isSubtitle ? 5 : 3
-  export let textWeight = null
-  export let align = null
+  export let textWeight: null | "semibold" = null
+  export let align: null | "centered" = null
 </script>
 
 <h1

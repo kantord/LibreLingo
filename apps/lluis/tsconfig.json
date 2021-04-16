@@ -3,6 +3,7 @@
   "include": ["src/**/*", "src/node_modules"],
   "exclude": ["node_modules/*", "__sapper__/*", "public/*"],
   "compilerOptions": {
-      "outDir": "dist"
+      "outDir": "dist",
+      "strict": true
   }
 }
