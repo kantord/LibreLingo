@@ -3,10 +3,10 @@
 
   import live from "../../db/live"
   import getSkillStats from "../../db/skill/getSkillStats"
-  import Icon from "lluis/Icon"
+  import Icon from "lluis/Icon.svelte"
   import Buttons from "./Buttons.svelte"
-  import ContentLeft from "./ContentLeft"
-  import ContentCenter from "./ContentCenter"
+  import ContentLeft from "./ContentLeft.svelte"
+  import ContentCenter from "./ContentCenter.svelte"
 
   export let title
   export let levels

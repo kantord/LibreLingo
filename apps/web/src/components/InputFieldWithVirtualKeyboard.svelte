@@ -1,5 +1,5 @@
 <script lang="typescript">
-  import Button from "lluis/Button"
+  import Button from "lluis/Button.svelte"
   export let value
   export let specialCharacters
   export let languageCode
@@ -23,12 +23,7 @@
   }
 
   function insertAtCaret(element, text) {
-      if (document.selection) {
-          element.focus()
-          var sel = document.selection.createRange()
-          sel.text = text
-          element.focus()
-      } else if (element.selectionStart || element.selectionStart === 0) {
+      if (element.selectionStart || element.selectionStart === 0) {
           var startPos = element.selectionStart
           var endPos = element.selectionEnd
           var scrollTop = element.scrollTop
@@ -55,7 +50,7 @@
 
 <!-- svelte-ignore a11y-autofocus -->
 <input
-  tabindex="0"
+  tabindex={0}
   data-test="answer"
   type="text"
   class="input"
@@ -73,7 +68,7 @@
 <div class="keyboard">
   {#each specialCharacters as specialCharacter}
     <Button
-      tabindex="-1"
+      tabindex={-1}
       light
       key
       size="small"

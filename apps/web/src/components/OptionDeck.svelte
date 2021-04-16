@@ -24,14 +24,14 @@
 </script>
 
 <ul class="options">
-  {#each options as { pictures, meaningInSourceLanguage, formInTargetLanguage, correct, fake }, i}
-    <label for="{i}" class:fake="{fake && true}" class:real="{!(fake && true)}">
+  {#each options as { pictures, formInTargetLanguage, correct, fake }, i}
+    <label for="{i.toString()}" class:fake="{fake && true}" class:real="{!(fake && true)}">
       <input
         type="radio"
         bind:group="{selectedOption}"
         value="{i}"
-        name="{i}"
-        id="{i}"
+        name="{i.toString()}"
+        id="{i.toString()}"
         disabled="{disabled}"
       />
       <OptionCard
