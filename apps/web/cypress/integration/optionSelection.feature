@@ -5,7 +5,6 @@ Feature: Option selection challenge
   Scenario: Getting an option selection challenge
     Given I open "course/test/skill/_options_test"
     Then option selection challenge looks correct
-    And I don't read "undefined"
     And I read "Which of these is"
     And I see 3 options
     And every option is inactive

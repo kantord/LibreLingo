@@ -11,7 +11,6 @@ Feature: Chips challenge
     And I read "are"
     And I read "you"
     And I read "today?"
-    And I don't read "undefined"
     Then I see a panel with only a skip button
     And I see the correct chips
 
