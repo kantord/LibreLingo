@@ -2,7 +2,7 @@
   import { createEventDispatcher } from "svelte"
 
   const dispatch = createEventDispatcher()
-  export let href = null
+  export let href: string | null = null
   export let primary = false
   export let light = false
   export let info = false
@@ -20,7 +20,7 @@
   export let key = false
   export let disabled = false
   export let loading = false
-  export let asHref = null
+  export let asHref: string | null = null
   export let submit = false
 
   let styleTokens = `

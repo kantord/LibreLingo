@@ -1,9 +1,9 @@
 <script lang="typescript">
   import ClampedText from "lluis/ClampedText.svelte"
 
-  export let summary
-  export let stale
-  export let completed
+  export let summary: Array<string>
+  export let stale: boolean
+  export let completed: boolean
 </script>
 
 <div class:completed class:stale>

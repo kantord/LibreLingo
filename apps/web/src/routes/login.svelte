@@ -6,7 +6,7 @@
   import Button from "lluis/Button.svelte"
   import FormField from "lluis/FormField.svelte"
 
-  let error = null
+  let error: string | null = null
   let username = ""
   let password = ""
 

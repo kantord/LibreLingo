@@ -9,7 +9,7 @@
 
           return {
               testSkills: (await readdir("./src/courses/test/challenges")).map(
-                  (fname) => fname.split(".")[0]
+                  (fname: string) => fname.split(".")[0]
               ),
           }
       } catch(error) {
@@ -22,7 +22,7 @@
   import NavBar from "../components/NavBar.svelte"
   import Content from "lluis/Content.svelte"
 
-  export let testSkills = []
+  export let testSkills: Array<string> = []
 </script>
 
 <svelte:head>

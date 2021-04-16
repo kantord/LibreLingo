@@ -1,7 +1,9 @@
 <script lang="typescript">
-  export let size = null
-  export let sizeDesktop = null
-  export let sizeTablet = null
+  import type { SizeType } from "./types"
+
+  export let size: null | SizeType = null
+  export let sizeDesktop: null | SizeType = null
+  export let sizeTablet: null | SizeType = null
 </script>
 
 <div
