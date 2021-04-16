@@ -6,7 +6,6 @@ Feature: Cards challenge
     Given I open "course/test/skill/_cards_test"
     Then cards challenge looks correct
     And I read "Which of these is"
-    And I don't read "undefined"
     And I see 3 cards
     And I see 3 inactive cards
     And I see a panel with only a skip button
