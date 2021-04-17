@@ -1,11 +1,11 @@
 <script lang="typescript">
   import Icon from "lluis/Icon.svelte"
 
-  export let name
-  export let id
-  export let icon
+  export let name: string
+  export let id: string
+  export let icon: string
   export let type = "text"
-  export let value
+  export let value: string | boolean | number
   export let formStatus = {}
   let error = null
   $: {error = formStatus[id]}
