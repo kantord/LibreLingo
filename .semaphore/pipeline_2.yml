@@ -20,7 +20,7 @@ blocks:
             - 'NODE_ENV=production yarn export:withDocs'
             - git config --global user.email "gitlab@daniel-kantor.com"
             - git config --global user.name "Dániel Kántor"
-            - 'yarn deploy --repo=https://$GH_TOKEN@github.com/dhelmr/LibreLingo.git'
+            - 'yarn deploy --repo=https://$GH_TOKEN@github.com/kantord/LibreLingo.git'
             - cache store website-build-$SEMAPHORE_GIT_PR_SHA __sapper__/export
       secrets:
         - name: GitHub token
