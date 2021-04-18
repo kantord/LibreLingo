@@ -33,5 +33,5 @@ blocks:
             - checkout
             - cache restore website-build-$SEMAPHORE_GIT_PR_SHA
             - apps/librelingo-server/build.sh __sapper__/export/ binaries/
-            - artifact push project binaries      
+            - artifact push project --force binaries      
 
