@@ -28,7 +28,7 @@ def _convert_language(raw_language):
 
 def _get_dictionary_items_from_new_words(skill):
     """
-    Extract new words in a skill as dictionar items
+    Extract new words in a skill as dictionary items
     """
     for word in skill.words:
         yield word.in_source_language[0], word.in_target_language[0], False
