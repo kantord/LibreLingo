@@ -1,19 +1,21 @@
 import collections
 from pathlib import Path
-from yaml import load
-try:
-    from yaml import CLoader as Loader
-except ImportError:
-    from yaml import Loader
+from yaml import safe_load
+from yaml.constructor import SafeConstructor
 
 from librelingo_types import Course, Language, License, Module, Skill, \
     Word, Phrase, DictionaryItem
 
 
+def add_bool(self, node):
+    return self.construct_scalar(node)
+
+SafeConstructor.add_constructor(u'tag:yaml.org,2002:bool', add_bool)
+
 def _load_yaml(path):
     """Helper function for reading a YAML file"""
     with open(path) as f:
-        return load(f, Loader=Loader)
+        return safe_load(f)
 
 
 def _convert_language(raw_language):
@@ -28,7 +30,7 @@ def _convert_language(raw_language):
 
 def _get_dictionary_items_from_new_words(skill):
     """
-    Extract new words in a skill as dictionar items
+    Extract new words in a skill as dictionary items
     """
     for word in skill.words:
         yield word.in_source_language[0], word.in_target_language[0], False
