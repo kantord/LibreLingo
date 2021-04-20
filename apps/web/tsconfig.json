@@ -5,6 +5,7 @@
   "compilerOptions": {
       "outDir": "dist",
       "types": ["node"],
-      "resolveJsonModule": true
+      "resolveJsonModule": true,
+      "strict": false
   }
 }
