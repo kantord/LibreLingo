@@ -195,7 +195,7 @@ def test_load_course_output_matches_value(fs):
                                 'The woman says hi']),
         Phrase(
             in_target_language=["L'homme dit bonjour",
-                                "L'homme dit salut"],
+                                "true"],
             in_source_language=['The man says hello',
                                 'The man says hi'])]
 
