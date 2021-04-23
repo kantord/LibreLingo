@@ -38,7 +38,7 @@ blocks:
     task:
       jobs:
         - name: cypress
-          parallelism: 3
+          parallelism: 2
           commands:
             - sem-version node 12
             - checkout
