@@ -52,6 +52,9 @@ LibreLingo's mission is to create a modern language-learning platform that is ow
     <li>
       <a href="#become-a-contributor">Become a contributor</a>
     </li>
+    <li>
+      <a href="#see-also">See also</a>
+    </li>
   </ol>
 </details>
 
@@ -399,3 +402,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
 
+
+## See also
+
+- [omnilingo](https://omnilingo.xyz/), listening-based language learning
