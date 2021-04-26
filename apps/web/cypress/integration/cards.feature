@@ -19,7 +19,6 @@ Feature: Cards challenge
   Scenario: Clicking a card
     Given I open "course/test/skill/_cards_test"
     And I click a card
-    Then I see the challenge panel with no skip button
     And I see a "Submit" button
     And I see an active card
     And I see 2 inactive cards
