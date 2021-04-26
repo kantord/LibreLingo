@@ -1,5 +1,4 @@
 <script lang="typescript">
-  import { slide } from "svelte/transition"
   import Button from "lluis/Button.svelte"
 
   export let buttonText
@@ -20,8 +19,6 @@
   class:incorrect
   class:typo
   class="panel is-primary"
-  out:slide|local="{{ duration: 100 }}"
-  in:slide|local="{{ duration: 300, delay: 50 }}"
 >
   <div class="panel-block">
     <div class="control">
