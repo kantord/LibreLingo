@@ -32,6 +32,6 @@ blocks:
             - sem-version go 1.16
             - checkout
             - cache restore website-build-$SEMAPHORE_GIT_PR_SHA
-            - apps/librelingo-server/build.sh __sapper__/export/ binaries/
+            - apps/librelingo-standalone-server/build.sh __sapper__/export/ binaries/
             - artifact push project --force binaries      
 
