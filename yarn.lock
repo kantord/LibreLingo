@@ -12505,17 +12505,17 @@ seed-random@~2.2.0:
   resolved "https://registry.yarnpkg.com/seed-random/-/seed-random-2.2.0.tgz#2a9b19e250a817099231a5b99a4daf80b7fbed54"
   integrity sha1-KpsZ4lCoFwmSMaW5mk2vgLf77VQ=
 
-semantic-release-monorepo@7.0.4:
-  version "7.0.4"
-  resolved "https://registry.yarnpkg.com/semantic-release-monorepo/-/semantic-release-monorepo-7.0.4.tgz#fbfb8a857f5daec8633c72bff9b030499b078d11"
-  integrity sha512-aN8dm7M67CFMbGnvlXu0vldHM6t8sTEfPA6zizOKhaXtCQcjtpuyp0LS4A/nY8TCZJRXUsnCmMOsMqtsMDuapA==
+semantic-release-monorepo@7.0.5:
+  version "7.0.5"
+  resolved "https://registry.yarnpkg.com/semantic-release-monorepo/-/semantic-release-monorepo-7.0.5.tgz#96b7ff0aff183db2f81e71e5f821ed4adc7d5647"
+  integrity sha512-riOYD8eZ5PIST7o97Ltc01l8VQW7q01NmPDRPOBycaeZczJowyKkzkBfo92kTIWDFWbdO3G8A695JrrYjoTaiw==
   dependencies:
     debug "^3.1.0"
     execa "^0.8.0"
     p-limit "^1.2.0"
     pkg-up "^2.0.0"
     ramda "^0.25.0"
-    read-pkg "^3.0.0"
+    read-pkg "^5.0.0"
     semantic-release-plugin-decorators "^3.0.0"
 
 semantic-release-plugin-decorators@^3.0.0:
