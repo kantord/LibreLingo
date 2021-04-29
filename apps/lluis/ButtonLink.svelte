@@ -1,7 +1,5 @@
 <script lang="typescript">
-  import { createEventDispatcher } from "svelte"
-
-  const dispatch = createEventDispatcher()
+  export let href: string
   export let primary = false
   export let light = false
   export let info = false
@@ -12,14 +10,11 @@
   export let textColor = null
   export let customColor = color != null
   export let customTextColor = textColor != null
+  export let target = "_self"
   export let size = "default"
-  export let type = "button"
   export let tabindex = 0
   export let key = false
-  export let disabled = false
   export let loading = false
-  export let asHref: string | null = null
-  export let submit = false
 
   let styleTokens = `
     --color:${color};
@@ -27,7 +22,7 @@
   `
 </script>
 
-<button
+<a
   style="{styleTokens}"
   class="button is-{size}"
   class:is-primary="{primary}"
@@ -40,15 +35,11 @@
   class:customColor
   class:customTextColor
   class:key
-  on:click="{() => dispatch('click')}"
+  {href}
   {tabindex}
-  {disabled}
-  {type}>
+  {target}>
   <slot />
-</button>
-{#if asHref}
-  <a class="is-hidden" href={asHref}>{asHref}</a>
-{/if}
+</a>
 
 <style type="text/scss">
   .button.customColor {
@@ -68,7 +59,3 @@
     margin-top: 0;
   }
 </style>
-
-{#if submit}
-  <button type="submit" class="is-hidden"></button>
-{/if}
