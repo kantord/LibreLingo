@@ -5,6 +5,7 @@
   import GitHubButton from "./GitHubButton.svelte"
   import Icon from "lluis/Icon.svelte"
   import Button from "lluis/Button.svelte"
+  import ButtonLink from "lluis/ButtonLink.svelte"
   export let dark = false
   export let is_hidden_mobile = false
   export let hasAuth = false
@@ -51,12 +52,12 @@
               Log out
             </Button>
           {:else}
-            <Button href="/sign-up" size="small" outlined inverted info>
+            <ButtonLink href="/sign-up" size="small" outlined inverted info>
               Sign up
-            </Button>
-            <Button href="/login" size="small" outlined inverted info>
+            </ButtonLink>
+            <ButtonLink href="/login" size="small" outlined inverted info>
               Log in
-            </Button>
+            </ButtonLink>
           {/if}
         {/if}
       </div>
