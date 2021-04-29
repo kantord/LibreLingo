@@ -3,7 +3,7 @@
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   import db from "../db/db.js"
   import NavBar from "../components/NavBar.svelte"
-  import Button from "lluis/Button.svelte"
+  import ButtonLink from "lluis/ButtonLink.svelte"
 </script>
 
 <NavBar dark />
@@ -12,6 +12,6 @@
   <div class="container">
     <h2 class="is-size-2">Registration successful!</h2>
     <p>You can now log in.</p>
-    <Button href="/login">Log in</Button>
+    <ButtonLink href="/login">Log in</ButtonLink>
   </div>
 </section>
