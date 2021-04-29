@@ -10,7 +10,7 @@
     "export": "sapper export",
     "start": "node __sapper__/build",
     "jest": "jest src",
-    "types": "sapper build && tsc && svelte-check",
+    "types": "sapper build && tsc && svelte-check --treshold error",
     "fetchPhotos": "./scripts/fetchPhotos.sh",
     "fetchAudios": "./scripts/fetchAudios.sh",
     "updateAllCourseData": "./scripts/updateAllCourseData.sh",

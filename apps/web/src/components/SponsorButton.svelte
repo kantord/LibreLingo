@@ -1,9 +1,9 @@
 <script lang="typescript">
-  import Button from "lluis/Button.svelte"
+  import ButtonLink from "lluis/ButtonLink.svelte"
   import Icon from "lluis/Icon.svelte"
 </script>
 
-<Button
+<ButtonLink
   href="http://github.com/sponsors/kantord"
   size="small"
   outlined
@@ -12,4 +12,4 @@
 >
   <Icon icon="heart" />
   <div>Sponsor</div>
-</Button>
+</ButtonLink>

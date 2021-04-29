@@ -1,9 +1,9 @@
 <script lang="typescript">
-  import Button from "lluis/Button.svelte"
+  import ButtonLink from "lluis/ButtonLink.svelte"
   import Icon from "lluis/Icon.svelte"
 </script>
 
-<Button
+<ButtonLink
   color="#55acee"
   textColor="white"
   target="_blank"
@@ -11,4 +11,4 @@
 >
   <Icon icon="twitter" prefix="fab" />
   <div>Tweet about LibreLingo</div>
-</Button>
+</ButtonLink>

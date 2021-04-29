@@ -8,7 +8,7 @@
   import { goto } from "@sapper/app"
   import Mascot from "./Mascot.svelte"
   import TwitterButton from "./TwitterButton.svelte"
-  import Button from "lluis/Button.svelte"
+  import ButtonLink from "lluis/ButtonLink.svelte"
   import Column from "lluis/Column.svelte"
   import Columns from "lluis/Columns.svelte"
   import Title from "lluis/Title.svelte"
@@ -51,9 +51,9 @@
               {stats.correct}
               challenges
             </Title>
-            <Button size="medium" href="{courseURL}">
+            <ButtonLink size="medium" href="{courseURL}">
               Continue to course page
-            </Button>
+            </ButtonLink>
             <div class="bottom">
               <Title size="{5}">Excited about LibreLingo?</Title>
               <TwitterButton />
