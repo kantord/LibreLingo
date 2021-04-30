@@ -1,7 +1,7 @@
 <script lang="typescript">
   import Mascot from "../components/Mascot.svelte"
   import LicenseLogo from "../components/LicenseLogo.svelte"
-  import Button from "lluis/Button.svelte"
+  import ButtonLink from "lluis/ButtonLink.svelte"
   import Box from "lluis/Box.svelte"
   import Column from "lluis/Column.svelte"
   import Columns from "lluis/Columns.svelte"
@@ -34,41 +34,41 @@
               </Translate>
             </h2>
             <div class="buttons">
-              <Button primary href="course/spanish-from-english">
+              <ButtonLink primary href="course/spanish-from-english">
                 <Translate key="index.start_spanish_course">
                   Start learning Spanish
                 </Translate>
-              </Button>
+              </ButtonLink>
 
-              <Button primary hidden href="course/german-from-english">
+              <ButtonLink primary hidden href="course/german-from-english">
                 <Translate key="index.start_german_course">
                   Start learning German
                 </Translate>
-              </Button>
+              </ButtonLink>
 
-              <Button primary hidden href="course/french-from-english">
+              <ButtonLink primary hidden href="course/french-from-english">
                 <Translate key="index.start_french_course">
                   Start learning French
                 </Translate>
-              </Button>
+              </ButtonLink>
 
-              <Button primary hidden href="course/bangla-from-english">
+              <ButtonLink primary hidden href="course/bangla-from-english">
                 <Translate key="index.start_french_course">
                   Start learning Bangla
                 </Translate>
-              </Button>
+              </ButtonLink>
 
-              <Button primary href="about">
+              <ButtonLink primary href="about">
                 <Translate key="index.about_librelingo">
                   About LibreLingo
                 </Translate>
-              </Button>
+              </ButtonLink>
 
-              <Button primary href="https://librelingo.app/docs/">
+              <ButtonLink primary href="https://librelingo.app/docs/">
                 <Translate key="index.development_docs">
                   Development documentation
                 </Translate>
-              </Button>
+              </ButtonLink>
               <a href="/devtools" class="is-invisible"></a>
             </div>
           </Box>
