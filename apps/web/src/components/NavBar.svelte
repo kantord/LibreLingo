@@ -3,6 +3,7 @@
   import authStore from "../auth"
   import SponsorButton from "./SponsorButton.svelte"
   import GitHubButton from "./GitHubButton.svelte"
+  import NavBar from "lluis/NavBar.svelte"
   import Icon from "lluis/Icon.svelte"
   import Button from "lluis/Button.svelte"
   import ButtonLink from "lluis/ButtonLink.svelte"
@@ -14,56 +15,39 @@
     _Logout: () => void
   }
   const _Logout = () => (window as unknown as WindowWithLogout)._Logout()
+
 </script>
 
-<nav
-  class="navbar"
-  class:dark
-  class:is-hidden-mobile="{is_hidden_mobile}"
-  role="navigation"
-  aria-label="main navigation"
->
-  <div class="navbar-brand">
-    <a class="navbar-item" href="/">
-      <img src="/images/logo.svg" alt="LibreLingo" />
-    </a>
-  </div>
-
-  <div class="navbar-start"></div>
-
-  <div class="navbar-end">
-    <div class="navbar-item">
-      <div class="buttons">
-        <SponsorButton />
-        <GitHubButton />
-        {#if hasAuth && settings.features.authEnabled}
-          {#if $authStore.user}
-            <Button size="small" outlined inverted info>
-              <Icon size="small" icon="user" />
-              <span>{$authStore.user.name}</span>
-            </Button>
-            <Button
-              on:click="{() => _Logout()}"
-              size="small"
-              outlined
-              inverted
-              info
-            >
-              Log out
-            </Button>
-          {:else}
-            <ButtonLink href="/sign-up" size="small" outlined inverted info>
-              Sign up
-            </ButtonLink>
-            <ButtonLink href="/login" size="small" outlined inverted info>
-              Log in
-            </ButtonLink>
-          {/if}
-        {/if}
-      </div>
-    </div>
-  </div>
-</nav>
+<NavBar dark>
+  <span slot="buttons">
+    <SponsorButton />
+    <GitHubButton />
+    {#if hasAuth && settings.features.authEnabled}
+      {#if $authStore.user}
+        <Button size="small" outlined inverted info>
+          <Icon size="small" icon="user" />
+          <span>{$authStore.user.name}</span>
+        </Button>
+        <Button
+          on:click="{() => _Logout()}"
+          size="small"
+          outlined
+          inverted
+          info
+        >
+          Log out
+        </Button>
+      {:else}
+        <ButtonLink href="/sign-up" size="small" outlined inverted info>
+          Sign up
+        </ButtonLink>
+        <ButtonLink href="/login" size="small" outlined inverted info>
+          Log in
+        </ButtonLink>
+      {/if}
+    {/if}
+  </span>
+</NavBar>
 
 <style type="text/scss">
   @import "../variables";
