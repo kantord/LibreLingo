@@ -57,3 +57,11 @@
 
 
 @import "~bulmaswatch/lumen/overrides.scss";
+
+:root {
+    --blue: #325f74;
+    --white: #bfb5af;
+
+    --navbar-dark-background: var(--blue);
+    --navbar-dark-text-color: var(--white);
+}
