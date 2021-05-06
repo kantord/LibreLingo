@@ -18,7 +18,7 @@
 
 </script>
 
-<NavBar dark>
+<NavBar>
   <span slot="buttons">
     <SponsorButton />
     <GitHubButton />
