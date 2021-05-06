@@ -5,7 +5,6 @@
 
 <nav
   class="navbar"
-  class:dark
   class:is-hidden-mobile={is_hidden_mobile}
   role="navigation"
   aria-label="main navigation"
@@ -30,12 +29,9 @@
 </nav>
 
 <style type="text/scss">
-  .navbar.dark {
+  .navbar {
     background: var(--navbar-dark-background);
     color: var(--navbar-dark-text-color);
-  }
-
-  .navbar {
     border: 0;
     .navbar-end {
       position: absolute;
