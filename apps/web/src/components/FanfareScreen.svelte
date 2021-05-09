@@ -79,7 +79,6 @@
     .mascot {
       width: 45%;
       margin: auto;
-      margin-top: -3em;
     }
 
     .bottom {
