@@ -4,14 +4,13 @@
 </script>
 
 <nav
-  class="navbar"
   class:is-hidden-mobile={is_hidden_mobile}
   role="navigation"
   aria-label="main navigation"
 >
 
-  <div class="navbar-brand">
-    <a class="navbar-item" href="/">
+  <div class="left">
+    <a href="/">
       <img src="/images/logo.svg" alt="LibreLingo" />
     </a>
   </div>
@@ -29,14 +28,25 @@
 </nav>
 
 <style type="text/scss">
-  .navbar {
-    background: var(--navbar-dark-background);
-    color: var(--navbar-dark-text-color);
+  nav {
+    display: flex;
+    position: relative;
+    left: 0;
+    right: 0;
+
+    background: var(--navbar-background);
+    color: var(--navbar-text-color);
     border: 0;
     .navbar-end {
       position: absolute;
       right: 0;
       top: 0;
+    }
+
+    .left {
+      img {
+        height: var(--navbar-height);
+      }
     }
   }
 </style>
