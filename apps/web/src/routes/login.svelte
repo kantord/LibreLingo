@@ -27,7 +27,7 @@
   <title>Log in - LibreLingo</title>
 </svelte:head>
 
-<NavBar dark />
+<NavBar />
 
 <section class="section">
   <div class="container">
