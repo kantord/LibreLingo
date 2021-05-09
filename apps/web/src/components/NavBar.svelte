@@ -6,9 +6,9 @@
   import NavBar from "lluis/NavBar.svelte"
   import Icon from "lluis/Icon.svelte"
   import Button from "lluis/Button.svelte"
+  import Logo from "lluis/Logo.svelte"
   import ButtonLink from "lluis/ButtonLink.svelte"
-  export let dark = false
-  export let is_hidden_mobile = false
+  import ButtonSet from "lluis/ButtonSet.svelte"
   export let hasAuth = false
 
   type WindowWithLogout = Window & {
@@ -19,50 +19,38 @@
 </script>
 
 <NavBar>
-  <span slot="buttons">
-    <SponsorButton />
-    <GitHubButton />
-    {#if hasAuth && settings.features.authEnabled}
-      {#if $authStore.user}
-        <Button size="small" outlined inverted info>
-          <Icon size="small" icon="user" />
-          <span>{$authStore.user.name}</span>
-        </Button>
-        <Button
-          on:click="{() => _Logout()}"
-          size="small"
-          outlined
-          inverted
-          info
-        >
-          Log out
-        </Button>
-      {:else}
-        <ButtonLink href="/sign-up" size="small" outlined inverted info>
-          Sign up
-        </ButtonLink>
-        <ButtonLink href="/login" size="small" outlined inverted info>
-          Log in
-        </ButtonLink>
+  <div slot="left">
+    <Logo src="/images/logo.svg" alt="LibreLingo" />
+  </div>
+
+  <div slot="right">
+    <ButtonSet>
+      <SponsorButton />
+      <GitHubButton />
+      {#if hasAuth && settings.features.authEnabled}
+        {#if $authStore.user}
+          <Button size="small" outlined inverted info>
+            <Icon size="small" icon="user" />
+            <span>{$authStore.user.name}</span>
+          </Button>
+          <Button
+            on:click="{() => _Logout()}"
+            size="small"
+            outlined
+            inverted
+            info
+          >
+            Log out
+          </Button>
+        {:else}
+          <ButtonLink href="/sign-up" size="small" outlined inverted info>
+            Sign up
+          </ButtonLink>
+          <ButtonLink href="/login" size="small" outlined inverted info>
+            Log in
+          </ButtonLink>
+        {/if}
       {/if}
-    {/if}
-  </span>
+    </ButtonSet>
+  </div>
 </NavBar>
-
-<style type="text/scss">
-  @import "../variables";
-
-  .navbar.dark {
-    background: $blue;
-    color: $white-light;
-  }
-
-  .navbar {
-    border: 0;
-    .navbar-end {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-  }
-</style>

@@ -6,7 +6,7 @@
   import ButtonLink from "lluis/ButtonLink.svelte"
 </script>
 
-<NavBar dark />
+<NavBar />
 
 <section class="section">
   <div class="container">
