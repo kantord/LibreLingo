@@ -6,6 +6,7 @@
   import NavBar from "lluis/NavBar.svelte"
   import Icon from "lluis/Icon.svelte"
   import Button from "lluis/Button.svelte"
+  import Logo from "lluis/Logo.svelte"
   import ButtonLink from "lluis/ButtonLink.svelte"
   export let dark = false
   export let is_hidden_mobile = false
@@ -19,7 +20,11 @@
 </script>
 
 <NavBar>
-  <span slot="buttons">
+  <div slot="left">
+    <Logo src="/images/logo.svg" alt="LibreLingo" />
+  </div>
+
+  <div slot="right">
     <SponsorButton />
     <GitHubButton />
     {#if hasAuth && settings.features.authEnabled}
@@ -46,23 +51,5 @@
         </ButtonLink>
       {/if}
     {/if}
-  </span>
+  </div>
 </NavBar>
-
-<style type="text/scss">
-  @import "../variables";
-
-  .navbar.dark {
-    background: $blue;
-    color: $white-light;
-  }
-
-  .navbar {
-    border: 0;
-    .navbar-end {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-  }
-</style>
