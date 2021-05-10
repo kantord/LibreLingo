@@ -51,7 +51,7 @@
   <title>LibreLingo - learn {id} in {languageName} for free</title>
 </svelte:head>
 
-<NavBar dark is_hidden_mobile />
+<NavBar />
 
 <ChallengeScreen
   {expectedNumberOfChallenges}

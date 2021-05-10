@@ -29,7 +29,7 @@
   <meta name="description" content="{description}" />
 </svelte:head>
 
-<NavBar dark />
+<NavBar />
 
 <section class="hero is-primary">
   <div class="hero-body">
