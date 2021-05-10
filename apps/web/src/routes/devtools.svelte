@@ -29,7 +29,7 @@
   <title>LibreLingo - Development</title>
 </svelte:head>
 
-<NavBar dark />
+<NavBar />
 
 <section class="section">
   <div class="container">

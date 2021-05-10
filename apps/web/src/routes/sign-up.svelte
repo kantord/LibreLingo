@@ -212,7 +212,7 @@
   <meta name="description" content="{$_('sign-up.meta.description')}" />
 </svelte:head>
 
-<NavBar dark />
+<NavBar />
 
 <section class="section">
   <div class="container">
