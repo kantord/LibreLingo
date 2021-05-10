@@ -38,7 +38,7 @@
 //@import "~bulma/sass/components/level.sass";
 //@import "~bulma/sass/components/message.sass";
 //@import "~bulma/sass/components/modal.sass";
-@import "~bulma/sass/components/navbar.sass";
+// @import "~bulma/sass/components/navbar.sass";
 @import "~bulma/sass/components/panel.sass";
 //@import "~bulma/sass/components/list.sass";
 //@import "~bulma/sass/components/breadcrumb.sass";
@@ -62,6 +62,9 @@
     --blue: #325f74;
     --white: #bfb5af;
 
-    --navbar-dark-background: var(--blue);
-    --navbar-dark-text-color: var(--white);
+    --navbar-background: var(--blue);
+    --navbar-text-color: var(--white);
+    --navbar-height: 52px;
+    --navbar-padding: 16px;
+    --navbar-logo-height: 28px;
 }

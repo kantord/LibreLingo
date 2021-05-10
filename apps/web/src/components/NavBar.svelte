@@ -19,7 +19,13 @@
 </script>
 
 <NavBar>
-  <span slot="buttons">
+  <div slot="left">
+    <a href="/" class="logo">
+      <img src="/images/logo.svg" alt="LibreLingo" />
+    </a>
+  </div>
+
+  <div slot="right">
     <SponsorButton />
     <GitHubButton />
     {#if hasAuth && settings.features.authEnabled}
@@ -46,23 +52,15 @@
         </ButtonLink>
       {/if}
     {/if}
-  </span>
+  </div>
 </NavBar>
 
 <style type="text/scss">
   @import "../variables";
 
-  .navbar.dark {
-    background: $blue;
-    color: $white-light;
-  }
-
-  .navbar {
-    border: 0;
-    .navbar-end {
-      position: absolute;
-      right: 0;
-      top: 0;
+  .logo {
+    img {
+      height: var(--navbar-logo-height);
     }
   }
 </style>
