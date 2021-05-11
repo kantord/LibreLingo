@@ -7,7 +7,7 @@
   <title>Fonts Visual Guide - LibreLingo</title>
 </svelte:head>
 
-<NavBar dark />
+<NavBar />
 <section class="section">
   <div class="container">
     <div class="tile is-ancestor">
