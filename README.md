@@ -309,7 +309,7 @@ The mascot is designed by [@almostdesigner](https://github.com/almostdesigner).
 ## Contributors ✨
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-58-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-59-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
@@ -393,6 +393,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="http://luthert.net"><img src="https://avatars.githubusercontent.com/u/1281696?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Luther</b></sub></a><br /><a href="#ideas-luther9" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/danielinux7"><img src="https://avatars.githubusercontent.com/u/2645266?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nart Tlisha</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/issues?q=author%3Adanielinux7" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://binyam.in"><img src="https://avatars.githubusercontent.com/u/39805353?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Binyamin Aron Green</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/commits?author=binyamin" title="Documentation">📖</a></td>
   </tr>
 </table>
 
