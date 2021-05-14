@@ -232,6 +232,7 @@ def _load_skill(path, course):
         dictionary=list(_convert_mini_dictionary(
             data["Mini-dictionary"], course))
         if "Mini-dictionary" in data else [],
+        introduction=None,
     )
 
 
