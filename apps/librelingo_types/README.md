@@ -105,6 +105,7 @@ class Skill(namedtuple("Skill", [
     "phrases",
     "image_set",
     "dictionary",
+    "introduction",
 ]))
 ```
 
@@ -123,7 +124,8 @@ my_skill = Skill(
     words=[word1, word2, word3],
     phrases=[phrases1, phrases2, phrases3],
     image_set=["cat1", "dog2", "horse1"],
-    dictionary=[dict_item_1, dict_item_2, dict_item_3, dict_item_4]
+    dictionary=[dict_item_1, dict_item_2, dict_item_3, dict_item_4],
+    introduction="My *markdown* text",
 )
 ```
 
