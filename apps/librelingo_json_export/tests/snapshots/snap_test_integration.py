@@ -317,5 +317,10 @@ le''',
         ],
         'id': '379dca1c8ae9',
         'levels': 2
-    }
+    },
+    './output/introduction/hello.md': '''# Lorem Ipsum
+
+## Dolor sit amet
+
+Foo Bar'''
 }
