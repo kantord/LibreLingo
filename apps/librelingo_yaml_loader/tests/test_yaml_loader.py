@@ -186,6 +186,7 @@ def test_load_course_output_matches_value(fs):
         phrases=result.modules[0].skills[0].phrases,
         words=result.modules[0].skills[0].words,
         dictionary=result.modules[0].skills[0].dictionary,
+        introduction=None,
     )
     assert result.modules[0].skills[0].phrases == [
         Phrase(
@@ -353,6 +354,9 @@ Mini-dictionary:
       - salut
     """.format(**kwargs)
 
+    def get_fake_skill_markdown(self):
+        return "<script />" + self.fake_values["introduction"]
+
     def create_fake_skill_meta(self, path, **kwargs):
         with open(Path(path) / "food.yaml", "w") as f:
             f.write(self.get_fake_skill_yaml(**kwargs))
@@ -373,6 +377,7 @@ Mini-dictionary:
             "word5": str(fakes.fake_value()),
             "word6": str(fakes.fake_value()),
             "word7": str(fakes.fake_value()),
+            "introduction": "# [https://example.com](_{}_)".format(str(fakes.fake_value())),
         }
 
     def set_up_patches(self):
@@ -387,6 +392,10 @@ Mini-dictionary:
         self.create_fake_skill_meta(self.fake_path, **{
             **self.fake_values,
         })
+
+        with open(self.fake_path / "food.md", "w") as f:
+            f.write(self.get_fake_skill_markdown())
+
         french = Language(self.fake_values["word3"], "")
         english = Language("English", "")
         self.fake_course = Course(french, english, [], [], None, None)
@@ -414,6 +423,10 @@ Mini-dictionary:
 
     def test_returned_object_has_correct_phrases(self):
         assert self.result.phrases == self.convert_phrases.return_value
+
+    def test_returned_object_has_correct_introduction(self):
+        print(self.result )
+        assert self.result.introduction == self.fake_values["introduction"]
 
     def test_dictionary_is_a_list_of_dictionary_items(self):
         assert type(self.result.dictionary) == list and all(
@@ -614,7 +627,7 @@ def module_with_word():
     my_module = Module("", skills=[
         Skill("", "", [
             word
-        ], [], [], None)
+        ], [], [], None, None)
     ])
 
     return my_module, in_source_language, in_target_language
@@ -670,7 +683,7 @@ def test_load_dictionary_handles_multiple_word_per_skill(module_with_word):
 def test_load_dictionary_handles_multiple_skills_per_module(module_with_word):
     module_with_word[0].skills.append(Skill("", "", [
         get_fake_word()[0]
-    ], [], [], None))
+    ], [], [], None, None))
     assert len(_load_dictionary([module_with_word[0]])) == 4
 
 
@@ -678,7 +691,7 @@ def test_load_dictionary_handles_multiple_modules(module_with_word):
     new_module = Module("", [
         Skill("", "", [
             get_fake_word()[0]
-        ], [], [], None)
+        ], [], [], None, None)
     ])
     assert len(_load_dictionary([module_with_word[0], new_module])) == 4
 
@@ -687,7 +700,7 @@ def test_load_dictionary_includes_duplicate_words_only_once(module_with_word):
     new_module = Module("", [
         Skill("", "", [
             module_with_word[0].skills[0].words[0]
-        ], [], [], None)
+        ], [], [], None, None)
     ])
     assert len(_load_dictionary([module_with_word[0], new_module])) == 2
 
@@ -707,7 +720,7 @@ def test_load_dictionary_includes_duplicate_words_includes_multiple_definitions(
     new_module = Module("", [
         Skill("", "", [
             duplicate_word
-        ], [], [], None)
+        ], [], [], None, None)
     ])
     definition = _load_dictionary([module_with_word[0], new_module])[
         0].definition

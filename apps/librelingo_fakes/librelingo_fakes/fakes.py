@@ -110,6 +110,7 @@ emptySkill = Skill(
     phrases=[],
     image_set=["foo1", "bar1", "bar2"],
     dictionary=fake_dictionary,
+    introduction=None,
 )
 
 skillWithPhrase = Skill(
@@ -119,6 +120,7 @@ skillWithPhrase = Skill(
     words=[],
     image_set=["man1", "man2", "boy1"],
     dictionary=fake_dictionary,
+    introduction=None,
 )
 
 
@@ -129,6 +131,7 @@ skillWithWord = Skill(
     words=[word1],
     image_set=["man1", "man2", "boy1"],
     dictionary=fake_dictionary,
+    introduction=None,
 )
 
 
@@ -139,6 +142,7 @@ skillWithPhraseAndWord = Skill(
     words=[word1],
     image_set=["man1", "man2", "boy1"],
     dictionary=fake_dictionary,
+    introduction=None,
 )
 
 
@@ -149,6 +153,7 @@ skillWith3Words = Skill(
     words=[word1, word2, word2],
     image_set=["man1", "man2", "boy1"],
     dictionary=fake_dictionary,
+    introduction=None,
 )
 
 skillWith3Phrases = Skill(
@@ -158,6 +163,7 @@ skillWith3Phrases = Skill(
     words=[],
     image_set=["man1", "man2", "boy1"],
     dictionary=fake_dictionary,
+    introduction=None,
 )
 
 skills = [
@@ -169,6 +175,7 @@ skills = [
         phrases=[phrase1],
         image_set=["woman1", "woman2", "girl1"],
         dictionary=fake_dictionary,
+        introduction=None,
     ),
     emptySkill,
     Skill(
@@ -178,6 +185,7 @@ skills = [
         phrases=[],
         image_set=["just_one_image"],
         dictionary=fake_dictionary,
+        introduction=None,
     )
 ]
 
