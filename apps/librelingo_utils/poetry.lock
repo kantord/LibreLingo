@@ -56,7 +56,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [[package]]
 name = "librelingo-types"
-version = "0.1.1"
+version = "1.0.0"
 description = "Data types to be used in Python packages for LibreLingo"
 category = "main"
 optional = false
@@ -141,7 +141,7 @@ python-versions = "*"
 
 [[package]]
 name = "nr.parsing.date"
-version = "0.4.4"
+version = "0.6.1"
 description = "A simple and fast date parsing library. Uses dateutil for timezone offset support."
 category = "dev"
 optional = false
@@ -196,7 +196,7 @@ python-versions = "*"
 
 [[package]]
 name = "pydoc-markdown"
-version = "3.10.0"
+version = "3.10.3"
 description = "Create Python API documentation in Markdown format."
 category = "dev"
 optional = false
@@ -245,7 +245,7 @@ socks = ["PySocks (>=1.5.6,!=1.5.7)", "win-inet-pton"]
 
 [[package]]
 name = "six"
-version = "1.15.0"
+version = "1.16.0"
 description = "Python 2 and 3 compatibility utilities"
 category = "dev"
 optional = false
@@ -261,16 +261,16 @@ python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
 name = "urllib3"
-version = "1.26.3"
+version = "1.26.4"
 description = "HTTP library with thread-safe connection pooling, file post, and more."
 category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, <4"
 
 [package.extras]
-brotli = ["brotlipy (>=0.6.0)"]
 secure = ["pyOpenSSL (>=0.14)", "cryptography (>=1.3.4)", "idna (>=2.0.0)", "certifi", "ipaddress"]
 socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
+brotli = ["brotlipy (>=0.6.0)"]
 
 [[package]]
 name = "watchdog"
@@ -286,7 +286,7 @@ watchmedo = ["PyYAML (>=3.10)", "argh (>=0.24.1)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "9da61c18e9178079ead8fc99e82ead007d38af56f83fcca28c00e502490e9061"
+content-hash = "a132df0a81baf970b7d75b3e366c14d9576df473cf42650db1d351a336011787"
 
 [metadata.files]
 certifi = [
@@ -314,8 +314,8 @@ idna = [
     {file = "idna-2.10.tar.gz", hash = "sha256:b307872f855b18632ce0c21c5e45be78c0ea7ae4c15c828c20788b26921eb3f6"},
 ]
 librelingo-types = [
-    {file = "librelingo_types-0.1.1-py3-none-any.whl", hash = "sha256:630f5a5e09682d1cac0ca030f978a1a1a8ef81b8929c29c88de08e835fa1ce24"},
-    {file = "librelingo_types-0.1.1.tar.gz", hash = "sha256:eff361df0687a28195aca817c0407cfacbee45a737e71225297b5de8a55cc5a6"},
+    {file = "librelingo_types-1.0.0-py3-none-any.whl", hash = "sha256:1b5af0b754613e9aec1c941a530e44bdeee53a58f1173144ab333c48f0fa8825"},
+    {file = "librelingo_types-1.0.0.tar.gz", hash = "sha256:ab9434ff039d354be49c1852f3f372fb4a63e891799f5b748b4f1c026c735f04"},
 ]
 "nr.collections" = [
     {file = "nr.collections-0.0.1.tar.gz", hash = "sha256:ddf38cd6379cac546ce7abdadf024fc01cca75540e11b1d5f1aa701a33817f1c"},
@@ -341,8 +341,8 @@ librelingo-types = [
     {file = "nr.metaclass-0.0.6.tar.gz", hash = "sha256:3d52f8e603e3c2944b9135e5a09593c3c36191f26cf1c29a7c71efb192552b10"},
 ]
 "nr.parsing.date" = [
-    {file = "nr.parsing.date-0.4.4-py3-none-any.whl", hash = "sha256:047404978517d892b961bf065d3373ba5e53b6207af978b2c08b2e49498e7bb0"},
-    {file = "nr.parsing.date-0.4.4.tar.gz", hash = "sha256:1c4d25f8f7141676cce03728153f4216d2170adc537aefb2f535a4bad78e3d5d"},
+    {file = "nr.parsing.date-0.6.1-py3-none-any.whl", hash = "sha256:8cc5e1bf5d9a28c7e93c2c6417958857eef752bf166f777102c60b304b5f020d"},
+    {file = "nr.parsing.date-0.6.1.tar.gz", hash = "sha256:11bf1e2a63397a3f9e039cf6b03a9f54d33d7e14ca230b022722e91fd8344fd8"},
 ]
 "nr.pylang.utils" = [
     {file = "nr.pylang.utils-0.0.4-py3-none-any.whl", hash = "sha256:cf8c88b9e7821a256e31e83e16dcd506d1fb33ea3cf37578eb163526ab044a27"},
@@ -361,8 +361,8 @@ librelingo-types = [
     {file = "nr.utils.re-0.1.1.tar.gz", hash = "sha256:71e21300dbf890d914841f1e6d66eb4e7d6a9f01c9a20d8e83e5242c8d3140aa"},
 ]
 pydoc-markdown = [
-    {file = "pydoc-markdown-3.10.0.tar.gz", hash = "sha256:5076e16a14a2d708db269f6767236c2b2137e2816cf9efaba6b6bfca36367932"},
-    {file = "pydoc_markdown-3.10.0-py3-none-any.whl", hash = "sha256:eccca05d136f17a1b85fc6d9fba58e5a4f134621ab0426958c79f8fc03b589ff"},
+    {file = "pydoc-markdown-3.10.3.tar.gz", hash = "sha256:48035f601e6084352b78d67b9835b269948210d5d90ea3f5ee5f9f63c9f29c7e"},
+    {file = "pydoc_markdown-3.10.3-py3-none-any.whl", hash = "sha256:77062857745b75273275f7532853cb9b223d4878cb0bc1c1b88c6b5dfc7f25fe"},
 ]
 pyyaml = [
     {file = "PyYAML-5.4.1-cp27-cp27m-macosx_10_9_x86_64.whl", hash = "sha256:3b2b1824fe7112845700f815ff6a489360226a5609b96ec2190a45e62a9fc922"},
@@ -392,16 +392,16 @@ requests = [
     {file = "requests-2.25.1.tar.gz", hash = "sha256:27973dd4a904a4f13b263a19c866c13b92a39ed1c964655f025f3f8d3d75b804"},
 ]
 six = [
-    {file = "six-1.15.0-py2.py3-none-any.whl", hash = "sha256:8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced"},
-    {file = "six-1.15.0.tar.gz", hash = "sha256:30639c035cdb23534cd4aa2dd52c3bf48f06e5f4a941509c8bafd8ce11080259"},
+    {file = "six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"},
+    {file = "six-1.16.0.tar.gz", hash = "sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"},
 ]
 toml = [
     {file = "toml-0.10.2-py2.py3-none-any.whl", hash = "sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b"},
     {file = "toml-0.10.2.tar.gz", hash = "sha256:b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f"},
 ]
 urllib3 = [
-    {file = "urllib3-1.26.3-py2.py3-none-any.whl", hash = "sha256:1b465e494e3e0d8939b50680403e3aedaa2bc434b7d5af64dfd3c958d7f5ae80"},
-    {file = "urllib3-1.26.3.tar.gz", hash = "sha256:de3eedaad74a2683334e282005cd8d7f22f4d55fa690a2a1020a416cb0a47e73"},
+    {file = "urllib3-1.26.4-py2.py3-none-any.whl", hash = "sha256:2f4da4594db7e1e110a944bb1b551fdf4e6c136ad42e4234131391e21eb5b0df"},
+    {file = "urllib3-1.26.4.tar.gz", hash = "sha256:e7b021f7241115872f92f43c6508082facffbd1c048e3c6e2bb9c2a157e28937"},
 ]
 watchdog = [
     {file = "watchdog-1.0.2-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:e2a531e71be7b5cc3499ae2d1494d51b6a26684bcc7c3146f63c810c00e8a3cc"},

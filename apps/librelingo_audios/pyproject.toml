@@ -1,18 +1,18 @@
 [tool.poetry]
 name = "librelingo_audios"
-version = "0.1.0"
+version = "1.0.0"
 description = "Tools to help getting audios for LibreLingo courses"
 authors = ["Dániel Kántor <git@daniel-kantor.com>"]
 license = "GPLv3"
 
 [tool.poetry.dependencies]
 python = "^3.9"
-librelingo-yaml-loader = "^0.1.5"
-librelingo-utils = "^1.0.0"
+librelingo-yaml-loader = "^1.0.0"
+librelingo-utils = "^2.0.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.2"
-librelingo-fakes = "^0.1.7"
+librelingo-fakes = "^1.0.0"
 pytest-mock = "^3.5.1"
 
 [build-system]
