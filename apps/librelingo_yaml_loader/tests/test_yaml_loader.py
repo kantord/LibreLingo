@@ -354,6 +354,9 @@ Mini-dictionary:
       - salut
     """.format(**kwargs)
 
+    def get_fake_skill_markdown(self):
+        return "<script />" + self.fake_values["introduction"]
+
     def create_fake_skill_meta(self, path, **kwargs):
         with open(Path(path) / "food.yaml", "w") as f:
             f.write(self.get_fake_skill_yaml(**kwargs))
@@ -374,6 +377,7 @@ Mini-dictionary:
             "word5": str(fakes.fake_value()),
             "word6": str(fakes.fake_value()),
             "word7": str(fakes.fake_value()),
+            "introduction": "# [https://example.com](_{}_)".format(str(fakes.fake_value())),
         }
 
     def set_up_patches(self):
@@ -388,6 +392,10 @@ Mini-dictionary:
         self.create_fake_skill_meta(self.fake_path, **{
             **self.fake_values,
         })
+
+        with open(self.fake_path / "food.md", "w") as f:
+            f.write(self.get_fake_skill_markdown())
+
         french = Language(self.fake_values["word3"], "")
         english = Language("English", "")
         self.fake_course = Course(french, english, [], [], None, None)
@@ -415,6 +423,10 @@ Mini-dictionary:
 
     def test_returned_object_has_correct_phrases(self):
         assert self.result.phrases == self.convert_phrases.return_value
+
+    def test_returned_object_has_correct_introduction(self):
+        print(self.result )
+        assert self.result.introduction == self.fake_values["introduction"]
 
     def test_dictionary_is_a_list_of_dictionary_items(self):
         assert type(self.result.dictionary) == list and all(
