@@ -1,10 +1,22 @@
 import collections
 from pathlib import Path
+
+import bleach
+from librelingo_types import (
+    Course,
+    DictionaryItem,
+    Language,
+    License,
+    Module,
+    Phrase,
+    Skill,
+    Word,
+)
+import markdown
 from yaml import safe_load
 from yaml.constructor import SafeConstructor
 
-from librelingo_types import Course, Language, License, Module, Skill, \
-    Word, Phrase, DictionaryItem
+import html2markdown
 
 
 def add_bool(self, node):
@@ -186,9 +198,33 @@ def _convert_mini_dictionary(raw_mini_dictionary, course):
             yield (word, tuple(definition), is_in_target_language)
 
 
+def _sanitize_markdown(mdtext):
+    "Removes unsafe text content from Markdown"
+    dirty_html = markdown.markdown(mdtext)
+    clean_html = bleach.clean(
+        dirty_html,
+        strip=True,
+        tags=[
+            *bleach.sanitizer.ALLOWED_TAGS, "h1", "h2", "h3", "h4", "h5", "h6"
+        ]
+    )
+    print(clean_html)
+    return html2markdown.convert(clean_html)
+
+
+def _load_introduction(path):
+    "Loads the introduction text from a Markdown file"
+    try:
+        with open(path) as f:
+            return _sanitize_markdown(f.read())
+    except:
+        return None
+
+
 def _load_skill(path, course):
     try:
         data = _load_yaml(path)
+        introduction = _load_introduction(str(path).replace(".yaml", ".md"))
         skill = data["Skill"]
         words = data["New words"]
         phrases = data["Phrases"]
@@ -232,6 +268,7 @@ def _load_skill(path, course):
         dictionary=list(_convert_mini_dictionary(
             data["Mini-dictionary"], course))
         if "Mini-dictionary" in data else [],
+        introduction=introduction,
     )
 
 
