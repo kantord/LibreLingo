@@ -25,11 +25,28 @@ from librelingo_json_export.skills import _get_skill_data
 from librelingo_utils import calculate_number_of_levels
 
 
-def get_fake_skill():
+course_with_markdown = fakes.customize(
+        fakes.course2,
+        modules=[
+            fakes.customize(
+                fakes.course2.modules[0],
+                skills=[
+                    fakes.customize(
+                        fakes.course2.modules[0].skills[0],
+                        introduction="# *Hello* (https://example.com)[_world_]!",
+                    )
+                ]
+            )
+        ]
+    )
+
+
+def get_fake_skill(introduction=None):
     randomname = str(random.randint(0, 5000))
     return randomname, fakes.customize(
         fakes.skillWithPhraseAndWord,
         name="Animals {}".format(randomname),
+        introduction=introduction,
     )
 
 
@@ -66,12 +83,31 @@ class TestExportSkill(FakeFsTestCase):
         self.setUpPyfakefs()
         self.export_path = fakes.path()
 
-    def test_creates_the_correct_file(self):
+    def test_creates_the_challenges_file(self):
         randomname, fake_skill = get_fake_skill()
         _export_skill(self.export_path,
                       fake_skill, fakes.course1)
         self.assertTrue(os.path.exists(self.export_path / "challenges" /
                                        "animals-{}.json".format(randomname)))
+
+    def test_creates_the_introduction_file(self):
+        fake_name = str(fakes.fake_value())
+        introduction="# *Hello* (https://example.com)[_{}_]!".format(fake_name)
+        randomname, fake_skill = get_fake_skill(introduction=introduction)
+        _export_skill(self.export_path,
+                      fake_skill, fakes.course1)
+        with open(self.export_path / "introduction" / "animals-{}.md".format(randomname)) as f:
+            introduction_file_content = f.read()
+            self.assertEquals(introduction_file_content, introduction)
+
+
+    def test_does_not_create_an_introduction_file_if_theres_no_introduction(self):
+        randomname, fake_skill = get_fake_skill()
+        _export_skill(self.export_path,
+                      fake_skill, fakes.course1)
+        self.assertFalse(os.path.exists(self.export_path / "introduction" /
+                                       "animals-{}.md".format(randomname)))
+
 
     @patch('librelingo_json_export.export._get_skill_data')
     def test_calls__get_skill_data_with_correct_value(self, _get_skill_data):
@@ -247,6 +283,41 @@ def test__get_course_data_return_value_2():
                         "title": "Mammals and birds",
                         "practiceHref": "mammals-and-birds",
                         "summary": ["foous"],
+                        "levels": 1,
+                    }
+                ]
+            },
+        ]
+    }
+
+
+def test__get_course_data_return_value_with_introduction():
+    """
+    Tests the return value of _get_course_data with the
+    fakes.course2 object
+
+    """
+    assert _get_course_data(course_with_markdown) == {
+        "languageName": "another language",
+        "languageCode": "tr",
+        "specialCharacters": ["ç", "ş"],
+        "license": {
+            "name": {
+                "short":  "lorem",
+                "full": "ipsum lorem license"
+            },
+            "link":  "https://example.com/lipsum_license",
+        },
+        "modules": [
+            {
+                "title": "Animals",
+                "skills": [
+                    {
+                        'id': 'd7279e4777cd',
+                        "title": "Mammals and birds",
+                        "practiceHref": "mammals-and-birds",
+                        "summary": ["foous"],
+                        "introduction": "mammals-and-birds.md",
                         "levels": 1,
                     }
                 ]

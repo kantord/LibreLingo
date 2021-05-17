@@ -9,19 +9,18 @@
   import { _ } from "svelte-i18n"
   import isBrowser from "../utils/isBrowser"
 
-
   type ErrorsType = {
-    _form?: string,
-    username?: string,
-    email?: string,
-    license?: string,
-    password?: string,
-    password_confirmation?: string,
+    _form?: string
+    username?: string
+    email?: string
+    license?: string
+    password?: string
+    password_confirmation?: string
   }
 
   interface ExtendedWindow extends Window {
-    _test_fake_signup: boolean,
-    _test_user_already_exists: boolean,
+    _test_fake_signup: boolean
+    _test_user_already_exists: boolean
   }
 
   let loading = false
@@ -35,7 +34,8 @@
 
   // TODO: deal with this ignore comment
   // eslint-disable-next-line no-useless-escape
-  const emailRegexp = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+  const emailRegexp =
+    /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
 
   const validateUsername = () => {
       if (!username) {
