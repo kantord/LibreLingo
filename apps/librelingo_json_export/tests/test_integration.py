@@ -19,7 +19,9 @@ def test_loaded_yaml_is_exported_to_correct_json(fs, snapshot):
     export_course("./output", course)
     files = glob.glob("./output/**/*")
     data = {
-        fname: read_json_file(fname) for fname in files
+        fname:
+            read_json_file(fname) if fname.endswith(".json") else open(fname).read()
+            for fname in files
     }
 
     fs.pause()  # Write snapshots to the real fs, not the fake
