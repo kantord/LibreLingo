@@ -1,7 +1,7 @@
 <script lang="typescript" context="module">
   export async function preload() {
       try {
-          // eslint-disable-next-line @typescript-eslint/no-var-requires
+      // eslint-disable-next-line @typescript-eslint/no-var-requires
           const fs = require("fs")
           // eslint-disable-next-line @typescript-eslint/no-var-requires
           const util = require("util")
@@ -12,8 +12,8 @@
                   (fname: string) => fname.split(".")[0]
               ),
           }
-      } catch(error) {
-          // do nothing
+      } catch (error) {
+      // do nothing
       }
   }
 </script>
