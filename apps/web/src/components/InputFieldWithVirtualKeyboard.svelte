@@ -50,7 +50,7 @@
 
 <!-- svelte-ignore a11y-autofocus -->
 <input
-  tabindex={0}
+  tabindex="{0}"
   data-test="answer"
   type="text"
   class="input"
@@ -68,7 +68,7 @@
 <div class="keyboard">
   {#each specialCharacters as specialCharacter}
     <Button
-      tabindex={-1}
+      tabindex="{-1}"
       light
       key
       size="small"

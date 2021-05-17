@@ -14,12 +14,7 @@
   export let skipAllVoice = null
 </script>
 
-<div
-  class:correct
-  class:incorrect
-  class:typo
-  class="panel is-primary"
->
+<div class:correct class:incorrect class:typo class="panel is-primary">
   <div class="panel-block">
     <div class="control">
       <div class="left">
