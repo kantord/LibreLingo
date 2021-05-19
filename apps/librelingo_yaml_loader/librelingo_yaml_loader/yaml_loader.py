@@ -208,7 +208,7 @@ def _sanitize_markdown(mdtext):
             *bleach.sanitizer.ALLOWED_TAGS, "h1", "h2", "h3", "h4", "h5", "h6"
         ]
     )
-    print(clean_html)
+
     return html2markdown.convert(clean_html)
 
 

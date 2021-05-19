@@ -23,37 +23,37 @@
   export let expectedNumberOfChallenges
 
   type CardChallengeType = {
-    id: string,
-    type: "cards",
+    id: string
+    type: "cards"
     pictures: Array<string>
   }
 
   type ListeningChallengeType = {
-    id: string,
-    type: "listeningExercise",
+    id: string
+    type: "listeningExercise"
   }
 
   type OptionsChallengeType = {
-    id: string,
-    type: "options",
+    id: string
+    type: "options"
   }
 
   type ShortInputChallengeType = {
-    id: string,
-    type: "shortInput",
+    id: string
+    type: "shortInput"
   }
 
   type ChipsChallengeType = {
-    id: string,
-    type: "chips",
+    id: string
+    type: "chips"
   }
 
   type ChallengeType =
-      | CardChallengeType
-      | ListeningChallengeType
-      | OptionsChallengeType
-      | ShortInputChallengeType
-      | ChipsChallengeType
+    | CardChallengeType
+    | ListeningChallengeType
+    | OptionsChallengeType
+    | ShortInputChallengeType
+    | ChipsChallengeType
 
   let challenges: Array<ChallengeType> = sortChallengeGroups(
       shuffle(rawChallenges),
