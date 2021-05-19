@@ -1,17 +1,16 @@
 <script lang="typescript" context="module">
   import MarkDownPage, {
       getMarkDownData,
-  } from "../components/MarkDownPage.svelte"
+} from "../../../../../components/MarkDownPage.svelte"
   import { _ } from "svelte-i18n"
 
   export async function preload() {
       return {
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-          readmeHTML:
-        // @ts-ignore
-        (
-            await getMarkDownData(await import("../../../../README.md"))
-        ).contents.split("<h2>Tech stack</h2>")[0],
+          readmeHTML: // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      (
+          await getMarkDownData(await import("../../../../README.md"))
+      ).contents.split("<h2>Tech stack</h2>")[0],
       }
   }
 </script>
