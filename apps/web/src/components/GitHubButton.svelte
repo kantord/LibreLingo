@@ -19,11 +19,14 @@
   const pMemoize = require("p-memoize")
 
   type WindowWithStars = Window & {
-    stars: number,
-    star_count: number,
+    stars: number
+    star_count: number
   }
 
-  export let stars = (isBrowser() === true ? (window as unknown as WindowWithStars).stars : null) || "   "
+  export let stars =
+    (isBrowser() === true
+        ? (window as unknown as WindowWithStars).stars
+        : null) || "   "
   export let size = "small"
 
   onMount(async () => {
