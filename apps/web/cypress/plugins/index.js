@@ -16,8 +16,8 @@ const cucumber = require("cypress-cucumber-preprocessor").default
 const { renameSync } = require("fs")
 
 module.exports = (on) => {
-    on("file:preprocessor", cucumber())
-    on("after:screenshot", ({ path }) => {
-        renameSync(path, path.replace(/ \(\d*\)/i, ""))
-    })
+  on("file:preprocessor", cucumber())
+  on("after:screenshot", ({ path }) => {
+    renameSync(path, path.replace(/ \(\d*\)/i, ""))
+  })
 }
