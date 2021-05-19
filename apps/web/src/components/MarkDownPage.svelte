@@ -36,6 +36,7 @@
     <div class="container">
       <h1 class="title">{title}</h1>
       <div class="section box">
+        <slot />
         <Content>
           {@html readmeHTML}
         </Content>
