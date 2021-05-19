@@ -15,7 +15,6 @@
     _Logout: () => void
   }
   const _Logout = () => (window as unknown as WindowWithLogout)._Logout()
-
 </script>
 
 <NavBar>

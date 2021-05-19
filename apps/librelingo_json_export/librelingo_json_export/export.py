@@ -39,6 +39,14 @@ def _export_skill(export_path, skill, course, settings=None):
         else:
             json.dump(skill_data, f, ensure_ascii=False, indent=2)
 
+    if skill.introduction:
+        Path(Path(export_path) / "introduction").mkdir(parents=True, exist_ok=True)
+        with open(Path(export_path) / "introduction" / "{}.md".format(slug), 'w', encoding='utf-8') as f:
+            if settings is not None and settings.dry_run:
+                pass
+            else:
+                f.write(skill.introduction)
+
 
 def _export_course_data(export_path, course, settings=None):
     """
@@ -60,7 +68,7 @@ def _export_course_data(export_path, course, settings=None):
 def export_course(export_path, course, settings=None):
     """
         Writes the course to JSON files in the specified path.
-        
+
         ### Usage example:
 
         ```python

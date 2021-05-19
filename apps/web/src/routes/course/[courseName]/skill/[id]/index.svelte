@@ -5,9 +5,9 @@
           languageName,
           languageCode,
           specialCharacters,
-      } = await import(`../../../../courses/${courseName}/courseData.json`)
+      } = await import(`../../../../../courses/${courseName}/courseData.json`)
       const skillData = await import(
-          `../../../../courses/${courseName}/challenges/${id}.json`
+          `../../../../../courses/${courseName}/challenges/${id}.json`
       )
       const rawChallenges = skillData.challenges
       const challengesPerLevel = skillData.challenges.length / skillData.levels
@@ -28,8 +28,8 @@
 </script>
 
 <script lang="typescript">
-  import ChallengeScreen from "../../../../components/ChallengeScreen.svelte"
-  import NavBar from "../../../../components/NavBar.svelte"
+  import ChallengeScreen from "../../../../../components/ChallengeScreen.svelte"
+  import NavBar from "../../../../../components/NavBar.svelte"
   import { sortChallengeGroups } from "./_logic"
 
   export let rawChallenges
