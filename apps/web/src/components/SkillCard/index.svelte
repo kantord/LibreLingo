@@ -11,6 +11,7 @@
   export let title
   export let levels
   export let practiceHref
+  export let introduction
   export let id
   export let imageSet = []
   export let summary
@@ -19,6 +20,7 @@
   let started = null
   let stale = null
   let progress = null
+  let introductionPageHref = introduction ? `${practiceHref}/introduction` : null
 
   onMount(() => {
       live((db) =>
@@ -72,7 +74,7 @@
     <div href="{practiceHref}" class="card-footer-item">
       <Buttons
         title="{title}"
-        practiceHref="{practiceHref}"
+        practiceHref="{introductionPageHref || practiceHref}"
         started="{started}"
         completed="{completed}" />
     </div>
