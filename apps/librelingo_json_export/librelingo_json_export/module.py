@@ -13,6 +13,12 @@ def _get_module_summary(module):
         else:
             return {}
 
+    def get_introduction(skill):
+        if skill.introduction:
+            return {"introduction": "{}.md".format(slugify(skill.name))}
+        else:
+            return {}
+
     def get_summary(words, phrases):
         words = [word.in_target_language[0] for word in words]
         phrases = [phrase.in_target_language[0] for phrase in phrases]
@@ -27,6 +33,7 @@ def _get_module_summary(module):
         "skills": [
             {
                 **(get_imageset(skill.image_set)),
+                **(get_introduction(skill)),
                 "summary": get_summary(skill.words, skill.phrases),
                 "practiceHref": slugify(skill.name),
                 "id": get_opaque_id(skill, "Skill"),
