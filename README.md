@@ -309,7 +309,7 @@ The mascot is designed by [@almostdesigner](https://github.com/almostdesigner).
 ## Contributors ✨
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-60-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-61-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
@@ -395,6 +395,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/danielinux7"><img src="https://avatars.githubusercontent.com/u/2645266?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nart Tlisha</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/issues?q=author%3Adanielinux7" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://binyam.in"><img src="https://avatars.githubusercontent.com/u/39805353?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Binyamin Aron Green</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/commits?author=binyamin" title="Documentation">📖</a></td>
     <td align="center"><a href="https://stragu.gitlab.io/"><img src="https://avatars.githubusercontent.com/u/1747497?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Stéphane Guillou</b></sub></a><br /><a href="#ideas-stragu" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="http://aerabi.com"><img src="https://avatars.githubusercontent.com/u/44623032?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mohammad-Ali A'RÂBI</b></sub></a><br /><a href="#content-aerabi" title="Content">🖋</a></td>
   </tr>
 </table>
 
