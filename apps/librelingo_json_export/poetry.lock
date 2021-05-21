@@ -21,6 +21,42 @@ tests = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)"
 tests_no_zope = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "mypy", "pytest-mypy-plugins"]
 
 [[package]]
+name = "beautifulsoup4"
+version = "4.9.3"
+description = "Screen-scraping library"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+soupsieve = {version = ">1.2", markers = "python_version >= \"3.0\""}
+
+[package.extras]
+html5lib = ["html5lib"]
+lxml = ["lxml"]
+
+[[package]]
+name = "bleach"
+version = "3.3.0"
+description = "An easy safelist-based HTML-sanitizing tool."
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+
+[package.dependencies]
+packaging = "*"
+six = ">=1.9.0"
+webencodings = "*"
+
+[[package]]
+name = "bleach-whitelist"
+version = "0.0.11"
+description = "Curated lists of tags and attributes for sanitizing html"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "certifi"
 version = "2020.12.5"
 description = "Python package for providing Mozilla's CA Bundle."
@@ -97,6 +133,17 @@ wasmer = ">=1.0.0"
 wasmer-compiler-cranelift = ">=1.0.0"
 
 [[package]]
+name = "html2markdown"
+version = "0.1.7"
+description = "Conservatively convert html to markdown"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+beautifulsoup4 = "*"
+
+[[package]]
 name = "idna"
 version = "2.10"
 description = "Internationalized Domain Names in Applications (IDNA)"
@@ -114,15 +161,18 @@ python-versions = "*"
 
 [[package]]
 name = "librelingo-fakes"
-version = "0.1.7"
+version = "1.0.0"
 description = "Fake data for testing LibreLingo-related packages"
 category = "dev"
 optional = false
 python-versions = ">=3.9,<4.0"
 
+[package.dependencies]
+librelingo-types = ">=1.0.0,<2.0.0"
+
 [[package]]
 name = "librelingo-types"
-version = "0.1.2"
+version = "1.0.0"
 description = "Data types to be used in Python packages for LibreLingo"
 category = "main"
 optional = false
@@ -130,31 +180,46 @@ python-versions = ">=3.9,<4.0"
 
 [[package]]
 name = "librelingo-utils"
-version = "1.0.0"
+version = "2.0.0"
 description = "Utilities to be used in LibreLingo-related-packages"
 category = "main"
 optional = false
 python-versions = ">=3.9,<4.0"
 
 [package.dependencies]
-librelingo-types = ">=0.1.1,<0.2.0"
+librelingo-types = ">=1.0.0,<2.0.0"
 
 [[package]]
 name = "librelingo-yaml-loader"
-version = "0.1.5"
+version = "1.1.1"
 description = "Load YAML-based LibreLingo courses in your Python project."
 category = "main"
 optional = false
 python-versions = ">=3.9,<4.0"
 
 [package.dependencies]
+bleach = ">=3.3.0,<4.0.0"
+bleach-whitelist = ">=0.0.11,<0.0.12"
 click = ">=7.1.2,<8.0.0"
-librelingo-types = ">=0.1.0,<0.2.0"
+html2markdown = ">=0.1.7,<0.2.0"
+librelingo-types = ">=1.0.0,<2.0.0"
+Markdown = ">=3.3.4,<4.0.0"
 pyfakefs = ">=4.3.3,<5.0.0"
 python-slugify = ">=4.0.1,<5.0.0"
 pyyaml = ">=5.3.1,<6.0.0"
 slugify = ">=0.0.1,<0.0.2"
 snapshottest = ">=0.6.0,<0.7.0"
+
+[[package]]
+name = "markdown"
+version = "3.3.4"
+description = "Python implementation of Markdown."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.extras]
+testing = ["coverage", "pyyaml"]
 
 [[package]]
 name = "nr.collections"
@@ -292,7 +357,7 @@ python-versions = "*"
 name = "packaging"
 version = "20.9"
 description = "Core utilities for Python packages"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
@@ -353,7 +418,7 @@ python-versions = ">=3.5"
 name = "pyparsing"
 version = "2.4.7"
 description = "Python parsing module"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
@@ -481,6 +546,14 @@ pytest = ["pytest"]
 test = ["six", "pytest (>=4.6)", "pytest-cov", "nose", "django (>=1.10.6)"]
 
 [[package]]
+name = "soupsieve"
+version = "2.2.1"
+description = "A modern CSS selector implementation for Beautiful Soup."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[[package]]
 name = "termcolor"
 version = "1.1.0"
 description = "ANSII Color formatting for output in terminal."
@@ -544,10 +617,18 @@ python-versions = ">=3.6"
 [package.extras]
 watchmedo = ["PyYAML (>=3.10)", "argh (>=0.24.1)"]
 
+[[package]]
+name = "webencodings"
+version = "0.5.1"
+description = "Character encoding aliases for legacy web content"
+category = "main"
+optional = false
+python-versions = "*"
+
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "270d5de5c5da9bfa7a10b6cdcaa43af2c2596a3cdee652334274ce969f4dbee9"
+content-hash = "c1e7efcc2a9ab89c849bf553f0b35bc4868e3d7f1a68718f5a913ae40b471e95"
 
 [metadata.files]
 atomicwrites = [
@@ -557,6 +638,18 @@ atomicwrites = [
 attrs = [
     {file = "attrs-21.2.0-py2.py3-none-any.whl", hash = "sha256:149e90d6d8ac20db7a955ad60cf0e6881a3f20d37096140088356da6c716b0b1"},
     {file = "attrs-21.2.0.tar.gz", hash = "sha256:ef6aaac3ca6cd92904cdd0d83f629a15f18053ec84e6432106f7a4d04ae4f5fb"},
+]
+beautifulsoup4 = [
+    {file = "beautifulsoup4-4.9.3-py2-none-any.whl", hash = "sha256:4c98143716ef1cb40bf7f39a8e3eec8f8b009509e74904ba3a7b315431577e35"},
+    {file = "beautifulsoup4-4.9.3-py3-none-any.whl", hash = "sha256:fff47e031e34ec82bf17e00da8f592fe7de69aeea38be00523c04623c04fb666"},
+    {file = "beautifulsoup4-4.9.3.tar.gz", hash = "sha256:84729e322ad1d5b4d25f805bfa05b902dd96450f43842c4e99067d5e1369eb25"},
+]
+bleach = [
+    {file = "bleach-3.3.0-py2.py3-none-any.whl", hash = "sha256:6123ddc1052673e52bab52cdc955bcb57a015264a1c57d37bea2f6b817af0125"},
+    {file = "bleach-3.3.0.tar.gz", hash = "sha256:98b3170739e5e83dd9dc19633f074727ad848cbedb6026708c8ac2d3b697a433"},
+]
+bleach-whitelist = [
+    {file = "bleach-whitelist-0.0.11.tar.gz", hash = "sha256:2f7cc5ac2283f14f0cd52251dad51382813db776f3bcb8a61c6123d57b8e2ab4"},
 ]
 certifi = [
     {file = "certifi-2020.12.5-py2.py3-none-any.whl", hash = "sha256:719a74fb9e33b9bd44cc7f3a8d94bc35e4049deebe19ba7d8e108280cfd59830"},
@@ -589,6 +682,9 @@ fastdiff = [
     {file = "fastdiff-0.3.0-py2.py3-none-any.whl", hash = "sha256:ca5f61f6ddf5a1564ddfd98132ad28e7abe4a88a638a8b014a2214f71e5918ec"},
     {file = "fastdiff-0.3.0.tar.gz", hash = "sha256:4dfa09c47832a8c040acda3f1f55fc0ab4d666f0e14e6951e6da78d59acd945a"},
 ]
+html2markdown = [
+    {file = "html2markdown-0.1.7.tar.gz", hash = "sha256:92baf932c7f216be6d9459a191d45b6401e204bda7a5413febafa875512cfa8c"},
+]
 idna = [
     {file = "idna-2.10-py2.py3-none-any.whl", hash = "sha256:b97d804b1e9b523befed77c48dacec60e6dcb0b5391d57af6a65a312a90648c0"},
     {file = "idna-2.10.tar.gz", hash = "sha256:b307872f855b18632ce0c21c5e45be78c0ea7ae4c15c828c20788b26921eb3f6"},
@@ -598,20 +694,24 @@ iniconfig = [
     {file = "iniconfig-1.1.1.tar.gz", hash = "sha256:bc3af051d7d14b2ee5ef9969666def0cd1a000e121eaea580d4a313df4b37f32"},
 ]
 librelingo-fakes = [
-    {file = "librelingo_fakes-0.1.7-py3-none-any.whl", hash = "sha256:aed8460bc2af12d5090bfba75288bfa67932262874a1e2bc0075d9186ffb8ec0"},
-    {file = "librelingo_fakes-0.1.7.tar.gz", hash = "sha256:e91ab363c96ecb723218413723cb5c79df6d5d333726a417ba9cb570b65842cd"},
+    {file = "librelingo_fakes-1.0.0-py3-none-any.whl", hash = "sha256:687723b3c2ed95e67278065cce3435161079bea4f227ce164f54a292d7062389"},
+    {file = "librelingo_fakes-1.0.0.tar.gz", hash = "sha256:22fe217ed398df9cc017713bb873479570fe11c9fa1231307154eedebb024743"},
 ]
 librelingo-types = [
-    {file = "librelingo_types-0.1.2-py3-none-any.whl", hash = "sha256:132b7e926a2a6a07c80bb815ea1cc6040b2b6610657beac9505bcc05eaf7d9f9"},
-    {file = "librelingo_types-0.1.2.tar.gz", hash = "sha256:991d76c44c640a7f45d831beb28597b8b4027ac223453f0085854a3958b5644c"},
+    {file = "librelingo_types-1.0.0-py3-none-any.whl", hash = "sha256:1b5af0b754613e9aec1c941a530e44bdeee53a58f1173144ab333c48f0fa8825"},
+    {file = "librelingo_types-1.0.0.tar.gz", hash = "sha256:ab9434ff039d354be49c1852f3f372fb4a63e891799f5b748b4f1c026c735f04"},
 ]
 librelingo-utils = [
-    {file = "librelingo_utils-1.0.0-py3-none-any.whl", hash = "sha256:a29ce6d7adb15313b5c10f5f83fa0c961156ab08b2e8535b05aaa6ec67233885"},
-    {file = "librelingo_utils-1.0.0.tar.gz", hash = "sha256:f78ed2aed3c0f08520b7515b38f869c7638196b3fd198a159de4626fc25a368a"},
+    {file = "librelingo_utils-2.0.0-py3-none-any.whl", hash = "sha256:0c40dd4a08fe55ca56c3d484faca3f9bce368ee9faf0606ca3fde5390068bf63"},
+    {file = "librelingo_utils-2.0.0.tar.gz", hash = "sha256:932e60546f38187b2dcf05a4b43d9b5c71ef5ccd3f9e7962d71445ba98fe346c"},
 ]
 librelingo-yaml-loader = [
-    {file = "librelingo_yaml_loader-0.1.5-py3-none-any.whl", hash = "sha256:c1b9ca9502c9c387392987b204387c66d57a738a1a322555c2605b5b67a4c1ad"},
-    {file = "librelingo_yaml_loader-0.1.5.tar.gz", hash = "sha256:3ca4292dc49f110b5d373ac680840c28321d695277527df6826b4c38e5c681b6"},
+    {file = "librelingo_yaml_loader-1.1.1-py3-none-any.whl", hash = "sha256:f2766f8df317976e70469b1a956918b80e5701648b46197ae2a3d7c8e7859e0b"},
+    {file = "librelingo_yaml_loader-1.1.1.tar.gz", hash = "sha256:758250bcb424bb21070cc27cd3be55e669dbbf7b9b44e28a1c528f5f704c8983"},
+]
+markdown = [
+    {file = "Markdown-3.3.4-py3-none-any.whl", hash = "sha256:96c3ba1261de2f7547b46a00ea8463832c921d3f9d6aba3f255a6f71386db20c"},
+    {file = "Markdown-3.3.4.tar.gz", hash = "sha256:31b5b491868dcc87d6c24b7e3d19a0d730d59d3e46f4eea6430a321bed387a49"},
 ]
 "nr.collections" = [
     {file = "nr.collections-0.0.1.tar.gz", hash = "sha256:ddf38cd6379cac546ce7abdadf024fc01cca75540e11b1d5f1aa701a33817f1c"},
@@ -732,6 +832,10 @@ snapshottest = [
     {file = "snapshottest-0.6.0-py2.py3-none-any.whl", hash = "sha256:9b177cffe0870c589df8ddbee0a770149c5474b251955bdbde58b7f32a4ec429"},
     {file = "snapshottest-0.6.0.tar.gz", hash = "sha256:bbcaf81d92d8e330042e5c928e13d9f035e99e91b314fe55fda949c2f17b653c"},
 ]
+soupsieve = [
+    {file = "soupsieve-2.2.1-py3-none-any.whl", hash = "sha256:c2c1c2d44f158cdbddab7824a9af8c4f83c76b1e23e049479aa432feb6c4c23b"},
+    {file = "soupsieve-2.2.1.tar.gz", hash = "sha256:052774848f448cf19c7e959adf5566904d525f33a3f8b6ba6f6f8f26ec7de0cc"},
+]
 termcolor = [
     {file = "termcolor-1.1.0.tar.gz", hash = "sha256:1d6d69ce66211143803fbc56652b41d73b4a400a2891d7bf7a1cdf4c02de613b"},
 ]
@@ -796,4 +900,8 @@ watchdog = [
     {file = "watchdog-1.0.2-py3-none-win_amd64.whl", hash = "sha256:f84146f7864339c8addf2c2b9903271df21d18d2c721e9a77f779493234a82b5"},
     {file = "watchdog-1.0.2-py3-none-win_ia64.whl", hash = "sha256:ee21aeebe6b3e51e4ba64564c94cee8dbe7438b9cb60f0bb350c4fa70d1b52c2"},
     {file = "watchdog-1.0.2.tar.gz", hash = "sha256:376cbc2a35c0392b0fe7ff16fbc1b303fd99d4dd9911ab5581ee9d69adc88982"},
+]
+webencodings = [
+    {file = "webencodings-0.5.1-py2.py3-none-any.whl", hash = "sha256:a0af1213f3c2226497a97e2b3aa01a7e4bee4f403f95be16fc9acd2947514a78"},
+    {file = "webencodings-0.5.1.tar.gz", hash = "sha256:b36a1c245f2d304965eb4e0a82848379241dc04b865afcc4aab16748587e1923"},
 ]
