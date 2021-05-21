@@ -58,6 +58,12 @@
                 </Translate>
               </ButtonLink>
 
+              <ButtonLink primary hidden href="course/parsig-from-english">
+                <Translate key="index.start_parsig_course">
+                  Start learning Middle Persian
+                </Translate>
+              </ButtonLink>
+
               <ButtonLink primary href="about">
                 <Translate key="index.about_librelingo">
                   About LibreLingo
