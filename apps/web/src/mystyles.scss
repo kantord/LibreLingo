@@ -24,7 +24,7 @@
 @import "~bulma/sass/elements/image.sass";
 @import "~bulma/sass/elements/button.sass";
 // @import "~bulma/sass/elements/title.sass";
-//@import "~bulma/sass/elements/content.sass";
+@import "~bulma/sass/elements/content.sass";
 @import "~bulma/sass/elements/box.sass";
 //@import "~bulma/sass/elements/table.sass";
 @import "~bulma/sass/elements/container.sass";
@@ -61,6 +61,7 @@
 :root {
     --spacing-small: 8px;
     --spacing-medium: 12px;
+    --spacing-large: calc(var(--spacing-small) + var(--spacing-medium));
     --blue: #325f74;
     --white: #bfb5af;
 
