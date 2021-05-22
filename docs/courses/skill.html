@@ -235,6 +235,11 @@
     Tips for creating good skills
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#skill_namemd">
+    (skill_name).md
+  </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -289,6 +294,11 @@
     Tips for creating good skills
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#skill_namemd">
+    (skill_name).md
+  </a>
+</li>
 </ul>
 </nav>
 </div>
@@ -310,10 +320,11 @@
 <p><strong>Table of Contents:</strong>
 - <a href="#tree-structure">Tree structure</a>
 - <a href="#yaml"><code>(skill_name).yaml</code></a>
-  - <a href="#data-breakdown">Data breakdown</a>
+- <a href="#data-breakdown">Data breakdown</a>
 - <a href="#creating-new">Creating new skills</a>
 - <a href="#example-edit">Examples of editing a skill</a>
-- <a href="#tips">Tips for creating good skills</a></p>
+- <a href="#tips">Tips for creating good skills</a>
+- <a href="#markdown"><code>(skill_name).md</code></a></p>
 <h2 id="tree-structure">Tree structure</h2>
 <p>A typical tree structure for skills under a module is as follows:</p>
 <pre><code>courses/spanish-from-english/basics/skills/
@@ -459,6 +470,24 @@ add any new words there:</p>
 <li>Use words to teach nouns that can be demonstrated easily with pictures, such as "dog", "car", "tree", "city".</li>
 <li>Do not try to teach verbs, adjectives, etc. using words. Instead, use them in phrases.</li>
 </ul>
+<p><a id="markdown"></a></p>
+<h2 id="skill_namemd"><code>(skill_name).md</code></h2>
+<p>In order to create an introduction page for your skill, you need to create a <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a>
+file with the same name as your .yaml file, but with the .md extension.</p>
+<p>Place this .md file next to the .yaml file in your skills folder like so</p>
+<pre><code>courses/spanish-from-english/basics/skills
+├── animals.md
+├── animals.yaml
+├── clothes.yaml
+├── food.yaml
+├── nature.yaml
+├── plurals.yaml
+├── professions.yaml
+├── verb_plurals.yaml
+└── verbs.yaml
+</code></pre>
+<p>You can use this Markdown file to create a short article about the skill the user is about to learn or practice.
+This can be useful to explain grammatical concepts, gotchas and learning tips about the specific skill.</p>
 </article>
 </div>
 </div>
