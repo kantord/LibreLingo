@@ -16,10 +16,11 @@ To get a better understanding, you can read the [course basics](README.md#basics
 **Table of Contents:**
 - [Tree structure](#tree-structure)
 - [`(skill_name).yaml`](#yaml)
-  - [Data breakdown](#data-breakdown)
+- [Data breakdown](#data-breakdown)
 - [Creating new skills](#creating-new)
 - [Examples of editing a skill](#example-edit)
 - [Tips for creating good skills](#tips)
+- [`(skill_name).md`](#markdown)
 
 ## Tree structure
 
@@ -192,3 +193,28 @@ Don't worry about listing the same word more than once in a course. It will not 
 - When it comes to teaching grammar, your main tool is to teach by example.
 - Use words to teach nouns that can be demonstrated easily with pictures, such as "dog", "car", "tree", "city".
 - Do not try to teach verbs, adjectives, etc. using words. Instead, use them in phrases.
+
+<a id="markdown"></a>
+## `(skill_name).md`
+
+In order to create an introduction page for your skill, you need to create a [Markdown](https://en.wikipedia.org/wiki/Markdown)
+file with the same name as your .yaml file, but with the .md extension.
+
+Place this .md file next to the .yaml file in your skills folder like so
+
+```
+courses/spanish-from-english/basics/skills
+├── animals.md
+├── animals.yaml
+├── clothes.yaml
+├── food.yaml
+├── nature.yaml
+├── plurals.yaml
+├── professions.yaml
+├── verb_plurals.yaml
+└── verbs.yaml
+```
+
+You can use this Markdown file to create a short article about the skill the user is about to learn or practice.
+This can be useful to explain grammatical concepts, gotchas and learning tips about the specific skill.
+
