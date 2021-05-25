@@ -2447,6 +2447,11 @@
   resolved "https://registry.yarnpkg.com/@polka/url/-/url-1.0.0-next.11.tgz#aeb16f50649a91af79dbe36574b66d0f9e4d9f71"
   integrity sha512-3NsZsJIA/22P3QUyrEDNA2D133H4j224twJrdipXN38dpnIOzAbUDtOwkcJ5pXmn75w7LSQDjA4tO9dm1XlqlA==
 
+"@polka/url@^1.0.0-next.15":
+  version "1.0.0-next.15"
+  resolved "https://registry.yarnpkg.com/@polka/url/-/url-1.0.0-next.15.tgz#6a9d143f7f4f49db2d782f9e1c8839a29b43ae23"
+  integrity sha512-15spi3V28QdevleWBNXE4pIls3nFZmBbUGrW9IVPwiQczuSb9n76TCB4bsk8TSel+I1OkHEdPhu5QKMfY6rQHA==
+
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/@samverschueren/stream-to-observable/-/stream-to-observable-0.3.1.tgz#a21117b19ee9be70c379ec1877537ef2e1c63301"
@@ -12832,7 +12837,16 @@ simple-swizzle@^0.2.2:
   dependencies:
     is-arrayish "^0.3.1"
 
-sirv@1.0.11, sirv@^1.0.7:
+sirv@1.0.12:
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/sirv/-/sirv-1.0.12.tgz#d816c882b35489b3c63290e2f455ae3eccd5f652"
+  integrity sha512-+jQoCxndz7L2tqQL4ZyzfDhky0W/4ZJip3XoOuxyQWnAwMxindLl3Xv1qT4x1YX/re0leShvTm8Uk0kQspGhBg==
+  dependencies:
+    "@polka/url" "^1.0.0-next.15"
+    mime "^2.3.1"
+    totalist "^1.0.0"
+
+sirv@^1.0.7:
   version "1.0.11"
   resolved "https://registry.yarnpkg.com/sirv/-/sirv-1.0.11.tgz#81c19a29202048507d6ec0d8ba8910fda52eb5a4"
   integrity sha512-SR36i3/LSWja7AJNRBz4fF/Xjpn7lQFI30tZ434dIy+bitLYSP+ZEenHg36i23V2SGEz+kqjksg0uOGZ5LPiqg==
