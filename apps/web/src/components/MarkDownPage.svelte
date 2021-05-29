@@ -21,12 +21,14 @@
 
   export let readmeHTML: string
   export let title: string | null
-  export let description: string | null
+  export let description: string | null = null
 </script>
 
 <svelte:head>
   <title>{title}</title>
-  <meta name="description" content="{description}" />
+  {#if description}
+    <meta name="description" content="{description}" />
+  {/if}
 </svelte:head>
 
 <NavBar />
