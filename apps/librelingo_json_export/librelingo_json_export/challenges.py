@@ -39,9 +39,8 @@ def _get_phrase_challenges(phrase, course):
     return challenge_mapper([
         get_options_challenge,
         get_listening_challenge,
-        *(
-            [get_chips_challenge, get_reverse_chips_challenge]
-            if is_long_enough_to_have_chips(phrase) else [])
+        get_chips_challenge,
+        get_reverse_chips_challenge
     ]
     )(phrase, course)
 

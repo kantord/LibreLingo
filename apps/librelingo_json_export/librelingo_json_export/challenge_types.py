@@ -70,7 +70,17 @@ def create_chips_challenge_generator(reverse):
     def get_phrase_text(phrase):
         return get_phrase_texts(phrase)[0]
 
+    def is_long_enough_to_have_chips(phrase):
+        if len(phrase.in_source_language[0].split()) < 2:
+            return False
+        if len(phrase.in_target_language[0].split()) < 2:
+            return False
+        return True
+
     def get_chips_challenge(phrase, course):
+        if not is_long_enough_to_have_chips(phrase):
+            return []
+
         return [{
             "type": "chips",
             "translatesToSourceLanguage": reverse,
@@ -89,10 +99,3 @@ def create_chips_challenge_generator(reverse):
 get_chips_challenge = create_chips_challenge_generator(False)
 get_reverse_chips_challenge = create_chips_challenge_generator(True)
 
-
-def is_long_enough_to_have_chips(phrase):
-    if len(phrase.in_source_language[0].split()) < 2:
-        return False
-    if len(phrase.in_target_language[0].split()) < 2:
-        return False
-    return True
