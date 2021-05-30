@@ -98,7 +98,7 @@ class TestExportSkill(FakeFsTestCase):
                       fake_skill, fakes.course1)
         with open(self.export_path / "introduction" / "animals-{}.md".format(randomname)) as f:
             introduction_file_content = f.read()
-            self.assertEquals(introduction_file_content, introduction)
+            self.assertEqual(introduction_file_content, introduction)
 
 
     def test_does_not_create_an_introduction_file_if_theres_no_introduction(self):
