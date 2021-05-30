@@ -8,13 +8,13 @@
   import ContentLeft from "./ContentLeft.svelte"
   import ContentCenter from "./ContentCenter.svelte"
 
-  export let title
-  export let levels
-  export let practiceHref
-  export let introduction
-  export let id
-  export let imageSet = []
-  export let summary
+  export let title: string
+  export let levels: number
+  export let practiceHref: string
+  export let introduction: string
+  export let id: string
+  export let imageSet: string[] = []
+  export let summary: string
 
   let completed = null
   let started = null

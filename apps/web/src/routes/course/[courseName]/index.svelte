@@ -36,7 +36,7 @@
         {#each skills as skill}
           <Column sizeDesktop="1/3" sizeTablet="1/2">
             <SkillCard
-              {...{ ...skill }}
+              {... { ...skill } }
               practiceHref="{`/course/${courseName}/skill/${skill.practiceHref}`}" />
           </Column>
         {/each}
