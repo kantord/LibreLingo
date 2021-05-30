@@ -12,14 +12,16 @@ def make_challenges_using(callback, data_source, course):
         *map(lambda item: callback(item, course), data_source)))
 
 
-def get_challenges_data(skill, course):
+def challenge_mapper(challenge_types):
     """
-        Generates challenges for a certain Skill
+        Returns a function that applies challenge types
+        to a certain item (Word or Phrase), using the settings
+        of the given course.
     """
-    return sum([
-        make_challenges_using(_get_phrase_challenges, skill.phrases, course),
-        make_challenges_using(_get_word_challenges, skill.words, course),
-    ], start=[])
+    def map_challenge_creators(item, course):
+        return list(map(lambda f: f(item, course), challenge_types))
+
+    return map_challenge_creators
 
 
 def _get_phrase_challenges(phrase, course):
@@ -43,13 +45,11 @@ def _get_word_challenges(word, course):
     )(word, course)
 
 
-def challenge_mapper(challenge_types):
+def get_challenges_data(skill, course):
     """
-        Returns a function that applies challenge types
-        to a certain item (Word or Phrase), using the settings
-        of the given course.
+        Generates challenges for a certain Skill
     """
-    def map_challenge_creators(item, course):
-        return list(map(lambda f: f(item, course), challenge_types))
-
-    return map_challenge_creators
+    return sum([
+        make_challenges_using(_get_phrase_challenges, skill.phrases, course),
+        make_challenges_using(_get_word_challenges, skill.words, course),
+    ], start=[])
