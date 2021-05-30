@@ -3,7 +3,7 @@
 **/node_modules/
 /src/node_modules/@sapper/
 yarn-error.log
-/cypress/screenshots/
+apps/web/cypress/screenshots/
 /apps/web/__sapper__/
 /static/files
 .nyc_output/
@@ -35,3 +35,4 @@ apps/librelingo_tools/dist
 **/dist/
 *.tsbuildinfo
 report.*.*.json
+/coverage/
