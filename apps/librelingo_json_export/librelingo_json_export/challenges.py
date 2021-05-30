@@ -23,7 +23,13 @@ def challenge_mapper(challenge_types):
         of the given course.
     """
     def map_challenge_creators(item, course):
-        return list(map(lambda f: f(item, course), challenge_types))
+        challenges = []
+        for challenge_type_callback in challenge_types:
+            for challenge in challenge_type_callback(item, course):
+                challenges.append(challenge)
+
+        return challenges
+
 
     return map_challenge_creators
 

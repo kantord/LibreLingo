@@ -51,19 +51,19 @@ class TestGetWordChallenges(TestCase):
     @patch('librelingo_json_export.challenges.get_cards_challenge')
     def test_includes_cards_challenges(self, mock):
         fake_value = fakes.fake_value()
-        mock.return_value = fake_value
+        mock.return_value = [fake_value]
         assert _get_word_challenges(fakes.word1, fakes.course1)[0] == fake_value
 
     @patch('librelingo_json_export.challenges.get_short_input_challenge')
     def test_includes_short_input_challenges(self, mock):
         fake_value = fakes.fake_value()
-        mock.return_value = fake_value
+        mock.return_value = [fake_value]
         assert _get_word_challenges(fakes.word1, fakes.course1)[1] == fake_value
 
     @patch('librelingo_json_export.challenges.get_listening_challenge')
     def test_includes_listening_challenge(self, mock):
         fake_value = fakes.fake_value()
-        mock.return_value = fake_value
+        mock.return_value = [fake_value]
         assert _get_word_challenges(fakes.word1, fakes.course1)[2] == fake_value
 
 
@@ -71,28 +71,28 @@ class TestGetPhraseChallenges(TestCase):
     @patch('librelingo_json_export.challenges.get_options_challenge')
     def test_includes_options_challenges(self, mock):
         fake_value = fakes.fake_value()
-        mock.return_value = fake_value
+        mock.return_value = [fake_value]
         assert _get_phrase_challenges(
             fakes.phrase1, fakes.course1)[0] == fake_value
 
     @patch('librelingo_json_export.challenges.get_listening_challenge')
     def test_includes_listening_challenge(self, mock):
         fake_value = fakes.fake_value()
-        mock.return_value = fake_value
+        mock.return_value = [fake_value]
         assert _get_phrase_challenges(
             fakes.phrase1, fakes.course1)[1] == fake_value
 
     @patch('librelingo_json_export.challenges.get_chips_challenge')
     def test_includes_chips_challenge(self, mock):
         fake_value = fakes.fake_value()
-        mock.return_value = fake_value
+        mock.return_value = [fake_value]
         assert _get_phrase_challenges(
             fakes.long_phrase, fakes.course1)[2] == fake_value
 
     @patch('librelingo_json_export.challenges.get_reverse_chips_challenge')
     def test_includes_reverse_chips_challenge(self, mock):
         fake_value = fakes.fake_value()
-        mock.return_value = fake_value
+        mock.return_value = [fake_value]
         assert _get_phrase_challenges(
             fakes.long_phrase, fakes.course1)[3] == fake_value
 
@@ -112,7 +112,7 @@ class TestGetPhraseChallenges(TestCase):
 
 class TestGetCardsChallenge(TestCase):
     def test_returns_correct_value1(self):
-        challenge = get_cards_challenge(fakes.word1, fakes.course1)
+        challenge = get_cards_challenge(fakes.word1, fakes.course1)[0]
         assert challenge == {
             'id': '95e24ac99aa9',
             "type": "cards",
@@ -124,7 +124,7 @@ class TestGetCardsChallenge(TestCase):
         }
 
     def test_returns_correct_value2(self):
-        challenge = get_cards_challenge(fakes.word2, fakes.course1)
+        challenge = get_cards_challenge(fakes.word2, fakes.course1)[0]
         assert challenge == {
             'id': '22bd7b11c2c9',
             "type": "cards",
@@ -138,7 +138,7 @@ class TestGetCardsChallenge(TestCase):
 
 class TestGetOptionsChallenge(TestCase):
     def test_returns_correct_value1(self):
-        challenge = get_options_challenge(fakes.word1, fakes.course1)
+        challenge = get_options_challenge(fakes.word1, fakes.course1)[0]
         assert challenge == {
             'id': 'db8fd4cec19f',
             "type": "options",
@@ -149,7 +149,7 @@ class TestGetOptionsChallenge(TestCase):
         }
 
     def test_returns_correct_value2(self):
-        challenge = get_options_challenge(fakes.word2, fakes.course1)
+        challenge = get_options_challenge(fakes.word2, fakes.course1)[0]
         assert challenge == {
             'id': 'e50475a646e2',
             "type": "options",
@@ -162,7 +162,7 @@ class TestGetOptionsChallenge(TestCase):
 
 class TestGetShortInputChallenge(TestCase):
     def test_returns_correct_value1(self):
-        challenge = get_short_input_challenge(fakes.word1, fakes.course1)
+        challenge = get_short_input_challenge(fakes.word1, fakes.course1)[0]
         assert challenge == {
             'id': '749e7c734898',
             "type": "shortInput",
@@ -174,7 +174,7 @@ class TestGetShortInputChallenge(TestCase):
         }
 
     def test_returns_correct_value2(self):
-        challenge = get_short_input_challenge(fakes.word2, fakes.course1)
+        challenge = get_short_input_challenge(fakes.word2, fakes.course1)[0]
         assert challenge == {
             'id': '5f1b4778039c',
             "type": "shortInput",
@@ -188,7 +188,7 @@ class TestGetShortInputChallenge(TestCase):
 
 class TestListeningChallenge(TestCase):
     def test_returns_correct_value1(self):
-        challenge = get_listening_challenge(fakes.word1, fakes.course1)
+        challenge = get_listening_challenge(fakes.word1, fakes.course1)[0]
         assert challenge == {
             'id': 'ae89bd25c323',
             "type": "listeningExercise",
@@ -200,7 +200,7 @@ class TestListeningChallenge(TestCase):
         }
 
     def test_returns_correct_value2(self):
-        challenge = get_listening_challenge(fakes.word2, fakes.course1)
+        challenge = get_listening_challenge(fakes.word2, fakes.course1)[0]
         assert challenge == {
             'id': '7de4d5b7f106',
             "type": "listeningExercise",
@@ -214,7 +214,7 @@ class TestListeningChallenge(TestCase):
 
 class TestChipsChallenge(TestCase):
     def test_returns_correct_value1(self):
-        challenge = get_chips_challenge(fakes.phrase1, fakes.course1)
+        challenge = get_chips_challenge(fakes.phrase1, fakes.course1)[0]
         assert challenge == {
             "type": "chips",
             "translatesToSourceLanguage": False,
@@ -234,7 +234,7 @@ class TestChipsChallenge(TestCase):
     def test_returns_correct_value2(self, get_chips):
         get_chips.return_value = fakes.fake_value()
         challenge = get_chips_challenge(
-            fakes.phrase_with_alternatives, fakes.course1)
+            fakes.phrase_with_alternatives, fakes.course1)[0]
         assert challenge == {
             "type": "chips",
             "translatesToSourceLanguage": False,
