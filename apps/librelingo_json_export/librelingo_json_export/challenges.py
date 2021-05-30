@@ -8,8 +8,12 @@ def make_challenges_using(callback, data_source, course):
         to create challenges. Each item in the data source will
         be used.
     """
-    return list(itertools.chain(
-        *map(lambda item: callback(item, course), data_source)))
+    results = []
+    for data_item in data_source:
+        for challenge in callback(data_item, course):
+            results.append(challenge)
+
+    return results
 
 
 def challenge_mapper(challenge_types):
