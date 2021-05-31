@@ -1,14 +1,30 @@
 from collections import namedtuple
 
 
+class Settings(namedtuple("Settings", ["audio_files_enabled"], defaults=[True])):
+    """
+    Settings for a course
+
+    ### Usage example:
+    ```python
+        my_settings = Settings()
+    ```
+    """
+    pass
+
+
+default_settings = Settings()
+
+
 class Course(namedtuple("Course", [
     "target_language",
     "source_language",
     "special_characters",
     "modules",
     "license",
-    "dictionary"
-])):
+    "dictionary",
+    "settings",
+], defaults=[default_settings])):
     """
     A LibreLingo course
 
