@@ -58,7 +58,7 @@ python-versions = "*"
 
 [[package]]
 name = "certifi"
-version = "2020.12.5"
+version = "2021.5.30"
 description = "Python package for providing Mozilla's CA Bundle."
 category = "dev"
 optional = false
@@ -89,6 +89,14 @@ optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [[package]]
+name = "dataclasses"
+version = "0.6"
+description = "A backport of the dataclasses module for Python 3.6"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "docopt"
 version = "0.6.2"
 description = "Pythonic argument parser, that will make you smile"
@@ -110,15 +118,15 @@ python-versions = ">=3.6.0,<4.0.0"
 
 [[package]]
 name = "docspec-python"
-version = "0.1.0"
+version = "0.2.0"
 description = "A parser based on lib2to3 producing docspec data from Python source code."
 category = "dev"
 optional = false
-python-versions = ">=3.5.0,<4.0.0"
+python-versions = ">=3.6.0,<4.0.0"
 
 [package.dependencies]
+dataclasses = "*"
 docspec = ">=0.2.0,<0.3.0"
-"nr.sumtype" = ">=0.0.3,<0.1.0"
 
 [[package]]
 name = "fastdiff"
@@ -172,7 +180,7 @@ librelingo-types = ">=1.0.0,<2.0.0"
 
 [[package]]
 name = "librelingo-types"
-version = "1.0.0"
+version = "1.1.0"
 description = "Data types to be used in Python packages for LibreLingo"
 category = "main"
 optional = false
@@ -278,7 +286,7 @@ six = ">=1.11.0,<2.0.0"
 
 [[package]]
 name = "nr.interface"
-version = "0.0.4"
+version = "0.0.5"
 description = "Interface definitions for Python."
 category = "dev"
 optional = false
@@ -334,18 +342,6 @@ python-versions = "*"
 six = ">=1.11.0,<2.0.0"
 
 [[package]]
-name = "nr.sumtype"
-version = "0.0.4"
-description = "Sumtypes in Python."
-category = "dev"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-"nr.metaclass" = ">=0.0.4,<1.0.0"
-"nr.stream" = ">=0.0.2,<1.0.0"
-
-[[package]]
 name = "nr.utils.re"
 version = "0.1.1"
 description = "This module provides some utility functions for applying regular expressions."
@@ -385,16 +381,17 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [[package]]
 name = "pydoc-markdown"
-version = "3.10.3"
+version = "3.13.0"
 description = "Create Python API documentation in Markdown format."
 category = "dev"
 optional = false
-python-versions = ">=3.5.0,<4.0.0"
+python-versions = ">=3.6.0,<4.0.0"
 
 [package.dependencies]
 click = ">=7.0.0,<8.0.0"
+dataclasses = "*"
 docspec = ">=0.2.0,<0.3.0"
-docspec-python = ">=0.1.0,<0.2.0"
+docspec-python = ">=0.2.0,<0.3.0"
 "nr.collections" = ">=0.0.1,<0.1.0"
 "nr.databind.core" = ">=0.0.18,<0.1.0"
 "nr.databind.json" = ">=0.0.9,<0.1.0"
@@ -579,16 +576,16 @@ python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
 name = "urllib3"
-version = "1.26.4"
+version = "1.26.5"
 description = "HTTP library with thread-safe connection pooling, file post, and more."
 category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, <4"
 
 [package.extras]
+brotli = ["brotlipy (>=0.6.0)"]
 secure = ["pyOpenSSL (>=0.14)", "cryptography (>=1.3.4)", "idna (>=2.0.0)", "certifi", "ipaddress"]
 socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
-brotli = ["brotlipy (>=0.6.0)"]
 
 [[package]]
 name = "wasmer"
@@ -652,8 +649,8 @@ bleach-whitelist = [
     {file = "bleach-whitelist-0.0.11.tar.gz", hash = "sha256:2f7cc5ac2283f14f0cd52251dad51382813db776f3bcb8a61c6123d57b8e2ab4"},
 ]
 certifi = [
-    {file = "certifi-2020.12.5-py2.py3-none-any.whl", hash = "sha256:719a74fb9e33b9bd44cc7f3a8d94bc35e4049deebe19ba7d8e108280cfd59830"},
-    {file = "certifi-2020.12.5.tar.gz", hash = "sha256:1a4995114262bffbc2413b159f2a1a480c969de6e6eb13ee966d470af86af59c"},
+    {file = "certifi-2021.5.30-py2.py3-none-any.whl", hash = "sha256:50b1e4f8446b06f41be7dd6338db18e0990601dce795c2b1686458aa7e8fa7d8"},
+    {file = "certifi-2021.5.30.tar.gz", hash = "sha256:2bbf76fd432960138b3ef6dda3dde0544f27cbf8546c458e60baf371917ba9ee"},
 ]
 chardet = [
     {file = "chardet-4.0.0-py2.py3-none-any.whl", hash = "sha256:f864054d66fd9118f2e67044ac8981a54775ec5b67aed0441892edb553d21da5"},
@@ -667,6 +664,10 @@ colorama = [
     {file = "colorama-0.4.4-py2.py3-none-any.whl", hash = "sha256:9f47eda37229f68eee03b24b9748937c7dc3868f906e8ba69fbcbdd3bc5dc3e2"},
     {file = "colorama-0.4.4.tar.gz", hash = "sha256:5941b2b48a20143d2267e95b1c2a7603ce057ee39fd88e7329b0c292aa16869b"},
 ]
+dataclasses = [
+    {file = "dataclasses-0.6-py3-none-any.whl", hash = "sha256:454a69d788c7fda44efd71e259be79577822f5e3f53f029a22d08004e951dc9f"},
+    {file = "dataclasses-0.6.tar.gz", hash = "sha256:6988bd2b895eef432d562370bb707d540f32f7360ab13da45340101bc2307d84"},
+]
 docopt = [
     {file = "docopt-0.6.2.tar.gz", hash = "sha256:49b3a825280bd66b3aa83585ef59c4a8c82f2c8a522dbe754a8bc8d08c85c491"},
 ]
@@ -675,8 +676,8 @@ docspec = [
     {file = "docspec-0.2.1.tar.gz", hash = "sha256:8ff14da2cdf69a958c3e25c748d629129e38d3145cf5d0c4d55da8e6cfa0cd29"},
 ]
 docspec-python = [
-    {file = "docspec-python-0.1.0.tar.gz", hash = "sha256:8858dc3318b6a67d8452a89ac5c14a15c73f1aa1dd72f9cf63eaa9687082d278"},
-    {file = "docspec_python-0.1.0-py3-none-any.whl", hash = "sha256:86561c77dc9ebe4f7d9c224c0740cd66407db849a78580a7509963d4e2c02dfe"},
+    {file = "docspec-python-0.2.0.tar.gz", hash = "sha256:61b161ccb5e6d0cc4d6ed2e127458e14becd6eae8276be2432ae380793f50468"},
+    {file = "docspec_python-0.2.0-py3-none-any.whl", hash = "sha256:a9aba8db53d22a91cc278e26256dae3b4f02c6bb11066d2a31bf500c3e489bfa"},
 ]
 fastdiff = [
     {file = "fastdiff-0.3.0-py2.py3-none-any.whl", hash = "sha256:ca5f61f6ddf5a1564ddfd98132ad28e7abe4a88a638a8b014a2214f71e5918ec"},
@@ -698,8 +699,8 @@ librelingo-fakes = [
     {file = "librelingo_fakes-1.0.0.tar.gz", hash = "sha256:22fe217ed398df9cc017713bb873479570fe11c9fa1231307154eedebb024743"},
 ]
 librelingo-types = [
-    {file = "librelingo_types-1.0.0-py3-none-any.whl", hash = "sha256:1b5af0b754613e9aec1c941a530e44bdeee53a58f1173144ab333c48f0fa8825"},
-    {file = "librelingo_types-1.0.0.tar.gz", hash = "sha256:ab9434ff039d354be49c1852f3f372fb4a63e891799f5b748b4f1c026c735f04"},
+    {file = "librelingo_types-1.1.0-py3-none-any.whl", hash = "sha256:db5db5d9127db8f2aac4f8ee687b580a212ea133120b6026b460a8248406e2e3"},
+    {file = "librelingo_types-1.1.0.tar.gz", hash = "sha256:9a7a8fbb35173a510b58f2e409cda88d195b3a7e51804a4dcfc06357a39698b3"},
 ]
 librelingo-utils = [
     {file = "librelingo_utils-2.0.0-py3-none-any.whl", hash = "sha256:0c40dd4a08fe55ca56c3d484faca3f9bce368ee9faf0606ca3fde5390068bf63"},
@@ -729,8 +730,8 @@ markdown = [
     {file = "nr.fs-1.6.3.tar.gz", hash = "sha256:788aa0a04c4143f95c5245bc8ccc0c0872e932be533bd37780fbb55afcdf124a"},
 ]
 "nr.interface" = [
-    {file = "nr.interface-0.0.4-py2.py3-none-any.whl", hash = "sha256:5f88579643ea18e1d948d92a49b326aa4585516bf64eb529ae693c4c8bddcc6e"},
-    {file = "nr.interface-0.0.4.tar.gz", hash = "sha256:285cd82b932427c9d5c21cdc02ad319f701c4eed201377e2b30485c91eac67a3"},
+    {file = "nr.interface-0.0.5-py2.py3-none-any.whl", hash = "sha256:8287f817297d825641793bf3e860445c43e271f4f87ff34f3e30b94bf1aa79a8"},
+    {file = "nr.interface-0.0.5.tar.gz", hash = "sha256:ed6043954813247555299ce3032033bbbcaa2d7906f849e1f8317df4011ade83"},
 ]
 "nr.metaclass" = [
     {file = "nr.metaclass-0.0.6-py2.py3-none-any.whl", hash = "sha256:d458eb1bddd93373cc74e19981214e7d478c92c9b08fc9732bd430225698a8f0"},
@@ -747,10 +748,6 @@ markdown = [
 "nr.stream" = [
     {file = "nr.stream-0.0.5-py2.py3-none-any.whl", hash = "sha256:cf418a4de3cedb8622286d2baca6007a153c780af48362d1f2ef2c1993525615"},
     {file = "nr.stream-0.0.5.tar.gz", hash = "sha256:3489ce5e8174b70d194a6592248ba341fbbd5bf30c9ec5f1223a351df909f505"},
-]
-"nr.sumtype" = [
-    {file = "nr.sumtype-0.0.4-py2.py3-none-any.whl", hash = "sha256:a1017468bbc3d187592c413892c19d0e9642bdeae0149fa0c122ca21dfb23132"},
-    {file = "nr.sumtype-0.0.4.tar.gz", hash = "sha256:a224c7f70c212aebf3754cf941d94527e68f1afad8db0e224d9885eb113d797c"},
 ]
 "nr.utils.re" = [
     {file = "nr.utils.re-0.1.1-py2.py3-none-any.whl", hash = "sha256:eb4e6c10b074e8b296c4e2a83d0299e9a162524fb3e5e6b916dfd194688dbd06"},
@@ -769,8 +766,8 @@ py = [
     {file = "py-1.10.0.tar.gz", hash = "sha256:21b81bda15b66ef5e1a777a21c4dcd9c20ad3efd0b3f817e7a809035269e1bd3"},
 ]
 pydoc-markdown = [
-    {file = "pydoc-markdown-3.10.3.tar.gz", hash = "sha256:48035f601e6084352b78d67b9835b269948210d5d90ea3f5ee5f9f63c9f29c7e"},
-    {file = "pydoc_markdown-3.10.3-py3-none-any.whl", hash = "sha256:77062857745b75273275f7532853cb9b223d4878cb0bc1c1b88c6b5dfc7f25fe"},
+    {file = "pydoc-markdown-3.13.0.tar.gz", hash = "sha256:1f23ebd02756664e84535969fd200ae11ca5c84329dd89539e5b603ef0e6d98f"},
+    {file = "pydoc_markdown-3.13.0-py3-none-any.whl", hash = "sha256:5b547c09862ebd64511417dc318de8a64302284389d5adf8ce130a5ca4742fe6"},
 ]
 pyfakefs = [
     {file = "pyfakefs-4.4.0-py3-none-any.whl", hash = "sha256:1ac3b2845dabe69af56c20691b9347914581195ccdde352535fb7d4ff0055c19"},
@@ -848,8 +845,8 @@ toml = [
     {file = "toml-0.10.2.tar.gz", hash = "sha256:b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f"},
 ]
 urllib3 = [
-    {file = "urllib3-1.26.4-py2.py3-none-any.whl", hash = "sha256:2f4da4594db7e1e110a944bb1b551fdf4e6c136ad42e4234131391e21eb5b0df"},
-    {file = "urllib3-1.26.4.tar.gz", hash = "sha256:e7b021f7241115872f92f43c6508082facffbd1c048e3c6e2bb9c2a157e28937"},
+    {file = "urllib3-1.26.5-py2.py3-none-any.whl", hash = "sha256:753a0374df26658f99d826cfe40394a686d05985786d946fbe4165b5148f5a7c"},
+    {file = "urllib3-1.26.5.tar.gz", hash = "sha256:a7acd0977125325f516bda9735fa7142b909a8d01e8b2e4c8108d0984e6e0098"},
 ]
 wasmer = [
     {file = "wasmer-1.0.0-cp36-cp36m-macosx_10_7_x86_64.whl", hash = "sha256:0d755a93184380f9785e1f8269b070f4a4a3285ae0f7f9571cfaf2ea215b102d"},
