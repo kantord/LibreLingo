@@ -5342,10 +5342,10 @@ cyclist@^1.0.1:
   resolved "https://registry.yarnpkg.com/cyclist/-/cyclist-1.0.1.tgz#596e9698fd0c80e12038c2b82d6eb1b35b6224d9"
   integrity sha1-WW6WmP0MgOEgOMK4LW6xs1tiJNk=
 
-cypress-cucumber-preprocessor@4.1.1:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/cypress-cucumber-preprocessor/-/cypress-cucumber-preprocessor-4.1.1.tgz#d730620c1b57f379677b29baff4f07a0180959c6"
-  integrity sha512-YBUrCfYsbC7QIWTwajd4L861GBMO3ybub3920+GXgiPnCOevrrY4QL670yHMZRv1d15h4yC0rbb3rDkgWDxMYA==
+cypress-cucumber-preprocessor@4.1.2:
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/cypress-cucumber-preprocessor/-/cypress-cucumber-preprocessor-4.1.2.tgz#bd653001c2b3441c29685f0699461c38d4c4bd63"
+  integrity sha512-9TPpYeF5VGAO99TWzGnEMIwXamhDvvJP+may/CZKbaEeY8w3Bh82FIGgRiE59OnA92oe/BXJwNrduNgPQ1qt5w==
   dependencies:
     "@cypress/browserify-preprocessor" "^3.0.1"
     chai "^4.2.0"
@@ -5354,6 +5354,7 @@ cypress-cucumber-preprocessor@4.1.1:
     cucumber "^4.2.1"
     cucumber-expressions "^6.0.1"
     cucumber-tag-expressions "^1.1.1"
+    dargs "^7.0.0"
     debug "^3.0.1"
     gherkin "^5.1.0"
     glob "^7.1.2"
