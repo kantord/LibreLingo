@@ -3,6 +3,9 @@ from .dictionary import _define_words_in_sentence
 
 
 def get_listening_challenge(source, course):
+    if not course.settings.audio_files_enabled:
+        return []
+
     return [{
         "type": "listeningExercise",
         "answer": source.in_target_language[0],

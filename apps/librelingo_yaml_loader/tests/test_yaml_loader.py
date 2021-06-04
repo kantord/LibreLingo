@@ -58,6 +58,7 @@ class TestLoadCourseMeta(YamlImportTestCase):
 
     Modules:
       - {fake_module}
+
     """.format(**kwargs)
 
     def get_fake_values(self):
@@ -138,6 +139,20 @@ class TestLoadCourseMeta(YamlImportTestCase):
             self.fake_values["second_special_character"],
         ]
 
+    def test_returns_correct_settings_audio_files_enabled(self):
+        assert self.result.settings.audio_files_enabled == True
+
+    def test_returns_correct_settings_audio_files_disabled(self):
+        new_settings = """
+    Settings:
+        - disable audio files
+        """
+
+        # Append settings to the file
+        with open(Path(self.fake_path) / "course.yaml", "a") as f:
+            f.write(new_settings)
+        self.result = load_course(self.fake_path)
+        assert self.result.settings.audio_files_enabled == False
 
 def test_load_course_output_matches_value(fs):
     fixture_path = os.path.join(os.path.dirname(

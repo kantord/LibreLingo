@@ -10,6 +10,7 @@ from librelingo_json_export.challenge_types import get_chips_challenge
 from librelingo_json_export.challenge_types import get_options_challenge
 from librelingo_json_export.challenge_types import get_chips
 from librelingo_types import Phrase
+from librelingo_types import Settings
 from librelingo_fakes import fakes
 
 
@@ -210,6 +211,14 @@ class TestListeningChallenge(TestCase):
             'group': '9dbe235cb2d6',
             'audio': 'f38b5ac2a5e36c336eed306d56ed517bfd78a728321be0b87db5def8ff8abc3d'
         }
+
+    def test_returns_nothing_if_audio_files_are_disabled_in_the_course(self):
+        my_fake_course = fakes.customize(
+            fakes.course1,
+            settings=Settings(audio_files_enabled=False)
+        )
+        result = get_listening_challenge(fakes.word2, my_fake_course)
+        assert result == []
 
 
 class TestChipsChallenge(TestCase):
