@@ -6,6 +6,20 @@ Data types to be used in Python packages for LibreLingo
 <a name="librelingo_types.data_types"></a>
 # librelingo\_types.data\_types
 
+<a name="librelingo_types.data_types.Settings"></a>
+## Settings Objects
+
+```python
+class Settings(namedtuple("Settings", ["audio_files_enabled"], defaults=[True]))
+```
+
+Settings for a course
+
+### Usage example:
+```python
+    my_settings = Settings()
+```
+
 <a name="librelingo_types.data_types.Course"></a>
 ## Course Objects
 
@@ -16,8 +30,9 @@ class Course(namedtuple("Course", [
     "special_characters",
     "modules",
     "license",
-    "dictionary"
-]))
+    "dictionary",
+    "settings",
+], defaults=[default_settings]))
 ```
 
 A LibreLingo course

@@ -3,7 +3,10 @@ from .dictionary import _define_words_in_sentence
 
 
 def get_listening_challenge(source, course):
-    return {
+    if not course.settings.audio_files_enabled:
+        return []
+
+    return [{
         "type": "listeningExercise",
         "answer": source.in_target_language[0],
         "meaning": source.in_source_language[0],
@@ -11,11 +14,11 @@ def get_listening_challenge(source, course):
         "id": get_dumb_opaque_id("Word", source, "listeningExercise"),
         "priority": 1,
         "group": get_dumb_opaque_id("Group", source),
-    }
+    }]
 
 
 def get_short_input_challenge(source, course):
-    return {
+    return [{
         "type": "shortInput",
         'pictures':
             [pic + ".jpg" for pic in source.pictures] if source.pictures
@@ -25,11 +28,11 @@ def get_short_input_challenge(source, course):
         "id": get_dumb_opaque_id("Word", source, "shortInput"),
         "priority": 1,
         "group": get_dumb_opaque_id("Group", source),
-    }
+    }]
 
 
 def get_cards_challenge(word, _):
-    return {
+    return [{
         "type": "cards",
         'pictures':
             [pic + ".jpg" for pic in word.pictures] if word.pictures
@@ -39,18 +42,18 @@ def get_cards_challenge(word, _):
         "id": get_dumb_opaque_id("Word", word, "cards"),
         "priority": 0,
         "group": get_dumb_opaque_id("Group", word),
-    }
+    }]
 
 
 def get_options_challenge(phrase, _):
-    return {
+    return [{
         "type": "options",
         "formInTargetLanguage": phrase.in_target_language[0],
         "meaningInSourceLanguage": phrase.in_source_language[0],
         "id": get_dumb_opaque_id("Options", phrase, "options"),
         "priority": 0,
         "group": get_dumb_opaque_id("Group", phrase),
-    }
+    }]
 
 
 def get_chips(phrase):
@@ -70,8 +73,18 @@ def create_chips_challenge_generator(reverse):
     def get_phrase_text(phrase):
         return get_phrase_texts(phrase)[0]
 
+    def is_long_enough_to_have_chips(phrase):
+        if len(phrase.in_source_language[0].split()) < 2:
+            return False
+        if len(phrase.in_target_language[0].split()) < 2:
+            return False
+        return True
+
     def get_chips_challenge(phrase, course):
-        return {
+        if not is_long_enough_to_have_chips(phrase):
+            return []
+
+        return [{
             "type": "chips",
             "translatesToSourceLanguage": reverse,
             "phrase": _define_words_in_sentence(course, get_phrase_text(phrase), reverse),
@@ -81,7 +94,7 @@ def create_chips_challenge_generator(reverse):
             "id": get_dumb_opaque_id("Chips", phrase, "reverse chips" if reverse else "chips"),
             "priority": 2,
             "group": get_dumb_opaque_id("Group", phrase),
-        }
+        }]
 
     return get_chips_challenge
 
@@ -89,10 +102,3 @@ def create_chips_challenge_generator(reverse):
 get_chips_challenge = create_chips_challenge_generator(False)
 get_reverse_chips_challenge = create_chips_challenge_generator(True)
 
-
-def is_long_enough_to_have_chips(phrase):
-    if len(phrase.in_source_language[0].split()) < 2:
-        return False
-    if len(phrase.in_target_language[0].split()) < 2:
-        return False
-    return True
