@@ -1,0 +1,2082 @@
+{
+  "id": "abd64079f86a",
+  "levels": 5,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Zu sagua zara.",
+      "meaningInSourceLanguage": "You are a mouse.",
+      "id": "44cb0603d31c",
+      "priority": 0,
+      "group": "cd50e00edebd"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "You",
+          "definition": "zu\nzuek"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "mouse.",
+          "definition": "sagu\nsagua"
+        }
+      ],
+      "chips": [
+        "Zu",
+        "sagua",
+        "zara"
+      ],
+      "solutions": [
+        [
+          "Zu",
+          "sagua",
+          "zara"
+        ]
+      ],
+      "formattedSolution": "Zu sagua zara.",
+      "id": "3879c01135c4",
+      "priority": 2,
+      "group": "cd50e00edebd"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Zu",
+          "definition": "you"
+        },
+        {
+          "word": "sagua",
+          "definition": "a mouse\nmouse"
+        },
+        {
+          "word": "zara.",
+          "definition": "are\nyou are (izan)"
+        }
+      ],
+      "chips": [
+        "You",
+        "are",
+        "a",
+        "mouse"
+      ],
+      "solutions": [
+        [
+          "You",
+          "are",
+          "a",
+          "mouse"
+        ],
+        [
+          "You",
+          "are",
+          "the",
+          "mouse"
+        ]
+      ],
+      "formattedSolution": "You are a mouse.",
+      "id": "d2b6b9546d38",
+      "priority": 2,
+      "group": "cd50e00edebd"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Behia marroia da.",
+      "meaningInSourceLanguage": "The cow is brown.",
+      "id": "9769e0a4a1f4",
+      "priority": 0,
+      "group": "ae54d824b35b"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "The",
+          "definition": "-a"
+        },
+        {
+          "word": "cow",
+          "definition": "behi"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "brown.",
+          "definition": "marroia"
+        }
+      ],
+      "chips": [
+        "Behia",
+        "marroia",
+        "da"
+      ],
+      "solutions": [
+        [
+          "Behia",
+          "marroia",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Behia marroia da.",
+      "id": "14933dcec998",
+      "priority": 2,
+      "group": "ae54d824b35b"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Behia",
+          "definition": "a cow"
+        },
+        {
+          "word": "marroia",
+          "definition": "brown"
+        },
+        {
+          "word": "da.",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "The",
+        "cow",
+        "is",
+        "brown"
+      ],
+      "solutions": [
+        [
+          "The",
+          "cow",
+          "is",
+          "brown"
+        ],
+        [
+          "A",
+          "cow",
+          "is",
+          "brown"
+        ]
+      ],
+      "formattedSolution": "The cow is brown.",
+      "id": "107bee121cba",
+      "priority": 2,
+      "group": "ae54d824b35b"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Ardia zuria da.",
+      "meaningInSourceLanguage": "The sheep is white.",
+      "id": "1b61718def6c",
+      "priority": 0,
+      "group": "d6c447727826"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "The",
+          "definition": "-a"
+        },
+        {
+          "word": "sheep",
+          "definition": "ardi\nardiak"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "white.",
+          "definition": "zuri\nzuria"
+        }
+      ],
+      "chips": [
+        "Ardia",
+        "zuria",
+        "da"
+      ],
+      "solutions": [
+        [
+          "Ardia",
+          "zuria",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Ardia zuria da.",
+      "id": "5e8147af6a0a",
+      "priority": 2,
+      "group": "d6c447727826"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Ardia",
+          "definition": "a sheep"
+        },
+        {
+          "word": "zuria",
+          "definition": "white"
+        },
+        {
+          "word": "da.",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "The",
+        "sheep",
+        "is",
+        "white"
+      ],
+      "solutions": [
+        [
+          "The",
+          "sheep",
+          "is",
+          "white"
+        ],
+        [
+          "A",
+          "sheep",
+          "is",
+          "white"
+        ]
+      ],
+      "formattedSolution": "The sheep is white.",
+      "id": "19cc1fb1aca6",
+      "priority": 2,
+      "group": "d6c447727826"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Ahuntzak beltzak dira.",
+      "meaningInSourceLanguage": "The goats are black.",
+      "id": "1350e406ae5f",
+      "priority": 0,
+      "group": "6bd7b7ec0468"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "The",
+          "definition": "-a"
+        },
+        {
+          "word": "goats",
+          "definition": "ahuntzak"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "black.",
+          "definition": "beltz\nbeltza"
+        }
+      ],
+      "chips": [
+        "Ahuntzak",
+        "beltzak",
+        "dira"
+      ],
+      "solutions": [
+        [
+          "Ahuntzak",
+          "beltzak",
+          "dira"
+        ]
+      ],
+      "formattedSolution": "Ahuntzak beltzak dira.",
+      "id": "b51727b03ffd",
+      "priority": 2,
+      "group": "6bd7b7ec0468"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Ahuntzak",
+          "definition": "goats"
+        },
+        {
+          "word": "beltzak",
+          "definition": "black"
+        },
+        {
+          "word": "dira.",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "The",
+        "goats",
+        "are",
+        "black"
+      ],
+      "solutions": [
+        [
+          "The",
+          "goats",
+          "are",
+          "black"
+        ]
+      ],
+      "formattedSolution": "The goats are black.",
+      "id": "56a507ee3f1c",
+      "priority": 2,
+      "group": "6bd7b7ec0468"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Gida suge horia zen.",
+      "meaningInSourceLanguage": "The guide was a yellow snake.",
+      "id": "6d9a8805641a",
+      "priority": 0,
+      "group": "9c5de11d9b17"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "The",
+          "definition": "-a"
+        },
+        {
+          "word": "guide",
+          "definition": "gida"
+        },
+        {
+          "word": "was",
+          "definition": "nintzen\nzen"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "yellow",
+          "definition": "hori"
+        },
+        {
+          "word": "snake.",
+          "definition": "suge\nsugea"
+        }
+      ],
+      "chips": [
+        "Gida",
+        "suge",
+        "horia",
+        "zen"
+      ],
+      "solutions": [
+        [
+          "Gida",
+          "suge",
+          "horia",
+          "zen"
+        ]
+      ],
+      "formattedSolution": "Gida suge horia zen.",
+      "id": "ce09ddf7bce8",
+      "priority": 2,
+      "group": "9c5de11d9b17"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Gida",
+          "definition": "guide"
+        },
+        {
+          "word": "suge",
+          "definition": "snake"
+        },
+        {
+          "word": "horia",
+          "definition": "yellow"
+        },
+        {
+          "word": "zen.",
+          "definition": "was"
+        }
+      ],
+      "chips": [
+        "The",
+        "guide",
+        "was",
+        "a",
+        "yellow",
+        "snake"
+      ],
+      "solutions": [
+        [
+          "The",
+          "guide",
+          "was",
+          "a",
+          "yellow",
+          "snake"
+        ],
+        [
+          "A",
+          "guide",
+          "was",
+          "a",
+          "yellow",
+          "snake"
+        ]
+      ],
+      "formattedSolution": "The guide was a yellow snake.",
+      "id": "2f67ae6c9bf0",
+      "priority": 2,
+      "group": "9c5de11d9b17"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Gidaria txerria da.",
+      "meaningInSourceLanguage": "The driver is a pig.",
+      "id": "e534c1e03d0a",
+      "priority": 0,
+      "group": "032271d71d5b"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "The",
+          "definition": "-a"
+        },
+        {
+          "word": "driver",
+          "definition": "gidari\ngidaria"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "pig.",
+          "definition": "txerri"
+        }
+      ],
+      "chips": [
+        "Gidaria",
+        "txerria",
+        "da"
+      ],
+      "solutions": [
+        [
+          "Gidaria",
+          "txerria",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Gidaria txerria da.",
+      "id": "6743552f8ef2",
+      "priority": 2,
+      "group": "032271d71d5b"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Gidaria",
+          "definition": "driver\nthe driver"
+        },
+        {
+          "word": "txerria",
+          "definition": "a pig"
+        },
+        {
+          "word": "da.",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "The",
+        "driver",
+        "is",
+        "a",
+        "pig"
+      ],
+      "solutions": [
+        [
+          "The",
+          "driver",
+          "is",
+          "a",
+          "pig"
+        ]
+      ],
+      "formattedSolution": "The driver is a pig.",
+      "id": "9606b625ea06",
+      "priority": 2,
+      "group": "032271d71d5b"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Behiak dira. Ez dira ahuntzak.",
+      "meaningInSourceLanguage": "They are cows. They are not goats.",
+      "id": "e21bbcbad1b5",
+      "priority": 0,
+      "group": "4fc992f67553"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "They",
+          "definition": "haiek"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "cows.",
+          "definition": "behiak"
+        },
+        {
+          "word": "They",
+          "definition": "haiek"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "not",
+          "definition": "ez"
+        },
+        {
+          "word": "goats.",
+          "definition": "ahuntzak"
+        }
+      ],
+      "chips": [
+        "Behiak",
+        "dira",
+        "Ez",
+        "dira",
+        "ahuntzak"
+      ],
+      "solutions": [
+        [
+          "Behiak",
+          "dira",
+          "Ez",
+          "dira",
+          "ahuntzak"
+        ]
+      ],
+      "formattedSolution": "Behiak dira. Ez dira ahuntzak.",
+      "id": "3e0a150292b7",
+      "priority": 2,
+      "group": "4fc992f67553"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Behiak",
+          "definition": "cows"
+        },
+        {
+          "word": "dira.",
+          "definition": "are\nare (izan)"
+        },
+        {
+          "word": "Ez",
+          "definition": "no\nnot\nnot, no\nnot,no"
+        },
+        {
+          "word": "dira",
+          "definition": "are\nare (izan)"
+        },
+        {
+          "word": "ahuntzak.",
+          "definition": "goats"
+        }
+      ],
+      "chips": [
+        "They",
+        "are",
+        "cows",
+        "They",
+        "are",
+        "not",
+        "goats"
+      ],
+      "solutions": [
+        [
+          "They",
+          "are",
+          "cows",
+          "They",
+          "are",
+          "not",
+          "goats"
+        ]
+      ],
+      "formattedSolution": "They are cows. They are not goats.",
+      "id": "d9b8eba2ac97",
+      "priority": 2,
+      "group": "4fc992f67553"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Zuek txerri altuak eta ardi laburak zarete.",
+      "meaningInSourceLanguage": "You(plural) are tall pigs and short sheep.",
+      "id": "7d90f79a4f40",
+      "priority": 0,
+      "group": "57c2e7a9c7f0"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "You(plural)",
+          "definition": "zuek"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "tall",
+          "definition": "altu"
+        },
+        {
+          "word": "pigs",
+          "definition": "txerriak"
+        },
+        {
+          "word": "and",
+          "definition": "eta"
+        },
+        {
+          "word": "short",
+          "definition": "labur\nlaburak"
+        },
+        {
+          "word": "sheep.",
+          "definition": "ardi\nardiak"
+        }
+      ],
+      "chips": [
+        "Zuek",
+        "txerri",
+        "altuak",
+        "eta",
+        "ardi",
+        "laburak",
+        "zarete"
+      ],
+      "solutions": [
+        [
+          "Zuek",
+          "txerri",
+          "altuak",
+          "eta",
+          "ardi",
+          "laburak",
+          "zarete"
+        ]
+      ],
+      "formattedSolution": "Zuek txerri altuak eta ardi laburak zarete.",
+      "id": "696766189dd3",
+      "priority": 2,
+      "group": "57c2e7a9c7f0"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Zuek",
+          "definition": "You'll\nyou\nyou'll\nyou(plural)\nyour (plural)"
+        },
+        {
+          "word": "txerri",
+          "definition": "pig"
+        },
+        {
+          "word": "altuak",
+          "definition": "tall"
+        },
+        {
+          "word": "eta",
+          "definition": "and"
+        },
+        {
+          "word": "ardi",
+          "definition": "sheep"
+        },
+        {
+          "word": "laburak",
+          "definition": "short"
+        },
+        {
+          "word": "zarete.",
+          "definition": "are\ntheir"
+        }
+      ],
+      "chips": [
+        "You(plural",
+        "are",
+        "tall",
+        "pigs",
+        "and",
+        "short",
+        "sheep"
+      ],
+      "solutions": [
+        [
+          "You(plural",
+          "are",
+          "tall",
+          "pigs",
+          "and",
+          "short",
+          "sheep"
+        ],
+        [
+          "You'll",
+          "are",
+          "tall",
+          "pigs",
+          "and",
+          "short",
+          "sheep"
+        ],
+        [
+          "You",
+          "are",
+          "tall",
+          "pigs",
+          "and",
+          "short",
+          "sheep"
+        ],
+        [
+          "You(plural",
+          "are",
+          "the",
+          "tall",
+          "pigs",
+          "and",
+          "the",
+          "short",
+          "sheep"
+        ],
+        [
+          "You'll",
+          "are",
+          "the",
+          "tall",
+          "pigs",
+          "and",
+          "the",
+          "short",
+          "sheep"
+        ],
+        [
+          "You",
+          "are",
+          "the",
+          "tall",
+          "pigs",
+          "and",
+          "the",
+          "short",
+          "sheep"
+        ]
+      ],
+      "formattedSolution": "You(plural) are tall pigs and short sheep.",
+      "id": "b594e28d772e",
+      "priority": 2,
+      "group": "57c2e7a9c7f0"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Hura txoria da, ez arraina.",
+      "meaningInSourceLanguage": "It is a bird, not a fish.",
+      "id": "faaef425f4cf",
+      "priority": 0,
+      "group": "bf2a5d960279"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "It",
+          "definition": "hura"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "bird,",
+          "definition": "txoria"
+        },
+        {
+          "word": "not",
+          "definition": "ez"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "fish.",
+          "definition": "arrain\narraina\narrainak"
+        }
+      ],
+      "chips": [
+        "Hura",
+        "txoria",
+        "da",
+        "ez",
+        "arraina"
+      ],
+      "solutions": [
+        [
+          "Hura",
+          "txoria",
+          "da",
+          "ez",
+          "arraina"
+        ]
+      ],
+      "formattedSolution": "Hura txoria da, ez arraina.",
+      "id": "552c73afdb69",
+      "priority": 2,
+      "group": "bf2a5d960279"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Hura",
+          "definition": "he\nit\nitr\nshe\nthat over there"
+        },
+        {
+          "word": "txoria",
+          "definition": "bird"
+        },
+        {
+          "word": "da,",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        },
+        {
+          "word": "ez",
+          "definition": "no\nnot\nnot, no\nnot,no"
+        },
+        {
+          "word": "arraina.",
+          "definition": "a fish\nfish"
+        }
+      ],
+      "chips": [
+        "It",
+        "is",
+        "a",
+        "bird",
+        "not",
+        "a",
+        "fish"
+      ],
+      "solutions": [
+        [
+          "It",
+          "is",
+          "a",
+          "bird",
+          "not",
+          "a",
+          "fish"
+        ],
+        [
+          "It",
+          "is",
+          "the",
+          "bird",
+          "not",
+          "the",
+          "fish"
+        ]
+      ],
+      "formattedSolution": "It is a bird, not a fish.",
+      "id": "b7788595b257",
+      "priority": 2,
+      "group": "bf2a5d960279"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Zaldi animalia da?",
+      "meaningInSourceLanguage": "Is a horse an animal?",
+      "id": "1ef449bf2b6c",
+      "priority": 0,
+      "group": "dfc59ea62782"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "horse",
+          "definition": "zaldi\nzaldia"
+        },
+        {
+          "word": "an",
+          "definition": "-a\n-ak"
+        },
+        {
+          "word": "animal?",
+          "definition": "animalia"
+        }
+      ],
+      "chips": [
+        "Zaldi",
+        "animalia",
+        "da"
+      ],
+      "solutions": [
+        [
+          "Zaldi",
+          "animalia",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Zaldi animalia da?",
+      "id": "e797f19843fc",
+      "priority": 2,
+      "group": "dfc59ea62782"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Zaldi",
+          "definition": "horse"
+        },
+        {
+          "word": "animalia",
+          "definition": "animal"
+        },
+        {
+          "word": "da?",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "Is",
+        "a",
+        "horse",
+        "an",
+        "animal"
+      ],
+      "solutions": [
+        [
+          "Is",
+          "a",
+          "horse",
+          "an",
+          "animal"
+        ],
+        [
+          "Is",
+          "the",
+          "horse",
+          "an",
+          "animal"
+        ]
+      ],
+      "formattedSolution": "Is a horse an animal?",
+      "id": "592b5364b63b",
+      "priority": 2,
+      "group": "dfc59ea62782"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Bai. Zaldiak animalia handiak dira.",
+      "meaningInSourceLanguage": "Yes. Horses are big animals.",
+      "id": "bce3a501b213",
+      "priority": 0,
+      "group": "b42e2b830324"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Yes.",
+          "definition": "bai"
+        },
+        {
+          "word": "Horses",
+          "definition": "zaldiak"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "big",
+          "definition": "handi\nhandiak"
+        },
+        {
+          "word": "animals.",
+          "definition": "animaliak"
+        }
+      ],
+      "chips": [
+        "Bai",
+        "Zaldiak",
+        "animalia",
+        "handiak",
+        "dira"
+      ],
+      "solutions": [
+        [
+          "Bai",
+          "Zaldiak",
+          "animalia",
+          "handiak",
+          "dira"
+        ]
+      ],
+      "formattedSolution": "Bai. Zaldiak animalia handiak dira.",
+      "id": "059ec5ff38d7",
+      "priority": 2,
+      "group": "b42e2b830324"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Bai.",
+          "definition": "Yes\nyes"
+        },
+        {
+          "word": "Zaldiak",
+          "definition": "horses"
+        },
+        {
+          "word": "animalia",
+          "definition": "animal"
+        },
+        {
+          "word": "handiak",
+          "definition": "big"
+        },
+        {
+          "word": "dira.",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "Yes",
+        "Horses",
+        "are",
+        "big",
+        "animals"
+      ],
+      "solutions": [
+        [
+          "Yes",
+          "Horses",
+          "are",
+          "big",
+          "animals"
+        ]
+      ],
+      "formattedSolution": "Yes. Horses are big animals.",
+      "id": "1c65237a02ff",
+      "priority": 2,
+      "group": "b42e2b830324"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Ahuntza ez da txoria.",
+      "meaningInSourceLanguage": "A goat is not a bird.",
+      "id": "bebc77e337be",
+      "priority": 0,
+      "group": "9065d8fffe50"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "A",
+          "definition": "-a"
+        },
+        {
+          "word": "goat",
+          "definition": "ahuntz\nahuntza"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "not",
+          "definition": "ez"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "bird.",
+          "definition": "txoria"
+        }
+      ],
+      "chips": [
+        "Ahuntza",
+        "ez",
+        "da",
+        "txoria"
+      ],
+      "solutions": [
+        [
+          "Ahuntza",
+          "ez",
+          "da",
+          "txoria"
+        ]
+      ],
+      "formattedSolution": "Ahuntza ez da txoria.",
+      "id": "c4f9482ff488",
+      "priority": 2,
+      "group": "9065d8fffe50"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Ahuntza",
+          "definition": "a goat\ngoat"
+        },
+        {
+          "word": "ez",
+          "definition": "no\nnot\nnot, no\nnot,no"
+        },
+        {
+          "word": "da",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        },
+        {
+          "word": "txoria.",
+          "definition": "bird"
+        }
+      ],
+      "chips": [
+        "A",
+        "goat",
+        "is",
+        "not",
+        "a",
+        "bird"
+      ],
+      "solutions": [
+        [
+          "A",
+          "goat",
+          "is",
+          "not",
+          "a",
+          "bird"
+        ],
+        [
+          "The",
+          "goat",
+          "is",
+          "not",
+          "a",
+          "bird"
+        ],
+        [
+          "The",
+          "goat",
+          "is",
+          "not",
+          "the",
+          "bird"
+        ],
+        [
+          "A",
+          "goat",
+          "is",
+          "not",
+          "the",
+          "bird"
+        ]
+      ],
+      "formattedSolution": "A goat is not a bird.",
+      "id": "eb470acba438",
+      "priority": 2,
+      "group": "9065d8fffe50"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Arraina txoria da? Ez da.",
+      "meaningInSourceLanguage": "Is a fish a bird? It is not.",
+      "id": "36c18590d6a2",
+      "priority": 0,
+      "group": "19ac4535ad50"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "fish",
+          "definition": "arrain\narraina\narrainak"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "bird?",
+          "definition": "txoria"
+        },
+        {
+          "word": "It",
+          "definition": "hura"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "not.",
+          "definition": "ez"
+        }
+      ],
+      "chips": [
+        "Arraina",
+        "txoria",
+        "da",
+        "Ez",
+        "da"
+      ],
+      "solutions": [
+        [
+          "Arraina",
+          "txoria",
+          "da",
+          "Ez",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Arraina txoria da? Ez da.",
+      "id": "a54cf337faad",
+      "priority": 2,
+      "group": "19ac4535ad50"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Arraina",
+          "definition": "a fish\nfish"
+        },
+        {
+          "word": "txoria",
+          "definition": "bird"
+        },
+        {
+          "word": "da?",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        },
+        {
+          "word": "Ez",
+          "definition": "no\nnot\nnot, no\nnot,no"
+        },
+        {
+          "word": "da.",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "Is",
+        "a",
+        "fish",
+        "a",
+        "bird",
+        "It",
+        "is",
+        "not"
+      ],
+      "solutions": [
+        [
+          "Is",
+          "a",
+          "fish",
+          "a",
+          "bird",
+          "It",
+          "is",
+          "not"
+        ],
+        [
+          "Is",
+          "the",
+          "fish",
+          "a",
+          "bird",
+          "It",
+          "is",
+          "not"
+        ],
+        [
+          "Is",
+          "the",
+          "fish",
+          "the",
+          "bird",
+          "It",
+          "is",
+          "not"
+        ],
+        [
+          "Is",
+          "a",
+          "fish",
+          "the",
+          "bird",
+          "It",
+          "is",
+          "not"
+        ]
+      ],
+      "formattedSolution": "Is a fish a bird? It is not.",
+      "id": "f774816ce6c5",
+      "priority": 2,
+      "group": "19ac4535ad50"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Arraina ez da sugea.",
+      "meaningInSourceLanguage": "A fish is not a snake.",
+      "id": "fe34244283a1",
+      "priority": 0,
+      "group": "95844b7f1a6b"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "A",
+          "definition": "-a"
+        },
+        {
+          "word": "fish",
+          "definition": "arrain\narraina\narrainak"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "not",
+          "definition": "ez"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "snake.",
+          "definition": "suge\nsugea"
+        }
+      ],
+      "chips": [
+        "Arraina",
+        "ez",
+        "da",
+        "sugea"
+      ],
+      "solutions": [
+        [
+          "Arraina",
+          "ez",
+          "da",
+          "sugea"
+        ]
+      ],
+      "formattedSolution": "Arraina ez da sugea.",
+      "id": "1f39666ccbf9",
+      "priority": 2,
+      "group": "95844b7f1a6b"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Arraina",
+          "definition": "a fish\nfish"
+        },
+        {
+          "word": "ez",
+          "definition": "no\nnot\nnot, no\nnot,no"
+        },
+        {
+          "word": "da",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        },
+        {
+          "word": "sugea.",
+          "definition": "a snake\nsnake"
+        }
+      ],
+      "chips": [
+        "A",
+        "fish",
+        "is",
+        "not",
+        "a",
+        "snake"
+      ],
+      "solutions": [
+        [
+          "A",
+          "fish",
+          "is",
+          "not",
+          "a",
+          "snake"
+        ],
+        [
+          "The",
+          "fish",
+          "is",
+          "not",
+          "a",
+          "snake"
+        ],
+        [
+          "The",
+          "fish",
+          "is",
+          "not",
+          "the",
+          "snake"
+        ],
+        [
+          "A",
+          "fish",
+          "is",
+          "not",
+          "the",
+          "snake"
+        ]
+      ],
+      "formattedSolution": "A fish is not a snake.",
+      "id": "765953dca69d",
+      "priority": 2,
+      "group": "95844b7f1a6b"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Ez da ardia, baizik ahuntz bat.",
+      "meaningInSourceLanguage": "It is not a sheep, but rather a goat.",
+      "id": "d78d1be0d42b",
+      "priority": 0,
+      "group": "14ddcf972b5d"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "It",
+          "definition": "hura"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "not",
+          "definition": "ez"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "sheep,",
+          "definition": "ardi\nardiak"
+        },
+        {
+          "word": "but",
+          "definition": "baina"
+        },
+        {
+          "word": "rather",
+          "definition": "baizik"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "goat.",
+          "definition": "ahuntz\nahuntza"
+        }
+      ],
+      "chips": [
+        "Ez",
+        "da",
+        "ardia",
+        "baizik",
+        "ahuntz",
+        "bat"
+      ],
+      "solutions": [
+        [
+          "Ez",
+          "da",
+          "ardia",
+          "baizik",
+          "ahuntz",
+          "bat"
+        ]
+      ],
+      "formattedSolution": "Ez da ardia, baizik ahuntz bat.",
+      "id": "54a316da8031",
+      "priority": 2,
+      "group": "14ddcf972b5d"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Ez",
+          "definition": "no\nnot\nnot, no\nnot,no"
+        },
+        {
+          "word": "da",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        },
+        {
+          "word": "ardia,",
+          "definition": "a sheep"
+        },
+        {
+          "word": "baizik",
+          "definition": "but (rather)\nbut(rather)\nrather"
+        },
+        {
+          "word": "ahuntz",
+          "definition": "goat"
+        },
+        {
+          "word": "bat.",
+          "definition": "one"
+        }
+      ],
+      "chips": [
+        "It",
+        "is",
+        "not",
+        "a",
+        "sheep",
+        "but",
+        "rather",
+        "a",
+        "goat"
+      ],
+      "solutions": [
+        [
+          "It",
+          "is",
+          "not",
+          "a",
+          "sheep",
+          "but",
+          "rather",
+          "a",
+          "goat"
+        ],
+        [
+          "It",
+          "is",
+          "not",
+          "the",
+          "sheep",
+          "but",
+          "rather",
+          "a",
+          "goat"
+        ],
+        [
+          "It",
+          "is",
+          "not",
+          "the",
+          "sheep",
+          "but",
+          "rather",
+          "the",
+          "goat"
+        ],
+        [
+          "It",
+          "is",
+          "not",
+          "a",
+          "sheep",
+          "but",
+          "rather",
+          "the",
+          "goat"
+        ]
+      ],
+      "formattedSolution": "It is not a sheep, but rather a goat.",
+      "id": "c734a29b83a1",
+      "priority": 2,
+      "group": "14ddcf972b5d"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Behia ez da apaiza.",
+      "meaningInSourceLanguage": "A cow is not a priest.",
+      "id": "d28783874391",
+      "priority": 0,
+      "group": "9b90caac2cc3"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "A",
+          "definition": "-a"
+        },
+        {
+          "word": "cow",
+          "definition": "behi"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "not",
+          "definition": "ez"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "priest.",
+          "definition": "apaiz\napaiza\napiza"
+        }
+      ],
+      "chips": [
+        "Behia",
+        "ez",
+        "da",
+        "apaiza"
+      ],
+      "solutions": [
+        [
+          "Behia",
+          "ez",
+          "da",
+          "apaiza"
+        ]
+      ],
+      "formattedSolution": "Behia ez da apaiza.",
+      "id": "bf7d8f071a69",
+      "priority": 2,
+      "group": "9b90caac2cc3"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Behia",
+          "definition": "a cow"
+        },
+        {
+          "word": "ez",
+          "definition": "no\nnot\nnot, no\nnot,no"
+        },
+        {
+          "word": "da",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        },
+        {
+          "word": "apaiza.",
+          "definition": "priest\nthe priest"
+        }
+      ],
+      "chips": [
+        "A",
+        "cow",
+        "is",
+        "not",
+        "a",
+        "priest"
+      ],
+      "solutions": [
+        [
+          "A",
+          "cow",
+          "is",
+          "not",
+          "a",
+          "priest"
+        ],
+        [
+          "The",
+          "cow",
+          "is",
+          "not",
+          "the",
+          "priest"
+        ]
+      ],
+      "formattedSolution": "A cow is not a priest.",
+      "id": "8f820e2039fd",
+      "priority": 2,
+      "group": "9b90caac2cc3"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "goat.jpg",
+        "goat.jpg",
+        "goat.jpg"
+      ],
+      "formInTargetLanguage": "ahuntz",
+      "meaningInSourceLanguage": "goat",
+      "id": "a2472ca3f7f4",
+      "priority": 0,
+      "group": "089d2530ee74"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "goat.jpg",
+        "goat.jpg",
+        "goat.jpg"
+      ],
+      "formInTargetLanguage": [
+        "ahuntz"
+      ],
+      "phrase": [
+        {
+          "word": "goat",
+          "definition": "ahuntz\nahuntza"
+        }
+      ],
+      "id": "d4fa982abc9d",
+      "priority": 1,
+      "group": "089d2530ee74"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "sheep.jpg",
+        "sheep.jpg",
+        "sheep.jpg"
+      ],
+      "formInTargetLanguage": "ardi",
+      "meaningInSourceLanguage": "sheep",
+      "id": "d20a8179c6f6",
+      "priority": 0,
+      "group": "b5502045f1dc"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "sheep.jpg",
+        "sheep.jpg",
+        "sheep.jpg"
+      ],
+      "formInTargetLanguage": [
+        "ardi"
+      ],
+      "phrase": [
+        {
+          "word": "sheep",
+          "definition": "ardi\nardiak"
+        }
+      ],
+      "id": "22852ef72dba",
+      "priority": 1,
+      "group": "b5502045f1dc"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "fish.jpg",
+        "fish.jpg",
+        "fish.jpg"
+      ],
+      "formInTargetLanguage": "arrain",
+      "meaningInSourceLanguage": "fish",
+      "id": "03409ff6d95b",
+      "priority": 0,
+      "group": "cf1e4ccae6b6"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "fish.jpg",
+        "fish.jpg",
+        "fish.jpg"
+      ],
+      "formInTargetLanguage": [
+        "arrain"
+      ],
+      "phrase": [
+        {
+          "word": "fish",
+          "definition": "arrain\narraina\narrainak"
+        }
+      ],
+      "id": "3203a6ced6e3",
+      "priority": 1,
+      "group": "cf1e4ccae6b6"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "cow.jpg",
+        "cow.jpg",
+        "cow.jpg"
+      ],
+      "formInTargetLanguage": "behi",
+      "meaningInSourceLanguage": "cow",
+      "id": "62bfeff153d6",
+      "priority": 0,
+      "group": "e5806e997d4d"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "cow.jpg",
+        "cow.jpg",
+        "cow.jpg"
+      ],
+      "formInTargetLanguage": [
+        "behi"
+      ],
+      "phrase": [
+        {
+          "word": "cow",
+          "definition": "behi"
+        }
+      ],
+      "id": "01c6410519d2",
+      "priority": 1,
+      "group": "e5806e997d4d"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "mouse1.jpg",
+        "mouse2.jpg",
+        "mouse3.jpg"
+      ],
+      "formInTargetLanguage": "sagu",
+      "meaningInSourceLanguage": "mouse",
+      "id": "18f06f4f0819",
+      "priority": 0,
+      "group": "232d7f83284c"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "mouse1.jpg",
+        "mouse2.jpg",
+        "mouse3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "sagu"
+      ],
+      "phrase": [
+        {
+          "word": "mouse",
+          "definition": "sagu\nsagua"
+        }
+      ],
+      "id": "a95a72efc7df",
+      "priority": 1,
+      "group": "232d7f83284c"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "snake.jpg",
+        "snake.jpg",
+        "snake.jpg"
+      ],
+      "formInTargetLanguage": "suge",
+      "meaningInSourceLanguage": "snake",
+      "id": "017599f2ca95",
+      "priority": 0,
+      "group": "113d4dfc54bd"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "snake.jpg",
+        "snake.jpg",
+        "snake.jpg"
+      ],
+      "formInTargetLanguage": [
+        "suge"
+      ],
+      "phrase": [
+        {
+          "word": "snake",
+          "definition": "suge\nsugea"
+        }
+      ],
+      "id": "68af0b666042",
+      "priority": 1,
+      "group": "113d4dfc54bd"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "pig.jpg",
+        "pig.jpg",
+        "pig.jpg"
+      ],
+      "formInTargetLanguage": "txerri",
+      "meaningInSourceLanguage": "pig",
+      "id": "01df4d1975b5",
+      "priority": 0,
+      "group": "0a8ebb439253"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "pig.jpg",
+        "pig.jpg",
+        "pig.jpg"
+      ],
+      "formInTargetLanguage": [
+        "txerri"
+      ],
+      "phrase": [
+        {
+          "word": "pig",
+          "definition": "txerri"
+        }
+      ],
+      "id": "8e18c7fdc2c4",
+      "priority": 1,
+      "group": "0a8ebb439253"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "horse1.jpg",
+        "horse2.jpg",
+        "horse3.jpg"
+      ],
+      "formInTargetLanguage": "zaldi",
+      "meaningInSourceLanguage": "horse",
+      "id": "04c66795d17d",
+      "priority": 0,
+      "group": "e37a1b9040b7"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "horse1.jpg",
+        "horse2.jpg",
+        "horse3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "zaldi"
+      ],
+      "phrase": [
+        {
+          "word": "horse",
+          "definition": "zaldi\nzaldia"
+        }
+      ],
+      "id": "af4855197e7b",
+      "priority": 1,
+      "group": "e37a1b9040b7"
+    }
+  ]
+}
