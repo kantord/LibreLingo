@@ -1,0 +1,1529 @@
+{
+  "id": "f7ee2ecbddc1",
+  "levels": 5,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Epa. Gu Mikel eta Joseba gara.",
+      "meaningInSourceLanguage": "Hi. We are Mikel and Joseba.",
+      "id": "6473b557ac22",
+      "priority": 0,
+      "group": "d49929395a56"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Hi.",
+          "definition": "epa"
+        },
+        {
+          "word": "We",
+          "definition": "gu"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "Mikel",
+          "definition": "Mikel (male name)\nMikel (name)\nMikel(male name)"
+        },
+        {
+          "word": "and",
+          "definition": "eta"
+        },
+        {
+          "word": "Joseba.",
+          "definition": "Joseba (male name)\nJoseba (name)\nJoseba(male name)"
+        }
+      ],
+      "chips": [
+        "Epa",
+        "Gu",
+        "Mikel",
+        "eta",
+        "Joseba",
+        "gara"
+      ],
+      "solutions": [
+        [
+          "Epa",
+          "Gu",
+          "Mikel",
+          "eta",
+          "Joseba",
+          "gara"
+        ],
+        [
+          "Epa",
+          "Mikel",
+          "eta",
+          "Joseba",
+          "gara"
+        ]
+      ],
+      "formattedSolution": "Epa. Gu Mikel eta Joseba gara.",
+      "id": "e3198355a0dc",
+      "priority": 2,
+      "group": "d49929395a56"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Epa.",
+          "definition": "hi"
+        },
+        {
+          "word": "Gu",
+          "definition": "we"
+        },
+        {
+          "word": "Mikel",
+          "definition": "Mikel (male name)\nMikel(male name)"
+        },
+        {
+          "word": "eta",
+          "definition": "and"
+        },
+        {
+          "word": "Joseba",
+          "definition": "Joseba (male name)\nJoseba (name)\nJoseba(male name)"
+        },
+        {
+          "word": "gara.",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "Hi",
+        "We",
+        "are",
+        "Mikel",
+        "and",
+        "Joseba"
+      ],
+      "solutions": [
+        [
+          "Hi",
+          "We",
+          "are",
+          "Mikel",
+          "and",
+          "Joseba"
+        ]
+      ],
+      "formattedSolution": "Hi. We are Mikel and Joseba.",
+      "id": "45c6a29c5ec0",
+      "priority": 2,
+      "group": "d49929395a56"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Gu gizonak gara.",
+      "meaningInSourceLanguage": "We are men.",
+      "id": "b7180137c31f",
+      "priority": 0,
+      "group": "04c0b70e361c"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "We",
+          "definition": "gu"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "men.",
+          "definition": "gizonak"
+        }
+      ],
+      "chips": [
+        "Gu",
+        "gizonak",
+        "gara"
+      ],
+      "solutions": [
+        [
+          "Gu",
+          "gizonak",
+          "gara"
+        ],
+        [
+          "Gizonak",
+          "gara"
+        ]
+      ],
+      "formattedSolution": "Gu gizonak gara.",
+      "id": "192accb6ba1d",
+      "priority": 2,
+      "group": "04c0b70e361c"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Gu",
+          "definition": "we"
+        },
+        {
+          "word": "gizonak",
+          "definition": "men"
+        },
+        {
+          "word": "gara.",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "We",
+        "are",
+        "men"
+      ],
+      "solutions": [
+        [
+          "We",
+          "are",
+          "men"
+        ]
+      ],
+      "formattedSolution": "We are men.",
+      "id": "efbf065e3189",
+      "priority": 2,
+      "group": "04c0b70e361c"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Kaixo. Gu Miren eta Aintza gara.",
+      "meaningInSourceLanguage": "Hello.  We are Miren and Aintza.",
+      "id": "ba204e522e56",
+      "priority": 0,
+      "group": "161e51efd035"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Hello.",
+          "definition": "kaixo"
+        },
+        {
+          "word": "We",
+          "definition": "gu"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "Miren",
+          "definition": "Miren (female name)\nMiren (name)"
+        },
+        {
+          "word": "and",
+          "definition": "eta"
+        },
+        {
+          "word": "Aintza.",
+          "definition": "Aintza (female name)"
+        }
+      ],
+      "chips": [
+        "Kaixo",
+        "Gu",
+        "Miren",
+        "eta",
+        "Aintza",
+        "gara"
+      ],
+      "solutions": [
+        [
+          "Kaixo",
+          "Gu",
+          "Miren",
+          "eta",
+          "Aintza",
+          "gara"
+        ],
+        [
+          "Kaixo",
+          "Miren",
+          "eta",
+          "Aintza",
+          "gara"
+        ]
+      ],
+      "formattedSolution": "Kaixo. Gu Miren eta Aintza gara.",
+      "id": "297b836c0808",
+      "priority": 2,
+      "group": "161e51efd035"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Kaixo.",
+          "definition": "hello"
+        },
+        {
+          "word": "Gu",
+          "definition": "we"
+        },
+        {
+          "word": "Miren",
+          "definition": "Miren (female name)\nMiren's (female name)"
+        },
+        {
+          "word": "eta",
+          "definition": "and"
+        },
+        {
+          "word": "Aintza",
+          "definition": "Aintza (female name)"
+        },
+        {
+          "word": "gara.",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "Hello",
+        "We",
+        "are",
+        "Miren",
+        "and",
+        "Aintza"
+      ],
+      "solutions": [
+        [
+          "Hello",
+          "We",
+          "are",
+          "Miren",
+          "and",
+          "Aintza"
+        ]
+      ],
+      "formattedSolution": "Hello.  We are Miren and Aintza.",
+      "id": "4a529558a41b",
+      "priority": 2,
+      "group": "161e51efd035"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Gu emakumeak gara.",
+      "meaningInSourceLanguage": "We are women.",
+      "id": "1c14bc7ad9fe",
+      "priority": 0,
+      "group": "b5e1de75edd4"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "We",
+          "definition": "gu"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "women.",
+          "definition": "emakumeak"
+        }
+      ],
+      "chips": [
+        "Gu",
+        "emakumeak",
+        "gara"
+      ],
+      "solutions": [
+        [
+          "Gu",
+          "emakumeak",
+          "gara"
+        ],
+        [
+          "Emakumeak",
+          "gara"
+        ]
+      ],
+      "formattedSolution": "Gu emakumeak gara.",
+      "id": "82e746be490c",
+      "priority": 2,
+      "group": "b5e1de75edd4"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Gu",
+          "definition": "we"
+        },
+        {
+          "word": "emakumeak",
+          "definition": "women"
+        },
+        {
+          "word": "gara.",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "We",
+        "are",
+        "women"
+      ],
+      "solutions": [
+        [
+          "We",
+          "are",
+          "women"
+        ]
+      ],
+      "formattedSolution": "We are women.",
+      "id": "9fcba912635e",
+      "priority": 2,
+      "group": "b5e1de75edd4"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Gu ikasleak gara.",
+      "meaningInSourceLanguage": "We are students.",
+      "id": "9682903d9190",
+      "priority": 0,
+      "group": "492df7be0040"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "We",
+          "definition": "gu"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "students.",
+          "definition": "ikasleak"
+        }
+      ],
+      "chips": [
+        "Gu",
+        "ikasleak",
+        "gara"
+      ],
+      "solutions": [
+        [
+          "Gu",
+          "ikasleak",
+          "gara"
+        ],
+        [
+          "Ikasleak",
+          "gara"
+        ]
+      ],
+      "formattedSolution": "Gu ikasleak gara.",
+      "id": "4400bb94e597",
+      "priority": 2,
+      "group": "492df7be0040"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Gu",
+          "definition": "we"
+        },
+        {
+          "word": "ikasleak",
+          "definition": "students"
+        },
+        {
+          "word": "gara.",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "We",
+        "are",
+        "students"
+      ],
+      "solutions": [
+        [
+          "We",
+          "are",
+          "students"
+        ]
+      ],
+      "formattedSolution": "We are students.",
+      "id": "9af6298b4222",
+      "priority": 2,
+      "group": "492df7be0040"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Zuek Aitor eta Jon zarete.",
+      "meaningInSourceLanguage": "You are Aitor and Jon.",
+      "id": "85bd585045fd",
+      "priority": 0,
+      "group": "f347c61c01d6"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "You",
+          "definition": "zu\nzuek"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "Aitor",
+          "definition": "Aitor (male name)\nAitor (name)"
+        },
+        {
+          "word": "and",
+          "definition": "eta"
+        },
+        {
+          "word": "Jon.",
+          "definition": "Jon (male name)"
+        }
+      ],
+      "chips": [
+        "Zuek",
+        "Aitor",
+        "eta",
+        "Jon",
+        "zarete"
+      ],
+      "solutions": [
+        [
+          "Zuek",
+          "Aitor",
+          "eta",
+          "Jon",
+          "zarete"
+        ],
+        [
+          "Aitor",
+          "eta",
+          "Jon",
+          "zarete"
+        ]
+      ],
+      "formattedSolution": "Zuek Aitor eta Jon zarete.",
+      "id": "8d1788fc9593",
+      "priority": 2,
+      "group": "f347c61c01d6"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Zuek",
+          "definition": "You'll\nyou\nyou'll\nyou(plural)\nyour (plural)"
+        },
+        {
+          "word": "Aitor",
+          "definition": "Aitor (male name)"
+        },
+        {
+          "word": "eta",
+          "definition": "and"
+        },
+        {
+          "word": "Jon",
+          "definition": "Jon (male name)"
+        },
+        {
+          "word": "zarete.",
+          "definition": "are\ntheir"
+        }
+      ],
+      "chips": [
+        "You",
+        "are",
+        "Aitor",
+        "and",
+        "Jon"
+      ],
+      "solutions": [
+        [
+          "You",
+          "are",
+          "Aitor",
+          "and",
+          "Jon"
+        ],
+        [
+          "You'll",
+          "are",
+          "Aitor",
+          "and",
+          "Jon"
+        ]
+      ],
+      "formattedSolution": "You are Aitor and Jon.",
+      "id": "ac3c050da241",
+      "priority": 2,
+      "group": "f347c61c01d6"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Zuek mutilak zarete.",
+      "meaningInSourceLanguage": "You are boys.",
+      "id": "9f5b564c18e6",
+      "priority": 0,
+      "group": "8e737c5dc0fd"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "You",
+          "definition": "zu\nzuek"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "boys.",
+          "definition": "mutilak"
+        }
+      ],
+      "chips": [
+        "Zuek",
+        "mutilak",
+        "zarete"
+      ],
+      "solutions": [
+        [
+          "Zuek",
+          "mutilak",
+          "zarete"
+        ],
+        [
+          "Mutilak",
+          "zarete"
+        ]
+      ],
+      "formattedSolution": "Zuek mutilak zarete.",
+      "id": "7272c55d4aed",
+      "priority": 2,
+      "group": "8e737c5dc0fd"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Zuek",
+          "definition": "You'll\nyou\nyou'll\nyou(plural)\nyour (plural)"
+        },
+        {
+          "word": "mutilak",
+          "definition": "boys"
+        },
+        {
+          "word": "zarete.",
+          "definition": "are\ntheir"
+        }
+      ],
+      "chips": [
+        "You",
+        "are",
+        "boys"
+      ],
+      "solutions": [
+        [
+          "You",
+          "are",
+          "boys"
+        ],
+        [
+          "You'll",
+          "are",
+          "boys"
+        ]
+      ],
+      "formattedSolution": "You are boys.",
+      "id": "58ea7f07d634",
+      "priority": 2,
+      "group": "8e737c5dc0fd"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Zuek irakasleak zarete.",
+      "meaningInSourceLanguage": "You are teachers.",
+      "id": "b3d0ae10ab9a",
+      "priority": 0,
+      "group": "87e1a70e5d77"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "You",
+          "definition": "zu\nzuek"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "teachers.",
+          "definition": "irakasleak"
+        }
+      ],
+      "chips": [
+        "Zuek",
+        "irakasleak",
+        "zarete"
+      ],
+      "solutions": [
+        [
+          "Zuek",
+          "irakasleak",
+          "zarete"
+        ],
+        [
+          "irakasleak",
+          "zarete"
+        ]
+      ],
+      "formattedSolution": "Zuek irakasleak zarete.",
+      "id": "ba13e382e3e6",
+      "priority": 2,
+      "group": "87e1a70e5d77"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Zuek",
+          "definition": "You'll\nyou\nyou'll\nyou(plural)\nyour (plural)"
+        },
+        {
+          "word": "irakasleak",
+          "definition": "teachers"
+        },
+        {
+          "word": "zarete.",
+          "definition": "are\ntheir"
+        }
+      ],
+      "chips": [
+        "You",
+        "are",
+        "teachers"
+      ],
+      "solutions": [
+        [
+          "You",
+          "are",
+          "teachers"
+        ],
+        [
+          "You'll",
+          "are",
+          "teachers"
+        ]
+      ],
+      "formattedSolution": "You are teachers.",
+      "id": "cf7cf715d964",
+      "priority": 2,
+      "group": "87e1a70e5d77"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Haiek Aitor eta Jon dira.",
+      "meaningInSourceLanguage": "They are Aitor and Jon.",
+      "id": "d6d40023a823",
+      "priority": 0,
+      "group": "0dfddc603272"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "They",
+          "definition": "haiek"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "Aitor",
+          "definition": "Aitor (male name)\nAitor (name)"
+        },
+        {
+          "word": "and",
+          "definition": "eta"
+        },
+        {
+          "word": "Jon.",
+          "definition": "Jon (male name)"
+        }
+      ],
+      "chips": [
+        "Haiek",
+        "Aitor",
+        "eta",
+        "Jon",
+        "dira"
+      ],
+      "solutions": [
+        [
+          "Haiek",
+          "Aitor",
+          "eta",
+          "Jon",
+          "dira"
+        ],
+        [
+          "Aitor",
+          "eta",
+          "Jon",
+          "dira"
+        ]
+      ],
+      "formattedSolution": "Haiek Aitor eta Jon dira.",
+      "id": "08422fba26ca",
+      "priority": 2,
+      "group": "0dfddc603272"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Haiek",
+          "definition": "they\nthose over there, plural of hura"
+        },
+        {
+          "word": "Aitor",
+          "definition": "Aitor (male name)"
+        },
+        {
+          "word": "eta",
+          "definition": "and"
+        },
+        {
+          "word": "Jon",
+          "definition": "Jon (male name)"
+        },
+        {
+          "word": "dira.",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "They",
+        "are",
+        "Aitor",
+        "and",
+        "Jon"
+      ],
+      "solutions": [
+        [
+          "They",
+          "are",
+          "Aitor",
+          "and",
+          "Jon"
+        ]
+      ],
+      "formattedSolution": "They are Aitor and Jon.",
+      "id": "02ba487624aa",
+      "priority": 2,
+      "group": "0dfddc603272"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Haiek ere mutilak dira.",
+      "meaningInSourceLanguage": "They are also boys.",
+      "id": "7d1e3ef0176b",
+      "priority": 0,
+      "group": "1b99c9e611a6"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "They",
+          "definition": "haiek"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "also",
+          "definition": "ere"
+        },
+        {
+          "word": "boys.",
+          "definition": "mutilak"
+        }
+      ],
+      "chips": [
+        "Haiek",
+        "ere",
+        "mutilak",
+        "dira"
+      ],
+      "solutions": [
+        [
+          "Haiek",
+          "ere",
+          "mutilak",
+          "dira"
+        ],
+        [
+          "Ere",
+          "mutilak",
+          "dira"
+        ]
+      ],
+      "formattedSolution": "Haiek ere mutilak dira.",
+      "id": "bece8509b1e2",
+      "priority": 2,
+      "group": "1b99c9e611a6"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Haiek",
+          "definition": "they\nthose over there, plural of hura"
+        },
+        {
+          "word": "ere",
+          "definition": "also"
+        },
+        {
+          "word": "mutilak",
+          "definition": "boys"
+        },
+        {
+          "word": "dira.",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "They",
+        "are",
+        "also",
+        "boys"
+      ],
+      "solutions": [
+        [
+          "They",
+          "are",
+          "also",
+          "boys"
+        ]
+      ],
+      "formattedSolution": "They are also boys.",
+      "id": "846e0a7c550c",
+      "priority": 2,
+      "group": "1b99c9e611a6"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Terese eta Karmele neskak dira.",
+      "meaningInSourceLanguage": "Terese and Karmele are also girls.",
+      "id": "eb11f1c3579f",
+      "priority": 0,
+      "group": "423e6d2a3ade"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Terese",
+          "definition": "Terese (female name)\nTerese (name)"
+        },
+        {
+          "word": "and",
+          "definition": "eta"
+        },
+        {
+          "word": "Karmele",
+          "definition": "Karmele (female name)"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "also",
+          "definition": "ere"
+        },
+        {
+          "word": "girls.",
+          "definition": "neskak"
+        }
+      ],
+      "chips": [
+        "Terese",
+        "eta",
+        "Karmele",
+        "neskak",
+        "dira"
+      ],
+      "solutions": [
+        [
+          "Terese",
+          "eta",
+          "Karmele",
+          "neskak",
+          "dira"
+        ]
+      ],
+      "formattedSolution": "Terese eta Karmele neskak dira.",
+      "id": "93b375f7bc61",
+      "priority": 2,
+      "group": "423e6d2a3ade"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Terese",
+          "definition": "Terese (female name)"
+        },
+        {
+          "word": "eta",
+          "definition": "and"
+        },
+        {
+          "word": "Karmele",
+          "definition": "Karmele (female name)"
+        },
+        {
+          "word": "neskak",
+          "definition": "girls"
+        },
+        {
+          "word": "dira.",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "Terese",
+        "and",
+        "Karmele",
+        "are",
+        "also",
+        "girls"
+      ],
+      "solutions": [
+        [
+          "Terese",
+          "and",
+          "Karmele",
+          "are",
+          "also",
+          "girls"
+        ]
+      ],
+      "formattedSolution": "Terese and Karmele are also girls.",
+      "id": "acbf1c171dea",
+      "priority": 2,
+      "group": "423e6d2a3ade"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Terese eta Karmele ere ikasleak dira.",
+      "meaningInSourceLanguage": "Terese and Karmele are also students.",
+      "id": "1d26609e8843",
+      "priority": 0,
+      "group": "ca7437796a9f"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Terese",
+          "definition": "Terese (female name)\nTerese (name)"
+        },
+        {
+          "word": "and",
+          "definition": "eta"
+        },
+        {
+          "word": "Karmele",
+          "definition": "Karmele (female name)"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "also",
+          "definition": "ere"
+        },
+        {
+          "word": "students.",
+          "definition": "ikasleak"
+        }
+      ],
+      "chips": [
+        "Terese",
+        "eta",
+        "Karmele",
+        "ere",
+        "ikasleak",
+        "dira"
+      ],
+      "solutions": [
+        [
+          "Terese",
+          "eta",
+          "Karmele",
+          "ere",
+          "ikasleak",
+          "dira"
+        ]
+      ],
+      "formattedSolution": "Terese eta Karmele ere ikasleak dira.",
+      "id": "23f5baf1948f",
+      "priority": 2,
+      "group": "ca7437796a9f"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Terese",
+          "definition": "Terese (female name)"
+        },
+        {
+          "word": "eta",
+          "definition": "and"
+        },
+        {
+          "word": "Karmele",
+          "definition": "Karmele (female name)"
+        },
+        {
+          "word": "ere",
+          "definition": "also"
+        },
+        {
+          "word": "ikasleak",
+          "definition": "students"
+        },
+        {
+          "word": "dira.",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "Terese",
+        "and",
+        "Karmele",
+        "are",
+        "also",
+        "students"
+      ],
+      "solutions": [
+        [
+          "Terese",
+          "and",
+          "Karmele",
+          "are",
+          "also",
+          "students"
+        ]
+      ],
+      "formattedSolution": "Terese and Karmele are also students.",
+      "id": "286bdddc283f",
+      "priority": 2,
+      "group": "ca7437796a9f"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "we.jpg",
+        "we.jpg",
+        "we.jpg"
+      ],
+      "formInTargetLanguage": "gu gara",
+      "meaningInSourceLanguage": "we are",
+      "id": "051cc7fe8650",
+      "priority": 0,
+      "group": "f111926a4593"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "we.jpg",
+        "we.jpg",
+        "we.jpg"
+      ],
+      "formInTargetLanguage": [
+        "gu gara",
+        "gara"
+      ],
+      "phrase": [
+        {
+          "word": "we",
+          "definition": "gu"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        }
+      ],
+      "id": "ce4ee46d3079",
+      "priority": 1,
+      "group": "f111926a4593"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "youll.jpg",
+        "youll.jpg",
+        "youll.jpg"
+      ],
+      "formInTargetLanguage": "zuek zarete",
+      "meaningInSourceLanguage": "you'll are",
+      "id": "50a02c684661",
+      "priority": 0,
+      "group": "ff04ef45bd45"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "youll.jpg",
+        "youll.jpg",
+        "youll.jpg"
+      ],
+      "formInTargetLanguage": [
+        "zuek zarete",
+        "zarete"
+      ],
+      "phrase": [
+        {
+          "word": "you'll",
+          "definition": "zuek"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        }
+      ],
+      "id": "24ec4c2e8676",
+      "priority": 1,
+      "group": "ff04ef45bd45"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "they.jpg",
+        "they.jpg",
+        "they.jpg"
+      ],
+      "formInTargetLanguage": "haiek dira",
+      "meaningInSourceLanguage": "they are",
+      "id": "81a57e15c648",
+      "priority": 0,
+      "group": "86e5e10b5580"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "they.jpg",
+        "they.jpg",
+        "they.jpg"
+      ],
+      "formInTargetLanguage": [
+        "haiek dira",
+        "dira"
+      ],
+      "phrase": [
+        {
+          "word": "they",
+          "definition": "haiek"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        }
+      ],
+      "id": "677e144fb40b",
+      "priority": 1,
+      "group": "86e5e10b5580"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "and.jpg",
+        "and.jpg",
+        "and.jpg"
+      ],
+      "formInTargetLanguage": "eta",
+      "meaningInSourceLanguage": "and",
+      "id": "1e50c6fd203e",
+      "priority": 0,
+      "group": "234da93eb793"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "and.jpg",
+        "and.jpg",
+        "and.jpg"
+      ],
+      "formInTargetLanguage": [
+        "eta"
+      ],
+      "phrase": [
+        {
+          "word": "and",
+          "definition": "eta"
+        }
+      ],
+      "id": "7ab1b1d6957c",
+      "priority": 1,
+      "group": "234da93eb793"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "men.jpg",
+        "men.jpg",
+        "men.jpg"
+      ],
+      "formInTargetLanguage": "gizonak",
+      "meaningInSourceLanguage": "men",
+      "id": "512e7bf3f8b4",
+      "priority": 0,
+      "group": "0783d4463925"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "men.jpg",
+        "men.jpg",
+        "men.jpg"
+      ],
+      "formInTargetLanguage": [
+        "gizonak"
+      ],
+      "phrase": [
+        {
+          "word": "men",
+          "definition": "gizonak"
+        }
+      ],
+      "id": "3a60e77a5b9f",
+      "priority": 1,
+      "group": "0783d4463925"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "women.jpg",
+        "women.jpg",
+        "women.jpg"
+      ],
+      "formInTargetLanguage": "emakumeak",
+      "meaningInSourceLanguage": "women",
+      "id": "dfc3841e7944",
+      "priority": 0,
+      "group": "6ba04f52226e"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "women.jpg",
+        "women.jpg",
+        "women.jpg"
+      ],
+      "formInTargetLanguage": [
+        "emakumeak"
+      ],
+      "phrase": [
+        {
+          "word": "women",
+          "definition": "emakumeak"
+        }
+      ],
+      "id": "ee1d515cb474",
+      "priority": 1,
+      "group": "6ba04f52226e"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "boys.jpg",
+        "boys.jpg",
+        "boys.jpg"
+      ],
+      "formInTargetLanguage": "mutilak",
+      "meaningInSourceLanguage": "boys",
+      "id": "86c40b84d2fb",
+      "priority": 0,
+      "group": "834c472044b4"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "boys.jpg",
+        "boys.jpg",
+        "boys.jpg"
+      ],
+      "formInTargetLanguage": [
+        "mutilak"
+      ],
+      "phrase": [
+        {
+          "word": "boys",
+          "definition": "mutilak"
+        }
+      ],
+      "id": "3ecb5c37dcb9",
+      "priority": 1,
+      "group": "834c472044b4"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "girls.jpg",
+        "girls.jpg",
+        "girls.jpg"
+      ],
+      "formInTargetLanguage": "neskak",
+      "meaningInSourceLanguage": "girls",
+      "id": "939fba7db0c1",
+      "priority": 0,
+      "group": "2852be23e4f1"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "girls.jpg",
+        "girls.jpg",
+        "girls.jpg"
+      ],
+      "formInTargetLanguage": [
+        "neskak"
+      ],
+      "phrase": [
+        {
+          "word": "girls",
+          "definition": "neskak"
+        }
+      ],
+      "id": "830789a327d3",
+      "priority": 1,
+      "group": "2852be23e4f1"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "teachers.jpg",
+        "teachers.jpg",
+        "teachers.jpg"
+      ],
+      "formInTargetLanguage": "irakasleak",
+      "meaningInSourceLanguage": "teachers",
+      "id": "21e338c287df",
+      "priority": 0,
+      "group": "2016bd61dbfc"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "teachers.jpg",
+        "teachers.jpg",
+        "teachers.jpg"
+      ],
+      "formInTargetLanguage": [
+        "irakasleak"
+      ],
+      "phrase": [
+        {
+          "word": "teachers",
+          "definition": "irakasleak"
+        }
+      ],
+      "id": "05eb5de76d57",
+      "priority": 1,
+      "group": "2016bd61dbfc"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "students.jpg",
+        "students.jpg",
+        "students.jpg"
+      ],
+      "formInTargetLanguage": "ikasleak",
+      "meaningInSourceLanguage": "students",
+      "id": "11b51618fe8e",
+      "priority": 0,
+      "group": "50fd39f4f774"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "students.jpg",
+        "students.jpg",
+        "students.jpg"
+      ],
+      "formInTargetLanguage": [
+        "ikasleak"
+      ],
+      "phrase": [
+        {
+          "word": "students",
+          "definition": "ikasleak"
+        }
+      ],
+      "id": "e9025be4a999",
+      "priority": 1,
+      "group": "50fd39f4f774"
+    }
+  ]
+}

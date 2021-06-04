@@ -1,0 +1,1247 @@
+{
+  "id": "76a6c8df6b2b",
+  "levels": 4,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Ni gizon bat naiz.",
+      "meaningInSourceLanguage": "I am a man.",
+      "id": "81d37a2a92bd",
+      "priority": 0,
+      "group": "97c9a4271492"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "I",
+          "definition": "ni"
+        },
+        {
+          "word": "am",
+          "definition": "nago (egon)\nnaiz\nnaiz (izan)"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "man.",
+          "definition": "gizon\ngizona"
+        }
+      ],
+      "chips": [
+        "Ni",
+        "gizon",
+        "bat",
+        "naiz"
+      ],
+      "solutions": [
+        [
+          "Ni",
+          "gizon",
+          "bat",
+          "naiz"
+        ]
+      ],
+      "formattedSolution": "Ni gizon bat naiz.",
+      "id": "2952458aa6c9",
+      "priority": 2,
+      "group": "97c9a4271492"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Ni",
+          "definition": "I\nme"
+        },
+        {
+          "word": "gizon",
+          "definition": "man"
+        },
+        {
+          "word": "bat",
+          "definition": "one"
+        },
+        {
+          "word": "naiz.",
+          "definition": "I am (izan)\nam"
+        }
+      ],
+      "chips": [
+        "I",
+        "am",
+        "a",
+        "man"
+      ],
+      "solutions": [
+        [
+          "I",
+          "am",
+          "a",
+          "man"
+        ],
+        [
+          "I",
+          "am",
+          "one",
+          "man"
+        ]
+      ],
+      "formattedSolution": "I am a man.",
+      "id": "8b04477060df",
+      "priority": 2,
+      "group": "97c9a4271492"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Kaixo. Ni Terese naiz.",
+      "meaningInSourceLanguage": "Hello I am Terese.",
+      "id": "c6c191cafaaa",
+      "priority": 0,
+      "group": "5eeb23e4e46d"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Hello",
+          "definition": "kaixo"
+        },
+        {
+          "word": "I",
+          "definition": "ni"
+        },
+        {
+          "word": "am",
+          "definition": "nago (egon)\nnaiz\nnaiz (izan)"
+        },
+        {
+          "word": "Terese.",
+          "definition": "Terese (female name)\nTerese (name)"
+        }
+      ],
+      "chips": [
+        "Kaixo",
+        "Ni",
+        "Terese",
+        "naiz"
+      ],
+      "solutions": [
+        [
+          "Kaixo",
+          "Ni",
+          "Terese",
+          "naiz"
+        ]
+      ],
+      "formattedSolution": "Kaixo. Ni Terese naiz.",
+      "id": "f6bd012b62c5",
+      "priority": 2,
+      "group": "5eeb23e4e46d"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Kaixo.",
+          "definition": "hello"
+        },
+        {
+          "word": "Ni",
+          "definition": "I\nme"
+        },
+        {
+          "word": "Terese",
+          "definition": "Terese (female name)"
+        },
+        {
+          "word": "naiz.",
+          "definition": "I am (izan)\nam"
+        }
+      ],
+      "chips": [
+        "Hello",
+        "I",
+        "am",
+        "Terese"
+      ],
+      "solutions": [
+        [
+          "Hello",
+          "I",
+          "am",
+          "Terese"
+        ]
+      ],
+      "formattedSolution": "Hello I am Terese.",
+      "id": "6540814c246a",
+      "priority": 2,
+      "group": "5eeb23e4e46d"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Ni neska bat naiz.",
+      "meaningInSourceLanguage": "I am a girl.",
+      "id": "4bda20c0e168",
+      "priority": 0,
+      "group": "7f1871c5f24b"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "I",
+          "definition": "ni"
+        },
+        {
+          "word": "am",
+          "definition": "nago (egon)\nnaiz\nnaiz (izan)"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "girl.",
+          "definition": "neska"
+        }
+      ],
+      "chips": [
+        "Ni",
+        "neska",
+        "bat",
+        "naiz"
+      ],
+      "solutions": [
+        [
+          "Ni",
+          "neska",
+          "bat",
+          "naiz"
+        ]
+      ],
+      "formattedSolution": "Ni neska bat naiz.",
+      "id": "f1287f487642",
+      "priority": 2,
+      "group": "7f1871c5f24b"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Ni",
+          "definition": "I\nme"
+        },
+        {
+          "word": "neska",
+          "definition": "a girl\ngirl\nthe girl"
+        },
+        {
+          "word": "bat",
+          "definition": "one"
+        },
+        {
+          "word": "naiz.",
+          "definition": "I am (izan)\nam"
+        }
+      ],
+      "chips": [
+        "I",
+        "am",
+        "a",
+        "girl"
+      ],
+      "solutions": [
+        [
+          "I",
+          "am",
+          "a",
+          "girl"
+        ],
+        [
+          "I",
+          "am",
+          "one",
+          "girl"
+        ]
+      ],
+      "formattedSolution": "I am a girl.",
+      "id": "11ffc7537b72",
+      "priority": 2,
+      "group": "7f1871c5f24b"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Kaixo, Ni mutil bat naiz.",
+      "meaningInSourceLanguage": "Hello, I am a boy.",
+      "id": "97394da39bb9",
+      "priority": 0,
+      "group": "30ce39517923"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Hello,",
+          "definition": "kaixo"
+        },
+        {
+          "word": "I",
+          "definition": "ni"
+        },
+        {
+          "word": "am",
+          "definition": "nago (egon)\nnaiz\nnaiz (izan)"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "boy.",
+          "definition": "mutil\nmutila"
+        }
+      ],
+      "chips": [
+        "Kaixo",
+        "Ni",
+        "mutil",
+        "bat",
+        "naiz"
+      ],
+      "solutions": [
+        [
+          "Kaixo",
+          "Ni",
+          "mutil",
+          "bat",
+          "naiz"
+        ]
+      ],
+      "formattedSolution": "Kaixo, Ni mutil bat naiz.",
+      "id": "0c7ec432d5ce",
+      "priority": 2,
+      "group": "30ce39517923"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Kaixo,",
+          "definition": "hello"
+        },
+        {
+          "word": "Ni",
+          "definition": "I\nme"
+        },
+        {
+          "word": "mutil",
+          "definition": "boy"
+        },
+        {
+          "word": "bat",
+          "definition": "one"
+        },
+        {
+          "word": "naiz.",
+          "definition": "I am (izan)\nam"
+        }
+      ],
+      "chips": [
+        "Hello",
+        "I",
+        "am",
+        "a",
+        "boy"
+      ],
+      "solutions": [
+        [
+          "Hello",
+          "I",
+          "am",
+          "a",
+          "boy"
+        ],
+        [
+          "Hello",
+          "I",
+          "am",
+          "one",
+          "boy"
+        ]
+      ],
+      "formattedSolution": "Hello, I am a boy.",
+      "id": "706e28ff1cb3",
+      "priority": 2,
+      "group": "30ce39517923"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Zu neska bat zara.",
+      "meaningInSourceLanguage": "You are a girl.",
+      "id": "ad24c6d89a79",
+      "priority": 0,
+      "group": "187ce75860e8"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "You",
+          "definition": "zu\nzuek"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "girl.",
+          "definition": "neska"
+        }
+      ],
+      "chips": [
+        "Zu",
+        "neska",
+        "bat",
+        "zara"
+      ],
+      "solutions": [
+        [
+          "Zu",
+          "neska",
+          "bat",
+          "zara"
+        ]
+      ],
+      "formattedSolution": "Zu neska bat zara.",
+      "id": "a558e843f117",
+      "priority": 2,
+      "group": "187ce75860e8"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Zu",
+          "definition": "you"
+        },
+        {
+          "word": "neska",
+          "definition": "a girl\ngirl\nthe girl"
+        },
+        {
+          "word": "bat",
+          "definition": "one"
+        },
+        {
+          "word": "zara.",
+          "definition": "are\nyou are (izan)"
+        }
+      ],
+      "chips": [
+        "You",
+        "are",
+        "a",
+        "girl"
+      ],
+      "solutions": [
+        [
+          "You",
+          "are",
+          "a",
+          "girl"
+        ],
+        [
+          "You",
+          "are",
+          "one",
+          "girl"
+        ]
+      ],
+      "formattedSolution": "You are a girl.",
+      "id": "1e5a585abff0",
+      "priority": 2,
+      "group": "187ce75860e8"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Zu emakume bat zara.",
+      "meaningInSourceLanguage": "You are a woman.",
+      "id": "b1058488b65c",
+      "priority": 0,
+      "group": "439e9cb3d1c9"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "You",
+          "definition": "zu\nzuek"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "woman.",
+          "definition": "emakaume\nemakume\nemakumea"
+        }
+      ],
+      "chips": [
+        "Zu",
+        "emakume",
+        "bat",
+        "zara"
+      ],
+      "solutions": [
+        [
+          "Zu",
+          "emakume",
+          "bat",
+          "zara"
+        ]
+      ],
+      "formattedSolution": "Zu emakume bat zara.",
+      "id": "b18403dd1e82",
+      "priority": 2,
+      "group": "439e9cb3d1c9"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Zu",
+          "definition": "you"
+        },
+        {
+          "word": "emakume",
+          "definition": "woman"
+        },
+        {
+          "word": "bat",
+          "definition": "one"
+        },
+        {
+          "word": "zara.",
+          "definition": "are\nyou are (izan)"
+        }
+      ],
+      "chips": [
+        "You",
+        "are",
+        "a",
+        "woman"
+      ],
+      "solutions": [
+        [
+          "You",
+          "are",
+          "a",
+          "woman"
+        ],
+        [
+          "You",
+          "are",
+          "one",
+          "woman"
+        ]
+      ],
+      "formattedSolution": "You are a woman.",
+      "id": "5d1aaaf3ac1f",
+      "priority": 2,
+      "group": "439e9cb3d1c9"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Zu gizon bat zara.",
+      "meaningInSourceLanguage": "You are a man.",
+      "id": "f6b619be5bbb",
+      "priority": 0,
+      "group": "7caec0c666c5"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "You",
+          "definition": "zu\nzuek"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "man.",
+          "definition": "gizon\ngizona"
+        }
+      ],
+      "chips": [
+        "Zu",
+        "gizon",
+        "bat",
+        "zara"
+      ],
+      "solutions": [
+        [
+          "Zu",
+          "gizon",
+          "bat",
+          "zara"
+        ]
+      ],
+      "formattedSolution": "Zu gizon bat zara.",
+      "id": "03fab488aed4",
+      "priority": 2,
+      "group": "7caec0c666c5"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Zu",
+          "definition": "you"
+        },
+        {
+          "word": "gizon",
+          "definition": "man"
+        },
+        {
+          "word": "bat",
+          "definition": "one"
+        },
+        {
+          "word": "zara.",
+          "definition": "are\nyou are (izan)"
+        }
+      ],
+      "chips": [
+        "You",
+        "are",
+        "a",
+        "man"
+      ],
+      "solutions": [
+        [
+          "You",
+          "are",
+          "a",
+          "man"
+        ],
+        [
+          "You",
+          "are",
+          "one",
+          "man"
+        ]
+      ],
+      "formattedSolution": "You are a man.",
+      "id": "3163e0e7e9d0",
+      "priority": 2,
+      "group": "7caec0c666c5"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Hura Mikel da.",
+      "meaningInSourceLanguage": "He is Mikel.",
+      "id": "d11b83e4d298",
+      "priority": 0,
+      "group": "8bd3a2a5c0a6"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "He",
+          "definition": "hura"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "Mikel.",
+          "definition": "Mikel (male name)\nMikel (name)\nMikel(male name)"
+        }
+      ],
+      "chips": [
+        "Hura",
+        "Mikel",
+        "da"
+      ],
+      "solutions": [
+        [
+          "Hura",
+          "Mikel",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Hura Mikel da.",
+      "id": "3c97d37fb792",
+      "priority": 2,
+      "group": "8bd3a2a5c0a6"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Hura",
+          "definition": "he\nit\nitr\nshe\nthat over there"
+        },
+        {
+          "word": "Mikel",
+          "definition": "Mikel (male name)\nMikel(male name)"
+        },
+        {
+          "word": "da.",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "He",
+        "is",
+        "Mikel"
+      ],
+      "solutions": [
+        [
+          "He",
+          "is",
+          "Mikel"
+        ]
+      ],
+      "formattedSolution": "He is Mikel.",
+      "id": "ed5dbde6d76d",
+      "priority": 2,
+      "group": "8bd3a2a5c0a6"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Aitor mutil bat da.",
+      "meaningInSourceLanguage": "Aitor is a boy.",
+      "id": "b7c816ffee36",
+      "priority": 0,
+      "group": "122a49013cae"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Aitor",
+          "definition": "Aitor (male name)\nAitor (name)"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "boy.",
+          "definition": "mutil\nmutila"
+        }
+      ],
+      "chips": [
+        "Aitor",
+        "mutil",
+        "bat",
+        "da"
+      ],
+      "solutions": [
+        [
+          "Aitor",
+          "mutil",
+          "bat",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Aitor mutil bat da.",
+      "id": "6bbc349023d5",
+      "priority": 2,
+      "group": "122a49013cae"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Aitor",
+          "definition": "Aitor (male name)"
+        },
+        {
+          "word": "mutil",
+          "definition": "boy"
+        },
+        {
+          "word": "bat",
+          "definition": "one"
+        },
+        {
+          "word": "da.",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "Aitor",
+        "is",
+        "a",
+        "boy"
+      ],
+      "solutions": [
+        [
+          "Aitor",
+          "is",
+          "a",
+          "boy"
+        ],
+        [
+          "Aitor",
+          "is",
+          "one",
+          "boy"
+        ]
+      ],
+      "formattedSolution": "Aitor is a boy.",
+      "id": "4a89f8b57f2a",
+      "priority": 2,
+      "group": "122a49013cae"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Miren emakume bat da.",
+      "meaningInSourceLanguage": "Miren is a woman.",
+      "id": "616e658f89e8",
+      "priority": 0,
+      "group": "e8914ed73ee1"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Miren",
+          "definition": "Miren (female name)\nMiren (name)"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "woman.",
+          "definition": "emakaume\nemakume\nemakumea"
+        }
+      ],
+      "chips": [
+        "Miren",
+        "emakume",
+        "bat",
+        "da"
+      ],
+      "solutions": [
+        [
+          "Miren",
+          "emakume",
+          "bat",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Miren emakume bat da.",
+      "id": "eb858393e2ae",
+      "priority": 2,
+      "group": "e8914ed73ee1"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Miren",
+          "definition": "Miren (female name)\nMiren's (female name)"
+        },
+        {
+          "word": "emakume",
+          "definition": "woman"
+        },
+        {
+          "word": "bat",
+          "definition": "one"
+        },
+        {
+          "word": "da.",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "Miren",
+        "is",
+        "a",
+        "woman"
+      ],
+      "solutions": [
+        [
+          "Miren",
+          "is",
+          "a",
+          "woman"
+        ],
+        [
+          "Miren",
+          "is",
+          "one",
+          "woman"
+        ]
+      ],
+      "formattedSolution": "Miren is a woman.",
+      "id": "e7f3a7a4ddda",
+      "priority": 2,
+      "group": "e8914ed73ee1"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "man1.jpg",
+        "man2.jpg",
+        "man3.jpg"
+      ],
+      "formInTargetLanguage": "gizon",
+      "meaningInSourceLanguage": "man",
+      "id": "7fa463373ced",
+      "priority": 0,
+      "group": "6eaf8ab5fb15"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "man1.jpg",
+        "man2.jpg",
+        "man3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "gizon"
+      ],
+      "phrase": [
+        {
+          "word": "man",
+          "definition": "gizon\ngizona"
+        }
+      ],
+      "id": "2b7ac7f4ec77",
+      "priority": 1,
+      "group": "6eaf8ab5fb15"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "woman1.jpg",
+        "woman2.jpg",
+        "woman3.jpg"
+      ],
+      "formInTargetLanguage": "emakume",
+      "meaningInSourceLanguage": "woman",
+      "id": "96f900cd2e34",
+      "priority": 0,
+      "group": "404e4b7da22d"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "woman1.jpg",
+        "woman2.jpg",
+        "woman3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "emakume"
+      ],
+      "phrase": [
+        {
+          "word": "woman",
+          "definition": "emakaume\nemakume\nemakumea"
+        }
+      ],
+      "id": "593792e9b648",
+      "priority": 1,
+      "group": "404e4b7da22d"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "boy.jpg",
+        "boy.jpg",
+        "boy.jpg"
+      ],
+      "formInTargetLanguage": "mutil",
+      "meaningInSourceLanguage": "boy",
+      "id": "95daa2869c81",
+      "priority": 0,
+      "group": "1a225d240444"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "boy.jpg",
+        "boy.jpg",
+        "boy.jpg"
+      ],
+      "formInTargetLanguage": [
+        "mutil"
+      ],
+      "phrase": [
+        {
+          "word": "boy",
+          "definition": "mutil\nmutila"
+        }
+      ],
+      "id": "cb7456f31409",
+      "priority": 1,
+      "group": "1a225d240444"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "girl.jpg",
+        "girl.jpg",
+        "girl.jpg"
+      ],
+      "formInTargetLanguage": "neska",
+      "meaningInSourceLanguage": "girl",
+      "id": "f855ffa04b53",
+      "priority": 0,
+      "group": "302155a9fc59"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "girl.jpg",
+        "girl.jpg",
+        "girl.jpg"
+      ],
+      "formInTargetLanguage": [
+        "neska"
+      ],
+      "phrase": [
+        {
+          "word": "girl",
+          "definition": "neska"
+        }
+      ],
+      "id": "ebe5dacb7332",
+      "priority": 1,
+      "group": "302155a9fc59"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "iam.jpg",
+        "iam.jpg",
+        "iam.jpg"
+      ],
+      "formInTargetLanguage": "ni naiz",
+      "meaningInSourceLanguage": "I am",
+      "id": "a4de94a078c9",
+      "priority": 0,
+      "group": "7bc82c713f8e"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "iam.jpg",
+        "iam.jpg",
+        "iam.jpg"
+      ],
+      "formInTargetLanguage": [
+        "ni naiz",
+        "naiz"
+      ],
+      "phrase": [
+        {
+          "word": "I",
+          "definition": "ni"
+        },
+        {
+          "word": "am",
+          "definition": "nago (egon)\nnaiz\nnaiz (izan)"
+        }
+      ],
+      "id": "90569bdbadaa",
+      "priority": 1,
+      "group": "7bc82c713f8e"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "youare.jpg",
+        "youare.jpg",
+        "youare.jpg"
+      ],
+      "formInTargetLanguage": "zu zara",
+      "meaningInSourceLanguage": "you are",
+      "id": "dacb063f32db",
+      "priority": 0,
+      "group": "620fc8b4cb9e"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "youare.jpg",
+        "youare.jpg",
+        "youare.jpg"
+      ],
+      "formInTargetLanguage": [
+        "zu zara",
+        "zara"
+      ],
+      "phrase": [
+        {
+          "word": "you",
+          "definition": "zu\nzuek"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        }
+      ],
+      "id": "64f86994d47a",
+      "priority": 1,
+      "group": "620fc8b4cb9e"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "heis.jpg",
+        "heis.jpg",
+        "heis.jpg"
+      ],
+      "formInTargetLanguage": "hura da",
+      "meaningInSourceLanguage": "he is",
+      "id": "98cae0f4c785",
+      "priority": 0,
+      "group": "ac800c00b5ad"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "heis.jpg",
+        "heis.jpg",
+        "heis.jpg"
+      ],
+      "formInTargetLanguage": [
+        "hura da",
+        "da"
+      ],
+      "phrase": [
+        {
+          "word": "he",
+          "definition": "hura"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        }
+      ],
+      "id": "8bdf64ad48ee",
+      "priority": 1,
+      "group": "ac800c00b5ad"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "one.jpg",
+        "one.jpg",
+        "one.jpg"
+      ],
+      "formInTargetLanguage": "bat",
+      "meaningInSourceLanguage": "one",
+      "id": "87e195b07285",
+      "priority": 0,
+      "group": "eb176eb23d33"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "one.jpg",
+        "one.jpg",
+        "one.jpg"
+      ],
+      "formInTargetLanguage": [
+        "bat"
+      ],
+      "phrase": [
+        {
+          "word": "one",
+          "definition": "bat"
+        }
+      ],
+      "id": "a49428e4b29d",
+      "priority": 1,
+      "group": "eb176eb23d33"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "hello.jpg",
+        "hello.jpg",
+        "hello.jpg"
+      ],
+      "formInTargetLanguage": "kaixo",
+      "meaningInSourceLanguage": "hello",
+      "id": "062f0a5d1a28",
+      "priority": 0,
+      "group": "b031a6694ded"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "hello.jpg",
+        "hello.jpg",
+        "hello.jpg"
+      ],
+      "formInTargetLanguage": [
+        "kaixo"
+      ],
+      "phrase": [
+        {
+          "word": "hello",
+          "definition": "kaixo"
+        }
+      ],
+      "id": "f4af97173721",
+      "priority": 1,
+      "group": "b031a6694ded"
+    }
+  ]
+}
