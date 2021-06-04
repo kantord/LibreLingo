@@ -11,6 +11,7 @@ from librelingo_types import (
     Phrase,
     Skill,
     Word,
+    Settings,
 )
 import markdown
 from yaml import safe_load
@@ -329,6 +330,16 @@ def _convert_license(raw_license):
         link=raw_license["Link"],
     )
 
+def _convert_settings(data):
+    if "Settings" not in data:
+        return Settings()
+
+    raw_settings = data["Settings"]
+
+    return Settings(
+        audio_files_enabled="disable audio files" not in raw_settings,
+    )
+
 
 def load_course(path):
     """
@@ -344,6 +355,7 @@ def load_course(path):
         special_characters=course["Special characters"],
         dictionary=[],
         modules=[],
+        settings=_convert_settings(data)
     )
     modules = _load_modules(path, raw_modules, dumb_course)
 

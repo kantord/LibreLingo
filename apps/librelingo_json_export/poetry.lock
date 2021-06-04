@@ -199,7 +199,7 @@ librelingo-types = ">=1.0.0,<2.0.0"
 
 [[package]]
 name = "librelingo-yaml-loader"
-version = "1.1.1"
+version = "1.2.0"
 description = "Load YAML-based LibreLingo courses in your Python project."
 category = "main"
 optional = false
@@ -405,7 +405,7 @@ watchdog = ">=1.0.0,<2.0.0"
 
 [[package]]
 name = "pyfakefs"
-version = "4.4.0"
+version = "4.5.0"
 description = "pyfakefs implements a fake file system that mocks the Python file system modules."
 category = "main"
 optional = false
@@ -707,8 +707,8 @@ librelingo-utils = [
     {file = "librelingo_utils-2.0.0.tar.gz", hash = "sha256:932e60546f38187b2dcf05a4b43d9b5c71ef5ccd3f9e7962d71445ba98fe346c"},
 ]
 librelingo-yaml-loader = [
-    {file = "librelingo_yaml_loader-1.1.1-py3-none-any.whl", hash = "sha256:f2766f8df317976e70469b1a956918b80e5701648b46197ae2a3d7c8e7859e0b"},
-    {file = "librelingo_yaml_loader-1.1.1.tar.gz", hash = "sha256:758250bcb424bb21070cc27cd3be55e669dbbf7b9b44e28a1c528f5f704c8983"},
+    {file = "librelingo_yaml_loader-1.2.0-py3-none-any.whl", hash = "sha256:a8594fb14dec281e91d693d200667a5fd25f548b5e2debebea19b91e5bf5b82a"},
+    {file = "librelingo_yaml_loader-1.2.0.tar.gz", hash = "sha256:5c902fe7a3636ac47f43767dc2a03ab499696bc625c201e9cd003856f8be3d78"},
 ]
 markdown = [
     {file = "Markdown-3.3.4-py3-none-any.whl", hash = "sha256:96c3ba1261de2f7547b46a00ea8463832c921d3f9d6aba3f255a6f71386db20c"},
@@ -770,8 +770,8 @@ pydoc-markdown = [
     {file = "pydoc_markdown-3.13.0-py3-none-any.whl", hash = "sha256:5b547c09862ebd64511417dc318de8a64302284389d5adf8ce130a5ca4742fe6"},
 ]
 pyfakefs = [
-    {file = "pyfakefs-4.4.0-py3-none-any.whl", hash = "sha256:1ac3b2845dabe69af56c20691b9347914581195ccdde352535fb7d4ff0055c19"},
-    {file = "pyfakefs-4.4.0.tar.gz", hash = "sha256:082d863e0e2a74351f697da404e329a91e18e5055942e59d1b836e8459b2c94c"},
+    {file = "pyfakefs-4.5.0-py3-none-any.whl", hash = "sha256:46234fa2dbce8ffb693ec906638449342afe83e45fa832932351d5050048159b"},
+    {file = "pyfakefs-4.5.0.tar.gz", hash = "sha256:58b017b3437bbe97803a23755876c6d6aeb5aea37e52cec15e5d86b59c4c7295"},
 ]
 pyparsing = [
     {file = "pyparsing-2.4.7-py2.py3-none-any.whl", hash = "sha256:ef9d7589ef3c200abe66653d3f1ab1033c3c419ae9b9bdb1240a85b024efc88b"},
