@@ -1,0 +1,2382 @@
+{
+  "id": "3e8e332663cb",
+  "levels": 7,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Kaixo. Nor zara zu?",
+      "meaningInSourceLanguage": "Hello. Who are you?",
+      "id": "ce6272d57129",
+      "priority": 0,
+      "group": "db6d74080573"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Hello.",
+          "definition": "kaixo"
+        },
+        {
+          "word": "Who",
+          "definition": "nor"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "you?",
+          "definition": "zu\nzuek"
+        }
+      ],
+      "chips": [
+        "Kaixo",
+        "Nor",
+        "zara",
+        "zu"
+      ],
+      "solutions": [
+        [
+          "Kaixo",
+          "Nor",
+          "zara",
+          "zu"
+        ]
+      ],
+      "formattedSolution": "Kaixo. Nor zara zu?",
+      "id": "e225aafea70f",
+      "priority": 2,
+      "group": "db6d74080573"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Kaixo.",
+          "definition": "hello"
+        },
+        {
+          "word": "Nor",
+          "definition": "who"
+        },
+        {
+          "word": "zara",
+          "definition": "are\nyou are (izan)"
+        },
+        {
+          "word": "zu?",
+          "definition": "you"
+        }
+      ],
+      "chips": [
+        "Hello",
+        "Who",
+        "are",
+        "you"
+      ],
+      "solutions": [
+        [
+          "Hello",
+          "Who",
+          "are",
+          "you"
+        ],
+        [
+          "Hi",
+          "Who",
+          "are",
+          "you"
+        ]
+      ],
+      "formattedSolution": "Hello. Who are you?",
+      "id": "66df8ac0102a",
+      "priority": 2,
+      "group": "db6d74080573"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Zer zara zu?",
+      "meaningInSourceLanguage": "What are you?",
+      "id": "559285509516",
+      "priority": 0,
+      "group": "f72c5d779a5e"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "What",
+          "definition": "zer"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "you?",
+          "definition": "zu\nzuek"
+        }
+      ],
+      "chips": [
+        "Zer",
+        "zara",
+        "zu"
+      ],
+      "solutions": [
+        [
+          "Zer",
+          "zara",
+          "zu"
+        ]
+      ],
+      "formattedSolution": "Zer zara zu?",
+      "id": "eb79f9485139",
+      "priority": 2,
+      "group": "f72c5d779a5e"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Zer",
+          "definition": "what"
+        },
+        {
+          "word": "zara",
+          "definition": "are\nyou are (izan)"
+        },
+        {
+          "word": "zu?",
+          "definition": "you"
+        }
+      ],
+      "chips": [
+        "What",
+        "are",
+        "you"
+      ],
+      "solutions": [
+        [
+          "What",
+          "are",
+          "you"
+        ]
+      ],
+      "formattedSolution": "What are you?",
+      "id": "3f488a219dee",
+      "priority": 2,
+      "group": "f72c5d779a5e"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Zu al zara irakaslea?",
+      "meaningInSourceLanguage": "Are you a teacher?",
+      "id": "d44a0a2fb50a",
+      "priority": 0,
+      "group": "b6bf2da734c7"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "you",
+          "definition": "zu\nzuek"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "teacher?",
+          "definition": "irakasle\nirakaslea"
+        }
+      ],
+      "chips": [
+        "Zu",
+        "al",
+        "zara",
+        "irakaslea"
+      ],
+      "solutions": [
+        [
+          "Zu",
+          "al",
+          "zara",
+          "irakaslea"
+        ]
+      ],
+      "formattedSolution": "Zu al zara irakaslea?",
+      "id": "2decfe5e45de",
+      "priority": 2,
+      "group": "b6bf2da734c7"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Zu",
+          "definition": "you"
+        },
+        {
+          "word": "al",
+          "definition": "question_word"
+        },
+        {
+          "word": "zara",
+          "definition": "are\nyou are (izan)"
+        },
+        {
+          "word": "irakaslea?",
+          "definition": "a teacher\nteacher\nthe teacher"
+        }
+      ],
+      "chips": [
+        "Are",
+        "you",
+        "a",
+        "teacher"
+      ],
+      "solutions": [
+        [
+          "Are",
+          "you",
+          "a",
+          "teacher"
+        ]
+      ],
+      "formattedSolution": "Are you a teacher?",
+      "id": "373fb46f21d8",
+      "priority": 2,
+      "group": "b6bf2da734c7"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Nor da hura?",
+      "meaningInSourceLanguage": "Who is he?",
+      "id": "c4d4c0db5f1f",
+      "priority": 0,
+      "group": "f5e46a9a2a2e"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Who",
+          "definition": "nor"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "he?",
+          "definition": "hura"
+        }
+      ],
+      "chips": [
+        "Nor",
+        "da",
+        "hura"
+      ],
+      "solutions": [
+        [
+          "Nor",
+          "da",
+          "hura"
+        ]
+      ],
+      "formattedSolution": "Nor da hura?",
+      "id": "56d62c9348c8",
+      "priority": 2,
+      "group": "f5e46a9a2a2e"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Nor",
+          "definition": "who"
+        },
+        {
+          "word": "da",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        },
+        {
+          "word": "hura?",
+          "definition": "he\nit\nitr\nshe\nthat over there"
+        }
+      ],
+      "chips": [
+        "Who",
+        "is",
+        "he"
+      ],
+      "solutions": [
+        [
+          "Who",
+          "is",
+          "he"
+        ],
+        [
+          "Who",
+          "is",
+          "she"
+        ]
+      ],
+      "formattedSolution": "Who is he?",
+      "id": "deded8e97e8a",
+      "priority": 2,
+      "group": "f5e46a9a2a2e"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Zer da hura?",
+      "meaningInSourceLanguage": "What is he?",
+      "id": "7c06d949bab2",
+      "priority": 0,
+      "group": "a0ae72eaecb4"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "What",
+          "definition": "zer"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "he?",
+          "definition": "hura"
+        }
+      ],
+      "chips": [
+        "Zer",
+        "da",
+        "hura"
+      ],
+      "solutions": [
+        [
+          "Zer",
+          "da",
+          "hura"
+        ]
+      ],
+      "formattedSolution": "Zer da hura?",
+      "id": "c94d86ec4a1a",
+      "priority": 2,
+      "group": "a0ae72eaecb4"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Zer",
+          "definition": "what"
+        },
+        {
+          "word": "da",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        },
+        {
+          "word": "hura?",
+          "definition": "he\nit\nitr\nshe\nthat over there"
+        }
+      ],
+      "chips": [
+        "What",
+        "is",
+        "he"
+      ],
+      "solutions": [
+        [
+          "What",
+          "is",
+          "he"
+        ],
+        [
+          "What",
+          "is",
+          "she"
+        ],
+        [
+          "What",
+          "is",
+          "it"
+        ]
+      ],
+      "formattedSolution": "What is he?",
+      "id": "6f93c038a976",
+      "priority": 2,
+      "group": "a0ae72eaecb4"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Hura neska da?",
+      "meaningInSourceLanguage": "Is she a girl?",
+      "id": "deaf32c233c7",
+      "priority": 0,
+      "group": "19975421eeff"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "she",
+          "definition": "hura"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "girl?",
+          "definition": "neska"
+        }
+      ],
+      "chips": [
+        "Hura",
+        "neska",
+        "da"
+      ],
+      "solutions": [
+        [
+          "Hura",
+          "neska",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Hura neska da?",
+      "id": "9b3ca73cabed",
+      "priority": 2,
+      "group": "19975421eeff"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Hura",
+          "definition": "he\nit\nitr\nshe\nthat over there"
+        },
+        {
+          "word": "neska",
+          "definition": "a girl\ngirl\nthe girl"
+        },
+        {
+          "word": "da?",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "Is",
+        "she",
+        "a",
+        "girl"
+      ],
+      "solutions": [
+        [
+          "Is",
+          "she",
+          "a",
+          "girl"
+        ],
+        [
+          "Is",
+          "she",
+          "the",
+          "girl"
+        ]
+      ],
+      "formattedSolution": "Is she a girl?",
+      "id": "504f7df9cb37",
+      "priority": 2,
+      "group": "19975421eeff"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Hura mutila da?",
+      "meaningInSourceLanguage": "Is he a boy?",
+      "id": "88ace3224ad1",
+      "priority": 0,
+      "group": "85df5b9d3053"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "he",
+          "definition": "hura"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "boy?",
+          "definition": "mutil\nmutila"
+        }
+      ],
+      "chips": [
+        "Hura",
+        "mutila",
+        "da"
+      ],
+      "solutions": [
+        [
+          "Hura",
+          "mutila",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Hura mutila da?",
+      "id": "3fad99ed52a8",
+      "priority": 2,
+      "group": "85df5b9d3053"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Hura",
+          "definition": "he\nit\nitr\nshe\nthat over there"
+        },
+        {
+          "word": "mutila",
+          "definition": "a boy\nboy\nthe boy"
+        },
+        {
+          "word": "da?",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "Is",
+        "he",
+        "a",
+        "boy"
+      ],
+      "solutions": [
+        [
+          "Is",
+          "he",
+          "a",
+          "boy"
+        ],
+        [
+          "Is",
+          "he",
+          "the",
+          "boy"
+        ]
+      ],
+      "formattedSolution": "Is he a boy?",
+      "id": "3722413f4fa5",
+      "priority": 2,
+      "group": "85df5b9d3053"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Hura al autobusa da?",
+      "meaningInSourceLanguage": "Is it a bus?",
+      "id": "45c573f08123",
+      "priority": 0,
+      "group": "7dac0caf8983"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "it",
+          "definition": "hura"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "bus?",
+          "definition": "austobusa\nautobus\nautobusa"
+        }
+      ],
+      "chips": [
+        "Hura",
+        "al",
+        "autobusa",
+        "da"
+      ],
+      "solutions": [
+        [
+          "Hura",
+          "al",
+          "autobusa",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Hura al autobusa da?",
+      "id": "c5c20c6b5d28",
+      "priority": 2,
+      "group": "7dac0caf8983"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Hura",
+          "definition": "he\nit\nitr\nshe\nthat over there"
+        },
+        {
+          "word": "al",
+          "definition": "question_word"
+        },
+        {
+          "word": "autobusa",
+          "definition": "a bus\nbus"
+        },
+        {
+          "word": "da?",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "Is",
+        "it",
+        "a",
+        "bus"
+      ],
+      "solutions": [
+        [
+          "Is",
+          "it",
+          "a",
+          "bus"
+        ],
+        [
+          "Is",
+          "it",
+          "the",
+          "bus"
+        ]
+      ],
+      "formattedSolution": "Is it a bus?",
+      "id": "890b0a49e2b1",
+      "priority": 2,
+      "group": "7dac0caf8983"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Kotxe al bat ere da.",
+      "meaningInSourceLanguage": "Is it also a car?",
+      "id": "fdc0d05620f6",
+      "priority": 0,
+      "group": "397c0819a5d5"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "it",
+          "definition": "hura"
+        },
+        {
+          "word": "also",
+          "definition": "ere"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "car?",
+          "definition": "kotxe\nkotxea"
+        }
+      ],
+      "chips": [
+        "Kotxe",
+        "al",
+        "bat",
+        "ere",
+        "da"
+      ],
+      "solutions": [
+        [
+          "Kotxe",
+          "al",
+          "bat",
+          "ere",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Kotxe al bat ere da.",
+      "id": "34b3ff7c8046",
+      "priority": 2,
+      "group": "397c0819a5d5"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Kotxe",
+          "definition": "car"
+        },
+        {
+          "word": "al",
+          "definition": "question_word"
+        },
+        {
+          "word": "bat",
+          "definition": "one"
+        },
+        {
+          "word": "ere",
+          "definition": "also"
+        },
+        {
+          "word": "da.",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "Is",
+        "it",
+        "also",
+        "a",
+        "car"
+      ],
+      "solutions": [
+        [
+          "Is",
+          "it",
+          "also",
+          "a",
+          "car"
+        ]
+      ],
+      "formattedSolution": "Is it also a car?",
+      "id": "b7ea7b87fbf3",
+      "priority": 2,
+      "group": "397c0819a5d5"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Hura autobusa edo kotxea da?",
+      "meaningInSourceLanguage": "Is it a bus or a car?",
+      "id": "1bf8b1afe9b7",
+      "priority": 0,
+      "group": "e6aa490f85d2"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "it",
+          "definition": "hura"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "bus",
+          "definition": "austobusa\nautobus\nautobusa"
+        },
+        {
+          "word": "or",
+          "definition": "edo"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "car?",
+          "definition": "kotxe\nkotxea"
+        }
+      ],
+      "chips": [
+        "Hura",
+        "autobusa",
+        "edo",
+        "kotxea",
+        "da"
+      ],
+      "solutions": [
+        [
+          "Hura",
+          "autobusa",
+          "edo",
+          "kotxea",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Hura autobusa edo kotxea da?",
+      "id": "683e5d08481e",
+      "priority": 2,
+      "group": "e6aa490f85d2"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Hura",
+          "definition": "he\nit\nitr\nshe\nthat over there"
+        },
+        {
+          "word": "autobusa",
+          "definition": "a bus\nbus"
+        },
+        {
+          "word": "edo",
+          "definition": "or"
+        },
+        {
+          "word": "kotxea",
+          "definition": "a car\ncar"
+        },
+        {
+          "word": "da?",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "Is",
+        "it",
+        "a",
+        "bus",
+        "or",
+        "a",
+        "car"
+      ],
+      "solutions": [
+        [
+          "Is",
+          "it",
+          "a",
+          "bus",
+          "or",
+          "a",
+          "car"
+        ]
+      ],
+      "formattedSolution": "Is it a bus or a car?",
+      "id": "f20777839587",
+      "priority": 2,
+      "group": "e6aa490f85d2"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Nortzuk gara gu?",
+      "meaningInSourceLanguage": "Who are we?",
+      "id": "d3c4d5a966e6",
+      "priority": 0,
+      "group": "8e1c11c6f34b"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Who",
+          "definition": "nor"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "we?",
+          "definition": "gu"
+        }
+      ],
+      "chips": [
+        "Nortzuk",
+        "gara",
+        "gu"
+      ],
+      "solutions": [
+        [
+          "Nortzuk",
+          "gara",
+          "gu"
+        ]
+      ],
+      "formattedSolution": "Nortzuk gara gu?",
+      "id": "746433c87a18",
+      "priority": 2,
+      "group": "8e1c11c6f34b"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Nortzuk",
+          "definition": "who(plural)"
+        },
+        {
+          "word": "gara",
+          "definition": "are\nare (izan)"
+        },
+        {
+          "word": "gu?",
+          "definition": "we"
+        }
+      ],
+      "chips": [
+        "Who",
+        "are",
+        "we"
+      ],
+      "solutions": [
+        [
+          "Who",
+          "are",
+          "we"
+        ]
+      ],
+      "formattedSolution": "Who are we?",
+      "id": "9bef59ea58fe",
+      "priority": 2,
+      "group": "8e1c11c6f34b"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Zer gara gu?",
+      "meaningInSourceLanguage": "What are we?",
+      "id": "38fc18696a3b",
+      "priority": 0,
+      "group": "6cb55b50f7d7"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "What",
+          "definition": "zer"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "we?",
+          "definition": "gu"
+        }
+      ],
+      "chips": [
+        "Zer",
+        "gara",
+        "gu"
+      ],
+      "solutions": [
+        [
+          "Zer",
+          "gara",
+          "gu"
+        ]
+      ],
+      "formattedSolution": "Zer gara gu?",
+      "id": "3115002aa40a",
+      "priority": 2,
+      "group": "6cb55b50f7d7"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Zer",
+          "definition": "what"
+        },
+        {
+          "word": "gara",
+          "definition": "are\nare (izan)"
+        },
+        {
+          "word": "gu?",
+          "definition": "we"
+        }
+      ],
+      "chips": [
+        "What",
+        "are",
+        "we"
+      ],
+      "solutions": [
+        [
+          "What",
+          "are",
+          "we"
+        ]
+      ],
+      "formattedSolution": "What are we?",
+      "id": "5e8bf5a84c3c",
+      "priority": 2,
+      "group": "6cb55b50f7d7"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Nortzuk zarete zuek?",
+      "meaningInSourceLanguage": "Who are you(plural)?",
+      "id": "921875907630",
+      "priority": 0,
+      "group": "1acba3fc94fb"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Who",
+          "definition": "nor"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "you(plural)?",
+          "definition": "zuek"
+        }
+      ],
+      "chips": [
+        "Nortzuk",
+        "zarete",
+        "zuek"
+      ],
+      "solutions": [
+        [
+          "Nortzuk",
+          "zarete",
+          "zuek"
+        ]
+      ],
+      "formattedSolution": "Nortzuk zarete zuek?",
+      "id": "3162883e8406",
+      "priority": 2,
+      "group": "1acba3fc94fb"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Nortzuk",
+          "definition": "who(plural)"
+        },
+        {
+          "word": "zarete",
+          "definition": "are\ntheir"
+        },
+        {
+          "word": "zuek?",
+          "definition": "You'll\nyou\nyou'll\nyou(plural)\nyour (plural)"
+        }
+      ],
+      "chips": [
+        "Who",
+        "are",
+        "you(plural"
+      ],
+      "solutions": [
+        [
+          "Who",
+          "are",
+          "you(plural"
+        ],
+        [
+          "Who",
+          "are",
+          "you"
+        ],
+        [
+          "Who",
+          "are",
+          "you'll"
+        ]
+      ],
+      "formattedSolution": "Who are you(plural)?",
+      "id": "4f3db610a1be",
+      "priority": 2,
+      "group": "1acba3fc94fb"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Nortzuk dira haiek?",
+      "meaningInSourceLanguage": "Who are they?",
+      "id": "62ad74349a4c",
+      "priority": 0,
+      "group": "9d5f3def7476"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Who",
+          "definition": "nor"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "they?",
+          "definition": "haiek"
+        }
+      ],
+      "chips": [
+        "Nortzuk",
+        "dira",
+        "haiek"
+      ],
+      "solutions": [
+        [
+          "Nortzuk",
+          "dira",
+          "haiek"
+        ]
+      ],
+      "formattedSolution": "Nortzuk dira haiek?",
+      "id": "859fa3c3ad56",
+      "priority": 2,
+      "group": "9d5f3def7476"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Nortzuk",
+          "definition": "who(plural)"
+        },
+        {
+          "word": "dira",
+          "definition": "are\nare (izan)"
+        },
+        {
+          "word": "haiek?",
+          "definition": "they\nthose over there, plural of hura"
+        }
+      ],
+      "chips": [
+        "Who",
+        "are",
+        "they"
+      ],
+      "solutions": [
+        [
+          "Who",
+          "are",
+          "they"
+        ]
+      ],
+      "formattedSolution": "Who are they?",
+      "id": "fa191a02b01a",
+      "priority": 2,
+      "group": "9d5f3def7476"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Zer dira haiek?",
+      "meaningInSourceLanguage": "What are they?",
+      "id": "c0e828d97399",
+      "priority": 0,
+      "group": "a869aa2b0118"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "What",
+          "definition": "zer"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "they?",
+          "definition": "haiek"
+        }
+      ],
+      "chips": [
+        "Zer",
+        "dira",
+        "haiek"
+      ],
+      "solutions": [
+        [
+          "Zer",
+          "dira",
+          "haiek"
+        ]
+      ],
+      "formattedSolution": "Zer dira haiek?",
+      "id": "7ef53245a615",
+      "priority": 2,
+      "group": "a869aa2b0118"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Zer",
+          "definition": "what"
+        },
+        {
+          "word": "dira",
+          "definition": "are\nare (izan)"
+        },
+        {
+          "word": "haiek?",
+          "definition": "they\nthose over there, plural of hura"
+        }
+      ],
+      "chips": [
+        "What",
+        "are",
+        "they"
+      ],
+      "solutions": [
+        [
+          "What",
+          "are",
+          "they"
+        ]
+      ],
+      "formattedSolution": "What are they?",
+      "id": "a874dfb87dbb",
+      "priority": 2,
+      "group": "a869aa2b0118"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Haiek al autobusak dira?",
+      "meaningInSourceLanguage": "Are they buses?",
+      "id": "05d80061b119",
+      "priority": 0,
+      "group": "efc95f043b77"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "they",
+          "definition": "haiek"
+        },
+        {
+          "word": "buses?",
+          "definition": "autobusak"
+        }
+      ],
+      "chips": [
+        "Haiek",
+        "al",
+        "autobusak",
+        "dira"
+      ],
+      "solutions": [
+        [
+          "Haiek",
+          "al",
+          "autobusak",
+          "dira"
+        ]
+      ],
+      "formattedSolution": "Haiek al autobusak dira?",
+      "id": "b24d7e8d5ab6",
+      "priority": 2,
+      "group": "efc95f043b77"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Haiek",
+          "definition": "they\nthose over there, plural of hura"
+        },
+        {
+          "word": "al",
+          "definition": "question_word"
+        },
+        {
+          "word": "autobusak",
+          "definition": "buses"
+        },
+        {
+          "word": "dira?",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "Are",
+        "they",
+        "buses"
+      ],
+      "solutions": [
+        [
+          "Are",
+          "they",
+          "buses"
+        ]
+      ],
+      "formattedSolution": "Are they buses?",
+      "id": "ee41113087db",
+      "priority": 2,
+      "group": "efc95f043b77"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Haiek autobusak edo kotxeak dira?",
+      "meaningInSourceLanguage": "Are they buses or cars?",
+      "id": "58dea3b028bf",
+      "priority": 0,
+      "group": "c3e71083897b"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "they",
+          "definition": "haiek"
+        },
+        {
+          "word": "buses",
+          "definition": "autobusak"
+        },
+        {
+          "word": "or",
+          "definition": "edo"
+        },
+        {
+          "word": "cars?",
+          "definition": "kotxeak"
+        }
+      ],
+      "chips": [
+        "Haiek",
+        "autobusak",
+        "edo",
+        "kotxeak",
+        "dira"
+      ],
+      "solutions": [
+        [
+          "Haiek",
+          "autobusak",
+          "edo",
+          "kotxeak",
+          "dira"
+        ]
+      ],
+      "formattedSolution": "Haiek autobusak edo kotxeak dira?",
+      "id": "6d7902930638",
+      "priority": 2,
+      "group": "c3e71083897b"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Haiek",
+          "definition": "they\nthose over there, plural of hura"
+        },
+        {
+          "word": "autobusak",
+          "definition": "buses"
+        },
+        {
+          "word": "edo",
+          "definition": "or"
+        },
+        {
+          "word": "kotxeak",
+          "definition": "cars"
+        },
+        {
+          "word": "dira?",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "Are",
+        "they",
+        "buses",
+        "or",
+        "cars"
+      ],
+      "solutions": [
+        [
+          "Are",
+          "they",
+          "buses",
+          "or",
+          "cars"
+        ]
+      ],
+      "formattedSolution": "Are they buses or cars?",
+      "id": "dc26db405a51",
+      "priority": 2,
+      "group": "c3e71083897b"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Zer zarete zuek?",
+      "meaningInSourceLanguage": "What are you(plural)?",
+      "id": "86eeda25d747",
+      "priority": 0,
+      "group": "d41432db14a8"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "What",
+          "definition": "zer"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "you(plural)?",
+          "definition": "zuek"
+        }
+      ],
+      "chips": [
+        "Zer",
+        "zarete",
+        "zuek"
+      ],
+      "solutions": [
+        [
+          "Zer",
+          "zarete",
+          "zuek"
+        ]
+      ],
+      "formattedSolution": "Zer zarete zuek?",
+      "id": "8b63f1c201aa",
+      "priority": 2,
+      "group": "d41432db14a8"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Zer",
+          "definition": "what"
+        },
+        {
+          "word": "zarete",
+          "definition": "are\ntheir"
+        },
+        {
+          "word": "zuek?",
+          "definition": "You'll\nyou\nyou'll\nyou(plural)\nyour (plural)"
+        }
+      ],
+      "chips": [
+        "What",
+        "are",
+        "you(plural"
+      ],
+      "solutions": [
+        [
+          "What",
+          "are",
+          "you(plural"
+        ],
+        [
+          "What",
+          "are",
+          "you"
+        ],
+        [
+          "What",
+          "are",
+          "you'll"
+        ]
+      ],
+      "formattedSolution": "What are you(plural)?",
+      "id": "60f677ae0f6b",
+      "priority": 2,
+      "group": "d41432db14a8"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Zuek al zarete irakasleak?",
+      "meaningInSourceLanguage": "Are you(plural) teachers?",
+      "id": "d06ad018cd92",
+      "priority": 0,
+      "group": "9d6d252cb061"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "you(plural)",
+          "definition": "zuek"
+        },
+        {
+          "word": "teachers?",
+          "definition": "irakasleak"
+        }
+      ],
+      "chips": [
+        "Zuek",
+        "al",
+        "zarete",
+        "irakasleak"
+      ],
+      "solutions": [
+        [
+          "Zuek",
+          "al",
+          "zarete",
+          "irakasleak"
+        ]
+      ],
+      "formattedSolution": "Zuek al zarete irakasleak?",
+      "id": "fae926ed149a",
+      "priority": 2,
+      "group": "9d6d252cb061"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Zuek",
+          "definition": "You'll\nyou\nyou'll\nyou(plural)\nyour (plural)"
+        },
+        {
+          "word": "al",
+          "definition": "question_word"
+        },
+        {
+          "word": "zarete",
+          "definition": "are\ntheir"
+        },
+        {
+          "word": "irakasleak?",
+          "definition": "teachers"
+        }
+      ],
+      "chips": [
+        "Are",
+        "you(plural",
+        "teachers"
+      ],
+      "solutions": [
+        [
+          "Are",
+          "you(plural",
+          "teachers"
+        ],
+        [
+          "Are",
+          "you",
+          "teachers"
+        ],
+        [
+          "Are",
+          "you'll",
+          "teachers"
+        ]
+      ],
+      "formattedSolution": "Are you(plural) teachers?",
+      "id": "90899411d77b",
+      "priority": 2,
+      "group": "9d6d252cb061"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Nortzuk irakasleak dira?",
+      "meaningInSourceLanguage": "Who are the teachers?",
+      "id": "66cc24fb400f",
+      "priority": 0,
+      "group": "893636695262"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Who",
+          "definition": "nor"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "the",
+          "definition": "-a"
+        },
+        {
+          "word": "teachers?",
+          "definition": "irakasleak"
+        }
+      ],
+      "chips": [
+        "Nortzuk",
+        "irakasleak",
+        "dira"
+      ],
+      "solutions": [
+        [
+          "Nortzuk",
+          "irakasleak",
+          "dira"
+        ]
+      ],
+      "formattedSolution": "Nortzuk irakasleak dira?",
+      "id": "84daa4842799",
+      "priority": 2,
+      "group": "893636695262"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Nortzuk",
+          "definition": "who(plural)"
+        },
+        {
+          "word": "irakasleak",
+          "definition": "teachers"
+        },
+        {
+          "word": "dira?",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "Who",
+        "are",
+        "the",
+        "teachers"
+      ],
+      "solutions": [
+        [
+          "Who",
+          "are",
+          "the",
+          "teachers"
+        ]
+      ],
+      "formattedSolution": "Who are the teachers?",
+      "id": "70495a62b0c1",
+      "priority": 2,
+      "group": "893636695262"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Nortzuk emakumeak dira?",
+      "meaningInSourceLanguage": "Who are the women?",
+      "id": "4e1bc9fe8269",
+      "priority": 0,
+      "group": "bca3422b5200"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Who",
+          "definition": "nor"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "the",
+          "definition": "-a"
+        },
+        {
+          "word": "women?",
+          "definition": "emakumeak"
+        }
+      ],
+      "chips": [
+        "Nortzuk",
+        "emakumeak",
+        "dira"
+      ],
+      "solutions": [
+        [
+          "Nortzuk",
+          "emakumeak",
+          "dira"
+        ]
+      ],
+      "formattedSolution": "Nortzuk emakumeak dira?",
+      "id": "d4a9e154757c",
+      "priority": 2,
+      "group": "bca3422b5200"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Nortzuk",
+          "definition": "who(plural)"
+        },
+        {
+          "word": "emakumeak",
+          "definition": "women"
+        },
+        {
+          "word": "dira?",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "Who",
+        "are",
+        "the",
+        "women"
+      ],
+      "solutions": [
+        [
+          "Who",
+          "are",
+          "the",
+          "women"
+        ]
+      ],
+      "formattedSolution": "Who are the women?",
+      "id": "1d7c89c11ca0",
+      "priority": 2,
+      "group": "bca3422b5200"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Nortzuk gizonak dira?",
+      "meaningInSourceLanguage": "Who are the men?",
+      "id": "2900bbcc386e",
+      "priority": 0,
+      "group": "43901de30b9d"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Who",
+          "definition": "nor"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "the",
+          "definition": "-a"
+        },
+        {
+          "word": "men?",
+          "definition": "gizonak"
+        }
+      ],
+      "chips": [
+        "Nortzuk",
+        "gizonak",
+        "dira"
+      ],
+      "solutions": [
+        [
+          "Nortzuk",
+          "gizonak",
+          "dira"
+        ]
+      ],
+      "formattedSolution": "Nortzuk gizonak dira?",
+      "id": "e509ba27b0de",
+      "priority": 2,
+      "group": "43901de30b9d"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Nortzuk",
+          "definition": "who(plural)"
+        },
+        {
+          "word": "gizonak",
+          "definition": "men"
+        },
+        {
+          "word": "dira?",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "Who",
+        "are",
+        "the",
+        "men"
+      ],
+      "solutions": [
+        [
+          "Who",
+          "are",
+          "the",
+          "men"
+        ]
+      ],
+      "formattedSolution": "Who are the men?",
+      "id": "b1adf4a3e884",
+      "priority": 2,
+      "group": "43901de30b9d"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Nortzuk dira haiek?",
+      "meaningInSourceLanguage": "Who are they?",
+      "id": "62ad74349a4c",
+      "priority": 0,
+      "group": "9d5f3def7476"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Who",
+          "definition": "nor"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "they?",
+          "definition": "haiek"
+        }
+      ],
+      "chips": [
+        "Nortzuk",
+        "dira",
+        "haiek"
+      ],
+      "solutions": [
+        [
+          "Nortzuk",
+          "dira",
+          "haiek"
+        ]
+      ],
+      "formattedSolution": "Nortzuk dira haiek?",
+      "id": "859fa3c3ad56",
+      "priority": 2,
+      "group": "9d5f3def7476"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Nortzuk",
+          "definition": "who(plural)"
+        },
+        {
+          "word": "dira",
+          "definition": "are\nare (izan)"
+        },
+        {
+          "word": "haiek?",
+          "definition": "they\nthose over there, plural of hura"
+        }
+      ],
+      "chips": [
+        "Who",
+        "are",
+        "they"
+      ],
+      "solutions": [
+        [
+          "Who",
+          "are",
+          "they"
+        ]
+      ],
+      "formattedSolution": "Who are they?",
+      "id": "fa191a02b01a",
+      "priority": 2,
+      "group": "9d5f3def7476"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Haiek emakumeak edo gizonak dira?",
+      "meaningInSourceLanguage": "Are they women or men?",
+      "id": "62d82c40edf7",
+      "priority": 0,
+      "group": "37467f60c33c"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "they",
+          "definition": "haiek"
+        },
+        {
+          "word": "women",
+          "definition": "emakumeak"
+        },
+        {
+          "word": "or",
+          "definition": "edo"
+        },
+        {
+          "word": "men?",
+          "definition": "gizonak"
+        }
+      ],
+      "chips": [
+        "Haiek",
+        "emakumeak",
+        "edo",
+        "gizonak",
+        "dira"
+      ],
+      "solutions": [
+        [
+          "Haiek",
+          "emakumeak",
+          "edo",
+          "gizonak",
+          "dira"
+        ]
+      ],
+      "formattedSolution": "Haiek emakumeak edo gizonak dira?",
+      "id": "b01d891a8599",
+      "priority": 2,
+      "group": "37467f60c33c"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Haiek",
+          "definition": "they\nthose over there, plural of hura"
+        },
+        {
+          "word": "emakumeak",
+          "definition": "women"
+        },
+        {
+          "word": "edo",
+          "definition": "or"
+        },
+        {
+          "word": "gizonak",
+          "definition": "men"
+        },
+        {
+          "word": "dira?",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "Are",
+        "they",
+        "women",
+        "or",
+        "men"
+      ],
+      "solutions": [
+        [
+          "Are",
+          "they",
+          "women",
+          "or",
+          "men"
+        ]
+      ],
+      "formattedSolution": "Are they women or men?",
+      "id": "523f0deda317",
+      "priority": 2,
+      "group": "37467f60c33c"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "what.jpg",
+        "what.jpg",
+        "what.jpg"
+      ],
+      "formInTargetLanguage": "zer",
+      "meaningInSourceLanguage": "what",
+      "id": "ed122c419995",
+      "priority": 0,
+      "group": "451be09b0c83"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "what.jpg",
+        "what.jpg",
+        "what.jpg"
+      ],
+      "formInTargetLanguage": [
+        "zer"
+      ],
+      "phrase": [
+        {
+          "word": "what",
+          "definition": "zer"
+        }
+      ],
+      "id": "e9dd145af15f",
+      "priority": 1,
+      "group": "451be09b0c83"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "who.jpg",
+        "who.jpg",
+        "who.jpg"
+      ],
+      "formInTargetLanguage": "nor",
+      "meaningInSourceLanguage": "who",
+      "id": "f7400a6cbc15",
+      "priority": 0,
+      "group": "51d0504988d3"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "who.jpg",
+        "who.jpg",
+        "who.jpg"
+      ],
+      "formInTargetLanguage": [
+        "nor"
+      ],
+      "phrase": [
+        {
+          "word": "who",
+          "definition": "nor"
+        }
+      ],
+      "id": "3c7f5a603bc4",
+      "priority": 1,
+      "group": "51d0504988d3"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "whoplural.jpg",
+        "whoplural.jpg",
+        "whoplural.jpg"
+      ],
+      "formInTargetLanguage": "nortzuk",
+      "meaningInSourceLanguage": "who(plural)",
+      "id": "f9eb35f074ec",
+      "priority": 0,
+      "group": "ed869bff9927"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "whoplural.jpg",
+        "whoplural.jpg",
+        "whoplural.jpg"
+      ],
+      "formInTargetLanguage": [
+        "nortzuk"
+      ],
+      "phrase": [
+        {
+          "word": "who(plural)",
+          "definition": "nortzuk"
+        }
+      ],
+      "id": "3cd849252072",
+      "priority": 1,
+      "group": "ed869bff9927"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "bus.jpg",
+        "bus.jpg",
+        "bus.jpg"
+      ],
+      "formInTargetLanguage": "autobus",
+      "meaningInSourceLanguage": "bus",
+      "id": "289db2aa584a",
+      "priority": 0,
+      "group": "0d405d9747ab"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "bus.jpg",
+        "bus.jpg",
+        "bus.jpg"
+      ],
+      "formInTargetLanguage": [
+        "autobus"
+      ],
+      "phrase": [
+        {
+          "word": "bus",
+          "definition": "austobusa\nautobus\nautobusa"
+        }
+      ],
+      "id": "c329f2cd805f",
+      "priority": 1,
+      "group": "0d405d9747ab"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "car.jpg",
+        "car.jpg",
+        "car.jpg"
+      ],
+      "formInTargetLanguage": "kotxe",
+      "meaningInSourceLanguage": "car",
+      "id": "08eca479c77e",
+      "priority": 0,
+      "group": "ed833e8601ff"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "car.jpg",
+        "car.jpg",
+        "car.jpg"
+      ],
+      "formInTargetLanguage": [
+        "kotxe"
+      ],
+      "phrase": [
+        {
+          "word": "car",
+          "definition": "kotxe\nkotxea"
+        }
+      ],
+      "id": "0f5b06b7a0b3",
+      "priority": 1,
+      "group": "ed833e8601ff"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "buses.jpg",
+        "buses.jpg",
+        "buses.jpg"
+      ],
+      "formInTargetLanguage": "autobusak",
+      "meaningInSourceLanguage": "buses",
+      "id": "a02111b7191f",
+      "priority": 0,
+      "group": "f27322416030"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "buses.jpg",
+        "buses.jpg",
+        "buses.jpg"
+      ],
+      "formInTargetLanguage": [
+        "autobusak"
+      ],
+      "phrase": [
+        {
+          "word": "buses",
+          "definition": "autobusak"
+        }
+      ],
+      "id": "494d86e3aa3d",
+      "priority": 1,
+      "group": "f27322416030"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "cars.jpg",
+        "cars.jpg",
+        "cars.jpg"
+      ],
+      "formInTargetLanguage": "kotxeak",
+      "meaningInSourceLanguage": "cars",
+      "id": "6a290c00e80e",
+      "priority": 0,
+      "group": "e98b1c951c52"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "cars.jpg",
+        "cars.jpg",
+        "cars.jpg"
+      ],
+      "formInTargetLanguage": [
+        "kotxeak"
+      ],
+      "phrase": [
+        {
+          "word": "cars",
+          "definition": "kotxeak"
+        }
+      ],
+      "id": "66b71e1cf22b",
+      "priority": 1,
+      "group": "e98b1c951c52"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "yesno.jpg",
+        "yesno.jpg",
+        "yesno.jpg"
+      ],
+      "formInTargetLanguage": "al",
+      "meaningInSourceLanguage": "question_word",
+      "id": "26a90e90ce15",
+      "priority": 0,
+      "group": "185d6877bdcb"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "yesno.jpg",
+        "yesno.jpg",
+        "yesno.jpg"
+      ],
+      "formInTargetLanguage": [
+        "al"
+      ],
+      "phrase": [
+        {
+          "word": "question_word",
+          "definition": "al"
+        }
+      ],
+      "id": "2f252801b661",
+      "priority": 1,
+      "group": "185d6877bdcb"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "or.jpg",
+        "or.jpg",
+        "or.jpg"
+      ],
+      "formInTargetLanguage": "edo",
+      "meaningInSourceLanguage": "or",
+      "id": "79a1783f4f9a",
+      "priority": 0,
+      "group": "c65152d26f30"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "or.jpg",
+        "or.jpg",
+        "or.jpg"
+      ],
+      "formInTargetLanguage": [
+        "edo"
+      ],
+      "phrase": [
+        {
+          "word": "or",
+          "definition": "edo"
+        }
+      ],
+      "id": "82e94b1de706",
+      "priority": 1,
+      "group": "c65152d26f30"
+    }
+  ]
+}

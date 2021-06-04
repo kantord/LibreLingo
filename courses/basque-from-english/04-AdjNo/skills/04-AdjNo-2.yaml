@@ -1,0 +1,260 @@
+Skill:
+  Id: 42
+  Name: Adj 2
+  Thumbnails:
+
+New words:
+  - Word: ez
+    Translation: not
+    Images:
+      - not
+      - not
+      - not
+
+  - Word: baina
+    Translation: but (contrast)
+    Images:
+      - but
+      - but
+      - but
+
+  - Word: baizik
+    Translation: but (rather)
+    Images:
+      - but
+      - but
+      - but
+
+  - Word: hotel
+    Translation: hotel
+    Images:
+      - hotel1
+      - hotel2
+      - hotel3
+
+  - Word: eliza
+    Translation: church
+    Images:
+      - church
+      - church
+      - church
+
+  - Word: kolore
+    Translation: color
+    Images:
+      - color1
+      - color2
+      - color3
+
+  - Word: ostatu
+    Translation: mini-hotel
+    Images:
+      - hotel1
+      - hotel1_tinier
+      - hotel2
+
+  - Word: denda
+    Translation: store
+    Images:
+      - store
+      - store
+      - store
+
+  - Word: etxe
+    Translation: house
+    Images:
+      - house1
+      - house2
+      - house3
+
+
+Phrases:
+  - Phrase: Ez da hotela, baizik denda.
+    Translation: It is not a hotel, but rather a store.
+    Alternative translations:
+      - It is not the hotel, but rather the store.
+
+  - Phrase: Ez zen etxe, baizik ostatua.
+    Translation: It was not a house, but rather a mini-hotel.
+    Alternative translations:
+      - It was not the house, but rather the mini-hotel.
+
+  - Phrase: Hotela ez da berdea, baizik gorria da.
+    Translation: The hotel is not green, but rather it is red.
+
+  - Phrase: Zer kolorea da denda?
+    Translation: What color is the store?
+
+  - Phrase: Zer koloreak ziren hotelak?
+    Translation: What color were the hotels?
+
+  - Phrase: Zer kolorea zen autobusa?
+    Translation: What color was the bus?
+
+  - Phrase: Autobusa ez zen gorria.
+    Translation: The bus was not red.
+
+  - Phrase: Ostatu ez da zuria.
+    Translation: The mini-hotel is not white.
+
+  - Phrase: Ez da etxe beltza, baizik eliza zuria baizik.
+    Translation: It is not a black house, but rather a white church.
+    Alternative translations:
+      - It is not the black house, but rather the white church.
+
+  - Phrase: Eliza ez zen zuria, baina ostatua zuria zen.
+    Translation: The church was not white, but rather the mini-hotel was white.
+
+  - Phrase: Ez zen denda, baizik etxe bat zen.
+    Translation: It was not a store, but rather it was a house.
+    Alternative translations:
+      - It was not the store, but rather it was the house.
+
+  - Phrase: Ez da denda gorria, baizik denda berdea.
+    Translation: It is not a red store, but rather a green store.
+    Alternative translations:
+      - It is not the red store, but rather the green store.
+
+  - Phrase: Dendak ez ziren zuria, baina berdeak.
+    Translation: The stores were not not white, but green.
+
+  - Phrase: Hura ez da medikua, baina medikua zen.
+    Translation: She is not a doctor, but I was a doctor.
+    Alternative translations:
+      - He is not a doctor, but I was a doctor.
+
+  - Phrase: Hura ez zen ikaslea, baina irakaslea nintzen.
+    Translation: He was not a student, but I was a teacher.
+    Alternative translations:
+      - She was not a student, but I was a teacher..
+
+  - Phrase: Zu ez zara polizia.
+    Translation: You are not a police officer.
+
+  - Phrase: Gu ez ginen medikuak, erizainak baizik.
+    Translation: We were not doctors, but nurses.
+
+  - Phrase: Zuek ez zineten turistak.
+    Translation: You(plural) were not tourists.
+
+  - Phrase: Zer kolorea da denda?
+    Translation: What color is the store?
+
+Mini-dictionary:
+  Basque:
+    - bai: yes
+    - bat: one
+    - baina: but(contrast)
+    - baizik: but(rather)
+    - beltza: black
+    - da: is
+    - denda: store
+    - dendak: stores
+    - etxe: house
+    - eliza: church
+    - erizainak: nurses
+    - ez: not
+    - gidari: driver
+    - gidariak: drivers
+    - ginen: were
+    - gu: we
+    - hotel: hotel
+    - hotela: hotel
+    - hotelak: hotels
+    - hura:
+      - he
+      - she
+      - it
+    - ikasle: student
+    - ikaslea: student
+    - ikasleak: students
+    - irakasle: teacher
+    - irakaslea: teacher
+    - irakasleak: teachers
+    - kolore: color
+    - kolorea: color
+    - koloreak: colors
+    - medikuak: doctors
+    - nintzen: was
+    - ostatu: mini-hotel
+    - ostatua: mini-hotel
+    - polizia: police officer
+    - turista: tourist
+    - turistak: tourists
+    - zinen: were
+    - zineten: were
+    - zen: was
+    - zer: what
+    - ziren: were
+    - zuek: you(plural)
+    - zuria: white
+
+  English:
+    - a: -a
+    - also: ere
+    - am: naiz
+    - an: -a
+    - are:
+      - zara
+      - gare
+      - zarete
+    - black: beltza
+    - boys: mutilak
+    - but: baina
+    - color: kolorea
+    - colors: koloreak
+    - contrast: kontrastatu
+    - doctor: medikua
+    - doctors: medikuak
+    - driver: gidari
+    - drivers: gidariak
+    - excuse: Barkatu
+    - girl: neska
+    - guide: gida
+    - guides: gidak
+    - he: hura
+    - hello: kaixo
+    - hi: epa
+    - hotel: hotel
+    - hotels: hotelak
+    - I: ni
+    - is: da
+    - me: ni
+    - men: gizonak
+    - nurse: erizaina
+    - nurses: erizainak
+    - officer: ofiziala
+    - one: bat
+    - police: polizia
+    - rather: baizik
+    - it: hura
+    - yes: bai
+    - she: hura
+    - store: denda
+    - stores: dendak
+    - student: ikaslea
+    - students: ikasleak
+    - teacher: irakaslea
+    - teachers: irakasleak
+    - the: -a
+    - they: haiek
+    - tour: tour
+    - tourist: turista
+    - tourists: turistak
+    - we: gu
+    - who: nor
+    - you: zu
+    - you(plural): zuek
+    - you'll: zuek
+    - was:
+      - zen
+      - nintzen
+    - we: gu
+    - were:
+      - zinen
+      - ziren
+      - ginen
+      - zineten
+    - what: zer
+    - white: zuria
+    - woman: emakume

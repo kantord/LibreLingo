@@ -1,0 +1,1627 @@
+{
+  "id": "2fdd76f3de18",
+  "levels": 5,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Barkatu. Nor da gidaria?",
+      "meaningInSourceLanguage": "Excuse me. Who is the driver?",
+      "id": "1347eb172ebb",
+      "priority": 0,
+      "group": "a0c3cc54560f"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Excuse",
+          "definition": "Barkatu\nbarkatu"
+        },
+        {
+          "word": "me.",
+          "definition": "ni"
+        },
+        {
+          "word": "Who",
+          "definition": "nor"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "the",
+          "definition": "-a"
+        },
+        {
+          "word": "driver?",
+          "definition": "gidari\ngidaria"
+        }
+      ],
+      "chips": [
+        "Barkatu",
+        "Nor",
+        "da",
+        "gidaria"
+      ],
+      "solutions": [
+        [
+          "Barkatu",
+          "Nor",
+          "da",
+          "gidaria"
+        ]
+      ],
+      "formattedSolution": "Barkatu. Nor da gidaria?",
+      "id": "0e138802c26f",
+      "priority": 2,
+      "group": "a0c3cc54560f"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Barkatu.",
+          "definition": "Excuse me\nsorry"
+        },
+        {
+          "word": "Nor",
+          "definition": "who"
+        },
+        {
+          "word": "da",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        },
+        {
+          "word": "gidaria?",
+          "definition": "driver\nthe driver"
+        }
+      ],
+      "chips": [
+        "Excuse",
+        "me",
+        "Who",
+        "is",
+        "the",
+        "driver"
+      ],
+      "solutions": [
+        [
+          "Excuse",
+          "me",
+          "Who",
+          "is",
+          "the",
+          "driver"
+        ],
+        [
+          "SExcuse",
+          "me",
+          "Who",
+          "is",
+          "a",
+          "driver"
+        ]
+      ],
+      "formattedSolution": "Excuse me. Who is the driver?",
+      "id": "0bd30ea3fa02",
+      "priority": 2,
+      "group": "a0c3cc54560f"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Hura autobus gidaria da.",
+      "meaningInSourceLanguage": "He is the bus driver.",
+      "id": "fbe3532581e6",
+      "priority": 0,
+      "group": "666ef11b6031"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "He",
+          "definition": "hura"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "the",
+          "definition": "-a"
+        },
+        {
+          "word": "bus",
+          "definition": "austobusa\nautobus\nautobusa"
+        },
+        {
+          "word": "driver.",
+          "definition": "gidari\ngidaria"
+        }
+      ],
+      "chips": [
+        "Hura",
+        "autobus",
+        "gidaria",
+        "da"
+      ],
+      "solutions": [
+        [
+          "Hura",
+          "autobus",
+          "gidaria",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Hura autobus gidaria da.",
+      "id": "05a7eb01d860",
+      "priority": 2,
+      "group": "666ef11b6031"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Hura",
+          "definition": "he\nit\nitr\nshe\nthat over there"
+        },
+        {
+          "word": "autobus",
+          "definition": "bus"
+        },
+        {
+          "word": "gidaria",
+          "definition": "driver\nthe driver"
+        },
+        {
+          "word": "da.",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "He",
+        "is",
+        "the",
+        "bus",
+        "driver"
+      ],
+      "solutions": [
+        [
+          "He",
+          "is",
+          "the",
+          "bus",
+          "driver"
+        ],
+        [
+          "She",
+          "is",
+          "the",
+          "bus",
+          "driver"
+        ],
+        [
+          "He",
+          "is",
+          "a",
+          "bus",
+          "driver"
+        ],
+        [
+          "She",
+          "is",
+          "a",
+          "bus",
+          "driver"
+        ]
+      ],
+      "formattedSolution": "He is the bus driver.",
+      "id": "49a1f13a30ea",
+      "priority": 2,
+      "group": "666ef11b6031"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Barkatu. Nor da tour gida?",
+      "meaningInSourceLanguage": "Excuse me. Who is the tour guide?",
+      "id": "12f676110f7f",
+      "priority": 0,
+      "group": "508b00e1b279"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Excuse",
+          "definition": "Barkatu\nbarkatu"
+        },
+        {
+          "word": "me.",
+          "definition": "ni"
+        },
+        {
+          "word": "Who",
+          "definition": "nor"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "the",
+          "definition": "-a"
+        },
+        {
+          "word": "tour",
+          "definition": "tour"
+        },
+        {
+          "word": "guide?",
+          "definition": "gida"
+        }
+      ],
+      "chips": [
+        "Barkatu",
+        "Nor",
+        "da",
+        "tour",
+        "gida"
+      ],
+      "solutions": [
+        [
+          "Barkatu",
+          "Nor",
+          "da",
+          "tour",
+          "gida"
+        ]
+      ],
+      "formattedSolution": "Barkatu. Nor da tour gida?",
+      "id": "6f6a536630cc",
+      "priority": 2,
+      "group": "508b00e1b279"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Barkatu.",
+          "definition": "Excuse me\nsorry"
+        },
+        {
+          "word": "Nor",
+          "definition": "who"
+        },
+        {
+          "word": "da",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        },
+        {
+          "word": "tour",
+          "definition": "tour"
+        },
+        {
+          "word": "gida?",
+          "definition": "guide"
+        }
+      ],
+      "chips": [
+        "Excuse",
+        "me",
+        "Who",
+        "is",
+        "the",
+        "tour",
+        "guide"
+      ],
+      "solutions": [
+        [
+          "Excuse",
+          "me",
+          "Who",
+          "is",
+          "the",
+          "tour",
+          "guide"
+        ],
+        [
+          "Excuse",
+          "me",
+          "Who",
+          "is",
+          "a",
+          "tour",
+          "guide"
+        ]
+      ],
+      "formattedSolution": "Excuse me. Who is the tour guide?",
+      "id": "4aea302210eb",
+      "priority": 2,
+      "group": "508b00e1b279"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Ni tour gida naiz.",
+      "meaningInSourceLanguage": "I am the tour guide.",
+      "id": "166c4ce5d02e",
+      "priority": 0,
+      "group": "e0bf50db4524"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "I",
+          "definition": "ni"
+        },
+        {
+          "word": "am",
+          "definition": "nago (egon)\nnaiz\nnaiz (izan)"
+        },
+        {
+          "word": "the",
+          "definition": "-a"
+        },
+        {
+          "word": "tour",
+          "definition": "tour"
+        },
+        {
+          "word": "guide.",
+          "definition": "gida"
+        }
+      ],
+      "chips": [
+        "Ni",
+        "tour",
+        "gida",
+        "naiz"
+      ],
+      "solutions": [
+        [
+          "Ni",
+          "tour",
+          "gida",
+          "naiz"
+        ]
+      ],
+      "formattedSolution": "Ni tour gida naiz.",
+      "id": "b7ec39005a85",
+      "priority": 2,
+      "group": "e0bf50db4524"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Ni",
+          "definition": "I\nme"
+        },
+        {
+          "word": "tour",
+          "definition": "tour"
+        },
+        {
+          "word": "gida",
+          "definition": "guide"
+        },
+        {
+          "word": "naiz.",
+          "definition": "I am (izan)\nam"
+        }
+      ],
+      "chips": [
+        "I",
+        "am",
+        "the",
+        "tour",
+        "guide"
+      ],
+      "solutions": [
+        [
+          "I",
+          "am",
+          "the",
+          "tour",
+          "guide"
+        ],
+        [
+          "I",
+          "am",
+          "a",
+          "tour",
+          "guide"
+        ]
+      ],
+      "formattedSolution": "I am the tour guide.",
+      "id": "ac7dbb49ee1e",
+      "priority": 2,
+      "group": "e0bf50db4524"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Haiek turistak dira.",
+      "meaningInSourceLanguage": "They are tourists.",
+      "id": "ba39c29aaaa9",
+      "priority": 0,
+      "group": "7b129c2aa22c"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "They",
+          "definition": "haiek"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "tourists.",
+          "definition": "turistak"
+        }
+      ],
+      "chips": [
+        "Haiek",
+        "turistak",
+        "dira"
+      ],
+      "solutions": [
+        [
+          "Haiek",
+          "turistak",
+          "dira"
+        ]
+      ],
+      "formattedSolution": "Haiek turistak dira.",
+      "id": "4d199a7e1397",
+      "priority": 2,
+      "group": "7b129c2aa22c"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Haiek",
+          "definition": "they\nthose over there, plural of hura"
+        },
+        {
+          "word": "turistak",
+          "definition": "tourists"
+        },
+        {
+          "word": "dira.",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "They",
+        "are",
+        "tourists"
+      ],
+      "solutions": [
+        [
+          "They",
+          "are",
+          "tourists"
+        ]
+      ],
+      "formattedSolution": "They are tourists.",
+      "id": "f5bf6c8817ce",
+      "priority": 2,
+      "group": "7b129c2aa22c"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Kaixo. Ni ere erizaina naiz.",
+      "meaningInSourceLanguage": "Hello. I am also a nurse.",
+      "id": "8b89ea66915b",
+      "priority": 0,
+      "group": "62815c8b2e64"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Hello.",
+          "definition": "kaixo"
+        },
+        {
+          "word": "I",
+          "definition": "ni"
+        },
+        {
+          "word": "am",
+          "definition": "nago (egon)\nnaiz\nnaiz (izan)"
+        },
+        {
+          "word": "also",
+          "definition": "ere"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "nurse.",
+          "definition": "erizain\nerizaina"
+        }
+      ],
+      "chips": [
+        "Kaixo",
+        "Ni",
+        "ere",
+        "erizaina",
+        "naiz"
+      ],
+      "solutions": [
+        [
+          "Kaixo",
+          "Ni",
+          "ere",
+          "erizaina",
+          "naiz"
+        ]
+      ],
+      "formattedSolution": "Kaixo. Ni ere erizaina naiz.",
+      "id": "b1d0aee67a24",
+      "priority": 2,
+      "group": "62815c8b2e64"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Kaixo.",
+          "definition": "hello"
+        },
+        {
+          "word": "Ni",
+          "definition": "I\nme"
+        },
+        {
+          "word": "ere",
+          "definition": "also"
+        },
+        {
+          "word": "erizaina",
+          "definition": "nurse"
+        },
+        {
+          "word": "naiz.",
+          "definition": "I am (izan)\nam"
+        }
+      ],
+      "chips": [
+        "Hello",
+        "I",
+        "am",
+        "also",
+        "a",
+        "nurse"
+      ],
+      "solutions": [
+        [
+          "Hello",
+          "I",
+          "am",
+          "also",
+          "a",
+          "nurse"
+        ]
+      ],
+      "formattedSolution": "Hello. I am also a nurse.",
+      "id": "305068b75f6e",
+      "priority": 2,
+      "group": "62815c8b2e64"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Zu al medikua zara?",
+      "meaningInSourceLanguage": "Are you a doctor?",
+      "id": "a3e1275f6bf6",
+      "priority": 0,
+      "group": "7ec41b510375"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "you",
+          "definition": "zu\nzuek"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "doctor?",
+          "definition": "mediku\nmedikua"
+        }
+      ],
+      "chips": [
+        "Zu",
+        "al",
+        "medikua",
+        "zara"
+      ],
+      "solutions": [
+        [
+          "Zu",
+          "al",
+          "medikua",
+          "zara"
+        ]
+      ],
+      "formattedSolution": "Zu al medikua zara?",
+      "id": "c952216ac3c2",
+      "priority": 2,
+      "group": "7ec41b510375"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Zu",
+          "definition": "you"
+        },
+        {
+          "word": "al",
+          "definition": "question_word"
+        },
+        {
+          "word": "medikua",
+          "definition": "doctor\nthe doctor"
+        },
+        {
+          "word": "zara?",
+          "definition": "are\nyou are (izan)"
+        }
+      ],
+      "chips": [
+        "Are",
+        "you",
+        "a",
+        "doctor"
+      ],
+      "solutions": [
+        [
+          "Are",
+          "you",
+          "a",
+          "doctor"
+        ],
+        [
+          "Are",
+          "you",
+          "the",
+          "doctor"
+        ]
+      ],
+      "formattedSolution": "Are you a doctor?",
+      "id": "47c451d2307b",
+      "priority": 2,
+      "group": "7ec41b510375"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Epa. Gu ikasleak gara.",
+      "meaningInSourceLanguage": "Hi. We are students.",
+      "id": "6b54f0d81e32",
+      "priority": 0,
+      "group": "d9c6e933f77a"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Hi.",
+          "definition": "epa"
+        },
+        {
+          "word": "We",
+          "definition": "gu"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "students.",
+          "definition": "ikasleak"
+        }
+      ],
+      "chips": [
+        "Epa",
+        "Gu",
+        "ikasleak",
+        "gara"
+      ],
+      "solutions": [
+        [
+          "Epa",
+          "Gu",
+          "ikasleak",
+          "gara"
+        ]
+      ],
+      "formattedSolution": "Epa. Gu ikasleak gara.",
+      "id": "51d18f5df010",
+      "priority": 2,
+      "group": "d9c6e933f77a"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Epa.",
+          "definition": "hi"
+        },
+        {
+          "word": "Gu",
+          "definition": "we"
+        },
+        {
+          "word": "ikasleak",
+          "definition": "students"
+        },
+        {
+          "word": "gara.",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "Hi",
+        "We",
+        "are",
+        "students"
+      ],
+      "solutions": [
+        [
+          "Hi",
+          "We",
+          "are",
+          "students"
+        ],
+        [
+          "Hi",
+          "We're",
+          "students"
+        ]
+      ],
+      "formattedSolution": "Hi. We are students.",
+      "id": "cb5c396fa003",
+      "priority": 2,
+      "group": "d9c6e933f77a"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Bai. Gu gidariak gara.",
+      "meaningInSourceLanguage": "Yes. We are drivers.",
+      "id": "669aa4e6dac0",
+      "priority": 0,
+      "group": "97088da8af56"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Yes.",
+          "definition": "bai"
+        },
+        {
+          "word": "We",
+          "definition": "gu"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "drivers.",
+          "definition": "gidariak"
+        }
+      ],
+      "chips": [
+        "Bai",
+        "Gu",
+        "gidariak",
+        "gara"
+      ],
+      "solutions": [
+        [
+          "Bai",
+          "Gu",
+          "gidariak",
+          "gara"
+        ]
+      ],
+      "formattedSolution": "Bai. Gu gidariak gara.",
+      "id": "d8f9cede62b0",
+      "priority": 2,
+      "group": "97088da8af56"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Bai.",
+          "definition": "Yes\nyes"
+        },
+        {
+          "word": "Gu",
+          "definition": "we"
+        },
+        {
+          "word": "gidariak",
+          "definition": "driver\ndrivers"
+        },
+        {
+          "word": "gara.",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "Yes",
+        "We",
+        "are",
+        "drivers"
+      ],
+      "solutions": [
+        [
+          "Yes",
+          "We",
+          "are",
+          "drivers"
+        ],
+        [
+          "Yes",
+          "We",
+          "are",
+          "the",
+          "drivers"
+        ],
+        [
+          "Yes",
+          "We're",
+          "drivers"
+        ],
+        [
+          "Yes",
+          "We're",
+          "the",
+          "drivers"
+        ]
+      ],
+      "formattedSolution": "Yes. We are drivers.",
+      "id": "e506348811c2",
+      "priority": 2,
+      "group": "97088da8af56"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Bai. Gu medikua gara.",
+      "meaningInSourceLanguage": "Yes. We are doctors.",
+      "id": "b1ddabd15438",
+      "priority": 0,
+      "group": "5e1de75bfbeb"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Yes.",
+          "definition": "bai"
+        },
+        {
+          "word": "We",
+          "definition": "gu"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "doctors.",
+          "definition": "medikuak"
+        }
+      ],
+      "chips": [
+        "Bai",
+        "Gu",
+        "medikua",
+        "gara"
+      ],
+      "solutions": [
+        [
+          "Bai",
+          "Gu",
+          "medikua",
+          "gara"
+        ]
+      ],
+      "formattedSolution": "Bai. Gu medikua gara.",
+      "id": "1236ae6c60fe",
+      "priority": 2,
+      "group": "5e1de75bfbeb"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Bai.",
+          "definition": "Yes\nyes"
+        },
+        {
+          "word": "Gu",
+          "definition": "we"
+        },
+        {
+          "word": "medikua",
+          "definition": "doctor\nthe doctor"
+        },
+        {
+          "word": "gara.",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "Yes",
+        "We",
+        "are",
+        "doctors"
+      ],
+      "solutions": [
+        [
+          "Yes",
+          "We",
+          "are",
+          "doctors"
+        ],
+        [
+          "Yes",
+          "We",
+          "are",
+          "the",
+          "doctors"
+        ],
+        [
+          "Yes",
+          "We're",
+          "doctors"
+        ],
+        [
+          "Yes",
+          "We're",
+          "the",
+          "doctors"
+        ]
+      ],
+      "formattedSolution": "Yes. We are doctors.",
+      "id": "e773b2bbff79",
+      "priority": 2,
+      "group": "5e1de75bfbeb"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Zuek turistak zarete.",
+      "meaningInSourceLanguage": "You are tourists.",
+      "id": "31ad03778a89",
+      "priority": 0,
+      "group": "fd7baf1256c3"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "You",
+          "definition": "zu\nzuek"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "tourists.",
+          "definition": "turistak"
+        }
+      ],
+      "chips": [
+        "Zuek",
+        "turistak",
+        "zarete"
+      ],
+      "solutions": [
+        [
+          "Zuek",
+          "turistak",
+          "zarete"
+        ]
+      ],
+      "formattedSolution": "Zuek turistak zarete.",
+      "id": "b62dbc5e2ec1",
+      "priority": 2,
+      "group": "fd7baf1256c3"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Zuek",
+          "definition": "You'll\nyou\nyou'll\nyou(plural)\nyour (plural)"
+        },
+        {
+          "word": "turistak",
+          "definition": "tourists"
+        },
+        {
+          "word": "zarete.",
+          "definition": "are\ntheir"
+        }
+      ],
+      "chips": [
+        "You",
+        "are",
+        "tourists"
+      ],
+      "solutions": [
+        [
+          "You",
+          "are",
+          "tourists"
+        ],
+        [
+          "You(plural",
+          "are",
+          "tourists"
+        ],
+        [
+          "You'll",
+          "are",
+          "tourists"
+        ]
+      ],
+      "formattedSolution": "You are tourists.",
+      "id": "38ce1a408463",
+      "priority": 2,
+      "group": "fd7baf1256c3"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Zuek al poliziak zarete?",
+      "meaningInSourceLanguage": "Are you(plural) police officers?",
+      "id": "21e3b2ce656e",
+      "priority": 0,
+      "group": "f024f891ed89"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "you(plural)",
+          "definition": "zuek"
+        },
+        {
+          "word": "police",
+          "definition": "polizia"
+        },
+        {
+          "word": "officers?",
+          "definition": "ofizialak"
+        }
+      ],
+      "chips": [
+        "Zuek",
+        "al",
+        "poliziak",
+        "zarete"
+      ],
+      "solutions": [
+        [
+          "Zuek",
+          "al",
+          "poliziak",
+          "zarete"
+        ]
+      ],
+      "formattedSolution": "Zuek al poliziak zarete?",
+      "id": "6bc28153c22d",
+      "priority": 2,
+      "group": "f024f891ed89"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Zuek",
+          "definition": "You'll\nyou\nyou'll\nyou(plural)\nyour (plural)"
+        },
+        {
+          "word": "al",
+          "definition": "question_word"
+        },
+        {
+          "word": "poliziak",
+          "definition": "police officers"
+        },
+        {
+          "word": "zarete?",
+          "definition": "are\ntheir"
+        }
+      ],
+      "chips": [
+        "Are",
+        "you(plural",
+        "police",
+        "officers"
+      ],
+      "solutions": [
+        [
+          "Are",
+          "you(plural",
+          "police",
+          "officers"
+        ],
+        [
+          "Are",
+          "you'll",
+          "police",
+          "officers"
+        ],
+        [
+          "Are",
+          "you",
+          "police",
+          "officers"
+        ]
+      ],
+      "formattedSolution": "Are you(plural) police officers?",
+      "id": "40182699b5e6",
+      "priority": 2,
+      "group": "f024f891ed89"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Hura al polizia bat da.",
+      "meaningInSourceLanguage": "Is he a police officer?",
+      "id": "ed9b4a98b87b",
+      "priority": 0,
+      "group": "cac10769d8f1"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "he",
+          "definition": "hura"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "police",
+          "definition": "polizia"
+        },
+        {
+          "word": "officer?",
+          "definition": "ofiziala"
+        }
+      ],
+      "chips": [
+        "Hura",
+        "al",
+        "polizia",
+        "bat",
+        "da"
+      ],
+      "solutions": [
+        [
+          "Hura",
+          "al",
+          "polizia",
+          "bat",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Hura al polizia bat da.",
+      "id": "83370806262d",
+      "priority": 2,
+      "group": "cac10769d8f1"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Hura",
+          "definition": "he\nit\nitr\nshe\nthat over there"
+        },
+        {
+          "word": "al",
+          "definition": "question_word"
+        },
+        {
+          "word": "polizia",
+          "definition": "police officer"
+        },
+        {
+          "word": "bat",
+          "definition": "one"
+        },
+        {
+          "word": "da.",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "Is",
+        "he",
+        "a",
+        "police",
+        "officer"
+      ],
+      "solutions": [
+        [
+          "Is",
+          "he",
+          "a",
+          "police",
+          "officer"
+        ],
+        [
+          "Is",
+          "she",
+          "a",
+          "police",
+          "officer"
+        ],
+        [
+          "Is",
+          "he",
+          "the",
+          "police",
+          "officer"
+        ],
+        [
+          "Is",
+          "she",
+          "the",
+          "police",
+          "officer"
+        ]
+      ],
+      "formattedSolution": "Is he a police officer?",
+      "id": "8b6d31aa4f08",
+      "priority": 2,
+      "group": "cac10769d8f1"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Haiek al erizainak dira?",
+      "meaningInSourceLanguage": "Are they nurses?",
+      "id": "ce1f6c7853b2",
+      "priority": 0,
+      "group": "a89e2f10c447"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "they",
+          "definition": "haiek"
+        },
+        {
+          "word": "nurses?",
+          "definition": "erizainak"
+        }
+      ],
+      "chips": [
+        "Haiek",
+        "al",
+        "erizainak",
+        "dira"
+      ],
+      "solutions": [
+        [
+          "Haiek",
+          "al",
+          "erizainak",
+          "dira"
+        ]
+      ],
+      "formattedSolution": "Haiek al erizainak dira?",
+      "id": "0b861d7e2e64",
+      "priority": 2,
+      "group": "a89e2f10c447"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Haiek",
+          "definition": "they\nthose over there, plural of hura"
+        },
+        {
+          "word": "al",
+          "definition": "question_word"
+        },
+        {
+          "word": "erizainak",
+          "definition": "nurses"
+        },
+        {
+          "word": "dira?",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "Are",
+        "they",
+        "nurses"
+      ],
+      "solutions": [
+        [
+          "Are",
+          "they",
+          "nurses"
+        ]
+      ],
+      "formattedSolution": "Are they nurses?",
+      "id": "f1f66570e6d5",
+      "priority": 2,
+      "group": "a89e2f10c447"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "nurse.jpg",
+        "nurse.jpg",
+        "nurse.jpg"
+      ],
+      "formInTargetLanguage": "erizain",
+      "meaningInSourceLanguage": "nurse",
+      "id": "048f2cffa405",
+      "priority": 0,
+      "group": "129a3a78f855"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "nurse.jpg",
+        "nurse.jpg",
+        "nurse.jpg"
+      ],
+      "formInTargetLanguage": [
+        "erizain"
+      ],
+      "phrase": [
+        {
+          "word": "nurse",
+          "definition": "erizain\nerizaina"
+        }
+      ],
+      "id": "8dff716ce9d8",
+      "priority": 1,
+      "group": "129a3a78f855"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "driver.jpg",
+        "driver.jpg",
+        "driver.jpg"
+      ],
+      "formInTargetLanguage": "gidari",
+      "meaningInSourceLanguage": "driver",
+      "id": "2d504034d779",
+      "priority": 0,
+      "group": "75fe793f0938"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "driver.jpg",
+        "driver.jpg",
+        "driver.jpg"
+      ],
+      "formInTargetLanguage": [
+        "gidari"
+      ],
+      "phrase": [
+        {
+          "word": "driver",
+          "definition": "gidari\ngidaria"
+        }
+      ],
+      "id": "895e79d09b8b",
+      "priority": 1,
+      "group": "75fe793f0938"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "doctor.jpg",
+        "doctor.jpg",
+        "doctor.jpg"
+      ],
+      "formInTargetLanguage": "mediku",
+      "meaningInSourceLanguage": "doctor",
+      "id": "2774d114eb2e",
+      "priority": 0,
+      "group": "6456c6db5c76"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "doctor.jpg",
+        "doctor.jpg",
+        "doctor.jpg"
+      ],
+      "formInTargetLanguage": [
+        "mediku"
+      ],
+      "phrase": [
+        {
+          "word": "doctor",
+          "definition": "mediku\nmedikua"
+        }
+      ],
+      "id": "67e6cd0fd5dd",
+      "priority": 1,
+      "group": "6456c6db5c76"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "police.jpg",
+        "police.jpg",
+        "police.jpg"
+      ],
+      "formInTargetLanguage": "polizia",
+      "meaningInSourceLanguage": "police officer",
+      "id": "c9394dbf4933",
+      "priority": 0,
+      "group": "fe4c8b18f714"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "police.jpg",
+        "police.jpg",
+        "police.jpg"
+      ],
+      "formInTargetLanguage": [
+        "polizia"
+      ],
+      "phrase": [
+        {
+          "word": "police",
+          "definition": "polizia"
+        },
+        {
+          "word": "officer",
+          "definition": "ofiziala"
+        }
+      ],
+      "id": "e532e5a78fb2",
+      "priority": 1,
+      "group": "fe4c8b18f714"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "tourguide.jpg",
+        "tourguide.jpg",
+        "tourguide.jpg"
+      ],
+      "formInTargetLanguage": "tour gida",
+      "meaningInSourceLanguage": "tour guide",
+      "id": "f9719392dcc1",
+      "priority": 0,
+      "group": "f99555a5abcb"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "tourguide.jpg",
+        "tourguide.jpg",
+        "tourguide.jpg"
+      ],
+      "formInTargetLanguage": [
+        "tour gida"
+      ],
+      "phrase": [
+        {
+          "word": "tour",
+          "definition": "tour"
+        },
+        {
+          "word": "guide",
+          "definition": "gida"
+        }
+      ],
+      "id": "766af73302a3",
+      "priority": 1,
+      "group": "f99555a5abcb"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "tourist.jpg",
+        "tourist.jpg",
+        "tourist.jpg"
+      ],
+      "formInTargetLanguage": "turist",
+      "meaningInSourceLanguage": "tourist",
+      "id": "a367a6e11312",
+      "priority": 0,
+      "group": "d94eca0dfd71"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "tourist.jpg",
+        "tourist.jpg",
+        "tourist.jpg"
+      ],
+      "formInTargetLanguage": [
+        "turist"
+      ],
+      "phrase": [
+        {
+          "word": "tourist",
+          "definition": "turist\nturista"
+        }
+      ],
+      "id": "97e6fbbb3b52",
+      "priority": 1,
+      "group": "d94eca0dfd71"
+    }
+  ]
+}
