@@ -4,11 +4,11 @@
   "challenges": [
     {
       "type": "options",
-      "formInTargetLanguage": "Autobusa handi eta morea da.",
+      "formInTargetLanguage": "Autobusa handia eta morea da.",
       "meaningInSourceLanguage": "The bus is big and purple.",
-      "id": "f1f301fd9e30",
+      "id": "1d20f7201911",
       "priority": 0,
-      "group": "efa4ab177d98"
+      "group": "73228bc21526"
     },
     {
       "type": "chips",
@@ -41,7 +41,7 @@
       ],
       "chips": [
         "Autobusa",
-        "handi",
+        "handia",
         "eta",
         "morea",
         "da"
@@ -49,16 +49,16 @@
       "solutions": [
         [
           "Autobusa",
-          "handi",
+          "handia",
           "eta",
           "morea",
           "da"
         ]
       ],
-      "formattedSolution": "Autobusa handi eta morea da.",
-      "id": "299097a9a9a0",
+      "formattedSolution": "Autobusa handia eta morea da.",
+      "id": "d817f83ea066",
       "priority": 2,
-      "group": "efa4ab177d98"
+      "group": "73228bc21526"
     },
     {
       "type": "chips",
@@ -69,7 +69,7 @@
           "definition": "a bus\nbus"
         },
         {
-          "word": "handi",
+          "word": "handia",
           "definition": "big"
         },
         {
@@ -112,9 +112,9 @@
         ]
       ],
       "formattedSolution": "The bus is big and purple.",
-      "id": "40b51be06244",
+      "id": "f7b9a68d7665",
       "priority": 2,
-      "group": "efa4ab177d98"
+      "group": "73228bc21526"
     },
     {
       "type": "options",
@@ -562,11 +562,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Gidari  gaztea argala eta labura zen.",
+      "formInTargetLanguage": "Gidari gaztea argala eta labura zen.",
       "meaningInSourceLanguage": "The young driver was thin and short.",
-      "id": "0b54055f6c1e",
+      "id": "fae3e039966a",
       "priority": 0,
-      "group": "7f58a8029c79"
+      "group": "7f88ed8e68da"
     },
     {
       "type": "chips",
@@ -619,10 +619,10 @@
           "zen"
         ]
       ],
-      "formattedSolution": "Gidari  gaztea argala eta labura zen.",
-      "id": "40f5b73be410",
+      "formattedSolution": "Gidari gaztea argala eta labura zen.",
+      "id": "ad40c091de26",
       "priority": 2,
-      "group": "7f58a8029c79"
+      "group": "7f88ed8e68da"
     },
     {
       "type": "chips",
@@ -683,17 +683,17 @@
         ]
       ],
       "formattedSolution": "The young driver was thin and short.",
-      "id": "6b1e0ed2eb04",
+      "id": "50bfc794c978",
       "priority": 2,
-      "group": "7f58a8029c79"
+      "group": "7f88ed8e68da"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Gizona zahar gizena eta altua da.",
+      "formInTargetLanguage": "Gizon zahara gizena eta altua da.",
       "meaningInSourceLanguage": "The old man is fat and tall.",
-      "id": "6c05f2650d9a",
+      "id": "b90c1f20a05a",
       "priority": 0,
-      "group": "9c2fb917e975"
+      "group": "e22b104218a8"
     },
     {
       "type": "chips",
@@ -729,8 +729,8 @@
         }
       ],
       "chips": [
-        "Gizona",
-        "zahar",
+        "Gizon",
+        "zahara",
         "gizena",
         "eta",
         "altua",
@@ -738,29 +738,29 @@
       ],
       "solutions": [
         [
-          "Gizona",
-          "zahar",
+          "Gizon",
+          "zahara",
           "gizena",
           "eta",
           "altua",
           "da"
         ]
       ],
-      "formattedSolution": "Gizona zahar gizena eta altua da.",
-      "id": "7561a5176921",
+      "formattedSolution": "Gizon zahara gizena eta altua da.",
+      "id": "198b705333de",
       "priority": 2,
-      "group": "9c2fb917e975"
+      "group": "e22b104218a8"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Gizona",
-          "definition": "a man\nman\nthe man"
+          "word": "Gizon",
+          "definition": "man"
         },
         {
-          "word": "zahar",
+          "word": "zahara",
           "definition": "old"
         },
         {
@@ -810,17 +810,17 @@
         ]
       ],
       "formattedSolution": "The old man is fat and tall.",
-      "id": "3cd2bf6aa9ac",
+      "id": "9c85b3c8659f",
       "priority": 2,
-      "group": "9c2fb917e975"
+      "group": "e22b104218a8"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Hotela altuak eta zuriak eta ziren.",
+      "formInTargetLanguage": "Hotelak altuak eta zuriak ziren.",
       "meaningInSourceLanguage": "The hotels were tall and white.",
-      "id": "1cf7034b2c41",
+      "id": "a31157a97fa9",
       "priority": 0,
-      "group": "80aeb088d7b5"
+      "group": "e86367b77978"
     },
     {
       "type": "chips",
@@ -852,35 +852,33 @@
         }
       ],
       "chips": [
-        "Hotela",
+        "Hotelak",
         "altuak",
         "eta",
         "zuriak",
-        "eta",
         "ziren"
       ],
       "solutions": [
         [
-          "Hotela",
+          "Hotelak",
           "altuak",
           "eta",
           "zuriak",
-          "eta",
           "ziren"
         ]
       ],
-      "formattedSolution": "Hotela altuak eta zuriak eta ziren.",
-      "id": "f445b465c530",
+      "formattedSolution": "Hotelak altuak eta zuriak ziren.",
+      "id": "29d1309d3378",
       "priority": 2,
-      "group": "80aeb088d7b5"
+      "group": "e86367b77978"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Hotela",
-          "definition": "hotel"
+          "word": "Hotelak",
+          "definition": "hotels"
         },
         {
           "word": "altuak",
@@ -893,10 +891,6 @@
         {
           "word": "zuriak",
           "definition": "white"
-        },
-        {
-          "word": "eta",
-          "definition": "and"
         },
         {
           "word": "ziren.",
@@ -922,9 +916,9 @@
         ]
       ],
       "formattedSolution": "The hotels were tall and white.",
-      "id": "16c15684bcde",
+      "id": "561d280c6193",
       "priority": 2,
-      "group": "80aeb088d7b5"
+      "group": "e86367b77978"
     },
     {
       "type": "options",
@@ -1224,11 +1218,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Kotxea grisa dira.",
-      "meaningInSourceLanguage": "The small cars are gray.",
-      "id": "407053e9c34d",
+      "formInTargetLanguage": "Kotxeak grisak dira.",
+      "meaningInSourceLanguage": "The cars are gray.",
+      "id": "7b8495b68fe8",
       "priority": 0,
-      "group": "9050a806a2f9"
+      "group": "7871e3e04cf0"
     },
     {
       "type": "chips",
@@ -1237,10 +1231,6 @@
         {
           "word": "The",
           "definition": "-a"
-        },
-        {
-          "word": "small",
-          "definition": "txiki"
         },
         {
           "word": "cars",
@@ -1256,32 +1246,32 @@
         }
       ],
       "chips": [
-        "Kotxea",
-        "grisa",
+        "Kotxeak",
+        "grisak",
         "dira"
       ],
       "solutions": [
         [
-          "Kotxea",
-          "grisa",
+          "Kotxeak",
+          "grisak",
           "dira"
         ]
       ],
-      "formattedSolution": "Kotxea grisa dira.",
-      "id": "d69ca7793c34",
+      "formattedSolution": "Kotxeak grisak dira.",
+      "id": "185e86ef9370",
       "priority": 2,
-      "group": "9050a806a2f9"
+      "group": "7871e3e04cf0"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Kotxea",
-          "definition": "a car\ncar"
+          "word": "Kotxeak",
+          "definition": "cars"
         },
         {
-          "word": "grisa",
+          "word": "grisak",
           "definition": "gray"
         },
         {
@@ -1291,7 +1281,6 @@
       ],
       "chips": [
         "The",
-        "small",
         "cars",
         "are",
         "gray"
@@ -1299,16 +1288,15 @@
       "solutions": [
         [
           "The",
-          "small",
           "cars",
           "are",
           "gray"
         ]
       ],
-      "formattedSolution": "The small cars are gray.",
-      "id": "cc95370730f7",
+      "formattedSolution": "The cars are gray.",
+      "id": "d773b58cd76a",
       "priority": 2,
-      "group": "9050a806a2f9"
+      "group": "7871e3e04cf0"
     },
     {
       "type": "options",
@@ -1617,11 +1605,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Medikua labur da, baina ez gizena da.",
+      "formInTargetLanguage": "Medikua labura da, baina ez da gizena.",
       "meaningInSourceLanguage": "The doctor is short, but he is not fat.",
-      "id": "a357a35d22e2",
+      "id": "cee4dcf31a0b",
       "priority": 0,
-      "group": "4822c44d46f1"
+      "group": "b73b7cb497cc"
     },
     {
       "type": "chips",
@@ -1666,28 +1654,28 @@
       ],
       "chips": [
         "Medikua",
-        "labur",
+        "labura",
         "da",
         "baina",
         "ez",
-        "gizena",
-        "da"
+        "da",
+        "gizena"
       ],
       "solutions": [
         [
           "Medikua",
-          "labur",
+          "labura",
           "da",
           "baina",
           "ez",
-          "gizena",
-          "da"
+          "da",
+          "gizena"
         ]
       ],
-      "formattedSolution": "Medikua labur da, baina ez gizena da.",
-      "id": "e05603657d81",
+      "formattedSolution": "Medikua labura da, baina ez da gizena.",
+      "id": "39db8e7cdf81",
       "priority": 2,
-      "group": "4822c44d46f1"
+      "group": "b73b7cb497cc"
     },
     {
       "type": "chips",
@@ -1698,7 +1686,7 @@
           "definition": "doctor\nthe doctor"
         },
         {
-          "word": "labur",
+          "word": "labura",
           "definition": "short"
         },
         {
@@ -1707,19 +1695,19 @@
         },
         {
           "word": "baina",
-          "definition": "but\nbut (contrast)\nbut(contrast)"
+          "definition": "but\nbut(contrast)"
         },
         {
           "word": "ez",
           "definition": "no\nnot\nnot, no\nnot,no"
         },
         {
-          "word": "gizena",
-          "definition": "fat"
+          "word": "da",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
         },
         {
-          "word": "da.",
-          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+          "word": "gizena.",
+          "definition": "fat"
         }
       ],
       "chips": [
@@ -1780,9 +1768,9 @@
         ]
       ],
       "formattedSolution": "The doctor is short, but he is not fat.",
-      "id": "073624a63ed8",
+      "id": "58bbf9cb538a",
       "priority": 2,
-      "group": "4822c44d46f1"
+      "group": "b73b7cb497cc"
     },
     {
       "type": "options",
@@ -2072,11 +2060,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Sukaldaria labur eta gizena da.",
+      "formInTargetLanguage": "Sukaldaria labura eta gizena da.",
       "meaningInSourceLanguage": "The cook is short and fat.",
-      "id": "990397960ddc",
+      "id": "e52bc457e5ab",
       "priority": 0,
-      "group": "56ccef410b55"
+      "group": "9472f18fed4d"
     },
     {
       "type": "chips",
@@ -2109,7 +2097,7 @@
       ],
       "chips": [
         "Sukaldaria",
-        "labur",
+        "labura",
         "eta",
         "gizena",
         "da"
@@ -2117,16 +2105,16 @@
       "solutions": [
         [
           "Sukaldaria",
-          "labur",
+          "labura",
           "eta",
           "gizena",
           "da"
         ]
       ],
-      "formattedSolution": "Sukaldaria labur eta gizena da.",
-      "id": "8ad8aedbfbba",
+      "formattedSolution": "Sukaldaria labura eta gizena da.",
+      "id": "6ee477019bc5",
       "priority": 2,
-      "group": "56ccef410b55"
+      "group": "9472f18fed4d"
     },
     {
       "type": "chips",
@@ -2137,7 +2125,7 @@
           "definition": "chef\ncook"
         },
         {
-          "word": "labur",
+          "word": "labura",
           "definition": "short"
         },
         {
@@ -2180,9 +2168,9 @@
         ]
       ],
       "formattedSolution": "The cook is short and fat.",
-      "id": "4a808176915c",
+      "id": "1371b840e95a",
       "priority": 2,
-      "group": "56ccef410b55"
+      "group": "9472f18fed4d"
     },
     {
       "type": "cards",

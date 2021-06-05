@@ -341,6 +341,11 @@
           "goats",
           "are",
           "black"
+        ],
+        [
+          "Goats",
+          "are",
+          "black"
         ]
       ],
       "formattedSolution": "The goats are black.",
@@ -954,11 +959,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Zaldi animalia da?",
+      "formInTargetLanguage": "Zaldia animalia da?",
       "meaningInSourceLanguage": "Is a horse an animal?",
-      "id": "1ef449bf2b6c",
+      "id": "1eb5f996ae3a",
       "priority": 0,
-      "group": "dfc59ea62782"
+      "group": "43569f28c908"
     },
     {
       "type": "chips",
@@ -986,29 +991,29 @@
         }
       ],
       "chips": [
-        "Zaldi",
+        "Zaldia",
         "animalia",
         "da"
       ],
       "solutions": [
         [
-          "Zaldi",
+          "Zaldia",
           "animalia",
           "da"
         ]
       ],
-      "formattedSolution": "Zaldi animalia da?",
-      "id": "e797f19843fc",
+      "formattedSolution": "Zaldia animalia da?",
+      "id": "4d2916f93d38",
       "priority": 2,
-      "group": "dfc59ea62782"
+      "group": "43569f28c908"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Zaldi",
-          "definition": "horse"
+          "word": "Zaldia",
+          "definition": "a horse\nhorse"
         },
         {
           "word": "animalia",
@@ -1043,9 +1048,9 @@
         ]
       ],
       "formattedSolution": "Is a horse an animal?",
-      "id": "592b5364b63b",
+      "id": "b6513518c03c",
       "priority": 2,
-      "group": "dfc59ea62782"
+      "group": "43569f28c908"
     },
     {
       "type": "options",

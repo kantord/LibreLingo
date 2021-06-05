@@ -105,11 +105,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Zaldi euskalak ederra eta jatora dira.",
+      "formInTargetLanguage": "Zaldi euskalak ederrak eta jatorak dira.",
       "meaningInSourceLanguage": "The Basque horses are beautiful and nice.",
-      "id": "1ae1c340ad8c",
+      "id": "f0a59f1bc60d",
       "priority": 0,
-      "group": "6191c8ec63da"
+      "group": "3b5fc224a608"
     },
     {
       "type": "chips",
@@ -147,25 +147,25 @@
       "chips": [
         "Zaldi",
         "euskalak",
-        "ederra",
+        "ederrak",
         "eta",
-        "jatora",
+        "jatorak",
         "dira"
       ],
       "solutions": [
         [
           "Zaldi",
           "euskalak",
-          "ederra",
+          "ederrak",
           "eta",
-          "jatora",
+          "jatorak",
           "dira"
         ]
       ],
-      "formattedSolution": "Zaldi euskalak ederra eta jatora dira.",
-      "id": "4d834085ef83",
+      "formattedSolution": "Zaldi euskalak ederrak eta jatorak dira.",
+      "id": "a6c054ed5cf3",
       "priority": 2,
-      "group": "6191c8ec63da"
+      "group": "3b5fc224a608"
     },
     {
       "type": "chips",
@@ -180,7 +180,7 @@
           "definition": "basque (ad)"
         },
         {
-          "word": "ederra",
+          "word": "ederrak",
           "definition": "beautiful\nhandsome"
         },
         {
@@ -188,7 +188,7 @@
           "definition": "and"
         },
         {
-          "word": "jatora",
+          "word": "jatorak",
           "definition": "nice"
         },
         {
@@ -217,17 +217,17 @@
         ]
       ],
       "formattedSolution": "The Basque horses are beautiful and nice.",
-      "id": "147e546d80f6",
+      "id": "8a43a2369976",
       "priority": 2,
-      "group": "6191c8ec63da"
+      "group": "3b5fc224a608"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Mutila txerri ona da.",
+      "formInTargetLanguage": "Txerri txikia ona da.",
       "meaningInSourceLanguage": "The small pig is good.",
-      "id": "3d94febe5856",
+      "id": "813872f5be91",
       "priority": 0,
-      "group": "c7784f72111f"
+      "group": "0aee5d2fbc4a"
     },
     {
       "type": "chips",
@@ -255,35 +255,35 @@
         }
       ],
       "chips": [
-        "Mutila",
-        "txerri",
+        "Txerri",
+        "txikia",
         "ona",
         "da"
       ],
       "solutions": [
         [
-          "Mutila",
-          "txerri",
+          "Txerri",
+          "txikia",
           "ona",
           "da"
         ]
       ],
-      "formattedSolution": "Mutila txerri ona da.",
-      "id": "d5e871b9a2ad",
+      "formattedSolution": "Txerri txikia ona da.",
+      "id": "5b8df1964f22",
       "priority": 2,
-      "group": "c7784f72111f"
+      "group": "0aee5d2fbc4a"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Mutila",
-          "definition": "a boy\nboy\nthe boy"
+          "word": "Txerri",
+          "definition": "pig"
         },
         {
-          "word": "txerri",
-          "definition": "pig"
+          "word": "txikia",
+          "definition": "small"
         },
         {
           "word": "ona",
@@ -318,9 +318,9 @@
         ]
       ],
       "formattedSolution": "The small pig is good.",
-      "id": "2dbdca5408ed",
+      "id": "47cee3cb0b4a",
       "priority": 2,
-      "group": "c7784f72111f"
+      "group": "0aee5d2fbc4a"
     },
     {
       "type": "options",
@@ -786,11 +786,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Txerri txikia txarra zen.",
-      "meaningInSourceLanguage": "The small pig was bad.",
-      "id": "12850cb67bf6",
+      "formInTargetLanguage": "Sagu txikia txarra zen.",
+      "meaningInSourceLanguage": "The small mouse was bad.",
+      "id": "fc7723d3b509",
       "priority": 0,
-      "group": "2c7f27866970"
+      "group": "2af9d78af550"
     },
     {
       "type": "chips",
@@ -805,8 +805,8 @@
           "definition": "txiki"
         },
         {
-          "word": "pig",
-          "definition": "txerri"
+          "word": "mouse",
+          "definition": "sagu\nsagua"
         },
         {
           "word": "was",
@@ -818,31 +818,31 @@
         }
       ],
       "chips": [
-        "Txerri",
+        "Sagu",
         "txikia",
         "txarra",
         "zen"
       ],
       "solutions": [
         [
-          "Txerri",
+          "Sagu",
           "txikia",
           "txarra",
           "zen"
         ]
       ],
-      "formattedSolution": "Txerri txikia txarra zen.",
-      "id": "1ef439852170",
+      "formattedSolution": "Sagu txikia txarra zen.",
+      "id": "aa5182edc77a",
       "priority": 2,
-      "group": "2c7f27866970"
+      "group": "2af9d78af550"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Txerri",
-          "definition": "pig"
+          "word": "Sagu",
+          "definition": "mouse"
         },
         {
           "word": "txikia",
@@ -860,7 +860,7 @@
       "chips": [
         "The",
         "small",
-        "pig",
+        "mouse",
         "was",
         "bad"
       ],
@@ -868,22 +868,22 @@
         [
           "The",
           "small",
-          "pig",
+          "mouse",
           "was",
           "bad"
         ],
         [
           "A",
           "small",
-          "pig",
+          "mouse",
           "was",
           "bad"
         ]
       ],
-      "formattedSolution": "The small pig was bad.",
-      "id": "72801bbb33bc",
+      "formattedSolution": "The small mouse was bad.",
+      "id": "c61da978c990",
       "priority": 2,
-      "group": "2c7f27866970"
+      "group": "2af9d78af550"
     },
     {
       "type": "options",
@@ -1322,11 +1322,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Arraina horiak motelak eta itsusiak ziren.",
+      "formInTargetLanguage": "Arrain horiak motelak eta itsusiak ziren.",
       "meaningInSourceLanguage": "The yellow fish were slow and ugly.",
-      "id": "c20697b60ef2",
+      "id": "a70f5a5732e9",
       "priority": 0,
-      "group": "61f811312ced"
+      "group": "28ea65dee279"
     },
     {
       "type": "chips",
@@ -1362,7 +1362,7 @@
         }
       ],
       "chips": [
-        "Arraina",
+        "Arrain",
         "horiak",
         "motelak",
         "eta",
@@ -1371,7 +1371,7 @@
       ],
       "solutions": [
         [
-          "Arraina",
+          "Arrain",
           "horiak",
           "motelak",
           "eta",
@@ -1379,18 +1379,18 @@
           "ziren"
         ]
       ],
-      "formattedSolution": "Arraina horiak motelak eta itsusiak ziren.",
-      "id": "f6b7db5deb32",
+      "formattedSolution": "Arrain horiak motelak eta itsusiak ziren.",
+      "id": "b642e4e1ef47",
       "priority": 2,
-      "group": "61f811312ced"
+      "group": "28ea65dee279"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Arraina",
-          "definition": "a fish\nfish"
+          "word": "Arrain",
+          "definition": "fish"
         },
         {
           "word": "horiak",
@@ -1434,9 +1434,9 @@
         ]
       ],
       "formattedSolution": "The yellow fish were slow and ugly.",
-      "id": "ec2edd55f98f",
+      "id": "a6cdfd390e77",
       "priority": 2,
-      "group": "61f811312ced"
+      "group": "28ea65dee279"
     },
     {
       "type": "options",
