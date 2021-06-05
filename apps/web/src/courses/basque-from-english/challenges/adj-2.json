@@ -130,6 +130,32 @@
           "rather",
           "the",
           "store"
+        ],
+        [
+          "It",
+          "is",
+          "not",
+          "the",
+          "hotel",
+          "but",
+          "rather",
+          "it",
+          "is",
+          "the",
+          "store"
+        ],
+        [
+          "It",
+          "is",
+          "not",
+          "a",
+          "hotel",
+          "but",
+          "rather",
+          "it",
+          "is",
+          "a",
+          "store"
         ]
       ],
       "formattedSolution": "It is not a hotel, but rather a store.",
@@ -139,11 +165,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Ez zen etxe, baizik ostatua.",
+      "formInTargetLanguage": "Ez zen etxea, baizik ostatua.",
       "meaningInSourceLanguage": "It was not a house, but rather a mini-hotel.",
-      "id": "12894b59104e",
+      "id": "4571fdf00e2b",
       "priority": 0,
-      "group": "2133b7860a11"
+      "group": "7a7920121d8f"
     },
     {
       "type": "chips",
@@ -189,7 +215,7 @@
       "chips": [
         "Ez",
         "zen",
-        "etxe",
+        "etxea",
         "baizik",
         "ostatua"
       ],
@@ -197,15 +223,15 @@
         [
           "Ez",
           "zen",
-          "etxe",
+          "etxea",
           "baizik",
           "ostatua"
         ]
       ],
-      "formattedSolution": "Ez zen etxe, baizik ostatua.",
-      "id": "1ae0300b5119",
+      "formattedSolution": "Ez zen etxea, baizik ostatua.",
+      "id": "9ecd99687b6d",
       "priority": 2,
-      "group": "2133b7860a11"
+      "group": "7a7920121d8f"
     },
     {
       "type": "chips",
@@ -220,7 +246,7 @@
           "definition": "was"
         },
         {
-          "word": "etxe,",
+          "word": "etxea,",
           "definition": "house"
         },
         {
@@ -265,12 +291,38 @@
           "rather",
           "the",
           "mini-hotel"
+        ],
+        [
+          "It",
+          "was",
+          "not",
+          "the",
+          "house",
+          "but",
+          "rather",
+          "it",
+          "is",
+          "the",
+          "mini-hotel"
+        ],
+        [
+          "It",
+          "was",
+          "not",
+          "a",
+          "house",
+          "but",
+          "rather",
+          "it",
+          "is",
+          "a",
+          "mini-hotel"
         ]
       ],
       "formattedSolution": "It was not a house, but rather a mini-hotel.",
-      "id": "826ea0e88fb6",
+      "id": "ed72458461ea",
       "priority": 2,
-      "group": "2133b7860a11"
+      "group": "7a7920121d8f"
     },
     {
       "type": "options",
@@ -407,6 +459,16 @@
           "it",
           "is",
           "red"
+        ],
+        [
+          "The",
+          "hotel",
+          "is",
+          "not",
+          "green",
+          "but",
+          "rather",
+          "red"
         ]
       ],
       "formattedSolution": "The hotel is not green, but rather it is red.",
@@ -501,6 +563,13 @@
           "is",
           "the",
           "store"
+        ],
+        [
+          "What",
+          "color",
+          "is",
+          "a",
+          "store"
         ]
       ],
       "formattedSolution": "What color is the store?",
@@ -511,10 +580,10 @@
     {
       "type": "options",
       "formInTargetLanguage": "Zer koloreak ziren hotelak?",
-      "meaningInSourceLanguage": "What color were the hotels?",
-      "id": "d8f63ed5f4a6",
+      "meaningInSourceLanguage": "What colors were the hotels?",
+      "id": "31e3dc5f3de9",
       "priority": 0,
-      "group": "d66dd670e7a5"
+      "group": "ea0ebf5cbed8"
     },
     {
       "type": "chips",
@@ -525,8 +594,8 @@
           "definition": "zer"
         },
         {
-          "word": "color",
-          "definition": "kolore\nkolorea"
+          "word": "colors",
+          "definition": "koloreak"
         },
         {
           "word": "were",
@@ -556,9 +625,9 @@
         ]
       ],
       "formattedSolution": "Zer koloreak ziren hotelak?",
-      "id": "4e51a72252c4",
+      "id": "b0c0792b5cff",
       "priority": 2,
-      "group": "d66dd670e7a5"
+      "group": "ea0ebf5cbed8"
     },
     {
       "type": "chips",
@@ -583,7 +652,7 @@
       ],
       "chips": [
         "What",
-        "color",
+        "colors",
         "were",
         "the",
         "hotels"
@@ -591,16 +660,16 @@
       "solutions": [
         [
           "What",
-          "color",
+          "colors",
           "were",
           "the",
           "hotels"
         ]
       ],
-      "formattedSolution": "What color were the hotels?",
-      "id": "771c7d898fa8",
+      "formattedSolution": "What colors were the hotels?",
+      "id": "63c384e20e27",
       "priority": 2,
-      "group": "d66dd670e7a5"
+      "group": "ea0ebf5cbed8"
     },
     {
       "type": "options",
@@ -783,6 +852,13 @@
           "was",
           "not",
           "red"
+        ],
+        [
+          "A",
+          "bus",
+          "was",
+          "not",
+          "red"
         ]
       ],
       "formattedSolution": "The bus was not red.",
@@ -792,11 +868,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Ostatu ez da zuria.",
+      "formInTargetLanguage": "Ostatua ez da zuria.",
       "meaningInSourceLanguage": "The mini-hotel is not white.",
-      "id": "46d48d59bf59",
+      "id": "b7c2b5932541",
       "priority": 0,
-      "group": "d4695806ec68"
+      "group": "470b46ba655f"
     },
     {
       "type": "chips",
@@ -824,30 +900,30 @@
         }
       ],
       "chips": [
-        "Ostatu",
+        "Ostatua",
         "ez",
         "da",
         "zuria"
       ],
       "solutions": [
         [
-          "Ostatu",
+          "Ostatua",
           "ez",
           "da",
           "zuria"
         ]
       ],
-      "formattedSolution": "Ostatu ez da zuria.",
-      "id": "30dc667e2432",
+      "formattedSolution": "Ostatua ez da zuria.",
+      "id": "57d3bbe4667b",
       "priority": 2,
-      "group": "d4695806ec68"
+      "group": "470b46ba655f"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Ostatu",
+          "word": "Ostatua",
           "definition": "mini-hotel"
         },
         {
@@ -877,12 +953,19 @@
           "is",
           "not",
           "white"
+        ],
+        [
+          "A",
+          "mini-hotel",
+          "is",
+          "not",
+          "white"
         ]
       ],
       "formattedSolution": "The mini-hotel is not white.",
-      "id": "8cca9568444f",
+      "id": "f3bbe2e31ee1",
       "priority": 2,
-      "group": "d4695806ec68"
+      "group": "470b46ba655f"
     },
     {
       "type": "options",
@@ -1054,10 +1137,10 @@
     {
       "type": "options",
       "formInTargetLanguage": "Eliza ez zen zuria, baina ostatua zuria zen.",
-      "meaningInSourceLanguage": "The church was not white, but rather the mini-hotel was white.",
-      "id": "16f4909f94f4",
+      "meaningInSourceLanguage": "The church was not white, but the mini-hotel was white.",
+      "id": "a2531a5215a6",
       "priority": 0,
-      "group": "8d837c2a67dc"
+      "group": "c7ea3c09c914"
     },
     {
       "type": "chips",
@@ -1086,10 +1169,6 @@
         {
           "word": "but",
           "definition": "baina"
-        },
-        {
-          "word": "rather",
-          "definition": "baizik"
         },
         {
           "word": "the",
@@ -1131,9 +1210,9 @@
         ]
       ],
       "formattedSolution": "Eliza ez zen zuria, baina ostatua zuria zen.",
-      "id": "480f8d45d158",
+      "id": "25c709c700c8",
       "priority": 2,
-      "group": "8d837c2a67dc"
+      "group": "c7ea3c09c914"
     },
     {
       "type": "chips",
@@ -1157,7 +1236,7 @@
         },
         {
           "word": "baina",
-          "definition": "but\nbut (contrast)\nbut(contrast)"
+          "definition": "but\nbut(contrast)"
         },
         {
           "word": "ostatua",
@@ -1179,7 +1258,6 @@
         "not",
         "white",
         "but",
-        "rather",
         "the",
         "mini-hotel",
         "was",
@@ -1193,17 +1271,28 @@
           "not",
           "white",
           "but",
-          "rather",
           "the",
+          "mini-hotel",
+          "was",
+          "white"
+        ],
+        [
+          "A",
+          "church",
+          "was",
+          "not",
+          "white",
+          "but",
+          "a",
           "mini-hotel",
           "was",
           "white"
         ]
       ],
-      "formattedSolution": "The church was not white, but rather the mini-hotel was white.",
-      "id": "32176fb87e9b",
+      "formattedSolution": "The church was not white, but the mini-hotel was white.",
+      "id": "57c1971afa5c",
       "priority": 2,
-      "group": "8d837c2a67dc"
+      "group": "c7ea3c09c914"
     },
     {
       "type": "options",
@@ -1529,11 +1618,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Dendak ez ziren zuria, baina berdeak.",
+      "formInTargetLanguage": "Dendak ez ziren zuriak, baina berdeak.",
       "meaningInSourceLanguage": "The stores were not not white, but green.",
-      "id": "4c93cbc81390",
+      "id": "76a23df3cd97",
       "priority": 0,
-      "group": "d9e3321b4c93"
+      "group": "9cf2aaba63f4"
     },
     {
       "type": "chips",
@@ -1576,7 +1665,7 @@
         "Dendak",
         "ez",
         "ziren",
-        "zuria",
+        "zuriak",
         "baina",
         "berdeak"
       ],
@@ -1585,15 +1674,15 @@
           "Dendak",
           "ez",
           "ziren",
-          "zuria",
+          "zuriak",
           "baina",
           "berdeak"
         ]
       ],
-      "formattedSolution": "Dendak ez ziren zuria, baina berdeak.",
-      "id": "10af9f9427c3",
+      "formattedSolution": "Dendak ez ziren zuriak, baina berdeak.",
+      "id": "290067fb7b50",
       "priority": 2,
-      "group": "d9e3321b4c93"
+      "group": "9cf2aaba63f4"
     },
     {
       "type": "chips",
@@ -1612,12 +1701,12 @@
           "definition": "were"
         },
         {
-          "word": "zuria,",
+          "word": "zuriak,",
           "definition": "white"
         },
         {
           "word": "baina",
-          "definition": "but\nbut (contrast)\nbut(contrast)"
+          "definition": "but\nbut(contrast)"
         },
         {
           "word": "berdeak.",
@@ -1647,9 +1736,9 @@
         ]
       ],
       "formattedSolution": "The stores were not not white, but green.",
-      "id": "59d1ef6d89d3",
+      "id": "5694638111c3",
       "priority": 2,
-      "group": "d9e3321b4c93"
+      "group": "9cf2aaba63f4"
     },
     {
       "type": "options",
@@ -1751,7 +1840,7 @@
         },
         {
           "word": "baina",
-          "definition": "but\nbut (contrast)\nbut(contrast)"
+          "definition": "but\nbut(contrast)"
         },
         {
           "word": "medikua",
@@ -1905,7 +1994,7 @@
         },
         {
           "word": "baina",
-          "definition": "but\nbut (contrast)\nbut(contrast)"
+          "definition": "but\nbut(contrast)"
         },
         {
           "word": "irakaslea",
@@ -2052,6 +2141,14 @@
           "a",
           "police",
           "officer"
+        ],
+        [
+          "You",
+          "are",
+          "not",
+          "the",
+          "police",
+          "officer"
         ]
       ],
       "formattedSolution": "You are not a police officer.",
@@ -2061,11 +2158,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Gu ez ginen medikuak, erizainak baizik.",
+      "formInTargetLanguage": "Gu ez ginen medikuak, baizik erizainak.",
       "meaningInSourceLanguage": "We were not doctors, but nurses.",
-      "id": "460432b5037e",
+      "id": "ed4a57e7bcf9",
       "priority": 0,
-      "group": "ddddce07791f"
+      "group": "fdef390d943a"
     },
     {
       "type": "chips",
@@ -2101,8 +2198,8 @@
         "ez",
         "ginen",
         "medikuak",
-        "erizainak",
-        "baizik"
+        "baizik",
+        "erizainak"
       ],
       "solutions": [
         [
@@ -2110,14 +2207,14 @@
           "ez",
           "ginen",
           "medikuak",
-          "erizainak",
-          "baizik"
+          "baizik",
+          "erizainak"
         ]
       ],
-      "formattedSolution": "Gu ez ginen medikuak, erizainak baizik.",
-      "id": "54f019750c38",
+      "formattedSolution": "Gu ez ginen medikuak, baizik erizainak.",
+      "id": "b5814eef83e2",
       "priority": 2,
-      "group": "ddddce07791f"
+      "group": "fdef390d943a"
     },
     {
       "type": "chips",
@@ -2140,12 +2237,12 @@
           "definition": "doctors"
         },
         {
-          "word": "erizainak",
-          "definition": "nurses"
+          "word": "baizik",
+          "definition": "but (rather)\nbut(rather)\nrather"
         },
         {
-          "word": "baizik.",
-          "definition": "but (rather)\nbut(rather)\nrather"
+          "word": "erizainak.",
+          "definition": "nurses"
         }
       ],
       "chips": [
@@ -2167,9 +2264,9 @@
         ]
       ],
       "formattedSolution": "We were not doctors, but nurses.",
-      "id": "db726aa8e639",
+      "id": "909d049217b9",
       "priority": 2,
-      "group": "ddddce07791f"
+      "group": "fdef390d943a"
     },
     {
       "type": "options",
@@ -2249,6 +2346,18 @@
       "solutions": [
         [
           "You(plural",
+          "were",
+          "not",
+          "tourists"
+        ],
+        [
+          "You'll",
+          "were",
+          "not",
+          "tourists"
+        ],
+        [
+          "You",
           "were",
           "not",
           "tourists"
@@ -2346,6 +2455,13 @@
           "is",
           "the",
           "store"
+        ],
+        [
+          "What",
+          "color",
+          "is",
+          "a",
+          "store"
         ]
       ],
       "formattedSolution": "What color is the store?",
@@ -2385,43 +2501,6 @@
       "id": "d17842499451",
       "priority": 1,
       "group": "004d599ec84e"
-    },
-    {
-      "type": "cards",
-      "pictures": [
-        "but.jpg",
-        "but.jpg",
-        "but.jpg"
-      ],
-      "formInTargetLanguage": "baina",
-      "meaningInSourceLanguage": "but (contrast)",
-      "id": "925c5a224d2c",
-      "priority": 0,
-      "group": "93ab4672a1e8"
-    },
-    {
-      "type": "shortInput",
-      "pictures": [
-        "but.jpg",
-        "but.jpg",
-        "but.jpg"
-      ],
-      "formInTargetLanguage": [
-        "baina"
-      ],
-      "phrase": [
-        {
-          "word": "but",
-          "definition": "baina"
-        },
-        {
-          "word": "(contrast)",
-          "definition": "kontrastatu"
-        }
-      ],
-      "id": "8e8412f8091e",
-      "priority": 1,
-      "group": "93ab4672a1e8"
     },
     {
       "type": "cards",
