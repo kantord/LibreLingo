@@ -11,6 +11,15 @@
       "group": "cd50e00edebd"
     },
     {
+      "type": "listeningExercise",
+      "answer": "Zu sagua zara.",
+      "meaning": "You are a mouse.",
+      "audio": "ac6c065646fef6de15f6a916e2df5d42d2ac8b36c818776659b9df9948ef8b86",
+      "id": "263fb8990471",
+      "priority": 1,
+      "group": "cd50e00edebd"
+    },
+    {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
@@ -96,6 +105,15 @@
       "meaningInSourceLanguage": "The cow is brown.",
       "id": "9769e0a4a1f4",
       "priority": 0,
+      "group": "ae54d824b35b"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Behia marroia da.",
+      "meaning": "The cow is brown.",
+      "audio": "edc57c602a7a9de2e22d88b494edc2c5b3aeed1358746943f5d1dfe6ddc04a3a",
+      "id": "a62d1c092b3b",
+      "priority": 1,
       "group": "ae54d824b35b"
     },
     {
@@ -187,6 +205,15 @@
       "group": "d6c447727826"
     },
     {
+      "type": "listeningExercise",
+      "answer": "Ardia zuria da.",
+      "meaning": "The sheep is white.",
+      "audio": "900c6b7a27be5b854fd418a679e03da45deca3a5dba6aa49acf354f29fb20f77",
+      "id": "e1795d3c16f2",
+      "priority": 1,
+      "group": "d6c447727826"
+    },
+    {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
@@ -275,6 +302,15 @@
       "group": "6bd7b7ec0468"
     },
     {
+      "type": "listeningExercise",
+      "answer": "Ahuntzak beltzak dira.",
+      "meaning": "The goats are black.",
+      "audio": "9ab9aec3aeee2e002595189adccfef5103d16c9bbdc22809363f59e32f024815",
+      "id": "0c757de9f4dd",
+      "priority": 1,
+      "group": "6bd7b7ec0468"
+    },
+    {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
@@ -341,6 +377,11 @@
           "goats",
           "are",
           "black"
+        ],
+        [
+          "Goats",
+          "are",
+          "black"
         ]
       ],
       "formattedSolution": "The goats are black.",
@@ -354,6 +395,15 @@
       "meaningInSourceLanguage": "The guide was a yellow snake.",
       "id": "6d9a8805641a",
       "priority": 0,
+      "group": "9c5de11d9b17"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Gida suge horia zen.",
+      "meaning": "The guide was a yellow snake.",
+      "audio": "db1fc2a0f778325504cdd5a34234a1e16ea52d041c9f9f2d42d5051cf8e2c0b5",
+      "id": "d6f5e0f82efa",
+      "priority": 1,
       "group": "9c5de11d9b17"
     },
     {
@@ -465,6 +515,15 @@
       "group": "032271d71d5b"
     },
     {
+      "type": "listeningExercise",
+      "answer": "Gidaria txerria da.",
+      "meaning": "The driver is a pig.",
+      "audio": "64aa65d68093de35fd109f50fd061e4c386541de8623e808af712983f3062b4f",
+      "id": "e06d2fef6903",
+      "priority": 1,
+      "group": "032271d71d5b"
+    },
+    {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
@@ -550,6 +609,15 @@
       "meaningInSourceLanguage": "They are cows. They are not goats.",
       "id": "e21bbcbad1b5",
       "priority": 0,
+      "group": "4fc992f67553"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Behiak dira. Ez dira ahuntzak.",
+      "meaning": "They are cows. They are not goats.",
+      "audio": "2030dd021dc9e15e5433df576fe3ee5eb5c8a6b77f07571f5294c833547bb0fd",
+      "id": "60a80e978f5e",
+      "priority": 1,
       "group": "4fc992f67553"
     },
     {
@@ -662,6 +730,15 @@
       "meaningInSourceLanguage": "You(plural) are tall pigs and short sheep.",
       "id": "7d90f79a4f40",
       "priority": 0,
+      "group": "57c2e7a9c7f0"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Zuek txerri altuak eta ardi laburak zarete.",
+      "meaning": "You(plural) are tall pigs and short sheep.",
+      "audio": "9726cb6d805058783a7aac581fb435a556b1b07430e904dde11495bd766e0dab",
+      "id": "8e900a3285bc",
+      "priority": 1,
       "group": "57c2e7a9c7f0"
     },
     {
@@ -840,6 +917,15 @@
       "group": "bf2a5d960279"
     },
     {
+      "type": "listeningExercise",
+      "answer": "Hura txoria da, ez arraina.",
+      "meaning": "It is a bird, not a fish.",
+      "audio": "1b81f4803bab186add0d38668592333e988610ed58e079910f3abd5646297d95",
+      "id": "355a74b43f5d",
+      "priority": 1,
+      "group": "bf2a5d960279"
+    },
+    {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
@@ -954,11 +1040,20 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Zaldi animalia da?",
+      "formInTargetLanguage": "Zaldia animalia da?",
       "meaningInSourceLanguage": "Is a horse an animal?",
-      "id": "1ef449bf2b6c",
+      "id": "1eb5f996ae3a",
       "priority": 0,
-      "group": "dfc59ea62782"
+      "group": "43569f28c908"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Zaldia animalia da?",
+      "meaning": "Is a horse an animal?",
+      "audio": "eb78cdb62a394d774fd2651b287305756cdddca232335c376f41418601e79643",
+      "id": "74db4421f6e4",
+      "priority": 1,
+      "group": "43569f28c908"
     },
     {
       "type": "chips",
@@ -986,29 +1081,29 @@
         }
       ],
       "chips": [
-        "Zaldi",
+        "Zaldia",
         "animalia",
         "da"
       ],
       "solutions": [
         [
-          "Zaldi",
+          "Zaldia",
           "animalia",
           "da"
         ]
       ],
-      "formattedSolution": "Zaldi animalia da?",
-      "id": "e797f19843fc",
+      "formattedSolution": "Zaldia animalia da?",
+      "id": "4d2916f93d38",
       "priority": 2,
-      "group": "dfc59ea62782"
+      "group": "43569f28c908"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Zaldi",
-          "definition": "horse"
+          "word": "Zaldia",
+          "definition": "a horse\nhorse"
         },
         {
           "word": "animalia",
@@ -1043,9 +1138,9 @@
         ]
       ],
       "formattedSolution": "Is a horse an animal?",
-      "id": "592b5364b63b",
+      "id": "b6513518c03c",
       "priority": 2,
-      "group": "dfc59ea62782"
+      "group": "43569f28c908"
     },
     {
       "type": "options",
@@ -1053,6 +1148,15 @@
       "meaningInSourceLanguage": "Yes. Horses are big animals.",
       "id": "bce3a501b213",
       "priority": 0,
+      "group": "b42e2b830324"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Bai. Zaldiak animalia handiak dira.",
+      "meaning": "Yes. Horses are big animals.",
+      "audio": "8ab9719eb5b9405596973958e2f42d008d816d9677dd3b23ca90479bbd7f29b2",
+      "id": "875ea7d0fc52",
+      "priority": 1,
       "group": "b42e2b830324"
     },
     {
@@ -1153,6 +1257,15 @@
       "meaningInSourceLanguage": "A goat is not a bird.",
       "id": "bebc77e337be",
       "priority": 0,
+      "group": "9065d8fffe50"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Ahuntza ez da txoria.",
+      "meaning": "A goat is not a bird.",
+      "audio": "9c2844465c1c65a576381cff2f256888f835c4a76131c6704bcbdb9da56efd90",
+      "id": "c3b947cb8d79",
+      "priority": 1,
       "group": "9065d8fffe50"
     },
     {
@@ -1277,6 +1390,15 @@
       "meaningInSourceLanguage": "Is a fish a bird? It is not.",
       "id": "36c18590d6a2",
       "priority": 0,
+      "group": "19ac4535ad50"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Arraina txoria da? Ez da.",
+      "meaning": "Is a fish a bird? It is not.",
+      "audio": "ef0f9ae679bb82d10121b517006bd47a55831d5fd168d1d3dec3210dd84f6f54",
+      "id": "fab7c3cfb550",
+      "priority": 1,
       "group": "19ac4535ad50"
     },
     {
@@ -1428,6 +1550,15 @@
       "group": "95844b7f1a6b"
     },
     {
+      "type": "listeningExercise",
+      "answer": "Arraina ez da sugea.",
+      "meaning": "A fish is not a snake.",
+      "audio": "4cff004016353880db926eea12c3941b8fbebd4d36b58a306dcdc9a426b95443",
+      "id": "f38e65da3b4f",
+      "priority": 1,
+      "group": "95844b7f1a6b"
+    },
+    {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
@@ -1549,6 +1680,15 @@
       "meaningInSourceLanguage": "It is not a sheep, but rather a goat.",
       "id": "d78d1be0d42b",
       "priority": 0,
+      "group": "14ddcf972b5d"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Ez da ardia, baizik ahuntz bat.",
+      "meaning": "It is not a sheep, but rather a goat.",
+      "audio": "2dcd130c93108763d403651daa399b8057c0c24b48295b42f7e2c88c1d8cc4d0",
+      "id": "538f9d233626",
+      "priority": 1,
       "group": "14ddcf972b5d"
     },
     {
@@ -1715,6 +1855,15 @@
       "group": "9b90caac2cc3"
     },
     {
+      "type": "listeningExercise",
+      "answer": "Behia ez da apaiza.",
+      "meaning": "A cow is not a priest.",
+      "audio": "e57e0d770e287633fe1bd608da98cfdbeb098b162dd140bd3004c63a0235e6c8",
+      "id": "23ad108e0915",
+      "priority": 1,
+      "group": "9b90caac2cc3"
+    },
+    {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
@@ -1848,6 +1997,15 @@
       "group": "089d2530ee74"
     },
     {
+      "type": "listeningExercise",
+      "answer": "ahuntz",
+      "meaning": "goat",
+      "audio": "e1c815ae0b1c9dd06d444145d66cde760e0f7755ef963c81dc1650298badbdde",
+      "id": "862e17a02265",
+      "priority": 1,
+      "group": "089d2530ee74"
+    },
+    {
       "type": "cards",
       "pictures": [
         "sheep.jpg",
@@ -1877,6 +2035,15 @@
         }
       ],
       "id": "22852ef72dba",
+      "priority": 1,
+      "group": "b5502045f1dc"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "ardi",
+      "meaning": "sheep",
+      "audio": "9277a12c38da1902d99cd82a1ac598a138af622f6b20a9350e53d004705dd3bf",
+      "id": "9687d73acebb",
       "priority": 1,
       "group": "b5502045f1dc"
     },
@@ -1914,6 +2081,15 @@
       "group": "cf1e4ccae6b6"
     },
     {
+      "type": "listeningExercise",
+      "answer": "arrain",
+      "meaning": "fish",
+      "audio": "e1d23d955639123d3a5c99dac4949cc35c455663a2b03265e7105e49a91f300d",
+      "id": "d0e159ab1b8a",
+      "priority": 1,
+      "group": "cf1e4ccae6b6"
+    },
+    {
       "type": "cards",
       "pictures": [
         "cow.jpg",
@@ -1943,6 +2119,15 @@
         }
       ],
       "id": "01c6410519d2",
+      "priority": 1,
+      "group": "e5806e997d4d"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "behi",
+      "meaning": "cow",
+      "audio": "818dde546141a0bbbeff607a2ec8538c1c49d1b433b4b6e5439721dafccd2078",
+      "id": "8a7531b9f59c",
       "priority": 1,
       "group": "e5806e997d4d"
     },
@@ -1980,6 +2165,15 @@
       "group": "232d7f83284c"
     },
     {
+      "type": "listeningExercise",
+      "answer": "sagu",
+      "meaning": "mouse",
+      "audio": "292c4c46b8949b8335a5767782bf8f56a7e0e57bcfcf7674813af3654f49f1e0",
+      "id": "20a7e2d914b4",
+      "priority": 1,
+      "group": "232d7f83284c"
+    },
+    {
       "type": "cards",
       "pictures": [
         "snake.jpg",
@@ -2009,6 +2203,15 @@
         }
       ],
       "id": "68af0b666042",
+      "priority": 1,
+      "group": "113d4dfc54bd"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "suge",
+      "meaning": "snake",
+      "audio": "701287fad0f7b3c627170dd2fe73fae50382bd270d3f8c6189aba72e6c847d6a",
+      "id": "ac551d6b66ea",
       "priority": 1,
       "group": "113d4dfc54bd"
     },
@@ -2046,6 +2249,15 @@
       "group": "0a8ebb439253"
     },
     {
+      "type": "listeningExercise",
+      "answer": "txerri",
+      "meaning": "pig",
+      "audio": "a9f1937592e5c8764bbba897b82cd22b40292ce4f2785cf184ee7b4db00204bd",
+      "id": "e139f2de2d3b",
+      "priority": 1,
+      "group": "0a8ebb439253"
+    },
+    {
       "type": "cards",
       "pictures": [
         "horse1.jpg",
@@ -2075,6 +2287,15 @@
         }
       ],
       "id": "af4855197e7b",
+      "priority": 1,
+      "group": "e37a1b9040b7"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "zaldi",
+      "meaning": "horse",
+      "audio": "1359419b338bf9279f43ecc1515b0d3d61b82c4a806c96ef0c1af8b4c08e2cb0",
+      "id": "294ac1b9907e",
       "priority": 1,
       "group": "e37a1b9040b7"
     }

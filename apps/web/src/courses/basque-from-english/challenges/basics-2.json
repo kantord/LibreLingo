@@ -5,10 +5,19 @@
     {
       "type": "options",
       "formInTargetLanguage": "Epa. Ni Aitor naiz. Ni mutila naiz.",
-      "meaningInSourceLanguage": "Hi.  I am Aitor. I am a boy.",
-      "id": "81805dec2a01",
+      "meaningInSourceLanguage": "Hi. I am Aitor. I am a boy.",
+      "id": "66382af23900",
       "priority": 0,
-      "group": "48fd76571cf7"
+      "group": "86ad46273e7e"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Epa. Ni Aitor naiz. Ni mutila naiz.",
+      "meaning": "Hi. I am Aitor. I am a boy.",
+      "audio": "0954fbd1acad6f1f34a8d264996a365527c4ab0a191c62cfc60847eb68d49f91",
+      "id": "1527ed771e2f",
+      "priority": 1,
+      "group": "86ad46273e7e"
     },
     {
       "type": "chips",
@@ -91,9 +100,9 @@
         ]
       ],
       "formattedSolution": "Epa. Ni Aitor naiz. Ni mutila naiz.",
-      "id": "c35299746408",
+      "id": "401313e2f876",
       "priority": 2,
-      "group": "48fd76571cf7"
+      "group": "86ad46273e7e"
     },
     {
       "type": "chips",
@@ -160,18 +169,27 @@
           "boy"
         ]
       ],
-      "formattedSolution": "Hi.  I am Aitor. I am a boy.",
-      "id": "cbbe0656ff3e",
+      "formattedSolution": "Hi. I am Aitor. I am a boy.",
+      "id": "2b5c7c1ee463",
       "priority": 2,
-      "group": "48fd76571cf7"
+      "group": "86ad46273e7e"
     },
     {
       "type": "options",
       "formInTargetLanguage": "Epa. Ni Terese naiz. Ni neska naiz.",
-      "meaningInSourceLanguage": "Hi. I am  Terese. I am a girl.",
-      "id": "bdc1cd1418ae",
+      "meaningInSourceLanguage": "Hi. I am Terese. I am a girl.",
+      "id": "2e0016e406f3",
       "priority": 0,
-      "group": "bf5da4bf7ef3"
+      "group": "1b4a5e656f51"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Epa. Ni Terese naiz. Ni neska naiz.",
+      "meaning": "Hi. I am Terese. I am a girl.",
+      "audio": "8efd7ecbc168cdaa44cdabab50b0f5068c8adc1bb76b7de43403c609b1be8630",
+      "id": "55124a7835ff",
+      "priority": 1,
+      "group": "1b4a5e656f51"
     },
     {
       "type": "chips",
@@ -254,9 +272,9 @@
         ]
       ],
       "formattedSolution": "Epa. Ni Terese naiz. Ni neska naiz.",
-      "id": "b5c3f5e5bb49",
+      "id": "8bc33e967399",
       "priority": 2,
-      "group": "bf5da4bf7ef3"
+      "group": "1b4a5e656f51"
     },
     {
       "type": "chips",
@@ -323,10 +341,10 @@
           "girl"
         ]
       ],
-      "formattedSolution": "Hi. I am  Terese. I am a girl.",
-      "id": "38ceceb2fe36",
+      "formattedSolution": "Hi. I am Terese. I am a girl.",
+      "id": "ba55d1d94204",
       "priority": 2,
-      "group": "bf5da4bf7ef3"
+      "group": "1b4a5e656f51"
     },
     {
       "type": "options",
@@ -334,6 +352,15 @@
       "meaningInSourceLanguage": "Hello. I am Miren. I am a teacher.",
       "id": "39e7dccc2c08",
       "priority": 0,
+      "group": "25e517d900b8"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Kaixo. Ni Miren naiz. Ni irakaslea naiz.",
+      "meaning": "Hello. I am Miren. I am a teacher.",
+      "audio": "c32ff3907d672d87ba9965eb02e347e2e9d7b90519d49bf1575a77daa4ad509f",
+      "id": "f25b2b481b8b",
+      "priority": 1,
       "group": "25e517d900b8"
     },
     {
@@ -497,6 +524,15 @@
       "meaningInSourceLanguage": "Hi. I am also one teacher.",
       "id": "b1972a1c0cb0",
       "priority": 0,
+      "group": "0424e5c2ea7a"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Epa. Ni ere irakasle bat naiz.",
+      "meaning": "Hi. I am also one teacher.",
+      "audio": "14470cde00115a988942f37bddba2388557286b784b0e3cee4f8a16ed84aa4f8",
+      "id": "f02e1a970900",
+      "priority": 1,
       "group": "0424e5c2ea7a"
     },
     {
@@ -693,6 +729,15 @@
       "group": "ea134d56dae2"
     },
     {
+      "type": "listeningExercise",
+      "answer": "Zu Mikel zara. Zu gizona zara.",
+      "meaning": "You are a Mikel. You are a man.",
+      "audio": "d46fff82d19e70e3c6509eebc6fcc1d138989606493e7a62059df205dfa83e15",
+      "id": "e927001503ba",
+      "priority": 1,
+      "group": "ea134d56dae2"
+    },
+    {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
@@ -844,6 +889,15 @@
       "meaningInSourceLanguage": "You are Aitor. You are one student.",
       "id": "5519545cda07",
       "priority": 0,
+      "group": "9fb745237c59"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Zu Aitor zara. Zu bat ikasle zara.",
+      "meaning": "You are Aitor. You are one student.",
+      "audio": "ded3080816f14611af5cab41639cbdc01fea9fe3195aaf8f5fc5186f26f2983f",
+      "id": "82128589d872",
+      "priority": 1,
       "group": "9fb745237c59"
     },
     {
@@ -1001,6 +1055,15 @@
       "group": "65746e5b9f79"
     },
     {
+      "type": "listeningExercise",
+      "answer": "Zu Miren zara. Zu emakumea zara.",
+      "meaning": "You are Miren. You are a woman.",
+      "audio": "60189df8a1c8013e635be1a1d68eec447862ca56da21794e49701a27673e57ab",
+      "id": "1aafeba853ea",
+      "priority": 1,
+      "group": "65746e5b9f79"
+    },
+    {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
@@ -1148,6 +1211,15 @@
       "group": "4cb12f43cdf3"
     },
     {
+      "type": "listeningExercise",
+      "answer": "Zu Aitor zara. Zu mutila zara.",
+      "meaning": "You are Aitor. You are a boy.",
+      "audio": "c3c906000cbfe272009b69786b2c7783b39c5f9faf416f96703eac4ec06b2f6f",
+      "id": "e7989326ce37",
+      "priority": 1,
+      "group": "4cb12f43cdf3"
+    },
+    {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
@@ -1289,10 +1361,19 @@
     {
       "type": "options",
       "formInTargetLanguage": "Hura Miren da. Miren emakumea da.",
-      "meaningInSourceLanguage": "She is Miren  Miren is a woman.",
-      "id": "6929f7e09602",
+      "meaningInSourceLanguage": "She is Miren. Miren is a woman.",
+      "id": "2d8b7e496307",
       "priority": 0,
-      "group": "c55e871d0219"
+      "group": "885c505f2443"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Hura Miren da. Miren emakumea da.",
+      "meaning": "She is Miren. Miren is a woman.",
+      "audio": "8e9c9c4dcab2e24aab52fbba2bc79a899e8a5e104ea9efb345cb39a7bae4dd9a",
+      "id": "9ee5e00151c1",
+      "priority": 1,
+      "group": "885c505f2443"
     },
     {
       "type": "chips",
@@ -1307,7 +1388,7 @@
           "definition": "da\nda (izan)\ndago (egon)"
         },
         {
-          "word": "Miren",
+          "word": "Miren.",
           "definition": "Miren (female name)\nMiren (name)"
         },
         {
@@ -1422,9 +1503,9 @@
         ]
       ],
       "formattedSolution": "Hura Miren da. Miren emakumea da.",
-      "id": "572d16fefa57",
+      "id": "b9c1d139058e",
       "priority": 2,
-      "group": "c55e871d0219"
+      "group": "885c505f2443"
     },
     {
       "type": "chips",
@@ -1510,7 +1591,6 @@
           ""
         ],
         [],
-        [],
         [
           "M"
         ],
@@ -1563,10 +1643,10 @@
           ""
         ]
       ],
-      "formattedSolution": "She is Miren  Miren is a woman.",
-      "id": "7ef3fa21da8c",
+      "formattedSolution": "She is Miren. Miren is a woman.",
+      "id": "3f7f50b36132",
       "priority": 2,
-      "group": "c55e871d0219"
+      "group": "885c505f2443"
     },
     {
       "type": "options",
@@ -1574,6 +1654,15 @@
       "meaningInSourceLanguage": "Miren is also a teacher.",
       "id": "421b37f5a674",
       "priority": 0,
+      "group": "53d0dafbdf2e"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Miren ere irakaslea da.",
+      "meaning": "Miren is also a teacher.",
+      "audio": "2c24d1b6b0347ba8e45550cde8941879be86054dc5777b33f9a3bf24a8327221",
+      "id": "74b05cdf7810",
+      "priority": 1,
       "group": "53d0dafbdf2e"
     },
     {
@@ -1675,6 +1764,15 @@
       "meaningInSourceLanguage": "She is Terese. She is a student.",
       "id": "2d9632674ccf",
       "priority": 0,
+      "group": "6d738767fdcb"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Hura Terese da. Hura ikaslea da.",
+      "meaning": "She is Terese. She is a student.",
+      "audio": "98a29119b1f45137b72e1379738ad100fbeeab0d85914fb6e16fdc64e94c9100",
+      "id": "a9ae23b58069",
+      "priority": 1,
       "group": "6d738767fdcb"
     },
     {
@@ -1854,6 +1952,15 @@
       "group": "58017e18feba"
     },
     {
+      "type": "listeningExercise",
+      "answer": "gizona",
+      "meaning": "the man",
+      "audio": "88939d1c148a0ff886d3b5010a87a6961e37b229813593dd90ea8e279f245e22",
+      "id": "a5c35a8db51f",
+      "priority": 1,
+      "group": "58017e18feba"
+    },
+    {
       "type": "cards",
       "pictures": [
         "woman1.jpg",
@@ -1887,6 +1994,15 @@
         }
       ],
       "id": "f27a7ffd661c",
+      "priority": 1,
+      "group": "87b8e7b3991e"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "emakumea",
+      "meaning": "the woman",
+      "audio": "cf7c8ad742cee4ad3fa8f0a58f6c09a3cfa255328582749ab8e48c6fe9eff9f3",
+      "id": "d83911398f42",
       "priority": 1,
       "group": "87b8e7b3991e"
     },
@@ -1928,6 +2044,15 @@
       "group": "65463eee74f8"
     },
     {
+      "type": "listeningExercise",
+      "answer": "mutila",
+      "meaning": "the boy",
+      "audio": "3c76fe35e378a8d9bc13ac10f1e232e3a138a90cb204c95d04485109e9b6bcb9",
+      "id": "da3ef746083e",
+      "priority": 1,
+      "group": "65463eee74f8"
+    },
+    {
       "type": "cards",
       "pictures": [
         "also.jpg",
@@ -1961,6 +2086,15 @@
       "group": "a1fbea3182ef"
     },
     {
+      "type": "listeningExercise",
+      "answer": "ere",
+      "meaning": "also",
+      "audio": "f74003674dca8418fd66d1bf81ef693a9c60070107e08fcac603c44b08b71bd9",
+      "id": "823eab700679",
+      "priority": 1,
+      "group": "a1fbea3182ef"
+    },
+    {
       "type": "cards",
       "pictures": [
         "teacher1.jpg",
@@ -1990,6 +2124,15 @@
         }
       ],
       "id": "cf45d2555d0a",
+      "priority": 1,
+      "group": "aa182282c428"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "irakasle",
+      "meaning": "teacher",
+      "audio": "ef6975b61b4985e0a5c14bd63336727acc983ac008e650e77a0a4902d89a44fe",
+      "id": "8a4b25d44a00",
       "priority": 1,
       "group": "aa182282c428"
     },
@@ -2031,6 +2174,15 @@
       "group": "2432fb848bfe"
     },
     {
+      "type": "listeningExercise",
+      "answer": "irakaslea",
+      "meaning": "the teacher",
+      "audio": "bbf8946d540adad4654bfc10346b18b2b9d4cba5848bd7b792633f49f25d2bda",
+      "id": "b761ffe04e55",
+      "priority": 1,
+      "group": "2432fb848bfe"
+    },
+    {
       "type": "cards",
       "pictures": [
         "student1.jpg",
@@ -2060,6 +2212,15 @@
         }
       ],
       "id": "df56d6e21ff9",
+      "priority": 1,
+      "group": "aa79c111c75a"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "ikasle",
+      "meaning": "student",
+      "audio": "20b6d3c8a5ddf2d58cdd06e4401a7393c3f07182243d58485837838d76f10c76",
+      "id": "bb697e40071f",
       "priority": 1,
       "group": "aa79c111c75a"
     },
@@ -2101,6 +2262,15 @@
       "group": "758964f58ced"
     },
     {
+      "type": "listeningExercise",
+      "answer": "ikaslea",
+      "meaning": "the student",
+      "audio": "75e445e6dd12dcadf4c7ce7ae41203defa2d8c04f29c8d44046f99b670de26c9",
+      "id": "dd7d5baf885b",
+      "priority": 1,
+      "group": "758964f58ced"
+    },
+    {
       "type": "cards",
       "pictures": [
         "hi.jpg",
@@ -2130,6 +2300,15 @@
         }
       ],
       "id": "c576a672ee1c",
+      "priority": 1,
+      "group": "9e45fd2af359"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "epa",
+      "meaning": "hi",
+      "audio": "2f2c446e070f7047db1a0b8f41831d1a0eccc9bcf738ea2d069c0d8647c20ff7",
+      "id": "b779aba64680",
       "priority": 1,
       "group": "9e45fd2af359"
     }
