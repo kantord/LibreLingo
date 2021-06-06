@@ -11,6 +11,15 @@
       "group": "bf33fe5f8d66"
     },
     {
+      "type": "listeningExercise",
+      "answer": "Autobusa horia da?",
+      "meaning": "Is it a yellow bus?",
+      "audio": "6bde315d853e11e310d20eb462e6dee0164a10b3e564f568486a4d097bed8184",
+      "id": "eac5fc0f5baa",
+      "priority": 1,
+      "group": "bf33fe5f8d66"
+    },
+    {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
@@ -83,6 +92,13 @@
           "a",
           "yellow",
           "bus"
+        ],
+        [
+          "Is",
+          "it",
+          "the",
+          "yellow",
+          "bus"
         ]
       ],
       "formattedSolution": "Is it a yellow bus?",
@@ -96,6 +112,15 @@
       "meaningInSourceLanguage": "It was a green bus, but now it is yellow.",
       "id": "d7c7e272c75b",
       "priority": 0,
+      "group": "bbddbeb138c2"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Autobus berdea zen, baina orain horia da.",
+      "meaning": "It was a green bus, but now it is yellow.",
+      "audio": "b1259eb6114fdcbe70e6cd63a450a13c1860db1dad92f33d8e3a6f8a52546560",
+      "id": "bf8166d34e00",
+      "priority": 1,
       "group": "bbddbeb138c2"
     },
     {
@@ -186,7 +211,7 @@
         },
         {
           "word": "baina",
-          "definition": "but\nbut (contrast)\nbut(contrast)"
+          "definition": "but\nbut(contrast)"
         },
         {
           "word": "orain",
@@ -225,6 +250,18 @@
           "it",
           "is",
           "yellow"
+        ],
+        [
+          "It",
+          "was",
+          "the",
+          "green",
+          "bus",
+          "but",
+          "now",
+          "it",
+          "is",
+          "yellow"
         ]
       ],
       "formattedSolution": "It was a green bus, but now it is yellow.",
@@ -238,6 +275,15 @@
       "meaningInSourceLanguage": "The bus is red and black and the car is blue and orange.",
       "id": "28abef0616a6",
       "priority": 0,
+      "group": "76adfa059776"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Autobusa gorria eta beltza da eta kotxea urdina eta laranja da.",
+      "meaning": "The bus is red and black and the car is blue and orange.",
+      "audio": "4e04de8c3d3857df8aba51b6099d9b140da422d914e5880649b1ca3e478807ae",
+      "id": "7a88ae3c8e3c",
+      "priority": 1,
       "group": "76adfa059776"
     },
     {
@@ -419,10 +465,19 @@
     {
       "type": "options",
       "formInTargetLanguage": "Kotxe beltza zen, baina orain gorria da.",
-      "meaningInSourceLanguage": "It was a  black car, but now it is red.",
-      "id": "6ba3d357e1ea",
+      "meaningInSourceLanguage": "It was a black car, but now it is red.",
+      "id": "177b0f1c4f35",
       "priority": 0,
-      "group": "ce182ebc8557"
+      "group": "620b306c4936"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Kotxe beltza zen, baina orain gorria da.",
+      "meaning": "It was a black car, but now it is red.",
+      "audio": "601849267170a914bdd257f3513f2788af30c4fae8e636cb15259c17c30f14e5",
+      "id": "9c2a80275ff7",
+      "priority": 1,
+      "group": "620b306c4936"
     },
     {
       "type": "chips",
@@ -490,9 +545,9 @@
         ]
       ],
       "formattedSolution": "Kotxe beltza zen, baina orain gorria da.",
-      "id": "08a2b2209b60",
+      "id": "b899d9da99af",
       "priority": 2,
-      "group": "ce182ebc8557"
+      "group": "620b306c4936"
     },
     {
       "type": "chips",
@@ -512,7 +567,7 @@
         },
         {
           "word": "baina",
-          "definition": "but\nbut (contrast)\nbut(contrast)"
+          "definition": "but\nbut(contrast)"
         },
         {
           "word": "orain",
@@ -553,10 +608,10 @@
           "red"
         ]
       ],
-      "formattedSolution": "It was a  black car, but now it is red.",
-      "id": "a00f3dd35d47",
+      "formattedSolution": "It was a black car, but now it is red.",
+      "id": "a2a6abd3ddfc",
       "priority": 2,
-      "group": "ce182ebc8557"
+      "group": "620b306c4936"
     },
     {
       "type": "options",
@@ -564,6 +619,15 @@
       "meaningInSourceLanguage": "One car is white and one car is blue.",
       "id": "b51faf32138a",
       "priority": 0,
+      "group": "045b03e7094e"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Kotxe bat zuria da eta kotxe bat urdina da.",
+      "meaning": "One car is white and one car is blue.",
+      "audio": "889a70a7d5fab6cd4488ae2c31bc0784b83dc7ec5b9db8f688a6c5a136b82ff3",
+      "id": "0066b1a422c5",
+      "priority": 1,
       "group": "045b03e7094e"
     },
     {
@@ -708,11 +772,20 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Haiek kotxe zuriak ziren, baina orain  horiak dira.",
+      "formInTargetLanguage": "Haiek kotxe zuriak ziren, baina orain horiak dira.",
       "meaningInSourceLanguage": "They were white cars, but now they are yellow.",
-      "id": "e5a6d01c3f04",
+      "id": "8db4c31f8cee",
       "priority": 0,
-      "group": "d8fb89b6f4ab"
+      "group": "819982b0ab83"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Haiek kotxe zuriak ziren, baina orain horiak dira.",
+      "meaning": "They were white cars, but now they are yellow.",
+      "audio": "0e4a4753c3e01b066e33d843a24a3d00bd34634b333406115fc767941f7c971e",
+      "id": "666b4f9dfea4",
+      "priority": 1,
+      "group": "819982b0ab83"
     },
     {
       "type": "chips",
@@ -777,10 +850,10 @@
           "dira"
         ]
       ],
-      "formattedSolution": "Haiek kotxe zuriak ziren, baina orain  horiak dira.",
-      "id": "e15aad114e77",
+      "formattedSolution": "Haiek kotxe zuriak ziren, baina orain horiak dira.",
+      "id": "93d15eb86c95",
       "priority": 2,
-      "group": "d8fb89b6f4ab"
+      "group": "819982b0ab83"
     },
     {
       "type": "chips",
@@ -804,7 +877,7 @@
         },
         {
           "word": "baina",
-          "definition": "but\nbut (contrast)\nbut(contrast)"
+          "definition": "but\nbut(contrast)"
         },
         {
           "word": "orain",
@@ -844,9 +917,9 @@
         ]
       ],
       "formattedSolution": "They were white cars, but now they are yellow.",
-      "id": "9f7ab9031da2",
+      "id": "b8e4ff110505",
       "priority": 2,
-      "group": "d8fb89b6f4ab"
+      "group": "819982b0ab83"
     },
     {
       "type": "options",
@@ -854,6 +927,15 @@
       "meaningInSourceLanguage": "One purse was black and one purse was gray.",
       "id": "d13371b8c127",
       "priority": 0,
+      "group": "75de62128033"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Poltsa bat beltza zen eta poltsa bat grisa zen.",
+      "meaning": "One purse was black and one purse was gray.",
+      "audio": "53c64c6cb76bc26cae43e24a8ef788872509d0af9bce9f00640c7bb60002cb09",
+      "id": "3bef3c5054c9",
+      "priority": 1,
       "group": "75de62128033"
     },
     {
@@ -989,6 +1071,17 @@
           "purse",
           "was",
           "gray"
+        ],
+        [
+          "A",
+          "purse",
+          "was",
+          "black",
+          "and",
+          "a",
+          "purse",
+          "was",
+          "gray"
         ]
       ],
       "formattedSolution": "One purse was black and one purse was gray.",
@@ -1002,6 +1095,15 @@
       "meaningInSourceLanguage": "One purse was green",
       "id": "fbee6b2875dd",
       "priority": 0,
+      "group": "c5fb73e9abe8"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Poltsa bat berdea zen.",
+      "meaning": "One purse was green",
+      "audio": "4f31bfb2544c8645d8d7d3f2d305e80e2109eaa7af5fd9850d9d4dff608d0850",
+      "id": "453ab5ddbdd8",
+      "priority": 1,
       "group": "c5fb73e9abe8"
     },
     {
@@ -1077,6 +1179,12 @@
           "purse",
           "was",
           "green"
+        ],
+        [
+          "A",
+          "purse",
+          "was",
+          "green"
         ]
       ],
       "formattedSolution": "One purse was green",
@@ -1090,6 +1198,15 @@
       "meaningInSourceLanguage": "The purses were yellow.",
       "id": "bb94d540f824",
       "priority": 0,
+      "group": "54a8e841d898"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Poltsak horiak ziren.",
+      "meaning": "The purses were yellow.",
+      "audio": "e0916632787debd272465db8cb33febd035300e61cd53a0f94fcd70df57f96ab",
+      "id": "5c8307d5f4ec",
+      "priority": 1,
       "group": "54a8e841d898"
     },
     {
@@ -1172,6 +1289,15 @@
       "meaningInSourceLanguage": "The bus and the car are blue.",
       "id": "cc904ca72f13",
       "priority": 0,
+      "group": "e6c14395f28a"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Autobusa eta kotxea urdinak dira.",
+      "meaning": "The bus and the car are blue.",
+      "audio": "af2e2df583fe9f549ca1478f18ad69825d8b3588948acfb0120310731c4e0c0a",
+      "id": "50979d96edc0",
+      "priority": 1,
       "group": "e6c14395f28a"
     },
     {
@@ -1289,11 +1415,20 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Autobusa beltz zen eta kotxea zuria zen.",
+      "formInTargetLanguage": "Autobusa beltza zen eta kotxea zuria zen.",
       "meaningInSourceLanguage": "The bus was black and the car was white.",
-      "id": "fcd2d75116b2",
+      "id": "01f59b7fae76",
       "priority": 0,
-      "group": "21af73d438f2"
+      "group": "5aa8190ce5f6"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Autobusa beltza zen eta kotxea zuria zen.",
+      "meaning": "The bus was black and the car was white.",
+      "audio": "b8b660b2c8d7f268bd334c27fc53349a11b1fc86631457b5d4fd52143e304488",
+      "id": "2058c3c6eb26",
+      "priority": 1,
+      "group": "5aa8190ce5f6"
     },
     {
       "type": "chips",
@@ -1338,7 +1473,7 @@
       ],
       "chips": [
         "Autobusa",
-        "beltz",
+        "beltza",
         "zen",
         "eta",
         "kotxea",
@@ -1348,7 +1483,7 @@
       "solutions": [
         [
           "Autobusa",
-          "beltz",
+          "beltza",
           "zen",
           "eta",
           "kotxea",
@@ -1356,10 +1491,10 @@
           "zen"
         ]
       ],
-      "formattedSolution": "Autobusa beltz zen eta kotxea zuria zen.",
-      "id": "a5c94548f3df",
+      "formattedSolution": "Autobusa beltza zen eta kotxea zuria zen.",
+      "id": "1bf5c9ddca4d",
       "priority": 2,
-      "group": "21af73d438f2"
+      "group": "5aa8190ce5f6"
     },
     {
       "type": "chips",
@@ -1370,7 +1505,7 @@
           "definition": "a bus\nbus"
         },
         {
-          "word": "beltz",
+          "word": "beltza",
           "definition": "black"
         },
         {
@@ -1430,9 +1565,9 @@
         ]
       ],
       "formattedSolution": "The bus was black and the car was white.",
-      "id": "30f5c51ffcab",
+      "id": "d25aa7bf9840",
       "priority": 2,
-      "group": "21af73d438f2"
+      "group": "5aa8190ce5f6"
     },
     {
       "type": "options",
@@ -1440,6 +1575,15 @@
       "meaningInSourceLanguage": "The car was orange.",
       "id": "a842b0ad270d",
       "priority": 0,
+      "group": "f7d5c1af7d40"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Kotxea laranja zen.",
+      "meaning": "The car was orange.",
+      "audio": "5ff3318831ea5f6dc5eb78c4b462dba5f1f816d235a241a180091b2034ba620b",
+      "id": "1c0c97de86ca",
+      "priority": 1,
       "group": "f7d5c1af7d40"
     },
     {
@@ -1528,6 +1672,15 @@
       "meaningInSourceLanguage": "The purses are orange and green.",
       "id": "b433a7b5d15c",
       "priority": 0,
+      "group": "f0f5067db32f"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Poltsak laranjak eta berdeak dira.",
+      "meaning": "The purses are orange and green.",
+      "audio": "5ac09a2d669892f6864de22227d4c4c6c64aa653aaebe090b610105a08f0356d",
+      "id": "6151189262eb",
+      "priority": 1,
       "group": "f0f5067db32f"
     },
     {
@@ -1634,6 +1787,15 @@
       "meaningInSourceLanguage": "The cars are gray.",
       "id": "7b8495b68fe8",
       "priority": 0,
+      "group": "7871e3e04cf0"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Kotxeak grisak dira.",
+      "meaning": "The cars are gray.",
+      "audio": "961b6e065427df59cdd0eb455ee627f10cc58dbca636790dc25e7d59cd90348b",
+      "id": "8315153a0fb7",
+      "priority": 1,
       "group": "7871e3e04cf0"
     },
     {
@@ -1744,6 +1906,15 @@
       "group": "9ce8a688890a"
     },
     {
+      "type": "listeningExercise",
+      "answer": "beltz",
+      "meaning": "black",
+      "audio": "18a11fe6a3a23de272a96a73898808bf4125dc5e86a6024de915e06492538780",
+      "id": "e09f69c01bfb",
+      "priority": 1,
+      "group": "9ce8a688890a"
+    },
+    {
       "type": "cards",
       "pictures": [
         "white.jpg",
@@ -1773,6 +1944,15 @@
         }
       ],
       "id": "524a080cc3e5",
+      "priority": 1,
+      "group": "efcb55d46664"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "zuri",
+      "meaning": "white",
+      "audio": "d60a116a1277f3e77d2ea32e5d537b2000eca7aed38f64e04313272159f454a5",
+      "id": "e6cc82e311b8",
       "priority": 1,
       "group": "efcb55d46664"
     },
@@ -1810,6 +1990,15 @@
       "group": "e3c0e39fad24"
     },
     {
+      "type": "listeningExercise",
+      "answer": "gorri",
+      "meaning": "red",
+      "audio": "825842f1e04902efef9e69c5d4128113e56b5aaf3d9d17ed1431662dd1f96c2f",
+      "id": "433d8660a955",
+      "priority": 1,
+      "group": "e3c0e39fad24"
+    },
+    {
       "type": "cards",
       "pictures": [
         "orange.jpg",
@@ -1839,6 +2028,15 @@
         }
       ],
       "id": "d3ac08b90c28",
+      "priority": 1,
+      "group": "7a417aa49198"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "laranja",
+      "meaning": "orange",
+      "audio": "232907ef2b8b5a78db7939a6c290ed622522b66a1e99422d561ff45fa2509423",
+      "id": "25bfcacc1f01",
       "priority": 1,
       "group": "7a417aa49198"
     },
@@ -1876,6 +2074,15 @@
       "group": "04269f043196"
     },
     {
+      "type": "listeningExercise",
+      "answer": "hori",
+      "meaning": "yellow",
+      "audio": "4e9c1dd0ef40ac90cc09207039441af6f87f70245d8197a2319efeef7e1b9c82",
+      "id": "809485f68f79",
+      "priority": 1,
+      "group": "04269f043196"
+    },
+    {
       "type": "cards",
       "pictures": [
         "green.jpg",
@@ -1905,6 +2112,15 @@
         }
       ],
       "id": "90ef7f7b2f52",
+      "priority": 1,
+      "group": "85e126751ffd"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "berde",
+      "meaning": "green",
+      "audio": "a213a538737ca1c1a23e86858a4dc0e0645274c3fcad4b594ea59d37ede3cb6a",
+      "id": "181af9c8ed17",
       "priority": 1,
       "group": "85e126751ffd"
     },
@@ -1942,6 +2158,15 @@
       "group": "9d1ebb02c029"
     },
     {
+      "type": "listeningExercise",
+      "answer": "urdin",
+      "meaning": "blue",
+      "audio": "244c7c5af88657114d8c63a5f14ca3e33365c4b926c70a1d5c5f660f538916f2",
+      "id": "9d614e721cef",
+      "priority": 1,
+      "group": "9d1ebb02c029"
+    },
+    {
       "type": "cards",
       "pictures": [
         "gray.jpg",
@@ -1975,6 +2200,15 @@
       "group": "750c445a6b46"
     },
     {
+      "type": "listeningExercise",
+      "answer": "gris",
+      "meaning": "gray",
+      "audio": "bdf888fc2d6c77e978c3af7932e513b7f6f5921a6b1b038e89081807e398db51",
+      "id": "2f2a05778636",
+      "priority": 1,
+      "group": "750c445a6b46"
+    },
+    {
       "type": "cards",
       "pictures": [
         "purse.jpg",
@@ -2004,6 +2238,15 @@
         }
       ],
       "id": "bc6ec5d942a3",
+      "priority": 1,
+      "group": "63814b02e6ce"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "poltsa",
+      "meaning": "purse",
+      "audio": "0aeefcc737bb66d0da46f731f220b6eb31188b2de95e2dda549f03d76638f445",
+      "id": "41fc6a15696f",
       "priority": 1,
       "group": "63814b02e6ce"
     }

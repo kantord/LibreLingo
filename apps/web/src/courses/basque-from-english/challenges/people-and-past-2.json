@@ -11,6 +11,15 @@
       "group": "f638d30a5e9e"
     },
     {
+      "type": "listeningExercise",
+      "answer": "Ni ikaslea nintzen, baina orain irakaslea naiz.",
+      "meaning": "I was a student, but now I am a teacher.",
+      "audio": "9a0bb9464bec90923270d377b7c0a65978aeee9b62d18b7dc253c2e0eed77f37",
+      "id": "34d13db6d8af",
+      "priority": 1,
+      "group": "f638d30a5e9e"
+    },
+    {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
@@ -98,7 +107,7 @@
         },
         {
           "word": "baina",
-          "definition": "but\nbut (contrast)\nbut(contrast)"
+          "definition": "but\nbut(contrast)"
         },
         {
           "word": "orain",
@@ -150,6 +159,15 @@
       "meaningInSourceLanguage": "I was a tourist, but now I am a tour guide.",
       "id": "439c039edd69",
       "priority": 0,
+      "group": "affb977fcae9"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Ni turista nintzen, baina orain tour gida naiz.",
+      "meaning": "I was a tourist, but now I am a tour guide.",
+      "audio": "3dc849445d852a0becd66d502ac39610deec53c7f2494a70bd7072263875801b",
+      "id": "bf56739bc769",
+      "priority": 1,
       "group": "affb977fcae9"
     },
     {
@@ -246,7 +264,7 @@
         },
         {
           "word": "baina",
-          "definition": "but\nbut (contrast)\nbut(contrast)"
+          "definition": "but\nbut(contrast)"
         },
         {
           "word": "orain",
@@ -304,6 +322,15 @@
       "meaningInSourceLanguage": "You were a driver, but now you are a teacher.",
       "id": "ab39e0d83964",
       "priority": 0,
+      "group": "2575e24ce46c"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Zu gidaria zinen, baina orain irakaslea zara.",
+      "meaning": "You were a driver, but now you are a teacher.",
+      "audio": "b05d19a9f43bd36f3a64e0f4fe0eb871da417677a28f7c4427105a133ffcfde0",
+      "id": "2baa15df4ef3",
+      "priority": 1,
       "group": "2575e24ce46c"
     },
     {
@@ -394,7 +421,7 @@
         },
         {
           "word": "baina",
-          "definition": "but\nbut (contrast)\nbut(contrast)"
+          "definition": "but\nbut(contrast)"
         },
         {
           "word": "orain",
@@ -446,6 +473,15 @@
       "meaningInSourceLanguage": "You were a girl, but now you are a woman.",
       "id": "35495580e95b",
       "priority": 0,
+      "group": "8f9187c839d9"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Zu neska zinen, baina orain emakume zara.",
+      "meaning": "You were a girl, but now you are a woman.",
+      "audio": "054a11c878dd0d080f0ae545d7bc10654ec2bfa9240c9b704b0d95fa065295c3",
+      "id": "ff30fea7446b",
+      "priority": 1,
       "group": "8f9187c839d9"
     },
     {
@@ -536,7 +572,7 @@
         },
         {
           "word": "baina",
-          "definition": "but\nbut (contrast)\nbut(contrast)"
+          "definition": "but\nbut(contrast)"
         },
         {
           "word": "orain",
@@ -585,10 +621,19 @@
     {
       "type": "options",
       "formInTargetLanguage": "Hura irakaslea zen, baina orain erizaina da.",
-      "meaningInSourceLanguage": "He was a teacher, but now he is an nurse.",
-      "id": "db9d1703542d",
+      "meaningInSourceLanguage": "He was a teacher, but now he is a nurse.",
+      "id": "2592224127fc",
       "priority": 0,
-      "group": "4014aab22288"
+      "group": "4da158d73d04"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Hura irakaslea zen, baina orain erizaina da.",
+      "meaning": "He was a teacher, but now he is a nurse.",
+      "audio": "9fc4a82cb625f20ef14150d703d3bef805bf58d1625857348d47957d048ec176",
+      "id": "297acc864b5a",
+      "priority": 1,
+      "group": "4da158d73d04"
     },
     {
       "type": "chips",
@@ -627,8 +672,8 @@
           "definition": "da\nda (izan)\ndago (egon)"
         },
         {
-          "word": "an",
-          "definition": "-a\n-ak"
+          "word": "a",
+          "definition": "-a"
         },
         {
           "word": "nurse.",
@@ -656,9 +701,9 @@
         ]
       ],
       "formattedSolution": "Hura irakaslea zen, baina orain erizaina da.",
-      "id": "e8324edf778c",
+      "id": "13ccfd05e15f",
       "priority": 2,
-      "group": "4014aab22288"
+      "group": "4da158d73d04"
     },
     {
       "type": "chips",
@@ -678,7 +723,7 @@
         },
         {
           "word": "baina",
-          "definition": "but\nbut (contrast)\nbut(contrast)"
+          "definition": "but\nbut(contrast)"
         },
         {
           "word": "orain",
@@ -702,7 +747,7 @@
         "now",
         "he",
         "is",
-        "an",
+        "a",
         "nurse"
       ],
       "solutions": [
@@ -715,7 +760,7 @@
           "now",
           "he",
           "is",
-          "an",
+          "a",
           "nurse"
         ],
         [
@@ -727,14 +772,14 @@
           "now",
           "she",
           "is",
-          "an",
+          "a",
           "nurse"
         ]
       ],
-      "formattedSolution": "He was a teacher, but now he is an nurse.",
-      "id": "93f9aee07052",
+      "formattedSolution": "He was a teacher, but now he is a nurse.",
+      "id": "8519897401fc",
       "priority": 2,
-      "group": "4014aab22288"
+      "group": "4da158d73d04"
     },
     {
       "type": "options",
@@ -742,6 +787,15 @@
       "meaningInSourceLanguage": "He was a police officer, but now he is a tour guide.",
       "id": "23526c1de038",
       "priority": 0,
+      "group": "a30f06956bc8"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Hura polizia zen, baina orain tour gida da.",
+      "meaning": "He was a police officer, but now he is a tour guide.",
+      "audio": "147ae6a38de396747620a8b2fb9358b6065fd9c22001c3ebfa29b8001395add4",
+      "id": "df4d21e168dd",
+      "priority": 1,
       "group": "a30f06956bc8"
     },
     {
@@ -842,7 +896,7 @@
         },
         {
           "word": "baina",
-          "definition": "but\nbut (contrast)\nbut(contrast)"
+          "definition": "but\nbut(contrast)"
         },
         {
           "word": "orain",
@@ -916,6 +970,15 @@
       "meaningInSourceLanguage": "We were boys, but now we are men.",
       "id": "16a797eecfb7",
       "priority": 0,
+      "group": "56545618b0a6"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Gu mutilak ginen, baina gizonak gara.",
+      "meaning": "We were boys, but now we are men.",
+      "audio": "500af17b5301591fc63a7405f1a9542d273be31cb63cf767d475ec278c743e31",
+      "id": "8e9880fe9876",
+      "priority": 1,
       "group": "56545618b0a6"
     },
     {
@@ -996,7 +1059,7 @@
         },
         {
           "word": "baina",
-          "definition": "but\nbut (contrast)\nbut(contrast)"
+          "definition": "but\nbut(contrast)"
         },
         {
           "word": "gizonak",
@@ -1040,6 +1103,15 @@
       "meaningInSourceLanguage": "We were tourists, but now we are teachers.",
       "id": "f38597d95208",
       "priority": 0,
+      "group": "817f7bc05d7b"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Gu turistak ginen, baina orain ikasleak gara.",
+      "meaning": "We were tourists, but now we are teachers.",
+      "audio": "8e17762073da919c5048ceb321206059e8711ee1a1623e63ec44e0f82676088e",
+      "id": "251ae660d1bf",
+      "priority": 1,
       "group": "817f7bc05d7b"
     },
     {
@@ -1122,7 +1194,7 @@
         },
         {
           "word": "baina",
-          "definition": "but\nbut (contrast)\nbut(contrast)"
+          "definition": "but\nbut(contrast)"
         },
         {
           "word": "orain",
@@ -1170,6 +1242,15 @@
       "meaningInSourceLanguage": "You(plural) were doctors, but now you(plural) are tourists.",
       "id": "c0c302835068",
       "priority": 0,
+      "group": "a87e02930c26"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Zuek medikuak zineten, baina orain turistak dira.",
+      "meaning": "You(plural) were doctors, but now you(plural) are tourists.",
+      "audio": "05948be12e6db7298326e5dd1a4460a5a1a3d8571c3c4ffc077f70fe333a30a5",
+      "id": "21869d7ba4b2",
+      "priority": 1,
       "group": "a87e02930c26"
     },
     {
@@ -1252,7 +1333,7 @@
         },
         {
           "word": "baina",
-          "definition": "but\nbut (contrast)\nbut(contrast)"
+          "definition": "but\nbut(contrast)"
         },
         {
           "word": "orain",
@@ -1320,6 +1401,15 @@
       "meaningInSourceLanguage": "You(plural) were students, but now you are doctors.",
       "id": "bc2d4a9d9570",
       "priority": 0,
+      "group": "060a799e4fd8"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Zuek ikasleak zineten, baina orain medikuak zarete.",
+      "meaning": "You(plural) were students, but now you are doctors.",
+      "audio": "fc6416554ca2a03ec4d28f7e7e4f12f84d2c9b03cd64945571c3815d212b832c",
+      "id": "728c14ddaa0e",
+      "priority": 1,
       "group": "060a799e4fd8"
     },
     {
@@ -1402,7 +1492,7 @@
         },
         {
           "word": "baina",
-          "definition": "but\nbut (contrast)\nbut(contrast)"
+          "definition": "but\nbut(contrast)"
         },
         {
           "word": "orain",
@@ -1470,6 +1560,15 @@
       "meaningInSourceLanguage": "They were students, but now they are nurses.",
       "id": "2ea384cd173f",
       "priority": 0,
+      "group": "28b03c0b8c55"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Haiek ikasleak ziren, baina orain erizainak dira.",
+      "meaning": "They were students, but now they are nurses.",
+      "audio": "c07b1da49ff441d566f4be2950f7a1f0936238305ffbf843266a3afc1204b195",
+      "id": "54e428f91331",
+      "priority": 1,
       "group": "28b03c0b8c55"
     },
     {
@@ -1552,7 +1651,7 @@
         },
         {
           "word": "baina",
-          "definition": "but\nbut (contrast)\nbut(contrast)"
+          "definition": "but\nbut(contrast)"
         },
         {
           "word": "orain",
@@ -1587,6 +1686,15 @@
           "they",
           "are",
           "nurses"
+        ],
+        [
+          "They",
+          "were",
+          "students",
+          "but",
+          "now",
+          "they're",
+          "nurses"
         ]
       ],
       "formattedSolution": "They were students, but now they are nurses.",
@@ -1600,6 +1708,15 @@
       "meaningInSourceLanguage": "They were drivers, but now they are students.",
       "id": "4c9062713caa",
       "priority": 0,
+      "group": "5335b58f6b7b"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Haiek gidariak ziren, baina orain ikasleak dira.",
+      "meaning": "They were drivers, but now they are students.",
+      "audio": "1bc1290c68f550ed65762088d05ede2ce3e28854a11db4f11160e70a730aed82",
+      "id": "078859cbd4df",
+      "priority": 1,
       "group": "5335b58f6b7b"
     },
     {
@@ -1682,7 +1799,7 @@
         },
         {
           "word": "baina",
-          "definition": "but\nbut (contrast)\nbut(contrast)"
+          "definition": "but\nbut(contrast)"
         },
         {
           "word": "orain",
@@ -1716,6 +1833,15 @@
           "now",
           "they",
           "are",
+          "students"
+        ],
+        [
+          "They",
+          "were",
+          "drivers",
+          "but",
+          "now",
+          "they're",
           "students"
         ]
       ],
@@ -1763,6 +1889,15 @@
       "group": "70cb967a46d6"
     },
     {
+      "type": "listeningExercise",
+      "answer": "ni nintzen",
+      "meaning": "I was",
+      "audio": "49940de34c3814cdf4febddd4bdc1b78cc31d5568b58323e7c6adf6c01aa93c8",
+      "id": "48de441d2d20",
+      "priority": 1,
+      "group": "70cb967a46d6"
+    },
+    {
       "type": "cards",
       "pictures": [
         "youare.jpg",
@@ -1797,6 +1932,15 @@
         }
       ],
       "id": "9a532d6f90cc",
+      "priority": 1,
+      "group": "486f71e0efaa"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "zu zinen",
+      "meaning": "you were",
+      "audio": "912710533f97bfddb3892246a3e9055b704e56e1a661dc041c6bb237cc001532",
+      "id": "d09c6f59e971",
       "priority": 1,
       "group": "486f71e0efaa"
     },
@@ -1839,6 +1983,15 @@
       "group": "7821eb4e14e3"
     },
     {
+      "type": "listeningExercise",
+      "answer": "hura zen",
+      "meaning": "he was",
+      "audio": "a4a9b58d7ff771e8b1da67bacbe5c154bd66a2f8a1a8de3b2aa160d99275ebfa",
+      "id": "bc594ce4fc71",
+      "priority": 1,
+      "group": "7821eb4e14e3"
+    },
+    {
       "type": "cards",
       "pictures": [
         "doctor1.jpg",
@@ -1873,6 +2026,15 @@
         }
       ],
       "id": "2d012085526e",
+      "priority": 1,
+      "group": "1bbfdad04a99"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "gu ginen",
+      "meaning": "we were",
+      "audio": "2a22b3bd7df9966829d9a47a96deb57b29f07a0cde86735e750c8e00c3a81013",
+      "id": "da7f3eb20d2c",
       "priority": 1,
       "group": "1bbfdad04a99"
     },
@@ -1915,6 +2077,15 @@
       "group": "f6eb9ac2c6ac"
     },
     {
+      "type": "listeningExercise",
+      "answer": "zuek zineten",
+      "meaning": "you(plural) were",
+      "audio": "adc7c52e197900326f86d49b8fea6b9d09c6b7c3ce6acf793355199abd46f6e0",
+      "id": "4c1f280ad25c",
+      "priority": 1,
+      "group": "f6eb9ac2c6ac"
+    },
+    {
       "type": "cards",
       "pictures": [
         "they.jpg",
@@ -1953,6 +2124,15 @@
       "group": "0fd58d8e4968"
     },
     {
+      "type": "listeningExercise",
+      "answer": "haiek ziren",
+      "meaning": "they were",
+      "audio": "0670fb52aa0afba4294a3cfa169b8e9b6f8f18741fad8ce731236c738deebd80",
+      "id": "739a0d43627b",
+      "priority": 1,
+      "group": "0fd58d8e4968"
+    },
+    {
       "type": "cards",
       "pictures": [
         "now.jpg",
@@ -1986,6 +2166,15 @@
       "group": "d0a5639471ca"
     },
     {
+      "type": "listeningExercise",
+      "answer": "orain",
+      "meaning": "now",
+      "audio": "6bfde939c953312a194e74852351956bbf0cfb8171b27df1095de15bca96eedf",
+      "id": "e389a19ec11b",
+      "priority": 1,
+      "group": "d0a5639471ca"
+    },
+    {
       "type": "cards",
       "pictures": [
         "but.jpg",
@@ -2015,6 +2204,15 @@
         }
       ],
       "id": "1c8b4c0893a1",
+      "priority": 1,
+      "group": "8a1169a90ef4"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "baina",
+      "meaning": "but",
+      "audio": "8649ba83243c507842affc8f1cb5e520cd3829c3e2a9ac4dd64372ed36ff3d0a",
+      "id": "0fcb4e0faf05",
       "priority": 1,
       "group": "8a1169a90ef4"
     }
