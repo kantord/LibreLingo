@@ -81,7 +81,7 @@ git add courses/
 git commit -m "Add Example language"
 ```
 
-_**NOTE:** Replace the commit message to describe what it does in your case. Another thing is that make your changes only on one commit because it will be easier to maintain and apply possible changes into later. If you want to add something else to the commit, just use the `--ammend` command below._
+_**NOTE:** Replace the commit message to describe what it does in your case. Another thing is that make your changes only on one commit because it will be easier to maintain and apply possible changes into later. If you want to add something else to the commit, just use the `--amend` command below._
 
 This hasn't yet been sent to the repo online. The changes are only on your machine. If you feel like you've missed something, there is a chance you can make the changes and run:
 
