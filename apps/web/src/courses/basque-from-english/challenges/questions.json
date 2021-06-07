@@ -253,6 +253,12 @@
           "you",
           "a",
           "teacher"
+        ],
+        [
+          "Are",
+          "you",
+          "the",
+          "teacher"
         ]
       ],
       "formattedSolution": "Are you a teacher?",
@@ -606,10 +612,10 @@
     {
       "type": "options",
       "formInTargetLanguage": "Hura al autobusa da?",
-      "meaningInSourceLanguage": "Is it a bus?",
-      "id": "45c573f08123",
+      "meaningInSourceLanguage": "Is it the bus?",
+      "id": "c0bbd6d216b2",
       "priority": 0,
-      "group": "7dac0caf8983"
+      "group": "f56f0ff8c1a4"
     },
     {
       "type": "chips",
@@ -624,7 +630,7 @@
           "definition": "hura"
         },
         {
-          "word": "a",
+          "word": "the",
           "definition": "-a"
         },
         {
@@ -647,9 +653,9 @@
         ]
       ],
       "formattedSolution": "Hura al autobusa da?",
-      "id": "c5c20c6b5d28",
+      "id": "6baacc9f4074",
       "priority": 2,
-      "group": "7dac0caf8983"
+      "group": "f56f0ff8c1a4"
     },
     {
       "type": "chips",
@@ -675,27 +681,27 @@
       "chips": [
         "Is",
         "it",
-        "a",
+        "the",
         "bus"
       ],
       "solutions": [
         [
           "Is",
           "it",
-          "a",
+          "the",
           "bus"
         ],
         [
           "Is",
           "it",
-          "the",
+          "a",
           "bus"
         ]
       ],
-      "formattedSolution": "Is it a bus?",
-      "id": "890b0a49e2b1",
+      "formattedSolution": "Is it the bus?",
+      "id": "c299bd972e6e",
       "priority": 2,
-      "group": "7dac0caf8983"
+      "group": "f56f0ff8c1a4"
     },
     {
       "type": "options",
@@ -901,6 +907,15 @@
           "bus",
           "or",
           "a",
+          "car"
+        ],
+        [
+          "Is",
+          "it",
+          "the",
+          "bus",
+          "or",
+          "the",
           "car"
         ]
       ],
@@ -1473,6 +1488,15 @@
           "they",
           "buses",
           "or",
+          "cars"
+        ],
+        [
+          "Are",
+          "they",
+          "the",
+          "buses",
+          "or",
+          "the",
           "cars"
         ]
       ],

@@ -97,7 +97,7 @@
           "driver"
         ],
         [
-          "SExcuse",
+          "Excuse",
           "me",
           "Who",
           "is",
@@ -516,6 +516,12 @@
           "They",
           "are",
           "tourists"
+        ],
+        [
+          "They",
+          "are",
+          "the",
+          "tourists"
         ]
       ],
       "formattedSolution": "They are tourists.",
@@ -809,6 +815,19 @@
           "Hi",
           "We're",
           "students"
+        ],
+        [
+          "Hi",
+          "We",
+          "are",
+          "the",
+          "students"
+        ],
+        [
+          "Hi",
+          "We're",
+          "the",
+          "students"
         ]
       ],
       "formattedSolution": "Hi. We are students.",
@@ -924,11 +943,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Bai. Gu medikua gara.",
+      "formInTargetLanguage": "Bai. Gu medikuak gara.",
       "meaningInSourceLanguage": "Yes. We are doctors.",
-      "id": "b1ddabd15438",
+      "id": "0a8f523deeb3",
       "priority": 0,
-      "group": "5e1de75bfbeb"
+      "group": "c1b9ef2cd0c1"
     },
     {
       "type": "chips",
@@ -954,21 +973,21 @@
       "chips": [
         "Bai",
         "Gu",
-        "medikua",
+        "medikuak",
         "gara"
       ],
       "solutions": [
         [
           "Bai",
           "Gu",
-          "medikua",
+          "medikuak",
           "gara"
         ]
       ],
-      "formattedSolution": "Bai. Gu medikua gara.",
-      "id": "1236ae6c60fe",
+      "formattedSolution": "Bai. Gu medikuak gara.",
+      "id": "04d8428e9eac",
       "priority": 2,
-      "group": "5e1de75bfbeb"
+      "group": "c1b9ef2cd0c1"
     },
     {
       "type": "chips",
@@ -983,8 +1002,8 @@
           "definition": "we"
         },
         {
-          "word": "medikua",
-          "definition": "doctor\nthe doctor"
+          "word": "medikuak",
+          "definition": "doctors"
         },
         {
           "word": "gara.",
@@ -1024,9 +1043,9 @@
         ]
       ],
       "formattedSolution": "Yes. We are doctors.",
-      "id": "e773b2bbff79",
+      "id": "530147b162a5",
       "priority": 2,
-      "group": "5e1de75bfbeb"
+      "group": "c1b9ef2cd0c1"
     },
     {
       "type": "options",
@@ -1205,6 +1224,27 @@
         [
           "Are",
           "you",
+          "police",
+          "officers"
+        ],
+        [
+          "Are",
+          "you(plural",
+          "the",
+          "police",
+          "officers"
+        ],
+        [
+          "Are",
+          "you'll",
+          "the",
+          "police",
+          "officers"
+        ],
+        [
+          "Are",
+          "you",
+          "the",
           "police",
           "officers"
         ]
@@ -1409,6 +1449,12 @@
         [
           "Are",
           "they",
+          "nurses"
+        ],
+        [
+          "Are",
+          "they",
+          "the",
           "nurses"
         ]
       ],

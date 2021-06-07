@@ -83,6 +83,13 @@
           "a",
           "yellow",
           "bus"
+        ],
+        [
+          "Is",
+          "it",
+          "the",
+          "yellow",
+          "bus"
         ]
       ],
       "formattedSolution": "Is it a yellow bus?",
@@ -186,7 +193,7 @@
         },
         {
           "word": "baina",
-          "definition": "but\nbut (contrast)\nbut(contrast)"
+          "definition": "but\nbut(contrast)"
         },
         {
           "word": "orain",
@@ -218,6 +225,18 @@
           "It",
           "was",
           "a",
+          "green",
+          "bus",
+          "but",
+          "now",
+          "it",
+          "is",
+          "yellow"
+        ],
+        [
+          "It",
+          "was",
+          "the",
           "green",
           "bus",
           "but",
@@ -419,10 +438,10 @@
     {
       "type": "options",
       "formInTargetLanguage": "Kotxe beltza zen, baina orain gorria da.",
-      "meaningInSourceLanguage": "It was a  black car, but now it is red.",
-      "id": "6ba3d357e1ea",
+      "meaningInSourceLanguage": "It was a black car, but now it is red.",
+      "id": "177b0f1c4f35",
       "priority": 0,
-      "group": "ce182ebc8557"
+      "group": "620b306c4936"
     },
     {
       "type": "chips",
@@ -490,9 +509,9 @@
         ]
       ],
       "formattedSolution": "Kotxe beltza zen, baina orain gorria da.",
-      "id": "08a2b2209b60",
+      "id": "b899d9da99af",
       "priority": 2,
-      "group": "ce182ebc8557"
+      "group": "620b306c4936"
     },
     {
       "type": "chips",
@@ -512,7 +531,7 @@
         },
         {
           "word": "baina",
-          "definition": "but\nbut (contrast)\nbut(contrast)"
+          "definition": "but\nbut(contrast)"
         },
         {
           "word": "orain",
@@ -553,10 +572,10 @@
           "red"
         ]
       ],
-      "formattedSolution": "It was a  black car, but now it is red.",
-      "id": "a00f3dd35d47",
+      "formattedSolution": "It was a black car, but now it is red.",
+      "id": "a2a6abd3ddfc",
       "priority": 2,
-      "group": "ce182ebc8557"
+      "group": "620b306c4936"
     },
     {
       "type": "options",
@@ -708,11 +727,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Haiek kotxe zuriak ziren, baina orain  horiak dira.",
+      "formInTargetLanguage": "Haiek kotxe zuriak ziren, baina orain horiak dira.",
       "meaningInSourceLanguage": "They were white cars, but now they are yellow.",
-      "id": "e5a6d01c3f04",
+      "id": "8db4c31f8cee",
       "priority": 0,
-      "group": "d8fb89b6f4ab"
+      "group": "819982b0ab83"
     },
     {
       "type": "chips",
@@ -777,10 +796,10 @@
           "dira"
         ]
       ],
-      "formattedSolution": "Haiek kotxe zuriak ziren, baina orain  horiak dira.",
-      "id": "e15aad114e77",
+      "formattedSolution": "Haiek kotxe zuriak ziren, baina orain horiak dira.",
+      "id": "93d15eb86c95",
       "priority": 2,
-      "group": "d8fb89b6f4ab"
+      "group": "819982b0ab83"
     },
     {
       "type": "chips",
@@ -804,7 +823,7 @@
         },
         {
           "word": "baina",
-          "definition": "but\nbut (contrast)\nbut(contrast)"
+          "definition": "but\nbut(contrast)"
         },
         {
           "word": "orain",
@@ -844,9 +863,9 @@
         ]
       ],
       "formattedSolution": "They were white cars, but now they are yellow.",
-      "id": "9f7ab9031da2",
+      "id": "b8e4ff110505",
       "priority": 2,
-      "group": "d8fb89b6f4ab"
+      "group": "819982b0ab83"
     },
     {
       "type": "options",
@@ -989,6 +1008,17 @@
           "purse",
           "was",
           "gray"
+        ],
+        [
+          "A",
+          "purse",
+          "was",
+          "black",
+          "and",
+          "a",
+          "purse",
+          "was",
+          "gray"
         ]
       ],
       "formattedSolution": "One purse was black and one purse was gray.",
@@ -1074,6 +1104,12 @@
       "solutions": [
         [
           "One",
+          "purse",
+          "was",
+          "green"
+        ],
+        [
+          "A",
           "purse",
           "was",
           "green"
@@ -1289,11 +1325,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Autobusa beltz zen eta kotxea zuria zen.",
+      "formInTargetLanguage": "Autobusa beltza zen eta kotxea zuria zen.",
       "meaningInSourceLanguage": "The bus was black and the car was white.",
-      "id": "fcd2d75116b2",
+      "id": "01f59b7fae76",
       "priority": 0,
-      "group": "21af73d438f2"
+      "group": "5aa8190ce5f6"
     },
     {
       "type": "chips",
@@ -1338,7 +1374,7 @@
       ],
       "chips": [
         "Autobusa",
-        "beltz",
+        "beltza",
         "zen",
         "eta",
         "kotxea",
@@ -1348,7 +1384,7 @@
       "solutions": [
         [
           "Autobusa",
-          "beltz",
+          "beltza",
           "zen",
           "eta",
           "kotxea",
@@ -1356,10 +1392,10 @@
           "zen"
         ]
       ],
-      "formattedSolution": "Autobusa beltz zen eta kotxea zuria zen.",
-      "id": "a5c94548f3df",
+      "formattedSolution": "Autobusa beltza zen eta kotxea zuria zen.",
+      "id": "1bf5c9ddca4d",
       "priority": 2,
-      "group": "21af73d438f2"
+      "group": "5aa8190ce5f6"
     },
     {
       "type": "chips",
@@ -1370,7 +1406,7 @@
           "definition": "a bus\nbus"
         },
         {
-          "word": "beltz",
+          "word": "beltza",
           "definition": "black"
         },
         {
@@ -1430,9 +1466,9 @@
         ]
       ],
       "formattedSolution": "The bus was black and the car was white.",
-      "id": "30f5c51ffcab",
+      "id": "d25aa7bf9840",
       "priority": 2,
-      "group": "21af73d438f2"
+      "group": "5aa8190ce5f6"
     },
     {
       "type": "options",
