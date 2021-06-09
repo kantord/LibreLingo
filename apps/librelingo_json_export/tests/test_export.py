@@ -359,14 +359,14 @@ class TestGetSkillData(TestCase):
         _get_skill_data(fakes.skills[1], fakes.course1)
         mock.assert_called_with(4, 1)
 
-    @patch('librelingo_json_export.skills.get_challenges_data')
+    @patch('librelingo_json_export.skills._get_challenges_data')
     def test_correct_challenges(self, mock):
         FAKE_CHALLENGES = "fake challenges"
         mock.return_value = FAKE_CHALLENGES
         converted_skill = _get_skill_data(fakes.skills[1], fakes.course1)
         assert converted_skill["challenges"] == FAKE_CHALLENGES
 
-    @patch('librelingo_json_export.skills.get_challenges_data')
+    @patch('librelingo_json_export.skills._get_challenges_data')
     def test_formats_challenges_correctly(self, mock):
         _get_skill_data(fakes.skills[1], fakes.course1)
         mock.assert_called_with(fakes.skills[1], fakes.course1)

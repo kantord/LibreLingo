@@ -1,5 +1,5 @@
 from librelingo_utils import get_opaque_id, calculate_number_of_levels
-from .challenges import get_challenges_data
+from .challenges import _get_challenges_data
 
 
 def _get_skill_data(skill, course):
@@ -11,5 +11,5 @@ def _get_skill_data(skill, course):
         "id": get_opaque_id(skill, "Skill"),
         "levels": calculate_number_of_levels(
             len(skill.words), len(skill.phrases)),
-        "challenges": get_challenges_data(skill, course),
+        "challenges": _get_challenges_data(skill, course),
     }
