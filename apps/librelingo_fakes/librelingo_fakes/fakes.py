@@ -206,7 +206,8 @@ courseEmpty = Course(
     special_characters=["ä", "ß"],
     license=license1,
     modules=[],
-    dictionary=fake_dictionary
+    dictionary=fake_dictionary,
+    repository_url="https://github.com/kantord/LibreLingo/tree/main/courses/spanish-from-english"
 )
 
 
@@ -223,7 +224,8 @@ course1 = Course(
         ]),
         Module(title="Phrases", skills=[]),
     ],
-    dictionary=fake_dictionary
+    dictionary=fake_dictionary,
+    repository_url="https://github.com/kantord/LibreLingo/tree/main/courses/spanish-from-english"
 )
 
 course2 = Course(
@@ -236,7 +238,8 @@ course2 = Course(
             skills[3]
         ]),
     ],
-    dictionary=fake_dictionary
+    dictionary=fake_dictionary,
+    repository_url="https://github.com/kantord/LibreLingo-Spanish-from-English"
 )
 
 

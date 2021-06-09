@@ -1,6 +1,6 @@
 [[package]]
 name = "astroid"
-version = "2.5.7"
+version = "2.5.6"
 description = "An abstract syntax tree for Python with inference support."
 category = "dev"
 optional = false
@@ -202,18 +202,18 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*"
 
 [[package]]
 name = "librelingo-fakes"
-version = "1.0.0"
+version = "3.0.0"
 description = "Fake data for testing LibreLingo-related packages"
 category = "dev"
 optional = false
 python-versions = ">=3.9,<4.0"
 
 [package.dependencies]
-librelingo-types = ">=1.0.0,<2.0.0"
+librelingo-types = ">=3.0.0,<4.0.0"
 
 [[package]]
 name = "librelingo-types"
-version = "1.1.0"
+version = "3.0.0"
 description = "Data types to be used in Python packages for LibreLingo"
 category = "main"
 optional = false
@@ -414,7 +414,7 @@ watchdog = ">=1.0.0,<2.0.0"
 
 [[package]]
 name = "pyfakefs"
-version = "4.4.0"
+version = "4.5.0"
 description = "pyfakefs implements a fake file system that mocks the Python file system modules."
 category = "main"
 optional = false
@@ -422,14 +422,14 @@ python-versions = ">=3.5"
 
 [[package]]
 name = "pylint"
-version = "2.8.2"
+version = "2.8.3"
 description = "python code static checker"
 category = "dev"
 optional = false
 python-versions = "~=3.6"
 
 [package.dependencies]
-astroid = ">=2.5.6,<2.7"
+astroid = "2.5.6"
 colorama = {version = "*", markers = "sys_platform == \"win32\""}
 isort = ">=4.2.5,<6"
 mccabe = ">=0.6,<0.7"
@@ -657,12 +657,12 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "05237fa42db64a9d5f9133e092ba7d78b8c0396e8203581f5b3d15152abff9d7"
+content-hash = "faeb07be61ec2fc502d87d772740bc7ac8d22e638278c3d8daaa99cafa50fb15"
 
 [metadata.files]
 astroid = [
-    {file = "astroid-2.5.7-py3-none-any.whl", hash = "sha256:3c9a2d84354185d13213ff2640ec03d39168dbcd13648abc84fb13ca3b2e2761"},
-    {file = "astroid-2.5.7.tar.gz", hash = "sha256:d66a600e1602736a0f24f725a511b0e50d12eb18f54b31ec276d2c26a0a62c6a"},
+    {file = "astroid-2.5.6-py3-none-any.whl", hash = "sha256:4db03ab5fc3340cf619dbc25e42c2cc3755154ce6009469766d7143d1fc2ee4e"},
+    {file = "astroid-2.5.6.tar.gz", hash = "sha256:8a398dfce302c13f14bab13e2b14fe385d32b73f4e4853b9bdfb64598baa1975"},
 ]
 atomicwrites = [
     {file = "atomicwrites-1.4.0-py2.py3-none-any.whl", hash = "sha256:6d1784dea7c0c8d4a5172b6c620f40b6e4cbfdf96d783691f2e1302a7b88e197"},
@@ -759,12 +759,12 @@ lazy-object-proxy = [
     {file = "lazy_object_proxy-1.6.0-cp39-cp39-win_amd64.whl", hash = "sha256:f5144c75445ae3ca2057faac03fda5a902eff196702b0a24daf1d6ce0650514b"},
 ]
 librelingo-fakes = [
-    {file = "librelingo_fakes-1.0.0-py3-none-any.whl", hash = "sha256:687723b3c2ed95e67278065cce3435161079bea4f227ce164f54a292d7062389"},
-    {file = "librelingo_fakes-1.0.0.tar.gz", hash = "sha256:22fe217ed398df9cc017713bb873479570fe11c9fa1231307154eedebb024743"},
+    {file = "librelingo_fakes-3.0.0-py3-none-any.whl", hash = "sha256:c99c0e43b03db9cd63528f872662a8287d65cd948ddcc4fd95c945e3e0624622"},
+    {file = "librelingo_fakes-3.0.0.tar.gz", hash = "sha256:20e321a70744ecbf622add7eb000317c55d140d8a9d0013696b6f7b38e4fe205"},
 ]
 librelingo-types = [
-    {file = "librelingo_types-1.1.0-py3-none-any.whl", hash = "sha256:db5db5d9127db8f2aac4f8ee687b580a212ea133120b6026b460a8248406e2e3"},
-    {file = "librelingo_types-1.1.0.tar.gz", hash = "sha256:9a7a8fbb35173a510b58f2e409cda88d195b3a7e51804a4dcfc06357a39698b3"},
+    {file = "librelingo_types-3.0.0-py3-none-any.whl", hash = "sha256:c0526b2ceca73d30b7d73f016201ec001b181db0c493306625484fba51e00d93"},
+    {file = "librelingo_types-3.0.0.tar.gz", hash = "sha256:ac8d9b0335e7ed52bc34476e16c792d99c8b7872f08883fedad6a276e71e2286"},
 ]
 markdown = [
     {file = "Markdown-3.3.4-py3-none-any.whl", hash = "sha256:96c3ba1261de2f7547b46a00ea8463832c921d3f9d6aba3f255a6f71386db20c"},
@@ -830,12 +830,12 @@ pydoc-markdown = [
     {file = "pydoc_markdown-3.13.0-py3-none-any.whl", hash = "sha256:5b547c09862ebd64511417dc318de8a64302284389d5adf8ce130a5ca4742fe6"},
 ]
 pyfakefs = [
-    {file = "pyfakefs-4.4.0-py3-none-any.whl", hash = "sha256:1ac3b2845dabe69af56c20691b9347914581195ccdde352535fb7d4ff0055c19"},
-    {file = "pyfakefs-4.4.0.tar.gz", hash = "sha256:082d863e0e2a74351f697da404e329a91e18e5055942e59d1b836e8459b2c94c"},
+    {file = "pyfakefs-4.5.0-py3-none-any.whl", hash = "sha256:46234fa2dbce8ffb693ec906638449342afe83e45fa832932351d5050048159b"},
+    {file = "pyfakefs-4.5.0.tar.gz", hash = "sha256:58b017b3437bbe97803a23755876c6d6aeb5aea37e52cec15e5d86b59c4c7295"},
 ]
 pylint = [
-    {file = "pylint-2.8.2-py3-none-any.whl", hash = "sha256:f7e2072654a6b6afdf5e2fb38147d3e2d2d43c89f648637baab63e026481279b"},
-    {file = "pylint-2.8.2.tar.gz", hash = "sha256:586d8fa9b1891f4b725f587ef267abe2a1bad89d6b184520c7f07a253dd6e217"},
+    {file = "pylint-2.8.3-py3-none-any.whl", hash = "sha256:792b38ff30903884e4a9eab814ee3523731abd3c463f3ba48d7b627e87013484"},
+    {file = "pylint-2.8.3.tar.gz", hash = "sha256:0a049c5d47b629d9070c3932d13bff482b12119b6a241a93bc460b0be16953c8"},
 ]
 pyparsing = [
     {file = "pyparsing-2.4.7-py2.py3-none-any.whl", hash = "sha256:ef9d7589ef3c200abe66653d3f1ab1033c3c419ae9b9bdb1240a85b024efc88b"},
