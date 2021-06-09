@@ -23,6 +23,7 @@ class Course(namedtuple("Course", [
     "modules",
     "license",
     "dictionary",
+    "repository_url",
     "settings",
 ], defaults=[default_settings])):
     """
@@ -41,7 +42,9 @@ class Course(namedtuple("Course", [
             name="CC BY 4.0",
             link="https://creativecommons.org/licenses/by/4.0/"
         ),
-        dictionary=[dict_item1, dict_item2, dict_item3, dict_item4]
+        dictionary=[dict_item1, dict_item2, dict_item3, dict_item4],
+        repository_url="https://example.com",
+        setttings=Settings()
     )
     ```
     """
