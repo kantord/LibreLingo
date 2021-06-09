@@ -169,18 +169,18 @@ python-versions = "*"
 
 [[package]]
 name = "librelingo-fakes"
-version = "1.0.0"
+version = "3.0.0"
 description = "Fake data for testing LibreLingo-related packages"
 category = "dev"
 optional = false
 python-versions = ">=3.9,<4.0"
 
 [package.dependencies]
-librelingo-types = ">=1.0.0,<2.0.0"
+librelingo-types = ">=3.0.0,<4.0.0"
 
 [[package]]
 name = "librelingo-types"
-version = "1.1.0"
+version = "3.0.0"
 description = "Data types to be used in Python packages for LibreLingo"
 category = "main"
 optional = false
@@ -188,18 +188,18 @@ python-versions = ">=3.9,<4.0"
 
 [[package]]
 name = "librelingo-utils"
-version = "2.0.0"
+version = "2.3.0"
 description = "Utilities to be used in LibreLingo-related-packages"
 category = "main"
 optional = false
 python-versions = ">=3.9,<4.0"
 
 [package.dependencies]
-librelingo-types = ">=1.0.0,<2.0.0"
+librelingo-types = ">=3.0.0,<4.0.0"
 
 [[package]]
 name = "librelingo-yaml-loader"
-version = "1.2.0"
+version = "1.5.0"
 description = "Load YAML-based LibreLingo courses in your Python project."
 category = "main"
 optional = false
@@ -210,7 +210,7 @@ bleach = ">=3.3.0,<4.0.0"
 bleach-whitelist = ">=0.0.11,<0.0.12"
 click = ">=7.1.2,<8.0.0"
 html2markdown = ">=0.1.7,<0.2.0"
-librelingo-types = ">=1.0.0,<2.0.0"
+librelingo-types = ">=3.0.0,<4.0.0"
 Markdown = ">=3.3.4,<4.0.0"
 pyfakefs = ">=4.3.3,<5.0.0"
 python-slugify = ">=4.0.1,<5.0.0"
@@ -625,7 +625,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "c1e7efcc2a9ab89c849bf553f0b35bc4868e3d7f1a68718f5a913ae40b471e95"
+content-hash = "30ee5ae8245015d2279c88fcf6c12b2c8212ec4ace8d72da665d154daa99bd43"
 
 [metadata.files]
 atomicwrites = [
@@ -695,20 +695,20 @@ iniconfig = [
     {file = "iniconfig-1.1.1.tar.gz", hash = "sha256:bc3af051d7d14b2ee5ef9969666def0cd1a000e121eaea580d4a313df4b37f32"},
 ]
 librelingo-fakes = [
-    {file = "librelingo_fakes-1.0.0-py3-none-any.whl", hash = "sha256:687723b3c2ed95e67278065cce3435161079bea4f227ce164f54a292d7062389"},
-    {file = "librelingo_fakes-1.0.0.tar.gz", hash = "sha256:22fe217ed398df9cc017713bb873479570fe11c9fa1231307154eedebb024743"},
+    {file = "librelingo_fakes-3.0.0-py3-none-any.whl", hash = "sha256:c99c0e43b03db9cd63528f872662a8287d65cd948ddcc4fd95c945e3e0624622"},
+    {file = "librelingo_fakes-3.0.0.tar.gz", hash = "sha256:20e321a70744ecbf622add7eb000317c55d140d8a9d0013696b6f7b38e4fe205"},
 ]
 librelingo-types = [
-    {file = "librelingo_types-1.1.0-py3-none-any.whl", hash = "sha256:db5db5d9127db8f2aac4f8ee687b580a212ea133120b6026b460a8248406e2e3"},
-    {file = "librelingo_types-1.1.0.tar.gz", hash = "sha256:9a7a8fbb35173a510b58f2e409cda88d195b3a7e51804a4dcfc06357a39698b3"},
+    {file = "librelingo_types-3.0.0-py3-none-any.whl", hash = "sha256:c0526b2ceca73d30b7d73f016201ec001b181db0c493306625484fba51e00d93"},
+    {file = "librelingo_types-3.0.0.tar.gz", hash = "sha256:ac8d9b0335e7ed52bc34476e16c792d99c8b7872f08883fedad6a276e71e2286"},
 ]
 librelingo-utils = [
-    {file = "librelingo_utils-2.0.0-py3-none-any.whl", hash = "sha256:0c40dd4a08fe55ca56c3d484faca3f9bce368ee9faf0606ca3fde5390068bf63"},
-    {file = "librelingo_utils-2.0.0.tar.gz", hash = "sha256:932e60546f38187b2dcf05a4b43d9b5c71ef5ccd3f9e7962d71445ba98fe346c"},
+    {file = "librelingo_utils-2.3.0-py3-none-any.whl", hash = "sha256:0dcf340045e86e9b5e41e0a1cde246e4d2efaccaf330038d0a5011f494650181"},
+    {file = "librelingo_utils-2.3.0.tar.gz", hash = "sha256:673e5027cc86caa316bb22c345419f74ad0e027a5ee0ddd80e2331f6cb0bd9cb"},
 ]
 librelingo-yaml-loader = [
-    {file = "librelingo_yaml_loader-1.2.0-py3-none-any.whl", hash = "sha256:a8594fb14dec281e91d693d200667a5fd25f548b5e2debebea19b91e5bf5b82a"},
-    {file = "librelingo_yaml_loader-1.2.0.tar.gz", hash = "sha256:5c902fe7a3636ac47f43767dc2a03ab499696bc625c201e9cd003856f8be3d78"},
+    {file = "librelingo_yaml_loader-1.5.0-py3-none-any.whl", hash = "sha256:955f954d5e844f91f8647cbfe3376952bc4e0c32abc6eb704789cd422f489c75"},
+    {file = "librelingo_yaml_loader-1.5.0.tar.gz", hash = "sha256:060b3e5dc290c2ddda9fe91df9a4fb7903a6d585d0f0d7c2f0963aaa9aa5f9c1"},
 ]
 markdown = [
     {file = "Markdown-3.3.4-py3-none-any.whl", hash = "sha256:96c3ba1261de2f7547b46a00ea8463832c921d3f9d6aba3f255a6f71386db20c"},
