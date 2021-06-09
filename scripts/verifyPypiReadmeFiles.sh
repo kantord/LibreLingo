@@ -16,5 +16,5 @@ else
 	echo "Run the following script to automatically update the readme files:"
 	echo
 	echo "./scripts/updatePypiReadmeFiles.sh"
-	exit 1
+	exit 1 
 fi
