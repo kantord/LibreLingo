@@ -355,7 +355,8 @@ def load_course(path):
         special_characters=course["Special characters"],
         dictionary=[],
         modules=[],
-        settings=_convert_settings(data)
+        settings=_convert_settings(data),
+        repository_url=course["Repository"],
     )
     modules = _load_modules(path, raw_modules, dumb_course)
 
