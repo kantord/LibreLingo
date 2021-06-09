@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "librelingo_fakes"
-version = "1.0.0"
+version = "3.0.0"
 description = "Fake data for testing LibreLingo-related packages"
 authors = ["Dániel Kántor <git@daniel-kantor.com>"]
 license = "GPLv3"
@@ -8,7 +8,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.9"
-librelingo-types = "^1.0.0"
+librelingo-types = "^3.0.0"
 
 [tool.poetry.dev-dependencies]
 pydoc-markdown = "^3.10.0"
