@@ -64,7 +64,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [[package]]
 name = "librelingo-types"
-version = "1.1.0"
+version = "2.0.0"
 description = "Data types to be used in Python packages for LibreLingo"
 category = "main"
 optional = false
@@ -283,7 +283,7 @@ watchmedo = ["PyYAML (>=3.10)", "argh (>=0.24.1)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "a132df0a81baf970b7d75b3e366c14d9576df473cf42650db1d351a336011787"
+content-hash = "334bfdf6857941ac0a229e5b6a9e6d19c0076e79c33a8b1c3a5dccb0e44ea19a"
 
 [metadata.files]
 certifi = [
@@ -315,8 +315,8 @@ idna = [
     {file = "idna-2.10.tar.gz", hash = "sha256:b307872f855b18632ce0c21c5e45be78c0ea7ae4c15c828c20788b26921eb3f6"},
 ]
 librelingo-types = [
-    {file = "librelingo_types-1.1.0-py3-none-any.whl", hash = "sha256:db5db5d9127db8f2aac4f8ee687b580a212ea133120b6026b460a8248406e2e3"},
-    {file = "librelingo_types-1.1.0.tar.gz", hash = "sha256:9a7a8fbb35173a510b58f2e409cda88d195b3a7e51804a4dcfc06357a39698b3"},
+    {file = "librelingo_types-2.0.0-py3-none-any.whl", hash = "sha256:0f50dfa1c81ec59e7189f148f2479b4e00a7638008417930820f07b6e0396ca7"},
+    {file = "librelingo_types-2.0.0.tar.gz", hash = "sha256:25a3442d07f7d963a41359a5f415dbbcefe0c2191d13a541b68fee7ad7990f0d"},
 ]
 "nr.collections" = [
     {file = "nr.collections-0.0.1.tar.gz", hash = "sha256:ddf38cd6379cac546ce7abdadf024fc01cca75540e11b1d5f1aa701a33817f1c"},
