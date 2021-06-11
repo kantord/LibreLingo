@@ -912,11 +912,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Gu mutilak ginen, baina gizonak gara.",
+      "formInTargetLanguage": "Gu mutilak ginen, baina orain gizonak gara.",
       "meaningInSourceLanguage": "We were boys, but now we are men.",
-      "id": "16a797eecfb7",
+      "id": "f0e5d0ef6d56",
       "priority": 0,
-      "group": "56545618b0a6"
+      "group": "ec1a8dae32bd"
     },
     {
       "type": "chips",
@@ -960,6 +960,7 @@
         "mutilak",
         "ginen",
         "baina",
+        "orain",
         "gizonak",
         "gara"
       ],
@@ -969,14 +970,15 @@
           "mutilak",
           "ginen",
           "baina",
+          "orain",
           "gizonak",
           "gara"
         ]
       ],
-      "formattedSolution": "Gu mutilak ginen, baina gizonak gara.",
-      "id": "352007b5539c",
+      "formattedSolution": "Gu mutilak ginen, baina orain gizonak gara.",
+      "id": "6239f612848e",
       "priority": 2,
-      "group": "56545618b0a6"
+      "group": "ec1a8dae32bd"
     },
     {
       "type": "chips",
@@ -997,6 +999,10 @@
         {
           "word": "baina",
           "definition": "but\nbut(contrast)"
+        },
+        {
+          "word": "orain",
+          "definition": "now"
         },
         {
           "word": "gizonak",
@@ -1030,9 +1036,9 @@
         ]
       ],
       "formattedSolution": "We were boys, but now we are men.",
-      "id": "7fd4a94e296f",
+      "id": "11f454e05547",
       "priority": 2,
-      "group": "56545618b0a6"
+      "group": "ec1a8dae32bd"
     },
     {
       "type": "options",
