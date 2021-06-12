@@ -1,6 +1,6 @@
 {
   "id": "a768a811eb74",
-  "levels": 6,
+  "levels": 7,
   "challenges": [
     {
       "type": "options",
@@ -2359,6 +2359,616 @@
       "id": "3f657d4b78f7",
       "priority": 2,
       "group": "90cf0d6b61ab"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Hotel haiek berdeak zineten, baina orain laranjak dira.",
+      "meaningInSourceLanguage": "Those hotels over there were green, but now they are orange.",
+      "id": "010b6ffd14f4",
+      "priority": 0,
+      "group": "b7a32e0e354c"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Those",
+          "definition": "haiek\nhoriek"
+        },
+        {
+          "word": "hotels",
+          "definition": "hotelak"
+        },
+        {
+          "word": "over",
+          "definition": "amaitu"
+        },
+        {
+          "word": "there",
+          "definition": "hor"
+        },
+        {
+          "word": "were",
+          "definition": "ginen\nzinen\nzineten\nziren"
+        },
+        {
+          "word": "green,",
+          "definition": "berde"
+        },
+        {
+          "word": "but",
+          "definition": "baina"
+        },
+        {
+          "word": "now",
+          "definition": "orain"
+        },
+        {
+          "word": "they",
+          "definition": "haiek"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "orange.",
+          "definition": "laranja"
+        }
+      ],
+      "chips": [
+        "Hotel",
+        "haiek",
+        "berdeak",
+        "zineten",
+        "baina",
+        "orain",
+        "laranjak",
+        "dira"
+      ],
+      "solutions": [
+        [
+          "Hotel",
+          "haiek",
+          "berdeak",
+          "zineten",
+          "baina",
+          "orain",
+          "laranjak",
+          "dira"
+        ]
+      ],
+      "formattedSolution": "Hotel haiek berdeak zineten, baina orain laranjak dira.",
+      "id": "81b6a8230c76",
+      "priority": 2,
+      "group": "b7a32e0e354c"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Hotel",
+          "definition": "hotel"
+        },
+        {
+          "word": "haiek",
+          "definition": "they\nthose over there, plural of hura"
+        },
+        {
+          "word": "berdeak",
+          "definition": "green"
+        },
+        {
+          "word": "zineten,",
+          "definition": "were"
+        },
+        {
+          "word": "baina",
+          "definition": "but\nbut(contrast)"
+        },
+        {
+          "word": "orain",
+          "definition": "now"
+        },
+        {
+          "word": "laranjak",
+          "definition": "orange"
+        },
+        {
+          "word": "dira.",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "Those",
+        "hotels",
+        "over",
+        "there",
+        "were",
+        "green",
+        "but",
+        "now",
+        "they",
+        "are",
+        "orange"
+      ],
+      "solutions": [
+        [
+          "Those",
+          "hotels",
+          "over",
+          "there",
+          "were",
+          "green",
+          "but",
+          "now",
+          "they",
+          "are",
+          "orange"
+        ]
+      ],
+      "formattedSolution": "Those hotels over there were green, but now they are orange.",
+      "id": "ae33e598a91b",
+      "priority": 2,
+      "group": "b7a32e0e354c"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Txakur txiki horiek grisak dira, baizik txakur handi hauek beltzak dira.",
+      "meaningInSourceLanguage": "Those small dogs are gray while these big dogs are black.",
+      "id": "e2c9193b1ab1",
+      "priority": 0,
+      "group": "c04b465ee5ef"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Those",
+          "definition": "haiek\nhoriek"
+        },
+        {
+          "word": "small",
+          "definition": "txiki"
+        },
+        {
+          "word": "dogs",
+          "definition": "txakurrak"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "gray",
+          "definition": "gris"
+        },
+        {
+          "word": "while",
+          "definition": "baina"
+        },
+        {
+          "word": "these",
+          "definition": "hauek"
+        },
+        {
+          "word": "big",
+          "definition": "handi\nhandiak"
+        },
+        {
+          "word": "dogs",
+          "definition": "txakurrak"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "black.",
+          "definition": "beltz\nbeltza"
+        }
+      ],
+      "chips": [
+        "Txakur",
+        "txiki",
+        "horiek",
+        "grisak",
+        "dira",
+        "baizik",
+        "txakur",
+        "handi",
+        "hauek",
+        "beltzak",
+        "dira"
+      ],
+      "solutions": [
+        [
+          "Txakur",
+          "txiki",
+          "horiek",
+          "grisak",
+          "dira",
+          "baizik",
+          "txakur",
+          "handi",
+          "hauek",
+          "beltzak",
+          "dira"
+        ]
+      ],
+      "formattedSolution": "Txakur txiki horiek grisak dira, baizik txakur handi hauek beltzak dira.",
+      "id": "881974b8a85d",
+      "priority": 2,
+      "group": "c04b465ee5ef"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Txakur",
+          "definition": "dog"
+        },
+        {
+          "word": "txiki",
+          "definition": "small"
+        },
+        {
+          "word": "horiek",
+          "definition": "Those, plural of hori"
+        },
+        {
+          "word": "grisak",
+          "definition": "gray"
+        },
+        {
+          "word": "dira,",
+          "definition": "are\nare (izan)"
+        },
+        {
+          "word": "baizik",
+          "definition": "but (rather)\nbut(rather)\nrather"
+        },
+        {
+          "word": "txakur",
+          "definition": "dog"
+        },
+        {
+          "word": "handi",
+          "definition": "big"
+        },
+        {
+          "word": "hauek",
+          "definition": "These, plural of hau"
+        },
+        {
+          "word": "beltzak",
+          "definition": "black"
+        },
+        {
+          "word": "dira.",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "Those",
+        "small",
+        "dogs",
+        "are",
+        "gray",
+        "while",
+        "these",
+        "big",
+        "dogs",
+        "are",
+        "black"
+      ],
+      "solutions": [
+        [
+          "Those",
+          "small",
+          "dogs",
+          "are",
+          "gray",
+          "while",
+          "these",
+          "big",
+          "dogs",
+          "are",
+          "black"
+        ],
+        [
+          "Those",
+          "small",
+          "dogs",
+          "are",
+          "gray",
+          "but",
+          "these",
+          "big",
+          "dogs",
+          "are",
+          "black"
+        ]
+      ],
+      "formattedSolution": "Those small dogs are gray while these big dogs are black.",
+      "id": "f03049f99956",
+      "priority": 2,
+      "group": "c04b465ee5ef"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Autobusa hau eta kotxe horiek urdina dira.",
+      "meaningInSourceLanguage": "This bus and those cars are blue.",
+      "id": "7f55997a1700",
+      "priority": 0,
+      "group": "a979d10b672f"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "This",
+          "definition": "hau"
+        },
+        {
+          "word": "bus",
+          "definition": "austobusa\nautobus\nautobusa"
+        },
+        {
+          "word": "and",
+          "definition": "eta"
+        },
+        {
+          "word": "those",
+          "definition": "haiek\nhoriek"
+        },
+        {
+          "word": "cars",
+          "definition": "kotxeak"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "blue.",
+          "definition": "urdin"
+        }
+      ],
+      "chips": [
+        "Autobusa",
+        "hau",
+        "eta",
+        "kotxe",
+        "horiek",
+        "urdina",
+        "dira"
+      ],
+      "solutions": [
+        [
+          "Autobusa",
+          "hau",
+          "eta",
+          "kotxe",
+          "horiek",
+          "urdina",
+          "dira"
+        ]
+      ],
+      "formattedSolution": "Autobusa hau eta kotxe horiek urdina dira.",
+      "id": "938430f2fc21",
+      "priority": 2,
+      "group": "a979d10b672f"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Autobusa",
+          "definition": "a bus\nbus"
+        },
+        {
+          "word": "hau",
+          "definition": "this"
+        },
+        {
+          "word": "eta",
+          "definition": "and"
+        },
+        {
+          "word": "kotxe",
+          "definition": "car"
+        },
+        {
+          "word": "horiek",
+          "definition": "Those, plural of hori"
+        },
+        {
+          "word": "urdina",
+          "definition": "blue"
+        },
+        {
+          "word": "dira.",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "This",
+        "bus",
+        "and",
+        "those",
+        "cars",
+        "are",
+        "blue"
+      ],
+      "solutions": [
+        [
+          "This",
+          "bus",
+          "and",
+          "those",
+          "cars",
+          "are",
+          "blue"
+        ]
+      ],
+      "formattedSolution": "This bus and those cars are blue.",
+      "id": "bd31713528f3",
+      "priority": 2,
+      "group": "a979d10b672f"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Hau autobusa da, baina hori kotxea da.",
+      "meaningInSourceLanguage": "This is a bus while that is a car.",
+      "id": "a364b3239d24",
+      "priority": 0,
+      "group": "2af3c631ac3e"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "This",
+          "definition": "hau"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "bus",
+          "definition": "austobusa\nautobus\nautobusa"
+        },
+        {
+          "word": "while",
+          "definition": "baina"
+        },
+        {
+          "word": "that",
+          "definition": "hori\nhura"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "car.",
+          "definition": "kotxe\nkotxea"
+        }
+      ],
+      "chips": [
+        "Hau",
+        "autobusa",
+        "da",
+        "baina",
+        "hori",
+        "kotxea",
+        "da"
+      ],
+      "solutions": [
+        [
+          "Hau",
+          "autobusa",
+          "da",
+          "baina",
+          "hori",
+          "kotxea",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Hau autobusa da, baina hori kotxea da.",
+      "id": "a005b7458777",
+      "priority": 2,
+      "group": "2af3c631ac3e"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Hau",
+          "definition": "this"
+        },
+        {
+          "word": "autobusa",
+          "definition": "a bus\nbus"
+        },
+        {
+          "word": "da,",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        },
+        {
+          "word": "baina",
+          "definition": "but\nbut(contrast)"
+        },
+        {
+          "word": "hori",
+          "definition": "that\nyellow"
+        },
+        {
+          "word": "kotxea",
+          "definition": "a car\ncar"
+        },
+        {
+          "word": "da.",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "This",
+        "is",
+        "a",
+        "bus",
+        "while",
+        "that",
+        "is",
+        "a",
+        "car"
+      ],
+      "solutions": [
+        [
+          "This",
+          "is",
+          "a",
+          "bus",
+          "while",
+          "that",
+          "is",
+          "a",
+          "car"
+        ],
+        [
+          "This",
+          "is",
+          "a",
+          "bus",
+          "but",
+          "that",
+          "is",
+          "a",
+          "car"
+        ]
+      ],
+      "formattedSolution": "This is a bus while that is a car.",
+      "id": "10876738b581",
+      "priority": 2,
+      "group": "2af3c631ac3e"
     },
     {
       "type": "cards",

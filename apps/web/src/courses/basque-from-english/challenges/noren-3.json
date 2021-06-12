@@ -499,11 +499,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Nire lagunaren boligrafoa da",
+      "formInTargetLanguage": "Nire lagunaren boligrafoa da.",
       "meaningInSourceLanguage": "It is my friend's pen.",
-      "id": "de1c37d3bddb",
+      "id": "0b2e3df72d5e",
       "priority": 0,
-      "group": "bfae937c38b6"
+      "group": "25a54899d974"
     },
     {
       "type": "chips",
@@ -547,10 +547,10 @@
           "da"
         ]
       ],
-      "formattedSolution": "Nire lagunaren boligrafoa da",
-      "id": "d64695d0c08f",
+      "formattedSolution": "Nire lagunaren boligrafoa da.",
+      "id": "c2fc11267084",
       "priority": 2,
-      "group": "bfae937c38b6"
+      "group": "25a54899d974"
     },
     {
       "type": "chips",
@@ -569,7 +569,7 @@
           "definition": "pen"
         },
         {
-          "word": "da",
+          "word": "da.",
           "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
         }
       ],
@@ -603,9 +603,9 @@
         ]
       ],
       "formattedSolution": "It is my friend's pen.",
-      "id": "f5358c77483d",
+      "id": "76c1d886400d",
       "priority": 2,
-      "group": "bfae937c38b6"
+      "group": "25a54899d974"
     },
     {
       "type": "options",
@@ -1005,6 +1005,88 @@
       "id": "6db4294dc53a",
       "priority": 2,
       "group": "3c69612a4702"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Noren baloia da?",
+      "meaningInSourceLanguage": "Whose ball is it?",
+      "id": "b96fc33d3856",
+      "priority": 0,
+      "group": "478622318262"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Whose",
+          "definition": "noren\nnorena\nnorenak"
+        },
+        {
+          "word": "ball",
+          "definition": "baloi"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "it?",
+          "definition": "hura"
+        }
+      ],
+      "chips": [
+        "Noren",
+        "baloia",
+        "da"
+      ],
+      "solutions": [
+        [
+          "Noren",
+          "baloia",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Noren baloia da?",
+      "id": "9b92008abd65",
+      "priority": 2,
+      "group": "478622318262"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Noren",
+          "definition": "whose"
+        },
+        {
+          "word": "baloia",
+          "definition": "ball"
+        },
+        {
+          "word": "da?",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "Whose",
+        "ball",
+        "is",
+        "it"
+      ],
+      "solutions": [
+        [
+          "Whose",
+          "ball",
+          "is",
+          "it"
+        ]
+      ],
+      "formattedSolution": "Whose ball is it?",
+      "id": "53e28597127c",
+      "priority": 2,
+      "group": "478622318262"
     },
     {
       "type": "options",

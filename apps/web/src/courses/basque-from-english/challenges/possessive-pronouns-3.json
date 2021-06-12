@@ -178,6 +178,100 @@
     },
     {
       "type": "options",
+      "formInTargetLanguage": "Gona luzeak nireak dira.",
+      "meaningInSourceLanguage": "The long skirts are mine.",
+      "id": "56197b8ab7e7",
+      "priority": 0,
+      "group": "795a9399bad8"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "The",
+          "definition": "-a"
+        },
+        {
+          "word": "long",
+          "definition": "luze\nluzea\nluzeak"
+        },
+        {
+          "word": "skirts",
+          "definition": "gonak"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "mine.",
+          "definition": "nirea\nnireak"
+        }
+      ],
+      "chips": [
+        "Gona",
+        "luzeak",
+        "nireak",
+        "dira"
+      ],
+      "solutions": [
+        [
+          "Gona",
+          "luzeak",
+          "nireak",
+          "dira"
+        ]
+      ],
+      "formattedSolution": "Gona luzeak nireak dira.",
+      "id": "f4c1e2e80b8d",
+      "priority": 2,
+      "group": "795a9399bad8"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Gona",
+          "definition": "skirt"
+        },
+        {
+          "word": "luzeak",
+          "definition": "large\nlong"
+        },
+        {
+          "word": "nireak",
+          "definition": "mine\nmine (plural object)"
+        },
+        {
+          "word": "dira.",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "The",
+        "long",
+        "skirts",
+        "are",
+        "mine"
+      ],
+      "solutions": [
+        [
+          "The",
+          "long",
+          "skirts",
+          "are",
+          "mine"
+        ]
+      ],
+      "formattedSolution": "The long skirts are mine.",
+      "id": "dde920c97ebc",
+      "priority": 2,
+      "group": "795a9399bad8"
+    },
+    {
+      "type": "options",
       "formInTargetLanguage": "Zure jaka da?",
       "meaningInSourceLanguage": "Is it your jacket?",
       "id": "74392bacdbc7",
@@ -262,6 +356,100 @@
       "id": "b1703024f636",
       "priority": 2,
       "group": "b44823d24057"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Bai. Nire jaka da.",
+      "meaningInSourceLanguage": "Yes. It is my jacket.",
+      "id": "19439ca8df6e",
+      "priority": 0,
+      "group": "eea9a5e288a0"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Yes.",
+          "definition": "bai"
+        },
+        {
+          "word": "It",
+          "definition": "hura"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "my",
+          "definition": "nire"
+        },
+        {
+          "word": "jacket.",
+          "definition": "jaka"
+        }
+      ],
+      "chips": [
+        "Bai",
+        "Nire",
+        "jaka",
+        "da"
+      ],
+      "solutions": [
+        [
+          "Bai",
+          "Nire",
+          "jaka",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Bai. Nire jaka da.",
+      "id": "d212c27758df",
+      "priority": 2,
+      "group": "eea9a5e288a0"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Bai.",
+          "definition": "Yes\nyes"
+        },
+        {
+          "word": "Nire",
+          "definition": "my"
+        },
+        {
+          "word": "jaka",
+          "definition": "jacket"
+        },
+        {
+          "word": "da.",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "Yes",
+        "It",
+        "is",
+        "my",
+        "jacket"
+      ],
+      "solutions": [
+        [
+          "Yes",
+          "It",
+          "is",
+          "my",
+          "jacket"
+        ]
+      ],
+      "formattedSolution": "Yes. It is my jacket.",
+      "id": "12da81f324e6",
+      "priority": 2,
+      "group": "eea9a5e288a0"
     },
     {
       "type": "options",
@@ -794,7 +982,7 @@
       "phrase": [
         {
           "word": "Dortokaren",
-          "definition": "turtle's"
+          "definition": "turtle's\nturtle’s"
         },
         {
           "word": "soinekoa",
@@ -1508,7 +1696,7 @@
         },
         {
           "word": "long.",
-          "definition": "luzea\nluzeak"
+          "definition": "luze\nluzea\nluzeak"
         }
       ],
       "chips": [

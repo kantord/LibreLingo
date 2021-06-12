@@ -1,6 +1,6 @@
 {
   "id": "fb798a829358",
-  "levels": 6,
+  "levels": 7,
   "challenges": [
     {
       "type": "options",
@@ -919,6 +919,82 @@
     },
     {
       "type": "options",
+      "formInTargetLanguage": "Non daude haiek?",
+      "meaningInSourceLanguage": "Where are they?",
+      "id": "2d393a7aac67",
+      "priority": 0,
+      "group": "69ffca9f6aff"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Where",
+          "definition": "non"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "they?",
+          "definition": "haiek"
+        }
+      ],
+      "chips": [
+        "Non",
+        "daude",
+        "haiek"
+      ],
+      "solutions": [
+        [
+          "Non",
+          "daude",
+          "haiek"
+        ]
+      ],
+      "formattedSolution": "Non daude haiek?",
+      "id": "9ca02b00ceb3",
+      "priority": 2,
+      "group": "69ffca9f6aff"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Non",
+          "definition": "where"
+        },
+        {
+          "word": "daude",
+          "definition": "they are (egon)"
+        },
+        {
+          "word": "haiek?",
+          "definition": "they\nthose over there, plural of hura"
+        }
+      ],
+      "chips": [
+        "Where",
+        "are",
+        "they"
+      ],
+      "solutions": [
+        [
+          "Where",
+          "are",
+          "they"
+        ]
+      ],
+      "formattedSolution": "Where are they?",
+      "id": "803441ec1807",
+      "priority": 2,
+      "group": "69ffca9f6aff"
+    },
+    {
+      "type": "options",
       "formInTargetLanguage": "Haiek han daude.",
       "meaningInSourceLanguage": "They are over there.",
       "id": "069325d814ac",
@@ -1104,6 +1180,100 @@
       "id": "0a5a4b636a23",
       "priority": 2,
       "group": "a12dc8d01723"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Zuek bere aita gaude?",
+      "meaningInSourceLanguage": "Where is her father?",
+      "id": "9d5abf7cefcc",
+      "priority": 0,
+      "group": "d190da419408"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Where",
+          "definition": "non"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "her",
+          "definition": "bere"
+        },
+        {
+          "word": "father?",
+          "definition": "aita"
+        }
+      ],
+      "chips": [
+        "Zuek",
+        "bere",
+        "aita",
+        "gaude"
+      ],
+      "solutions": [
+        [
+          "Zuek",
+          "bere",
+          "aita",
+          "gaude"
+        ]
+      ],
+      "formattedSolution": "Zuek bere aita gaude?",
+      "id": "fa9b188fedbc",
+      "priority": 2,
+      "group": "d190da419408"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Zuek",
+          "definition": "You'll\nyou\nyou'll\nyou(plural)\nyour (plural)"
+        },
+        {
+          "word": "bere",
+          "definition": "her\nhers\nhis\nhis/hers/its\nits"
+        },
+        {
+          "word": "aita",
+          "definition": "father"
+        },
+        {
+          "word": "gaude?",
+          "definition": "are (egon)"
+        }
+      ],
+      "chips": [
+        "Where",
+        "is",
+        "her",
+        "father"
+      ],
+      "solutions": [
+        [
+          "Where",
+          "is",
+          "her",
+          "father"
+        ],
+        [
+          "Where",
+          "is",
+          "his",
+          "father"
+        ]
+      ],
+      "formattedSolution": "Where is her father?",
+      "id": "2f910791bf93",
+      "priority": 2,
+      "group": "d190da419408"
     },
     {
       "type": "options",
@@ -1327,6 +1497,100 @@
       "id": "21b98b4b6919",
       "priority": 2,
       "group": "00758912706a"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Non daude zure ilobak?",
+      "meaningInSourceLanguage": "Where are your nephews?",
+      "id": "3978d7ce16f0",
+      "priority": 0,
+      "group": "c0cb73a9ae91"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Where",
+          "definition": "non"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "your",
+          "definition": "zuen\nzure"
+        },
+        {
+          "word": "nephews?",
+          "definition": "ilobak"
+        }
+      ],
+      "chips": [
+        "Non",
+        "daude",
+        "zure",
+        "ilobak"
+      ],
+      "solutions": [
+        [
+          "Non",
+          "daude",
+          "zure",
+          "ilobak"
+        ]
+      ],
+      "formattedSolution": "Non daude zure ilobak?",
+      "id": "12eb24e4a0a3",
+      "priority": 2,
+      "group": "c0cb73a9ae91"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Non",
+          "definition": "where"
+        },
+        {
+          "word": "daude",
+          "definition": "they are (egon)"
+        },
+        {
+          "word": "zure",
+          "definition": "your"
+        },
+        {
+          "word": "ilobak?",
+          "definition": "nephews\nnieces"
+        }
+      ],
+      "chips": [
+        "Where",
+        "are",
+        "your",
+        "nephews"
+      ],
+      "solutions": [
+        [
+          "Where",
+          "are",
+          "your",
+          "nephews"
+        ],
+        [
+          "Where",
+          "are",
+          "your",
+          "nieces"
+        ]
+      ],
+      "formattedSolution": "Where are your nephews?",
+      "id": "1156f0a569dc",
+      "priority": 2,
+      "group": "c0cb73a9ae91"
     },
     {
       "type": "options",
@@ -2294,16 +2558,24 @@
     },
     {
       "type": "cards",
-      "pictures": null,
+      "pictures": [
+        "basque1.jpg",
+        "basque2.jpg",
+        "basque3.jpg"
+      ],
       "formInTargetLanguage": "Euskal Herrian",
       "meaningInSourceLanguage": "Basque Country",
-      "id": "0c187f254eb7",
+      "id": "2a7655bda2f0",
       "priority": 0,
-      "group": "fcff07ab0e4e"
+      "group": "2bdb9a55f5d3"
     },
     {
       "type": "shortInput",
-      "pictures": null,
+      "pictures": [
+        "basque1.jpg",
+        "basque2.jpg",
+        "basque3.jpg"
+      ],
       "formInTargetLanguage": [
         "Euskal Herrian"
       ],
@@ -2317,9 +2589,9 @@
           "definition": "Herrian"
         }
       ],
-      "id": "b1d363a6047f",
+      "id": "11c0eea048f8",
       "priority": 1,
-      "group": "fcff07ab0e4e"
+      "group": "2bdb9a55f5d3"
     },
     {
       "type": "listeningExercise",

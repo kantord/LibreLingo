@@ -825,11 +825,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Bai. Ni berdin naiz.",
+      "formInTargetLanguage": "Bai. Ni ere berdin naiz.",
       "meaningInSourceLanguage": "Yes. I am also fine.",
-      "id": "43a055aef3b8",
+      "id": "d3ed9c475ec4",
       "priority": 0,
-      "group": "8e84f5dbcc4c"
+      "group": "dbd92017cb2a"
     },
     {
       "type": "chips",
@@ -859,6 +859,7 @@
       "chips": [
         "Bai",
         "Ni",
+        "ere",
         "berdin",
         "naiz",
         "ni",
@@ -869,14 +870,15 @@
         [
           "Bai",
           "Ni",
+          "ere",
           "berdin",
           "naiz"
         ]
       ],
-      "formattedSolution": "Bai. Ni berdin naiz.",
-      "id": "4f917758c743",
+      "formattedSolution": "Bai. Ni ere berdin naiz.",
+      "id": "d55130c7692d",
       "priority": 2,
-      "group": "8e84f5dbcc4c"
+      "group": "dbd92017cb2a"
     },
     {
       "type": "chips",
@@ -889,6 +891,10 @@
         {
           "word": "Ni",
           "definition": "I\nme"
+        },
+        {
+          "word": "ere",
+          "definition": "also"
         },
         {
           "word": "berdin",
@@ -927,9 +933,9 @@
         ]
       ],
       "formattedSolution": "Yes. I am also fine.",
-      "id": "b5fc664296f4",
+      "id": "d67600590ca9",
       "priority": 2,
-      "group": "8e84f5dbcc4c"
+      "group": "dbd92017cb2a"
     },
     {
       "type": "options",
@@ -1604,10 +1610,10 @@
         "thankyou3.jpg"
       ],
       "formInTargetLanguage": "Eskerrik asko",
-      "meaningInSourceLanguage": "thank you",
-      "id": "13e8ccd7fc0a",
+      "meaningInSourceLanguage": "Thank you",
+      "id": "1dec39d57b5c",
       "priority": 0,
-      "group": "dbb8a83d8f84"
+      "group": "a1134a69b50b"
     },
     {
       "type": "shortInput",
@@ -1621,7 +1627,7 @@
       ],
       "phrase": [
         {
-          "word": "thank",
+          "word": "Thank",
           "definition": "Eskerrik\neskerrik"
         },
         {
@@ -1629,9 +1635,9 @@
           "definition": "zu\nzuek"
         }
       ],
-      "id": "fc1c3c17d134",
+      "id": "3a852d245f05",
       "priority": 1,
-      "group": "dbb8a83d8f84"
+      "group": "a1134a69b50b"
     },
     {
       "type": "listeningExercise",
@@ -1716,6 +1722,47 @@
       "id": "365bbaba35a5",
       "priority": 1,
       "group": "2a54b61edc1f"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "howareyou1.jpg",
+        "howareyou2.jpg",
+        "howareyou3.jpg"
+      ],
+      "formInTargetLanguage": "Zer moduz?",
+      "meaningInSourceLanguage": "How are you?",
+      "id": "59e8f1ebc798",
+      "priority": 0,
+      "group": "077c99f3ae57"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "howareyou1.jpg",
+        "howareyou2.jpg",
+        "howareyou3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "Zer moduz?"
+      ],
+      "phrase": [
+        {
+          "word": "How",
+          "definition": "nola\nzer(what)"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "you?",
+          "definition": "zu\nzuek"
+        }
+      ],
+      "id": "baa53de777a0",
+      "priority": 1,
+      "group": "077c99f3ae57"
     }
   ]
 }

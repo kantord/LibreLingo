@@ -1021,11 +1021,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Gure osaba ingeniari bat da.",
-      "meaningInSourceLanguage": "Our uncle is an engineer.",
-      "id": "11e7a158845c",
+      "formInTargetLanguage": "Gure osaba erizaina bat da.",
+      "meaningInSourceLanguage": "Our uncle is an nurse.",
+      "id": "9157c44b32cf",
       "priority": 0,
-      "group": "cd46822313c9"
+      "group": "0a94f948fddd"
     },
     {
       "type": "chips",
@@ -1048,14 +1048,14 @@
           "definition": "-a\n-ak"
         },
         {
-          "word": "engineer.",
-          "definition": "ingeniari"
+          "word": "nurse.",
+          "definition": "erizain\nerizaina"
         }
       ],
       "chips": [
         "Gure",
         "osaba",
-        "ingeniari",
+        "erizaina",
         "bat",
         "da",
         "gara",
@@ -1067,15 +1067,15 @@
         [
           "Gure",
           "osaba",
-          "ingeniari",
+          "erizaina",
           "bat",
           "da"
         ]
       ],
-      "formattedSolution": "Gure osaba ingeniari bat da.",
-      "id": "16cd04549a4b",
+      "formattedSolution": "Gure osaba erizaina bat da.",
+      "id": "8eb6b49a39dc",
       "priority": 2,
-      "group": "cd46822313c9"
+      "group": "0a94f948fddd"
     },
     {
       "type": "chips",
@@ -1090,8 +1090,8 @@
           "definition": "uncle"
         },
         {
-          "word": "ingeniari",
-          "definition": "engineer"
+          "word": "erizaina",
+          "definition": "nurse"
         },
         {
           "word": "bat",
@@ -1119,13 +1119,13 @@
           "uncle",
           "is",
           "an",
-          "engineer"
+          "nurse"
         ]
       ],
-      "formattedSolution": "Our uncle is an engineer.",
-      "id": "efaebdc59dcd",
+      "formattedSolution": "Our uncle is an nurse.",
+      "id": "82736cb015a7",
       "priority": 2,
-      "group": "cd46822313c9"
+      "group": "0a94f948fddd"
     },
     {
       "type": "options",
@@ -1352,11 +1352,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Nire lehengusina medikua da.",
+      "formInTargetLanguage": "Nire lehengusina ere medikua da.",
       "meaningInSourceLanguage": "My cousin (female) is also a doctor.",
-      "id": "cff6baab781e",
+      "id": "38107ae4ba04",
       "priority": 0,
-      "group": "adcd870339e9"
+      "group": "eda79ac44adc"
     },
     {
       "type": "chips",
@@ -1394,6 +1394,7 @@
       "chips": [
         "Nire",
         "lehengusina",
+        "ere",
         "medikua",
         "da",
         "dira",
@@ -1404,14 +1405,15 @@
         [
           "Nire",
           "lehengusina",
+          "ere",
           "medikua",
           "da"
         ]
       ],
-      "formattedSolution": "Nire lehengusina medikua da.",
-      "id": "9a6c8cd001ff",
+      "formattedSolution": "Nire lehengusina ere medikua da.",
+      "id": "0610a3d75aa3",
       "priority": 2,
-      "group": "adcd870339e9"
+      "group": "eda79ac44adc"
     },
     {
       "type": "chips",
@@ -1424,6 +1426,10 @@
         {
           "word": "lehengusina",
           "definition": "cousin (female)"
+        },
+        {
+          "word": "ere",
+          "definition": "also"
         },
         {
           "word": "medikua",
@@ -1461,9 +1467,9 @@
         ]
       ],
       "formattedSolution": "My cousin (female) is also a doctor.",
-      "id": "6ac012032da0",
+      "id": "bcc8beee362b",
       "priority": 2,
-      "group": "adcd870339e9"
+      "group": "eda79ac44adc"
     },
     {
       "type": "options",

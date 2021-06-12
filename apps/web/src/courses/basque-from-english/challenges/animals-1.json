@@ -1,6 +1,6 @@
 {
   "id": "64a9147c90d5",
-  "levels": 5,
+  "levels": 6,
   "challenges": [
     {
       "type": "options",
@@ -2011,6 +2011,31 @@
       "id": "d685f537d1d5",
       "priority": 2,
       "group": "08fe41c49253"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "animalia",
+      "meaningInSourceLanguage": "animal",
+      "id": "908ed8a88999",
+      "priority": 0,
+      "group": "ca430a041450"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "animalia"
+      ],
+      "phrase": [
+        {
+          "word": "animal",
+          "definition": "animalia"
+        }
+      ],
+      "id": "a2be693c377a",
+      "priority": 1,
+      "group": "ca430a041450"
     },
     {
       "type": "cards",

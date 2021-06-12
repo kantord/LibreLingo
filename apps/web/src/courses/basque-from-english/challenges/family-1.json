@@ -1139,11 +1139,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Gure aitona ingeniari bat da.",
-      "meaningInSourceLanguage": "Our grandfather is an engineer.",
-      "id": "b70b2bc5c3da",
+      "formInTargetLanguage": "Gure aitona gidaria bat da..",
+      "meaningInSourceLanguage": "Our grandfather is a driver.",
+      "id": "3097e202247c",
       "priority": 0,
-      "group": "9f52a5141a9e"
+      "group": "a64ea27b5f3e"
     },
     {
       "type": "chips",
@@ -1162,18 +1162,18 @@
           "definition": "da\nda (izan)\ndago (egon)"
         },
         {
-          "word": "an",
-          "definition": "-a\n-ak"
+          "word": "a",
+          "definition": "-a"
         },
         {
-          "word": "engineer.",
-          "definition": "ingeniari"
+          "word": "driver.",
+          "definition": "gidari\ngidaria"
         }
       ],
       "chips": [
         "Gure",
         "aitona",
-        "ingeniari",
+        "gidaria",
         "bat",
         "da",
         "ona",
@@ -1185,15 +1185,15 @@
         [
           "Gure",
           "aitona",
-          "ingeniari",
+          "gidaria",
           "bat",
           "da"
         ]
       ],
-      "formattedSolution": "Gure aitona ingeniari bat da.",
-      "id": "a8145b9aa1de",
+      "formattedSolution": "Gure aitona gidaria bat da..",
+      "id": "ec355f845756",
       "priority": 2,
-      "group": "9f52a5141a9e"
+      "group": "a64ea27b5f3e"
     },
     {
       "type": "chips",
@@ -1208,15 +1208,15 @@
           "definition": "grandfather"
         },
         {
-          "word": "ingeniari",
-          "definition": "engineer"
+          "word": "gidaria",
+          "definition": "driver\nthe driver"
         },
         {
           "word": "bat",
           "definition": "one"
         },
         {
-          "word": "da.",
+          "word": "da..",
           "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
         }
       ],
@@ -1236,14 +1236,14 @@
           "Our",
           "grandfather",
           "is",
-          "an",
-          "engineer"
+          "a",
+          "driver"
         ]
       ],
-      "formattedSolution": "Our grandfather is an engineer.",
-      "id": "520709ad7e6f",
+      "formattedSolution": "Our grandfather is a driver.",
+      "id": "724f7b1a0d21",
       "priority": 2,
-      "group": "9f52a5141a9e"
+      "group": "a64ea27b5f3e"
     },
     {
       "type": "options",

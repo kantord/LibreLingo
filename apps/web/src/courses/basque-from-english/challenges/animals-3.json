@@ -613,7 +613,7 @@
         },
         {
           "word": "long",
-          "definition": "luzea\nluzeak"
+          "definition": "luze\nluzea\nluzeak"
         },
         {
           "word": "snake",
@@ -1927,6 +1927,39 @@
     {
       "type": "cards",
       "pictures": [
+        "snake1.jpg",
+        "snake2.jpg",
+        "snake3.jpg"
+      ],
+      "formInTargetLanguage": "luze",
+      "meaningInSourceLanguage": "long",
+      "id": "cf4fc5dda422",
+      "priority": 0,
+      "group": "5a05baa7a319"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "snake1.jpg",
+        "snake2.jpg",
+        "snake3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "luze"
+      ],
+      "phrase": [
+        {
+          "word": "long",
+          "definition": "luze\nluzea\nluzeak"
+        }
+      ],
+      "id": "e0d0aaad9f22",
+      "priority": 1,
+      "group": "5a05baa7a319"
+    },
+    {
+      "type": "cards",
+      "pictures": [
         "angel1.jpg",
         "angel2.jpg",
         "angel3.jpg"
@@ -2010,16 +2043,24 @@
     },
     {
       "type": "cards",
-      "pictures": null,
+      "pictures": [
+        "basque1.jpg",
+        "basque2.jpg",
+        "basque3.jpg"
+      ],
       "formInTargetLanguage": "euskal",
       "meaningInSourceLanguage": "basque",
-      "id": "2eaef3678997",
+      "id": "ffefe473d9f3",
       "priority": 0,
-      "group": "5cafd778c994"
+      "group": "d15531522eff"
     },
     {
       "type": "shortInput",
-      "pictures": null,
+      "pictures": [
+        "basque1.jpg",
+        "basque2.jpg",
+        "basque3.jpg"
+      ],
       "formInTargetLanguage": [
         "euskal"
       ],
@@ -2029,9 +2070,9 @@
           "definition": "Euskal\neuskaldun"
         }
       ],
-      "id": "622ced6982a6",
+      "id": "e6226daf832d",
       "priority": 1,
-      "group": "5cafd778c994"
+      "group": "d15531522eff"
     }
   ]
 }

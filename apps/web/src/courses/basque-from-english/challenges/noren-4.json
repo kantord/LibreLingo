@@ -1234,12 +1234,415 @@
           "gloves",
           "are",
           "blue"
+        ],
+        [
+          "The",
+          "gloves",
+          "of",
+          "the",
+          "girl",
+          "are",
+          "blue"
         ]
       ],
       "formattedSolution": "The girl's gloves are blue.",
       "id": "f06f72a21376",
       "priority": 2,
       "group": "326b49c30919"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Nire galtzerdiak gorriak eta zuriak dira.",
+      "meaningInSourceLanguage": "My socks are red and white.",
+      "id": "a1e02d9f106c",
+      "priority": 0,
+      "group": "dbb5ae5bd988"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "My",
+          "definition": "nire"
+        },
+        {
+          "word": "socks",
+          "definition": "galtzerdiak"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "red",
+          "definition": "gorri\ngorria\ngorriak"
+        },
+        {
+          "word": "and",
+          "definition": "eta"
+        },
+        {
+          "word": "white.",
+          "definition": "zuri\nzuria"
+        }
+      ],
+      "chips": [
+        "Nire",
+        "galtzerdiak",
+        "gorriak",
+        "eta",
+        "zuriak",
+        "dira"
+      ],
+      "solutions": [
+        [
+          "Nire",
+          "galtzerdiak",
+          "gorriak",
+          "eta",
+          "zuriak",
+          "dira"
+        ]
+      ],
+      "formattedSolution": "Nire galtzerdiak gorriak eta zuriak dira.",
+      "id": "84d417cca16e",
+      "priority": 2,
+      "group": "dbb5ae5bd988"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Nire",
+          "definition": "my"
+        },
+        {
+          "word": "galtzerdiak",
+          "definition": "socks"
+        },
+        {
+          "word": "gorriak",
+          "definition": "red"
+        },
+        {
+          "word": "eta",
+          "definition": "and"
+        },
+        {
+          "word": "zuriak",
+          "definition": "white"
+        },
+        {
+          "word": "dira.",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "My",
+        "socks",
+        "are",
+        "red",
+        "and",
+        "white"
+      ],
+      "solutions": [
+        [
+          "My",
+          "socks",
+          "are",
+          "red",
+          "and",
+          "white"
+        ]
+      ],
+      "formattedSolution": "My socks are red and white.",
+      "id": "aaec3b1588d7",
+      "priority": 2,
+      "group": "dbb5ae5bd988"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Hori da dortokaren eraztuna.",
+      "meaningInSourceLanguage": "That is the turtle’s ring.",
+      "id": "18ef2c1a946b",
+      "priority": 0,
+      "group": "23113e31096c"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "That",
+          "definition": "hori\nhura"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "the",
+          "definition": "-a"
+        },
+        {
+          "word": "turtle’s",
+          "definition": "dortokaren"
+        },
+        {
+          "word": "ring.",
+          "definition": "eraztun\neraztuna"
+        }
+      ],
+      "chips": [
+        "Hori",
+        "da",
+        "dortokaren",
+        "eraztuna"
+      ],
+      "solutions": [
+        [
+          "Hori",
+          "da",
+          "dortokaren",
+          "eraztuna"
+        ]
+      ],
+      "formattedSolution": "Hori da dortokaren eraztuna.",
+      "id": "473a44d1dad8",
+      "priority": 2,
+      "group": "23113e31096c"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Hori",
+          "definition": "that\nyellow"
+        },
+        {
+          "word": "da",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        },
+        {
+          "word": "dortokaren",
+          "definition": "turtle's\nturtle’s"
+        },
+        {
+          "word": "eraztuna.",
+          "definition": "ring"
+        }
+      ],
+      "chips": [
+        "That",
+        "is",
+        "the",
+        "turtle’s",
+        "ring"
+      ],
+      "solutions": [
+        [
+          "That",
+          "is",
+          "the",
+          "turtle’s",
+          "ring"
+        ],
+        [
+          "That",
+          "is",
+          "the",
+          "ring",
+          "of",
+          "the",
+          "turtle"
+        ]
+      ],
+      "formattedSolution": "That is the turtle’s ring.",
+      "id": "2ae0b4512d6d",
+      "priority": 2,
+      "group": "23113e31096c"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Gerrikoak luzeak dira.",
+      "meaningInSourceLanguage": "Belts are long.",
+      "id": "5d62796c5fe9",
+      "priority": 0,
+      "group": "1f0334160fcb"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Belts",
+          "definition": "gerrikoak"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "long.",
+          "definition": "luze\nluzea\nluzeak"
+        }
+      ],
+      "chips": [
+        "Gerrikoak",
+        "luzeak",
+        "dira"
+      ],
+      "solutions": [
+        [
+          "Gerrikoak",
+          "luzeak",
+          "dira"
+        ]
+      ],
+      "formattedSolution": "Gerrikoak luzeak dira.",
+      "id": "1002ef34de0a",
+      "priority": 2,
+      "group": "1f0334160fcb"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Gerrikoak",
+          "definition": "belts"
+        },
+        {
+          "word": "luzeak",
+          "definition": "large\nlong"
+        },
+        {
+          "word": "dira.",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "Belts",
+        "are",
+        "long"
+      ],
+      "solutions": [
+        [
+          "Belts",
+          "are",
+          "long"
+        ]
+      ],
+      "formattedSolution": "Belts are long.",
+      "id": "c67f1fd4a79a",
+      "priority": 2,
+      "group": "1f0334160fcb"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Irakaslearen eskularruak beltzak dira.",
+      "meaningInSourceLanguage": "The teacher’s gloves are black.",
+      "id": "75766b689fd5",
+      "priority": 0,
+      "group": "45a5a7267c08"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "The",
+          "definition": "-a"
+        },
+        {
+          "word": "teacher’s",
+          "definition": "irakaslearen"
+        },
+        {
+          "word": "gloves",
+          "definition": "eskularruak"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "black.",
+          "definition": "beltz\nbeltza"
+        }
+      ],
+      "chips": [
+        "Irakaslearen",
+        "eskularruak",
+        "beltzak",
+        "dira"
+      ],
+      "solutions": [
+        [
+          "Irakaslearen",
+          "eskularruak",
+          "beltzak",
+          "dira"
+        ]
+      ],
+      "formattedSolution": "Irakaslearen eskularruak beltzak dira.",
+      "id": "55f5dc60071e",
+      "priority": 2,
+      "group": "45a5a7267c08"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Irakaslearen",
+          "definition": "teacher's\nthe teacher's\nthe teacher’s"
+        },
+        {
+          "word": "eskularruak",
+          "definition": "gloves"
+        },
+        {
+          "word": "beltzak",
+          "definition": "black"
+        },
+        {
+          "word": "dira.",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "The",
+        "teacher’s",
+        "gloves",
+        "are",
+        "black"
+      ],
+      "solutions": [
+        [
+          "The",
+          "teacher’s",
+          "gloves",
+          "are",
+          "black"
+        ],
+        [
+          "The",
+          "gloves",
+          "of",
+          "the",
+          "teacher",
+          "are",
+          "black"
+        ]
+      ],
+      "formattedSolution": "The teacher’s gloves are black.",
+      "id": "e1848a76edfa",
+      "priority": 2,
+      "group": "45a5a7267c08"
     },
     {
       "type": "cards",
