@@ -56,7 +56,7 @@ def get_options_challenge(phrase, _):
     }]
 
 
-def get_chips(phrase):
+def get_chips(phrase, course):
     return list(map(clean_word, phrase.split()))
 
 
@@ -88,8 +88,8 @@ def create_chips_challenge_generator(reverse):
             "type": "chips",
             "translatesToSourceLanguage": reverse,
             "phrase": _define_words_in_sentence(course, get_phrase_text(phrase), reverse),
-            "chips": get_chips(get_input_text(phrase)),
-            "solutions": [get_chips(x) for x in get_input_texts(phrase)],
+            "chips": get_chips(get_input_text(phrase), course),
+            "solutions": [get_chips(x, course) for x in get_input_texts(phrase)],
             "formattedSolution": get_input_text(phrase),
             "id": get_dumb_opaque_id("Chips", phrase, "reverse chips" if reverse else "chips"),
             "priority": 2,
