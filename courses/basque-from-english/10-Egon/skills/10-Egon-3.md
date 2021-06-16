@@ -24,7 +24,7 @@
 * Gasteiz: Victoria
 * Bilbo: Bilboa
 * kale: street
-* Francia: France
+* Frantzia: France
 * ibai: river
 
 [ Go Back to Home Page!](..)
