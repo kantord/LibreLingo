@@ -1129,11 +1129,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Nire lehengusua da ere ingeniaria.",
-      "meaningInSourceLanguage": "My cousin (male) is also an engineer.",
-      "id": "b36289956f3b",
+      "formInTargetLanguage": "Nire lehengusua da ere gidaria.",
+      "meaningInSourceLanguage": "My cousin (male) is also an driver.",
+      "id": "792598510b07",
       "priority": 0,
-      "group": "0358b3a77c09"
+      "group": "e8a35ff81688"
     },
     {
       "type": "chips",
@@ -1164,8 +1164,8 @@
           "definition": "-a\n-ak"
         },
         {
-          "word": "engineer.",
-          "definition": "ingeniari"
+          "word": "driver.",
+          "definition": "gidari\ngidaria"
         }
       ],
       "chips": [
@@ -1185,13 +1185,13 @@
           "lehengusua",
           "da",
           "ere",
-          "ingeniaria"
+          "gidaria"
         ]
       ],
-      "formattedSolution": "Nire lehengusua da ere ingeniaria.",
-      "id": "af603e89e9c2",
+      "formattedSolution": "Nire lehengusua da ere gidaria.",
+      "id": "259a6489b2ae",
       "priority": 2,
-      "group": "0358b3a77c09"
+      "group": "e8a35ff81688"
     },
     {
       "type": "chips",
@@ -1214,8 +1214,8 @@
           "definition": "also"
         },
         {
-          "word": "ingeniaria.",
-          "definition": "engineer"
+          "word": "gidaria.",
+          "definition": "driver\nthe driver"
         }
       ],
       "chips": [
@@ -1241,13 +1241,13 @@
           "is",
           "also",
           "an",
-          "engineer"
+          "driver"
         ]
       ],
-      "formattedSolution": "My cousin (male) is also an engineer.",
-      "id": "af597af9dfc8",
+      "formattedSolution": "My cousin (male) is also an driver.",
+      "id": "f0bfb3323e91",
       "priority": 2,
-      "group": "0358b3a77c09"
+      "group": "e8a35ff81688"
     },
     {
       "type": "options",

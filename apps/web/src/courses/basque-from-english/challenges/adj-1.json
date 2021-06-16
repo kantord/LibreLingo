@@ -4,11 +4,11 @@
   "challenges": [
     {
       "type": "options",
-      "formInTargetLanguage": "Autobusa horia da?",
-      "meaningInSourceLanguage": "Is it a yellow bus?",
-      "id": "ba6fa32ecf6d",
+      "formInTargetLanguage": "Autobusa horia edo autobus laranja da?",
+      "meaningInSourceLanguage": "Is it a yellow bus or an orange bus?",
+      "id": "df0a47076a89",
       "priority": 0,
-      "group": "bf33fe5f8d66"
+      "group": "5d13501f57ad"
     },
     {
       "type": "chips",
@@ -31,6 +31,22 @@
           "definition": "hori"
         },
         {
+          "word": "bus",
+          "definition": "austobusa\nautobus\nautobusa"
+        },
+        {
+          "word": "or",
+          "definition": "edo"
+        },
+        {
+          "word": "an",
+          "definition": "-a\n-ak"
+        },
+        {
+          "word": "orange",
+          "definition": "laranja"
+        },
+        {
           "word": "bus?",
           "definition": "austobusa\nautobus\nautobusa"
         }
@@ -46,13 +62,16 @@
         [
           "Autobusa",
           "horia",
+          "edo",
+          "autobus",
+          "laranja",
           "da"
         ]
       ],
-      "formattedSolution": "Autobusa horia da?",
-      "id": "f0b8181e18a1",
+      "formattedSolution": "Autobusa horia edo autobus laranja da?",
+      "id": "5ed231c6a72e",
       "priority": 2,
-      "group": "bf33fe5f8d66"
+      "group": "5d13501f57ad"
     },
     {
       "type": "chips",
@@ -65,6 +84,18 @@
         {
           "word": "horia",
           "definition": "yellow"
+        },
+        {
+          "word": "edo",
+          "definition": "or"
+        },
+        {
+          "word": "autobus",
+          "definition": "bus"
+        },
+        {
+          "word": "laranja",
+          "definition": "orange"
         },
         {
           "word": "da?",
@@ -88,6 +119,10 @@
           "it",
           "a",
           "yellow",
+          "bus",
+          "or",
+          "an",
+          "orange",
           "bus"
         ],
         [
@@ -95,13 +130,17 @@
           "it",
           "the",
           "yellow",
+          "bus",
+          "or",
+          "the",
+          "orange",
           "bus"
         ]
       ],
-      "formattedSolution": "Is it a yellow bus?",
-      "id": "e0070e929af4",
+      "formattedSolution": "Is it a yellow bus or an orange bus?",
+      "id": "0fd311ec9908",
       "priority": 2,
-      "group": "bf33fe5f8d66"
+      "group": "5d13501f57ad"
     },
     {
       "type": "options",
@@ -137,7 +176,7 @@
         },
         {
           "word": "but",
-          "definition": "baina"
+          "definition": "baina\nbaina, baizik"
         },
         {
           "word": "now",
@@ -512,7 +551,7 @@
         },
         {
           "word": "but",
-          "definition": "baina"
+          "definition": "baina\nbaina, baizik"
         },
         {
           "word": "now",
@@ -829,7 +868,7 @@
         },
         {
           "word": "but",
-          "definition": "baina"
+          "definition": "baina\nbaina, baizik"
         },
         {
           "word": "now",

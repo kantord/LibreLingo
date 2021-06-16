@@ -1,6 +1,6 @@
 {
   "id": "e876e5c6ae07",
-  "levels": 5,
+  "levels": 4,
   "challenges": [
     {
       "type": "options",
@@ -32,7 +32,7 @@
         },
         {
           "word": "but",
-          "definition": "baina"
+          "definition": "baina\nbaina, baizik"
         },
         {
           "word": "the",
@@ -369,7 +369,7 @@
         },
         {
           "word": "but",
-          "definition": "baina"
+          "definition": "baina\nbaina, baizik"
         },
         {
           "word": "the",
@@ -534,7 +534,7 @@
         },
         {
           "word": "but",
-          "definition": "baina"
+          "definition": "baina\nbaina, baizik"
         },
         {
           "word": "the",
@@ -734,7 +734,7 @@
         },
         {
           "word": "but",
-          "definition": "baina"
+          "definition": "baina\nbaina, baizik"
         },
         {
           "word": "rather",
@@ -806,7 +806,7 @@
         },
         {
           "word": "baizik",
-          "definition": "but (rather)\nbut(rather)\nrather"
+          "definition": "but (rather)\nbut rather\nbut(rather)\nrather"
         },
         {
           "word": "ederra",
@@ -1164,11 +1164,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Gidaria ez da euskalduna.",
-      "meaningInSourceLanguage": "The driver is not Basque.",
-      "id": "06426e363ac0",
+      "formInTargetLanguage": "Gidaria ez da ederra.",
+      "meaningInSourceLanguage": "The driver is not handsome.",
+      "id": "6929eb709a5e",
       "priority": 0,
-      "group": "ea15e1f4c8e6"
+      "group": "0d305f7f84af"
     },
     {
       "type": "chips",
@@ -1191,8 +1191,8 @@
           "definition": "ez"
         },
         {
-          "word": "Basque.",
-          "definition": "Euskal\neuskaldun"
+          "word": "handsome.",
+          "definition": "eder"
         }
       ],
       "chips": [
@@ -1209,13 +1209,13 @@
           "Gidaria",
           "ez",
           "da",
-          "euskalduna"
+          "ederra"
         ]
       ],
-      "formattedSolution": "Gidaria ez da euskalduna.",
-      "id": "4006e385fb2e",
+      "formattedSolution": "Gidaria ez da ederra.",
+      "id": "ab86746f684f",
       "priority": 2,
-      "group": "ea15e1f4c8e6"
+      "group": "0d305f7f84af"
     },
     {
       "type": "chips",
@@ -1234,8 +1234,8 @@
           "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
         },
         {
-          "word": "euskalduna.",
-          "definition": "Basque person"
+          "word": "ederra.",
+          "definition": "beautiful\nhandsome"
         }
       ],
       "chips": [
@@ -1255,20 +1255,34 @@
           "driver",
           "is",
           "not",
-          "Basque"
+          "handsome"
         ],
         [
           "A",
           "driver",
           "is",
           "not",
-          "Basque"
+          "handsome"
+        ],
+        [
+          "The",
+          "driver",
+          "is",
+          "not",
+          "beautiful"
+        ],
+        [
+          "A",
+          "driver",
+          "is",
+          "not",
+          "beautiful"
         ]
       ],
-      "formattedSolution": "The driver is not Basque.",
-      "id": "f5815f3044c5",
+      "formattedSolution": "The driver is not handsome.",
+      "id": "3ce59a28a061",
       "priority": 2,
-      "group": "ea15e1f4c8e6"
+      "group": "0d305f7f84af"
     },
     {
       "type": "options",
@@ -1672,7 +1686,7 @@
         },
         {
           "word": "but",
-          "definition": "baina"
+          "definition": "baina\nbaina, baizik"
         },
         {
           "word": "rather",
@@ -1744,7 +1758,7 @@
         },
         {
           "word": "baizik",
-          "definition": "but (rather)\nbut(rather)\nrather"
+          "definition": "but (rather)\nbut rather\nbut(rather)\nrather"
         },
         {
           "word": "berria",
@@ -2298,43 +2312,6 @@
       "id": "c99de2629427",
       "priority": 1,
       "group": "2eb8c4902d7d"
-    },
-    {
-      "type": "cards",
-      "pictures": [
-        "euskaldun1.jpg",
-        "euskaldun2.jpg",
-        "euskaldun3.jpg"
-      ],
-      "formInTargetLanguage": "euskaldun",
-      "meaningInSourceLanguage": "Basque person",
-      "id": "a0964578e369",
-      "priority": 0,
-      "group": "0d3e0e1ab654"
-    },
-    {
-      "type": "shortInput",
-      "pictures": [
-        "euskaldun1.jpg",
-        "euskaldun2.jpg",
-        "euskaldun3.jpg"
-      ],
-      "formInTargetLanguage": [
-        "euskaldun"
-      ],
-      "phrase": [
-        {
-          "word": "Basque",
-          "definition": "Euskal\neuskaldun"
-        },
-        {
-          "word": "person",
-          "definition": "pertsona"
-        }
-      ],
-      "id": "6c243550914d",
-      "priority": 1,
-      "group": "0d3e0e1ab654"
     },
     {
       "type": "cards",

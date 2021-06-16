@@ -190,11 +190,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Ardia zuria da.",
-      "meaningInSourceLanguage": "The sheep is white.",
-      "id": "1b61718def6c",
+      "formInTargetLanguage": "Ardiak zuriak edo beltzak dira.",
+      "meaningInSourceLanguage": "The sheep are white or black",
+      "id": "46774e670728",
       "priority": 0,
-      "group": "d6c447727826"
+      "group": "c61f4f1ccf5c"
     },
     {
       "type": "chips",
@@ -209,12 +209,20 @@
           "definition": "ardi\nardiak"
         },
         {
-          "word": "is",
-          "definition": "da\nda (izan)\ndago (egon)"
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
         },
         {
-          "word": "white.",
+          "word": "white",
           "definition": "zuri\nzuria"
+        },
+        {
+          "word": "or",
+          "definition": "edo"
+        },
+        {
+          "word": "black",
+          "definition": "beltz\nbeltza"
         }
       ],
       "chips": [
@@ -226,31 +234,41 @@
       ],
       "solutions": [
         [
-          "Ardia",
-          "zuria",
-          "da"
+          "Ardiak",
+          "zuriak",
+          "edo",
+          "beltzak",
+          "dira"
         ]
       ],
-      "formattedSolution": "Ardia zuria da.",
-      "id": "5e8147af6a0a",
+      "formattedSolution": "Ardiak zuriak edo beltzak dira.",
+      "id": "88b2ce20343a",
       "priority": 2,
-      "group": "d6c447727826"
+      "group": "c61f4f1ccf5c"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Ardia",
-          "definition": "a sheep"
+          "word": "Ardiak",
+          "definition": "sheep\nsheep (plural)"
         },
         {
-          "word": "zuria",
+          "word": "zuriak",
           "definition": "white"
         },
         {
-          "word": "da.",
-          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+          "word": "edo",
+          "definition": "or"
+        },
+        {
+          "word": "beltzak",
+          "definition": "black"
+        },
+        {
+          "word": "dira.",
+          "definition": "are\nare (izan)"
         }
       ],
       "chips": [
@@ -266,20 +284,23 @@
         [
           "The",
           "sheep",
-          "is",
-          "white"
+          "are",
+          "white",
+          "or",
+          "black"
         ],
         [
-          "A",
-          "sheep",
-          "is",
-          "white"
+          "Sheep",
+          "are",
+          "white",
+          "or",
+          "black"
         ]
       ],
-      "formattedSolution": "The sheep is white.",
-      "id": "19cc1fb1aca6",
+      "formattedSolution": "The sheep are white or black",
+      "id": "d3ddea1df22f",
       "priority": 2,
-      "group": "d6c447727826"
+      "group": "c61f4f1ccf5c"
     },
     {
       "type": "options",
@@ -1689,7 +1710,7 @@
         },
         {
           "word": "but",
-          "definition": "baina"
+          "definition": "baina\nbaina, baizik"
         },
         {
           "word": "rather",
@@ -1750,7 +1771,7 @@
         },
         {
           "word": "baizik",
-          "definition": "but (rather)\nbut(rather)\nrather"
+          "definition": "but (rather)\nbut rather\nbut(rather)\nrather"
         },
         {
           "word": "ahuntz",
