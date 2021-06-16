@@ -137,7 +137,7 @@ skillWithWord = Skill(
 
 skillWithPhraseAndWord = Skill(
     name="Masculine",
-    id=3,
+    id=3s
     phrases=[phrase2],
     words=[word1],
     image_set=["man1", "man2", "boy1"],
