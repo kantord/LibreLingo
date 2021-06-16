@@ -56,8 +56,12 @@ def get_options_challenge(phrase, _):
     }]
 
 
-def get_chips(phrase, course):
+def _get_chips(phrase):
     return list(map(clean_word, phrase.split()))
+
+
+def get_chips(phrase, course):
+    return _get_chips(phrase)
 
 
 def create_chips_challenge_generator(reverse):
