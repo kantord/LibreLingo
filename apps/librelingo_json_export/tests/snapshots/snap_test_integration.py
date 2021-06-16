@@ -32,7 +32,10 @@ snapshots['test_loaded_yaml_is_exported_to_correct_json 1'] = {
                     'La',
                     'femme',
                     'dit',
-                    'bonjour'
+                    'bonjour',
+                    'la',
+                    'salut',
+                    "L'homme"
                 ],
                 'formattedSolution': 'La femme dit bonjour',
                 'group': '921dd5d24167',
@@ -80,7 +83,9 @@ salut''',
                     'The',
                     'woman',
                     'says',
-                    'hello'
+                    'hello',
+                    'man',
+                    'hi'
                 ],
                 'formattedSolution': 'The woman says hello',
                 'group': '921dd5d24167',
@@ -143,7 +148,9 @@ hi''',
                 'chips': [
                     "L'homme",
                     'dit',
-                    'bonjour'
+                    'bonjour',
+                    'La',
+                    'femme'
                 ],
                 'formattedSolution': "L'homme dit bonjour",
                 'group': '0f389ca8a0c4',
@@ -189,7 +196,9 @@ salut''',
                     'The',
                     'man',
                     'says',
-                    'hello'
+                    'hello',
+                    'hi',
+                    'woman'
                 ],
                 'formattedSolution': 'The man says hello',
                 'group': '0f389ca8a0c4',
