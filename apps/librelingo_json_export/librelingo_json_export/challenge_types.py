@@ -1,4 +1,4 @@
-from librelingo_utils import get_dumb_opaque_id, audio_id, clean_word
+from librelingo_utils import get_dumb_opaque_id, audio_id, clean_word, iterate_phrases
 from .dictionary import _define_words_in_sentence
 
 
@@ -56,8 +56,29 @@ def get_options_challenge(phrase, _):
     }]
 
 
-def get_chips(phrase, course):
+def get_chips_from_string(phrase):
     return list(map(clean_word, phrase.split()))
+
+
+def get_chips_from_phrase(get_input_texts, phrase, course):
+    extra_chips = []
+    solution_chips = get_chips_from_string(get_input_texts(phrase)[0])
+
+    for phrase in iterate_phrases(course):
+        for variant in get_input_texts(phrase):
+            print("📤 variant", variant)
+            for chip in get_chips_from_string(variant):
+                print("trying", chip)
+                if chip not in solution_chips:
+                    extra_chips.append(chip)
+
+    print("🍌", repr(solution_chips))
+    print("🍅", repr(extra_chips))
+
+    return solution_chips + extra_chips[0:2]
+
+def get_solutions_from_phrase(get_input_texts, phrase):
+    return [get_chips_from_string(x) for x in get_input_texts(phrase)]
 
 
 def create_chips_challenge_generator(reverse):
@@ -88,8 +109,8 @@ def create_chips_challenge_generator(reverse):
             "type": "chips",
             "translatesToSourceLanguage": reverse,
             "phrase": _define_words_in_sentence(course, get_phrase_text(phrase), reverse),
-            "chips": get_chips(get_input_text(phrase), course),
-            "solutions": [get_chips(x, course) for x in get_input_texts(phrase)],
+            "chips": get_chips_from_phrase(get_input_texts, phrase, course),
+            "solutions": get_solutions_from_phrase(get_input_texts, phrase),
             "formattedSolution": get_input_text(phrase),
             "id": get_dumb_opaque_id("Chips", phrase, "reverse chips" if reverse else "chips"),
             "priority": 2,

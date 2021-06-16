@@ -8,7 +8,7 @@ from librelingo_json_export.challenge_types import get_short_input_challenge
 from librelingo_json_export.challenge_types import get_listening_challenge
 from librelingo_json_export.challenge_types import get_chips_challenge
 from librelingo_json_export.challenge_types import get_options_challenge
-from librelingo_json_export.challenge_types import get_chips
+from librelingo_json_export.challenge_types import get_chips_from_phrase
 from librelingo_types import Phrase
 from librelingo_types import Settings
 from librelingo_fakes import fakes
@@ -234,14 +234,15 @@ class TestChipsChallenge(TestCase):
             'id': '9f9b09771a07',
             'group': '930c4c4e7552',
             "priority": 2,
-            "chips": ["foous", "barus"],
+            "chips": ["foous", "barus", "lorem", "ipsum"],
             "solutions": [["foous", "barus"]],
             "formattedSolution": "foous barus",
         }
 
-    @patch('librelingo_json_export.challenge_types.get_chips')
-    def test_returns_correct_value2(self, get_chips):
-        get_chips.return_value = fakes.fake_value()
+    @patch('librelingo_json_export.challenge_types.get_solutions_from_phrase')
+    @patch('librelingo_json_export.challenge_types.get_chips_from_phrase')
+    def test_returns_correct_value2(self, get_chips_from_phrase, get_solutions_from_phrase):
+        get_chips_from_phrase.return_value = fakes.fake_value()
         challenge = get_chips_challenge(
             fakes.phrase_with_alternatives, fakes.course1)[0]
         assert challenge == {
@@ -256,36 +257,46 @@ class TestChipsChallenge(TestCase):
             'id': '4b0e9208ce1b',
             'group': '66a39e74a2c8',
             "priority": 2,
-            "solutions": [get_chips.return_value, get_chips.return_value],
-            "chips": get_chips.return_value,
+            "solutions": get_solutions_from_phrase.return_value,
+            "chips": get_chips_from_phrase.return_value,
             "formattedSolution": "foous barus foous barus ",
         }
 
-    @patch('librelingo_json_export.challenge_types.get_chips')
-    def test_calls_get_chips_with_correct_value(self, get_chips):
+    @patch('librelingo_json_export.challenge_types.get_chips_from_phrase')
+    def test_calls_get_chips_with_correct_value(self, get_chips_from_phrase):
         get_chips_challenge(fakes.phrase1, fakes.course1)
-        get_chips.assert_called_with(fakes.phrase1.in_target_language[0], fakes.course1)
+        get_chips_from_phrase.assert_called_with(fakes.phrase1.in_target_language[0], fakes.course1)
 
 
 class GetChipsTest(TestCase):
     def test_empty_string(self):
-        assert get_chips('', fakes.course1) == []
+        assert get_chips_from_phrase(lambda _: [''], None, fakes.course1) == []
 
     @patch('librelingo_json_export.challenge_types.clean_word')
     def test_empty_string_doesnt_call_clean_word(self, clean_word):
-        get_chips('', fakes.course1)
+        get_chips_from_phrase(lambda _: [''], None, fakes.course1)
         assert not clean_word.called
 
     @patch('librelingo_json_export.challenge_types.clean_word')
     def test_calls_clean_word_with_correct_argument(self, clean_word):
-        get_chips('foo', fakes.course2)
+        get_chips_from_phrase(lambda _: ['foo'], None, fakes.course2)
         clean_word.assert_called_with('foo')
 
     @patch('librelingo_json_export.challenge_types.clean_word')
     def test_returns_correct_value(self, clean_word):
         clean_word.return_value = fakes.fake_value()
-        assert get_chips('foo', fakes.course1) == [clean_word.return_value]
+        assert get_chips_from_phrase(lambda _: 'foo', None, fakes.course1) == [clean_word.return_value]
 
     @patch('librelingo_json_export.challenge_types.clean_word')
     def test_returns_correct_number_of_words(self, clean_word):
-        assert len(get_chips('foo bar', fakes.course1)) == 2
+        # Includes extra words
+        clean_word.side_effect = lambda x: x
+        assert len(get_chips_from_phrase(lambda x: ['Sleep well!'] if x is None else x[0], None, fakes.course1)) == 4
+
+    def test_includes_words_from_other_phrases(self):
+        chips = set(get_chips_from_phrase(lambda x: ['something otherthing'] if x is None else x[0], None, fakes.course1))
+        while "something" in chips:
+            chips.remove("something")
+        while "otherthing" in chips:
+            chips.remove("otherthing")
+        assert len(chips) != 0
