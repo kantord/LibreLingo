@@ -54,3 +54,12 @@ audio_id(language, text)
 
 Generate the ID that will identify the audio file of a sentence.
 
+<a name="librelingo_utils.utils.iterate_phrases"></a>
+#### iterate\_phrases
+
+```python
+iterate_phrases(course)
+```
+
+"Flatten" a course into a sequence of phrases
+

@@ -264,28 +264,28 @@ class TestChipsChallenge(TestCase):
     @patch('librelingo_json_export.challenge_types.get_chips')
     def test_calls_get_chips_with_correct_value(self, get_chips):
         get_chips_challenge(fakes.phrase1, fakes.course1)
-        get_chips.assert_called_with(fakes.phrase1.in_target_language[0])
+        get_chips.assert_called_with(fakes.phrase1.in_target_language[0], fakes.course1)
 
 
 class GetChipsTest(TestCase):
     def test_empty_string(self):
-        assert get_chips('') == []
+        assert get_chips('', fakes.course1) == []
 
     @patch('librelingo_json_export.challenge_types.clean_word')
     def test_empty_string_doesnt_call_clean_word(self, clean_word):
-        get_chips('')
+        get_chips('', fakes.course1)
         assert not clean_word.called
 
     @patch('librelingo_json_export.challenge_types.clean_word')
     def test_calls_clean_word_with_correct_argument(self, clean_word):
-        get_chips('foo')
+        get_chips('foo', fakes.course2)
         clean_word.assert_called_with('foo')
 
     @patch('librelingo_json_export.challenge_types.clean_word')
     def test_returns_correct_value(self, clean_word):
         clean_word.return_value = fakes.fake_value()
-        assert get_chips('foo') == [clean_word.return_value]
+        assert get_chips('foo', fakes.course1) == [clean_word.return_value]
 
     @patch('librelingo_json_export.challenge_types.clean_word')
     def test_returns_correct_number_of_words(self, clean_word):
-        assert len(get_chips('foo bar')) == 2
+        assert len(get_chips('foo bar', fakes.course1)) == 2
