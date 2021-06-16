@@ -13,3 +13,7 @@ Then("I see the correct chips", () => {
     cy.get(".chip").contains("estás").should("be.visible")
     cy.get(".chip").contains("hoy").should("be.visible")
 })
+
+Then("I have unused chips", () => {
+    cy.get("#chips .chip").should("be.visible")
+})
