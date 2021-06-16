@@ -59,8 +59,8 @@ New words:
       - book3
 
 Phrases:
-  - Phrase: Katu handi hau laranja da.
-    Translation: This big cat is orange.
+  - Phrase: Katu handi hau laranja da, baina ahula.
+    Translation: This big cat is orange, but weak.
 
   - Phrase: Katu laranja hau handia da.
     Translation: This orange cat is big.
@@ -85,6 +85,9 @@ Phrases:
   - Phrase: Zer da hau?
     Translation: What is this?
 
+  - Phrase: Eskola hori ez da berdea, horia baizik.
+    Translation: That school is not green, but yellow.
+
   - Phrase: Hau eskola zen, baina orain hotela da.
     Translation: This was a school, but now it is a hotel.
 
@@ -105,17 +108,17 @@ Phrases:
   - Phrase: Zer da hori?
     Translation: What is that?
 
-  - Phrase: Hori Iziar da. Iziar mutila da.
-    Translation: That is Iziar. Iziar is a boy.
+  - Phrase: Hori da Iziar. Iziar mutil indartsua da.
+    Translation: That is Iziar. Iziar is a strong boy.
 
-  - Phrase: Katua hori beltza da.
-    Translation: That cat is black.
+  - Phrase: Katu beltz hori ahula da.
+    Translation: That black cat is weak.
 
   - Phrase: Hotel horiek zuriak dira.
     Translation: Those hotels are white.
 
-  - Phrase: Mutil horiek ikasleak dira.
-    Translation: Those boys are students.
+  - Phrase: Ikasle horiek mutil indartsuak dira.
+    Translation: Those students are strong boys.
 
   - Phrase: Hura katu hura beltza da.
     Translation: That over there is a black cat.
@@ -153,6 +156,9 @@ Mini-dictionary:
   Basque:
     - Joseba: Joseba (name)
     - Iziar: Iziar (name)
+    - ahul: weak
+    - ahula: weak
+    - ahulak: weak
     - altua: tall
     - animalia: animal
     - animaliak: animals
@@ -162,6 +168,7 @@ Mini-dictionary:
     - azkarra: fast
     - bat: one
     - baina: but
+    - baizik: but rather
     - begira!: look!
     - beltz: black
     - beltza: black
@@ -210,6 +217,9 @@ Mini-dictionary:
       - he
       - she
       - it
+    - indartsu: strong
+    - indartsua: strong
+    - indartsuak: strong
     - itsusia: ugly
     - kaixo: hello
     - katu: cat
@@ -281,7 +291,7 @@ Mini-dictionary:
     - boy: mutil
     - boys: mutilak
     - bus: autobusa
-    - but: baina
+    - but: baina, baizik
     - car: kotxea
     - cars: kotxeak
     - cat: katu
@@ -330,6 +340,7 @@ Mini-dictionary:
     - short: labur
     - slow: motel
     - small: txiki
+    - strong: indartsu
     - tall: altu
     - that:
       - hori
@@ -348,6 +359,7 @@ Mini-dictionary:
     - turtles: dortokak
     - ugly: itsusi
     - was: zen
+    - weak: ahul
     - what: zer
     - while: baina
     - white: zuri
