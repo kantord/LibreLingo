@@ -1,4 +1,4 @@
-# 10. To Be or Not To Be - Egon and the NON(Inessive) Case
+# 9. To Be or Not To Be - Egon and the NON(Inessive) Case
 
 ## Egon (To Be)
 
@@ -22,7 +22,8 @@
     
     
 *   Northern Basque (in France) does not have this distinction, so "to be" is translated as izan in almost all contexts.
-*   In Northern Basque, egon is used to mean "to stay" instead of "to be", so "Euskal herrian dago" would mean "I am staying in Basque Country" not "I am in Basque Country".
+*   In Northern Basque, egon is used to mean "to stay" instead of "to be", so
+*   "Euskal herrian dago" would mean "I am staying in Basque Country" not "I am in Basque Country".
 *   Note that both Egon and Izan are also used to describe feelings. Nekatuta nago. I am tired.(Emotions will be covered later in this course).
 *   When using Egon (or Izan in Northern Basque) to show that a subject is in or at a location you need to use the Inessive case, which answers the question NON - where.
 
@@ -34,7 +35,7 @@
 *   Single definite
     
     *   Ending: -(E)AN
-    *   Examples: etxeAN (in a house) haranAN (in a valley)
+    *   Examples: etxeAN (in a house) haranEAN (in a valley)
     
     
     

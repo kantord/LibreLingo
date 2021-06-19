@@ -1,22 +1,26 @@
 {
-  "id": "fb798a829358",
+  "id": "9b28ede8e4ee",
   "levels": 7,
   "challenges": [
     {
       "type": "options",
-      "formInTargetLanguage": "Euskal herrian dago.",
-      "meaningInSourceLanguage": "He is in Basque country.",
-      "id": "6d41243111a3",
+      "formInTargetLanguage": "Sukaldaria euskal herrian dago.",
+      "meaningInSourceLanguage": "The cook is in Basque country.",
+      "id": "bb8bac00c44a",
       "priority": 0,
-      "group": "58c6f7adef49"
+      "group": "28a6caa5510c"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
         {
-          "word": "He",
-          "definition": "hura"
+          "word": "The",
+          "definition": "-a"
+        },
+        {
+          "word": "cook",
+          "definition": "sukaldaria"
         },
         {
           "word": "is",
@@ -36,30 +40,37 @@
         }
       ],
       "chips": [
-        "Euskal",
+        "Sukaldaria",
+        "euskal",
         "herrian",
         "dago",
-        "han",
-        "neska"
+        "zuria",
+        "zara",
+        "Hura"
       ],
       "solutions": [
         [
-          "Euskal",
+          "Sukaldaria",
+          "euskal",
           "herrian",
           "dago"
         ]
       ],
-      "formattedSolution": "Euskal herrian dago.",
-      "id": "cf7021e6477d",
+      "formattedSolution": "Sukaldaria euskal herrian dago.",
+      "id": "6a46c255dc77",
       "priority": 2,
-      "group": "58c6f7adef49"
+      "group": "28a6caa5510c"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Euskal",
+          "word": "Sukaldaria",
+          "definition": "chef\ncook"
+        },
+        {
+          "word": "euskal",
           "definition": "basque\nbasque (ad)"
         },
         {
@@ -72,44 +83,64 @@
         }
       ],
       "chips": [
-        "He",
+        "The",
+        "cook",
         "is",
         "in",
         "Basque",
         "country",
-        "it",
-        "on",
         "one",
-        "e"
+        "on",
+        "or",
+        "it",
+        "an"
       ],
       "solutions": [
         [
-          "He",
+          "The",
+          "cook",
           "is",
           "in",
           "Basque",
           "country"
         ],
         [
-          "She",
+          "A",
+          "cook",
+          "is",
+          "in",
+          "Basque",
+          "country"
+        ],
+        [
+          "A",
+          "chef",
+          "is",
+          "in",
+          "Basque",
+          "country"
+        ],
+        [
+          "The",
+          "chef",
           "is",
           "in",
           "Basque",
           "country"
         ]
       ],
-      "formattedSolution": "He is in Basque country.",
-      "id": "98d846d0e805",
+      "formattedSolution": "The cook is in Basque country.",
+      "id": "df0f005e9fe8",
       "priority": 2,
-      "group": "58c6f7adef49"
+      "group": "28a6caa5510c"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Non dago neska?",
-      "meaningInSourceLanguage": "Where is the girl?",
-      "id": "d65239fa7aad",
+      "formInTargetLanguage": "Non dago gona?",
+      "meaningInSourceLanguage": "Where is the skirt?",
+      "id": "f91106da97ee",
       "priority": 0,
-      "group": "21e6ba6f4f2a"
+      "group": "c12f5847e276"
     },
     {
       "type": "chips",
@@ -128,28 +159,28 @@
           "definition": "-a"
         },
         {
-          "word": "girl?",
-          "definition": "neska"
+          "word": "skirt?",
+          "definition": "gona"
         }
       ],
       "chips": [
         "Non",
         "dago",
-        "neska",
-        "da",
-        "nago"
+        "gona",
+        "Jon",
+        "on"
       ],
       "solutions": [
         [
           "Non",
           "dago",
-          "neska"
+          "gona"
         ]
       ],
-      "formattedSolution": "Non dago neska?",
-      "id": "b6dc38bc15f3",
+      "formattedSolution": "Non dago gona?",
+      "id": "6d028866f9f5",
       "priority": 2,
-      "group": "21e6ba6f4f2a"
+      "group": "c12f5847e276"
     },
     {
       "type": "chips",
@@ -164,15 +195,15 @@
           "definition": "he is (egon)\nit is (egon)\nshe is (egon)"
         },
         {
-          "word": "neska?",
-          "definition": "a girl\ngirl\nthe girl"
+          "word": "gona?",
+          "definition": "skirt"
         }
       ],
       "chips": [
         "Where",
         "is",
         "the",
-        "girl",
+        "skirt",
         "her",
         "are",
         "She"
@@ -182,29 +213,39 @@
           "Where",
           "is",
           "the",
-          "girl"
+          "skirt"
+        ],
+        [
+          "Where",
+          "is",
+          "a",
+          "skirt"
         ]
       ],
-      "formattedSolution": "Where is the girl?",
-      "id": "56e250324972",
+      "formattedSolution": "Where is the skirt?",
+      "id": "19cfd2ec2e77",
       "priority": 2,
-      "group": "21e6ba6f4f2a"
+      "group": "c12f5847e276"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Hura lakuan dago.",
-      "meaningInSourceLanguage": "She is in the lake.",
-      "id": "a6491a15ccfb",
+      "formInTargetLanguage": "Neska lakuan dago.",
+      "meaningInSourceLanguage": "A girl is in the lake.",
+      "id": "306a74d5cb05",
       "priority": 0,
-      "group": "227b34afb000"
+      "group": "33689847fa86"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
         {
-          "word": "She",
-          "definition": "hura"
+          "word": "A",
+          "definition": "-a"
+        },
+        {
+          "word": "girl",
+          "definition": "neska"
         },
         {
           "word": "is",
@@ -224,31 +265,31 @@
         }
       ],
       "chips": [
-        "Hura",
+        "Neska",
         "lakuan",
         "dago",
-        "zara",
-        "gara"
+        "jaka",
+        "laku"
       ],
       "solutions": [
         [
-          "Hura",
+          "Neska",
           "lakuan",
           "dago"
         ]
       ],
-      "formattedSolution": "Hura lakuan dago.",
-      "id": "82d44ccdf937",
+      "formattedSolution": "Neska lakuan dago.",
+      "id": "9724e92441f3",
       "priority": 2,
-      "group": "227b34afb000"
+      "group": "33689847fa86"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Hura",
-          "definition": "he\nit\nitr\nshe\nthat over there"
+          "word": "Neska",
+          "definition": "a girl\ngirl\nthe girl"
         },
         {
           "word": "lakuan",
@@ -260,52 +301,60 @@
         }
       ],
       "chips": [
-        "She",
+        "A",
+        "girl",
         "is",
         "in",
         "the",
         "lake",
-        "He",
         "e",
-        "We",
-        "she"
+        "it",
+        "a",
+        "He",
+        "h"
       ],
       "solutions": [
         [
-          "She",
+          "A",
+          "girl",
           "is",
           "in",
           "the",
           "lake"
         ],
         [
-          "He",
+          "The",
+          "girl",
           "is",
           "in",
           "the",
           "lake"
         ]
       ],
-      "formattedSolution": "She is in the lake.",
-      "id": "775b74e61ae1",
+      "formattedSolution": "A girl is in the lake.",
+      "id": "d98ae26f1d0e",
       "priority": 2,
-      "group": "227b34afb000"
+      "group": "33689847fa86"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Hura hor dago.",
-      "meaningInSourceLanguage": "He is there.",
-      "id": "b84f248c41d7",
+      "formInTargetLanguage": "Alkandora hor dago.",
+      "meaningInSourceLanguage": "The shirt is there.",
+      "id": "d06cace0bdc1",
       "priority": 0,
-      "group": "81d8b31093b3"
+      "group": "645b732e704d"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
         {
-          "word": "He",
-          "definition": "hura"
+          "word": "The",
+          "definition": "-a"
+        },
+        {
+          "word": "shirt",
+          "definition": "alkandora\nalkondara"
         },
         {
           "word": "is",
@@ -317,31 +366,31 @@
         }
       ],
       "chips": [
-        "Hura",
+        "Alkandora",
         "hor",
         "dago",
-        "hura",
-        "zara"
+        "zara",
+        "da"
       ],
       "solutions": [
         [
-          "Hura",
+          "Alkandora",
           "hor",
           "dago"
         ]
       ],
-      "formattedSolution": "Hura hor dago.",
-      "id": "e8b3db361ca1",
+      "formattedSolution": "Alkandora hor dago.",
+      "id": "8856f4aa2310",
       "priority": 2,
-      "group": "81d8b31093b3"
+      "group": "645b732e704d"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Hura",
-          "definition": "he\nit\nitr\nshe\nthat over there"
+          "word": "Alkandora",
+          "definition": "shirt"
         },
         {
           "word": "hor",
@@ -353,33 +402,32 @@
         }
       ],
       "chips": [
-        "He",
+        "The",
+        "shirt",
         "is",
         "there",
-        "he",
-        "the"
+        "the",
+        "her",
+        "She"
       ],
       "solutions": [
         [
-          "He",
+          "The",
+          "shirt",
           "is",
           "there"
         ],
         [
-          "She",
-          "is",
-          "there"
-        ],
-        [
-          "It",
+          "A",
+          "shirt",
           "is",
           "there"
         ]
       ],
-      "formattedSolution": "He is there.",
-      "id": "8a23824a826b",
+      "formattedSolution": "The shirt is there.",
+      "id": "1e9a7e4ab7ad",
       "priority": 2,
-      "group": "81d8b31093b3"
+      "group": "645b732e704d"
     },
     {
       "type": "options",
@@ -451,9 +499,9 @@
         "are",
         "in",
         "Madrid",
+        "an",
         "am",
-        "a",
-        "He"
+        "a"
       ],
       "solutions": [
         [
@@ -619,8 +667,8 @@
         "in",
         "Spain",
         "it",
-        "pig",
-        "his"
+        "an",
+        "pig"
       ],
       "solutions": [
         [
@@ -786,8 +834,8 @@
         "in",
         "Europe",
         "it",
-        "on",
-        "n"
+        "an",
+        "on"
       ],
       "solutions": [
         [
@@ -886,7 +934,7 @@
         "one",
         "you",
         "Are",
-        "our"
+        "an"
       ],
       "solutions": [
         [
@@ -945,7 +993,9 @@
       "chips": [
         "Non",
         "daude",
-        "haiek"
+        "haiek",
+        "hau",
+        "hauek"
       ],
       "solutions": [
         [
@@ -979,7 +1029,9 @@
       "chips": [
         "Where",
         "are",
-        "they"
+        "they",
+        "the",
+        "hee"
       ],
       "solutions": [
         [
@@ -1165,7 +1217,7 @@
         "one",
         "you",
         "or",
-        "our"
+        "an"
       ],
       "solutions": [
         [
@@ -1183,11 +1235,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Zuek bere aita gaude?",
-      "meaningInSourceLanguage": "Where is her father?",
-      "id": "9d5abf7cefcc",
+      "formInTargetLanguage": "Non dago bere berokia?",
+      "meaningInSourceLanguage": "Where is her coat?",
+      "id": "8ce2816a66e0",
       "priority": 0,
-      "group": "d190da419408"
+      "group": "9522bc4c5ce5"
     },
     {
       "type": "chips",
@@ -1206,82 +1258,88 @@
           "definition": "bere"
         },
         {
-          "word": "father?",
-          "definition": "aita"
+          "word": "coat?",
+          "definition": "armarria\nberoki\nberokia"
         }
       ],
       "chips": [
-        "Zuek",
+        "Non",
+        "dago",
         "bere",
-        "aita",
-        "gaude"
+        "berokia",
+        "ere",
+        "Gero",
+        "Nor"
       ],
       "solutions": [
         [
-          "Zuek",
+          "Non",
+          "dago",
           "bere",
-          "aita",
-          "gaude"
+          "berokia"
         ]
       ],
-      "formattedSolution": "Zuek bere aita gaude?",
-      "id": "fa9b188fedbc",
+      "formattedSolution": "Non dago bere berokia?",
+      "id": "c0e1f91d19e2",
       "priority": 2,
-      "group": "d190da419408"
+      "group": "9522bc4c5ce5"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Zuek",
-          "definition": "You'll\nyou\nyou'll\nyou(plural)\nyour (plural)"
+          "word": "Non",
+          "definition": "where"
+        },
+        {
+          "word": "dago",
+          "definition": "he is (egon)\nit is (egon)\nshe is (egon)"
         },
         {
           "word": "bere",
           "definition": "her\nhers\nhis\nhis/hers/its\nits"
         },
         {
-          "word": "aita",
-          "definition": "father"
-        },
-        {
-          "word": "gaude?",
-          "definition": "are (egon)"
+          "word": "berokia?",
+          "definition": "coat"
         }
       ],
       "chips": [
         "Where",
         "is",
         "her",
-        "father"
+        "coat",
+        "hee",
+        "hers",
+        "here"
       ],
       "solutions": [
         [
           "Where",
           "is",
           "her",
-          "father"
+          "coat"
         ],
         [
           "Where",
           "is",
           "his",
-          "father"
+          "coat"
         ]
       ],
-      "formattedSolution": "Where is her father?",
-      "id": "2f910791bf93",
+      "formattedSolution": "Where is her coat?",
+      "id": "08b5e60585ae",
       "priority": 2,
-      "group": "d190da419408"
+      "group": "9522bc4c5ce5"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Bere aita Espainian gaude.",
-      "meaningInSourceLanguage": "Her father is in Spain.",
-      "id": "1f8dab9a7cd7",
+      "formInTargetLanguage": "Bere etxea Espainian dago.",
+      "meaningInSourceLanguage": "Her house is in Spain.",
+      "id": "5a6fefbbe700",
       "priority": 0,
-      "group": "e24d16fd9fbf"
+      "group": "8519476cce29"
     },
     {
       "type": "chips",
@@ -1292,8 +1350,8 @@
           "definition": "bere"
         },
         {
-          "word": "father",
-          "definition": "aita"
+          "word": "house",
+          "definition": "etxe\netxea"
         },
         {
           "word": "is",
@@ -1310,25 +1368,25 @@
       ],
       "chips": [
         "Bere",
-        "aita",
+        "etxea",
         "Espainian",
-        "gaude",
-        "gara",
-        "arte",
-        "gida"
+        "dago",
+        "zara",
+        "ere",
+        "eta"
       ],
       "solutions": [
         [
           "Bere",
-          "aita",
+          "etxea",
           "Espainian",
-          "gaude"
+          "dago"
         ]
       ],
-      "formattedSolution": "Bere aita Espainian gaude.",
-      "id": "012253ef721a",
+      "formattedSolution": "Bere etxea Espainian dago.",
+      "id": "66139508a3c0",
       "priority": 2,
-      "group": "e24d16fd9fbf"
+      "group": "8519476cce29"
     },
     {
       "type": "chips",
@@ -1339,57 +1397,57 @@
           "definition": "her\nhers\nhis\nhis/hers/its\nits"
         },
         {
-          "word": "aita",
-          "definition": "father"
+          "word": "etxea",
+          "definition": "house"
         },
         {
           "word": "Espainian",
           "definition": "in Spain"
         },
         {
-          "word": "gaude.",
-          "definition": "are (egon)"
+          "word": "dago.",
+          "definition": "he is (egon)\nit is (egon)\nshe is (egon)"
         }
       ],
       "chips": [
         "Her",
-        "father",
+        "house",
         "is",
         "in",
         "Spain",
-        "it",
-        "He",
         "his",
-        "her"
+        "He",
+        "it",
+        "an"
       ],
       "solutions": [
         [
           "Her",
-          "father",
+          "house",
           "is",
           "in",
           "Spain"
         ],
         [
           "His",
-          "father",
+          "house",
           "is",
           "in",
           "Spain"
         ]
       ],
-      "formattedSolution": "Her father is in Spain.",
-      "id": "35263e406693",
+      "formattedSolution": "Her house is in Spain.",
+      "id": "45dbf55d35e2",
       "priority": 2,
-      "group": "e24d16fd9fbf"
+      "group": "8519476cce29"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Zure ilobak ez hemen daude.",
-      "meaningInSourceLanguage": "Your nephews are not here.",
-      "id": "870e7ee527fb",
+      "formInTargetLanguage": "Zure eskularruak ez daude hemen.",
+      "meaningInSourceLanguage": "Your gloves are not here.",
+      "id": "a957a47b64e2",
       "priority": 0,
-      "group": "00758912706a"
+      "group": "82fbb0de8750"
     },
     {
       "type": "chips",
@@ -1400,8 +1458,8 @@
           "definition": "zuen\nzure"
         },
         {
-          "word": "nephews",
-          "definition": "ilobak"
+          "word": "gloves",
+          "definition": "eskularruak"
         },
         {
           "word": "are",
@@ -1418,28 +1476,28 @@
       ],
       "chips": [
         "Zure",
-        "ilobak",
+        "eskularruak",
         "ez",
-        "hemen",
         "daude",
+        "hemen",
         "ere",
-        "Zuek",
         "zure",
-        "bere"
+        "gure",
+        "Zuek"
       ],
       "solutions": [
         [
           "Zure",
-          "ilobak",
+          "eskularruak",
           "ez",
-          "hemen",
-          "daude"
+          "daude",
+          "hemen"
         ]
       ],
-      "formattedSolution": "Zure ilobak ez hemen daude.",
-      "id": "413f8b9bddb7",
+      "formattedSolution": "Zure eskularruak ez daude hemen.",
+      "id": "e8d38705346f",
       "priority": 2,
-      "group": "00758912706a"
+      "group": "82fbb0de8750"
     },
     {
       "type": "chips",
@@ -1450,61 +1508,54 @@
           "definition": "your"
         },
         {
-          "word": "ilobak",
-          "definition": "nephews\nnieces"
+          "word": "eskularruak",
+          "definition": "gloves"
         },
         {
           "word": "ez",
           "definition": "no\nnot\nnot, no\nnot,no"
         },
         {
-          "word": "hemen",
-          "definition": "here"
+          "word": "daude",
+          "definition": "they are (egon)"
         },
         {
-          "word": "daude.",
-          "definition": "they are (egon)"
+          "word": "hemen.",
+          "definition": "here"
         }
       ],
       "chips": [
         "Your",
-        "nephews",
+        "gloves",
         "are",
         "not",
         "here",
-        "hee",
-        "her",
-        "Are",
-        "or"
+        "or",
+        "one",
+        "You",
+        "Are"
       ],
       "solutions": [
         [
           "Your",
-          "nephews",
-          "are",
-          "not",
-          "here"
-        ],
-        [
-          "Your",
-          "nieces",
+          "gloves",
           "are",
           "not",
           "here"
         ]
       ],
-      "formattedSolution": "Your nephews are not here.",
-      "id": "21b98b4b6919",
+      "formattedSolution": "Your gloves are not here.",
+      "id": "381ed97ad906",
       "priority": 2,
-      "group": "00758912706a"
+      "group": "82fbb0de8750"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Non daude zure ilobak?",
-      "meaningInSourceLanguage": "Where are your nephews?",
-      "id": "3978d7ce16f0",
+      "formInTargetLanguage": "Non daude zure aterkiak?",
+      "meaningInSourceLanguage": "Where are your umbrellas?",
+      "id": "7e1fe1ecb3aa",
       "priority": 0,
-      "group": "c0cb73a9ae91"
+      "group": "5647ff08bff9"
     },
     {
       "type": "chips",
@@ -1523,28 +1574,31 @@
           "definition": "zuen\nzure"
         },
         {
-          "word": "nephews?",
-          "definition": "ilobak"
+          "word": "umbrellas?",
+          "definition": "aterkiak"
         }
       ],
       "chips": [
         "Non",
         "daude",
         "zure",
-        "ilobak"
+        "aterkiak",
+        "ere",
+        "Zure",
+        "gure"
       ],
       "solutions": [
         [
           "Non",
           "daude",
           "zure",
-          "ilobak"
+          "aterkiak"
         ]
       ],
-      "formattedSolution": "Non daude zure ilobak?",
-      "id": "12eb24e4a0a3",
+      "formattedSolution": "Non daude zure aterkiak?",
+      "id": "b602d21551f2",
       "priority": 2,
-      "group": "c0cb73a9ae91"
+      "group": "5647ff08bff9"
     },
     {
       "type": "chips",
@@ -1563,42 +1617,39 @@
           "definition": "your"
         },
         {
-          "word": "ilobak?",
-          "definition": "nephews\nnieces"
+          "word": "aterkiak?",
+          "definition": "umbrellas"
         }
       ],
       "chips": [
         "Where",
         "are",
         "your",
-        "nephews"
+        "umbrellas",
+        "here",
+        "Are",
+        "were"
       ],
       "solutions": [
         [
           "Where",
           "are",
           "your",
-          "nephews"
-        ],
-        [
-          "Where",
-          "are",
-          "your",
-          "nieces"
+          "umbrellas"
         ]
       ],
-      "formattedSolution": "Where are your nephews?",
-      "id": "1156f0a569dc",
+      "formattedSolution": "Where are your umbrellas?",
+      "id": "a928105c7102",
       "priority": 2,
-      "group": "c0cb73a9ae91"
+      "group": "5647ff08bff9"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Nire ilobak Euskal Herrian daude.",
-      "meaningInSourceLanguage": "My nieces are in Basque Country.",
-      "id": "f1d5016f540f",
+      "formInTargetLanguage": "Nire lagunak Euskal Herrian daude.",
+      "meaningInSourceLanguage": "My friends are in Basque Country.",
+      "id": "2c7dcb28f8be",
       "priority": 0,
-      "group": "e7a2dfefc2ce"
+      "group": "e85ffafd0f0d"
     },
     {
       "type": "chips",
@@ -1609,8 +1660,8 @@
           "definition": "nire"
         },
         {
-          "word": "nieces",
-          "definition": "ilobak"
+          "word": "friends",
+          "definition": "lagunak"
         },
         {
           "word": "are",
@@ -1631,28 +1682,28 @@
       ],
       "chips": [
         "Nire",
-        "ilobak",
+        "lagunak",
         "Euskal",
         "Herrian",
         "daude",
         "Hura",
-        "dira",
-        "zurea",
-        "zara"
+        "gure",
+        "zara",
+        "gara"
       ],
       "solutions": [
         [
           "Nire",
-          "ilobak",
+          "lagunak",
           "Euskal",
           "Herrian",
           "daude"
         ]
       ],
-      "formattedSolution": "Nire ilobak Euskal Herrian daude.",
-      "id": "e91c458f6e49",
+      "formattedSolution": "Nire lagunak Euskal Herrian daude.",
+      "id": "4b7ee6555bec",
       "priority": 2,
-      "group": "e7a2dfefc2ce"
+      "group": "e85ffafd0f0d"
     },
     {
       "type": "chips",
@@ -1663,8 +1714,8 @@
           "definition": "my"
         },
         {
-          "word": "ilobak",
-          "definition": "nephews\nnieces"
+          "word": "lagunak",
+          "definition": "friends"
         },
         {
           "word": "Euskal",
@@ -1681,39 +1732,31 @@
       ],
       "chips": [
         "My",
-        "nieces",
+        "friends",
         "are",
         "in",
         "Basque",
         "Country",
+        "an",
         "one",
         "is",
-        "He",
-        "e",
-        "n"
+        "and",
+        "Are"
       ],
       "solutions": [
         [
           "My",
-          "nieces",
-          "are",
-          "in",
-          "Basque",
-          "Country"
-        ],
-        [
-          "My",
-          "nephews",
+          "friends",
           "are",
           "in",
           "Basque",
           "Country"
         ]
       ],
-      "formattedSolution": "My nieces are in Basque Country.",
-      "id": "dabbed674936",
+      "formattedSolution": "My friends are in Basque Country.",
+      "id": "7d37c6f85c47",
       "priority": 2,
-      "group": "e7a2dfefc2ce"
+      "group": "e85ffafd0f0d"
     },
     {
       "type": "options",
@@ -1797,19 +1840,23 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Mikel ez dago hemen.",
-      "meaningInSourceLanguage": "Mikel is not here,",
-      "id": "5f44c52ac6ea",
+      "formInTargetLanguage": "Gerrikoa ez dago hemen..",
+      "meaningInSourceLanguage": "The belt is not here,",
+      "id": "1ff6346e9793",
       "priority": 0,
-      "group": "e611e650147a"
+      "group": "f4e2749e3ba8"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
         {
-          "word": "Mikel",
-          "definition": "Mikel (male name)\nMikel (name)\nMikel(male name)"
+          "word": "The",
+          "definition": "-a"
+        },
+        {
+          "word": "belt",
+          "definition": "gerriko\ngerrikoa"
         },
         {
           "word": "is",
@@ -1825,34 +1872,34 @@
         }
       ],
       "chips": [
-        "Mikel",
+        "Gerrikoa",
         "ez",
         "dago",
         "hemen",
+        "Gero",
         "ere",
-        "ezer",
-        "zen"
+        "edo"
       ],
       "solutions": [
         [
-          "Mikel",
+          "Gerrikoa",
           "ez",
           "dago",
           "hemen"
         ]
       ],
-      "formattedSolution": "Mikel ez dago hemen.",
-      "id": "e82afb1aa846",
+      "formattedSolution": "Gerrikoa ez dago hemen..",
+      "id": "2c68c73f71d2",
       "priority": 2,
-      "group": "e611e650147a"
+      "group": "f4e2749e3ba8"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Mikel",
-          "definition": "Mikel (male name)\nMikel(male name)"
+          "word": "Gerrikoa",
+          "definition": "belt"
         },
         {
           "word": "ez",
@@ -1863,31 +1910,41 @@
           "definition": "he is (egon)\nit is (egon)\nshe is (egon)"
         },
         {
-          "word": "hemen.",
+          "word": "hemen..",
           "definition": "here"
         }
       ],
       "chips": [
-        "Mikel",
+        "The",
+        "belt",
         "is",
         "not",
         "here",
-        "it",
         "hee",
-        "his"
+        "her",
+        "He",
+        "e"
       ],
       "solutions": [
         [
-          "Mikel",
+          "The",
+          "belt",
+          "is",
+          "not",
+          "here"
+        ],
+        [
+          "A",
+          "belt",
           "is",
           "not",
           "here"
         ]
       ],
-      "formattedSolution": "Mikel is not here,",
-      "id": "baa4c8de482c",
+      "formattedSolution": "The belt is not here,",
+      "id": "8d8105cfabab",
       "priority": 2,
-      "group": "e611e650147a"
+      "group": "f4e2749e3ba8"
     },
     {
       "type": "options",
@@ -2278,10 +2335,10 @@
         "e",
         "r",
         "Are",
+        "an",
         "am",
         "one",
-        "He",
-        "the"
+        "He"
       ],
       "solutions": [
         [
@@ -2334,15 +2391,6 @@
       "group": "2d7046664617"
     },
     {
-      "type": "listeningExercise",
-      "answer": "Madril",
-      "meaning": "Madrid",
-      "audio": "b48a5b7075dccd385952ae26d889d4e8f0f0736e2690319bcc0c5773ad002a75",
-      "id": "34f7bad8736f",
-      "priority": 1,
-      "group": "2d7046664617"
-    },
-    {
       "type": "cards",
       "pictures": [
         "spain1.jpg",
@@ -2374,15 +2422,6 @@
       "id": "70277275bcde",
       "priority": 1,
       "group": "a318f56356e1"
-    },
-    {
-      "type": "listeningExercise",
-      "answer": "Espainia",
-      "meaning": "Spain",
-      "audio": "1671796a10e6d00ebdb04f131ec43b78ebd307b49a81ce6f3185ccae1d8e21c7",
-      "id": "b94fcdafaeb2",
-      "priority": 1,
-      "group": "bd9d083157c8"
     },
     {
       "type": "cards",
@@ -2418,15 +2457,6 @@
       "group": "1e19970e78b2"
     },
     {
-      "type": "listeningExercise",
-      "answer": "Europa",
-      "meaning": "Europe",
-      "audio": "be20fd2831ee5b9b674e3455e922792f03951d7a647bfdfad68f32fbef2e8980",
-      "id": "138e37259baa",
-      "priority": 1,
-      "group": "1807b5e57d19"
-    },
-    {
       "type": "cards",
       "pictures": [
         "here1.jpg",
@@ -2456,15 +2486,6 @@
         }
       ],
       "id": "121a651e4e60",
-      "priority": 1,
-      "group": "fcb5bd0d0b16"
-    },
-    {
-      "type": "listeningExercise",
-      "answer": "hemen",
-      "meaning": "here",
-      "audio": "f6cfe89c80f426b9f574cd10a70271f22b7de55e0134a96731790148d6343393",
-      "id": "978b5dac8d8f",
       "priority": 1,
       "group": "fcb5bd0d0b16"
     },
@@ -2502,15 +2523,6 @@
       "group": "9265d88dba4f"
     },
     {
-      "type": "listeningExercise",
-      "answer": "hor",
-      "meaning": "there",
-      "audio": "566da471ff8fabe9f7cc02a9e4bb2a1fac860bd470ec0771ce513c099b30a1d5",
-      "id": "9fa29e343769",
-      "priority": 1,
-      "group": "1a86a2d6bd7d"
-    },
-    {
       "type": "cards",
       "pictures": [
         "overthere1.jpg",
@@ -2544,15 +2556,6 @@
         }
       ],
       "id": "257fb23c7808",
-      "priority": 1,
-      "group": "f675a4f36824"
-    },
-    {
-      "type": "listeningExercise",
-      "answer": "han",
-      "meaning": "over there",
-      "audio": "7ab753fffd0369d1dfcf2f545ea979b56b5acfb761ac7d9095c04eacf266462c",
-      "id": "b1c6d3d813f3",
       "priority": 1,
       "group": "f675a4f36824"
     },
@@ -2594,15 +2597,6 @@
       "group": "2bdb9a55f5d3"
     },
     {
-      "type": "listeningExercise",
-      "answer": "Euskal Herrian",
-      "meaning": "Basque Country",
-      "audio": "feaffb00d702573838fcb629c4b8e292163ccb987cf10b0085e2b41de36a7d3e",
-      "id": "eba17d2b5f1b",
-      "priority": 1,
-      "group": "fcff07ab0e4e"
-    },
-    {
       "type": "cards",
       "pictures": [
         "forest1.jpg",
@@ -2632,15 +2626,6 @@
         }
       ],
       "id": "e04fc119ade0",
-      "priority": 1,
-      "group": "6f60d9f303e9"
-    },
-    {
-      "type": "listeningExercise",
-      "answer": "baso",
-      "meaning": "forest",
-      "audio": "b4450ec99e8dc1329487ec260f2ea7250e5aae7df331af8dbad9515bffaa9dab",
-      "id": "ff504fc02281",
       "priority": 1,
       "group": "6f60d9f303e9"
     },
