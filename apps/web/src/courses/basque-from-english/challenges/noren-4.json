@@ -1,6 +1,6 @@
 {
   "id": "1611ba1c35a7",
-  "levels": 5,
+  "levels": 6,
   "challenges": [
     {
       "type": "options",
@@ -271,11 +271,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Noren arropa dira horiek?",
+      "formInTargetLanguage": "Noren arropak dira horiek?",
       "meaningInSourceLanguage": "Whose clothes are those?",
-      "id": "c2c1dd048714",
+      "id": "f2afae9c11bd",
       "priority": 0,
-      "group": "4516f4d2bc9a"
+      "group": "f47fea0f2ead"
     },
     {
       "type": "chips",
@@ -300,7 +300,7 @@
       ],
       "chips": [
         "Noren",
-        "arropa",
+        "arropak",
         "dira",
         "horiek",
         "horia",
@@ -310,15 +310,15 @@
       "solutions": [
         [
           "Noren",
-          "arropa",
+          "arropak",
           "dira",
           "horiek"
         ]
       ],
-      "formattedSolution": "Noren arropa dira horiek?",
-      "id": "e602aa8f217a",
+      "formattedSolution": "Noren arropak dira horiek?",
+      "id": "b82438f8fe18",
       "priority": 2,
-      "group": "4516f4d2bc9a"
+      "group": "f47fea0f2ead"
     },
     {
       "type": "chips",
@@ -329,7 +329,7 @@
           "definition": "whose"
         },
         {
-          "word": "arropa",
+          "word": "arropak",
           "definition": "clothes"
         },
         {
@@ -359,9 +359,91 @@
         ]
       ],
       "formattedSolution": "Whose clothes are those?",
-      "id": "9626ab7cc77c",
+      "id": "dd91f140b85f",
       "priority": 2,
-      "group": "4516f4d2bc9a"
+      "group": "f47fea0f2ead"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Noren betaurrekoak dira?",
+      "meaningInSourceLanguage": "Whose glasses are they?",
+      "id": "650ae212f553",
+      "priority": 0,
+      "group": "7924a2c52d69"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Whose",
+          "definition": "noren\nnorena\nnorenak"
+        },
+        {
+          "word": "glasses",
+          "definition": "betaurrekoak"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "they?",
+          "definition": "haiek"
+        }
+      ],
+      "chips": [
+        "Noren",
+        "betaurrekoak",
+        "dira"
+      ],
+      "solutions": [
+        [
+          "Noren",
+          "betaurrekoak",
+          "dira"
+        ]
+      ],
+      "formattedSolution": "Noren betaurrekoak dira?",
+      "id": "1ddc04b00b54",
+      "priority": 2,
+      "group": "7924a2c52d69"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Noren",
+          "definition": "whose"
+        },
+        {
+          "word": "betaurrekoak",
+          "definition": "glasses"
+        },
+        {
+          "word": "dira?",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "Whose",
+        "glasses",
+        "are",
+        "they"
+      ],
+      "solutions": [
+        [
+          "Whose",
+          "glasses",
+          "are",
+          "they"
+        ]
+      ],
+      "formattedSolution": "Whose glasses are they?",
+      "id": "39438be80f18",
+      "priority": 2,
+      "group": "7924a2c52d69"
     },
     {
       "type": "options",
@@ -456,6 +538,88 @@
       "id": "55b94073f498",
       "priority": 2,
       "group": "d64e5bc0d528"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Norena da berokia?",
+      "meaningInSourceLanguage": "Whose coat is it?",
+      "id": "507cda8ca3de",
+      "priority": 0,
+      "group": "bd8ee6d65344"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Whose",
+          "definition": "noren\nnorena\nnorenak"
+        },
+        {
+          "word": "coat",
+          "definition": "armarria\nberoki\nberokia"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "it?",
+          "definition": "hura"
+        }
+      ],
+      "chips": [
+        "Norena",
+        "da",
+        "berokia"
+      ],
+      "solutions": [
+        [
+          "Norena",
+          "da",
+          "berokia"
+        ]
+      ],
+      "formattedSolution": "Norena da berokia?",
+      "id": "d35ed550be2a",
+      "priority": 2,
+      "group": "bd8ee6d65344"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Norena",
+          "definition": "whose"
+        },
+        {
+          "word": "da",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        },
+        {
+          "word": "berokia?",
+          "definition": "coat"
+        }
+      ],
+      "chips": [
+        "Whose",
+        "coat",
+        "is",
+        "it"
+      ],
+      "solutions": [
+        [
+          "Whose",
+          "coat",
+          "is",
+          "it"
+        ]
+      ],
+      "formattedSolution": "Whose coat is it?",
+      "id": "98b695589062",
+      "priority": 2,
+      "group": "bd8ee6d65344"
     },
     {
       "type": "options",

@@ -1,34 +1,38 @@
 {
   "id": "b6e80fc47d6c",
-  "levels": 6,
+  "levels": 7,
   "challenges": [
     {
       "type": "options",
-      "formInTargetLanguage": "Zein aterkia zurea da?",
-      "meaningInSourceLanguage": "Which umbrella is yours?",
-      "id": "f217f630b407",
+      "formInTargetLanguage": "Boligrafoa beltza nirea da.",
+      "meaningInSourceLanguage": "The black pen is mine.",
+      "id": "1f69c121bd61",
       "priority": 0,
-      "group": "ec01d4b5a3d7"
+      "group": "340c82f4f742"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
         {
-          "word": "Which",
-          "definition": "zein"
+          "word": "The",
+          "definition": "-a"
         },
         {
-          "word": "umbrella",
-          "definition": "aterki"
+          "word": "black",
+          "definition": "beltz\nbeltza"
+        },
+        {
+          "word": "pen",
+          "definition": "boligrafo"
         },
         {
           "word": "is",
           "definition": "da\nda (izan)\ndago (egon)"
         },
         {
-          "word": "yours?",
-          "definition": "zuena\nzuenak\nzurea\nzureak"
+          "word": "mine.",
+          "definition": "nirea\nnireak"
         }
       ],
       "chips": [
@@ -42,41 +46,42 @@
       ],
       "solutions": [
         [
-          "Zein",
-          "aterkia",
-          "zurea",
+          "Boligrafoa",
+          "beltza",
+          "nirea",
           "da"
         ]
       ],
-      "formattedSolution": "Zein aterkia zurea da?",
-      "id": "dbf5d151f166",
+      "formattedSolution": "Boligrafoa beltza nirea da.",
+      "id": "57c65b9dd195",
       "priority": 2,
-      "group": "ec01d4b5a3d7"
+      "group": "340c82f4f742"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Zein",
-          "definition": "which"
+          "word": "Boligrafoa",
+          "definition": "pen"
         },
         {
-          "word": "aterkia",
-          "definition": "umbrella"
+          "word": "beltza",
+          "definition": "black"
         },
         {
-          "word": "zurea",
-          "definition": "yours"
+          "word": "nirea",
+          "definition": "mine"
         },
         {
-          "word": "da?",
+          "word": "da.",
           "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
         }
       ],
       "chips": [
-        "Which",
-        "umbrella",
+        "The",
+        "black",
+        "pen",
         "is",
         "yours",
         "his",
@@ -85,40 +90,45 @@
       ],
       "solutions": [
         [
-          "Which",
-          "umbrella",
+          "The",
+          "black",
+          "pen",
           "is",
-          "yours"
+          "mine"
         ]
       ],
-      "formattedSolution": "Which umbrella is yours?",
-      "id": "3a95ff979744",
+      "formattedSolution": "The black pen is mine.",
+      "id": "d2d3e4c321d5",
       "priority": 2,
-      "group": "ec01d4b5a3d7"
+      "group": "340c82f4f742"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Motxila hauek nireak dira.",
-      "meaningInSourceLanguage": "These backpacks are mine.",
-      "id": "388396a1b834",
+      "formInTargetLanguage": "Kotxe gorri hori nirea da.",
+      "meaningInSourceLanguage": "That red car is mine.",
+      "id": "2c64166b2e74",
       "priority": 0,
-      "group": "31c9c021d2a4"
+      "group": "feab22cf6a7e"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
         {
-          "word": "These",
-          "definition": "hauek"
+          "word": "That",
+          "definition": "hori\nhura"
         },
         {
-          "word": "backpacks",
-          "definition": "motxilak"
+          "word": "red",
+          "definition": "gorri\ngorria\ngorriak"
         },
         {
-          "word": "are",
-          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+          "word": "car",
+          "definition": "kotxe\nkotxea"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
         },
         {
           "word": "mine.",
@@ -136,36 +146,41 @@
       ],
       "solutions": [
         [
-          "Motxila",
-          "hauek",
-          "nireak",
-          "dira"
+          "Kotxe",
+          "gorri",
+          "hori",
+          "nirea",
+          "da"
         ]
       ],
-      "formattedSolution": "Motxila hauek nireak dira.",
-      "id": "387780d80801",
+      "formattedSolution": "Kotxe gorri hori nirea da.",
+      "id": "82ae3acd0ce8",
       "priority": 2,
-      "group": "31c9c021d2a4"
+      "group": "feab22cf6a7e"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Motxila",
-          "definition": "backpack"
+          "word": "Kotxe",
+          "definition": "car"
         },
         {
-          "word": "hauek",
-          "definition": "These, plural of hau"
+          "word": "gorri",
+          "definition": "red"
         },
         {
-          "word": "nireak",
-          "definition": "mine\nmine (plural object)"
+          "word": "hori",
+          "definition": "that\nyellow"
         },
         {
-          "word": "dira.",
-          "definition": "are\nare (izan)"
+          "word": "nirea",
+          "definition": "mine"
+        },
+        {
+          "word": "da.",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
         }
       ],
       "chips": [
@@ -179,24 +194,120 @@
       ],
       "solutions": [
         [
-          "These",
-          "backpacks",
-          "are",
+          "That",
+          "red",
+          "car",
+          "is",
           "mine"
         ]
       ],
-      "formattedSolution": "These backpacks are mine.",
-      "id": "60b1a03dd1d1",
+      "formattedSolution": "That red car is mine.",
+      "id": "c61424dc76a0",
       "priority": 2,
-      "group": "31c9c021d2a4"
+      "group": "feab22cf6a7e"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Aterkia urdina nirea da",
-      "meaningInSourceLanguage": "The blue umbrella is mine.",
-      "id": "99d2f54fea69",
+      "formInTargetLanguage": "Motxila hau nirea da.",
+      "meaningInSourceLanguage": "This backpack is mine.",
+      "id": "deff1c352fae",
       "priority": 0,
-      "group": "3a762dc447c9"
+      "group": "6e0dc27855f9"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "This",
+          "definition": "hau"
+        },
+        {
+          "word": "backpack",
+          "definition": "motxila"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "mine.",
+          "definition": "nirea\nnireak"
+        }
+      ],
+      "chips": [
+        "Motxila",
+        "hau",
+        "nirea",
+        "da",
+        "dira",
+        "ardia",
+        "zuria"
+      ],
+      "solutions": [
+        [
+          "Motxila",
+          "hau",
+          "nirea",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Motxila hau nirea da.",
+      "id": "9f787de1c50d",
+      "priority": 2,
+      "group": "6e0dc27855f9"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Motxila",
+          "definition": "backpack"
+        },
+        {
+          "word": "hau",
+          "definition": "this"
+        },
+        {
+          "word": "nirea",
+          "definition": "mine"
+        },
+        {
+          "word": "da.",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "This",
+        "backpack",
+        "is",
+        "mine",
+        "me",
+        "one",
+        "are",
+        "He"
+      ],
+      "solutions": [
+        [
+          "This",
+          "backpack",
+          "is",
+          "mine"
+        ]
+      ],
+      "formattedSolution": "This backpack is mine.",
+      "id": "aedd8e81617f",
+      "priority": 2,
+      "group": "6e0dc27855f9"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Aterki urdina nirea da.",
+      "meaningInSourceLanguage": "The blue umbrella is mine.",
+      "id": "ef244f730d82",
+      "priority": 0,
+      "group": "a5ee05a8a257"
     },
     {
       "type": "chips",
@@ -224,33 +335,33 @@
         }
       ],
       "chips": [
-        "Aterkia",
+        "Aterki",
         "urdina",
         "nirea",
         "da",
+        "a",
         "dira",
-        "ardia",
-        "zuria"
+        "zara"
       ],
       "solutions": [
         [
-          "Aterkia",
+          "Aterki",
           "urdina",
           "nirea",
           "da"
         ]
       ],
-      "formattedSolution": "Aterkia urdina nirea da",
-      "id": "c56ac1ab2db6",
+      "formattedSolution": "Aterki urdina nirea da.",
+      "id": "1114ace95202",
       "priority": 2,
-      "group": "3a762dc447c9"
+      "group": "a5ee05a8a257"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Aterkia",
+          "word": "Aterki",
           "definition": "umbrella"
         },
         {
@@ -262,7 +373,7 @@
           "definition": "mine"
         },
         {
-          "word": "da",
+          "word": "da.",
           "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
         }
       ],
@@ -272,10 +383,9 @@
         "umbrella",
         "is",
         "mine",
+        "his",
         "me",
-        "one",
-        "are",
-        "He"
+        "in"
       ],
       "solutions": [
         [
@@ -287,205 +397,17 @@
         ]
       ],
       "formattedSolution": "The blue umbrella is mine.",
-      "id": "3b3642f8842e",
+      "id": "35e4b08d356b",
       "priority": 2,
-      "group": "3a762dc447c9"
+      "group": "a5ee05a8a257"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Aterkia hau nirea da.",
-      "meaningInSourceLanguage": "This umbrella is mine.",
-      "id": "a435132350f3",
+      "formInTargetLanguage": "Motxila berdea zurea da.",
+      "meaningInSourceLanguage": "The green backpack is yours.",
+      "id": "5f4f165e1ff5",
       "priority": 0,
-      "group": "b06073397aac"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": false,
-      "phrase": [
-        {
-          "word": "This",
-          "definition": "hau"
-        },
-        {
-          "word": "umbrella",
-          "definition": "aterki"
-        },
-        {
-          "word": "is",
-          "definition": "da\nda (izan)\ndago (egon)"
-        },
-        {
-          "word": "mine.",
-          "definition": "nirea\nnireak"
-        }
-      ],
-      "chips": [
-        "Aterkia",
-        "hau",
-        "nirea",
-        "da",
-        "a",
-        "dira",
-        "zara"
-      ],
-      "solutions": [
-        [
-          "Aterkia",
-          "hau",
-          "nirea",
-          "da"
-        ]
-      ],
-      "formattedSolution": "Aterkia hau nirea da.",
-      "id": "e82969d7c52d",
-      "priority": 2,
-      "group": "b06073397aac"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": true,
-      "phrase": [
-        {
-          "word": "Aterkia",
-          "definition": "umbrella"
-        },
-        {
-          "word": "hau",
-          "definition": "this"
-        },
-        {
-          "word": "nirea",
-          "definition": "mine"
-        },
-        {
-          "word": "da.",
-          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
-        }
-      ],
-      "chips": [
-        "This",
-        "umbrella",
-        "is",
-        "mine",
-        "his",
-        "me",
-        "in"
-      ],
-      "solutions": [
-        [
-          "This",
-          "umbrella",
-          "is",
-          "mine"
-        ]
-      ],
-      "formattedSolution": "This umbrella is mine.",
-      "id": "59c868fb329f",
-      "priority": 2,
-      "group": "b06073397aac"
-    },
-    {
-      "type": "options",
-      "formInTargetLanguage": "Zein motxilak zureak dira?",
-      "meaningInSourceLanguage": "Which backpacks are yours?",
-      "id": "4e3d249d2703",
-      "priority": 0,
-      "group": "2391ce23759e"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": false,
-      "phrase": [
-        {
-          "word": "Which",
-          "definition": "zein"
-        },
-        {
-          "word": "backpacks",
-          "definition": "motxilak"
-        },
-        {
-          "word": "are",
-          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
-        },
-        {
-          "word": "yours?",
-          "definition": "zuena\nzuenak\nzurea\nzureak"
-        }
-      ],
-      "chips": [
-        "Zein",
-        "motxilak",
-        "zureak",
-        "dira",
-        "zuria",
-        "zuriak",
-        "zara"
-      ],
-      "solutions": [
-        [
-          "Zein",
-          "motxilak",
-          "zureak",
-          "dira"
-        ]
-      ],
-      "formattedSolution": "Zein motxilak zureak dira?",
-      "id": "f124fcbcf58f",
-      "priority": 2,
-      "group": "2391ce23759e"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": true,
-      "phrase": [
-        {
-          "word": "Zein",
-          "definition": "which"
-        },
-        {
-          "word": "motxilak",
-          "definition": "backpacks"
-        },
-        {
-          "word": "zureak",
-          "definition": "yours\nyours (plural object)"
-        },
-        {
-          "word": "dira?",
-          "definition": "are\nare (izan)"
-        }
-      ],
-      "chips": [
-        "Which",
-        "backpacks",
-        "are",
-        "yours",
-        "cars",
-        "ours",
-        "bus"
-      ],
-      "solutions": [
-        [
-          "Which",
-          "backpacks",
-          "are",
-          "yours"
-        ]
-      ],
-      "formattedSolution": "Which backpacks are yours?",
-      "id": "eb6a99bd0d86",
-      "priority": 2,
-      "group": "2391ce23759e"
-    },
-    {
-      "type": "options",
-      "formInTargetLanguage": "Motxila berdeak nirea dira.",
-      "meaningInSourceLanguage": "The green backpacks are mine.",
-      "id": "4c2d54f8430f",
-      "priority": 0,
-      "group": "d3d6d3eeb19a"
+      "group": "9685cd5f9e4f"
     },
     {
       "type": "chips",
@@ -500,16 +422,111 @@
           "definition": "berde"
         },
         {
-          "word": "backpacks",
-          "definition": "motxilak"
+          "word": "backpack",
+          "definition": "motxila"
         },
         {
-          "word": "are",
-          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
         },
         {
-          "word": "mine.",
-          "definition": "nirea\nnireak"
+          "word": "yours.",
+          "definition": "zuena\nzuenak\nzurea\nzureak"
+        }
+      ],
+      "chips": [
+        "Zein",
+        "motxilak",
+        "zureak",
+        "dira",
+        "zuria",
+        "zuriak",
+        "zara"
+      ],
+      "solutions": [
+        [
+          "Motxila",
+          "berdea",
+          "zurea",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Motxila berdea zurea da.",
+      "id": "6002db24d62e",
+      "priority": 2,
+      "group": "9685cd5f9e4f"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Motxila",
+          "definition": "backpack"
+        },
+        {
+          "word": "berdea",
+          "definition": "green"
+        },
+        {
+          "word": "zurea",
+          "definition": "yours"
+        },
+        {
+          "word": "da.",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "Which",
+        "backpacks",
+        "are",
+        "yours",
+        "cars",
+        "ours",
+        "bus"
+      ],
+      "solutions": [
+        [
+          "The",
+          "green",
+          "backpack",
+          "is",
+          "yours"
+        ]
+      ],
+      "formattedSolution": "The green backpack is yours.",
+      "id": "bee3584f73d3",
+      "priority": 2,
+      "group": "9685cd5f9e4f"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Zein motxila da zurea?",
+      "meaningInSourceLanguage": "Which backpack is yours?",
+      "id": "e2e71e8ffa11",
+      "priority": 0,
+      "group": "fbfcebfe33af"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Which",
+          "definition": "zein"
+        },
+        {
+          "word": "backpack",
+          "definition": "motxila"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "yours?",
+          "definition": "zuena\nzuenak\nzurea\nzureak"
         }
       ],
       "chips": [
@@ -523,36 +540,36 @@
       ],
       "solutions": [
         [
-          "Motxila",
-          "berdeak",
-          "nirea",
-          "dira"
+          "Zein",
+          "motxila",
+          "da",
+          "zurea"
         ]
       ],
-      "formattedSolution": "Motxila berdeak nirea dira.",
-      "id": "b128adc30866",
+      "formattedSolution": "Zein motxila da zurea?",
+      "id": "46e30ba45b4b",
       "priority": 2,
-      "group": "d3d6d3eeb19a"
+      "group": "fbfcebfe33af"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Motxila",
+          "word": "Zein",
+          "definition": "which"
+        },
+        {
+          "word": "motxila",
           "definition": "backpack"
         },
         {
-          "word": "berdeak",
-          "definition": "green"
+          "word": "da",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
         },
         {
-          "word": "nirea",
-          "definition": "mine"
-        },
-        {
-          "word": "dira.",
-          "definition": "are\nare (izan)"
+          "word": "zurea?",
+          "definition": "yours"
         }
       ],
       "chips": [
@@ -568,25 +585,24 @@
       ],
       "solutions": [
         [
-          "The",
-          "green",
-          "backpacks",
-          "are",
-          "mine"
+          "Which",
+          "backpack",
+          "is",
+          "yours"
         ]
       ],
-      "formattedSolution": "The green backpacks are mine.",
-      "id": "ff7276dc9f47",
+      "formattedSolution": "Which backpack is yours?",
+      "id": "136f247ba894",
       "priority": 2,
-      "group": "d3d6d3eeb19a"
+      "group": "fbfcebfe33af"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Zein etxea berea da.",
-      "meaningInSourceLanguage": "Which house is hers?",
-      "id": "96e60041d09b",
+      "formInTargetLanguage": "Zein boligrafoa da zurea.",
+      "meaningInSourceLanguage": "Which pen is yours?",
+      "id": "c4aefc583349",
       "priority": 0,
-      "group": "e8054e72b3bb"
+      "group": "571b3e8350a4"
     },
     {
       "type": "chips",
@@ -597,16 +613,16 @@
           "definition": "zein"
         },
         {
-          "word": "house",
-          "definition": "etxe\netxea"
+          "word": "pen",
+          "definition": "boligrafo"
         },
         {
           "word": "is",
           "definition": "da\nda (izan)\ndago (egon)"
         },
         {
-          "word": "hers?",
-          "definition": "bere\nberea\nbereak"
+          "word": "yours?",
+          "definition": "zuena\nzuenak\nzurea\nzureak"
         }
       ],
       "chips": [
@@ -621,15 +637,584 @@
       "solutions": [
         [
           "Zein",
-          "etxea",
+          "boligrafoa",
+          "da",
+          "zurea"
+        ]
+      ],
+      "formattedSolution": "Zein boligrafoa da zurea.",
+      "id": "1b6e25a8b1a2",
+      "priority": 2,
+      "group": "571b3e8350a4"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Zein",
+          "definition": "which"
+        },
+        {
+          "word": "boligrafoa",
+          "definition": "pen"
+        },
+        {
+          "word": "da",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        },
+        {
+          "word": "zurea.",
+          "definition": "yours"
+        }
+      ],
+      "chips": [
+        "Which",
+        "pen",
+        "is",
+        "hers",
+        "his",
+        "hee",
+        "horse"
+      ],
+      "solutions": [
+        [
+          "Which",
+          "pen",
+          "is",
+          "yours"
+        ]
+      ],
+      "formattedSolution": "Which pen is yours?",
+      "id": "1f44b1dd2e72",
+      "priority": 2,
+      "group": "571b3e8350a4"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Zein aterkia da zurea?",
+      "meaningInSourceLanguage": "Which umbrella is yours?",
+      "id": "d9d5c78d4e29",
+      "priority": 0,
+      "group": "2e824b9564af"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Which",
+          "definition": "zein"
+        },
+        {
+          "word": "umbrella",
+          "definition": "aterki"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "yours?",
+          "definition": "zuena\nzuenak\nzurea\nzureak"
+        }
+      ],
+      "chips": [
+        "Zein",
+        "aterkia",
+        "da",
+        "zurea"
+      ],
+      "solutions": [
+        [
+          "Zein",
+          "aterkia",
+          "da",
+          "zurea"
+        ]
+      ],
+      "formattedSolution": "Zein aterkia da zurea?",
+      "id": "ed271beccfd2",
+      "priority": 2,
+      "group": "2e824b9564af"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Zein",
+          "definition": "which"
+        },
+        {
+          "word": "aterkia",
+          "definition": "umbrella"
+        },
+        {
+          "word": "da",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        },
+        {
+          "word": "zurea?",
+          "definition": "yours"
+        }
+      ],
+      "chips": [
+        "Which",
+        "umbrella",
+        "is",
+        "yours"
+      ],
+      "solutions": [
+        [
+          "Which",
+          "umbrella",
+          "is",
+          "yours"
+        ]
+      ],
+      "formattedSolution": "Which umbrella is yours?",
+      "id": "76152d3f4a3d",
+      "priority": 2,
+      "group": "2e824b9564af"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Kotxe grisa berea da.",
+      "meaningInSourceLanguage": "The gray car is hers.",
+      "id": "ffbfe0d151d6",
+      "priority": 0,
+      "group": "75dfe286d929"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "The",
+          "definition": "-a"
+        },
+        {
+          "word": "gray",
+          "definition": "gris"
+        },
+        {
+          "word": "car",
+          "definition": "kotxe\nkotxea"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "hers.",
+          "definition": "bere\nberea\nbereak"
+        }
+      ],
+      "chips": [
+        "Kotxe",
+        "grisa",
+        "berea",
+        "da"
+      ],
+      "solutions": [
+        [
+          "Kotxe",
+          "grisa",
           "berea",
           "da"
         ]
       ],
-      "formattedSolution": "Zein etxea berea da.",
-      "id": "4ddf5f0469eb",
+      "formattedSolution": "Kotxe grisa berea da.",
+      "id": "4378ec863091",
       "priority": 2,
-      "group": "e8054e72b3bb"
+      "group": "75dfe286d929"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Kotxe",
+          "definition": "car"
+        },
+        {
+          "word": "grisa",
+          "definition": "gray"
+        },
+        {
+          "word": "berea",
+          "definition": "hers\nhis\nits"
+        },
+        {
+          "word": "da.",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "The",
+        "gray",
+        "car",
+        "is",
+        "hers"
+      ],
+      "solutions": [
+        [
+          "The",
+          "gray",
+          "car",
+          "is",
+          "hers"
+        ],
+        [
+          "The",
+          "gray",
+          "car",
+          "is",
+          "his"
+        ]
+      ],
+      "formattedSolution": "The gray car is hers.",
+      "id": "c74477b41ecc",
+      "priority": 2,
+      "group": "75dfe286d929"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Motxila hori berea da.",
+      "meaningInSourceLanguage": "That backpack is his.",
+      "id": "152688552077",
+      "priority": 0,
+      "group": "2799bf879b9e"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "That",
+          "definition": "hori\nhura"
+        },
+        {
+          "word": "backpack",
+          "definition": "motxila"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "his.",
+          "definition": "bere\nberea\nbereak"
+        }
+      ],
+      "chips": [
+        "Motxila",
+        "hori",
+        "berea",
+        "da"
+      ],
+      "solutions": [
+        [
+          "Motxila",
+          "hori",
+          "berea",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Motxila hori berea da.",
+      "id": "f8c481b65803",
+      "priority": 2,
+      "group": "2799bf879b9e"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Motxila",
+          "definition": "backpack"
+        },
+        {
+          "word": "hori",
+          "definition": "that\nyellow"
+        },
+        {
+          "word": "berea",
+          "definition": "hers\nhis\nits"
+        },
+        {
+          "word": "da.",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "That",
+        "backpack",
+        "is",
+        "his"
+      ],
+      "solutions": [
+        [
+          "That",
+          "backpack",
+          "is",
+          "his"
+        ],
+        [
+          "That",
+          "backpack",
+          "is",
+          "hers"
+        ]
+      ],
+      "formattedSolution": "That backpack is his.",
+      "id": "00e3962e2cde",
+      "priority": 2,
+      "group": "2799bf879b9e"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Zein arkatz da berea?",
+      "meaningInSourceLanguage": "Which pencil is hers?",
+      "id": "a829818040f5",
+      "priority": 0,
+      "group": "deac928af664"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Which",
+          "definition": "zein"
+        },
+        {
+          "word": "pencil",
+          "definition": "arkatz\narkatza"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "hers?",
+          "definition": "bere\nberea\nbereak"
+        }
+      ],
+      "chips": [
+        "Zein",
+        "arkatz",
+        "da",
+        "berea"
+      ],
+      "solutions": [
+        [
+          "Zein",
+          "arkatz",
+          "da",
+          "berea"
+        ]
+      ],
+      "formattedSolution": "Zein arkatz da berea?",
+      "id": "5f108a89d8b5",
+      "priority": 2,
+      "group": "deac928af664"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Zein",
+          "definition": "which"
+        },
+        {
+          "word": "arkatz",
+          "definition": "pencil"
+        },
+        {
+          "word": "da",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        },
+        {
+          "word": "berea?",
+          "definition": "hers\nhis\nits"
+        }
+      ],
+      "chips": [
+        "Which",
+        "pencil",
+        "is",
+        "hers"
+      ],
+      "solutions": [
+        [
+          "Which",
+          "pencil",
+          "is",
+          "hers"
+        ],
+        [
+          "Which",
+          "pencil",
+          "is",
+          "his"
+        ]
+      ],
+      "formattedSolution": "Which pencil is hers?",
+      "id": "c0ef6cb17db6",
+      "priority": 2,
+      "group": "deac928af664"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Arkatz morea berea da.",
+      "meaningInSourceLanguage": "The purple pencil is his.",
+      "id": "2db42a252bbc",
+      "priority": 0,
+      "group": "7030d4b69819"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "The",
+          "definition": "-a"
+        },
+        {
+          "word": "purple",
+          "definition": "more\nmorea"
+        },
+        {
+          "word": "pencil",
+          "definition": "arkatz\narkatza"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "his.",
+          "definition": "bere\nberea\nbereak"
+        }
+      ],
+      "chips": [
+        "Arkatz",
+        "morea",
+        "berea",
+        "da"
+      ],
+      "solutions": [
+        [
+          "Arkatz",
+          "morea",
+          "berea",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Arkatz morea berea da.",
+      "id": "27a3f27332d0",
+      "priority": 2,
+      "group": "7030d4b69819"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Arkatz",
+          "definition": "pencil"
+        },
+        {
+          "word": "morea",
+          "definition": "purple"
+        },
+        {
+          "word": "berea",
+          "definition": "hers\nhis\nits"
+        },
+        {
+          "word": "da.",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "The",
+        "purple",
+        "pencil",
+        "is",
+        "his"
+      ],
+      "solutions": [
+        [
+          "The",
+          "purple",
+          "pencil",
+          "is",
+          "his"
+        ],
+        [
+          "The",
+          "purple",
+          "pencil",
+          "is",
+          "hers"
+        ]
+      ],
+      "formattedSolution": "The purple pencil is his.",
+      "id": "2f0457e33e96",
+      "priority": 2,
+      "group": "7030d4b69819"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Zein etxea da gurea?",
+      "meaningInSourceLanguage": "Which house is ours?",
+      "id": "95aeb42934a7",
+      "priority": 0,
+      "group": "5c760c614a2a"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Which",
+          "definition": "zein"
+        },
+        {
+          "word": "house",
+          "definition": "etxe\netxea"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "ours?",
+          "definition": "gurea\ngureak"
+        }
+      ],
+      "chips": [
+        "Zein",
+        "etxea",
+        "da",
+        "gurea"
+      ],
+      "solutions": [
+        [
+          "Zein",
+          "etxea",
+          "da",
+          "gurea"
+        ]
+      ],
+      "formattedSolution": "Zein etxea da gurea?",
+      "id": "55a40bc53901",
+      "priority": 2,
+      "group": "5c760c614a2a"
     },
     {
       "type": "chips",
@@ -644,49 +1229,40 @@
           "definition": "house"
         },
         {
-          "word": "berea",
-          "definition": "hers\nhis\nits"
+          "word": "da",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
         },
         {
-          "word": "da.",
-          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+          "word": "gurea?",
+          "definition": "ours"
         }
       ],
       "chips": [
         "Which",
         "house",
         "is",
-        "hers",
-        "his",
-        "hee",
-        "horse"
+        "ours"
       ],
       "solutions": [
         [
           "Which",
           "house",
           "is",
-          "hers"
-        ],
-        [
-          "Which",
-          "house",
-          "is",
-          "his"
+          "ours"
         ]
       ],
-      "formattedSolution": "Which house is hers?",
-      "id": "cc490dfd48cc",
+      "formattedSolution": "Which house is ours?",
+      "id": "46352c669f4d",
       "priority": 2,
-      "group": "e8054e72b3bb"
+      "group": "5c760c614a2a"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Etxe zuria eta berria berea da.",
-      "meaningInSourceLanguage": "The white and new house is hers.",
-      "id": "ba3d44facb45",
+      "formInTargetLanguage": "Etxe zuri berria gurea da.",
+      "meaningInSourceLanguage": "The new, white house is ours.",
+      "id": "e0e99aa25bd3",
       "priority": 0,
-      "group": "c1a9322dae84"
+      "group": "233ebdcd3af0"
     },
     {
       "type": "chips",
@@ -697,16 +1273,12 @@
           "definition": "-a"
         },
         {
+          "word": "new,",
+          "definition": "berri"
+        },
+        {
           "word": "white",
           "definition": "zuri\nzuria"
-        },
-        {
-          "word": "and",
-          "definition": "eta"
-        },
-        {
-          "word": "new",
-          "definition": "berri"
         },
         {
           "word": "house",
@@ -717,14 +1289,13 @@
           "definition": "da\nda (izan)\ndago (egon)"
         },
         {
-          "word": "hers.",
-          "definition": "bere\nberea\nbereak"
+          "word": "ours.",
+          "definition": "gurea\ngureak"
         }
       ],
       "chips": [
         "Etxe",
-        "zuria",
-        "eta",
+        "zuri",
         "berria",
         "berea",
         "da",
@@ -737,17 +1308,16 @@
       "solutions": [
         [
           "Etxe",
-          "zuria",
-          "eta",
+          "zuri",
           "berria",
-          "berea",
+          "gurea",
           "da"
         ]
       ],
-      "formattedSolution": "Etxe zuria eta berria berea da.",
-      "id": "41642eec63ac",
+      "formattedSolution": "Etxe zuri berria gurea da.",
+      "id": "5ec9bc8a68a1",
       "priority": 2,
-      "group": "c1a9322dae84"
+      "group": "233ebdcd3af0"
     },
     {
       "type": "chips",
@@ -758,20 +1328,16 @@
           "definition": "house"
         },
         {
-          "word": "zuria",
+          "word": "zuri",
           "definition": "white"
-        },
-        {
-          "word": "eta",
-          "definition": "and"
         },
         {
           "word": "berria",
           "definition": "new"
         },
         {
-          "word": "berea",
-          "definition": "hers\nhis\nits"
+          "word": "gurea",
+          "definition": "ours"
         },
         {
           "word": "da.",
@@ -780,9 +1346,8 @@
       ],
       "chips": [
         "The",
-        "white",
-        "and",
         "new",
+        "white",
         "house",
         "is",
         "hers",
@@ -796,35 +1361,24 @@
       "solutions": [
         [
           "The",
-          "white",
-          "and",
-          "new",
-          "house",
+          "red",
+          "bicycle",
           "is",
-          "hers"
-        ],
-        [
-          "The",
-          "white",
-          "and",
-          "new",
-          "house",
-          "is",
-          "his"
+          "ours"
         ]
       ],
-      "formattedSolution": "The white and new house is hers.",
-      "id": "f50fc0bed04b",
+      "formattedSolution": "The red bicycle is ours.",
+      "id": "af76d3bba910",
       "priority": 2,
-      "group": "c1a9322dae84"
+      "group": "21ced571783e"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Zein zuenak poltsak dira?",
-      "meaningInSourceLanguage": "Which purses are yours (plural)?",
-      "id": "f69b67fef162",
+      "formInTargetLanguage": "Zein erlojua da zuena?",
+      "meaningInSourceLanguage": "Which watch is yours(plural)?",
+      "id": "639ee3da12ed",
       "priority": 0,
-      "group": "61a3559c7ef9"
+      "group": "691788cf6203"
     },
     {
       "type": "chips",
@@ -835,20 +1389,16 @@
           "definition": "zein"
         },
         {
-          "word": "purses",
-          "definition": "poltsak"
+          "word": "watch",
+          "definition": "erloju"
         },
         {
-          "word": "are",
-          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
         },
         {
-          "word": "yours",
-          "definition": "zuena\nzuenak\nzurea\nzureak"
-        },
-        {
-          "word": "(plural)?",
-          "definition": "plurala"
+          "word": "yours(plural)?",
+          "definition": "zuenak"
         }
       ],
       "chips": [
@@ -863,15 +1413,15 @@
       "solutions": [
         [
           "Zein",
-          "zuenak",
-          "poltsak",
-          "dira"
+          "erlojua",
+          "da",
+          "zuena"
         ]
       ],
-      "formattedSolution": "Zein zuenak poltsak dira?",
-      "id": "6d4169446a11",
+      "formattedSolution": "Zein erlojua da zuena?",
+      "id": "b92eb20c4c35",
       "priority": 2,
-      "group": "61a3559c7ef9"
+      "group": "691788cf6203"
     },
     {
       "type": "chips",
@@ -882,16 +1432,16 @@
           "definition": "which"
         },
         {
-          "word": "zuenak",
-          "definition": "yours\nyours (plural)\nyours(plural) (plural object)"
+          "word": "erlojua",
+          "definition": "watch"
         },
         {
-          "word": "poltsak",
-          "definition": "purses"
+          "word": "da",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
         },
         {
-          "word": "dira?",
-          "definition": "are\nare (izan)"
+          "word": "zuena?",
+          "definition": "yours (plural)"
         }
       ],
       "chips": [
@@ -908,36 +1458,36 @@
       "solutions": [
         [
           "Which",
-          "purses",
-          "are",
-          "yours",
-          "plural"
+          "watch",
+          "is",
+          "yours(plural"
         ],
         [
           "Which",
-          "purses",
-          "are",
+          "watch",
+          "is",
           "yours"
         ],
         [
           "Which",
-          "purses",
+          "watch",
+          "is",
           "are",
           "you'alls"
         ]
       ],
-      "formattedSolution": "Which purses are yours (plural)?",
-      "id": "af81c1499e2a",
+      "formattedSolution": "Which watch is yours(plural)?",
+      "id": "1a1f26883f4e",
       "priority": 2,
-      "group": "61a3559c7ef9"
+      "group": "691788cf6203"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Poltsak handiak eta laranjak gureak dira.",
-      "meaningInSourceLanguage": "The big and orange purses are ours.",
-      "id": "9add7ec8bda9",
+      "formInTargetLanguage": "Baloia zuria zuena da.",
+      "meaningInSourceLanguage": "The white ball is yours(plural).",
+      "id": "d46cb5ea1115",
       "priority": 0,
-      "group": "8ee624adf497"
+      "group": "9d05e745e01f"
     },
     {
       "type": "chips",
@@ -948,28 +1498,20 @@
           "definition": "-a"
         },
         {
-          "word": "big",
-          "definition": "handi\nhandiak"
+          "word": "white",
+          "definition": "zuri\nzuria"
         },
         {
-          "word": "and",
-          "definition": "eta"
+          "word": "ball",
+          "definition": "baloi"
         },
         {
-          "word": "orange",
-          "definition": "laranja"
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
         },
         {
-          "word": "purses",
-          "definition": "poltsak"
-        },
-        {
-          "word": "are",
-          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
-        },
-        {
-          "word": "ours.",
-          "definition": "gurea\ngureak"
+          "word": "yours(plural).",
+          "definition": "zuenak"
         }
       ],
       "chips": [
@@ -987,46 +1529,36 @@
       ],
       "solutions": [
         [
-          "Poltsak",
-          "handiak",
-          "eta",
-          "laranjak",
-          "gureak",
-          "dira"
+          "Baloia",
+          "zuria",
+          "zuena",
+          "da"
         ]
       ],
-      "formattedSolution": "Poltsak handiak eta laranjak gureak dira.",
-      "id": "1117640afba2",
+      "formattedSolution": "Baloia zuria zuena da.",
+      "id": "684f9f9e7922",
       "priority": 2,
-      "group": "8ee624adf497"
+      "group": "9d05e745e01f"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Poltsak",
-          "definition": "purses"
+          "word": "Baloia",
+          "definition": "ball"
         },
         {
-          "word": "handiak",
-          "definition": "big"
+          "word": "zuria",
+          "definition": "white"
         },
         {
-          "word": "eta",
-          "definition": "and"
+          "word": "zuena",
+          "definition": "yours (plural)"
         },
         {
-          "word": "laranjak",
-          "definition": "orange"
-        },
-        {
-          "word": "gureak",
-          "definition": "ours\nours (plural object)"
-        },
-        {
-          "word": "dira.",
-          "definition": "are\nare (izan)"
+          "word": "da.",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
         }
       ],
       "chips": [
@@ -1047,46 +1579,59 @@
       "solutions": [
         [
           "The",
-          "big",
-          "and",
-          "orange",
-          "purses",
+          "white",
+          "ball",
+          "is",
+          "yours(plural"
+        ],
+        [
+          "The",
+          "white",
+          "ball",
+          "is",
+          "yours"
+        ],
+        [
+          "The",
+          "white",
+          "ball",
+          "is",
           "are",
-          "ours"
+          "you'alls"
         ]
       ],
-      "formattedSolution": "The big and orange purses are ours.",
-      "id": "13faabfee2e7",
+      "formattedSolution": "The white ball is yours(plural).",
+      "id": "c5ad80e8ec32",
       "priority": 2,
-      "group": "8ee624adf497"
+      "group": "9d05e745e01f"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Poltsa horiek gureak dira.",
-      "meaningInSourceLanguage": "Those purses are ours.",
-      "id": "48945396c241",
+      "formInTargetLanguage": "Zein bizikleta da zuena?",
+      "meaningInSourceLanguage": "Which bicycle is yours(plural)?",
+      "id": "b44de03e85ac",
       "priority": 0,
-      "group": "0504e6add489"
+      "group": "4d6ee52dd7a3"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
         {
-          "word": "Those",
-          "definition": "haiek\nhoriek"
+          "word": "Which",
+          "definition": "zein"
         },
         {
-          "word": "purses",
-          "definition": "poltsak"
+          "word": "bicycle",
+          "definition": "bizikleta"
         },
         {
-          "word": "are",
-          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
         },
         {
-          "word": "ours.",
-          "definition": "gurea\ngureak"
+          "word": "yours(plural)?",
+          "definition": "zuenak"
         }
       ],
       "chips": [
@@ -1100,36 +1645,36 @@
       ],
       "solutions": [
         [
-          "Poltsa",
-          "horiek",
-          "gureak",
-          "dira"
+          "Zein",
+          "bizikleta",
+          "da",
+          "zuena"
         ]
       ],
-      "formattedSolution": "Poltsa horiek gureak dira.",
-      "id": "9811afa455c2",
+      "formattedSolution": "Zein bizikleta da zuena?",
+      "id": "e36033ef18c2",
       "priority": 2,
-      "group": "0504e6add489"
+      "group": "4d6ee52dd7a3"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Poltsa",
-          "definition": "purse"
+          "word": "Zein",
+          "definition": "which"
         },
         {
-          "word": "horiek",
-          "definition": "Those, plural of hori"
+          "word": "bizikleta",
+          "definition": "bicycle"
         },
         {
-          "word": "gureak",
-          "definition": "ours\nours (plural object)"
+          "word": "da",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
         },
         {
-          "word": "dira.",
-          "definition": "are\nare (izan)"
+          "word": "zuena?",
+          "definition": "yours (plural)"
         }
       ],
       "chips": [
@@ -1143,44 +1688,61 @@
       ],
       "solutions": [
         [
-          "Those",
-          "purses",
+          "Which",
+          "bicycle",
+          "is",
+          "yours(plural"
+        ],
+        [
+          "Which",
+          "bicycle",
+          "is",
+          "yours"
+        ],
+        [
+          "Which",
+          "bicycle",
+          "is",
           "are",
-          "ours"
+          "you'alls"
         ]
       ],
-      "formattedSolution": "Those purses are ours.",
-      "id": "49944b0c92e1",
+      "formattedSolution": "Which bicycle is yours(plural)?",
+      "id": "ccad9f7a8528",
       "priority": 2,
-      "group": "0504e6add489"
+      "group": "4d6ee52dd7a3"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Zein da haien liburua?",
-      "meaningInSourceLanguage": "Which is their book?",
-      "id": "6623e81da946",
+      "formInTargetLanguage": "Erloju laranja zuena da.",
+      "meaningInSourceLanguage": "The orange watch is yours(plural).",
+      "id": "17e6d1b43987",
       "priority": 0,
-      "group": "5887759a2de8"
+      "group": "bf4299aac956"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
         {
-          "word": "Which",
-          "definition": "zein"
+          "word": "The",
+          "definition": "-a"
+        },
+        {
+          "word": "orange",
+          "definition": "laranja"
+        },
+        {
+          "word": "watch",
+          "definition": "erloju"
         },
         {
           "word": "is",
           "definition": "da\nda (izan)\ndago (egon)"
         },
         {
-          "word": "their",
-          "definition": "haien"
-        },
-        {
-          "word": "book?",
-          "definition": "liburu"
+          "word": "yours(plural).",
+          "definition": "zuenak"
         }
       ],
       "chips": [
@@ -1194,40 +1756,42 @@
       ],
       "solutions": [
         [
-          "Zein",
-          "da",
-          "haien",
-          "liburua"
+          "Erloju",
+          "laranja",
+          "zuena",
+          "da"
         ]
       ],
-      "formattedSolution": "Zein da haien liburua?",
-      "id": "96ad77452036",
+      "formattedSolution": "Erloju laranja zuena da.",
+      "id": "89913283621c",
       "priority": 2,
-      "group": "5887759a2de8"
+      "group": "bf4299aac956"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Zein",
-          "definition": "which"
+          "word": "Erloju",
+          "definition": "watch"
         },
         {
-          "word": "da",
+          "word": "laranja",
+          "definition": "orange"
+        },
+        {
+          "word": "zuena",
+          "definition": "yours (plural)"
+        },
+        {
+          "word": "da.",
           "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
-        },
-        {
-          "word": "haien",
-          "definition": "their"
-        },
-        {
-          "word": "liburua?",
-          "definition": "a book\nbooks"
         }
       ],
       "chips": [
-        "Which",
+        "The",
+        "orange",
+        "watch",
         "is",
         "their",
         "book",
@@ -1237,16 +1801,32 @@
       ],
       "solutions": [
         [
-          "Which",
+          "The",
+          "orange",
+          "watch",
           "is",
-          "their",
-          "book"
+          "yours(plural"
+        ],
+        [
+          "The",
+          "orange",
+          "watch",
+          "is",
+          "yours"
+        ],
+        [
+          "The",
+          "orange",
+          "watch",
+          "is",
+          "are",
+          "you'alls"
         ]
       ],
-      "formattedSolution": "Which is their book?",
-      "id": "5c5b52028a18",
+      "formattedSolution": "The orange watch is yours(plural).",
+      "id": "a544e9d8f676",
       "priority": 2,
-      "group": "5887759a2de8"
+      "group": "bf4299aac956"
     },
     {
       "type": "options",
@@ -1344,11 +1924,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Liburu zaharrak eta horia haiena dira.",
-      "meaningInSourceLanguage": "The old and yellow book is theirs.",
-      "id": "e5603339749a",
+      "formInTargetLanguage": "Liburu horia zaharra haiena da.",
+      "meaningInSourceLanguage": "The old yellow book is theirs.",
+      "id": "d6709ade8511",
       "priority": 0,
-      "group": "5ee298996cd5"
+      "group": "6ec3362da2c2"
     },
     {
       "type": "chips",
@@ -1361,10 +1941,6 @@
         {
           "word": "old",
           "definition": "zahar\nzaharra"
-        },
-        {
-          "word": "and",
-          "definition": "eta"
         },
         {
           "word": "yellow",
@@ -1385,9 +1961,8 @@
       ],
       "chips": [
         "Liburu",
-        "zaharrak",
-        "eta",
         "horia",
+        "zaharra",
         "haiena",
         "dira",
         "zara",
@@ -1399,17 +1974,16 @@
       "solutions": [
         [
           "Liburu",
-          "zaharrak",
-          "eta",
           "horia",
+          "zaharra",
           "haiena",
-          "dira"
+          "da"
         ]
       ],
-      "formattedSolution": "Liburu zaharrak eta horia haiena dira.",
-      "id": "7cccd63238a4",
+      "formattedSolution": "Liburu horia zaharra haiena da.",
+      "id": "2141e3c6d23b",
       "priority": 2,
-      "group": "5ee298996cd5"
+      "group": "6ec3362da2c2"
     },
     {
       "type": "chips",
@@ -1420,30 +1994,25 @@
           "definition": "book"
         },
         {
-          "word": "zaharrak",
-          "definition": "old"
-        },
-        {
-          "word": "eta",
-          "definition": "and"
-        },
-        {
           "word": "horia",
           "definition": "yellow"
+        },
+        {
+          "word": "zaharra",
+          "definition": "old"
         },
         {
           "word": "haiena",
           "definition": "theirs"
         },
         {
-          "word": "dira.",
-          "definition": "are\nare (izan)"
+          "word": "da.",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
         }
       ],
       "chips": [
         "The",
         "old",
-        "and",
         "yellow",
         "book",
         "is",
@@ -1459,17 +2028,16 @@
         [
           "The",
           "old",
-          "and",
           "yellow",
           "book",
           "is",
           "theirs"
         ]
       ],
-      "formattedSolution": "The old and yellow book is theirs.",
-      "id": "a39a463aa0f0",
+      "formattedSolution": "The old yellow book is theirs.",
+      "id": "ceae657dfc6f",
       "priority": 2,
-      "group": "5ee298996cd5"
+      "group": "6ec3362da2c2"
     },
     {
       "type": "options",
@@ -1581,35 +2149,31 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Kotxea gorria nirea da.",
-      "meaningInSourceLanguage": "The red car is mine.",
-      "id": "64aa9cb947c0",
+      "formInTargetLanguage": "Zein arropa da haiena?",
+      "meaningInSourceLanguage": "Which clothing is theirs?",
+      "id": "56cfa3684c9b",
       "priority": 0,
-      "group": "6e7aeb2b8a41"
+      "group": "00058f74a8b5"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
         {
-          "word": "The",
-          "definition": "-a"
+          "word": "Which",
+          "definition": "zein"
         },
         {
-          "word": "red",
-          "definition": "gorri\ngorria\ngorriak"
-        },
-        {
-          "word": "car",
-          "definition": "kotxe\nkotxea"
+          "word": "clothing",
+          "definition": "arropa"
         },
         {
           "word": "is",
           "definition": "da\nda (izan)\ndago (egon)"
         },
         {
-          "word": "mine.",
-          "definition": "nirea\nnireak"
+          "word": "theirs?",
+          "definition": "haiena\nhaienak"
         }
       ],
       "chips": [
@@ -1623,42 +2187,41 @@
       ],
       "solutions": [
         [
-          "Kotxea",
-          "gorria",
-          "nirea",
-          "da"
+          "Zein",
+          "arropa",
+          "da",
+          "haiena"
         ]
       ],
-      "formattedSolution": "Kotxea gorria nirea da.",
-      "id": "0f9afc9549d7",
+      "formattedSolution": "Zein arropa da haiena?",
+      "id": "789716cdebf7",
       "priority": 2,
-      "group": "6e7aeb2b8a41"
+      "group": "00058f74a8b5"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Kotxea",
-          "definition": "a car\ncar"
+          "word": "Zein",
+          "definition": "which"
         },
         {
-          "word": "gorria",
-          "definition": "red"
+          "word": "arropa",
+          "definition": "clothes\nclothing"
         },
         {
-          "word": "nirea",
-          "definition": "mine"
-        },
-        {
-          "word": "da.",
+          "word": "da",
           "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        },
+        {
+          "word": "haiena?",
+          "definition": "theirs"
         }
       ],
       "chips": [
-        "The",
-        "red",
-        "car",
+        "Which",
+        "clothing",
         "is",
         "mine",
         "me",
@@ -1668,25 +2231,24 @@
       ],
       "solutions": [
         [
-          "The",
-          "red",
-          "car",
+          "Which",
+          "clothing",
           "is",
-          "mine"
+          "theirs"
         ]
       ],
-      "formattedSolution": "The red car is mine.",
-      "id": "79fddb38807e",
+      "formattedSolution": "Which clothing is theirs?",
+      "id": "ba78e09194a8",
       "priority": 2,
-      "group": "6e7aeb2b8a41"
+      "group": "00058f74a8b5"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Kotxea grisa zurea da.",
-      "meaningInSourceLanguage": "The gray car is yours.",
-      "id": "d670531e25bf",
+      "formInTargetLanguage": "Arropa horia haiena da.",
+      "meaningInSourceLanguage": "The yellow clothing is theirs.",
+      "id": "88be9d54ff87",
       "priority": 0,
-      "group": "c31d1810f485"
+      "group": "2c906b22d52f"
     },
     {
       "type": "chips",
@@ -1697,20 +2259,20 @@
           "definition": "-a"
         },
         {
-          "word": "gray",
-          "definition": "gris"
+          "word": "yellow",
+          "definition": "hori"
         },
         {
-          "word": "car",
-          "definition": "kotxe\nkotxea"
+          "word": "clothing",
+          "definition": "arropa"
         },
         {
           "word": "is",
           "definition": "da\nda (izan)\ndago (egon)"
         },
         {
-          "word": "yours.",
-          "definition": "zuena\nzuenak\nzurea\nzureak"
+          "word": "theirs.",
+          "definition": "haiena\nhaienak"
         }
       ],
       "chips": [
@@ -1724,32 +2286,32 @@
       ],
       "solutions": [
         [
-          "Kotxea",
-          "grisa",
-          "zurea",
+          "Arropa",
+          "horia",
+          "haiena",
           "da"
         ]
       ],
-      "formattedSolution": "Kotxea grisa zurea da.",
-      "id": "517673de7c7b",
+      "formattedSolution": "Arropa horia haiena da.",
+      "id": "bb931bda5354",
       "priority": 2,
-      "group": "c31d1810f485"
+      "group": "2c906b22d52f"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Kotxea",
-          "definition": "a car\ncar"
+          "word": "Arropa",
+          "definition": "clothes\nclothing"
         },
         {
-          "word": "grisa",
-          "definition": "gray"
+          "word": "horia",
+          "definition": "yellow"
         },
         {
-          "word": "zurea",
-          "definition": "yours"
+          "word": "haiena",
+          "definition": "theirs"
         },
         {
           "word": "da.",
@@ -1758,8 +2320,8 @@
       ],
       "chips": [
         "The",
-        "gray",
-        "car",
+        "yellow",
+        "clothing",
         "is",
         "yours",
         "or",
@@ -1770,16 +2332,16 @@
       "solutions": [
         [
           "The",
-          "gray",
-          "car",
+          "yellow",
+          "clothing",
           "is",
-          "yours"
+          "theirs"
         ]
       ],
-      "formattedSolution": "The gray car is yours.",
-      "id": "f9b8e5b1cbcb",
+      "formattedSolution": "The yellow clothing is theirs.",
+      "id": "62647ac3dbc4",
       "priority": 2,
-      "group": "c31d1810f485"
+      "group": "2c906b22d52f"
     },
     {
       "type": "cards",
