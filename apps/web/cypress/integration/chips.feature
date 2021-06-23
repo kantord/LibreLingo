@@ -36,6 +36,7 @@ Feature: Chips challenge
     And I click "Como"
     And I click "estás"
     And I click "hoy"
+    Then I have unused chips
     Given I click "Submit"
     Then I see the challenge panel with no skip button
     And I read "Correct solution"

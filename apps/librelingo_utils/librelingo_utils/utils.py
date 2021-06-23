@@ -57,3 +57,13 @@ def audio_id(language, text):
     hash = hashlib.sha256()
     hash.update((language.name.lower() + "|" + text).encode('utf-8'))
     return hash.hexdigest()
+
+
+def iterate_phrases(course):
+    '"Flatten" a course into a sequence of phrases'
+    for module in course.modules:
+        for skill in module.skills:
+            for phrase in skill.phrases:
+                yield phrase
+
+
