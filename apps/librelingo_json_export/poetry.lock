@@ -188,7 +188,7 @@ python-versions = ">=3.9,<4.0"
 
 [[package]]
 name = "librelingo-utils"
-version = "2.3.0"
+version = "2.4.0"
 description = "Utilities to be used in LibreLingo-related-packages"
 category = "main"
 optional = false
@@ -703,8 +703,8 @@ librelingo-types = [
     {file = "librelingo_types-3.0.0.tar.gz", hash = "sha256:ac8d9b0335e7ed52bc34476e16c792d99c8b7872f08883fedad6a276e71e2286"},
 ]
 librelingo-utils = [
-    {file = "librelingo_utils-2.3.0-py3-none-any.whl", hash = "sha256:0dcf340045e86e9b5e41e0a1cde246e4d2efaccaf330038d0a5011f494650181"},
-    {file = "librelingo_utils-2.3.0.tar.gz", hash = "sha256:673e5027cc86caa316bb22c345419f74ad0e027a5ee0ddd80e2331f6cb0bd9cb"},
+    {file = "librelingo_utils-2.4.0-py3-none-any.whl", hash = "sha256:d110b2e0d3a561847b79ff8c175ae30e870d54f30aa6541c588c1a8fd96d3f36"},
+    {file = "librelingo_utils-2.4.0.tar.gz", hash = "sha256:1b94fcefcf657cf18149a1886298bea558c0d67d9287b0a763e6f396321fe8f1"},
 ]
 librelingo-yaml-loader = [
     {file = "librelingo_yaml_loader-1.5.0-py3-none-any.whl", hash = "sha256:955f954d5e844f91f8647cbfe3376952bc4e0c32abc6eb704789cd422f489c75"},
