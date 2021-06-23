@@ -1,7 +1,7 @@
 # ​People and Past 2
 
 *   As mentioned earlier, Southern Basque (like Spanish) has two different verbs that can be translated as “to be”; izan and egon.
-*   Like the present tense, Izan in the past is used for facts or qualities that are fairly permanent, fixed attributes of something.
+*   Like for the present tense, Izan in the past is used for facts or qualities that are fairly permanent, fixed attributes of something.
 
 ## Simple Past vs Simple Present of Izan
 
