@@ -1,4 +1,3 @@
-
 import re
 from unittest import TestCase
 import pytest
@@ -9,8 +8,12 @@ import os
 import random
 from pyfakefs.fake_filesystem_unittest import TestCase as FakeFsTestCase
 from librelingo_fakes import fakes
-from librelingo_json_export.export import _export_course_skills, _export_skill, \
-    _export_course_data, export_course
+from librelingo_json_export.export import (
+    _export_course_skills,
+    _export_skill,
+    _export_course_data,
+    export_course,
+)
 from librelingo_types import Module, Language
 from librelingo_json_export.challenges import _get_word_challenges
 from librelingo_json_export.challenges import _get_phrase_challenges
@@ -26,19 +29,19 @@ from librelingo_utils import calculate_number_of_levels
 
 
 course_with_markdown = fakes.customize(
-        fakes.course2,
-        modules=[
-            fakes.customize(
-                fakes.course2.modules[0],
-                skills=[
-                    fakes.customize(
-                        fakes.course2.modules[0].skills[0],
-                        introduction="# *Hello* (https://example.com)[_world_]!",
-                    )
-                ]
-            )
-        ]
-    )
+    fakes.course2,
+    modules=[
+        fakes.customize(
+            fakes.course2.modules[0],
+            skills=[
+                fakes.customize(
+                    fakes.course2.modules[0].skills[0],
+                    introduction="# *Hello* (https://example.com)[_world_]!",
+                )
+            ],
+        )
+    ],
+)
 
 
 def get_fake_skill(introduction=None):
@@ -55,27 +58,36 @@ class TestExportCourseSkills(FakeFsTestCase):
         self.setUpPyfakefs()
         self.export_path = fakes.path()
 
-    @patch('librelingo_json_export.export._export_skill')
+    @patch("librelingo_json_export.export._export_skill")
     def test_exports_all_skills(self, _export_skill):
         _, fake_skill_1 = get_fake_skill()
         _, fake_skill_2 = get_fake_skill()
         _, fake_skill_3 = get_fake_skill()
-        fake_module_1 = Module(title="", skills=[
-            fake_skill_1,
-            fake_skill_2,
-        ])
-        fake_module_2 = Module(title="", skills=[
-            fake_skill_3,
-        ])
-        fake_course = fakes.customize(fakes.course1, modules=[
-            fake_module_1, fake_module_2
-        ])
+        fake_module_1 = Module(
+            title="",
+            skills=[
+                fake_skill_1,
+                fake_skill_2,
+            ],
+        )
+        fake_module_2 = Module(
+            title="",
+            skills=[
+                fake_skill_3,
+            ],
+        )
+        fake_course = fakes.customize(
+            fakes.course1, modules=[fake_module_1, fake_module_2]
+        )
         _export_course_skills(self.export_path, fake_course)
-        _export_skill.assert_has_calls([
-            call(self.export_path, fake_skill_1,  fake_course, None),
-            call(self.export_path, fake_skill_2,  fake_course, None),
-            call(self.export_path, fake_skill_3,  fake_course, None),
-        ], any_order=True)
+        _export_skill.assert_has_calls(
+            [
+                call(self.export_path, fake_skill_1, fake_course, None),
+                call(self.export_path, fake_skill_2, fake_course, None),
+                call(self.export_path, fake_skill_3, fake_course, None),
+            ],
+            any_order=True,
+        )
 
 
 class TestExportSkill(FakeFsTestCase):
@@ -85,58 +97,56 @@ class TestExportSkill(FakeFsTestCase):
 
     def test_creates_the_challenges_file(self):
         randomname, fake_skill = get_fake_skill()
-        _export_skill(self.export_path,
-                      fake_skill, fakes.course1)
-        self.assertTrue(os.path.exists(self.export_path / "challenges" /
-                                       "animals-{}.json".format(randomname)))
+        _export_skill(self.export_path, fake_skill, fakes.course1)
+        self.assertTrue(
+            os.path.exists(
+                self.export_path / "challenges" / "animals-{}.json".format(randomname)
+            )
+        )
 
     def test_creates_the_introduction_file(self):
         fake_name = str(fakes.fake_value())
-        introduction="# *Hello* (https://example.com)[_{}_]!".format(fake_name)
+        introduction = "# *Hello* (https://example.com)[_{}_]!".format(fake_name)
         randomname, fake_skill = get_fake_skill(introduction=introduction)
-        _export_skill(self.export_path,
-                      fake_skill, fakes.course1)
-        with open(self.export_path / "introduction" / "animals-{}.md".format(randomname)) as f:
+        _export_skill(self.export_path, fake_skill, fakes.course1)
+        with open(
+            self.export_path / "introduction" / "animals-{}.md".format(randomname)
+        ) as f:
             introduction_file_content = f.read()
             self.assertEqual(introduction_file_content, introduction)
 
-
     def test_does_not_create_an_introduction_file_if_theres_no_introduction(self):
         randomname, fake_skill = get_fake_skill()
-        _export_skill(self.export_path,
-                      fake_skill, fakes.course1)
-        self.assertFalse(os.path.exists(self.export_path / "introduction" /
-                                       "animals-{}.md".format(randomname)))
+        _export_skill(self.export_path, fake_skill, fakes.course1)
+        self.assertFalse(
+            os.path.exists(
+                self.export_path / "introduction" / "animals-{}.md".format(randomname)
+            )
+        )
 
-
-    @patch('librelingo_json_export.export._get_skill_data')
+    @patch("librelingo_json_export.export._get_skill_data")
     def test_calls__get_skill_data_with_correct_value(self, _get_skill_data):
         _get_skill_data.return_value = []
-        _export_skill(self.export_path,
-                      fakes.skillWithPhraseAndWord, fakes.course1)
-        _get_skill_data.assert_called_with(
-            fakes.skillWithPhraseAndWord, fakes.course1)
+        _export_skill(self.export_path, fakes.skillWithPhraseAndWord, fakes.course1)
+        _get_skill_data.assert_called_with(fakes.skillWithPhraseAndWord, fakes.course1)
 
-    @patch('librelingo_json_export.export._get_skill_data')
+    @patch("librelingo_json_export.export._get_skill_data")
     def test_writes_correct_value_into_json_file(self, _get_skill_data):
-        fake_skill_data = {
-            "fake_skill_data": random.randint(0, 1000)
-        }
+        fake_skill_data = {"fake_skill_data": random.randint(0, 1000)}
         _get_skill_data.return_value = fake_skill_data
-        _export_skill(self.export_path,
-                      fakes.skillWithPhraseAndWord, fakes.course1)
-        with open(self.export_path /
-                  "challenges" / "masculine.json") as f:
+        _export_skill(self.export_path, fakes.skillWithPhraseAndWord, fakes.course1)
+        with open(self.export_path / "challenges" / "masculine.json") as f:
             assert json.loads(f.read()) == fake_skill_data
 
     def test_assert_logs_correctly(self):
         with self.assertLogs("librelingo_json_export", level="INFO") as log:
             _, fake_skill = get_fake_skill()
-            _export_skill(self.export_path,
-                          fake_skill, fakes.course1)
-            assert log.output[0] == \
-                "INFO:librelingo_json_export:Writing skill '{}'".format(
-                fake_skill.name)
+            _export_skill(self.export_path, fake_skill, fakes.course1)
+            assert log.output[
+                0
+            ] == "INFO:librelingo_json_export:Writing skill '{}'".format(
+                fake_skill.name
+            )
 
 
 class TestExportCourseData(FakeFsTestCase):
@@ -149,17 +159,15 @@ class TestExportCourseData(FakeFsTestCase):
         _export_course_data(self.export_path, fakes.course1)
         self.assertTrue(os.path.exists(self.export_path / "courseData.json"))
 
-    @patch('librelingo_json_export.export._get_course_data')
+    @patch("librelingo_json_export.export._get_course_data")
     def test_calls__get_course_data_with_correct_value(self, _get_course_data):
         _get_course_data.return_value = []
         _export_course_data(self.export_path, fakes.course1)
         _get_course_data.assert_called_with(fakes.course1)
 
-    @patch('librelingo_json_export.export._get_course_data')
+    @patch("librelingo_json_export.export._get_course_data")
     def test_writes_correct_value_into_json_file(self, _get_course_data):
-        fake_course_data = {
-            "fake_course_data": random.randint(0, 1000)
-        }
+        fake_course_data = {"fake_course_data": random.randint(0, 1000)}
         _get_course_data.return_value = fake_course_data
         _export_course_data(self.export_path, fakes.course1)
         with open(self.export_path / "courseData.json") as f:
@@ -171,19 +179,15 @@ class TestExportCourseData(FakeFsTestCase):
             randomname2 = str(random.randint(0, 5000))
             fake_course = fakes.customize(
                 fakes.course1,
-                target_language=Language(
-                    name=randomname1,
-                    code=""
-                ),
-                source_language=Language(
-                    name=randomname2,
-                    code=""
-                )
+                target_language=Language(name=randomname1, code=""),
+                source_language=Language(name=randomname2, code=""),
             )
             _export_course_data(self.export_path, fake_course)
-            assert log.output[0] == \
-                "INFO:librelingo_json_export:Writing course '{}' for '{}' speakers".format(
-                    randomname1, randomname2)
+            assert log.output[
+                0
+            ] == "INFO:librelingo_json_export:Writing course '{}' for '{}' speakers".format(
+                randomname1, randomname2
+            )
 
 
 class TestExportCourse(FakeFsTestCase):
@@ -191,17 +195,17 @@ class TestExportCourse(FakeFsTestCase):
         self.setUpPyfakefs()
         self.export_path = fakes.path()
 
-    @patch('librelingo_json_export.export._export_course_data')
+    @patch("librelingo_json_export.export._export_course_data")
     def test_calls__export_course_data_with_correct_value(self, _export_course_data):
         export_course(self.export_path, fakes.course1)
-        _export_course_data.assert_called_with(self.export_path, fakes.course1,
-                                               None)
+        _export_course_data.assert_called_with(self.export_path, fakes.course1, None)
 
-    @patch('librelingo_json_export.export._export_course_skills')
-    def test_calls__export_course_skills_with_correct_value(self, _export_course_skills):
+    @patch("librelingo_json_export.export._export_course_skills")
+    def test_calls__export_course_skills_with_correct_value(
+        self, _export_course_skills
+    ):
         export_course(self.export_path, fakes.course1)
-        _export_course_skills.assert_called_with(
-            self.export_path, fakes.course1, None)
+        _export_course_skills.assert_called_with(self.export_path, fakes.course1, None)
 
 
 def test__get_course_data_return_value():
@@ -229,15 +233,15 @@ def test__get_course_data_return_value():
                         "practiceHref": "masculine",
                         "summary": ["lorem ipsum"],
                         "imageSet": ["man1", "man2", "boy1"],
-                        'id': 'd7279e4777cd',
+                        "id": "d7279e4777cd",
                         "levels": 1,
                     },
                     {
                         "title": "Feminine",
                         "practiceHref": "feminine",
                         "imageSet": ["woman1", "woman2", "girl1"],
-                        "summary": ["foous", "apfel",  "foous", "apfel", "foous barus"],
-                        'id': 'd7279e4777cd',
+                        "summary": ["foous", "apfel", "foous", "apfel", "foous barus"],
+                        "id": "d7279e4777cd",
                         "levels": 2,
                     },
                     {
@@ -245,16 +249,13 @@ def test__get_course_data_return_value():
                         "summary": [],
                         "practiceHref": "neuter",
                         "imageSet": ["foo1", "bar1", "bar2"],
-                        'id': 'd7279e4777cd',
+                        "id": "d7279e4777cd",
                         "levels": 1,
                     },
-                ]
+                ],
             },
-            {
-                "title": "Phrases",
-                "skills": []
-            }
-        ]
+            {"title": "Phrases", "skills": []},
+        ],
     }
 
 
@@ -268,26 +269,23 @@ def test__get_course_data_return_value_2():
         "languageCode": "tr",
         "specialCharacters": ["ç", "ş"],
         "license": {
-            "name": {
-                "short":  "lorem",
-                "full": "ipsum lorem license"
-            },
-            "link":  "https://example.com/lipsum_license",
+            "name": {"short": "lorem", "full": "ipsum lorem license"},
+            "link": "https://example.com/lipsum_license",
         },
         "modules": [
             {
                 "title": "Animals",
                 "skills": [
                     {
-                        'id': 'd7279e4777cd',
+                        "id": "d7279e4777cd",
                         "title": "Mammals and birds",
                         "practiceHref": "mammals-and-birds",
                         "summary": ["foous"],
                         "levels": 1,
                     }
-                ]
+                ],
             },
-        ]
+        ],
     }
 
 
@@ -302,27 +300,24 @@ def test__get_course_data_return_value_with_introduction():
         "languageCode": "tr",
         "specialCharacters": ["ç", "ş"],
         "license": {
-            "name": {
-                "short":  "lorem",
-                "full": "ipsum lorem license"
-            },
-            "link":  "https://example.com/lipsum_license",
+            "name": {"short": "lorem", "full": "ipsum lorem license"},
+            "link": "https://example.com/lipsum_license",
         },
         "modules": [
             {
                 "title": "Animals",
                 "skills": [
                     {
-                        'id': 'd7279e4777cd',
+                        "id": "d7279e4777cd",
                         "title": "Mammals and birds",
                         "practiceHref": "mammals-and-birds",
                         "summary": ["foous"],
                         "introduction": "mammals-and-birds.md",
                         "levels": 1,
                     }
-                ]
+                ],
             },
-        ]
+        ],
     }
 
 
@@ -335,8 +330,10 @@ def test_calculate_number_of_levels():
     ]
 
     for example in examples:
-        assert calculate_number_of_levels(
-            example["words"], example["phrases"]) == example["result"]
+        assert (
+            calculate_number_of_levels(example["words"], example["phrases"])
+            == example["result"]
+        )
 
 
 class TestGetSkillData(TestCase):
@@ -344,29 +341,29 @@ class TestGetSkillData(TestCase):
         assert _get_skill_data(fakes.emptySkill, fakes.courseEmpty) == {
             "id": "d7279e4777cd",
             "levels": 1,
-            "challenges": []
+            "challenges": [],
         }
 
-    @patch('librelingo_json_export.skills.calculate_number_of_levels')
+    @patch("librelingo_json_export.skills.calculate_number_of_levels")
     def test_correct_number_of_levels(self, mock):
         FAKE_NUMBER = "fake number"
         mock.return_value = FAKE_NUMBER
         converted_skill = _get_skill_data(fakes.emptySkill, fakes.course1)
         assert converted_skill["levels"] == FAKE_NUMBER
 
-    @patch('librelingo_json_export.skills.calculate_number_of_levels')
+    @patch("librelingo_json_export.skills.calculate_number_of_levels")
     def test_calculates_levels_correctly(self, mock):
         _get_skill_data(fakes.skills[1], fakes.course1)
         mock.assert_called_with(4, 1)
 
-    @patch('librelingo_json_export.skills._get_challenges_data')
+    @patch("librelingo_json_export.skills._get_challenges_data")
     def test_correct_challenges(self, mock):
         FAKE_CHALLENGES = "fake challenges"
         mock.return_value = FAKE_CHALLENGES
         converted_skill = _get_skill_data(fakes.skills[1], fakes.course1)
         assert converted_skill["challenges"] == FAKE_CHALLENGES
 
-    @patch('librelingo_json_export.skills._get_challenges_data')
+    @patch("librelingo_json_export.skills._get_challenges_data")
     def test_formats_challenges_correctly(self, mock):
         _get_skill_data(fakes.skills[1], fakes.course1)
         mock.assert_called_with(fakes.skills[1], fakes.course1)
@@ -399,44 +396,44 @@ class DefineWordsInSentenceTest(TestCase):
     def test_empty_sentence(self):
         assert _define_words_in_sentence(fakes.course1, "", False) == []
 
-    @patch('librelingo_json_export.dictionary._define_word')
+    @patch("librelingo_json_export.dictionary._define_word")
     def test_calls_define_word_the_correct_number_of_times(self, _define_word):
         _define_words_in_sentence(fakes.course1, "foo bar baz", False)
         assert _define_word.call_count == 3
 
-    @patch('librelingo_json_export.dictionary._define_word')
+    @patch("librelingo_json_export.dictionary._define_word")
     def test_calls_define_word_with_the_correct_data(self, _define_word):
         is_in_target_language = fakes.fake_value()
         fake_word = str(fakes.fake_value())
-        _define_words_in_sentence(
-            fakes.course1, fake_word, is_in_target_language)
-        _define_word.assert_called_with(
-            fakes.course1, fake_word, is_in_target_language)
+        _define_words_in_sentence(fakes.course1, fake_word, is_in_target_language)
+        _define_word.assert_called_with(fakes.course1, fake_word, is_in_target_language)
 
-    @patch('librelingo_json_export.dictionary._define_word')
+    @patch("librelingo_json_export.dictionary._define_word")
     def test_returns_correct_value(self, _define_word):
         _define_word.return_value = fakes.fake_value()
-        assert _define_words_in_sentence(
-            fakes.course1, "foo", True) == [_define_word.return_value]
+        assert _define_words_in_sentence(fakes.course1, "foo", True) == [
+            _define_word.return_value
+        ]
 
-    @patch('librelingo_json_export.dictionary._define_word')
+    @patch("librelingo_json_export.dictionary._define_word")
     def test_defines_every_word(self, _define_word):
         _define_word.return_value = fakes.fake_value()
-        assert _define_words_in_sentence(
-            fakes.course1, "foo bar", True) == [_define_word.return_value, _define_word.return_value]
+        assert _define_words_in_sentence(fakes.course1, "foo bar", True) == [
+            _define_word.return_value,
+            _define_word.return_value,
+        ]
 
 
 class TestDefineWord(TestCase):
     def test_definition_not_found(self):
         word = str(fakes.fake_value())
         pattern = re.escape(
-            'The another language word "{}" does not have a definition. Please add it to the mini-dictionary.'
-            .format(word))
-        with pytest.raises(
-                ValueError,
-                match=pattern):
-            assert _define_word(fakes.course1, word,
-                                is_in_target_language=False)
+            'The another language word "{}" does not have a definition. Please add it to the mini-dictionary.'.format(
+                word
+            )
+        )
+        with pytest.raises(ValueError, match=pattern):
+            assert _define_word(fakes.course1, word, is_in_target_language=False)
 
     def test_includes_definition(self):
         word = str(fakes.fake_value())
@@ -449,15 +446,14 @@ class TestDefineWord(TestCase):
                     DictionaryItem(
                         word=word,
                         definition=meaning,
-                        is_in_target_language=is_in_target_language
+                        is_in_target_language=is_in_target_language,
                     ),
-                ]
+                ],
             },
         )
-        assert _define_word(my_course, word, is_in_target_language=is_in_target_language) == {
-            "word": word,
-            "definition": meaning
-        }
+        assert _define_word(
+            my_course, word, is_in_target_language=is_in_target_language
+        ) == {"word": word, "definition": meaning}
 
     def test_normalizes_words(self):
         word = str(fakes.fake_value())
@@ -470,15 +466,14 @@ class TestDefineWord(TestCase):
                     DictionaryItem(
                         word=word,
                         definition=meaning,
-                        is_in_target_language=is_in_target_language
+                        is_in_target_language=is_in_target_language,
                     ),
-                ]
+                ],
             },
         )
-        assert _define_word(my_course, word + ",", is_in_target_language=is_in_target_language) == {
-            "word": word + ",",
-            "definition": meaning
-        }
+        assert _define_word(
+            my_course, word + ",", is_in_target_language=is_in_target_language
+        ) == {"word": word + ",", "definition": meaning}
 
     def test_matches_definitions_in_a_case_insensitive_way(self):
         my_course = Course(
@@ -486,16 +481,14 @@ class TestDefineWord(TestCase):
                 **(fakes.course1._asdict()),
                 "dictionary": [
                     DictionaryItem(
-                        word="Easier",
-                        definition="by a lot",
-                        is_in_target_language=True
+                        word="Easier", definition="by a lot", is_in_target_language=True
                     ),
-                ]
+                ],
             },
         )
         assert _define_word(my_course, "easier", is_in_target_language=True) == {
             "word": "easier",
-            "definition": "by a lot"
+            "definition": "by a lot",
         }
 
     def test_doesnt_include_definition_with_different_word(self):
@@ -509,60 +502,60 @@ class TestDefineWord(TestCase):
                     DictionaryItem(
                         word=word,
                         definition=meaning,
-                        is_in_target_language=is_in_target_language
+                        is_in_target_language=is_in_target_language,
                     ),
-                ]
+                ],
             },
         )
         with pytest.raises(ValueError):
-            _define_word(my_course, "asd",
-                         is_in_target_language=is_in_target_language)
+            _define_word(my_course, "asd", is_in_target_language=is_in_target_language)
 
     def test_doesnt_include_definition_with_different_is_in_target_language(self):
         word = str(fakes.fake_value())
         meaning = str(fakes.fake_value())
         is_in_target_language = fakes.fake_value()
-        my_course = fakes.customize(fakes.course1, dictionary=[
-            DictionaryItem(
-                word=word,
-                definition=meaning,
-                is_in_target_language=False
-            ),
-        ])
+        my_course = fakes.customize(
+            fakes.course1,
+            dictionary=[
+                DictionaryItem(
+                    word=word, definition=meaning, is_in_target_language=False
+                ),
+            ],
+        )
         with pytest.raises(ValueError):
-            _define_word(my_course, word,
-                         is_in_target_language=is_in_target_language)
+            _define_word(my_course, word, is_in_target_language=is_in_target_language)
 
     def test_skips_non_matching_definitions(self):
         word = str(fakes.fake_value())
         meaning = str(fakes.fake_value())
         is_in_target_language = fakes.fake_value()
-        my_course = fakes.customize(fakes.course1, dictionary=[
-            DictionaryItem(
-                word="random shit",
-                definition="random shit",
-                is_in_target_language="random shit"
-            ),
-            DictionaryItem(
-                word=word,
-                definition=meaning,
-                is_in_target_language=is_in_target_language
-            ),
-        ])
-        assert _define_word(my_course, word, is_in_target_language=is_in_target_language) == {
-            "word": word,
-            "definition": meaning
-        }
+        my_course = fakes.customize(
+            fakes.course1,
+            dictionary=[
+                DictionaryItem(
+                    word="random shit",
+                    definition="random shit",
+                    is_in_target_language="random shit",
+                ),
+                DictionaryItem(
+                    word=word,
+                    definition=meaning,
+                    is_in_target_language=is_in_target_language,
+                ),
+            ],
+        )
+        assert _define_word(
+            my_course, word, is_in_target_language=is_in_target_language
+        ) == {"word": word, "definition": meaning}
 
     def test_skips_empty_definition(self):
         word = str(fakes.fake_value())
-        my_course = fakes.customize(fakes.course1, dictionary=[
-            DictionaryItem(
-                word=word,
-                definition="",
-                is_in_target_language=False
-            ),
-        ])
+        my_course = fakes.customize(
+            fakes.course1,
+            dictionary=[
+                DictionaryItem(word=word, definition="", is_in_target_language=False),
+            ],
+        )
         with pytest.raises(ValueError):
             _define_word(my_course, word, is_in_target_language=False)
 
