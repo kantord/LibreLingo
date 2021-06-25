@@ -84,13 +84,26 @@ Phrases:
   - Phrase: Arratsalde on. Non zaude zu?
     Translation: Good Afternoon. Where are you?
 
-  - Phrase: Non dago etxekoandrea?
-    Translation: Where is the housewife?
-
   - Phrase: Ni etxean nago
     Translation: I am in the house.
     Alternative translations:
     - I am in a house.
+
+  - Phrase: Barkatu. Non nago?
+    Translation: Excuse me. Where am I?
+
+  - Phrase: Egun on. Gure ostatuan zaude.
+    Translation: Good morning. You are in our mini-hotel.
+
+  - Phrase: Non dago etxekoandrea?
+    Translation: Where is the housewife?
+    Alternative translations:
+    - Where is a housewife?
+
+  - Phrase: Etxekoandrea barruan dago.
+    Translation: The housewife is inside.
+    Alternative translations:
+    - A housewife is inside.
 
   - Phrase: Non dago arrotza?
     Translation: Where is the stranger?
@@ -102,12 +115,28 @@ Phrases:
     Alternative translations:
     - A stranger is in a hotel.
 
+  - Phrase: Barkatu. Non gaude?
+    Translation: Excuse me. Where are we?
 
-  - Phrase: Non daude boligrafoak?
-    Translation: Where are the pens?
+  - Phrase: Egun on. Elizan gaude.
+    Translation: Good Morning. We are in the church.
+    Alternative translations:
+    - Good Morning. We are in a church.
 
-  - Phrase: Boligrafoak poltsan daude.
-    Translation: The pens are in the purse.
+  - Phrase: Zuek kanpoan zaudete. Gu barruan gaude.
+    Translation: You(plural) are outside. We are inside.
+    Alternative translations:
+    - You'll are outside. We are inside.
+    - You are outside. We are inside.
+
+  - Phrase: Zuek elizan ere zaudete.
+    Translation: You(plural) are also in the church.
+    Alternative translations:
+    - You(plural) are also in a church.
+    - You'll are also in the church.
+    - You'll are also in a church.
+    - You are also in the church.
+    - You are also in a church.
 
   - Phrase: Apaizak  elizan daude.
     Translation: The priests are in the church.
@@ -125,10 +154,10 @@ Phrases:
   - Phrase: Non gaude gu?
     Translation: Where are we?
 
-  - Phrase: Gu elizan gaude.
-    Translation: We are in the church.
+  - Phrase: Gu ostatuan gaude.
+    Translation: We are in the mini-hotel.
     Alternative translations:
-    - We are in a church.
+    - We are in a mini-hotel
 
   - Phrase: Non daude erlojuak?
     Translation: Where are the watches?
@@ -138,11 +167,6 @@ Phrases:
     Alternative translations:
     - They are in a purse.
 
-  - Phrase: Non dago camareroa?
-    Translation: Where is the waiter?
-    Alternative translations:
-    - Where is a waiter?
-
   - Phrase: Mutila dago zuhaitzean.
     Translation: A boy is in the tree.
     Alternative translations:
@@ -150,18 +174,10 @@ Phrases:
     - The boy is in a tree.
     - The boy is in the tree.
 
-  - Phrase: Zaldia kanpoan dago.
-    Translation: A horse is outside.
-    Alternative translations:
-    - The horse is outside.
-
   - Phrase: Oilaskoak ere kanpoan daude.
     Translation: The chickens are also outside.
     Alternative translations:
     - Chickens are also outside.
-
-  - Phrase: Txakurra eta katua etxean daude.
-    Translation: The dog and the cat are inside the house.
 
   - Phrase: Sagua barruan dago
     Translation: The mouse is inside.
@@ -382,6 +398,9 @@ Mini-dictionary:
     - orain : now
     - osaba: uncle
     - osabaren: uncle's
+    - ostatu: mini-hotel
+    - ostatua: mini-hotel
+    - ostatuan: in a mini-hotel
     - polita: pretty
     - poltsa: purse
     - poltsak: purses
@@ -569,6 +588,7 @@ Mini-dictionary:
     - male: gizonezkoa
     - man: gizon
     - mine: nirea
+    - mini-hotel: ostatu
     - owls: hontzak
     - mother: ama
     - mother's: amaren
