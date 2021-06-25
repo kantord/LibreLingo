@@ -23,7 +23,9 @@ import html2markdown
 def add_bool(self, node):
     return self.construct_scalar(node)
 
-SafeConstructor.add_constructor(u'tag:yaml.org,2002:bool', add_bool)
+
+SafeConstructor.add_constructor(u"tag:yaml.org,2002:bool", add_bool)
+
 
 def _load_yaml(path):
     """Helper function for reading a YAML file"""
@@ -89,8 +91,7 @@ def _merge_dictionary_definitions(items_generator):
     """
     items = collections.defaultdict(set)
     for word, definition, is_in_target_language in items_generator:
-        items[(word, is_in_target_language)].add(
-            definition)
+        items[(word, is_in_target_language)].add(definition)
     return list(items.items())
 
 
@@ -113,11 +114,13 @@ def _load_dictionary(modules):
     items = []
     for key, definition in _get_merged_dictionary_items(modules):
         word, is_in_target_language = key
-        items.append(DictionaryItem(
-            word=word,
-            definition="\n".join(sorted(definition)),
-            is_in_target_language=is_in_target_language,
-        ))
+        items.append(
+            DictionaryItem(
+                word=word,
+                definition="\n".join(sorted(definition)),
+                is_in_target_language=is_in_target_language,
+            )
+        )
     return items
 
 
@@ -126,8 +129,7 @@ def _alternatives_from_yaml(raw_object, key):
     Returns alternative solutions based on the key, or an empty list if
     there are no alternative solutions specified
     """
-    return (raw_object[key]
-            if key in raw_object else [])
+    return raw_object[key] if key in raw_object else []
 
 
 def _solution_from_yaml(raw_object, solution_key, alternatives_key):
@@ -146,7 +148,8 @@ def _convert_word(raw_word):
     return Word(
         in_target_language=_solution_from_yaml(raw_word, "Word", "Synonyms"),
         in_source_language=_solution_from_yaml(
-            raw_word, "Translation", "Also accepted"),
+            raw_word, "Translation", "Also accepted"
+        ),
         pictures=raw_word["Images"] if "Images" in raw_word else None,
     )
 
@@ -165,14 +168,16 @@ def _convert_phrase(raw_phrase):
     try:
         return Phrase(
             in_target_language=_solution_from_yaml(
-                raw_phrase, "Phrase", "Alternative versions"),
+                raw_phrase, "Phrase", "Alternative versions"
+            ),
             in_source_language=_solution_from_yaml(
-                raw_phrase, "Translation", "Alternative translations"),
+                raw_phrase, "Translation", "Alternative translations"
+            ),
         )
     except KeyError:
-        raise RuntimeError('Phrase "{}" needs to have a "Translation".'.format(
-            raw_phrase["Phrase"]
-        ))
+        raise RuntimeError(
+            'Phrase "{}" needs to have a "Translation".'.format(raw_phrase["Phrase"])
+        )
 
 
 def _convert_phrases(raw_phrases):
@@ -194,8 +199,9 @@ def _convert_mini_dictionary(raw_mini_dictionary, course):
         for item in raw_mini_dictionary[language_name]:
             word = list(item.keys())[0]
             raw_definition = list(item.values())[0]
-            definition = raw_definition if type(
-                raw_definition) == list else [raw_definition]
+            definition = (
+                raw_definition if type(raw_definition) == list else [raw_definition]
+            )
             yield (word, tuple(definition), is_in_target_language)
 
 
@@ -205,9 +211,7 @@ def _sanitize_markdown(mdtext):
     clean_html = bleach.clean(
         dirty_html,
         strip=True,
-        tags=[
-            *bleach.sanitizer.ALLOWED_TAGS, "h1", "h2", "h3", "h4", "h5", "h6"
-        ]
+        tags=[*bleach.sanitizer.ALLOWED_TAGS, "h1", "h2", "h3", "h4", "h5", "h6"],
     )
 
     return html2markdown.convert(clean_html)
@@ -230,35 +234,31 @@ def _load_skill(path, course):
         words = data["New words"]
         phrases = data["Phrases"]
     except TypeError:
-        raise RuntimeError(
-            'Skill file "{}" is empty or does not exist'.format(path))
+        raise RuntimeError('Skill file "{}" is empty or does not exist'.format(path))
     except KeyError as error:
         raise RuntimeError(
-            'Skill file "{}" needs to have a "{}" key'.format(path, error.args[0]))
+            'Skill file "{}" needs to have a "{}" key'.format(path, error.args[0])
+        )
 
     try:
         name = skill["Name"]
     except Exception:
-        raise RuntimeError(
-            'Skill file "{}" needs to have skill name'.format(path))
+        raise RuntimeError('Skill file "{}" needs to have skill name'.format(path))
 
     try:
         skill_id = skill["Id"]
     except Exception:
-        raise RuntimeError(
-            'Skill file "{}" needs to have skill id'.format(path))
+        raise RuntimeError('Skill file "{}" needs to have skill id'.format(path))
 
     try:
         phrases = _convert_phrases(phrases)
     except TypeError:
-        raise RuntimeError(
-            'Skill file "{}" has an invalid phrase'.format(path))
+        raise RuntimeError('Skill file "{}" has an invalid phrase'.format(path))
 
     try:
         words = _convert_words(words)
     except TypeError:
-        raise RuntimeError(
-            'Skill file "{}" has an invalid word'.format(path))
+        raise RuntimeError('Skill file "{}" has an invalid word'.format(path))
 
     return Skill(
         name=name,
@@ -266,9 +266,9 @@ def _load_skill(path, course):
         words=words,
         phrases=phrases,
         image_set=skill["Thumbnails"] if "Thumbnails" in skill else [],
-        dictionary=list(_convert_mini_dictionary(
-            data["Mini-dictionary"], course))
-        if "Mini-dictionary" in data else [],
+        dictionary=list(_convert_mini_dictionary(data["Mini-dictionary"], course))
+        if "Mini-dictionary" in data
+        else [],
         introduction=introduction,
     )
 
@@ -281,7 +281,8 @@ def _load_skills(path, skills, course):
         return [_load_skill(Path(path) / "skills" / skill, course) for skill in skills]
     except TypeError:
         raise RuntimeError(
-            'Module file "{}/module.yaml" needs to have a list of skills'.format(path))
+            'Module file "{}/module.yaml" needs to have a list of skills'.format(path)
+        )
 
 
 def _load_module(path, course):
@@ -295,21 +296,21 @@ def _load_module(path, course):
         skills = data["Skills"]
     except TypeError:
         raise RuntimeError(
-            'Module file "{}" is empty or does not exist'.format(filepath))
+            'Module file "{}" is empty or does not exist'.format(filepath)
+        )
     except KeyError as error:
         raise RuntimeError(
-            'Module file "{}" needs to have a "{}" key'.format(filepath, error.args[0]))
+            'Module file "{}" needs to have a "{}" key'.format(filepath, error.args[0])
+        )
 
     try:
         title = module["Name"]
     except Exception:
         raise RuntimeError(
-            'Module file "{}" needs to have module name'.format(filepath))
+            'Module file "{}" needs to have module name'.format(filepath)
+        )
 
-    return Module(
-        title=title,
-        skills=_load_skills(path, skills, course)
-    )
+    return Module(title=title, skills=_load_skills(path, skills, course))
 
 
 def _load_modules(path, modules, course):
@@ -329,6 +330,7 @@ def _convert_license(raw_license):
         full_name=raw_license["Name"],
         link=raw_license["Link"],
     )
+
 
 def _convert_settings(data):
     if "Settings" not in data:

@@ -14,11 +14,8 @@ def _get_course_data(course):
             "name": {
                 "short": course.license.name,
                 "full": course.license.full_name,
-
             },
             "link": course.license.link,
         },
-        "modules": [
-            _get_module_summary(module) for module in course.modules
-        ]
+        "modules": [_get_module_summary(module) for module in course.modules],
     }

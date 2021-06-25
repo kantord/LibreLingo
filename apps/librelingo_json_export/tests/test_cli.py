@@ -17,7 +17,7 @@ def mocks(mocker):
     load_course.return_value = fakes.fake_value()
     return {
         "load_course": load_course,
-        "export_course": mocker.patch("librelingo_json_export.cli.export_course")
+        "export_course": mocker.patch("librelingo_json_export.cli.export_course"),
     }
 
 
@@ -38,7 +38,8 @@ def test_yaml_to_json_loads_correct_course(mocks, inputs, invoke):
 def test_yaml_to_json_exports_correct_course(mocks, inputs, invoke):
     invoke(inputs)
     mocks["export_course"].assert_called_with(
-        inputs[1], mocks["load_course"].return_value, DEFAULT_SETTINGS)
+        inputs[1], mocks["load_course"].return_value, DEFAULT_SETTINGS
+    )
 
 
 def test_yaml_to_json_has_help_text(mocks, inputs, invoke):
