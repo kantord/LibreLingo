@@ -113,6 +113,13 @@ blocks:
             - pip install poetry
             - poetry install
             - poetry run pytest
+            - cache store
+        - name: Python code style (black)
+          commands:
+            - sem-version python 3.9
+            - checkout
+            - cache restore
+            - poetry run black apps --check
   - name: PyPi readme
     dependencies: []
     task:

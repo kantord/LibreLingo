@@ -82,25 +82,19 @@ phrase_with_alternatives = Phrase(
 word1 = Word(
     in_target_language=["foous"],
     in_source_language=["foo"],
-    pictures=['foo', 'bar', 'baz']
+    pictures=["foo", "bar", "baz"],
 )
 
-license1 = License(
-    name="foo",
-    full_name="foo bar license",
-    link=None
-)
+license1 = License(name="foo", full_name="foo bar license", link=None)
 
 license2 = License(
     name="lorem",
     full_name="ipsum lorem license",
-    link="https://example.com/lipsum_license"
+    link="https://example.com/lipsum_license",
 )
 
 word2 = Word(
-    in_target_language=["apfel"],
-    in_source_language=["apple"],
-    pictures=['1', '2', '3']
+    in_target_language=["apfel"], in_source_language=["apple"], pictures=["1", "2", "3"]
 )
 
 emptySkill = Skill(
@@ -186,7 +180,7 @@ skills = [
         image_set=["just_one_image"],
         dictionary=fake_dictionary,
         introduction=None,
-    )
+    ),
 ]
 
 language_1 = Language(
@@ -207,7 +201,7 @@ courseEmpty = Course(
     license=license1,
     modules=[],
     dictionary=fake_dictionary,
-    repository_url="https://github.com/kantord/LibreLingo/tree/main/courses/spanish-from-english"
+    repository_url="https://github.com/kantord/LibreLingo/tree/main/courses/spanish-from-english",
 )
 
 
@@ -217,15 +211,18 @@ course1 = Course(
     special_characters=["ä", "ß"],
     license=license1,
     modules=[
-        Module(title="Basics", skills=[
-            skills[0],
-            skills[1],
-            skills[2],
-        ]),
+        Module(
+            title="Basics",
+            skills=[
+                skills[0],
+                skills[1],
+                skills[2],
+            ],
+        ),
         Module(title="Phrases", skills=[]),
     ],
     dictionary=fake_dictionary,
-    repository_url="https://github.com/kantord/LibreLingo/tree/main/courses/spanish-from-english"
+    repository_url="https://github.com/kantord/LibreLingo/tree/main/courses/spanish-from-english",
 )
 
 course2 = Course(
@@ -234,12 +231,10 @@ course2 = Course(
     special_characters=["ç", "ş"],
     license=license2,
     modules=[
-        Module(title="Animals", skills=[
-            skills[3]
-        ]),
+        Module(title="Animals", skills=[skills[3]]),
     ],
     dictionary=fake_dictionary,
-    repository_url="https://github.com/kantord/LibreLingo-Spanish-from-English"
+    repository_url="https://github.com/kantord/LibreLingo-Spanish-from-English",
 )
 
 
@@ -250,10 +245,7 @@ def fake_value():
 
 def customize(fake, **kwargs):
     return type(fake)(
-        **{
-            **(fake._asdict()),
-            **kwargs
-        },
+        **{**(fake._asdict()), **kwargs},
     )
 
 
