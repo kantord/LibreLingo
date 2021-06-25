@@ -10,22 +10,29 @@ class Settings(namedtuple("Settings", ["audio_files_enabled"], defaults=[True]))
         my_settings = Settings()
     ```
     """
+
     pass
 
 
 default_settings = Settings()
 
 
-class Course(namedtuple("Course", [
-    "target_language",
-    "source_language",
-    "special_characters",
-    "modules",
-    "license",
-    "dictionary",
-    "repository_url",
-    "settings",
-], defaults=[default_settings])):
+class Course(
+    namedtuple(
+        "Course",
+        [
+            "target_language",
+            "source_language",
+            "special_characters",
+            "modules",
+            "license",
+            "dictionary",
+            "repository_url",
+            "settings",
+        ],
+        defaults=[default_settings],
+    )
+):
     """
     A LibreLingo course
 
@@ -48,6 +55,7 @@ class Course(namedtuple("Course", [
     )
     ```
     """
+
     pass
 
 
@@ -60,14 +68,20 @@ class Language(namedtuple("Language", ["name", "code"])):
         my_language = Language("English", "en")
     ```
     """
+
     pass
 
 
-class License(namedtuple("License", [
-    "name",
-    "full_name",
-    "link",
-])):
+class License(
+    namedtuple(
+        "License",
+        [
+            "name",
+            "full_name",
+            "link",
+        ],
+    )
+):
     """
     Metadata about the license of a LibreLingo course
 
@@ -81,13 +95,19 @@ class License(namedtuple("License", [
     )
     ```
     """
+
     pass
 
 
-class Module(namedtuple("Module", [
-    "title",
-    "skills",
-])):
+class Module(
+    namedtuple(
+        "Module",
+        [
+            "title",
+            "skills",
+        ],
+    )
+):
     """
     A module of a LibreLingo course.
 
@@ -97,18 +117,24 @@ class Module(namedtuple("Module", [
     my_module = Module(title="Basics", skills=[skill1, skill2])
     ```
     """
+
     pass
 
 
-class Skill(namedtuple("Skill", [
-    "name",
-    "id",
-    "words",
-    "phrases",
-    "image_set",
-    "dictionary",
-    "introduction",
-])):
+class Skill(
+    namedtuple(
+        "Skill",
+        [
+            "name",
+            "id",
+            "words",
+            "phrases",
+            "image_set",
+            "dictionary",
+            "introduction",
+        ],
+    )
+):
     """
     A skill of a module of a LibreLingo course.
 
@@ -130,14 +156,20 @@ class Skill(namedtuple("Skill", [
     )
     ```
     """
+
     pass
 
 
-class Word(namedtuple("Word", [
-    "in_target_language",
-    "in_source_language",
-    "pictures",
-])):
+class Word(
+    namedtuple(
+        "Word",
+        [
+            "in_target_language",
+            "in_source_language",
+            "pictures",
+        ],
+    )
+):
     """
     A new word taught in a LibreLingo skill.
 
@@ -163,13 +195,19 @@ class Word(namedtuple("Word", [
     )
     ```
     """
+
     pass
 
 
-class Phrase(namedtuple("Phrase", [
-    "in_target_language",
-    "in_source_language",
-])):
+class Phrase(
+    namedtuple(
+        "Phrase",
+        [
+            "in_target_language",
+            "in_source_language",
+        ],
+    )
+):
     """
     A new phrase taught in a LibreLingo skill.
 
@@ -194,14 +232,13 @@ class Phrase(namedtuple("Phrase", [
     )
     ```
     """
+
     pass
 
 
-class DictionaryItem(namedtuple("DictionaryItem", [
-    "word",
-    "definition",
-    "is_in_target_language"
-])):
+class DictionaryItem(
+    namedtuple("DictionaryItem", ["word", "definition", "is_in_target_language"])
+):
     """
     A dictionary item for a LibreLingo course. It contains the definition of
     a word. The word can be either in the source language or the target
@@ -215,4 +252,5 @@ class DictionaryItem(namedtuple("DictionaryItem", [
     my_dict_item_2 = DictionaryItem("speak", "hablo", True)
     ```
     """
+
     pass

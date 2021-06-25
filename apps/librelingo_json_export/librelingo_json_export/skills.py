@@ -9,7 +9,6 @@ def _get_skill_data(skill, course):
 
     return {
         "id": get_opaque_id(skill, "Skill"),
-        "levels": calculate_number_of_levels(
-            len(skill.words), len(skill.phrases)),
+        "levels": calculate_number_of_levels(len(skill.words), len(skill.phrases)),
         "challenges": _get_challenges_data(skill, course),
     }

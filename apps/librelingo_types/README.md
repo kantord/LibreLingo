@@ -24,16 +24,21 @@ Settings for a course
 ## Course Objects
 
 ```python
-class Course(namedtuple("Course", [
-    "target_language",
-    "source_language",
-    "special_characters",
-    "modules",
-    "license",
-    "dictionary",
-    "repository_url",
-    "settings",
-], defaults=[default_settings]))
+class Course(
+    namedtuple(
+        "Course",
+        [
+            "target_language",
+            "source_language",
+            "special_characters",
+            "modules",
+            "license",
+            "dictionary",
+            "repository_url",
+            "settings",
+        ],
+        defaults=[default_settings],
+    ))
 ```
 
 A LibreLingo course
@@ -75,11 +80,15 @@ Metadata about a language
 ## License Objects
 
 ```python
-class License(namedtuple("License", [
-    "name",
-    "full_name",
-    "link",
-]))
+class License(
+    namedtuple(
+        "License",
+        [
+            "name",
+            "full_name",
+            "link",
+        ],
+    ))
 ```
 
 Metadata about the license of a LibreLingo course
@@ -98,10 +107,14 @@ License(
 ## Module Objects
 
 ```python
-class Module(namedtuple("Module", [
-    "title",
-    "skills",
-]))
+class Module(
+    namedtuple(
+        "Module",
+        [
+            "title",
+            "skills",
+        ],
+    ))
 ```
 
 A module of a LibreLingo course.
@@ -116,15 +129,19 @@ my_module = Module(title="Basics", skills=[skill1, skill2])
 ## Skill Objects
 
 ```python
-class Skill(namedtuple("Skill", [
-    "name",
-    "id",
-    "words",
-    "phrases",
-    "image_set",
-    "dictionary",
-    "introduction",
-]))
+class Skill(
+    namedtuple(
+        "Skill",
+        [
+            "name",
+            "id",
+            "words",
+            "phrases",
+            "image_set",
+            "dictionary",
+            "introduction",
+        ],
+    ))
 ```
 
 A skill of a module of a LibreLingo course.
@@ -151,11 +168,15 @@ my_skill = Skill(
 ## Word Objects
 
 ```python
-class Word(namedtuple("Word", [
-    "in_target_language",
-    "in_source_language",
-    "pictures",
-]))
+class Word(
+    namedtuple(
+        "Word",
+        [
+            "in_target_language",
+            "in_source_language",
+            "pictures",
+        ],
+    ))
 ```
 
 A new word taught in a LibreLingo skill.
@@ -186,10 +207,14 @@ my_word = Word(
 ## Phrase Objects
 
 ```python
-class Phrase(namedtuple("Phrase", [
-    "in_target_language",
-    "in_source_language",
-]))
+class Phrase(
+    namedtuple(
+        "Phrase",
+        [
+            "in_target_language",
+            "in_source_language",
+        ],
+    ))
 ```
 
 A new phrase taught in a LibreLingo skill.
@@ -219,11 +244,8 @@ my_phrase = Phrase(
 ## DictionaryItem Objects
 
 ```python
-class DictionaryItem(namedtuple("DictionaryItem", [
-    "word",
-    "definition",
-    "is_in_target_language"
-]))
+class DictionaryItem(
+    namedtuple("DictionaryItem", ["word", "definition", "is_in_target_language"]))
 ```
 
 A dictionary item for a LibreLingo course. It contains the definition of
