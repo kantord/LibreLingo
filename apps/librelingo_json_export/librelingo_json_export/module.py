@@ -39,6 +39,7 @@ def _get_module_summary(module):
                 "id": get_opaque_id(skill, "Skill"),
                 "title": skill.name,
                 "levels": get_levels(skill.words, skill.phrases),
-            } for skill in module.skills
-        ]
+            }
+            for skill in module.skills
+        ],
     }

@@ -11,17 +11,15 @@ def read_json_file(path):
 
 
 def test_loaded_yaml_is_exported_to_correct_json(fs, snapshot):
-    fixture_path = os.path.join(os.path.dirname(
-        __file__), 'fixtures', "fake_course")
+    fixture_path = os.path.join(os.path.dirname(__file__), "fixtures", "fake_course")
     fs.add_real_directory(fixture_path)
     fs.create_dir("output")
     course = load_course(fixture_path)
     export_course("./output", course)
     files = glob.glob("./output/**/*")
     data = {
-        fname:
-            read_json_file(fname) if fname.endswith(".json") else open(fname).read()
-            for fname in files
+        fname: read_json_file(fname) if fname.endswith(".json") else open(fname).read()
+        for fname in files
     }
 
     fs.pause()  # Write snapshots to the real fs, not the fake

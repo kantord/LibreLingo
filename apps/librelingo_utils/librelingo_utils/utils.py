@@ -12,12 +12,13 @@ def calculate_number_of_levels(nwords, nphrases):
 
 def clean_word(word):
     """
-        Remove punctuation and other special characters from a word.
+    Remove punctuation and other special characters from a word.
     """
     MATCH_NON_WORD_CHARACTERS_BEGINNING = re.compile("^[^\\w']+")
     MATCH_NON_WORD_CHARACTERS_END = re.compile("[^\\w']+$")
     return MATCH_NON_WORD_CHARACTERS_BEGINNING.sub(
-        "", MATCH_NON_WORD_CHARACTERS_END.sub("", word))
+        "", MATCH_NON_WORD_CHARACTERS_END.sub("", word)
+    )
 
 
 def get_dumb_opaque_id(name, id_, salt=""):
@@ -36,8 +37,7 @@ def get_dumb_opaque_id(name, id_, salt=""):
             },
         )
 
-    sha256.update((name +
-                   str(id_) + salt).encode('utf-8'))
+    sha256.update((name + str(id_) + salt).encode("utf-8"))
 
     return sha256.hexdigest()[0:12]
 
@@ -55,7 +55,7 @@ def audio_id(language, text):
     Generate the ID that will identify the audio file of a sentence.
     """
     hash = hashlib.sha256()
-    hash.update((language.name.lower() + "|" + text).encode('utf-8'))
+    hash.update((language.name.lower() + "|" + text).encode("utf-8"))
     return hash.hexdigest()
 
 
@@ -65,5 +65,3 @@ def iterate_phrases(course):
         for skill in module.skills:
             for phrase in skill.phrases:
                 yield phrase
-
-
