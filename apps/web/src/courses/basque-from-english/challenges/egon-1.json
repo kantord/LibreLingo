@@ -300,6 +300,399 @@
     },
     {
       "type": "options",
+      "formInTargetLanguage": "Barkatu. Non nago?",
+      "meaningInSourceLanguage": "Excuse me. Where am I?",
+      "id": "52f7e71aacbf",
+      "priority": 0,
+      "group": "d71f39c3b768"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Excuse",
+          "definition": "Barkatu\nbarkatu"
+        },
+        {
+          "word": "me.",
+          "definition": "ni"
+        },
+        {
+          "word": "Where",
+          "definition": "non"
+        },
+        {
+          "word": "am",
+          "definition": "nago (egon)\nnaiz\nnaiz (izan)"
+        },
+        {
+          "word": "I?",
+          "definition": "ni"
+        }
+      ],
+      "chips": [
+        "Barkatu",
+        "Non",
+        "dago",
+        "arrotza",
+        "da",
+        "Jon"
+      ],
+      "solutions": [
+        [
+          "Barkatu",
+          "Non",
+          "nago"
+        ]
+      ],
+      "formattedSolution": "Barkatu. Non nago?",
+      "id": "8a2cd9c73bda",
+      "priority": 2,
+      "group": "d71f39c3b768"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Barkatu.",
+          "definition": "Excuse me\nsorry"
+        },
+        {
+          "word": "Non",
+          "definition": "where"
+        },
+        {
+          "word": "nago?",
+          "definition": "I am (egon)"
+        }
+      ],
+      "chips": [
+        "Excuse",
+        "me",
+        "Where",
+        "is",
+        "the",
+        "stranger",
+        "her",
+        "are",
+        "She"
+      ],
+      "solutions": [
+        [
+          "Excuse",
+          "me",
+          "Where",
+          "am",
+          "I"
+        ]
+      ],
+      "formattedSolution": "Excuse me. Where am I?",
+      "id": "85dff4da5828",
+      "priority": 2,
+      "group": "d71f39c3b768"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Egun on. Gure ostatuan zaude.",
+      "meaningInSourceLanguage": "Good morning. You are in our mini-hotel.",
+      "id": "c42b2c6fd683",
+      "priority": 0,
+      "group": "9cb4247c71cb"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Good",
+          "definition": "on\nonak\nondo"
+        },
+        {
+          "word": "morning.",
+          "definition": "goizean"
+        },
+        {
+          "word": "You",
+          "definition": "zu\nzuek"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "in",
+          "definition": "NON case, not a word"
+        },
+        {
+          "word": "our",
+          "definition": "gure"
+        },
+        {
+          "word": "mini-hotel.",
+          "definition": "ostatu\nostatua"
+        }
+      ],
+      "chips": [
+        "Arrotza",
+        "hotelan",
+        "dago",
+        "hotela",
+        "arrotza"
+      ],
+      "solutions": [
+        [
+          "Egun",
+          "on",
+          "Gure",
+          "ostatuan",
+          "zaude"
+        ]
+      ],
+      "formattedSolution": "Egun on. Gure ostatuan zaude.",
+      "id": "ce374244b87e",
+      "priority": 2,
+      "group": "9cb4247c71cb"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Egun",
+          "definition": "day"
+        },
+        {
+          "word": "on.",
+          "definition": "good"
+        },
+        {
+          "word": "Gure",
+          "definition": "our"
+        },
+        {
+          "word": "ostatuan",
+          "definition": "in a mini-hotel"
+        },
+        {
+          "word": "zaude.",
+          "definition": "you are (egon)"
+        }
+      ],
+      "chips": [
+        "Good",
+        "morning",
+        "You",
+        "are",
+        "in",
+        "a",
+        "hotel",
+        "e",
+        "it",
+        "an",
+        "one",
+        "He"
+      ],
+      "solutions": [
+        [
+          "Good",
+          "morning",
+          "You",
+          "are",
+          "in",
+          "our",
+          "mini-hotel"
+        ]
+      ],
+      "formattedSolution": "Good morning. You are in our mini-hotel.",
+      "id": "e3fcb24225cb",
+      "priority": 2,
+      "group": "9cb4247c71cb"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Non dago etxekoandrea?",
+      "meaningInSourceLanguage": "Where is the housewife?",
+      "id": "290acc05df6c",
+      "priority": 0,
+      "group": "e1b704d14e4b"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Where",
+          "definition": "non"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "the",
+          "definition": "-a"
+        },
+        {
+          "word": "housewife?",
+          "definition": "etxekoandre\netxekoandrea"
+        }
+      ],
+      "chips": [
+        "Non",
+        "daude",
+        "boligrafoak",
+        "Nor",
+        "gaude"
+      ],
+      "solutions": [
+        [
+          "Non",
+          "dago",
+          "etxekoandrea"
+        ]
+      ],
+      "formattedSolution": "Non dago etxekoandrea?",
+      "id": "40992de32613",
+      "priority": 2,
+      "group": "e1b704d14e4b"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Non",
+          "definition": "where"
+        },
+        {
+          "word": "dago",
+          "definition": "he is (egon)\nit is (egon)\nshe is (egon)"
+        },
+        {
+          "word": "etxekoandrea?",
+          "definition": "housewife\nthe housewife"
+        }
+      ],
+      "chips": [
+        "Where",
+        "is",
+        "the",
+        "pens",
+        "hee",
+        "here",
+        "She"
+      ],
+      "solutions": [
+        [
+          "Where",
+          "is",
+          "the",
+          "housewife"
+        ],
+        [
+          "Where",
+          "is",
+          "a",
+          "housewife"
+        ]
+      ],
+      "formattedSolution": "Where is the housewife?",
+      "id": "119642d75f31",
+      "priority": 2,
+      "group": "e1b704d14e4b"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Etxekoandrea barruan dago.",
+      "meaningInSourceLanguage": "The housewife is inside.",
+      "id": "636a2de3cb85",
+      "priority": 0,
+      "group": "32c852158492"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "The",
+          "definition": "-a"
+        },
+        {
+          "word": "housewife",
+          "definition": "etxekoandre\netxekoandrea"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "inside.",
+          "definition": "barruan"
+        }
+      ],
+      "chips": [
+        "Etxekoandrea",
+        "barruan",
+        "dago"
+      ],
+      "solutions": [
+        [
+          "Etxekoandrea",
+          "barruan",
+          "dago"
+        ]
+      ],
+      "formattedSolution": "Etxekoandrea barruan dago.",
+      "id": "08ce54c4a6a9",
+      "priority": 2,
+      "group": "32c852158492"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Etxekoandrea",
+          "definition": "housewife\nthe housewife"
+        },
+        {
+          "word": "barruan",
+          "definition": "inside"
+        },
+        {
+          "word": "dago.",
+          "definition": "he is (egon)\nit is (egon)\nshe is (egon)"
+        }
+      ],
+      "chips": [
+        "The",
+        "housewife",
+        "is",
+        "inside"
+      ],
+      "solutions": [
+        [
+          "The",
+          "housewife",
+          "is",
+          "inside"
+        ],
+        [
+          "A",
+          "housewife",
+          "is",
+          "inside"
+        ]
+      ],
+      "formattedSolution": "The housewife is inside.",
+      "id": "1796563eef7f",
+      "priority": 2,
+      "group": "32c852158492"
+    },
+    {
+      "type": "options",
       "formInTargetLanguage": "Non dago arrotza?",
       "meaningInSourceLanguage": "Where is the stranger?",
       "id": "36118b063524",
@@ -330,9 +723,7 @@
       "chips": [
         "Non",
         "dago",
-        "arrotza",
-        "da",
-        "Jon"
+        "arrotza"
       ],
       "solutions": [
         [
@@ -367,10 +758,7 @@
         "Where",
         "is",
         "the",
-        "stranger",
-        "her",
-        "are",
-        "She"
+        "stranger"
       ],
       "solutions": [
         [
@@ -431,9 +819,7 @@
       "chips": [
         "Arrotza",
         "hotelan",
-        "dago",
-        "hotela",
-        "arrotza"
+        "dago"
       ],
       "solutions": [
         [
@@ -470,12 +856,7 @@
         "is",
         "in",
         "a",
-        "hotel",
-        "e",
-        "it",
-        "an",
-        "one",
-        "He"
+        "hotel"
       ],
       "solutions": [
         [
@@ -502,16 +883,24 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Non daude boligrafoak?",
-      "meaningInSourceLanguage": "Where are the pens?",
-      "id": "2d4485994cca",
+      "formInTargetLanguage": "Barkatu. Non gaude?",
+      "meaningInSourceLanguage": "Excuse me. Where are we?",
+      "id": "2129c5a3dfd1",
       "priority": 0,
-      "group": "6ea0285ffcae"
+      "group": "7d3b380f590f"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
+        {
+          "word": "Excuse",
+          "definition": "Barkatu\nbarkatu"
+        },
+        {
+          "word": "me.",
+          "definition": "ni"
+        },
         {
           "word": "Where",
           "definition": "non"
@@ -521,91 +910,88 @@
           "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
         },
         {
-          "word": "the",
-          "definition": "-a"
-        },
-        {
-          "word": "pens?",
-          "definition": "boligrafoak"
+          "word": "we?",
+          "definition": "gu"
         }
       ],
       "chips": [
+        "Barkatu",
         "Non",
-        "daude",
-        "boligrafoak",
-        "Nor",
         "gaude"
       ],
       "solutions": [
         [
+          "Barkatu",
           "Non",
-          "daude",
-          "boligrafoak"
+          "gaude"
         ]
       ],
-      "formattedSolution": "Non daude boligrafoak?",
-      "id": "354d4b9b9d62",
+      "formattedSolution": "Barkatu. Non gaude?",
+      "id": "9ad7ceaaf3a6",
       "priority": 2,
-      "group": "6ea0285ffcae"
+      "group": "7d3b380f590f"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
+          "word": "Barkatu.",
+          "definition": "Excuse me\nsorry"
+        },
+        {
           "word": "Non",
           "definition": "where"
         },
         {
-          "word": "daude",
-          "definition": "they are (egon)"
-        },
-        {
-          "word": "boligrafoak?",
-          "definition": "pens"
+          "word": "gaude?",
+          "definition": "are (egon)"
         }
       ],
       "chips": [
+        "Excuse",
+        "me",
         "Where",
         "are",
-        "the",
-        "pens",
-        "hee",
-        "here",
-        "She"
+        "we"
       ],
       "solutions": [
         [
+          "Excuse",
+          "me",
           "Where",
           "are",
-          "the",
-          "pens"
+          "we"
         ]
       ],
-      "formattedSolution": "Where are the pens?",
-      "id": "78c254b62da5",
+      "formattedSolution": "Excuse me. Where are we?",
+      "id": "7e76618db468",
       "priority": 2,
-      "group": "6ea0285ffcae"
+      "group": "7d3b380f590f"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Boligrafoak poltsan daude.",
-      "meaningInSourceLanguage": "The pens are in the purse.",
-      "id": "53dbe3b1af46",
+      "formInTargetLanguage": "Egun on. Elizan gaude.",
+      "meaningInSourceLanguage": "Good Morning. We are in the church.",
+      "id": "1886e38bb50d",
       "priority": 0,
-      "group": "ed74f8e874b1"
+      "group": "f82717b43b31"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
         {
-          "word": "The",
-          "definition": "-a"
+          "word": "Good",
+          "definition": "on\nonak\nondo"
         },
         {
-          "word": "pens",
-          "definition": "boligrafoak"
+          "word": "Morning.",
+          "definition": "goizean"
+        },
+        {
+          "word": "We",
+          "definition": "gu"
         },
         {
           "word": "are",
@@ -620,8 +1006,8 @@
           "definition": "-a"
         },
         {
-          "word": "purse.",
-          "definition": "poltsa"
+          "word": "church.",
+          "definition": "eliza"
         }
       ],
       "chips": [
@@ -633,36 +1019,42 @@
       ],
       "solutions": [
         [
-          "Boligrafoak",
-          "poltsan",
-          "daude"
+          "Egun",
+          "on",
+          "Elizan",
+          "gaude"
         ]
       ],
-      "formattedSolution": "Boligrafoak poltsan daude.",
-      "id": "f05effad178d",
+      "formattedSolution": "Egun on. Elizan gaude.",
+      "id": "3b87e969f82d",
       "priority": 2,
-      "group": "ed74f8e874b1"
+      "group": "f82717b43b31"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Boligrafoak",
-          "definition": "pens"
+          "word": "Egun",
+          "definition": "day"
         },
         {
-          "word": "poltsan",
-          "definition": "in the purse"
+          "word": "on.",
+          "definition": "good"
         },
         {
-          "word": "daude.",
-          "definition": "they are (egon)"
+          "word": "Elizan",
+          "definition": "in a church"
+        },
+        {
+          "word": "gaude.",
+          "definition": "are (egon)"
         }
       ],
       "chips": [
-        "The",
-        "pens",
+        "Good",
+        "Morning",
+        "We",
         "are",
         "in",
         "the",
@@ -675,18 +1067,58 @@
       ],
       "solutions": [
         [
-          "The",
-          "pens",
+          "You(plural",
           "are",
+          "also",
           "in",
           "the",
-          "purse"
+          "church"
+        ],
+        [
+          "You(plural",
+          "are",
+          "also",
+          "in",
+          "a",
+          "church"
+        ],
+        [
+          "You'll",
+          "are",
+          "also",
+          "in",
+          "the",
+          "church"
+        ],
+        [
+          "You'll",
+          "are",
+          "also",
+          "in",
+          "a",
+          "church"
+        ],
+        [
+          "You",
+          "are",
+          "also",
+          "in",
+          "the",
+          "church"
+        ],
+        [
+          "You",
+          "are",
+          "also",
+          "in",
+          "a",
+          "church"
         ]
       ],
-      "formattedSolution": "The pens are in the purse.",
-      "id": "a904c28a599c",
+      "formattedSolution": "You(plural) are also in the church.",
+      "id": "45adbf7a31b5",
       "priority": 2,
-      "group": "ed74f8e874b1"
+      "group": "0f9300a8113a"
     },
     {
       "type": "options",
@@ -1097,11 +1529,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Gu elizan gaude.",
-      "meaningInSourceLanguage": "We are in the church.",
-      "id": "746632fad3ae",
+      "formInTargetLanguage": "Gu ostatuan gaude.",
+      "meaningInSourceLanguage": "We are in the mini-hotel.",
+      "id": "c75a6aebdb3e",
       "priority": 0,
-      "group": "a885a90585d1"
+      "group": "f3c355ee6500"
     },
     {
       "type": "chips",
@@ -1124,8 +1556,8 @@
           "definition": "-a"
         },
         {
-          "word": "church.",
-          "definition": "eliza"
+          "word": "mini-hotel.",
+          "definition": "ostatu\nostatua"
         }
       ],
       "chips": [
@@ -1138,14 +1570,14 @@
       "solutions": [
         [
           "Gu",
-          "elizan",
+          "ostatuan",
           "gaude"
         ]
       ],
-      "formattedSolution": "Gu elizan gaude.",
-      "id": "bf758ec7f27b",
+      "formattedSolution": "Gu ostatuan gaude.",
+      "id": "2c43a609560f",
       "priority": 2,
-      "group": "a885a90585d1"
+      "group": "f3c355ee6500"
     },
     {
       "type": "chips",
@@ -1156,8 +1588,8 @@
           "definition": "we"
         },
         {
-          "word": "elizan",
-          "definition": "in a church"
+          "word": "ostatuan",
+          "definition": "in a mini-hotel"
         },
         {
           "word": "gaude.",
@@ -1181,20 +1613,20 @@
           "are",
           "in",
           "the",
-          "church"
+          "mini-hotel"
         ],
         [
           "We",
           "are",
           "in",
           "a",
-          "church"
+          "mini-hotel"
         ]
       ],
-      "formattedSolution": "We are in the church.",
-      "id": "fa2bb2288688",
+      "formattedSolution": "We are in the mini-hotel.",
+      "id": "f674dd22b7e4",
       "priority": 2,
-      "group": "a885a90585d1"
+      "group": "f3c355ee6500"
     },
     {
       "type": "options",

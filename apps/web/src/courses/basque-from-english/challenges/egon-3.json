@@ -748,6 +748,112 @@
     },
     {
       "type": "options",
+      "formInTargetLanguage": "Bilbo ere Euskal Herrian dago.",
+      "meaningInSourceLanguage": "Bilboa is also in Basque Country.",
+      "id": "66c31194e9fd",
+      "priority": 0,
+      "group": "3ab2ed61279c"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Bilboa",
+          "definition": "Bilbo\nBilbo (city)"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "also",
+          "definition": "ere"
+        },
+        {
+          "word": "in",
+          "definition": "NON case, not a word"
+        },
+        {
+          "word": "Basque",
+          "definition": "Euskal\neuskaldun"
+        },
+        {
+          "word": "Country.",
+          "definition": "Herrian"
+        }
+      ],
+      "chips": [
+        "Bilbo",
+        "ere",
+        "Euskal",
+        "Herrian",
+        "dago"
+      ],
+      "solutions": [
+        [
+          "Bilbo",
+          "ere",
+          "Euskal",
+          "Herrian",
+          "dago"
+        ]
+      ],
+      "formattedSolution": "Bilbo ere Euskal Herrian dago.",
+      "id": "cfa92cb57661",
+      "priority": 2,
+      "group": "3ab2ed61279c"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Bilbo",
+          "definition": "Bilboa\nBilboa (city)"
+        },
+        {
+          "word": "ere",
+          "definition": "also"
+        },
+        {
+          "word": "Euskal",
+          "definition": "basque\nbasque (ad)"
+        },
+        {
+          "word": "Herrian",
+          "definition": "Country"
+        },
+        {
+          "word": "dago.",
+          "definition": "he is (egon)\nit is (egon)\nshe is (egon)"
+        }
+      ],
+      "chips": [
+        "Bilboa",
+        "is",
+        "also",
+        "in",
+        "Basque",
+        "Country"
+      ],
+      "solutions": [
+        [
+          "Bilboa",
+          "is",
+          "also",
+          "in",
+          "Basque",
+          "Country"
+        ]
+      ],
+      "formattedSolution": "Bilboa is also in Basque Country.",
+      "id": "815e5e23f048",
+      "priority": 2,
+      "group": "3ab2ed61279c"
+    },
+    {
+      "type": "options",
       "formInTargetLanguage": "Non dago ibaia?",
       "meaningInSourceLanguage": "Where is the river?",
       "id": "da5795537c9d",

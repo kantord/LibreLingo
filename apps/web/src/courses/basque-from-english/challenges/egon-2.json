@@ -20,7 +20,7 @@
         },
         {
           "word": "cook",
-          "definition": "sukaldaria"
+          "definition": "sukaldari\nsukaldaria"
         },
         {
           "word": "is",
@@ -229,27 +229,23 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Neska lakuan dago.",
-      "meaningInSourceLanguage": "A girl is in the lake.",
-      "id": "306a74d5cb05",
+      "formInTargetLanguage": "Zu lakuan zaude.",
+      "meaningInSourceLanguage": "You are in the lake.",
+      "id": "227cd7bdca04",
       "priority": 0,
-      "group": "33689847fa86"
+      "group": "3fe8e31fa165"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
         {
-          "word": "A",
-          "definition": "-a"
+          "word": "You",
+          "definition": "zu\nzuek"
         },
         {
-          "word": "girl",
-          "definition": "neska"
-        },
-        {
-          "word": "is",
-          "definition": "da\nda (izan)\ndago (egon)"
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
         },
         {
           "word": "in",
@@ -265,7 +261,7 @@
         }
       ],
       "chips": [
-        "Neska",
+        "Zu",
         "lakuan",
         "dago",
         "jaka",
@@ -273,37 +269,36 @@
       ],
       "solutions": [
         [
-          "Neska",
+          "Zu",
           "lakuan",
-          "dago"
+          "zaude"
         ]
       ],
-      "formattedSolution": "Neska lakuan dago.",
-      "id": "9724e92441f3",
+      "formattedSolution": "Zu lakuan zaude.",
+      "id": "73530c7cdcfa",
       "priority": 2,
-      "group": "33689847fa86"
+      "group": "3fe8e31fa165"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Neska",
-          "definition": "a girl\ngirl\nthe girl"
+          "word": "Zu",
+          "definition": "you"
         },
         {
           "word": "lakuan",
           "definition": "in the lake"
         },
         {
-          "word": "dago.",
-          "definition": "he is (egon)\nit is (egon)\nshe is (egon)"
+          "word": "zaude.",
+          "definition": "you are (egon)"
         }
       ],
       "chips": [
-        "A",
-        "girl",
-        "is",
+        "You",
+        "are",
         "in",
         "the",
         "lake",
@@ -315,26 +310,17 @@
       ],
       "solutions": [
         [
-          "A",
-          "girl",
-          "is",
-          "in",
-          "the",
-          "lake"
-        ],
-        [
-          "The",
-          "girl",
-          "is",
+          "You",
+          "are",
           "in",
           "the",
           "lake"
         ]
       ],
-      "formattedSolution": "A girl is in the lake.",
-      "id": "d98ae26f1d0e",
+      "formattedSolution": "You are in the lake.",
+      "id": "ea6965246f3e",
       "priority": 2,
-      "group": "33689847fa86"
+      "group": "3fe8e31fa165"
     },
     {
       "type": "options",
@@ -1134,19 +1120,19 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Zu Euskal Herrian zaude.",
-      "meaningInSourceLanguage": "You are in Basque country.",
-      "id": "3e308a607867",
+      "formInTargetLanguage": "Zuek Euskal Herrian zaudete.",
+      "meaningInSourceLanguage": "You(plural) are in Basque country.",
+      "id": "d838a6c6a6f4",
       "priority": 0,
-      "group": "a12dc8d01723"
+      "group": "7cf1886e21aa"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
         {
-          "word": "You",
-          "definition": "zu\nzuek"
+          "word": "You(plural)",
+          "definition": "zuek"
         },
         {
           "word": "are",
@@ -1166,7 +1152,7 @@
         }
       ],
       "chips": [
-        "Zu",
+        "Zuek",
         "Euskal",
         "Herrian",
         "zaude",
@@ -1176,24 +1162,24 @@
       ],
       "solutions": [
         [
-          "Zu",
+          "Zuek",
           "Euskal",
           "Herrian",
-          "zaude"
+          "zaudete"
         ]
       ],
-      "formattedSolution": "Zu Euskal Herrian zaude.",
-      "id": "fd249c5a1d8a",
+      "formattedSolution": "Zuek Euskal Herrian zaudete.",
+      "id": "6d171ef59540",
       "priority": 2,
-      "group": "a12dc8d01723"
+      "group": "7cf1886e21aa"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Zu",
-          "definition": "you"
+          "word": "Zuek",
+          "definition": "You'll\nyou\nyou'll\nyou(plural)\nyour (plural)"
         },
         {
           "word": "Euskal",
@@ -1204,12 +1190,12 @@
           "definition": "Country"
         },
         {
-          "word": "zaude.",
-          "definition": "you are (egon)"
+          "word": "zaudete.",
+          "definition": "you (plural) are (egon)"
         }
       ],
       "chips": [
-        "You",
+        "You(plural",
         "are",
         "in",
         "Basque",
@@ -1221,6 +1207,20 @@
       ],
       "solutions": [
         [
+          "You(plural",
+          "are",
+          "in",
+          "Basque",
+          "country"
+        ],
+        [
+          "You'll",
+          "are",
+          "in",
+          "Basque",
+          "country"
+        ],
+        [
           "You",
           "are",
           "in",
@@ -1228,10 +1228,10 @@
           "country"
         ]
       ],
-      "formattedSolution": "You are in Basque country.",
-      "id": "0a5a4b636a23",
+      "formattedSolution": "You(plural) are in Basque country.",
+      "id": "dbac6345e82c",
       "priority": 2,
-      "group": "a12dc8d01723"
+      "group": "7cf1886e21aa"
     },
     {
       "type": "options",
