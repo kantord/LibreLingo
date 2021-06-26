@@ -261,7 +261,7 @@
         "one",
         "Are",
         "fine",
-        "the"
+        "nine"
       ],
       "solutions": [
         [
@@ -396,10 +396,11 @@
       "chips": [
         "Nire",
         "jaka",
+        "urdina",
         "da",
-        "Ni",
-        "a",
-        "bat"
+        "dira",
+        "gida",
+        "Ni"
       ],
       "solutions": [
         [
@@ -439,12 +440,10 @@
         "My",
         "jacket",
         "is",
-        "my",
-        "jacket",
-        "it",
-        "Is",
-        "me",
-        "He"
+        "blue",
+        "He",
+        "e",
+        "We"
       ],
       "solutions": [
         [
@@ -1523,100 +1522,6 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Nire jaka urdina da.",
-      "meaningInSourceLanguage": "My jacket is blue.",
-      "id": "450edaa6241f",
-      "priority": 0,
-      "group": "16d7e40b441f"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": false,
-      "phrase": [
-        {
-          "word": "My",
-          "definition": "nire"
-        },
-        {
-          "word": "jacket",
-          "definition": "jaka"
-        },
-        {
-          "word": "is",
-          "definition": "da\nda (izan)\ndago (egon)"
-        },
-        {
-          "word": "blue.",
-          "definition": "urdin"
-        }
-      ],
-      "chips": [
-        "Nire",
-        "jaka",
-        "urdina",
-        "da",
-        "dira",
-        "gida",
-        "Ni"
-      ],
-      "solutions": [
-        [
-          "Nire",
-          "jaka",
-          "urdina",
-          "da"
-        ]
-      ],
-      "formattedSolution": "Nire jaka urdina da.",
-      "id": "a8f308753a16",
-      "priority": 2,
-      "group": "16d7e40b441f"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": true,
-      "phrase": [
-        {
-          "word": "Nire",
-          "definition": "my"
-        },
-        {
-          "word": "jaka",
-          "definition": "jacket"
-        },
-        {
-          "word": "urdina",
-          "definition": "blue"
-        },
-        {
-          "word": "da.",
-          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
-        }
-      ],
-      "chips": [
-        "My",
-        "jacket",
-        "is",
-        "blue",
-        "He",
-        "e",
-        "We"
-      ],
-      "solutions": [
-        [
-          "My",
-          "jacket",
-          "is",
-          "blue"
-        ]
-      ],
-      "formattedSolution": "My jacket is blue.",
-      "id": "e5d2b452d633",
-      "priority": 2,
-      "group": "16d7e40b441f"
-    },
-    {
-      "type": "options",
       "formInTargetLanguage": "Txerriaren txanoa morea da.",
       "meaningInSourceLanguage": "The pig's hat is purple.",
       "id": "a4f6e61961c4",
@@ -1849,7 +1754,9 @@
       "chips": [
         "Norenak",
         "dira",
-        "prakak"
+        "prakak",
+        "Norena",
+        "nireak"
       ],
       "solutions": [
         [
@@ -1884,7 +1791,10 @@
         "Whose",
         "trousers",
         "are",
-        "these"
+        "these",
+        "Those",
+        "there",
+        "the"
       ],
       "solutions": [
         [
@@ -1932,7 +1842,10 @@
         "Horiek",
         "dira",
         "bere",
-        "prakak"
+        "prakak",
+        "ere",
+        "berea",
+        "zara"
       ],
       "solutions": [
         [
@@ -1972,7 +1885,10 @@
         "Those",
         "are",
         "his",
-        "trousers"
+        "trousers",
+        "those",
+        "house",
+        "horse"
       ],
       "solutions": [
         [
@@ -2026,7 +1942,10 @@
         "Zein",
         "txano",
         "dira",
-        "bereak"
+        "bereak",
+        "bere",
+        "berea",
+        "zara"
       ],
       "solutions": [
         [
@@ -2066,7 +1985,10 @@
         "Which",
         "hats",
         "are",
-        "his"
+        "his",
+        "hat",
+        "is",
+        "hee"
       ],
       "solutions": [
         [
@@ -2120,7 +2042,10 @@
         "Horiek",
         "dira",
         "bere",
-        "txanoak"
+        "txanoak",
+        "nire",
+        "berea",
+        "zara"
       ],
       "solutions": [
         [
@@ -2160,7 +2085,10 @@
         "Those",
         "are",
         "his",
-        "hats"
+        "hats",
+        "hee",
+        "This",
+        "hat"
       ],
       "solutions": [
         [
@@ -2214,7 +2142,10 @@
         "Zein",
         "galtzerdi",
         "dira",
-        "gureak"
+        "gureak",
+        "gara",
+        "gure",
+        "gurea"
       ],
       "solutions": [
         [
@@ -2254,7 +2185,10 @@
         "Which",
         "socks",
         "are",
-        "ours"
+        "ours",
+        "or",
+        "cars",
+        "his"
       ],
       "solutions": [
         [
@@ -2306,7 +2240,10 @@
         "Galtzerdi",
         "laranjak",
         "gureak",
-        "dira"
+        "dira",
+        "gara",
+        "zara",
+        "luzeak"
       ],
       "solutions": [
         [
@@ -2347,7 +2284,11 @@
         "orange",
         "socks",
         "are",
-        "ours"
+        "ours",
+        "one",
+        "Are",
+        "or",
+        "our"
       ],
       "solutions": [
         [
@@ -2396,7 +2337,10 @@
         "Noren",
         "zapatak",
         "dira",
-        "horiek"
+        "horiek",
+        "horia",
+        "horiak",
+        "morea"
       ],
       "solutions": [
         [
@@ -2436,7 +2380,10 @@
         "Whose",
         "shoes",
         "are",
-        "those"
+        "those",
+        "Those",
+        "the",
+        "horse"
       ],
       "solutions": [
         [
@@ -2484,7 +2431,10 @@
         "Horiek",
         "dira",
         "gure",
-        "zapatak"
+        "zapatak",
+        "zara",
+        "Hura",
+        "gara"
       ],
       "solutions": [
         [
@@ -2524,7 +2474,10 @@
         "Those",
         "are",
         "our",
-        "shoes"
+        "shoes",
+        "one",
+        "the",
+        "She"
       ],
       "solutions": [
         [
@@ -2572,7 +2525,10 @@
         "Zein",
         "soineko",
         "dira",
-        "zuenak"
+        "zuenak",
+        "Zuek",
+        "baina",
+        "zen"
       ],
       "solutions": [
         [
@@ -2612,7 +2568,10 @@
         "Which",
         "dresses",
         "are",
-        "yours(plural"
+        "yours(plural",
+        "dress",
+        "Are",
+        "nurse"
       ],
       "solutions": [
         [
@@ -2676,7 +2635,10 @@
         "Soineko",
         "moreak",
         "zuenak",
-        "dira"
+        "dira",
+        "morea",
+        "onak",
+        "nireak"
       ],
       "solutions": [
         [
@@ -2717,7 +2679,11 @@
         "purple",
         "dresses",
         "are",
-        "yours(plural"
+        "yours(plural",
+        "Are",
+        "purse",
+        "nurse",
+        "tree"
       ],
       "solutions": [
         [

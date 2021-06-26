@@ -112,93 +112,6 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Non dago etxekoandrea?",
-      "meaningInSourceLanguage": "Where is the housewife?",
-      "id": "290acc05df6c",
-      "priority": 0,
-      "group": "e1b704d14e4b"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": false,
-      "phrase": [
-        {
-          "word": "Where",
-          "definition": "non"
-        },
-        {
-          "word": "is",
-          "definition": "da\nda (izan)\ndago (egon)"
-        },
-        {
-          "word": "the",
-          "definition": "-a"
-        },
-        {
-          "word": "housewife?",
-          "definition": "etxekoandre\netxekoandrea"
-        }
-      ],
-      "chips": [
-        "Non",
-        "dago",
-        "etxekoandrea",
-        "da",
-        "Jon"
-      ],
-      "solutions": [
-        [
-          "Non",
-          "dago",
-          "etxekoandrea"
-        ]
-      ],
-      "formattedSolution": "Non dago etxekoandrea?",
-      "id": "40992de32613",
-      "priority": 2,
-      "group": "e1b704d14e4b"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": true,
-      "phrase": [
-        {
-          "word": "Non",
-          "definition": "where"
-        },
-        {
-          "word": "dago",
-          "definition": "he is (egon)\nit is (egon)\nshe is (egon)"
-        },
-        {
-          "word": "etxekoandrea?",
-          "definition": "housewife\nthe housewife"
-        }
-      ],
-      "chips": [
-        "Where",
-        "is",
-        "the",
-        "housewife",
-        "hee",
-        "her",
-        "here"
-      ],
-      "solutions": [
-        [
-          "Where",
-          "is",
-          "the",
-          "housewife"
-        ]
-      ],
-      "formattedSolution": "Where is the housewife?",
-      "id": "119642d75f31",
-      "priority": 2,
-      "group": "e1b704d14e4b"
-    },
-    {
-      "type": "options",
       "formInTargetLanguage": "Ni etxean nago",
       "meaningInSourceLanguage": "I am in the house.",
       "id": "7eec5c109d48",
@@ -334,10 +247,9 @@
       "chips": [
         "Barkatu",
         "Non",
-        "dago",
-        "arrotza",
-        "da",
-        "Jon"
+        "nago",
+        "bat",
+        "zara"
       ],
       "solutions": [
         [
@@ -372,12 +284,12 @@
         "Excuse",
         "me",
         "Where",
-        "is",
-        "the",
-        "stranger",
-        "her",
-        "are",
-        "She"
+        "am",
+        "I",
+        "e",
+        "We",
+        "He",
+        "a"
       ],
       "solutions": [
         [
@@ -435,11 +347,15 @@
         }
       ],
       "chips": [
-        "Arrotza",
-        "hotelan",
-        "dago",
-        "hotela",
-        "arrotza"
+        "Egun",
+        "on",
+        "Gure",
+        "ostatuan",
+        "zaude",
+        "Gu",
+        "zuen",
+        "gure",
+        "Zu"
       ],
       "solutions": [
         [
@@ -486,13 +402,14 @@
         "You",
         "are",
         "in",
-        "a",
-        "hotel",
-        "e",
-        "it",
-        "an",
+        "our",
+        "mini-hotel",
+        "or",
         "one",
-        "He"
+        "on",
+        "o",
+        "Jon",
+        "you"
       ],
       "solutions": [
         [
@@ -541,10 +458,10 @@
       ],
       "chips": [
         "Non",
-        "daude",
-        "boligrafoak",
-        "Nor",
-        "gaude"
+        "dago",
+        "etxekoandrea",
+        "da",
+        "Jon"
       ],
       "solutions": [
         [
@@ -579,10 +496,10 @@
         "Where",
         "is",
         "the",
-        "pens",
+        "housewife",
         "hee",
-        "here",
-        "She"
+        "her",
+        "here"
       ],
       "solutions": [
         [
@@ -635,7 +552,9 @@
       "chips": [
         "Etxekoandrea",
         "barruan",
-        "dago"
+        "dago",
+        "zara",
+        "gara"
       ],
       "solutions": [
         [
@@ -670,7 +589,10 @@
         "The",
         "housewife",
         "is",
-        "inside"
+        "inside",
+        "one",
+        "hee",
+        "nice"
       ],
       "solutions": [
         [
@@ -723,7 +645,9 @@
       "chips": [
         "Non",
         "dago",
-        "arrotza"
+        "arrotza",
+        "da",
+        "Jon"
       ],
       "solutions": [
         [
@@ -758,7 +682,10 @@
         "Where",
         "is",
         "the",
-        "stranger"
+        "stranger",
+        "her",
+        "are",
+        "She"
       ],
       "solutions": [
         [
@@ -819,7 +746,9 @@
       "chips": [
         "Arrotza",
         "hotelan",
-        "dago"
+        "dago",
+        "hotela",
+        "arrotza"
       ],
       "solutions": [
         [
@@ -856,7 +785,12 @@
         "is",
         "in",
         "a",
-        "hotel"
+        "hotel",
+        "e",
+        "it",
+        "an",
+        "one",
+        "He"
       ],
       "solutions": [
         [
@@ -917,7 +851,9 @@
       "chips": [
         "Barkatu",
         "Non",
-        "gaude"
+        "gaude",
+        "gara",
+        "arte"
       ],
       "solutions": [
         [
@@ -953,7 +889,11 @@
         "me",
         "Where",
         "are",
-        "we"
+        "we",
+        "We",
+        "He",
+        "e",
+        "Are"
       ],
       "solutions": [
         [
@@ -1011,11 +951,13 @@
         }
       ],
       "chips": [
-        "Boligrafoak",
-        "poltsan",
-        "daude",
-        "Poltsa",
-        "Poltsak"
+        "Egun",
+        "on",
+        "Elizan",
+        "gaude",
+        "han",
+        "gizon",
+        "n"
       ],
       "solutions": [
         [
@@ -1058,12 +1000,269 @@
         "are",
         "in",
         "the",
-        "purse",
+        "church",
         "one",
+        "or",
+        "Are",
+        "on",
         "He",
-        "She",
-        "e",
-        "We"
+        "She"
+      ],
+      "solutions": [
+        [
+          "Good",
+          "Morning",
+          "We",
+          "are",
+          "in",
+          "the",
+          "church"
+        ],
+        [
+          "Good",
+          "Morning",
+          "We",
+          "are",
+          "in",
+          "a",
+          "church"
+        ]
+      ],
+      "formattedSolution": "Good Morning. We are in the church.",
+      "id": "cfa0d80756f3",
+      "priority": 2,
+      "group": "f82717b43b31"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Zuek kanpoan zaudete. Gu barruan gaude.",
+      "meaningInSourceLanguage": "You(plural) are outside. We are inside.",
+      "id": "1b77f188b437",
+      "priority": 0,
+      "group": "7a4f6d94acf1"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "You(plural)",
+          "definition": "zuek"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "outside.",
+          "definition": "kanpo"
+        },
+        {
+          "word": "We",
+          "definition": "gu"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "inside.",
+          "definition": "barruan"
+        }
+      ],
+      "chips": [
+        "Zuek",
+        "kanpoan",
+        "zaudete",
+        "Gu",
+        "barruan",
+        "gaude",
+        "zaude",
+        "daude",
+        "hauek",
+        "zuen",
+        "zuek"
+      ],
+      "solutions": [
+        [
+          "Zuek",
+          "kanpoan",
+          "zaudete",
+          "Gu",
+          "barruan",
+          "gaude"
+        ]
+      ],
+      "formattedSolution": "Zuek kanpoan zaudete. Gu barruan gaude.",
+      "id": "6a7109b7b945",
+      "priority": 2,
+      "group": "7a4f6d94acf1"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Zuek",
+          "definition": "You'll\nyou\nyou'll\nyou(plural)\nyour (plural)"
+        },
+        {
+          "word": "kanpoan",
+          "definition": "located outside"
+        },
+        {
+          "word": "zaudete.",
+          "definition": "you (plural) are (egon)"
+        },
+        {
+          "word": "Gu",
+          "definition": "we"
+        },
+        {
+          "word": "barruan",
+          "definition": "inside"
+        },
+        {
+          "word": "gaude.",
+          "definition": "are (egon)"
+        }
+      ],
+      "chips": [
+        "You(plural",
+        "are",
+        "outside",
+        "We",
+        "are",
+        "inside",
+        "one",
+        "Are",
+        "He",
+        "the",
+        "e"
+      ],
+      "solutions": [
+        [
+          "You(plural",
+          "are",
+          "outside",
+          "We",
+          "are",
+          "inside"
+        ],
+        [
+          "You'll",
+          "are",
+          "outside",
+          "We",
+          "are",
+          "inside"
+        ],
+        [
+          "You",
+          "are",
+          "outside",
+          "We",
+          "are",
+          "inside"
+        ]
+      ],
+      "formattedSolution": "You(plural) are outside. We are inside.",
+      "id": "0272d6d76411",
+      "priority": 2,
+      "group": "7a4f6d94acf1"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Zuek elizan ere zaudete.",
+      "meaningInSourceLanguage": "You(plural) are also in the church.",
+      "id": "cb7975e55a71",
+      "priority": 0,
+      "group": "0f9300a8113a"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "You(plural)",
+          "definition": "zuek"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "also",
+          "definition": "ere"
+        },
+        {
+          "word": "in",
+          "definition": "NON case, not a word"
+        },
+        {
+          "word": "the",
+          "definition": "-a"
+        },
+        {
+          "word": "church.",
+          "definition": "eliza"
+        }
+      ],
+      "chips": [
+        "Zuek",
+        "elizan",
+        "ere",
+        "zaudete",
+        "zuek",
+        "zuen",
+        "eta"
+      ],
+      "solutions": [
+        [
+          "Zuek",
+          "elizan",
+          "ere",
+          "zaudete"
+        ]
+      ],
+      "formattedSolution": "Zuek elizan ere zaudete.",
+      "id": "c07315c20fd9",
+      "priority": 2,
+      "group": "0f9300a8113a"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Zuek",
+          "definition": "You'll\nyou\nyou'll\nyou(plural)\nyour (plural)"
+        },
+        {
+          "word": "elizan",
+          "definition": "in a church"
+        },
+        {
+          "word": "ere",
+          "definition": "also"
+        },
+        {
+          "word": "zaudete.",
+          "definition": "you (plural) are (egon)"
+        }
+      ],
+      "chips": [
+        "You(plural",
+        "are",
+        "also",
+        "in",
+        "the",
+        "church",
+        "Are",
+        "or",
+        "an",
+        "our",
+        "am"
       ],
       "solutions": [
         [
@@ -1562,7 +1761,7 @@
       ],
       "chips": [
         "Gu",
-        "elizan",
+        "ostatuan",
         "gaude",
         "gu",
         "hau"
@@ -1601,11 +1800,11 @@
         "are",
         "in",
         "the",
-        "church",
+        "mini-hotel",
+        "me",
+        "one",
         "He",
-        "She",
-        "e",
-        "Are"
+        "She"
       ],
       "solutions": [
         [
@@ -1818,99 +2017,6 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Non dago camareroa?",
-      "meaningInSourceLanguage": "Where is the waiter?",
-      "id": "cb246708a851",
-      "priority": 0,
-      "group": "e86f5e2246b4"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": false,
-      "phrase": [
-        {
-          "word": "Where",
-          "definition": "non"
-        },
-        {
-          "word": "is",
-          "definition": "da\nda (izan)\ndago (egon)"
-        },
-        {
-          "word": "the",
-          "definition": "-a"
-        },
-        {
-          "word": "waiter?",
-          "definition": "camarero\ncamareroa"
-        }
-      ],
-      "chips": [
-        "Non",
-        "dago",
-        "camareroa",
-        "nago",
-        "zara"
-      ],
-      "solutions": [
-        [
-          "Non",
-          "dago",
-          "camareroa"
-        ]
-      ],
-      "formattedSolution": "Non dago camareroa?",
-      "id": "8f712961ff9d",
-      "priority": 2,
-      "group": "e86f5e2246b4"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": true,
-      "phrase": [
-        {
-          "word": "Non",
-          "definition": "where"
-        },
-        {
-          "word": "dago",
-          "definition": "he is (egon)\nit is (egon)\nshe is (egon)"
-        },
-        {
-          "word": "camareroa?",
-          "definition": "the waiter\nwaiter"
-        }
-      ],
-      "chips": [
-        "Where",
-        "is",
-        "the",
-        "waiter",
-        "her",
-        "are",
-        "She"
-      ],
-      "solutions": [
-        [
-          "Where",
-          "is",
-          "the",
-          "waiter"
-        ],
-        [
-          "Where",
-          "is",
-          "a",
-          "waiter"
-        ]
-      ],
-      "formattedSolution": "Where is the waiter?",
-      "id": "5bdf690bff7f",
-      "priority": 2,
-      "group": "e86f5e2246b4"
-    },
-    {
-      "type": "options",
       "formInTargetLanguage": "Mutila dago zuhaitzean.",
       "meaningInSourceLanguage": "A boy is in the tree.",
       "id": "53424841f3d6",
@@ -2036,99 +2142,6 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Zaldia kanpoan dago.",
-      "meaningInSourceLanguage": "A horse is outside.",
-      "id": "f88a89880b0e",
-      "priority": 0,
-      "group": "fbfa2dc8b98d"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": false,
-      "phrase": [
-        {
-          "word": "A",
-          "definition": "-a"
-        },
-        {
-          "word": "horse",
-          "definition": "zaldi\nzaldia"
-        },
-        {
-          "word": "is",
-          "definition": "da\nda (izan)\ndago (egon)"
-        },
-        {
-          "word": "outside.",
-          "definition": "kanpo"
-        }
-      ],
-      "chips": [
-        "Zaldia",
-        "kanpoan",
-        "dago",
-        "handia",
-        "Zaldi"
-      ],
-      "solutions": [
-        [
-          "Zaldia",
-          "kanpoan",
-          "dago"
-        ]
-      ],
-      "formattedSolution": "Zaldia kanpoan dago.",
-      "id": "1de2e813d826",
-      "priority": 2,
-      "group": "fbfa2dc8b98d"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": true,
-      "phrase": [
-        {
-          "word": "Zaldia",
-          "definition": "a horse\nhorse"
-        },
-        {
-          "word": "kanpoan",
-          "definition": "located outside"
-        },
-        {
-          "word": "dago.",
-          "definition": "he is (egon)\nit is (egon)\nshe is (egon)"
-        }
-      ],
-      "chips": [
-        "A",
-        "horse",
-        "is",
-        "outside",
-        "e",
-        "o",
-        "or"
-      ],
-      "solutions": [
-        [
-          "A",
-          "horse",
-          "is",
-          "outside"
-        ],
-        [
-          "The",
-          "horse",
-          "is",
-          "outside"
-        ]
-      ],
-      "formattedSolution": "A horse is outside.",
-      "id": "e6666c394ded",
-      "priority": 2,
-      "group": "fbfa2dc8b98d"
-    },
-    {
-      "type": "options",
       "formInTargetLanguage": "Oilaskoak ere kanpoan daude.",
       "meaningInSourceLanguage": "The chickens are also outside.",
       "id": "631664dff374",
@@ -2233,142 +2246,6 @@
       "id": "ce93e7bf5076",
       "priority": 2,
       "group": "da13afa40385"
-    },
-    {
-      "type": "options",
-      "formInTargetLanguage": "Txakurra eta katua etxean daude.",
-      "meaningInSourceLanguage": "The dog and the cat are inside the house.",
-      "id": "80a13d37218b",
-      "priority": 0,
-      "group": "153065755044"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": false,
-      "phrase": [
-        {
-          "word": "The",
-          "definition": "-a"
-        },
-        {
-          "word": "dog",
-          "definition": "txakur\ntxakurra"
-        },
-        {
-          "word": "and",
-          "definition": "eta"
-        },
-        {
-          "word": "the",
-          "definition": "-a"
-        },
-        {
-          "word": "cat",
-          "definition": "katu"
-        },
-        {
-          "word": "are",
-          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
-        },
-        {
-          "word": "inside",
-          "definition": "barruan"
-        },
-        {
-          "word": "the",
-          "definition": "-a"
-        },
-        {
-          "word": "house.",
-          "definition": "etxe\netxea"
-        }
-      ],
-      "chips": [
-        "Txakurra",
-        "eta",
-        "katua",
-        "etxean",
-        "daude",
-        "etxea",
-        "zara",
-        "gara",
-        "Eta"
-      ],
-      "solutions": [
-        [
-          "Txakurra",
-          "eta",
-          "katua",
-          "etxean",
-          "daude"
-        ]
-      ],
-      "formattedSolution": "Txakurra eta katua etxean daude.",
-      "id": "bf5ec20812ce",
-      "priority": 2,
-      "group": "153065755044"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": true,
-      "phrase": [
-        {
-          "word": "Txakurra",
-          "definition": "a dog"
-        },
-        {
-          "word": "eta",
-          "definition": "and"
-        },
-        {
-          "word": "katua",
-          "definition": "a cat"
-        },
-        {
-          "word": "etxean",
-          "definition": "in the house"
-        },
-        {
-          "word": "daude.",
-          "definition": "they are (egon)"
-        }
-      ],
-      "chips": [
-        "The",
-        "dog",
-        "and",
-        "the",
-        "cat",
-        "are",
-        "inside",
-        "the",
-        "house",
-        "one",
-        "She",
-        "Are",
-        "hee",
-        "He",
-        "e",
-        "We",
-        "me"
-      ],
-      "solutions": [
-        [
-          "The",
-          "dog",
-          "and",
-          "the",
-          "cat",
-          "are",
-          "inside",
-          "the",
-          "house"
-        ]
-      ],
-      "formattedSolution": "The dog and the cat are inside the house.",
-      "id": "4fd1b37cdf19",
-      "priority": 2,
-      "group": "153065755044"
     },
     {
       "type": "options",
@@ -2548,7 +2425,7 @@
         "one",
         "nice",
         "in",
-        "are"
+        "nine"
       ],
       "solutions": [
         [
