@@ -2,7 +2,7 @@
 # snapshottest: v1 - https://goo.gl/zC4yUc
 from __future__ import unicode_literals
 
-from snapshottest import Snapshot
+from snapshottest import Snapshot  # type: ignore
 
 
 snapshots = Snapshot()

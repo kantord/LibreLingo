@@ -1,5 +1,5 @@
 from pathlib import Path
-import click
+import click  # type: ignore
 import collections
 from librelingo_yaml_loader import load_course
 from librelingo_json_export.export import export_course
