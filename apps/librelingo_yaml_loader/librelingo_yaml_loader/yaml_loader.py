@@ -17,7 +17,7 @@ import markdown
 from yaml import safe_load
 from yaml.constructor import SafeConstructor
 
-import html2markdown
+import html2markdown  # type: ignore
 
 
 def add_bool(self, node):
