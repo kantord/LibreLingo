@@ -1,6 +1,6 @@
 # ​Animaliak 1
 ## Basque names of common animals
-*   The Basque region is largely agriculture, so you are going to see animals.
+* The Basque region is largely agriculture, so you are going to see animals.
 
 ### Vocabulary Animaliak 1
 * animalia: animal

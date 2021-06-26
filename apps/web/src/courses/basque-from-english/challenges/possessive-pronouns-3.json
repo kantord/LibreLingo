@@ -1,6 +1,6 @@
 {
   "id": "b3d8bb67ac1c",
-  "levels": 6,
+  "levels": 8,
   "challenges": [
     {
       "type": "options",
@@ -123,7 +123,7 @@
         "gonak",
         "dira",
         "onak",
-        "gona"
+        "ona"
       ],
       "solutions": [
         [
@@ -175,6 +175,107 @@
       "id": "cb6f8e443536",
       "priority": 2,
       "group": "ee9b53243dde"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Gona luzeak nireak dira.",
+      "meaningInSourceLanguage": "The long skirts are mine.",
+      "id": "56197b8ab7e7",
+      "priority": 0,
+      "group": "795a9399bad8"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "The",
+          "definition": "-a"
+        },
+        {
+          "word": "long",
+          "definition": "luze\nluzea\nluzeak"
+        },
+        {
+          "word": "skirts",
+          "definition": "gonak"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "mine.",
+          "definition": "nirea\nnireak"
+        }
+      ],
+      "chips": [
+        "Gona",
+        "luzeak",
+        "nireak",
+        "dira",
+        "nirea",
+        "Hura",
+        "morea"
+      ],
+      "solutions": [
+        [
+          "Gona",
+          "luzeak",
+          "nireak",
+          "dira"
+        ]
+      ],
+      "formattedSolution": "Gona luzeak nireak dira.",
+      "id": "f4c1e2e80b8d",
+      "priority": 2,
+      "group": "795a9399bad8"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Gona",
+          "definition": "skirt"
+        },
+        {
+          "word": "luzeak",
+          "definition": "large\nlong"
+        },
+        {
+          "word": "nireak",
+          "definition": "mine\nmine (plural object)"
+        },
+        {
+          "word": "dira.",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "The",
+        "long",
+        "skirts",
+        "are",
+        "mine",
+        "one",
+        "Are",
+        "fine",
+        "nine"
+      ],
+      "solutions": [
+        [
+          "The",
+          "long",
+          "skirts",
+          "are",
+          "mine"
+        ]
+      ],
+      "formattedSolution": "The long skirts are mine.",
+      "id": "dde920c97ebc",
+      "priority": 2,
+      "group": "795a9399bad8"
     },
     {
       "type": "options",
@@ -265,6 +366,100 @@
     },
     {
       "type": "options",
+      "formInTargetLanguage": "Nire jaka urdina da.",
+      "meaningInSourceLanguage": "My jacket is blue.",
+      "id": "450edaa6241f",
+      "priority": 0,
+      "group": "16d7e40b441f"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "My",
+          "definition": "nire"
+        },
+        {
+          "word": "jacket",
+          "definition": "jaka"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "blue.",
+          "definition": "urdin"
+        }
+      ],
+      "chips": [
+        "Nire",
+        "jaka",
+        "urdina",
+        "da",
+        "dira",
+        "gida",
+        "Ni"
+      ],
+      "solutions": [
+        [
+          "Nire",
+          "jaka",
+          "urdina",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Nire jaka urdina da.",
+      "id": "a8f308753a16",
+      "priority": 2,
+      "group": "16d7e40b441f"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Nire",
+          "definition": "my"
+        },
+        {
+          "word": "jaka",
+          "definition": "jacket"
+        },
+        {
+          "word": "urdina",
+          "definition": "blue"
+        },
+        {
+          "word": "da.",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "My",
+        "jacket",
+        "is",
+        "blue",
+        "He",
+        "e",
+        "We"
+      ],
+      "solutions": [
+        [
+          "My",
+          "jacket",
+          "is",
+          "blue"
+        ]
+      ],
+      "formattedSolution": "My jacket is blue.",
+      "id": "e5d2b452d633",
+      "priority": 2,
+      "group": "16d7e40b441f"
+    },
+    {
+      "type": "options",
       "formInTargetLanguage": "Txoriaren jertsea da.",
       "meaningInSourceLanguage": "It is the bird's sweater.",
       "id": "5abb3d2d0100",
@@ -350,6 +545,15 @@
           "the",
           "bird's",
           "sweater"
+        ],
+        [
+          "It",
+          "is",
+          "the",
+          "sweater",
+          "of",
+          "the",
+          "bird"
         ]
       ],
       "formattedSolution": "It is the bird's sweater.",
@@ -396,8 +600,8 @@
         "berdea",
         "da",
         "berea",
-        "ere",
-        "dira"
+        "ardia",
+        "ere"
       ],
       "solutions": [
         [
@@ -449,6 +653,15 @@
           "The",
           "horse's",
           "sweater",
+          "is",
+          "green"
+        ],
+        [
+          "The",
+          "sweater",
+          "of",
+          "the",
+          "horse",
           "is",
           "green"
         ]
@@ -672,7 +885,7 @@
         },
         {
           "word": "dress.",
-          "definition": "soinekoa"
+          "definition": "soineko\nsoinekoa"
         }
       ],
       "chips": [
@@ -726,6 +939,13 @@
           "is",
           "Anitza's",
           "dress"
+        ],
+        [
+          "It",
+          "is",
+          "dress",
+          "of",
+          "Anitza"
         ]
       ],
       "formattedSolution": "It is Anitza's dress.",
@@ -755,7 +975,7 @@
         },
         {
           "word": "dress",
-          "definition": "soinekoa"
+          "definition": "soineko\nsoinekoa"
         },
         {
           "word": "is",
@@ -794,7 +1014,7 @@
       "phrase": [
         {
           "word": "Dortokaren",
-          "definition": "turtle's"
+          "definition": "turtle's\nturtle’s"
         },
         {
           "word": "soinekoa",
@@ -825,6 +1045,15 @@
           "The",
           "turtle's",
           "dress",
+          "is",
+          "black"
+        ],
+        [
+          "The",
+          "dress",
+          "of",
+          "the",
+          "turtle",
           "is",
           "black"
         ]
@@ -955,7 +1184,7 @@
         "Mikelenak",
         "dira",
         "nireak",
-        "aita"
+        "Zaldiak"
       ],
       "solutions": [
         [
@@ -1095,6 +1324,14 @@
           "shoes",
           "are",
           "red"
+        ],
+        [
+          "The",
+          "shoes",
+          "of",
+          "Mikel",
+          "are",
+          "red"
         ]
       ],
       "formattedSolution": "Mikel’s shoes are red.",
@@ -1120,7 +1357,7 @@
         },
         {
           "word": "wallet",
-          "definition": "zorroa"
+          "definition": "zorro\nzorroa"
         },
         {
           "word": "is",
@@ -1207,7 +1444,7 @@
         },
         {
           "word": "wallet",
-          "definition": "zorroa"
+          "definition": "zorro\nzorroa"
         },
         {
           "word": "is",
@@ -1282,100 +1519,6 @@
       "id": "15d3dc8f47dd",
       "priority": 2,
       "group": "027be0582574"
-    },
-    {
-      "type": "options",
-      "formInTargetLanguage": "Nire jaka urdina da.",
-      "meaningInSourceLanguage": "My jacket is blue.",
-      "id": "450edaa6241f",
-      "priority": 0,
-      "group": "16d7e40b441f"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": false,
-      "phrase": [
-        {
-          "word": "My",
-          "definition": "nire"
-        },
-        {
-          "word": "jacket",
-          "definition": "jaka"
-        },
-        {
-          "word": "is",
-          "definition": "da\nda (izan)\ndago (egon)"
-        },
-        {
-          "word": "blue.",
-          "definition": "urdin"
-        }
-      ],
-      "chips": [
-        "Nire",
-        "jaka",
-        "urdina",
-        "da",
-        "dira",
-        "gida",
-        "Ni"
-      ],
-      "solutions": [
-        [
-          "Nire",
-          "jaka",
-          "urdina",
-          "da"
-        ]
-      ],
-      "formattedSolution": "Nire jaka urdina da.",
-      "id": "a8f308753a16",
-      "priority": 2,
-      "group": "16d7e40b441f"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": true,
-      "phrase": [
-        {
-          "word": "Nire",
-          "definition": "my"
-        },
-        {
-          "word": "jaka",
-          "definition": "jacket"
-        },
-        {
-          "word": "urdina",
-          "definition": "blue"
-        },
-        {
-          "word": "da.",
-          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
-        }
-      ],
-      "chips": [
-        "My",
-        "jacket",
-        "is",
-        "blue",
-        "He",
-        "e",
-        "We"
-      ],
-      "solutions": [
-        [
-          "My",
-          "jacket",
-          "is",
-          "blue"
-        ]
-      ],
-      "formattedSolution": "My jacket is blue.",
-      "id": "e5d2b452d633",
-      "priority": 2,
-      "group": "16d7e40b441f"
     },
     {
       "type": "options",
@@ -1508,7 +1651,7 @@
         },
         {
           "word": "long.",
-          "definition": "luzea\nluzeak"
+          "definition": "luze\nluzea\nluzeak"
         }
       ],
       "chips": [
@@ -1578,6 +1721,997 @@
       "id": "d9c6eeda75e9",
       "priority": 2,
       "group": "fbc1ae3221c7"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Norenak dira prakak?",
+      "meaningInSourceLanguage": "Whose trousers are these?",
+      "id": "5a23083810d0",
+      "priority": 0,
+      "group": "d93780c7d27e"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Whose",
+          "definition": "noren\nnorena\nnorenak"
+        },
+        {
+          "word": "trousers",
+          "definition": "prakak"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "these?",
+          "definition": "hauek"
+        }
+      ],
+      "chips": [
+        "Norenak",
+        "dira",
+        "prakak",
+        "Norena",
+        "nireak"
+      ],
+      "solutions": [
+        [
+          "Norenak",
+          "dira",
+          "prakak"
+        ]
+      ],
+      "formattedSolution": "Norenak dira prakak?",
+      "id": "fd1d37981564",
+      "priority": 2,
+      "group": "d93780c7d27e"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Norenak",
+          "definition": "whose\nwhose (plural)"
+        },
+        {
+          "word": "dira",
+          "definition": "are\nare (izan)"
+        },
+        {
+          "word": "prakak?",
+          "definition": "trousers"
+        }
+      ],
+      "chips": [
+        "Whose",
+        "trousers",
+        "are",
+        "these",
+        "Those",
+        "there",
+        "the"
+      ],
+      "solutions": [
+        [
+          "Whose",
+          "trousers",
+          "are",
+          "these"
+        ]
+      ],
+      "formattedSolution": "Whose trousers are these?",
+      "id": "513e885d2fe4",
+      "priority": 2,
+      "group": "d93780c7d27e"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Horiek dira bere prakak.",
+      "meaningInSourceLanguage": "Those are his trousers.",
+      "id": "907947f47d33",
+      "priority": 0,
+      "group": "05a639dc1d30"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Those",
+          "definition": "haiek\nhoriek"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "his",
+          "definition": "bere\nberea\nbereak"
+        },
+        {
+          "word": "trousers.",
+          "definition": "prakak"
+        }
+      ],
+      "chips": [
+        "Horiek",
+        "dira",
+        "bere",
+        "prakak",
+        "ere",
+        "berea",
+        "zara"
+      ],
+      "solutions": [
+        [
+          "Horiek",
+          "dira",
+          "bere",
+          "prakak"
+        ]
+      ],
+      "formattedSolution": "Horiek dira bere prakak.",
+      "id": "9905e74334e0",
+      "priority": 2,
+      "group": "05a639dc1d30"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Horiek",
+          "definition": "Those, plural of hori"
+        },
+        {
+          "word": "dira",
+          "definition": "are\nare (izan)"
+        },
+        {
+          "word": "bere",
+          "definition": "her\nhers\nhis\nhis/hers/its\nits"
+        },
+        {
+          "word": "prakak.",
+          "definition": "trousers"
+        }
+      ],
+      "chips": [
+        "Those",
+        "are",
+        "his",
+        "trousers",
+        "those",
+        "house",
+        "horse"
+      ],
+      "solutions": [
+        [
+          "Those",
+          "are",
+          "his",
+          "trousers"
+        ],
+        [
+          "Those",
+          "are",
+          "her",
+          "trousers"
+        ]
+      ],
+      "formattedSolution": "Those are his trousers.",
+      "id": "e7b8c90cd4ee",
+      "priority": 2,
+      "group": "05a639dc1d30"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Zein txano dira bereak?",
+      "meaningInSourceLanguage": "Which hats are his?",
+      "id": "200e049af44e",
+      "priority": 0,
+      "group": "5b44de6229dc"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Which",
+          "definition": "zein"
+        },
+        {
+          "word": "hats",
+          "definition": "txanoak"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "his?",
+          "definition": "bere\nberea\nbereak"
+        }
+      ],
+      "chips": [
+        "Zein",
+        "txano",
+        "dira",
+        "bereak",
+        "bere",
+        "berea",
+        "zara"
+      ],
+      "solutions": [
+        [
+          "Zein",
+          "txano",
+          "dira",
+          "bereak"
+        ]
+      ],
+      "formattedSolution": "Zein txano dira bereak?",
+      "id": "62fde88185d8",
+      "priority": 2,
+      "group": "5b44de6229dc"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Zein",
+          "definition": "which"
+        },
+        {
+          "word": "txano",
+          "definition": "hat"
+        },
+        {
+          "word": "dira",
+          "definition": "are\nare (izan)"
+        },
+        {
+          "word": "bereak?",
+          "definition": "his\nhis/hers/its (plural object)"
+        }
+      ],
+      "chips": [
+        "Which",
+        "hats",
+        "are",
+        "his",
+        "hat",
+        "is",
+        "hee"
+      ],
+      "solutions": [
+        [
+          "Which",
+          "hats",
+          "are",
+          "his"
+        ],
+        [
+          "Which",
+          "hats",
+          "are",
+          "hers"
+        ]
+      ],
+      "formattedSolution": "Which hats are his?",
+      "id": "f522db2a9357",
+      "priority": 2,
+      "group": "5b44de6229dc"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Horiek dira bere txanoak.",
+      "meaningInSourceLanguage": "Those are his hats.",
+      "id": "9556a3bc6b83",
+      "priority": 0,
+      "group": "c697aa3acbfe"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Those",
+          "definition": "haiek\nhoriek"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "his",
+          "definition": "bere\nberea\nbereak"
+        },
+        {
+          "word": "hats.",
+          "definition": "txanoak"
+        }
+      ],
+      "chips": [
+        "Horiek",
+        "dira",
+        "bere",
+        "txanoak",
+        "nire",
+        "berea",
+        "zara"
+      ],
+      "solutions": [
+        [
+          "Horiek",
+          "dira",
+          "bere",
+          "txanoak"
+        ]
+      ],
+      "formattedSolution": "Horiek dira bere txanoak.",
+      "id": "e783962efeb6",
+      "priority": 2,
+      "group": "c697aa3acbfe"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Horiek",
+          "definition": "Those, plural of hori"
+        },
+        {
+          "word": "dira",
+          "definition": "are\nare (izan)"
+        },
+        {
+          "word": "bere",
+          "definition": "her\nhers\nhis\nhis/hers/its\nits"
+        },
+        {
+          "word": "txanoak.",
+          "definition": "hats"
+        }
+      ],
+      "chips": [
+        "Those",
+        "are",
+        "his",
+        "hats",
+        "hee",
+        "This",
+        "hat"
+      ],
+      "solutions": [
+        [
+          "Those",
+          "are",
+          "his",
+          "hats"
+        ],
+        [
+          "Those",
+          "are",
+          "her",
+          "hats"
+        ]
+      ],
+      "formattedSolution": "Those are his hats.",
+      "id": "9eb72130958b",
+      "priority": 2,
+      "group": "c697aa3acbfe"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Zein galtzerdi dira gureak?",
+      "meaningInSourceLanguage": "Which socks are ours?",
+      "id": "29790452fb4b",
+      "priority": 0,
+      "group": "659451f38dd7"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Which",
+          "definition": "zein"
+        },
+        {
+          "word": "socks",
+          "definition": "galtzerdiak"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "ours?",
+          "definition": "gurea\ngureak"
+        }
+      ],
+      "chips": [
+        "Zein",
+        "galtzerdi",
+        "dira",
+        "gureak",
+        "gara",
+        "gure",
+        "gurea"
+      ],
+      "solutions": [
+        [
+          "Zein",
+          "galtzerdi",
+          "dira",
+          "gureak"
+        ]
+      ],
+      "formattedSolution": "Zein galtzerdi dira gureak?",
+      "id": "908504608f28",
+      "priority": 2,
+      "group": "659451f38dd7"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Zein",
+          "definition": "which"
+        },
+        {
+          "word": "galtzerdi",
+          "definition": "sock"
+        },
+        {
+          "word": "dira",
+          "definition": "are\nare (izan)"
+        },
+        {
+          "word": "gureak?",
+          "definition": "ours\nours (plural object)"
+        }
+      ],
+      "chips": [
+        "Which",
+        "socks",
+        "are",
+        "ours",
+        "or",
+        "cars",
+        "his"
+      ],
+      "solutions": [
+        [
+          "Which",
+          "socks",
+          "are",
+          "ours"
+        ]
+      ],
+      "formattedSolution": "Which socks are ours?",
+      "id": "8b9a3c1d53c9",
+      "priority": 2,
+      "group": "659451f38dd7"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Galtzerdi laranjak gureak dira.",
+      "meaningInSourceLanguage": "The orange socks are ours.",
+      "id": "11422eb30275",
+      "priority": 0,
+      "group": "8374a5164913"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "The",
+          "definition": "-a"
+        },
+        {
+          "word": "orange",
+          "definition": "laranja"
+        },
+        {
+          "word": "socks",
+          "definition": "galtzerdiak"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "ours.",
+          "definition": "gurea\ngureak"
+        }
+      ],
+      "chips": [
+        "Galtzerdi",
+        "laranjak",
+        "gureak",
+        "dira",
+        "gara",
+        "zara",
+        "luzeak"
+      ],
+      "solutions": [
+        [
+          "Galtzerdi",
+          "laranjak",
+          "gureak",
+          "dira"
+        ]
+      ],
+      "formattedSolution": "Galtzerdi laranjak gureak dira.",
+      "id": "0f7f1ffd9560",
+      "priority": 2,
+      "group": "8374a5164913"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Galtzerdi",
+          "definition": "sock"
+        },
+        {
+          "word": "laranjak",
+          "definition": "orange"
+        },
+        {
+          "word": "gureak",
+          "definition": "ours\nours (plural object)"
+        },
+        {
+          "word": "dira.",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "The",
+        "orange",
+        "socks",
+        "are",
+        "ours",
+        "one",
+        "Are",
+        "or",
+        "our"
+      ],
+      "solutions": [
+        [
+          "The",
+          "orange",
+          "socks",
+          "are",
+          "ours"
+        ]
+      ],
+      "formattedSolution": "The orange socks are ours.",
+      "id": "f161cb76b4a6",
+      "priority": 2,
+      "group": "8374a5164913"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Noren zapatak dira horiek?",
+      "meaningInSourceLanguage": "Whose shoes are those?",
+      "id": "3252b9d2ace4",
+      "priority": 0,
+      "group": "0addcc6292cc"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Whose",
+          "definition": "noren\nnorena\nnorenak"
+        },
+        {
+          "word": "shoes",
+          "definition": "zapatak"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "those?",
+          "definition": "haiek\nhoriek"
+        }
+      ],
+      "chips": [
+        "Noren",
+        "zapatak",
+        "dira",
+        "horiek",
+        "horia",
+        "horiak",
+        "morea"
+      ],
+      "solutions": [
+        [
+          "Noren",
+          "zapatak",
+          "dira",
+          "horiek"
+        ]
+      ],
+      "formattedSolution": "Noren zapatak dira horiek?",
+      "id": "17bdedbb8300",
+      "priority": 2,
+      "group": "0addcc6292cc"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Noren",
+          "definition": "whose"
+        },
+        {
+          "word": "zapatak",
+          "definition": "shoes"
+        },
+        {
+          "word": "dira",
+          "definition": "are\nare (izan)"
+        },
+        {
+          "word": "horiek?",
+          "definition": "Those, plural of hori"
+        }
+      ],
+      "chips": [
+        "Whose",
+        "shoes",
+        "are",
+        "those",
+        "Those",
+        "the",
+        "horse"
+      ],
+      "solutions": [
+        [
+          "Whose",
+          "shoes",
+          "are",
+          "those"
+        ]
+      ],
+      "formattedSolution": "Whose shoes are those?",
+      "id": "79e0ba9382ba",
+      "priority": 2,
+      "group": "0addcc6292cc"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Horiek dira gure zapatak.",
+      "meaningInSourceLanguage": "Those are our shoes.",
+      "id": "326b8c4839e2",
+      "priority": 0,
+      "group": "b3f2e7596e54"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Those",
+          "definition": "haiek\nhoriek"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "our",
+          "definition": "gure"
+        },
+        {
+          "word": "shoes.",
+          "definition": "zapatak"
+        }
+      ],
+      "chips": [
+        "Horiek",
+        "dira",
+        "gure",
+        "zapatak",
+        "zara",
+        "Hura",
+        "gara"
+      ],
+      "solutions": [
+        [
+          "Horiek",
+          "dira",
+          "gure",
+          "zapatak"
+        ]
+      ],
+      "formattedSolution": "Horiek dira gure zapatak.",
+      "id": "cfecc87fb953",
+      "priority": 2,
+      "group": "b3f2e7596e54"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Horiek",
+          "definition": "Those, plural of hori"
+        },
+        {
+          "word": "dira",
+          "definition": "are\nare (izan)"
+        },
+        {
+          "word": "gure",
+          "definition": "our"
+        },
+        {
+          "word": "zapatak.",
+          "definition": "shoes"
+        }
+      ],
+      "chips": [
+        "Those",
+        "are",
+        "our",
+        "shoes",
+        "one",
+        "the",
+        "She"
+      ],
+      "solutions": [
+        [
+          "Those",
+          "are",
+          "our",
+          "shoes"
+        ]
+      ],
+      "formattedSolution": "Those are our shoes.",
+      "id": "f5956a21153b",
+      "priority": 2,
+      "group": "b3f2e7596e54"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Zein soineko dira zuenak?",
+      "meaningInSourceLanguage": "Which dresses are yours(plural)?",
+      "id": "dc12dcec3d87",
+      "priority": 0,
+      "group": "b74cd86078b9"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Which",
+          "definition": "zein"
+        },
+        {
+          "word": "dresses",
+          "definition": "soinekoak"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "yours(plural)?",
+          "definition": "zuenak"
+        }
+      ],
+      "chips": [
+        "Zein",
+        "soineko",
+        "dira",
+        "zuenak",
+        "Zuek",
+        "baina",
+        "zen"
+      ],
+      "solutions": [
+        [
+          "Zein",
+          "soineko",
+          "dira",
+          "zuenak"
+        ]
+      ],
+      "formattedSolution": "Zein soineko dira zuenak?",
+      "id": "5365eebec381",
+      "priority": 2,
+      "group": "b74cd86078b9"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Zein",
+          "definition": "which"
+        },
+        {
+          "word": "soineko",
+          "definition": "dress"
+        },
+        {
+          "word": "dira",
+          "definition": "are\nare (izan)"
+        },
+        {
+          "word": "zuenak?",
+          "definition": "yours\nyours (plural)\nyours(plural) (plural object)"
+        }
+      ],
+      "chips": [
+        "Which",
+        "dresses",
+        "are",
+        "yours(plural",
+        "dress",
+        "Are",
+        "nurse"
+      ],
+      "solutions": [
+        [
+          "Which",
+          "dresses",
+          "are",
+          "yours(plural"
+        ],
+        [
+          "Which",
+          "dresses",
+          "are",
+          "yours"
+        ],
+        [
+          "TWhich",
+          "dresses",
+          "are",
+          "you'alls"
+        ]
+      ],
+      "formattedSolution": "Which dresses are yours(plural)?",
+      "id": "26bfa0a63be3",
+      "priority": 2,
+      "group": "b74cd86078b9"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Soineko moreak zuenak dira.",
+      "meaningInSourceLanguage": "The purple dresses are yours(plural).",
+      "id": "660c3e144cfb",
+      "priority": 0,
+      "group": "55f75b2fa8cd"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "The",
+          "definition": "-a"
+        },
+        {
+          "word": "purple",
+          "definition": "more\nmorea"
+        },
+        {
+          "word": "dresses",
+          "definition": "soinekoak"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "yours(plural).",
+          "definition": "zuenak"
+        }
+      ],
+      "chips": [
+        "Soineko",
+        "moreak",
+        "zuenak",
+        "dira",
+        "morea",
+        "onak",
+        "nireak"
+      ],
+      "solutions": [
+        [
+          "Soineko",
+          "moreak",
+          "zuenak",
+          "dira"
+        ]
+      ],
+      "formattedSolution": "Soineko moreak zuenak dira.",
+      "id": "0e8a432c69cf",
+      "priority": 2,
+      "group": "55f75b2fa8cd"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Soineko",
+          "definition": "dress"
+        },
+        {
+          "word": "moreak",
+          "definition": "purple"
+        },
+        {
+          "word": "zuenak",
+          "definition": "yours\nyours (plural)\nyours(plural) (plural object)"
+        },
+        {
+          "word": "dira.",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "The",
+        "purple",
+        "dresses",
+        "are",
+        "yours(plural",
+        "Are",
+        "purse",
+        "nurse",
+        "tree"
+      ],
+      "solutions": [
+        [
+          "The",
+          "purple",
+          "dresses",
+          "are",
+          "yours(plural"
+        ],
+        [
+          "The",
+          "purple",
+          "dresses",
+          "are",
+          "yours"
+        ],
+        [
+          "The",
+          "purple",
+          "dresses",
+          "are",
+          "you'alls"
+        ]
+      ],
+      "formattedSolution": "The purple dresses are yours(plural).",
+      "id": "540583fc6c0d",
+      "priority": 2,
+      "group": "55f75b2fa8cd"
     },
     {
       "type": "cards",
@@ -1737,7 +2871,7 @@
       "phrase": [
         {
           "word": "dress",
-          "definition": "soinekoa"
+          "definition": "soineko\nsoinekoa"
         }
       ],
       "id": "0b1337b9ca26",
@@ -1836,7 +2970,7 @@
       "phrase": [
         {
           "word": "wallet",
-          "definition": "zorroa"
+          "definition": "zorro\nzorroa"
         }
       ],
       "id": "5b038684efe5",

@@ -4,11 +4,11 @@
   "challenges": [
     {
       "type": "options",
-      "formInTargetLanguage": "Ahuntz handia indarstua zen.",
+      "formInTargetLanguage": "Ahuntz handia indartsua zen.",
       "meaningInSourceLanguage": "The big goat was strong.",
-      "id": "2342422a6817",
+      "id": "5f22694a6b59",
       "priority": 0,
-      "group": "3fa2127c6156"
+      "group": "16d2ade9c34e"
     },
     {
       "type": "chips",
@@ -32,13 +32,13 @@
         },
         {
           "word": "strong.",
-          "definition": "indarstu\nindarstua\nindartsua"
+          "definition": "indartsu\nindartsua"
         }
       ],
       "chips": [
         "Ahuntz",
         "handia",
-        "indarstua",
+        "indartsua",
         "zen",
         "handi",
         "han",
@@ -48,14 +48,14 @@
         [
           "Ahuntz",
           "handia",
-          "indarstua",
+          "indartsua",
           "zen"
         ]
       ],
-      "formattedSolution": "Ahuntz handia indarstua zen.",
-      "id": "c8d6d79087e4",
+      "formattedSolution": "Ahuntz handia indartsua zen.",
+      "id": "c9dcf7f4d711",
       "priority": 2,
-      "group": "3fa2127c6156"
+      "group": "16d2ade9c34e"
     },
     {
       "type": "chips",
@@ -70,7 +70,7 @@
           "definition": "big"
         },
         {
-          "word": "indarstua",
+          "word": "indartsua",
           "definition": "strong"
         },
         {
@@ -86,8 +86,8 @@
         "strong",
         "one",
         "dog",
-        "son",
-        "man"
+        "man",
+        "boy"
       ],
       "solutions": [
         [
@@ -106,9 +106,9 @@
         ]
       ],
       "formattedSolution": "The big goat was strong.",
-      "id": "0f3bee64f58d",
+      "id": "8711e5c5ca68",
       "priority": 2,
-      "group": "3fa2127c6156"
+      "group": "16d2ade9c34e"
     },
     {
       "type": "options",
@@ -446,12 +446,12 @@
         "and",
         "slow",
         "turtle",
+        "an",
         "am",
         "t",
         "w",
         "it",
-        "I",
-        "are"
+        "I"
       ],
       "solutions": [
         [
@@ -597,11 +597,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Suge luzea jatora da.",
-      "meaningInSourceLanguage": "The long snake is nice.",
-      "id": "2b37733ac75a",
+      "formInTargetLanguage": "Suge luzea jatora da, baina ahula.",
+      "meaningInSourceLanguage": "The long snake is nice, but weak.",
+      "id": "96dca4e25597",
       "priority": 0,
-      "group": "ee5934ed6197"
+      "group": "ed26db02fce0"
     },
     {
       "type": "chips",
@@ -613,7 +613,7 @@
         },
         {
           "word": "long",
-          "definition": "luzea\nluzeak"
+          "definition": "luze\nluzea\nluzeak"
         },
         {
           "word": "snake",
@@ -624,8 +624,16 @@
           "definition": "da\nda (izan)\ndago (egon)"
         },
         {
-          "word": "nice.",
+          "word": "nice,",
           "definition": "jator\njatora\njatorak"
+        },
+        {
+          "word": "but",
+          "definition": "baina\nbaina, baizik"
+        },
+        {
+          "word": "weak.",
+          "definition": "ahul\nahula"
         }
       ],
       "chips": [
@@ -633,22 +641,28 @@
         "luzea",
         "jatora",
         "da",
+        "baina",
+        "ahula",
         "Hura",
-        "sugea",
-        "umea"
+        "zara",
+        "gara",
+        "dira",
+        "sugea"
       ],
       "solutions": [
         [
           "Suge",
           "luzea",
           "jatora",
-          "da"
+          "da",
+          "baina",
+          "ahula"
         ]
       ],
-      "formattedSolution": "Suge luzea jatora da.",
-      "id": "268120bc2b84",
+      "formattedSolution": "Suge luzea jatora da, baina ahula.",
+      "id": "09e31f77ff59",
       "priority": 2,
-      "group": "ee5934ed6197"
+      "group": "ed26db02fce0"
     },
     {
       "type": "chips",
@@ -667,8 +681,16 @@
           "definition": "nice"
         },
         {
-          "word": "da.",
+          "word": "da,",
           "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        },
+        {
+          "word": "baina",
+          "definition": "but\nbut(contrast)"
+        },
+        {
+          "word": "ahula.",
+          "definition": "weak"
         }
       ],
       "chips": [
@@ -677,10 +699,14 @@
         "snake",
         "is",
         "nice",
+        "but",
+        "weak",
         "one",
-        "in",
-        "are",
-        "He"
+        "He",
+        "e",
+        "We",
+        "me",
+        "in"
       ],
       "solutions": [
         [
@@ -688,20 +714,23 @@
           "long",
           "snake",
           "is",
-          "nice"
+          "nice",
+          "but",
+          "weak"
         ],
         [
           "A",
           "long",
           "snake",
           "is",
-          "nice"
+          "nice",
+          "weak"
         ]
       ],
-      "formattedSolution": "The long snake is nice.",
-      "id": "dd46b2333c17",
+      "formattedSolution": "The long snake is nice, but weak.",
+      "id": "bad700d963df",
       "priority": 2,
-      "group": "ee5934ed6197"
+      "group": "ed26db02fce0"
     },
     {
       "type": "options",
@@ -929,9 +958,9 @@
         "was",
         "bad",
         "man",
-        "male",
         "bus",
-        "me"
+        "me",
+        "am"
       ],
       "solutions": [
         [
@@ -1115,11 +1144,11 @@
         "da",
         "Eta",
         "ona",
-        "aita",
         "etxea",
         "a",
         "berea",
-        "ama"
+        "Hura",
+        "Epa"
       ],
       "solutions": [
         [
@@ -1185,14 +1214,14 @@
         "weak",
         "and",
         "slow",
+        "an",
         "man",
         "are",
         "on",
         "am",
         "a",
         "one",
-        "me",
-        "red"
+        "me"
       ],
       "solutions": [
         [
@@ -1326,11 +1355,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Txoria azkarra indarstua da.",
+      "formInTargetLanguage": "Txoria azkarra indartsua da.",
       "meaningInSourceLanguage": "The fast bird is strong.",
-      "id": "cbb3ad67d27a",
+      "id": "58bbd9756b03",
       "priority": 0,
-      "group": "d430d207fd0e"
+      "group": "017a06014cc8"
     },
     {
       "type": "chips",
@@ -1354,13 +1383,13 @@
         },
         {
           "word": "strong.",
-          "definition": "indarstu\nindarstua\nindartsua"
+          "definition": "indartsu\nindartsua"
         }
       ],
       "chips": [
         "Txoria",
         "azkarra",
-        "indarstua",
+        "indartsua",
         "da",
         "zara",
         "gara",
@@ -1370,14 +1399,14 @@
         [
           "Txoria",
           "azkarra",
-          "indarstua",
+          "indartsua",
           "da"
         ]
       ],
-      "formattedSolution": "Txoria azkarra indarstua da.",
-      "id": "572797084bf1",
+      "formattedSolution": "Txoria azkarra indartsua da.",
+      "id": "b1956bba864f",
       "priority": 2,
-      "group": "d430d207fd0e"
+      "group": "017a06014cc8"
     },
     {
       "type": "chips",
@@ -1392,7 +1421,7 @@
           "definition": "fast"
         },
         {
-          "word": "indarstua",
+          "word": "indartsua",
           "definition": "strong"
         },
         {
@@ -1421,9 +1450,9 @@
         ]
       ],
       "formattedSolution": "The fast bird is strong.",
-      "id": "da5b1fa3ed6f",
+      "id": "897acb55a08e",
       "priority": 2,
-      "group": "d430d207fd0e"
+      "group": "017a06014cc8"
     },
     {
       "type": "options",
@@ -1474,10 +1503,10 @@
         "itsusiak",
         "ziren",
         "horia",
+        "moreak",
         "zuria",
         "zuriak",
-        "morea",
-        "zureak"
+        "morea"
       ],
       "solutions": [
         [
@@ -1660,12 +1689,12 @@
         "owl",
         "is",
         "bad",
+        "an",
         "am",
         "a",
         "man",
         "one",
-        "are",
-        "He"
+        "are"
       ],
       "solutions": [
         [
@@ -1728,8 +1757,8 @@
         "da",
         "horia",
         "morea",
-        "zara",
-        "eta"
+        "ardia",
+        "zara"
       ],
       "solutions": [
         [
@@ -1838,11 +1867,11 @@
         "strong2.jpg",
         "strong3.jpg"
       ],
-      "formInTargetLanguage": "indarstu",
+      "formInTargetLanguage": "indartsu",
       "meaningInSourceLanguage": "strong",
-      "id": "6a9e1729d643",
+      "id": "d9009bf38996",
       "priority": 0,
-      "group": "f622f48652b4"
+      "group": "f582a70e5214"
     },
     {
       "type": "shortInput",
@@ -1852,17 +1881,17 @@
         "strong3.jpg"
       ],
       "formInTargetLanguage": [
-        "indarstu"
+        "indartsu"
       ],
       "phrase": [
         {
           "word": "strong",
-          "definition": "indarstu\nindarstua\nindartsua"
+          "definition": "indartsu\nindartsua"
         }
       ],
-      "id": "5787d3b69af1",
+      "id": "6e357cf067d9",
       "priority": 1,
-      "group": "f622f48652b4"
+      "group": "f582a70e5214"
     },
     {
       "type": "cards",
@@ -1896,6 +1925,39 @@
       "id": "901411ea17d9",
       "priority": 1,
       "group": "397ccd8c8e5b"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "snake1.jpg",
+        "snake2.jpg",
+        "snake3.jpg"
+      ],
+      "formInTargetLanguage": "luze",
+      "meaningInSourceLanguage": "long",
+      "id": "cf4fc5dda422",
+      "priority": 0,
+      "group": "5a05baa7a319"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "snake1.jpg",
+        "snake2.jpg",
+        "snake3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "luze"
+      ],
+      "phrase": [
+        {
+          "word": "long",
+          "definition": "luze\nluzea\nluzeak"
+        }
+      ],
+      "id": "e0d0aaad9f22",
+      "priority": 1,
+      "group": "5a05baa7a319"
     },
     {
       "type": "cards",
@@ -1965,16 +2027,24 @@
     },
     {
       "type": "cards",
-      "pictures": null,
+      "pictures": [
+        "basque1.jpg",
+        "basque2.jpg",
+        "basque3.jpg"
+      ],
       "formInTargetLanguage": "euskal",
       "meaningInSourceLanguage": "basque",
-      "id": "2eaef3678997",
+      "id": "ffefe473d9f3",
       "priority": 0,
-      "group": "5cafd778c994"
+      "group": "d15531522eff"
     },
     {
       "type": "shortInput",
-      "pictures": null,
+      "pictures": [
+        "basque1.jpg",
+        "basque2.jpg",
+        "basque3.jpg"
+      ],
       "formInTargetLanguage": [
         "euskal"
       ],
@@ -1984,9 +2054,9 @@
           "definition": "Euskal\neuskaldun"
         }
       ],
-      "id": "622ced6982a6",
+      "id": "e6226daf832d",
       "priority": 1,
-      "group": "5cafd778c994"
+      "group": "d15531522eff"
     }
   ]
 }

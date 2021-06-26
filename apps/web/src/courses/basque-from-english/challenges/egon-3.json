@@ -1,5 +1,5 @@
 {
-  "id": "774279fe3de5",
+  "id": "037ac8184b22",
   "levels": 7,
   "challenges": [
     {
@@ -28,7 +28,7 @@
         },
         {
           "word": "France.",
-          "definition": "Francia"
+          "definition": "Francia\nFrantzia"
         }
       ],
       "chips": [
@@ -60,7 +60,7 @@
         },
         {
           "word": "Frantzia",
-          "definition": "in France"
+          "definition": "France\nin France"
         },
         {
           "word": "dago.",
@@ -72,9 +72,9 @@
         "is",
         "in",
         "France",
+        "an",
         "one",
-        "He",
-        "e"
+        "He"
       ],
       "solutions": [
         [
@@ -97,11 +97,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Frantzia ere da Europan?",
+      "formInTargetLanguage": "Frantzia ere dago Europan?",
       "meaningInSourceLanguage": "Is France also in Europe?",
-      "id": "2501cba497b0",
+      "id": "171b945702dd",
       "priority": 0,
-      "group": "d2e93d0d9b8d"
+      "group": "907265cbd27b"
     },
     {
       "type": "chips",
@@ -113,7 +113,7 @@
         },
         {
           "word": "France",
-          "definition": "Francia"
+          "definition": "Francia\nFrantzia"
         },
         {
           "word": "also",
@@ -131,24 +131,24 @@
       "chips": [
         "Frantzia",
         "ere",
-        "da",
+        "dago",
         "Europan",
-        "Epa",
-        "eta",
+        "zara",
+        "gara",
         "Ere"
       ],
       "solutions": [
         [
           "Frantzia",
           "ere",
-          "da",
+          "dago",
           "Europan"
         ]
       ],
-      "formattedSolution": "Frantzia ere da Europan?",
-      "id": "b5b86bf811af",
+      "formattedSolution": "Frantzia ere dago Europan?",
+      "id": "fae8a6177cf1",
       "priority": 2,
-      "group": "d2e93d0d9b8d"
+      "group": "907265cbd27b"
     },
     {
       "type": "chips",
@@ -156,15 +156,15 @@
       "phrase": [
         {
           "word": "Frantzia",
-          "definition": "in France"
+          "definition": "France\nin France"
         },
         {
           "word": "ere",
           "definition": "also"
         },
         {
-          "word": "da",
-          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+          "word": "dago",
+          "definition": "he is (egon)\nit is (egon)\nshe is (egon)"
         },
         {
           "word": "Europan?",
@@ -177,10 +177,10 @@
         "also",
         "in",
         "Europe",
+        "an",
         "one",
         "are",
-        "is",
-        "on"
+        "is"
       ],
       "solutions": [
         [
@@ -192,9 +192,9 @@
         ]
       ],
       "formattedSolution": "Is France also in Europe?",
-      "id": "13cea40d066b",
+      "id": "e1cf3453474d",
       "priority": 2,
-      "group": "d2e93d0d9b8d"
+      "group": "907265cbd27b"
     },
     {
       "type": "options",
@@ -222,7 +222,7 @@
         },
         {
           "word": "France.",
-          "definition": "Francia"
+          "definition": "Francia\nFrantzia"
         }
       ],
       "chips": [
@@ -230,7 +230,7 @@
         "Frantzia",
         "dago",
         "gara",
-        "anaia"
+        "zara"
       ],
       "solutions": [
         [
@@ -254,7 +254,7 @@
         },
         {
           "word": "Frantzia",
-          "definition": "in France"
+          "definition": "France\nin France"
         },
         {
           "word": "dago.",
@@ -353,8 +353,8 @@
         "are",
         "in",
         "Victoria",
-        "it",
         "or",
+        "it",
         "a"
       ],
       "solutions": [
@@ -435,8 +435,8 @@
         "Where",
         "is",
         "Victoria",
-        "it",
-        "or"
+        "or",
+        "it"
       ],
       "solutions": [
         [
@@ -488,9 +488,9 @@
         "Euskal",
         "Herrian",
         "dago",
+        "euskal",
         "basoan",
-        "bat",
-        "naiz"
+        "sei"
       ],
       "solutions": [
         [
@@ -622,8 +622,8 @@
         "San",
         "Sebastian",
         "See",
-        "in",
-        "man"
+        "an",
+        "in"
       ],
       "solutions": [
         [
@@ -725,8 +725,8 @@
         "in",
         "Basque",
         "Country",
+        "an",
         "man",
-        "son",
         "on",
         "n",
         "it"
@@ -745,6 +745,121 @@
       "id": "fe1210816d70",
       "priority": 2,
       "group": "fc40daee1a47"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Bilbo ere Euskal Herrian dago.",
+      "meaningInSourceLanguage": "Bilboa is also in Basque Country.",
+      "id": "66c31194e9fd",
+      "priority": 0,
+      "group": "3ab2ed61279c"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Bilboa",
+          "definition": "Bilbo\nBilbo (city)"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "also",
+          "definition": "ere"
+        },
+        {
+          "word": "in",
+          "definition": "NON case, not a word"
+        },
+        {
+          "word": "Basque",
+          "definition": "Euskal\neuskaldun"
+        },
+        {
+          "word": "Country.",
+          "definition": "Herrian"
+        }
+      ],
+      "chips": [
+        "Bilbo",
+        "ere",
+        "Euskal",
+        "Herrian",
+        "dago",
+        "euro",
+        "Hura",
+        "dira",
+        "al"
+      ],
+      "solutions": [
+        [
+          "Bilbo",
+          "ere",
+          "Euskal",
+          "Herrian",
+          "dago"
+        ]
+      ],
+      "formattedSolution": "Bilbo ere Euskal Herrian dago.",
+      "id": "cfa92cb57661",
+      "priority": 2,
+      "group": "3ab2ed61279c"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Bilbo",
+          "definition": "Bilboa\nBilboa (city)"
+        },
+        {
+          "word": "ere",
+          "definition": "also"
+        },
+        {
+          "word": "Euskal",
+          "definition": "basque\nbasque (ad)"
+        },
+        {
+          "word": "Herrian",
+          "definition": "Country"
+        },
+        {
+          "word": "dago.",
+          "definition": "he is (egon)\nit is (egon)\nshe is (egon)"
+        }
+      ],
+      "chips": [
+        "Bilboa",
+        "is",
+        "also",
+        "in",
+        "Basque",
+        "Country",
+        "it",
+        "an",
+        "his",
+        "on",
+        "a"
+      ],
+      "solutions": [
+        [
+          "Bilboa",
+          "is",
+          "also",
+          "in",
+          "Basque",
+          "Country"
+        ]
+      ],
+      "formattedSolution": "Bilboa is also in Basque Country.",
+      "id": "815e5e23f048",
+      "priority": 2,
+      "group": "3ab2ed61279c"
     },
     {
       "type": "options",
@@ -874,8 +989,8 @@
         "Ibaia",
         "Donostia",
         "dago",
-        "anaia",
-        "ibaia"
+        "ibaia",
+        "naiz"
       ],
       "solutions": [
         [
@@ -913,11 +1028,11 @@
         "in",
         "San",
         "Sebastian",
+        "an",
         "it",
         "man",
         "He",
-        "She",
-        "e"
+        "She"
       ],
       "solutions": [
         [
@@ -1086,8 +1201,8 @@
         "in",
         "Irun",
         "n",
-        "a",
-        "i"
+        "an",
+        "a"
       ],
       "solutions": [
         [
@@ -1187,7 +1302,7 @@
         "one",
         "you",
         "or",
-        "our"
+        "an"
       ],
       "solutions": [
         [
@@ -1205,11 +1320,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Non dago Mikel?",
-      "meaningInSourceLanguage": "Where is Mikel?",
-      "id": "3f31ec3c61d8",
+      "formInTargetLanguage": "Non dago eraztuna?",
+      "meaningInSourceLanguage": "Where is the ring?",
+      "id": "9695445f4ecf",
       "priority": 0,
-      "group": "e9107a936645"
+      "group": "777b83072623"
     },
     {
       "type": "chips",
@@ -1224,28 +1339,32 @@
           "definition": "da\nda (izan)\ndago (egon)"
         },
         {
-          "word": "Mikel?",
-          "definition": "Mikel (male name)\nMikel (name)\nMikel(male name)"
+          "word": "the",
+          "definition": "-a"
+        },
+        {
+          "word": "ring?",
+          "definition": "eraztun\neraztuna"
         }
       ],
       "chips": [
         "Non",
         "dago",
-        "Mikel",
-        "Ni",
-        "da"
+        "eraztuna",
+        "han",
+        "bat"
       ],
       "solutions": [
         [
           "Non",
           "dago",
-          "Mikel"
+          "eraztuna"
         ]
       ],
-      "formattedSolution": "Non dago Mikel?",
-      "id": "6532e785b4b5",
+      "formattedSolution": "Non dago eraztuna?",
+      "id": "56b11ad9234b",
       "priority": 2,
-      "group": "e9107a936645"
+      "group": "777b83072623"
     },
     {
       "type": "chips",
@@ -1260,44 +1379,57 @@
           "definition": "he is (egon)\nit is (egon)\nshe is (egon)"
         },
         {
-          "word": "Mikel?",
-          "definition": "Mikel (male name)\nMikel(male name)"
+          "word": "eraztuna?",
+          "definition": "ring"
         }
       ],
       "chips": [
         "Where",
         "is",
-        "Mikel",
+        "the",
+        "ring",
+        "She",
         "We",
-        "hee"
+        "The"
       ],
       "solutions": [
         [
           "Where",
           "is",
-          "Mikel"
+          "the",
+          "ring"
+        ],
+        [
+          "Where",
+          "is",
+          "a",
+          "ring"
         ]
       ],
-      "formattedSolution": "Where is Mikel?",
-      "id": "89ff3d8e25a7",
+      "formattedSolution": "Where is the ring?",
+      "id": "8ef1e690f883",
       "priority": 2,
-      "group": "e9107a936645"
+      "group": "777b83072623"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Mikel Bilbon dago.",
-      "meaningInSourceLanguage": "Mikel is in Bilboa",
-      "id": "99cd7873ab27",
+      "formInTargetLanguage": "Eraztuna Bilbon dago.",
+      "meaningInSourceLanguage": "The ring is in Bilboa.",
+      "id": "827d9e36af4f",
       "priority": 0,
-      "group": "7aada6bd998d"
+      "group": "c35dca19620a"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
         {
-          "word": "Mikel",
-          "definition": "Mikel (male name)\nMikel (name)\nMikel(male name)"
+          "word": "The",
+          "definition": "-a"
+        },
+        {
+          "word": "ring",
+          "definition": "eraztun\neraztuna"
         },
         {
           "word": "is",
@@ -1308,36 +1440,36 @@
           "definition": "NON case, not a word"
         },
         {
-          "word": "Bilboa",
+          "word": "Bilboa.",
           "definition": "Bilbo\nBilbo (city)"
         }
       ],
       "chips": [
-        "Mikel",
+        "Eraztuna",
         "Bilbon",
         "dago",
-        "gizon",
-        "Miren"
+        "Gabon",
+        "gizon"
       ],
       "solutions": [
         [
-          "Mikel",
+          "Eraztuna",
           "Bilbon",
           "dago"
         ]
       ],
-      "formattedSolution": "Mikel Bilbon dago.",
-      "id": "7915af69cb52",
+      "formattedSolution": "Eraztuna Bilbon dago.",
+      "id": "e81a708d91f4",
       "priority": 2,
-      "group": "7aada6bd998d"
+      "group": "c35dca19620a"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Mikel",
-          "definition": "Mikel (male name)\nMikel(male name)"
+          "word": "Eraztuna",
+          "definition": "ring"
         },
         {
           "word": "Bilbon",
@@ -1349,26 +1481,36 @@
         }
       ],
       "chips": [
-        "Mikel",
+        "The",
+        "ring",
         "is",
         "in",
         "Bilboa",
         "it",
-        "his",
-        "Hi"
+        "big",
+        "pig",
+        "his"
       ],
       "solutions": [
         [
-          "Mikel",
+          "The",
+          "ring",
+          "is",
+          "in",
+          "Bilboa"
+        ],
+        [
+          "A",
+          "ring",
           "is",
           "in",
           "Bilboa"
         ]
       ],
-      "formattedSolution": "Mikel is in Bilboa",
-      "id": "2fbc439771fb",
+      "formattedSolution": "The ring is in Bilboa.",
+      "id": "a7737e790a2b",
       "priority": 2,
-      "group": "7aada6bd998d"
+      "group": "c35dca19620a"
     },
     {
       "type": "options",
@@ -1447,8 +1589,8 @@
         "mountain",
         "thin",
         "man",
-        "in",
-        "on"
+        "an",
+        "in"
       ],
       "solutions": [
         [
@@ -1466,16 +1608,20 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Ardiak mendiaetan daude.",
-      "meaningInSourceLanguage": "Sheep are on the mountains.",
-      "id": "88168d01cb65",
+      "formInTargetLanguage": "Begira! Ardiak mendiaetan daude.",
+      "meaningInSourceLanguage": "Look! Sheep are on the mountains.",
+      "id": "b3e5b17dfe29",
       "priority": 0,
-      "group": "f3b1fa1d5935"
+      "group": "0ff15353fda9"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
+        {
+          "word": "Look!",
+          "definition": "begira"
+        },
         {
           "word": "Sheep",
           "definition": "ardi\nardiak"
@@ -1498,28 +1644,35 @@
         }
       ],
       "chips": [
+        "Begira",
         "Ardiak",
         "mendiaetan",
         "daude",
-        "Ardia",
-        "ardiak"
+        "ardia",
+        "dira",
+        "berdea"
       ],
       "solutions": [
         [
+          "Begira",
           "Ardiak",
           "mendiaetan",
           "daude"
         ]
       ],
-      "formattedSolution": "Ardiak mendiaetan daude.",
-      "id": "707576c01819",
+      "formattedSolution": "Begira! Ardiak mendiaetan daude.",
+      "id": "464f911473e3",
       "priority": 2,
-      "group": "f3b1fa1d5935"
+      "group": "0ff15353fda9"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
+        {
+          "word": "Begira!",
+          "definition": "look"
+        },
         {
           "word": "Ardiak",
           "definition": "sheep\nsheep (plural)"
@@ -1534,6 +1687,7 @@
         }
       ],
       "chips": [
+        "Look",
         "Sheep",
         "are",
         "on",
@@ -1541,11 +1695,13 @@
         "mountains",
         "one",
         "She",
-        "me",
-        "See"
+        "Jon",
+        "or",
+        "me"
       ],
       "solutions": [
         [
+          "Look",
           "Sheep",
           "are",
           "on",
@@ -1553,23 +1709,27 @@
           "mountains"
         ]
       ],
-      "formattedSolution": "Sheep are on the mountains.",
-      "id": "cb518ba53f6a",
+      "formattedSolution": "Look! Sheep are on the mountains.",
+      "id": "9957cc52c39e",
       "priority": 2,
-      "group": "f3b1fa1d5935"
+      "group": "0ff15353fda9"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Ahuntzak basoetan daude.",
-      "meaningInSourceLanguage": "Goats are in the forests.",
-      "id": "7c72ea1ba0d5",
+      "formInTargetLanguage": "Begira! Ahuntzak basoetan daude.",
+      "meaningInSourceLanguage": "Look! Goats are in the forests.",
+      "id": "a3bc1ca89450",
       "priority": 0,
-      "group": "b094c5400645"
+      "group": "6a5043c97048"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
+        {
+          "word": "Look!",
+          "definition": "begira"
+        },
         {
           "word": "Goats",
           "definition": "ahuntzak"
@@ -1592,28 +1752,35 @@
         }
       ],
       "chips": [
+        "Begira",
         "Ahuntzak",
         "basoetan",
         "daude",
-        "ahuntzak",
-        "Ahuntza"
+        "baina",
+        "eta",
+        "gara"
       ],
       "solutions": [
         [
+          "Begira",
           "Ahuntzak",
           "basoetan",
           "daude"
         ]
       ],
-      "formattedSolution": "Ahuntzak basoetan daude.",
-      "id": "d3bf2762da10",
+      "formattedSolution": "Begira! Ahuntzak basoetan daude.",
+      "id": "b81619a9b4b7",
       "priority": 2,
-      "group": "b094c5400645"
+      "group": "6a5043c97048"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
+        {
+          "word": "Begira!",
+          "definition": "look"
+        },
         {
           "word": "Ahuntzak",
           "definition": "goats"
@@ -1628,18 +1795,21 @@
         }
       ],
       "chips": [
+        "Look",
         "Goats",
         "are",
         "in",
         "the",
         "forests",
         "one",
-        "Are",
         "or",
-        "He"
+        "Are",
+        "not",
+        "on"
       ],
       "solutions": [
         [
+          "Look",
           "Goats",
           "are",
           "in",
@@ -1647,10 +1817,10 @@
           "forests"
         ]
       ],
-      "formattedSolution": "Goats are in the forests.",
-      "id": "50349497b5ac",
+      "formattedSolution": "Look! Goats are in the forests.",
+      "id": "b0ab7eb5446d",
       "priority": 2,
-      "group": "b094c5400645"
+      "group": "6a5043c97048"
     },
     {
       "type": "options",
@@ -1784,7 +1954,7 @@
         "ibaietan",
         "daude",
         "baina",
-        "aita"
+        "ibaia"
       ],
       "solutions": [
         [
@@ -1927,8 +2097,8 @@
         "in",
         "the",
         "street",
-        "it",
         "or",
+        "it",
         "He",
         "e",
         "r"
@@ -2037,9 +2207,9 @@
         "streets",
         "is",
         "Are",
+        "an",
         "tree",
-        "am",
-        "a"
+        "am"
       ],
       "solutions": [
         [
@@ -2380,11 +2550,11 @@
         "france2.jpg",
         "france3.jpg"
       ],
-      "formInTargetLanguage": "Francia",
+      "formInTargetLanguage": "Frantzia",
       "meaningInSourceLanguage": "France",
-      "id": "c57f05baf7c4",
+      "id": "968e684afa22",
       "priority": 0,
-      "group": "cec87b71c5fb"
+      "group": "a44622f18167"
     },
     {
       "type": "shortInput",
@@ -2394,17 +2564,17 @@
         "france3.jpg"
       ],
       "formInTargetLanguage": [
-        "Francia"
+        "Frantzia"
       ],
       "phrase": [
         {
           "word": "France",
-          "definition": "Francia"
+          "definition": "Francia\nFrantzia"
         }
       ],
-      "id": "0bd245221acf",
+      "id": "6646ab9cd786",
       "priority": 1,
-      "group": "cec87b71c5fb"
+      "group": "a44622f18167"
     },
     {
       "type": "cards",

@@ -1021,11 +1021,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Gure osaba ingeniari bat da.",
-      "meaningInSourceLanguage": "Our uncle is an engineer.",
-      "id": "11e7a158845c",
+      "formInTargetLanguage": "Gure osaba erizaina bat da.",
+      "meaningInSourceLanguage": "Our uncle is an nurse.",
+      "id": "9157c44b32cf",
       "priority": 0,
-      "group": "cd46822313c9"
+      "group": "0a94f948fddd"
     },
     {
       "type": "chips",
@@ -1048,14 +1048,14 @@
           "definition": "-a\n-ak"
         },
         {
-          "word": "engineer.",
-          "definition": "ingeniari"
+          "word": "nurse.",
+          "definition": "erizain\nerizaina"
         }
       ],
       "chips": [
         "Gure",
         "osaba",
-        "ingeniari",
+        "erizaina",
         "bat",
         "da",
         "gara",
@@ -1067,15 +1067,15 @@
         [
           "Gure",
           "osaba",
-          "ingeniari",
+          "erizaina",
           "bat",
           "da"
         ]
       ],
-      "formattedSolution": "Gure osaba ingeniari bat da.",
-      "id": "16cd04549a4b",
+      "formattedSolution": "Gure osaba erizaina bat da.",
+      "id": "8eb6b49a39dc",
       "priority": 2,
-      "group": "cd46822313c9"
+      "group": "0a94f948fddd"
     },
     {
       "type": "chips",
@@ -1090,8 +1090,8 @@
           "definition": "uncle"
         },
         {
-          "word": "ingeniari",
-          "definition": "engineer"
+          "word": "erizaina",
+          "definition": "nurse"
         },
         {
           "word": "bat",
@@ -1119,21 +1119,21 @@
           "uncle",
           "is",
           "an",
-          "engineer"
+          "nurse"
         ]
       ],
-      "formattedSolution": "Our uncle is an engineer.",
-      "id": "efaebdc59dcd",
+      "formattedSolution": "Our uncle is an nurse.",
+      "id": "82736cb015a7",
       "priority": 2,
-      "group": "cd46822313c9"
+      "group": "0a94f948fddd"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Nire lehengusua da ere ingeniaria.",
-      "meaningInSourceLanguage": "My cousin (male) is also an engineer.",
-      "id": "b36289956f3b",
+      "formInTargetLanguage": "Nire lehengusua da ere gidaria.",
+      "meaningInSourceLanguage": "My cousin (male) is also an driver.",
+      "id": "792598510b07",
       "priority": 0,
-      "group": "0358b3a77c09"
+      "group": "e8a35ff81688"
     },
     {
       "type": "chips",
@@ -1164,8 +1164,8 @@
           "definition": "-a\n-ak"
         },
         {
-          "word": "engineer.",
-          "definition": "ingeniari"
+          "word": "driver.",
+          "definition": "gidari\ngidaria"
         }
       ],
       "chips": [
@@ -1185,13 +1185,13 @@
           "lehengusua",
           "da",
           "ere",
-          "ingeniaria"
+          "gidaria"
         ]
       ],
-      "formattedSolution": "Nire lehengusua da ere ingeniaria.",
-      "id": "af603e89e9c2",
+      "formattedSolution": "Nire lehengusua da ere gidaria.",
+      "id": "259a6489b2ae",
       "priority": 2,
-      "group": "0358b3a77c09"
+      "group": "e8a35ff81688"
     },
     {
       "type": "chips",
@@ -1214,8 +1214,8 @@
           "definition": "also"
         },
         {
-          "word": "ingeniaria.",
-          "definition": "engineer"
+          "word": "gidaria.",
+          "definition": "driver\nthe driver"
         }
       ],
       "chips": [
@@ -1241,13 +1241,13 @@
           "is",
           "also",
           "an",
-          "engineer"
+          "driver"
         ]
       ],
-      "formattedSolution": "My cousin (male) is also an engineer.",
-      "id": "af597af9dfc8",
+      "formattedSolution": "My cousin (male) is also an driver.",
+      "id": "f0bfb3323e91",
       "priority": 2,
-      "group": "0358b3a77c09"
+      "group": "e8a35ff81688"
     },
     {
       "type": "options",
@@ -1352,11 +1352,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Nire lehengusina medikua da.",
+      "formInTargetLanguage": "Nire lehengusina ere medikua da.",
       "meaningInSourceLanguage": "My cousin (female) is also a doctor.",
-      "id": "cff6baab781e",
+      "id": "38107ae4ba04",
       "priority": 0,
-      "group": "adcd870339e9"
+      "group": "eda79ac44adc"
     },
     {
       "type": "chips",
@@ -1394,6 +1394,7 @@
       "chips": [
         "Nire",
         "lehengusina",
+        "ere",
         "medikua",
         "da",
         "dira",
@@ -1404,14 +1405,15 @@
         [
           "Nire",
           "lehengusina",
+          "ere",
           "medikua",
           "da"
         ]
       ],
-      "formattedSolution": "Nire lehengusina medikua da.",
-      "id": "9a6c8cd001ff",
+      "formattedSolution": "Nire lehengusina ere medikua da.",
+      "id": "0610a3d75aa3",
       "priority": 2,
-      "group": "adcd870339e9"
+      "group": "eda79ac44adc"
     },
     {
       "type": "chips",
@@ -1424,6 +1426,10 @@
         {
           "word": "lehengusina",
           "definition": "cousin (female)"
+        },
+        {
+          "word": "ere",
+          "definition": "also"
         },
         {
           "word": "medikua",
@@ -1461,9 +1467,9 @@
         ]
       ],
       "formattedSolution": "My cousin (female) is also a doctor.",
-      "id": "6ac012032da0",
+      "id": "bcc8beee362b",
       "priority": 2,
-      "group": "adcd870339e9"
+      "group": "eda79ac44adc"
     },
     {
       "type": "options",
@@ -1851,6 +1857,15 @@
       "group": "7895444ab116"
     },
     {
+      "type": "listeningExercise",
+      "answer": "biloba",
+      "meaning": "grandson",
+      "audio": "cbdc17db5c2cf82fe6c83892c752839e9a7d756e77d1e73f0bef6952eed9fbe4",
+      "id": "3cc3a12c21bc",
+      "priority": 1,
+      "group": "7895444ab116"
+    },
+    {
       "type": "cards",
       "pictures": [
         "wife1.jpg",
@@ -1884,6 +1899,15 @@
       "group": "19782e98d67a"
     },
     {
+      "type": "listeningExercise",
+      "answer": "emaztea",
+      "meaning": "wife",
+      "audio": "2748b9e4f85e011cf80906d93209157a128061306c7cc691a96346d3614c1a70",
+      "id": "9795a7db7b42",
+      "priority": 1,
+      "group": "175b7a4c56a0"
+    },
+    {
       "type": "cards",
       "pictures": [
         "aunt1.jpg",
@@ -1913,6 +1937,15 @@
         }
       ],
       "id": "16fa017f4fa3",
+      "priority": 1,
+      "group": "0d2e68ed85bf"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "izeba",
+      "meaning": "aunt",
+      "audio": "c1fbc30a8522ec4ab4467b01d1b9dd750ec763b429ba1da5920f8343a206d1ba",
+      "id": "64a1ba7996ee",
       "priority": 1,
       "group": "0d2e68ed85bf"
     },
@@ -1954,6 +1987,15 @@
       "group": "9efe14aea246"
     },
     {
+      "type": "listeningExercise",
+      "answer": "lehengusu",
+      "meaning": "cousin (male)",
+      "audio": "dc4b52e88ce1ef10a46ec864266e0cf446d77e523f27a567c2b15171d993b68e",
+      "id": "2979daa12330",
+      "priority": 1,
+      "group": "9efe14aea246"
+    },
+    {
       "type": "cards",
       "pictures": [
         "cousinfemale1.jpg",
@@ -1991,6 +2033,15 @@
       "group": "5a0149e25def"
     },
     {
+      "type": "listeningExercise",
+      "answer": "lehengusina",
+      "meaning": "cousin (female)",
+      "audio": "e320c2c62261e381d4696d3903b36d8aab61d35fb8e7d493f8ea6ba94af3a884",
+      "id": "0e154578f302",
+      "priority": 1,
+      "group": "5a0149e25def"
+    },
+    {
       "type": "cards",
       "pictures": [
         "uncle1.jpg",
@@ -2022,6 +2073,15 @@
       "id": "70b2d99cc7ef",
       "priority": 1,
       "group": "4e467a2678ee"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "osaba",
+      "meaning": "uncle",
+      "audio": "79556605819fab01813e71c027d22fd9a11b39ae3d19b3e42e8e8815b5422bd0",
+      "id": "49bfeb7f6450",
+      "priority": 1,
+      "group": "a01a3b5f93fc"
     },
     {
       "type": "cards",
@@ -2057,6 +2117,15 @@
       "group": "8c0e8901fc8e"
     },
     {
+      "type": "listeningExercise",
+      "answer": "seme-alba",
+      "meaning": "children",
+      "audio": "60c816577a22cf1958935e82dc2a57c0b838e089cb971a2a089807929694f40f",
+      "id": "bb766e61eb4e",
+      "priority": 1,
+      "group": "8c0e8901fc8e"
+    },
+    {
       "type": "cards",
       "pictures": [
         "husband1.jpg",
@@ -2088,6 +2157,15 @@
       "id": "7b3d3c714ba0",
       "priority": 1,
       "group": "b52a5db2d0a4"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "senarra",
+      "meaning": "husband",
+      "audio": "36f668c7363a61d00afa636df490009c7c4c840d5a5c874dfb5061954e8d6f01",
+      "id": "3a71ec3998bc",
+      "priority": 1,
+      "group": "85d65ff4e9d3"
     },
     {
       "type": "cards",

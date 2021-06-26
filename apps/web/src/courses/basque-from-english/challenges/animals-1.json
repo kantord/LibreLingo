@@ -1,6 +1,6 @@
 {
   "id": "64a9147c90d5",
-  "levels": 5,
+  "levels": 6,
   "challenges": [
     {
       "type": "options",
@@ -150,7 +150,7 @@
         "da",
         "eta",
         "ona",
-        "gona"
+        "gida"
       ],
       "solutions": [
         [
@@ -260,8 +260,8 @@
         "dira",
         "horia",
         "ona",
-        "aita",
-        "zara"
+        "zara",
+        "gara"
       ],
       "solutions": [
         [
@@ -382,7 +382,7 @@
         "da",
         "gara",
         "jaka",
-        "aita"
+        "bat"
       ],
       "solutions": [
         [
@@ -643,7 +643,7 @@
         "are",
         "girl",
         "me",
-        "male"
+        "He"
       ],
       "solutions": [
         [
@@ -814,9 +814,9 @@
         "animaliak",
         "dira",
         "katua",
-        "aita",
         "Katuak",
-        "zara"
+        "zara",
+        "gara"
       ],
       "solutions": [
         [
@@ -864,9 +864,9 @@
         "are",
         "animals",
         "cars",
+        "an",
         "hats",
-        "Cats",
-        "am"
+        "Cats"
       ],
       "solutions": [
         [
@@ -1042,9 +1042,9 @@
         "zen",
         "beltza",
         "eta",
-        "neba",
         "naiz",
-        "da"
+        "da",
+        "al"
       ],
       "solutions": [
         [
@@ -1095,8 +1095,8 @@
         "bad",
         "am",
         "man",
-        "fat",
-        "cat"
+        "an",
+        "fat"
       ],
       "solutions": [
         [
@@ -1255,10 +1255,10 @@
         "grisak",
         "dira",
         "grisa",
-        "aita",
         "zara",
         "Hura",
-        "gara"
+        "gara",
+        "gida"
       ],
       "solutions": [
         [
@@ -1317,7 +1317,7 @@
         "Are",
         "they",
         "hee",
-        "red"
+        "grey"
       ],
       "solutions": [
         [
@@ -1373,7 +1373,7 @@
         "animalia",
         "da",
         "ona",
-        "anaia"
+        "naiz"
       ],
       "solutions": [
         [
@@ -1592,9 +1592,9 @@
         "animaliak",
         "dira",
         "onak",
-        "aita",
         "ona",
-        "nireak"
+        "nireak",
+        "Jakak"
       ],
       "solutions": [
         [
@@ -1642,8 +1642,8 @@
         "are",
         "animals",
         "cars",
+        "an",
         "his",
-        "male",
         "is"
       ],
       "solutions": [
@@ -1704,11 +1704,11 @@
         "ere",
         "animaliak",
         "dira",
-        "aita",
-        "neba",
         "neska",
         "Eta",
-        "nireak"
+        "nirea",
+        "nireak",
+        "zara"
       ],
       "solutions": [
         [
@@ -1763,8 +1763,8 @@
         "animals",
         "cars",
         "is",
+        "an",
         "his",
-        "male",
         "am"
       ],
       "solutions": [
@@ -1823,8 +1823,8 @@
         "nintzen",
         "zen",
         "ni",
-        "naiz",
-        "i"
+        "ken",
+        "naiz"
       ],
       "solutions": [
         [
@@ -1872,9 +1872,9 @@
         "fat",
         "cat",
         "a",
+        "an",
         "hat",
-        "am",
-        "t"
+        "am"
       ],
       "solutions": [
         [
@@ -1938,8 +1938,8 @@
         "zinen",
         "al",
         "hau",
-        "da",
-        "a"
+        "Lau",
+        "da"
       ],
       "solutions": [
         [
@@ -2011,6 +2011,31 @@
       "id": "d685f537d1d5",
       "priority": 2,
       "group": "08fe41c49253"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "animalia",
+      "meaningInSourceLanguage": "animal",
+      "id": "908ed8a88999",
+      "priority": 0,
+      "group": "ca430a041450"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "animalia"
+      ],
+      "phrase": [
+        {
+          "word": "animal",
+          "definition": "animalia"
+        }
+      ],
+      "id": "a2be693c377a",
+      "priority": 1,
+      "group": "ca430a041450"
     },
     {
       "type": "cards",

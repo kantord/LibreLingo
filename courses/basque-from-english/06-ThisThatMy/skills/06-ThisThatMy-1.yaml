@@ -41,8 +41,8 @@ New words:
       - they
     Images:
       - thosethere1
-      - thosethere23
-      - thosethere
+      - thosethere2
+      - thosethere3
 
   - Word: eskola
     Translation: school
@@ -59,8 +59,8 @@ New words:
       - book3
 
 Phrases:
-  - Phrase: Katu handi hau laranja da.
-    Translation: This big cat is orange.
+  - Phrase: Katu handi hau laranja da, baina ahula.
+    Translation: This big cat is orange, but weak.
 
   - Phrase: Katu laranja hau handia da.
     Translation: This orange cat is big.
@@ -85,6 +85,9 @@ Phrases:
   - Phrase: Zer da hau?
     Translation: What is this?
 
+  - Phrase: Eskola hori ez da berdea, horia baizik.
+    Translation: That school is not green, but yellow.
+
   - Phrase: Hau eskola zen, baina orain hotela da.
     Translation: This was a school, but now it is a hotel.
 
@@ -105,17 +108,17 @@ Phrases:
   - Phrase: Zer da hori?
     Translation: What is that?
 
-  - Phrase: Hori Iziar da. Iziar mutila da.
-    Translation: That is Iziar. Iziar is a boy.
+  - Phrase: Hori da Iziar. Iziar mutil indartsua da.
+    Translation: That is Iziar. Iziar is a strong boy.
 
-  - Phrase: Katua hori beltza da.
-    Translation: That cat is black.
+  - Phrase: Katu beltz hori ahula da.
+    Translation: That black cat is weak.
 
   - Phrase: Hotel horiek zuriak dira.
     Translation: Those hotels are white.
 
-  - Phrase: Mutil horiek ikasleak dira.
-    Translation: Those boys are students.
+  - Phrase: Ikasle horiek mutil indartsuak dira.
+    Translation: Those students are strong boys.
 
   - Phrase: Hura katu hura beltza da.
     Translation: That over there is a black cat.
@@ -133,11 +136,29 @@ Phrases:
   - Phrase: Neska haiek ikasleak dira.
     Translation: Those girls over there are students.
 
+  - Phrase: Hotel haiek berdeak zineten, baina orain laranjak dira.
+    Translation: Those hotels over there were green, but now they are orange.
+
+  - Phrase: Txakur txiki horiek grisak dira, baizik txakur handi hauek beltzak dira.
+    Translation: Those small dogs are gray while these big dogs are black.
+    Alternative translations:
+      - Those small dogs are gray but these big dogs are black.
+
+  - Phrase: Autobusa hau eta kotxe horiek urdina dira.
+    Translation: This bus and those cars are blue.
+
+  - Phrase: Hau autobusa da, baina hori kotxea da.
+    Translation: This is a bus while that is a car.
+    Alternative translations:
+      - This is a bus but that is a car.
 
 Mini-dictionary:
   Basque:
     - Joseba: Joseba (name)
     - Iziar: Iziar (name)
+    - ahul: weak
+    - ahula: weak
+    - ahulak: weak
     - altua: tall
     - animalia: animal
     - animaliak: animals
@@ -147,6 +168,7 @@ Mini-dictionary:
     - azkarra: fast
     - bat: one
     - baina: but
+    - baizik: but rather
     - begira!: look!
     - beltz: black
     - beltza: black
@@ -195,6 +217,9 @@ Mini-dictionary:
       - he
       - she
       - it
+    - indartsu: strong
+    - indartsua: strong
+    - indartsuak: strong
     - itsusia: ugly
     - kaixo: hello
     - katu: cat
@@ -266,7 +291,7 @@ Mini-dictionary:
     - boy: mutil
     - boys: mutilak
     - bus: autobusa
-    - but: baina
+    - but: baina, baizik
     - car: kotxea
     - cars: kotxeak
     - cat: katu
@@ -315,6 +340,7 @@ Mini-dictionary:
     - short: labur
     - slow: motel
     - small: txiki
+    - strong: indartsu
     - tall: altu
     - that:
       - hori
@@ -333,7 +359,9 @@ Mini-dictionary:
     - turtles: dortokak
     - ugly: itsusi
     - was: zen
+    - weak: ahul
     - what: zer
+    - while: baina
     - white: zuri
     - who: nor
     - yellow: hori

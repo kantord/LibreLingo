@@ -1,6 +1,6 @@
 {
   "id": "e876e5c6ae07",
-  "levels": 5,
+  "levels": 4,
   "challenges": [
     {
       "type": "options",
@@ -32,7 +32,7 @@
         },
         {
           "word": "but",
-          "definition": "baina"
+          "definition": "baina\nbaina, baizik"
         },
         {
           "word": "the",
@@ -59,12 +59,12 @@
         "gizona",
         "itsusia",
         "da",
-        "aita",
         "gida",
         "ona",
         "dira",
-        "gona",
-        "ama"
+        "ibaia",
+        "a",
+        "eta"
       ],
       "solutions": [
         [
@@ -127,12 +127,12 @@
         "ugly",
         "me",
         "it",
+        "an",
         "my",
         "in",
         "He",
         "She",
-        "e",
-        "t"
+        "e"
       ],
       "solutions": [
         [
@@ -221,9 +221,9 @@
         "ederra",
         "dira",
         "eliza",
-        "aita",
         "Eta",
-        "gida"
+        "gida",
+        "Behia"
       ],
       "solutions": [
         [
@@ -369,7 +369,7 @@
         },
         {
           "word": "but",
-          "definition": "baina"
+          "definition": "baina\nbaina, baizik"
         },
         {
           "word": "the",
@@ -397,11 +397,11 @@
         "itsusia",
         "da",
         "gida",
-        "aita",
         "ibaia",
         "dira",
         "gara",
-        "ama"
+        "ardia",
+        "zara"
       ],
       "solutions": [
         [
@@ -534,7 +534,7 @@
         },
         {
           "word": "but",
-          "definition": "baina"
+          "definition": "baina\nbaina, baizik"
         },
         {
           "word": "the",
@@ -564,11 +564,11 @@
         "da",
         "dira",
         "Gida",
-        "aita",
         "eta",
         "ona",
         "Hura",
-        "a"
+        "a",
+        "gara"
       ],
       "solutions": [
         [
@@ -734,7 +734,7 @@
         },
         {
           "word": "but",
-          "definition": "baina"
+          "definition": "baina\nbaina, baizik"
         },
         {
           "word": "rather",
@@ -766,7 +766,7 @@
         "dira",
         "d",
         "edo",
-        "Ni"
+        "sei"
       ],
       "solutions": [
         [
@@ -806,7 +806,7 @@
         },
         {
           "word": "baizik",
-          "definition": "but (rather)\nbut(rather)\nrather"
+          "definition": "but (rather)\nbut rather\nbut(rather)\nrather"
         },
         {
           "word": "ederra",
@@ -951,9 +951,9 @@
         "da",
         "dira",
         "gida",
-        "aita",
         "gara",
-        "Eta"
+        "Eta",
+        "eliza"
       ],
       "solutions": [
         [
@@ -1010,13 +1010,13 @@
         "handsome",
         "man",
         "one",
+        "an",
         "in",
         "on",
         "me",
         "am",
         "are",
-        "e",
-        "n"
+        "e"
       ],
       "solutions": [
         [
@@ -1090,10 +1090,10 @@
         "eta",
         "politak",
         "dira",
-        "aita",
         "Eta",
         "gara",
-        "onak"
+        "onak",
+        "zara"
       ],
       "solutions": [
         [
@@ -1143,9 +1143,9 @@
         "women",
         "one",
         "men",
+        "an",
         "man",
-        "the",
-        "me"
+        "the"
       ],
       "solutions": [
         [
@@ -1164,11 +1164,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Gidaria ez da euskalduna.",
-      "meaningInSourceLanguage": "The driver is not Basque.",
-      "id": "06426e363ac0",
+      "formInTargetLanguage": "Gidaria ez da ederra.",
+      "meaningInSourceLanguage": "The driver is not handsome.",
+      "id": "6929eb709a5e",
       "priority": 0,
-      "group": "ea15e1f4c8e6"
+      "group": "0d305f7f84af"
     },
     {
       "type": "chips",
@@ -1191,31 +1191,31 @@
           "definition": "ez"
         },
         {
-          "word": "Basque.",
-          "definition": "Euskal\neuskaldun"
+          "word": "handsome.",
+          "definition": "eder"
         }
       ],
       "chips": [
         "Gidaria",
         "ez",
         "da",
-        "euskalduna",
+        "ederra",
+        "dira",
         "a",
-        "d",
-        "eta"
+        "d"
       ],
       "solutions": [
         [
           "Gidaria",
           "ez",
           "da",
-          "euskalduna"
+          "ederra"
         ]
       ],
-      "formattedSolution": "Gidaria ez da euskalduna.",
-      "id": "4006e385fb2e",
+      "formattedSolution": "Gidaria ez da ederra.",
+      "id": "ab86746f684f",
       "priority": 2,
-      "group": "ea15e1f4c8e6"
+      "group": "0d305f7f84af"
     },
     {
       "type": "chips",
@@ -1234,8 +1234,8 @@
           "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
         },
         {
-          "word": "euskalduna.",
-          "definition": "Basque person"
+          "word": "ederra.",
+          "definition": "beautiful\nhandsome"
         }
       ],
       "chips": [
@@ -1243,11 +1243,11 @@
         "driver",
         "is",
         "not",
-        "Basque",
+        "handsome",
         "are",
-        "He",
-        "the",
-        "She"
+        "me",
+        "his",
+        "one"
       ],
       "solutions": [
         [
@@ -1255,20 +1255,34 @@
           "driver",
           "is",
           "not",
-          "Basque"
+          "handsome"
         ],
         [
           "A",
           "driver",
           "is",
           "not",
-          "Basque"
+          "handsome"
+        ],
+        [
+          "The",
+          "driver",
+          "is",
+          "not",
+          "beautiful"
+        ],
+        [
+          "A",
+          "driver",
+          "is",
+          "not",
+          "beautiful"
         ]
       ],
-      "formattedSolution": "The driver is not Basque.",
-      "id": "f5815f3044c5",
+      "formattedSolution": "The driver is not handsome.",
+      "id": "3ce59a28a061",
       "priority": 2,
-      "group": "ea15e1f4c8e6"
+      "group": "0d305f7f84af"
     },
     {
       "type": "options",
@@ -1337,11 +1351,11 @@
         "berdea",
         "da",
         "etxea",
+        "ardia",
         "berea",
         "ere",
         "dira",
         "horia",
-        "Ardia",
         "zara"
       ],
       "solutions": [
@@ -1416,10 +1430,10 @@
         "e",
         "We",
         "me",
+        "an",
         "She",
         "or",
-        "See",
-        "hee"
+        "See"
       ],
       "solutions": [
         [
@@ -1520,12 +1534,12 @@
         "berdea",
         "polita",
         "da",
-        "aita",
         "dira",
         "kotxea",
         "Eta",
         "horia",
         "etxea",
+        "ardia",
         "ona"
       ],
       "solutions": [
@@ -1600,10 +1614,10 @@
         "e",
         "We",
         "me",
+        "an",
         "one",
         "r",
-        "or",
-        "See"
+        "or"
       ],
       "solutions": [
         [
@@ -1672,7 +1686,7 @@
         },
         {
           "word": "but",
-          "definition": "baina"
+          "definition": "baina\nbaina, baizik"
         },
         {
           "word": "rather",
@@ -1704,7 +1718,7 @@
         "bat",
         "zara",
         "dira",
-        "ama"
+        "z"
       ],
       "solutions": [
         [
@@ -1744,7 +1758,7 @@
         },
         {
           "word": "baizik",
-          "definition": "but (rather)\nbut(rather)\nrather"
+          "definition": "but (rather)\nbut rather\nbut(rather)\nrather"
         },
         {
           "word": "berria",
@@ -1935,6 +1949,7 @@
         "car",
         "is",
         "slow",
+        "an",
         "am",
         "a",
         "are",
@@ -1943,8 +1958,7 @@
         "cat",
         "one",
         "He",
-        "e",
-        "We"
+        "e"
       ],
       "solutions": [
         [
@@ -2047,9 +2061,9 @@
         "kotxea",
         "Eta",
         "ona",
-        "aita",
         "arte",
-        "etxea"
+        "etxea",
+        "katua"
       ],
       "solutions": [
         [
@@ -2113,6 +2127,7 @@
         "is",
         "fast",
         "are",
+        "an",
         "am",
         "a",
         "He",
@@ -2120,8 +2135,7 @@
         "e",
         "We",
         "or",
-        "me",
-        "was"
+        "me"
       ],
       "solutions": [
         [
@@ -2271,43 +2285,6 @@
       "id": "c99de2629427",
       "priority": 1,
       "group": "2eb8c4902d7d"
-    },
-    {
-      "type": "cards",
-      "pictures": [
-        "euskaldun1.jpg",
-        "euskaldun2.jpg",
-        "euskaldun3.jpg"
-      ],
-      "formInTargetLanguage": "euskaldun",
-      "meaningInSourceLanguage": "Basque person",
-      "id": "a0964578e369",
-      "priority": 0,
-      "group": "0d3e0e1ab654"
-    },
-    {
-      "type": "shortInput",
-      "pictures": [
-        "euskaldun1.jpg",
-        "euskaldun2.jpg",
-        "euskaldun3.jpg"
-      ],
-      "formInTargetLanguage": [
-        "euskaldun"
-      ],
-      "phrase": [
-        {
-          "word": "Basque",
-          "definition": "Euskal\neuskaldun"
-        },
-        {
-          "word": "person",
-          "definition": "pertsona"
-        }
-      ],
-      "id": "6c243550914d",
-      "priority": 1,
-      "group": "0d3e0e1ab654"
     },
     {
       "type": "cards",

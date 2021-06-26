@@ -1,14 +1,14 @@
 {
   "id": "a768a811eb74",
-  "levels": 6,
+  "levels": 7,
   "challenges": [
     {
       "type": "options",
-      "formInTargetLanguage": "Katu handi hau laranja da.",
-      "meaningInSourceLanguage": "This big cat is orange.",
-      "id": "d2c487b29d7c",
+      "formInTargetLanguage": "Katu handi hau laranja da, baina ahula.",
+      "meaningInSourceLanguage": "This big cat is orange, but weak.",
+      "id": "891caaa810e4",
       "priority": 0,
-      "group": "50790a0a9e1f"
+      "group": "019889fbcc87"
     },
     {
       "type": "chips",
@@ -31,8 +31,16 @@
           "definition": "da\nda (izan)\ndago (egon)"
         },
         {
-          "word": "orange.",
+          "word": "orange,",
           "definition": "laranja"
+        },
+        {
+          "word": "but",
+          "definition": "baina\nbaina, baizik"
+        },
+        {
+          "word": "weak.",
+          "definition": "ahul\nahula"
         }
       ],
       "chips": [
@@ -41,9 +49,13 @@
         "hau",
         "laranja",
         "da",
+        "baina",
+        "ahula",
         "han",
         "Hau",
+        "Lau",
         "bat",
+        "zara",
         "a"
       ],
       "solutions": [
@@ -52,13 +64,15 @@
           "handi",
           "hau",
           "laranja",
-          "da"
+          "da",
+          "baina",
+          "ahula"
         ]
       ],
-      "formattedSolution": "Katu handi hau laranja da.",
-      "id": "265ed78fcee9",
+      "formattedSolution": "Katu handi hau laranja da, baina ahula.",
+      "id": "8b4f487cb3ad",
       "priority": 2,
-      "group": "50790a0a9e1f"
+      "group": "019889fbcc87"
     },
     {
       "type": "chips",
@@ -81,8 +95,16 @@
           "definition": "orange"
         },
         {
-          "word": "da.",
+          "word": "da,",
           "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        },
+        {
+          "word": "baina",
+          "definition": "but\nbut(contrast)"
+        },
+        {
+          "word": "ahula.",
+          "definition": "weak"
         }
       ],
       "chips": [
@@ -91,10 +113,14 @@
         "cat",
         "is",
         "orange",
-        "his",
+        "but",
+        "weak",
         "it",
-        "pig",
-        "in"
+        "was",
+        "his",
+        "hat",
+        "bus",
+        "an"
       ],
       "solutions": [
         [
@@ -102,13 +128,15 @@
           "big",
           "cat",
           "is",
-          "orange"
+          "orange",
+          "but",
+          "weak"
         ]
       ],
-      "formattedSolution": "This big cat is orange.",
-      "id": "bb3098366f9f",
+      "formattedSolution": "This big cat is orange, but weak.",
+      "id": "db61eb987c9e",
       "priority": 2,
-      "group": "50790a0a9e1f"
+      "group": "019889fbcc87"
     },
     {
       "type": "options",
@@ -151,8 +179,8 @@
         "da",
         "han",
         "Hau",
-        "bat",
-        "zara"
+        "Lau",
+        "bat"
       ],
       "solutions": [
         [
@@ -252,7 +280,7 @@
         },
         {
           "word": "but",
-          "definition": "baina"
+          "definition": "baina\nbaina, baizik"
         },
         {
           "word": "now",
@@ -364,11 +392,11 @@
         "his",
         "hat",
         "in",
+        "an",
         "not",
         "fat",
         "pig",
-        "bad",
-        "am"
+        "bad"
       ],
       "solutions": [
         [
@@ -444,10 +472,10 @@
         "moduz",
         "a",
         "ona",
+        "sei",
         "bat",
         "eta",
-        "Jon",
-        "edo"
+        "Jon"
       ],
       "solutions": [
         [
@@ -881,6 +909,142 @@
     },
     {
       "type": "options",
+      "formInTargetLanguage": "Eskola hori ez da berdea, horia baizik.",
+      "meaningInSourceLanguage": "That school is not green, but yellow.",
+      "id": "ebeb3a9a3f09",
+      "priority": 0,
+      "group": "a1f96d3ac840"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "That",
+          "definition": "hori\nhura"
+        },
+        {
+          "word": "school",
+          "definition": "eskola"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "not",
+          "definition": "ez"
+        },
+        {
+          "word": "green,",
+          "definition": "berde"
+        },
+        {
+          "word": "but",
+          "definition": "baina\nbaina, baizik"
+        },
+        {
+          "word": "yellow.",
+          "definition": "hori"
+        }
+      ],
+      "chips": [
+        "Eskola",
+        "hori",
+        "ez",
+        "da",
+        "berdea",
+        "horia",
+        "baizik",
+        "hor",
+        "a",
+        "dira",
+        "ona",
+        "Hori",
+        "berea"
+      ],
+      "solutions": [
+        [
+          "Eskola",
+          "hori",
+          "ez",
+          "da",
+          "berdea",
+          "horia",
+          "baizik"
+        ]
+      ],
+      "formattedSolution": "Eskola hori ez da berdea, horia baizik.",
+      "id": "28a17a04c98c",
+      "priority": 2,
+      "group": "a1f96d3ac840"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Eskola",
+          "definition": "school"
+        },
+        {
+          "word": "hori",
+          "definition": "that\nyellow"
+        },
+        {
+          "word": "ez",
+          "definition": "no\nnot\nnot, no\nnot,no"
+        },
+        {
+          "word": "da",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        },
+        {
+          "word": "berdea,",
+          "definition": "green"
+        },
+        {
+          "word": "horia",
+          "definition": "yellow"
+        },
+        {
+          "word": "baizik.",
+          "definition": "but (rather)\nbut rather\nbut(rather)\nrather"
+        }
+      ],
+      "chips": [
+        "That",
+        "school",
+        "is",
+        "not",
+        "green",
+        "but",
+        "yellow",
+        "hat",
+        "or",
+        "it",
+        "now",
+        "hee",
+        "cat"
+      ],
+      "solutions": [
+        [
+          "That",
+          "school",
+          "is",
+          "not",
+          "green",
+          "but",
+          "yellow"
+        ]
+      ],
+      "formattedSolution": "That school is not green, but yellow.",
+      "id": "8205ad6a5648",
+      "priority": 2,
+      "group": "a1f96d3ac840"
+    },
+    {
+      "type": "options",
       "formInTargetLanguage": "Hau eskola zen, baina orain hotela da.",
       "meaningInSourceLanguage": "This was a school, but now it is a hotel.",
       "id": "9d2491199ddd",
@@ -909,7 +1073,7 @@
         },
         {
           "word": "but",
-          "definition": "baina"
+          "definition": "baina\nbaina, baizik"
         },
         {
           "word": "now",
@@ -1372,10 +1536,10 @@
         "a",
         "green",
         "bus",
+        "an",
         "am",
         "h",
-        "e",
-        "r"
+        "e"
       ],
       "solutions": [
         [
@@ -1480,11 +1644,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Hori Iziar da. Iziar mutila da.",
-      "meaningInSourceLanguage": "That is Iziar. Iziar is a boy.",
-      "id": "57fbd1b06751",
+      "formInTargetLanguage": "Hori da Iziar. Iziar mutil indartsua da.",
+      "meaningInSourceLanguage": "That is Iziar. Iziar is a strong boy.",
+      "id": "807e5bad1fdc",
       "priority": 0,
-      "group": "2b5d2fca8d8f"
+      "group": "86710fd16de5"
     },
     {
       "type": "chips",
@@ -1515,37 +1679,44 @@
           "definition": "-a"
         },
         {
+          "word": "strong",
+          "definition": "indartsu\nindartsua"
+        },
+        {
           "word": "boy.",
           "definition": "mutil\nmutila"
         }
       ],
       "chips": [
         "Hori",
-        "Iziar",
         "da",
         "Iziar",
-        "mutila",
+        "Iziar",
+        "mutil",
+        "indartsua",
         "da",
-        "a",
-        "dira",
-        "Ni",
         "zara",
-        "Hura"
+        "dira",
+        "bat",
+        "Hura",
+        "a",
+        "i"
       ],
       "solutions": [
         [
           "Hori",
-          "Iziar",
           "da",
           "Iziar",
-          "mutila",
+          "Iziar",
+          "mutil",
+          "indartsua",
           "da"
         ]
       ],
-      "formattedSolution": "Hori Iziar da. Iziar mutila da.",
-      "id": "a532f3fd9a33",
+      "formattedSolution": "Hori da Iziar. Iziar mutil indartsua da.",
+      "id": "c93fcb77f29c",
       "priority": 2,
-      "group": "2b5d2fca8d8f"
+      "group": "86710fd16de5"
     },
     {
       "type": "chips",
@@ -1556,20 +1727,24 @@
           "definition": "that\nyellow"
         },
         {
-          "word": "Iziar",
-          "definition": "Iziar (name)"
-        },
-        {
-          "word": "da.",
+          "word": "da",
           "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
         },
         {
+          "word": "Iziar.",
+          "definition": "Iziar (name)"
+        },
+        {
           "word": "Iziar",
           "definition": "Iziar (name)"
         },
         {
-          "word": "mutila",
-          "definition": "a boy\nboy\nthe boy"
+          "word": "mutil",
+          "definition": "boy"
+        },
+        {
+          "word": "indartsua",
+          "definition": "strong"
         },
         {
           "word": "da.",
@@ -1583,13 +1758,15 @@
         "Iziar",
         "is",
         "a",
+        "strong",
         "boy",
         "it",
-        "am",
-        "Is",
-        "his",
+        "an",
         "in",
-        "I"
+        "am",
+        "r",
+        "or",
+        "Is"
       ],
       "solutions": [
         [
@@ -1599,21 +1776,22 @@
           "Iziar",
           "is",
           "a",
+          "strong",
           "boy"
         ]
       ],
-      "formattedSolution": "That is Iziar. Iziar is a boy.",
-      "id": "b52e5d1377e0",
+      "formattedSolution": "That is Iziar. Iziar is a strong boy.",
+      "id": "47b9aa0ea464",
       "priority": 2,
-      "group": "2b5d2fca8d8f"
+      "group": "86710fd16de5"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Katua hori beltza da.",
-      "meaningInSourceLanguage": "That cat is black.",
-      "id": "dd4c00ff7e64",
+      "formInTargetLanguage": "Katu beltz hori ahula da.",
+      "meaningInSourceLanguage": "That black cat is weak.",
+      "id": "b4783d2892b2",
       "priority": 0,
-      "group": "004d1d15aa81"
+      "group": "d5b817918c00"
     },
     {
       "type": "chips",
@@ -1624,6 +1802,10 @@
           "definition": "hori\nhura"
         },
         {
+          "word": "black",
+          "definition": "beltz\nbeltza"
+        },
+        {
           "word": "cat",
           "definition": "katu"
         },
@@ -1632,47 +1814,54 @@
           "definition": "da\nda (izan)\ndago (egon)"
         },
         {
-          "word": "black.",
-          "definition": "beltz\nbeltza"
+          "word": "weak.",
+          "definition": "ahul\nahula"
         }
       ],
       "chips": [
-        "Katua",
+        "Katu",
+        "beltz",
         "hori",
-        "beltza",
+        "ahula",
         "da",
-        "eta",
         "bat",
-        "Katu"
+        "eta",
+        "al",
+        "katu"
       ],
       "solutions": [
         [
-          "Katua",
+          "Katu",
+          "beltz",
           "hori",
-          "beltza",
+          "ahula",
           "da"
         ]
       ],
-      "formattedSolution": "Katua hori beltza da.",
-      "id": "312bff85e4d9",
+      "formattedSolution": "Katu beltz hori ahula da.",
+      "id": "ba1c81fa4907",
       "priority": 2,
-      "group": "004d1d15aa81"
+      "group": "d5b817918c00"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Katua",
-          "definition": "a cat"
+          "word": "Katu",
+          "definition": "cat"
+        },
+        {
+          "word": "beltz",
+          "definition": "black"
         },
         {
           "word": "hori",
           "definition": "that\nyellow"
         },
         {
-          "word": "beltza",
-          "definition": "black"
+          "word": "ahula",
+          "definition": "weak"
         },
         {
           "word": "da.",
@@ -1681,25 +1870,28 @@
       ],
       "chips": [
         "That",
+        "black",
         "cat",
         "is",
-        "black",
+        "weak",
         "hat",
+        "was",
         "fat",
         "am"
       ],
       "solutions": [
         [
           "That",
+          "black",
           "cat",
           "is",
-          "black"
+          "weak"
         ]
       ],
-      "formattedSolution": "That cat is black.",
-      "id": "b5e281747830",
+      "formattedSolution": "That black cat is weak.",
+      "id": "5db3d692384b",
       "priority": 2,
-      "group": "004d1d15aa81"
+      "group": "d5b817918c00"
     },
     {
       "type": "options",
@@ -1780,7 +1972,7 @@
         "white",
         "hotel",
         "hee",
-        "Whose"
+        "those"
       ],
       "solutions": [
         [
@@ -1797,11 +1989,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Mutil horiek ikasleak dira.",
-      "meaningInSourceLanguage": "Those boys are students.",
-      "id": "a18937595e6c",
+      "formInTargetLanguage": "Ikasle horiek mutil indartsuak dira.",
+      "meaningInSourceLanguage": "Those students are strong boys.",
+      "id": "b89638acb3ff",
       "priority": 0,
-      "group": "c5f5e83cb0e0"
+      "group": "87070a9074cd"
     },
     {
       "type": "chips",
@@ -1812,55 +2004,66 @@
           "definition": "haiek\nhoriek"
         },
         {
-          "word": "boys",
-          "definition": "mutilak"
+          "word": "students",
+          "definition": "ikasleak"
         },
         {
           "word": "are",
           "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
         },
         {
-          "word": "students.",
-          "definition": "ikasleak"
+          "word": "strong",
+          "definition": "indartsu\nindartsua"
+        },
+        {
+          "word": "boys.",
+          "definition": "mutilak"
         }
       ],
       "chips": [
-        "Mutil",
+        "Ikasle",
         "horiek",
-        "ikasleak",
+        "mutil",
+        "indartsuak",
         "dira",
+        "mutila",
+        "arte",
         "horia",
-        "horiak",
-        "mutila"
+        "horiak"
       ],
       "solutions": [
         [
-          "Mutil",
+          "Ikasle",
           "horiek",
-          "ikasleak",
+          "mutil",
+          "indartsuak",
           "dira"
         ]
       ],
-      "formattedSolution": "Mutil horiek ikasleak dira.",
-      "id": "f24b2cf4c7b8",
+      "formattedSolution": "Ikasle horiek mutil indartsuak dira.",
+      "id": "2d95775f1de3",
       "priority": 2,
-      "group": "c5f5e83cb0e0"
+      "group": "87070a9074cd"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Mutil",
-          "definition": "boy"
+          "word": "Ikasle",
+          "definition": "student"
         },
         {
           "word": "horiek",
           "definition": "Those, plural of hori"
         },
         {
-          "word": "ikasleak",
-          "definition": "students"
+          "word": "mutil",
+          "definition": "boy"
+        },
+        {
+          "word": "indartsuak",
+          "definition": "strong"
         },
         {
           "word": "dira.",
@@ -1869,25 +2072,28 @@
       ],
       "chips": [
         "Those",
-        "boys",
-        "are",
         "students",
+        "are",
+        "strong",
+        "boys",
+        "store",
         "one",
-        "the",
-        "bus"
+        "shoes",
+        "the"
       ],
       "solutions": [
         [
           "Those",
-          "boys",
+          "students",
           "are",
-          "students"
+          "strong",
+          "boys"
         ]
       ],
-      "formattedSolution": "Those boys are students.",
-      "id": "abf3def3459f",
+      "formattedSolution": "Those students are strong boys.",
+      "id": "6489a34a3512",
       "priority": 2,
-      "group": "c5f5e83cb0e0"
+      "group": "87070a9074cd"
     },
     {
       "type": "options",
@@ -1992,8 +2198,8 @@
         "car",
         "am",
         "t",
-        "fat",
-        "that"
+        "an",
+        "fat"
       ],
       "solutions": [
         [
@@ -2116,8 +2322,8 @@
         "the",
         "car",
         "hee",
-        "hat",
-        "am"
+        "an",
+        "hat"
       ],
       "solutions": [
         [
@@ -2295,8 +2501,8 @@
         "ikasleak",
         "dira",
         "Haiek",
-        "aita",
-        "neska"
+        "neska",
+        "zara"
       ],
       "solutions": [
         [
@@ -2359,6 +2565,679 @@
       "id": "3f657d4b78f7",
       "priority": 2,
       "group": "90cf0d6b61ab"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Hotel haiek berdeak zineten, baina orain laranjak dira.",
+      "meaningInSourceLanguage": "Those hotels over there were green, but now they are orange.",
+      "id": "010b6ffd14f4",
+      "priority": 0,
+      "group": "b7a32e0e354c"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Those",
+          "definition": "haiek\nhoriek"
+        },
+        {
+          "word": "hotels",
+          "definition": "hotelak"
+        },
+        {
+          "word": "over",
+          "definition": "amaitu"
+        },
+        {
+          "word": "there",
+          "definition": "hor"
+        },
+        {
+          "word": "were",
+          "definition": "ginen\nzinen\nzineten\nziren"
+        },
+        {
+          "word": "green,",
+          "definition": "berde"
+        },
+        {
+          "word": "but",
+          "definition": "baina\nbaina, baizik"
+        },
+        {
+          "word": "now",
+          "definition": "orain"
+        },
+        {
+          "word": "they",
+          "definition": "haiek"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "orange.",
+          "definition": "laranja"
+        }
+      ],
+      "chips": [
+        "Hotel",
+        "haiek",
+        "berdeak",
+        "zineten",
+        "baina",
+        "orain",
+        "laranjak",
+        "dira",
+        "Haiek",
+        "haien",
+        "berea",
+        "zara",
+        "ziren",
+        "morea",
+        "nirea"
+      ],
+      "solutions": [
+        [
+          "Hotel",
+          "haiek",
+          "berdeak",
+          "zineten",
+          "baina",
+          "orain",
+          "laranjak",
+          "dira"
+        ]
+      ],
+      "formattedSolution": "Hotel haiek berdeak zineten, baina orain laranjak dira.",
+      "id": "81b6a8230c76",
+      "priority": 2,
+      "group": "b7a32e0e354c"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Hotel",
+          "definition": "hotel"
+        },
+        {
+          "word": "haiek",
+          "definition": "they\nthose over there, plural of hura"
+        },
+        {
+          "word": "berdeak",
+          "definition": "green"
+        },
+        {
+          "word": "zineten,",
+          "definition": "were"
+        },
+        {
+          "word": "baina",
+          "definition": "but\nbut(contrast)"
+        },
+        {
+          "word": "orain",
+          "definition": "now"
+        },
+        {
+          "word": "laranjak",
+          "definition": "orange"
+        },
+        {
+          "word": "dira.",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "Those",
+        "hotels",
+        "over",
+        "there",
+        "were",
+        "green",
+        "but",
+        "now",
+        "they",
+        "are",
+        "orange",
+        "hee",
+        "one",
+        "the",
+        "Are",
+        "here",
+        "her",
+        "tree",
+        "She",
+        "See",
+        "or"
+      ],
+      "solutions": [
+        [
+          "Those",
+          "hotels",
+          "over",
+          "there",
+          "were",
+          "green",
+          "but",
+          "now",
+          "they",
+          "are",
+          "orange"
+        ]
+      ],
+      "formattedSolution": "Those hotels over there were green, but now they are orange.",
+      "id": "ae33e598a91b",
+      "priority": 2,
+      "group": "b7a32e0e354c"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Txakur txiki horiek grisak dira, baizik txakur handi hauek beltzak dira.",
+      "meaningInSourceLanguage": "Those small dogs are gray while these big dogs are black.",
+      "id": "e2c9193b1ab1",
+      "priority": 0,
+      "group": "c04b465ee5ef"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Those",
+          "definition": "haiek\nhoriek"
+        },
+        {
+          "word": "small",
+          "definition": "txiki"
+        },
+        {
+          "word": "dogs",
+          "definition": "txakurrak"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "gray",
+          "definition": "gris"
+        },
+        {
+          "word": "while",
+          "definition": "baina"
+        },
+        {
+          "word": "these",
+          "definition": "hauek"
+        },
+        {
+          "word": "big",
+          "definition": "handi\nhandiak"
+        },
+        {
+          "word": "dogs",
+          "definition": "txakurrak"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "black.",
+          "definition": "beltz\nbeltza"
+        }
+      ],
+      "chips": [
+        "Txakur",
+        "txiki",
+        "horiek",
+        "grisak",
+        "dira",
+        "baizik",
+        "txakur",
+        "handi",
+        "hauek",
+        "beltzak",
+        "dira",
+        "Haiek",
+        "baina",
+        "onak",
+        "haien",
+        "Jakak",
+        "gara",
+        "hau",
+        "laku",
+        "zara",
+        "gida"
+      ],
+      "solutions": [
+        [
+          "Txakur",
+          "txiki",
+          "horiek",
+          "grisak",
+          "dira",
+          "baizik",
+          "txakur",
+          "handi",
+          "hauek",
+          "beltzak",
+          "dira"
+        ]
+      ],
+      "formattedSolution": "Txakur txiki horiek grisak dira, baizik txakur handi hauek beltzak dira.",
+      "id": "881974b8a85d",
+      "priority": 2,
+      "group": "c04b465ee5ef"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Txakur",
+          "definition": "dog"
+        },
+        {
+          "word": "txiki",
+          "definition": "small"
+        },
+        {
+          "word": "horiek",
+          "definition": "Those, plural of hori"
+        },
+        {
+          "word": "grisak",
+          "definition": "gray"
+        },
+        {
+          "word": "dira,",
+          "definition": "are\nare (izan)"
+        },
+        {
+          "word": "baizik",
+          "definition": "but (rather)\nbut rather\nbut(rather)\nrather"
+        },
+        {
+          "word": "txakur",
+          "definition": "dog"
+        },
+        {
+          "word": "handi",
+          "definition": "big"
+        },
+        {
+          "word": "hauek",
+          "definition": "These, plural of hau"
+        },
+        {
+          "word": "beltzak",
+          "definition": "black"
+        },
+        {
+          "word": "dira.",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "Those",
+        "small",
+        "dogs",
+        "are",
+        "gray",
+        "while",
+        "these",
+        "big",
+        "dogs",
+        "are",
+        "black",
+        "the",
+        "hee",
+        "his",
+        "one",
+        "She",
+        "Are",
+        "was",
+        "dog",
+        "here",
+        "cars"
+      ],
+      "solutions": [
+        [
+          "Those",
+          "small",
+          "dogs",
+          "are",
+          "gray",
+          "while",
+          "these",
+          "big",
+          "dogs",
+          "are",
+          "black"
+        ],
+        [
+          "Those",
+          "small",
+          "dogs",
+          "are",
+          "gray",
+          "but",
+          "these",
+          "big",
+          "dogs",
+          "are",
+          "black"
+        ]
+      ],
+      "formattedSolution": "Those small dogs are gray while these big dogs are black.",
+      "id": "f03049f99956",
+      "priority": 2,
+      "group": "c04b465ee5ef"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Autobusa hau eta kotxe horiek urdina dira.",
+      "meaningInSourceLanguage": "This bus and those cars are blue.",
+      "id": "7f55997a1700",
+      "priority": 0,
+      "group": "a979d10b672f"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "This",
+          "definition": "hau"
+        },
+        {
+          "word": "bus",
+          "definition": "austobusa\nautobus\nautobusa"
+        },
+        {
+          "word": "and",
+          "definition": "eta"
+        },
+        {
+          "word": "those",
+          "definition": "haiek\nhoriek"
+        },
+        {
+          "word": "cars",
+          "definition": "kotxeak"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "blue.",
+          "definition": "urdin"
+        }
+      ],
+      "chips": [
+        "Autobusa",
+        "hau",
+        "eta",
+        "kotxe",
+        "horiek",
+        "urdina",
+        "dira",
+        "horia",
+        "ona",
+        "da",
+        "Eta",
+        "hori",
+        "hor"
+      ],
+      "solutions": [
+        [
+          "Autobusa",
+          "hau",
+          "eta",
+          "kotxe",
+          "horiek",
+          "urdina",
+          "dira"
+        ]
+      ],
+      "formattedSolution": "Autobusa hau eta kotxe horiek urdina dira.",
+      "id": "938430f2fc21",
+      "priority": 2,
+      "group": "a979d10b672f"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Autobusa",
+          "definition": "a bus\nbus"
+        },
+        {
+          "word": "hau",
+          "definition": "this"
+        },
+        {
+          "word": "eta",
+          "definition": "and"
+        },
+        {
+          "word": "kotxe",
+          "definition": "car"
+        },
+        {
+          "word": "horiek",
+          "definition": "Those, plural of hori"
+        },
+        {
+          "word": "urdina",
+          "definition": "blue"
+        },
+        {
+          "word": "dira.",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "This",
+        "bus",
+        "and",
+        "those",
+        "cars",
+        "are",
+        "blue",
+        "his",
+        "the",
+        "one",
+        "is",
+        "She",
+        "Are"
+      ],
+      "solutions": [
+        [
+          "This",
+          "bus",
+          "and",
+          "those",
+          "cars",
+          "are",
+          "blue"
+        ]
+      ],
+      "formattedSolution": "This bus and those cars are blue.",
+      "id": "bd31713528f3",
+      "priority": 2,
+      "group": "a979d10b672f"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Hau autobusa da, baina hori kotxea da.",
+      "meaningInSourceLanguage": "This is a bus while that is a car.",
+      "id": "a364b3239d24",
+      "priority": 0,
+      "group": "2af3c631ac3e"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "This",
+          "definition": "hau"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "bus",
+          "definition": "austobusa\nautobus\nautobusa"
+        },
+        {
+          "word": "while",
+          "definition": "baina"
+        },
+        {
+          "word": "that",
+          "definition": "hori\nhura"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "car.",
+          "definition": "kotxe\nkotxea"
+        }
+      ],
+      "chips": [
+        "Hau",
+        "autobusa",
+        "da",
+        "baina",
+        "hori",
+        "kotxea",
+        "da",
+        "ona",
+        "a",
+        "bat",
+        "eta",
+        "hau",
+        "dira"
+      ],
+      "solutions": [
+        [
+          "Hau",
+          "autobusa",
+          "da",
+          "baina",
+          "hori",
+          "kotxea",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Hau autobusa da, baina hori kotxea da.",
+      "id": "a005b7458777",
+      "priority": 2,
+      "group": "2af3c631ac3e"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Hau",
+          "definition": "this"
+        },
+        {
+          "word": "autobusa",
+          "definition": "a bus\nbus"
+        },
+        {
+          "word": "da,",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        },
+        {
+          "word": "baina",
+          "definition": "but\nbut(contrast)"
+        },
+        {
+          "word": "hori",
+          "definition": "that\nyellow"
+        },
+        {
+          "word": "kotxea",
+          "definition": "a car\ncar"
+        },
+        {
+          "word": "da.",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "This",
+        "is",
+        "a",
+        "bus",
+        "while",
+        "that",
+        "is",
+        "a",
+        "car",
+        "his",
+        "h",
+        "it",
+        "was",
+        "am",
+        "Is",
+        "an",
+        "hat"
+      ],
+      "solutions": [
+        [
+          "This",
+          "is",
+          "a",
+          "bus",
+          "while",
+          "that",
+          "is",
+          "a",
+          "car"
+        ],
+        [
+          "This",
+          "is",
+          "a",
+          "bus",
+          "but",
+          "that",
+          "is",
+          "a",
+          "car"
+        ]
+      ],
+      "formattedSolution": "This is a bus while that is a car.",
+      "id": "10876738b581",
+      "priority": 2,
+      "group": "2af3c631ac3e"
     },
     {
       "type": "cards",
@@ -2508,21 +3387,21 @@
       "type": "cards",
       "pictures": [
         "thosethere1.jpg",
-        "thosethere23.jpg",
-        "thosethere.jpg"
+        "thosethere2.jpg",
+        "thosethere3.jpg"
       ],
       "formInTargetLanguage": "haiek",
       "meaningInSourceLanguage": "those over there, plural of hura",
-      "id": "70c557322a67",
+      "id": "76d3f61b23ce",
       "priority": 0,
-      "group": "1817aba63261"
+      "group": "785e616d2729"
     },
     {
       "type": "shortInput",
       "pictures": [
         "thosethere1.jpg",
-        "thosethere23.jpg",
-        "thosethere.jpg"
+        "thosethere2.jpg",
+        "thosethere3.jpg"
       ],
       "formInTargetLanguage": [
         "haiek"
@@ -2553,9 +3432,9 @@
           "definition": "hura"
         }
       ],
-      "id": "0c47f57eaa0e",
+      "id": "826b1d4c44e3",
       "priority": 1,
-      "group": "1817aba63261"
+      "group": "785e616d2729"
     },
     {
       "type": "cards",

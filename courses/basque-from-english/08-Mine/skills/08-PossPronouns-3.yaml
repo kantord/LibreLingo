@@ -69,14 +69,24 @@ Phrases:
   - Phrase: Norenak gonak dira?
     Translation: Whose skirts are those?
 
+  - Phrase: Gona luzeak nireak dira.
+    Translation: The long skirts are mine.
+
   - Phrase: Zure jaka da?
     Translation: Is it your jacket?
 
+  - Phrase: Nire jaka urdina da.
+    Translation: My jacket is blue.
+
   - Phrase: Txoriaren jertsea da.
     Translation: It is the bird's sweater.
+    Alternative translations:
+      - It is the sweater of the bird.
 
   - Phrase: Zaldiaren jertsea berdea da.
     Translation: The horse's sweater is green.
+    Alternative translations:
+      - The sweater of the horse is green.
 
   - Phrase: Gure prakak dira.
     Translation: They are our trousers.
@@ -86,9 +96,13 @@ Phrases:
 
   - Phrase: Anitzaren soinekoa da.
     Translation: It is Anitza's dress.
+    Alternative translations:
+      - It is dress of Anitza.
 
   - Phrase: Dortokaren soinekoa beltza da.
     Translation: The turtle's dress is black.
+    Alternative translations:
+      - The dress of the turtle is black.
 
   - Phrase: Txanoak Anitzarenak dira.
     Translation: The hats are Anitza's
@@ -98,6 +112,8 @@ Phrases:
 
   - Phrase: Mikelen zapatak gorriak dira.
     Translation: Mikel’s shoes are red.
+    Alternative translations:
+      -  The shoes of Mikel  are red
 
   - Phrase: Noren zorroa da?
     Translation: Whose wallet is it?
@@ -105,14 +121,53 @@ Phrases:
   - Phrase: Zure zorroa marroia da.
     Translation: Your wallet is brown.
 
-  - Phrase: Nire jaka urdina da.
-    Translation: My jacket is blue.
-
   - Phrase: Txerriaren txanoa morea da.
     Translation: The pig's hat is purple.
 
   - Phrase: Oilaskoaren gona luzea da.
     Translation: The chicken's skirt is long.
+
+  - Phrase: Norenak dira prakak?
+    Translation: Whose trousers are these?
+
+  - Phrase: Horiek dira bere prakak.
+    Translation: Those are his trousers.
+    Alternative translations:
+      -  Those are her trousers.
+
+  - Phrase: Zein txano dira bereak?
+    Translation: Which hats are his?
+    Alternative translations:
+      -  Which hats are hers?
+
+  - Phrase: Horiek dira bere txanoak.
+    Translation: Those are his hats.
+    Alternative translations:
+      -  Those are her hats.
+
+  - Phrase: Zein galtzerdi dira gureak?
+    Translation: Which socks are ours?
+
+  - Phrase: Galtzerdi laranjak gureak dira.
+    Translation: The orange socks are ours.
+
+  - Phrase: Noren zapatak dira horiek?
+    Translation: Whose shoes are those?
+
+  - Phrase: Horiek dira gure zapatak.
+    Translation: Those are our shoes.
+
+  - Phrase: Zein soineko dira zuenak?
+    Translation: Which dresses are yours(plural)?
+    Alternative translations:
+      - Which dresses are yours?
+      - TWhich dresses are you'alls?
+
+  - Phrase: Soineko moreak zuenak dira.
+    Translation: The purple dresses are yours(plural).
+    Alternative translations:
+      - The purple dresses are yours.
+      - The purple dresses are you'alls.
 
 Mini-dictionary:
   Basque:
@@ -212,6 +267,7 @@ Mini-dictionary:
     - luzea: long
     - medikua: doctor
     - morea: purple
+    - moreak: purple
     - marroia: brown
     - motela: slow
     - mutila: boy
@@ -234,7 +290,10 @@ Mini-dictionary:
     - poltsa: purse
     - poltsak: purses
     - prakak: trousers
+    - soineko: dress
     - soinekoa: dress
+    - soinekoak: dresses
+    - txano: hat
     - txanoa: hat
     - txanoak: hats
     - txakur: dog
@@ -308,7 +367,8 @@ Mini-dictionary:
     - doctor: medikua
     - dog: txakur
     - dogs: txakurrak
-    - dress: soinekoa
+    - dress: soineko
+    - dresses: soinekoak
     - driver: gidaria
     - engineers: ingeniariak
     - fast: azkar

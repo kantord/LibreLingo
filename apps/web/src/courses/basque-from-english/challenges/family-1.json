@@ -1139,11 +1139,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Gure aitona ingeniari bat da.",
-      "meaningInSourceLanguage": "Our grandfather is an engineer.",
-      "id": "b70b2bc5c3da",
+      "formInTargetLanguage": "Gure aitona gidaria bat da..",
+      "meaningInSourceLanguage": "Our grandfather is a driver.",
+      "id": "3097e202247c",
       "priority": 0,
-      "group": "9f52a5141a9e"
+      "group": "a64ea27b5f3e"
     },
     {
       "type": "chips",
@@ -1162,18 +1162,18 @@
           "definition": "da\nda (izan)\ndago (egon)"
         },
         {
-          "word": "an",
-          "definition": "-a\n-ak"
+          "word": "a",
+          "definition": "-a"
         },
         {
-          "word": "engineer.",
-          "definition": "ingeniari"
+          "word": "driver.",
+          "definition": "gidari\ngidaria"
         }
       ],
       "chips": [
         "Gure",
         "aitona",
-        "ingeniari",
+        "gidaria",
         "bat",
         "da",
         "ona",
@@ -1185,15 +1185,15 @@
         [
           "Gure",
           "aitona",
-          "ingeniari",
+          "gidaria",
           "bat",
           "da"
         ]
       ],
-      "formattedSolution": "Gure aitona ingeniari bat da.",
-      "id": "a8145b9aa1de",
+      "formattedSolution": "Gure aitona gidaria bat da..",
+      "id": "ec355f845756",
       "priority": 2,
-      "group": "9f52a5141a9e"
+      "group": "a64ea27b5f3e"
     },
     {
       "type": "chips",
@@ -1208,15 +1208,15 @@
           "definition": "grandfather"
         },
         {
-          "word": "ingeniari",
-          "definition": "engineer"
+          "word": "gidaria",
+          "definition": "driver\nthe driver"
         },
         {
           "word": "bat",
           "definition": "one"
         },
         {
-          "word": "da.",
+          "word": "da..",
           "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
         }
       ],
@@ -1236,14 +1236,14 @@
           "Our",
           "grandfather",
           "is",
-          "an",
-          "engineer"
+          "a",
+          "driver"
         ]
       ],
-      "formattedSolution": "Our grandfather is an engineer.",
-      "id": "520709ad7e6f",
+      "formattedSolution": "Our grandfather is a driver.",
+      "id": "724f7b1a0d21",
       "priority": 2,
-      "group": "9f52a5141a9e"
+      "group": "a64ea27b5f3e"
     },
     {
       "type": "options",
@@ -2620,6 +2620,15 @@
       "group": "57563b229273"
     },
     {
+      "type": "listeningExercise",
+      "answer": "aiton-amonak",
+      "meaning": "grandparents",
+      "audio": "d98e8eaed62bba2e0638a523cb551102442406d8f0d7ed5fe67618f000cdad37",
+      "id": "dab1a86d1822",
+      "priority": 1,
+      "group": "d3184189f7c2"
+    },
+    {
       "type": "cards",
       "pictures": [
         "grandfather1.jpg",
@@ -2649,6 +2658,15 @@
         }
       ],
       "id": "b441d8f25700",
+      "priority": 1,
+      "group": "a2d7bdff48d6"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "aiton",
+      "meaning": "grandfather",
+      "audio": "b479a871d30851e61b6035155c30a23f90199ee5fc4313d30758d9c6295c4c11",
+      "id": "b09e3a4fff5a",
       "priority": 1,
       "group": "a2d7bdff48d6"
     },
@@ -2686,6 +2704,15 @@
       "group": "4db87cc95262"
     },
     {
+      "type": "listeningExercise",
+      "answer": "amon",
+      "meaning": "grandmother",
+      "audio": "ad4aaf0195ffce7e0e748ec9a3916625b3b047c67211ddf52b0b4e5b1b451627",
+      "id": "9e2a254709fa",
+      "priority": 1,
+      "group": "4db87cc95262"
+    },
+    {
       "type": "cards",
       "pictures": [
         "parents1.jpg",
@@ -2719,6 +2746,15 @@
       "group": "49988ecd6f79"
     },
     {
+      "type": "listeningExercise",
+      "answer": "gurasoak",
+      "meaning": "parents",
+      "audio": "8e462ebff12a1ca4666e99a326d66586a2ead5b4def6f1263725a6c84cbb3dd3",
+      "id": "c7f6c7f89345",
+      "priority": 1,
+      "group": "19c3a5b6b4ce"
+    },
+    {
       "type": "cards",
       "pictures": [
         "father1.jpg",
@@ -2748,6 +2784,15 @@
         }
       ],
       "id": "075c0123a8e8",
+      "priority": 1,
+      "group": "3cbd95346617"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "aita",
+      "meaning": "father",
+      "audio": "79561dd1aaef1b07fbccd6ae3119ff54ccbe00a6d752ab8d1576a98a0fcd5c37",
+      "id": "d5792f03a0cd",
       "priority": 1,
       "group": "3cbd95346617"
     },
@@ -2785,6 +2830,15 @@
       "group": "f0f51767d4b2"
     },
     {
+      "type": "listeningExercise",
+      "answer": "ama",
+      "meaning": "mother",
+      "audio": "58135b9c4875c60d9f40788b6d11684db859c67be2ee9ce3763deaf4192e61b9",
+      "id": "7bdfbf40c876",
+      "priority": 1,
+      "group": "7daca16d28c0"
+    },
+    {
       "type": "cards",
       "pictures": [
         "son1.jpg",
@@ -2814,6 +2868,15 @@
         }
       ],
       "id": "fc4427218b53",
+      "priority": 1,
+      "group": "99077fd8ed60"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "seme",
+      "meaning": "son",
+      "audio": "61159662239d34b0987b87a3956e88dc0e4303d71fa59891e5d21fad9a48fe2d",
+      "id": "586394d8f6ab",
       "priority": 1,
       "group": "99077fd8ed60"
     },

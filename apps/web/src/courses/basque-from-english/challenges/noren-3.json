@@ -36,9 +36,9 @@
         "ahuntza",
         "gizena",
         "da",
-        "aita",
         "gizona",
-        "eta"
+        "eta",
+        "Aintza"
       ],
       "solutions": [
         [
@@ -138,9 +138,9 @@
         "behiak",
         "gazteak",
         "dira",
-        "aita",
         "gara",
-        "gaztea"
+        "gaztea",
+        "altuak"
       ],
       "solutions": [
         [
@@ -240,9 +240,9 @@
         "sagua",
         "argala",
         "zen",
-        "osaba",
         "zara",
-        "gara"
+        "gara",
+        "sugea"
       ],
       "solutions": [
         [
@@ -499,11 +499,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Nire lagunaren boligrafoa da",
+      "formInTargetLanguage": "Nire lagunaren boligrafoa da.",
       "meaningInSourceLanguage": "It is my friend's pen.",
-      "id": "de1c37d3bddb",
+      "id": "0b2e3df72d5e",
       "priority": 0,
-      "group": "bfae937c38b6"
+      "group": "25a54899d974"
     },
     {
       "type": "chips",
@@ -547,10 +547,10 @@
           "da"
         ]
       ],
-      "formattedSolution": "Nire lagunaren boligrafoa da",
-      "id": "d64695d0c08f",
+      "formattedSolution": "Nire lagunaren boligrafoa da.",
+      "id": "c2fc11267084",
       "priority": 2,
-      "group": "bfae937c38b6"
+      "group": "25a54899d974"
     },
     {
       "type": "chips",
@@ -569,7 +569,7 @@
           "definition": "pen"
         },
         {
-          "word": "da",
+          "word": "da.",
           "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
         }
       ],
@@ -603,9 +603,9 @@
         ]
       ],
       "formattedSolution": "It is my friend's pen.",
-      "id": "f5358c77483d",
+      "id": "76c1d886400d",
       "priority": 2,
-      "group": "bfae937c38b6"
+      "group": "25a54899d974"
     },
     {
       "type": "options",
@@ -748,10 +748,10 @@
         "Mirenen",
         "lagun",
         "naiz",
+        "Bi",
         "Ni",
         "i",
-        "n",
-        "han"
+        "n"
       ],
       "solutions": [
         [
@@ -860,7 +860,7 @@
         "da",
         "arkatza",
         "eta",
-        "ona"
+        "ardia"
       ],
       "solutions": [
         [
@@ -952,8 +952,8 @@
         "Mirenen",
         "arkatza",
         "da",
-        "eta",
-        "dira"
+        "arkatz",
+        "eta"
       ],
       "solutions": [
         [
@@ -1008,6 +1008,93 @@
     },
     {
       "type": "options",
+      "formInTargetLanguage": "Noren baloia da?",
+      "meaningInSourceLanguage": "Whose ball is it?",
+      "id": "b96fc33d3856",
+      "priority": 0,
+      "group": "478622318262"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Whose",
+          "definition": "noren\nnorena\nnorenak"
+        },
+        {
+          "word": "ball",
+          "definition": "baloi"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "it?",
+          "definition": "hura"
+        }
+      ],
+      "chips": [
+        "Noren",
+        "baloia",
+        "da",
+        "Nor",
+        "on"
+      ],
+      "solutions": [
+        [
+          "Noren",
+          "baloia",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Noren baloia da?",
+      "id": "9b92008abd65",
+      "priority": 2,
+      "group": "478622318262"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Noren",
+          "definition": "whose"
+        },
+        {
+          "word": "baloia",
+          "definition": "ball"
+        },
+        {
+          "word": "da?",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "Whose",
+        "ball",
+        "is",
+        "it",
+        "his",
+        "We",
+        "Is"
+      ],
+      "solutions": [
+        [
+          "Whose",
+          "ball",
+          "is",
+          "it"
+        ]
+      ],
+      "formattedSolution": "Whose ball is it?",
+      "id": "53e28597127c",
+      "priority": 2,
+      "group": "478622318262"
+    },
+    {
+      "type": "options",
       "formInTargetLanguage": "Zure lagunaren baloia da.",
       "meaningInSourceLanguage": "It is your friend's ball.",
       "id": "008a148358c4",
@@ -1046,7 +1133,7 @@
         "da",
         "gara",
         "gure",
-        "zara"
+        "gurea"
       ],
       "solutions": [
         [
@@ -1088,9 +1175,9 @@
         "your",
         "friend's",
         "ball",
+        "or",
         "it",
         "Is",
-        "or",
         "in"
       ],
       "solutions": [
@@ -1294,7 +1381,7 @@
         "Are",
         "me",
         "red",
-        "He"
+        "grey"
       ],
       "solutions": [
         [
@@ -1411,93 +1498,6 @@
       "id": "3748bba0b72b",
       "priority": 2,
       "group": "b847acc18978"
-    },
-    {
-      "type": "options",
-      "formInTargetLanguage": "Xabieren aterkia da.",
-      "meaningInSourceLanguage": "It is Xabier’s umbrella.",
-      "id": "e3bda3ebde8e",
-      "priority": 0,
-      "group": "ffa16b0f99fa"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": false,
-      "phrase": [
-        {
-          "word": "It",
-          "definition": "hura"
-        },
-        {
-          "word": "is",
-          "definition": "da\nda (izan)\ndago (egon)"
-        },
-        {
-          "word": "Xabier’s",
-          "definition": "Xabieren (male name)"
-        },
-        {
-          "word": "umbrella.",
-          "definition": "aterki"
-        }
-      ],
-      "chips": [
-        "Xabieren",
-        "aterkia",
-        "da",
-        "berea",
-        "ere"
-      ],
-      "solutions": [
-        [
-          "Xabieren",
-          "aterkia",
-          "da"
-        ]
-      ],
-      "formattedSolution": "Xabieren aterkia da.",
-      "id": "fa1d5ddf54b8",
-      "priority": 2,
-      "group": "ffa16b0f99fa"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": true,
-      "phrase": [
-        {
-          "word": "Xabieren",
-          "definition": "Xabier's (male name)\nXabier’s (male name)"
-        },
-        {
-          "word": "aterkia",
-          "definition": "umbrella"
-        },
-        {
-          "word": "da.",
-          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
-        }
-      ],
-      "chips": [
-        "It",
-        "is",
-        "Xabier’s",
-        "umbrella",
-        "it",
-        "Is",
-        "me"
-      ],
-      "solutions": [
-        [
-          "It",
-          "is",
-          "Xabier’s",
-          "umbrella"
-        ]
-      ],
-      "formattedSolution": "It is Xabier’s umbrella.",
-      "id": "75c864f0a7a8",
-      "priority": 2,
-      "group": "ffa16b0f99fa"
     },
     {
       "type": "options",
@@ -2205,22 +2205,22 @@
     {
       "type": "cards",
       "pictures": [
-        "ball.jpg",
-        "ball.jpg",
-        "ball.jpg"
+        "ball1.jpg",
+        "ball2.jpg",
+        "ball3.jpg"
       ],
       "formInTargetLanguage": "baloi",
       "meaningInSourceLanguage": "ball",
-      "id": "75437d271c41",
+      "id": "cc232f392402",
       "priority": 0,
-      "group": "c2da00c5844b"
+      "group": "6f52363dff1f"
     },
     {
       "type": "shortInput",
       "pictures": [
-        "ball.jpg",
-        "ball.jpg",
-        "ball.jpg"
+        "ball1.jpg",
+        "ball2.jpg",
+        "ball3.jpg"
       ],
       "formInTargetLanguage": [
         "baloi"
@@ -2231,9 +2231,9 @@
           "definition": "baloi"
         }
       ],
-      "id": "c2fb976f9e06",
+      "id": "ed3781bc6aba",
       "priority": 1,
-      "group": "c2da00c5844b"
+      "group": "6f52363dff1f"
     },
     {
       "type": "cards",
@@ -2271,22 +2271,22 @@
     {
       "type": "cards",
       "pictures": [
-        "watch.jpg",
-        "watch.jpg",
-        "watch.jpg"
+        "watch1.jpg",
+        "watch2.jpg",
+        "watch3.jpg"
       ],
       "formInTargetLanguage": "erloju",
       "meaningInSourceLanguage": "watch",
-      "id": "878e36e711ef",
+      "id": "d32f5f1b1d4e",
       "priority": 0,
-      "group": "53da247815ca"
+      "group": "67631e3f9895"
     },
     {
       "type": "shortInput",
       "pictures": [
-        "watch.jpg",
-        "watch.jpg",
-        "watch.jpg"
+        "watch1.jpg",
+        "watch2.jpg",
+        "watch3.jpg"
       ],
       "formInTargetLanguage": [
         "erloju"
@@ -2297,9 +2297,9 @@
           "definition": "erloju"
         }
       ],
-      "id": "098c02fa4126",
+      "id": "84a58b193b3f",
       "priority": 1,
-      "group": "53da247815ca"
+      "group": "67631e3f9895"
     }
   ]
 }

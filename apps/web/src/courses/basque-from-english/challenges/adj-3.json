@@ -212,11 +212,11 @@
         "small",
         "green",
         "bus",
+        "an",
         "am",
         "man",
         "I",
-        "are",
-        "is"
+        "are"
       ],
       "solutions": [
         [
@@ -280,8 +280,8 @@
         "morea",
         "da",
         "eta",
-        "altu",
-        "katua"
+        "katua",
+        "ona"
       ],
       "solutions": [
         [
@@ -575,8 +575,8 @@
         "are",
         "the",
         "She",
-        "it",
-        "or"
+        "or",
+        "it"
       ],
       "solutions": [
         [
@@ -653,9 +653,9 @@
         "zen",
         "gara",
         "zara",
-        "aita",
-        "ama",
-        "Eta"
+        "Eta",
+        "gida",
+        "da"
       ],
       "solutions": [
         [
@@ -714,7 +714,7 @@
         "her",
         "are",
         "She",
-        "his"
+        "an"
       ],
       "solutions": [
         [
@@ -789,11 +789,11 @@
         "eta",
         "altua",
         "da",
-        "aita",
         "zara",
         "dira",
         "Eta",
-        "gida"
+        "gida",
+        "ona"
       ],
       "solutions": [
         [
@@ -847,12 +847,12 @@
         "fat",
         "and",
         "tall",
+        "an",
         "am",
         "a",
         "bad",
         "San",
-        "was",
-        "cat"
+        "was"
       ],
       "solutions": [
         [
@@ -996,11 +996,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Hotel altu horiak ziren.",
-      "meaningInSourceLanguage": "The tall hotels were yellow.",
-      "id": "92b48ad5fc88",
+      "formInTargetLanguage": "Hotel altuak horiak edo zuriak ziren.",
+      "meaningInSourceLanguage": "The tall hotels were yellow or white.",
+      "id": "a0fdbf6d959c",
       "priority": 0,
-      "group": "f7382bc8e5dc"
+      "group": "f4686e99691c"
     },
     {
       "type": "chips",
@@ -1023,31 +1023,45 @@
           "definition": "ginen\nzinen\nzineten\nziren"
         },
         {
-          "word": "yellow.",
+          "word": "yellow",
           "definition": "hori"
+        },
+        {
+          "word": "or",
+          "definition": "edo"
+        },
+        {
+          "word": "white.",
+          "definition": "zuri\nzuria"
         }
       ],
       "chips": [
         "Hotel",
-        "altu",
+        "altuak",
         "horiak",
+        "edo",
+        "zuriak",
         "ziren",
-        "arte",
+        "zureak",
         "horia",
-        "morea"
+        "zuria",
+        "zurea",
+        "moreak"
       ],
       "solutions": [
         [
           "Hotel",
-          "altu",
+          "altuak",
           "horiak",
+          "edo",
+          "zuriak",
           "ziren"
         ]
       ],
-      "formattedSolution": "Hotel altu horiak ziren.",
-      "id": "75a24017a200",
+      "formattedSolution": "Hotel altuak horiak edo zuriak ziren.",
+      "id": "cd50e7166433",
       "priority": 2,
-      "group": "f7382bc8e5dc"
+      "group": "f4686e99691c"
     },
     {
       "type": "chips",
@@ -1058,12 +1072,20 @@
           "definition": "hotel"
         },
         {
-          "word": "altu",
+          "word": "altuak",
           "definition": "tall"
         },
         {
           "word": "horiak",
           "definition": "yellow"
+        },
+        {
+          "word": "edo",
+          "definition": "or"
+        },
+        {
+          "word": "zuriak",
+          "definition": "white"
         },
         {
           "word": "ziren.",
@@ -1076,10 +1098,14 @@
         "hotels",
         "were",
         "yellow",
+        "or",
+        "white",
         "hee",
         "her",
-        "hers",
-        "here"
+        "here",
+        "are",
+        "the",
+        "hers"
       ],
       "solutions": [
         [
@@ -1087,13 +1113,15 @@
           "tall",
           "hotels",
           "were",
-          "yellow"
+          "yellow",
+          "or",
+          "white"
         ]
       ],
-      "formattedSolution": "The tall hotels were yellow.",
-      "id": "0ca74a03ab22",
+      "formattedSolution": "The tall hotels were yellow or white.",
+      "id": "d81d461452b4",
       "priority": 2,
-      "group": "f7382bc8e5dc"
+      "group": "f4686e99691c"
     },
     {
       "type": "options",
@@ -1133,9 +1161,9 @@
         "handia",
         "laranja",
         "da",
+        "ardia",
         "ona",
-        "handi",
-        "anaia"
+        "handi"
       ],
       "solutions": [
         [
@@ -1180,7 +1208,7 @@
         "one",
         "are",
         "or",
-        "pig"
+        "an"
       ],
       "solutions": [
         [
@@ -1288,7 +1316,7 @@
         "man",
         "one",
         "are",
-        "cat"
+        "an"
       ],
       "solutions": [
         [
@@ -1383,7 +1411,7 @@
         "gray",
         "Are",
         "car",
-        "am"
+        "grey"
       ],
       "solutions": [
         [
@@ -1456,11 +1484,11 @@
         "labura",
         "da",
         "Eta",
-        "ama",
         "katua",
         "ona",
-        "aita",
-        "zara"
+        "zara",
+        "a",
+        "gara"
       ],
       "solutions": [
         [
@@ -1586,7 +1614,7 @@
         },
         {
           "word": "cook",
-          "definition": "sukaldaria"
+          "definition": "sukaldari\nsukaldaria"
         },
         {
           "word": "was",
@@ -1606,11 +1634,11 @@
         "gizena",
         "zen",
         "zara",
+        "zuena",
         "gara",
-        "ama",
         "zurea",
-        "umea",
-        "izeba"
+        "ken",
+        "ezer"
       ],
       "solutions": [
         [
@@ -1671,14 +1699,14 @@
         "cook",
         "was",
         "fat",
+        "an",
         "cat",
         "hat",
         "man",
         "She",
         "car",
         "San",
-        "am",
-        "a"
+        "am"
       ],
       "solutions": [
         [
@@ -1761,7 +1789,7 @@
         },
         {
           "word": "but",
-          "definition": "baina"
+          "definition": "baina\nbaina, baizik"
         },
         {
           "word": "he",
@@ -1793,7 +1821,7 @@
         "eta",
         "gida",
         "ona",
-        "aita"
+        "zara"
       ],
       "solutions": [
         [
@@ -1980,13 +2008,13 @@
         "gizena",
         "a",
         "Eta",
-        "aita",
-        "ama",
         "Epa",
         "gida",
         "ona",
         "gara",
-        "dira"
+        "dira",
+        "zara",
+        "al"
       ],
       "solutions": [
         [
@@ -2064,14 +2092,14 @@
         "and",
         "fat",
         "it",
+        "an",
         "hat",
         "are",
         "the",
         "t",
         "his",
         "in",
-        "cat",
-        "on"
+        "cat"
       ],
       "solutions": [
         [
@@ -2150,7 +2178,7 @@
         "zara",
         "gara",
         "Eta",
-        "aita"
+        "arte"
       ],
       "solutions": [
         [
@@ -2199,10 +2227,10 @@
         "and",
         "thin",
         "the",
+        "an",
         "man",
         "one",
-        "San",
-        "are"
+        "San"
       ],
       "solutions": [
         [
@@ -2245,7 +2273,7 @@
         },
         {
           "word": "cook",
-          "definition": "sukaldaria"
+          "definition": "sukaldari\nsukaldaria"
         },
         {
           "word": "is",
@@ -2323,9 +2351,9 @@
         "fat",
         "one",
         "Who",
-        "it",
         "or",
-        "not"
+        "it",
+        "an"
       ],
       "solutions": [
         [
@@ -2617,22 +2645,22 @@
     {
       "type": "cards",
       "pictures": [
-        "purple.jpg",
-        "purple.jpg",
-        "purple.jpg"
+        "purple1.jpg",
+        "purple2.jpg",
+        "purple3.jpg"
       ],
       "formInTargetLanguage": "more",
       "meaningInSourceLanguage": "purple",
-      "id": "3c5814a97778",
+      "id": "e0eaeb8556dd",
       "priority": 0,
-      "group": "1539588ded49"
+      "group": "74bec4d55c2a"
     },
     {
       "type": "shortInput",
       "pictures": [
-        "purple.jpg",
-        "purple.jpg",
-        "purple.jpg"
+        "purple1.jpg",
+        "purple2.jpg",
+        "purple3.jpg"
       ],
       "formInTargetLanguage": [
         "more"
@@ -2643,9 +2671,9 @@
           "definition": "more\nmorea"
         }
       ],
-      "id": "76fe3282ec1c",
+      "id": "e0fa5dca1d18",
       "priority": 1,
-      "group": "1539588ded49"
+      "group": "74bec4d55c2a"
     }
   ]
 }

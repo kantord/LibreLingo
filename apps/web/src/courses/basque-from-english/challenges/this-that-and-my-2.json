@@ -734,9 +734,9 @@
         "erizaina",
         "naiz",
         "ni",
+        "Bi",
         "ere",
-        "i",
-        "bat"
+        "i"
       ],
       "solutions": [
         [
@@ -950,8 +950,8 @@
         "da",
         "gara",
         "hura",
-        "dira",
-        "gida"
+        "gurea",
+        "dira"
       ],
       "solutions": [
         [
@@ -1058,9 +1058,9 @@
         "gure",
         "gidariak",
         "zarete",
+        "gurea",
         "gureak",
-        "gara",
-        "Zure"
+        "gara"
       ],
       "solutions": [
         [
@@ -1223,6 +1223,112 @@
       "id": "19149a82f8fd",
       "priority": 2,
       "group": "3453473b8310"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Hori da zuen eskola.",
+      "meaningInSourceLanguage": "That is your(plural) school.",
+      "id": "5fb1b8998340",
+      "priority": 0,
+      "group": "da8c2bd0155d"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "That",
+          "definition": "hori\nhura"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "your(plural)",
+          "definition": "zuen"
+        },
+        {
+          "word": "school.",
+          "definition": "eskola"
+        }
+      ],
+      "chips": [
+        "Hori",
+        "da",
+        "zuen",
+        "eskola",
+        "Hura",
+        "on",
+        "ona"
+      ],
+      "solutions": [
+        [
+          "Hori",
+          "da",
+          "zuen",
+          "eskola"
+        ]
+      ],
+      "formattedSolution": "Hori da zuen eskola.",
+      "id": "587ac61469d6",
+      "priority": 2,
+      "group": "da8c2bd0155d"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Hori",
+          "definition": "that\nyellow"
+        },
+        {
+          "word": "da",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        },
+        {
+          "word": "zuen",
+          "definition": "your(plural)\nyour, plural\nyours"
+        },
+        {
+          "word": "eskola.",
+          "definition": "school"
+        }
+      ],
+      "chips": [
+        "That",
+        "is",
+        "your(plural",
+        "school",
+        "coat",
+        "hat",
+        "What"
+      ],
+      "solutions": [
+        [
+          "That",
+          "is",
+          "your(plural",
+          "school"
+        ],
+        [
+          "That",
+          "is",
+          "your'll",
+          "school"
+        ],
+        [
+          "That",
+          "is",
+          "your",
+          "school"
+        ]
+      ],
+      "formattedSolution": "That is your(plural) school.",
+      "id": "e1938430ac24",
+      "priority": 2,
+      "group": "da8c2bd0155d"
     },
     {
       "type": "options",
@@ -1482,9 +1588,9 @@
         "medikua",
         "naiz",
         "ni",
+        "Bi",
         "da",
-        "i",
-        "a"
+        "i"
       ],
       "solutions": [
         [
@@ -1589,8 +1695,8 @@
         "medikua",
         "zen",
         "haien",
-        "Haiek",
-        "ziren"
+        "ken",
+        "Haiek"
       ],
       "solutions": [
         [

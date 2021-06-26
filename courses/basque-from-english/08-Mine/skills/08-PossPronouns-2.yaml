@@ -26,7 +26,7 @@ New words:
     Images:
       - he3
       - she3
-      - she3
+      - she2
 
   - Word: gureak
     Translation: ours
@@ -66,6 +66,12 @@ New words:
 
 
 Phrases:
+  - Phrase: Zein aterkiak dira nireak?
+    Translation: Which umbrellas are mine?
+
+  - Phrase: Aterki beltzak zureak dira.
+    Translation: The black umbrellas are yours.
+
   - Phrase: Norenak dira alkandora zuriak?
     Translation: Whose are the white shirts?
 
@@ -74,47 +80,89 @@ Phrases:
 
   - Phrase: Zein dira nire berokiak?
     Translation: Which are my coats?
-    Alternative translations:
-      - Which coats are mine?
 
   - Phrase: Beroki beltzak zureak dira.
     Translation: The black coats are yours.
 
-  - Phrase: Noren betaurrekoak dira hauek?
+  - Phrase: Norenak betaurrekoak dira hauek?
     Translation: Whose glasses are these?
-    Alternative translations:
-      - Whose are these glasses?
 
   - Phrase: Betaurreko hauek bereak dira.
-    Translation: These glasses are hers.
+    Translation: These glasses are his.
     Alternative translations:
-      - These glasses are his.
+      - These glasses are hers.
 
-  - Phrase: Zein galtzerdi dira gureak?
-    Translation: Which socks are ours?
+  - Phrase: Norenak dira boligrafo horiek?
+    Translation: Whose pens are these?
+
+  - Phrase: Horiek dira bere boligrafoak
+    Translation: Those are his pens.
     Alternative translations:
-      - Which are our socks?
+      - Those are her pens.
 
-  - Phrase: Galtzerdi laranjak gureak dira.
-    Translation: The orange socks are ours.
-
-  - Phrase: Noren gerrikoak dira horiek?
-    Translation: Whose belts are those?
+  - Phrase: Zein arkatz dira bereak?
+    Translation: Which pencils are hers?
     Alternative translations:
-      - Whose are those belts?
+      - Which pencils are his?
 
-  - Phrase: Gerriko horiek zuenak dira.
-    Translation: These belts are yours.
+  - Phrase: Horiek dira bere arkatzak.
+    Translation: Those are his pencils.
     Alternative translations:
-      - These belts are yours(plural).
+      - Those are her pencils.
 
-  - Phrase: Zein dira haien motxilak?
-    Translation: Which are their backpacks?
+  - Phrase: Zein eraztun dira gureak?
+    Translation: Which rings are ours?
+
+  - Phrase: Eraztun horiak gureak dira.
+    Translation: The yellow rings are ours.
+
+  - Phrase: Norenak dira eskularruak?
+    Translation: Whose are those gloves?
+
+  - Phrase: Horiek dira gure eskularruak.
+    Translation: Those are our gloves.
+
+  - Phrase: Noren erlojuak dira horiek?
+    Translation: Whose watches are those?
+
+  - Phrase: Erlojuak horiek zuenak dira.
+    Translation: These watches are yours(plural).
     Alternative translations:
-      - Which backpacks are theirs?
+      - These watches are yours.
+      - These watches are you'alls.
+
+  - Phrase: Zein eskularruak  dira zuenak?
+    Translation: Which gloves are yours(plural)?
+    Alternative translations:
+      - Which gloves are yours?
+      - Which gloves are you'alls?
+
+  - Phrase: Eskularru moreak zuenak dira.
+    Translation: The purple gloves are yours(plural).
+    Alternative translations:
+      - The purple glovess are yours.
+      - The purple gloves are you'alls.
+
+  - Phrase: Zein dira zuenak motxilak?
+    Translation: Which are your(plural) backpacks?
+    Alternative translations:
+      - Which are your backpacks?
+      - Which are you'alls backpacks?
 
   - Phrase: Motxila urdinak haienak dira.
     Translation: The blue backpacks are theirs.
+
+  - Phrase: Noren zorroak dira horiek?
+    Translation: Whose wallets are those?
+
+  - Phrase: Zorro horiek haienak dira.
+    Translation: Those wallets are theirs.
+
+  - Phrase: Noren jaka dira hauek?
+    Translation: Whose jackets are these?
+
+  - Phrase: Jakak marroiak haienak dira.
+    Translation: The brown jackets are theirs.
 
 Mini-dictionary:
   Basque:
@@ -151,6 +199,9 @@ Mini-dictionary:
     - dortokaren: turtle's
     - ere: also
     - eskola: school
+    - eskularru: glove
+    - eskularrua: glove
+    - eskularruak: gloves
     - eta: and
     - ez: not
     - galtzerdi: sock
@@ -205,6 +256,7 @@ Mini-dictionary:
     - irakasleak: teachers
     - itsusia: ugly
     - jaka: jacket
+    - jakak: jackets
     - jertse: sweater
     - jertsea: sweater
     - katu: cat
@@ -226,6 +278,7 @@ Mini-dictionary:
     - medikua: doctor
     - morea: purple
     - marroia: brown
+    - marroiak: brown
     - motela: slow
     - motxila: backpack
     - motxilak: backpacks
@@ -277,7 +330,9 @@ Mini-dictionary:
     - zapatak: shoes
     - zen: was
     - zer: what
+    - zorro: wallet
     - zorroa: wallet
+    - zorroak: wallets
     - zu: you
     - zuek: you
     - zuen: your, plural
@@ -345,6 +400,7 @@ Mini-dictionary:
     - girl: neska
     - girls: neskak
     - glasses: betaurrekoak
+    - gloves: eskularruak
     - gray: gris
     - green: berde
     - hat: txanoa
@@ -370,6 +426,7 @@ Mini-dictionary:
       - bere
       - bereak
     - jacket: jaka
+    - jackets: jakak
     - Lili: Lili (LibreLingo Turtle)
     - look!: begira!
     - long: luzea
@@ -443,7 +500,8 @@ Mini-dictionary:
     - turtle's: dortokaren
     - yours(plural): zuenak
     - ugly: itsusi
-    - wallet: zorroa
+    - wallet: zorro
+    - wallets: zorroak
     - was: zen
     - what: zer
     - we: gu

@@ -4,11 +4,11 @@
   "challenges": [
     {
       "type": "options",
-      "formInTargetLanguage": "Autobusa horia da?",
-      "meaningInSourceLanguage": "Is it a yellow bus?",
-      "id": "ba6fa32ecf6d",
+      "formInTargetLanguage": "Autobusa horia edo autobus laranja da?",
+      "meaningInSourceLanguage": "Is it a yellow bus or an orange bus?",
+      "id": "df0a47076a89",
       "priority": 0,
-      "group": "bf33fe5f8d66"
+      "group": "5d13501f57ad"
     },
     {
       "type": "chips",
@@ -31,6 +31,22 @@
           "definition": "hori"
         },
         {
+          "word": "bus",
+          "definition": "austobusa\nautobus\nautobusa"
+        },
+        {
+          "word": "or",
+          "definition": "edo"
+        },
+        {
+          "word": "an",
+          "definition": "-a\n-ak"
+        },
+        {
+          "word": "orange",
+          "definition": "laranja"
+        },
+        {
           "word": "bus?",
           "definition": "austobusa\nautobus\nautobusa"
         }
@@ -38,21 +54,30 @@
       "chips": [
         "Autobusa",
         "horia",
+        "edo",
+        "autobus",
+        "laranja",
         "da",
         "ona",
-        "Hura"
+        "eta",
+        "Hura",
+        "a",
+        "altua"
       ],
       "solutions": [
         [
           "Autobusa",
           "horia",
+          "edo",
+          "autobus",
+          "laranja",
           "da"
         ]
       ],
-      "formattedSolution": "Autobusa horia da?",
-      "id": "f0b8181e18a1",
+      "formattedSolution": "Autobusa horia edo autobus laranja da?",
+      "id": "5ed231c6a72e",
       "priority": 2,
-      "group": "bf33fe5f8d66"
+      "group": "5d13501f57ad"
     },
     {
       "type": "chips",
@@ -67,6 +92,18 @@
           "definition": "yellow"
         },
         {
+          "word": "edo",
+          "definition": "or"
+        },
+        {
+          "word": "autobus",
+          "definition": "bus"
+        },
+        {
+          "word": "laranja",
+          "definition": "orange"
+        },
+        {
           "word": "da?",
           "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
         }
@@ -77,10 +114,18 @@
         "a",
         "yellow",
         "bus",
+        "or",
+        "an",
+        "orange",
+        "bus",
+        "on",
         "is",
-        "I",
+        "o",
+        "am",
         "e",
-        "t"
+        "r",
+        "n",
+        "of"
       ],
       "solutions": [
         [
@@ -88,6 +133,10 @@
           "it",
           "a",
           "yellow",
+          "bus",
+          "or",
+          "an",
+          "orange",
           "bus"
         ],
         [
@@ -95,13 +144,17 @@
           "it",
           "the",
           "yellow",
+          "bus",
+          "or",
+          "the",
+          "orange",
           "bus"
         ]
       ],
-      "formattedSolution": "Is it a yellow bus?",
-      "id": "e0070e929af4",
+      "formattedSolution": "Is it a yellow bus or an orange bus?",
+      "id": "0fd311ec9908",
       "priority": 2,
-      "group": "bf33fe5f8d66"
+      "group": "5d13501f57ad"
     },
     {
       "type": "options",
@@ -137,7 +190,7 @@
         },
         {
           "word": "but",
-          "definition": "baina"
+          "definition": "baina\nbaina, baizik"
         },
         {
           "word": "now",
@@ -238,8 +291,8 @@
         "n",
         "o",
         "or",
-        "in",
-        "on"
+        "an",
+        "in"
       ],
       "solutions": [
         [
@@ -351,14 +404,14 @@
         "da",
         "Eta",
         "ona",
-        "aita",
         "a",
         "dira",
         "etxea",
-        "gona",
-        "ama",
         "Epa",
-        "neba"
+        "Gona",
+        "Hura",
+        "gara",
+        "gida"
       ],
       "solutions": [
         [
@@ -443,6 +496,7 @@
         "blue",
         "and",
         "orange",
+        "an",
         "are",
         "bad",
         "one",
@@ -453,8 +507,7 @@
         "man",
         "He",
         "e",
-        "We",
-        "me"
+        "We"
       ],
       "solutions": [
         [
@@ -512,7 +565,7 @@
         },
         {
           "word": "but",
-          "definition": "baina"
+          "definition": "baina\nbaina, baizik"
         },
         {
           "word": "now",
@@ -541,10 +594,10 @@
         "da",
         "ona",
         "eta",
-        "gona",
         "bat",
         "on",
-        "aita"
+        "Gona",
+        "zara"
       ],
       "solutions": [
         [
@@ -608,13 +661,13 @@
         "red",
         "am",
         "t",
+        "an",
         "cat",
         "r",
         "w",
         "Is",
         "fat",
-        "bad",
-        "hat"
+        "bad"
       ],
       "solutions": [
         [
@@ -699,9 +752,9 @@
         "ona",
         "t",
         "Bai",
-        "aita",
         "Epa",
-        "ere"
+        "ere",
+        "d"
       ],
       "solutions": [
         [
@@ -772,14 +825,14 @@
         "car",
         "is",
         "blue",
+        "an",
         "in",
         "are",
         "He",
         "e",
         "We",
         "it",
-        "me",
-        "his"
+        "me"
       ],
       "solutions": [
         [
@@ -829,7 +882,7 @@
         },
         {
           "word": "but",
-          "definition": "baina"
+          "definition": "baina\nbaina, baizik"
         },
         {
           "word": "now",
@@ -1019,9 +1072,9 @@
         "da",
         "a",
         "ona",
-        "aita",
+        "beltz",
         "t",
-        "neba",
+        "bost",
         "Epa"
       ],
       "solutions": [
@@ -1094,13 +1147,13 @@
         "was",
         "gray",
         "are",
+        "an",
         "bus",
         "car",
         "bad",
         "am",
         "a",
-        "man",
-        "cars"
+        "man"
       ],
       "solutions": [
         [
@@ -1365,10 +1418,10 @@
         "kotxea",
         "urdinak",
         "dira",
-        "aita",
         "Eta",
         "urdina",
-        "etxea"
+        "etxea",
+        "ona"
       ],
       "solutions": [
         [
@@ -1507,11 +1560,11 @@
         "zuria",
         "zen",
         "Eta",
+        "zuena",
         "etxea",
         "zurea",
         "ona",
-        "luzea",
-        "zuen"
+        "luzea"
       ],
       "solutions": [
         [
@@ -1575,11 +1628,11 @@
         "bad",
         "are",
         "She",
+        "an",
         "cat",
         "hat",
         "am",
-        "a",
-        "man"
+        "a"
       ],
       "solutions": [
         [
@@ -1890,7 +1943,7 @@
         "gray",
         "Are",
         "car",
-        "am"
+        "grey"
       ],
       "solutions": [
         [
@@ -1908,22 +1961,22 @@
     {
       "type": "cards",
       "pictures": [
-        "black.jpg",
-        "black.jpg",
-        "black.jpg"
+        "black1.jpg",
+        "black2.jpg",
+        "black3.jpg"
       ],
       "formInTargetLanguage": "beltz",
       "meaningInSourceLanguage": "black",
-      "id": "cbfc6c789e08",
+      "id": "966c40ac1f5d",
       "priority": 0,
-      "group": "9ce8a688890a"
+      "group": "c415bd9f8a54"
     },
     {
       "type": "shortInput",
       "pictures": [
-        "black.jpg",
-        "black.jpg",
-        "black.jpg"
+        "black1.jpg",
+        "black2.jpg",
+        "black3.jpg"
       ],
       "formInTargetLanguage": [
         "beltz"
@@ -1934,29 +1987,29 @@
           "definition": "beltz\nbeltza"
         }
       ],
-      "id": "9f00e84fbb7e",
+      "id": "81fbb4c9d5a7",
       "priority": 1,
-      "group": "9ce8a688890a"
+      "group": "c415bd9f8a54"
     },
     {
       "type": "cards",
       "pictures": [
-        "white.jpg",
-        "white.jpg",
-        "white.jpg"
+        "white1.jpg",
+        "white2.jpg",
+        "white3.jpg"
       ],
       "formInTargetLanguage": "zuri",
       "meaningInSourceLanguage": "white",
-      "id": "216aea509afd",
+      "id": "b88a99804c3e",
       "priority": 0,
-      "group": "efcb55d46664"
+      "group": "6178a18d05b5"
     },
     {
       "type": "shortInput",
       "pictures": [
-        "white.jpg",
-        "white.jpg",
-        "white.jpg"
+        "white1.jpg",
+        "white2.jpg",
+        "white3.jpg"
       ],
       "formInTargetLanguage": [
         "zuri"
@@ -1967,29 +2020,29 @@
           "definition": "zuri\nzuria"
         }
       ],
-      "id": "524a080cc3e5",
+      "id": "815a2983aaf6",
       "priority": 1,
-      "group": "efcb55d46664"
+      "group": "6178a18d05b5"
     },
     {
       "type": "cards",
       "pictures": [
-        "red.jpg",
-        "red.jpg",
-        "red.jpg"
+        "red1.jpg",
+        "red2.jpg",
+        "red3.jpg"
       ],
       "formInTargetLanguage": "gorri",
       "meaningInSourceLanguage": "red",
-      "id": "f09c01e6b8e3",
+      "id": "e85ba52d6ac2",
       "priority": 0,
-      "group": "e3c0e39fad24"
+      "group": "f6f467dc7943"
     },
     {
       "type": "shortInput",
       "pictures": [
-        "red.jpg",
-        "red.jpg",
-        "red.jpg"
+        "red1.jpg",
+        "red2.jpg",
+        "red3.jpg"
       ],
       "formInTargetLanguage": [
         "gorri"
@@ -2000,29 +2053,29 @@
           "definition": "gorri\ngorria\ngorriak"
         }
       ],
-      "id": "342ab4f025f4",
+      "id": "0e256d188e06",
       "priority": 1,
-      "group": "e3c0e39fad24"
+      "group": "f6f467dc7943"
     },
     {
       "type": "cards",
       "pictures": [
-        "orange.jpg",
-        "orange.jpg",
-        "orange.jpg"
+        "orange1.jpg",
+        "orange2.jpg",
+        "orange3.jpg"
       ],
       "formInTargetLanguage": "laranja",
       "meaningInSourceLanguage": "orange",
-      "id": "649795fd33db",
+      "id": "3920d4d0ed41",
       "priority": 0,
-      "group": "7a417aa49198"
+      "group": "d43e5a66afb0"
     },
     {
       "type": "shortInput",
       "pictures": [
-        "orange.jpg",
-        "orange.jpg",
-        "orange.jpg"
+        "orange1.jpg",
+        "orange2.jpg",
+        "orange3.jpg"
       ],
       "formInTargetLanguage": [
         "laranja"
@@ -2033,29 +2086,29 @@
           "definition": "laranja"
         }
       ],
-      "id": "d3ac08b90c28",
+      "id": "1e8c3cdec3fa",
       "priority": 1,
-      "group": "7a417aa49198"
+      "group": "d43e5a66afb0"
     },
     {
       "type": "cards",
       "pictures": [
-        "yellow.jpg",
-        "yellow.jpg",
-        "yellow.jpg"
+        "yellow1.jpg",
+        "yellow2.jpg",
+        "yellow3.jpg"
       ],
       "formInTargetLanguage": "hori",
       "meaningInSourceLanguage": "yellow",
-      "id": "6b0e090e1ec2",
+      "id": "e3039979b520",
       "priority": 0,
-      "group": "04269f043196"
+      "group": "f8e2ab36ea63"
     },
     {
       "type": "shortInput",
       "pictures": [
-        "yellow.jpg",
-        "yellow.jpg",
-        "yellow.jpg"
+        "yellow1.jpg",
+        "yellow2.jpg",
+        "yellow3.jpg"
       ],
       "formInTargetLanguage": [
         "hori"
@@ -2066,29 +2119,29 @@
           "definition": "hori"
         }
       ],
-      "id": "72a2046a6e53",
+      "id": "66ffb61f74e9",
       "priority": 1,
-      "group": "04269f043196"
+      "group": "f8e2ab36ea63"
     },
     {
       "type": "cards",
       "pictures": [
-        "green.jpg",
-        "green.jpg",
-        "green.jpg"
+        "green1.jpg",
+        "green2.jpg",
+        "green3.jpg"
       ],
       "formInTargetLanguage": "berde",
       "meaningInSourceLanguage": "green",
-      "id": "917682e1cf1a",
+      "id": "75a491cf7de0",
       "priority": 0,
-      "group": "85e126751ffd"
+      "group": "4268bb380460"
     },
     {
       "type": "shortInput",
       "pictures": [
-        "green.jpg",
-        "green.jpg",
-        "green.jpg"
+        "green1.jpg",
+        "green2.jpg",
+        "green3.jpg"
       ],
       "formInTargetLanguage": [
         "berde"
@@ -2099,29 +2152,29 @@
           "definition": "berde"
         }
       ],
-      "id": "90ef7f7b2f52",
+      "id": "9ed5fc793bfd",
       "priority": 1,
-      "group": "85e126751ffd"
+      "group": "4268bb380460"
     },
     {
       "type": "cards",
       "pictures": [
-        "blue.jpg",
-        "blue.jpg",
-        "blue.jpg"
+        "blue1.jpg",
+        "blue2.jpg",
+        "blue3.jpg"
       ],
       "formInTargetLanguage": "urdin",
       "meaningInSourceLanguage": "blue",
-      "id": "d1f879b57246",
+      "id": "aa6f9f796f7b",
       "priority": 0,
-      "group": "9d1ebb02c029"
+      "group": "5c4207353c43"
     },
     {
       "type": "shortInput",
       "pictures": [
-        "blue.jpg",
-        "blue.jpg",
-        "blue.jpg"
+        "blue1.jpg",
+        "blue2.jpg",
+        "blue3.jpg"
       ],
       "formInTargetLanguage": [
         "urdin"
@@ -2132,29 +2185,29 @@
           "definition": "urdin"
         }
       ],
-      "id": "d3016b789244",
+      "id": "de5552aa57e5",
       "priority": 1,
-      "group": "9d1ebb02c029"
+      "group": "5c4207353c43"
     },
     {
       "type": "cards",
       "pictures": [
-        "gray.jpg",
-        "gray.jpg",
-        "gray.jpg"
+        "gray1.jpg",
+        "gray2.jpg",
+        "gray3.jpg"
       ],
       "formInTargetLanguage": "gris",
       "meaningInSourceLanguage": "gray",
-      "id": "9f814888da9c",
+      "id": "21cd9182d34a",
       "priority": 0,
-      "group": "750c445a6b46"
+      "group": "24d56c3933af"
     },
     {
       "type": "shortInput",
       "pictures": [
-        "gray.jpg",
-        "gray.jpg",
-        "gray.jpg"
+        "gray1.jpg",
+        "gray2.jpg",
+        "gray3.jpg"
       ],
       "formInTargetLanguage": [
         "gris"
@@ -2165,9 +2218,9 @@
           "definition": "gris"
         }
       ],
-      "id": "93f535c336da",
+      "id": "ea1abf777f6d",
       "priority": 1,
-      "group": "750c445a6b46"
+      "group": "24d56c3933af"
     },
     {
       "type": "cards",

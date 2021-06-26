@@ -373,16 +373,24 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Ni tour gida naiz.",
-      "meaningInSourceLanguage": "I am the tour guide.",
-      "id": "166c4ce5d02e",
+      "formInTargetLanguage": "Arratsalde on. Ni tour gida naiz.",
+      "meaningInSourceLanguage": "Good Afternoon. I am the tour guide.",
+      "id": "74af46b9175a",
       "priority": 0,
-      "group": "e0bf50db4524"
+      "group": "7969d948f41d"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
+        {
+          "word": "Good",
+          "definition": "on\nonak\nondo"
+        },
+        {
+          "word": "Afternoon.",
+          "definition": "arratsalde"
+        },
         {
           "word": "I",
           "definition": "ni"
@@ -405,31 +413,45 @@
         }
       ],
       "chips": [
+        "Arratsalde",
+        "on",
         "Ni",
         "tour",
         "gida",
         "naiz",
-        "ni",
         "da",
+        "ona",
+        "ni",
+        "a",
         "i"
       ],
       "solutions": [
         [
+          "Arratsalde",
+          "on",
           "Ni",
           "tour",
           "gida",
           "naiz"
         ]
       ],
-      "formattedSolution": "Ni tour gida naiz.",
-      "id": "b7ec39005a85",
+      "formattedSolution": "Arratsalde on. Ni tour gida naiz.",
+      "id": "cb6186e4aca8",
       "priority": 2,
-      "group": "e0bf50db4524"
+      "group": "7969d948f41d"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
+        {
+          "word": "Arratsalde",
+          "definition": "afternoon"
+        },
+        {
+          "word": "on.",
+          "definition": "good"
+        },
         {
           "word": "Ni",
           "definition": "I\nme"
@@ -448,6 +470,8 @@
         }
       ],
       "chips": [
+        "Good",
+        "Afternoon",
         "I",
         "am",
         "the",
@@ -455,11 +479,15 @@
         "guide",
         "e",
         "t",
-        "a",
-        "He"
+        "o",
+        "or",
+        "our",
+        "on"
       ],
       "solutions": [
         [
+          "Good",
+          "Afternoon",
           "I",
           "am",
           "the",
@@ -467,6 +495,8 @@
           "guide"
         ],
         [
+          "Good",
+          "Afternoon",
           "I",
           "am",
           "a",
@@ -474,10 +504,10 @@
           "guide"
         ]
       ],
-      "formattedSolution": "I am the tour guide.",
-      "id": "ac7dbb49ee1e",
+      "formattedSolution": "Good Afternoon. I am the tour guide.",
+      "id": "27c65576fab5",
       "priority": 2,
-      "group": "e0bf50db4524"
+      "group": "7969d948f41d"
     },
     {
       "type": "options",
@@ -508,8 +538,8 @@
         "Haiek",
         "turistak",
         "dira",
-        "aita",
-        "Hura"
+        "Hura",
+        "haiek"
       ],
       "solutions": [
         [
@@ -611,7 +641,7 @@
         "Bai",
         "ni",
         "i",
-        "aita"
+        "Bi"
       ],
       "solutions": [
         [
@@ -682,16 +712,24 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Zu al medikua zara?",
-      "meaningInSourceLanguage": "Are you a doctor?",
-      "id": "a3e1275f6bf6",
+      "formInTargetLanguage": "Egun on. Zu al medikua zara?",
+      "meaningInSourceLanguage": "Good Morning. Are you a doctor?",
+      "id": "4ca982e83e1c",
       "priority": 0,
-      "group": "7ec41b510375"
+      "group": "11fba5823c20"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
+        {
+          "word": "Good",
+          "definition": "on\nonak\nondo"
+        },
+        {
+          "word": "Morning.",
+          "definition": "goizean"
+        },
         {
           "word": "Are",
           "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
@@ -710,31 +748,45 @@
         }
       ],
       "chips": [
+        "Egun",
+        "on",
         "Zu",
         "al",
         "medikua",
         "zara",
+        "zu",
         "da",
         "a",
-        "zu"
+        "u",
+        "Gu"
       ],
       "solutions": [
         [
+          "Egun",
+          "on",
           "Zu",
           "al",
           "medikua",
           "zara"
         ]
       ],
-      "formattedSolution": "Zu al medikua zara?",
-      "id": "c952216ac3c2",
+      "formattedSolution": "Egun on. Zu al medikua zara?",
+      "id": "16b10fe32d0e",
       "priority": 2,
-      "group": "7ec41b510375"
+      "group": "11fba5823c20"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
+        {
+          "word": "Egun",
+          "definition": "day"
+        },
+        {
+          "word": "on.",
+          "definition": "good"
+        },
         {
           "word": "Zu",
           "definition": "you"
@@ -753,32 +805,40 @@
         }
       ],
       "chips": [
+        "Good",
+        "Morning",
         "Are",
         "you",
         "a",
         "doctor",
         "or",
-        "r",
-        "o"
+        "o",
+        "dog",
+        "on",
+        "one"
       ],
       "solutions": [
         [
+          "Good",
+          "Morning",
           "Are",
           "you",
           "a",
           "doctor"
         ],
         [
+          "Good",
+          "Morning",
           "Are",
           "you",
           "the",
           "doctor"
         ]
       ],
-      "formattedSolution": "Are you a doctor?",
-      "id": "47c451d2307b",
+      "formattedSolution": "Good Morning. Are you a doctor?",
+      "id": "e2109984633e",
       "priority": 2,
-      "group": "7ec41b510375"
+      "group": "11fba5823c20"
     },
     {
       "type": "options",
@@ -814,9 +874,9 @@
         "Gu",
         "ikasleak",
         "gara",
-        "ama",
         "zara",
-        "da"
+        "da",
+        "a"
       ],
       "solutions": [
         [
@@ -1464,11 +1524,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Haiek al erizainak dira?",
-      "meaningInSourceLanguage": "Are they nurses?",
-      "id": "ce1f6c7853b2",
+      "formInTargetLanguage": "Haiek erizainak edo medikuak dira?",
+      "meaningInSourceLanguage": "Are they nurses or doctors?",
+      "id": "2d4c551e3c72",
       "priority": 0,
-      "group": "a89e2f10c447"
+      "group": "3d8338a30cba"
     },
     {
       "type": "chips",
@@ -1483,31 +1543,42 @@
           "definition": "haiek"
         },
         {
-          "word": "nurses?",
+          "word": "nurses",
           "definition": "erizainak"
+        },
+        {
+          "word": "or",
+          "definition": "edo"
+        },
+        {
+          "word": "doctors?",
+          "definition": "medikuak"
         }
       ],
       "chips": [
         "Haiek",
-        "al",
         "erizainak",
+        "edo",
+        "medikuak",
         "dira",
-        "aita",
-        "zara",
-        "haiek"
+        "eliza",
+        "da",
+        "haiek",
+        "gida"
       ],
       "solutions": [
         [
           "Haiek",
-          "al",
           "erizainak",
+          "edo",
+          "medikuak",
           "dira"
         ]
       ],
-      "formattedSolution": "Haiek al erizainak dira?",
-      "id": "0b861d7e2e64",
+      "formattedSolution": "Haiek erizainak edo medikuak dira?",
+      "id": "cfade4fec419",
       "priority": 2,
-      "group": "a89e2f10c447"
+      "group": "3d8338a30cba"
     },
     {
       "type": "chips",
@@ -1518,12 +1589,16 @@
           "definition": "they\nthose over there, plural of hura"
         },
         {
-          "word": "al",
-          "definition": "question_word"
-        },
-        {
           "word": "erizainak",
           "definition": "nurses"
+        },
+        {
+          "word": "edo",
+          "definition": "or"
+        },
+        {
+          "word": "medikuak",
+          "definition": "doctors"
         },
         {
           "word": "dira?",
@@ -1534,46 +1609,55 @@
         "Are",
         "they",
         "nurses",
+        "or",
+        "doctors",
         "are",
-        "the"
+        "ours",
+        "the",
+        "our"
       ],
       "solutions": [
         [
           "Are",
           "they",
-          "nurses"
+          "nurses",
+          "or",
+          "doctors"
         ],
         [
           "Are",
           "they",
           "the",
-          "nurses"
+          "nurses",
+          "or",
+          "the",
+          "doctors"
         ]
       ],
-      "formattedSolution": "Are they nurses?",
-      "id": "f1f66570e6d5",
+      "formattedSolution": "Are they nurses or doctors?",
+      "id": "2750a8eef9de",
       "priority": 2,
-      "group": "a89e2f10c447"
+      "group": "3d8338a30cba"
     },
     {
       "type": "cards",
       "pictures": [
-        "nurse.jpg",
-        "nurse.jpg",
-        "nurse.jpg"
+        "nurse1.jpg",
+        "nurse2.jpg",
+        "nurse3.jpg"
       ],
       "formInTargetLanguage": "erizain",
       "meaningInSourceLanguage": "nurse",
-      "id": "048f2cffa405",
+      "id": "7c370c442ca3",
       "priority": 0,
-      "group": "129a3a78f855"
+      "group": "a6e0834e5ed9"
     },
     {
       "type": "shortInput",
       "pictures": [
-        "nurse.jpg",
-        "nurse.jpg",
-        "nurse.jpg"
+        "nurse1.jpg",
+        "nurse2.jpg",
+        "nurse3.jpg"
       ],
       "formInTargetLanguage": [
         "erizain"
@@ -1584,29 +1668,29 @@
           "definition": "erizain\nerizaina"
         }
       ],
-      "id": "8dff716ce9d8",
+      "id": "0d4cf1ee7e1d",
       "priority": 1,
-      "group": "129a3a78f855"
+      "group": "a6e0834e5ed9"
     },
     {
       "type": "cards",
       "pictures": [
-        "driver.jpg",
-        "driver.jpg",
-        "driver.jpg"
+        "driver1.jpg",
+        "driver2.jpg",
+        "driver3.jpg"
       ],
       "formInTargetLanguage": "gidari",
       "meaningInSourceLanguage": "driver",
-      "id": "2d504034d779",
+      "id": "5c9aca09b49c",
       "priority": 0,
-      "group": "75fe793f0938"
+      "group": "e6f98c758b6a"
     },
     {
       "type": "shortInput",
       "pictures": [
-        "driver.jpg",
-        "driver.jpg",
-        "driver.jpg"
+        "driver1.jpg",
+        "driver2.jpg",
+        "driver3.jpg"
       ],
       "formInTargetLanguage": [
         "gidari"
@@ -1617,9 +1701,9 @@
           "definition": "gidari\ngidaria"
         }
       ],
-      "id": "895e79d09b8b",
+      "id": "b5284279df1d",
       "priority": 1,
-      "group": "75fe793f0938"
+      "group": "e6f98c758b6a"
     },
     {
       "type": "cards",

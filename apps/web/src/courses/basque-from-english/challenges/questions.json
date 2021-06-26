@@ -217,8 +217,8 @@
         "zara",
         "irakaslea",
         "a",
-        "ama",
-        "da"
+        "da",
+        "r"
       ],
       "solutions": [
         [
@@ -281,6 +281,137 @@
       "id": "373fb46f21d8",
       "priority": 2,
       "group": "b6bf2da734c7"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Zu irakaslea edo ikaslea zara?",
+      "meaningInSourceLanguage": "Are you a teacher or a student?",
+      "id": "2819758f39a1",
+      "priority": 0,
+      "group": "1e3bdab6c1b1"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "you",
+          "definition": "zu\nzuek"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "teacher",
+          "definition": "irakasle\nirakaslea"
+        },
+        {
+          "word": "or",
+          "definition": "edo"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "student?",
+          "definition": "ikasle\nikaslea"
+        }
+      ],
+      "chips": [
+        "Zu",
+        "irakaslea",
+        "edo",
+        "ikaslea",
+        "zara",
+        "al",
+        "da",
+        "ere",
+        "ikasle"
+      ],
+      "solutions": [
+        [
+          "Zu",
+          "irakaslea",
+          "edo",
+          "ikaslea",
+          "zara"
+        ]
+      ],
+      "formattedSolution": "Zu irakaslea edo ikaslea zara?",
+      "id": "76743f87b19a",
+      "priority": 2,
+      "group": "1e3bdab6c1b1"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Zu",
+          "definition": "you"
+        },
+        {
+          "word": "irakaslea",
+          "definition": "a teacher\nteacher\nthe teacher"
+        },
+        {
+          "word": "edo",
+          "definition": "or"
+        },
+        {
+          "word": "ikaslea",
+          "definition": "a student\nstudent\nthe student"
+        },
+        {
+          "word": "zara?",
+          "definition": "are\nyou are (izan)"
+        }
+      ],
+      "chips": [
+        "Are",
+        "you",
+        "a",
+        "teacher",
+        "or",
+        "a",
+        "student",
+        "are",
+        "e",
+        "r",
+        "t",
+        "o",
+        "an"
+      ],
+      "solutions": [
+        [
+          "Are",
+          "you",
+          "a",
+          "teacher",
+          "or",
+          "a",
+          "student"
+        ],
+        [
+          "Are",
+          "you",
+          "the",
+          "teacher",
+          "or",
+          "the",
+          "student"
+        ]
+      ],
+      "formattedSolution": "Are you a teacher or a student?",
+      "id": "7e3a326ca933",
+      "priority": 2,
+      "group": "1e3bdab6c1b1"
     },
     {
       "type": "options",
@@ -678,8 +809,8 @@
         "autobusa",
         "da",
         "a",
-        "ama",
-        "Zu"
+        "Zu",
+        "u"
       ],
       "solutions": [
         [
@@ -834,8 +965,8 @@
         "car",
         "am",
         "is",
-        "I",
-        "r"
+        "an",
+        "I"
       ],
       "solutions": [
         [
@@ -1422,9 +1553,9 @@
         "al",
         "autobusak",
         "dira",
-        "aita",
         "da",
-        "a"
+        "a",
+        "bat"
       ],
       "solutions": [
         [
@@ -1518,10 +1649,10 @@
         "edo",
         "kotxeak",
         "dira",
-        "aita",
         "da",
         "eta",
-        "etxea"
+        "etxea",
+        "onak"
       ],
       "solutions": [
         [
@@ -1903,8 +2034,8 @@
         "Nortzuk",
         "emakumeak",
         "dira",
-        "morea",
-        "nireak"
+        "moreak",
+        "morea"
       ],
       "solutions": [
         [
@@ -2164,9 +2295,9 @@
         "gizonak",
         "dira",
         "gida",
-        "aita",
         "zara",
-        "da"
+        "da",
+        "gara"
       ],
       "solutions": [
         [
@@ -2214,9 +2345,9 @@
         "or",
         "men",
         "me",
+        "ten",
         "one",
-        "are",
-        "He"
+        "are"
       ],
       "solutions": [
         [

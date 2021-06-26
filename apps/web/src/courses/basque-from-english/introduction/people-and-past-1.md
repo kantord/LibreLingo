@@ -7,7 +7,6 @@ In this lesson you will learn the names of some of the professions you will like
 *   Erizain: Nurse
 *   Gideri: Driver
 *   Ikasle: Student
-*   Ingeniari: Engineer
 *   Mediku: Doctor
 *   Polizia: Police officer
 *   Tour gida: Tour guide

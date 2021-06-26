@@ -19,7 +19,6 @@
 *   baizik : but rather
 *   hotel : hotel
 *   eliza : church
-*   kolore : color
 *   ostatu : small hotel/mini-hotel
 *   denda : store
 *   etxe : house

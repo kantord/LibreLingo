@@ -79,11 +79,17 @@ Phrases:
   - Phrase: Norena da alkandora?
     Translation: Whose shirt is it?
 
-  - Phrase: Noren arropa dira horiek?
+  - Phrase: Noren arropak dira horiek?
     Translation: Whose clothes are those?
+
+  - Phrase: Noren betaurrekoak dira?
+    Translation: Whose glasses are they?
 
   - Phrase: Horiek dira Mirenen betaurrekoak.
     Translation: Those are Miren's glasses.
+
+  - Phrase: Norena da berokia?
+    Translation: Whose coat is it?
 
   - Phrase: Hori da behiaren armarria.
     Translation: That is the cow's coat.
@@ -107,7 +113,24 @@ Phrases:
 
   - Phrase: Neskaren eskularruak urdinak dira.
     Translation: The girl's gloves are blue.
+    Alternative translations:
+      - The gloves of the girl are blue.
 
+  - Phrase: Nire galtzerdiak gorriak eta zuriak dira.
+    Translation: My socks are red and white.
+
+  - Phrase: Hori da dortokaren eraztuna.
+    Translation: That is the turtle’s ring.
+    Alternative translations:
+      - That is the ring of the turtle.
+
+  - Phrase: Gerrikoak luzeak dira.
+    Translation: Belts are long.
+
+  - Phrase: Irakaslearen eskularruak beltzak dira.
+    Translation: The teacher’s gloves are black.
+    Alternative translations:
+      - The gloves of the teacher are black.
 
 Mini-dictionary:
   Basque:
@@ -149,6 +172,7 @@ Mini-dictionary:
     - dira: are
     - dortoka: a turtle
     - dortokak: turtles
+    - dortokaren: turtle’s
     - eraztun: ring
     - eraztuna: ring
     - ere: also
@@ -381,6 +405,7 @@ Mini-dictionary:
       - horiek
     - turtle: dortoka
     - turtles: dortokak
+    - turtle’s: dortokaren
     - ugly: itsusi
     - was: zen
     - what: zer

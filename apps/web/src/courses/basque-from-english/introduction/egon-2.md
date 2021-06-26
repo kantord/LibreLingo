@@ -1,4 +1,4 @@
-# 10. To Be or Not To Be - Egon and the NON(Inessive) Case
+# 9. To Be or Not To Be - Egon and the NON(Inessive) Case
 
 ## Inessive(NON) Case
 

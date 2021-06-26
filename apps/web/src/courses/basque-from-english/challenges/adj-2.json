@@ -36,7 +36,7 @@
         },
         {
           "word": "but",
-          "definition": "baina"
+          "definition": "baina\nbaina, baizik"
         },
         {
           "word": "rather",
@@ -94,7 +94,7 @@
         },
         {
           "word": "baizik",
-          "definition": "but (rather)\nbut(rather)\nrather"
+          "definition": "but (rather)\nbut rather\nbut(rather)\nrather"
         },
         {
           "word": "denda.",
@@ -209,7 +209,7 @@
         },
         {
           "word": "but",
-          "definition": "baina"
+          "definition": "baina\nbaina, baizik"
         },
         {
           "word": "rather",
@@ -267,7 +267,7 @@
         },
         {
           "word": "baizik",
-          "definition": "but (rather)\nbut(rather)\nrather"
+          "definition": "but (rather)\nbut rather\nbut(rather)\nrather"
         },
         {
           "word": "ostatua.",
@@ -382,7 +382,7 @@
         },
         {
           "word": "but",
-          "definition": "baina"
+          "definition": "baina\nbaina, baizik"
         },
         {
           "word": "rather",
@@ -413,8 +413,8 @@
         "eta",
         "dira",
         "gida",
-        "ona",
-        "berea"
+        "ardia",
+        "ona"
       ],
       "solutions": [
         [
@@ -454,7 +454,7 @@
         },
         {
           "word": "baizik",
-          "definition": "but (rather)\nbut(rather)\nrather"
+          "definition": "but (rather)\nbut rather\nbut(rather)\nrather"
         },
         {
           "word": "gorria",
@@ -517,321 +517,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Zer kolorea da denda?",
-      "meaningInSourceLanguage": "What color is the store?",
-      "id": "d6861d4f84a5",
+      "formInTargetLanguage": "Denda ez da grisa.",
+      "meaningInSourceLanguage": "The store is not gray.",
+      "id": "eb77c6eeef11",
       "priority": 0,
-      "group": "75199882c77e"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": false,
-      "phrase": [
-        {
-          "word": "What",
-          "definition": "zer"
-        },
-        {
-          "word": "color",
-          "definition": "kolore\nkolorea"
-        },
-        {
-          "word": "is",
-          "definition": "da\nda (izan)\ndago (egon)"
-        },
-        {
-          "word": "the",
-          "definition": "-a"
-        },
-        {
-          "word": "store?",
-          "definition": "denda"
-        }
-      ],
-      "chips": [
-        "Zer",
-        "kolorea",
-        "da",
-        "denda",
-        "dira",
-        "ona",
-        "ere"
-      ],
-      "solutions": [
-        [
-          "Zer",
-          "kolorea",
-          "da",
-          "denda"
-        ]
-      ],
-      "formattedSolution": "Zer kolorea da denda?",
-      "id": "d04097d179fd",
-      "priority": 2,
-      "group": "75199882c77e"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": true,
-      "phrase": [
-        {
-          "word": "Zer",
-          "definition": "what"
-        },
-        {
-          "word": "kolorea",
-          "definition": "color"
-        },
-        {
-          "word": "da",
-          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
-        },
-        {
-          "word": "denda?",
-          "definition": "store"
-        }
-      ],
-      "chips": [
-        "What",
-        "color",
-        "is",
-        "the",
-        "store",
-        "Who",
-        "or",
-        "one",
-        "She"
-      ],
-      "solutions": [
-        [
-          "What",
-          "color",
-          "is",
-          "the",
-          "store"
-        ],
-        [
-          "What",
-          "color",
-          "is",
-          "a",
-          "store"
-        ]
-      ],
-      "formattedSolution": "What color is the store?",
-      "id": "717306099020",
-      "priority": 2,
-      "group": "75199882c77e"
-    },
-    {
-      "type": "options",
-      "formInTargetLanguage": "Zer koloreak ziren hotelak?",
-      "meaningInSourceLanguage": "What colors were the hotels?",
-      "id": "31e3dc5f3de9",
-      "priority": 0,
-      "group": "ea0ebf5cbed8"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": false,
-      "phrase": [
-        {
-          "word": "What",
-          "definition": "zer"
-        },
-        {
-          "word": "colors",
-          "definition": "koloreak"
-        },
-        {
-          "word": "were",
-          "definition": "ginen\nzinen\nzineten\nziren"
-        },
-        {
-          "word": "the",
-          "definition": "-a"
-        },
-        {
-          "word": "hotels?",
-          "definition": "hotelak"
-        }
-      ],
-      "chips": [
-        "Zer",
-        "koloreak",
-        "ziren",
-        "hotelak",
-        "morea",
-        "Noren",
-        "zurea"
-      ],
-      "solutions": [
-        [
-          "Zer",
-          "koloreak",
-          "ziren",
-          "hotelak"
-        ]
-      ],
-      "formattedSolution": "Zer koloreak ziren hotelak?",
-      "id": "b0c0792b5cff",
-      "priority": 2,
-      "group": "ea0ebf5cbed8"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": true,
-      "phrase": [
-        {
-          "word": "Zer",
-          "definition": "what"
-        },
-        {
-          "word": "koloreak",
-          "definition": "colors"
-        },
-        {
-          "word": "ziren",
-          "definition": "were"
-        },
-        {
-          "word": "hotelak?",
-          "definition": "hotels"
-        }
-      ],
-      "chips": [
-        "What",
-        "colors",
-        "were",
-        "the",
-        "hotels",
-        "her",
-        "hers",
-        "hee",
-        "here"
-      ],
-      "solutions": [
-        [
-          "What",
-          "colors",
-          "were",
-          "the",
-          "hotels"
-        ]
-      ],
-      "formattedSolution": "What colors were the hotels?",
-      "id": "63c384e20e27",
-      "priority": 2,
-      "group": "ea0ebf5cbed8"
-    },
-    {
-      "type": "options",
-      "formInTargetLanguage": "Zer kolorea zen autobusa?",
-      "meaningInSourceLanguage": "What color was the bus?",
-      "id": "6090f075ba88",
-      "priority": 0,
-      "group": "d6c2c4f435f2"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": false,
-      "phrase": [
-        {
-          "word": "What",
-          "definition": "zer"
-        },
-        {
-          "word": "color",
-          "definition": "kolore\nkolorea"
-        },
-        {
-          "word": "was",
-          "definition": "nintzen\nzen"
-        },
-        {
-          "word": "the",
-          "definition": "-a"
-        },
-        {
-          "word": "bus?",
-          "definition": "austobusa\nautobus\nautobusa"
-        }
-      ],
-      "chips": [
-        "Zer",
-        "kolorea",
-        "zen",
-        "autobusa",
-        "zer",
-        "Nor",
-        "tour"
-      ],
-      "solutions": [
-        [
-          "Zer",
-          "kolorea",
-          "zen",
-          "autobusa"
-        ]
-      ],
-      "formattedSolution": "Zer kolorea zen autobusa?",
-      "id": "eeb534d06fcb",
-      "priority": 2,
-      "group": "d6c2c4f435f2"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": true,
-      "phrase": [
-        {
-          "word": "Zer",
-          "definition": "what"
-        },
-        {
-          "word": "kolorea",
-          "definition": "color"
-        },
-        {
-          "word": "zen",
-          "definition": "was"
-        },
-        {
-          "word": "autobusa?",
-          "definition": "a bus\nbus"
-        }
-      ],
-      "chips": [
-        "What",
-        "color",
-        "was",
-        "the",
-        "bus",
-        "Who",
-        "car",
-        "cat",
-        "hat"
-      ],
-      "solutions": [
-        [
-          "What",
-          "color",
-          "was",
-          "the",
-          "bus"
-        ]
-      ],
-      "formattedSolution": "What color was the bus?",
-      "id": "9074610a72ca",
-      "priority": 2,
-      "group": "d6c2c4f435f2"
-    },
-    {
-      "type": "options",
-      "formInTargetLanguage": "Autobusa ez zen gorria.",
-      "meaningInSourceLanguage": "The bus was not red.",
-      "id": "9f9c107a3feb",
-      "priority": 0,
-      "group": "dec5ab7bced6"
+      "group": "153a9606b5eb"
     },
     {
       "type": "chips",
@@ -842,12 +532,228 @@
           "definition": "-a"
         },
         {
-          "word": "bus",
-          "definition": "austobusa\nautobus\nautobusa"
+          "word": "store",
+          "definition": "denda"
         },
         {
-          "word": "was",
-          "definition": "nintzen\nzen"
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "not",
+          "definition": "ez"
+        },
+        {
+          "word": "gray.",
+          "definition": "gris"
+        }
+      ],
+      "chips": [
+        "Denda",
+        "ez",
+        "da",
+        "grisa",
+        "a",
+        "eta",
+        "gida"
+      ],
+      "solutions": [
+        [
+          "Denda",
+          "ez",
+          "da",
+          "grisa"
+        ]
+      ],
+      "formattedSolution": "Denda ez da grisa.",
+      "id": "0e018c8f6e03",
+      "priority": 2,
+      "group": "153a9606b5eb"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Denda",
+          "definition": "store"
+        },
+        {
+          "word": "ez",
+          "definition": "no\nnot\nnot, no\nnot,no"
+        },
+        {
+          "word": "da",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        },
+        {
+          "word": "grisa.",
+          "definition": "gray"
+        }
+      ],
+      "chips": [
+        "The",
+        "store",
+        "is",
+        "not",
+        "gray",
+        "or",
+        "are",
+        "the",
+        "it"
+      ],
+      "solutions": [
+        [
+          "The",
+          "store",
+          "is",
+          "not",
+          "gray"
+        ],
+        [
+          "The",
+          "store",
+          "is",
+          "not",
+          "grey"
+        ]
+      ],
+      "formattedSolution": "The store is not gray.",
+      "id": "e90f9ff1df0b",
+      "priority": 2,
+      "group": "153a9606b5eb"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Hotelak ez ziren grisak.",
+      "meaningInSourceLanguage": "The hotels were not gray.",
+      "id": "69dd25548154",
+      "priority": 0,
+      "group": "c66eb631479c"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "The",
+          "definition": "-a"
+        },
+        {
+          "word": "hotels",
+          "definition": "hotelak"
+        },
+        {
+          "word": "were",
+          "definition": "ginen\nzinen\nzineten\nziren"
+        },
+        {
+          "word": "not",
+          "definition": "ez"
+        },
+        {
+          "word": "gray.",
+          "definition": "gris"
+        }
+      ],
+      "chips": [
+        "Hotelak",
+        "ez",
+        "ziren",
+        "grisak",
+        "Miren",
+        "ere",
+        "Haiek"
+      ],
+      "solutions": [
+        [
+          "Hotelak",
+          "ez",
+          "ziren",
+          "grisak"
+        ]
+      ],
+      "formattedSolution": "Hotelak ez ziren grisak.",
+      "id": "7ff777e9b59b",
+      "priority": 2,
+      "group": "c66eb631479c"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Hotelak",
+          "definition": "hotels"
+        },
+        {
+          "word": "ez",
+          "definition": "no\nnot\nnot, no\nnot,no"
+        },
+        {
+          "word": "ziren",
+          "definition": "were"
+        },
+        {
+          "word": "grisak.",
+          "definition": "gray"
+        }
+      ],
+      "chips": [
+        "The",
+        "hotels",
+        "were",
+        "not",
+        "gray",
+        "are",
+        "hee",
+        "her",
+        "one"
+      ],
+      "solutions": [
+        [
+          "The",
+          "hotels",
+          "were",
+          "not",
+          "gray"
+        ],
+        [
+          "The",
+          "hotels",
+          "were",
+          "not",
+          "grey"
+        ]
+      ],
+      "formattedSolution": "The hotels were not gray.",
+      "id": "b30450d6ba88",
+      "priority": 2,
+      "group": "c66eb631479c"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Autobusak ez ziren gorriak.",
+      "meaningInSourceLanguage": "The buses were not red.",
+      "id": "d0ebcb02d3cd",
+      "priority": 0,
+      "group": "2f3b53acb49c"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "The",
+          "definition": "-a"
+        },
+        {
+          "word": "buses",
+          "definition": "autobusak"
+        },
+        {
+          "word": "were",
+          "definition": "ginen\nzinen\nzineten\nziren"
         },
         {
           "word": "not",
@@ -859,34 +765,135 @@
         }
       ],
       "chips": [
-        "Autobusa",
+        "Autobusak",
         "ez",
-        "zen",
-        "gorria",
-        "eta",
-        "on",
-        "ona"
+        "ziren",
+        "gorriak",
+        "morea",
+        "zurea",
+        "gurea"
       ],
       "solutions": [
         [
-          "Autobusa",
+          "Autobusak",
           "ez",
-          "zen",
-          "gorria"
+          "ziren",
+          "gorriak"
         ]
       ],
-      "formattedSolution": "Autobusa ez zen gorria.",
-      "id": "6ff2b9c02fca",
+      "formattedSolution": "Autobusak ez ziren gorriak.",
+      "id": "d8cce9726b4a",
       "priority": 2,
-      "group": "dec5ab7bced6"
+      "group": "2f3b53acb49c"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Autobusa",
-          "definition": "a bus\nbus"
+          "word": "Autobusak",
+          "definition": "buses"
+        },
+        {
+          "word": "ez",
+          "definition": "no\nnot\nnot, no\nnot,no"
+        },
+        {
+          "word": "ziren",
+          "definition": "were"
+        },
+        {
+          "word": "gorriak.",
+          "definition": "red"
+        }
+      ],
+      "chips": [
+        "The",
+        "buses",
+        "were",
+        "not",
+        "red",
+        "are",
+        "See",
+        "hee",
+        "her"
+      ],
+      "solutions": [
+        [
+          "The",
+          "buses",
+          "were",
+          "not",
+          "red"
+        ]
+      ],
+      "formattedSolution": "The buses were not red.",
+      "id": "f7eb84f3fc86",
+      "priority": 2,
+      "group": "2f3b53acb49c"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Ostatu ez zen beltza.",
+      "meaningInSourceLanguage": "The mini-hotel was not black.",
+      "id": "eb17b8452de9",
+      "priority": 0,
+      "group": "4b8e36f2a434"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "The",
+          "definition": "-a"
+        },
+        {
+          "word": "mini-hotel",
+          "definition": "ostatu\nostatua"
+        },
+        {
+          "word": "was",
+          "definition": "nintzen\nzen"
+        },
+        {
+          "word": "not",
+          "definition": "ez"
+        },
+        {
+          "word": "black.",
+          "definition": "beltz\nbeltza"
+        }
+      ],
+      "chips": [
+        "Ostatu",
+        "ez",
+        "zen",
+        "beltza",
+        "eta",
+        "beltz",
+        "bat"
+      ],
+      "solutions": [
+        [
+          "Ostatu",
+          "ez",
+          "zen",
+          "beltza"
+        ]
+      ],
+      "formattedSolution": "Ostatu ez zen beltza.",
+      "id": "995ccd6a54dd",
+      "priority": 2,
+      "group": "4b8e36f2a434"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Ostatu",
+          "definition": "mini-hotel"
         },
         {
           "word": "ez",
@@ -897,41 +904,34 @@
           "definition": "was"
         },
         {
-          "word": "gorria.",
-          "definition": "red"
+          "word": "beltza.",
+          "definition": "black"
         }
       ],
       "chips": [
         "The",
-        "bus",
+        "mini-hotel",
         "was",
         "not",
-        "red",
-        "Yes",
-        "but",
-        "bad",
-        "boy"
+        "black",
+        "hat",
+        "man",
+        "the",
+        "She"
       ],
       "solutions": [
         [
           "The",
-          "bus",
+          "mini-hotel",
           "was",
           "not",
-          "red"
-        ],
-        [
-          "A",
-          "bus",
-          "was",
-          "not",
-          "red"
+          "black"
         ]
       ],
-      "formattedSolution": "The bus was not red.",
-      "id": "aa32210e227d",
+      "formattedSolution": "The mini-hotel was not black.",
+      "id": "60f07b595a5a",
       "priority": 2,
-      "group": "dec5ab7bced6"
+      "group": "4b8e36f2a434"
     },
     {
       "type": "options",
@@ -1079,7 +1079,7 @@
         },
         {
           "word": "but",
-          "definition": "baina"
+          "definition": "baina\nbaina, baizik"
         },
         {
           "word": "rather",
@@ -1113,7 +1113,7 @@
         "eta",
         "a",
         "z",
-        "aita"
+        "bat"
       ],
       "solutions": [
         [
@@ -1154,7 +1154,7 @@
         },
         {
           "word": "baizik",
-          "definition": "but (rather)\nbut(rather)\nrather"
+          "definition": "but (rather)\nbut rather\nbut(rather)\nrather"
         },
         {
           "word": "eliza",
@@ -1166,7 +1166,7 @@
         },
         {
           "word": "baizik.",
-          "definition": "but (rather)\nbut(rather)\nrather"
+          "definition": "but (rather)\nbut rather\nbut(rather)\nrather"
         }
       ],
       "chips": [
@@ -1259,7 +1259,7 @@
         },
         {
           "word": "but",
-          "definition": "baina"
+          "definition": "baina\nbaina, baizik"
         },
         {
           "word": "the",
@@ -1287,13 +1287,13 @@
         "ostatua",
         "zuria",
         "zen",
+        "zuena",
         "zara",
         "zurea",
         "zuen",
+        "sei",
         "z",
-        "eta",
-        "ona",
-        "luzea"
+        "eta"
       ],
       "solutions": [
         [
@@ -1435,7 +1435,7 @@
         },
         {
           "word": "but",
-          "definition": "baina"
+          "definition": "baina\nbaina, baizik"
         },
         {
           "word": "rather",
@@ -1467,11 +1467,11 @@
         "bat",
         "zen",
         "ez",
+        "ken",
         "da",
         "z",
         "han",
-        "a",
-        "n"
+        "a"
       ],
       "solutions": [
         [
@@ -1507,7 +1507,7 @@
         },
         {
           "word": "baizik",
-          "definition": "but (rather)\nbut(rather)\nrather"
+          "definition": "but (rather)\nbut rather\nbut(rather)\nrather"
         },
         {
           "word": "etxe",
@@ -1542,8 +1542,8 @@
         "e",
         "o",
         "or",
-        "is",
-        "h"
+        "an",
+        "is"
       ],
       "solutions": [
         [
@@ -1616,7 +1616,7 @@
         },
         {
           "word": "but",
-          "definition": "baina"
+          "definition": "baina\nbaina, baizik"
         },
         {
           "word": "rather",
@@ -1643,12 +1643,12 @@
         "baizik",
         "denda",
         "berdea",
+        "Denda",
         "dira",
         "gida",
         "berea",
         "a",
-        "eta",
-        "ona"
+        "eta"
       ],
       "solutions": [
         [
@@ -1688,7 +1688,7 @@
         },
         {
           "word": "baizik",
-          "definition": "but (rather)\nbut(rather)\nrather"
+          "definition": "but (rather)\nbut rather\nbut(rather)\nrather"
         },
         {
           "word": "denda",
@@ -1715,8 +1715,8 @@
         "are",
         "e",
         "r",
-        "it",
         "or",
+        "it",
         "He",
         "o",
         "We",
@@ -1793,7 +1793,7 @@
         },
         {
           "word": "but",
-          "definition": "baina"
+          "definition": "baina\nbaina, baizik"
         },
         {
           "word": "green.",
@@ -1872,7 +1872,7 @@
         "She",
         "See",
         "one",
-        "it"
+        "or"
       ],
       "solutions": [
         [
@@ -1925,7 +1925,7 @@
         },
         {
           "word": "but",
-          "definition": "baina"
+          "definition": "baina\nbaina, baizik"
         },
         {
           "word": "I",
@@ -1955,9 +1955,9 @@
         "dira",
         "eta",
         "a",
+        "sei",
         "edo",
-        "gida",
-        "ona"
+        "gida"
       ],
       "solutions": [
         [
@@ -2022,8 +2022,8 @@
         "t",
         "o",
         "r",
-        "it",
         "or",
+        "it",
         "S",
         "h",
         "e",
@@ -2094,7 +2094,7 @@
         },
         {
           "word": "but",
-          "definition": "baina"
+          "definition": "baina\nbaina, baizik"
         },
         {
           "word": "I",
@@ -2121,12 +2121,12 @@
         "baina",
         "irakaslea",
         "nintzen",
+        "ken",
         "zuen",
         "nirea",
-        "aita",
+        "sei",
         "zara",
-        "luzea",
-        "zurea"
+        "luzea"
       ],
       "solutions": [
         [
@@ -2190,13 +2190,13 @@
         "teacher",
         "t",
         "e",
+        "an",
         "am",
         "n",
         "w",
         "h",
         "r",
-        "o",
-        "he"
+        "o"
       ],
       "solutions": [
         [
@@ -2375,7 +2375,7 @@
         },
         {
           "word": "but",
-          "definition": "baina"
+          "definition": "baina\nbaina, baizik"
         },
         {
           "word": "nurses.",
@@ -2392,8 +2392,8 @@
         "zen",
         "eliza",
         "gizen",
-        "elizan",
-        "Ni"
+        "Ni",
+        "gizon"
       ],
       "solutions": [
         [
@@ -2432,7 +2432,7 @@
         },
         {
           "word": "baizik",
-          "definition": "but (rather)\nbut(rather)\nrather"
+          "definition": "but (rather)\nbut rather\nbut(rather)\nrather"
         },
         {
           "word": "erizainak.",
@@ -2574,114 +2574,6 @@
       "group": "545480bbc14d"
     },
     {
-      "type": "options",
-      "formInTargetLanguage": "Zer kolorea da denda?",
-      "meaningInSourceLanguage": "What color is the store?",
-      "id": "d6861d4f84a5",
-      "priority": 0,
-      "group": "75199882c77e"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": false,
-      "phrase": [
-        {
-          "word": "What",
-          "definition": "zer"
-        },
-        {
-          "word": "color",
-          "definition": "kolore\nkolorea"
-        },
-        {
-          "word": "is",
-          "definition": "da\nda (izan)\ndago (egon)"
-        },
-        {
-          "word": "the",
-          "definition": "-a"
-        },
-        {
-          "word": "store?",
-          "definition": "denda"
-        }
-      ],
-      "chips": [
-        "Zer",
-        "kolorea",
-        "da",
-        "denda",
-        "dira",
-        "ona",
-        "ere"
-      ],
-      "solutions": [
-        [
-          "Zer",
-          "kolorea",
-          "da",
-          "denda"
-        ]
-      ],
-      "formattedSolution": "Zer kolorea da denda?",
-      "id": "d04097d179fd",
-      "priority": 2,
-      "group": "75199882c77e"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": true,
-      "phrase": [
-        {
-          "word": "Zer",
-          "definition": "what"
-        },
-        {
-          "word": "kolorea",
-          "definition": "color"
-        },
-        {
-          "word": "da",
-          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
-        },
-        {
-          "word": "denda?",
-          "definition": "store"
-        }
-      ],
-      "chips": [
-        "What",
-        "color",
-        "is",
-        "the",
-        "store",
-        "Who",
-        "or",
-        "one",
-        "She"
-      ],
-      "solutions": [
-        [
-          "What",
-          "color",
-          "is",
-          "the",
-          "store"
-        ],
-        [
-          "What",
-          "color",
-          "is",
-          "a",
-          "store"
-        ]
-      ],
-      "formattedSolution": "What color is the store?",
-      "id": "717306099020",
-      "priority": 2,
-      "group": "75199882c77e"
-    },
-    {
       "type": "cards",
       "pictures": [
         "no1.jpg",
@@ -2732,7 +2624,7 @@
       "phrase": [
         {
           "word": "but",
-          "definition": "baina"
+          "definition": "baina\nbaina, baizik"
         },
         {
           "word": "(rather)",
@@ -2808,39 +2700,6 @@
       "id": "90b8d9a78c13",
       "priority": 1,
       "group": "f6924f5edd31"
-    },
-    {
-      "type": "cards",
-      "pictures": [
-        "color1.jpg",
-        "color2.jpg",
-        "color3.jpg"
-      ],
-      "formInTargetLanguage": "kolore",
-      "meaningInSourceLanguage": "color",
-      "id": "8a9c94298cc0",
-      "priority": 0,
-      "group": "3763e4c6e629"
-    },
-    {
-      "type": "shortInput",
-      "pictures": [
-        "color1.jpg",
-        "color2.jpg",
-        "color3.jpg"
-      ],
-      "formInTargetLanguage": [
-        "kolore"
-      ],
-      "phrase": [
-        {
-          "word": "color",
-          "definition": "kolore\nkolorea"
-        }
-      ],
-      "id": "9e8cad866f63",
-      "priority": 1,
-      "group": "3763e4c6e629"
     },
     {
       "type": "cards",
