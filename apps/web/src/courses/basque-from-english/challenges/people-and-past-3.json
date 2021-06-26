@@ -62,18 +62,39 @@
         "baina",
         "orain",
         "etxekoandrea",
-        "naiz",
-        "ona",
-        "ni",
-        "nire",
-        "nirea",
-        "Zein",
-        "ibaia"
+        "naiz"
       ],
       "solutions": [
         [
           "Ni",
           "neska",
+          "nintzen",
+          "baina",
+          "orain",
+          "etxekoandrea",
+          "naiz"
+        ],
+        [
+          "Ni",
+          "neska",
+          "nintzen",
+          "baina",
+          "orain",
+          "ni",
+          "etxekoandrea",
+          "naiz"
+        ],
+        [
+          "Neska",
+          "nintzen",
+          "baina",
+          "orain",
+          "ni",
+          "etxekoandrea",
+          "naiz"
+        ],
+        [
+          "Neska",
           "nintzen",
           "baina",
           "orain",
@@ -129,16 +150,7 @@
         "I",
         "am",
         "a",
-        "housewife",
-        "w",
-        "i",
-        "o",
-        "h",
-        "e",
-        "r",
-        "n",
-        "t",
-        "S"
+        "housewife"
       ],
       "solutions": [
         [
@@ -219,18 +231,39 @@
         "baina",
         "orain",
         "apaiza",
-        "naiz",
-        "ibaia",
-        "apaiz",
-        "Bai",
-        "haien",
-        "ni",
-        "i"
+        "naiz"
       ],
       "solutions": [
         [
           "Ni",
           "ikaslea",
+          "nintzen",
+          "baina",
+          "orain",
+          "apaiza",
+          "naiz"
+        ],
+        [
+          "Ni",
+          "ikaslea",
+          "nintzen",
+          "baina",
+          "orain",
+          "ni",
+          "apaiza",
+          "naiz"
+        ],
+        [
+          "Ikaslea",
+          "nintzen",
+          "baina",
+          "orain",
+          "ni",
+          "apaiza",
+          "naiz"
+        ],
+        [
+          "Ikaslea",
           "nintzen",
           "baina",
           "orain",
@@ -286,16 +319,7 @@
         "I",
         "am",
         "a",
-        "priest",
-        "t",
-        "e",
-        "n",
-        "w",
-        "i",
-        "r",
-        "o",
-        "an",
-        "S"
+        "priest"
       ],
       "solutions": [
         [
@@ -318,11 +342,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Camareroa zinen, baina orain irakaslea zara.",
+      "formInTargetLanguage": "Zu camareroa zinen, baina orain irakaslea zara.",
       "meaningInSourceLanguage": "You were a waiter, but now you are a teacher.",
-      "id": "9ae2aab20ec8",
+      "id": "5ace332098d8",
       "priority": 0,
-      "group": "eb35b51edcbb"
+      "group": "e37dd0c8e579"
     },
     {
       "type": "chips",
@@ -370,19 +394,43 @@
         }
       ],
       "chips": [
-        "Camareroa",
+        "Zu",
+        "camareroa",
         "zinen",
         "baina",
         "orain",
         "irakaslea",
-        "zara",
-        "gara",
-        "ibaia",
-        "dira",
-        "ziren",
-        "morea"
+        "zara"
       ],
       "solutions": [
+        [
+          "Zu",
+          "camareroa",
+          "zinen",
+          "baina",
+          "orain",
+          "irakaslea",
+          "zara"
+        ],
+        [
+          "Zu",
+          "camareroa",
+          "zinen",
+          "baina",
+          "orain",
+          "zu",
+          "irakaslea",
+          "zara"
+        ],
+        [
+          "Camareroa",
+          "zinen",
+          "baina",
+          "orain",
+          "zu",
+          "irakaslea",
+          "zara"
+        ],
         [
           "Camareroa",
           "zinen",
@@ -392,17 +440,21 @@
           "zara"
         ]
       ],
-      "formattedSolution": "Camareroa zinen, baina orain irakaslea zara.",
-      "id": "eb2d31853a2d",
+      "formattedSolution": "Zu camareroa zinen, baina orain irakaslea zara.",
+      "id": "3da970ba2bf3",
       "priority": 2,
-      "group": "eb35b51edcbb"
+      "group": "e37dd0c8e579"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Camareroa",
+          "word": "Zu",
+          "definition": "you"
+        },
+        {
+          "word": "camareroa",
           "definition": "the waiter\nwaiter"
         },
         {
@@ -436,16 +488,7 @@
         "you",
         "are",
         "a",
-        "teacher",
-        "or",
-        "e",
-        "r",
-        "car",
-        "am",
-        "t",
-        "w",
-        "o",
-        "an"
+        "teacher"
       ],
       "solutions": [
         [
@@ -462,9 +505,9 @@
         ]
       ],
       "formattedSolution": "You were a waiter, but now you are a teacher.",
-      "id": "69dd82ac9d95",
+      "id": "caae44d67a20",
       "priority": 2,
-      "group": "eb35b51edcbb"
+      "group": "e37dd0c8e579"
     },
     {
       "type": "options",
@@ -526,18 +569,39 @@
         "baina",
         "orain",
         "laguna",
-        "zara",
-        "ona",
-        "gara",
-        "Hura",
-        "dira",
-        "Gona",
-        "han"
+        "zara"
       ],
       "solutions": [
         [
           "Zu",
           "arrotza",
+          "zinen",
+          "baina",
+          "orain",
+          "laguna",
+          "zara"
+        ],
+        [
+          "Zu",
+          "arrotza",
+          "zinen",
+          "baina",
+          "orain",
+          "zu",
+          "laguna",
+          "zara"
+        ],
+        [
+          "Arrotza",
+          "zinen",
+          "baina",
+          "orain",
+          "zu",
+          "laguna",
+          "zara"
+        ],
+        [
+          "Arrotza",
           "zinen",
           "baina",
           "orain",
@@ -593,16 +657,7 @@
         "you",
         "are",
         "a",
-        "friend",
-        "or",
-        "e",
-        "r",
-        "Are",
-        "an",
-        "n",
-        "o",
-        "and",
-        "red"
+        "friend"
       ],
       "solutions": [
         [
@@ -683,18 +738,39 @@
         "baina",
         "orain",
         "sukaldaria",
-        "da",
-        "zara",
-        "gara",
-        "dira",
-        "hura",
-        "Bai",
-        "gida"
+        "da"
       ],
       "solutions": [
         [
           "Hura",
           "gidaria",
+          "zen",
+          "baina",
+          "orain",
+          "sukaldaria",
+          "da"
+        ],
+        [
+          "Hura",
+          "gidaria",
+          "zen",
+          "baina",
+          "orain",
+          "hura",
+          "sukaldaria",
+          "da"
+        ],
+        [
+          "Gidaria",
+          "zen",
+          "baina",
+          "orain",
+          "hura",
+          "sukaldaria",
+          "da"
+        ],
+        [
+          "Gidaria",
           "zen",
           "baina",
           "orain",
@@ -750,16 +826,7 @@
         "he",
         "is",
         "a",
-        "chef",
-        "e",
-        "h",
-        "w",
-        "We",
-        "me",
-        "am",
-        "r",
-        "n",
-        "t"
+        "chef"
       ],
       "solutions": [
         [
@@ -876,18 +943,39 @@
         "baina",
         "orain",
         "medikua",
-        "da",
-        "dira",
-        "zara",
-        "gara",
-        "hura",
-        "Bai",
-        "zuria"
+        "da"
       ],
       "solutions": [
         [
           "Hura",
           "sukaldaria",
+          "zen",
+          "baina",
+          "orain",
+          "medikua",
+          "da"
+        ],
+        [
+          "Hura",
+          "sukaldaria",
+          "zen",
+          "baina",
+          "orain",
+          "hura",
+          "medikua",
+          "da"
+        ],
+        [
+          "Sukaldaria",
+          "zen",
+          "baina",
+          "orain",
+          "hura",
+          "medikua",
+          "da"
+        ],
+        [
+          "Sukaldaria",
           "zen",
           "baina",
           "orain",
@@ -943,16 +1031,7 @@
         "she",
         "is",
         "a",
-        "doctor",
-        "o",
-        "h",
-        "e",
-        "t",
-        "w",
-        "or",
-        "am",
-        "S",
-        "r"
+        "doctor"
       ],
       "solutions": [
         [
@@ -1061,18 +1140,39 @@
         "baina",
         "orain",
         "arrotzak",
-        "gara",
-        "ona",
-        "gonak",
-        "zara",
-        "onak",
-        "Gona",
-        "han"
+        "gara"
       ],
       "solutions": [
         [
           "Gu",
           "lagunak",
+          "ginen",
+          "baina",
+          "orain",
+          "arrotzak",
+          "gara"
+        ],
+        [
+          "Gu",
+          "lagunak",
+          "ginen",
+          "baina",
+          "orain",
+          "gu",
+          "arrotzak",
+          "gara"
+        ],
+        [
+          "Lagunak",
+          "ginen",
+          "baina",
+          "orain",
+          "gu",
+          "arrotzak",
+          "gara"
+        ],
+        [
+          "Lagunak",
           "ginen",
           "baina",
           "orain",
@@ -1126,14 +1226,7 @@
         "now",
         "we",
         "are",
-        "strangers",
-        "Are",
-        "red",
-        "He",
-        "e",
-        "me",
-        "new",
-        "one"
+        "strangers"
       ],
       "solutions": [
         [
@@ -1217,18 +1310,39 @@
         "baina",
         "orain",
         "poliziak",
-        "gara",
-        "zara",
-        "dira",
-        "ona",
-        "gida",
-        "morea",
-        "onak"
+        "gara"
       ],
       "solutions": [
         [
           "Gu",
           "camareroak",
+          "ginen",
+          "baina",
+          "orain",
+          "poliziak",
+          "gara"
+        ],
+        [
+          "Gu",
+          "camareroak",
+          "ginen",
+          "baina",
+          "orain",
+          "gu",
+          "poliziak",
+          "gara"
+        ],
+        [
+          "Camareroak",
+          "ginen",
+          "baina",
+          "orain",
+          "gu",
+          "poliziak",
+          "gara"
+        ],
+        [
+          "Camareroak",
           "ginen",
           "baina",
           "orain",
@@ -1283,15 +1397,7 @@
         "we",
         "are",
         "police",
-        "officers",
-        "one",
-        "He",
-        "e",
-        "Are",
-        "or",
-        "me",
-        "See",
-        "hee"
+        "officers"
       ],
       "solutions": [
         [
@@ -1373,18 +1479,39 @@
         "baina",
         "orain",
         "apaizak",
-        "zara",
-        "zuria",
-        "ibaia",
-        "naiz",
-        "gara",
-        "Haiek",
-        "dira"
+        "zara"
       ],
       "solutions": [
         [
           "Zuek",
           "turistak",
+          "zineten",
+          "baina",
+          "orain",
+          "apaizak",
+          "zara"
+        ],
+        [
+          "Zuek",
+          "turistak",
+          "zineten",
+          "baina",
+          "orain",
+          "zuek",
+          "apaizak",
+          "zara"
+        ],
+        [
+          "Turistak",
+          "zineten",
+          "baina",
+          "orain",
+          "zuek",
+          "apaizak",
+          "zara"
+        ],
+        [
+          "Turistak",
           "zineten",
           "baina",
           "orain",
@@ -1438,14 +1565,7 @@
         "now",
         "you(plural",
         "are",
-        "priests",
-        "our",
-        "ours",
-        "or",
-        "Are",
-        "tour",
-        "purse",
-        "your"
+        "priests"
       ],
       "solutions": [
         [
@@ -1545,18 +1665,39 @@
         "baina",
         "orain",
         "lagunak",
-        "zara",
-        "onak",
-        "gara",
-        "ona",
-        "gonak",
-        "Hura",
-        "dira"
+        "zara"
       ],
       "solutions": [
         [
           "Zuek",
           "arrotzak",
+          "zineten",
+          "baina",
+          "orain",
+          "lagunak",
+          "zara"
+        ],
+        [
+          "Zuek",
+          "arrotzak",
+          "zineten",
+          "baina",
+          "orain",
+          "zuek",
+          "lagunak",
+          "zara"
+        ],
+        [
+          "Arrotzak",
+          "zineten",
+          "baina",
+          "orain",
+          "zuek",
+          "lagunak",
+          "zara"
+        ],
+        [
+          "Arrotzak",
           "zineten",
           "baina",
           "orain",
@@ -1610,14 +1751,7 @@
         "now",
         "you(plural",
         "are",
-        "friends",
-        "Are",
-        "or",
-        "red",
-        "our",
-        "ours",
-        "one",
-        "tour"
+        "friends"
       ],
       "solutions": [
         [
@@ -1717,18 +1851,39 @@
         "baina",
         "orain",
         "etxekoandreak",
-        "dira",
-        "zara",
-        "haiek",
-        "haien",
-        "nirea",
-        "haiena",
-        "gara"
+        "dira"
       ],
       "solutions": [
         [
           "Haiek",
           "erizainak",
+          "ziren",
+          "baina",
+          "orain",
+          "etxekoandreak",
+          "dira"
+        ],
+        [
+          "Haiek",
+          "erizainak",
+          "ziren",
+          "baina",
+          "orain",
+          "haiek",
+          "etxekoandreak",
+          "dira"
+        ],
+        [
+          "Erizainak",
+          "ziren",
+          "baina",
+          "orain",
+          "haiek",
+          "etxekoandreak",
+          "dira"
+        ],
+        [
+          "Erizainak",
           "ziren",
           "baina",
           "orain",
@@ -1782,14 +1937,7 @@
         "now",
         "they",
         "are",
-        "housewives",
-        "hee",
-        "the",
-        "Are",
-        "new",
-        "her",
-        "here",
-        "She"
+        "housewives"
       ],
       "solutions": [
         [
@@ -1869,18 +2017,39 @@
         "baina",
         "orain",
         "apaizak",
-        "dira",
-        "haiek",
-        "haien",
-        "zara",
-        "apaiza",
-        "ibaia",
-        "naiz"
+        "dira"
       ],
       "solutions": [
         [
           "Haiek",
           "mutilak",
+          "ziren",
+          "baina",
+          "orain",
+          "apaizak",
+          "dira"
+        ],
+        [
+          "Haiek",
+          "mutilak",
+          "ziren",
+          "baina",
+          "orain",
+          "haiek",
+          "apaizak",
+          "dira"
+        ],
+        [
+          "Mutilak",
+          "ziren",
+          "baina",
+          "orain",
+          "haiek",
+          "apaizak",
+          "dira"
+        ],
+        [
+          "Mutilak",
           "ziren",
           "baina",
           "orain",
@@ -1934,14 +2103,7 @@
         "now",
         "they",
         "are",
-        "priests",
-        "the",
-        "Are",
-        "hee",
-        "boy",
-        "She",
-        "her",
-        "one"
+        "priests"
       ],
       "solutions": [
         [
