@@ -21,6 +21,10 @@ mkdocs-material = "^7.0.3"
 mkdocs = "^1.1.2"
 black = "^21.6b0"
 mypy = "^0.910"
+types-python-slugify = "^0.1.1"
+types-PyYAML = "^5.4.3"
+types-bleach = "^3.3.3"
+types-Markdown = "^3.3.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
