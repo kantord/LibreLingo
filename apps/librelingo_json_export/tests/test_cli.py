@@ -1,7 +1,7 @@
 import os
 import random
 import pytest
-from click.testing import CliRunner
+from click.testing import CliRunner  # type: ignore
 from librelingo_json_export.cli import _command, DEFAULT_SETTINGS
 from librelingo_fakes import fakes
 

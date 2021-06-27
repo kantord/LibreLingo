@@ -6,7 +6,7 @@ from unittest.mock import patch, call
 import json
 import os
 import random
-from pyfakefs.fake_filesystem_unittest import TestCase as FakeFsTestCase
+from pyfakefs.fake_filesystem_unittest import TestCase as FakeFsTestCase  # type: ignore
 from librelingo_fakes import fakes
 from librelingo_json_export.export import (
     _export_course_skills,

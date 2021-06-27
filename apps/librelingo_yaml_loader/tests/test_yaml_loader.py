@@ -4,7 +4,7 @@ import pytest
 from pathlib import Path
 from unittest.mock import patch
 from unittest import TestCase
-from pyfakefs.fake_filesystem_unittest import TestCase as FakeFsTestCase
+from pyfakefs.fake_filesystem_unittest import TestCase as FakeFsTestCase  # type: ignore
 from librelingo_types import (
     Course,
     License,
