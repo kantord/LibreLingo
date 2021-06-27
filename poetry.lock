@@ -716,6 +716,38 @@ optional = false
 python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
+name = "types-bleach"
+version = "3.3.3"
+description = "Typing stubs for bleach"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "types-markdown"
+version = "3.3.0"
+description = "Typing stubs for Markdown"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "types-python-slugify"
+version = "0.1.1"
+description = "Typing stubs for python-slugify"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "types-pyyaml"
+version = "5.4.3"
+description = "Typing stubs for PyYAML"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "typing-extensions"
 version = "3.10.0.0"
 description = "Backported and Experimental Type Hints for Python 3.5+"
@@ -786,7 +818,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pyt
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "fbe805dc5305dc0e934f078d1270d8927808b3e01b0ea61b6fb77b9ec41650e0"
+content-hash = "3915f464278d8cd15eb3458de9566ea844b39a057e070bc399fc967c580cbeec"
 
 [metadata.files]
 appdirs = [
@@ -1148,6 +1180,22 @@ text-unidecode = [
 toml = [
     {file = "toml-0.10.2-py2.py3-none-any.whl", hash = "sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b"},
     {file = "toml-0.10.2.tar.gz", hash = "sha256:b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f"},
+]
+types-bleach = [
+    {file = "types-bleach-3.3.3.tar.gz", hash = "sha256:431db47fb76a2e47d2fe076136dc591ab7c73db47511519718f0bd5db83eb3b4"},
+    {file = "types_bleach-3.3.3-py2.py3-none-any.whl", hash = "sha256:73f684ffb17d21db3f062363b144c3506c951c1107e0f562c2476413013436a9"},
+]
+types-markdown = [
+    {file = "types-Markdown-3.3.0.tar.gz", hash = "sha256:b7bf9ce52a9f712c6a59b75350ed435d6fc1f1d5eafed44a321472bf96cf77db"},
+    {file = "types_Markdown-3.3.0-py3-none-any.whl", hash = "sha256:cc18cc0fcc2ba8ab3f5233b2945db33e2e68ddad179708b2d2f08da08d33bc4e"},
+]
+types-python-slugify = [
+    {file = "types-python-slugify-0.1.1.tar.gz", hash = "sha256:98dd5a5fcc1d37d2d05698ca744c808e2fb1cac8aa1b1a43e0430d2dd25392c5"},
+    {file = "types_python_slugify-0.1.1-py2.py3-none-any.whl", hash = "sha256:16f0c1dc95c385bc9770feb357e322e7f53440fe87e7ea941fb54bbe7a84d4df"},
+]
+types-pyyaml = [
+    {file = "types-PyYAML-5.4.3.tar.gz", hash = "sha256:2e7b81b2b7af751634425107b986086c6ba7cb61270a43a5c290c58be8cdbc3a"},
+    {file = "types_PyYAML-5.4.3-py2.py3-none-any.whl", hash = "sha256:bca83cbfc0be48600a8abf1e3d87fb762a91e6d35d724029a3321dd2dce2ceb1"},
 ]
 typing-extensions = [
     {file = "typing_extensions-3.10.0.0-py2-none-any.whl", hash = "sha256:0ac0f89795dd19de6b97debb0c6af1c70987fd80a2d62d1958f7e56fcc31b497"},
