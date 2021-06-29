@@ -177,41 +177,41 @@ python-versions = "*"
 
 [[package]]
 name = "librelingo-fakes"
-version = "3.0.0"
+version = "3.0.1"
 description = "Fake data for testing LibreLingo-related packages"
 category = "dev"
 optional = false
-python-versions = ">=3.9,<4.0"
+python-versions = ">=3.8,<4.0"
 
 [package.dependencies]
 librelingo-types = ">=3.0.0,<4.0.0"
 
 [[package]]
 name = "librelingo-types"
-version = "3.0.0"
+version = "3.0.1"
 description = "Data types to be used in Python packages for LibreLingo"
 category = "main"
 optional = false
-python-versions = ">=3.9,<4.0"
+python-versions = ">=3.8,<4.0"
 
 [[package]]
 name = "librelingo-utils"
-version = "2.4.0"
+version = "2.4.1"
 description = "Utilities to be used in LibreLingo-related-packages"
 category = "main"
 optional = false
-python-versions = ">=3.9,<4.0"
+python-versions = ">=3.8,<4.0"
 
 [package.dependencies]
 librelingo-types = ">=3.0.0,<4.0.0"
 
 [[package]]
 name = "librelingo-yaml-loader"
-version = "1.5.0"
+version = "1.5.1"
 description = "Load YAML-based LibreLingo courses in your Python project."
 category = "main"
 optional = false
-python-versions = ">=3.9,<4.0"
+python-versions = ">=3.8,<4.0"
 
 [package.dependencies]
 bleach = ">=3.3.0,<4.0.0"
@@ -584,7 +584,7 @@ python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
 name = "urllib3"
-version = "1.26.5"
+version = "1.26.6"
 description = "HTTP library with thread-safe connection pooling, file post, and more."
 category = "dev"
 optional = false
@@ -632,8 +632,8 @@ python-versions = "*"
 
 [metadata]
 lock-version = "1.1"
-python-versions = "^3.9"
-content-hash = "f2352eac84dc32968818355c841d5fdc532e17f8951ad73f13162f5abb850c04"
+python-versions = "^3.8"
+content-hash = "d4cb4f48aa227cf0ce762016c9d1891a626362242027cffce26879b9e53f2c1c"
 
 [metadata.files]
 atomicwrites = [
@@ -735,20 +735,20 @@ iniconfig = [
     {file = "iniconfig-1.1.1.tar.gz", hash = "sha256:bc3af051d7d14b2ee5ef9969666def0cd1a000e121eaea580d4a313df4b37f32"},
 ]
 librelingo-fakes = [
-    {file = "librelingo_fakes-3.0.0-py3-none-any.whl", hash = "sha256:c99c0e43b03db9cd63528f872662a8287d65cd948ddcc4fd95c945e3e0624622"},
-    {file = "librelingo_fakes-3.0.0.tar.gz", hash = "sha256:20e321a70744ecbf622add7eb000317c55d140d8a9d0013696b6f7b38e4fe205"},
+    {file = "librelingo_fakes-3.0.1-py3-none-any.whl", hash = "sha256:65f594e50c49b02f8e8ccbf8a93d4a537ba32804988ebfd23d443837faa6c2c7"},
+    {file = "librelingo_fakes-3.0.1.tar.gz", hash = "sha256:e7532e2fc8f1a11a9029a80068f56c398e313847f240ee504289351e1e5c4940"},
 ]
 librelingo-types = [
-    {file = "librelingo_types-3.0.0-py3-none-any.whl", hash = "sha256:c0526b2ceca73d30b7d73f016201ec001b181db0c493306625484fba51e00d93"},
-    {file = "librelingo_types-3.0.0.tar.gz", hash = "sha256:ac8d9b0335e7ed52bc34476e16c792d99c8b7872f08883fedad6a276e71e2286"},
+    {file = "librelingo_types-3.0.1-py3-none-any.whl", hash = "sha256:670ec7ae225003fdf381ef5a5a6b5ca8da85f4bc23e2745f624d29e8e0a7145c"},
+    {file = "librelingo_types-3.0.1.tar.gz", hash = "sha256:7de4c1b21e7c7f0944416302cd73b54f2961983c23f30ed20add8f6a327556f0"},
 ]
 librelingo-utils = [
-    {file = "librelingo_utils-2.4.0-py3-none-any.whl", hash = "sha256:d110b2e0d3a561847b79ff8c175ae30e870d54f30aa6541c588c1a8fd96d3f36"},
-    {file = "librelingo_utils-2.4.0.tar.gz", hash = "sha256:1b94fcefcf657cf18149a1886298bea558c0d67d9287b0a763e6f396321fe8f1"},
+    {file = "librelingo_utils-2.4.1-py3-none-any.whl", hash = "sha256:7a5de4b97273991b1d43fde444891126647ce46442b092f485d67d7d267e55d1"},
+    {file = "librelingo_utils-2.4.1.tar.gz", hash = "sha256:c26cff4a2f007e12d44c60fa1423ac8ecd2d25ee220417b2061cd98d42b9bd6a"},
 ]
 librelingo-yaml-loader = [
-    {file = "librelingo_yaml_loader-1.5.0-py3-none-any.whl", hash = "sha256:955f954d5e844f91f8647cbfe3376952bc4e0c32abc6eb704789cd422f489c75"},
-    {file = "librelingo_yaml_loader-1.5.0.tar.gz", hash = "sha256:060b3e5dc290c2ddda9fe91df9a4fb7903a6d585d0f0d7c2f0963aaa9aa5f9c1"},
+    {file = "librelingo_yaml_loader-1.5.1-py3-none-any.whl", hash = "sha256:189a063306f0f7214ecd5d6b28ae4f5ac276e683d9a178fd5d4e519297a5ee0c"},
+    {file = "librelingo_yaml_loader-1.5.1.tar.gz", hash = "sha256:b4cee8e9cf015af7c933a3b8f87b67aa12ca33070ecebb32fe6e20aea8bde4b2"},
 ]
 markdown = [
     {file = "Markdown-3.3.4-py3-none-any.whl", hash = "sha256:96c3ba1261de2f7547b46a00ea8463832c921d3f9d6aba3f255a6f71386db20c"},
@@ -885,8 +885,8 @@ toml = [
     {file = "toml-0.10.2.tar.gz", hash = "sha256:b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f"},
 ]
 urllib3 = [
-    {file = "urllib3-1.26.5-py2.py3-none-any.whl", hash = "sha256:753a0374df26658f99d826cfe40394a686d05985786d946fbe4165b5148f5a7c"},
-    {file = "urllib3-1.26.5.tar.gz", hash = "sha256:a7acd0977125325f516bda9735fa7142b909a8d01e8b2e4c8108d0984e6e0098"},
+    {file = "urllib3-1.26.6-py2.py3-none-any.whl", hash = "sha256:39fb8672126159acb139a7718dd10806104dec1e2f0f6c88aab05d17df10c8d4"},
+    {file = "urllib3-1.26.6.tar.gz", hash = "sha256:f57b4c16c62fa2760b7e3d97c35b255512fb6b59a259730f36ba32ce9f8e342f"},
 ]
 wasmer = [
     {file = "wasmer-1.0.0-cp36-cp36m-macosx_10_7_x86_64.whl", hash = "sha256:0d755a93184380f9785e1f8269b070f4a4a3285ae0f7f9571cfaf2ea215b102d"},
