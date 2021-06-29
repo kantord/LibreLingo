@@ -107,7 +107,7 @@ blocks:
       jobs:
         - name: test python packages
           commands:
-            - sem-version python 3.9
+            - sem-version python 3.8
             - checkout
             - cache restore
             - pip install poetry
@@ -116,7 +116,7 @@ blocks:
             - cache store
         - name: Python code style (black)
           commands:
-            - sem-version python 3.9
+            - sem-version python 3.8
             - checkout
             - cache restore
             - pip install poetry
@@ -124,7 +124,7 @@ blocks:
             - poetry run black apps --check
         - name: Python types (mypy)
           commands:
-            - sem-version python 3.9
+            - sem-version python 3.8
             - checkout
             - cache restore
             - pip install poetry
@@ -136,7 +136,7 @@ blocks:
       jobs:
         - name: validate that PyPi readme files are up to date
           commands:
-            - sem-version python 3.9
+            - sem-version python 3.8
             - checkout
             - cache restore python-$(checksum poetry.lock)
             - pip install poetry
