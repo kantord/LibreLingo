@@ -6,7 +6,7 @@ authors = ["Dániel Kántor <git@daniel-kantor.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.8"
 python-slugify = "^4.0.1"
 pyfakefs = "^4.3.3"
 slugify = "^0.0.1"
