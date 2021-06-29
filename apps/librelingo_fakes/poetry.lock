@@ -64,11 +64,11 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [[package]]
 name = "librelingo-types"
-version = "3.0.0"
+version = "3.0.1"
 description = "Data types to be used in Python packages for LibreLingo"
 category = "main"
 optional = false
-python-versions = ">=3.9,<4.0"
+python-versions = ">=3.8,<4.0"
 
 [[package]]
 name = "nr.collections"
@@ -258,7 +258,7 @@ python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
 name = "urllib3"
-version = "1.26.5"
+version = "1.26.6"
 description = "HTTP library with thread-safe connection pooling, file post, and more."
 category = "dev"
 optional = false
@@ -282,8 +282,8 @@ watchmedo = ["PyYAML (>=3.10)", "argh (>=0.24.1)"]
 
 [metadata]
 lock-version = "1.1"
-python-versions = "^3.9"
-content-hash = "5584aa9582ee503cef6f84b04b1ba3612ca59c2ffc0599a0e013998b5db77476"
+python-versions = "^3.8"
+content-hash = "ed35d759689cb9bd4c9cf5af25c349eee81b615bdf0aeeb44219aa101a459bb7"
 
 [metadata.files]
 certifi = [
@@ -315,8 +315,8 @@ idna = [
     {file = "idna-2.10.tar.gz", hash = "sha256:b307872f855b18632ce0c21c5e45be78c0ea7ae4c15c828c20788b26921eb3f6"},
 ]
 librelingo-types = [
-    {file = "librelingo_types-3.0.0-py3-none-any.whl", hash = "sha256:c0526b2ceca73d30b7d73f016201ec001b181db0c493306625484fba51e00d93"},
-    {file = "librelingo_types-3.0.0.tar.gz", hash = "sha256:ac8d9b0335e7ed52bc34476e16c792d99c8b7872f08883fedad6a276e71e2286"},
+    {file = "librelingo_types-3.0.1-py3-none-any.whl", hash = "sha256:670ec7ae225003fdf381ef5a5a6b5ca8da85f4bc23e2745f624d29e8e0a7145c"},
+    {file = "librelingo_types-3.0.1.tar.gz", hash = "sha256:7de4c1b21e7c7f0944416302cd73b54f2961983c23f30ed20add8f6a327556f0"},
 ]
 "nr.collections" = [
     {file = "nr.collections-0.0.1.tar.gz", hash = "sha256:ddf38cd6379cac546ce7abdadf024fc01cca75540e11b1d5f1aa701a33817f1c"},
@@ -397,8 +397,8 @@ toml = [
     {file = "toml-0.10.2.tar.gz", hash = "sha256:b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f"},
 ]
 urllib3 = [
-    {file = "urllib3-1.26.5-py2.py3-none-any.whl", hash = "sha256:753a0374df26658f99d826cfe40394a686d05985786d946fbe4165b5148f5a7c"},
-    {file = "urllib3-1.26.5.tar.gz", hash = "sha256:a7acd0977125325f516bda9735fa7142b909a8d01e8b2e4c8108d0984e6e0098"},
+    {file = "urllib3-1.26.6-py2.py3-none-any.whl", hash = "sha256:39fb8672126159acb139a7718dd10806104dec1e2f0f6c88aab05d17df10c8d4"},
+    {file = "urllib3-1.26.6.tar.gz", hash = "sha256:f57b4c16c62fa2760b7e3d97c35b255512fb6b59a259730f36ba32ce9f8e342f"},
 ]
 watchdog = [
     {file = "watchdog-1.0.2-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:e2a531e71be7b5cc3499ae2d1494d51b6a26684bcc7c3146f63c810c00e8a3cc"},
