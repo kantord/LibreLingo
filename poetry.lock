@@ -239,7 +239,7 @@ six = ">=1.13.0"
 
 [[package]]
 name = "librelingo-audios"
-version = "1.0.1"
+version = "1.0.2"
 description = "Tools to help getting audios for LibreLingo courses"
 category = "dev"
 optional = false
@@ -272,7 +272,7 @@ url = "apps/librelingo_fakes"
 
 [[package]]
 name = "librelingo-json-export"
-version = "0.7.0"
+version = "0.7.1"
 description = "Export LibreLingo courses in the JSON format used by the web app"
 category = "dev"
 optional = false
@@ -316,7 +316,7 @@ url = "apps/librelingo_utils"
 
 [[package]]
 name = "librelingo-yaml-loader"
-version = "1.5.0"
+version = "1.5.1"
 description = "Load YAML-based LibreLingo courses in your Python project."
 category = "dev"
 optional = false
