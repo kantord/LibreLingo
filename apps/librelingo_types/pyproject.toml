@@ -1,13 +1,13 @@
 [tool.poetry]
 name = "librelingo_types"
-version = "3.0.0"
+version = "3.0.1"
 description = "Data types to be used in Python packages for LibreLingo"
 authors = ["Dániel Kántor <git@daniel-kantor.com>"]
 license = "GPLv3"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.8"
 
 [tool.poetry.dev-dependencies]
 pydoc-markdown = "^3.10.0"

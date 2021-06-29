@@ -1,12 +1,12 @@
 [tool.poetry]
 name = "librelingo_audios"
-version = "1.0.1"
+version = "1.0.2"
 description = "Tools to help getting audios for LibreLingo courses"
 authors = ["Dániel Kántor <git@daniel-kantor.com>"]
 license = "GPLv3"
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.8"
 librelingo-yaml-loader = "^1.5.0"
 librelingo-utils = "^2.4.0"
 
