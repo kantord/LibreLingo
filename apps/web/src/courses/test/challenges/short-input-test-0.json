@@ -1,0 +1,52 @@
+{
+  "id": "e70976d68b28",
+  "levels": 1,
+  "challenges": [
+    {
+      "type": "cards",
+      "pictures": [
+        "dog1.jpg",
+        "dog2.jpg",
+        "dog3.jpg"
+      ],
+      "formInTargetLanguage": "el perro",
+      "meaningInSourceLanguage": "the dog",
+      "id": "26eaf9940451",
+      "priority": 0,
+      "group": "dc51787e55a3"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "dog1.jpg",
+        "dog2.jpg",
+        "dog3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "el perro"
+      ],
+      "phrase": [
+        {
+          "word": "the",
+          "definition": "el\nla"
+        },
+        {
+          "word": "dog",
+          "definition": "can\nperro"
+        }
+      ],
+      "id": "b174b698c4cd",
+      "priority": 1,
+      "group": "dc51787e55a3"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "el perro",
+      "meaning": "the dog",
+      "audio": "2184ed4937d5df0e572d49d89248d5b503b3a0a4c27f03dcf09e11f3b74a010a",
+      "id": "c61ecac20453",
+      "priority": 1,
+      "group": "dc51787e55a3"
+    }
+  ]
+}
