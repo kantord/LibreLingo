@@ -3,7 +3,7 @@ import settings from "../../../src/settings"
 import { Before, Then, Given, And } from "cypress-cucumber-preprocessor/steps"
 
 const COURSE_PAGE_URL = "/course/test"
-const SKILL_PAGE_URL = `${COURSE_PAGE_URL}/skill/_short_input_test0`
+const SKILL_PAGE_URL = `${COURSE_PAGE_URL}/skill/short-input-test-0`
 
 Before(() => {
     // Reset database
