@@ -3,9 +3,8 @@ Feature: Chips challenge
   A challenge type where the user has to reorder chips to form a correct sentence
 
   Scenario: Getting a chips challenge
-    Given I open "/course/test/skill/_chips_test1"
+    Given I open "/course/test/skill/chips-test-0?testChallenge=5000997897bb"
     Then chips challenge looks correct
-    Given I open "/course/test/skill/_chips_test0"
     Then I read "Translate"
     And I read "How"
     And I read "are"
@@ -15,12 +14,11 @@ Feature: Chips challenge
     And I see the correct chips
 
   Scenario: Using the mini-dictionary
-    Given I open "/course/test/skill/_chips_test1"
+    Given I open "/course/test/skill/chips-test-0?testChallenge=c3f7fcb9c86c"
     Then words with definitions have tooltips
-    And words without a definition have no tooltip
     
   Scenario: Submitting an incorrect solution
-    Given I open "/course/test/skill/_chips_test0"
+    Given I open "/course/test/skill/chips-test-0?testChallenge=5000997897bb"
     And I click "estás"
     And I click "hoy"
     And I click "Como"
@@ -32,7 +30,7 @@ Feature: Chips challenge
     Then I see a panel with only a skip button
 
   Scenario: Submitting a correct solution
-    Given I open "/course/test/skill/_chips_test0"
+    Given I open "/course/test/skill/chips-test-0?testChallenge=5000997897bb"
     And I click "Como"
     And I click "estás"
     And I click "hoy"
@@ -45,11 +43,10 @@ Feature: Chips challenge
     Then I see a panel with only a skip and a finish early button
 
   Scenario: Submitting an alternative correct solution
-    Given I open "/course/test/skill/_chips_test0"
-    And I click "Tu"
-    And I click "Como"
+    Given I open "/course/test/skill/chips-test-0?testChallenge=5000997897bb"
+    And I click "Hoy"
+    And I click "como"
     And I click "estás"
-    And I click "hoy"
     Given I click "Submit"
     Then I see the challenge panel with no skip button
     And I read "Correct solution"
