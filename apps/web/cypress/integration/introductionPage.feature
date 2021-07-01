@@ -5,10 +5,10 @@ Feature: Skill introduction page
 
   Scenario: Opening the introduction page
     When I open "/course/test"
-    And I click "Learn Nature"
-    Then I should be on "/course/test/skill/nature/introduction"
-    Then I read "Introduction to nature"
-    When I click "Practice Nature" 
-    Then I should be on "/course/test/skill/nature"
+    And I click "Learn Animals"
+    Then I should be on "/course/test/skill/animals/introduction"
+    Then I read "Introduction to animals"
+    When I click "Practice Animals" 
+    Then I should be on "/course/test/skill/animals"
 
 

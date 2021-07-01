@@ -3,7 +3,7 @@ import settings from "../../../src/settings"
 import { Before, Then, Given, And } from "cypress-cucumber-preprocessor/steps"
 
 const COURSE_PAGE_URL = "/course/test"
-const SKILL_PAGE_URL = `${COURSE_PAGE_URL}/skill/_short_input_test0`
+const SKILL_PAGE_URL = `${COURSE_PAGE_URL}/skill/short-input-test-0?testChallenge=14fc2ae4fb35`
 
 Before(() => {
     // Reset database
@@ -37,10 +37,12 @@ Given("I have a stale skill", () => {
         cy.wrap(null).then(() => {
             return db
                 .put({
-                    _id: "skills/434d43b3",
+                    _id: "skills/38c2ea1c36d2",
                     practiced: [
                         { at: +dayjs().subtract(1, "year") },
                         { at: +dayjs().subtract(1, "month") },
+                        { at: +dayjs().subtract(3, "month") },
+                        { at: +dayjs().subtract(6, "month") },
                     ],
                 })
                 .then(() => {
@@ -64,6 +66,7 @@ Given("I complete a lesson", () => {
     cy.get("input[type=text]").type("el perro")
     cy.contains("Submit").click()
     cy.contains("Continue").click()
+    cy.contains("Finish early").click()
     cy.contains("Continue to course page").click()
 })
 
@@ -81,16 +84,16 @@ Then("I see a started skill", () => {
     cy.get(".svg-inline--fa").should("be.visible")
 })
 
-And("I see a skill with 50% progress", () => {
-    cy.get("[data-test='skill card'] progress").should("have.value", 1)
-    cy.get("[data-test='skill card'] progress").should("have.attr", "max", "2")
+And("I see a skill with 20% progress", () => {
+    cy.get("[data-test='skill card'] progress").should("have.value", 0.2)
+    cy.get("[data-test='skill card'] progress").should("have.attr", "max", "1")
 })
 
 Given("practice statistics are saved correctly", () => {
     cy.window().then((window) => {
         const db = window._DB
         cy.wrap(null).then(() => {
-            return db.get("skills/434d43b3").then((doc) => {
+            return db.get("skills/e70976d68b28").then((doc) => {
                 cy.wrap(doc.practiced[0].incorrect).should("equal", 0)
                 cy.wrap(doc.practiced[0].correct).should("equal", 1)
             })
