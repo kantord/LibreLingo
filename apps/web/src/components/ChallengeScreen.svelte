@@ -21,6 +21,7 @@
   export let courseURL
   export let skillId
   export let expectedNumberOfChallenges
+  export let testChallengeType
 
   type CardChallengeType = {
     id: string
@@ -59,7 +60,14 @@
       shuffle(rawChallenges),
       expectedNumberOfChallenges
   )
-  let remainingChallenges = [...challenges]
+  let remainingChallenges = 
+    testChallengeType
+        ? ([...challenges].filter(challenge => challenge.type === testChallengeType))
+        : [...challenges]
+
+  console.log("🍎", testChallengeType)
+  console.log("🆚", [...challenges])
+  console.log("🍐", remainingChallenges)
   let currentChallenge = remainingChallenges.shift()
   let solvedChallenges = []
   let skipAllChallenges = null
