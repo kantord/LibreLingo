@@ -15,6 +15,7 @@
       const skillId = skillData.id
 
       return {
+          testChallengeType: page.query.testChallengeType,
           rawChallenges: Array.from(rawChallenges),
           languageName,
           languageCode,
@@ -35,6 +36,7 @@
   export let rawChallenges
   export let languageName: string
   export let languageCode: string
+  export let testChallengeType: string | undefined
   export let specialCharacters: Array<string>
   export let id: string
   export let courseURL: string
@@ -54,6 +56,7 @@
 <NavBar />
 
 <ChallengeScreen
+  {testChallengeType}
   {expectedNumberOfChallenges}
   {skillId}
   {rawChallenges}
