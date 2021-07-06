@@ -47,7 +47,7 @@ blocks:
             - cache restore packages-web-$(checksum yarn.lock)
             - cache restore sapper-build-$SEMAPHORE_GIT_PR_SHA
             - yarn install
-            - SEMAPHORE_BUILD_NUMBER=$SEMAPHORE_PIPELINE_ID SEMAPHORE_THREAD_COUNT=3 yarn test
+            - SEMAPHORE_BUILD_NUMBER=$SEMAPHORE_PIPELINE_ID SEMAPHORE_THREAD_COUNT=3 yarn test:ci
       secrets:
         - name: Percy token
         - name: KnapsackPro token
