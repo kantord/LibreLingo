@@ -6,12 +6,12 @@
       const remark2rehype = await import("remark-rehype")
       const format = await import("rehype-format")
 
-      return await remark()
+      return (await remark()
           .use(markdown.default, { gfm: true, commonmark: true })
           .use(remark2rehype.default)
           .use(format.default)
           .use(html.default)
-          .process(markdownModule.default)
+          .process(markdownModule.default)).contents
   }
 </script>
 
