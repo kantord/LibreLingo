@@ -12,6 +12,7 @@
   // TODO: deal with this ignore comment
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   import db from "../db/db"
+  import isBrowser from "../utils/isBrowser"
 
   export let rawChallenges
   export let languageName
@@ -21,7 +22,8 @@
   export let courseURL
   export let skillId
   export let expectedNumberOfChallenges
-  export let testChallenge
+
+  const testChallenge = isBrowser() && new URLSearchParams(window.location.search).get("testChallenge")
 
   type CardChallengeType = {
     id: string
