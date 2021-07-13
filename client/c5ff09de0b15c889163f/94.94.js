@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[94],{401:function(n,a,o){"use strict";o.r(a),a.default="# ​Adjectives &amp; No 3\n\n### Vocabulary Adjectives &amp; No 3\n\n*   handi : big\n*   txiki :small\n*   altu : tall\n*   labur : short\n*   gizena : fat\n*   argal : thin\n*   gazte : young\n*   zahar : old\n*   morea : purple\n\n[ Go Back to Home Page!](..)"}}]);

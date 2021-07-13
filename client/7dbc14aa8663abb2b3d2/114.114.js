@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[114],{421:function(n,e,a){"use strict";a.r(e),e.default="# Numbers and Math 2\n\n### Numbers six to ten\n\n### Vocabulary Numbers and Math 2\n\n*   sei: six\n*   zazpi: seven\n*   zortzi: eight\n*   bederatzi: nine\n*   hamar: ten\n*   gehi: plus\n*   ken: minus\n\n[ Go Back to Home Page!](..)"}}]);
