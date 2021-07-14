@@ -19,7 +19,7 @@
     "exportCourse": "yarn loadCourseDataLocally && cd ../../ && pipenv run python manage.py exportcourse $1",
     "percypress": "sh ./percypress.sh",
     "test": "yarn dev & yarn percypress",
-    "test:ci": "yarn start & yarn percypress",
+    "test:ci": "npx serve __sapper__/export -l 3000 & yarn percypress",
     "prettierfix": "yarn prettierfix:src && yarn prettierfix:cypress && yarn prettierfix:svelte",
     "prettierfix:src": "prettier --write --plugin-search-dir=. ./src/**/*.js",
     "prettierfix:cypress": "prettier --write --plugin-search-dir=. ./cypress/**/*.js",
