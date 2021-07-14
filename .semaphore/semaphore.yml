@@ -47,12 +47,13 @@ blocks:
             - cache restore packages-web-$(checksum yarn.lock)
             - cache restore sapper-build-$SEMAPHORE_GIT_SHA
             - yarn install
+            - find ./apps/web/src
             - SEMAPHORE_BUILD_NUMBER=$SEMAPHORE_PIPELINE_ID SEMAPHORE_THREAD_COUNT=3 yarn test:ci
       secrets:
         - name: Percy token
         - name: KnapsackPro token
     dependencies:
-      - Sapper build
+      - Sapper static build
   - name: Eslint
     dependencies:
       - Set up dependencies
@@ -87,20 +88,21 @@ blocks:
             - cache restore node-$(checksum yarn.lock)
             - cache restore packages-web-$(checksum yarn.lock)
             - yarn types
-  - name: Sapper build
+  - name: Sapper static build
     dependencies:
       - Eslint Cypress
     task:
       jobs:
-        - name: yarn web build
+        - name: yarn web export
           commands:
             - sem-version node 12
             - checkout
             - cache restore node-$(checksum yarn.lock)
             - cache restore cypress-$(checksum yarn.lock)
             - cache restore packages-web-$(checksum yarn.lock)
-            - yarn web build
-            - cache store sapper-build-$SEMAPHORE_GIT_SHA apps/web/__sapper__
+            - yarn web export
+            - find ./apps/web/__sapper__/
+            - cache store sapper-build-$SEMAPHORE_GIT_SHA ./apps/web/__sapper__/
   - name: python packages
     dependencies: []
     task:
