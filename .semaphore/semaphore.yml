@@ -47,6 +47,7 @@ blocks:
             - cache restore packages-web-$(checksum yarn.lock)
             - cache restore sapper-build-$SEMAPHORE_GIT_SHA
             - yarn install
+            - find /apps/web/src
             - SEMAPHORE_BUILD_NUMBER=$SEMAPHORE_PIPELINE_ID SEMAPHORE_THREAD_COUNT=3 yarn test:ci
       secrets:
         - name: Percy token
