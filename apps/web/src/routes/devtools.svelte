@@ -46,6 +46,11 @@
             </a>
           </li>
         {/each}
+        <li>
+          <a target="_blank" href="/dev-typography">
+            <b>Typography</b>
+          </a>
+        </li>
       </ul>
     </Content>
   </div>
