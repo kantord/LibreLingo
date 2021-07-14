@@ -142,6 +142,7 @@ blocks:
             - pip install poetry
             - poetry install --no-interaction
             - ./scripts/verifyPypiReadmeFiles.sh
+            - find .
             - cache store python-$(checksum poetry.lock) /home/semaphore/.cache/pypoetry
 promotions:
   - name: Deploy to production
