@@ -23,7 +23,9 @@
   export let skillId
   export let expectedNumberOfChallenges
 
-  const testChallenge = isBrowser() && new URLSearchParams(window.location.search).get("testChallenge")
+  const testChallenge =
+    isBrowser() &&
+    new URLSearchParams(window.location.search).get("testChallenge")
 
   type CardChallengeType = {
     id: string
@@ -62,13 +64,16 @@
       shuffle(rawChallenges),
       expectedNumberOfChallenges
   )
-  let remainingChallenges = 
-    testChallenge
-        ? ([
-            ...[...challenges].filter(challenge => challenge.id === testChallenge),
-            ...[...challenges].filter(challenge => challenge.id !== testChallenge),
-        ])
-        : [...challenges]
+  let remainingChallenges = testChallenge
+      ? [
+          ...[...challenges].filter(
+              (challenge) => challenge.id === testChallenge
+          ),
+          ...[...challenges].filter(
+              (challenge) => challenge.id !== testChallenge
+          ),
+      ]
+      : [...challenges]
 
   let currentChallenge = remainingChallenges.shift()
   let solvedChallenges = []
