@@ -402,10 +402,22 @@ class DefineWordsInSentenceTest(TestCase):
         assert _define_word.call_count == 3
 
     @patch("librelingo_json_export.dictionary._define_word")
+    def test_calls_define_word_the_correct_number_of_times_with_spaces(self, _define_word):
+        _define_words_in_sentence(fakes.course1, "foo {bar baz}", False)
+        assert _define_word.call_count == 2
+
+    @patch("librelingo_json_export.dictionary._define_word")
     def test_calls_define_word_with_the_correct_data(self, _define_word):
         is_in_target_language = fakes.fake_value()
         fake_word = str(fakes.fake_value())
         _define_words_in_sentence(fakes.course1, fake_word, is_in_target_language)
+        _define_word.assert_called_with(fakes.course1, fake_word, is_in_target_language)
+
+    @patch("librelingo_json_export.dictionary._define_word")
+    def test_calls_define_word_with_the_correct_data_with_spaces(self, _define_word):
+        is_in_target_language = fakes.fake_value()
+        fake_word = str(fakes.fake_value()) + " " + str(fakes.fake_value())
+        _define_words_in_sentence(fakes.course1, "{" + fake_word  + "}", is_in_target_language)
         _define_word.assert_called_with(fakes.course1, fake_word, is_in_target_language)
 
     @patch("librelingo_json_export.dictionary._define_word")
@@ -415,10 +427,19 @@ class DefineWordsInSentenceTest(TestCase):
             _define_word.return_value
         ]
 
+        assert _define_words_in_sentence(fakes.course1, "{foo bar}", True) == [
+            _define_word.return_value
+        ]
+
     @patch("librelingo_json_export.dictionary._define_word")
     def test_defines_every_word(self, _define_word):
         _define_word.return_value = fakes.fake_value()
         assert _define_words_in_sentence(fakes.course1, "foo bar", True) == [
+            _define_word.return_value,
+            _define_word.return_value,
+        ]
+
+        assert _define_words_in_sentence(fakes.course1, "{foo bar} {baz quux}", True) == [
             _define_word.return_value,
             _define_word.return_value,
         ]
@@ -489,6 +510,22 @@ class TestDefineWord(TestCase):
         assert _define_word(my_course, "easier", is_in_target_language=True) == {
             "word": "easier",
             "definition": "by a lot",
+        }
+
+    def test_matches_definitions_with_spaces(self):
+        my_course = Course(
+            **{
+                **(fakes.course1._asdict()),
+                "dictionary": [
+                    DictionaryItem(
+                        word="three word term", definition="something", is_in_target_language=True
+                    ),
+                ],
+            },
+        )
+        assert _define_word(my_course, "three word term", is_in_target_language=True) == {
+            "word": "three word term",
+            "definition": "something",
         }
 
     def test_doesnt_include_definition_with_different_word(self):
