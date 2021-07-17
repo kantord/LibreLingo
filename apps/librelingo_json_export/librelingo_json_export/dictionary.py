@@ -18,6 +18,7 @@
 """
 
 from librelingo_utils import clean_word
+import re
 
 
 def _get_raw_dictionary_item(course, word, is_in_target_language):
@@ -60,4 +61,5 @@ def _define_words_in_sentence(course, sentence, reverse):
     """
     Converts a sentence into a list of definition objects.
     """
-    return [_define_word(course, word, reverse) for word in sentence.split()]
+    words = [p for p in re.split("( |\\{.*?\\}|'.*?')", sentence) if p.strip(' {}')]
+    return [_define_word(course, word.strip(' {}'), reverse) for word in words]
