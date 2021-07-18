@@ -427,6 +427,9 @@ class DefineWordsInSentenceTest(TestCase):
             _define_word.return_value
         ]
 
+    @patch("librelingo_json_export.dictionary._define_word")
+    def test_returns_correct_value_for_word_that_has_space(self, _define_word):
+        _define_word.return_value = fakes.fake_value()
         assert _define_words_in_sentence(fakes.course1, "{foo bar}", True) == [
             _define_word.return_value
         ]
@@ -439,6 +442,9 @@ class DefineWordsInSentenceTest(TestCase):
             _define_word.return_value,
         ]
 
+    @patch("librelingo_json_export.dictionary._define_word")
+    def test_defines_every_word_that_has_space(self, _define_word):
+        _define_word.return_value = fakes.fake_value()
         assert _define_words_in_sentence(fakes.course1, "{foo bar} {baz quux}", True) == [
             _define_word.return_value,
             _define_word.return_value,
