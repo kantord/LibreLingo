@@ -1893,11 +1893,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Hura ez da medikua, baina medikua zen.",
+      "formInTargetLanguage": "Hura ez da medikua, baina ni medikua zen.",
       "meaningInSourceLanguage": "She is not a doctor, but I was a doctor.",
-      "id": "ab6402c40b78",
+      "id": "2d4527679520",
       "priority": 0,
-      "group": "9113111c80a0"
+      "group": "8a2141e13118"
     },
     {
       "type": "chips",
@@ -1950,14 +1950,16 @@
         "da",
         "medikua",
         "baina",
+        "ni",
         "medikua",
         "zen",
         "dira",
-        "eta",
         "a",
+        "eta",
         "sei",
-        "edo",
-        "gida"
+        "Ni",
+        "i",
+        "ona"
       ],
       "solutions": [
         [
@@ -1966,14 +1968,41 @@
           "da",
           "medikua",
           "baina",
+          "ni",
+          "medikua",
+          "zen"
+        ],
+        [
+          "Hura",
+          "ez",
+          "da",
+          "medikua",
+          "baina",
+          "medikua",
+          "zen"
+        ],
+        [
+          "Ez",
+          "da",
+          "medikua",
+          "ni",
+          "baina",
+          "medikua",
+          "zen"
+        ],
+        [
+          "Ez",
+          "da",
+          "medikua",
+          "baina",
           "medikua",
           "zen"
         ]
       ],
-      "formattedSolution": "Hura ez da medikua, baina medikua zen.",
-      "id": "3031f73cf38f",
+      "formattedSolution": "Hura ez da medikua, baina ni medikua zen.",
+      "id": "a7bf7657a915",
       "priority": 2,
-      "group": "9113111c80a0"
+      "group": "8a2141e13118"
     },
     {
       "type": "chips",
@@ -1998,6 +2027,10 @@
         {
           "word": "baina",
           "definition": "but\nbut(contrast)"
+        },
+        {
+          "word": "ni",
+          "definition": "I\nme"
         },
         {
           "word": "medikua",
@@ -2056,17 +2089,17 @@
         ]
       ],
       "formattedSolution": "She is not a doctor, but I was a doctor.",
-      "id": "ed0b06276426",
+      "id": "ff8d78bf908a",
       "priority": 2,
-      "group": "9113111c80a0"
+      "group": "8a2141e13118"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Hura ez zen ikaslea, baina irakaslea nintzen.",
+      "formInTargetLanguage": "Hura ez zen ikaslea, baina ni irakaslea nintzen.",
       "meaningInSourceLanguage": "He was not a student, but I was a teacher.",
-      "id": "8b7836ccf731",
+      "id": "83f643cc026a",
       "priority": 0,
-      "group": "2d5adab37598"
+      "group": "4fb531bf6d70"
     },
     {
       "type": "chips",
@@ -2119,14 +2152,16 @@
         "zen",
         "ikaslea",
         "baina",
+        "ni",
         "irakaslea",
         "nintzen",
         "ken",
-        "zuen",
-        "nirea",
         "sei",
-        "zara",
-        "luzea"
+        "nirea",
+        "i",
+        "al",
+        "ona",
+        "nire"
       ],
       "solutions": [
         [
@@ -2135,14 +2170,41 @@
           "zen",
           "ikaslea",
           "baina",
+          "ni",
+          "irakaslea",
+          "nintzen"
+        ],
+        [
+          "Hura",
+          "ez",
+          "zen",
+          "ikaslea",
+          "baina",
+          "irakaslea",
+          "nintzen"
+        ],
+        [
+          "Ez",
+          "zen",
+          "ikaslea",
+          "baina",
+          "ni",
+          "irakaslea",
+          "nintzen"
+        ],
+        [
+          "Ez",
+          "zen",
+          "ikaslea",
+          "baina",
           "irakaslea",
           "nintzen"
         ]
       ],
-      "formattedSolution": "Hura ez zen ikaslea, baina irakaslea nintzen.",
-      "id": "4b3624b1a98c",
+      "formattedSolution": "Hura ez zen ikaslea, baina ni irakaslea nintzen.",
+      "id": "b65b210bc564",
       "priority": 2,
-      "group": "2d5adab37598"
+      "group": "4fb531bf6d70"
     },
     {
       "type": "chips",
@@ -2167,6 +2229,10 @@
         {
           "word": "baina",
           "definition": "but\nbut(contrast)"
+        },
+        {
+          "word": "ni",
+          "definition": "I\nme"
         },
         {
           "word": "irakaslea",
@@ -2225,9 +2291,9 @@
         ]
       ],
       "formattedSolution": "He was not a student, but I was a teacher.",
-      "id": "b2cf321574b0",
+      "id": "1dff0e344bff",
       "priority": 2,
-      "group": "2d5adab37598"
+      "group": "4fb531bf6d70"
     },
     {
       "type": "options",
@@ -2279,6 +2345,11 @@
         [
           "Zu",
           "ez",
+          "zara",
+          "polizia"
+        ],
+        [
+          "Ez",
           "zara",
           "polizia"
         ]
@@ -2403,6 +2474,13 @@
           "medikuak",
           "baizik",
           "erizainak"
+        ],
+        [
+          "Ez",
+          "ginen",
+          "medikuak",
+          "baizik",
+          "erizainak"
         ]
       ],
       "formattedSolution": "Gu ez ginen medikuak, baizik erizainak.",
@@ -2509,6 +2587,11 @@
         [
           "Zuek",
           "ez",
+          "zineten",
+          "turistak"
+        ],
+        [
+          "Ez",
           "zineten",
           "turistak"
         ]

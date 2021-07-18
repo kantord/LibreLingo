@@ -166,6 +166,11 @@
           "autobus",
           "gidaria",
           "da"
+        ],
+        [
+          "Autobus",
+          "gidaria",
+          "da"
         ]
       ],
       "formattedSolution": "Hura autobus gidaria da.",
@@ -420,8 +425,8 @@
         "gida",
         "naiz",
         "da",
-        "ona",
         "ni",
+        "ona",
         "a",
         "i"
       ],
@@ -431,6 +436,13 @@
           "on",
           "Ni",
           "tour",
+          "gida",
+          "naiz"
+        ],
+        [
+          "Arratsalde",
+          "on",
+          "Tour",
           "gida",
           "naiz"
         ]
@@ -546,6 +558,10 @@
           "Haiek",
           "turistak",
           "dira"
+        ],
+        [
+          "Turistak",
+          "dira"
         ]
       ],
       "formattedSolution": "Haiek turistak dira.",
@@ -648,6 +664,12 @@
           "Kaixo",
           "Ni",
           "ere",
+          "erizaina",
+          "naiz"
+        ],
+        [
+          "Kaixo",
+          "Ere",
           "erizaina",
           "naiz"
         ]
@@ -757,8 +779,8 @@
         "zu",
         "da",
         "a",
-        "u",
-        "Gu"
+        "Gu",
+        "n"
       ],
       "solutions": [
         [
@@ -766,6 +788,13 @@
           "on",
           "Zu",
           "al",
+          "medikua",
+          "zara"
+        ],
+        [
+          "Egun",
+          "on",
+          "Al",
           "medikua",
           "zara"
         ]
@@ -884,6 +913,11 @@
           "Gu",
           "ikasleak",
           "gara"
+        ],
+        [
+          "Epa",
+          "Ikasleak",
+          "gara"
         ]
       ],
       "formattedSolution": "Epa. Gu ikasleak gara.",
@@ -995,6 +1029,11 @@
           "Bai",
           "Gu",
           "gidariak",
+          "gara"
+        ],
+        [
+          "Bai",
+          "Gidariak",
           "gara"
         ]
       ],
@@ -1108,6 +1147,11 @@
           "Gu",
           "medikuak",
           "gara"
+        ],
+        [
+          "Bai",
+          "Medikuak",
+          "gara"
         ]
       ],
       "formattedSolution": "Bai. Gu medikuak gara.",
@@ -1213,6 +1257,10 @@
           "Zuek",
           "turistak",
           "zarete"
+        ],
+        [
+          "Turistak",
+          "zarete"
         ]
       ],
       "formattedSolution": "Zuek turistak zarete.",
@@ -1310,6 +1358,11 @@
           "al",
           "poliziak",
           "zarete"
+        ],
+        [
+          "Al",
+          "poliziak",
+          "zarete"
         ]
       ],
       "formattedSolution": "Zuek al poliziak zarete?",
@@ -1395,11 +1448,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Hura al polizia bat da.",
+      "formInTargetLanguage": "Hura al polizia bat da?",
       "meaningInSourceLanguage": "Is he a police officer?",
-      "id": "ed9b4a98b87b",
+      "id": "b7f8232653d8",
       "priority": 0,
-      "group": "cac10769d8f1"
+      "group": "85fa10080b8d"
     },
     {
       "type": "chips",
@@ -1434,8 +1487,8 @@
         "da",
         "a",
         "l",
-        "Bai",
-        "ona"
+        "Al",
+        "Bai"
       ],
       "solutions": [
         [
@@ -1444,12 +1497,29 @@
           "polizia",
           "bat",
           "da"
+        ],
+        [
+          "Al",
+          "polizia",
+          "bat",
+          "da"
+        ],
+        [
+          "Hura",
+          "al",
+          "polizia",
+          "da"
+        ],
+        [
+          "Al",
+          "polizia",
+          "da"
         ]
       ],
-      "formattedSolution": "Hura al polizia bat da.",
-      "id": "83370806262d",
+      "formattedSolution": "Hura al polizia bat da?",
+      "id": "ed2722570d8b",
       "priority": 2,
-      "group": "cac10769d8f1"
+      "group": "85fa10080b8d"
     },
     {
       "type": "chips",
@@ -1472,7 +1542,7 @@
           "definition": "one"
         },
         {
-          "word": "da.",
+          "word": "da?",
           "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
         }
       ],
@@ -1515,12 +1585,26 @@
           "the",
           "police",
           "officer"
+        ],
+        [
+          "Is",
+          "he",
+          "one",
+          "police",
+          "officer"
+        ],
+        [
+          "Is",
+          "she",
+          "one",
+          "police",
+          "officer"
         ]
       ],
       "formattedSolution": "Is he a police officer?",
-      "id": "8b6d31aa4f08",
+      "id": "6978132690f3",
       "priority": 2,
-      "group": "cac10769d8f1"
+      "group": "85fa10080b8d"
     },
     {
       "type": "options",
@@ -1570,6 +1654,12 @@
         [
           "Haiek",
           "erizainak",
+          "edo",
+          "medikuak",
+          "dira"
+        ],
+        [
+          "Erizainak",
           "edo",
           "medikuak",
           "dira"

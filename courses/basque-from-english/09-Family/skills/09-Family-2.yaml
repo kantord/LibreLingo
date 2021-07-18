@@ -1,224 +1,135 @@
 Skill:
-  Id: 91
-  Name: Egon 1
+  Id: 92
+  Name: Family 2
   Thumbnails:
 
 New words:
-  - Word: Ni nago
-    Translation: I am
-    Images:
-      - iam1
-      - iam2
-      - iam3
-
-  - Word: zu zaude
-    Translation: you are
-    Images:
-      - you1
-      - you2
-      - you3
-
-  - Word: hura dago
-    Translation: he is
+  - Word: biloba
+    Translation: grandson
     Also accepted:
-      - she is
-      - it is
+      - granddaughter
     Images:
-      - he3
-      - she3
-      - he2
+      - grandson1
+      - granddaughter1
+      - grandson2
 
-  - Word: gu gaude
-    Translation: We are
+  - Word: emaztea
+    Translation: wife
     Images:
-      - we1
-      - we2
-      - we3
+      - wife1
+      - wife2
+      - wife3
 
-  - Word: zuek zaudete
-    Translation: you (plural) are
+  - Word: izeba
+    Translation: aunt
+    Images:
+      - aunt1
+      - aunt2
+      - aunt3
+
+  - Word: lehengusu
+    Translation: cousin (male)
+    Images:
+      - cousinmale1
+      - cousinmale2
+      - cousinmale3
+
+  - Word: lehengusina
+    Translation: cousin (female)
+    Images:
+      - cousinfemale1
+      - cousinfemale2
+      - cousinfemale3
+
+  - Word: osaba
+    Translation: uncle
+    Images:
+      - uncle1
+      - uncle2
+      - uncle3
+
+  - Word: seme-alba
+    Translation: children
     Also accepted:
-      - you'll are
-      - you are
+      - sons and daughters
     Images:
-      - you1
-      - you2
-      - you3
+      - children1
+      - children2
+      - children3
 
-  - Word: haiek daude
-    Translation: they are
+  - Word: senarra
+    Translation: husband
     Images:
-      - they1
-      - they2
-      - they3
+      - husband1
+      - husband2
+      - husband3
 
-  - Word: zuhaitz
-    Translation: tree
+  - Word: ume
+    Translation: child
     Images:
-      - tree1
-      - tree2
-      - tree3
-
-  - Word: non
-    Translation: where
-    Images:
-      - where1
-      - where2
-      - where3
-
-  - Word: kanpo
-    Translation: outside
-    Images:
-      - outside1
-      - outside2
-      - outside3
-
-  - Word: barruan
-    Translation: inside
-    Images:
-      - inside1
-      - inside2
-      - inside3
+      - child1
+      - child2
+      - child3
 
 Phrases:
-  - Phrase: Arratsalde on. Non zaude zu?
-    Alternative versions:
-      - Arratsalde on. Non zaude?
-    Translation: Good Afternoon. Where are you?
+  - Phrase: Haiek nire seme-alba dira.
+    Translation: They are my children.
 
-  - Phrase: Ni etxean nago.
-    Alternative versions:
-      - Etxean nago.
-    Translation: I am in the house.
-    Alternative translations:
-    - I am in a house.
+  - Phrase: Haiek gure bilobak dira.
+    Translation: They are our grandchildren.
 
-  - Phrase: Barkatu. Non nago?
-    Alternative versions:
-      - Barkatu. Ni non nago?
-    Translation: Excuse me. Where am I?
+  - Phrase: Zu nire umea zara.
+    Translation: You are my child.
 
-  - Phrase: Egun on. Gure ostatuan zaude.
-    Alternative versions:
-      - Egun on. Zu gure ostatuan zaude.
-    Translation: Good morning. You are in our mini-hotel.
+  - Phrase: Umea nire semea da.
+    Translation: The child is my son.
 
-  - Phrase: Non dago etxekoandrea?
-    Translation: Where is the housewife?
-    Alternative translations:
-    - Where is a housewife?
+  - Phrase: Ni zure osaba naiz.
+    Translation: I am your uncle.
 
-  - Phrase: Etxekoandrea barruan dago.
-    Translation: The housewife is inside.
-    Alternative translations:
-    - A housewife is inside.
+  - Phrase: Hura gure izeba da.
+    Translation: She is our aunt.
 
-  - Phrase: Non dago arrotza?
-    Translation: Where is the stranger?
-    Alternative translations:
-    - Where is a stranger?
+  - Phrase: Gizon hau nire senarra da.
+    Translation: This man is my husband.
 
-  - Phrase: Arrotza hotelan dago.
-    Translation: The stranger is in a hotel.
-    Alternative translations:
-    - A stranger is in a hotel.
+  - Phrase: Emakumea hau nire emaztea da.
+    Translation: This woman is my wife.
 
-  - Phrase: Barkatu. Non gaude?
-    Alternative versions:
-      - Barkatu. Gu non gaude?
-    Translation: Excuse me. Where are we?
+  - Phrase: Nire emaztea polizia da.
+    Translation: My wife is a police officer.
 
-  - Phrase: Egun on. Elizan gaude.
-    Alternative versions:
-      - Egun on. Gu elizan gaude.
-    Translation: Good Morning. We are in the church.
-    Alternative translations:
-    - Good Morning. We are in a church.
+  - Phrase: Bere senarra gida tour gida da.
+    Translation: Her husband is a tour guide.
 
-  - Phrase: Zuek kanpoan zaudete. Gu barruan gaude.
-    Alternative versions:
-      - Zuek kanpoan zaudete. Barruan gaude.
-      - Kanpoan zaudete. Gu barruan gaude.
-      - Kanpoan zaudete. Barruan gaude.
-    Translation: You(plural) are outside. We are inside.
-    Alternative translations:
-    - You'll are outside. We are inside.
-    - You are outside. We are inside.
+  - Phrase: Gure osaba erizaina bat da.
+    Translation: Our uncle is an nurse.
 
-  - Phrase: Zuek elizan ere zaudete.
-    Alternative versions:
-      - Elizan ere zaudete.
-    Translation: You(plural) are also in the church.
-    Alternative translations:
-    - You(plural) are also in a church.
-    - You'll are also in the church.
-    - You'll are also in a church.
-    - You are also in the church.
-    - You are also in a church.
+  - Phrase: Nire lehengusua da ere ingeniaria.
+    Translation: My cousin (male) is also an engineer.
 
-  - Phrase: Apaizak  elizan daude.
-    Translation: The priests are in the church.
+  - Phrase: Haien izeba medikua da.
+    Translation: Their aunt is a doctor.
 
-  - Phrase: Badaude hontzak elizan.
-    Translation: There are owls in the church.
+  - Phrase: Nire lehengusina ere medikua da.
+    Translation: My cousin (female) is also a doctor.
 
-  - Phrase: Txoria dago zuhaitzean.
-    Translation: A bird is in the tree.
-    Alternative translations:
-    - A bird is in a tree.
-    - The bird is in a tree.
-    - The bird is in the tree.
+  - Phrase: Gure izeba irakaslea da.
+    Translation: Our aunt is a teacher.
 
-  - Phrase: Non gaude gu?
-    Translation: Where are we?
+  - Phrase: Nire osabaren semea lehengusua da.
+    Translation: My uncle's son is my cousin (male).
 
-  - Phrase: Gu ostatuan gaude.
-    Translation: We are in the mini-hotel.
-    Alternative translations:
-    - We are in a mini-hotel
-
-  - Phrase: Non daude erlojuak?
-    Translation: Where are the watches?
-
-  - Phrase: Haiek poltsan daude.
-    Translation: They are in the purse.
-    Alternative translations:
-    - They are in a purse.
-
-  - Phrase: Mutila dago zuhaitzean.
-    Translation: A boy is in the tree.
-    Alternative translations:
-    - A boy is in a tree.
-    - The boy is in a tree.
-    - The boy is in the tree.
-
-  - Phrase: Oilaskoak ere kanpoan daude.
-    Translation: The chickens are also outside.
-    Alternative translations:
-    - Chickens are also outside.
-
-  - Phrase: Sagua barruan dago
-    Translation: The mouse is inside.
-    Alternative translations:
-    - A mouse is inside.
-
-  - Phrase: Sugea ez dago barruan.
-    Translation: The snake is not inside.
-    Alternative translations:
-    - A snake is not inside.
+  - Phrase: Nire izebare alaba nire lehengusina da.
+    Translation: My aunt's daughter is my cousin (female).
 
 Mini-dictionary:
   Basque:
-    - Aitorren: Aitor's (male name)
     - Anitzarenak: Anitza's (female name, plural object)
     - Lili: Lili (LibreLingo Turtle)
-    - Mikel: Mikel (male name)
     - Mikelenak: Mikel's (male name)
-    - Miren: Miren's (female name)
     - Mirenen: Miren's (female name)
     - Xabieren: Xabier's (male name)
-    - ahizpa: sister of a sister
-    - ahizpan: sister's
     - aiton-amonak: grandparents
     - aiton: grandfather
     - aitona: grandfather
@@ -234,26 +145,21 @@ Mini-dictionary:
     - amon: grandmother
     - amona: grandmother
     - amonaren: grandmother's
-    - anaia: brother of a brother
-    - anaian: brother of a brother's
     - animalia: animal
     - animaliak: animals
     - argala: thin
     - arkatza: pencil
     - arkatzak: pencils
-    - arreba: sister of a brother
     - aterki: umbrella
     - aterkia: umbrella
     - aterkiak: umbrellas
     - autobus: bus
     - autobusa: bus
     - azkarra: fast
-    - badaude: there are
     - baina: but
     - baloi: ball
     - baloia: ball
     - baloiak: balls
-    - barruan: inside
     - bat: one
     - begira!: look!
     - beltz: black
@@ -279,21 +185,10 @@ Mini-dictionary:
     - boligrafo: pen
     - boligrafoa: pen
     - boligrafoak: pens
-    - da:
-      - he is (izan)
-      - she is (izan)
-      - it is (izan)
-    - dago:
-      - he is (egon)
-      - she is (egon)
-      - it is (egon)
-    - daude: they are (egon)
-    - dira: are (izan)
+    - da: is
+    - dira: are
     - dortoka: a turtle
     - dortokak: turtles
-    - eliza: church
-    - elizan: in a church
-    - elizetan: in the churches
     - emakumea: woman
     - emaztea: wife
     - ere: also
@@ -304,10 +199,7 @@ Mini-dictionary:
     - eta: and
     - etxe: house
     - etxea: house
-    - etxean: in the house
     - ez: not, no
-    - gara: are (izan)
-    - gaude: are (egon)
     - gaztea: young
     - gizon: man
     - gida: guide
@@ -319,7 +211,6 @@ Mini-dictionary:
     - grisa: gray
     - grisak: gray
     - gurasoak: parents
-    - gu: we
     - gure: our
     - gurea: ours
     - gureak: ours
@@ -343,7 +234,6 @@ Mini-dictionary:
     - horiek: Those, plural of hori
     - hotel: hotel
     - hotelak: hotels
-    - hotelan: in the hotel
     - hura:
       - that over there
       - he
@@ -351,21 +241,12 @@ Mini-dictionary:
       - it
     - ikasleak: students
     - ikasleenak: students'
-    - iloba:
-      - niece
-      - nephew
-    - ilobak:
-      - nieces
-      - nephews
     - ingeniari: engineer
     - ingeniaria: engineer
     - irakaslea: teacher
     - itsusia: ugly
     - izeba: aunt
     - izebare: aunt's
-    - jatora: nice
-    - kanpo: outside
-    - kanpoan: located outside
     - katu: cat
     - katua: a cat
     - katuak: cats
@@ -394,18 +275,13 @@ Mini-dictionary:
     - mutil: boy
     - mutila: boy
     - mutilak: boys
-    - mutillaguna: boyfriend
-    - naiz: I am (izan)
-    - nago: I am (egon)
-    - neba: brother of a sister
+    - naiz: am
     - neska: girl
     - neskak: girls
-    - neskalaguna: girlfriend
     - ni: I
     - nire: my
     - nirea: mine
     - nireak: mine
-    - non: where
     - nor: who
     - noren: whose
     - norena: whose
@@ -416,38 +292,26 @@ Mini-dictionary:
     - orain : now
     - osaba: uncle
     - osabaren: uncle's
-    - ostatu: mini-hotel
-    - ostatua: mini-hotel
-    - ostatuan: in a mini-hotel
     - polita: pretty
     - poltsa: purse
     - poltsak: purses
-    - poltsan: in the purse
     - polizia: police officer
-    - sagu: mouse
-    - sagua: mouse
     - seme: son
     - semea: son
     - semeak: sons
     - semearen: son's
     - seme-alba: children
-    - seme-albak:
-      - children
-      - sons and daughters
     - senarra: husband
-    - sugea: snake
     - tour: tour
     - turista: tourist
     - txakur: dog
-    - txakurra: a dog
+    - txakura: a dog
     - txakurrak: dogs
     - txikia: small
-    - txori: bird
     - txoria: bird
     - txoriak: birds
     - ume: child
     - umea: child
-    - umeak: children
     - urdin: blue
     - urdina: blue
     - urdinak: blue
@@ -457,12 +321,8 @@ Mini-dictionary:
     - zahara: old
     - zaharra: old
     - zaharrak: old
-    - zaldi: horse
-    - zaldia: a horse
-    - zara: you are (izan)
+    - zara: are
     - zarete: their
-    - zaude: you are (egon)
-    - zaudete: you (plural) are (egon)
     - zein: which
     - zen: was
     - zer: what
@@ -471,8 +331,6 @@ Mini-dictionary:
     - zuen: yours
     - zuena: yours (plural)
     - zuenak: yours (plural)
-    - zuhaitz: tree
-    - zuhaitzean: in a tree
     - zure: your
     - zurea: yours
     - zureak: yours
@@ -481,31 +339,21 @@ Mini-dictionary:
     - zuriak: white
 
   English:
-    - Aitor's: Aitorren (male name)
     - Anitza's: Anitzarenak (female name, plural object)
     - Lili: Lili (LibreLingo Turtle)
-    - Mikel: Mikel (male name)
     - Mikel's: Mikelenak (male name)
-    - Miren's: Miren (female name)
-    - Miren's: Mirenen (female name)
+    - Miren's: Mirenen(female name)
     - Xabier's: Xabieren (male name)
     - a: -a
     - also: ere
-    - am:
-      - naiz (izan)
-      - nago (egon)
+    - am: naiz
     - an: -ak
     - and: eta
     - animal: animalia
     - animals: animaliak
     - are:
-      - dira (izan)
-      - zara (izan)
-      - gara (izan)
-      - zaude  (egon)
-      - gaude (egon)
-      - zaudete (egon)
-      - daude (egon)
+      - dira
+      - zara
     - aunt: izeba
     - aunt's: izebare
     - ball: baloi
@@ -523,13 +371,6 @@ Mini-dictionary:
     - books: liburuak
     - boy: mutil
     - boys: mutilak
-    - boyfriend: mutillaguna
-    - brother:
-      - neba
-      - anaia
-    - brother's:
-      - neban
-      - anaian
     - bus: autobusa
     - but: baina
     - car: kotxea
@@ -542,8 +383,6 @@ Mini-dictionary:
     - children:
       - umeak
       - seme-alba
-    - church: eliza
-    - churches: elizak
     - cousin:
       - lehengusu
       - lehengusina
@@ -551,9 +390,7 @@ Mini-dictionary:
     - daughters: alabak
     - daughter's: alabaren
     - doctor: medikua
-    - dog:
-      - txakur
-      - txakurra
+    - dog: txakur
     - dogs: txakurrak
     - engineer: ingeniari
     - fast: azkar
@@ -567,7 +404,6 @@ Mini-dictionary:
     - friends': lagunaren
     - girl: neska
     - girls: neskak
-    - girlfriend: neskalaguna
     - gray: gris
     - grandchildren: bilobak
     - granddaughter: biloba
@@ -588,37 +424,25 @@ Mini-dictionary:
       - berea
     - her: bere
     - hers: berea
-    - horse: zaldia
     - hotel: hotel
     - hotels: hotelak
     - house: etxea
     - hura: hura
     - husband: senarra
     - I: ni
-    - in: NON case, not a word
-    - inside: barruan
-    - is:
-      - da (izan)
-      - dago (egon)
+    - is: da
     - it: hura
     - its: berea
     - look!: begira!
     - male: gizonezkoa
     - man: gizon
     - mine: nirea
-    - mini-hotel: ostatu
     - owls: hontzak
     - mother: ama
     - mother's: amaren
     - mothers: amak
-    - mouse: sagua
     - my: nire
     - new: berri
-    - nephew: iloba
-    - nephews: ilobak
-    - nice: jatora
-    - niece: iloba
-    - nieces: ilobak
     - no: ez
     - not: ez
     - now: orain
@@ -629,7 +453,6 @@ Mini-dictionary:
     - orange: laranja
     - our: gure
     - ours: gurea
-    - outside: kanpo
     - over: amaitu
     - owl: hontza
     - parents: gurasoak
@@ -647,14 +470,7 @@ Mini-dictionary:
     - school: eskola
     - she: hura
     - short: labur
-    - sister:
-      - ahizpa
-      - arreba
-    - sister's:
-      - ahizpan
-      - arreban
     - slow: motel
-    - snake: sugea
     - son: seme
     - sons: semeak
     - son's: semearen
@@ -679,7 +495,6 @@ Mini-dictionary:
       - horiek
     - tour: tour
     - tourist: turista
-    - tree: zuhaitz
     - turtle: dortoka
     - turtles: dortokak
     - ugly: itsusi
@@ -690,9 +505,7 @@ Mini-dictionary:
     - was: zen
     - watch: erloju
     - watches: erlojuak
-    - we: gu
     - what: zer
-    - where: non
     - which: zein
     - white: zuri
     - who: nor

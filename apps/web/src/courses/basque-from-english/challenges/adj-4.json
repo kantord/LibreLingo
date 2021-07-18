@@ -702,11 +702,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Medikua ez da itsusia, baizik ederra da",
+      "formInTargetLanguage": "Medikua ez da itsusia, baizik ederra da.",
       "meaningInSourceLanguage": "The doctor is not ugly, but rather he is handsome.",
-      "id": "52c093b8c6ff",
+      "id": "55c928b5b578",
       "priority": 0,
-      "group": "f147b79de7fa"
+      "group": "ec20205b07f2"
     },
     {
       "type": "chips",
@@ -764,9 +764,9 @@
         "a",
         "eta",
         "dira",
-        "d",
         "edo",
-        "sei"
+        "sei",
+        "Ni"
       ],
       "solutions": [
         [
@@ -777,12 +777,22 @@
           "baizik",
           "ederra",
           "da"
+        ],
+        [
+          "Medikua",
+          "ez",
+          "da",
+          "itsusia",
+          "baizik",
+          "hura",
+          "ederra",
+          "da"
         ]
       ],
-      "formattedSolution": "Medikua ez da itsusia, baizik ederra da",
-      "id": "02e8b5e6696f",
+      "formattedSolution": "Medikua ez da itsusia, baizik ederra da.",
+      "id": "a0444c775123",
       "priority": 2,
-      "group": "f147b79de7fa"
+      "group": "ec20205b07f2"
     },
     {
       "type": "chips",
@@ -813,7 +823,7 @@
           "definition": "beautiful\nhandsome"
         },
         {
-          "word": "da",
+          "word": "da.",
           "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
         }
       ],
@@ -889,9 +899,9 @@
         ]
       ],
       "formattedSolution": "The doctor is not ugly, but rather he is handsome.",
-      "id": "218325a259c4",
+      "id": "0a055fd77be7",
       "priority": 2,
-      "group": "f147b79de7fa"
+      "group": "ec20205b07f2"
     },
     {
       "type": "options",
@@ -1202,7 +1212,7 @@
         "ederra",
         "dira",
         "a",
-        "d"
+        "eta"
       ],
       "solutions": [
         [

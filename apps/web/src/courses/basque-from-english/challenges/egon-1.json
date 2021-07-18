@@ -53,6 +53,12 @@
           "Non",
           "zaude",
           "zu"
+        ],
+        [
+          "Arratsalde",
+          "on",
+          "Non",
+          "zaude"
         ]
       ],
       "formattedSolution": "Arratsalde on. Non zaude zu?",
@@ -112,11 +118,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Ni etxean nago",
+      "formInTargetLanguage": "Ni etxean nago.",
       "meaningInSourceLanguage": "I am in the house.",
-      "id": "7eec5c109d48",
+      "id": "656a90d447fd",
       "priority": 0,
-      "group": "0919f45a5103"
+      "group": "86fd0146dec0"
     },
     {
       "type": "chips",
@@ -155,12 +161,16 @@
           "Ni",
           "etxean",
           "nago"
+        ],
+        [
+          "Etxean",
+          "nago"
         ]
       ],
-      "formattedSolution": "Ni etxean nago",
-      "id": "908ee35d243a",
+      "formattedSolution": "Ni etxean nago.",
+      "id": "ba1182131674",
       "priority": 2,
-      "group": "0919f45a5103"
+      "group": "86fd0146dec0"
     },
     {
       "type": "chips",
@@ -175,7 +185,7 @@
           "definition": "in the house"
         },
         {
-          "word": "nago",
+          "word": "nago.",
           "definition": "I am (egon)"
         }
       ],
@@ -207,9 +217,9 @@
         ]
       ],
       "formattedSolution": "I am in the house.",
-      "id": "98b5b3d80744",
+      "id": "78c5984905af",
       "priority": 2,
-      "group": "0919f45a5103"
+      "group": "86fd0146dec0"
     },
     {
       "type": "options",
@@ -255,6 +265,12 @@
         [
           "Barkatu",
           "Non",
+          "nago"
+        ],
+        [
+          "Barkatu",
+          "Ni",
+          "non",
           "nago"
         ]
       ],
@@ -362,6 +378,14 @@
           "Egun",
           "on",
           "Gure",
+          "ostatuan",
+          "zaude"
+        ],
+        [
+          "Egun",
+          "on",
+          "Zu",
+          "gure",
           "ostatuan",
           "zaude"
         ]
@@ -860,6 +884,12 @@
           "Barkatu",
           "Non",
           "gaude"
+        ],
+        [
+          "Barkatu",
+          "Gu",
+          "non",
+          "gaude"
         ]
       ],
       "formattedSolution": "Barkatu. Non gaude?",
@@ -964,6 +994,13 @@
           "Egun",
           "on",
           "Elizan",
+          "gaude"
+        ],
+        [
+          "Egun",
+          "on",
+          "Gu",
+          "elizan",
           "gaude"
         ]
       ],
@@ -1090,6 +1127,26 @@
           "zaudete",
           "Gu",
           "barruan",
+          "gaude"
+        ],
+        [
+          "Zuek",
+          "kanpoan",
+          "zaudete",
+          "Barruan",
+          "gaude"
+        ],
+        [
+          "Kanpoan",
+          "zaudete",
+          "Gu",
+          "barruan",
+          "gaude"
+        ],
+        [
+          "Kanpoan",
+          "zaudete",
+          "Barruan",
           "gaude"
         ]
       ],
@@ -1221,6 +1278,11 @@
         [
           "Zuek",
           "elizan",
+          "ere",
+          "zaudete"
+        ],
+        [
+          "Elizan",
           "ere",
           "zaudete"
         ]
@@ -1676,7 +1738,7 @@
         "gaude",
         "gu",
         "Zu",
-        "u"
+        "Gu"
       ],
       "solutions": [
         [
