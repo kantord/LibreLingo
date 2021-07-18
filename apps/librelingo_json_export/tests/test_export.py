@@ -460,17 +460,13 @@ class TestDefineWord(TestCase):
         word = str(fakes.fake_value())
         meaning = str(fakes.fake_value())
         is_in_target_language = fakes.fake_value()
-        my_course = Course(
-            **{
-                **(fakes.course1._asdict()),
-                "dictionary": [
-                    DictionaryItem(
-                        word=word,
-                        definition=meaning,
-                        is_in_target_language=is_in_target_language,
-                    ),
-                ],
-            },
+        my_course = fakes.customize(
+            fakes.course1,
+            dictionary=[
+                DictionaryItem(
+                    word=word, definition=meaning, is_in_target_language=is_in_target_language
+                ),
+            ],
         )
         assert _define_word(
             my_course, word, is_in_target_language=is_in_target_language
@@ -480,32 +476,26 @@ class TestDefineWord(TestCase):
         word = str(fakes.fake_value())
         meaning = str(fakes.fake_value())
         is_in_target_language = fakes.fake_value()
-        my_course = Course(
-            **{
-                **(fakes.course1._asdict()),
-                "dictionary": [
-                    DictionaryItem(
-                        word=word,
-                        definition=meaning,
-                        is_in_target_language=is_in_target_language,
-                    ),
-                ],
-            },
+        my_course = fakes.customize(
+            fakes.course1,
+            dictionary=[
+                DictionaryItem(
+                    word=word, definition=meaning, is_in_target_language=is_in_target_language
+                ),
+            ],
         )
         assert _define_word(
             my_course, word + ",", is_in_target_language=is_in_target_language
         ) == {"word": word + ",", "definition": meaning}
 
     def test_matches_definitions_in_a_case_insensitive_way(self):
-        my_course = Course(
-            **{
-                **(fakes.course1._asdict()),
-                "dictionary": [
-                    DictionaryItem(
-                        word="Easier", definition="by a lot", is_in_target_language=True
-                    ),
-                ],
-            },
+        my_course = fakes.customize(
+            fakes.course1,
+            dictionary=[
+                DictionaryItem(
+                    word="Easier", definition="by a lot", is_in_target_language=True
+                ),
+            ],
         )
         assert _define_word(my_course, "easier", is_in_target_language=True) == {
             "word": "easier",
@@ -513,15 +503,13 @@ class TestDefineWord(TestCase):
         }
 
     def test_matches_definitions_with_spaces(self):
-        my_course = Course(
-            **{
-                **(fakes.course1._asdict()),
-                "dictionary": [
-                    DictionaryItem(
-                        word="three word term", definition="something", is_in_target_language=True
-                    ),
-                ],
-            },
+        my_course = fakes.customize(
+            fakes.course1,
+            dictionary=[
+                DictionaryItem(
+                    word="three word term", definition="something", is_in_target_language=True
+                ),
+            ],
         )
         assert _define_word(my_course, "three word term", is_in_target_language=True) == {
             "word": "three word term",
@@ -532,17 +520,13 @@ class TestDefineWord(TestCase):
         word = str(fakes.fake_value())
         meaning = str(fakes.fake_value())
         is_in_target_language = fakes.fake_value()
-        my_course = Course(
-            **{
-                **(fakes.course1._asdict()),
-                "dictionary": [
-                    DictionaryItem(
-                        word=word,
-                        definition=meaning,
-                        is_in_target_language=is_in_target_language,
-                    ),
-                ],
-            },
+        my_course = fakes.customize(
+            fakes.course1,
+            dictionary=[
+                DictionaryItem(
+                    word=word, definition=meaning, is_in_target_language=is_in_target_language
+                ),
+            ],
         )
         with pytest.raises(ValueError):
             _define_word(my_course, "asd", is_in_target_language=is_in_target_language)
