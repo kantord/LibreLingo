@@ -63,8 +63,8 @@
         "orain",
         "etxekoandrea",
         "naiz",
-        "ona",
         "ni",
+        "ona",
         "nire",
         "nirea",
         "Zein",
@@ -74,6 +74,33 @@
         [
           "Ni",
           "neska",
+          "nintzen",
+          "baina",
+          "orain",
+          "etxekoandrea",
+          "naiz"
+        ],
+        [
+          "Ni",
+          "neska",
+          "nintzen",
+          "baina",
+          "orain",
+          "ni",
+          "etxekoandrea",
+          "naiz"
+        ],
+        [
+          "Neska",
+          "nintzen",
+          "baina",
+          "orain",
+          "ni",
+          "etxekoandrea",
+          "naiz"
+        ],
+        [
+          "Neska",
           "nintzen",
           "baina",
           "orain",
@@ -236,6 +263,33 @@
           "orain",
           "apaiza",
           "naiz"
+        ],
+        [
+          "Ni",
+          "ikaslea",
+          "nintzen",
+          "baina",
+          "orain",
+          "ni",
+          "apaiza",
+          "naiz"
+        ],
+        [
+          "Ikaslea",
+          "nintzen",
+          "baina",
+          "orain",
+          "ni",
+          "apaiza",
+          "naiz"
+        ],
+        [
+          "Ikaslea",
+          "nintzen",
+          "baina",
+          "orain",
+          "apaiza",
+          "naiz"
         ]
       ],
       "formattedSolution": "Ni ikaslea nintzen, baina orain apaiza naiz.",
@@ -318,11 +372,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Camareroa zinen, baina orain irakaslea zara.",
+      "formInTargetLanguage": "Zu camareroa zinen, baina orain irakaslea zara.",
       "meaningInSourceLanguage": "You were a waiter, but now you are a teacher.",
-      "id": "9ae2aab20ec8",
+      "id": "5ace332098d8",
       "priority": 0,
-      "group": "eb35b51edcbb"
+      "group": "e37dd0c8e579"
     },
     {
       "type": "chips",
@@ -370,19 +424,49 @@
         }
       ],
       "chips": [
-        "Camareroa",
+        "Zu",
+        "camareroa",
         "zinen",
         "baina",
         "orain",
         "irakaslea",
         "zara",
         "gara",
-        "ibaia",
         "dira",
-        "ziren",
-        "morea"
+        "zurea",
+        "jaka",
+        "ibaia",
+        "zen"
       ],
       "solutions": [
+        [
+          "Zu",
+          "camareroa",
+          "zinen",
+          "baina",
+          "orain",
+          "irakaslea",
+          "zara"
+        ],
+        [
+          "Zu",
+          "camareroa",
+          "zinen",
+          "baina",
+          "orain",
+          "zu",
+          "irakaslea",
+          "zara"
+        ],
+        [
+          "Camareroa",
+          "zinen",
+          "baina",
+          "orain",
+          "zu",
+          "irakaslea",
+          "zara"
+        ],
         [
           "Camareroa",
           "zinen",
@@ -392,17 +476,21 @@
           "zara"
         ]
       ],
-      "formattedSolution": "Camareroa zinen, baina orain irakaslea zara.",
-      "id": "eb2d31853a2d",
+      "formattedSolution": "Zu camareroa zinen, baina orain irakaslea zara.",
+      "id": "3da970ba2bf3",
       "priority": 2,
-      "group": "eb35b51edcbb"
+      "group": "e37dd0c8e579"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Camareroa",
+          "word": "Zu",
+          "definition": "you"
+        },
+        {
+          "word": "camareroa",
           "definition": "the waiter\nwaiter"
         },
         {
@@ -462,9 +550,9 @@
         ]
       ],
       "formattedSolution": "You were a waiter, but now you are a teacher.",
-      "id": "69dd82ac9d95",
+      "id": "caae44d67a20",
       "priority": 2,
-      "group": "eb35b51edcbb"
+      "group": "e37dd0c8e579"
     },
     {
       "type": "options",
@@ -538,6 +626,33 @@
         [
           "Zu",
           "arrotza",
+          "zinen",
+          "baina",
+          "orain",
+          "laguna",
+          "zara"
+        ],
+        [
+          "Zu",
+          "arrotza",
+          "zinen",
+          "baina",
+          "orain",
+          "zu",
+          "laguna",
+          "zara"
+        ],
+        [
+          "Arrotza",
+          "zinen",
+          "baina",
+          "orain",
+          "zu",
+          "laguna",
+          "zara"
+        ],
+        [
+          "Arrotza",
           "zinen",
           "baina",
           "orain",
@@ -695,6 +810,33 @@
         [
           "Hura",
           "gidaria",
+          "zen",
+          "baina",
+          "orain",
+          "sukaldaria",
+          "da"
+        ],
+        [
+          "Hura",
+          "gidaria",
+          "zen",
+          "baina",
+          "orain",
+          "hura",
+          "sukaldaria",
+          "da"
+        ],
+        [
+          "Gidaria",
+          "zen",
+          "baina",
+          "orain",
+          "hura",
+          "sukaldaria",
+          "da"
+        ],
+        [
+          "Gidaria",
           "zen",
           "baina",
           "orain",
@@ -893,6 +1035,33 @@
           "orain",
           "medikua",
           "da"
+        ],
+        [
+          "Hura",
+          "sukaldaria",
+          "zen",
+          "baina",
+          "orain",
+          "hura",
+          "medikua",
+          "da"
+        ],
+        [
+          "Sukaldaria",
+          "zen",
+          "baina",
+          "orain",
+          "hura",
+          "medikua",
+          "da"
+        ],
+        [
+          "Sukaldaria",
+          "zen",
+          "baina",
+          "orain",
+          "medikua",
+          "da"
         ]
       ],
       "formattedSolution": "Hura sukaldaria zen, baina orain medikua da.",
@@ -1078,6 +1247,33 @@
           "orain",
           "arrotzak",
           "gara"
+        ],
+        [
+          "Gu",
+          "lagunak",
+          "ginen",
+          "baina",
+          "orain",
+          "gu",
+          "arrotzak",
+          "gara"
+        ],
+        [
+          "Lagunak",
+          "ginen",
+          "baina",
+          "orain",
+          "gu",
+          "arrotzak",
+          "gara"
+        ],
+        [
+          "Lagunak",
+          "ginen",
+          "baina",
+          "orain",
+          "arrotzak",
+          "gara"
         ]
       ],
       "formattedSolution": "Gu lagunak ginen, baina orain arrotzak gara.",
@@ -1234,6 +1430,33 @@
           "orain",
           "poliziak",
           "gara"
+        ],
+        [
+          "Gu",
+          "camareroak",
+          "ginen",
+          "baina",
+          "orain",
+          "gu",
+          "poliziak",
+          "gara"
+        ],
+        [
+          "Camareroak",
+          "ginen",
+          "baina",
+          "orain",
+          "gu",
+          "poliziak",
+          "gara"
+        ],
+        [
+          "Camareroak",
+          "ginen",
+          "baina",
+          "orain",
+          "poliziak",
+          "gara"
         ]
       ],
       "formattedSolution": "Gu camareroak ginen, baina orain poliziak gara.",
@@ -1385,6 +1608,33 @@
         [
           "Zuek",
           "turistak",
+          "zineten",
+          "baina",
+          "orain",
+          "apaizak",
+          "zara"
+        ],
+        [
+          "Zuek",
+          "turistak",
+          "zineten",
+          "baina",
+          "orain",
+          "zuek",
+          "apaizak",
+          "zara"
+        ],
+        [
+          "Turistak",
+          "zineten",
+          "baina",
+          "orain",
+          "zuek",
+          "apaizak",
+          "zara"
+        ],
+        [
+          "Turistak",
           "zineten",
           "baina",
           "orain",
@@ -1562,6 +1812,33 @@
           "orain",
           "lagunak",
           "zara"
+        ],
+        [
+          "Zuek",
+          "arrotzak",
+          "zineten",
+          "baina",
+          "orain",
+          "zuek",
+          "lagunak",
+          "zara"
+        ],
+        [
+          "Arrotzak",
+          "zineten",
+          "baina",
+          "orain",
+          "zuek",
+          "lagunak",
+          "zara"
+        ],
+        [
+          "Arrotzak",
+          "zineten",
+          "baina",
+          "orain",
+          "lagunak",
+          "zara"
         ]
       ],
       "formattedSolution": "Zuek arrotzak zineten, baina orain lagunak zara.",
@@ -1734,6 +2011,33 @@
           "orain",
           "etxekoandreak",
           "dira"
+        ],
+        [
+          "Haiek",
+          "erizainak",
+          "ziren",
+          "baina",
+          "orain",
+          "haiek",
+          "etxekoandreak",
+          "dira"
+        ],
+        [
+          "Erizainak",
+          "ziren",
+          "baina",
+          "orain",
+          "haiek",
+          "etxekoandreak",
+          "dira"
+        ],
+        [
+          "Erizainak",
+          "ziren",
+          "baina",
+          "orain",
+          "etxekoandreak",
+          "dira"
         ]
       ],
       "formattedSolution": "Haiek erizainak ziren, baina orain etxekoandreak dira.",
@@ -1881,6 +2185,33 @@
         [
           "Haiek",
           "mutilak",
+          "ziren",
+          "baina",
+          "orain",
+          "apaizak",
+          "dira"
+        ],
+        [
+          "Haiek",
+          "mutilak",
+          "ziren",
+          "baina",
+          "orain",
+          "haiek",
+          "apaizak",
+          "dira"
+        ],
+        [
+          "Mutilak",
+          "ziren",
+          "baina",
+          "orain",
+          "haiek",
+          "apaizak",
+          "dira"
+        ],
+        [
+          "Mutilak",
           "ziren",
           "baina",
           "orain",
