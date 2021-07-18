@@ -397,28 +397,19 @@ class DefineWordsInSentenceTest(TestCase):
         assert _define_words_in_sentence(fakes.course1, "", False) == []
 
     @patch("librelingo_json_export.dictionary._define_word")
-    def test_calls_define_word_the_correct_number_of_times(self, _define_word):
+    def test_calls_define_word_with_the_correct_data(self, _define_word):
         _define_words_in_sentence(fakes.course1, "foo bar baz", False)
         assert _define_word.call_count == 3
+        _define_word.assert_any_call(fakes.course1, "foo", False)
+        _define_word.assert_any_call(fakes.course1, "bar", False)
+        _define_word.assert_any_call(fakes.course1, "baz", False)
 
     @patch("librelingo_json_export.dictionary._define_word")
-    def test_calls_define_word_the_correct_number_of_times_with_spaces(self, _define_word):
+    def test_calls_define_word_with_the_correct_word_that_has_space(self, _define_word):
         _define_words_in_sentence(fakes.course1, "foo {bar baz}", False)
         assert _define_word.call_count == 2
-
-    @patch("librelingo_json_export.dictionary._define_word")
-    def test_calls_define_word_with_the_correct_data(self, _define_word):
-        is_in_target_language = fakes.fake_value()
-        fake_word = str(fakes.fake_value())
-        _define_words_in_sentence(fakes.course1, fake_word, is_in_target_language)
-        _define_word.assert_called_with(fakes.course1, fake_word, is_in_target_language)
-
-    @patch("librelingo_json_export.dictionary._define_word")
-    def test_calls_define_word_with_the_correct_data_with_spaces(self, _define_word):
-        is_in_target_language = fakes.fake_value()
-        fake_word = str(fakes.fake_value()) + " " + str(fakes.fake_value())
-        _define_words_in_sentence(fakes.course1, "{" + fake_word  + "}", is_in_target_language)
-        _define_word.assert_called_with(fakes.course1, fake_word, is_in_target_language)
+        _define_word.assert_any_call(fakes.course1, "foo", False)
+        _define_word.assert_any_call(fakes.course1, "bar baz", False)
 
     @patch("librelingo_json_export.dictionary._define_word")
     def test_returns_correct_value(self, _define_word):
