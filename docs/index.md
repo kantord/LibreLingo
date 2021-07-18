@@ -46,9 +46,12 @@ cd LibreLingo
 
 ### Web app
 
+You will need [Node](https://nodejs.org/en/). Note that this project is not yet compatible with Node v16.
+
 Install dependencies:
 
 ```sh
+yarn set version classic
 yarn
 ```
 
@@ -59,6 +62,23 @@ yarn web dev
 ```
 
 Now you should be able to see your app on [http://localhost:3000/](http://localhost:3000/)
+
+### Exporting a course from YAML
+
+You will need [Poetry](https://python-poetry.org/).
+
+Install dependencies at the top level and for the app:
+```sh
+poetry install
+cd apps/librelingo_yaml_loader
+poetry install
+cd ../..
+```
+
+Export a course:
+```sh
+./scripts/exportYamlCourse.sh <course directory name>
+```
 
 ## Setting up Semaphore CI in a clone
 
