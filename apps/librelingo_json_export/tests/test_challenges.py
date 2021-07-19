@@ -148,6 +148,18 @@ class TestGetCardsChallenge(TestCase):
             "pictures": ["1.jpg", "2.jpg", "3.jpg"],
         }
 
+    def test_returns_correct_value_with_spaces(self):
+        challenge = get_cards_challenge(fakes.word_with_spaces, fakes.course1)[0]
+        assert challenge == {
+            "id": "5bc48626f40f",
+            "type": "cards",
+            "formInTargetLanguage": "three word term",
+            "meaningInSourceLanguage": "foo bar baz",
+            "priority": 0,
+            "group": "e707f76a703d",
+            "pictures": ["1.jpg", "2.jpg", "3.jpg"],
+        }
+
 
 class TestGetOptionsChallenge(TestCase):
     def test_returns_correct_value1(self):
@@ -170,6 +182,17 @@ class TestGetOptionsChallenge(TestCase):
             "meaningInSourceLanguage": "apple",
             "priority": 0,
             "group": "9dbe235cb2d6",
+        }
+
+    def test_returns_correct_value_with_spaces(self):
+        challenge = get_options_challenge(fakes.word_with_spaces, fakes.course1)[0]
+        assert challenge == {
+            "id": "98220c0c74ac",
+            "type": "options",
+            "formInTargetLanguage": "three word term",
+            "meaningInSourceLanguage": "foo bar baz",
+            "priority": 0,
+            "group": "e707f76a703d",
         }
 
 
@@ -198,6 +221,18 @@ class TestGetShortInputChallenge(TestCase):
             "group": "9dbe235cb2d6",
         }
 
+    def test_returns_correct_value_with_spaces(self):
+        challenge = get_short_input_challenge(fakes.word_with_spaces, fakes.course1)[0]
+        assert challenge == {
+            "id": "3b0f6c9df85b",
+            "type": "shortInput",
+            "pictures": ["1.jpg", "2.jpg", "3.jpg"],
+            "formInTargetLanguage": ["three word term"],
+            "phrase": [{"word": "foo bar baz", "definition": "three word term"}],
+            "priority": 1,
+            "group": "e707f76a703d",
+        }
+
 
 class TestListeningChallenge(TestCase):
     def test_returns_correct_value1(self):
@@ -222,6 +257,18 @@ class TestListeningChallenge(TestCase):
             "priority": 1,
             "group": "9dbe235cb2d6",
             "audio": "f38b5ac2a5e36c336eed306d56ed517bfd78a728321be0b87db5def8ff8abc3d",
+        }
+
+    def test_returns_correct_value_with_spaces(self):
+        challenge = get_listening_challenge(fakes.word_with_spaces, fakes.course1)[0]
+        assert challenge == {
+            "id": "cfc902e834ee",
+            "type": "listeningExercise",
+            "answer": "three word term",
+            "meaning": "foo bar baz",
+            "priority": 1,
+            "group": "e707f76a703d",
+            "audio": "c851c784743954d87b3b49b45290318f9681f2854c0472e613d8d70daae05df7",
         }
 
     def test_returns_nothing_if_audio_files_are_disabled_in_the_course(self):
@@ -274,6 +321,26 @@ class TestChipsChallenge(TestCase):
             "solutions": get_solutions_from_phrase.return_value,
             "chips": get_chips_from_phrase.return_value,
             "formattedSolution": "foous barus foous barus ",
+        }
+
+    def test_returns_correct_value_with_multi_word_terms(self):
+        challenge = get_chips_challenge(
+            fakes.phrase_with_multi_word_terms, fakes.course1
+        )[0]
+        assert challenge == {
+            "type": "chips",
+            "translatesToSourceLanguage": False,
+            "phrase": [
+                {"word": "foo", "definition": "barrus"},
+                {"word": "bar", "definition": "furrrr"},
+                {"word": "baz quux", "definition": "very big word"},
+            ],
+            "id": "3e4d0ed7d738",
+            "group": "e87212735da5",
+            "priority": 2,
+            "chips": ["foous", "barus", "very", "big", "word", "lorem", "ipsum"],
+            "solutions": [["foous", "barus", "very", "big", "word"]],
+            "formattedSolution": "foous barus very big word",
         }
 
 

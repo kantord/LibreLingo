@@ -57,6 +57,10 @@ fake_dictionary = [
     DictionaryItem("smith", "red fruit", False),
     DictionaryItem("lorem", "red fruit", True),
     DictionaryItem("ipsum", "red fruit", True),
+    DictionaryItem("three word term", "foo bar baz", True),
+    DictionaryItem("foo bar baz", "three word term", False),
+    DictionaryItem("very big word", "baz quux", True),
+    DictionaryItem("baz quux", "very big word", False),
 ]
 
 phrase1 = Phrase(
@@ -79,6 +83,11 @@ phrase_with_alternatives = Phrase(
     in_source_language=["foo bar " * 2] + ["ad o" * 2],
 )
 
+phrase_with_multi_word_terms = Phrase(
+    in_target_language=["foous barus {very big word}"],
+    in_source_language=["foo bar {baz quux}"],
+)
+
 word1 = Word(
     in_target_language=["foous"],
     in_source_language=["foo"],
@@ -95,6 +104,12 @@ license2 = License(
 
 word2 = Word(
     in_target_language=["apfel"], in_source_language=["apple"], pictures=["1", "2", "3"]
+)
+
+word_with_spaces = Word(
+    in_target_language=["{three word term}"],
+    in_source_language=["{foo bar baz}"],
+    pictures=["1", "2", "3"],
 )
 
 emptySkill = Skill(

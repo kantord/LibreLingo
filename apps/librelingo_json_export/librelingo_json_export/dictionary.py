@@ -17,7 +17,8 @@
     the output JSON files.
 """
 
-from librelingo_utils import clean_word
+from librelingo_utils import clean_word, get_words_from_phrase
+import re
 
 
 def _get_raw_dictionary_item(course, word, is_in_target_language):
@@ -60,4 +61,5 @@ def _define_words_in_sentence(course, sentence, reverse):
     """
     Converts a sentence into a list of definition objects.
     """
-    return [_define_word(course, word, reverse) for word in sentence.split()]
+    words = get_words_from_phrase(sentence)
+    return [_define_word(course, word, reverse) for word in words]
