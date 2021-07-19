@@ -1,10 +1,7 @@
 import editdistance  # type: ignore
 
-from librelingo_utils import get_dumb_opaque_id, audio_id, clean_word, iterate_phrases
+from librelingo_utils import get_dumb_opaque_id, audio_id, remove_control_characters_for_display, clean_word, iterate_phrases
 from .dictionary import _define_words_in_sentence
-
-def _remove_special_characters_for_display(string):
-    return string.replace('}', '').replace('{', '')
 
 def get_listening_challenge(source, course):
     if not course.settings.audio_files_enabled:
@@ -13,9 +10,9 @@ def get_listening_challenge(source, course):
     return [
         {
             "type": "listeningExercise",
-            "answer": _remove_special_characters_for_display(source.in_target_language[0]),
-            "meaning": _remove_special_characters_for_display(source.in_source_language[0]),
-            "audio": audio_id(course.target_language, _remove_special_characters_for_display(source.in_target_language[0])),
+            "answer": remove_control_characters_for_display(source.in_target_language[0]),
+            "meaning": remove_control_characters_for_display(source.in_source_language[0]),
+            "audio": audio_id(course.target_language, remove_control_characters_for_display(source.in_target_language[0])),
             "id": get_dumb_opaque_id("Word", source, "listeningExercise"),
             "priority": 1,
             "group": get_dumb_opaque_id("Group", source),
@@ -30,7 +27,7 @@ def get_short_input_challenge(source, course):
             "pictures": [pic + ".jpg" for pic in source.pictures]
             if source.pictures
             else None,
-            "formInTargetLanguage": [_remove_special_characters_for_display(t) for t in source.in_target_language],
+            "formInTargetLanguage": [remove_control_characters_for_display(t) for t in source.in_target_language],
             "phrase": _define_words_in_sentence(
                 course,
                 source.in_source_language[0],
@@ -50,8 +47,8 @@ def get_cards_challenge(word, _):
             "pictures": [pic + ".jpg" for pic in word.pictures]
             if word.pictures
             else None,
-            "formInTargetLanguage": _remove_special_characters_for_display(word.in_target_language[0]),
-            "meaningInSourceLanguage": _remove_special_characters_for_display(word.in_source_language[0]),
+            "formInTargetLanguage": remove_control_characters_for_display(word.in_target_language[0]),
+            "meaningInSourceLanguage": remove_control_characters_for_display(word.in_source_language[0]),
             "id": get_dumb_opaque_id("Word", word, "cards"),
             "priority": 0,
             "group": get_dumb_opaque_id("Group", word),
@@ -63,8 +60,8 @@ def get_options_challenge(phrase, _):
     return [
         {
             "type": "options",
-            "formInTargetLanguage": _remove_special_characters_for_display(phrase.in_target_language[0]),
-            "meaningInSourceLanguage": _remove_special_characters_for_display(phrase.in_source_language[0]),
+            "formInTargetLanguage": remove_control_characters_for_display(phrase.in_target_language[0]),
+            "meaningInSourceLanguage": remove_control_characters_for_display(phrase.in_source_language[0]),
             "id": get_dumb_opaque_id("Options", phrase, "options"),
             "priority": 0,
             "group": get_dumb_opaque_id("Group", phrase),
@@ -141,7 +138,7 @@ def create_chips_challenge_generator(reverse):
                 ),
                 "chips": get_chips_from_phrase(get_input_texts, phrase, course),
                 "solutions": get_solutions_from_phrase(get_input_texts, phrase),
-                "formattedSolution": _remove_special_characters_for_display(get_input_text(phrase)),
+                "formattedSolution": remove_control_characters_for_display(get_input_text(phrase)),
                 "id": get_dumb_opaque_id(
                     "Chips", phrase, "reverse chips" if reverse else "chips"
                 ),
