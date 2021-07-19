@@ -107,7 +107,9 @@ word2 = Word(
 )
 
 word_with_spaces = Word(
-    in_target_language=["{three word term}"], in_source_language=["{foo bar baz}"], pictures=["1", "2", "3"]
+    in_target_language=["{three word term}"],
+    in_source_language=["{foo bar baz}"],
+    pictures=["1", "2", "3"],
 )
 
 emptySkill = Skill(

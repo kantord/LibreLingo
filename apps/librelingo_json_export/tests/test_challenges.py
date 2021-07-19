@@ -324,7 +324,9 @@ class TestChipsChallenge(TestCase):
         }
 
     def test_returns_correct_value_with_multi_word_terms(self):
-        challenge = get_chips_challenge(fakes.phrase_with_multi_word_terms, fakes.course1)[0]
+        challenge = get_chips_challenge(
+            fakes.phrase_with_multi_word_terms, fakes.course1
+        )[0]
         assert challenge == {
             "type": "chips",
             "translatesToSourceLanguage": False,

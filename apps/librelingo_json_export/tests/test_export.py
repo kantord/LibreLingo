@@ -436,7 +436,9 @@ class DefineWordsInSentenceTest(TestCase):
     @patch("librelingo_json_export.dictionary._define_word")
     def test_defines_every_word_that_has_space(self, _define_word):
         _define_word.return_value = fakes.fake_value()
-        assert _define_words_in_sentence(fakes.course1, "{foo bar} {baz quux}", True) == [
+        assert _define_words_in_sentence(
+            fakes.course1, "{foo bar} {baz quux}", True
+        ) == [
             _define_word.return_value,
             _define_word.return_value,
         ]
@@ -461,7 +463,9 @@ class TestDefineWord(TestCase):
             fakes.course1,
             dictionary=[
                 DictionaryItem(
-                    word=word, definition=meaning, is_in_target_language=is_in_target_language
+                    word=word,
+                    definition=meaning,
+                    is_in_target_language=is_in_target_language,
                 ),
             ],
         )
@@ -477,7 +481,9 @@ class TestDefineWord(TestCase):
             fakes.course1,
             dictionary=[
                 DictionaryItem(
-                    word=word, definition=meaning, is_in_target_language=is_in_target_language
+                    word=word,
+                    definition=meaning,
+                    is_in_target_language=is_in_target_language,
                 ),
             ],
         )
@@ -504,11 +510,15 @@ class TestDefineWord(TestCase):
             fakes.course1,
             dictionary=[
                 DictionaryItem(
-                    word="three word term", definition="something", is_in_target_language=True
+                    word="three word term",
+                    definition="something",
+                    is_in_target_language=True,
                 ),
             ],
         )
-        assert _define_word(my_course, "three word term", is_in_target_language=True) == {
+        assert _define_word(
+            my_course, "three word term", is_in_target_language=True
+        ) == {
             "word": "three word term",
             "definition": "something",
         }
@@ -521,7 +531,9 @@ class TestDefineWord(TestCase):
             fakes.course1,
             dictionary=[
                 DictionaryItem(
-                    word=word, definition=meaning, is_in_target_language=is_in_target_language
+                    word=word,
+                    definition=meaning,
+                    is_in_target_language=is_in_target_language,
                 ),
             ],
         )

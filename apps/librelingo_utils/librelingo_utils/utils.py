@@ -17,7 +17,11 @@ def get_words_from_phrase(phrase):
     be split from each other.
     """
     # Regex matches all spaces not between { and }
-    return [w.strip(' {}') for w in re.split("( |\\{.*?\\}|'.*?')", phrase) if w.strip(' {}')]
+    return [
+        w.strip(" {}")
+        for w in re.split("( |\\{.*?\\}|'.*?')", phrase)
+        if w.strip(" {}")
+    ]
 
 
 def remove_control_characters_for_display(phrase):
@@ -27,7 +31,7 @@ def remove_control_characters_for_display(phrase):
     At the moment, this only applies to curly brackets used to group several
     words into a single mini-dictionary term.
     """
-    return phrase.replace('}', '').replace('{', '')
+    return phrase.replace("}", "").replace("{", "")
 
 
 def clean_word(word):
