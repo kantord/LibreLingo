@@ -16,6 +16,29 @@ calculate_number_of_levels(nwords, nphrases)
 
 Calculates how many levels a skill should have
 
+<a name="librelingo_utils.utils.get_words_from_phrase"></a>
+#### get\_words\_from\_phrase
+
+```python
+get_words_from_phrase(phrase)
+```
+
+Splits a phrase into its component words/terms. Note that this respects
+grouping with curly braces, i.e. sets of words surrounded by curly braces will not
+be split from each other.
+
+<a name="librelingo_utils.utils.remove_control_characters_for_display"></a>
+#### remove\_control\_characters\_for\_display
+
+```python
+remove_control_characters_for_display(phrase)
+```
+
+Removes characters with special LibreLingo functions from a phrase before it
+is displayed to the user.
+At the moment, this only applies to curly brackets used to group several
+words into a single mini-dictionary term.
+
 <a name="librelingo_utils.utils.clean_word"></a>
 #### clean\_word
 
