@@ -201,19 +201,14 @@ python-versions = ">=3.8,<4.0"
 
 [[package]]
 name = "librelingo-utils"
-version = "2.4.2"
+version = "2.4.1"
 description = "Utilities to be used in LibreLingo-related-packages"
 category = "main"
 optional = false
-python-versions = "^3.8"
-develop = false
+python-versions = ">=3.8,<4.0"
 
 [package.dependencies]
-librelingo-types = "^3.0.0"
-
-[package.source]
-type = "directory"
-url = "../librelingo_utils"
+librelingo-types = ">=3.0.0,<4.0.0"
 
 [[package]]
 name = "librelingo-yaml-loader"
@@ -643,7 +638,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "bcec8f66931ddea7eb5ebad1adff566f4d82c54ca8b745fd039cef15d154f747"
+content-hash = "c9e02d9b3157efd6dad96088246366fbcb01fa90e9434f7680d215713082d482"
 
 [metadata.files]
 atomicwrites = [
@@ -749,7 +744,10 @@ librelingo-types = [
     {file = "librelingo_types-3.0.1-py3-none-any.whl", hash = "sha256:670ec7ae225003fdf381ef5a5a6b5ca8da85f4bc23e2745f624d29e8e0a7145c"},
     {file = "librelingo_types-3.0.1.tar.gz", hash = "sha256:7de4c1b21e7c7f0944416302cd73b54f2961983c23f30ed20add8f6a327556f0"},
 ]
-librelingo-utils = []
+librelingo-utils = [
+    {file = "librelingo_utils-2.4.1-py3-none-any.whl", hash = "sha256:7a5de4b97273991b1d43fde444891126647ce46442b092f485d67d7d267e55d1"},
+    {file = "librelingo_utils-2.4.1.tar.gz", hash = "sha256:c26cff4a2f007e12d44c60fa1423ac8ecd2d25ee220417b2061cd98d42b9bd6a"},
+]
 librelingo-yaml-loader = [
     {file = "librelingo_yaml_loader-1.5.1-py3-none-any.whl", hash = "sha256:189a063306f0f7214ecd5d6b28ae4f5ac276e683d9a178fd5d4e519297a5ee0c"},
     {file = "librelingo_yaml_loader-1.5.1.tar.gz", hash = "sha256:b4cee8e9cf015af7c933a3b8f87b67aa12ca33070ecebb32fe6e20aea8bde4b2"},
