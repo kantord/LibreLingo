@@ -38,7 +38,7 @@ blocks:
     task:
       jobs:
         - name: cypress
-          parallelism: 2
+          # parallelism: 2
           commands:
             - sem-version node 12
             - checkout
@@ -48,7 +48,8 @@ blocks:
             - cache restore sapper-build-$SEMAPHORE_GIT_SHA
             - yarn install
             - find ./apps/web/src
-            - SEMAPHORE_BUILD_NUMBER=$SEMAPHORE_PIPELINE_ID SEMAPHORE_THREAD_COUNT=3 yarn test:ci
+            # - SEMAPHORE_BUILD_NUMBER=$SEMAPHORE_PIPELINE_ID SEMAPHORE_THREAD_COUNT=3 yarn test:ci
+            - yarn test:ci
       secrets:
         - name: Percy token
         - name: KnapsackPro token
