@@ -8,6 +8,5 @@ if [ "$KNAPSACK_PRO_TEST_SUITE_TOKEN_RSPEC" = "" ]; then
     yarn cy:run
 else
   echo "KNAPSACK PRO ENABLED"
-  # KNAPSACK_PRO_TEST_FILE_PATTERN=\"cypress/integration/**/*.{feature,features}\" percy exec -- $(npm bin)/knapsack-pro-cypress
-  KNAPSACK_PRO_TEST_FILE_PATTERN=\"cypress/integration/**/*.{feature,features}\" $(npm bin)/knapsack-pro-cypress
+  KNAPSACK_PRO_TEST_FILE_PATTERN=\"cypress/integration/**/*.{feature,features}\" percy exec -- $(npm bin)/knapsack-pro-cypress
 fi
