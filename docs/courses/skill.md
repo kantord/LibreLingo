@@ -120,9 +120,16 @@ Mini-dictionary:
 - `Alternative versions`: An alternative version of the above phrase. (optional)
 - `Translation`: Translation of the phrase in target audience's language. e.g. In this case, it's written in English.
 
-**`Mini-dictionary`** has a list of words and meanings. [TODO: Explain where and how it is used]
-- `<destination language>`: A list of words in destination language as key and meaning in target audience's language.
-- `<target audience's language>`: A list of words in target audience's language as key and meaning in destination language.
+**`Mini-dictionary`** has a list of terms and meanings the user can view as a sort of "hint" if they are stuck. Entries are accessed by mousing over terms in an exercise, which brings up a tooltip with the corresponding term(s) in the other language. An entry is required for every term used in a skill.
+
+Note that all `New words` are automatically added to the `Mini-dictionary`, in both translation directions, using the `Word` and `Translation` fields (`Synonyms` and `Also accepted` are ignored).
+
+`Mini-dictionary` entries do not only apply to this skill; the meanings will apply course-wide and be merged with the same term in other skills, if applicable. This means that entries can be omitted when they already are present in other skills.
+
+`Mini-dictionary` entries can define a term that spans multiple words, for example a phrase like "post office". For this to work, "post office" will need to be enclosed in curly braces -- `{post office}` -- wherever it appears in the skill. (Due to YAML, strings containing braces will need to be quoted.)
+
+- `<destination language>`: A list of terms in destination language as key and meaning in target audience's language.
+- `<target audience's language>`: A list of terms in target audience's language as key and meaning in destination language.
 
 <a id="creating-new"></a>
 ## Creating new skills
@@ -184,8 +191,6 @@ Mini-dictionary:
       - bonjour
       - salut
 ```
-
-Don't worry about listing the same word more than once in a course. It will not cause any issues if you do so.
 
 <a id="tips"></a>
 ## Tips for creating good skills
