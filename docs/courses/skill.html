@@ -409,9 +409,14 @@ Mini-dictionary:
 - <code>Phrase</code>: The phrase in destination language. e.g. In this case, it's written in Spanish.
 - <code>Alternative versions</code>: An alternative version of the above phrase. (optional)
 - <code>Translation</code>: Translation of the phrase in target audience's language. e.g. In this case, it's written in English.</p>
-<p><strong><code>Mini-dictionary</code></strong> has a list of words and meanings. [TODO: Explain where and how it is used]
-- <code>&lt;destination language&gt;</code>: A list of words in destination language as key and meaning in target audience's language.
-- <code>&lt;target audience's language&gt;</code>: A list of words in target audience's language as key and meaning in destination language.</p>
+<p><strong><code>Mini-dictionary</code></strong> has a list of terms and meanings the user can view as a sort of "hint" if they are stuck. Entries are accessed by mousing over terms in an exercise, which brings up a tooltip with the corresponding term(s) in the other language. An entry is required for every term used in a skill.</p>
+<p>Note that all <code>New words</code> are automatically added to the <code>Mini-dictionary</code>, in both translation directions, using the <code>Word</code> and <code>Translation</code> fields (<code>Synonyms</code> and <code>Also accepted</code> are ignored).</p>
+<p><code>Mini-dictionary</code> entries do not only apply to this skill; the meanings will apply course-wide and be merged with the same term in other skills, if applicable. This means that entries can be omitted when they already are present in other skills.</p>
+<p><code>Mini-dictionary</code> entries can define a term that spans multiple words, for example a phrase like "post office". For this to work, "post office" will need to be enclosed in curly braces -- <code>{post office}</code> -- wherever it appears in the skill. (Due to YAML, strings containing braces will need to be quoted.)</p>
+<ul>
+<li><code>&lt;destination language&gt;</code>: A list of terms in destination language as key and meaning in target audience's language.</li>
+<li><code>&lt;target audience's language&gt;</code>: A list of terms in target audience's language as key and meaning in destination language.</li>
+</ul>
 <p><a id="creating-new"></a></p>
 <h2 id="creating-new-skills">Creating new skills</h2>
 <p>Creating new skills is a matter of creating their corresponding YAML file.
@@ -462,7 +467,6 @@ add any new words there:</p>
       - bonjour
       - salut
 </code></pre>
-<p>Don't worry about listing the same word more than once in a course. It will not cause any issues if you do so.</p>
 <p><a id="tips"></a></p>
 <h2 id="tips-for-creating-good-skills">Tips for creating good skills</h2>
 <ul>
