@@ -4,19 +4,19 @@ Feature: Option selection challenge
 
   Scenario: Getting an option selection challenge
     Given I open "course/test/skill/options-test-0?testChallenge=5075bbb5a7df"
-    Then option selection challenge looks correct
-    And I read "Which of these is"
+    Then I read "Which of these is"
     And I see 3 options
     And every option is inactive
-    Then I see a panel with only a skip button
+    And I see a panel with only a skip button
     And I don't see a "Submit" button
+    And option selection challenge looks correct
 
   Scenario: clicking an option
     Given I open "course/test/skill/options-test-0?testChallenge=5075bbb5a7df"
     And I select an option
-    Then option selection challenge with first option selected looks correct
-    And I see 2 inactive options
+    Then I see 2 inactive options
     And I see 1 active option
+    And option selection challenge with first option selected looks correct
 
   Scenario: Submitting correct answer
     Given I open "course/test/skill/options-test-0?testChallenge=5075bbb5a7df"
