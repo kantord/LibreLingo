@@ -15,7 +15,7 @@
   >
     <div class="card-image">
       <figure class="image is-1by1">
-        <img src="{`images/${picture}`}" alt="" />
+        <img src="{`images/${picture}`}" alt="" data-test={`card-img-${number}`} />
       </figure>
     </div>
     <div class="card-content">
