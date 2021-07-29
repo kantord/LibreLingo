@@ -21,9 +21,10 @@ Then("{} looks correct", (snapshotsName) => {
 
     case "option selection challenge":
     case "option selection challenge with first option selected":
-        cy.get(".option-content").each(($el, index) => {
+        cy.get(".option-content div").each(($el, index) => {
             $el.text(("cerdo perro león".split(" "))[index])
         })
+        Cypress.$("[data-test=\"meaning-in-source-language\"]").text("perro")
         break
 
     case "the terms of service page":
