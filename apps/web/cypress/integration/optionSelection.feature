@@ -30,4 +30,5 @@ Feature: Option selection challenge
     And I select an incorrect option
     And I click "Submit"
     Then I read "Incorrect solution"
+    And I read "Correct answer: perro"
     And I see a "Continue" button
