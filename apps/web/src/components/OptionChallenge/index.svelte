@@ -77,6 +77,7 @@
     {#if !options[selectedOption].correct}
       <ChallengePanel
         message="Incorrect solution!"
+        messageDetail="{`Correct answer: ${currentChallenge.formInTargetLanguage}`}"
         buttonText="Continue"
         incorrect
         buttonAction="{finishChallenge}" />
