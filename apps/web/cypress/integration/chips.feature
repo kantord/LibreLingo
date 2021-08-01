@@ -53,3 +53,15 @@ Feature: Chips challenge
     And I see a "Continue" button
     Given I click "Continue"
     Then I see a panel with only a skip and a finish early button
+
+    Scenario: Submitting an alternative correct solution with uncapitalized chips
+      Given I open "/course/test/skill/chips-test-0?testChallenge=59cd9b603be9"
+      And I click "como"
+      And I click "estás"
+      And I click "hoy"
+      Given I click "Submit"
+      Then I see the challenge panel with no skip button
+      And I read "Correct solution"
+      And I see a "Continue" button
+      Given I click "Continue"
+      Then I see a panel with only a skip and a finish early button
