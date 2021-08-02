@@ -9,8 +9,12 @@ Then("{} looks correct", (snapshotsName) => {
     switch(snapshotsName) {
     case "cards challenge":
         cy.get("[data-test=\"card-img-1\"]").invoke("attr", "src", "images/pasta1.jpg")
-        cy.get("[data-test=\"card-img-2\"]").invoke("attr", "src", "images/pasta2.jpg")
-        cy.get("[data-test=\"card-img-3\"]").invoke("attr", "src", "images/pasta3.jpg")
+        cy.get("[data-test=\"card-img-2\"]").invoke("attr", "src", "images/dog1.jpg")
+        cy.get("[data-test=\"card-img-3\"]").invoke("attr", "src", "images/cat3.jpg")
+        Cypress.$("[data-test=\"card-text-1\"]").text("pasta")
+        Cypress.$("[data-test=\"card-text-2\"]").text("dog")
+        Cypress.$("[data-test=\"card-text-3\"]").text("cat")
+        Cypress.$("[data-test=\"meaning-in-source-language\"]").text("pasta")
         break
 
     case "chips challenge":
@@ -28,6 +32,11 @@ Then("{} looks correct", (snapshotsName) => {
         Cypress.$("[data-test=\"meaning-in-source-language\"]").text("perro")
         break
 
+    case "short text input challenge":
+        cy.get("[data-test=\"short text input illustrations\"]")
+            .invoke("attr", "src", "images/dog1.jpg")
+        break
+
     case "the terms of service page":
     case "the license page":
     case "sign up success page":
@@ -42,7 +51,6 @@ Then("{} looks correct", (snapshotsName) => {
     case "course page with a completed skill":
     case "course page with a stale skill":
     case "course page":
-    case "short text input challenge":
     case "listening challenge":
         // These tests are deterministic and thus don't need normalization.
         break

@@ -80,7 +80,7 @@
       <div class="card">
         <div class="card-image">
           <figure class="image is-1by1">
-            <img src="images/{picture}" alt="" />
+            <img src="images/{picture}" alt="" data-test="short text input illustrations" />
           </figure>
         </div>
       </div>
