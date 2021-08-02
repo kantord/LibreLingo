@@ -27,9 +27,9 @@
       if (!$answer) return
       if (submitted) return
       correct = false
-      const answerForm = $answer.join(" ")
+      const answerForm = $answer.join(" ").toLowerCase()
       challenge.solutions.map((solution: string[]) => {
-          correct = correct || answerForm === solution.join(" ")
+          correct = correct || answerForm === solution.join(" ").toLowerCase()
       })
       registerResult(correct)
       submitted = true
