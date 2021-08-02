@@ -4,14 +4,14 @@ Feature: Chips challenge
 
   Scenario: Getting a chips challenge
     Given I open "/course/test/skill/chips-test-0?testChallenge=5000997897bb"
-    Then chips challenge looks correct
     Then I read "Translate"
     And I read "How"
     And I read "are"
     And I read "you"
     And I read "today?"
-    Then I see a panel with only a skip button
+    And I see a panel with only a skip button
     And I see the correct chips
+    And chips challenge looks correct
 
   Scenario: Using the mini-dictionary
     Given I open "/course/test/skill/chips-test-0?testChallenge=c3f7fcb9c86c"
