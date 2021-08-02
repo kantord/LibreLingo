@@ -20,7 +20,7 @@ To get a better understanding, you can read the [course basics](README.md#basics
 
 ## Cards challenge
 
-<img src="/docs/screenshots/cards-challenge.png" width="400px"></img>
+<img src="/docs/screenshots/cards-challenge.png" width="400px"  alt="Text asks the user: which of these is \"river\"?. Below this heading are three cards. Each card contains a Spanish word and corresponding image. In the center the correct choice (río) is selected."></img>
 
 - *Generated from:* `New words` only
 - *Task:* translation, multiple-choice
@@ -34,7 +34,7 @@ Note that for each card, a random image is selected from the `Images` array.
 
 ## Short input challenge
 
-<img src="/docs/screenshots/short-input-challenge.png" width="400px"></img>
+<img src="/docs/screenshots/short-input-challenge.png" width="400px" alt="Text asks the user to type the word \"river\" in Spanish. Below this heading is a text box, and underneath that a set of buttons to insert Spanish-specific characters. At right is an image of a river."></img>
 
 - *Generated from:* `New words` only
 - *Task:* translation, free-form
@@ -46,7 +46,7 @@ In this challenge type, the user is presented with a word in their source langua
 
 ## Options challenge
 
-<img src="/docs/screenshots/options-challenge.png" width="400px"></img>
+<img src="/docs/screenshots/options-challenge.png" width="400px" alt="Text asks the user which one of the options is \"Let's go to the beach!\". Below this question are three Spanish sentences with radio buttons to their left."></img>
 
 - *Generated from:* `Phrases` only
 - *Task:* translation, multiple-choice
@@ -58,7 +58,7 @@ In this challenge type, the user is presented with a phrase in their source lang
 
 ## Chips challenge
 
-<img src="/docs/screenshots/chips-challenge.png" width="400px"></img>
+<img src="/docs/screenshots/chips-challenge.png" width="400px" alt="Text instructs the user to translate the phrase \"Let's go to the beach!\". At the bottom of the image, there is a group of draggable Spanish words."></img>
 
 - *Generated from:* `Phrases` only
 - *Task:* translation, set of words provided
@@ -76,7 +76,7 @@ The chips will never include exact duplicates of each other.
 
 ## Listening challenge
 
-<img src="/docs/screenshots/listening-challenge.png" width="400px"></img>
+<img src="/docs/screenshots/listening-challenge.png" width="400px" alt="Text instructs the user: \"Type what you hear\". Below this heading is a text box, and underneath that a set of buttons to insert Spanish-specific characters."></img>
 
 - *Generated from:* `New words` and `Phrases`
 - *Task:* transcription
