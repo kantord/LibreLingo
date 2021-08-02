@@ -20,7 +20,7 @@ To get a better understanding, you can read the [course basics](README.md#basics
 
 ## Cards challenge
 
-<img src="screenshots/cards-challenge.png" width="400px"></img>
+<img src="/docs/screenshots/cards-challenge.png" width="400px"></img>
 
 *Generated from:* `New words` only
 *Task:* translation, multiple-choice
@@ -34,7 +34,7 @@ Note that for each card, a random image is selected from the `Images` array.
 
 ## Short input challenge
 
-<img src="screenshots/short-input-challenge.png" width="400px"></img>
+<img src="/docs/screenshots/short-input-challenge.png" width="400px"></img>
 
 *Generated from:* `New words` only
 *Task:* translation, free-form
@@ -46,7 +46,7 @@ In this challenge type, the user is presented with a word in their source langua
 
 ## Options challenge
 
-<img src="screenshots/options-challenge.png" width="400px"></img>
+<img src="/docs/screenshots/options-challenge.png" width="400px"></img>
 
 *Generated from:* `Phrases` only
 *Task:* translation, multiple-choice
@@ -58,7 +58,7 @@ In this challenge type, the user is presented with a phrase in their source lang
 
 ## Chips challenge
 
-<img src="screenshots/chips-challenge.png" width="400px"></img>
+<img src="/docs/screenshots/chips-challenge.png" width="400px"></img>
 
 *Generated from:* `Phrases` only
 *Task:* translation, set of words provided
@@ -76,7 +76,7 @@ The chips will never include exact duplicates of each other.
 
 ## Listening challenge
 
-<img src="screenshots/listening-challenge.png" width="400px"></img>
+<img src="/docs/screenshots/listening-challenge.png" width="400px"></img>
 
 *Generated from:* `New words` and `Phrases`
 *Task:* transcription
