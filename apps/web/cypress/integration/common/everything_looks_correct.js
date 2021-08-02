@@ -11,6 +11,7 @@ Then("{} looks correct", (snapshotsName) => {
         cy.get("[data-test=\"card-img-1\"]").invoke("attr", "src", "images/pasta1.jpg")
         cy.get("[data-test=\"card-img-2\"]").invoke("attr", "src", "images/dog1.jpg")
         cy.get("[data-test=\"card-img-3\"]").invoke("attr", "src", "images/cat3.jpg")
+        cy.get("[data-test=\"card-img-3\"]").eq(1).invoke("attr", "src", "images/milk1.jpg")
         Cypress.$("[data-test=\"card-text-1\"]").text("pasta")
         Cypress.$("[data-test=\"card-text-2\"]").text("dog")
         Cypress.$("[data-test=\"card-text-3\"]").text("cat")
