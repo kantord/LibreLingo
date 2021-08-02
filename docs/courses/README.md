@@ -43,11 +43,12 @@ You'll need to have an idea on basic terminology used in LibreLingo:
 - A **Course** is a set of Modules. There is typically one course for each language pair. e.g. Spanish for English speakers, Japanese for Italian speakers, etc.
 - A **Module** is a set of Skills.
 - A **Skill** is a small unit of course material. In the web app, the user will typically practice a Skill at a time.
+- A **Challenge** is a single question or task the user will complete within a skill.
 
-These concepts represent a hierarchical structure to LibreLingo course material: `Courses > Modules > Skills`
+These concepts represent a hierarchical structure to LibreLingo course material: `Courses > Modules > Skills > Challenges`
 
 - The **target language** is the language the course is meant to teach.
-- The **source langauge** is a language that users of the course are assumed to know.
+- The **source language** is a language that users of the course are assumed to know.
 
 
 <a id="exploring-courses"></a>
@@ -65,7 +66,7 @@ When you enter a course page, for example the [Spanish course](https://libreling
 
 "Skills" are units of course content focused on a particular topic. Each skill is a set of new knowledge, such as new words or phrases.  Skills can focus on vocabulary and follow a theme: the "Animal" skill has words and phrases related to animals, the "Food" skill is all about food. Skills can also focus on teaching grammar.
 
-Inside a skill YAML file there are some keys that you might want to learn of, which is exaplained in detail [here](course.md).
+Inside a skill YAML file there are some keys that you might want to learn of, which is explained in detail [here](skill.md).
 
 <a id="things-new-contributors"></a>
 ### Things you can do as a new contributor
