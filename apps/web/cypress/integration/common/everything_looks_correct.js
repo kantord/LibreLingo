@@ -11,9 +11,17 @@ Then("{} looks correct", (snapshotsName) => {
         cy.get("[data-test=\"card-img-1\"]").invoke("attr", "src", "images/pasta1.jpg")
         cy.get("[data-test=\"card-img-2\"]").invoke("attr", "src", "images/dog1.jpg")
         cy.get("[data-test=\"card-img-3\"]").invoke("attr", "src", "images/cat3.jpg")
+        cy.get(".fake img").invoke("attr", "src", "images/cat3.jpg")
+        cy.window().then((win) => {
+            const fakeCard = win.document.querySelector(".fake")
+            const parent = fakeCard.parentElement
+            fakeCard.remove()
+            parent.append(fakeCard)
+        })
         Cypress.$("[data-test=\"card-text-1\"]").text("pasta")
         Cypress.$("[data-test=\"card-text-2\"]").text("dog")
         Cypress.$("[data-test=\"card-text-3\"]").text("cat")
+        Cypress.$(".fake .card-text").text("cat")
         Cypress.$("[data-test=\"meaning-in-source-language\"]").text("pasta")
         break
 
