@@ -43,9 +43,8 @@ You'll need to have an idea on basic terminology used in LibreLingo:
 - A **Course** is a set of Modules. There is typically one course for each language pair. e.g. Spanish for English speakers, Japanese for Italian speakers, etc.
 - A **Module** is a set of Skills.
 - A **Skill** is a small unit of course material. In the web app, the user will typically practice a Skill at a time.
-- A **Challenge** is a single question or task the user will complete within a skill.
 
-These concepts represent a hierarchical structure to LibreLingo course material: `Courses > Modules > Skills > Challenges`
+These concepts represent a hierarchical structure to LibreLingo course material: `Courses > Modules > Skills`
 
 - The **target language** is the language the course is meant to teach.
 - The **source language** is a language that users of the course are assumed to know.

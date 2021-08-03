@@ -1,12 +1,10 @@
 # LibreLingo Documentation on Skill
 
-A **Skill** resides below a Module within the course structure. It's the lowest element in the course hierarchy you will edit directly. It contains the words and phrases to be taught to the user.
+A **Skill** resides below a Module within the course structure. It's the lowest element in the course hierarchy. It contains a set of words and phrases to be taught to the user.
 
 A skill is usually centered around a specific theme. This could be introducing a new grammar concept or just vocabulary to talk about a certain topic.
 
-The words and phrases that make up a skill are used to [automatically generate](#how-skills-generate-challenges) challenges (individual questions) the user will answer.
-
-To get a better understanding, you can read the [course basics](README.md#basics).
+The words and phrases that make up a skill are taught to the user using [automatically generated questions and tasks](#how-skills-are-taught-to-the-user).
 
 ---
 
@@ -19,7 +17,7 @@ To get a better understanding, you can read the [course basics](README.md#basics
 - [Tree structure](#tree-structure)
 - [`(skill_name).yaml`](#yaml)
 - [Data breakdown](#data-breakdown)
-- [How skills generate challenges](#how-skills-generate-challenges)
+- [How skills are taught to the user](#how-skills-are-taught-to-the-user)
 - [Creating new skills](#creating-new)
 - [Examples of editing a skill](#example-edit)
 - [Tips for creating good skills](#tips)
@@ -135,9 +133,9 @@ Note that all `New words` are automatically added to the `Mini-dictionary`, in b
 - `<destination language>`: A list of terms in destination language as key and meaning in target audience's language.
 - `<target audience's language>`: A list of terms in target audience's language as key and meaning in destination language.
 
-## How skills generate challenges
+## How skills are taught to the user
 
-As the course author, you only have to specify the words and phrases you want to teach, and LibreLingo will generate the challenges (individual questions). However, it is useful to understand what challenges will be generated.
+As the course author, you have to specify the words and phrases you want to teach. LibreLingo will know how to present skills as a series of individual questions and tasks -- LibreLingo calls these "challenges." It is useful to understand what challenges will be generated.
 
 For each vocabulary word (that is, each `New words` entry) in a skill, LibreLingo generates:
 - A [cards challenge](challenge.md#cards-challenge) -- multiple-choice translation from source language to target language, with a visual clue
