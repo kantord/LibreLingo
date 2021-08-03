@@ -1,10 +1,10 @@
 # LibreLingo Documentation on Skill
 
-A **Skill** resides below a Module within the course structure. It's the lowest element in the course hierarchy. It contains data regarding what questions LibreLingo will ask the users.
+A **Skill** resides below a Module within the course structure. It's the lowest element in the course hierarchy. It contains a set of words and phrases to be taught to the user.
 
 A skill is usually centered around a specific theme. This could be introducing a new grammar concept or just vocabulary to talk about a certain topic.
 
-To get a better understanding, you can read the [course basics](README.md#basics).
+The words and phrases that make up a skill are taught to the user using [automatically generated questions and tasks](#how-skills-are-taught-to-the-user).
 
 ---
 
@@ -17,6 +17,7 @@ To get a better understanding, you can read the [course basics](README.md#basics
 - [Tree structure](#tree-structure)
 - [`(skill_name).yaml`](#yaml)
 - [Data breakdown](#data-breakdown)
+- [How skills are taught to the user](#how-skills-are-taught-to-the-user)
 - [Creating new skills](#creating-new)
 - [Examples of editing a skill](#example-edit)
 - [Tips for creating good skills](#tips)
@@ -108,17 +109,18 @@ Mini-dictionary:
 - `Skill > Id`: The ID of the course. **NOTE:** This should be unchanged if you're translating or editing existing course. Only if you're creating a new course, this should have a unique [UUID v4](https://www.uuidgenerator.net/version4) string. Details for which you can find [here](creating-courses.md).
 - `Skill > Thumbnails`: A list of filenames of the thumbnails to be used on the course page to give an idea of the skill. A list of available files can be found on [`apps/web/static/images/`](https://github.com/kantord/LibreLingo/tree/main/apps/web/static/images). The names should be used without extension and without `_tiny` or `_tinier` parts. e.g. `banana2_tinier.jpg` should be written as `banana2`.
 
-**`New words`** has a list of new words that the lesson asks about.
-- `Word`: The word in destination language.
+**`New words`** has a list of new words that the lesson teaches.
+- `Word`: The word in the target language, i.e. the language the user is learning.
 - `Synonyms`: A list of synonyms of the above word. (optional)
-- `Translation`: Translation of the word in target audience's language.
-- `Also accepted`: A list of synonyms of the `Translation` word above. (optional)
+- `Translation`: Translation of the word in the source language, i.e. the language the user already knows.
+- `Also accepted`: A list of alternative translations to the source language, which will *not* be taught, but will be accepted as correct translations of the `Word` field if supplied by the user. Currently has no effect, but may be used by future challenge types. (optional)
 - `Images`: A list of images for the word that is defined under `Word` or `Translation` above. The image names has to be without extension and without `_tiny` or `_tinier` part.
 
-**`Phrases`** has a list of sentences or phrases that the lession asks about.
-- `Phrase`: The phrase in destination language. e.g. In this case, it's written in Spanish.
-- `Alternative versions`: An alternative version of the above phrase. (optional)
-- `Translation`: Translation of the phrase in target audience's language. e.g. In this case, it's written in English.
+**`Phrases`** has a list of sentences or phrases that the lesson teaches.
+- `Phrase`: The phrase in the target language.
+- `Alternative versions`: A list of alternative versions of the phrase in the target language. These will *not* be taught, but will be accepted as correct translations of the `Translation` field if supplied by the user. (optional)
+- `Translation`: Translation of the phrase to the source language.
+- `Alternative translations`: A list of alternative translations to the source language, which will *not* be taught, but will be accepted as correct translations of the `Phrase` field if supplied by the user. (optional)
 
 **`Mini-dictionary`** has a list of terms and meanings the user can view as a sort of "hint" if they are stuck. Entries are accessed by mousing over terms in an exercise, which brings up a tooltip with the corresponding term(s) in the other language. An entry is required for every term used in a skill.
 
@@ -130,6 +132,20 @@ Note that all `New words` are automatically added to the `Mini-dictionary`, in b
 
 - `<destination language>`: A list of terms in destination language as key and meaning in target audience's language.
 - `<target audience's language>`: A list of terms in target audience's language as key and meaning in destination language.
+
+## How skills are taught to the user
+
+As the course author, you have to specify the words and phrases you want to teach. LibreLingo will know how to present skills as a series of individual questions and tasks -- LibreLingo calls these "challenges." It is useful to understand what challenges will be generated.
+
+For each vocabulary word (that is, each `New words` entry) in a skill, LibreLingo generates:
+- A [cards challenge](challenge.md#cards-challenge) -- multiple-choice translation from source language to target language, with a visual clue
+- A [short input challenge](challenge.md#short-input-challenge) -- free-form translation from source language to target language
+- A [listening challenge](challenge.md#listening-challenge) -- transcription from target language audio to target language text
+
+For each phrase in a skill, LibreLingo generates:
+- An [options challenge](challenge.md#options-challenge) -- multiple-choice translation from target language to source language
+- Two [chips challenges](challenge.md#chips-challenge) -- translation using provided words, one in each translation direction, unless the phrase is one word
+- A [listening challenge](challenge.md#listening-challenge) -- transcription from target language audio to target language text
 
 <a id="creating-new"></a>
 ## Creating new skills
@@ -222,4 +238,3 @@ courses/spanish-from-english/basics/skills
 
 You can use this Markdown file to create a short article about the skill the user is about to learn or practice.
 This can be useful to explain grammatical concepts, gotchas and learning tips about the specific skill.
-
