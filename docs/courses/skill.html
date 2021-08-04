@@ -167,6 +167,11 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="challenge.html">
+        LibreLingo Documentation on Challenge
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="course.html">
         LibreLingo Documentation on Course
       </a>
@@ -219,6 +224,11 @@
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-skills-are-taught-to-the-user">
+    How skills are taught to the user
+  </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#creating-new-skills">
@@ -280,6 +290,11 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#how-skills-are-taught-to-the-user">
+    How skills are taught to the user
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#creating-new-skills">
     Creating new skills
   </a>
@@ -310,9 +325,9 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
 <h1 id="librelingo-documentation-on-skill">LibreLingo Documentation on Skill</h1>
-<p>A <strong>Skill</strong> resides below a Module within the course structure. It's the lowest element in the course hierarchy. It contains data regarding what questions LibreLingo will ask the users.</p>
+<p>A <strong>Skill</strong> resides below a Module within the course structure. It's the lowest element in the course hierarchy. It contains a set of words and phrases to be taught to the user.</p>
 <p>A skill is usually centered around a specific theme. This could be introducing a new grammar concept or just vocabulary to talk about a certain topic.</p>
-<p>To get a better understanding, you can read the <a href="index.html#basics">course basics</a>.</p>
+<p>The words and phrases that make up a skill are taught to the user using <a href="#how-skills-are-taught-to-the-user">automatically generated questions and tasks</a>.</p>
 <hr/>
 <p><strong>Confused?</strong>
 <a href="https://github.com/kantord/LibreLingo/discussions">Ask people</a> on GitHub Discussions.</p>
@@ -321,6 +336,7 @@
 - <a href="#tree-structure">Tree structure</a>
 - <a href="#yaml"><code>(skill_name).yaml</code></a>
 - <a href="#data-breakdown">Data breakdown</a>
+- <a href="#how-skills-are-taught-to-the-user">How skills are taught to the user</a>
 - <a href="#creating-new">Creating new skills</a>
 - <a href="#example-edit">Examples of editing a skill</a>
 - <a href="#tips">Tips for creating good skills</a>
@@ -399,16 +415,17 @@ Mini-dictionary:
 - <code>Skill &gt; Name</code>: The human friendly name of the skill.
 - <code>Skill &gt; Id</code>: The ID of the course. <strong>NOTE:</strong> This should be unchanged if you're translating or editing existing course. Only if you're creating a new course, this should have a unique <a href="https://www.uuidgenerator.net/version4">UUID v4</a> string. Details for which you can find <a href="creating-courses.html">here</a>.
 - <code>Skill &gt; Thumbnails</code>: A list of filenames of the thumbnails to be used on the course page to give an idea of the skill. A list of available files can be found on <a href="https://github.com/kantord/LibreLingo/tree/main/apps/web/static/images"><code>apps/web/static/images/</code></a>. The names should be used without extension and without <code>_tiny</code> or <code>_tinier</code> parts. e.g. <code>banana2_tinier.jpg</code> should be written as <code>banana2</code>.</p>
-<p><strong><code>New words</code></strong> has a list of new words that the lesson asks about.
-- <code>Word</code>: The word in destination language.
+<p><strong><code>New words</code></strong> has a list of new words that the lesson teaches.
+- <code>Word</code>: The word in the target language, i.e. the language the user is learning.
 - <code>Synonyms</code>: A list of synonyms of the above word. (optional)
-- <code>Translation</code>: Translation of the word in target audience's language.
-- <code>Also accepted</code>: A list of synonyms of the <code>Translation</code> word above. (optional)
+- <code>Translation</code>: Translation of the word in the source language, i.e. the language the user already knows.
+- <code>Also accepted</code>: A list of alternative translations to the source language, which will <em>not</em> be taught, but will be accepted as correct translations of the <code>Word</code> field if supplied by the user. Currently has no effect, but may be used by future challenge types. (optional)
 - <code>Images</code>: A list of images for the word that is defined under <code>Word</code> or <code>Translation</code> above. The image names has to be without extension and without <code>_tiny</code> or <code>_tinier</code> part.</p>
-<p><strong><code>Phrases</code></strong> has a list of sentences or phrases that the lession asks about.
-- <code>Phrase</code>: The phrase in destination language. e.g. In this case, it's written in Spanish.
-- <code>Alternative versions</code>: An alternative version of the above phrase. (optional)
-- <code>Translation</code>: Translation of the phrase in target audience's language. e.g. In this case, it's written in English.</p>
+<p><strong><code>Phrases</code></strong> has a list of sentences or phrases that the lesson teaches.
+- <code>Phrase</code>: The phrase in the target language.
+- <code>Alternative versions</code>: A list of alternative versions of the phrase in the target language. These will <em>not</em> be taught, but will be accepted as correct translations of the <code>Translation</code> field if supplied by the user. (optional)
+- <code>Translation</code>: Translation of the phrase to the source language.
+- <code>Alternative translations</code>: A list of alternative translations to the source language, which will <em>not</em> be taught, but will be accepted as correct translations of the <code>Phrase</code> field if supplied by the user. (optional)</p>
 <p><strong><code>Mini-dictionary</code></strong> has a list of terms and meanings the user can view as a sort of "hint" if they are stuck. Entries are accessed by mousing over terms in an exercise, which brings up a tooltip with the corresponding term(s) in the other language. An entry is required for every term used in a skill.</p>
 <p>Note that all <code>New words</code> are automatically added to the <code>Mini-dictionary</code>, in both translation directions, using the <code>Word</code> and <code>Translation</code> fields (<code>Synonyms</code> and <code>Also accepted</code> are ignored).</p>
 <p><code>Mini-dictionary</code> entries do not only apply to this skill; the meanings will apply course-wide and be merged with the same term in other skills, if applicable. This means that entries can be omitted when they already are present in other skills.</p>
@@ -417,6 +434,16 @@ Mini-dictionary:
 <li><code>&lt;destination language&gt;</code>: A list of terms in destination language as key and meaning in target audience's language.</li>
 <li><code>&lt;target audience's language&gt;</code>: A list of terms in target audience's language as key and meaning in destination language.</li>
 </ul>
+<h2 id="how-skills-are-taught-to-the-user">How skills are taught to the user</h2>
+<p>As the course author, you have to specify the words and phrases you want to teach. LibreLingo will know how to present skills as a series of individual questions and tasks -- LibreLingo calls these "challenges." It is useful to understand what challenges will be generated.</p>
+<p>For each vocabulary word (that is, each <code>New words</code> entry) in a skill, LibreLingo generates:
+- A <a href="challenge.html#cards-challenge">cards challenge</a> -- multiple-choice translation from source language to target language, with a visual clue
+- A <a href="challenge.html#short-input-challenge">short input challenge</a> -- free-form translation from source language to target language
+- A <a href="challenge.html#listening-challenge">listening challenge</a> -- transcription from target language audio to target language text</p>
+<p>For each phrase in a skill, LibreLingo generates:
+- An <a href="challenge.html#options-challenge">options challenge</a> -- multiple-choice translation from target language to source language
+- Two <a href="challenge.html#chips-challenge">chips challenges</a> -- translation using provided words, one in each translation direction, unless the phrase is one word
+- A <a href="challenge.html#listening-challenge">listening challenge</a> -- transcription from target language audio to target language text</p>
 <p><a id="creating-new"></a></p>
 <h2 id="creating-new-skills">Creating new skills</h2>
 <p>Creating new skills is a matter of creating their corresponding YAML file.
