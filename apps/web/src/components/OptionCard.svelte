@@ -19,7 +19,7 @@
       </figure>
     </div>
     <div class="card-content">
-      <div class="is-size-5 has-text-centered is-size-6-mobile" data-test={`card-text-${number}`}>
+      <div class="is-size-5 has-text-centered is-size-6-mobile card-text" data-test={`card-text-${number}`}>
         {formInTargetLanguage}
       </div>
       <div
