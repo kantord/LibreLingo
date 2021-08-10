@@ -1,14 +1,12 @@
 <script lang="typescript">
   import settings from "../settings"
   import authStore from "../auth"
-  import SponsorButton from "./SponsorButton.svelte"
-  import GitHubButton from "./GitHubButton.svelte"
-  import NavBar from "lluis/NavBar.svelte"
+  import NavBar from "lluis/NavBar/NavBar.svelte"
   import Icon from "lluis/Icon.svelte"
-  import Button from "lluis/Button.svelte"
+  import NavBarButton from "lluis/NavBar/NavBarButton.svelte"
   import Logo from "lluis/Logo.svelte"
-  import ButtonLink from "lluis/ButtonLink.svelte"
-  import ButtonSet from "lluis/ButtonSet.svelte"
+  import NavBarItem from "lluis/NavBar/NavBarItem.svelte"
+  import NavBarButtonSet from "lluis/NavBar/NavBarButtonSet.svelte"
   export let hasAuth = false
 
   type WindowWithLogout = Window & {
@@ -17,39 +15,37 @@
   const _Logout = () => (window as unknown as WindowWithLogout)._Logout()
 </script>
 
-<NavBar>
+<NavBar data-test="navbar">
   <div slot="left">
     <Logo src="/images/logo.svg" alt="LibreLingo" />
   </div>
 
   <div slot="right">
-    <ButtonSet>
-      <SponsorButton />
-      <GitHubButton />
+    <NavBarButtonSet>
       {#if hasAuth && settings.features.authEnabled}
         {#if $authStore.user}
-          <Button size="small" outlined inverted info>
+          <NavBarItem>
             <Icon size="small" icon="user" />
             <span>{$authStore.user.name}</span>
-          </Button>
-          <Button
-            on:click="{() => _Logout()}"
-            size="small"
-            outlined
-            inverted
-            info
-          >
+          </NavBarItem>
+          <NavBarButton on:click="{() => _Logout()}">
             Log out
-          </Button>
+          </NavBarButton>
         {:else}
-          <ButtonLink href="/sign-up" size="small" outlined inverted info>
+          <NavBarButton href="/sign-up">
             Sign up
-          </ButtonLink>
-          <ButtonLink href="/login" size="small" outlined inverted info>
+          </NavBarButton>
+          <NavBarButton href="/login">
             Log in
-          </ButtonLink>
+          </NavBarButton>
         {/if}
       {/if}
-    </ButtonSet>
+    </NavBarButtonSet>
   </div>
 </NavBar>
+
+<style>
+  div {
+    height: 100%;
+  }
+</style>
