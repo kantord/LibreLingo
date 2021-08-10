@@ -10,7 +10,7 @@ Feature: Course page
     And I see 10 skills that are not started
     And I see a skill that has no image set
     And I see 3 skills that have an image set
-    And I see a "Log in" button
+    And I see a "Log in" link in the navbar
 
   Scenario: Opening course page with a stale skill
     Given I open "/course/test"

@@ -81,7 +81,6 @@ Then("I see a completed skill", () => {
 
 Then("I see a started skill", () => {
     cy.get("[data-started=true][data-stale=false]").should("have.length", 1)
-    cy.get(".svg-inline--fa").should("be.visible")
 })
 
 And("I see a skill with 20% progress", () => {
