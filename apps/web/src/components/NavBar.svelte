@@ -1,14 +1,13 @@
 <script lang="typescript">
   import settings from "../settings"
   import authStore from "../auth"
-  import SponsorButton from "./SponsorButton.svelte"
-  import GitHubButton from "./GitHubButton.svelte"
   import NavBar from "lluis/NavBar.svelte"
   import Icon from "lluis/Icon.svelte"
   import Button from "lluis/Button.svelte"
   import Logo from "lluis/Logo.svelte"
-  import ButtonLink from "lluis/ButtonLink.svelte"
-  import ButtonSet from "lluis/ButtonSet.svelte"
+  import NavBarLinkButton from "lluis/NavBarLinkButton.svelte"
+  import NavBarItem from "lluis/NavBarItem.svelte"
+  import NavBarButtonSet from "lluis/NavBarButtonSet.svelte"
   export let hasAuth = false
 
   type WindowWithLogout = Window & {
@@ -23,15 +22,13 @@
   </div>
 
   <div slot="right">
-    <ButtonSet>
-      <SponsorButton />
-      <GitHubButton />
+    <NavBarButtonSet>
       {#if hasAuth && settings.features.authEnabled}
         {#if $authStore.user}
-          <Button size="small" outlined inverted info>
+          <NavBarItem>
             <Icon size="small" icon="user" />
             <span>{$authStore.user.name}</span>
-          </Button>
+          </NavBarItem>
           <Button
             on:click="{() => _Logout()}"
             size="small"
@@ -42,14 +39,20 @@
             Log out
           </Button>
         {:else}
-          <ButtonLink href="/sign-up" size="small" outlined inverted info>
+          <NavBarLinkButton href="/sign-up">
             Sign up
-          </ButtonLink>
-          <ButtonLink href="/login" size="small" outlined inverted info>
+          </NavBarLinkButton>
+          <NavBarLinkButton href="/login">
             Log in
-          </ButtonLink>
+          </NavBarLinkButton>
         {/if}
       {/if}
-    </ButtonSet>
+    </NavBarButtonSet>
   </div>
 </NavBar>
+
+<style>
+  div {
+    height: 100%;
+  }
+</style>

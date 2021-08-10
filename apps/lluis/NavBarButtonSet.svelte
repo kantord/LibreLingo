@@ -4,6 +4,7 @@
 
 <style type="text/scss">
   .buttonset {
+    height: 100%;
     display: flex;
     gap: var(--spacing-medium);
   }
