@@ -12,9 +12,7 @@
     "types": "yarn workspaces run types",
     "stylefix": "yarn web run prettierfix && yarn web run eslintfix",
     "stylecheck": "yarn web run prettiercheck && yarn web run eslintcheck",
-    "exportAllCourses": "./scripts/exportAllYamlCourses.sh",
-    "docs": "poetry run mkdocs serve",
-    "docs:build": "poetry run mkdocs build --site-dir ./apps/web/__sapper__/export/docs/"
+    "exportAllCourses": "./scripts/exportAllYamlCourses.sh"
   },
   "workspaces": {
     "packages": [
@@ -39,8 +37,8 @@
     "@tsconfig/svelte": "2.0.1",
     "@types/jest": "26.0.24",
     "@types/node": "14.17.9",
-    "@typescript-eslint/eslint-plugin": "4.29.0",
-    "@typescript-eslint/parser": "4.29.0",
+    "@typescript-eslint/eslint-plugin": "4.29.1",
+    "@typescript-eslint/parser": "4.29.1",
     "eslint": "7.32.0",
     "eslint-plugin-cypress": "2.11.3",
     "eslint-plugin-jest": "24.4.0",
