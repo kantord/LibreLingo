@@ -176,20 +176,99 @@ class TestLoadCourseMeta(YamlImportTestCase):
             self.fake_values["second_special_character"],
         ]
 
-    def test_returns_correct_settings_audio_files_enabled(self):
-        assert self.result.settings.audio_files_enabled == True
+    def test_returns_correct_settings_audio_settings_enabled(self):
+        assert self.result.settings.audio_settings.enabled == True
 
-    def test_returns_correct_settings_audio_files_disabled(self):
+    def test_returns_correct_settings_audio_settings_tts(self):
+        tts_settings = self.result.settings.audio_settings.text_to_speech_settings
+        assert len(tts_settings) == 1
+        assert tts_settings[0].provider == "Polly"
+        assert tts_settings[0].voice == "Lupe"
+        assert tts_settings[0].engine == "standard"
+
+    def test_returns_correct_settings_audio_disabled(self):
         new_settings = """
     Settings:
-        - disable audio files
+        Audio:
+            Enabled: False
         """
 
         # Append settings to the file
         with open(Path(self.fake_path) / "course.yaml", "a") as f:
             f.write(new_settings)
         self.result = load_course(self.fake_path)
-        assert self.result.settings.audio_files_enabled == False
+        assert self.result.settings.audio_settings.enabled == False
+
+        tts_settings = self.result.settings.audio_settings.text_to_speech_settings
+        assert len(tts_settings) == 1
+        assert tts_settings[0].provider == "Polly"
+        assert tts_settings[0].voice == "Lupe"
+        assert tts_settings[0].engine == "standard"
+
+    def test_returns_correct_settings_audio_enabled(self):
+        new_settings = """
+    Settings:
+        Audio:
+            Enabled: True
+        """
+
+        # Append settings to the file
+        with open(Path(self.fake_path) / "course.yaml", "a") as f:
+            f.write(new_settings)
+        self.result = load_course(self.fake_path)
+        assert self.result.settings.audio_settings.enabled == True
+
+        tts_settings = self.result.settings.audio_settings.text_to_speech_settings
+        assert len(tts_settings) == 1
+        assert tts_settings[0].provider == "Polly"
+        assert tts_settings[0].voice == "Lupe"
+        assert tts_settings[0].engine == "standard"
+
+    def test_returns_correct_settings_audio_enabled_no_tts(self):
+        new_settings = """
+    Settings:
+        Audio:
+            Enabled: True
+            TTS: []
+        """
+
+        # Append settings to the file
+        with open(Path(self.fake_path) / "course.yaml", "a") as f:
+            f.write(new_settings)
+        self.result = load_course(self.fake_path)
+        assert self.result.settings.audio_settings.enabled == True
+
+        tts_settings = self.result.settings.audio_settings.text_to_speech_settings
+        assert len(tts_settings) == 0
+
+    def test_returns_correct_settings_audio_enabled_and_tts(self):
+        new_settings = """
+    Settings:
+        Audio:
+            Enabled: True
+            TTS:
+                - Provider: Polly
+                  Voice: Aditi
+                  Engine: standard
+                - Provider: Polly
+                  Voice: Lupe
+                  Engine: neural
+        """
+
+        # Append settings to the file
+        with open(Path(self.fake_path) / "course.yaml", "a") as f:
+            f.write(new_settings)
+        self.result = load_course(self.fake_path)
+        assert self.result.settings.audio_settings.enabled == True
+
+        tts_settings = self.result.settings.audio_settings.text_to_speech_settings
+        assert len(tts_settings) == 2
+        assert tts_settings[0].provider == "Polly"
+        assert tts_settings[0].voice == "Aditi"
+        assert tts_settings[0].engine == "standard"
+        assert tts_settings[1].provider == "Polly"
+        assert tts_settings[1].voice == "Lupe"
+        assert tts_settings[1].engine == "neural"
 
     def test_returned_object_has_correct_repository_url(self):
         assert self.result.repository_url == self.fake_values["repository_url"]
