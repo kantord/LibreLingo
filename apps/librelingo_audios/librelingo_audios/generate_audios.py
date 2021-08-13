@@ -46,7 +46,7 @@ def generate_audios_for_course(output_path, course_name, course, settings):
             json.dump({"audios": result_index}, f, ensure_ascii=False, indent=4)
 
 def _generate_audio_for_phrase(phrase, output_path, course, settings):
-    tts_settings = random.choice(course.audio_settings.text_to_speech_settings)
+    tts_settings = random.choice(course.settings.audio_settings.text_to_speech_settings)
     id = audio_id(course.target_language, phrase.in_target_language[0])
     destination_path = Path(Path(output_path) / "{}.mp3".format(id))
 
@@ -54,9 +54,9 @@ def _generate_audio_for_phrase(phrase, output_path, course, settings):
         raise RuntimeError('File {} already exists!'.format(destination_path))
 
     if settings.dry_run:
-        print('Would generate {}'.format(destination_path))
+        print('Would generate {} using {} {}'.format(destination_path, tts_settings.voice, tts_settings.engine))
     else:
-        print('Generating {}'.format(destination_path))
+        print('Generating {} using {} {}'.format(destination_path, tts_settings.voice, tts_settings.engine))
         subprocess.run([
             "aws", "polly", "synthesize-speech",
             "--output-format", "mp3",
