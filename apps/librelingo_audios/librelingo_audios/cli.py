@@ -27,9 +27,10 @@ def ensure_output_directory(output_path, settings):
 @click.command()
 @click.argument("input_path")
 @click.argument("output_path")
+@click.argument("course_name")
 @click.option("--dry-run/--no-dry-run", default=DEFAULT_SETTINGS.dry_run)
 @click.option("--overwrite/--no-overwrite", default=DEFAULT_SETTINGS.overwrite)
-def _command(input_path, output_path, dry_run, overwrite):
+def _command(input_path, output_path, course_name, dry_run, overwrite):
     """
     Generate audios for a YAML course.
     """
@@ -39,7 +40,7 @@ def _command(input_path, output_path, dry_run, overwrite):
     )
     course = load_course(input_path)
     ensure_output_directory(output_path, settings)
-    generate_audios_for_course(output_path, course, settings)
+    generate_audios_for_course(output_path, course_name, course, settings)
 
 
 if __name__ == "__main__":
