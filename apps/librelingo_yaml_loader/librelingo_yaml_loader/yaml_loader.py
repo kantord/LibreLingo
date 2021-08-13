@@ -342,8 +342,6 @@ def _convert_text_to_speech_settings(raw_audio_settings):
     if "TTS" not in raw_audio_settings:
         return [TextToSpeechSettings()]
 
-    raw_text_to_speech_settings = raw_audio_settings["TTS"]
-
     return [
         TextToSpeechSettings(tts["Provider"], tts["Voice"], tts["Engine"])
             for tts in raw_audio_settings["TTS"]

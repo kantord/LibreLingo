@@ -47,8 +47,8 @@ def generate_audios_for_course(output_path, course_name, course, settings):
 
 def _generate_audio_for_phrase(phrase, output_path, course, settings):
     tts_settings = random.choice(course.settings.audio_settings.text_to_speech_settings)
-    id = audio_id(course.target_language, phrase.in_target_language[0])
-    destination_path = Path(Path(output_path) / "{}.mp3".format(id))
+    file_name = audio_id(course.target_language, phrase.in_target_language[0])
+    destination_path = Path(Path(output_path) / "{}.mp3".format(file_name))
 
     if destination_path.is_file() and not settings.overwrite:
         raise RuntimeError('File {} already exists!'.format(destination_path))
@@ -67,8 +67,8 @@ def _generate_audio_for_phrase(phrase, output_path, course, settings):
         ], stdout = subprocess.DEVNULL)
 
 def _delete_audio_for_phrase(phrase, output_path, course, settings):
-    id = audio_id(course.target_language, phrase.in_target_language[0])
-    target_path = Path(Path(output_path) / "{}.mp3".format(id))
+    file_name = audio_id(course.target_language, phrase.in_target_language[0])
+    target_path = Path(Path(output_path) / "{}.mp3".format(file_name))
 
     if not target_path.is_file():
         # It's already not there, for whatever reason
