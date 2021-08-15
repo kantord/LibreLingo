@@ -47,7 +47,7 @@ You'll need to have an idea on basic terminology used in LibreLingo:
 These concepts represent a hierarchical structure to LibreLingo course material: `Courses > Modules > Skills`
 
 - The **target language** is the language the course is meant to teach.
-- The **source langauge** is a language that users of the course are assumed to know.
+- The **source language** is a language that users of the course are assumed to know.
 
 
 <a id="exploring-courses"></a>
@@ -65,7 +65,7 @@ When you enter a course page, for example the [Spanish course](https://libreling
 
 "Skills" are units of course content focused on a particular topic. Each skill is a set of new knowledge, such as new words or phrases.  Skills can focus on vocabulary and follow a theme: the "Animal" skill has words and phrases related to animals, the "Food" skill is all about food. Skills can also focus on teaching grammar.
 
-Inside a skill YAML file there are some keys that you might want to learn of, which is exaplained in detail [here](course.md).
+Inside a skill YAML file there are some keys that you might want to learn of, which is explained in detail [here](skill.md).
 
 <a id="things-new-contributors"></a>
 ### Things you can do as a new contributor

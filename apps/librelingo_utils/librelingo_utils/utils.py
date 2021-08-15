@@ -10,6 +10,30 @@ def calculate_number_of_levels(nwords, nphrases):
     return round(1 + (nwords / 7) + (nphrases / 5))
 
 
+def get_words_from_phrase(phrase):
+    """
+    Splits a phrase into its component words/terms. Note that this respects
+    grouping with curly braces, i.e. sets of words surrounded by curly braces will not
+    be split from each other.
+    """
+    # Regex matches all spaces not between { and }
+    return [
+        w.strip(" {}")
+        for w in re.split("( |\\{.*?\\}|'.*?')", phrase)
+        if w.strip(" {}")
+    ]
+
+
+def remove_control_characters_for_display(phrase):
+    """
+    Removes characters with special LibreLingo functions from a phrase before it
+    is displayed to the user.
+    At the moment, this only applies to curly brackets used to group several
+    words into a single mini-dictionary term.
+    """
+    return phrase.replace("}", "").replace("{", "")
+
+
 def clean_word(word):
     """
     Remove punctuation and other special characters from a word.

@@ -47,7 +47,7 @@
 
 <p class="is-size-1 is-size-2-tablet is-size-4-mobile has-text-centered">
   Which of these is
-  <strong>{currentChallenge.meaningInSourceLanguage}</strong>
+  <strong data-test="meaning-in-source-language">{currentChallenge.meaningInSourceLanguage}</strong>
   ?
 </p>
 

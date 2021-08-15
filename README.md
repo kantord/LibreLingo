@@ -342,7 +342,7 @@ The mascot is designed by [@almostdesigner](https://github.com/almostdesigner).
 ## Contributors ✨
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-64-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-65-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
@@ -430,10 +430,11 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://stragu.gitlab.io/"><img src="https://avatars.githubusercontent.com/u/1747497?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Stéphane Guillou</b></sub></a><br /><a href="#ideas-stragu" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="http://aerabi.com"><img src="https://avatars.githubusercontent.com/u/44623032?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mohammad-Ali A'RÂBI</b></sub></a><br /><a href="#content-aerabi" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/RGBradley"><img src="https://avatars.githubusercontent.com/u/78659707?v=4?s=100" width="100px;" alt=""/><br /><sub><b>RGBradley</b></sub></a><br /><a href="#content-RGBradley" title="Content">🖋</a></td>
-    <td align="center"><a href="https://github.com/radmorecameron"><img src="https://avatars.githubusercontent.com/u/55817894?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Cameron Radmore</b></sub></a><br /><a href="#content-radmorecameron" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/radmorecameron"><img src="https://avatars.githubusercontent.com/u/55817894?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Cameron Radmore</b></sub></a><br /><a href="#content-radmorecameron" title="Content">🖋</a> <a href="https://github.com/kantord/LibreLingo/commits?author=radmorecameron" title="Code">💻</a></td>
   </tr>
   <tr>
-    <td align="center"><a href="http://zebburkeconte.com"><img src="https://avatars.githubusercontent.com/u/13357648?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Zeb Burke-Conte</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/commits?author=zmbc" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://zebburkeconte.com"><img src="https://avatars.githubusercontent.com/u/13357648?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Zeb Burke-Conte</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/commits?author=zmbc" title="Documentation">📖</a> <a href="https://github.com/kantord/LibreLingo/commits?author=zmbc" title="Code">💻</a> <a href="https://github.com/kantord/LibreLingo/issues?q=author%3Azmbc" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/Poslovitch"><img src="https://avatars.githubusercontent.com/u/20014332?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Florian CUNY</b></sub></a><br /><a href="#ideas-Poslovitch" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
