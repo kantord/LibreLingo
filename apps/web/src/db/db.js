@@ -52,10 +52,10 @@ if (isBrowser() === true) {
     window._DB = db
 
     // Detect fake user session
-    if (Cookies.get("loginDb") === getUserDbName("---fakeUser")) {
+    if (Cookies.get("loginDb") === getUserDbName("JohnDoe")) {
         authStore.update((value) => ({
             ...value,
-            user: { name: "---fakeUser" },
+            user: { name: "JohnDoe" },
             online: true,
         }))
     }
@@ -84,7 +84,7 @@ if (isBrowser() === true) {
 
     // Fake login for testing purposes
     window._fakeLogin = () => {
-        Cookies.set("loginDb", getUserDbName("---fakeUser"), {
+        Cookies.set("loginDb", getUserDbName("JohnDoe"), {
             expires: settings.database.auth.expireDays,
         })
         window.location.href = "/course/spanish-from-english/"
