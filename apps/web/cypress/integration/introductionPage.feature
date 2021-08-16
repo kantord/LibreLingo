@@ -8,6 +8,10 @@ Feature: Skill introduction page
     And I click "Learn Animals"
     Then I should be on "/course/test/skill/animals/introduction"
     Then I read "Introduction to animals"
+
+  Scenario: Practicing the skill from the introduction page
+    When I open "/course/test/skill/animals/introduction"
+    Then I read "Introduction to animals"
     When I click "Practice Animals" 
     Then I should be on "/course/test/skill/animals"
 

@@ -4,7 +4,7 @@
   import levenshtein from "js-levenshtein"
   import ChallengePanel from "./ChallengePanel.svelte"
   import Icon from "lluis/Icon.svelte"
-  import InputFieldWithVirtualKeyboard from "./InputFieldWithVirtualKeyboard.svelte"
+  import InputFieldWithVirtualKeyboard from "./InputFieldWithVirtualKeyboard/index.svelte"
   import { playAudio } from "../media/sound"
   import Button from "lluis/Button.svelte"
   import Column from "lluis/Column.svelte"
@@ -83,7 +83,7 @@
 
   <Columns>
     <Column size="1">
-      <Button size="large" primary on:click="{playChallengeVoice}">
+      <Button size="large" style="primary" on:click="{playChallengeVoice}">
         <Icon icon="volume-up" />
       </Button>
     </Column>
