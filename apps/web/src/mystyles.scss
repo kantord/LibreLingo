@@ -22,7 +22,7 @@
 //@import "~bulma/sass/elements/notification.sass";
 @import "~bulma/sass/elements/icon.sass";
 @import "~bulma/sass/elements/image.sass";
-@import "~bulma/sass/elements/button.sass";
+// @import "~bulma/sass/elements/button.sass";
 // @import "~bulma/sass/elements/title.sass";
 @import "~bulma/sass/elements/content.sass";
 @import "~bulma/sass/elements/box.sass";
@@ -62,9 +62,12 @@
     --spacing-small: 8px;
     --spacing-medium: 12px;
     --spacing-large: calc(var(--spacing-small) + var(--spacing-medium));
-    --button-radius-small: calc(var(--spacing-small) / 2);
     --blue: #325f74;
     --white: #faf4f0;
+
+    --button-background-color: #325f74;
+    --button-text-color: #fff;
+    --button-radius-small: calc(var(--spacing-small) / 2);
 
     --navbar-background: var(--blue);
     --navbar-text-color: var(--white);
