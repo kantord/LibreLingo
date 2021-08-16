@@ -1,74 +1,118 @@
 <script lang="typescript">
   import { createEventDispatcher } from "svelte"
+  import LinkOrButton from "./primitives/LinkOrButton.svelte"
+  import Icon from "lluis/Icon.svelte"
 
   const dispatch = createEventDispatcher()
-  export let primary = false
-  export let light = false
-  export let info = false
-  export let inverted = false
-  export let outlined = false
-  export let hidden = false
-  export let color = null
-  export let textColor = null
-  export let customColor = color != null
-  export let customTextColor = textColor != null
-  export let size = "default"
-  export let type = "button"
-  export let tabindex = 0
-  export let key = false
-  export let disabled = false
+  export let href: string | null = null
+  export let size: "small" | "normal" | "medium" | "large" = "normal"
   export let loading = false
   export let asHref: string | null = null
-  export let submit = false
-
-  let styleTokens = `
-    --color:${color};
-    --textColor:${textColor};
-  `
+  export let type: "button" | "submit" = "button"
+  export let style: "primary" | "secondary" | "key" = "secondary"
+  export let target: string | undefined = undefined
+  export let tabIndex: number | undefined = undefined
+  export let disabled = false
 </script>
 
-<button
-  style="{styleTokens}"
-  class="button is-{size}"
-  class:is-primary="{primary}"
-  class:is-light="{light}"
-  class:is-info="{info}"
-  class:is-inverted="{inverted}"
-  class:is-outlined="{outlined}"
-  class:is-hidden="{hidden}"
-  class:is-loading="{loading}"
-  class:customColor
-  class:customTextColor
-  class:key
-  on:click="{() => dispatch('click')}"
-  {tabindex}
-  {disabled}
-  {type}>
-  <slot />
-</button>
-{#if asHref}
-  <a class="is-hidden" href={asHref}>{asHref}</a>
+<div class="lluis-button" class:small={size === "small"} class:large={size === "large"} data-style={style}>
+  <LinkOrButton href={href} on:click="{() => dispatch('click')}" type={type} target={target} tabIndex={tabIndex} disabled={disabled}>
+    {#if loading}
+      <span class="spinner">
+        <Icon icon="spinner" />
+      </span>
+    {:else}
+      <slot />
+    {/if}
+  </LinkOrButton>
+</div>
+
+{#if asHref != null}
+  <a class="hidden-link" href={asHref} />
 {/if}
 
 <style type="text/scss">
-  .button.customColor {
-    background-color: var(--color);
+  @keyframes spinner {
+    to {transform: rotate(360deg);}
   }
 
-  .button.customTextColor {
-    color: var(--textColor);
+  .lluis-button {
+    display: inline-block;
   }
 
-  .key {
-    font-family: monospace;
-    border-radius: 8px;
-    text-transform: none;
-    margin: 1em;
-    margin-left: 0;
-    margin-top: 0;
+  div>:global(*) {
+    display: flex;
+    border-radius: var(--button-radius-small);
+    padding: 6px 20px;
+    margin: 4px;
+    transition-property: filter;
+    transition-duration: .1s;
+    transition-timing-function: ease-in-out;
+
+		:global(.icon) {
+				width: unset;
+				height: unset;
+				margin-right: 8px;
+		}
+
+    &:hover, &:focus {
+      filter: brightness(1.2);
+    }
+
+    &:active {
+      filter: brightness(.9);
+      transform: scale(0.9);
+    }
+  }
+
+  .spinner {
+    display: flex;
+    width: 16px;
+    height: 16px;
+    align-items: center;
+    justify-content: center;
+    animation: spinner .6s linear infinite;
+
+    :global(.icon) {
+      display: block;
+      margin: 0 !important;
+    }
+  }
+
+  div[data-style=primary]>:global(*) {
+    border: 1px solid var(--button-primary-border);
+    color: var(--button-primary-text-color) !important; /* TODO: remove when hero is remoevd */
+    background-color: var(--button-primary-background-color) !important;
+  }
+
+  div[data-style=secondary]>:global(*) {
+    border: 1px solid var(--button-secondary-border);
+    color: var(--button-secondary-text-color) !important;
+    background-color: var(--button-secondary-background-color) !important;
+  }
+
+  div[data-style=key]>:global(*) {
+    margin: 6px;
+    padding: 6px 0;
+    text-align: center;
+    width: calc(1em + 22px);
+    border: 1px solid var(--button-key-border);
+    color: var(--button-key-text-color) !important;
+    background-color: var(--button-key-background-color) !important;
+  }
+
+  .small>:global(*) {
+    font-size: 16px;
+    padding: 3px 12px;
+  }
+
+  .medium>:global(*) {
+    font-size: 18px;
+    padding: 3px 12px;
+  }
+
+  .large>:global(*) {
+    font-size: 20px;
+    padding: 9px 14px;
   }
 </style>
-
-{#if submit}
-  <button type="submit" class="is-hidden"></button>
-{/if}
