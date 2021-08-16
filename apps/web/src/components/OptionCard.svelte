@@ -15,11 +15,18 @@
   >
     <div class="card-image">
       <figure class="image is-1by1">
-        <img src="{`images/${picture}`}" alt="" data-test={`card-img-${number}`} />
+        <img
+          src="{`images/${picture}`}"
+          alt=""
+          data-test="{`card-img-${number}`}"
+        />
       </figure>
     </div>
     <div class="card-content">
-      <div class="is-size-5 has-text-centered is-size-6-mobile card-text" data-test={`card-text-${number}`}>
+      <div
+        class="is-size-5 has-text-centered is-size-6-mobile card-text"
+        data-test="{`card-text-${number}`}"
+      >
         {formInTargetLanguage}
       </div>
       <div
