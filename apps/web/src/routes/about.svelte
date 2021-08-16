@@ -6,12 +6,11 @@
 
   export async function preload() {
       return {
-          readmeHTML:
-      (
-          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-          // @ts-ignore
-          await getMarkDownData(await import("../../../../README.md"))
-      ).split("<h2>Tech stack</h2>")[0],
+          readmeHTML: // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      (await getMarkDownData(await import("../../../../README.md"))).split(
+          "<h2>Tech stack</h2>"
+      )[0],
       }
   }
 </script>

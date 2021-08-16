@@ -13,7 +13,7 @@
   import { onMount } from "svelte"
   import isBrowser from "../utils/isBrowser"
   import Icon from "lluis/Icon.svelte"
-  import ButtonLink from "lluis/ButtonLink.svelte"
+  import Button from "lluis/Button.svelte"
   import isCypress from "../utils/isCypress"
   // eslint-disable-next-line @typescript-eslint/no-var-requires
   const pMemoize = require("p-memoize")
@@ -27,7 +27,7 @@
     (isBrowser() === true
         ? (window as unknown as WindowWithStars).stars
         : null) || "   "
-  export let size = "small"
+  export let size: "small" | "normal" = "small"
 
   onMount(async () => {
       if (isBrowser() === true && isCypress()) {
@@ -48,11 +48,8 @@
   })
 </script>
 
-<ButtonLink
+<Button
   target="_blank"
-  outlined
-  inverted
-  info
   size="{size}"
   href="https://github.com/kantord/LibreLingo"
 >
@@ -65,7 +62,7 @@
     </span>
   {/if}
   <span class="is-hidden-mobile">GitHub</span>
-</ButtonLink>
+</Button>
 
 <style type="text/scss">
   @import "../variables";
