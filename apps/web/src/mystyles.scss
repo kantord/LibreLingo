@@ -22,7 +22,7 @@
 //@import "~bulma/sass/elements/notification.sass";
 @import "~bulma/sass/elements/icon.sass";
 @import "~bulma/sass/elements/image.sass";
-@import "~bulma/sass/elements/button.sass";
+// @import "~bulma/sass/elements/button.sass";
 // @import "~bulma/sass/elements/title.sass";
 @import "~bulma/sass/elements/content.sass";
 @import "~bulma/sass/elements/box.sass";
@@ -62,9 +62,25 @@
     --spacing-small: 8px;
     --spacing-medium: 12px;
     --spacing-large: calc(var(--spacing-small) + var(--spacing-medium));
-    --button-radius-small: calc(var(--spacing-small) / 2);
     --blue: #325f74;
     --white: #faf4f0;
+
+    --animation-short: .1s;
+
+    /* primary button stuff */
+    --button-primary-background-color: #325f74;
+    --button-primary-text-color: #fff;
+    --button-primary-border: transparent;
+    /* secondary button stuff */
+    --button-secondary-background-color: #f5f5f5;
+    --button-secondary-text-color: #111;
+    --button-secondary-border: #b5b5b5;
+    /* virtual keyboard button stuff */
+    --button-key-background-color: #f5f5f5;
+    --button-key-text-color: #111;
+    --button-key-border: #b5b5b5;
+    /* generic button stuff */
+    --button-radius-small: calc(var(--spacing-small) / 2);
 
     --navbar-background: var(--blue);
     --navbar-text-color: var(--white);
