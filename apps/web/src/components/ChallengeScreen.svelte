@@ -126,10 +126,13 @@
   }
 
   $: skipAllChallengesFunc = async () => {
+      console.error("🍠 skipAllChallengesFunc")
       stats.skipped++
       remainingChallenges.forEach(() => stats.skipped++)
       currentChallenge = undefined
   }
+
+  console.error("🍎", skipAllChallenges)
 
   $: skipAllVoice = () => {
       let filteredRemainingChallenges = remainingChallenges.filter(
