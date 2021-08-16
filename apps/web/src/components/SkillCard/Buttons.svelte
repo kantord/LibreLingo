@@ -1,5 +1,5 @@
 <script lang="typescript">
-  import ButtonLink from "lluis/ButtonLink.svelte"
+  import Button from "lluis/Button.svelte"
 
   export let practiceHref
   export let completed
@@ -9,10 +9,10 @@
 
 <div class="button-container">
   {#if completed}
-    <ButtonLink primary href="{practiceHref}">Practice {title}</ButtonLink>
+    <Button style="primary" href="{practiceHref}">Practice {title}</Button>
   {:else if started}
-    <ButtonLink primary href="{practiceHref}">Continue {title}</ButtonLink>
+    <Button style="primary" href="{practiceHref}">Continue {title}</Button>
   {:else}
-    <ButtonLink primary href="{practiceHref}">Learn {title}</ButtonLink>
+    <Button style="primary" href="{practiceHref}">Learn {title}</Button>
   {/if}
 </div>
