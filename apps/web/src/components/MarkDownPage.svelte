@@ -1,6 +1,7 @@
 <script lang="typescript" context="module">
+  import remark from "remark"
+
   export async function getMarkDownData(markdownModule) {
-      const remark = await require("remark")
       const markdown = await import("remark-parse")
       const html = await import("rehype-stringify")
       const remark2rehype = await import("remark-rehype")
