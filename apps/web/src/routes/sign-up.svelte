@@ -32,9 +32,8 @@
   let license_accepted = false
   let errors: ErrorsType = {}
 
-  // TODO: deal with this ignore comment
-  // eslint-disable-next-line no-useless-escape
-  const emailRegexp = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+  const emailRegexp =
+    /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i
 
   const validateUsername = () => {
       if (!username) {
@@ -277,7 +276,7 @@
         on:click="{handleSignUp}"
         loading="{loading}"
         asHref="/sign-up-success"
-        submit
+        type="submit"
       >
         Sign up
       </Button>
