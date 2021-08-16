@@ -28,16 +28,10 @@
             <Icon size="small" icon="user" />
             <span>{$authStore.user.name}</span>
           </NavBarItem>
-          <NavBarButton on:click="{() => _Logout()}">
-            Log out
-          </NavBarButton>
+          <NavBarButton on:click="{() => _Logout()}">Log out</NavBarButton>
         {:else}
-          <NavBarButton href="/sign-up">
-            Sign up
-          </NavBarButton>
-          <NavBarButton href="/login">
-            Log in
-          </NavBarButton>
+          <NavBarButton href="/sign-up">Sign up</NavBarButton>
+          <NavBarButton href="/login">Log in</NavBarButton>
         {/if}
       {/if}
     </NavBarButtonSet>

@@ -1,5 +1,5 @@
 <script lang="typescript">
-  import Button from "lluis/Button.svelte"
+  import VirtualKeyboard from "./VirtualKeyboard.svelte"
   export let value
   export let specialCharacters
   export let languageCode
@@ -65,23 +65,8 @@
   bind:this="{inputFieldRef}"
 />
 
-<div class="keyboard">
-  {#each specialCharacters as specialCharacter}
-    <Button
-      tabindex="{-1}"
-      light
-      key
-      size="small"
-      disabled="{disabled}"
-      on:click="{handleVirtualKey(specialCharacter)}"
-    >
-      {specialCharacter}
-    </Button>
-  {/each}
-</div>
-
-<style type="text/scss">
-  .keyboard {
-    margin-top: 2em;
-  }
-</style>
+<VirtualKeyboard
+  characters={specialCharacters}
+  handleVirtualKey={handleVirtualKey}
+  disabled={disabled}
+/>
