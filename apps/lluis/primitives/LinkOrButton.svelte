@@ -19,7 +19,7 @@
 
 <style type="text/scss">
   button {
-    display: block;
+    display: inline-block;
     background: transparent;
     border: 0;
     font-size: inherit;
