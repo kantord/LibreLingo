@@ -9,11 +9,11 @@ python = "^3.8"
 mkdocs-mermaid2-plugin = "^0.5.1"
 
 [tool.poetry.dev-dependencies]
-librelingo-yaml-loader = { path = "./apps/librelingo_yaml_loader/" }
-librelingo-json-export = { path = "./apps/librelingo_json_export" }
-librelingo-fakes = { path = "./apps/librelingo_fakes" }
-librelingo-utils = { path = "./apps/librelingo_utils" }
-librelingo-audios = { path = "./apps/librelingo_audios" }
+librelingo-yaml-loader = { path = "./apps/librelingo_yaml_loader/", develop = true }
+librelingo-json-export = { path = "./apps/librelingo_json_export", develop = true }
+librelingo-fakes = { path = "./apps/librelingo_fakes", develop = true }
+librelingo-utils = { path = "./apps/librelingo_utils", develop = true }
+librelingo-audios = { path = "./apps/librelingo_audios", develop = true }
 pytest = "^6.2.2"
 pytest-mock = "^3.5.1"
 pytest-watch = "^4.2.0"
