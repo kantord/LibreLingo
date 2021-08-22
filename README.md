@@ -433,7 +433,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/radmorecameron"><img src="https://avatars.githubusercontent.com/u/55817894?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Cameron Radmore</b></sub></a><br /><a href="#content-radmorecameron" title="Content">🖋</a> <a href="https://github.com/kantord/LibreLingo/commits?author=radmorecameron" title="Code">💻</a></td>
   </tr>
   <tr>
-    <td align="center"><a href="http://zebburkeconte.com"><img src="https://avatars.githubusercontent.com/u/13357648?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Zeb Burke-Conte</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/commits?author=zmbc" title="Documentation">📖</a> <a href="https://github.com/kantord/LibreLingo/commits?author=zmbc" title="Code">💻</a></td>
+    <td align="center"><a href="http://zebburkeconte.com"><img src="https://avatars.githubusercontent.com/u/13357648?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Zeb Burke-Conte</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/commits?author=zmbc" title="Documentation">📖</a> <a href="https://github.com/kantord/LibreLingo/commits?author=zmbc" title="Code">💻</a> <a href="https://github.com/kantord/LibreLingo/issues?q=author%3Azmbc" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/Poslovitch"><img src="https://avatars.githubusercontent.com/u/20014332?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Florian CUNY</b></sub></a><br /><a href="#ideas-Poslovitch" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
