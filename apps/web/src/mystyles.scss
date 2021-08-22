@@ -62,11 +62,13 @@
     --spacing-small: 8px;
     --spacing-medium: 12px;
     --spacing-large: calc(var(--spacing-small) + var(--spacing-medium));
+    --button-radius-small: calc(var(--spacing-small) / 2);
     --blue: #325f74;
-    --white: #bfb5af;
+    --white: #faf4f0;
 
     --navbar-background: var(--blue);
     --navbar-text-color: var(--white);
+    --navbar-highlight-color: rgba(255, 255, 255, .1);
     --navbar-height: 52px;
     --navbar-padding-vertical: var(--spacing-small);
     --navbar-padding-horizontal: var(--spacing-medium);

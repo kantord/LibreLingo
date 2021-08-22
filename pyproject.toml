@@ -8,11 +8,11 @@ authors = ["Dániel Kántor <git@daniel-kantor.com>"]
 python = "^3.8"
 
 [tool.poetry.dev-dependencies]
-librelingo-yaml-loader = { path = "./apps/librelingo_yaml_loader/" }
-librelingo-json-export = { path = "./apps/librelingo_json_export" }
-librelingo-fakes = { path = "./apps/librelingo_fakes" }
-librelingo-utils = { path = "./apps/librelingo_utils" }
-librelingo-audios = { path = "./apps/librelingo_audios" }
+librelingo-yaml-loader = { path = "./apps/librelingo_yaml_loader/", develop = true }
+librelingo-json-export = { path = "./apps/librelingo_json_export", develop = true }
+librelingo-fakes = { path = "./apps/librelingo_fakes", develop = true }
+librelingo-utils = { path = "./apps/librelingo_utils", develop = true }
+librelingo-audios = { path = "./apps/librelingo_audios", develop = true }
 pytest = "^6.2.2"
 pytest-mock = "^3.5.1"
 pytest-watch = "^4.2.0"
@@ -20,7 +20,7 @@ black = "^21.6b0"
 mypy = "^0.910"
 types-python-slugify = "^0.1.1"
 types-PyYAML = "^5.4.3"
-types-bleach = "^3.3.3"
+types-bleach = "^4.0.0"
 types-Markdown = "^3.3.0"
 
 [build-system]
