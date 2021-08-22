@@ -33,5 +33,6 @@ Feature: Login form
     And I introduce "baz" as "password"
     Given my credentials are correct
     When I click the "Log in" button
+    And I click "Start learning Spanish"
     Then I read "Log out"
-    And I am on "/course/spanish-from-english/"
+    And I am on "/"
