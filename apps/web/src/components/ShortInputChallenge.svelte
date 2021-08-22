@@ -4,7 +4,7 @@
   import shuffle from "lodash.shuffle"
   import ChallengePanel from "./ChallengePanel.svelte"
   import Phrase from "./Phrase.svelte"
-  import InputFieldWithVirtualKeyboard from "./InputFieldWithVirtualKeyboard.svelte"
+  import InputFieldWithVirtualKeyboard from "./InputFieldWithVirtualKeyboard/index.svelte"
   import Column from "lluis/Column.svelte"
   import Columns from "lluis/Columns.svelte"
   import evaluateAnswer from "@librelingo/answer-corrector/src/index"
