@@ -87,7 +87,7 @@ if (isBrowser() === true) {
         Cookies.set("loginDb", getUserDbName("JohnDoe"), {
             expires: settings.database.auth.expireDays,
         })
-        window.location.href = "/"
+        window.location.href = "/course/spanish-from-english/"
     }
 
     // Add login function
@@ -129,7 +129,7 @@ if (isBrowser() === true) {
             expires: settings.database.auth.expireDays,
         })
         window.location.reload(false)
-        window.location.href = ""
+        window.location.href = "/course/spanish-from-english/"
     }
 
     // Logout
