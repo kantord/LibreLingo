@@ -27,8 +27,6 @@ class TextToSpeechSettings(
 
     pass
 
-default_text_to_speech_settings = TextToSpeechSettings()
-
 class AudioSettings(
     namedtuple(
         "AudioSettings",
@@ -36,7 +34,7 @@ class AudioSettings(
             "enabled",
             "text_to_speech_settings",
         ],
-        defaults=[True, [default_text_to_speech_settings]]
+        defaults=[False, []]
     )
 ):
     """
@@ -54,10 +52,8 @@ class AudioSettings(
 
     pass
 
-default_audio_settings = AudioSettings()
 
-
-class Settings(namedtuple("Settings", ["audio_settings"], defaults=[default_audio_settings])):
+class Settings(namedtuple("Settings", ["audio_settings"], defaults=[AudioSettings()])):
     """
     Settings for a course
 
@@ -68,9 +64,6 @@ class Settings(namedtuple("Settings", ["audio_settings"], defaults=[default_audi
     """
 
     pass
-
-
-default_settings = Settings()
 
 
 class Course(
@@ -86,7 +79,7 @@ class Course(
             "repository_url",
             "settings",
         ],
-        defaults=[default_settings],
+        defaults=[Settings()],
     )
 ):
     """
