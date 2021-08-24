@@ -7,7 +7,7 @@
     "cy:open": "cypress open",
     "dev": "sapper dev --no-hot",
     "build": "sapper build",
-    "export": "web installAllExternalCourses & sapper export",
+    "export": "sapper export",
     "start": "node __sapper__/build",
     "jest": "jest src",
     "types": "sapper build && tsc && svelte-check --treshold error",
