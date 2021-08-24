@@ -84,7 +84,7 @@ def _generate_audio_with_tts(phrase_identity, file_name, destination_path, cours
         "id": file_name,
         "text": phrase_identity.text,
         "source": "TTS",
-        "license": course.license,
+        "license": course.license.full_name,
         "ttsProvider": "Polly",
         "ttsVoice": chosen_tts_settings.voice,
         "ttsEngine": chosen_tts_settings.engine
