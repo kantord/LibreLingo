@@ -59,11 +59,11 @@ def _fetch_audio_for_phrase(phrase_identity, output_path, course, settings):
     return _generate_audio_with_tts(phrase_identity, file_name, destination_path, course, settings)
 
 def _generate_audio_with_tts(phrase_identity, file_name, destination_path, course, settings):
-    tts_settings = course.settings.audio_settings.text_to_speech_settings
-    if tts_settings == []:
+    tts_settings_list = course.settings.audio_settings.text_to_speech_settings_list
+    if tts_settings_list == []:
         raise RuntimeError("Cannot generate {} because there are no TTS settings configured".format(destination_path))
 
-    chosen_tts_settings = random.choice(tts_settings)
+    chosen_tts_settings = random.choice(tts_settings_list)
 
     if settings.dry_run:
         print('Would generate {} using {} {}'.format(destination_path, chosen_tts_settings.voice, chosen_tts_settings.engine))

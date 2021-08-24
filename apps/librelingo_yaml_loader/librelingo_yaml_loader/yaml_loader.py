@@ -334,13 +334,13 @@ def _convert_license(raw_license):
     )
 
 
-def _convert_text_to_speech_settings(raw_audio_settings):
+def _convert_text_to_speech_settings_list(raw_audio_settings):
     """
     Creates an TextToSpeechSettings() object based on the data structure in the YAML
     file
     """
     if "TTS" not in raw_audio_settings:
-        return AudioSettings().text_to_speech_settings
+        return AudioSettings().text_to_speech_settings_list
 
     return [
         TextToSpeechSettings(tts["Provider"], tts["Voice"], tts["Engine"])
@@ -359,13 +359,13 @@ def _convert_audio_settings(raw_settings):
     raw_audio_settings = raw_settings["Audio"]
 
     if raw_audio_settings["Enabled"]:
-        text_to_speech_settings = _convert_text_to_speech_settings(raw_audio_settings)
+        text_to_speech_settings_list = _convert_text_to_speech_settings_list(raw_audio_settings)
     else:
-        text_to_speech_settings = []
+        text_to_speech_settings_list = []
 
     return AudioSettings(
         enabled=raw_audio_settings["Enabled"] == "True",
-        text_to_speech_settings=text_to_speech_settings
+        text_to_speech_settings_list=text_to_speech_settings_list
     )
 
 

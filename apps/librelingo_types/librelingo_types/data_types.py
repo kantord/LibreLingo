@@ -32,7 +32,7 @@ class AudioSettings(
         "AudioSettings",
         [
             "enabled",
-            "text_to_speech_settings",
+            "text_to_speech_settings_list",
         ],
         defaults=[False, []]
     )
@@ -45,7 +45,7 @@ class AudioSettings(
     ```python
     AudioSettings(
         enabled=True,
-        text_to_speech_settings=[TextToSpeechSettings()]
+        text_to_speech_settings_list=[TextToSpeechSettings()]
     )
     ```
     """

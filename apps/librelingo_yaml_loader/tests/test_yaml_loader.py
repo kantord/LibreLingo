@@ -181,8 +181,8 @@ class TestLoadCourseMeta(YamlImportTestCase):
         assert self.result.settings.audio_settings.enabled == False
 
     def test_returns_correct_settings_audio_settings_tts(self):
-        tts_settings = self.result.settings.audio_settings.text_to_speech_settings
-        assert tts_settings == []
+        tts_settings_list = self.result.settings.audio_settings.text_to_speech_settings_list
+        assert tts_settings_list == []
 
     def _append_settings_to_file(self, new_settings):
         with open(Path(self.fake_path) / "course.yaml", "a") as f:
@@ -198,8 +198,8 @@ class TestLoadCourseMeta(YamlImportTestCase):
         self.result = load_course(self.fake_path)
         assert self.result.settings.audio_settings.enabled == False
 
-        tts_settings = self.result.settings.audio_settings.text_to_speech_settings
-        assert tts_settings == []
+        tts_settings_list = self.result.settings.audio_settings.text_to_speech_settings_list
+        assert tts_settings_list == []
 
     def test_returns_correct_settings_audio_enabled(self):
         self._append_settings_to_file("""
@@ -211,8 +211,8 @@ class TestLoadCourseMeta(YamlImportTestCase):
         self.result = load_course(self.fake_path)
         assert self.result.settings.audio_settings.enabled == True
 
-        tts_settings = self.result.settings.audio_settings.text_to_speech_settings
-        assert tts_settings == []
+        tts_settings_list = self.result.settings.audio_settings.text_to_speech_settings_list
+        assert tts_settings_list == []
 
     def test_returns_correct_settings_audio_enabled_no_tts(self):
         self._append_settings_to_file("""
@@ -225,8 +225,8 @@ class TestLoadCourseMeta(YamlImportTestCase):
         self.result = load_course(self.fake_path)
         assert self.result.settings.audio_settings.enabled == True
 
-        tts_settings = self.result.settings.audio_settings.text_to_speech_settings
-        assert tts_settings == []
+        tts_settings_list = self.result.settings.audio_settings.text_to_speech_settings_list
+        assert tts_settings_list == []
 
     def test_returns_correct_settings_audio_enabled_and_tts(self):
         self._append_settings_to_file("""
@@ -245,8 +245,8 @@ class TestLoadCourseMeta(YamlImportTestCase):
         self.result = load_course(self.fake_path)
         assert self.result.settings.audio_settings.enabled == True
 
-        tts_settings = self.result.settings.audio_settings.text_to_speech_settings
-        assert tts_settings == [
+        tts_settings_list = self.result.settings.audio_settings.text_to_speech_settings_list
+        assert tts_settings_list == [
             TextToSpeechSettings(
                 provider="Polly",
                 voice="Aditi",
