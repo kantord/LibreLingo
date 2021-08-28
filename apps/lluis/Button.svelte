@@ -1,74 +1,51 @@
 <script lang="typescript">
   import { createEventDispatcher } from "svelte"
+  import LinkOrButton from "./primitives/LinkOrButton.svelte"
 
   const dispatch = createEventDispatcher()
-  export let primary = false
-  export let light = false
-  export let info = false
-  export let inverted = false
-  export let outlined = false
-  export let hidden = false
-  export let color = null
-  export let textColor = null
-  export let customColor = color != null
-  export let customTextColor = textColor != null
-  export let size = "default"
-  export let type = "button"
-  export let tabindex = 0
-  export let key = false
-  export let disabled = false
-  export let loading = false
+  export let href: string | null = null
+  export let size: "small" | "normal" | "large" = "normal"
+  export let loading: boolean = false
   export let asHref: string | null = null
-  export let submit = false
-
-  let styleTokens = `
-    --color:${color};
-    --textColor:${textColor};
-  `
 </script>
 
-<button
-  style="{styleTokens}"
-  class="button is-{size}"
-  class:is-primary="{primary}"
-  class:is-light="{light}"
-  class:is-info="{info}"
-  class:is-inverted="{inverted}"
-  class:is-outlined="{outlined}"
-  class:is-hidden="{hidden}"
-  class:is-loading="{loading}"
-  class:customColor
-  class:customTextColor
-  class:key
-  on:click="{() => dispatch('click')}"
-  {tabindex}
-  {disabled}
-  {type}>
-  <slot />
-</button>
-{#if asHref}
-  <a class="is-hidden" href={asHref}>{asHref}</a>
+<div class="lluis-button" class:small={size === "small"} class:large={size === "large"}>
+  <LinkOrButton href={href} on:click="{() => dispatch('click')}">
+    <slot />
+  </LinkOrButton>
+</div>
+
+{#if asHref != null}
+  <a class="hidden-link" href={asHref}>
 {/if}
 
 <style type="text/scss">
-  .button.customColor {
-    background-color: var(--color);
+  div :global(*) {
+    color: var(--button-text-color);
+    background-color: var(--button-background-color) !important;
+    border-radius: var(--button-radius-small);
+    padding: 6px 20px;
+    transition-property: filter;
+    transition-duration: .1s;
+    transition-timing-function: ease-in-out;
+
+    &:hover, &:focus {
+      filter: brightness(1.2);
+    }
+
+    &:active {
+      filter: brightness(.9);
+      transform: scale(0.9);
+    }
   }
 
-  .button.customTextColor {
-    color: var(--textColor);
+  .small :global(*) {
+    font-size: 16px;
+    padding: 3px 12px;
   }
 
-  .key {
-    font-family: monospace;
-    border-radius: 8px;
-    text-transform: none;
-    margin: 1em;
-    margin-left: 0;
-    margin-top: 0;
+  .large :global(*) {
+    font-size: 18px;
+    padding: 9px 28px;
   }
 </style>
-
-{#if submit}
-  <button type="submit" class="is-hidden"></button>
-{/if}
