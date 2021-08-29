@@ -31,7 +31,7 @@
     "prettiercheck:src": "prettier --plugin-search-dir=. ./src/**/*.js",
     "prettiercheck:cypress": "prettier --plugin-search-dir=. ./cypress/**/*.js",
     "prettiercheck:svelte": "prettier --plugin-search-dir=. ./src/**/*.svelte",
-    "eslintcheck": "eslint ./src"
+    "eslintcheck": "eslint ./src && eslint ./cypress"
   },
   "publishConfig": {
     "access": "public"
