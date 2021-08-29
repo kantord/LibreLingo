@@ -23,7 +23,7 @@
 </script>
 
 <script lang="typescript">
-  import ButtonLink from "lluis/ButtonLink.svelte"
+  import Button from "lluis/Button.svelte"
 
   export let readmeHTML: string
   export let title: string
@@ -37,7 +37,7 @@
   description="{$_('about.meta.description')}"
 >
   <div>
-    <ButtonLink primary href="{`course/${courseName}/skill/${practiceHref}`}">Practice {title}</ButtonLink>
+    <Button style="primary" href="{`course/${courseName}/skill/${practiceHref}`}">Practice {title}</Button>
   </div>
 </MarkDownPage>
 
