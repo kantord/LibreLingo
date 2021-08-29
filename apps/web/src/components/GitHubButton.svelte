@@ -13,7 +13,7 @@
   import { onMount } from "svelte"
   import isBrowser from "../utils/isBrowser"
   import Icon from "lluis/Icon.svelte"
-  import ButtonLink from "lluis/ButtonLink.svelte"
+  import Button from "lluis/Button.svelte"
   import isCypress from "../utils/isCypress"
   // eslint-disable-next-line @typescript-eslint/no-var-requires
   const pMemoize = require("p-memoize")
@@ -48,7 +48,7 @@
   })
 </script>
 
-<ButtonLink
+<Button
   target="_blank"
   outlined
   inverted
@@ -65,7 +65,7 @@
     </span>
   {/if}
   <span class="is-hidden-mobile">GitHub</span>
-</ButtonLink>
+</Button>
 
 <style type="text/scss">
   @import "../variables";

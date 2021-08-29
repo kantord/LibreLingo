@@ -29,6 +29,7 @@
   }
 
   $: submitChallenge = () => {
+      console.error("🍌", options[selectedOption])
       registerResult(options[selectedOption].correct)
       submitted = true
   }
