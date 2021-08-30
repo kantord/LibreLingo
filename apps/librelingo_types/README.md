@@ -18,7 +18,7 @@ class TextToSpeechSettings(
             "voice",
             "engine",
         ],
-        defaults=["Polly", "Lupe", "standard"]
+        defaults=["Polly", "Lupe", "standard"],
     ))
 ```
 
@@ -45,7 +45,7 @@ class AudioSettings(
             "enabled",
             "text_to_speech_settings_list",
         ],
-        defaults=[False, []]
+        defaults=[False, []],
     ))
 ```
 
