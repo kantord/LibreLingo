@@ -8,10 +8,10 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.8"
-librelingo-types = {path = "../librelingo_types", develop = true}
+librelingo-types = "^3.0.0"
 librelingo-utils = "^2.4.0"
 python-slugify = "^4.0.1"
-librelingo-yaml-loader = {path = "../librelingo_yaml_loader", develop = true}
+librelingo-yaml-loader = "^1.0.0"
 editdistance = "^0.5.3"
 
 [tool.poetry.dev-dependencies]
