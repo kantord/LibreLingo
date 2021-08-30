@@ -14,6 +14,7 @@ librelingo-json-export = { path = "./apps/librelingo_json_export", develop = tru
 librelingo-fakes = { path = "./apps/librelingo_fakes", develop = true }
 librelingo-utils = { path = "./apps/librelingo_utils", develop = true }
 librelingo-audios = { path = "./apps/librelingo_audios", develop = true }
+librelingo-types = { path = "./apps/librelingo_types", develop = true }
 pytest = "^6.2.2"
 pytest-mock = "^3.5.1"
 pytest-watch = "^4.2.0"
