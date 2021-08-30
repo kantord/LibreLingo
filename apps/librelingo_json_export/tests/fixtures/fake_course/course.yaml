@@ -31,3 +31,11 @@ Course:
 
 Modules:
   - basics/
+
+Settings:
+  Audio:
+    Enabled: True
+    TTS:
+      - Provider: Polly
+        Voice: Lupe
+        Engine: standard

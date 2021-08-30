@@ -40,6 +40,9 @@ from librelingo_types import Word
 from librelingo_types import License
 from librelingo_types import Language
 from librelingo_types import DictionaryItem
+from librelingo_types import Settings
+from librelingo_types import AudioSettings
+from librelingo_types import TextToSpeechSettings
 
 
 challenge1 = "challenge1"
@@ -238,6 +241,11 @@ course1 = Course(
     ],
     dictionary=fake_dictionary,
     repository_url="https://github.com/kantord/LibreLingo/tree/main/courses/spanish-from-english",
+    settings=Settings(
+        audio_settings=AudioSettings(
+            enabled=True, text_to_speech_settings_list=[TextToSpeechSettings()]
+        )
+    ),
 )
 
 course2 = Course(
