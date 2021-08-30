@@ -33,7 +33,7 @@ def ensure_output_directory(output_path, settings):
     "--destructive/--non-destructive",
     default=DEFAULT_SETTINGS.destructive,
     show_default=True,
-    help="--destructive deletes existing audio and re-generates from scratch. --non-destructive performs an iterative update."
+    help="--destructive deletes existing audio and re-generates from scratch. --non-destructive performs an iterative update.",
 )
 def _command(input_path, output_path, course_name, dry_run, destructive):
     """

@@ -1,5 +1,6 @@
 from collections import namedtuple
 
+
 class TextToSpeechSettings(
     namedtuple(
         "TextToSpeechSettings",
@@ -8,7 +9,7 @@ class TextToSpeechSettings(
             "voice",
             "engine",
         ],
-        defaults=["Polly", "Lupe", "standard"]
+        defaults=["Polly", "Lupe", "standard"],
     )
 ):
     """
@@ -27,6 +28,7 @@ class TextToSpeechSettings(
 
     pass
 
+
 class AudioSettings(
     namedtuple(
         "AudioSettings",
@@ -34,7 +36,7 @@ class AudioSettings(
             "enabled",
             "text_to_speech_settings_list",
         ],
-        defaults=[False, []]
+        defaults=[False, []],
     )
 ):
     """

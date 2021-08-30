@@ -344,7 +344,7 @@ def _convert_text_to_speech_settings_list(raw_audio_settings):
 
     return [
         TextToSpeechSettings(tts["Provider"], tts["Voice"], tts["Engine"])
-            for tts in raw_audio_settings["TTS"]
+        for tts in raw_audio_settings["TTS"]
     ]
 
 
@@ -359,13 +359,15 @@ def _convert_audio_settings(raw_settings):
     raw_audio_settings = raw_settings["Audio"]
 
     if raw_audio_settings["Enabled"]:
-        text_to_speech_settings_list = _convert_text_to_speech_settings_list(raw_audio_settings)
+        text_to_speech_settings_list = _convert_text_to_speech_settings_list(
+            raw_audio_settings
+        )
     else:
         text_to_speech_settings_list = []
 
     return AudioSettings(
         enabled=raw_audio_settings["Enabled"] == "True",
-        text_to_speech_settings_list=text_to_speech_settings_list
+        text_to_speech_settings_list=text_to_speech_settings_list,
     )
 
 
