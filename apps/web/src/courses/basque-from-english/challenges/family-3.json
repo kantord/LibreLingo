@@ -1,14 +1,14 @@
 {
-  "id": "eed990f1651f",
+  "id": "886841f75a00",
   "levels": 5,
   "challenges": [
     {
       "type": "options",
-      "formInTargetLanguage": "Miren neba naiz.",
-      "meaningInSourceLanguage": "I am Miren's brother.",
-      "id": "a8211ab835d5",
+      "formInTargetLanguage": "Mirenen neba naiz.",
+      "meaningInSourceLanguage": "I am Miren’s brother.",
+      "id": "abc64541e0db",
       "priority": 0,
-      "group": "98bbf2de5ac9"
+      "group": "5eadbe48e596"
     },
     {
       "type": "chips",
@@ -23,8 +23,8 @@
           "definition": "nago (egon)\nnaiz\nnaiz (izan)"
         },
         {
-          "word": "Miren's",
-          "definition": "Miren (female name)\nMirenen (female name)\nMirenen(female name)"
+          "word": "Miren’s",
+          "definition": "Miren (female name)\nMirenen\nMirenen (female name)"
         },
         {
           "word": "brother.",
@@ -32,31 +32,29 @@
         }
       ],
       "chips": [
-        "Miren",
+        "Mirenen",
         "neba",
-        "naiz",
-        "nire",
-        "nirea"
+        "naiz"
       ],
       "solutions": [
         [
-          "Miren",
+          "Mirenen",
           "neba",
           "naiz"
         ]
       ],
-      "formattedSolution": "Miren neba naiz.",
-      "id": "99a4b805ec7a",
+      "formattedSolution": "Mirenen neba naiz.",
+      "id": "d9857b1ba7f0",
       "priority": 2,
-      "group": "98bbf2de5ac9"
+      "group": "5eadbe48e596"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Miren",
-          "definition": "Miren (female name)\nMiren's (female name)"
+          "word": "Mirenen",
+          "definition": "Miren's (female name)\nMiren’s\nMiren’s (female name)"
         },
         {
           "word": "neba",
@@ -70,32 +68,36 @@
       "chips": [
         "I",
         "am",
-        "Miren's",
-        "brother",
-        "are",
-        "e",
-        "r"
+        "Miren’s",
+        "brother"
       ],
       "solutions": [
         [
           "I",
           "am",
-          "Miren's",
+          "Miren’s",
           "brother"
+        ],
+        [
+          "I",
+          "am",
+          "brother",
+          "of",
+          "Miren"
         ]
       ],
-      "formattedSolution": "I am Miren's brother.",
-      "id": "e5804d40a3f2",
+      "formattedSolution": "I am Miren’s brother.",
+      "id": "5ebcedb6a911",
       "priority": 2,
-      "group": "98bbf2de5ac9"
+      "group": "5eadbe48e596"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Miren ahizpa naiz.",
-      "meaningInSourceLanguage": "I am Miren's sister.",
-      "id": "fc22ec03dc4b",
+      "formInTargetLanguage": "Mirenen ahizpa naiz.",
+      "meaningInSourceLanguage": "I am Miren’s sister.",
+      "id": "14b6e596e601",
       "priority": 0,
-      "group": "c3a40ec479f1"
+      "group": "0d6bad1e76a8"
     },
     {
       "type": "chips",
@@ -110,8 +112,8 @@
           "definition": "nago (egon)\nnaiz\nnaiz (izan)"
         },
         {
-          "word": "Miren's",
-          "definition": "Miren (female name)\nMirenen (female name)\nMirenen(female name)"
+          "word": "Miren’s",
+          "definition": "Miren (female name)\nMirenen\nMirenen (female name)"
         },
         {
           "word": "sister.",
@@ -119,31 +121,29 @@
         }
       ],
       "chips": [
-        "Miren",
+        "Mirenen",
         "ahizpa",
-        "naiz",
-        "gizen",
-        "nire"
+        "naiz"
       ],
       "solutions": [
         [
-          "Miren",
+          "Mirenen",
           "ahizpa",
           "naiz"
         ]
       ],
-      "formattedSolution": "Miren ahizpa naiz.",
-      "id": "4e62724ee3ba",
+      "formattedSolution": "Mirenen ahizpa naiz.",
+      "id": "de1501c67b32",
       "priority": 2,
-      "group": "c3a40ec479f1"
+      "group": "0d6bad1e76a8"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Miren",
-          "definition": "Miren (female name)\nMiren's (female name)"
+          "word": "Mirenen",
+          "definition": "Miren's (female name)\nMiren’s\nMiren’s (female name)"
         },
         {
           "word": "ahizpa",
@@ -157,32 +157,36 @@
       "chips": [
         "I",
         "am",
-        "Miren's",
-        "sister",
-        "is",
-        "e",
-        "i"
+        "Miren’s",
+        "sister"
       ],
       "solutions": [
         [
           "I",
           "am",
-          "Miren's",
+          "Miren’s",
           "sister"
+        ],
+        [
+          "I",
+          "am",
+          "sister",
+          "of",
+          "Miren"
         ]
       ],
-      "formattedSolution": "I am Miren's sister.",
-      "id": "60ae4c0ea375",
+      "formattedSolution": "I am Miren’s sister.",
+      "id": "02eca20e5fbc",
       "priority": 2,
-      "group": "c3a40ec479f1"
+      "group": "0d6bad1e76a8"
     },
     {
       "type": "options",
       "formInTargetLanguage": "Aitorren anaia naiz",
-      "meaningInSourceLanguage": "I am Aitor's brother.",
-      "id": "fc60408b8d2f",
+      "meaningInSourceLanguage": "I am Aitor’s brother.",
+      "id": "cede4227a153",
       "priority": 0,
-      "group": "5e18eef967da"
+      "group": "47c6aae213d6"
     },
     {
       "type": "chips",
@@ -197,8 +201,8 @@
           "definition": "nago (egon)\nnaiz\nnaiz (izan)"
         },
         {
-          "word": "Aitor's",
-          "definition": "Aitorren (male name)"
+          "word": "Aitor’s",
+          "definition": "Aitorren\nAitorren (male name)"
         },
         {
           "word": "brother.",
@@ -208,9 +212,7 @@
       "chips": [
         "Aitorren",
         "anaia",
-        "naiz",
-        "orain",
-        "anaian"
+        "naiz"
       ],
       "solutions": [
         [
@@ -220,9 +222,9 @@
         ]
       ],
       "formattedSolution": "Aitorren anaia naiz",
-      "id": "db932cf200a0",
+      "id": "dbe6ecaf20c7",
       "priority": 2,
-      "group": "5e18eef967da"
+      "group": "47c6aae213d6"
     },
     {
       "type": "chips",
@@ -230,7 +232,7 @@
       "phrase": [
         {
           "word": "Aitorren",
-          "definition": "Aitor's (male name)\nAitor’s"
+          "definition": "Aitor's (male name)\nAitor’s\nAitor’s (male name)"
         },
         {
           "word": "anaia",
@@ -244,32 +246,36 @@
       "chips": [
         "I",
         "am",
-        "Aitor's",
-        "brother",
-        "or",
-        "r",
-        "t"
+        "Aitor’s",
+        "brother"
       ],
       "solutions": [
         [
           "I",
           "am",
-          "Aitor's",
+          "Aitor’s",
           "brother"
+        ],
+        [
+          "I",
+          "am",
+          "brother",
+          "of",
+          "Aitor"
         ]
       ],
-      "formattedSolution": "I am Aitor's brother.",
-      "id": "6eab14955260",
+      "formattedSolution": "I am Aitor’s brother.",
+      "id": "d0cdad19f295",
       "priority": 2,
-      "group": "5e18eef967da"
+      "group": "47c6aae213d6"
     },
     {
       "type": "options",
       "formInTargetLanguage": "Aitorren arreba naiz.",
-      "meaningInSourceLanguage": "I am Aitor's sister.",
-      "id": "c4dc1d1ec479",
+      "meaningInSourceLanguage": "I am Aitor’s sister.",
+      "id": "245adf34d909",
       "priority": 0,
-      "group": "b0286cd02f0f"
+      "group": "a0271c57595e"
     },
     {
       "type": "chips",
@@ -284,8 +290,8 @@
           "definition": "nago (egon)\nnaiz\nnaiz (izan)"
         },
         {
-          "word": "Aitor's",
-          "definition": "Aitorren (male name)"
+          "word": "Aitor’s",
+          "definition": "Aitorren\nAitorren (male name)"
         },
         {
           "word": "sister.",
@@ -295,9 +301,7 @@
       "chips": [
         "Aitorren",
         "arreba",
-        "naiz",
-        "nire",
-        "nirea"
+        "naiz"
       ],
       "solutions": [
         [
@@ -307,9 +311,9 @@
         ]
       ],
       "formattedSolution": "Aitorren arreba naiz.",
-      "id": "d698b1247240",
+      "id": "8a9d82bac297",
       "priority": 2,
-      "group": "b0286cd02f0f"
+      "group": "a0271c57595e"
     },
     {
       "type": "chips",
@@ -317,7 +321,7 @@
       "phrase": [
         {
           "word": "Aitorren",
-          "definition": "Aitor's (male name)\nAitor’s"
+          "definition": "Aitor's (male name)\nAitor’s\nAitor’s (male name)"
         },
         {
           "word": "arreba",
@@ -331,24 +335,28 @@
       "chips": [
         "I",
         "am",
-        "Aitor's",
-        "sister",
-        "is",
-        "it",
-        "i"
+        "Aitor’s",
+        "sister"
       ],
       "solutions": [
         [
           "I",
           "am",
-          "Aitor's",
+          "Aitor’s",
           "sister"
+        ],
+        [
+          "I",
+          "am",
+          "sister",
+          "of",
+          "Aitor"
         ]
       ],
-      "formattedSolution": "I am Aitor's sister.",
-      "id": "a50a3479e381",
+      "formattedSolution": "I am Aitor’s sister.",
+      "id": "aec9f758e2c4",
       "priority": 2,
-      "group": "b0286cd02f0f"
+      "group": "a0271c57595e"
     },
     {
       "type": "options",
@@ -388,11 +396,7 @@
         "hau",
         "nire",
         "neskalaguna",
-        "da",
-        "neska",
-        "a",
-        "eta",
-        "Hau"
+        "da"
       ],
       "solutions": [
         [
@@ -438,11 +442,7 @@
         "girl",
         "is",
         "my",
-        "girlfriend",
-        "his",
-        "in",
-        "it",
-        "Hi"
+        "girlfriend"
       ],
       "solutions": [
         [
@@ -460,11 +460,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Nire anaia neskalaguna polita da.",
-      "meaningInSourceLanguage": "My brother's girlfriend is nice.",
-      "id": "ec15c981cca6",
+      "formInTargetLanguage": "Nire anaiaren neskalaguna jatorra da.",
+      "meaningInSourceLanguage": "My brother’s girlfriend is nice.",
+      "id": "bd0e8c0b61b1",
       "priority": 0,
-      "group": "0cbe9013a4d7"
+      "group": "12480ac83543"
     },
     {
       "type": "chips",
@@ -475,8 +475,8 @@
           "definition": "nire"
         },
         {
-          "word": "brother's",
-          "definition": "anaian\nneban"
+          "word": "brother’s",
+          "definition": "anaianen\nnebanen"
         },
         {
           "word": "girlfriend",
@@ -488,33 +488,36 @@
         },
         {
           "word": "nice.",
-          "definition": "jator\njatora\njatorak"
+          "definition": "jator\njatora\njatorak\njatorra"
         }
       ],
       "chips": [
         "Nire",
-        "anaia",
+        "anaiaren",
         "neskalaguna",
-        "polita",
-        "da",
-        "aita",
-        "dira",
-        "gida",
-        "ona"
+        "jatorra",
+        "da"
       ],
       "solutions": [
         [
           "Nire",
-          "anaia",
+          "anaiaren",
           "neskalaguna",
-          "polita",
+          "jatorra",
+          "da"
+        ],
+        [
+          "Nire",
+          "nebaren",
+          "neskalaguna",
+          "jatorra",
           "da"
         ]
       ],
-      "formattedSolution": "Nire anaia neskalaguna polita da.",
-      "id": "415404ddb296",
+      "formattedSolution": "Nire anaiaren neskalaguna jatorra da.",
+      "id": "9d0082b1e83b",
       "priority": 2,
-      "group": "0cbe9013a4d7"
+      "group": "12480ac83543"
     },
     {
       "type": "chips",
@@ -525,16 +528,16 @@
           "definition": "my"
         },
         {
-          "word": "anaia",
-          "definition": "brother of a brother"
+          "word": "anaiaren",
+          "definition": "brother’s"
         },
         {
           "word": "neskalaguna",
           "definition": "girlfriend"
         },
         {
-          "word": "polita",
-          "definition": "pretty"
+          "word": "jatorra",
+          "definition": "nice"
         },
         {
           "word": "da.",
@@ -543,36 +546,41 @@
       ],
       "chips": [
         "My",
-        "brother's",
+        "brother’s",
         "girlfriend",
         "is",
-        "nice",
-        "it",
-        "his",
-        "in",
-        "girl"
+        "nice"
       ],
       "solutions": [
         [
           "My",
-          "brother's",
+          "brother’s",
           "girlfriend",
+          "is",
+          "nice"
+        ],
+        [
+          "The",
+          "girlfriend",
+          "of",
+          "my",
+          "brother",
           "is",
           "nice"
         ]
       ],
-      "formattedSolution": "My brother's girlfriend is nice.",
-      "id": "2670cea7148f",
+      "formattedSolution": "My brother’s girlfriend is nice.",
+      "id": "ab3171408d19",
       "priority": 2,
-      "group": "0cbe9013a4d7"
+      "group": "12480ac83543"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Nire arreba mutillaguna altua da.",
-      "meaningInSourceLanguage": "My sister's boyfriend is tall.",
-      "id": "13e1e30155bf",
+      "formInTargetLanguage": "Nire arrebaren mutillaguna altua da.",
+      "meaningInSourceLanguage": "My sister’s boyfriend is tall.",
+      "id": "b3ac4a45c08e",
       "priority": 0,
-      "group": "fb912db4a084"
+      "group": "d4857323e2ff"
     },
     {
       "type": "chips",
@@ -583,8 +591,8 @@
           "definition": "nire"
         },
         {
-          "word": "sister's",
-          "definition": "ahizpan\narreban"
+          "word": "sister’s",
+          "definition": "ahizparen\narrebaren"
         },
         {
           "word": "boyfriend",
@@ -601,28 +609,31 @@
       ],
       "chips": [
         "Nire",
-        "arreba",
+        "arrebaren",
         "mutillaguna",
         "altua",
-        "da",
-        "dira",
-        "aita",
-        "eta",
-        "nirea"
+        "da"
       ],
       "solutions": [
         [
           "Nire",
-          "arreba",
+          "arrebaren",
+          "mutillaguna",
+          "altua",
+          "da"
+        ],
+        [
+          "Nire",
+          "ahizparen",
           "mutillaguna",
           "altua",
           "da"
         ]
       ],
-      "formattedSolution": "Nire arreba mutillaguna altua da.",
-      "id": "362ab3cba9e6",
+      "formattedSolution": "Nire arrebaren mutillaguna altua da.",
+      "id": "0e40cdb8f259",
       "priority": 2,
-      "group": "fb912db4a084"
+      "group": "d4857323e2ff"
     },
     {
       "type": "chips",
@@ -633,8 +644,8 @@
           "definition": "my"
         },
         {
-          "word": "arreba",
-          "definition": "sister of a brother"
+          "word": "arrebaren",
+          "definition": "sister’s"
         },
         {
           "word": "mutillaguna",
@@ -651,48 +662,53 @@
       ],
       "chips": [
         "My",
-        "sister's",
+        "sister’s",
         "boyfriend",
         "is",
-        "tall",
-        "it",
-        "in",
-        "or",
-        "his"
+        "tall"
       ],
       "solutions": [
         [
           "My",
-          "sister's",
+          "sister’s",
           "boyfriend",
+          "is",
+          "tall"
+        ],
+        [
+          "The",
+          "boyfriend",
+          "of",
+          "my",
+          "sister",
           "is",
           "tall"
         ]
       ],
-      "formattedSolution": "My sister's boyfriend is tall.",
-      "id": "79042012e956",
+      "formattedSolution": "My sister’s boyfriend is tall.",
+      "id": "8419a6acba2c",
       "priority": 2,
-      "group": "fb912db4a084"
+      "group": "d4857323e2ff"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Mirenen ahizpan mutillaguna altua da.",
-      "meaningInSourceLanguage": "Miren's sister's boyfriend is tall.",
-      "id": "5ccdb42b7c42",
+      "formInTargetLanguage": "Mirenen ahizparen mutillaguna altua da.",
+      "meaningInSourceLanguage": "Miren’s sister’s boyfriend is tall.",
+      "id": "dae6c8ac5094",
       "priority": 0,
-      "group": "dcf8c6c95e4f"
+      "group": "3f33379a53db"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
         {
-          "word": "Miren's",
-          "definition": "Miren (female name)\nMirenen (female name)\nMirenen(female name)"
+          "word": "Miren’s",
+          "definition": "Miren (female name)\nMirenen\nMirenen (female name)"
         },
         {
-          "word": "sister's",
-          "definition": "ahizpan\narreban"
+          "word": "sister’s",
+          "definition": "ahizparen\narrebaren"
         },
         {
           "word": "boyfriend",
@@ -709,28 +725,24 @@
       ],
       "chips": [
         "Mirenen",
-        "ahizpan",
+        "ahizparen",
         "mutillaguna",
         "altua",
-        "da",
-        "aita",
-        "dira",
-        "Miren",
-        "eta"
+        "da"
       ],
       "solutions": [
         [
           "Mirenen",
-          "ahizpan",
+          "ahizparen",
           "mutillaguna",
           "altua",
           "da"
         ]
       ],
-      "formattedSolution": "Mirenen ahizpan mutillaguna altua da.",
-      "id": "5b0741b32b02",
+      "formattedSolution": "Mirenen ahizparen mutillaguna altua da.",
+      "id": "7a400658a56e",
       "priority": 2,
-      "group": "dcf8c6c95e4f"
+      "group": "3f33379a53db"
     },
     {
       "type": "chips",
@@ -741,8 +753,8 @@
           "definition": "Miren's (female name)\nMiren’s\nMiren’s (female name)"
         },
         {
-          "word": "ahizpan",
-          "definition": "sister's"
+          "word": "ahizparen",
+          "definition": "sister’s"
         },
         {
           "word": "mutillaguna",
@@ -758,49 +770,64 @@
         }
       ],
       "chips": [
-        "Miren's",
-        "sister's",
+        "Miren’s",
+        "sister’s",
         "boyfriend",
         "is",
-        "tall",
-        "Miren",
-        "girls",
-        "fine",
-        "birds"
+        "tall"
       ],
       "solutions": [
         [
-          "Miren's",
-          "sister's",
+          "Miren’s",
+          "sister’s",
           "boyfriend",
+          "is",
+          "tall"
+        ],
+        [
+          "The",
+          "boyfriend",
+          "of",
+          "Miren’s",
+          "sister",
+          "is",
+          "tall"
+        ],
+        [
+          "The",
+          "boyfriend",
+          "of",
+          "sister",
+          "of",
+          "Miren",
           "is",
           "tall"
         ]
       ],
-      "formattedSolution": "Miren's sister's boyfriend is tall.",
-      "id": "ffe3f432ddd3",
+      "formattedSolution": "Miren’s sister’s boyfriend is tall.",
+      "id": "7fcd3fd3c9d9",
       "priority": 2,
-      "group": "dcf8c6c95e4f"
+      "group": "3f33379a53db"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Aitorren anaian neskalaguna argala da.",
-      "meaningInSourceLanguage": "Aitor's brother's girlfriend is thin.",
-      "id": "9c4451f7f0e9",
+      "formInTargetLanguage": "Aitorren anaiaren neskalaguna argala da.",
+      "meaningInSourceLanguage": "Aitor’s brother’s girlfriend is thin.",
+      "id": "28604aa0246b",
       "priority": 0,
-      "group": "f55744126ecd"
+      "group": "fd4d078647a9"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
         {
-          "word": "Aitor's",
-          "definition": "Aitorren (male name)"
+          "word": "Aitor’s",
+          "definition": "Aitorren\nAitorren (male name)"
         },
         {
-          "word": "brother's",
-          "definition": "anaian\nneban"
+          "word": "brother’s",
+          "definition": "anaianen\nnebanen"
         },
         {
           "word": "girlfriend",
@@ -817,28 +844,24 @@
       ],
       "chips": [
         "Aitorren",
-        "anaian",
+        "anaiaren",
         "neskalaguna",
         "argala",
-        "da",
-        "anaia",
-        "orain",
-        "argal",
-        "alaba"
+        "da"
       ],
       "solutions": [
         [
           "Aitorren",
-          "anaian",
+          "anaiaren",
           "neskalaguna",
           "argala",
           "da"
         ]
       ],
-      "formattedSolution": "Aitorren anaian neskalaguna argala da.",
-      "id": "e1d1f3c66587",
+      "formattedSolution": "Aitorren anaiaren neskalaguna argala da.",
+      "id": "a396354e6e00",
       "priority": 2,
-      "group": "f55744126ecd"
+      "group": "fd4d078647a9"
     },
     {
       "type": "chips",
@@ -846,11 +869,11 @@
       "phrase": [
         {
           "word": "Aitorren",
-          "definition": "Aitor's (male name)\nAitor’s"
+          "definition": "Aitor's (male name)\nAitor’s\nAitor’s (male name)"
         },
         {
-          "word": "anaian",
-          "definition": "brother of a brother's"
+          "word": "anaiaren",
+          "definition": "brother’s"
         },
         {
           "word": "neskalaguna",
@@ -866,29 +889,45 @@
         }
       ],
       "chips": [
-        "Aitor's",
-        "brother's",
+        "Aitor’s",
+        "brother’s",
         "girlfriend",
         "is",
-        "thin",
-        "his",
-        "girls",
-        "girl",
-        "Aitor"
+        "thin"
       ],
       "solutions": [
         [
-          "Aitor's",
-          "brother's",
+          "Aitor’s",
+          "brother’s",
           "girlfriend",
+          "is",
+          "thin"
+        ],
+        [
+          "The",
+          "girlfriend",
+          "of",
+          "Aitor’s",
+          "brother",
+          "is",
+          "thin"
+        ],
+        [
+          "The",
+          "girlfriend",
+          "of",
+          "the",
+          "brother",
+          "of",
+          "Aitor",
           "is",
           "thin"
         ]
       ],
-      "formattedSolution": "Aitor's brother's girlfriend is thin.",
-      "id": "f1b5084c43f4",
+      "formattedSolution": "Aitor’s brother’s girlfriend is thin.",
+      "id": "099563415d66",
       "priority": 2,
-      "group": "f55744126ecd"
+      "group": "fd4d078647a9"
     },
     {
       "type": "options",
@@ -927,10 +966,7 @@
         "Turista",
         "nire",
         "iloba",
-        "da",
-        "dira",
-        "Hura",
-        "gida"
+        "da"
       ],
       "solutions": [
         [
@@ -971,11 +1007,7 @@
         "tourist",
         "is",
         "my",
-        "niece",
-        "it",
-        "me",
-        "his",
-        "in"
+        "niece"
       ],
       "solutions": [
         [
@@ -1031,10 +1063,7 @@
         "Gu",
         "zure",
         "ilobak",
-        "gara",
-        "zara",
-        "Hura",
-        "gure"
+        "gara"
       ],
       "solutions": [
         [
@@ -1074,10 +1103,7 @@
         "We",
         "are",
         "your",
-        "nieces",
-        "one",
-        "He",
-        "e"
+        "nieces"
       ],
       "solutions": [
         [
@@ -1144,11 +1170,7 @@
         "horiek",
         "gure",
         "seme-albak",
-        "dira",
-        "gureak",
-        "umea",
-        "ere",
-        "gara"
+        "dira"
       ],
       "solutions": [
         [
@@ -1196,13 +1218,7 @@
         "our",
         "sons",
         "and",
-        "daughters",
-        "one",
-        "cars",
-        "here",
-        "the",
-        "She",
-        "or"
+        "daughters"
       ],
       "solutions": [
         [
@@ -1213,6 +1229,13 @@
           "sons",
           "and",
           "daughters"
+        ],
+        [
+          "Those",
+          "children",
+          "are",
+          "our",
+          "children"
         ]
       ],
       "formattedSolution": "Those children are our sons and daughters.",
@@ -1261,10 +1284,7 @@
         "Zure",
         "seme-albak",
         "ikasleak",
-        "dira",
-        "zara",
-        "gara",
-        "zurea"
+        "dira"
       ],
       "solutions": [
         [
@@ -1306,12 +1326,7 @@
         "and",
         "daughters",
         "are",
-        "students",
-        "aunt",
-        "one",
-        "our",
-        "ours",
-        "You"
+        "students"
       ],
       "solutions": [
         [
@@ -1319,6 +1334,12 @@
           "sons",
           "and",
           "daughters",
+          "are",
+          "students"
+        ],
+        [
+          "Your",
+          "children",
           "are",
           "students"
         ]
@@ -1331,10 +1352,10 @@
     {
       "type": "options",
       "formInTargetLanguage": "Gure aitaren anaia gure osaba da.",
-      "meaningInSourceLanguage": "Our father's brother is our uncle.",
-      "id": "f14d7cc822c1",
+      "meaningInSourceLanguage": "Our father’s brother is our uncle.",
+      "id": "eb07e95cfac7",
       "priority": 0,
-      "group": "40db602050c2"
+      "group": "1991c8b4943c"
     },
     {
       "type": "chips",
@@ -1345,7 +1366,7 @@
           "definition": "gure"
         },
         {
-          "word": "father's",
+          "word": "father’s",
           "definition": "aitaren"
         },
         {
@@ -1371,12 +1392,7 @@
         "anaia",
         "gure",
         "osaba",
-        "da",
-        "gara",
-        "zara",
-        "Hura",
-        "dira",
-        "nire"
+        "da"
       ],
       "solutions": [
         [
@@ -1389,9 +1405,9 @@
         ]
       ],
       "formattedSolution": "Gure aitaren anaia gure osaba da.",
-      "id": "bd15d10e57ab",
+      "id": "bb88b8d36bca",
       "priority": 2,
-      "group": "40db602050c2"
+      "group": "1991c8b4943c"
     },
     {
       "type": "chips",
@@ -1403,7 +1419,7 @@
         },
         {
           "word": "aitaren",
-          "definition": "father's"
+          "definition": "father's\nfather’s"
         },
         {
           "word": "anaia",
@@ -1424,39 +1440,44 @@
       ],
       "chips": [
         "Our",
-        "father's",
+        "father’s",
         "brother",
         "is",
         "our",
-        "uncle",
-        "her",
-        "the",
-        "or",
-        "one",
-        "car"
+        "uncle"
       ],
       "solutions": [
         [
           "Our",
-          "father's",
+          "father’s",
           "brother",
+          "is",
+          "our",
+          "uncle"
+        ],
+        [
+          "The",
+          "brother",
+          "of",
+          "our",
+          "father",
           "is",
           "our",
           "uncle"
         ]
       ],
-      "formattedSolution": "Our father's brother is our uncle.",
-      "id": "4b5c3a841fe4",
+      "formattedSolution": "Our father’s brother is our uncle.",
+      "id": "82981c49df4a",
       "priority": 2,
-      "group": "40db602050c2"
+      "group": "1991c8b4943c"
     },
     {
       "type": "options",
       "formInTargetLanguage": "Gure amaren ahizpa gure izeba da.",
-      "meaningInSourceLanguage": "Our mother's sister is our aunt.",
-      "id": "73f80d28d094",
+      "meaningInSourceLanguage": "Our mother’s sister is our aunt.",
+      "id": "dd5a36507987",
       "priority": 0,
-      "group": "75964f1ae550"
+      "group": "227d8791dcc7"
     },
     {
       "type": "chips",
@@ -1467,7 +1488,7 @@
           "definition": "gure"
         },
         {
-          "word": "mother's",
+          "word": "mother’s",
           "definition": "amaren"
         },
         {
@@ -1493,12 +1514,7 @@
         "ahizpa",
         "gure",
         "izeba",
-        "da",
-        "zara",
-        "Hura",
-        "ere",
-        "gara",
-        "dira"
+        "da"
       ],
       "solutions": [
         [
@@ -1511,9 +1527,9 @@
         ]
       ],
       "formattedSolution": "Gure amaren ahizpa gure izeba da.",
-      "id": "18c520ea3892",
+      "id": "2e1c8de3fc11",
       "priority": 2,
-      "group": "75964f1ae550"
+      "group": "227d8791dcc7"
     },
     {
       "type": "chips",
@@ -1525,7 +1541,7 @@
         },
         {
           "word": "amaren",
-          "definition": "mother's"
+          "definition": "mother's\nmother’s"
         },
         {
           "word": "ahizpa",
@@ -1546,39 +1562,44 @@
       ],
       "chips": [
         "Our",
-        "mother's",
+        "mother’s",
         "sister",
         "is",
         "our",
-        "aunt",
-        "or",
-        "her",
-        "ours",
-        "it",
-        "bus"
+        "aunt"
       ],
       "solutions": [
         [
           "Our",
-          "mother's",
+          "mother’s",
           "sister",
+          "is",
+          "our",
+          "aunt"
+        ],
+        [
+          "The",
+          "sister",
+          "of",
+          "our",
+          "mother",
           "is",
           "our",
           "aunt"
         ]
       ],
-      "formattedSolution": "Our mother's sister is our aunt.",
-      "id": "93203c514ac6",
+      "formattedSolution": "Our mother’s sister is our aunt.",
+      "id": "2354a388b43d",
       "priority": 2,
-      "group": "75964f1ae550"
+      "group": "227d8791dcc7"
     },
     {
       "type": "options",
       "formInTargetLanguage": "Gure amaren neba gure osaba da.",
-      "meaningInSourceLanguage": "Our mother's brother is our uncle.",
-      "id": "bb7433f78499",
+      "meaningInSourceLanguage": "Our mother’s brother is our uncle.",
+      "id": "20e5f47b5ddd",
       "priority": 0,
-      "group": "f8aa4bd42c2a"
+      "group": "8b76527e4d9b"
     },
     {
       "type": "chips",
@@ -1589,7 +1610,7 @@
           "definition": "gure"
         },
         {
-          "word": "mother's",
+          "word": "mother’s",
           "definition": "amaren"
         },
         {
@@ -1615,12 +1636,7 @@
         "neba",
         "gure",
         "osaba",
-        "da",
-        "gara",
-        "zara",
-        "Hura",
-        "ere",
-        "Zure"
+        "da"
       ],
       "solutions": [
         [
@@ -1633,9 +1649,9 @@
         ]
       ],
       "formattedSolution": "Gure amaren neba gure osaba da.",
-      "id": "5a053f39e523",
+      "id": "eea8019f1591",
       "priority": 2,
-      "group": "f8aa4bd42c2a"
+      "group": "8b76527e4d9b"
     },
     {
       "type": "chips",
@@ -1647,7 +1663,7 @@
         },
         {
           "word": "amaren",
-          "definition": "mother's"
+          "definition": "mother's\nmother’s"
         },
         {
           "word": "neba",
@@ -1668,39 +1684,44 @@
       ],
       "chips": [
         "Our",
-        "mother's",
+        "mother’s",
         "brother",
         "is",
         "our",
-        "uncle",
-        "or",
-        "her",
-        "one",
-        "the",
-        "ours"
+        "uncle"
       ],
       "solutions": [
         [
           "Our",
-          "mother's",
+          "mother’s",
           "brother",
+          "is",
+          "our",
+          "uncle"
+        ],
+        [
+          "The",
+          "brother",
+          "of",
+          "our",
+          "mother",
           "is",
           "our",
           "uncle"
         ]
       ],
-      "formattedSolution": "Our mother's brother is our uncle.",
-      "id": "5fa18f212582",
+      "formattedSolution": "Our mother’s brother is our uncle.",
+      "id": "b3b9cb8058fe",
       "priority": 2,
-      "group": "f8aa4bd42c2a"
+      "group": "8b76527e4d9b"
     },
     {
       "type": "options",
       "formInTargetLanguage": "Gure aitaren arreba gure izeba da.",
-      "meaningInSourceLanguage": "Our father's sister is our aunt.",
-      "id": "bbddc6ce21b2",
+      "meaningInSourceLanguage": "Our father’s sister is our aunt.",
+      "id": "c9fa2c5b773e",
       "priority": 0,
-      "group": "cb70cf4e7ea3"
+      "group": "f0e023a6d798"
     },
     {
       "type": "chips",
@@ -1711,7 +1732,7 @@
           "definition": "gure"
         },
         {
-          "word": "father's",
+          "word": "father’s",
           "definition": "aitaren"
         },
         {
@@ -1737,12 +1758,7 @@
         "arreba",
         "gure",
         "izeba",
-        "da",
-        "ere",
-        "nire",
-        "Zure",
-        "zurea",
-        "nirea"
+        "da"
       ],
       "solutions": [
         [
@@ -1755,9 +1771,9 @@
         ]
       ],
       "formattedSolution": "Gure aitaren arreba gure izeba da.",
-      "id": "f29021cc54d1",
+      "id": "24fdc5054be4",
       "priority": 2,
-      "group": "cb70cf4e7ea3"
+      "group": "f0e023a6d798"
     },
     {
       "type": "chips",
@@ -1769,7 +1785,7 @@
         },
         {
           "word": "aitaren",
-          "definition": "father's"
+          "definition": "father's\nfather’s"
         },
         {
           "word": "arreba",
@@ -1790,31 +1806,36 @@
       ],
       "chips": [
         "Our",
-        "father's",
+        "father’s",
         "sister",
         "is",
         "our",
-        "aunt",
-        "her",
-        "it",
-        "bus",
-        "or",
-        "but"
+        "aunt"
       ],
       "solutions": [
         [
           "Our",
-          "father's",
+          "father’s",
           "sister",
+          "is",
+          "our",
+          "aunt"
+        ],
+        [
+          "The",
+          "sister",
+          "of",
+          "our",
+          "father",
           "is",
           "our",
           "aunt"
         ]
       ],
-      "formattedSolution": "Our father's sister is our aunt.",
-      "id": "40602ac432b0",
+      "formattedSolution": "Our father’s sister is our aunt.",
+      "id": "f1c896e0916e",
       "priority": 2,
-      "group": "cb70cf4e7ea3"
+      "group": "f0e023a6d798"
     },
     {
       "type": "cards",
@@ -1858,15 +1879,6 @@
         }
       ],
       "id": "b30a2087d1eb",
-      "priority": 1,
-      "group": "e3c4995e0cae"
-    },
-    {
-      "type": "listeningExercise",
-      "answer": "ahizpa",
-      "meaning": "sister of a sister",
-      "audio": "4706a3d7f2e8d7ba50ce966f6feaff9a63f3ae93c12903e1873772322a325da2",
-      "id": "2d2e7bd4424e",
       "priority": 1,
       "group": "e3c4995e0cae"
     },
@@ -1916,15 +1928,6 @@
       "group": "9f380c74853e"
     },
     {
-      "type": "listeningExercise",
-      "answer": "anaia",
-      "meaning": "brother of a brother",
-      "audio": "06baad3e37f9f9d4cc044ba64245942977913dc8e9a656adf7a8265bc02948ab",
-      "id": "d9124532a765",
-      "priority": 1,
-      "group": "016bc03f9716"
-    },
-    {
       "type": "cards",
       "pictures": [
         "sisterofbrother1.jpg",
@@ -1968,15 +1971,6 @@
       "id": "a2aaaa714638",
       "priority": 1,
       "group": "6114770de551"
-    },
-    {
-      "type": "listeningExercise",
-      "answer": "arreba",
-      "meaning": "sister of a brother",
-      "audio": "0e533b18fff0d1c742db702680af6c057425c8dc7fdc2d27841ffbe2d8baf6af",
-      "id": "2971ae09a1b0",
-      "priority": 1,
-      "group": "3007e1b7fa71"
     },
     {
       "type": "cards",
@@ -2024,33 +2018,24 @@
       "group": "3c59e2d3096a"
     },
     {
-      "type": "listeningExercise",
-      "answer": "neba",
-      "meaning": "brother of a sister",
-      "audio": "e8bde413196e91ec738198e96ff6b1572d889d112bf4ce38e9ad949a85ecbffc",
-      "id": "081c9e61ebeb",
-      "priority": 1,
-      "group": "3c59e2d3096a"
-    },
-    {
       "type": "cards",
       "pictures": [
         "niece1.jpg",
-        "nephew1.jpg",
-        "niece2.jpg"
+        "nephew2.jpg",
+        "niece3.jpg"
       ],
       "formInTargetLanguage": "iloba",
       "meaningInSourceLanguage": "niece",
-      "id": "d7adbbe369b1",
+      "id": "b0c06ed91177",
       "priority": 0,
-      "group": "7399ba83fe09"
+      "group": "617e969b4b26"
     },
     {
       "type": "shortInput",
       "pictures": [
         "niece1.jpg",
-        "nephew1.jpg",
-        "niece2.jpg"
+        "nephew2.jpg",
+        "niece3.jpg"
       ],
       "formInTargetLanguage": [
         "iloba"
@@ -2061,18 +2046,9 @@
           "definition": "iloba"
         }
       ],
-      "id": "0243a7e4bdb4",
+      "id": "0d295c122461",
       "priority": 1,
-      "group": "7399ba83fe09"
-    },
-    {
-      "type": "listeningExercise",
-      "answer": "iloba",
-      "meaning": "niece",
-      "audio": "611308970840d95405cd93a5871aa5a120b0bf8b4419dc68db6316597e819a71",
-      "id": "28d24dbe3cb9",
-      "priority": 1,
-      "group": "7399ba83fe09"
+      "group": "617e969b4b26"
     },
     {
       "type": "cards",
@@ -2106,15 +2082,6 @@
       "id": "58ad18872f13",
       "priority": 1,
       "group": "1a12bddb6fe8"
-    },
-    {
-      "type": "listeningExercise",
-      "answer": "mutillaguna",
-      "meaning": "boyfriend",
-      "audio": "66a0582a6a8602e382b98ac33ff5f2191cb651e460fe0b25863f6a05dfcabe40",
-      "id": "d46b3c02ab49",
-      "priority": 1,
-      "group": "80a6736c16ca"
     },
     {
       "type": "cards",
