@@ -52,20 +52,22 @@ Phrases:
   - Phrase: Hemen biziko zara.
     Translation: You will live here.
 
-  - Phrase: Nire laguna Arrano kalean biziko da.
-    Translation: My friend will live on Arrano street.
+  - Phrase: Gure izeba Arrano kalean biziko da..
+    Translation: Our aunt will live on Arrano street.
 
-  - Phrase: Gure aita Gasteizen biziko da.
-    Translation: Our father will live in Victoria.
+  - Phrase: Gure osaba Gasteizen biziko da.
+    Translation: Our uncle will live in Victoria.
 
-  - Phrase: Non biziko da zure ama?
-    Translation: Where will your mother live?
+  - Phrase: Non biziko da zure biloba?
+    Translation: Where will your grandson live?
+    Alternative translations:
+    - Where will your granddaughter live?
 
-  - Phrase: Non biziko da gure irakaslea?
-    Translation: Where will our teacher live?
+  - Phrase: Non biziko da bere ahizpa?
+    Translation: Where will her sister live?
 
-  - Phrase: Gure irakaslea Europan biziko da.
-    Translation: Our teacher will live in Europe.
+  - Phrase: Bere arreba Europan biziko da.
+    Translation: His sister will live in Europe.
 
   - Phrase: Non biziko gara?
     Translation: Where will we live?
@@ -96,20 +98,22 @@ Phrases:
     - You all will live in France.
     - You`ll will live in France.
 
-  - Phrase: Camareroak han biziko dira.
-    Translation: The waiters will live there.
+  - Phrase: Bere anaiak han biziko dira.
+    Translation: His brothers will live there.
 
-  - Phrase: Neskak ere mendietan biziko dira?
-    Translation: Will the girls also live on the mountains?
+  - Phrase: Bere nebak ere mendian biziko dira?
+    Translation: Will her brothers also live on the mountain?
 
-  - Phrase: Ez, Madrilen biziko dira neskak.
-    Translation: No, The girls will live in Madrid.
+  - Phrase: Ez, ilobak Madrilen biziko dira.
+    Translation: No, The nieces will live in Madrid.
+    Alternative translations:
+    - No, The nephews will live in Madrid.
 
-  - Phrase: Non zure ardiak eta ahuntzak biziko?
-    Translation: Where will your sheep and goats live?
+  - Phrase: Non biziko dira zure seme-alabak?
+    Translation: Where will your children live?
 
-  - Phrase: Gure ardiak eta ahuntzak ere baserrian biziko dira.
-    Translation: Our sheep and goats will also live on the farm.
+  - Phrase: Gure lehengusuak ere baserrian biziko dira.
+    Translation: Our cousins will also live on the farm.
 
 
 Mini-dictionary:
@@ -125,6 +129,7 @@ Mini-dictionary:
     - Europan: in Europe
     - Frantzian: in France
     - ahizpa: sister of a sister
+    - ahizpak: sisters of a sister
     - ahizparen: sister’s
     - ahuntzak: goats
     - aitona-amonak: grandparents
@@ -143,6 +148,7 @@ Mini-dictionary:
     - amona: grandmother
     - amonaren: grandmother’s
     - anaia: brother of a brother
+    - anaiak: brothers of a brother
     - anaian: brother of a brother’s
     - anaiaren: brother’s
     - animalia: animal
@@ -154,6 +160,7 @@ Mini-dictionary:
     - arkatzak: pencils
     - arraina: fish
     - arreba: sister of a brother
+    - arrebak: sisters of a brother
     - arrebaren: sister’s
     - aterki: umbrella
     - aterkia: umbrella
@@ -310,6 +317,7 @@ Mini-dictionary:
     - lehengusu: cousin (male)
     - lehengusua: cousin (male)
     - lehengusina: cousin (female)
+    - lehengusuak: cousins (male)
     - liburu: book
     - liburua: a book
     - liburua: books
@@ -318,6 +326,7 @@ Mini-dictionary:
     - Madrilen: in madrid
     - medikua: doctor
     - medikuak: doctors
+    - mendian: on the mountain
     - mendietan: on the mountains
     - motxila: backpack
     - motxilak: backpacks
@@ -328,7 +337,8 @@ Mini-dictionary:
     - mutilak: boys
     - mutillaguna: boyfriend
     - naiz: am
-    - neba: brother of a sister
+    - neba: brothers of a sister
+    - nebak: brother of a sister
     - neska: girl
     - neskak: girls
     - neskalaguna: girlfriend
@@ -357,7 +367,7 @@ Mini-dictionary:
     - semeak: sons
     - semearen: son’s
     - seme-alba: children
-    - seme-albak:
+    - seme-alabak:
       - children
       - sons and daughters
     - senarra: husband
@@ -447,6 +457,9 @@ Mini-dictionary:
     - brother:
       - neba
       - anaia
+    - brothers:
+      - nebak
+      - anaiak
     - brother’s:
       - nebanen
       - anaianen
@@ -462,11 +475,14 @@ Mini-dictionary:
     - child: ume
     - children:
       - umeak
-      - seme-alba
+      - seme-alabak
     - country: herrian
     - cousin:
       - lehengusu
       - lehengusina
+    - cousins:
+      - lehengusuak
+      - lehengusinak
     - cows: behiak
     - daughter: alaba
     - daughters: alabak
@@ -546,6 +562,7 @@ Mini-dictionary:
     - mother: ama
     - mother’s: amaren
     - mothers: amak
+    - mountain: mendia
     - mountains: mendiak
     - my: nire
     - new: berri
@@ -591,6 +608,9 @@ Mini-dictionary:
     - sister:
       - ahizpa
       - arreba
+    - sisters:
+      - ahizpak
+      - arrebak
     - sister’s:
       - ahizparen
       - arrebaren
