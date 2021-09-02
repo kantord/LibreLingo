@@ -62,7 +62,7 @@
         },
         {
           "word": "naiz?",
-          "definition": "I am (izan)\nam"
+          "definition": "am"
         }
       ],
       "chips": [
@@ -110,7 +110,7 @@
         },
         {
           "word": "in",
-          "definition": "Inessive case\nNON case, not a word"
+          "definition": "Inessive case"
         },
         {
           "word": "Spain.",
@@ -148,7 +148,7 @@
         },
         {
           "word": "naiz.",
-          "definition": "I am (izan)\nam"
+          "definition": "am"
         }
       ],
       "chips": [
@@ -198,7 +198,7 @@
         },
         {
           "word": "in",
-          "definition": "Inessive case\nNON case, not a word"
+          "definition": "Inessive case"
         },
         {
           "word": "the",
@@ -232,7 +232,7 @@
       "phrase": [
         {
           "word": "Basoan",
-          "definition": "in a forest\nin the forest"
+          "definition": "in a forest"
         },
         {
           "word": "biziko",
@@ -240,7 +240,7 @@
         },
         {
           "word": "naiz.",
-          "definition": "I am (izan)\nam"
+          "definition": "am"
         }
       ],
       "chips": [
@@ -284,7 +284,7 @@
         },
         {
           "word": "you",
-          "definition": "zu\nzuek"
+          "definition": "zu"
         },
         {
           "word": "live",
@@ -292,7 +292,7 @@
         },
         {
           "word": "in",
-          "definition": "Inessive case\nNON case, not a word"
+          "definition": "Inessive case"
         },
         {
           "word": "the",
@@ -326,7 +326,7 @@
       "phrase": [
         {
           "word": "Etxean",
-          "definition": "in a house\nin the house"
+          "definition": "in a house"
         },
         {
           "word": "biziko",
@@ -334,7 +334,7 @@
         },
         {
           "word": "zara?",
-          "definition": "are\nyou are (izan)"
+          "definition": "are"
         }
       ],
       "chips": [
@@ -394,7 +394,7 @@
         },
         {
           "word": "you",
-          "definition": "zu\nzuek"
+          "definition": "zu"
         },
         {
           "word": "live",
@@ -402,7 +402,7 @@
         },
         {
           "word": "on?",
-          "definition": "Inessive case\nNON case, not a word"
+          "definition": "Inessive case"
         }
       ],
       "chips": [
@@ -434,7 +434,7 @@
         },
         {
           "word": "kalean",
-          "definition": "in the street\nin/on a street"
+          "definition": "in/on a street"
         },
         {
           "word": "biziko",
@@ -442,7 +442,7 @@
         },
         {
           "word": "zara?",
-          "definition": "are\nyou are (izan)"
+          "definition": "are"
         }
       ],
       "chips": [
@@ -482,7 +482,7 @@
       "phrase": [
         {
           "word": "You",
-          "definition": "zu\nzuek"
+          "definition": "zu"
         },
         {
           "word": "will",
@@ -528,7 +528,7 @@
         },
         {
           "word": "zara.",
-          "definition": "are\nyou are (izan)"
+          "definition": "are"
         }
       ],
       "chips": [
@@ -552,23 +552,23 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Nire laguna Arrano kalean biziko da.",
-      "meaningInSourceLanguage": "My friend will live on Arrano street.",
-      "id": "799c057375cc",
+      "formInTargetLanguage": "Gure izeba Arrano kalean biziko da..",
+      "meaningInSourceLanguage": "Our aunt will live on Arrano street.",
+      "id": "67b95a587cd7",
       "priority": 0,
-      "group": "e8d14ae516eb"
+      "group": "d64dfefefb8c"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
         {
-          "word": "My",
-          "definition": "nire"
+          "word": "Our",
+          "definition": "gure"
         },
         {
-          "word": "friend",
-          "definition": "lagun\nlaguna"
+          "word": "aunt",
+          "definition": "izeba"
         },
         {
           "word": "will",
@@ -580,7 +580,7 @@
         },
         {
           "word": "on",
-          "definition": "Inessive case\nNON case, not a word"
+          "definition": "Inessive case"
         },
         {
           "word": "Arrano",
@@ -592,8 +592,8 @@
         }
       ],
       "chips": [
-        "Nire",
-        "laguna",
+        "Gure",
+        "izeba",
         "Arrano",
         "kalean",
         "biziko",
@@ -601,30 +601,30 @@
       ],
       "solutions": [
         [
-          "Nire",
-          "laguna",
+          "Gure",
+          "izeba",
           "Arrano",
           "kalean",
           "biziko",
           "da"
         ]
       ],
-      "formattedSolution": "Nire laguna Arrano kalean biziko da.",
-      "id": "f44c2996e4cb",
+      "formattedSolution": "Gure izeba Arrano kalean biziko da..",
+      "id": "ab531fce8976",
       "priority": 2,
-      "group": "e8d14ae516eb"
+      "group": "d64dfefefb8c"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Nire",
-          "definition": "my"
+          "word": "Gure",
+          "definition": "our"
         },
         {
-          "word": "laguna",
-          "definition": "friend\nthe friend"
+          "word": "izeba",
+          "definition": "aunt"
         },
         {
           "word": "Arrano",
@@ -632,20 +632,20 @@
         },
         {
           "word": "kalean",
-          "definition": "in the street\nin/on a street"
+          "definition": "in/on a street"
         },
         {
           "word": "biziko",
           "definition": "will live"
         },
         {
-          "word": "da.",
-          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+          "word": "da..",
+          "definition": "is"
         }
       ],
       "chips": [
-        "My",
-        "friend",
+        "Our",
+        "aunt",
         "will",
         "live",
         "on",
@@ -654,8 +654,8 @@
       ],
       "solutions": [
         [
-          "My",
-          "friend",
+          "Our",
+          "aunt",
           "will",
           "live",
           "on",
@@ -663,18 +663,18 @@
           "street"
         ]
       ],
-      "formattedSolution": "My friend will live on Arrano street.",
-      "id": "d95ebdbf59db",
+      "formattedSolution": "Our aunt will live on Arrano street.",
+      "id": "f7d0c18bcd13",
       "priority": 2,
-      "group": "e8d14ae516eb"
+      "group": "d64dfefefb8c"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Gure aita Gasteizen biziko da.",
-      "meaningInSourceLanguage": "Our father will live in Victoria.",
-      "id": "72a7492187c9",
+      "formInTargetLanguage": "Gure osaba Gasteizen biziko da.",
+      "meaningInSourceLanguage": "Our uncle will live in Victoria.",
+      "id": "a8ecfc34b4af",
       "priority": 0,
-      "group": "54338022f74e"
+      "group": "035f13491c17"
     },
     {
       "type": "chips",
@@ -685,8 +685,8 @@
           "definition": "gure"
         },
         {
-          "word": "father",
-          "definition": "aita"
+          "word": "uncle",
+          "definition": "osaba"
         },
         {
           "word": "will",
@@ -698,16 +698,16 @@
         },
         {
           "word": "in",
-          "definition": "Inessive case\nNON case, not a word"
+          "definition": "Inessive case"
         },
         {
           "word": "Victoria.",
-          "definition": "Gasteis (city in Basque Country)\nGasteiz\nGasteiz (city)"
+          "definition": "Gasteis (city in Basque Country)"
         }
       ],
       "chips": [
         "Gure",
-        "aita",
+        "osaba",
         "Gasteizen",
         "biziko",
         "da"
@@ -715,16 +715,16 @@
       "solutions": [
         [
           "Gure",
-          "aita",
+          "osaba",
           "Gasteizen",
           "biziko",
           "da"
         ]
       ],
-      "formattedSolution": "Gure aita Gasteizen biziko da.",
-      "id": "94706ae33cca",
+      "formattedSolution": "Gure osaba Gasteizen biziko da.",
+      "id": "264bb73f41b5",
       "priority": 2,
-      "group": "54338022f74e"
+      "group": "035f13491c17"
     },
     {
       "type": "chips",
@@ -735,12 +735,12 @@
           "definition": "our"
         },
         {
-          "word": "aita",
-          "definition": "father"
+          "word": "osaba",
+          "definition": "uncle"
         },
         {
           "word": "Gasteizen",
-          "definition": "in Victoria\nin Victoria (city in Basque Country)"
+          "definition": "in Victoria (city in Basque Country)"
         },
         {
           "word": "biziko",
@@ -748,12 +748,12 @@
         },
         {
           "word": "da.",
-          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+          "definition": "is"
         }
       ],
       "chips": [
         "Our",
-        "father",
+        "uncle",
         "will",
         "live",
         "in",
@@ -762,25 +762,25 @@
       "solutions": [
         [
           "Our",
-          "father",
+          "uncle",
           "will",
           "live",
           "in",
           "Victoria"
         ]
       ],
-      "formattedSolution": "Our father will live in Victoria.",
-      "id": "5e39d16c0238",
+      "formattedSolution": "Our uncle will live in Victoria.",
+      "id": "26f72ecc6dd1",
       "priority": 2,
-      "group": "54338022f74e"
+      "group": "035f13491c17"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Non biziko da zure ama?",
-      "meaningInSourceLanguage": "Where will your mother live?",
-      "id": "0daff1ca87c2",
+      "formInTargetLanguage": "Non biziko da zure biloba?",
+      "meaningInSourceLanguage": "Where will your grandson live?",
+      "id": "7f7f713a803e",
       "priority": 0,
-      "group": "610b889e4ddb"
+      "group": "edd35612b184"
     },
     {
       "type": "chips",
@@ -796,11 +796,11 @@
         },
         {
           "word": "your",
-          "definition": "zuen\nzure"
+          "definition": "zure"
         },
         {
-          "word": "mother",
-          "definition": "ama"
+          "word": "grandson",
+          "definition": "biloba"
         },
         {
           "word": "live?",
@@ -812,7 +812,7 @@
         "biziko",
         "da",
         "zure",
-        "ama"
+        "biloba"
       ],
       "solutions": [
         [
@@ -820,13 +820,13 @@
           "biziko",
           "da",
           "zure",
-          "ama"
+          "biloba"
         ]
       ],
-      "formattedSolution": "Non biziko da zure ama?",
-      "id": "ed3935e2e339",
+      "formattedSolution": "Non biziko da zure biloba?",
+      "id": "b4d3d33aeef4",
       "priority": 2,
-      "group": "610b889e4ddb"
+      "group": "edd35612b184"
     },
     {
       "type": "chips",
@@ -842,22 +842,22 @@
         },
         {
           "word": "da",
-          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+          "definition": "is"
         },
         {
           "word": "zure",
           "definition": "your"
         },
         {
-          "word": "ama?",
-          "definition": "mother"
+          "word": "biloba?",
+          "definition": "granddaughter\ngrandson"
         }
       ],
       "chips": [
         "Where",
         "will",
         "your",
-        "mother",
+        "grandson",
         "live"
       ],
       "solutions": [
@@ -865,22 +865,29 @@
           "Where",
           "will",
           "your",
-          "mother",
+          "grandson",
+          "live"
+        ],
+        [
+          "Where",
+          "will",
+          "your",
+          "granddaughter",
           "live"
         ]
       ],
-      "formattedSolution": "Where will your mother live?",
-      "id": "5ab0c3abd890",
+      "formattedSolution": "Where will your grandson live?",
+      "id": "40d7dbe09f58",
       "priority": 2,
-      "group": "610b889e4ddb"
+      "group": "edd35612b184"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Non biziko da gure irakaslea?",
-      "meaningInSourceLanguage": "Where will our teacher live?",
-      "id": "4c9320d7255d",
+      "formInTargetLanguage": "Non biziko da bere ahizpa?",
+      "meaningInSourceLanguage": "Where will her sister live?",
+      "id": "0364984e96ae",
       "priority": 0,
-      "group": "528f3ded2927"
+      "group": "269ff03f7881"
     },
     {
       "type": "chips",
@@ -895,12 +902,12 @@
           "definition": "future tense"
         },
         {
-          "word": "our",
-          "definition": "gure"
+          "word": "her",
+          "definition": "bere"
         },
         {
-          "word": "teacher",
-          "definition": "irakasle\nirakaslea"
+          "word": "sister",
+          "definition": "ahizpa\narreba"
         },
         {
           "word": "live?",
@@ -911,22 +918,22 @@
         "Non",
         "biziko",
         "da",
-        "gure",
-        "irakaslea"
+        "bere",
+        "ahizpa"
       ],
       "solutions": [
         [
           "Non",
           "biziko",
           "da",
-          "gure",
-          "irakaslea"
+          "bere",
+          "ahizpa"
         ]
       ],
-      "formattedSolution": "Non biziko da gure irakaslea?",
-      "id": "4c58ad55b856",
+      "formattedSolution": "Non biziko da bere ahizpa?",
+      "id": "9ffd40867107",
       "priority": 2,
-      "group": "528f3ded2927"
+      "group": "269ff03f7881"
     },
     {
       "type": "chips",
@@ -942,57 +949,57 @@
         },
         {
           "word": "da",
-          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+          "definition": "is"
         },
         {
-          "word": "gure",
-          "definition": "our"
+          "word": "bere",
+          "definition": "hers\nhis\nits"
         },
         {
-          "word": "irakaslea?",
-          "definition": "a teacher\nteacher\nthe teacher"
+          "word": "ahizpa?",
+          "definition": "sister of a sister"
         }
       ],
       "chips": [
         "Where",
         "will",
-        "our",
-        "teacher",
+        "her",
+        "sister",
         "live"
       ],
       "solutions": [
         [
           "Where",
           "will",
-          "our",
-          "teacher",
+          "her",
+          "sister",
           "live"
         ]
       ],
-      "formattedSolution": "Where will our teacher live?",
-      "id": "527363602784",
+      "formattedSolution": "Where will her sister live?",
+      "id": "d0e51b861ca0",
       "priority": 2,
-      "group": "528f3ded2927"
+      "group": "269ff03f7881"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Gure irakaslea Europan biziko da.",
-      "meaningInSourceLanguage": "Our teacher will live in Europe.",
-      "id": "5c0458ae9bcb",
+      "formInTargetLanguage": "Bere arreba Europan biziko da.",
+      "meaningInSourceLanguage": "His sister will live in Europe.",
+      "id": "d213f05484d2",
       "priority": 0,
-      "group": "e62ab3306a09"
+      "group": "6c162b4ae3c4"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
         {
-          "word": "Our",
-          "definition": "gure"
+          "word": "His",
+          "definition": "bere\nberea"
         },
         {
-          "word": "teacher",
-          "definition": "irakasle\nirakaslea"
+          "word": "sister",
+          "definition": "ahizpa\narreba"
         },
         {
           "word": "will",
@@ -1004,7 +1011,7 @@
         },
         {
           "word": "in",
-          "definition": "Inessive case\nNON case, not a word"
+          "definition": "Inessive case"
         },
         {
           "word": "Europe.",
@@ -1012,37 +1019,37 @@
         }
       ],
       "chips": [
-        "Gure",
-        "irakaslea",
+        "Bere",
+        "arreba",
         "Europan",
         "biziko",
         "da"
       ],
       "solutions": [
         [
-          "Gure",
-          "irakaslea",
+          "Bere",
+          "arreba",
           "Europan",
           "biziko",
           "da"
         ]
       ],
-      "formattedSolution": "Gure irakaslea Europan biziko da.",
-      "id": "755443ca3239",
+      "formattedSolution": "Bere arreba Europan biziko da.",
+      "id": "d21f3b70fecb",
       "priority": 2,
-      "group": "e62ab3306a09"
+      "group": "6c162b4ae3c4"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Gure",
-          "definition": "our"
+          "word": "Bere",
+          "definition": "hers\nhis\nits"
         },
         {
-          "word": "irakaslea",
-          "definition": "a teacher\nteacher\nthe teacher"
+          "word": "arreba",
+          "definition": "sister of a brother"
         },
         {
           "word": "Europan",
@@ -1054,12 +1061,12 @@
         },
         {
           "word": "da.",
-          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+          "definition": "is"
         }
       ],
       "chips": [
-        "Our",
-        "teacher",
+        "His",
+        "sister",
         "will",
         "live",
         "in",
@@ -1067,18 +1074,18 @@
       ],
       "solutions": [
         [
-          "Our",
-          "teacher",
+          "His",
+          "sister",
           "will",
           "live",
           "in",
           "Europe"
         ]
       ],
-      "formattedSolution": "Our teacher will live in Europe.",
-      "id": "296bc1863f50",
+      "formattedSolution": "His sister will live in Europe.",
+      "id": "0073c509cd28",
       "priority": 2,
-      "group": "e62ab3306a09"
+      "group": "6c162b4ae3c4"
     },
     {
       "type": "options",
@@ -1140,7 +1147,7 @@
         },
         {
           "word": "gara?",
-          "definition": "are\nare (izan)"
+          "definition": "are"
         }
       ],
       "chips": [
@@ -1188,7 +1195,7 @@
         },
         {
           "word": "in",
-          "definition": "Inessive case\nNON case, not a word"
+          "definition": "Inessive case"
         },
         {
           "word": "the",
@@ -1196,11 +1203,11 @@
         },
         {
           "word": "Basque",
-          "definition": "Euskal\neuskaldun"
+          "definition": "euskal"
         },
         {
           "word": "country.",
-          "definition": "Herrian"
+          "definition": "herrian"
         }
       ],
       "chips": [
@@ -1228,11 +1235,11 @@
       "phrase": [
         {
           "word": "Euskal",
-          "definition": "basque\nbasque (ad)"
+          "definition": "basque"
         },
         {
           "word": "Herrian",
-          "definition": "Country"
+          "definition": "country"
         },
         {
           "word": "biziko",
@@ -1240,7 +1247,7 @@
         },
         {
           "word": "gara.",
-          "definition": "are\nare (izan)"
+          "definition": "are"
         }
       ],
       "chips": [
@@ -1298,7 +1305,7 @@
         },
         {
           "word": "you",
-          "definition": "zu\nzuek"
+          "definition": "zu"
         },
         {
           "word": "(plural)",
@@ -1340,7 +1347,7 @@
         },
         {
           "word": "zarete?",
-          "definition": "are\ntheir"
+          "definition": "are"
         }
       ],
       "chips": [
@@ -1397,7 +1404,7 @@
       "phrase": [
         {
           "word": "You",
-          "definition": "zu\nzuek"
+          "definition": "zu"
         },
         {
           "word": "(plural)",
@@ -1441,7 +1448,7 @@
       "phrase": [
         {
           "word": "Zuek",
-          "definition": "You'll\nyou\nyou'll\nyou(plural)\nyour (plural)"
+          "definition": "your (plural)"
         },
         {
           "word": "hemen",
@@ -1453,7 +1460,7 @@
         },
         {
           "word": "zarete",
-          "definition": "are\ntheir"
+          "definition": "are"
         }
       ],
       "chips": [
@@ -1510,7 +1517,7 @@
       "phrase": [
         {
           "word": "You",
-          "definition": "zu\nzuek"
+          "definition": "zu"
         },
         {
           "word": "(plural)",
@@ -1526,7 +1533,7 @@
         },
         {
           "word": "in",
-          "definition": "Inessive case\nNON case, not a word"
+          "definition": "Inessive case"
         },
         {
           "word": "France.",
@@ -1564,7 +1571,7 @@
         },
         {
           "word": "zarete.",
-          "definition": "are\ntheir"
+          "definition": "are"
         }
       ],
       "chips": [
@@ -1614,23 +1621,23 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Camareroak han biziko dira.",
-      "meaningInSourceLanguage": "The waiters will live there.",
-      "id": "2c3d26bc3f48",
+      "formInTargetLanguage": "Bere anaiak han biziko dira.",
+      "meaningInSourceLanguage": "His brothers will live there.",
+      "id": "c5868eb04e73",
       "priority": 0,
-      "group": "c33f33c4354a"
+      "group": "aa8274fe1436"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
         {
-          "word": "The",
-          "definition": "-a"
+          "word": "His",
+          "definition": "bere\nberea"
         },
         {
-          "word": "waiters",
-          "definition": "camareroak"
+          "word": "brothers",
+          "definition": "anaiak\nnebak"
         },
         {
           "word": "will",
@@ -1646,35 +1653,41 @@
         }
       ],
       "chips": [
-        "Camareroak",
+        "Bere",
+        "anaiak",
         "han",
         "biziko",
         "dira"
       ],
       "solutions": [
         [
-          "Camareroak",
+          "Bere",
+          "anaiak",
           "han",
           "biziko",
           "dira"
         ]
       ],
-      "formattedSolution": "Camareroak han biziko dira.",
-      "id": "a1401115b64f",
+      "formattedSolution": "Bere anaiak han biziko dira.",
+      "id": "35228cc9435b",
       "priority": 2,
-      "group": "c33f33c4354a"
+      "group": "aa8274fe1436"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Camareroak",
-          "definition": "waiters"
+          "word": "Bere",
+          "definition": "hers\nhis\nits"
+        },
+        {
+          "word": "anaiak",
+          "definition": "brothers of a brother"
         },
         {
           "word": "han",
-          "definition": "over there\nthere"
+          "definition": "there"
         },
         {
           "word": "biziko",
@@ -1682,37 +1695,37 @@
         },
         {
           "word": "dira.",
-          "definition": "are\nare (izan)"
+          "definition": "are"
         }
       ],
       "chips": [
-        "The",
-        "waiters",
+        "His",
+        "brothers",
         "will",
         "live",
         "there"
       ],
       "solutions": [
         [
-          "The",
-          "waiters",
+          "His",
+          "brothers",
           "will",
           "live",
           "there"
         ]
       ],
-      "formattedSolution": "The waiters will live there.",
-      "id": "3aa050052f19",
+      "formattedSolution": "His brothers will live there.",
+      "id": "86e1b42bc671",
       "priority": 2,
-      "group": "c33f33c4354a"
+      "group": "aa8274fe1436"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Neskak ere mendietan biziko dira?",
-      "meaningInSourceLanguage": "Will the girls also live on the mountains?",
-      "id": "ed250c6a53d5",
+      "formInTargetLanguage": "Bere nebak ere mendian biziko dira?",
+      "meaningInSourceLanguage": "Will her brothers also live on the mountain?",
+      "id": "ab4ab799a954",
       "priority": 0,
-      "group": "2507ca434b07"
+      "group": "90419fd507b7"
     },
     {
       "type": "chips",
@@ -1723,12 +1736,12 @@
           "definition": "future tense"
         },
         {
-          "word": "the",
-          "definition": "-a"
+          "word": "her",
+          "definition": "bere"
         },
         {
-          "word": "girls",
-          "definition": "neskak"
+          "word": "brothers",
+          "definition": "anaiak\nnebak"
         },
         {
           "word": "also",
@@ -1740,53 +1753,59 @@
         },
         {
           "word": "on",
-          "definition": "Inessive case\nNON case, not a word"
+          "definition": "Inessive case"
         },
         {
           "word": "the",
           "definition": "-a"
         },
         {
-          "word": "mountains?",
-          "definition": "mendiak"
+          "word": "mountain?",
+          "definition": "mendia"
         }
       ],
       "chips": [
-        "Neskak",
+        "Bere",
+        "nebak",
         "ere",
-        "mendietan",
+        "mendian",
         "biziko",
         "dira"
       ],
       "solutions": [
         [
-          "Neskak",
+          "Bere",
+          "nebak",
           "ere",
-          "mendietan",
+          "mendian",
           "biziko",
           "dira"
         ]
       ],
-      "formattedSolution": "Neskak ere mendietan biziko dira?",
-      "id": "8534329a0ecc",
+      "formattedSolution": "Bere nebak ere mendian biziko dira?",
+      "id": "802d3d8174d5",
       "priority": 2,
-      "group": "2507ca434b07"
+      "group": "90419fd507b7"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Neskak",
-          "definition": "girls"
+          "word": "Bere",
+          "definition": "hers\nhis\nits"
+        },
+        {
+          "word": "nebak",
+          "definition": "brother of a sister"
         },
         {
           "word": "ere",
           "definition": "also"
         },
         {
-          "word": "mendietan",
-          "definition": "on the mountains\nupon the mountain"
+          "word": "mendian",
+          "definition": "on the mountain"
         },
         {
           "word": "biziko",
@@ -1794,43 +1813,43 @@
         },
         {
           "word": "dira?",
-          "definition": "are\nare (izan)"
+          "definition": "are"
         }
       ],
       "chips": [
         "Will",
-        "the",
-        "girls",
+        "her",
+        "brothers",
         "also",
         "live",
         "on",
         "the",
-        "mountains"
+        "mountain"
       ],
       "solutions": [
         [
           "Will",
-          "the",
-          "girls",
+          "her",
+          "brothers",
           "also",
           "live",
           "on",
           "the",
-          "mountains"
+          "mountain"
         ]
       ],
-      "formattedSolution": "Will the girls also live on the mountains?",
-      "id": "55c57808bafd",
+      "formattedSolution": "Will her brothers also live on the mountain?",
+      "id": "e3f12bcf254c",
       "priority": 2,
-      "group": "2507ca434b07"
+      "group": "90419fd507b7"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Ez, Madrilen biziko dira neskak.",
-      "meaningInSourceLanguage": "No, The girls will live in Madrid.",
-      "id": "634a712b2c2d",
+      "formInTargetLanguage": "Ez, ilobak Madrilen biziko dira.",
+      "meaningInSourceLanguage": "No, The nieces will live in Madrid.",
+      "id": "7627ba6e358f",
       "priority": 0,
-      "group": "41c5d78cb25b"
+      "group": "c5a204cb9683"
     },
     {
       "type": "chips",
@@ -1845,8 +1864,8 @@
           "definition": "-a"
         },
         {
-          "word": "girls",
-          "definition": "neskak"
+          "word": "nieces",
+          "definition": "ilobak"
         },
         {
           "word": "will",
@@ -1858,33 +1877,33 @@
         },
         {
           "word": "in",
-          "definition": "Inessive case\nNON case, not a word"
+          "definition": "Inessive case"
         },
         {
           "word": "Madrid.",
-          "definition": "Madril\nMadril (city)"
+          "definition": "Madril"
         }
       ],
       "chips": [
         "Ez",
+        "ilobak",
         "Madrilen",
         "biziko",
-        "dira",
-        "neskak"
+        "dira"
       ],
       "solutions": [
         [
           "Ez",
+          "ilobak",
           "Madrilen",
           "biziko",
-          "dira",
-          "neskak"
+          "dira"
         ]
       ],
-      "formattedSolution": "Ez, Madrilen biziko dira neskak.",
-      "id": "92c2a0884c30",
+      "formattedSolution": "Ez, ilobak Madrilen biziko dira.",
+      "id": "168ef0ddcfa8",
       "priority": 2,
-      "group": "41c5d78cb25b"
+      "group": "c5a204cb9683"
     },
     {
       "type": "chips",
@@ -1892,29 +1911,29 @@
       "phrase": [
         {
           "word": "Ez,",
-          "definition": "no\nnot\nnot, no\nnot,no"
+          "definition": "not, no"
+        },
+        {
+          "word": "ilobak",
+          "definition": "nephews\nnieces"
         },
         {
           "word": "Madrilen",
-          "definition": "in Madrid\nin madrid"
+          "definition": "in madrid"
         },
         {
           "word": "biziko",
           "definition": "will live"
         },
         {
-          "word": "dira",
-          "definition": "are\nare (izan)"
-        },
-        {
-          "word": "neskak.",
-          "definition": "girls"
+          "word": "dira.",
+          "definition": "are"
         }
       ],
       "chips": [
         "No",
         "The",
-        "girls",
+        "nieces",
         "will",
         "live",
         "in",
@@ -1924,25 +1943,34 @@
         [
           "No",
           "The",
-          "girls",
+          "nieces",
+          "will",
+          "live",
+          "in",
+          "Madrid"
+        ],
+        [
+          "No",
+          "The",
+          "nephews",
           "will",
           "live",
           "in",
           "Madrid"
         ]
       ],
-      "formattedSolution": "No, The girls will live in Madrid.",
-      "id": "dac92c6dbfab",
+      "formattedSolution": "No, The nieces will live in Madrid.",
+      "id": "cbea5ade9c30",
       "priority": 2,
-      "group": "41c5d78cb25b"
+      "group": "c5a204cb9683"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Non zure ardiak eta ahuntzak biziko?",
-      "meaningInSourceLanguage": "Where will your sheep and goats live?",
-      "id": "27762487a5d8",
+      "formInTargetLanguage": "Non biziko dira zure seme-alabak?",
+      "meaningInSourceLanguage": "Where will your children live?",
+      "id": "b065f499adbc",
       "priority": 0,
-      "group": "9e2671fe0a7f"
+      "group": "dbd17ceb462d"
     },
     {
       "type": "chips",
@@ -1958,19 +1986,11 @@
         },
         {
           "word": "your",
-          "definition": "zuen\nzure"
+          "definition": "zure"
         },
         {
-          "word": "sheep",
-          "definition": "ardi\nardiak"
-        },
-        {
-          "word": "and",
-          "definition": "eta"
-        },
-        {
-          "word": "goats",
-          "definition": "ahuntzak"
+          "word": "children",
+          "definition": "seme-alabak\numeak"
         },
         {
           "word": "live?",
@@ -1979,26 +1999,24 @@
       ],
       "chips": [
         "Non",
+        "biziko",
+        "dira",
         "zure",
-        "ardiak",
-        "eta",
-        "ahuntzak",
-        "biziko"
+        "seme-alabak"
       ],
       "solutions": [
         [
           "Non",
+          "biziko",
+          "dira",
           "zure",
-          "ardiak",
-          "eta",
-          "ahuntzak",
-          "biziko"
+          "seme-alabak"
         ]
       ],
-      "formattedSolution": "Non zure ardiak eta ahuntzak biziko?",
-      "id": "96081ef5617b",
+      "formattedSolution": "Non biziko dira zure seme-alabak?",
+      "id": "9f0954265b18",
       "priority": 2,
-      "group": "9e2671fe0a7f"
+      "group": "dbd17ceb462d"
     },
     {
       "type": "chips",
@@ -2009,33 +2027,27 @@
           "definition": "where"
         },
         {
+          "word": "biziko",
+          "definition": "will live"
+        },
+        {
+          "word": "dira",
+          "definition": "are"
+        },
+        {
           "word": "zure",
           "definition": "your"
         },
         {
-          "word": "ardiak",
-          "definition": "sheep\nsheep (plural)"
-        },
-        {
-          "word": "eta",
-          "definition": "and"
-        },
-        {
-          "word": "ahuntzak",
-          "definition": "goats"
-        },
-        {
-          "word": "biziko?",
-          "definition": "will live"
+          "word": "seme-alabak?",
+          "definition": "children\nsons and daughters"
         }
       ],
       "chips": [
         "Where",
         "will",
         "your",
-        "sheep",
-        "and",
-        "goats",
+        "children",
         "live"
       ],
       "solutions": [
@@ -2043,24 +2055,22 @@
           "Where",
           "will",
           "your",
-          "sheep",
-          "and",
-          "goats",
+          "children",
           "live"
         ]
       ],
-      "formattedSolution": "Where will your sheep and goats live?",
-      "id": "f6470956f0f3",
+      "formattedSolution": "Where will your children live?",
+      "id": "d08c7edbaf36",
       "priority": 2,
-      "group": "9e2671fe0a7f"
+      "group": "dbd17ceb462d"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Gure ardiak eta ahuntzak ere baserrian biziko dira.",
-      "meaningInSourceLanguage": "Our sheep and goats will also live on the farm.",
-      "id": "9552b4eb4073",
+      "formInTargetLanguage": "Gure lehengusuak ere baserrian biziko dira.",
+      "meaningInSourceLanguage": "Our cousins will also live on the farm.",
+      "id": "44021cab1883",
       "priority": 0,
-      "group": "5cdd95a83d69"
+      "group": "93aa76fc83eb"
     },
     {
       "type": "chips",
@@ -2071,16 +2081,8 @@
           "definition": "gure"
         },
         {
-          "word": "sheep",
-          "definition": "ardi\nardiak"
-        },
-        {
-          "word": "and",
-          "definition": "eta"
-        },
-        {
-          "word": "goats",
-          "definition": "ahuntzak"
+          "word": "cousins",
+          "definition": "lehengusinak\nlehengusuak"
         },
         {
           "word": "will",
@@ -2096,7 +2098,7 @@
         },
         {
           "word": "on",
-          "definition": "Inessive case\nNON case, not a word"
+          "definition": "Inessive case"
         },
         {
           "word": "the",
@@ -2109,9 +2111,7 @@
       ],
       "chips": [
         "Gure",
-        "ardiak",
-        "eta",
-        "ahuntzak",
+        "lehengusuak",
         "ere",
         "baserrian",
         "biziko",
@@ -2120,19 +2120,17 @@
       "solutions": [
         [
           "Gure",
-          "ardiak",
-          "eta",
-          "ahuntzak",
+          "lehengusuak",
           "ere",
           "baserrian",
           "biziko",
           "dira"
         ]
       ],
-      "formattedSolution": "Gure ardiak eta ahuntzak ere baserrian biziko dira.",
-      "id": "6954b2b087d6",
+      "formattedSolution": "Gure lehengusuak ere baserrian biziko dira.",
+      "id": "d3ca92cf51cb",
       "priority": 2,
-      "group": "5cdd95a83d69"
+      "group": "93aa76fc83eb"
     },
     {
       "type": "chips",
@@ -2143,16 +2141,8 @@
           "definition": "our"
         },
         {
-          "word": "ardiak",
-          "definition": "sheep\nsheep (plural)"
-        },
-        {
-          "word": "eta",
-          "definition": "and"
-        },
-        {
-          "word": "ahuntzak",
-          "definition": "goats"
+          "word": "lehengusuak",
+          "definition": "cousins (male)"
         },
         {
           "word": "ere",
@@ -2168,14 +2158,12 @@
         },
         {
           "word": "dira.",
-          "definition": "are\nare (izan)"
+          "definition": "are"
         }
       ],
       "chips": [
         "Our",
-        "sheep",
-        "and",
-        "goats",
+        "cousins",
         "will",
         "also",
         "live",
@@ -2186,9 +2174,7 @@
       "solutions": [
         [
           "Our",
-          "sheep",
-          "and",
-          "goats",
+          "cousins",
           "will",
           "also",
           "live",
@@ -2197,10 +2183,10 @@
           "farm"
         ]
       ],
-      "formattedSolution": "Our sheep and goats will also live on the farm.",
-      "id": "2171bfac0df5",
+      "formattedSolution": "Our cousins will also live on the farm.",
+      "id": "8b959ef9269b",
       "priority": 2,
-      "group": "5cdd95a83d69"
+      "group": "93aa76fc83eb"
     },
     {
       "type": "cards",
@@ -2253,7 +2239,7 @@
       "phrase": [
         {
           "word": "You",
-          "definition": "zu\nzuek"
+          "definition": "zu"
         },
         {
           "word": "will",
@@ -2352,7 +2338,7 @@
       "phrase": [
         {
           "word": "You",
-          "definition": "zu\nzuek"
+          "definition": "zu"
         },
         {
           "word": "(plural)",
