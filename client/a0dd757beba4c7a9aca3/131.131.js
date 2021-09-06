@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[131],{429:function(e,n,o){"use strict";o.r(n),n.default="# Welcome to LibreLingo\n\nWelcome to LibreLingo, the free and open language learning platform!\nIn this introductory exercise you will learn some simple phrases in German."}}]);
