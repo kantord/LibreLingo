@@ -6,9 +6,9 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.2.2, mkdocs-material-7.2.4" name="generator"/>
+<meta content="mkdocs-1.2.2, mkdocs-material-7.2.5" name="generator"/>
 <title>Editing LibreLingo courses - LibreLingo Documentation</title>
-<link href="../assets/stylesheets/main.f7f47774.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.be71726b.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.3f5d1f46.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
@@ -219,6 +219,11 @@
     Following up with PR responses
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#updating-audio">
+    Updating audio
+  </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -283,6 +288,11 @@
     Following up with PR responses
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#updating-audio">
+    Updating audio
+  </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -318,6 +328,7 @@
   - <a href="#pulling-and-branching">Pulling code and branching</a>
   - <a href="#pushing-and-pr">Pushing code and creating Pull Request</a>
   - <a href="#following-up-pr">Following up with responses</a>
+  - <a href="#updating-audio">Updating audio</a>
 - <a href="#translating">Translating based on an existing course</a>
 - <a href="#editing-existing">Editing existing courses</a></p>
 <h2 id="setup">Setup</h2>
@@ -391,6 +402,12 @@ git commit --amend --no-edit
 git push origin HEAD -f
 </code></pre>
 <p>The <code>-f</code> switch is to force push so that the existing commit gets updated. <strong>NOTE:</strong> The <code>git commit --amend</code> command amends (or updates) the changes into the last commit you made. So it is important that you keep your changes in a branch on a single commit (if you followed the instructions above you should be fine).</p>
+<h3 id="updating-audio">Updating audio</h3>
+<p>If you've added or changed any words or phrases in the course, and the course you're editing has text-to-speech (TTS) audio in it, new audio will need to be generated to match your changes.</p>
+<p>Right now, the only TTS provider supported by LibreLingo is Amazon Polly. You'll need to install and configure the <a href="https://aws.amazon.com/cli/">AWS CLI</a> so you can use Polly to generate audio. Then, in the root directory of the LibreLingo repository, run:</p>
+<pre><code class="language-sh">./scripts/updateAudioForYamlCourse.sh &lt;name of edited course, e.g. spanish-from-english&gt;
+</code></pre>
+<p>If you'd like to simply <em>see</em> the audio changes that need to be made without actually performing them, add the <code>--dry-run</code> flag. In rare circumstances, you may want to completely regenerate the audio for a course, overwriting everything that's already there. This can be done with the <code>--destructive</code> flag -- but use with care!</p>
 <p><a id="translating"></a></p>
 <h2 id="translating-based-on-an-existing-course">Translating based on an existing course</h2>
 <p>If you just want to translate an existing course, the simplest way is to copy an existing course. Right now <code>spanish-from-english</code> is the most complete. So:</p>
@@ -455,7 +472,7 @@ git push origin HEAD -f
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
-<script src="../assets/javascripts/bundle.febc23d1.min.js"></script>
+<script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+<script src="../assets/javascripts/bundle.56a63758.min.js"></script>
 </body>
 </html>
