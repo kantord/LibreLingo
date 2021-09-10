@@ -25,4 +25,9 @@ Modules:
   - basics/
 
 Settings:
-    - disable audio files
+  Audio:
+    Enabled: True
+    TTS:
+      - Provider: Polly
+        Voice: Vicki
+        Engine: standard
