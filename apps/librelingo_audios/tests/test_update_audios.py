@@ -50,6 +50,18 @@ def test_dry_run_does_nothing(tmp_path, capsys):
                 / "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6.mp3"
             )
             + " using Lupe standard",
+            "Would generate "
+            + str(
+                tmp_path
+                / "f38b5ac2a5e36c336eed306d56ed517bfd78a728321be0b87db5def8ff8abc3d.mp3"
+            )
+            + " using Lupe standard",
+            "Would generate "
+            + str(
+                tmp_path
+                / "3f981d854531e9f376ae06cb8449a6e997972d3c1b598f9a00b481ef307a469d.mp3"
+            )
+            + " using Lupe standard",
         ],
         captured.out,
     )
@@ -73,6 +85,18 @@ def test_dry_run_does_nothing_with_destructive(tmp_path, capsys):
             + str(
                 tmp_path
                 / "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6.mp3"
+            )
+            + " using Lupe standard",
+            "Would generate "
+            + str(
+                tmp_path
+                / "f38b5ac2a5e36c336eed306d56ed517bfd78a728321be0b87db5def8ff8abc3d.mp3"
+            )
+            + " using Lupe standard",
+            "Would generate "
+            + str(
+                tmp_path
+                / "3f981d854531e9f376ae06cb8449a6e997972d3c1b598f9a00b481ef307a469d.mp3"
             )
             + " using Lupe standard",
         ],
@@ -609,10 +633,22 @@ def test_overwrite_with_deletion(subprocess_run, tmp_path, capsys):
                 / "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2.mp3"
             )
             + " using Lupe standard",
+            "Generating "
+            + str(
+                tmp_path
+                / "f38b5ac2a5e36c336eed306d56ed517bfd78a728321be0b87db5def8ff8abc3d.mp3"
+            )
+            + " using Lupe standard",
+            "Generating "
+            + str(
+                tmp_path
+                / "3f981d854531e9f376ae06cb8449a6e997972d3c1b598f9a00b481ef307a469d.mp3"
+            )
+            + " using Lupe standard",
         ],
         captured.out,
     )
-    assert subprocess_run.call_count == 2
+    assert subprocess_run.call_count == 4
     subprocess_run.assert_any_call(
         [
             "aws",
@@ -649,7 +685,7 @@ def test_overwrite_with_deletion(subprocess_run, tmp_path, capsys):
         ],
         stdout=subprocess.DEVNULL,
     )
-    assert _load_json_file(tmp_path / "test.json") == [
+    assert _load_json_file(tmp_path / "test.json")[0:1] == [
         {
             "id": "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6",
             "text": "foous barus",
