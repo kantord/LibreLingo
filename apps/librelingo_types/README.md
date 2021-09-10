@@ -6,11 +6,65 @@ Data types to be used in Python packages for LibreLingo
 <a name="librelingo_types.data_types"></a>
 # librelingo\_types.data\_types
 
+<a name="librelingo_types.data_types.TextToSpeechSettings"></a>
+## TextToSpeechSettings Objects
+
+```python
+class TextToSpeechSettings(
+    namedtuple(
+        "TextToSpeechSettings",
+        [
+            "provider",
+            "voice",
+            "engine",
+        ],
+        defaults=["Polly", "Lupe", "standard"],
+    ))
+```
+
+Settings about how to use TTS to generate audios
+
+### Usage example:
+
+```python
+TextToSpeechSettings(
+    provider="Polly",
+    voice="Aditi",
+    engine="standard"
+)
+```
+
+<a name="librelingo_types.data_types.AudioSettings"></a>
+## AudioSettings Objects
+
+```python
+class AudioSettings(
+    namedtuple(
+        "AudioSettings",
+        [
+            "enabled",
+            "text_to_speech_settings_list",
+        ],
+        defaults=[False, []],
+    ))
+```
+
+Settings for audio in a course
+
+### Usage example:
+
+```python
+AudioSettings(
+    enabled=True,
+    text_to_speech_settings_list=[TextToSpeechSettings()]
+)
+```
+
 <a name="librelingo_types.data_types.Settings"></a>
 ## Settings Objects
 
 ```python
-class Settings(namedtuple("Settings", ["audio_files_enabled"], defaults=[True]))
+class Settings(namedtuple("Settings", ["audio_settings"], defaults=[AudioSettings()]))
 ```
 
 Settings for a course
@@ -37,7 +91,7 @@ class Course(
             "repository_url",
             "settings",
         ],
-        defaults=[default_settings],
+        defaults=[Settings()],
     ))
 ```
 
