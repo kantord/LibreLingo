@@ -324,6 +324,7 @@ There is a Matrix/FreeNode IRC channel `#LibreLingo`, instructions for joining:
 ## Articles
 
 - [Why I built LibreLingo](https://dev.to/kantord/why-i-built-librelingo-280o)
+- [Practice TDD by creating a LibreLingo-based language-learning app](https://dev.to/kantord/practice-tdd-by-creating-a-librelingo-based-language-learning-app-4apf)
 
 ## License
 LibreLingo is licensed under the AGPL-3.0 License. Course content and other creative content might be licensed under other licenses, such as CC.
