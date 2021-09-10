@@ -1,152 +1,222 @@
 Skill:
-  Id: 92
-  Name: Family 2
+  Id: 111
+  Name: Family 1
   Thumbnails:
 
 New words:
-  - Word: biloba
-    Translation: grandson
+  - Word: aitona-amonak
+    Translation: grandparents
+    Images:
+      - grandparents1
+      - grandparents2
+      - grandparents3
+
+  - Word: aiton
+    Translation: grandfather
     Also accepted:
-      - granddaughter
+      - grandpa
+      - granddad
     Images:
-      - grandson1
-      - granddaughter1
-      - grandson2
+      - grandfather1
+      - grandfather2
+      - grandfather3
 
-  - Word: emaztea
-    Translation: wife
-    Images:
-      - wife1
-      - wife2
-      - wife3
-
-  - Word: izeba
-    Translation: aunt
-    Images:
-      - aunt1
-      - aunt2
-      - aunt3
-
-  - Word: lehengusu
-    Translation: cousin (male)
-    Images:
-      - cousinmale1
-      - cousinmale2
-      - cousinmale3
-
-  - Word: lehengusina
-    Translation: cousin (female)
-    Images:
-      - cousinfemale1
-      - cousinfemale2
-      - cousinfemale3
-
-  - Word: osaba
-    Translation: uncle
-    Images:
-      - uncle1
-      - uncle2
-      - uncle3
-
-  - Word: seme-alba
-    Translation: children
+  - Word: amon
+    Translation: grandmother
     Also accepted:
-      - sons and daughters
+      - grandma
+      - grandmum
     Images:
-      - children1
-      - children2
-      - children3
+      - grandmother1
+      - grandmother2
+      - grandmother3
 
-  - Word: senarra
-    Translation: husband
+  - Word: gurasoak
+    Translation: parents
     Images:
-      - husband1
-      - husband2
-      - husband3
+      - parents1
+      - parents2
+      - parents3
 
-  - Word: ume
-    Translation: child
+  - Word: aita
+    Translation: father
+    Also accepted:
+      - dad
+      - pa
     Images:
-      - child1
-      - child2
-      - child3
+      - father1
+      - father2
+      - father3
+
+  - Word: ama
+    Translation: mother
+    Also accepted:
+      - mum
+      - ma
+    Images:
+      - mother1
+      - mother2
+      - mother3
+
+  - Word: seme
+    Translation: son
+    Images:
+      - son1
+      - son2
+      - son3
+
+  - Word: alaba
+    Translation: daughter
+    Images:
+      - daughter1
+      - daughter2
+      - daughter3
 
 Phrases:
-  - Phrase: Haiek nire seme-alba dira.
-    Translation: They are my children.
+  - Phrase: Gure aitona-amonak medikuak dira.
+    Translation: Our grandparents are doctors.
 
-  - Phrase: Haiek gure bilobak dira.
-    Translation: They are our grandchildren.
+  - Phrase: Gu haien aitona-amonak gara.
+    Translation: We are their grandparents.
 
-  - Phrase: Zu nire umea zara.
-    Translation: You are my child.
+  - Phrase: Bere aitona-amonak zaharrak eta laburrak dira.
+    Translation: His grandparents are old and short.
+    Alternative translations:
+      - Her grandparents are old and short.
 
-  - Phrase: Umea nire semea da.
-    Translation: The child is my son.
+  - Phrase: Gure aitona altua eta argala da.
+    Translation: Our grandfather is tall and thin.
 
-  - Phrase: Ni zure osaba naiz.
-    Translation: I am your uncle.
+  - Phrase: Haien aitona gidaria da.
+    Translation: Their grandfather is a driver.
+    Alternative translations:
+      - Their grandfather is the driver.
 
-  - Phrase: Hura gure izeba da.
-    Translation: She is our aunt.
+  - Phrase: Aitonaren zaldia handia eta beltza da.
+    Translation: Grandfather’s horse is big and black.
+    Alternative translations:
+      - The horse of grandfather is big and black.
 
-  - Phrase: Gizon hau nire senarra da.
-    Translation: This man is my husband.
+  - Phrase: Haien amona laburra eta gizena da.
+    Translation: Their grandmother is short and fat.
 
-  - Phrase: Emakumea hau nire emaztea da.
-    Translation: This woman is my wife.
+  - Phrase: Zure amonaren baloia da.
+    Translation: It is your grandmother’s ball.
+    Alternative translations:
+      - It is the ball of your grandmother.
 
-  - Phrase: Nire emaztea polizia da.
-    Translation: My wife is a police officer.
+  - Phrase: Gure amona irakaslea da.
+    Translation: Our grandmother is a teacher.
+    Alternative translations:
+      - Our grandmother is the teacher.
 
-  - Phrase: Bere senarra gida tour gida da.
-    Translation: Her husband is a tour guide.
+  - Phrase: Haiek gure gurasoak dira.
+    Translation: They are our parents.
 
-  - Phrase: Gure osaba erizaina bat da.
-    Translation: Our uncle is an nurse.
+  - Phrase: Gure gurasoen kotxea urdina da.
+    Translation: Our parents’ car is blue.
+    Alternative translations:
+      - The car of our parents is blue.
 
-  - Phrase: Nire lehengusua da ere ingeniaria.
-    Translation: My cousin (male) is also an engineer.
+  - Phrase: Haien gurasoen etxea handia eta zuria da.
+    Translation: Their parents’ house is big and white.
+    Alternative translations:
+      - The house of their parents is big and white.
 
-  - Phrase: Haien izeba medikua da.
-    Translation: Their aunt is a doctor.
+  - Phrase: Hura gure aita da.
+    Translation: He is our father.
 
-  - Phrase: Nire lehengusina ere medikua da.
-    Translation: My cousin (female) is also a doctor.
+  - Phrase: Gure aitaren aita gure aitona da.
+    Translation: Our father’s father is our grandfather.
+    Alternative translations:
+      - The father of our father is our grandfather.
 
-  - Phrase: Gure izeba irakaslea da.
-    Translation: Our aunt is a teacher.
+  - Phrase: Gure aita eta ama dira gure gurasoak.
+    Translation: Our father and  mother are our parents.
 
-  - Phrase: Nire osabaren semea lehengusua da.
-    Translation: My uncle's son is my cousin (male).
+  - Phrase: Hura zuen ama da.
+    Translation: She is your(plural) mother.
+    Alternative translations:
+      - She is your mother.
 
-  - Phrase: Nire izebare alaba nire lehengusina da.
-    Translation: My aunt's daughter is my cousin (female).
+  - Phrase: Haien ama tour gida da.
+    Translation: Their mother is a tour guide.
+
+  - Phrase: Amaren ama bere amona da.
+    Translation: Her mother’s mother is her grandmother.
+    Alternative translations:
+      - His mother’s mother is his grandmother.
+      - The mother of his mother is his grandmother.
+      - The mother of her mother is her grandmother.
+
+  - Phrase: Bere semea apaiza da.
+    Translation: His son is a priest.
+    Alternative translations:
+      - Her son is a priest.
+      - His son is the priest.
+      - Her son is the priest.
+
+  - Phrase: Mutil hau nire semea da.
+    Translation: This boy is my son.
+
+  - Phrase: Nire semearen arkatza da.
+    Translation: It is my son’s pencil.
+    Alternative translations:
+      - It is the pencil of my son.
+
+  - Phrase: Zure aitonaren semea zure aita da.
+    Translation: Your grandfather’s son is your father.
+    Alternative translations:
+      - The son of your grandfather is your father.
+
+  - Phrase: Zure amonaren alaba zure ama da.
+    Translation: Your grandmother’s daughter is your mother.
+    Alternative translations:
+      - The daughter of your grandmother is your mother.
+
+  - Phrase: Neska hau nire alaba da.
+    Translation: This girl is my daughter.
+
+  - Phrase: Nire alaba erizaina da.
+    Translation: My daughter is a  nurse.
+    Alternative translations:
+      - The daughter of your grandmother is your mother.
+
+  - Phrase: Turista nire alaba da.
+    Translation: The tourist is my daughter.
+
+  - Phrase: Zure alabak ikasleak dira.
+    Translation: Your daughters are students.
+
+  - Phrase: Nire alabaren boligrafoa da.
+    Translation: It is my daughter’s pen.
+    Alternative translations:
+      - It is the pen of my daughter.
 
 Mini-dictionary:
   Basque:
-    - Anitzarenak: Anitza's (female name, plural object)
-    - Lili: Lili (LibreLingo Turtle)
-    - Mikelenak: Mikel's (male name)
-    - Mirenen: Miren's (female name)
-    - Xabieren: Xabier's (male name)
-    - aiton-amonak: grandparents
+    - Anearenak: Anea’s (female name, plural object)
+    - Mirenen: Miren’s (female name)
+    - Xabieren: Xabier’s (male name)
+    - Mikelenak: Mikel’s (male name)
+    - aitona-amonak: grandparents
     - aiton: grandfather
     - aitona: grandfather
-    - aitonaren: grandfather's
+    - aitonaren: grandfather’s
     - aita: father
-    - aitaren: father's
+    - aitaren: father’s
     - alaba: daughter
     - alabak: daughters
-    - alabaren: daughter's
+    - alabaren: daughter’s
     - altua: tall
     - ama: mother
-    - amaren: mother's
+    - amaren: mother’s
     - amon: grandmother
     - amona: grandmother
-    - amonaren: grandmother's
+    - amonaren: grandmother’s
     - animalia: animal
     - animaliak: animals
+    - apaiza: priest
     - argala: thin
     - arkatza: pencil
     - arkatzak: pencils
@@ -176,9 +246,6 @@ Mini-dictionary:
       - hers
       - its
     - berria: new
-    - biloba:
-      - grandson
-      - granddaughter
     - bilobak: grandchildren
     - bizikleta: bicycle
     - bizikletak: bicycles
@@ -189,9 +256,8 @@ Mini-dictionary:
     - dira: are
     - dortoka: a turtle
     - dortokak: turtles
-    - emakumea: woman
-    - emaztea: wife
     - ere: also
+    - erizaina: nurse
     - erloju: watch
     - erlojua: watch
     - erlojuak: watches
@@ -199,10 +265,10 @@ Mini-dictionary:
     - eta: and
     - etxe: house
     - etxea: house
-    - ez: not, no
+    - ez: not,no
     - gaztea: young
-    - gizon: man
     - gida: guide
+    - gidaria: driver
     - gizen: fat
     - gizena: fat
     - gorri: red
@@ -210,6 +276,7 @@ Mini-dictionary:
     - gris: gray
     - grisa: gray
     - grisak: gray
+    - gurasoen: parents’
     - gurasoak: parents
     - gure: our
     - gurea: ours
@@ -240,34 +307,31 @@ Mini-dictionary:
       - she
       - it
     - ikasleak: students
-    - ikasleenak: students'
+    - ikasleenak: students’
     - ingeniari: engineer
-    - ingeniaria: engineer
     - irakaslea: teacher
     - itsusia: ugly
-    - izeba: aunt
-    - izebare: aunt's
     - katu: cat
     - katua: a cat
     - katuak: cats
     - kotxe: car
     - kotxea: car
     - kotxeak: cars
-    - labura: short
+    - laburra: short
+    - laburrak: short
     - lagun: friend
     - laguna: friend
-    - lagunen: friend's
-    - lagunaren: friend's
+    - lagunen: friend’s
+    - lagunaren: friend’s
     - laranja: orange
     - laranjak: orange
-    - lehengusu: cousin (male)
-    - lehengusua: cousin (male)
-    - lehengusina: cousin (female)
     - liburu: book
     - liburua: a book
     - liburua: books
     - liburuak: books
+    - Lili: Lili (LibreLingo Turtle)
     - medikua: doctor
+    - medikuak: doctors
     - motxila: backpack
     - motxilak: backpacks
     - morea: purple
@@ -290,8 +354,6 @@ Mini-dictionary:
     - oilaskoa: a chicken
     - oilaskoak: chickens
     - orain : now
-    - osaba: uncle
-    - osabaren: uncle's
     - polita: pretty
     - poltsa: purse
     - poltsak: purses
@@ -299,9 +361,7 @@ Mini-dictionary:
     - seme: son
     - semea: son
     - semeak: sons
-    - semearen: son's
-    - seme-alba: children
-    - senarra: husband
+    - semearen: son’s
     - tour: tour
     - turista: tourist
     - txakur: dog
@@ -321,6 +381,7 @@ Mini-dictionary:
     - zahara: old
     - zaharra: old
     - zaharrak: old
+    - zaldia: horse
     - zara: are
     - zarete: their
     - zein: which
@@ -328,9 +389,9 @@ Mini-dictionary:
     - zer: what
     - zu: you
     - zuek: your (plural)
-    - zuen: yours
-    - zuena: yours (plural)
-    - zuenak: yours (plural)
+    - zuen: your
+    - zuena: your (plural)
+    - zuenak: your (plural)
     - zure: your
     - zurea: yours
     - zureak: yours
@@ -339,11 +400,10 @@ Mini-dictionary:
     - zuriak: white
 
   English:
-    - Anitza's: Anitzarenak (female name, plural object)
-    - Lili: Lili (LibreLingo Turtle)
-    - Mikel's: Mikelenak (male name)
-    - Miren's: Mirenen(female name)
-    - Xabier's: Xabieren (male name)
+    - Anea’s: Anearenak (female name, plural object)
+    - Miren’s: Mirenen (female name)
+    - Xabier’s: Xabieren (male name)
+    - Mikel’s: Mikelenak (male name)
     - a: -a
     - also: ere
     - am: naiz
@@ -354,8 +414,6 @@ Mini-dictionary:
     - are:
       - dira
       - zara
-    - aunt: izeba
-    - aunt's: izebare
     - ball: baloi
     - balls: baloiak
     - backpack: motxila
@@ -382,39 +440,33 @@ Mini-dictionary:
     - child: ume
     - children:
       - umeak
-      - seme-alba
-    - cousin:
-      - lehengusu
-      - lehengusina
     - daughter: alaba
     - daughters: alabak
-    - daughter's: alabaren
+    - daughter’s: alabaren
     - doctor: medikua
+    - doctors: medikuak
     - dog: txakur
     - dogs: txakurrak
+    - driver: gidaria
     - engineer: ingeniari
     - fast: azkar
     - fat: gizena
     - father: aita
     - fathers: aitak
-    - father's: aitaren
-    - female: emakumezkoa
+    - father’s: aitaren
     - friend: laguna
-    - friend's: lagunen
-    - friends': lagunaren
+    - friend’s: lagunen
+    - friends’: lagunaren
     - girl: neska
     - girls: neskak
     - gray: gris
-    - grandchildren: bilobak
-    - granddaughter: biloba
-    - grandparents: aiton-amonak
+    - grandparents: aitona-amonak
     - grandfather: aiton
     - grandfather: aitona
-    - grandfather's: aitonaren
+    - grandfather’s: aitonaren
     - grandmother: amon
     - grandmother: amona
-    - grandmother's: amonaren
-    - grandson: biloba
+    - grandmother’s: amonaren
     - green: berde
     - guide: gida
     - hau: hau
@@ -424,28 +476,28 @@ Mini-dictionary:
       - berea
     - her: bere
     - hers: berea
+    - horse: zaldia
     - hotel: hotel
     - hotels: hotelak
     - house: etxea
     - hura: hura
-    - husband: senarra
     - I: ni
     - is: da
     - it: hura
     - its: berea
+    - Lili: Lili (LibreLingo Turtle)
     - look!: begira!
-    - male: gizonezkoa
-    - man: gizon
     - mine: nirea
     - owls: hontzak
     - mother: ama
-    - mother's: amaren
+    - mother’s: amaren
     - mothers: amak
     - my: nire
     - new: berri
     - no: ez
     - not: ez
     - now: orain
+    - nurse: erizaina
     - of: de
     - officer: ofiziala
     - old: zahar
@@ -456,11 +508,13 @@ Mini-dictionary:
     - over: amaitu
     - owl: hontza
     - parents: gurasoak
+    - parents’: gurasoen
     - pen: boligrafo
     - pencil: arkatza
     - pencils: arkatzak
     - pens: boligrafoak
     - police: polizia
+    - priest: apaiza
     - plural: plurala
     - pretty: polit
     - purple: morea
@@ -473,10 +527,10 @@ Mini-dictionary:
     - slow: motel
     - son: seme
     - sons: semeak
-    - son's: semearen
+    - son’s: semearen
     - small: txiki
     - students: ikasleak
-    - students': ikasleenak
+    - students’: ikasleenak
     - tall: altu
     - teacher: irakaslea
     - that:
@@ -500,8 +554,6 @@ Mini-dictionary:
     - ugly: itsusi
     - umbrella: aterki
     - umbrellas: aterkiak
-    - uncle: osaba
-    - uncle's: osabaren
     - was: zen
     - watch: erloju
     - watches: erlojuak
@@ -510,12 +562,11 @@ Mini-dictionary:
     - white: zuri
     - who: nor
     - whose: noren
-    - wife: emaztea
-    - woman: emakumea
     - yellow: hori
     - you: zu
     - young: gazte
     - your: zure
+    - your(plural): zuen
     - yours:
       - zurea
       - zuena

@@ -1,73 +1,70 @@
 {
-  "id": "373d0f2f7eef",
-  "levels": 7,
+  "id": "6b628c9807e3",
+  "levels": 8,
   "challenges": [
     {
       "type": "options",
-      "formInTargetLanguage": "Haiek gure aiton-amonak dira.",
-      "meaningInSourceLanguage": "They are our grandparents.",
-      "id": "d4eb79aa249c",
+      "formInTargetLanguage": "Gure aitona-amonak medikuak dira.",
+      "meaningInSourceLanguage": "Our grandparents are doctors.",
+      "id": "2365b34c0d79",
       "priority": 0,
-      "group": "2933bc633dd0"
+      "group": "e6a9c3efe466"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
         {
-          "word": "They",
-          "definition": "haiek"
+          "word": "Our",
+          "definition": "gure"
+        },
+        {
+          "word": "grandparents",
+          "definition": "aiton-amonak\naitona-amonak"
         },
         {
           "word": "are",
           "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
         },
         {
-          "word": "our",
-          "definition": "gure"
-        },
-        {
-          "word": "grandparents.",
-          "definition": "aiton-amonak"
+          "word": "doctors.",
+          "definition": "medikuak"
         }
       ],
       "chips": [
-        "Haiek",
-        "gure",
-        "aiton-amonak",
-        "dira",
-        "aita",
-        "gara",
-        "zara"
+        "Gure",
+        "aitona-amonak",
+        "medikuak",
+        "dira"
       ],
       "solutions": [
         [
-          "Haiek",
-          "gure",
-          "aiton-amonak",
+          "Gure",
+          "aitona-amonak",
+          "medikuak",
           "dira"
         ]
       ],
-      "formattedSolution": "Haiek gure aiton-amonak dira.",
-      "id": "7be6758c5a24",
+      "formattedSolution": "Gure aitona-amonak medikuak dira.",
+      "id": "74ac4071ccb9",
       "priority": 2,
-      "group": "2933bc633dd0"
+      "group": "e6a9c3efe466"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Haiek",
-          "definition": "they\nthose over there, plural of hura"
-        },
-        {
-          "word": "gure",
+          "word": "Gure",
           "definition": "our"
         },
         {
-          "word": "aiton-amonak",
+          "word": "aitona-amonak",
           "definition": "grandparents"
+        },
+        {
+          "word": "medikuak",
+          "definition": "doctors"
         },
         {
           "word": "dira.",
@@ -75,441 +72,39 @@
         }
       ],
       "chips": [
-        "They",
-        "are",
-        "our",
+        "Our",
         "grandparents",
-        "one",
-        "Are",
-        "the"
-      ],
-      "solutions": [
-        [
-          "They",
-          "are",
-          "our",
-          "grandparents"
-        ]
-      ],
-      "formattedSolution": "They are our grandparents.",
-      "id": "6f89f58f1241",
-      "priority": 2,
-      "group": "2933bc633dd0"
-    },
-    {
-      "type": "options",
-      "formInTargetLanguage": "Zu gure aitona zara.",
-      "meaningInSourceLanguage": "You are our grandfather.",
-      "id": "fce9068aa3f6",
-      "priority": 0,
-      "group": "0ee60ea0ce6e"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": false,
-      "phrase": [
-        {
-          "word": "You",
-          "definition": "zu\nzuek"
-        },
-        {
-          "word": "are",
-          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
-        },
-        {
-          "word": "our",
-          "definition": "gure"
-        },
-        {
-          "word": "grandfather.",
-          "definition": "aiton\naitona"
-        }
-      ],
-      "chips": [
-        "Zu",
-        "gure",
-        "aitona",
-        "zara",
-        "Hura",
-        "gara",
-        "Zure"
-      ],
-      "solutions": [
-        [
-          "Zu",
-          "gure",
-          "aitona",
-          "zara"
-        ]
-      ],
-      "formattedSolution": "Zu gure aitona zara.",
-      "id": "721c5dfe72cb",
-      "priority": 2,
-      "group": "0ee60ea0ce6e"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": true,
-      "phrase": [
-        {
-          "word": "Zu",
-          "definition": "you"
-        },
-        {
-          "word": "gure",
-          "definition": "our"
-        },
-        {
-          "word": "aitona",
-          "definition": "grandfather"
-        },
-        {
-          "word": "zara.",
-          "definition": "are\nyou are (izan)"
-        }
-      ],
-      "chips": [
-        "You",
         "are",
-        "our",
-        "grandfather",
-        "or",
-        "one",
-        "the"
+        "doctors"
       ],
       "solutions": [
         [
-          "You",
+          "Our",
+          "grandparents",
           "are",
-          "our",
-          "grandfather"
+          "doctors"
         ]
       ],
-      "formattedSolution": "You are our grandfather.",
-      "id": "a52acc76b60e",
+      "formattedSolution": "Our grandparents are doctors.",
+      "id": "70f28d59c1c2",
       "priority": 2,
-      "group": "0ee60ea0ce6e"
+      "group": "e6a9c3efe466"
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Ni zure amon naiz.",
-      "meaningInSourceLanguage": "I am your grandmother.",
-      "id": "2db6315d7488",
+      "formInTargetLanguage": "Gu haien aitona-amonak gara.",
+      "meaningInSourceLanguage": "We are their grandparents.",
+      "id": "a2c5d4b20c6d",
       "priority": 0,
-      "group": "12e24539f47b"
+      "group": "4afecef8471b"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": false,
       "phrase": [
         {
-          "word": "I",
-          "definition": "ni"
-        },
-        {
-          "word": "am",
-          "definition": "nago (egon)\nnaiz\nnaiz (izan)"
-        },
-        {
-          "word": "your",
-          "definition": "zuen\nzure"
-        },
-        {
-          "word": "grandmother.",
-          "definition": "amon\namona"
-        }
-      ],
-      "chips": [
-        "Ni",
-        "zure",
-        "amon",
-        "naiz",
-        "ni",
-        "a",
-        "i"
-      ],
-      "solutions": [
-        [
-          "Ni",
-          "zure",
-          "amon",
-          "naiz"
-        ]
-      ],
-      "formattedSolution": "Ni zure amon naiz.",
-      "id": "fdc602bce3ee",
-      "priority": 2,
-      "group": "12e24539f47b"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": true,
-      "phrase": [
-        {
-          "word": "Ni",
-          "definition": "I\nme"
-        },
-        {
-          "word": "zure",
-          "definition": "your"
-        },
-        {
-          "word": "amon",
-          "definition": "grandmother"
-        },
-        {
-          "word": "naiz.",
-          "definition": "I am (izan)\nam"
-        }
-      ],
-      "chips": [
-        "I",
-        "am",
-        "your",
-        "grandmother",
-        "or",
-        "a",
-        "r"
-      ],
-      "solutions": [
-        [
-          "I",
-          "am",
-          "your",
-          "grandmother"
-        ]
-      ],
-      "formattedSolution": "I am your grandmother.",
-      "id": "df4a0b54bfbd",
-      "priority": 2,
-      "group": "12e24539f47b"
-    },
-    {
-      "type": "options",
-      "formInTargetLanguage": "Hura gure aita da.",
-      "meaningInSourceLanguage": "He is our father.",
-      "id": "f3311a2a69ac",
-      "priority": 0,
-      "group": "012f75d79058"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": false,
-      "phrase": [
-        {
-          "word": "He",
-          "definition": "hura"
-        },
-        {
-          "word": "is",
-          "definition": "da\nda (izan)\ndago (egon)"
-        },
-        {
-          "word": "our",
-          "definition": "gure"
-        },
-        {
-          "word": "father.",
-          "definition": "aita"
-        }
-      ],
-      "chips": [
-        "Hura",
-        "gure",
-        "aita",
-        "da",
-        "dira",
-        "hura",
-        "gara"
-      ],
-      "solutions": [
-        [
-          "Hura",
-          "gure",
-          "aita",
-          "da"
-        ]
-      ],
-      "formattedSolution": "Hura gure aita da.",
-      "id": "d0e3a4d12b51",
-      "priority": 2,
-      "group": "012f75d79058"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": true,
-      "phrase": [
-        {
-          "word": "Hura",
-          "definition": "he\nit\nitr\nshe\nthat over there"
-        },
-        {
-          "word": "gure",
-          "definition": "our"
-        },
-        {
-          "word": "aita",
-          "definition": "father"
-        },
-        {
-          "word": "da.",
-          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
-        }
-      ],
-      "chips": [
-        "He",
-        "is",
-        "our",
-        "father",
-        "he",
-        "or",
-        "her"
-      ],
-      "solutions": [
-        [
-          "He",
-          "is",
-          "our",
-          "father"
-        ]
-      ],
-      "formattedSolution": "He is our father.",
-      "id": "91a52172eb0e",
-      "priority": 2,
-      "group": "012f75d79058"
-    },
-    {
-      "type": "options",
-      "formInTargetLanguage": "Hura zuen ama da.",
-      "meaningInSourceLanguage": "She is your (plural) mother.",
-      "id": "13cfe2ca5fb2",
-      "priority": 0,
-      "group": "4793950df978"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": false,
-      "phrase": [
-        {
-          "word": "She",
-          "definition": "hura"
-        },
-        {
-          "word": "is",
-          "definition": "da\nda (izan)\ndago (egon)"
-        },
-        {
-          "word": "your",
-          "definition": "zuen\nzure"
-        },
-        {
-          "word": "(plural)",
-          "definition": "plurala"
-        },
-        {
-          "word": "mother.",
-          "definition": "ama"
-        }
-      ],
-      "chips": [
-        "Hura",
-        "zuen",
-        "ama",
-        "da",
-        "zara",
-        "a",
-        "hura"
-      ],
-      "solutions": [
-        [
-          "Hura",
-          "zuen",
-          "ama",
-          "da"
-        ]
-      ],
-      "formattedSolution": "Hura zuen ama da.",
-      "id": "2ca302b8a365",
-      "priority": 2,
-      "group": "4793950df978"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": true,
-      "phrase": [
-        {
-          "word": "Hura",
-          "definition": "he\nit\nitr\nshe\nthat over there"
-        },
-        {
-          "word": "zuen",
-          "definition": "your(plural)\nyour, plural\nyours"
-        },
-        {
-          "word": "ama",
-          "definition": "mother"
-        },
-        {
-          "word": "da.",
-          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
-        }
-      ],
-      "chips": [
-        "She",
-        "is",
-        "your",
-        "plural",
-        "mother",
-        "our",
-        "or",
-        "her",
-        "the"
-      ],
-      "solutions": [
-        [
-          "She",
-          "is",
-          "your",
-          "plural",
-          "mother"
-        ],
-        [
-          "She",
-          "is",
-          "your",
-          "mother"
-        ],
-        [
-          "She",
-          "is",
-          "you'lls",
-          "mother"
-        ]
-      ],
-      "formattedSolution": "She is your (plural) mother.",
-      "id": "bd0ca71b8b43",
-      "priority": 2,
-      "group": "4793950df978"
-    },
-    {
-      "type": "options",
-      "formInTargetLanguage": "Zuek haien aiton-amonak zarete.",
-      "meaningInSourceLanguage": "You (plural) are their grandparents.",
-      "id": "b0da25fe40ea",
-      "priority": 0,
-      "group": "ac9f0e852ae1"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": false,
-      "phrase": [
-        {
-          "word": "You",
-          "definition": "zu\nzuek"
-        },
-        {
-          "word": "(plural)",
-          "definition": "plurala"
+          "word": "We",
+          "definition": "gu"
         },
         {
           "word": "are",
@@ -521,88 +116,838 @@
         },
         {
           "word": "grandparents.",
-          "definition": "aiton-amonak"
+          "definition": "aiton-amonak\naitona-amonak"
         }
       ],
       "chips": [
-        "Zuek",
+        "Gu",
         "haien",
-        "aiton-amonak",
-        "zarete",
-        "hauek",
-        "Haiek",
-        "Haien"
+        "aitona-amonak",
+        "gara"
       ],
       "solutions": [
         [
-          "Zuek",
+          "Gu",
           "haien",
-          "aiton-amonak",
-          "zarete"
+          "aitona-amonak",
+          "gara"
         ]
       ],
-      "formattedSolution": "Zuek haien aiton-amonak zarete.",
-      "id": "b873667c72bb",
+      "formattedSolution": "Gu haien aitona-amonak gara.",
+      "id": "e988a50ee4b9",
       "priority": 2,
-      "group": "ac9f0e852ae1"
+      "group": "4afecef8471b"
     },
     {
       "type": "chips",
       "translatesToSourceLanguage": true,
       "phrase": [
         {
-          "word": "Zuek",
-          "definition": "You'll\nyou\nyou'll\nyou(plural)\nyour (plural)"
+          "word": "Gu",
+          "definition": "we"
         },
         {
           "word": "haien",
           "definition": "their"
         },
         {
-          "word": "aiton-amonak",
+          "word": "aitona-amonak",
           "definition": "grandparents"
         },
         {
-          "word": "zarete.",
-          "definition": "are\ntheir"
+          "word": "gara.",
+          "definition": "are\nare (izan)"
         }
       ],
       "chips": [
-        "You",
-        "plural",
+        "We",
         "are",
         "their",
-        "grandparents",
-        "Are",
-        "the",
-        "car",
-        "or"
+        "grandparents"
       ],
       "solutions": [
         [
-          "You",
-          "plural",
-          "are",
-          "their",
-          "grandparents"
-        ],
-        [
-          "You",
-          "are",
-          "their",
-          "grandparents"
-        ],
-        [
-          "You'll",
+          "We",
           "are",
           "their",
           "grandparents"
         ]
       ],
-      "formattedSolution": "You (plural) are their grandparents.",
-      "id": "15c7d2646775",
+      "formattedSolution": "We are their grandparents.",
+      "id": "d27dc197c507",
       "priority": 2,
-      "group": "ac9f0e852ae1"
+      "group": "4afecef8471b"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Bere aitona-amonak zaharrak eta laburrak dira.",
+      "meaningInSourceLanguage": "His grandparents are old and short.",
+      "id": "8bba170648e4",
+      "priority": 0,
+      "group": "671a576f4230"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "His",
+          "definition": "bere\nberea\nbereak"
+        },
+        {
+          "word": "grandparents",
+          "definition": "aiton-amonak\naitona-amonak"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "old",
+          "definition": "zahar\nzaharra"
+        },
+        {
+          "word": "and",
+          "definition": "eta"
+        },
+        {
+          "word": "short.",
+          "definition": "labur\nlaburak"
+        }
+      ],
+      "chips": [
+        "Bere",
+        "aitona-amonak",
+        "zaharrak",
+        "eta",
+        "laburrak",
+        "dira"
+      ],
+      "solutions": [
+        [
+          "Bere",
+          "aitona-amonak",
+          "zaharrak",
+          "eta",
+          "laburrak",
+          "dira"
+        ]
+      ],
+      "formattedSolution": "Bere aitona-amonak zaharrak eta laburrak dira.",
+      "id": "68eabb85d90a",
+      "priority": 2,
+      "group": "671a576f4230"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Bere",
+          "definition": "her\nhers\nhis\nhis/hers/its\nits"
+        },
+        {
+          "word": "aitona-amonak",
+          "definition": "grandparents"
+        },
+        {
+          "word": "zaharrak",
+          "definition": "old"
+        },
+        {
+          "word": "eta",
+          "definition": "and"
+        },
+        {
+          "word": "laburrak",
+          "definition": "short"
+        },
+        {
+          "word": "dira.",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "His",
+        "grandparents",
+        "are",
+        "old",
+        "and",
+        "short"
+      ],
+      "solutions": [
+        [
+          "His",
+          "grandparents",
+          "are",
+          "old",
+          "and",
+          "short"
+        ],
+        [
+          "Her",
+          "grandparents",
+          "are",
+          "old",
+          "and",
+          "short"
+        ]
+      ],
+      "formattedSolution": "His grandparents are old and short.",
+      "id": "a7c7ca5e6bc9",
+      "priority": 2,
+      "group": "671a576f4230"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Gure aitona altua eta argala da.",
+      "meaningInSourceLanguage": "Our grandfather is tall and thin.",
+      "id": "47bf6b133150",
+      "priority": 0,
+      "group": "3eb67a87f930"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Our",
+          "definition": "gure"
+        },
+        {
+          "word": "grandfather",
+          "definition": "aiton\naitona"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "tall",
+          "definition": "altu"
+        },
+        {
+          "word": "and",
+          "definition": "eta"
+        },
+        {
+          "word": "thin.",
+          "definition": "argal"
+        }
+      ],
+      "chips": [
+        "Gure",
+        "aitona",
+        "altua",
+        "eta",
+        "argala",
+        "da"
+      ],
+      "solutions": [
+        [
+          "Gure",
+          "aitona",
+          "altua",
+          "eta",
+          "argala",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Gure aitona altua eta argala da.",
+      "id": "b7eb530a9b2d",
+      "priority": 2,
+      "group": "3eb67a87f930"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Gure",
+          "definition": "our"
+        },
+        {
+          "word": "aitona",
+          "definition": "grandfather"
+        },
+        {
+          "word": "altua",
+          "definition": "tall"
+        },
+        {
+          "word": "eta",
+          "definition": "and"
+        },
+        {
+          "word": "argala",
+          "definition": "thin"
+        },
+        {
+          "word": "da.",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "Our",
+        "grandfather",
+        "is",
+        "tall",
+        "and",
+        "thin"
+      ],
+      "solutions": [
+        [
+          "Our",
+          "grandfather",
+          "is",
+          "tall",
+          "and",
+          "thin"
+        ]
+      ],
+      "formattedSolution": "Our grandfather is tall and thin.",
+      "id": "33153e1d19f6",
+      "priority": 2,
+      "group": "3eb67a87f930"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Haien aitona gidaria da.",
+      "meaningInSourceLanguage": "Their grandfather is a driver.",
+      "id": "46fba108ecac",
+      "priority": 0,
+      "group": "0358d8716daf"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Their",
+          "definition": "haien"
+        },
+        {
+          "word": "grandfather",
+          "definition": "aiton\naitona"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "driver.",
+          "definition": "gidari\ngidaria"
+        }
+      ],
+      "chips": [
+        "Haien",
+        "aitona",
+        "gidaria",
+        "da"
+      ],
+      "solutions": [
+        [
+          "Haien",
+          "aitona",
+          "gidaria",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Haien aitona gidaria da.",
+      "id": "aee7f5799af7",
+      "priority": 2,
+      "group": "0358d8716daf"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Haien",
+          "definition": "their"
+        },
+        {
+          "word": "aitona",
+          "definition": "grandfather"
+        },
+        {
+          "word": "gidaria",
+          "definition": "driver\nthe driver"
+        },
+        {
+          "word": "da.",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "Their",
+        "grandfather",
+        "is",
+        "a",
+        "driver"
+      ],
+      "solutions": [
+        [
+          "Their",
+          "grandfather",
+          "is",
+          "a",
+          "driver"
+        ],
+        [
+          "Their",
+          "grandfather",
+          "is",
+          "the",
+          "driver"
+        ]
+      ],
+      "formattedSolution": "Their grandfather is a driver.",
+      "id": "538f852ed05a",
+      "priority": 2,
+      "group": "0358d8716daf"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Aitonaren zaldia handia eta beltza da.",
+      "meaningInSourceLanguage": "Grandfather’s horse is big and black.",
+      "id": "9710207079ba",
+      "priority": 0,
+      "group": "e768800da98f"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Grandfather’s",
+          "definition": "aitonaren"
+        },
+        {
+          "word": "horse",
+          "definition": "zaldi\nzaldia"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "big",
+          "definition": "handi\nhandiak"
+        },
+        {
+          "word": "and",
+          "definition": "eta"
+        },
+        {
+          "word": "black.",
+          "definition": "beltz\nbeltza"
+        }
+      ],
+      "chips": [
+        "Aitonaren",
+        "zaldia",
+        "handia",
+        "eta",
+        "beltza",
+        "da"
+      ],
+      "solutions": [
+        [
+          "Aitonaren",
+          "zaldia",
+          "handia",
+          "eta",
+          "beltza",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Aitonaren zaldia handia eta beltza da.",
+      "id": "e60490f8246a",
+      "priority": 2,
+      "group": "e768800da98f"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Aitonaren",
+          "definition": "grandfather's\ngrandfather’s"
+        },
+        {
+          "word": "zaldia",
+          "definition": "a horse\nhorse"
+        },
+        {
+          "word": "handia",
+          "definition": "big"
+        },
+        {
+          "word": "eta",
+          "definition": "and"
+        },
+        {
+          "word": "beltza",
+          "definition": "black"
+        },
+        {
+          "word": "da.",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "Grandfather’s",
+        "horse",
+        "is",
+        "big",
+        "and",
+        "black"
+      ],
+      "solutions": [
+        [
+          "Grandfather’s",
+          "horse",
+          "is",
+          "big",
+          "and",
+          "black"
+        ],
+        [
+          "The",
+          "horse",
+          "of",
+          "grandfather",
+          "is",
+          "big",
+          "and",
+          "black"
+        ]
+      ],
+      "formattedSolution": "Grandfather’s horse is big and black.",
+      "id": "86df3340863d",
+      "priority": 2,
+      "group": "e768800da98f"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Haien amona laburra eta gizena da.",
+      "meaningInSourceLanguage": "Their grandmother is short and fat.",
+      "id": "902941adf56f",
+      "priority": 0,
+      "group": "d47b6a737328"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Their",
+          "definition": "haien"
+        },
+        {
+          "word": "grandmother",
+          "definition": "amon\namona"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "short",
+          "definition": "labur\nlaburak"
+        },
+        {
+          "word": "and",
+          "definition": "eta"
+        },
+        {
+          "word": "fat.",
+          "definition": "gizen\ngizena"
+        }
+      ],
+      "chips": [
+        "Haien",
+        "amona",
+        "laburra",
+        "eta",
+        "gizena",
+        "da"
+      ],
+      "solutions": [
+        [
+          "Haien",
+          "amona",
+          "laburra",
+          "eta",
+          "gizena",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Haien amona laburra eta gizena da.",
+      "id": "fa7e102d69f1",
+      "priority": 2,
+      "group": "d47b6a737328"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Haien",
+          "definition": "their"
+        },
+        {
+          "word": "amona",
+          "definition": "grandmother"
+        },
+        {
+          "word": "laburra",
+          "definition": "short"
+        },
+        {
+          "word": "eta",
+          "definition": "and"
+        },
+        {
+          "word": "gizena",
+          "definition": "fat"
+        },
+        {
+          "word": "da.",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "Their",
+        "grandmother",
+        "is",
+        "short",
+        "and",
+        "fat"
+      ],
+      "solutions": [
+        [
+          "Their",
+          "grandmother",
+          "is",
+          "short",
+          "and",
+          "fat"
+        ]
+      ],
+      "formattedSolution": "Their grandmother is short and fat.",
+      "id": "cf5fe621d1e4",
+      "priority": 2,
+      "group": "d47b6a737328"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Zure amonaren baloia da.",
+      "meaningInSourceLanguage": "It is your grandmother’s ball.",
+      "id": "3d0af4e5df1f",
+      "priority": 0,
+      "group": "078b0b65368f"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "It",
+          "definition": "hura"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "your",
+          "definition": "zuen\nzure"
+        },
+        {
+          "word": "grandmother’s",
+          "definition": "amonaren"
+        },
+        {
+          "word": "ball.",
+          "definition": "baloi"
+        }
+      ],
+      "chips": [
+        "Zure",
+        "amonaren",
+        "baloia",
+        "da"
+      ],
+      "solutions": [
+        [
+          "Zure",
+          "amonaren",
+          "baloia",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Zure amonaren baloia da.",
+      "id": "2010067628a1",
+      "priority": 2,
+      "group": "078b0b65368f"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Zure",
+          "definition": "your"
+        },
+        {
+          "word": "amonaren",
+          "definition": "grandmother's\ngrandmother’s"
+        },
+        {
+          "word": "baloia",
+          "definition": "ball"
+        },
+        {
+          "word": "da.",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "It",
+        "is",
+        "your",
+        "grandmother’s",
+        "ball"
+      ],
+      "solutions": [
+        [
+          "It",
+          "is",
+          "your",
+          "grandmother’s",
+          "ball"
+        ],
+        [
+          "It",
+          "is",
+          "the",
+          "ball",
+          "of",
+          "your",
+          "grandmother"
+        ]
+      ],
+      "formattedSolution": "It is your grandmother’s ball.",
+      "id": "00ca9abb5def",
+      "priority": 2,
+      "group": "078b0b65368f"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Gure amona irakaslea da.",
+      "meaningInSourceLanguage": "Our grandmother is a teacher.",
+      "id": "d4acb899c707",
+      "priority": 0,
+      "group": "bfcd1ceda419"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Our",
+          "definition": "gure"
+        },
+        {
+          "word": "grandmother",
+          "definition": "amon\namona"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "teacher.",
+          "definition": "irakasle\nirakaslea"
+        }
+      ],
+      "chips": [
+        "Gure",
+        "amona",
+        "irakaslea",
+        "da"
+      ],
+      "solutions": [
+        [
+          "Gure",
+          "amona",
+          "irakaslea",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Gure amona irakaslea da.",
+      "id": "ac0c0a00194c",
+      "priority": 2,
+      "group": "bfcd1ceda419"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Gure",
+          "definition": "our"
+        },
+        {
+          "word": "amona",
+          "definition": "grandmother"
+        },
+        {
+          "word": "irakaslea",
+          "definition": "a teacher\nteacher\nthe teacher"
+        },
+        {
+          "word": "da.",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "Our",
+        "grandmother",
+        "is",
+        "a",
+        "teacher"
+      ],
+      "solutions": [
+        [
+          "Our",
+          "grandmother",
+          "is",
+          "a",
+          "teacher"
+        ],
+        [
+          "Our",
+          "grandmother",
+          "is",
+          "the",
+          "teacher"
+        ]
+      ],
+      "formattedSolution": "Our grandmother is a teacher.",
+      "id": "c7e2ec3cacb7",
+      "priority": 2,
+      "group": "bfcd1ceda419"
     },
     {
       "type": "options",
@@ -637,10 +982,7 @@
         "Haiek",
         "gure",
         "gurasoak",
-        "dira",
-        "Hura",
-        "gara",
-        "gureak"
+        "dira"
       ],
       "solutions": [
         [
@@ -680,10 +1022,7 @@
         "They",
         "are",
         "our",
-        "parents",
-        "Are",
-        "one",
-        "the"
+        "parents"
       ],
       "solutions": [
         [
@@ -697,6 +1036,1033 @@
       "id": "a1639ae18acc",
       "priority": 2,
       "group": "79cd097690ed"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Gure gurasoen kotxea urdina da.",
+      "meaningInSourceLanguage": "Our parents’ car is blue.",
+      "id": "802713b46b64",
+      "priority": 0,
+      "group": "ab82337ba8a4"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Our",
+          "definition": "gure"
+        },
+        {
+          "word": "parents’",
+          "definition": "gurasoak"
+        },
+        {
+          "word": "car",
+          "definition": "kotxe\nkotxea"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "blue.",
+          "definition": "urdin"
+        }
+      ],
+      "chips": [
+        "Gure",
+        "gurasoen",
+        "kotxea",
+        "urdina",
+        "da"
+      ],
+      "solutions": [
+        [
+          "Gure",
+          "gurasoen",
+          "kotxea",
+          "urdina",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Gure gurasoen kotxea urdina da.",
+      "id": "07ae1212cd45",
+      "priority": 2,
+      "group": "ab82337ba8a4"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Gure",
+          "definition": "our"
+        },
+        {
+          "word": "gurasoen",
+          "definition": "parents’"
+        },
+        {
+          "word": "kotxea",
+          "definition": "a car\ncar"
+        },
+        {
+          "word": "urdina",
+          "definition": "blue"
+        },
+        {
+          "word": "da.",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "Our",
+        "parents",
+        "car",
+        "is",
+        "blue"
+      ],
+      "solutions": [
+        [
+          "Our",
+          "parents",
+          "car",
+          "is",
+          "blue"
+        ],
+        [
+          "The",
+          "car",
+          "of",
+          "our",
+          "parents",
+          "is",
+          "blue"
+        ]
+      ],
+      "formattedSolution": "Our parents’ car is blue.",
+      "id": "534bfd9a6582",
+      "priority": 2,
+      "group": "ab82337ba8a4"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Haien gurasoen etxea handia eta zuria da.",
+      "meaningInSourceLanguage": "Their parents’ house is big and white.",
+      "id": "2b700d6fa482",
+      "priority": 0,
+      "group": "4b0f200fdf5f"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Their",
+          "definition": "haien"
+        },
+        {
+          "word": "parents’",
+          "definition": "gurasoak"
+        },
+        {
+          "word": "house",
+          "definition": "etxe\netxea"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "big",
+          "definition": "handi\nhandiak"
+        },
+        {
+          "word": "and",
+          "definition": "eta"
+        },
+        {
+          "word": "white.",
+          "definition": "zuri\nzuria"
+        }
+      ],
+      "chips": [
+        "Haien",
+        "gurasoen",
+        "etxea",
+        "handia",
+        "eta",
+        "zuria",
+        "da"
+      ],
+      "solutions": [
+        [
+          "Haien",
+          "gurasoen",
+          "etxea",
+          "handia",
+          "eta",
+          "zuria",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Haien gurasoen etxea handia eta zuria da.",
+      "id": "86283b29126a",
+      "priority": 2,
+      "group": "4b0f200fdf5f"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Haien",
+          "definition": "their"
+        },
+        {
+          "word": "gurasoen",
+          "definition": "parents’"
+        },
+        {
+          "word": "etxea",
+          "definition": "house"
+        },
+        {
+          "word": "handia",
+          "definition": "big"
+        },
+        {
+          "word": "eta",
+          "definition": "and"
+        },
+        {
+          "word": "zuria",
+          "definition": "white"
+        },
+        {
+          "word": "da.",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "Their",
+        "parents",
+        "house",
+        "is",
+        "big",
+        "and",
+        "white"
+      ],
+      "solutions": [
+        [
+          "Their",
+          "parents",
+          "house",
+          "is",
+          "big",
+          "and",
+          "white"
+        ],
+        [
+          "The",
+          "house",
+          "of",
+          "their",
+          "parents",
+          "is",
+          "big",
+          "and",
+          "white"
+        ]
+      ],
+      "formattedSolution": "Their parents’ house is big and white.",
+      "id": "e5c8a26831ff",
+      "priority": 2,
+      "group": "4b0f200fdf5f"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Hura gure aita da.",
+      "meaningInSourceLanguage": "He is our father.",
+      "id": "f3311a2a69ac",
+      "priority": 0,
+      "group": "012f75d79058"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "He",
+          "definition": "hura"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "our",
+          "definition": "gure"
+        },
+        {
+          "word": "father.",
+          "definition": "aita"
+        }
+      ],
+      "chips": [
+        "Hura",
+        "gure",
+        "aita",
+        "da"
+      ],
+      "solutions": [
+        [
+          "Hura",
+          "gure",
+          "aita",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Hura gure aita da.",
+      "id": "d0e3a4d12b51",
+      "priority": 2,
+      "group": "012f75d79058"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Hura",
+          "definition": "he\nit\nitr\nshe\nthat over there"
+        },
+        {
+          "word": "gure",
+          "definition": "our"
+        },
+        {
+          "word": "aita",
+          "definition": "father"
+        },
+        {
+          "word": "da.",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "He",
+        "is",
+        "our",
+        "father"
+      ],
+      "solutions": [
+        [
+          "He",
+          "is",
+          "our",
+          "father"
+        ]
+      ],
+      "formattedSolution": "He is our father.",
+      "id": "91a52172eb0e",
+      "priority": 2,
+      "group": "012f75d79058"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Gure aitaren aita gure aitona da.",
+      "meaningInSourceLanguage": "Our father’s father is our grandfather.",
+      "id": "56f619908d02",
+      "priority": 0,
+      "group": "318b55603764"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Our",
+          "definition": "gure"
+        },
+        {
+          "word": "father’s",
+          "definition": "aitaren"
+        },
+        {
+          "word": "father",
+          "definition": "aita"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "our",
+          "definition": "gure"
+        },
+        {
+          "word": "grandfather.",
+          "definition": "aiton\naitona"
+        }
+      ],
+      "chips": [
+        "Gure",
+        "aitaren",
+        "aita",
+        "gure",
+        "aitona",
+        "da"
+      ],
+      "solutions": [
+        [
+          "Gure",
+          "aitaren",
+          "aita",
+          "gure",
+          "aitona",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Gure aitaren aita gure aitona da.",
+      "id": "0be70f67ebd4",
+      "priority": 2,
+      "group": "318b55603764"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Gure",
+          "definition": "our"
+        },
+        {
+          "word": "aitaren",
+          "definition": "father's\nfather’s"
+        },
+        {
+          "word": "aita",
+          "definition": "father"
+        },
+        {
+          "word": "gure",
+          "definition": "our"
+        },
+        {
+          "word": "aitona",
+          "definition": "grandfather"
+        },
+        {
+          "word": "da.",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "Our",
+        "father’s",
+        "father",
+        "is",
+        "our",
+        "grandfather"
+      ],
+      "solutions": [
+        [
+          "Our",
+          "father’s",
+          "father",
+          "is",
+          "our",
+          "grandfather"
+        ],
+        [
+          "The",
+          "father",
+          "of",
+          "our",
+          "father",
+          "is",
+          "our",
+          "grandfather"
+        ]
+      ],
+      "formattedSolution": "Our father’s father is our grandfather.",
+      "id": "e2523c36b322",
+      "priority": 2,
+      "group": "318b55603764"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Gure aita eta ama dira gure gurasoak.",
+      "meaningInSourceLanguage": "Our father and  mother are our parents.",
+      "id": "783067f42d1a",
+      "priority": 0,
+      "group": "04182b78397d"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Our",
+          "definition": "gure"
+        },
+        {
+          "word": "father",
+          "definition": "aita"
+        },
+        {
+          "word": "and",
+          "definition": "eta"
+        },
+        {
+          "word": "mother",
+          "definition": "ama"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "our",
+          "definition": "gure"
+        },
+        {
+          "word": "parents.",
+          "definition": "gurasoak"
+        }
+      ],
+      "chips": [
+        "Gure",
+        "aita",
+        "eta",
+        "ama",
+        "dira",
+        "gure",
+        "gurasoak"
+      ],
+      "solutions": [
+        [
+          "Gure",
+          "aita",
+          "eta",
+          "ama",
+          "dira",
+          "gure",
+          "gurasoak"
+        ]
+      ],
+      "formattedSolution": "Gure aita eta ama dira gure gurasoak.",
+      "id": "7206d35c5f41",
+      "priority": 2,
+      "group": "04182b78397d"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Gure",
+          "definition": "our"
+        },
+        {
+          "word": "aita",
+          "definition": "father"
+        },
+        {
+          "word": "eta",
+          "definition": "and"
+        },
+        {
+          "word": "ama",
+          "definition": "mother"
+        },
+        {
+          "word": "dira",
+          "definition": "are\nare (izan)"
+        },
+        {
+          "word": "gure",
+          "definition": "our"
+        },
+        {
+          "word": "gurasoak.",
+          "definition": "parents"
+        }
+      ],
+      "chips": [
+        "Our",
+        "father",
+        "and",
+        "mother",
+        "are",
+        "our",
+        "parents"
+      ],
+      "solutions": [
+        [
+          "Our",
+          "father",
+          "and",
+          "mother",
+          "are",
+          "our",
+          "parents"
+        ]
+      ],
+      "formattedSolution": "Our father and  mother are our parents.",
+      "id": "78d3aa4ab55b",
+      "priority": 2,
+      "group": "04182b78397d"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Hura zuen ama da.",
+      "meaningInSourceLanguage": "She is your(plural) mother.",
+      "id": "736f618dc144",
+      "priority": 0,
+      "group": "24a362a68f62"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "She",
+          "definition": "hura"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "your(plural)",
+          "definition": "zuen"
+        },
+        {
+          "word": "mother.",
+          "definition": "ama"
+        }
+      ],
+      "chips": [
+        "Hura",
+        "zuen",
+        "ama",
+        "da"
+      ],
+      "solutions": [
+        [
+          "Hura",
+          "zuen",
+          "ama",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Hura zuen ama da.",
+      "id": "b8708998babe",
+      "priority": 2,
+      "group": "24a362a68f62"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Hura",
+          "definition": "he\nit\nitr\nshe\nthat over there"
+        },
+        {
+          "word": "zuen",
+          "definition": "your\nyour(plural)\nyour, plural\nyours"
+        },
+        {
+          "word": "ama",
+          "definition": "mother"
+        },
+        {
+          "word": "da.",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "She",
+        "is",
+        "your(plural",
+        "mother"
+      ],
+      "solutions": [
+        [
+          "She",
+          "is",
+          "your(plural",
+          "mother"
+        ],
+        [
+          "She",
+          "is",
+          "your",
+          "mother"
+        ]
+      ],
+      "formattedSolution": "She is your(plural) mother.",
+      "id": "a21625ed36d5",
+      "priority": 2,
+      "group": "24a362a68f62"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Haien ama tour gida da.",
+      "meaningInSourceLanguage": "Their mother is a tour guide.",
+      "id": "5c6315b85187",
+      "priority": 0,
+      "group": "e926a0a57170"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Their",
+          "definition": "haien"
+        },
+        {
+          "word": "mother",
+          "definition": "ama"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "tour",
+          "definition": "tour"
+        },
+        {
+          "word": "guide.",
+          "definition": "gida"
+        }
+      ],
+      "chips": [
+        "Haien",
+        "ama",
+        "tour",
+        "gida",
+        "da"
+      ],
+      "solutions": [
+        [
+          "Haien",
+          "ama",
+          "tour",
+          "gida",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Haien ama tour gida da.",
+      "id": "803021eac9b4",
+      "priority": 2,
+      "group": "e926a0a57170"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Haien",
+          "definition": "their"
+        },
+        {
+          "word": "ama",
+          "definition": "mother"
+        },
+        {
+          "word": "tour",
+          "definition": "tour"
+        },
+        {
+          "word": "gida",
+          "definition": "guide"
+        },
+        {
+          "word": "da.",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "Their",
+        "mother",
+        "is",
+        "a",
+        "tour",
+        "guide"
+      ],
+      "solutions": [
+        [
+          "Their",
+          "mother",
+          "is",
+          "a",
+          "tour",
+          "guide"
+        ]
+      ],
+      "formattedSolution": "Their mother is a tour guide.",
+      "id": "0a0a54061831",
+      "priority": 2,
+      "group": "e926a0a57170"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Amaren ama bere amona da.",
+      "meaningInSourceLanguage": "Her mother’s mother is her grandmother.",
+      "id": "990e76894719",
+      "priority": 0,
+      "group": "50649a3016e4"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Her",
+          "definition": "bere"
+        },
+        {
+          "word": "mother’s",
+          "definition": "amaren"
+        },
+        {
+          "word": "mother",
+          "definition": "ama"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "her",
+          "definition": "bere"
+        },
+        {
+          "word": "grandmother.",
+          "definition": "amon\namona"
+        }
+      ],
+      "chips": [
+        "Amaren",
+        "ama",
+        "bere",
+        "amona",
+        "da"
+      ],
+      "solutions": [
+        [
+          "Amaren",
+          "ama",
+          "bere",
+          "amona",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Amaren ama bere amona da.",
+      "id": "6e48beaef0ea",
+      "priority": 2,
+      "group": "50649a3016e4"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Amaren",
+          "definition": "mother's\nmother’s"
+        },
+        {
+          "word": "ama",
+          "definition": "mother"
+        },
+        {
+          "word": "bere",
+          "definition": "her\nhers\nhis\nhis/hers/its\nits"
+        },
+        {
+          "word": "amona",
+          "definition": "grandmother"
+        },
+        {
+          "word": "da.",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "Her",
+        "mother’s",
+        "mother",
+        "is",
+        "her",
+        "grandmother"
+      ],
+      "solutions": [
+        [
+          "Her",
+          "mother’s",
+          "mother",
+          "is",
+          "her",
+          "grandmother"
+        ],
+        [
+          "His",
+          "mother’s",
+          "mother",
+          "is",
+          "his",
+          "grandmother"
+        ],
+        [
+          "The",
+          "mother",
+          "of",
+          "his",
+          "mother",
+          "is",
+          "his",
+          "grandmother"
+        ],
+        [
+          "The",
+          "mother",
+          "of",
+          "her",
+          "mother",
+          "is",
+          "her",
+          "grandmother"
+        ]
+      ],
+      "formattedSolution": "Her mother’s mother is her grandmother.",
+      "id": "5a5474336ce2",
+      "priority": 2,
+      "group": "50649a3016e4"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Bere semea apaiza da.",
+      "meaningInSourceLanguage": "His son is a priest.",
+      "id": "5d855ec19a1c",
+      "priority": 0,
+      "group": "01d6479a94da"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "His",
+          "definition": "bere\nberea\nbereak"
+        },
+        {
+          "word": "son",
+          "definition": "seme"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "priest.",
+          "definition": "apaiz\napaiza\napiza"
+        }
+      ],
+      "chips": [
+        "Bere",
+        "semea",
+        "apaiza",
+        "da"
+      ],
+      "solutions": [
+        [
+          "Bere",
+          "semea",
+          "apaiza",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Bere semea apaiza da.",
+      "id": "5381335058bd",
+      "priority": 2,
+      "group": "01d6479a94da"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Bere",
+          "definition": "her\nhers\nhis\nhis/hers/its\nits"
+        },
+        {
+          "word": "semea",
+          "definition": "son"
+        },
+        {
+          "word": "apaiza",
+          "definition": "priest\nthe priest"
+        },
+        {
+          "word": "da.",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "His",
+        "son",
+        "is",
+        "a",
+        "priest"
+      ],
+      "solutions": [
+        [
+          "His",
+          "son",
+          "is",
+          "a",
+          "priest"
+        ],
+        [
+          "Her",
+          "son",
+          "is",
+          "a",
+          "priest"
+        ],
+        [
+          "His",
+          "son",
+          "is",
+          "the",
+          "priest"
+        ],
+        [
+          "Her",
+          "son",
+          "is",
+          "the",
+          "priest"
+        ]
+      ],
+      "formattedSolution": "His son is a priest.",
+      "id": "e8bc0447c395",
+      "priority": 2,
+      "group": "01d6479a94da"
     },
     {
       "type": "options",
@@ -736,11 +2102,7 @@
         "hau",
         "nire",
         "semea",
-        "da",
-        "ere",
-        "a",
-        "eta",
-        "Ni"
+        "da"
       ],
       "solutions": [
         [
@@ -786,11 +2148,7 @@
         "boy",
         "is",
         "my",
-        "son",
-        "his",
-        "in",
-        "on",
-        "o"
+        "son"
       ],
       "solutions": [
         [
@@ -805,6 +2163,353 @@
       "id": "886bf5f41d54",
       "priority": 2,
       "group": "394ec63e502a"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Nire semearen arkatza da.",
+      "meaningInSourceLanguage": "It is my son’s pencil.",
+      "id": "954b4feeb9df",
+      "priority": 0,
+      "group": "ad4756a3b982"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "It",
+          "definition": "hura"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "my",
+          "definition": "nire"
+        },
+        {
+          "word": "son’s",
+          "definition": "semearen"
+        },
+        {
+          "word": "pencil.",
+          "definition": "arkatz\narkatza"
+        }
+      ],
+      "chips": [
+        "Nire",
+        "semearen",
+        "arkatza",
+        "da"
+      ],
+      "solutions": [
+        [
+          "Nire",
+          "semearen",
+          "arkatza",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Nire semearen arkatza da.",
+      "id": "75b7820b0880",
+      "priority": 2,
+      "group": "ad4756a3b982"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Nire",
+          "definition": "my"
+        },
+        {
+          "word": "semearen",
+          "definition": "son's\nson’s"
+        },
+        {
+          "word": "arkatza",
+          "definition": "pencil"
+        },
+        {
+          "word": "da.",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "It",
+        "is",
+        "my",
+        "son’s",
+        "pencil"
+      ],
+      "solutions": [
+        [
+          "It",
+          "is",
+          "my",
+          "son’s",
+          "pencil"
+        ],
+        [
+          "It",
+          "is",
+          "the",
+          "pencil",
+          "of",
+          "my",
+          "son"
+        ]
+      ],
+      "formattedSolution": "It is my son’s pencil.",
+      "id": "01339747aa2a",
+      "priority": 2,
+      "group": "ad4756a3b982"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Zure aitonaren semea zure aita da.",
+      "meaningInSourceLanguage": "Your grandfather’s son is your father.",
+      "id": "558a85cba0a3",
+      "priority": 0,
+      "group": "521d1bca4ad9"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Your",
+          "definition": "zuen\nzure"
+        },
+        {
+          "word": "grandfather’s",
+          "definition": "aitonaren"
+        },
+        {
+          "word": "son",
+          "definition": "seme"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "your",
+          "definition": "zuen\nzure"
+        },
+        {
+          "word": "father.",
+          "definition": "aita"
+        }
+      ],
+      "chips": [
+        "Zure",
+        "aitonaren",
+        "semea",
+        "zure",
+        "aita",
+        "da"
+      ],
+      "solutions": [
+        [
+          "Zure",
+          "aitonaren",
+          "semea",
+          "zure",
+          "aita",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Zure aitonaren semea zure aita da.",
+      "id": "523ffa7b3ad5",
+      "priority": 2,
+      "group": "521d1bca4ad9"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Zure",
+          "definition": "your"
+        },
+        {
+          "word": "aitonaren",
+          "definition": "grandfather's\ngrandfather’s"
+        },
+        {
+          "word": "semea",
+          "definition": "son"
+        },
+        {
+          "word": "zure",
+          "definition": "your"
+        },
+        {
+          "word": "aita",
+          "definition": "father"
+        },
+        {
+          "word": "da.",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "Your",
+        "grandfather’s",
+        "son",
+        "is",
+        "your",
+        "father"
+      ],
+      "solutions": [
+        [
+          "Your",
+          "grandfather’s",
+          "son",
+          "is",
+          "your",
+          "father"
+        ],
+        [
+          "The",
+          "son",
+          "of",
+          "your",
+          "grandfather",
+          "is",
+          "your",
+          "father"
+        ]
+      ],
+      "formattedSolution": "Your grandfather’s son is your father.",
+      "id": "7306390bddf6",
+      "priority": 2,
+      "group": "521d1bca4ad9"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Zure amonaren alaba zure ama da.",
+      "meaningInSourceLanguage": "Your grandmother’s daughter is your mother.",
+      "id": "691aca4c7033",
+      "priority": 0,
+      "group": "7be754065d5b"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Your",
+          "definition": "zuen\nzure"
+        },
+        {
+          "word": "grandmother’s",
+          "definition": "amonaren"
+        },
+        {
+          "word": "daughter",
+          "definition": "alaba"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "your",
+          "definition": "zuen\nzure"
+        },
+        {
+          "word": "mother.",
+          "definition": "ama"
+        }
+      ],
+      "chips": [
+        "Zure",
+        "amonaren",
+        "alaba",
+        "zure",
+        "ama",
+        "da"
+      ],
+      "solutions": [
+        [
+          "Zure",
+          "amonaren",
+          "alaba",
+          "zure",
+          "ama",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Zure amonaren alaba zure ama da.",
+      "id": "03d818f21730",
+      "priority": 2,
+      "group": "7be754065d5b"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Zure",
+          "definition": "your"
+        },
+        {
+          "word": "amonaren",
+          "definition": "grandmother's\ngrandmother’s"
+        },
+        {
+          "word": "alaba",
+          "definition": "daughter"
+        },
+        {
+          "word": "zure",
+          "definition": "your"
+        },
+        {
+          "word": "ama",
+          "definition": "mother"
+        },
+        {
+          "word": "da.",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "Your",
+        "grandmother’s",
+        "daughter",
+        "is",
+        "your",
+        "mother"
+      ],
+      "solutions": [
+        [
+          "Your",
+          "grandmother’s",
+          "daughter",
+          "is",
+          "your",
+          "mother"
+        ],
+        [
+          "The",
+          "daughter",
+          "of",
+          "your",
+          "grandmother",
+          "is",
+          "your",
+          "mother"
+        ]
+      ],
+      "formattedSolution": "Your grandmother’s daughter is your mother.",
+      "id": "0db8ea075eef",
+      "priority": 2,
+      "group": "7be754065d5b"
     },
     {
       "type": "options",
@@ -844,11 +2549,7 @@
         "hau",
         "nire",
         "alaba",
-        "da",
-        "a",
-        "zara",
-        "eta",
-        "gara"
+        "da"
       ],
       "solutions": [
         [
@@ -894,11 +2595,7 @@
         "girl",
         "is",
         "my",
-        "daughter",
-        "his",
-        "it",
-        "her",
-        "in"
+        "daughter"
       ],
       "solutions": [
         [
@@ -916,11 +2613,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Nire alaba polizia da.",
-      "meaningInSourceLanguage": "My daughter is a police officer.",
-      "id": "cc7353c32876",
+      "formInTargetLanguage": "Nire alaba erizaina da.",
+      "meaningInSourceLanguage": "My daughter is a  nurse.",
+      "id": "a0638bd93ab8",
       "priority": 0,
-      "group": "ff3c160b1c02"
+      "group": "b65723262ae7"
     },
     {
       "type": "chips",
@@ -943,35 +2640,28 @@
           "definition": "-a"
         },
         {
-          "word": "police",
-          "definition": "polizia"
-        },
-        {
-          "word": "officer.",
-          "definition": "ofiziala"
+          "word": "nurse.",
+          "definition": "erizain\nerizaina"
         }
       ],
       "chips": [
         "Nire",
         "alaba",
-        "polizia",
-        "da",
-        "dira",
-        "gida",
-        "eliza"
+        "erizaina",
+        "da"
       ],
       "solutions": [
         [
           "Nire",
           "alaba",
-          "polizia",
+          "erizaina",
           "da"
         ]
       ],
-      "formattedSolution": "Nire alaba polizia da.",
-      "id": "a44d02a07498",
+      "formattedSolution": "Nire alaba erizaina da.",
+      "id": "0fad5fd9dd44",
       "priority": 2,
-      "group": "ff3c160b1c02"
+      "group": "b65723262ae7"
     },
     {
       "type": "chips",
@@ -986,8 +2676,8 @@
           "definition": "daughter"
         },
         {
-          "word": "polizia",
-          "definition": "police officer"
+          "word": "erizaina",
+          "definition": "nurse"
         },
         {
           "word": "da.",
@@ -999,13 +2689,7 @@
         "daughter",
         "is",
         "a",
-        "police",
-        "officer",
-        "e",
-        "it",
-        "or",
-        "He",
-        "r"
+        "nurse"
       ],
       "solutions": [
         [
@@ -1013,338 +2697,23 @@
           "daughter",
           "is",
           "a",
-          "police",
-          "officer"
-        ]
-      ],
-      "formattedSolution": "My daughter is a police officer.",
-      "id": "be0f614330ca",
-      "priority": 2,
-      "group": "ff3c160b1c02"
-    },
-    {
-      "type": "options",
-      "formInTargetLanguage": "Bere semea tour gida da.",
-      "meaningInSourceLanguage": "His son is a tour guide.",
-      "id": "050b8ffbe5e1",
-      "priority": 0,
-      "group": "a855a2755d10"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": false,
-      "phrase": [
-        {
-          "word": "His",
-          "definition": "bere\nberea\nbereak"
-        },
-        {
-          "word": "son",
-          "definition": "seme"
-        },
-        {
-          "word": "is",
-          "definition": "da\nda (izan)\ndago (egon)"
-        },
-        {
-          "word": "a",
-          "definition": "-a"
-        },
-        {
-          "word": "tour",
-          "definition": "tour"
-        },
-        {
-          "word": "guide.",
-          "definition": "gida"
-        }
-      ],
-      "chips": [
-        "Bere",
-        "semea",
-        "tour",
-        "gida",
-        "da",
-        "ere",
-        "eta",
-        "dira",
-        "Gida"
-      ],
-      "solutions": [
+          "nurse"
+        ],
         [
-          "Bere",
-          "semea",
-          "tour",
-          "gida",
-          "da"
-        ]
-      ],
-      "formattedSolution": "Bere semea tour gida da.",
-      "id": "500a525d2a94",
-      "priority": 2,
-      "group": "a855a2755d10"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": true,
-      "phrase": [
-        {
-          "word": "Bere",
-          "definition": "her\nhers\nhis\nhis/hers/its\nits"
-        },
-        {
-          "word": "semea",
-          "definition": "son"
-        },
-        {
-          "word": "tour",
-          "definition": "tour"
-        },
-        {
-          "word": "gida",
-          "definition": "guide"
-        },
-        {
-          "word": "da.",
-          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
-        }
-      ],
-      "chips": [
-        "His",
-        "son",
-        "is",
-        "a",
-        "tour",
-        "guide",
-        "in",
-        "Hi",
-        "o",
-        "it",
-        "or"
-      ],
-      "solutions": [
-        [
-          "His",
-          "son",
+          "The",
+          "daughter",
+          "of",
+          "your",
+          "grandmother",
           "is",
-          "a",
-          "tour",
-          "guide"
+          "your",
+          "mother"
         ]
       ],
-      "formattedSolution": "His son is a tour guide.",
-      "id": "a9a86d46fffc",
+      "formattedSolution": "My daughter is a  nurse.",
+      "id": "819a63e4e079",
       "priority": 2,
-      "group": "a855a2755d10"
-    },
-    {
-      "type": "options",
-      "formInTargetLanguage": "Gure aitona gidaria bat da..",
-      "meaningInSourceLanguage": "Our grandfather is a driver.",
-      "id": "3097e202247c",
-      "priority": 0,
-      "group": "a64ea27b5f3e"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": false,
-      "phrase": [
-        {
-          "word": "Our",
-          "definition": "gure"
-        },
-        {
-          "word": "grandfather",
-          "definition": "aiton\naitona"
-        },
-        {
-          "word": "is",
-          "definition": "da\nda (izan)\ndago (egon)"
-        },
-        {
-          "word": "a",
-          "definition": "-a"
-        },
-        {
-          "word": "driver.",
-          "definition": "gidari\ngidaria"
-        }
-      ],
-      "chips": [
-        "Gure",
-        "aitona",
-        "gidaria",
-        "bat",
-        "da",
-        "ona",
-        "a",
-        "eta",
-        "gara"
-      ],
-      "solutions": [
-        [
-          "Gure",
-          "aitona",
-          "gidaria",
-          "bat",
-          "da"
-        ]
-      ],
-      "formattedSolution": "Gure aitona gidaria bat da..",
-      "id": "ec355f845756",
-      "priority": 2,
-      "group": "a64ea27b5f3e"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": true,
-      "phrase": [
-        {
-          "word": "Gure",
-          "definition": "our"
-        },
-        {
-          "word": "aitona",
-          "definition": "grandfather"
-        },
-        {
-          "word": "gidaria",
-          "definition": "driver\nthe driver"
-        },
-        {
-          "word": "bat",
-          "definition": "one"
-        },
-        {
-          "word": "da..",
-          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
-        }
-      ],
-      "chips": [
-        "Our",
-        "grandfather",
-        "is",
-        "an",
-        "engineer",
-        "in",
-        "and",
-        "her",
-        "man"
-      ],
-      "solutions": [
-        [
-          "Our",
-          "grandfather",
-          "is",
-          "a",
-          "driver"
-        ]
-      ],
-      "formattedSolution": "Our grandfather is a driver.",
-      "id": "724f7b1a0d21",
-      "priority": 2,
-      "group": "a64ea27b5f3e"
-    },
-    {
-      "type": "options",
-      "formInTargetLanguage": "Haien ama medikua da.",
-      "meaningInSourceLanguage": "Their mother is a doctor.",
-      "id": "91125584b67d",
-      "priority": 0,
-      "group": "aed6a514c5ee"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": false,
-      "phrase": [
-        {
-          "word": "Their",
-          "definition": "haien"
-        },
-        {
-          "word": "mother",
-          "definition": "ama"
-        },
-        {
-          "word": "is",
-          "definition": "da\nda (izan)\ndago (egon)"
-        },
-        {
-          "word": "a",
-          "definition": "-a"
-        },
-        {
-          "word": "doctor.",
-          "definition": "mediku\nmedikua"
-        }
-      ],
-      "chips": [
-        "Haien",
-        "ama",
-        "medikua",
-        "da",
-        "a",
-        "dira",
-        "aita"
-      ],
-      "solutions": [
-        [
-          "Haien",
-          "ama",
-          "medikua",
-          "da"
-        ]
-      ],
-      "formattedSolution": "Haien ama medikua da.",
-      "id": "7a6bd095ffac",
-      "priority": 2,
-      "group": "aed6a514c5ee"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": true,
-      "phrase": [
-        {
-          "word": "Haien",
-          "definition": "their"
-        },
-        {
-          "word": "ama",
-          "definition": "mother"
-        },
-        {
-          "word": "medikua",
-          "definition": "doctor\nthe doctor"
-        },
-        {
-          "word": "da.",
-          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
-        }
-      ],
-      "chips": [
-        "Their",
-        "mother",
-        "is",
-        "a",
-        "doctor",
-        "or",
-        "her",
-        "the",
-        "r"
-      ],
-      "solutions": [
-        [
-          "Their",
-          "mother",
-          "is",
-          "a",
-          "doctor"
-        ]
-      ],
-      "formattedSolution": "Their mother is a doctor.",
-      "id": "350cdf9cd7b9",
-      "priority": 2,
-      "group": "aed6a514c5ee"
+      "group": "b65723262ae7"
     },
     {
       "type": "options",
@@ -1383,10 +2752,7 @@
         "Turista",
         "nire",
         "alaba",
-        "da",
-        "dira",
-        "aita",
-        "zara"
+        "da"
       ],
       "solutions": [
         [
@@ -1427,11 +2793,7 @@
         "tourist",
         "is",
         "my",
-        "daughter",
-        "it",
-        "the",
-        "or",
-        "me"
+        "daughter"
       ],
       "solutions": [
         [
@@ -1446,107 +2808,6 @@
       "id": "d2263fa42755",
       "priority": 2,
       "group": "72665e380802"
-    },
-    {
-      "type": "options",
-      "formInTargetLanguage": "Gure amona irakaslea da.",
-      "meaningInSourceLanguage": "Our grandmother is a teacher.",
-      "id": "d4acb899c707",
-      "priority": 0,
-      "group": "bfcd1ceda419"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": false,
-      "phrase": [
-        {
-          "word": "Our",
-          "definition": "gure"
-        },
-        {
-          "word": "grandmother",
-          "definition": "amon\namona"
-        },
-        {
-          "word": "is",
-          "definition": "da\nda (izan)\ndago (egon)"
-        },
-        {
-          "word": "a",
-          "definition": "-a"
-        },
-        {
-          "word": "teacher.",
-          "definition": "irakasle\nirakaslea"
-        }
-      ],
-      "chips": [
-        "Gure",
-        "amona",
-        "irakaslea",
-        "da",
-        "ama",
-        "dira",
-        "ona"
-      ],
-      "solutions": [
-        [
-          "Gure",
-          "amona",
-          "irakaslea",
-          "da"
-        ]
-      ],
-      "formattedSolution": "Gure amona irakaslea da.",
-      "id": "ac0c0a00194c",
-      "priority": 2,
-      "group": "bfcd1ceda419"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": true,
-      "phrase": [
-        {
-          "word": "Gure",
-          "definition": "our"
-        },
-        {
-          "word": "amona",
-          "definition": "grandmother"
-        },
-        {
-          "word": "irakaslea",
-          "definition": "a teacher\nteacher\nthe teacher"
-        },
-        {
-          "word": "da.",
-          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
-        }
-      ],
-      "chips": [
-        "Our",
-        "grandmother",
-        "is",
-        "a",
-        "teacher",
-        "her",
-        "am",
-        "the",
-        "r"
-      ],
-      "solutions": [
-        [
-          "Our",
-          "grandmother",
-          "is",
-          "a",
-          "teacher"
-        ]
-      ],
-      "formattedSolution": "Our grandmother is a teacher.",
-      "id": "c7e2ec3cacb7",
-      "priority": 2,
-      "group": "bfcd1ceda419"
     },
     {
       "type": "options",
@@ -1581,10 +2842,7 @@
         "Zure",
         "alabak",
         "ikasleak",
-        "dira",
-        "zara",
-        "gara",
-        "Hura"
+        "dira"
       ],
       "solutions": [
         [
@@ -1624,10 +2882,7 @@
         "Your",
         "daughters",
         "are",
-        "students",
-        "ours",
-        "our",
-        "yours"
+        "students"
       ],
       "solutions": [
         [
@@ -1644,147 +2899,11 @@
     },
     {
       "type": "options",
-      "formInTargetLanguage": "Gure aita eta ama dira gure gurasoak.",
-      "meaningInSourceLanguage": "Our father and mother are our parents.",
-      "id": "5af560d75a7b",
+      "formInTargetLanguage": "Nire alabaren boligrafoa da.",
+      "meaningInSourceLanguage": "It is my daughter’s pen.",
+      "id": "16ad6377210e",
       "priority": 0,
-      "group": "04457ff12faf"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": false,
-      "phrase": [
-        {
-          "word": "Our",
-          "definition": "gure"
-        },
-        {
-          "word": "father",
-          "definition": "aita"
-        },
-        {
-          "word": "and",
-          "definition": "eta"
-        },
-        {
-          "word": "mother",
-          "definition": "ama"
-        },
-        {
-          "word": "are",
-          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
-        },
-        {
-          "word": "our",
-          "definition": "gure"
-        },
-        {
-          "word": "parents.",
-          "definition": "gurasoak"
-        }
-      ],
-      "chips": [
-        "Gure",
-        "aita",
-        "eta",
-        "ama",
-        "dira",
-        "gure",
-        "gurasoak",
-        "Hura",
-        "gara",
-        "zara",
-        "ere",
-        "Eta",
-        "gida"
-      ],
-      "solutions": [
-        [
-          "Gure",
-          "aita",
-          "eta",
-          "ama",
-          "dira",
-          "gure",
-          "gurasoak"
-        ]
-      ],
-      "formattedSolution": "Gure aita eta ama dira gure gurasoak.",
-      "id": "016bc1872e37",
-      "priority": 2,
-      "group": "04457ff12faf"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": true,
-      "phrase": [
-        {
-          "word": "Gure",
-          "definition": "our"
-        },
-        {
-          "word": "aita",
-          "definition": "father"
-        },
-        {
-          "word": "eta",
-          "definition": "and"
-        },
-        {
-          "word": "ama",
-          "definition": "mother"
-        },
-        {
-          "word": "dira",
-          "definition": "are\nare (izan)"
-        },
-        {
-          "word": "gure",
-          "definition": "our"
-        },
-        {
-          "word": "gurasoak.",
-          "definition": "parents"
-        }
-      ],
-      "chips": [
-        "Our",
-        "father",
-        "and",
-        "mother",
-        "are",
-        "our",
-        "parents",
-        "her",
-        "the",
-        "car",
-        "or",
-        "one",
-        "She"
-      ],
-      "solutions": [
-        [
-          "Our",
-          "father",
-          "and",
-          "mother",
-          "are",
-          "our",
-          "parents"
-        ]
-      ],
-      "formattedSolution": "Our father and mother are our parents.",
-      "id": "04b64fc44b04",
-      "priority": 2,
-      "group": "04457ff12faf"
-    },
-    {
-      "type": "options",
-      "formInTargetLanguage": "Nire alabaren boligrafoa da",
-      "meaningInSourceLanguage": "It is my daughter's pen.",
-      "id": "38c81f4b25c9",
-      "priority": 0,
-      "group": "78d8487ed39f"
+      "group": "681ac3aa89b0"
     },
     {
       "type": "chips",
@@ -1803,7 +2922,7 @@
           "definition": "nire"
         },
         {
-          "word": "daughter's",
+          "word": "daughter’s",
           "definition": "alabaren"
         },
         {
@@ -1815,10 +2934,7 @@
         "Nire",
         "alabaren",
         "boligrafoa",
-        "da",
-        "dira",
-        "gara",
-        "nire"
+        "da"
       ],
       "solutions": [
         [
@@ -1828,10 +2944,10 @@
           "da"
         ]
       ],
-      "formattedSolution": "Nire alabaren boligrafoa da",
-      "id": "8874675c6012",
+      "formattedSolution": "Nire alabaren boligrafoa da.",
+      "id": "11e72b40fda6",
       "priority": 2,
-      "group": "78d8487ed39f"
+      "group": "681ac3aa89b0"
     },
     {
       "type": "chips",
@@ -1843,14 +2959,14 @@
         },
         {
           "word": "alabaren",
-          "definition": "daughter's"
+          "definition": "daughter's\ndaughter’s"
         },
         {
           "word": "boligrafoa",
           "definition": "pen"
         },
         {
-          "word": "da",
+          "word": "da.",
           "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
         }
       ],
@@ -1858,733 +2974,31 @@
         "It",
         "is",
         "my",
-        "daughter's",
-        "pen",
-        "it",
-        "Is",
-        "me",
-        "He"
+        "daughter’s",
+        "pen"
       ],
       "solutions": [
         [
           "It",
           "is",
           "my",
-          "daughter's",
+          "daughter’s",
           "pen"
-        ]
-      ],
-      "formattedSolution": "It is my daughter's pen.",
-      "id": "a9e1c047f8f2",
-      "priority": 2,
-      "group": "78d8487ed39f"
-    },
-    {
-      "type": "options",
-      "formInTargetLanguage": "Nire semearen arkatza da.",
-      "meaningInSourceLanguage": "It is my son's pencil.",
-      "id": "cdb645f0723c",
-      "priority": 0,
-      "group": "11c02086d7b3"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": false,
-      "phrase": [
-        {
-          "word": "It",
-          "definition": "hura"
-        },
-        {
-          "word": "is",
-          "definition": "da\nda (izan)\ndago (egon)"
-        },
-        {
-          "word": "my",
-          "definition": "nire"
-        },
-        {
-          "word": "son's",
-          "definition": "semearen"
-        },
-        {
-          "word": "pencil.",
-          "definition": "arkatz\narkatza"
-        }
-      ],
-      "chips": [
-        "Nire",
-        "semearen",
-        "arkatza",
-        "da",
-        "ere",
-        "zara",
-        "eta"
-      ],
-      "solutions": [
-        [
-          "Nire",
-          "semearen",
-          "arkatza",
-          "da"
-        ]
-      ],
-      "formattedSolution": "Nire semearen arkatza da.",
-      "id": "fe3c2e3d7653",
-      "priority": 2,
-      "group": "11c02086d7b3"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": true,
-      "phrase": [
-        {
-          "word": "Nire",
-          "definition": "my"
-        },
-        {
-          "word": "semearen",
-          "definition": "son's"
-        },
-        {
-          "word": "arkatza",
-          "definition": "pencil"
-        },
-        {
-          "word": "da.",
-          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
-        }
-      ],
-      "chips": [
-        "It",
-        "is",
-        "my",
-        "son's",
-        "pencil",
-        "it",
-        "Is",
-        "in",
-        "on"
-      ],
-      "solutions": [
+        ],
         [
           "It",
           "is",
+          "the",
+          "pen",
+          "of",
           "my",
-          "son's",
-          "pencil"
+          "daughter"
         ]
       ],
-      "formattedSolution": "It is my son's pencil.",
-      "id": "afd6f30f9023",
+      "formattedSolution": "It is my daughter’s pen.",
+      "id": "7d5b322be838",
       "priority": 2,
-      "group": "11c02086d7b3"
-    },
-    {
-      "type": "options",
-      "formInTargetLanguage": "Zure amonaren baloia da.",
-      "meaningInSourceLanguage": "It is your grandmother's ball.",
-      "id": "05629a4d7901",
-      "priority": 0,
-      "group": "2a700f60a817"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": false,
-      "phrase": [
-        {
-          "word": "It",
-          "definition": "hura"
-        },
-        {
-          "word": "is",
-          "definition": "da\nda (izan)\ndago (egon)"
-        },
-        {
-          "word": "your",
-          "definition": "zuen\nzure"
-        },
-        {
-          "word": "grandmother's",
-          "definition": "amonaren"
-        },
-        {
-          "word": "ball.",
-          "definition": "baloi"
-        }
-      ],
-      "chips": [
-        "Zure",
-        "amonaren",
-        "baloia",
-        "da",
-        "ona",
-        "ama",
-        "amona"
-      ],
-      "solutions": [
-        [
-          "Zure",
-          "amonaren",
-          "baloia",
-          "da"
-        ]
-      ],
-      "formattedSolution": "Zure amonaren baloia da.",
-      "id": "b805be66e973",
-      "priority": 2,
-      "group": "2a700f60a817"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": true,
-      "phrase": [
-        {
-          "word": "Zure",
-          "definition": "your"
-        },
-        {
-          "word": "amonaren",
-          "definition": "grandmother's"
-        },
-        {
-          "word": "baloia",
-          "definition": "ball"
-        },
-        {
-          "word": "da.",
-          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
-        }
-      ],
-      "chips": [
-        "It",
-        "is",
-        "your",
-        "grandmother's",
-        "ball",
-        "or",
-        "am",
-        "it",
-        "Is"
-      ],
-      "solutions": [
-        [
-          "It",
-          "is",
-          "your",
-          "grandmother's",
-          "ball"
-        ]
-      ],
-      "formattedSolution": "It is your grandmother's ball.",
-      "id": "8ce12d4aa312",
-      "priority": 2,
-      "group": "2a700f60a817"
-    },
-    {
-      "type": "options",
-      "formInTargetLanguage": "Gure aitaren aita gure aitona da.",
-      "meaningInSourceLanguage": "Our father's father is our grandfather.",
-      "id": "a97699c2cff5",
-      "priority": 0,
-      "group": "81ec3e13e9e5"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": false,
-      "phrase": [
-        {
-          "word": "Our",
-          "definition": "gure"
-        },
-        {
-          "word": "father's",
-          "definition": "aitaren"
-        },
-        {
-          "word": "father",
-          "definition": "aita"
-        },
-        {
-          "word": "is",
-          "definition": "da\nda (izan)\ndago (egon)"
-        },
-        {
-          "word": "our",
-          "definition": "gure"
-        },
-        {
-          "word": "grandfather.",
-          "definition": "aiton\naitona"
-        }
-      ],
-      "chips": [
-        "Gure",
-        "aitaren",
-        "aita",
-        "gure",
-        "aitona",
-        "da",
-        "dira",
-        "arte",
-        "gida",
-        "nire",
-        "Hura"
-      ],
-      "solutions": [
-        [
-          "Gure",
-          "aitaren",
-          "aita",
-          "gure",
-          "aitona",
-          "da"
-        ]
-      ],
-      "formattedSolution": "Gure aitaren aita gure aitona da.",
-      "id": "7a1ad05f90eb",
-      "priority": 2,
-      "group": "81ec3e13e9e5"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": true,
-      "phrase": [
-        {
-          "word": "Gure",
-          "definition": "our"
-        },
-        {
-          "word": "aitaren",
-          "definition": "father's"
-        },
-        {
-          "word": "aita",
-          "definition": "father"
-        },
-        {
-          "word": "gure",
-          "definition": "our"
-        },
-        {
-          "word": "aitona",
-          "definition": "grandfather"
-        },
-        {
-          "word": "da.",
-          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
-        }
-      ],
-      "chips": [
-        "Our",
-        "father's",
-        "father",
-        "is",
-        "our",
-        "grandfather",
-        "her",
-        "the",
-        "rather",
-        "fat",
-        "car"
-      ],
-      "solutions": [
-        [
-          "Our",
-          "father's",
-          "father",
-          "is",
-          "our",
-          "grandfather"
-        ]
-      ],
-      "formattedSolution": "Our father's father is our grandfather.",
-      "id": "bde9a87a0a6b",
-      "priority": 2,
-      "group": "81ec3e13e9e5"
-    },
-    {
-      "type": "options",
-      "formInTargetLanguage": "Amaren ama bere amona da.",
-      "meaningInSourceLanguage": "His mother's mother is his grandmother.",
-      "id": "6bdbb8d090b4",
-      "priority": 0,
-      "group": "9913fa486b8d"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": false,
-      "phrase": [
-        {
-          "word": "His",
-          "definition": "bere\nberea\nbereak"
-        },
-        {
-          "word": "mother's",
-          "definition": "amaren"
-        },
-        {
-          "word": "mother",
-          "definition": "ama"
-        },
-        {
-          "word": "is",
-          "definition": "da\nda (izan)\ndago (egon)"
-        },
-        {
-          "word": "his",
-          "definition": "bere\nberea\nbereak"
-        },
-        {
-          "word": "grandmother.",
-          "definition": "amon\namona"
-        }
-      ],
-      "chips": [
-        "Amaren",
-        "ama",
-        "bere",
-        "amona",
-        "da",
-        "ona",
-        "amon",
-        "zara",
-        "ere"
-      ],
-      "solutions": [
-        [
-          "Amaren",
-          "ama",
-          "bere",
-          "amona",
-          "da"
-        ]
-      ],
-      "formattedSolution": "Amaren ama bere amona da.",
-      "id": "27c67dcca717",
-      "priority": 2,
-      "group": "9913fa486b8d"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": true,
-      "phrase": [
-        {
-          "word": "Amaren",
-          "definition": "mother's"
-        },
-        {
-          "word": "ama",
-          "definition": "mother"
-        },
-        {
-          "word": "bere",
-          "definition": "her\nhers\nhis\nhis/hers/its\nits"
-        },
-        {
-          "word": "amona",
-          "definition": "grandmother"
-        },
-        {
-          "word": "da.",
-          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
-        }
-      ],
-      "chips": [
-        "His",
-        "mother's",
-        "mother",
-        "is",
-        "his",
-        "grandmother",
-        "her",
-        "the",
-        "hers",
-        "This",
-        "it"
-      ],
-      "solutions": [
-        [
-          "His",
-          "mother's",
-          "mother",
-          "is",
-          "his",
-          "grandmother"
-        ],
-        [
-          "Her",
-          "mother's",
-          "mother",
-          "is",
-          "her",
-          "grandmother"
-        ],
-        [
-          "His",
-          "mother's",
-          "mother",
-          "is",
-          "her",
-          "grandmother"
-        ],
-        [
-          "Her",
-          "mother's",
-          "mother",
-          "is",
-          "his",
-          "grandmother"
-        ]
-      ],
-      "formattedSolution": "His mother's mother is his grandmother.",
-      "id": "ed7c97bbdded",
-      "priority": 2,
-      "group": "9913fa486b8d"
-    },
-    {
-      "type": "options",
-      "formInTargetLanguage": "Zure aitonaren semea zure aita da.",
-      "meaningInSourceLanguage": "Your grandfather's son is your father.",
-      "id": "e189cc40b51c",
-      "priority": 0,
-      "group": "89f824a5e1af"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": false,
-      "phrase": [
-        {
-          "word": "Your",
-          "definition": "zuen\nzure"
-        },
-        {
-          "word": "grandfather's",
-          "definition": "aitonaren"
-        },
-        {
-          "word": "son",
-          "definition": "seme"
-        },
-        {
-          "word": "is",
-          "definition": "da\nda (izan)\ndago (egon)"
-        },
-        {
-          "word": "your",
-          "definition": "zuen\nzure"
-        },
-        {
-          "word": "father.",
-          "definition": "aita"
-        }
-      ],
-      "chips": [
-        "Zure",
-        "aitonaren",
-        "semea",
-        "zure",
-        "aita",
-        "da",
-        "ere",
-        "dira",
-        "nire",
-        "gure",
-        "zurea"
-      ],
-      "solutions": [
-        [
-          "Zure",
-          "aitonaren",
-          "semea",
-          "zure",
-          "aita",
-          "da"
-        ]
-      ],
-      "formattedSolution": "Zure aitonaren semea zure aita da.",
-      "id": "3f3663b6cf44",
-      "priority": 2,
-      "group": "89f824a5e1af"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": true,
-      "phrase": [
-        {
-          "word": "Zure",
-          "definition": "your"
-        },
-        {
-          "word": "aitonaren",
-          "definition": "grandfather's"
-        },
-        {
-          "word": "semea",
-          "definition": "son"
-        },
-        {
-          "word": "zure",
-          "definition": "your"
-        },
-        {
-          "word": "aita",
-          "definition": "father"
-        },
-        {
-          "word": "da.",
-          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
-        }
-      ],
-      "chips": [
-        "Your",
-        "grandfather's",
-        "son",
-        "is",
-        "your",
-        "father",
-        "tour",
-        "or",
-        "her",
-        "our",
-        "one"
-      ],
-      "solutions": [
-        [
-          "Your",
-          "grandfather's",
-          "son",
-          "is",
-          "your",
-          "father"
-        ]
-      ],
-      "formattedSolution": "Your grandfather's son is your father.",
-      "id": "cc7837638744",
-      "priority": 2,
-      "group": "89f824a5e1af"
-    },
-    {
-      "type": "options",
-      "formInTargetLanguage": "Zure amonaren alaba zure ama da.",
-      "meaningInSourceLanguage": "Your grandmother's daughter is your mother.",
-      "id": "babb5d776ffc",
-      "priority": 0,
-      "group": "46dd92d337c2"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": false,
-      "phrase": [
-        {
-          "word": "Your",
-          "definition": "zuen\nzure"
-        },
-        {
-          "word": "grandmother's",
-          "definition": "amonaren"
-        },
-        {
-          "word": "daughter",
-          "definition": "alaba"
-        },
-        {
-          "word": "is",
-          "definition": "da\nda (izan)\ndago (egon)"
-        },
-        {
-          "word": "your",
-          "definition": "zuen\nzure"
-        },
-        {
-          "word": "mother.",
-          "definition": "ama"
-        }
-      ],
-      "chips": [
-        "Zure",
-        "amonaren",
-        "alaba",
-        "zure",
-        "ama",
-        "da",
-        "zara",
-        "gara",
-        "Hura",
-        "ere",
-        "ona"
-      ],
-      "solutions": [
-        [
-          "Zure",
-          "amonaren",
-          "alaba",
-          "zure",
-          "ama",
-          "da"
-        ]
-      ],
-      "formattedSolution": "Zure amonaren alaba zure ama da.",
-      "id": "c4d3970fdf75",
-      "priority": 2,
-      "group": "46dd92d337c2"
-    },
-    {
-      "type": "chips",
-      "translatesToSourceLanguage": true,
-      "phrase": [
-        {
-          "word": "Zure",
-          "definition": "your"
-        },
-        {
-          "word": "amonaren",
-          "definition": "grandmother's"
-        },
-        {
-          "word": "alaba",
-          "definition": "daughter"
-        },
-        {
-          "word": "zure",
-          "definition": "your"
-        },
-        {
-          "word": "ama",
-          "definition": "mother"
-        },
-        {
-          "word": "da.",
-          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
-        }
-      ],
-      "chips": [
-        "Your",
-        "grandmother's",
-        "daughter",
-        "is",
-        "your",
-        "mother",
-        "our",
-        "tour",
-        "her",
-        "or",
-        "later"
-      ],
-      "solutions": [
-        [
-          "Your",
-          "grandmother's",
-          "daughter",
-          "is",
-          "your",
-          "mother"
-        ]
-      ],
-      "formattedSolution": "Your grandmother's daughter is your mother.",
-      "id": "b90fd83bdfdb",
-      "priority": 2,
-      "group": "46dd92d337c2"
+      "group": "681ac3aa89b0"
     },
     {
       "type": "cards",
@@ -2593,11 +3007,11 @@
         "grandparents2.jpg",
         "grandparents3.jpg"
       ],
-      "formInTargetLanguage": "aiton-amonak",
+      "formInTargetLanguage": "aitona-amonak",
       "meaningInSourceLanguage": "grandparents",
-      "id": "f80a1b61ed98",
+      "id": "640f7e57a5f2",
       "priority": 0,
-      "group": "57563b229273"
+      "group": "23d33a96879b"
     },
     {
       "type": "shortInput",
@@ -2607,26 +3021,17 @@
         "grandparents3.jpg"
       ],
       "formInTargetLanguage": [
-        "aiton-amonak"
+        "aitona-amonak"
       ],
       "phrase": [
         {
           "word": "grandparents",
-          "definition": "aiton-amonak"
+          "definition": "aiton-amonak\naitona-amonak"
         }
       ],
-      "id": "cfaf5b2f117f",
+      "id": "c0812a133707",
       "priority": 1,
-      "group": "57563b229273"
-    },
-    {
-      "type": "listeningExercise",
-      "answer": "aiton-amonak",
-      "meaning": "grandparents",
-      "audio": "d98e8eaed62bba2e0638a523cb551102442406d8f0d7ed5fe67618f000cdad37",
-      "id": "dab1a86d1822",
-      "priority": 1,
-      "group": "d3184189f7c2"
+      "group": "23d33a96879b"
     },
     {
       "type": "cards",
@@ -2658,15 +3063,6 @@
         }
       ],
       "id": "b441d8f25700",
-      "priority": 1,
-      "group": "a2d7bdff48d6"
-    },
-    {
-      "type": "listeningExercise",
-      "answer": "aiton",
-      "meaning": "grandfather",
-      "audio": "b479a871d30851e61b6035155c30a23f90199ee5fc4313d30758d9c6295c4c11",
-      "id": "b09e3a4fff5a",
       "priority": 1,
       "group": "a2d7bdff48d6"
     },
@@ -2704,15 +3100,6 @@
       "group": "4db87cc95262"
     },
     {
-      "type": "listeningExercise",
-      "answer": "amon",
-      "meaning": "grandmother",
-      "audio": "ad4aaf0195ffce7e0e748ec9a3916625b3b047c67211ddf52b0b4e5b1b451627",
-      "id": "9e2a254709fa",
-      "priority": 1,
-      "group": "4db87cc95262"
-    },
-    {
       "type": "cards",
       "pictures": [
         "parents1.jpg",
@@ -2746,15 +3133,6 @@
       "group": "49988ecd6f79"
     },
     {
-      "type": "listeningExercise",
-      "answer": "gurasoak",
-      "meaning": "parents",
-      "audio": "8e462ebff12a1ca4666e99a326d66586a2ead5b4def6f1263725a6c84cbb3dd3",
-      "id": "c7f6c7f89345",
-      "priority": 1,
-      "group": "19c3a5b6b4ce"
-    },
-    {
       "type": "cards",
       "pictures": [
         "father1.jpg",
@@ -2784,15 +3162,6 @@
         }
       ],
       "id": "075c0123a8e8",
-      "priority": 1,
-      "group": "3cbd95346617"
-    },
-    {
-      "type": "listeningExercise",
-      "answer": "aita",
-      "meaning": "father",
-      "audio": "79561dd1aaef1b07fbccd6ae3119ff54ccbe00a6d752ab8d1576a98a0fcd5c37",
-      "id": "d5792f03a0cd",
       "priority": 1,
       "group": "3cbd95346617"
     },
@@ -2830,15 +3199,6 @@
       "group": "f0f51767d4b2"
     },
     {
-      "type": "listeningExercise",
-      "answer": "ama",
-      "meaning": "mother",
-      "audio": "58135b9c4875c60d9f40788b6d11684db859c67be2ee9ce3763deaf4192e61b9",
-      "id": "7bdfbf40c876",
-      "priority": 1,
-      "group": "7daca16d28c0"
-    },
-    {
       "type": "cards",
       "pictures": [
         "son1.jpg",
@@ -2868,15 +3228,6 @@
         }
       ],
       "id": "fc4427218b53",
-      "priority": 1,
-      "group": "99077fd8ed60"
-    },
-    {
-      "type": "listeningExercise",
-      "answer": "seme",
-      "meaning": "son",
-      "audio": "61159662239d34b0987b87a3956e88dc0e4303d71fa59891e5d21fad9a48fe2d",
-      "id": "586394d8f6ab",
       "priority": 1,
       "group": "99077fd8ed60"
     },

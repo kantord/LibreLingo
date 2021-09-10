@@ -342,7 +342,7 @@ The mascot is designed by [@almostdesigner](https://github.com/almostdesigner).
 ## Contributors ✨
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-65-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-66-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
@@ -435,6 +435,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="http://zebburkeconte.com"><img src="https://avatars.githubusercontent.com/u/13357648?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Zeb Burke-Conte</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/commits?author=zmbc" title="Documentation">📖</a> <a href="https://github.com/kantord/LibreLingo/commits?author=zmbc" title="Code">💻</a> <a href="https://github.com/kantord/LibreLingo/issues?q=author%3Azmbc" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/Poslovitch"><img src="https://avatars.githubusercontent.com/u/20014332?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Florian CUNY</b></sub></a><br /><a href="#ideas-Poslovitch" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/uberstar100"><img src="https://avatars.githubusercontent.com/u/59891590?v=4?s=100" width="100px;" alt=""/><br /><sub><b>uberstar100</b></sub></a><br /><a href="#ideas-uberstar100" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
