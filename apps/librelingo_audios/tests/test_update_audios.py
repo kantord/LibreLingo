@@ -50,6 +50,18 @@ def test_dry_run_does_nothing(tmp_path, capsys):
                 / "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6.mp3"
             )
             + " using Lupe standard",
+            "Would generate "
+            + str(
+                tmp_path
+                / "f38b5ac2a5e36c336eed306d56ed517bfd78a728321be0b87db5def8ff8abc3d.mp3"
+            )
+            + " using Lupe standard",
+            "Would generate "
+            + str(
+                tmp_path
+                / "3f981d854531e9f376ae06cb8449a6e997972d3c1b598f9a00b481ef307a469d.mp3"
+            )
+            + " using Lupe standard",
         ],
         captured.out,
     )
@@ -73,6 +85,18 @@ def test_dry_run_does_nothing_with_destructive(tmp_path, capsys):
             + str(
                 tmp_path
                 / "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6.mp3"
+            )
+            + " using Lupe standard",
+            "Would generate "
+            + str(
+                tmp_path
+                / "f38b5ac2a5e36c336eed306d56ed517bfd78a728321be0b87db5def8ff8abc3d.mp3"
+            )
+            + " using Lupe standard",
+            "Would generate "
+            + str(
+                tmp_path
+                / "3f981d854531e9f376ae06cb8449a6e997972d3c1b598f9a00b481ef307a469d.mp3"
             )
             + " using Lupe standard",
         ],
@@ -261,8 +285,26 @@ def test_noop_update(subprocess_run, tmp_path, capsys):
                 "ttsEngine": "standard",
             },
             {
+                "id": "3f981d854531e9f376ae06cb8449a6e997972d3c1b598f9a00b481ef307a469d.mp3",
+                "text": "foous",
+                "source": "TTS",
+                "license": "foo bar license",
+                "ttsProvider": "Polly",
+                "ttsVoice": "Lupe",
+                "ttsEngine": "standard",
+            },
+            {
                 "id": "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2",
                 "text": "lorem ipsum",
+                "source": "TTS",
+                "license": "foo bar license",
+                "ttsProvider": "Polly",
+                "ttsVoice": "Lupe",
+                "ttsEngine": "standard",
+            },
+            {
+                "id": "f38b5ac2a5e36c336eed306d56ed517bfd78a728321be0b87db5def8ff8abc3d.mp3",
+                "text": "apfel",
                 "source": "TTS",
                 "license": "foo bar license",
                 "ttsProvider": "Polly",
@@ -279,24 +321,42 @@ def test_noop_update(subprocess_run, tmp_path, capsys):
     assert captured.out == ""
     assert subprocess_run.call_count == 0
     assert _load_json_file(tmp_path / "test.json") == [
-        {
-            "id": "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6",
-            "text": "foous barus",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2",
-            "text": "lorem ipsum",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
+            {
+                "id": "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6",
+                "text": "foous barus",
+                "source": "TTS",
+                "license": "foo bar license",
+                "ttsProvider": "Polly",
+                "ttsVoice": "Lupe",
+                "ttsEngine": "standard",
+            },
+            {
+                "id": "3f981d854531e9f376ae06cb8449a6e997972d3c1b598f9a00b481ef307a469d.mp3",
+                "text": "foous",
+                "source": "TTS",
+                "license": "foo bar license",
+                "ttsProvider": "Polly",
+                "ttsVoice": "Lupe",
+                "ttsEngine": "standard",
+            },
+            {
+                "id": "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2",
+                "text": "lorem ipsum",
+                "source": "TTS",
+                "license": "foo bar license",
+                "ttsProvider": "Polly",
+                "ttsVoice": "Lupe",
+                "ttsEngine": "standard",
+            },
+            {
+                "id": "f38b5ac2a5e36c336eed306d56ed517bfd78a728321be0b87db5def8ff8abc3d.mp3",
+                "text": "apfel",
+                "source": "TTS",
+                "license": "foo bar license",
+                "ttsProvider": "Polly",
+                "ttsVoice": "Lupe",
+                "ttsEngine": "standard",
+            },
     ]
 
 
@@ -344,10 +404,22 @@ def test_overwrite_with_destructive(subprocess_run, tmp_path, capsys):
                 / "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6.mp3"
             )
             + " using Lupe standard",
+            "Generating "
+            + str(
+                tmp_path
+                / "f38b5ac2a5e36c336eed306d56ed517bfd78a728321be0b87db5def8ff8abc3d.mp3"
+            )
+            + " using Lupe standard",
+            "Generating "
+            + str(
+                tmp_path
+                / "3f981d854531e9f376ae06cb8449a6e997972d3c1b598f9a00b481ef307a469d.mp3"
+            )
+            + " using Lupe standard",
         ],
         captured.out,
     )
-    assert subprocess_run.call_count == 2
+    assert subprocess_run.call_count == 4
     subprocess_run.assert_any_call(
         [
             "aws",
@@ -395,8 +467,26 @@ def test_overwrite_with_destructive(subprocess_run, tmp_path, capsys):
             "ttsEngine": "standard",
         },
         {
+            "id": "3f981d854531e9f376ae06cb8449a6e997972d3c1b598f9a00b481ef307a469d",
+            "text": "foous",
+            "source": "TTS",
+            "license": "foo bar license",
+            "ttsProvider": "Polly",
+            "ttsVoice": "Lupe",
+            "ttsEngine": "standard",
+        },
+        {
             "id": "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2",
             "text": "lorem ipsum",
+            "source": "TTS",
+            "license": "foo bar license",
+            "ttsProvider": "Polly",
+            "ttsVoice": "Lupe",
+            "ttsEngine": "standard",
+        },
+        {
+            "id": "f38b5ac2a5e36c336eed306d56ed517bfd78a728321be0b87db5def8ff8abc3d",
+            "text": "apfel",
             "source": "TTS",
             "license": "foo bar license",
             "ttsProvider": "Polly",
@@ -435,10 +525,22 @@ def test_partial_update(subprocess_run, tmp_path, capsys):
                 / "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2.mp3"
             )
             + " using Lupe standard",
+            "Generating "
+            + str(
+                tmp_path
+                / "3f981d854531e9f376ae06cb8449a6e997972d3c1b598f9a00b481ef307a469d.mp3"
+            )
+            + " using Lupe standard",
+            "Generating "
+            + str(
+                tmp_path
+                / "f38b5ac2a5e36c336eed306d56ed517bfd78a728321be0b87db5def8ff8abc3d.mp3"
+            )
+            + " using Lupe standard",
         ],
         captured.out,
     )
-    assert subprocess_run.call_count == 1
+    assert subprocess_run.call_count == 3
     subprocess_run.assert_any_call(
         [
             "aws",
@@ -468,8 +570,26 @@ def test_partial_update(subprocess_run, tmp_path, capsys):
             "ttsEngine": "standard",
         },
         {
+            "id": "3f981d854531e9f376ae06cb8449a6e997972d3c1b598f9a00b481ef307a469d",
+            "text": "foous",
+            "source": "TTS",
+            "license": "foo bar license",
+            "ttsProvider": "Polly",
+            "ttsVoice": "Lupe",
+            "ttsEngine": "standard",
+        },
+        {
             "id": "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2",
             "text": "lorem ipsum",
+            "source": "TTS",
+            "license": "foo bar license",
+            "ttsProvider": "Polly",
+            "ttsVoice": "Lupe",
+            "ttsEngine": "standard",
+        },
+        {
+            "id": "f38b5ac2a5e36c336eed306d56ed517bfd78a728321be0b87db5def8ff8abc3d",
+            "text": "apfel",
             "source": "TTS",
             "license": "foo bar license",
             "ttsProvider": "Polly",
@@ -519,10 +639,22 @@ def test_partial_update_with_deletion(subprocess_run, tmp_path, capsys):
                 / "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2.mp3"
             )
             + " using Lupe standard",
+            "Generating "
+            + str(
+                tmp_path
+                / "f38b5ac2a5e36c336eed306d56ed517bfd78a728321be0b87db5def8ff8abc3d.mp3"
+            )
+            + " using Lupe standard",
+            "Generating "
+            + str(
+                tmp_path
+                / "3f981d854531e9f376ae06cb8449a6e997972d3c1b598f9a00b481ef307a469d.mp3"
+            )
+            + " using Lupe standard",
         ],
         captured.out,
     )
-    assert subprocess_run.call_count == 1
+    assert subprocess_run.call_count == 3
     subprocess_run.assert_any_call(
         [
             "aws",
@@ -552,8 +684,26 @@ def test_partial_update_with_deletion(subprocess_run, tmp_path, capsys):
             "ttsEngine": "standard",
         },
         {
+            "id": "3f981d854531e9f376ae06cb8449a6e997972d3c1b598f9a00b481ef307a469d",
+            "text": "foous",
+            "source": "TTS",
+            "license": "foo bar license",
+            "ttsProvider": "Polly",
+            "ttsVoice": "Lupe",
+            "ttsEngine": "standard",
+        },
+        {
             "id": "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2",
             "text": "lorem ipsum",
+            "source": "TTS",
+            "license": "foo bar license",
+            "ttsProvider": "Polly",
+            "ttsVoice": "Lupe",
+            "ttsEngine": "standard",
+        },
+        {
+            "id": "f38b5ac2a5e36c336eed306d56ed517bfd78a728321be0b87db5def8ff8abc3d",
+            "text": "apfel",
             "source": "TTS",
             "license": "foo bar license",
             "ttsProvider": "Polly",
@@ -609,10 +759,22 @@ def test_overwrite_with_deletion(subprocess_run, tmp_path, capsys):
                 / "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2.mp3"
             )
             + " using Lupe standard",
+            "Generating "
+            + str(
+                tmp_path
+                / "f38b5ac2a5e36c336eed306d56ed517bfd78a728321be0b87db5def8ff8abc3d.mp3"
+            )
+            + " using Lupe standard",
+            "Generating "
+            + str(
+                tmp_path
+                / "3f981d854531e9f376ae06cb8449a6e997972d3c1b598f9a00b481ef307a469d.mp3"
+            )
+            + " using Lupe standard",
         ],
         captured.out,
     )
-    assert subprocess_run.call_count == 2
+    assert subprocess_run.call_count == 4
     subprocess_run.assert_any_call(
         [
             "aws",
@@ -660,8 +822,26 @@ def test_overwrite_with_deletion(subprocess_run, tmp_path, capsys):
             "ttsEngine": "standard",
         },
         {
+            "id": "3f981d854531e9f376ae06cb8449a6e997972d3c1b598f9a00b481ef307a469d",
+            "text": "foous",
+            "source": "TTS",
+            "license": "foo bar license",
+            "ttsProvider": "Polly",
+            "ttsVoice": "Lupe",
+            "ttsEngine": "standard",
+        },
+        {
             "id": "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2",
             "text": "lorem ipsum",
+            "source": "TTS",
+            "license": "foo bar license",
+            "ttsProvider": "Polly",
+            "ttsVoice": "Lupe",
+            "ttsEngine": "standard",
+        },
+        {
+            "id": "f38b5ac2a5e36c336eed306d56ed517bfd78a728321be0b87db5def8ff8abc3d",
+            "text": "apfel",
             "source": "TTS",
             "license": "foo bar license",
             "ttsProvider": "Polly",
