@@ -18,7 +18,7 @@ blocks:
             - cache restore node-$(checksum yarn.lock)
             - cache restore packages-web-$(checksum yarn.lock)
             - 'NODE_ENV=production yarn export:production'
-            - git config --global user.email "gitlab@daniel-kantor.com"
+            - git config --global user.email "github@daniel-kantor.com"
             - git config --global user.name "Dániel Kántor"
             - 'yarn deploy --repo=https://$GH_TOKEN@github.com/kantord/LibreLingo.git'
             - cache store website-build-$SEMAPHORE_GIT_PR_SHA __sapper__/export
