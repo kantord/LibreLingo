@@ -1,3 +1,4 @@
+from librelingo_audios.functions import list_required_audios
 from librelingo_utils import audio_id, iterate_phrases, iterate_words
 from pathlib import Path
 import subprocess
@@ -12,14 +13,13 @@ def update_audios_for_course(output_path, course_name, course, settings):
 
     index_file_path = Path(Path(output_path) / "{}.json".format(course_name))
 
-    phrases_in_course = list(iterate_phrases(course)) + list(iterate_words(course))
     phrases_with_existing_audios = _load_index_file(index_file_path)
 
     # We want to go from the old state (the existing audios) to the new state
     # (the phrases now in the course). So we determine which phrases are the
     # same in both, which are new, and which are no longer needed.
     new_phrase_set = set(
-        [_phrase_identity_info_from_phrase(p) for p in phrases_in_course]
+        [_phrase_identity_info_from_text(p[1]) for p in list_required_audios(course)]
     )
     old_phrase_set = set(
         [_phrase_identity_info_from_index(p) for p in phrases_with_existing_audios]
@@ -167,8 +167,12 @@ def _save_index(result_index, index_file_path):
 PhraseIdentity = namedtuple("PhraseIdentity", "text source")
 
 
+def _phrase_identity_info_from_text(text):
+    return PhraseIdentity(text, "TTS")
+
+
 def _phrase_identity_info_from_phrase(phrase_object):
-    return PhraseIdentity(phrase_object.in_target_language[0], "TTS")
+    return _phrase_identity_info_from_text(phrase_object.in_target_language[0])
 
 
 def _phrase_identity_info_from_index(phrase_index_entry):
