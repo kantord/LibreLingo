@@ -55,6 +55,18 @@ def _mock_audio_file_for_text(text):
     return f"{_mock_hash_for_text(text)}.mp3"
 
 
+def _mock_meta_data_entry_for_text(text):
+    return {
+        "id": _mock_hash_for_text(text),
+        "text": text,
+        "source": "TTS",
+        "license": "foo bar license",
+        "ttsProvider": "Polly",
+        "ttsVoice": "Lupe",
+        "ttsEngine": "standard",
+    }
+
+
 @pytest.fixture
 def messages(tmp_path):
     return {
@@ -150,42 +162,10 @@ def test_generate_from_scratch(subprocess_run, tmp_path, capsys, messages):
         stdout=subprocess.DEVNULL,
     )
     assert _load_json_file(tmp_path / "test.json") == [
-        {
-            "id": "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6",
-            "text": "foous barus",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": "3f981d854531e9f376ae06cb8449a6e997972d3c1b598f9a00b481ef307a469d",
-            "text": "foous",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2",
-            "text": "lorem ipsum",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": "f38b5ac2a5e36c336eed306d56ed517bfd78a728321be0b87db5def8ff8abc3d",
-            "text": "apfel",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
+        _mock_meta_data_entry_for_text("foous barus"),
+        _mock_meta_data_entry_for_text("foous"),
+        _mock_meta_data_entry_for_text("lorem ipsum"),
+        _mock_meta_data_entry_for_text("apfel"),
     ]
 
 
@@ -243,42 +223,10 @@ def test_generate_from_scratch_with_destructive(
         stdout=subprocess.DEVNULL,
     )
     assert _load_json_file(tmp_path / "test.json") == [
-        {
-            "id": "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6",
-            "text": "foous barus",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": "3f981d854531e9f376ae06cb8449a6e997972d3c1b598f9a00b481ef307a469d",
-            "text": "foous",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2",
-            "text": "lorem ipsum",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": "f38b5ac2a5e36c336eed306d56ed517bfd78a728321be0b87db5def8ff8abc3d",
-            "text": "apfel",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
+        _mock_meta_data_entry_for_text("foous barus"),
+        _mock_meta_data_entry_for_text("foous"),
+        _mock_meta_data_entry_for_text("lorem ipsum"),
+        _mock_meta_data_entry_for_text("apfel"),
     ]
 
 
@@ -287,42 +235,10 @@ def test_noop_update(subprocess_run, tmp_path, capsys):
     _write_json_file(
         tmp_path / "test.json",
         [
-            {
-                "id": "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6",
-                "text": "foous barus",
-                "source": "TTS",
-                "license": "foo bar license",
-                "ttsProvider": "Polly",
-                "ttsVoice": "Lupe",
-                "ttsEngine": "standard",
-            },
-            {
-                "id": _mock_audio_file_for_text("foous"),
-                "text": "foous",
-                "source": "TTS",
-                "license": "foo bar license",
-                "ttsProvider": "Polly",
-                "ttsVoice": "Lupe",
-                "ttsEngine": "standard",
-            },
-            {
-                "id": "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2",
-                "text": "lorem ipsum",
-                "source": "TTS",
-                "license": "foo bar license",
-                "ttsProvider": "Polly",
-                "ttsVoice": "Lupe",
-                "ttsEngine": "standard",
-            },
-            {
-                "id": _mock_audio_file_for_text("apfel"),
-                "text": "apfel",
-                "source": "TTS",
-                "license": "foo bar license",
-                "ttsProvider": "Polly",
-                "ttsVoice": "Lupe",
-                "ttsEngine": "standard",
-            },
+            _mock_meta_data_entry_for_text("foous barus"),
+            _mock_meta_data_entry_for_text("foous"),
+            _mock_meta_data_entry_for_text("lorem ipsum"),
+            _mock_meta_data_entry_for_text("apfel"),
         ],
     )
     update_audios_for_course(
@@ -333,42 +249,10 @@ def test_noop_update(subprocess_run, tmp_path, capsys):
     assert captured.out == ""
     assert subprocess_run.call_count == 0
     assert _load_json_file(tmp_path / "test.json") == [
-        {
-            "id": "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6",
-            "text": "foous barus",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": _mock_audio_file_for_text("foous"),
-            "text": "foous",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2",
-            "text": "lorem ipsum",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": _mock_audio_file_for_text("apfel"),
-            "text": "apfel",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
+        _mock_meta_data_entry_for_text("foous barus"),
+        _mock_meta_data_entry_for_text("foous"),
+        _mock_meta_data_entry_for_text("lorem ipsum"),
+        _mock_meta_data_entry_for_text("apfel"),
     ]
 
 
@@ -377,24 +261,8 @@ def test_overwrite_with_destructive(subprocess_run, tmp_path, capsys, messages):
     _write_json_file(
         tmp_path / "test.json",
         [
-            {
-                "id": "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6",
-                "text": "foous barus",
-                "source": "TTS",
-                "license": "foo bar license",
-                "ttsProvider": "Polly",
-                "ttsVoice": "Lupe",
-                "ttsEngine": "standard",
-            },
-            {
-                "id": "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2",
-                "text": "lorem ipsum",
-                "source": "TTS",
-                "license": "foo bar license",
-                "ttsProvider": "Polly",
-                "ttsVoice": "Lupe",
-                "ttsEngine": "standard",
-            },
+            _mock_meta_data_entry_for_text("foous barus"),
+            _mock_meta_data_entry_for_text("lorem ipsum"),
         ],
     )
     update_audios_for_course(
@@ -447,42 +315,10 @@ def test_overwrite_with_destructive(subprocess_run, tmp_path, capsys, messages):
         stdout=subprocess.DEVNULL,
     )
     assert _load_json_file(tmp_path / "test.json") == [
-        {
-            "id": "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6",
-            "text": "foous barus",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": "3f981d854531e9f376ae06cb8449a6e997972d3c1b598f9a00b481ef307a469d",
-            "text": "foous",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2",
-            "text": "lorem ipsum",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": "f38b5ac2a5e36c336eed306d56ed517bfd78a728321be0b87db5def8ff8abc3d",
-            "text": "apfel",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
+        _mock_meta_data_entry_for_text("foous barus"),
+        _mock_meta_data_entry_for_text("foous"),
+        _mock_meta_data_entry_for_text("lorem ipsum"),
+        _mock_meta_data_entry_for_text("apfel"),
     ]
 
 
@@ -491,15 +327,7 @@ def test_partial_update(subprocess_run, tmp_path, capsys, messages):
     _write_json_file(
         tmp_path / "test.json",
         [
-            {
-                "id": "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6",
-                "text": "foous barus",
-                "source": "TTS",
-                "license": "foo bar license",
-                "ttsProvider": "Polly",
-                "ttsVoice": "Lupe",
-                "ttsEngine": "standard",
-            },
+            _mock_meta_data_entry_for_text("foous barus"),
         ],
     )
     update_audios_for_course(
@@ -534,42 +362,10 @@ def test_partial_update(subprocess_run, tmp_path, capsys, messages):
         stdout=subprocess.DEVNULL,
     )
     assert _load_json_file(tmp_path / "test.json") == [
-        {
-            "id": "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6",
-            "text": "foous barus",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": "3f981d854531e9f376ae06cb8449a6e997972d3c1b598f9a00b481ef307a469d",
-            "text": "foous",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2",
-            "text": "lorem ipsum",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": "f38b5ac2a5e36c336eed306d56ed517bfd78a728321be0b87db5def8ff8abc3d",
-            "text": "apfel",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
+        _mock_meta_data_entry_for_text("foous barus"),
+        _mock_meta_data_entry_for_text("foous"),
+        _mock_meta_data_entry_for_text("lorem ipsum"),
+        _mock_meta_data_entry_for_text("apfel"),
     ]
 
 
@@ -578,24 +374,8 @@ def test_partial_update_with_deletion(subprocess_run, tmp_path, capsys, messages
     _write_json_file(
         tmp_path / "test.json",
         [
-            {
-                "id": "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6",
-                "text": "foous barus",
-                "source": "TTS",
-                "license": "foo bar license",
-                "ttsProvider": "Polly",
-                "ttsVoice": "Lupe",
-                "ttsEngine": "standard",
-            },
-            {
-                "id": "oldid",
-                "text": "an unnecessary phrase",
-                "source": "TTS",
-                "license": "foo bar license",
-                "ttsProvider": "Polly",
-                "ttsVoice": "Lupe",
-                "ttsEngine": "standard",
-            },
+            _mock_meta_data_entry_for_text("foous barus"),
+            _mock_meta_data_entry_for_text("an unnecessary phrase"),
         ],
     )
     _write_dummy_audio_file(tmp_path / "oldid.mp3")
@@ -632,42 +412,10 @@ def test_partial_update_with_deletion(subprocess_run, tmp_path, capsys, messages
         stdout=subprocess.DEVNULL,
     )
     assert _load_json_file(tmp_path / "test.json") == [
-        {
-            "id": "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6",
-            "text": "foous barus",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": "3f981d854531e9f376ae06cb8449a6e997972d3c1b598f9a00b481ef307a469d",
-            "text": "foous",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2",
-            "text": "lorem ipsum",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": "f38b5ac2a5e36c336eed306d56ed517bfd78a728321be0b87db5def8ff8abc3d",
-            "text": "apfel",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
+        _mock_meta_data_entry_for_text("foous barus"),
+        _mock_meta_data_entry_for_text("foous"),
+        _mock_meta_data_entry_for_text("lorem ipsum"),
+        _mock_meta_data_entry_for_text("apfel"),
     ]
 
 
@@ -676,24 +424,8 @@ def test_overwrite_with_deletion(subprocess_run, tmp_path, capsys, messages):
     _write_json_file(
         tmp_path / "test.json",
         [
-            {
-                "id": "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6",
-                "text": "foous barus",
-                "source": "TTS",
-                "license": "foo bar license",
-                "ttsProvider": "Polly",
-                "ttsVoice": "Lupe",
-                "ttsEngine": "standard",
-            },
-            {
-                "id": "oldid",
-                "text": "an unnecessary phrase",
-                "source": "TTS",
-                "license": "foo bar license",
-                "ttsProvider": "Polly",
-                "ttsVoice": "Lupe",
-                "ttsEngine": "standard",
-            },
+            _mock_meta_data_entry_for_text("foous barus"),
+            _mock_meta_data_entry_for_text("an unnecessary phrase"),
         ],
     )
     _write_dummy_audio_file(tmp_path / "oldid.mp3")
@@ -748,42 +480,10 @@ def test_overwrite_with_deletion(subprocess_run, tmp_path, capsys, messages):
         stdout=subprocess.DEVNULL,
     )
     assert _load_json_file(tmp_path / "test.json") == [
-        {
-            "id": "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6",
-            "text": "foous barus",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": "3f981d854531e9f376ae06cb8449a6e997972d3c1b598f9a00b481ef307a469d",
-            "text": "foous",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2",
-            "text": "lorem ipsum",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": "f38b5ac2a5e36c336eed306d56ed517bfd78a728321be0b87db5def8ff8abc3d",
-            "text": "apfel",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
+        _mock_meta_data_entry_for_text("foous barus"),
+        _mock_meta_data_entry_for_text("foous"),
+        _mock_meta_data_entry_for_text("lorem ipsum"),
+        _mock_meta_data_entry_for_text("apfel"),
     ]
 
 
@@ -792,24 +492,8 @@ def test_delete_all(subprocess_run, tmp_path, capsys, messages):
     _write_json_file(
         tmp_path / "test.json",
         [
-            {
-                "id": "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6",
-                "text": "foous barus",
-                "source": "TTS",
-                "license": "foo bar license",
-                "ttsProvider": "Polly",
-                "ttsVoice": "Lupe",
-                "ttsEngine": "standard",
-            },
-            {
-                "id": "oldid",
-                "text": "an unnecessary phrase",
-                "source": "TTS",
-                "license": "foo bar license",
-                "ttsProvider": "Polly",
-                "ttsVoice": "Lupe",
-                "ttsEngine": "standard",
-            },
+            _mock_meta_data_entry_for_text("foous barus"),
+            _mock_meta_data_entry_for_text("an unnecessary phrase"),
         ],
     )
     _write_dummy_audio_file(tmp_path / "oldid.mp3")
@@ -835,24 +519,8 @@ def test_delete_all_with_destructive(subprocess_run, tmp_path, capsys, messages)
     _write_json_file(
         tmp_path / "test.json",
         [
-            {
-                "id": "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6",
-                "text": "foous barus",
-                "source": "TTS",
-                "license": "foo bar license",
-                "ttsProvider": "Polly",
-                "ttsVoice": "Lupe",
-                "ttsEngine": "standard",
-            },
-            {
-                "id": "oldid",
-                "text": "an unnecessary phrase",
-                "source": "TTS",
-                "license": "foo bar license",
-                "ttsProvider": "Polly",
-                "ttsVoice": "Lupe",
-                "ttsEngine": "standard",
-            },
+            _mock_meta_data_entry_for_text("foous barus"),
+            _mock_meta_data_entry_for_text("an unnecessary phrase"),
         ],
     )
     _write_dummy_audio_file(tmp_path / "oldid.mp3")
