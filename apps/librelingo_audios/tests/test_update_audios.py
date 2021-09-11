@@ -138,8 +138,7 @@ def test_generate_from_scratch_with_destructive(
 
 
 def test_noop_update(aws_cli, tmp_path, capsys, mock_index_entry, index_file):
-    _write_json_file(
-        tmp_path / "test.json",
+    index_file.set_entries(
         [
             mock_index_entry("foous barus"),
             mock_index_entry("foous"),
@@ -168,8 +167,7 @@ def test_noop_update(aws_cli, tmp_path, capsys, mock_index_entry, index_file):
 def test_overwrite_with_destructive(
     aws_cli, tmp_path, capsys, terminal_message, mock_index_entry, index_file
 ):
-    _write_json_file(
-        tmp_path / "test.json",
+    index_file.set_entries(
         [
             mock_index_entry("foous barus"),
             mock_index_entry("lorem ipsum"),
@@ -208,8 +206,7 @@ def test_overwrite_with_destructive(
 def test_partial_update(
     aws_cli, tmp_path, capsys, terminal_message, mock_index_entry, index_file
 ):
-    _write_json_file(
-        tmp_path / "test.json",
+    index_file.set_entries(
         [
             mock_index_entry("foous barus"),
         ],
@@ -249,8 +246,7 @@ def test_partial_update_with_deletion(
     write_mock_audio_file_for_text,
     index_file,
 ):
-    _write_json_file(
-        tmp_path / "test.json",
+    index_file.set_entries(
         [
             mock_index_entry("foous barus"),
             mock_index_entry("an unnecessary phrase"),
@@ -293,8 +289,7 @@ def test_overwrite_with_deletion(
     write_mock_audio_file_for_text,
     index_file,
 ):
-    _write_json_file(
-        tmp_path / "test.json",
+    index_file.set_entries(
         [
             mock_index_entry("foous barus"),
             mock_index_entry("an unnecessary phrase"),
@@ -339,8 +334,7 @@ def test_delete_all(
     write_mock_audio_file_for_text,
     index_file,
 ):
-    _write_json_file(
-        tmp_path / "test.json",
+    index_file.set_entries(
         [
             mock_index_entry("foous barus"),
             mock_index_entry("an unnecessary phrase"),
@@ -373,8 +367,7 @@ def test_delete_all_with_destructive(
     write_mock_audio_file_for_text,
     index_file,
 ):
-    _write_json_file(
-        tmp_path / "test.json",
+    index_file.set_entries(
         [
             mock_index_entry("foous barus"),
             mock_index_entry("an unnecessary phrase"),
@@ -396,11 +389,6 @@ def test_delete_all_with_destructive(
     )
     aws_cli.assert_call_count == 0
     index_file.assert_entries_match([])
-
-
-def _write_json_file(file_path, value):
-    with open(file_path, "w", encoding="utf-8") as f:
-        json.dump(value, f, ensure_ascii=False, indent=4)
 
 
 def _assert_output_lines(lines, text):

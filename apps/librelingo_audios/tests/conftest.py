@@ -108,10 +108,15 @@ def index_file(tmp_path):
     def assert_does_not_exist():
         assert len(list(tmp_path.iterdir())) == 0
 
+    def set_entries(entries):
+        with open(tmp_path / "test.json", "w", encoding="utf-8") as f:
+            json.dump(entries, f, ensure_ascii=False, indent=4)
+
     return SimpleNamespace(
         **{
             "assert_entries_match": assert_entries_match,
             "assert_exists": assert_exists,
             "assert_does_not_exist": assert_does_not_exist,
+            "set_entries": set_entries,
         }
     )
