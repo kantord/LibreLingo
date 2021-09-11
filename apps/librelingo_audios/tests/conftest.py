@@ -42,13 +42,21 @@ def mock_index_entry():
 
 
 @pytest.fixture
-def terminal_message(tmp_path):
+def terminal(tmp_path, capsys):
+    def assert_output_matches(set_of_messages):
+        assert set(set_of_messages) == set(
+            [l for l in capsys.readouterr().out.split("\n") if l != ""]
+        )
+
     return SimpleNamespace(
-        **{
-            "generating": lambda text: f"Generating {tmp_path / _mock_audio_file_for_text(text)} using Lupe standard",
-            "would_generate": lambda text: f"Would generate {tmp_path / _mock_audio_file_for_text(text)} using Lupe standard",
-            "deleting": lambda text: f"Deleting {tmp_path / _mock_audio_file_for_text(text)}",
-        }
+        assert_output_matches=assert_output_matches,
+        message=SimpleNamespace(
+            **{
+                "generating": lambda text: f"Generating {tmp_path / _mock_audio_file_for_text(text)} using Lupe standard",
+                "would_generate": lambda text: f"Would generate {tmp_path / _mock_audio_file_for_text(text)} using Lupe standard",
+                "deleting": lambda text: f"Deleting {tmp_path / _mock_audio_file_for_text(text)}",
+            }
+        ),
     )
 
 
