@@ -32,11 +32,11 @@ empty_course = fakes.customize(
 )
 
 
-def test_dry_run_does_nothing(tmp_path, capsys, terminal_message):
+def test_dry_run_does_nothing(tmp_path, capsys, terminal_message, index_file):
     update_audios_for_course(
         tmp_path, "test", course, cli.Settings(dry_run=True, destructive=False)
     )
-    assert len(list(tmp_path.iterdir())) == 0
+    index_file.assert_does_not_exist()
     captured = capsys.readouterr()
     _assert_output_lines(
         [
@@ -49,11 +49,13 @@ def test_dry_run_does_nothing(tmp_path, capsys, terminal_message):
     )
 
 
-def test_dry_run_does_nothing_with_destructive(tmp_path, capsys, terminal_message):
+def test_dry_run_does_nothing_with_destructive(
+    tmp_path, capsys, terminal_message, index_file
+):
     update_audios_for_course(
         tmp_path, "test", course, cli.Settings(dry_run=True, destructive=True)
     )
-    assert len(list(tmp_path.iterdir())) == 0
+    index_file.assert_does_not_exist()
     captured = capsys.readouterr()
     _assert_output_lines(
         [
