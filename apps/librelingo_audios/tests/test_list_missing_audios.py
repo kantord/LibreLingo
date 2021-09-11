@@ -3,12 +3,12 @@ from librelingo_fakes import fakes
 from librelingo_audios.functions import list_required_audios
 
 
-def test_a_course_with_0_phrases_needs_zero_audios():
-    assert len(list(list_required_audios(fakes.course2))) == 0
+def test_course_with_0_phrases_1_word_needs_1_audio():
+    assert len(list(list_required_audios(fakes.course2))) == 1
 
 
-def test_a_course_with_2_phrases_needs_2_audios():
-    assert len(list(list_required_audios(fakes.course1))) == 2
+def test_course_with_2_phrases_4_words_needs_6_audios():
+    assert len(list(list_required_audios(fakes.course1))) == 6
 
 
 def test_result_includes_the_phrase_in_the_target_language():
@@ -31,13 +31,17 @@ def test_audio_id_is_a_string():
     assert [type(result[0]) for result in list_required_audios(fakes.course1)] == [
         str,
         str,
+        str,
+        str,
+        str,
+        str,
     ]
 
 
 def test_calls_audio_id_to_get_the_id(mocker):
     audio_id = mocker.patch("librelingo_audios.functions.audio_id")
     list(list_required_audios(fakes.course1))
-    assert audio_id.call_count == 2
+    assert audio_id.call_count == 6
 
 
 def test_calls_audio_id_with_the_correct_arguments(mocker):
