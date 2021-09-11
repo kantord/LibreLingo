@@ -1,13 +1,14 @@
 # Plurals
 
-In this exercise you will learn some simple plural froms of German.
+In this exercise you will learn some simple plural froms of German.  
 
-Most German nouns end with one of these forms:
+Most German nouns end with one of these forms:  
+
 	* „n/en“
 	* „r/er“
 	* „e“
-	* „s“
-have either no special ending or no plural at all.
+	* „s“  
+have either no special ending or no plural at all.  
 
 Tip:
-In German all nouns use the article "die" in the plural!
+In German all nouns use the article "die" in the plural!  
