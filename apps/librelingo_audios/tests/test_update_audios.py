@@ -72,7 +72,7 @@ def test_generate_from_scratch(
     update_audios_for_course(
         tmp_path, "test", course, cli.Settings(dry_run=False, destructive=False)
     )
-    assert list(tmp_path.iterdir()) == [tmp_path / "test.json"]
+    index_file.assert_exists()
     captured = capsys.readouterr()
     _assert_output_lines(
         [
@@ -108,7 +108,7 @@ def test_generate_from_scratch_with_destructive(
     update_audios_for_course(
         tmp_path, "test", course, cli.Settings(dry_run=False, destructive=True)
     )
-    assert list(tmp_path.iterdir()) == [tmp_path / "test.json"]
+    index_file.assert_exists()
     captured = capsys.readouterr()
     _assert_output_lines(
         [
@@ -148,7 +148,7 @@ def test_noop_update(aws_cli, tmp_path, capsys, mock_index_entry, index_file):
     update_audios_for_course(
         tmp_path, "test", course, cli.Settings(dry_run=False, destructive=False)
     )
-    assert list(tmp_path.iterdir()) == [tmp_path / "test.json"]
+    index_file.assert_exists()
     captured = capsys.readouterr()
     assert captured.out == ""
     aws_cli.assert_call_count(0)
@@ -176,7 +176,7 @@ def test_overwrite_with_destructive(
     update_audios_for_course(
         tmp_path, "test", course, cli.Settings(dry_run=False, destructive=True)
     )
-    assert list(tmp_path.iterdir()) == [tmp_path / "test.json"]
+    index_file.assert_exists()
     captured = capsys.readouterr()
     _assert_output_lines(
         [
@@ -215,7 +215,7 @@ def test_partial_update(
     update_audios_for_course(
         tmp_path, "test", course, cli.Settings(dry_run=False, destructive=False)
     )
-    assert list(tmp_path.iterdir()) == [tmp_path / "test.json"]
+    index_file.assert_exists()
     captured = capsys.readouterr()
     _assert_output_lines(
         [
@@ -258,7 +258,7 @@ def test_partial_update_with_deletion(
     update_audios_for_course(
         tmp_path, "test", course, cli.Settings(dry_run=False, destructive=False)
     )
-    assert list(tmp_path.iterdir()) == [tmp_path / "test.json"]
+    index_file.assert_exists()
     captured = capsys.readouterr()
     _assert_output_lines(
         [
@@ -302,7 +302,7 @@ def test_overwrite_with_deletion(
     update_audios_for_course(
         tmp_path, "test", course, cli.Settings(dry_run=False, destructive=True)
     )
-    assert list(tmp_path.iterdir()) == [tmp_path / "test.json"]
+    index_file.assert_exists()
     captured = capsys.readouterr()
     _assert_output_lines(
         [
@@ -349,7 +349,7 @@ def test_delete_all(
     update_audios_for_course(
         tmp_path, "test", empty_course, cli.Settings(dry_run=False, destructive=False)
     )
-    assert list(tmp_path.iterdir()) == [tmp_path / "test.json"]
+    index_file.assert_exists()
     captured = capsys.readouterr()
     _assert_output_lines(
         [
@@ -383,7 +383,7 @@ def test_delete_all_with_destructive(
     update_audios_for_course(
         tmp_path, "test", empty_course, cli.Settings(dry_run=False, destructive=True)
     )
-    assert list(tmp_path.iterdir()) == [tmp_path / "test.json"]
+    index_file.assert_exists()
     captured = capsys.readouterr()
     _assert_output_lines(
         [
