@@ -162,9 +162,13 @@ def _save_index(result_index, index_file_path):
         )
 
 
-# This is the set of information that identifies a phrase as 'the same'. If any
-# of these things change, the phrase will be seen as 'new' and re-generated.
-PhraseIdentity = namedtuple("PhraseIdentity", ["text", "source"])
+class PhraseIdentity(namedtuple("PhraseIdentity", ["text", "source"])):
+    """
+    This is the set of information that identifies a phrase as 'the same'. If any
+    of these things change, the phrase will be seen as 'new' and re-generated.
+    """
+
+    pass
 
 
 def _phrase_identity_info_from_text(text):
