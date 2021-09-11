@@ -69,15 +69,17 @@ def _mock_meta_data_entry_for_text(text):
 
 
 @pytest.fixture
-def messages(tmp_path):
-    return {
-        "generating": lambda text: f"Generating {tmp_path / _mock_audio_file_for_text(text)} using Lupe standard",
-        "would generate": lambda text: f"Would generate {tmp_path / _mock_audio_file_for_text(text)} using Lupe standard",
-        "deleting": lambda text: f"Deleting {tmp_path / _mock_audio_file_for_text(text)}",
-    }
+def terminal_message(tmp_path):
+    return SimpleNamespace(
+        **{
+            "generating": lambda text: f"Generating {tmp_path / _mock_audio_file_for_text(text)} using Lupe standard",
+            "would_generate": lambda text: f"Would generate {tmp_path / _mock_audio_file_for_text(text)} using Lupe standard",
+            "deleting": lambda text: f"Deleting {tmp_path / _mock_audio_file_for_text(text)}",
+        }
+    )
 
 
-def test_dry_run_does_nothing(tmp_path, capsys, messages):
+def test_dry_run_does_nothing(tmp_path, capsys, terminal_message):
     update_audios_for_course(
         tmp_path, "test", course, cli.Settings(dry_run=True, destructive=False)
     )
@@ -85,16 +87,16 @@ def test_dry_run_does_nothing(tmp_path, capsys, messages):
     captured = capsys.readouterr()
     _assert_output_lines(
         [
-            messages["would generate"]("lorem ipsum"),
-            messages["would generate"]("foous barus"),
-            messages["would generate"]("apfel"),
-            messages["would generate"]("foous"),
+            terminal_message.would_generate("lorem ipsum"),
+            terminal_message.would_generate("foous barus"),
+            terminal_message.would_generate("apfel"),
+            terminal_message.would_generate("foous"),
         ],
         captured.out,
     )
 
 
-def test_dry_run_does_nothing_with_destructive(tmp_path, capsys, messages):
+def test_dry_run_does_nothing_with_destructive(tmp_path, capsys, terminal_message):
     update_audios_for_course(
         tmp_path, "test", course, cli.Settings(dry_run=True, destructive=True)
     )
@@ -102,10 +104,10 @@ def test_dry_run_does_nothing_with_destructive(tmp_path, capsys, messages):
     captured = capsys.readouterr()
     _assert_output_lines(
         [
-            messages["would generate"]("lorem ipsum"),
-            messages["would generate"]("foous barus"),
-            messages["would generate"]("apfel"),
-            messages["would generate"]("foous"),
+            terminal_message.would_generate("lorem ipsum"),
+            terminal_message.would_generate("foous barus"),
+            terminal_message.would_generate("apfel"),
+            terminal_message.would_generate("foous"),
         ],
         captured.out,
     )
@@ -145,7 +147,7 @@ def aws_cli(mocker, tmp_path):
     )
 
 
-def test_generate_from_scratch(aws_cli, tmp_path, capsys, messages):
+def test_generate_from_scratch(aws_cli, tmp_path, capsys, terminal_message):
     update_audios_for_course(
         tmp_path, "test", course, cli.Settings(dry_run=False, destructive=False)
     )
@@ -153,10 +155,10 @@ def test_generate_from_scratch(aws_cli, tmp_path, capsys, messages):
     captured = capsys.readouterr()
     _assert_output_lines(
         [
-            messages["generating"]("lorem ipsum"),
-            messages["generating"]("foous barus"),
-            messages["generating"]("apfel"),
-            messages["generating"]("foous"),
+            terminal_message.generating("lorem ipsum"),
+            terminal_message.generating("foous barus"),
+            terminal_message.generating("apfel"),
+            terminal_message.generating("foous"),
         ],
         captured.out,
     )
@@ -172,9 +174,8 @@ def test_generate_from_scratch(aws_cli, tmp_path, capsys, messages):
     ]
 
 
-@patch("subprocess.run")
 def test_generate_from_scratch_with_destructive(
-    subprocess_run, tmp_path, capsys, messages
+    aws_cli, tmp_path, capsys, terminal_message
 ):
     update_audios_for_course(
         tmp_path, "test", course, cli.Settings(dry_run=False, destructive=True)
@@ -183,48 +184,19 @@ def test_generate_from_scratch_with_destructive(
     captured = capsys.readouterr()
     _assert_output_lines(
         [
-            messages["generating"]("lorem ipsum"),
-            messages["generating"]("foous barus"),
-            messages["generating"]("apfel"),
-            messages["generating"]("foous"),
+            terminal_message.generating("lorem ipsum"),
+            terminal_message.generating("foous barus"),
+            terminal_message.generating("apfel"),
+            terminal_message.generating("foous"),
         ],
         captured.out,
     )
-    assert subprocess_run.call_count == 4
-    subprocess_run.assert_any_call(
-        [
-            "aws",
-            "polly",
-            "synthesize-speech",
-            "--output-format",
-            "mp3",
-            "--voice-id",
-            "Lupe",
-            "--engine",
-            "standard",
-            "--text",
-            "foous barus",
-            tmp_path / _mock_audio_file_for_text("foous barus"),
-        ],
-        stdout=subprocess.DEVNULL,
-    )
-    subprocess_run.assert_any_call(
-        [
-            "aws",
-            "polly",
-            "synthesize-speech",
-            "--output-format",
-            "mp3",
-            "--voice-id",
-            "Lupe",
-            "--engine",
-            "standard",
-            "--text",
-            "lorem ipsum",
-            tmp_path / _mock_audio_file_for_text("lorem ipsum"),
-        ],
-        stdout=subprocess.DEVNULL,
-    )
+    aws_cli.assert_call_count == 4
+    aws_cli.assert_audio_generated_for("foous barus")
+    aws_cli.assert_audio_generated_for("lorem ipsum")
+    aws_cli.assert_audio_generated_for("apfel")
+    aws_cli.assert_audio_generated_for("foous")
+
     assert _load_json_file(tmp_path / "test.json") == [
         _mock_meta_data_entry_for_text("foous barus"),
         _mock_meta_data_entry_for_text("foous"),
@@ -233,8 +205,7 @@ def test_generate_from_scratch_with_destructive(
     ]
 
 
-@patch("subprocess.run")
-def test_noop_update(subprocess_run, tmp_path, capsys):
+def test_noop_update(aws_cli, tmp_path, capsys):
     _write_json_file(
         tmp_path / "test.json",
         [
@@ -250,7 +221,7 @@ def test_noop_update(subprocess_run, tmp_path, capsys):
     assert list(tmp_path.iterdir()) == [tmp_path / "test.json"]
     captured = capsys.readouterr()
     assert captured.out == ""
-    assert subprocess_run.call_count == 0
+    aws_cli.assert_call_count(0)
     assert _load_json_file(tmp_path / "test.json") == [
         _mock_meta_data_entry_for_text("foous barus"),
         _mock_meta_data_entry_for_text("foous"),
@@ -259,8 +230,7 @@ def test_noop_update(subprocess_run, tmp_path, capsys):
     ]
 
 
-@patch("subprocess.run")
-def test_overwrite_with_destructive(subprocess_run, tmp_path, capsys, messages):
+def test_overwrite_with_destructive(aws_cli, tmp_path, capsys, terminal_message):
     _write_json_file(
         tmp_path / "test.json",
         [
@@ -275,48 +245,19 @@ def test_overwrite_with_destructive(subprocess_run, tmp_path, capsys, messages):
     captured = capsys.readouterr()
     _assert_output_lines(
         [
-            messages["generating"]("lorem ipsum"),
-            messages["generating"]("foous barus"),
-            messages["generating"]("apfel"),
-            messages["generating"]("foous"),
+            terminal_message.generating("lorem ipsum"),
+            terminal_message.generating("foous barus"),
+            terminal_message.generating("apfel"),
+            terminal_message.generating("foous"),
         ],
         captured.out,
     )
-    assert subprocess_run.call_count == 4
-    subprocess_run.assert_any_call(
-        [
-            "aws",
-            "polly",
-            "synthesize-speech",
-            "--output-format",
-            "mp3",
-            "--voice-id",
-            "Lupe",
-            "--engine",
-            "standard",
-            "--text",
-            "foous barus",
-            tmp_path / _mock_audio_file_for_text("foous barus"),
-        ],
-        stdout=subprocess.DEVNULL,
-    )
-    subprocess_run.assert_any_call(
-        [
-            "aws",
-            "polly",
-            "synthesize-speech",
-            "--output-format",
-            "mp3",
-            "--voice-id",
-            "Lupe",
-            "--engine",
-            "standard",
-            "--text",
-            "lorem ipsum",
-            tmp_path / _mock_audio_file_for_text("lorem ipsum"),
-        ],
-        stdout=subprocess.DEVNULL,
-    )
+    aws_cli.assert_call_count == 4
+    aws_cli.assert_audio_generated_for("foous barus")
+    aws_cli.assert_audio_generated_for("lorem ipsum")
+    aws_cli.assert_audio_generated_for("apfel")
+    aws_cli.assert_audio_generated_for("foous")
+
     assert _load_json_file(tmp_path / "test.json") == [
         _mock_meta_data_entry_for_text("foous barus"),
         _mock_meta_data_entry_for_text("foous"),
@@ -325,8 +266,7 @@ def test_overwrite_with_destructive(subprocess_run, tmp_path, capsys, messages):
     ]
 
 
-@patch("subprocess.run")
-def test_partial_update(subprocess_run, tmp_path, capsys, messages):
+def test_partial_update(aws_cli, tmp_path, capsys, terminal_message):
     _write_json_file(
         tmp_path / "test.json",
         [
@@ -340,30 +280,15 @@ def test_partial_update(subprocess_run, tmp_path, capsys, messages):
     captured = capsys.readouterr()
     _assert_output_lines(
         [
-            messages["generating"]("lorem ipsum"),
-            messages["generating"]("apfel"),
-            messages["generating"]("foous"),
+            terminal_message.generating("lorem ipsum"),
+            terminal_message.generating("apfel"),
+            terminal_message.generating("foous"),
         ],
         captured.out,
     )
-    assert subprocess_run.call_count == 3
-    subprocess_run.assert_any_call(
-        [
-            "aws",
-            "polly",
-            "synthesize-speech",
-            "--output-format",
-            "mp3",
-            "--voice-id",
-            "Lupe",
-            "--engine",
-            "standard",
-            "--text",
-            "lorem ipsum",
-            tmp_path / _mock_audio_file_for_text("lorem ipsum"),
-        ],
-        stdout=subprocess.DEVNULL,
-    )
+    aws_cli.assert_call_count == 3
+    aws_cli.assert_audio_generated_for("lorem ipsum")
+
     assert _load_json_file(tmp_path / "test.json") == [
         _mock_meta_data_entry_for_text("foous barus"),
         _mock_meta_data_entry_for_text("foous"),
@@ -372,8 +297,7 @@ def test_partial_update(subprocess_run, tmp_path, capsys, messages):
     ]
 
 
-@patch("subprocess.run")
-def test_partial_update_with_deletion(subprocess_run, tmp_path, capsys, messages):
+def test_partial_update_with_deletion(aws_cli, tmp_path, capsys, terminal_message):
     _write_json_file(
         tmp_path / "test.json",
         [
@@ -389,31 +313,16 @@ def test_partial_update_with_deletion(subprocess_run, tmp_path, capsys, messages
     captured = capsys.readouterr()
     _assert_output_lines(
         [
-            messages["deleting"]("an unnecessary phrase"),
-            messages["generating"]("lorem ipsum"),
-            messages["generating"]("apfel"),
-            messages["generating"]("foous"),
+            terminal_message.deleting("an unnecessary phrase"),
+            terminal_message.generating("lorem ipsum"),
+            terminal_message.generating("apfel"),
+            terminal_message.generating("foous"),
         ],
         captured.out,
     )
-    assert subprocess_run.call_count == 3
-    subprocess_run.assert_any_call(
-        [
-            "aws",
-            "polly",
-            "synthesize-speech",
-            "--output-format",
-            "mp3",
-            "--voice-id",
-            "Lupe",
-            "--engine",
-            "standard",
-            "--text",
-            "lorem ipsum",
-            tmp_path / _mock_audio_file_for_text("lorem ipsum"),
-        ],
-        stdout=subprocess.DEVNULL,
-    )
+    aws_cli.assert_call_count == 3
+    aws_cli.assert_audio_generated_for("lorem ipsum")
+
     assert _load_json_file(tmp_path / "test.json") == [
         _mock_meta_data_entry_for_text("foous barus"),
         _mock_meta_data_entry_for_text("foous"),
@@ -422,8 +331,7 @@ def test_partial_update_with_deletion(subprocess_run, tmp_path, capsys, messages
     ]
 
 
-@patch("subprocess.run")
-def test_overwrite_with_deletion(subprocess_run, tmp_path, capsys, messages):
+def test_overwrite_with_deletion(aws_cli, tmp_path, capsys, terminal_message):
     _write_json_file(
         tmp_path / "test.json",
         [
@@ -439,49 +347,18 @@ def test_overwrite_with_deletion(subprocess_run, tmp_path, capsys, messages):
     captured = capsys.readouterr()
     _assert_output_lines(
         [
-            messages["deleting"]("an unnecessary phrase"),
-            messages["generating"]("foous barus"),
-            messages["generating"]("lorem ipsum"),
-            messages["generating"]("apfel"),
-            messages["generating"]("foous"),
+            terminal_message.deleting("an unnecessary phrase"),
+            terminal_message.generating("foous barus"),
+            terminal_message.generating("lorem ipsum"),
+            terminal_message.generating("apfel"),
+            terminal_message.generating("foous"),
         ],
         captured.out,
     )
-    assert subprocess_run.call_count == 4
-    subprocess_run.assert_any_call(
-        [
-            "aws",
-            "polly",
-            "synthesize-speech",
-            "--output-format",
-            "mp3",
-            "--voice-id",
-            "Lupe",
-            "--engine",
-            "standard",
-            "--text",
-            "foous barus",
-            tmp_path / _mock_audio_file_for_text("foous barus"),
-        ],
-        stdout=subprocess.DEVNULL,
-    )
-    subprocess_run.assert_any_call(
-        [
-            "aws",
-            "polly",
-            "synthesize-speech",
-            "--output-format",
-            "mp3",
-            "--voice-id",
-            "Lupe",
-            "--engine",
-            "standard",
-            "--text",
-            "lorem ipsum",
-            tmp_path / _mock_audio_file_for_text("lorem ipsum"),
-        ],
-        stdout=subprocess.DEVNULL,
-    )
+    aws_cli.assert_call_count == 4
+    aws_cli.assert_audio_generated_for("foous barus")
+    aws_cli.assert_audio_generated_for("lorem ipsum")
+
     assert _load_json_file(tmp_path / "test.json") == [
         _mock_meta_data_entry_for_text("foous barus"),
         _mock_meta_data_entry_for_text("foous"),
@@ -490,8 +367,7 @@ def test_overwrite_with_deletion(subprocess_run, tmp_path, capsys, messages):
     ]
 
 
-@patch("subprocess.run")
-def test_delete_all(subprocess_run, tmp_path, capsys, messages):
+def test_delete_all(aws_cli, tmp_path, capsys, terminal_message):
     _write_json_file(
         tmp_path / "test.json",
         [
@@ -508,17 +384,16 @@ def test_delete_all(subprocess_run, tmp_path, capsys, messages):
     captured = capsys.readouterr()
     _assert_output_lines(
         [
-            messages["deleting"]("an unnecessary phrase"),
-            messages["deleting"]("foous barus"),
+            terminal_message.deleting("an unnecessary phrase"),
+            terminal_message.deleting("foous barus"),
         ],
         captured.out,
     )
-    assert subprocess_run.call_count == 0
+    aws_cli.assert_call_count == 0
     assert _load_json_file(tmp_path / "test.json") == []
 
 
-@patch("subprocess.run")
-def test_delete_all_with_destructive(subprocess_run, tmp_path, capsys, messages):
+def test_delete_all_with_destructive(aws_cli, tmp_path, capsys, terminal_message):
     _write_json_file(
         tmp_path / "test.json",
         [
@@ -535,12 +410,12 @@ def test_delete_all_with_destructive(subprocess_run, tmp_path, capsys, messages)
     captured = capsys.readouterr()
     _assert_output_lines(
         [
-            messages["deleting"]("an unnecessary phrase"),
-            messages["deleting"]("foous barus"),
+            terminal_message.deleting("an unnecessary phrase"),
+            terminal_message.deleting("foous barus"),
         ],
         captured.out,
     )
-    assert subprocess_run.call_count == 0
+    aws_cli.assert_call_count == 0
     assert _load_json_file(tmp_path / "test.json") == []
 
 
