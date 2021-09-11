@@ -1,3 +1,4 @@
+import json
 import subprocess
 from types import SimpleNamespace
 
@@ -92,3 +93,17 @@ def write_mock_audio_file_for_text(tmp_path):
             f.write(f"this is a fake audio file for {text}")
 
     return write_file
+
+
+@pytest.fixture
+def index_file(tmp_path):
+    def assert_entries_match(expected_entries):
+        with open(tmp_path / "test.json", "r") as f:
+            entries = json.loads(f.read())
+            assert entries == expected_entries
+
+    return SimpleNamespace(
+        **{
+            "assert_entries_match": assert_entries_match,
+        }
+    )
