@@ -2,6 +2,7 @@ import re
 import subprocess
 import inspect
 import json
+from types import SimpleNamespace
 
 import pytest
 
@@ -110,8 +111,41 @@ def test_dry_run_does_nothing_with_destructive(tmp_path, capsys, messages):
     )
 
 
-@patch("subprocess.run")
-def test_generate_from_scratch(subprocess_run, tmp_path, capsys, messages):
+@pytest.fixture
+def aws_cli(mocker, tmp_path):
+    subprocess_run = mocker.patch("subprocess.run")
+
+    def assert_call_count(count):
+        assert subprocess_run.call_count == count
+
+    def assert_audio_generated_for(text):
+        subprocess_run.assert_any_call(
+            [
+                "aws",
+                "polly",
+                "synthesize-speech",
+                "--output-format",
+                "mp3",
+                "--voice-id",
+                "Lupe",
+                "--engine",
+                "standard",
+                "--text",
+                text,
+                tmp_path / _mock_audio_file_for_text(text),
+            ],
+            stdout=subprocess.DEVNULL,
+        )
+
+    return SimpleNamespace(
+        **{
+            "assert_call_count": assert_call_count,
+            "assert_audio_generated_for": assert_audio_generated_for,
+        }
+    )
+
+
+def test_generate_from_scratch(aws_cli, tmp_path, capsys, messages):
     update_audios_for_course(
         tmp_path, "test", course, cli.Settings(dry_run=False, destructive=False)
     )
@@ -126,41 +160,10 @@ def test_generate_from_scratch(subprocess_run, tmp_path, capsys, messages):
         ],
         captured.out,
     )
-    assert subprocess_run.call_count == 4
-    subprocess_run.assert_any_call(
-        [
-            "aws",
-            "polly",
-            "synthesize-speech",
-            "--output-format",
-            "mp3",
-            "--voice-id",
-            "Lupe",
-            "--engine",
-            "standard",
-            "--text",
-            "foous barus",
-            tmp_path / _mock_audio_file_for_text("foous barus"),
-        ],
-        stdout=subprocess.DEVNULL,
-    )
-    subprocess_run.assert_any_call(
-        [
-            "aws",
-            "polly",
-            "synthesize-speech",
-            "--output-format",
-            "mp3",
-            "--voice-id",
-            "Lupe",
-            "--engine",
-            "standard",
-            "--text",
-            "lorem ipsum",
-            tmp_path / _mock_audio_file_for_text("lorem ipsum"),
-        ],
-        stdout=subprocess.DEVNULL,
-    )
+    aws_cli.assert_call_count(4)
+    aws_cli.assert_audio_generated_for("foous barus")
+    aws_cli.assert_audio_generated_for("lorem ipsum")
+
     assert _load_json_file(tmp_path / "test.json") == [
         _mock_meta_data_entry_for_text("foous barus"),
         _mock_meta_data_entry_for_text("foous"),
