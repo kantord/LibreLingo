@@ -307,7 +307,12 @@ def test_partial_update(aws_cli, tmp_path, capsys, terminal_message, mock_index_
 
 
 def test_partial_update_with_deletion(
-    aws_cli, tmp_path, capsys, terminal_message, mock_index_entry
+    aws_cli,
+    tmp_path,
+    capsys,
+    terminal_message,
+    mock_index_entry,
+    write_mock_audio_file_for_text,
 ):
     _write_json_file(
         tmp_path / "test.json",
@@ -316,7 +321,7 @@ def test_partial_update_with_deletion(
             mock_index_entry("an unnecessary phrase"),
         ],
     )
-    _write_dummy_audio_file(tmp_path / "oldid.mp3")
+    write_mock_audio_file_for_text("an unnecessary phrase")
     update_audios_for_course(
         tmp_path, "test", course, cli.Settings(dry_run=False, destructive=False)
     )
@@ -343,7 +348,12 @@ def test_partial_update_with_deletion(
 
 
 def test_overwrite_with_deletion(
-    aws_cli, tmp_path, capsys, terminal_message, mock_index_entry
+    aws_cli,
+    tmp_path,
+    capsys,
+    terminal_message,
+    mock_index_entry,
+    write_mock_audio_file_for_text,
 ):
     _write_json_file(
         tmp_path / "test.json",
@@ -352,7 +362,7 @@ def test_overwrite_with_deletion(
             mock_index_entry("an unnecessary phrase"),
         ],
     )
-    _write_dummy_audio_file(tmp_path / "oldid.mp3")
+    write_mock_audio_file_for_text("an unnecessary phrase")
     update_audios_for_course(
         tmp_path, "test", course, cli.Settings(dry_run=False, destructive=True)
     )
@@ -380,7 +390,14 @@ def test_overwrite_with_deletion(
     ]
 
 
-def test_delete_all(aws_cli, tmp_path, capsys, terminal_message, mock_index_entry):
+def test_delete_all(
+    aws_cli,
+    tmp_path,
+    capsys,
+    terminal_message,
+    mock_index_entry,
+    write_mock_audio_file_for_text,
+):
     _write_json_file(
         tmp_path / "test.json",
         [
@@ -388,8 +405,8 @@ def test_delete_all(aws_cli, tmp_path, capsys, terminal_message, mock_index_entr
             mock_index_entry("an unnecessary phrase"),
         ],
     )
-    _write_dummy_audio_file(tmp_path / "oldid.mp3")
-    _write_dummy_audio_file(tmp_path / _mock_audio_file_for_text("foous barus"))
+    write_mock_audio_file_for_text("an unnecessary phrase")
+    write_mock_audio_file_for_text("foous barus")
     update_audios_for_course(
         tmp_path, "test", empty_course, cli.Settings(dry_run=False, destructive=False)
     )
@@ -407,7 +424,12 @@ def test_delete_all(aws_cli, tmp_path, capsys, terminal_message, mock_index_entr
 
 
 def test_delete_all_with_destructive(
-    aws_cli, tmp_path, capsys, terminal_message, mock_index_entry
+    aws_cli,
+    tmp_path,
+    capsys,
+    terminal_message,
+    mock_index_entry,
+    write_mock_audio_file_for_text,
 ):
     _write_json_file(
         tmp_path / "test.json",
@@ -416,8 +438,8 @@ def test_delete_all_with_destructive(
             mock_index_entry("an unnecessary phrase"),
         ],
     )
-    _write_dummy_audio_file(tmp_path / "oldid.mp3")
-    _write_dummy_audio_file(tmp_path / _mock_audio_file_for_text("foous barus"))
+    write_mock_audio_file_for_text("an unnecessary phrase")
+    write_mock_audio_file_for_text("foous barus")
     update_audios_for_course(
         tmp_path, "test", empty_course, cli.Settings(dry_run=False, destructive=True)
     )
@@ -434,9 +456,13 @@ def test_delete_all_with_destructive(
     assert _load_json_file(tmp_path / "test.json") == []
 
 
-def _write_dummy_audio_file(file_path):
-    with open(file_path, "w") as f:
-        f.write("this is a fake audio file")
+@pytest.fixture
+def write_mock_audio_file_for_text(tmp_path):
+    def write_file(text):
+        with open(tmp_path / _mock_audio_file_for_text(text), "w") as f:
+            f.write(f"this is a fake audio file for {text}")
+
+    return write_file
 
 
 def _write_json_file(file_path, value):
