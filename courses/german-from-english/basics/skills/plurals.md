@@ -1,6 +1,6 @@
 # Plurals
 
-In this exercise you will learn some simple plural froms of German.  
+In this exercise you will learn some simple plural forms of German.  
 
 Most German nouns end with one of these forms:  
 
