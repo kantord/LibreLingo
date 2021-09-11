@@ -1,4 +1,4 @@
-from librelingo_utils import audio_id, iterate_phrases
+from librelingo_utils import audio_id, iterate_phrases, iterate_words
 from pathlib import Path
 import subprocess
 import json
@@ -12,7 +12,7 @@ def update_audios_for_course(output_path, course_name, course, settings):
 
     index_file_path = Path(Path(output_path) / "{}.json".format(course_name))
 
-    phrases_in_course = list(iterate_phrases(course))
+    phrases_in_course = list(iterate_phrases(course)) + list(iterate_words(course))
     phrases_with_existing_audios = _load_index_file(index_file_path)
 
     # We want to go from the old state (the existing audios) to the new state
