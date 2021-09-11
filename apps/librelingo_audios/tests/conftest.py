@@ -102,8 +102,12 @@ def index_file(tmp_path):
             entries = json.loads(f.read())
             assert entries == expected_entries
 
+    def assert_exists():
+        assert list(tmp_path.iterdir()) == [tmp_path / "test.json"]
+
     return SimpleNamespace(
         **{
             "assert_entries_match": assert_entries_match,
+            "assert_exists": assert_exists,
         }
     )
