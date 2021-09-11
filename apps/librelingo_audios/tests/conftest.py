@@ -105,9 +105,13 @@ def index_file(tmp_path):
     def assert_exists():
         assert list(tmp_path.iterdir()) == [tmp_path / "test.json"]
 
+    def assert_does_not_exist():
+        assert len(list(tmp_path.iterdir())) == 0
+
     return SimpleNamespace(
         **{
             "assert_entries_match": assert_entries_match,
             "assert_exists": assert_exists,
+            "assert_does_not_exist": assert_does_not_exist,
         }
     )
