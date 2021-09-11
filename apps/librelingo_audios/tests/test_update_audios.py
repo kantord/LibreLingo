@@ -32,58 +32,50 @@ empty_course = fakes.customize(
 )
 
 
-def test_dry_run_does_nothing(tmp_path, capsys, terminal_message, index_file):
+def test_dry_run_does_nothing(tmp_path, capsys, terminal, index_file):
     update_audios_for_course(
         tmp_path, "test", course, cli.Settings(dry_run=True, destructive=False)
     )
     index_file.assert_does_not_exist()
-    captured = capsys.readouterr()
-    _assert_output_lines(
+    terminal.assert_output_matches(
         [
-            terminal_message.would_generate("lorem ipsum"),
-            terminal_message.would_generate("foous barus"),
-            terminal_message.would_generate("apfel"),
-            terminal_message.would_generate("foous"),
+            terminal.message.would_generate("lorem ipsum"),
+            terminal.message.would_generate("foous barus"),
+            terminal.message.would_generate("apfel"),
+            terminal.message.would_generate("foous"),
         ],
-        captured.out,
     )
 
 
-def test_dry_run_does_nothing_with_destructive(
-    tmp_path, capsys, terminal_message, index_file
-):
+def test_dry_run_does_nothing_with_destructive(tmp_path, capsys, terminal, index_file):
     update_audios_for_course(
         tmp_path, "test", course, cli.Settings(dry_run=True, destructive=True)
     )
     index_file.assert_does_not_exist()
-    captured = capsys.readouterr()
-    _assert_output_lines(
+    terminal.assert_output_matches(
         [
-            terminal_message.would_generate("lorem ipsum"),
-            terminal_message.would_generate("foous barus"),
-            terminal_message.would_generate("apfel"),
-            terminal_message.would_generate("foous"),
+            terminal.message.would_generate("lorem ipsum"),
+            terminal.message.would_generate("foous barus"),
+            terminal.message.would_generate("apfel"),
+            terminal.message.would_generate("foous"),
         ],
-        captured.out,
     )
 
 
 def test_generate_from_scratch(
-    aws_cli, tmp_path, capsys, terminal_message, mock_index_entry, index_file
+    aws_cli, tmp_path, capsys, terminal, mock_index_entry, index_file
 ):
     update_audios_for_course(
         tmp_path, "test", course, cli.Settings(dry_run=False, destructive=False)
     )
     index_file.assert_exists()
-    captured = capsys.readouterr()
-    _assert_output_lines(
+    terminal.assert_output_matches(
         [
-            terminal_message.generating("lorem ipsum"),
-            terminal_message.generating("foous barus"),
-            terminal_message.generating("apfel"),
-            terminal_message.generating("foous"),
+            terminal.message.generating("lorem ipsum"),
+            terminal.message.generating("foous barus"),
+            terminal.message.generating("apfel"),
+            terminal.message.generating("foous"),
         ],
-        captured.out,
     )
     aws_cli.assert_call_count(4)
     aws_cli.assert_audio_generated_for("foous barus")
@@ -103,7 +95,7 @@ def test_generate_from_scratch_with_destructive(
     aws_cli,
     tmp_path,
     capsys,
-    terminal_message,
+    terminal,
     mock_index_entry,
     index_file,
 ):
@@ -111,15 +103,13 @@ def test_generate_from_scratch_with_destructive(
         tmp_path, "test", course, cli.Settings(dry_run=False, destructive=True)
     )
     index_file.assert_exists()
-    captured = capsys.readouterr()
-    _assert_output_lines(
+    terminal.assert_output_matches(
         [
-            terminal_message.generating("lorem ipsum"),
-            terminal_message.generating("foous barus"),
-            terminal_message.generating("apfel"),
-            terminal_message.generating("foous"),
+            terminal.message.generating("lorem ipsum"),
+            terminal.message.generating("foous barus"),
+            terminal.message.generating("apfel"),
+            terminal.message.generating("foous"),
         ],
-        captured.out,
     )
     aws_cli.assert_call_count == 4
     aws_cli.assert_audio_generated_for("foous barus")
@@ -137,7 +127,7 @@ def test_generate_from_scratch_with_destructive(
     )
 
 
-def test_noop_update(aws_cli, tmp_path, capsys, mock_index_entry, index_file):
+def test_noop_update(aws_cli, tmp_path, capsys, mock_index_entry, index_file, terminal):
     index_file.set_entries(
         [
             mock_index_entry("foous barus"),
@@ -150,8 +140,7 @@ def test_noop_update(aws_cli, tmp_path, capsys, mock_index_entry, index_file):
         tmp_path, "test", course, cli.Settings(dry_run=False, destructive=False)
     )
     index_file.assert_exists()
-    captured = capsys.readouterr()
-    assert captured.out == ""
+    terminal.assert_output_matches([])
     aws_cli.assert_call_count(0)
 
     index_file.assert_entries_match(
@@ -165,7 +154,7 @@ def test_noop_update(aws_cli, tmp_path, capsys, mock_index_entry, index_file):
 
 
 def test_overwrite_with_destructive(
-    aws_cli, tmp_path, capsys, terminal_message, mock_index_entry, index_file
+    aws_cli, tmp_path, capsys, terminal, mock_index_entry, index_file
 ):
     index_file.set_entries(
         [
@@ -177,15 +166,13 @@ def test_overwrite_with_destructive(
         tmp_path, "test", course, cli.Settings(dry_run=False, destructive=True)
     )
     index_file.assert_exists()
-    captured = capsys.readouterr()
-    _assert_output_lines(
+    terminal.assert_output_matches(
         [
-            terminal_message.generating("lorem ipsum"),
-            terminal_message.generating("foous barus"),
-            terminal_message.generating("apfel"),
-            terminal_message.generating("foous"),
+            terminal.message.generating("lorem ipsum"),
+            terminal.message.generating("foous barus"),
+            terminal.message.generating("apfel"),
+            terminal.message.generating("foous"),
         ],
-        captured.out,
     )
     aws_cli.assert_call_count == 4
     aws_cli.assert_audio_generated_for("foous barus")
@@ -204,7 +191,7 @@ def test_overwrite_with_destructive(
 
 
 def test_partial_update(
-    aws_cli, tmp_path, capsys, terminal_message, mock_index_entry, index_file
+    aws_cli, tmp_path, capsys, terminal, mock_index_entry, index_file
 ):
     index_file.set_entries(
         [
@@ -215,14 +202,12 @@ def test_partial_update(
         tmp_path, "test", course, cli.Settings(dry_run=False, destructive=False)
     )
     index_file.assert_exists()
-    captured = capsys.readouterr()
-    _assert_output_lines(
+    terminal.assert_output_matches(
         [
-            terminal_message.generating("lorem ipsum"),
-            terminal_message.generating("apfel"),
-            terminal_message.generating("foous"),
+            terminal.message.generating("lorem ipsum"),
+            terminal.message.generating("apfel"),
+            terminal.message.generating("foous"),
         ],
-        captured.out,
     )
     aws_cli.assert_call_count == 3
     aws_cli.assert_audio_generated_for("lorem ipsum")
@@ -241,7 +226,7 @@ def test_partial_update_with_deletion(
     aws_cli,
     tmp_path,
     capsys,
-    terminal_message,
+    terminal,
     mock_index_entry,
     write_mock_audio_file_for_text,
     index_file,
@@ -257,15 +242,13 @@ def test_partial_update_with_deletion(
         tmp_path, "test", course, cli.Settings(dry_run=False, destructive=False)
     )
     index_file.assert_exists()
-    captured = capsys.readouterr()
-    _assert_output_lines(
+    terminal.assert_output_matches(
         [
-            terminal_message.deleting("an unnecessary phrase"),
-            terminal_message.generating("lorem ipsum"),
-            terminal_message.generating("apfel"),
-            terminal_message.generating("foous"),
+            terminal.message.deleting("an unnecessary phrase"),
+            terminal.message.generating("lorem ipsum"),
+            terminal.message.generating("apfel"),
+            terminal.message.generating("foous"),
         ],
-        captured.out,
     )
     aws_cli.assert_call_count == 3
     aws_cli.assert_audio_generated_for("lorem ipsum")
@@ -284,7 +267,7 @@ def test_overwrite_with_deletion(
     aws_cli,
     tmp_path,
     capsys,
-    terminal_message,
+    terminal,
     mock_index_entry,
     write_mock_audio_file_for_text,
     index_file,
@@ -300,16 +283,14 @@ def test_overwrite_with_deletion(
         tmp_path, "test", course, cli.Settings(dry_run=False, destructive=True)
     )
     index_file.assert_exists()
-    captured = capsys.readouterr()
-    _assert_output_lines(
+    terminal.assert_output_matches(
         [
-            terminal_message.deleting("an unnecessary phrase"),
-            terminal_message.generating("foous barus"),
-            terminal_message.generating("lorem ipsum"),
-            terminal_message.generating("apfel"),
-            terminal_message.generating("foous"),
+            terminal.message.deleting("an unnecessary phrase"),
+            terminal.message.generating("foous barus"),
+            terminal.message.generating("lorem ipsum"),
+            terminal.message.generating("apfel"),
+            terminal.message.generating("foous"),
         ],
-        captured.out,
     )
     aws_cli.assert_call_count == 4
     aws_cli.assert_audio_generated_for("foous barus")
@@ -329,7 +310,7 @@ def test_delete_all(
     aws_cli,
     tmp_path,
     capsys,
-    terminal_message,
+    terminal,
     mock_index_entry,
     write_mock_audio_file_for_text,
     index_file,
@@ -346,13 +327,11 @@ def test_delete_all(
         tmp_path, "test", empty_course, cli.Settings(dry_run=False, destructive=False)
     )
     index_file.assert_exists()
-    captured = capsys.readouterr()
-    _assert_output_lines(
+    terminal.assert_output_matches(
         [
-            terminal_message.deleting("an unnecessary phrase"),
-            terminal_message.deleting("foous barus"),
+            terminal.message.deleting("an unnecessary phrase"),
+            terminal.message.deleting("foous barus"),
         ],
-        captured.out,
     )
     aws_cli.assert_call_count == 0
     index_file.assert_entries_match([])
@@ -362,7 +341,7 @@ def test_delete_all_with_destructive(
     aws_cli,
     tmp_path,
     capsys,
-    terminal_message,
+    terminal,
     mock_index_entry,
     write_mock_audio_file_for_text,
     index_file,
@@ -379,17 +358,11 @@ def test_delete_all_with_destructive(
         tmp_path, "test", empty_course, cli.Settings(dry_run=False, destructive=True)
     )
     index_file.assert_exists()
-    captured = capsys.readouterr()
-    _assert_output_lines(
+    terminal.assert_output_matches(
         [
-            terminal_message.deleting("an unnecessary phrase"),
-            terminal_message.deleting("foous barus"),
+            terminal.message.deleting("an unnecessary phrase"),
+            terminal.message.deleting("foous barus"),
         ],
-        captured.out,
     )
     aws_cli.assert_call_count == 0
     index_file.assert_entries_match([])
-
-
-def _assert_output_lines(lines, text):
-    assert set(lines) == set([l for l in text.split("\n") if l != ""])
