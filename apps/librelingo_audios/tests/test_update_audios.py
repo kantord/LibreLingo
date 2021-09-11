@@ -190,7 +190,9 @@ def test_generate_from_scratch(subprocess_run, tmp_path, capsys, messages):
 
 
 @patch("subprocess.run")
-def test_generate_from_scratch_with_destructive(subprocess_run, tmp_path, capsys, messages):
+def test_generate_from_scratch_with_destructive(
+    subprocess_run, tmp_path, capsys, messages
+):
     update_audios_for_course(
         tmp_path, "test", course, cli.Settings(dry_run=False, destructive=True)
     )
