@@ -86,3 +86,12 @@ iterate_phrases(course)
 
 "Flatten" a course into a sequence of phrases
 
+<a name="librelingo_utils.utils.iterate_words"></a>
+#### iterate\_words
+
+```python
+iterate_words(course)
+```
+
+"Flatten" a course into a sequence of words
+
