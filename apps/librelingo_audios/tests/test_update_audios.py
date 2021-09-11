@@ -67,7 +67,7 @@ def test_dry_run_does_nothing_with_destructive(tmp_path, capsys, terminal_messag
 
 
 def test_generate_from_scratch(
-    aws_cli, tmp_path, capsys, terminal_message, mock_index_entry
+    aws_cli, tmp_path, capsys, terminal_message, mock_index_entry, index_file
 ):
     update_audios_for_course(
         tmp_path, "test", course, cli.Settings(dry_run=False, destructive=False)
@@ -87,12 +87,14 @@ def test_generate_from_scratch(
     aws_cli.assert_audio_generated_for("foous barus")
     aws_cli.assert_audio_generated_for("lorem ipsum")
 
-    assert _load_json_file(tmp_path / "test.json") == [
-        mock_index_entry("foous barus"),
-        mock_index_entry("foous"),
-        mock_index_entry("lorem ipsum"),
-        mock_index_entry("apfel"),
-    ]
+    index_file.assert_entries_match(
+        [
+            mock_index_entry("foous barus"),
+            mock_index_entry("foous"),
+            mock_index_entry("lorem ipsum"),
+            mock_index_entry("apfel"),
+        ]
+    )
 
 
 def test_generate_from_scratch_with_destructive(
@@ -101,6 +103,7 @@ def test_generate_from_scratch_with_destructive(
     capsys,
     terminal_message,
     mock_index_entry,
+    index_file,
 ):
     update_audios_for_course(
         tmp_path, "test", course, cli.Settings(dry_run=False, destructive=True)
@@ -122,15 +125,17 @@ def test_generate_from_scratch_with_destructive(
     aws_cli.assert_audio_generated_for("apfel")
     aws_cli.assert_audio_generated_for("foous")
 
-    assert _load_json_file(tmp_path / "test.json") == [
-        mock_index_entry("foous barus"),
-        mock_index_entry("foous"),
-        mock_index_entry("lorem ipsum"),
-        mock_index_entry("apfel"),
-    ]
+    index_file.assert_entries_match(
+        [
+            mock_index_entry("foous barus"),
+            mock_index_entry("foous"),
+            mock_index_entry("lorem ipsum"),
+            mock_index_entry("apfel"),
+        ]
+    )
 
 
-def test_noop_update(aws_cli, tmp_path, capsys, mock_index_entry):
+def test_noop_update(aws_cli, tmp_path, capsys, mock_index_entry, index_file):
     _write_json_file(
         tmp_path / "test.json",
         [
@@ -147,16 +152,19 @@ def test_noop_update(aws_cli, tmp_path, capsys, mock_index_entry):
     captured = capsys.readouterr()
     assert captured.out == ""
     aws_cli.assert_call_count(0)
-    assert _load_json_file(tmp_path / "test.json") == [
-        mock_index_entry("foous barus"),
-        mock_index_entry("foous"),
-        mock_index_entry("lorem ipsum"),
-        mock_index_entry("apfel"),
-    ]
+
+    index_file.assert_entries_match(
+        [
+            mock_index_entry("foous barus"),
+            mock_index_entry("foous"),
+            mock_index_entry("lorem ipsum"),
+            mock_index_entry("apfel"),
+        ]
+    )
 
 
 def test_overwrite_with_destructive(
-    aws_cli, tmp_path, capsys, terminal_message, mock_index_entry
+    aws_cli, tmp_path, capsys, terminal_message, mock_index_entry, index_file
 ):
     _write_json_file(
         tmp_path / "test.json",
@@ -185,15 +193,19 @@ def test_overwrite_with_destructive(
     aws_cli.assert_audio_generated_for("apfel")
     aws_cli.assert_audio_generated_for("foous")
 
-    assert _load_json_file(tmp_path / "test.json") == [
-        mock_index_entry("foous barus"),
-        mock_index_entry("foous"),
-        mock_index_entry("lorem ipsum"),
-        mock_index_entry("apfel"),
-    ]
+    index_file.assert_entries_match(
+        [
+            mock_index_entry("foous barus"),
+            mock_index_entry("foous"),
+            mock_index_entry("lorem ipsum"),
+            mock_index_entry("apfel"),
+        ]
+    )
 
 
-def test_partial_update(aws_cli, tmp_path, capsys, terminal_message, mock_index_entry):
+def test_partial_update(
+    aws_cli, tmp_path, capsys, terminal_message, mock_index_entry, index_file
+):
     _write_json_file(
         tmp_path / "test.json",
         [
@@ -216,12 +228,14 @@ def test_partial_update(aws_cli, tmp_path, capsys, terminal_message, mock_index_
     aws_cli.assert_call_count == 3
     aws_cli.assert_audio_generated_for("lorem ipsum")
 
-    assert _load_json_file(tmp_path / "test.json") == [
-        mock_index_entry("foous barus"),
-        mock_index_entry("foous"),
-        mock_index_entry("lorem ipsum"),
-        mock_index_entry("apfel"),
-    ]
+    index_file.assert_entries_match(
+        [
+            mock_index_entry("foous barus"),
+            mock_index_entry("foous"),
+            mock_index_entry("lorem ipsum"),
+            mock_index_entry("apfel"),
+        ]
+    )
 
 
 def test_partial_update_with_deletion(
@@ -231,6 +245,7 @@ def test_partial_update_with_deletion(
     terminal_message,
     mock_index_entry,
     write_mock_audio_file_for_text,
+    index_file,
 ):
     _write_json_file(
         tmp_path / "test.json",
@@ -257,12 +272,14 @@ def test_partial_update_with_deletion(
     aws_cli.assert_call_count == 3
     aws_cli.assert_audio_generated_for("lorem ipsum")
 
-    assert _load_json_file(tmp_path / "test.json") == [
-        mock_index_entry("foous barus"),
-        mock_index_entry("foous"),
-        mock_index_entry("lorem ipsum"),
-        mock_index_entry("apfel"),
-    ]
+    index_file.assert_entries_match(
+        [
+            mock_index_entry("foous barus"),
+            mock_index_entry("foous"),
+            mock_index_entry("lorem ipsum"),
+            mock_index_entry("apfel"),
+        ]
+    )
 
 
 def test_overwrite_with_deletion(
@@ -272,6 +289,7 @@ def test_overwrite_with_deletion(
     terminal_message,
     mock_index_entry,
     write_mock_audio_file_for_text,
+    index_file,
 ):
     _write_json_file(
         tmp_path / "test.json",
@@ -300,12 +318,14 @@ def test_overwrite_with_deletion(
     aws_cli.assert_audio_generated_for("foous barus")
     aws_cli.assert_audio_generated_for("lorem ipsum")
 
-    assert _load_json_file(tmp_path / "test.json") == [
-        mock_index_entry("foous barus"),
-        mock_index_entry("foous"),
-        mock_index_entry("lorem ipsum"),
-        mock_index_entry("apfel"),
-    ]
+    index_file.assert_entries_match(
+        [
+            mock_index_entry("foous barus"),
+            mock_index_entry("foous"),
+            mock_index_entry("lorem ipsum"),
+            mock_index_entry("apfel"),
+        ]
+    )
 
 
 def test_delete_all(
@@ -315,6 +335,7 @@ def test_delete_all(
     terminal_message,
     mock_index_entry,
     write_mock_audio_file_for_text,
+    index_file,
 ):
     _write_json_file(
         tmp_path / "test.json",
@@ -338,7 +359,7 @@ def test_delete_all(
         captured.out,
     )
     aws_cli.assert_call_count == 0
-    assert _load_json_file(tmp_path / "test.json") == []
+    index_file.assert_entries_match([])
 
 
 def test_delete_all_with_destructive(
@@ -348,6 +369,7 @@ def test_delete_all_with_destructive(
     terminal_message,
     mock_index_entry,
     write_mock_audio_file_for_text,
+    index_file,
 ):
     _write_json_file(
         tmp_path / "test.json",
@@ -371,17 +393,12 @@ def test_delete_all_with_destructive(
         captured.out,
     )
     aws_cli.assert_call_count == 0
-    assert _load_json_file(tmp_path / "test.json") == []
+    index_file.assert_entries_match([])
 
 
 def _write_json_file(file_path, value):
     with open(file_path, "w", encoding="utf-8") as f:
         json.dump(value, f, ensure_ascii=False, indent=4)
-
-
-def _load_json_file(file_path):
-    with open(file_path, "r") as f:
-        return json.loads(f.read())
 
 
 def _assert_output_lines(lines, text):
