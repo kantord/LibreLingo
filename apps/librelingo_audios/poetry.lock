@@ -22,14 +22,14 @@ tests_no_zope = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>
 
 [[package]]
 name = "beautifulsoup4"
-version = "4.9.3"
+version = "4.10.0"
 description = "Screen-scraping library"
 category = "main"
 optional = false
-python-versions = "*"
+python-versions = ">3.0.0"
 
 [package.dependencies]
-soupsieve = {version = ">1.2", markers = "python_version >= \"3.0\""}
+soupsieve = ">1.2"
 
 [package.extras]
 html5lib = ["html5lib"]
@@ -124,7 +124,7 @@ python-versions = ">=3.8,<4.0"
 
 [[package]]
 name = "librelingo-utils"
-version = "2.4.2"
+version = "2.5.0"
 description = "Utilities to be used in LibreLingo-related-packages"
 category = "main"
 optional = false
@@ -374,9 +374,8 @@ attrs = [
     {file = "attrs-21.2.0.tar.gz", hash = "sha256:ef6aaac3ca6cd92904cdd0d83f629a15f18053ec84e6432106f7a4d04ae4f5fb"},
 ]
 beautifulsoup4 = [
-    {file = "beautifulsoup4-4.9.3-py2-none-any.whl", hash = "sha256:4c98143716ef1cb40bf7f39a8e3eec8f8b009509e74904ba3a7b315431577e35"},
-    {file = "beautifulsoup4-4.9.3-py3-none-any.whl", hash = "sha256:fff47e031e34ec82bf17e00da8f592fe7de69aeea38be00523c04623c04fb666"},
-    {file = "beautifulsoup4-4.9.3.tar.gz", hash = "sha256:84729e322ad1d5b4d25f805bfa05b902dd96450f43842c4e99067d5e1369eb25"},
+    {file = "beautifulsoup4-4.10.0-py3-none-any.whl", hash = "sha256:9a315ce70049920ea4572a4055bc4bd700c940521d36fc858205ad4fcde149bf"},
+    {file = "beautifulsoup4-4.10.0.tar.gz", hash = "sha256:c23ad23c521d818955a4151a67d81580319d4bf548d3d49f4223ae041ff98891"},
 ]
 bleach = [
     {file = "bleach-4.1.0-py2.py3-none-any.whl", hash = "sha256:4d2651ab93271d1129ac9cbc679f524565cc8a1b791909c4a51eac4446a15994"},
@@ -413,8 +412,8 @@ librelingo-types = [
     {file = "librelingo_types-3.1.0.tar.gz", hash = "sha256:7c8e2b8c2f86bf37654819d0fbc45d6f78803674a3613183aa822cc5b2073fe4"},
 ]
 librelingo-utils = [
-    {file = "librelingo_utils-2.4.2-py3-none-any.whl", hash = "sha256:2e632228c799853036f00813fab8b45466dd09317753c4cfb452c3f5c18d0291"},
-    {file = "librelingo_utils-2.4.2.tar.gz", hash = "sha256:fc849015accd13aa8bee62b1a4833e605ada172c75ae1b29a459fc0baba65b0e"},
+    {file = "librelingo_utils-2.5.0-py3-none-any.whl", hash = "sha256:cab92ebac06d9d47ea23604debdd6b1b3b96d3458a5db3c7e1ed3b91af122c6a"},
+    {file = "librelingo_utils-2.5.0.tar.gz", hash = "sha256:32c241f51480d7930cb6375633d1224a51a301c0fc1c419fd89b566801640f25"},
 ]
 librelingo-yaml-loader = [
     {file = "librelingo_yaml_loader-1.6.0-py3-none-any.whl", hash = "sha256:6ec3a5b4cc83546c0ca86f9acdeba653d3325ede7888c7c33a13ad7f47f83a38"},
