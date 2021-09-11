@@ -3,6 +3,8 @@ import subprocess
 import inspect
 import json
 
+import pytest
+
 from unittest.mock import patch
 
 from librelingo_fakes import fakes
@@ -43,14 +45,26 @@ def _mock_hash_for_text(text):
     if text == "foous":
         return "3f981d854531e9f376ae06cb8449a6e997972d3c1b598f9a00b481ef307a469d"
 
-    raise RuntimeError(f"Missing hash mock for {text}")
+    if text == "an unnecessary phrase":
+        return "oldid"
+
+    raise RuntimeError(f"Missing hash mock for '{text}'")
 
 
 def _mock_audio_file_for_text(text):
     return f"{_mock_hash_for_text(text)}.mp3"
 
 
-def test_dry_run_does_nothing(tmp_path, capsys):
+@pytest.fixture
+def messages(tmp_path):
+    return {
+        "generating": lambda text: f"Generating {tmp_path / _mock_audio_file_for_text(text)} using Lupe standard",
+        "would generate": lambda text: f"Would generate {tmp_path / _mock_audio_file_for_text(text)} using Lupe standard",
+        "deleting": lambda text: f"Deleting {tmp_path / _mock_audio_file_for_text(text)}",
+    }
+
+
+def test_dry_run_does_nothing(tmp_path, capsys, messages):
     update_audios_for_course(
         tmp_path, "test", course, cli.Settings(dry_run=True, destructive=False)
     )
@@ -58,24 +72,16 @@ def test_dry_run_does_nothing(tmp_path, capsys):
     captured = capsys.readouterr()
     _assert_output_lines(
         [
-            "Would generate "
-            + str(tmp_path / _mock_audio_file_for_text("lorem ipsum"))
-            + " using Lupe standard",
-            "Would generate "
-            + str(tmp_path / _mock_audio_file_for_text("foous barus"))
-            + " using Lupe standard",
-            "Would generate "
-            + str(tmp_path / _mock_audio_file_for_text("apfel"))
-            + " using Lupe standard",
-            "Would generate "
-            + str(tmp_path / _mock_audio_file_for_text("foous"))
-            + " using Lupe standard",
+            messages["would generate"]("lorem ipsum"),
+            messages["would generate"]("foous barus"),
+            messages["would generate"]("apfel"),
+            messages["would generate"]("foous"),
         ],
         captured.out,
     )
 
 
-def test_dry_run_does_nothing_with_destructive(tmp_path, capsys):
+def test_dry_run_does_nothing_with_destructive(tmp_path, capsys, messages):
     update_audios_for_course(
         tmp_path, "test", course, cli.Settings(dry_run=True, destructive=True)
     )
@@ -83,25 +89,17 @@ def test_dry_run_does_nothing_with_destructive(tmp_path, capsys):
     captured = capsys.readouterr()
     _assert_output_lines(
         [
-            "Would generate "
-            + str(tmp_path / _mock_audio_file_for_text("lorem ipsum"))
-            + " using Lupe standard",
-            "Would generate "
-            + str(tmp_path / _mock_audio_file_for_text("foous barus"))
-            + " using Lupe standard",
-            "Would generate "
-            + str(tmp_path / _mock_audio_file_for_text("apfel"))
-            + " using Lupe standard",
-            "Would generate "
-            + str(tmp_path / _mock_audio_file_for_text("foous"))
-            + " using Lupe standard",
+            messages["would generate"]("lorem ipsum"),
+            messages["would generate"]("foous barus"),
+            messages["would generate"]("apfel"),
+            messages["would generate"]("foous"),
         ],
         captured.out,
     )
 
 
 @patch("subprocess.run")
-def test_generate_from_scratch(subprocess_run, tmp_path, capsys):
+def test_generate_from_scratch(subprocess_run, tmp_path, capsys, messages):
     update_audios_for_course(
         tmp_path, "test", course, cli.Settings(dry_run=False, destructive=False)
     )
@@ -109,18 +107,10 @@ def test_generate_from_scratch(subprocess_run, tmp_path, capsys):
     captured = capsys.readouterr()
     _assert_output_lines(
         [
-            "Generating "
-            + str(tmp_path / _mock_audio_file_for_text("lorem ipsum"))
-            + " using Lupe standard",
-            "Generating "
-            + str(tmp_path / _mock_audio_file_for_text("foous barus"))
-            + " using Lupe standard",
-            "Generating "
-            + str(tmp_path / _mock_audio_file_for_text("apfel"))
-            + " using Lupe standard",
-            "Generating "
-            + str(tmp_path / _mock_audio_file_for_text("foous"))
-            + " using Lupe standard",
+            messages["generating"]("lorem ipsum"),
+            messages["generating"]("foous barus"),
+            messages["generating"]("apfel"),
+            messages["generating"]("foous"),
         ],
         captured.out,
     )
@@ -200,7 +190,9 @@ def test_generate_from_scratch(subprocess_run, tmp_path, capsys):
 
 
 @patch("subprocess.run")
-def test_generate_from_scratch_with_destructive(subprocess_run, tmp_path, capsys):
+def test_generate_from_scratch_with_destructive(
+    subprocess_run, tmp_path, capsys, messages
+):
     update_audios_for_course(
         tmp_path, "test", course, cli.Settings(dry_run=False, destructive=True)
     )
@@ -208,18 +200,10 @@ def test_generate_from_scratch_with_destructive(subprocess_run, tmp_path, capsys
     captured = capsys.readouterr()
     _assert_output_lines(
         [
-            "Generating "
-            + str(tmp_path / _mock_audio_file_for_text("lorem ipsum"))
-            + " using Lupe standard",
-            "Generating "
-            + str(tmp_path / _mock_audio_file_for_text("foous barus"))
-            + " using Lupe standard",
-            "Generating "
-            + str(tmp_path / _mock_audio_file_for_text("foous"))
-            + " using Lupe standard",
-            "Generating "
-            + str(tmp_path / _mock_audio_file_for_text("apfel"))
-            + " using Lupe standard",
+            messages["generating"]("lorem ipsum"),
+            messages["generating"]("foous barus"),
+            messages["generating"]("apfel"),
+            messages["generating"]("foous"),
         ],
         captured.out,
     )
@@ -389,7 +373,7 @@ def test_noop_update(subprocess_run, tmp_path, capsys):
 
 
 @patch("subprocess.run")
-def test_overwrite_with_destructive(subprocess_run, tmp_path, capsys):
+def test_overwrite_with_destructive(subprocess_run, tmp_path, capsys, messages):
     _write_json_file(
         tmp_path / "test.json",
         [
@@ -420,18 +404,10 @@ def test_overwrite_with_destructive(subprocess_run, tmp_path, capsys):
     captured = capsys.readouterr()
     _assert_output_lines(
         [
-            "Generating "
-            + str(tmp_path / _mock_audio_file_for_text("lorem ipsum"))
-            + " using Lupe standard",
-            "Generating "
-            + str(tmp_path / _mock_audio_file_for_text("foous barus"))
-            + " using Lupe standard",
-            "Generating "
-            + str(tmp_path / _mock_audio_file_for_text("apfel"))
-            + " using Lupe standard",
-            "Generating "
-            + str(tmp_path / _mock_audio_file_for_text("foous"))
-            + " using Lupe standard",
+            messages["generating"]("lorem ipsum"),
+            messages["generating"]("foous barus"),
+            messages["generating"]("apfel"),
+            messages["generating"]("foous"),
         ],
         captured.out,
     )
@@ -511,7 +487,7 @@ def test_overwrite_with_destructive(subprocess_run, tmp_path, capsys):
 
 
 @patch("subprocess.run")
-def test_partial_update(subprocess_run, tmp_path, capsys):
+def test_partial_update(subprocess_run, tmp_path, capsys, messages):
     _write_json_file(
         tmp_path / "test.json",
         [
@@ -533,15 +509,9 @@ def test_partial_update(subprocess_run, tmp_path, capsys):
     captured = capsys.readouterr()
     _assert_output_lines(
         [
-            "Generating "
-            + str(tmp_path / _mock_audio_file_for_text("lorem ipsum"))
-            + " using Lupe standard",
-            "Generating "
-            + str(tmp_path / _mock_audio_file_for_text("foous"))
-            + " using Lupe standard",
-            "Generating "
-            + str(tmp_path / _mock_audio_file_for_text("apfel"))
-            + " using Lupe standard",
+            messages["generating"]("lorem ipsum"),
+            messages["generating"]("apfel"),
+            messages["generating"]("foous"),
         ],
         captured.out,
     )
@@ -604,7 +574,7 @@ def test_partial_update(subprocess_run, tmp_path, capsys):
 
 
 @patch("subprocess.run")
-def test_partial_update_with_deletion(subprocess_run, tmp_path, capsys):
+def test_partial_update_with_deletion(subprocess_run, tmp_path, capsys, messages):
     _write_json_file(
         tmp_path / "test.json",
         [
@@ -636,16 +606,10 @@ def test_partial_update_with_deletion(subprocess_run, tmp_path, capsys):
     captured = capsys.readouterr()
     _assert_output_lines(
         [
-            "Deleting " + str(tmp_path / "oldid.mp3"),
-            "Generating "
-            + str(tmp_path / _mock_audio_file_for_text("lorem ipsum"))
-            + " using Lupe standard",
-            "Generating "
-            + str(tmp_path / _mock_audio_file_for_text("apfel"))
-            + " using Lupe standard",
-            "Generating "
-            + str(tmp_path / _mock_audio_file_for_text("foous"))
-            + " using Lupe standard",
+            messages["deleting"]("an unnecessary phrase"),
+            messages["generating"]("lorem ipsum"),
+            messages["generating"]("apfel"),
+            messages["generating"]("foous"),
         ],
         captured.out,
     )
@@ -708,7 +672,7 @@ def test_partial_update_with_deletion(subprocess_run, tmp_path, capsys):
 
 
 @patch("subprocess.run")
-def test_overwrite_with_deletion(subprocess_run, tmp_path, capsys):
+def test_overwrite_with_deletion(subprocess_run, tmp_path, capsys, messages):
     _write_json_file(
         tmp_path / "test.json",
         [
@@ -740,19 +704,11 @@ def test_overwrite_with_deletion(subprocess_run, tmp_path, capsys):
     captured = capsys.readouterr()
     _assert_output_lines(
         [
-            "Deleting " + str(tmp_path / "oldid.mp3"),
-            "Generating "
-            + str(tmp_path / _mock_audio_file_for_text("foous barus"))
-            + " using Lupe standard",
-            "Generating "
-            + str(tmp_path / _mock_audio_file_for_text("lorem ipsum"))
-            + " using Lupe standard",
-            "Generating "
-            + str(tmp_path / _mock_audio_file_for_text("apfel"))
-            + " using Lupe standard",
-            "Generating "
-            + str(tmp_path / _mock_audio_file_for_text("foous"))
-            + " using Lupe standard",
+            messages["deleting"]("an unnecessary phrase"),
+            messages["generating"]("foous barus"),
+            messages["generating"]("lorem ipsum"),
+            messages["generating"]("apfel"),
+            messages["generating"]("foous"),
         ],
         captured.out,
     )
@@ -832,7 +788,7 @@ def test_overwrite_with_deletion(subprocess_run, tmp_path, capsys):
 
 
 @patch("subprocess.run")
-def test_delete_all(subprocess_run, tmp_path, capsys):
+def test_delete_all(subprocess_run, tmp_path, capsys, messages):
     _write_json_file(
         tmp_path / "test.json",
         [
@@ -865,8 +821,8 @@ def test_delete_all(subprocess_run, tmp_path, capsys):
     captured = capsys.readouterr()
     _assert_output_lines(
         [
-            "Deleting " + str(tmp_path / "oldid.mp3"),
-            "Deleting " + str(tmp_path / _mock_audio_file_for_text("foous barus")),
+            messages["deleting"]("an unnecessary phrase"),
+            messages["deleting"]("foous barus"),
         ],
         captured.out,
     )
@@ -875,7 +831,7 @@ def test_delete_all(subprocess_run, tmp_path, capsys):
 
 
 @patch("subprocess.run")
-def test_delete_all_with_destructive(subprocess_run, tmp_path, capsys):
+def test_delete_all_with_destructive(subprocess_run, tmp_path, capsys, messages):
     _write_json_file(
         tmp_path / "test.json",
         [
@@ -908,8 +864,8 @@ def test_delete_all_with_destructive(subprocess_run, tmp_path, capsys):
     captured = capsys.readouterr()
     _assert_output_lines(
         [
-            "Deleting " + str(tmp_path / "oldid.mp3"),
-            "Deleting " + str(tmp_path / _mock_audio_file_for_text("foous barus")),
+            messages["deleting"]("an unnecessary phrase"),
+            messages["deleting"]("foous barus"),
         ],
         captured.out,
     )
