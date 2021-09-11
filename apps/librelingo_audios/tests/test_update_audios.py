@@ -1,7 +1,9 @@
 import re
-import subprocess
 import inspect
 import json
+from types import SimpleNamespace
+
+import pytest
 
 from unittest.mock import patch
 
@@ -30,7 +32,7 @@ empty_course = fakes.customize(
 )
 
 
-def test_dry_run_does_nothing(tmp_path, capsys):
+def test_dry_run_does_nothing(tmp_path, capsys, terminal_message):
     update_audios_for_course(
         tmp_path, "test", course, cli.Settings(dry_run=True, destructive=False)
     )
@@ -38,36 +40,16 @@ def test_dry_run_does_nothing(tmp_path, capsys):
     captured = capsys.readouterr()
     _assert_output_lines(
         [
-            "Would generate "
-            + str(
-                tmp_path
-                / "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2.mp3"
-            )
-            + " using Lupe standard",
-            "Would generate "
-            + str(
-                tmp_path
-                / "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6.mp3"
-            )
-            + " using Lupe standard",
-            "Would generate "
-            + str(
-                tmp_path
-                / "f38b5ac2a5e36c336eed306d56ed517bfd78a728321be0b87db5def8ff8abc3d.mp3"
-            )
-            + " using Lupe standard",
-            "Would generate "
-            + str(
-                tmp_path
-                / "3f981d854531e9f376ae06cb8449a6e997972d3c1b598f9a00b481ef307a469d.mp3"
-            )
-            + " using Lupe standard",
+            terminal_message.would_generate("lorem ipsum"),
+            terminal_message.would_generate("foous barus"),
+            terminal_message.would_generate("apfel"),
+            terminal_message.would_generate("foous"),
         ],
         captured.out,
     )
 
 
-def test_dry_run_does_nothing_with_destructive(tmp_path, capsys):
+def test_dry_run_does_nothing_with_destructive(tmp_path, capsys, terminal_message):
     update_audios_for_course(
         tmp_path, "test", course, cli.Settings(dry_run=True, destructive=True)
     )
@@ -75,37 +57,18 @@ def test_dry_run_does_nothing_with_destructive(tmp_path, capsys):
     captured = capsys.readouterr()
     _assert_output_lines(
         [
-            "Would generate "
-            + str(
-                tmp_path
-                / "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2.mp3"
-            )
-            + " using Lupe standard",
-            "Would generate "
-            + str(
-                tmp_path
-                / "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6.mp3"
-            )
-            + " using Lupe standard",
-            "Would generate "
-            + str(
-                tmp_path
-                / "f38b5ac2a5e36c336eed306d56ed517bfd78a728321be0b87db5def8ff8abc3d.mp3"
-            )
-            + " using Lupe standard",
-            "Would generate "
-            + str(
-                tmp_path
-                / "3f981d854531e9f376ae06cb8449a6e997972d3c1b598f9a00b481ef307a469d.mp3"
-            )
-            + " using Lupe standard",
+            terminal_message.would_generate("lorem ipsum"),
+            terminal_message.would_generate("foous barus"),
+            terminal_message.would_generate("apfel"),
+            terminal_message.would_generate("foous"),
         ],
         captured.out,
     )
 
 
-@patch("subprocess.run")
-def test_generate_from_scratch(subprocess_run, tmp_path, capsys):
+def test_generate_from_scratch(
+    aws_cli, tmp_path, capsys, terminal_message, mock_index_entry
+):
     update_audios_for_course(
         tmp_path, "test", course, cli.Settings(dry_run=False, destructive=False)
     )
@@ -113,112 +76,32 @@ def test_generate_from_scratch(subprocess_run, tmp_path, capsys):
     captured = capsys.readouterr()
     _assert_output_lines(
         [
-            "Generating "
-            + str(
-                tmp_path
-                / "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2.mp3"
-            )
-            + " using Lupe standard",
-            "Generating "
-            + str(
-                tmp_path
-                / "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6.mp3"
-            )
-            + " using Lupe standard",
-            "Generating "
-            + str(
-                tmp_path
-                / "f38b5ac2a5e36c336eed306d56ed517bfd78a728321be0b87db5def8ff8abc3d.mp3"
-            )
-            + " using Lupe standard",
-            "Generating "
-            + str(
-                tmp_path
-                / "3f981d854531e9f376ae06cb8449a6e997972d3c1b598f9a00b481ef307a469d.mp3"
-            )
-            + " using Lupe standard",
+            terminal_message.generating("lorem ipsum"),
+            terminal_message.generating("foous barus"),
+            terminal_message.generating("apfel"),
+            terminal_message.generating("foous"),
         ],
         captured.out,
     )
-    assert subprocess_run.call_count == 4
-    subprocess_run.assert_any_call(
-        [
-            "aws",
-            "polly",
-            "synthesize-speech",
-            "--output-format",
-            "mp3",
-            "--voice-id",
-            "Lupe",
-            "--engine",
-            "standard",
-            "--text",
-            "foous barus",
-            tmp_path
-            / "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6.mp3",
-        ],
-        stdout=subprocess.DEVNULL,
-    )
-    subprocess_run.assert_any_call(
-        [
-            "aws",
-            "polly",
-            "synthesize-speech",
-            "--output-format",
-            "mp3",
-            "--voice-id",
-            "Lupe",
-            "--engine",
-            "standard",
-            "--text",
-            "lorem ipsum",
-            tmp_path
-            / "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2.mp3",
-        ],
-        stdout=subprocess.DEVNULL,
-    )
+    aws_cli.assert_call_count(4)
+    aws_cli.assert_audio_generated_for("foous barus")
+    aws_cli.assert_audio_generated_for("lorem ipsum")
+
     assert _load_json_file(tmp_path / "test.json") == [
-        {
-            "id": "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6",
-            "text": "foous barus",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": "3f981d854531e9f376ae06cb8449a6e997972d3c1b598f9a00b481ef307a469d",
-            "text": "foous",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2",
-            "text": "lorem ipsum",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": "f38b5ac2a5e36c336eed306d56ed517bfd78a728321be0b87db5def8ff8abc3d",
-            "text": "apfel",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
+        mock_index_entry("foous barus"),
+        mock_index_entry("foous"),
+        mock_index_entry("lorem ipsum"),
+        mock_index_entry("apfel"),
     ]
 
 
-@patch("subprocess.run")
-def test_generate_from_scratch_with_destructive(subprocess_run, tmp_path, capsys):
+def test_generate_from_scratch_with_destructive(
+    aws_cli,
+    tmp_path,
+    capsys,
+    terminal_message,
+    mock_index_entry,
+):
     update_audios_for_course(
         tmp_path, "test", course, cli.Settings(dry_run=False, destructive=True)
     )
@@ -226,151 +109,35 @@ def test_generate_from_scratch_with_destructive(subprocess_run, tmp_path, capsys
     captured = capsys.readouterr()
     _assert_output_lines(
         [
-            "Generating "
-            + str(
-                tmp_path
-                / "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2.mp3"
-            )
-            + " using Lupe standard",
-            "Generating "
-            + str(
-                tmp_path
-                / "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6.mp3"
-            )
-            + " using Lupe standard",
-            "Generating "
-            + str(
-                tmp_path
-                / "3f981d854531e9f376ae06cb8449a6e997972d3c1b598f9a00b481ef307a469d.mp3"
-            )
-            + " using Lupe standard",
-            "Generating "
-            + str(
-                tmp_path
-                / "f38b5ac2a5e36c336eed306d56ed517bfd78a728321be0b87db5def8ff8abc3d.mp3"
-            )
-            + " using Lupe standard",
+            terminal_message.generating("lorem ipsum"),
+            terminal_message.generating("foous barus"),
+            terminal_message.generating("apfel"),
+            terminal_message.generating("foous"),
         ],
         captured.out,
     )
-    assert subprocess_run.call_count == 4
-    subprocess_run.assert_any_call(
-        [
-            "aws",
-            "polly",
-            "synthesize-speech",
-            "--output-format",
-            "mp3",
-            "--voice-id",
-            "Lupe",
-            "--engine",
-            "standard",
-            "--text",
-            "foous barus",
-            tmp_path
-            / "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6.mp3",
-        ],
-        stdout=subprocess.DEVNULL,
-    )
-    subprocess_run.assert_any_call(
-        [
-            "aws",
-            "polly",
-            "synthesize-speech",
-            "--output-format",
-            "mp3",
-            "--voice-id",
-            "Lupe",
-            "--engine",
-            "standard",
-            "--text",
-            "lorem ipsum",
-            tmp_path
-            / "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2.mp3",
-        ],
-        stdout=subprocess.DEVNULL,
-    )
+    aws_cli.assert_call_count == 4
+    aws_cli.assert_audio_generated_for("foous barus")
+    aws_cli.assert_audio_generated_for("lorem ipsum")
+    aws_cli.assert_audio_generated_for("apfel")
+    aws_cli.assert_audio_generated_for("foous")
+
     assert _load_json_file(tmp_path / "test.json") == [
-        {
-            "id": "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6",
-            "text": "foous barus",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": "3f981d854531e9f376ae06cb8449a6e997972d3c1b598f9a00b481ef307a469d",
-            "text": "foous",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2",
-            "text": "lorem ipsum",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": "f38b5ac2a5e36c336eed306d56ed517bfd78a728321be0b87db5def8ff8abc3d",
-            "text": "apfel",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
+        mock_index_entry("foous barus"),
+        mock_index_entry("foous"),
+        mock_index_entry("lorem ipsum"),
+        mock_index_entry("apfel"),
     ]
 
 
-@patch("subprocess.run")
-def test_noop_update(subprocess_run, tmp_path, capsys):
+def test_noop_update(aws_cli, tmp_path, capsys, mock_index_entry):
     _write_json_file(
         tmp_path / "test.json",
         [
-            {
-                "id": "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6",
-                "text": "foous barus",
-                "source": "TTS",
-                "license": "foo bar license",
-                "ttsProvider": "Polly",
-                "ttsVoice": "Lupe",
-                "ttsEngine": "standard",
-            },
-            {
-                "id": "3f981d854531e9f376ae06cb8449a6e997972d3c1b598f9a00b481ef307a469d.mp3",
-                "text": "foous",
-                "source": "TTS",
-                "license": "foo bar license",
-                "ttsProvider": "Polly",
-                "ttsVoice": "Lupe",
-                "ttsEngine": "standard",
-            },
-            {
-                "id": "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2",
-                "text": "lorem ipsum",
-                "source": "TTS",
-                "license": "foo bar license",
-                "ttsProvider": "Polly",
-                "ttsVoice": "Lupe",
-                "ttsEngine": "standard",
-            },
-            {
-                "id": "f38b5ac2a5e36c336eed306d56ed517bfd78a728321be0b87db5def8ff8abc3d.mp3",
-                "text": "apfel",
-                "source": "TTS",
-                "license": "foo bar license",
-                "ttsProvider": "Polly",
-                "ttsVoice": "Lupe",
-                "ttsEngine": "standard",
-            },
+            mock_index_entry("foous barus"),
+            mock_index_entry("foous"),
+            mock_index_entry("lorem ipsum"),
+            mock_index_entry("apfel"),
         ],
     )
     update_audios_for_course(
@@ -379,70 +146,23 @@ def test_noop_update(subprocess_run, tmp_path, capsys):
     assert list(tmp_path.iterdir()) == [tmp_path / "test.json"]
     captured = capsys.readouterr()
     assert captured.out == ""
-    assert subprocess_run.call_count == 0
+    aws_cli.assert_call_count(0)
     assert _load_json_file(tmp_path / "test.json") == [
-        {
-            "id": "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6",
-            "text": "foous barus",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": "3f981d854531e9f376ae06cb8449a6e997972d3c1b598f9a00b481ef307a469d.mp3",
-            "text": "foous",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2",
-            "text": "lorem ipsum",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": "f38b5ac2a5e36c336eed306d56ed517bfd78a728321be0b87db5def8ff8abc3d.mp3",
-            "text": "apfel",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
+        mock_index_entry("foous barus"),
+        mock_index_entry("foous"),
+        mock_index_entry("lorem ipsum"),
+        mock_index_entry("apfel"),
     ]
 
 
-@patch("subprocess.run")
-def test_overwrite_with_destructive(subprocess_run, tmp_path, capsys):
+def test_overwrite_with_destructive(
+    aws_cli, tmp_path, capsys, terminal_message, mock_index_entry
+):
     _write_json_file(
         tmp_path / "test.json",
         [
-            {
-                "id": "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6",
-                "text": "foous barus",
-                "source": "TTS",
-                "license": "foo bar license",
-                "ttsProvider": "Polly",
-                "ttsVoice": "Lupe",
-                "ttsEngine": "standard",
-            },
-            {
-                "id": "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2",
-                "text": "lorem ipsum",
-                "source": "TTS",
-                "license": "foo bar license",
-                "ttsProvider": "Polly",
-                "ttsVoice": "Lupe",
-                "ttsEngine": "standard",
-            },
+            mock_index_entry("foous barus"),
+            mock_index_entry("lorem ipsum"),
         ],
     )
     update_audios_for_course(
@@ -452,124 +172,32 @@ def test_overwrite_with_destructive(subprocess_run, tmp_path, capsys):
     captured = capsys.readouterr()
     _assert_output_lines(
         [
-            "Generating "
-            + str(
-                tmp_path
-                / "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2.mp3"
-            )
-            + " using Lupe standard",
-            "Generating "
-            + str(
-                tmp_path
-                / "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6.mp3"
-            )
-            + " using Lupe standard",
-            "Generating "
-            + str(
-                tmp_path
-                / "f38b5ac2a5e36c336eed306d56ed517bfd78a728321be0b87db5def8ff8abc3d.mp3"
-            )
-            + " using Lupe standard",
-            "Generating "
-            + str(
-                tmp_path
-                / "3f981d854531e9f376ae06cb8449a6e997972d3c1b598f9a00b481ef307a469d.mp3"
-            )
-            + " using Lupe standard",
+            terminal_message.generating("lorem ipsum"),
+            terminal_message.generating("foous barus"),
+            terminal_message.generating("apfel"),
+            terminal_message.generating("foous"),
         ],
         captured.out,
     )
-    assert subprocess_run.call_count == 4
-    subprocess_run.assert_any_call(
-        [
-            "aws",
-            "polly",
-            "synthesize-speech",
-            "--output-format",
-            "mp3",
-            "--voice-id",
-            "Lupe",
-            "--engine",
-            "standard",
-            "--text",
-            "foous barus",
-            tmp_path
-            / "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6.mp3",
-        ],
-        stdout=subprocess.DEVNULL,
-    )
-    subprocess_run.assert_any_call(
-        [
-            "aws",
-            "polly",
-            "synthesize-speech",
-            "--output-format",
-            "mp3",
-            "--voice-id",
-            "Lupe",
-            "--engine",
-            "standard",
-            "--text",
-            "lorem ipsum",
-            tmp_path
-            / "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2.mp3",
-        ],
-        stdout=subprocess.DEVNULL,
-    )
+    aws_cli.assert_call_count == 4
+    aws_cli.assert_audio_generated_for("foous barus")
+    aws_cli.assert_audio_generated_for("lorem ipsum")
+    aws_cli.assert_audio_generated_for("apfel")
+    aws_cli.assert_audio_generated_for("foous")
+
     assert _load_json_file(tmp_path / "test.json") == [
-        {
-            "id": "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6",
-            "text": "foous barus",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": "3f981d854531e9f376ae06cb8449a6e997972d3c1b598f9a00b481ef307a469d",
-            "text": "foous",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2",
-            "text": "lorem ipsum",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": "f38b5ac2a5e36c336eed306d56ed517bfd78a728321be0b87db5def8ff8abc3d",
-            "text": "apfel",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
+        mock_index_entry("foous barus"),
+        mock_index_entry("foous"),
+        mock_index_entry("lorem ipsum"),
+        mock_index_entry("apfel"),
     ]
 
 
-@patch("subprocess.run")
-def test_partial_update(subprocess_run, tmp_path, capsys):
+def test_partial_update(aws_cli, tmp_path, capsys, terminal_message, mock_index_entry):
     _write_json_file(
         tmp_path / "test.json",
         [
-            {
-                "id": "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6",
-                "text": "foous barus",
-                "source": "TTS",
-                "license": "foo bar license",
-                "ttsProvider": "Polly",
-                "ttsVoice": "Lupe",
-                "ttsEngine": "standard",
-            },
+            mock_index_entry("foous barus"),
         ],
     )
     update_audios_for_course(
@@ -579,112 +207,39 @@ def test_partial_update(subprocess_run, tmp_path, capsys):
     captured = capsys.readouterr()
     _assert_output_lines(
         [
-            "Generating "
-            + str(
-                tmp_path
-                / "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2.mp3"
-            )
-            + " using Lupe standard",
-            "Generating "
-            + str(
-                tmp_path
-                / "3f981d854531e9f376ae06cb8449a6e997972d3c1b598f9a00b481ef307a469d.mp3"
-            )
-            + " using Lupe standard",
-            "Generating "
-            + str(
-                tmp_path
-                / "f38b5ac2a5e36c336eed306d56ed517bfd78a728321be0b87db5def8ff8abc3d.mp3"
-            )
-            + " using Lupe standard",
+            terminal_message.generating("lorem ipsum"),
+            terminal_message.generating("apfel"),
+            terminal_message.generating("foous"),
         ],
         captured.out,
     )
-    assert subprocess_run.call_count == 3
-    subprocess_run.assert_any_call(
-        [
-            "aws",
-            "polly",
-            "synthesize-speech",
-            "--output-format",
-            "mp3",
-            "--voice-id",
-            "Lupe",
-            "--engine",
-            "standard",
-            "--text",
-            "lorem ipsum",
-            tmp_path
-            / "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2.mp3",
-        ],
-        stdout=subprocess.DEVNULL,
-    )
+    aws_cli.assert_call_count == 3
+    aws_cli.assert_audio_generated_for("lorem ipsum")
+
     assert _load_json_file(tmp_path / "test.json") == [
-        {
-            "id": "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6",
-            "text": "foous barus",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": "3f981d854531e9f376ae06cb8449a6e997972d3c1b598f9a00b481ef307a469d",
-            "text": "foous",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2",
-            "text": "lorem ipsum",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": "f38b5ac2a5e36c336eed306d56ed517bfd78a728321be0b87db5def8ff8abc3d",
-            "text": "apfel",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
+        mock_index_entry("foous barus"),
+        mock_index_entry("foous"),
+        mock_index_entry("lorem ipsum"),
+        mock_index_entry("apfel"),
     ]
 
 
-@patch("subprocess.run")
-def test_partial_update_with_deletion(subprocess_run, tmp_path, capsys):
+def test_partial_update_with_deletion(
+    aws_cli,
+    tmp_path,
+    capsys,
+    terminal_message,
+    mock_index_entry,
+    write_mock_audio_file_for_text,
+):
     _write_json_file(
         tmp_path / "test.json",
         [
-            {
-                "id": "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6",
-                "text": "foous barus",
-                "source": "TTS",
-                "license": "foo bar license",
-                "ttsProvider": "Polly",
-                "ttsVoice": "Lupe",
-                "ttsEngine": "standard",
-            },
-            {
-                "id": "oldid",
-                "text": "an unnecessary phrase",
-                "source": "TTS",
-                "license": "foo bar license",
-                "ttsProvider": "Polly",
-                "ttsVoice": "Lupe",
-                "ttsEngine": "standard",
-            },
+            mock_index_entry("foous barus"),
+            mock_index_entry("an unnecessary phrase"),
         ],
     )
-    _write_dummy_audio_file(tmp_path / "oldid.mp3")
+    write_mock_audio_file_for_text("an unnecessary phrase")
     update_audios_for_course(
         tmp_path, "test", course, cli.Settings(dry_run=False, destructive=False)
     )
@@ -692,113 +247,40 @@ def test_partial_update_with_deletion(subprocess_run, tmp_path, capsys):
     captured = capsys.readouterr()
     _assert_output_lines(
         [
-            "Deleting " + str(tmp_path / "oldid.mp3"),
-            "Generating "
-            + str(
-                tmp_path
-                / "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2.mp3"
-            )
-            + " using Lupe standard",
-            "Generating "
-            + str(
-                tmp_path
-                / "f38b5ac2a5e36c336eed306d56ed517bfd78a728321be0b87db5def8ff8abc3d.mp3"
-            )
-            + " using Lupe standard",
-            "Generating "
-            + str(
-                tmp_path
-                / "3f981d854531e9f376ae06cb8449a6e997972d3c1b598f9a00b481ef307a469d.mp3"
-            )
-            + " using Lupe standard",
+            terminal_message.deleting("an unnecessary phrase"),
+            terminal_message.generating("lorem ipsum"),
+            terminal_message.generating("apfel"),
+            terminal_message.generating("foous"),
         ],
         captured.out,
     )
-    assert subprocess_run.call_count == 3
-    subprocess_run.assert_any_call(
-        [
-            "aws",
-            "polly",
-            "synthesize-speech",
-            "--output-format",
-            "mp3",
-            "--voice-id",
-            "Lupe",
-            "--engine",
-            "standard",
-            "--text",
-            "lorem ipsum",
-            tmp_path
-            / "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2.mp3",
-        ],
-        stdout=subprocess.DEVNULL,
-    )
+    aws_cli.assert_call_count == 3
+    aws_cli.assert_audio_generated_for("lorem ipsum")
+
     assert _load_json_file(tmp_path / "test.json") == [
-        {
-            "id": "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6",
-            "text": "foous barus",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": "3f981d854531e9f376ae06cb8449a6e997972d3c1b598f9a00b481ef307a469d",
-            "text": "foous",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2",
-            "text": "lorem ipsum",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": "f38b5ac2a5e36c336eed306d56ed517bfd78a728321be0b87db5def8ff8abc3d",
-            "text": "apfel",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
+        mock_index_entry("foous barus"),
+        mock_index_entry("foous"),
+        mock_index_entry("lorem ipsum"),
+        mock_index_entry("apfel"),
     ]
 
 
-@patch("subprocess.run")
-def test_overwrite_with_deletion(subprocess_run, tmp_path, capsys):
+def test_overwrite_with_deletion(
+    aws_cli,
+    tmp_path,
+    capsys,
+    terminal_message,
+    mock_index_entry,
+    write_mock_audio_file_for_text,
+):
     _write_json_file(
         tmp_path / "test.json",
         [
-            {
-                "id": "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6",
-                "text": "foous barus",
-                "source": "TTS",
-                "license": "foo bar license",
-                "ttsProvider": "Polly",
-                "ttsVoice": "Lupe",
-                "ttsEngine": "standard",
-            },
-            {
-                "id": "oldid",
-                "text": "an unnecessary phrase",
-                "source": "TTS",
-                "license": "foo bar license",
-                "ttsProvider": "Polly",
-                "ttsVoice": "Lupe",
-                "ttsEngine": "standard",
-            },
+            mock_index_entry("foous barus"),
+            mock_index_entry("an unnecessary phrase"),
         ],
     )
-    _write_dummy_audio_file(tmp_path / "oldid.mp3")
+    write_mock_audio_file_for_text("an unnecessary phrase")
     update_audios_for_course(
         tmp_path, "test", course, cli.Settings(dry_run=False, destructive=True)
     )
@@ -806,141 +288,43 @@ def test_overwrite_with_deletion(subprocess_run, tmp_path, capsys):
     captured = capsys.readouterr()
     _assert_output_lines(
         [
-            "Deleting " + str(tmp_path / "oldid.mp3"),
-            "Generating "
-            + str(
-                tmp_path
-                / "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6.mp3"
-            )
-            + " using Lupe standard",
-            "Generating "
-            + str(
-                tmp_path
-                / "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2.mp3"
-            )
-            + " using Lupe standard",
-            "Generating "
-            + str(
-                tmp_path
-                / "f38b5ac2a5e36c336eed306d56ed517bfd78a728321be0b87db5def8ff8abc3d.mp3"
-            )
-            + " using Lupe standard",
-            "Generating "
-            + str(
-                tmp_path
-                / "3f981d854531e9f376ae06cb8449a6e997972d3c1b598f9a00b481ef307a469d.mp3"
-            )
-            + " using Lupe standard",
+            terminal_message.deleting("an unnecessary phrase"),
+            terminal_message.generating("foous barus"),
+            terminal_message.generating("lorem ipsum"),
+            terminal_message.generating("apfel"),
+            terminal_message.generating("foous"),
         ],
         captured.out,
     )
-    assert subprocess_run.call_count == 4
-    subprocess_run.assert_any_call(
-        [
-            "aws",
-            "polly",
-            "synthesize-speech",
-            "--output-format",
-            "mp3",
-            "--voice-id",
-            "Lupe",
-            "--engine",
-            "standard",
-            "--text",
-            "foous barus",
-            tmp_path
-            / "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6.mp3",
-        ],
-        stdout=subprocess.DEVNULL,
-    )
-    subprocess_run.assert_any_call(
-        [
-            "aws",
-            "polly",
-            "synthesize-speech",
-            "--output-format",
-            "mp3",
-            "--voice-id",
-            "Lupe",
-            "--engine",
-            "standard",
-            "--text",
-            "lorem ipsum",
-            tmp_path
-            / "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2.mp3",
-        ],
-        stdout=subprocess.DEVNULL,
-    )
+    aws_cli.assert_call_count == 4
+    aws_cli.assert_audio_generated_for("foous barus")
+    aws_cli.assert_audio_generated_for("lorem ipsum")
+
     assert _load_json_file(tmp_path / "test.json") == [
-        {
-            "id": "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6",
-            "text": "foous barus",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": "3f981d854531e9f376ae06cb8449a6e997972d3c1b598f9a00b481ef307a469d",
-            "text": "foous",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": "7dc37637ce2395ed74d4f6ae0f63e0885536356c8910914d3af8afe05694cab2",
-            "text": "lorem ipsum",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
-        {
-            "id": "f38b5ac2a5e36c336eed306d56ed517bfd78a728321be0b87db5def8ff8abc3d",
-            "text": "apfel",
-            "source": "TTS",
-            "license": "foo bar license",
-            "ttsProvider": "Polly",
-            "ttsVoice": "Lupe",
-            "ttsEngine": "standard",
-        },
+        mock_index_entry("foous barus"),
+        mock_index_entry("foous"),
+        mock_index_entry("lorem ipsum"),
+        mock_index_entry("apfel"),
     ]
 
 
-@patch("subprocess.run")
-def test_delete_all(subprocess_run, tmp_path, capsys):
+def test_delete_all(
+    aws_cli,
+    tmp_path,
+    capsys,
+    terminal_message,
+    mock_index_entry,
+    write_mock_audio_file_for_text,
+):
     _write_json_file(
         tmp_path / "test.json",
         [
-            {
-                "id": "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6",
-                "text": "foous barus",
-                "source": "TTS",
-                "license": "foo bar license",
-                "ttsProvider": "Polly",
-                "ttsVoice": "Lupe",
-                "ttsEngine": "standard",
-            },
-            {
-                "id": "oldid",
-                "text": "an unnecessary phrase",
-                "source": "TTS",
-                "license": "foo bar license",
-                "ttsProvider": "Polly",
-                "ttsVoice": "Lupe",
-                "ttsEngine": "standard",
-            },
+            mock_index_entry("foous barus"),
+            mock_index_entry("an unnecessary phrase"),
         ],
     )
-    _write_dummy_audio_file(tmp_path / "oldid.mp3")
-    _write_dummy_audio_file(
-        tmp_path
-        / "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6.mp3"
-    )
+    write_mock_audio_file_for_text("an unnecessary phrase")
+    write_mock_audio_file_for_text("foous barus")
     update_audios_for_course(
         tmp_path, "test", empty_course, cli.Settings(dry_run=False, destructive=False)
     )
@@ -948,49 +332,32 @@ def test_delete_all(subprocess_run, tmp_path, capsys):
     captured = capsys.readouterr()
     _assert_output_lines(
         [
-            "Deleting " + str(tmp_path / "oldid.mp3"),
-            "Deleting "
-            + str(
-                tmp_path
-                / "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6.mp3"
-            ),
+            terminal_message.deleting("an unnecessary phrase"),
+            terminal_message.deleting("foous barus"),
         ],
         captured.out,
     )
-    assert subprocess_run.call_count == 0
+    aws_cli.assert_call_count == 0
     assert _load_json_file(tmp_path / "test.json") == []
 
 
-@patch("subprocess.run")
-def test_delete_all_with_destructive(subprocess_run, tmp_path, capsys):
+def test_delete_all_with_destructive(
+    aws_cli,
+    tmp_path,
+    capsys,
+    terminal_message,
+    mock_index_entry,
+    write_mock_audio_file_for_text,
+):
     _write_json_file(
         tmp_path / "test.json",
         [
-            {
-                "id": "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6",
-                "text": "foous barus",
-                "source": "TTS",
-                "license": "foo bar license",
-                "ttsProvider": "Polly",
-                "ttsVoice": "Lupe",
-                "ttsEngine": "standard",
-            },
-            {
-                "id": "oldid",
-                "text": "an unnecessary phrase",
-                "source": "TTS",
-                "license": "foo bar license",
-                "ttsProvider": "Polly",
-                "ttsVoice": "Lupe",
-                "ttsEngine": "standard",
-            },
+            mock_index_entry("foous barus"),
+            mock_index_entry("an unnecessary phrase"),
         ],
     )
-    _write_dummy_audio_file(tmp_path / "oldid.mp3")
-    _write_dummy_audio_file(
-        tmp_path
-        / "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6.mp3"
-    )
+    write_mock_audio_file_for_text("an unnecessary phrase")
+    write_mock_audio_file_for_text("foous barus")
     update_audios_for_course(
         tmp_path, "test", empty_course, cli.Settings(dry_run=False, destructive=True)
     )
@@ -998,22 +365,13 @@ def test_delete_all_with_destructive(subprocess_run, tmp_path, capsys):
     captured = capsys.readouterr()
     _assert_output_lines(
         [
-            "Deleting " + str(tmp_path / "oldid.mp3"),
-            "Deleting "
-            + str(
-                tmp_path
-                / "0804b0ba52a7fa507998b7f18d6514876195f12dab6cbe7876b924524a1583f6.mp3"
-            ),
+            terminal_message.deleting("an unnecessary phrase"),
+            terminal_message.deleting("foous barus"),
         ],
         captured.out,
     )
-    assert subprocess_run.call_count == 0
+    aws_cli.assert_call_count == 0
     assert _load_json_file(tmp_path / "test.json") == []
-
-
-def _write_dummy_audio_file(file_path):
-    with open(file_path, "w") as f:
-        f.write("this is a fake audio file")
 
 
 def _write_json_file(file_path, value):
