@@ -1,4 +1,4 @@
-# Bizi 1
+# Bizi 3
 * When you are describing the location where someone lives, you use the Inessive (NON) form, which answers the question “where?”.
 ## Past tense - I lived (someplace)
 * The past tense is formed with the past of IZAN as in “Ni Donostian bizi nintzen.” (I used to live in San Sebastian.)
@@ -11,6 +11,6 @@
 * Haiek bizi ziren They lived.
 * Italian In Italy
 * Duela ago
-* urtebete One year    
+* urtebete One year
 
 [ Go Back to Home Page!](..)
