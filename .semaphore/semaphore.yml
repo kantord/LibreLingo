@@ -158,9 +158,9 @@ blocks:
             - pip install poetry
             - poetry install --no-interaction
             - cd apps/librelingo_yaml_loader
-            - cache restore python-$(checksum poetry.lock)
+            # - cache restore python-$(checksum poetry.lock)
             - poetry install --no-interaction
-            - cache store python-$(checksum poetry.lock) /home/semaphore/.cache/pypoetry
+            # - cache store python-$(checksum poetry.lock) /home/semaphore/.cache/pypoetry
             - cd ../..
             - ./scripts/verifyTestCourseJsonFiles.sh
             - cache store python-$(checksum poetry.lock) /home/semaphore/.cache/pypoetry
