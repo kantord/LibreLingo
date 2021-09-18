@@ -1,7 +1,7 @@
 #!/bin/bash
+set -e
 
 yarn exportAllCourses -B
-
 git diff --exit-code --name-only
 
 if [ "$?" -eq "0" ]; then
