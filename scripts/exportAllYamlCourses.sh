@@ -10,7 +10,7 @@ for d in ./courses/*/ ; do
 done
 
 if [ "$ANY_FAILED" -eq "1" ]; then
-	echo "😿 Could not export all yaml courses"
+	echo -en "\r😿 Could not export all yaml courses"
 	exit 1
 fi
 
