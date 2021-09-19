@@ -3,7 +3,6 @@
 In this exercise you will learn some simple plural forms of German.  
 
 Most German nouns end with one of these forms:  
-
 	* „n/en“
 	* „r/er“
 	* „e“
