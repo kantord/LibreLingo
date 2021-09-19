@@ -7,6 +7,7 @@ if [ $? -eq 0 ]; then
 		echo -en "\r✅ Exported course $1"
 else
 		echo -en "\r⚠️  Couldn't export course $1"
+		exit 1
 fi
 cd - > /dev/null
 echo
