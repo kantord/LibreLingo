@@ -146,6 +146,28 @@ blocks:
             - poetry install --no-interaction
             - ./scripts/verifyPypiReadmeFiles.sh
             - cache store python-$(checksum poetry.lock) /home/semaphore/.cache/pypoetry
+  - name: Test Course Json Files
+    dependencies: []
+    task:
+      jobs:
+        - name: validate that Test Course Json files are up to date
+          commands:
+            - sem-version python 3.8
+            - checkout
+            - cache restore python-$(checksum poetry.lock)
+            - pip install poetry
+            - poetry install --no-interaction
+            - cd apps/librelingo_yaml_loader
+            - cache restore python-$(checksum poetry.lock)
+            - poetry install --no-interaction
+            - cache store python-$(checksum poetry.lock) /home/semaphore/.cache/pypoetry
+            - cd ../librelingo_json_export
+            - cache restore python-$(checksum poetry.lock)
+            - poetry install --no-interaction
+            - cache store python-$(checksum poetry.lock) /home/semaphore/.cache/pypoetry
+            - cd ../..
+            - ./scripts/verifyTestCourseJsonFiles.sh
+            - cache store python-$(checksum poetry.lock) /home/semaphore/.cache/pypoetry
 promotions:
   - name: Deploy to production
     pipeline_file: pipeline_2.yml
