@@ -1,5 +1,4 @@
 #!/bin/bash
-set -e
 
 yarn exportAllCourses
 git diff --exit-code --name-only
