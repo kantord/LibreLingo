@@ -161,6 +161,10 @@ blocks:
             - cache restore python-$(checksum poetry.lock)
             - poetry install --no-interaction
             - cache store python-$(checksum poetry.lock) /home/semaphore/.cache/pypoetry
+            - cd ../librelingo_json_export
+            - cache restore python-$(checksum poetry.lock)
+            - poetry install --no-interaction
+            - cache store python-$(checksum poetry.lock) /home/semaphore/.cache/pypoetry
             - cd ../..
             - ./scripts/verifyTestCourseJsonFiles.sh
             - cache store python-$(checksum poetry.lock) /home/semaphore/.cache/pypoetry
