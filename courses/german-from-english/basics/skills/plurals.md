@@ -8,7 +8,8 @@ Most German nouns end with one of these forms:
 	* „r/er“
 	* „e“
 	* „s“  
+
 have either no special ending or no plural at all.  
 
-Tip:
+Tip:  
 In German all nouns use the article "die" in the plural!  
