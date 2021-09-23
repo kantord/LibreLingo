@@ -1,10 +1,11 @@
 <script lang="typescript">
   import Mascot from "../components/Mascot.svelte"
   import LicenseLogo from "../components/LicenseLogo.svelte"
-  import ButtonLink from "lluis/ButtonLink.svelte"
+  import Button from "lluis/Button.svelte"
   import Box from "lluis/Box.svelte"
   import Column from "lluis/Column.svelte"
   import Columns from "lluis/Columns.svelte"
+  import Hidden from "lluis/Hidden.svelte"
   import Title from "lluis/Title.svelte"
   import { _ } from "svelte-i18n"
   import Translate from "../Translate.svelte"
@@ -34,58 +35,60 @@
               </Translate>
             </h2>
             <div class="buttons">
-              <ButtonLink primary href="course/spanish-from-english">
+              <Button style="primary" href="course/spanish-from-english">
                 <Translate key="index.start_spanish_course">
                   Start learning Spanish
                 </Translate>
-              </ButtonLink>
+              </Button>
 
-              <ButtonLink primary hidden href="course/german-from-english">
-                <Translate key="index.start_german_course">
-                  Start learning German
-                </Translate>
-              </ButtonLink>
+              <Hidden>
+                <Button style="primary" href="course/german-from-english">
+                  <Translate key="index.start_german_course">
+                    Start learning German
+                  </Translate>
+                </Button>
 
-              <ButtonLink primary hidden href="course/french-from-english">
-                <Translate key="index.start_french_course">
-                  Start learning French
-                </Translate>
-              </ButtonLink>
+                <Button style="primary" href="course/french-from-english">
+                  <Translate key="index.start_french_course">
+                    Start learning French
+                  </Translate>
+                </Button>
 
-              <ButtonLink primary hidden href="course/bangla-from-english">
-                <Translate key="index.start_french_course">
-                  Start learning Bangla
-                </Translate>
-              </ButtonLink>
+                <Button style="primary" href="course/bangla-from-english">
+                  <Translate key="index.start_french_course">
+                    Start learning Bangla
+                  </Translate>
+                </Button>
 
-              <ButtonLink primary hidden href="course/parsig-from-english">
-                <Translate key="index.start_parsig_course">
-                  Start learning Middle Persian
-                </Translate>
-              </ButtonLink>
+                <Button style="primary" href="course/parsig-from-english">
+                  <Translate key="index.start_parsig_course">
+                    Start learning Middle Persian
+                  </Translate>
+                </Button>
 
-              <ButtonLink primary hidden href="course/basque-from-english">
-                <Translate key="index.start_parsig_course">
-                  Start learning Basque
-                </Translate>
-              </ButtonLink>
-
-              <ButtonLink primary href="about">
+                <Button style="primary" href="course/basque-from-english">
+                  <Translate key="index.start_parsig_course">
+                    Start learning Basque
+                  </Translate>
+                </Button>
+              </Hidden>
+              <Button style="primary" href="about">
                 <Translate key="index.about_librelingo">
                   About LibreLingo
                 </Translate>
-              </ButtonLink>
+              </Button>
 
-              <ButtonLink primary hidden href="/devtools">
-                Development tools
-              </ButtonLink>
+              <Hidden>
+                <Button style="primary" href="/devtools">
+                  Development tools
+                </Button>
+              </Hidden>
 
-              <ButtonLink primary href="https://librelingo.app/docs/">
+              <Button style="primary" href="https://librelingo.app/docs/">
                 <Translate key="index.development_docs">
                   Development documentation
                 </Translate>
-              </ButtonLink>
-              <a href="/devtools" class="is-invisible"></a>
+              </Button>
             </div>
           </Box>
         </Column>

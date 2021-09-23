@@ -128,6 +128,7 @@
   $: skipAllChallengesFunc = async () => {
       stats.skipped++
       remainingChallenges.forEach(() => stats.skipped++)
+      remainingChallenges = []
       currentChallenge = undefined
   }
 
