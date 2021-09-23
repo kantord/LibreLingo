@@ -1,6 +1,7 @@
 <script lang="typescript" context="module">
   import NavBar from "../components/NavBar.svelte"
   import Title from "lluis/Title.svelte"
+  import Button from "../../../lluis/Button.svelte"
 </script>
 
 <svelte:head>
@@ -28,6 +29,24 @@
             <Title size="{5}">Title 5</Title>
             <Title size="{6}">Title 6</Title>
           </article>
+          <div>
+            <Button>Click me</Button>
+          </div>
+          <div>
+            <Button size="small">Click me</Button>
+          </div>
+          <div>
+            <Button size="large">Click me</Button>
+          </div>
+          <div>
+            <Button size="small" style="primary">Click me</Button>
+          </div>
+          <div>
+            <Button size="large" style="primary">Click me</Button>
+          </div>
+          <div>
+            <Button loading style="primary">Click me</Button>
+          </div>
         </div>
       </div>
     </div>

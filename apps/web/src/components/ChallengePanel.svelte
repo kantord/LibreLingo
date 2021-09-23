@@ -34,12 +34,12 @@
       </div>
       <div class="right">
         {#if buttonAction}
-          <Button primary type="submit" on:click="{buttonAction}">
+          <Button style="primary" type="submit" on:click="{buttonAction}">
             {buttonText}
           </Button>
         {/if}
         {#if submit}
-          <Button primary type="submit">Submit</Button>
+          <Button style="primary" type="submit">Submit</Button>
         {/if}
       </div>
     </div>
