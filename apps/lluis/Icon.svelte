@@ -1,7 +1,7 @@
 <script lang="typescript">
   export let size = "medium"
   export let prefix = "fas"
-  export let icon
+  export let icon: string
   export let left = false
 </script>
 

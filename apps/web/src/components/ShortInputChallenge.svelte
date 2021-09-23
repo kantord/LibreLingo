@@ -4,7 +4,7 @@
   import shuffle from "lodash.shuffle"
   import ChallengePanel from "./ChallengePanel.svelte"
   import Phrase from "./Phrase.svelte"
-  import InputFieldWithVirtualKeyboard from "./InputFieldWithVirtualKeyboard.svelte"
+  import InputFieldWithVirtualKeyboard from "./InputFieldWithVirtualKeyboard/index.svelte"
   import Column from "lluis/Column.svelte"
   import Columns from "lluis/Columns.svelte"
   import evaluateAnswer from "@librelingo/answer-corrector/src/index"
@@ -80,7 +80,11 @@
       <div class="card">
         <div class="card-image">
           <figure class="image is-1by1">
-            <img src="images/{picture}" alt="" data-test="short text input illustrations" />
+            <img
+              src="images/{picture}"
+              alt=""
+              data-test="short text input illustrations"
+            />
           </figure>
         </div>
       </div>

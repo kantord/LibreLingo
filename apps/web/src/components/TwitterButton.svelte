@@ -1,14 +1,14 @@
 <script lang="typescript">
-  import ButtonLink from "lluis/ButtonLink.svelte"
+  import Button from "lluis/Button.svelte"
   import Icon from "lluis/Icon.svelte"
 </script>
 
-<ButtonLink
-  color="#55acee"
-  textColor="white"
+<Button
   target="_blank"
   href="https://twitter.com/intent/tweet?hashtags=LibreLingo%2Copensource&url=https%3A%2F%2Flibrelingo.app&text=LibreLingo%20-%20an%20experiment%20to%20create%20a%20community-owned%20language%20learning%20tool%0A"
 >
-  <Icon icon="twitter" prefix="fab" />
+  <slot name="icon-left">
+			<Icon icon="twitter" prefix="fab" size="small" />
+  </slot>
   <div>Tweet about LibreLingo</div>
-</ButtonLink>
+</Button>
