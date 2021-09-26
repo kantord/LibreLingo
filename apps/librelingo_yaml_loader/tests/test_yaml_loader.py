@@ -15,6 +15,7 @@ from librelingo_types import (
     Language,
     DictionaryItem,
     TextToSpeechSettings,
+    HunspellSettings,
 )
 from librelingo_yaml_loader.yaml_loader import (
     load_course,
@@ -150,6 +151,9 @@ class TestLoadCourseMeta(YamlImportTestCase):
     def test_returns_correct_license(self):
         assert self.result.license == self.convert_license.return_value
 
+    def test_returns_empty_hunspell_list(self):
+        assert self.result.settings.hunspell == HunspellSettings()
+
     def test_calls_convert_license_with_correct_argumetns(self):
         self.convert_license.assert_called_with(
             {
@@ -223,6 +227,60 @@ class TestLoadCourseMeta(YamlImportTestCase):
             self.result.settings.audio_settings.text_to_speech_settings_list
         )
         assert tts_settings_list == []
+
+    @patch("librelingo_yaml_loader.yaml_loader.hunspell")
+    def test_creates_correct_hunspell_settings_1(self, hunspell):
+        self._append_settings_to_file(
+            """
+    Settings:
+        Hunspell:
+            "{target_language_name}": en-US
+            "{source_language_name}": es-ES
+        """.format(
+            target_language_name=self.fake_values["target_language_name"],
+            source_language_name=self.fake_values["source_language_name"],
+        )
+        )
+
+        self.result = load_course(self.fake_path)
+        hunspell.HunSpell.assert_called_with('/usr/share/hunspell/en_US.dic', '/usr/share/hunspell/en_US.aff')
+
+    @patch("librelingo_yaml_loader.yaml_loader.hunspell")
+    def test_creates_correct_hunspell_settings_2(self, hunspell):
+        self._append_settings_to_file(
+            """
+    Settings:
+        Hunspell:
+            "{target_language_name}": hu-HU
+            "{source_language_name}": es-ES
+        """.format(
+            target_language_name=self.fake_values["target_language_name"],
+            source_language_name=self.fake_values["source_language_name"],
+        )
+        )
+
+        self.result = load_course(self.fake_path)
+        hunspell.HunSpell.assert_called_with('/usr/share/hunspell/hu_HU.dic', '/usr/share/hunspell/hu_HU.aff')
+
+    @patch("librelingo_yaml_loader.yaml_loader.hunspell")
+    def test_returns_correct_hunspell_settings(self, hunspell):
+        self._append_settings_to_file(
+            """
+    Settings:
+        Hunspell:
+            "{target_language_name}": hu-HU
+            "{source_language_name}": es-ES
+        """.format(
+            target_language_name=self.fake_values["target_language_name"],
+            source_language_name=self.fake_values["source_language_name"],
+        )
+        )
+
+        self.result = load_course(self.fake_path)
+        assert self.result.settings.hunspell.target_language == hunspell.HunSpell.return_value
+        assert self.result.settings.hunspell.source_language == hunspell.HunSpell.return_value
+
+
 
     def test_returns_correct_settings_audio_enabled_no_tts(self):
         self._append_settings_to_file(
@@ -1046,3 +1104,5 @@ def test_convert_phrase_complains_about_missing_translation():
     expected_error = 'Phrase "{}" needs to have a "Translation".'.format(randomPhrase)
     with pytest.raises(RuntimeError, match=expected_error):
         _convert_phrase({"Phrase": randomPhrase})
+
+
