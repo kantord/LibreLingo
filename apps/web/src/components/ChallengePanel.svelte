@@ -1,5 +1,6 @@
 <script lang="typescript">
   import Button from "lluis/Button.svelte"
+  import Panel from "lluis/Panel.svelte"
 
   export let buttonText
   export let buttonAction = null
@@ -12,86 +13,47 @@
   export let skipAction = null
   export let skipAllAction = null
   export let skipAllVoice = null
+
+  let background: "default" | "success" | "failure" | "info" = (() => {
+      if (correct) {
+          return "success"
+      }
+      if (incorrect) {
+          return "failure"
+      }
+      if (typo) {
+          return "info"
+      }
+
+      return "default"
+  })()
 </script>
 
-<div class:correct class:incorrect class:typo class="panel is-primary">
-  <div class="panel-block">
-    <div class="control">
-      <div class="left">
-        {#if skipAction}
-          <Button on:click="{skipAction}">Skip</Button>
-        {/if}
-        {#if skipAllAction}
-          <Button on:click="{skipAllAction}">Finish early</Button>
-        {/if}
-        {#if skipAllVoice}
-          <Button on:click="{skipAllVoice}">Can't listen now</Button>
-        {/if}
-        {#if message}<b>{message}</b>{/if}
-        {#if messageDetail}
-          <p>{messageDetail}</p>
-        {/if}
-      </div>
-      <div class="right">
-        {#if buttonAction}
-          <Button style="primary" type="submit" on:click="{buttonAction}">
-            {buttonText}
-          </Button>
-        {/if}
-        {#if submit}
-          <Button style="primary" type="submit">Submit</Button>
-        {/if}
-      </div>
-    </div>
+<Panel background="{background}">
+  <div slot="left">
+    {#if skipAction}
+      <Button on:click="{skipAction}">Skip</Button>
+    {/if}
+    {#if skipAllAction}
+      <Button on:click="{skipAllAction}">Finish early</Button>
+    {/if}
+    {#if skipAllVoice}
+      <Button on:click="{skipAllVoice}">Can't listen now</Button>
+    {/if}
+    {#if message}<b>{message}</b>{/if}
+    {#if messageDetail}
+      <p>{messageDetail}</p>
+    {/if}
   </div>
-</div>
 
-<style type="text/scss">
-  @import "../variables";
-
-  .panel {
-    position: fixed;
-    min-height: 12vh;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    border-radius: 0;
-    background: $white;
-  }
-
-  .correct {
-    color: $text-invert;
-    background: $success;
-  }
-
-  .incorrect {
-    color: $text-invert;
-    background: $pink;
-  }
-
-  .typo {
-    color: $text-invert;
-    background: $yellow;
-  }
-  .left {
-    float: left;
-  }
-  .right {
-    float: right;
-  }
-
-  .panel-block {
-    color: inherit;
-    padding-top: 1em;
-    @include mobile {
-      margin: 0;
-    }
-    @include tablet-only {
-      margin: 0 24px;
-    }
-    @include desktop {
-      max-width: 920px;
-      margin: auto;
-    }
-  }
-</style>
+  <div slot="right">
+    {#if buttonAction}
+      <Button style="primary" type="submit" on:click="{buttonAction}">
+        {buttonText}
+      </Button>
+    {/if}
+    {#if submit}
+      <Button style="primary" type="submit">Submit</Button>
+    {/if}
+  </div>
+</Panel>
