@@ -39,7 +39,7 @@
 //@import "~bulma/sass/components/message.sass";
 //@import "~bulma/sass/components/modal.sass";
 // @import "~bulma/sass/components/navbar.sass";
-@import "~bulma/sass/components/panel.sass";
+// @import "~bulma/sass/components/panel.sass";
 //@import "~bulma/sass/components/list.sass";
 //@import "~bulma/sass/components/breadcrumb.sass";
 //@import "~bulma/sass/components/menu.sass";
@@ -89,4 +89,9 @@
     --navbar-padding-vertical: var(--spacing-small);
     --navbar-padding-horizontal: var(--spacing-medium);
     --navbar-logo-height: calc(var(--navbar-height) - 2 * var(--spacing-small));
+
+    --panel-background: white;
+    --panel-background-success: #84b83f;
+    --panel-background-failure: #ab2149;
+    --panel-background-info: #fcb141;
 }
