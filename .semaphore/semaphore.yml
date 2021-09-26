@@ -5,21 +5,23 @@ agent:
     type: e1-standard-2
     os_image: ubuntu1804
 blocks:
-  - name: Install dependencies
+  - name: Install frontend dependencies
     task:
       jobs:
         - name: yarn install
           commands:
             - sem-version node 12
             - checkout
+            - cache restore
             - cache restore node-$(checksum yarn.lock)
             - cache restore cypress-$(checksum yarn.lock)
             - cache restore packages-web-$(checksum yarn.lock)
             - yarn install --frozen-lockfile
             - yarn cypress install
+            - cache store
             - cache store node-$(checksum yarn.lock) node_modules
             - cache store cypress-$(checksum yarn.lock) /home/semaphore/.cache/Cypress
-            - cache store packages-web-$(checksum yarn.lock) workspaces/web/node_modules
+            - cache store packages-web-$(checksum yarn.lock) apps/web/node_modules
     dependencies: []
   - name: Jest
     task:
@@ -36,24 +38,24 @@ blocks:
     task:
       jobs:
         - name: cypress
-          parallelism: 3
           commands:
             - sem-version node 12
             - checkout
             - cache restore node-$(checksum yarn.lock)
             - cache restore cypress-$(checksum yarn.lock)
             - cache restore packages-web-$(checksum yarn.lock)
-            - cache restore sapper-build-$SEMAPHORE_GIT_PR_SHA
+            - cache restore sapper-build-$SEMAPHORE_GIT_SHA
             - yarn install
-            - SEMAPHORE_BUILD_NUMBER=$SEMAPHORE_PIPELINE_ID SEMAPHORE_THREAD_COUNT=3 yarn test
+            - find ./apps/web/src
+            - 'yarn test:ci'
       secrets:
         - name: Percy token
         - name: KnapsackPro token
     dependencies:
-      - Sapper build
+      - Sapper static build
   - name: Eslint
     dependencies:
-      - Install dependencies
+      - Install frontend dependencies
     task:
       jobs:
         - name: eslint
@@ -61,10 +63,10 @@ blocks:
             - sem-version node 12
             - checkout
             - cache restore node-$(checksum yarn.lock)
-            - yarn eslint workspaces/*/src
+            - yarn eslint apps/*/src --no-error-on-unmatched-pattern
   - name: Eslint Cypress
     dependencies:
-      - Install dependencies
+      - Install frontend dependencies
     task:
       jobs:
         - name: eslint
@@ -72,74 +74,111 @@ blocks:
             - sem-version node 12
             - checkout
             - cache restore node-$(checksum yarn.lock)
-            - yarn eslint workspaces/*/cypress
-  - name: Typescript Code Style Check
+            - yarn eslint apps/*/cypress
+  - name: TypeScript check
     dependencies:
       - Eslint
     task:
       jobs:
-        - name: typecodestyle
+        - name: tsc
           commands:
             - sem-version node 12
             - checkout
             - cache restore node-$(checksum yarn.lock)
             - cache restore packages-web-$(checksum yarn.lock)
-            - yarn stylecheck
-  - name: Python Code Style Check
-    dependencies: []
-    task:
-      jobs:
-        - name: pycodestyle
-          commands:
-            - sem-version python 3.8
-            - checkout
-            - pip install pipenv
-            - pipenv install
-            - pycodestyle . --exclude="course/migrations" --max-line-length 119
-  - name: Django test
-    dependencies:
-      - Python Code Style Check
-    task:
-      jobs:
-        - name: manage.py test
-          commands:
-            - sem-version python 3.8
-            - checkout
-            - pip install pipenv
-            - pipenv install
-            - 'DATABASE_URL=sqlite:///db.sqlite3 python manage.py test'
-  - name: Sapper build
+            - yarn types
+  - name: Sapper static build
     dependencies:
       - Eslint Cypress
     task:
       jobs:
-        - name: yarn web build
+        - name: yarn web export
           commands:
             - sem-version node 12
             - checkout
             - cache restore node-$(checksum yarn.lock)
             - cache restore cypress-$(checksum yarn.lock)
             - cache restore packages-web-$(checksum yarn.lock)
-            - yarn web build
-            - cache store sapper-build-$SEMAPHORE_GIT_PR_SHA workspaces/web/__sapper__
-  - name: liblili2json
-    dependencies: []
+            - yarn web export
+            - find ./apps/web/__sapper__/
+            - cache store sapper-build-$SEMAPHORE_GIT_SHA ./apps/web/__sapper__/
+  - name: python packages
+    dependencies:
+      - Install Python dependencies
     task:
       jobs:
-        - name: test liblili2json
+        - name: test python packages
           commands:
             - sem-version python 3.8
             - checkout
-            - cache restore python-$(checksum yarn.lock)
-            - pip install poetry
-            - cd ./workspaces/liblili2json
-            - poetry install --no-interaction
+            - cache restore
             - poetry run pytest
-            #- poetry run pylint ./liblili2json
-            #- poetry run pylint ./test
-            - cache store python-$(checksum yarn.lock) /home/semaphore/.cache/pypoetry
+            - cache store
+        - name: Python code style (black)
+          commands:
+            - sem-version python 3.8
+            - checkout
+            - cache restore
+            - poetry run black apps --check
+        - name: Python types (mypy)
+          commands:
+            - sem-version python 3.8
+            - checkout
+            - cache restore
+            - poetry run mypy apps
+  - name: PyPi readme
+    dependencies:
+      - Install Python dependencies
+    task:
+      jobs:
+        - name: validate that PyPi readme files are up to date
+          commands:
+            - sem-version python 3.8
+            - checkout
+            - cache restore python-$(checksum poetry.lock)
+            - ./scripts/verifyPypiReadmeFiles.sh
+  - name: Test Course Json Files
+    dependencies:
+      - Install Python dependencies
+    task:
+      jobs:
+        - name: validate that Test Course Json files are up to date
+          commands:
+            - cd apps/librelingo_yaml_loader
+            - cache restore python-$(checksum poetry.lock)
+            - poetry install --no-interaction
+            - cache store python-$(checksum poetry.lock) /home/semaphore/.cache/pypoetry
+            - cd ../librelingo_json_export
+            - cache restore python-$(checksum poetry.lock)
+            - poetry install --no-interaction
+            - cache store python-$(checksum poetry.lock) /home/semaphore/.cache/pypoetry
+            - cd ../..
+            - ./scripts/verifyTestCourseJsonFiles.sh
+            - cache store python-$(checksum poetry.lock) /home/semaphore/.cache/pypoetry
+  - name: Install Python dependencies
+    dependencies: []
+    task:
+      jobs:
+        - name: install hunspell
+          commands:
+            - sudo apt-get update
+            - sudo apt-get install -y hunspell
+            - cache store
+        - name: poetry install
+          commands:
+            - sem-version python 3.8
+            - checkout
+            - cache restore python-$(checksum poetry.lock)
+            - pip install poetry
+            - poetry install --no-interaction
+            - cache store
+            - cache store python-$(checksum poetry.lock) /home/semaphore/.cache/pypoetry
 promotions:
   - name: Deploy to production
     pipeline_file: pipeline_2.yml
     auto_promote:
-      when: branch = 'master' AND result = 'passed'
+      when: branch = 'main' AND result = 'passed'
+  - name: Release packages
+    pipeline_file: pipeline_3.yml
+    auto_promote:
+      when: branch = 'main' AND result = 'passed'
