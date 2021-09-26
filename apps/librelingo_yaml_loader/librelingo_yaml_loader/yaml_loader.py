@@ -2,6 +2,7 @@ import collections
 from pathlib import Path
 
 import bleach
+import hunspell
 from librelingo_types import (
     Course,
     DictionaryItem,
@@ -371,6 +372,16 @@ def _convert_audio_settings(raw_settings):
     )
 
 
+def _convert_hunspell_settings(raw_settings):
+    if "Hunspell" not in raw_settings:
+        return None
+
+    raw_hunspell_settings = raw_settings["Hunspell"]
+    language_code = raw_hunspell_settings.replace("-", "_")
+
+    return hunspell.HunSpell(f'/usr/share/hunspell/{language_code}.dic', f'/usr/share/hunspell/{language_code}.aff')
+
+
 def _convert_settings(data):
     if "Settings" not in data:
         return Settings()
@@ -379,6 +390,7 @@ def _convert_settings(data):
 
     return Settings(
         audio_settings=_convert_audio_settings(raw_settings),
+        hunspell=_convert_hunspell_settings(raw_settings),
     )
 
 

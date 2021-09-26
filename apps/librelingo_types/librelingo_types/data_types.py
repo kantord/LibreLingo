@@ -55,7 +55,7 @@ class AudioSettings(
     pass
 
 
-class Settings(namedtuple("Settings", ["audio_settings"], defaults=[AudioSettings()])):
+class Settings(namedtuple("Settings", ["audio_settings", "hunspell"], defaults=[AudioSettings(), None])):
     """
     Settings for a course
 
