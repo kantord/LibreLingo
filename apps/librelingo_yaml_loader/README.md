@@ -3,6 +3,9 @@
 
 Load YAML-based LibreLingo courses in your Python project.
 
+<a name="librelingo_yaml_loader.spelling"></a>
+# librelingo\_yaml\_loader.spelling
+
 <a name="librelingo_yaml_loader.yaml_loader"></a>
 # librelingo\_yaml\_loader.yaml\_loader
 
