@@ -5,7 +5,7 @@ agent:
     type: e1-standard-2
     os_image: ubuntu1804
 blocks:
-  - name: Set up dependencies
+  - name: Set up frontend dependencies
     task:
       jobs:
         - name: yarn install
@@ -22,6 +22,19 @@ blocks:
             - cache store node-$(checksum yarn.lock) node_modules
             - cache store cypress-$(checksum yarn.lock) /home/semaphore/.cache/Cypress
             - cache store packages-web-$(checksum yarn.lock) apps/web/node_modules
+    dependencies: []
+  - name: Set up Python dependencies
+    task:
+      jobs:
+        - name: yarn install
+          commands:
+            - sem-version node 12
+            - checkout
+            - cache restore
+            - yarn cypress install
+            - sudo apt-get update
+            - sudo apt-get install -y hunspell
+            - cache store
     dependencies: []
   - name: Jest
     task:
@@ -57,7 +70,7 @@ blocks:
       - Sapper static build
   - name: Eslint
     dependencies:
-      - Set up dependencies
+      - Set up frontend dependencies
     task:
       jobs:
         - name: eslint
@@ -68,7 +81,7 @@ blocks:
             - yarn eslint apps/*/src --no-error-on-unmatched-pattern
   - name: Eslint Cypress
     dependencies:
-      - Set up dependencies
+      - Set up frontend dependencies
     task:
       jobs:
         - name: eslint
@@ -105,7 +118,8 @@ blocks:
             - find ./apps/web/__sapper__/
             - cache store sapper-build-$SEMAPHORE_GIT_SHA ./apps/web/__sapper__/
   - name: python packages
-    dependencies: []
+    dependencies:
+      - Set up Python dependencies
     task:
       jobs:
         - name: test python packages
