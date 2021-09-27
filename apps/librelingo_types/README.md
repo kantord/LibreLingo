@@ -60,11 +60,42 @@ AudioSettings(
 )
 ```
 
+<a name="librelingo_types.data_types.HunspellSettings"></a>
+## HunspellSettings Objects
+
+```python
+class HunspellSettings(
+    namedtuple(
+        "HunspellSettings",
+        [
+            "source_language",
+            "target_language",
+        ],
+        defaults=[None, None],
+    ))
+```
+
+Settings for hunspell spell checking
+
+### Usage example:
+
+```python
+HunspellSettings(
+    source_language="en-US",
+    target language="es-ES",
+)
+```
+
 <a name="librelingo_types.data_types.Settings"></a>
 ## Settings Objects
 
 ```python
-class Settings(namedtuple("Settings", ["audio_settings"], defaults=[AudioSettings()]))
+class Settings(
+    namedtuple(
+        "Settings",
+        ["audio_settings", "hunspell"],
+        defaults=[AudioSettings(), HunspellSettings()],
+    ))
 ```
 
 Settings for a course
