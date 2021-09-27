@@ -66,7 +66,7 @@ python-versions = "*"
 
 [[package]]
 name = "charset-normalizer"
-version = "2.0.4"
+version = "2.0.6"
 description = "The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet."
 category = "dev"
 optional = false
@@ -163,6 +163,14 @@ python-versions = "*"
 beautifulsoup4 = "*"
 
 [[package]]
+name = "hunspell"
+version = "0.5.5"
+description = "Module for the Hunspell spellchecker engine"
+category = "main"
+optional = true
+python-versions = "*"
+
+[[package]]
 name = "idna"
 version = "3.2"
 description = "Internationalized Domain Names in Applications (IDNA)"
@@ -196,7 +204,7 @@ url = "../librelingo_fakes"
 
 [[package]]
 name = "librelingo-types"
-version = "3.1.0"
+version = "3.2.0"
 description = "Data types to be used in Python packages for LibreLingo"
 category = "main"
 optional = false
@@ -215,7 +223,7 @@ librelingo-types = ">=3.0.0,<4.0.0"
 
 [[package]]
 name = "librelingo-yaml-loader"
-version = "1.6.0"
+version = "1.7.1"
 description = "Load YAML-based LibreLingo courses in your Python project."
 category = "main"
 optional = false
@@ -233,6 +241,9 @@ python-slugify = ">=4.0.1,<5.0.0"
 pyyaml = ">=5.3.1,<6.0.0"
 slugify = ">=0.0.1,<0.0.2"
 snapshottest = ">=0.6.0,<0.7.0"
+
+[package.extras]
+hunspell = ["hunspell (>=0.5.5,<0.6.0)"]
 
 [[package]]
 name = "markdown"
@@ -593,7 +604,7 @@ python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
 name = "urllib3"
-version = "1.26.6"
+version = "1.26.7"
 description = "HTTP library with thread-safe connection pooling, file post, and more."
 category = "dev"
 optional = false
@@ -639,10 +650,13 @@ category = "main"
 optional = false
 python-versions = "*"
 
+[extras]
+hunspell = ["hunspell"]
+
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "7f1b038ce968d9313abb1c67ff91ab61300910fb04ba6e6564be8abd325f85c5"
+content-hash = "12bab4260e60dd18b21f63ed4006d8f0cb28d3431f1ed70d9789538fe3cbc61a"
 
 [metadata.files]
 atomicwrites = [
@@ -669,8 +683,8 @@ certifi = [
     {file = "certifi-2021.5.30.tar.gz", hash = "sha256:2bbf76fd432960138b3ef6dda3dde0544f27cbf8546c458e60baf371917ba9ee"},
 ]
 charset-normalizer = [
-    {file = "charset-normalizer-2.0.4.tar.gz", hash = "sha256:f23667ebe1084be45f6ae0538e4a5a865206544097e4e8bbcacf42cd02a348f3"},
-    {file = "charset_normalizer-2.0.4-py3-none-any.whl", hash = "sha256:0c8911edd15d19223366a194a513099a302055a962bca2cec0f54b8b63175d8b"},
+    {file = "charset-normalizer-2.0.6.tar.gz", hash = "sha256:5ec46d183433dcbd0ab716f2d7f29d8dee50505b3fdb40c6b985c7c4f5a3591f"},
+    {file = "charset_normalizer-2.0.6-py3-none-any.whl", hash = "sha256:5d209c0a931f215cee683b6445e2d77677e7e75e159f78def0db09d68fafcaa6"},
 ]
 click = [
     {file = "click-7.1.2-py2.py3-none-any.whl", hash = "sha256:dacca89f4bfadd5de3d7489b7c8a566eee0d3676333fbb50030263894c38c0dc"},
@@ -734,6 +748,9 @@ fastdiff = [
 html2markdown = [
     {file = "html2markdown-0.1.7.tar.gz", hash = "sha256:92baf932c7f216be6d9459a191d45b6401e204bda7a5413febafa875512cfa8c"},
 ]
+hunspell = [
+    {file = "hunspell-0.5.5.tar.gz", hash = "sha256:0f830b68bd8c392f4d5b4e21c38e28809e14d64ec67bde48272c920b63686f53"},
+]
 idna = [
     {file = "idna-3.2-py3-none-any.whl", hash = "sha256:14475042e284991034cb48e06f6851428fb14c4dc953acd9be9a5e95c7b6dd7a"},
     {file = "idna-3.2.tar.gz", hash = "sha256:467fbad99067910785144ce333826c71fb0e63a425657295239737f7ecd125f3"},
@@ -744,16 +761,16 @@ iniconfig = [
 ]
 librelingo-fakes = []
 librelingo-types = [
-    {file = "librelingo_types-3.1.0-py3-none-any.whl", hash = "sha256:b04d791022d1db5a5d4c90075321d990c9ef9e965d6c1df0fa942c9bd07b32be"},
-    {file = "librelingo_types-3.1.0.tar.gz", hash = "sha256:7c8e2b8c2f86bf37654819d0fbc45d6f78803674a3613183aa822cc5b2073fe4"},
+    {file = "librelingo_types-3.2.0-py3-none-any.whl", hash = "sha256:bc15aa2e055ce407b883ad99b34ab6d8bcf48a13764f82685cc0f2ae9318f785"},
+    {file = "librelingo_types-3.2.0.tar.gz", hash = "sha256:03edbf293d953484b74e326001458e9b1d0a0bc0e60e22e71000b2e0e55d44de"},
 ]
 librelingo-utils = [
     {file = "librelingo_utils-2.5.0-py3-none-any.whl", hash = "sha256:cab92ebac06d9d47ea23604debdd6b1b3b96d3458a5db3c7e1ed3b91af122c6a"},
     {file = "librelingo_utils-2.5.0.tar.gz", hash = "sha256:32c241f51480d7930cb6375633d1224a51a301c0fc1c419fd89b566801640f25"},
 ]
 librelingo-yaml-loader = [
-    {file = "librelingo_yaml_loader-1.6.0-py3-none-any.whl", hash = "sha256:6ec3a5b4cc83546c0ca86f9acdeba653d3325ede7888c7c33a13ad7f47f83a38"},
-    {file = "librelingo_yaml_loader-1.6.0.tar.gz", hash = "sha256:6445b5ec177ef6fc1fbc09f65c6ccabd3f9f2e88556c07069825c049d443de86"},
+    {file = "librelingo_yaml_loader-1.7.1-py3-none-any.whl", hash = "sha256:886b3930f15080e1568b2671b1cad74be75cf156666eb4628ce9da95d279b6a2"},
+    {file = "librelingo_yaml_loader-1.7.1.tar.gz", hash = "sha256:bc84dbd6b10e04761a2475d89e74b9bfc219ea58d8de11545792dcb7cf9e2393"},
 ]
 markdown = [
     {file = "Markdown-3.3.4-py3-none-any.whl", hash = "sha256:96c3ba1261de2f7547b46a00ea8463832c921d3f9d6aba3f255a6f71386db20c"},
@@ -890,8 +907,8 @@ toml = [
     {file = "toml-0.10.2.tar.gz", hash = "sha256:b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f"},
 ]
 urllib3 = [
-    {file = "urllib3-1.26.6-py2.py3-none-any.whl", hash = "sha256:39fb8672126159acb139a7718dd10806104dec1e2f0f6c88aab05d17df10c8d4"},
-    {file = "urllib3-1.26.6.tar.gz", hash = "sha256:f57b4c16c62fa2760b7e3d97c35b255512fb6b59a259730f36ba32ce9f8e342f"},
+    {file = "urllib3-1.26.7-py2.py3-none-any.whl", hash = "sha256:c4fdf4019605b6e5423637e01bc9fe4daef873709a7973e195ceba0a62bbc844"},
+    {file = "urllib3-1.26.7.tar.gz", hash = "sha256:4987c65554f7a2dbf30c18fd48778ef124af6fab771a377103da0585e2336ece"},
 ]
 wasmer = [
     {file = "wasmer-1.0.0-cp36-cp36m-macosx_10_7_x86_64.whl", hash = "sha256:0d755a93184380f9785e1f8269b070f4a4a3285ae0f7f9571cfaf2ea215b102d"},
