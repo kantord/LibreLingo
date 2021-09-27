@@ -14,6 +14,7 @@ from librelingo_types import (
     Settings,
     AudioSettings,
     TextToSpeechSettings,
+    HunspellSettings,
 )
 import markdown
 from yaml import safe_load
@@ -21,12 +22,14 @@ from yaml.constructor import SafeConstructor
 
 import html2markdown  # type: ignore
 
+hunspell = None
+
 
 def add_bool(self, node):
     return self.construct_scalar(node)
 
 
-SafeConstructor.add_constructor(u"tag:yaml.org,2002:bool", add_bool)
+SafeConstructor.add_constructor("tag:yaml.org,2002:bool", add_bool)
 
 
 def _load_yaml(path):
@@ -228,6 +231,27 @@ def _load_introduction(path):
         return None
 
 
+def _run_skill_spellcheck(phrases, words, course):
+    if not course.settings:
+        return
+
+    if not course.settings.hunspell:
+        return
+
+    for word in words:
+        for variant in word.in_source_language:
+            if not course.settings.hunspell.source_language.spell(variant):
+                raise RuntimeError(
+                    f'The {course.source_language.name} word "{variant}" is misspelled.'
+                )
+
+        for variant in word.in_target_language:
+            if not course.settings.hunspell.target_language.spell(variant):
+                raise RuntimeError(
+                    f'The {course.target_language.name} word "{variant}" is misspelled.'
+                )
+
+
 def _load_skill(path, course):
     try:
         data = _load_yaml(path)
@@ -261,6 +285,8 @@ def _load_skill(path, course):
         words = _convert_words(words)
     except TypeError:
         raise RuntimeError('Skill file "{}" has an invalid word'.format(path))
+
+    _run_skill_spellcheck(phrases, words, course)
 
     return Skill(
         name=name,
@@ -371,7 +397,35 @@ def _convert_audio_settings(raw_settings):
     )
 
 
-def _convert_settings(data):
+def _convert_hunspell_settings_for_language(raw_language_name):
+    language_code = raw_language_name.replace("-", "_")
+
+    # Only import hunspell if actually needed. Still allow mocking it.
+    global hunspell
+    if not hunspell:
+        import hunspell
+
+    return hunspell.HunSpell(
+        f"/usr/share/hunspell/{language_code}.dic",
+        f"/usr/share/hunspell/{language_code}.aff",
+    )
+
+
+def _convert_hunspell_settings(raw_settings, course):
+    if "Hunspell" not in raw_settings:
+        return None
+
+    return HunspellSettings(
+        source_language=_convert_hunspell_settings_for_language(
+            raw_settings["Hunspell"][course.source_language.name]
+        ),
+        target_language=_convert_hunspell_settings_for_language(
+            raw_settings["Hunspell"][course.target_language.name]
+        ),
+    )
+
+
+def _convert_settings(data, course):
     if "Settings" not in data:
         return Settings()
 
@@ -379,6 +433,7 @@ def _convert_settings(data):
 
     return Settings(
         audio_settings=_convert_audio_settings(raw_settings),
+        hunspell=_convert_hunspell_settings(raw_settings, course),
     )
 
 
@@ -396,7 +451,7 @@ def load_course(path):
         special_characters=course["Special characters"],
         dictionary=[],
         modules=[],
-        settings=_convert_settings(data),
+        settings=None,
         repository_url=course["Repository"],
     )
     modules = _load_modules(path, raw_modules, dumb_course)
@@ -404,6 +459,7 @@ def load_course(path):
     return Course(
         **{
             **dumb_course._asdict(),
+            "settings": _convert_settings(data, dumb_course),
             "dictionary": _load_dictionary(modules),
             "modules": modules,
         }
