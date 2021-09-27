@@ -55,7 +55,39 @@ class AudioSettings(
     pass
 
 
-class Settings(namedtuple("Settings", ["audio_settings"], defaults=[AudioSettings()])):
+class HunspellSettings(
+    namedtuple(
+        "HunspellSettings",
+        [
+            "source_language",
+            "target_language",
+        ],
+        defaults=[None, None],
+    )
+):
+    """
+    Settings for hunspell spell checking
+
+    ### Usage example:
+
+    ```python
+    HunspellSettings(
+        source_language="en-US",
+        target language="es-ES",
+    )
+    ```
+    """
+
+    pass
+
+
+class Settings(
+    namedtuple(
+        "Settings",
+        ["audio_settings", "hunspell"],
+        defaults=[AudioSettings(), HunspellSettings()],
+    )
+):
     """
     Settings for a course
 
