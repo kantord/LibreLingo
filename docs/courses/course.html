@@ -6,9 +6,9 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.2.2, mkdocs-material-7.2.6" name="generator"/>
+<meta content="mkdocs-1.2.2, mkdocs-material-7.3.0" name="generator"/>
 <title>LibreLingo Documentation on Course - LibreLingo Documentation</title>
-<link href="../assets/stylesheets/main.802231af.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.8b42a75e.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.3f5d1f46.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
@@ -154,8 +154,8 @@
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" id="__nav_8" type="checkbox"/>
 <label class="md-nav__link" for="__nav_8">
-        Courses
-        <span class="md-nav__icon md-icon"></span>
+          Courses
+          <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-label="Courses" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_8">
@@ -203,6 +203,15 @@
 <a class="md-nav__link" href="#data-breakdown">
     Data breakdown
   </a>
+<nav aria-label="Data breakdown" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#automated-spell-checker">
+    Automated spell checker
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -262,6 +271,15 @@
 <a class="md-nav__link" href="#data-breakdown">
     Data breakdown
   </a>
+<nav aria-label="Data breakdown" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#automated-spell-checker">
+    Automated spell checker
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -370,6 +388,27 @@ Modules:
   - <code>License &gt; Link</code>: URL to reach to the full text of the license. e.g. <code>https://creativecommons.org/licenses/by-sa/4.0/legalcode</code>
 - <code>Special characters</code>: An array of special characters that might not be present on a typical English keyboard.</p>
 <p><strong><code>Modules</code></strong> has a list of module directory names followed by a <code>/</code>.</p>
+<p><a id="spell-checker"></a></p>
+<h4 id="automated-spell-checker">Automated spell checker</h4>
+<p>To avoid mistakes, you can enable automatic spell checking in your course. Automatic spell checking won't let you export
+a course if it has spelling mistakes. This can prevent incorrect changes from being merged into your course.</p>
+<p>The spell checker is implemneted using Hunspell. In order to use it, you need to have Hunspell installed on your
+computer.</p>
+<p>To install Hunspell, follow the instructions of your operating system. On Ubuntu, you can install Hunspell like so:</p>
+<pre><code class="language-bash">sudo apt-get update -y
+sudo apt-get install -y hunspell
+</code></pre>
+<p>Don't forget to also install a dictionary for the languages that you use in your course. Here's a list of 
+dictionary packages available on Ubuntu: https://packages.ubuntu.com/bionic/hunspell-dictionary</p>
+<p>In order to enable Hunspell in your course, add the following section to your <code>course.yaml</code>:</p>
+<pre><code class="language-yaml">Settings:
+  Hunspell:
+    German: de  # replace with the langauge code for your language
+    English: en-US  # replace with the langauge code for your language
+</code></pre>
+<p>Keep in mind that you also need to have the <code>hunspell</code> Python package installed. To install it, just run:</p>
+<pre><code class="language-bash">pip install hunspell
+</code></pre>
 </article>
 </div>
 </div>
@@ -407,10 +446,11 @@ Modules:
 <div class="md-footer-meta__inner md-grid">
 <div class="md-footer-copyright">
         
-        Made with
-        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
-          Material for MkDocs
-        </a>
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+            Material for MkDocs
+          </a>
 </div>
 </div>
 </div>
@@ -419,7 +459,7 @@ Modules:
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
-<script src="../assets/javascripts/bundle.756773cc.min.js"></script>
+<script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.f8263e09.min.js", "version": null}</script>
+<script src="../assets/javascripts/bundle.4fc53ad4.min.js"></script>
 </body>
 </html>
