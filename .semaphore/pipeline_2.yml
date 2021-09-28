@@ -13,11 +13,11 @@ blocks:
             - sem-version node 12
             - sem-version python 3.9
             - checkout
-            - pip install poetry
             - sudo apt-get update
             - sudo apt-get install -y hunspell
-            - cd apps/librelingo_json_export/ && poetry install --extras hunspell && cd -
+            - pip install poetry
             - poetry install --no-interaction
+            - cd apps/librelingo_json_export/ && poetry install --extras hunspell && cd -
             - cache restore node-$(checksum yarn.lock)
             - cache restore packages-web-$(checksum yarn.lock)
             - 'NODE_ENV=production yarn export:production'
