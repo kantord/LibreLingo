@@ -1,8 +1,10 @@
 import os
 import random
+import re
+from librelingo_types.data_types import Settings
 import pytest
 from pathlib import Path
-from unittest.mock import patch
+from unittest.mock import Mock, patch
 from unittest import TestCase
 from pyfakefs.fake_filesystem_unittest import TestCase as FakeFsTestCase  # type: ignore
 from librelingo_types import (
@@ -15,6 +17,7 @@ from librelingo_types import (
     Language,
     DictionaryItem,
     TextToSpeechSettings,
+    HunspellSettings,
 )
 from librelingo_yaml_loader.yaml_loader import (
     load_course,
@@ -114,7 +117,7 @@ class TestLoadCourseMeta(YamlImportTestCase):
             self.fake_path,
             **{
                 **self.fake_values,
-            }
+            },
         )
         self.result = load_course(self.fake_path)
 
@@ -149,6 +152,9 @@ class TestLoadCourseMeta(YamlImportTestCase):
 
     def test_returns_correct_license(self):
         assert self.result.license == self.convert_license.return_value
+
+    def test_returns_empty_hunspell_list(self):
+        assert self.result.settings.hunspell == HunspellSettings()
 
     def test_calls_convert_license_with_correct_argumetns(self):
         self.convert_license.assert_called_with(
@@ -223,6 +229,68 @@ class TestLoadCourseMeta(YamlImportTestCase):
             self.result.settings.audio_settings.text_to_speech_settings_list
         )
         assert tts_settings_list == []
+
+    @patch("librelingo_yaml_loader._spelling.hunspell")
+    def test_creates_correct_hunspell_settings_1(self, hunspell):
+        self._append_settings_to_file(
+            """
+    Settings:
+        Hunspell:
+            "{target_language_name}": en-US
+            "{source_language_name}": es-ES
+        """.format(
+                target_language_name=self.fake_values["target_language_name"],
+                source_language_name=self.fake_values["source_language_name"],
+            )
+        )
+
+        self.result = load_course(self.fake_path)
+        hunspell.HunSpell.assert_called_with(
+            "/usr/share/hunspell/en_US.dic", "/usr/share/hunspell/en_US.aff"
+        )
+
+    @patch("librelingo_yaml_loader._spelling.hunspell")
+    def test_creates_correct_hunspell_settings_2(self, hunspell):
+        self._append_settings_to_file(
+            """
+    Settings:
+        Hunspell:
+            "{target_language_name}": hu-HU
+            "{source_language_name}": es-ES
+        """.format(
+                target_language_name=self.fake_values["target_language_name"],
+                source_language_name=self.fake_values["source_language_name"],
+            )
+        )
+
+        self.result = load_course(self.fake_path)
+        hunspell.HunSpell.assert_called_with(
+            "/usr/share/hunspell/hu_HU.dic", "/usr/share/hunspell/hu_HU.aff"
+        )
+
+    @patch("librelingo_yaml_loader._spelling.hunspell")
+    def test_returns_correct_hunspell_settings(self, hunspell):
+        self._append_settings_to_file(
+            """
+    Settings:
+        Hunspell:
+            "{target_language_name}": hu-HU
+            "{source_language_name}": es-ES
+        """.format(
+                target_language_name=self.fake_values["target_language_name"],
+                source_language_name=self.fake_values["source_language_name"],
+            )
+        )
+
+        self.result = load_course(self.fake_path)
+        assert (
+            self.result.settings.hunspell.target_language
+            == hunspell.HunSpell.return_value
+        )
+        assert (
+            self.result.settings.hunspell.source_language
+            == hunspell.HunSpell.return_value
+        )
 
     def test_returns_correct_settings_audio_enabled_no_tts(self):
         self._append_settings_to_file(
@@ -427,7 +495,7 @@ class TestLoadModuleMeta(YamlImportTestCase):
             self.fake_path,
             **{
                 **self.fake_values,
-            }
+            },
         )
         self.result = _load_module(self.fake_path, fakes.course1)
 
@@ -555,6 +623,9 @@ Mini-dictionary:
         self.convert_phrases = self.create_patch(
             "librelingo_yaml_loader.yaml_loader._convert_phrases"
         )
+        self._run_skill_spellcheck = self.create_patch(
+            "librelingo_yaml_loader.yaml_loader._run_skill_spellcheck"
+        )
 
     def call_function(self):
         self.fake_path = self.fake_path / "skills"
@@ -563,7 +634,7 @@ Mini-dictionary:
             self.fake_path,
             **{
                 **self.fake_values,
-            }
+            },
         )
 
         with open(self.fake_path / "food.md", "w") as f:
@@ -1046,3 +1117,138 @@ def test_convert_phrase_complains_about_missing_translation():
     expected_error = 'Phrase "{}" needs to have a "Translation".'.format(randomPhrase)
     with pytest.raises(RuntimeError, match=expected_error):
         _convert_phrase({"Phrase": randomPhrase})
+
+
+@patch("librelingo_yaml_loader.yaml_loader._load_yaml")
+def test_load_skill_complains_about_misspelled_word_in_source_language(load_yaml):
+    randomPath = str(random.randint(0, 1000))
+    fake_word_value = str(fakes.fake_value())
+    load_yaml.return_value = {
+        "Skill": {"Name": "asd", "Id": 32423423},
+        "Phrases": [],
+        "New words": [
+            {
+                "Translation": fake_word_value,
+                "Word": "ola",
+            }
+        ],
+    }
+    fake_hunspell = Mock()
+    fake_hunspell.spell.return_value = False
+    fake_course = fakes.customize(
+        fakes.course1,
+        source_language=Language(fakes.fake_value(), fakes.fake_value),
+        settings=Settings(
+            hunspell=HunspellSettings(
+                source_language=fake_hunspell,
+                target_language=Mock(),
+            )
+        ),
+    )
+    expected_error = re.escape(
+        f'The {fake_course.source_language.name} word "{fake_word_value}" is misspelled.'
+    )
+    with pytest.raises(RuntimeError, match=expected_error):
+        _load_skill(randomPath, fake_course)
+
+
+@patch("librelingo_yaml_loader.yaml_loader._load_yaml")
+def test_load_skill_complains_about_misspelled_word_in_target_language(load_yaml):
+    randomPath = str(random.randint(0, 1000))
+    fake_word_value_simple = str(fakes.fake_value())
+    fake_word_value = f"the {fake_word_value_simple}"
+    load_yaml.return_value = {
+        "Skill": {"Name": "asd", "Id": 32423423},
+        "Phrases": [],
+        "New words": [
+            {
+                "Translation": "le asd",
+                "Word": fake_word_value,
+            }
+        ],
+    }
+    fake_hunspell = Mock()
+    fake_hunspell.spell = lambda word: False if word == fake_word_value_simple else True
+    fake_course = fakes.customize(
+        fakes.course1,
+        source_language=Language(fakes.fake_value(), fakes.fake_value),
+        settings=Settings(
+            hunspell=HunspellSettings(
+                source_language=Mock(),
+                target_language=fake_hunspell,
+            )
+        ),
+    )
+    expected_error = re.escape(
+        f'The {fake_course.target_language.name} word "{fake_word_value}" is misspelled.'
+    )
+    with pytest.raises(RuntimeError, match=expected_error):
+        _load_skill(randomPath, fake_course)
+
+
+@patch("librelingo_yaml_loader.yaml_loader._load_yaml")
+def test_load_skill_complains_about_misspelled_phrase_in_target_language(load_yaml):
+    randomPath = str(random.randint(0, 1000))
+    fake_word = str(fakes.fake_value())
+    fake_phrase = f"the {fake_word} foo bar"
+    load_yaml.return_value = {
+        "Skill": {"Name": "asd", "Id": 32423423},
+        "Phrases": [
+            {
+                "Phrase": fake_phrase,
+                "Translation": "foo bar",
+            }
+        ],
+        "New words": [],
+    }
+    fake_hunspell = Mock()
+    fake_hunspell.spell = lambda word: False if word == fake_word else True
+    fake_course = fakes.customize(
+        fakes.course1,
+        source_language=Language(fakes.fake_value(), fakes.fake_value),
+        settings=Settings(
+            hunspell=HunspellSettings(
+                source_language=Mock(),
+                target_language=fake_hunspell,
+            )
+        ),
+    )
+    expected_error = re.escape(
+        f'The {fake_course.target_language.name} phrase "{fake_phrase}" is misspelled. The word "{fake_word}" is unknown.'
+    )
+    with pytest.raises(RuntimeError, match=expected_error):
+        _load_skill(randomPath, fake_course)
+
+
+@patch("librelingo_yaml_loader.yaml_loader._load_yaml")
+def test_load_skill_complains_about_misspelled_phrase_in_source_language(load_yaml):
+    randomPath = str(random.randint(0, 1000))
+    fake_word = str(fakes.fake_value())
+    fake_phrase = f"the {fake_word} foo bar"
+    load_yaml.return_value = {
+        "Skill": {"Name": "asd", "Id": 32423423},
+        "Phrases": [
+            {
+                "Translation": fake_phrase,
+                "Phrase": "foo bar",
+            }
+        ],
+        "New words": [],
+    }
+    fake_hunspell = Mock()
+    fake_hunspell.spell = lambda word: False if word == fake_word else True
+    fake_course = fakes.customize(
+        fakes.course1,
+        source_language=Language(fakes.fake_value(), fakes.fake_value),
+        settings=Settings(
+            hunspell=HunspellSettings(
+                source_language=fake_hunspell,
+                target_language=Mock(),
+            )
+        ),
+    )
+    expected_error = re.escape(
+        f'The {fake_course.source_language.name} phrase "{fake_phrase}" is misspelled. The word "{fake_word}" is unknown.'
+    )
+    with pytest.raises(RuntimeError, match=expected_error):
+        _load_skill(randomPath, fake_course)
