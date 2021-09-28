@@ -1,0 +1,46 @@
+Skill:
+  Id: 49bdd5c6-6ca3-11eb-9439-0242ac140002
+  Name: Basic 1
+  Thumbnails:
+    - people1
+    - woman1
+    - man1
+
+New words:
+  - Word: mart
+    Translation: man
+    Images:
+      - man1
+      - man2
+      - man3
+
+  - Word: zan
+    Translation: woman
+    Also accepted:
+      - wife
+    Images:
+      - woman1
+      - woman2
+      - woman3
+
+Phrases:
+  - Phrase: zan nipišt
+    Translation: The woman wrote
+  - Phrase: mart nipišt
+    Translation: The man wrote
+
+Mini-dictionary:
+  Middle Persian:
+    - mart:
+      - man
+      - the man
+    - zan:
+      - woman
+      - the woman
+    - nipišt: wrote
+
+  English:
+    - wrote: nipišt
+    - man: mart
+    - woman: zan
+    - the: [no translation]

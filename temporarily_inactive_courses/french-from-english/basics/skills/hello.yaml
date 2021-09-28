@@ -1,0 +1,65 @@
+Skill:
+  Id: 33bfee7d-de74-4362-bf15-ce165add2dc8
+  Name: Hello
+  Thumbnails:
+    - people1
+    - woman1
+    - man1
+
+New words:
+  - Word: l'homme
+    Translation: the man
+    Images:
+      - man1
+      - man2
+      - man3
+
+  - Word: la femme
+    Synonyms:
+      - la dame
+    Translation: the woman
+    Also accepted:
+      - the female
+    Images:
+      - woman1
+      - woman2
+      - woman3
+
+Phrases:
+  - Phrase: La femme dit bonjour
+    Alternative versions:
+      - la femme dit salut
+    Translation: The woman says hello
+    Alternative translations:
+      - The woman says hi
+
+  - Phrase: L'homme dit bonjour
+    Alternative versions:
+      - L'homme dit salut
+    Translation: The man says hello
+    Alternative translations:
+      - The man says hi
+
+Mini-dictionary:
+  French:
+    - dit: says
+    - bonjour:
+      - hello
+      - hi
+    - L'homme: the man
+    - La: the
+    - femme: woman
+
+  English:
+    - says: dit
+    - hello:
+      - bonjour
+      - salut
+    - The:
+      - le
+      - la
+    - the:
+      - le
+      - la
+    - woman: femme
+    - man: homme
