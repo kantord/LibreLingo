@@ -111,3 +111,38 @@ Modules:
 - `Special characters`: An array of special characters that might not be present on a typical English keyboard.
 
 **`Modules`** has a list of module directory names followed by a `/`.
+
+<a id="spell-checker"></a>
+#### Automated spell checker
+
+To avoid mistakes, you can enable automatic spell checking in your course. Automatic spell checking won't let you export
+a course if it has spelling mistakes. This can prevent incorrect changes from being merged into your course.
+
+The spell checker is implemneted using Hunspell. In order to use it, you need to have Hunspell installed on your
+computer.
+
+To install Hunspell, follow the instructions of your operating system. On Ubuntu, you can install Hunspell like so:
+
+```bash
+sudo apt-get update -y
+sudo apt-get install -y hunspell
+```
+
+Don't forget to also install a dictionary for the languages that you use in your course. Here's a list of 
+dictionary packages available on Ubuntu: https://packages.ubuntu.com/bionic/hunspell-dictionary
+
+In order to enable Hunspell in your course, add the following section to your `course.yaml`:
+
+```yaml
+Settings:
+  Hunspell:
+    German: de  # replace with the langauge code for your language
+    English: en-US  # replace with the langauge code for your language
+```
+
+Keep in mind that you also need to have the `hunspell` Python package installed. To install it, just run:
+
+```bash
+pip install hunspell
+```
+
