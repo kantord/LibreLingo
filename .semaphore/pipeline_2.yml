@@ -14,7 +14,7 @@ blocks:
             - sem-version python 3.9
             - checkout
             - sudo apt-get update
-            - sudo apt-get install -y hunspell
+            - sudo apt-get install -y hunspell libhunspell-dev
             - pip install poetry
             - poetry install --no-interaction
             - cd apps/librelingo_json_export/ && poetry install --extras hunspell && cd -
