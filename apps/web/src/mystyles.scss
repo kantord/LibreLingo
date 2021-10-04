@@ -58,6 +58,8 @@
 
 @import "~bulmaswatch/lumen/overrides.scss";
 
+/* TODO: Plobably after PR this root elements will be removed */
+
 :root {
     --spacing-small: 8px;
     --spacing-medium: 12px;
