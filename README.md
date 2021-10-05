@@ -343,7 +343,7 @@ The mascot is designed by [@almostdesigner](https://github.com/almostdesigner).
 ## Contributors ✨
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-67-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-68-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
@@ -438,6 +438,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/Poslovitch"><img src="https://avatars.githubusercontent.com/u/20014332?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Florian CUNY</b></sub></a><br /><a href="#ideas-Poslovitch" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/uberstar100"><img src="https://avatars.githubusercontent.com/u/59891590?v=4?s=100" width="100px;" alt=""/><br /><sub><b>uberstar100</b></sub></a><br /><a href="#ideas-uberstar100" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/gdomingu"><img src="https://avatars.githubusercontent.com/u/4443635?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gabe D</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/issues?q=author%3Agdomingu" title="Bug reports">🐛</a> <a href="https://github.com/kantord/LibreLingo/commits?author=gdomingu" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/EkaterinaMozheiko"><img src="https://avatars.githubusercontent.com/u/15523524?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ekaterina Mozheiko</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/commits?author=EkaterinaMozheiko" title="Code">💻</a></td>
   </tr>
 </table>
 
