@@ -85,7 +85,7 @@
 {#if isBrowser() !== true}
   <div class="pageloader is-active"><span class="title">LibreLingo</span></div>
 {/if}
-<!-- Plase advice where you need to apply the styles to body or here in main  -->
+
 <main style="{theme}">
   <slot />
 </main>
