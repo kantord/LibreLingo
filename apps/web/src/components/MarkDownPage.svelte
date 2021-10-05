@@ -43,7 +43,7 @@
 
 <NavBar />
 
-<section class="hero is-primary">
+<section class="hero is-primary md-page">
   <div class="hero-body">
     <div class="container">
       <h1 class="title">{title}</h1>
