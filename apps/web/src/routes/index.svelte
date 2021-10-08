@@ -85,7 +85,7 @@
               </Hidden>
 
               <Button style="primary" href="https://librelingo.app/docs/">
-                <Translate key="index.development_docs">
+                <Translate key="index.development_docs_english_only">
                   Development documentation
                 </Translate>
               </Button>
