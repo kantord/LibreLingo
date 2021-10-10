@@ -321,7 +321,7 @@ def _load_module(path, course):
 
 def _load_modules(path, modules, course):
     """
-    Load each YAML module specifed in the list
+    Load each YAML module specified in the list
     """
     return [_load_module(Path(path) / module, course) for module in modules]
 
