@@ -4,7 +4,7 @@
       const markdown = await import("remark-parse")
       const html = await import("rehype-stringify")
       const remark2rehype = await import("remark-rehype")
-      const format = await import("rehype-format")
+      const format = import("rehype-format")
 
       return (
           await remark.default()
