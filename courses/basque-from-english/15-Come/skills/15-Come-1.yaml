@@ -53,8 +53,8 @@ Phrases:
   - Phrase: Nondik dator irakaslea?
     Translation: Where is the teacher coming from?
 
-  - Phrase: Irakaslea gaur Gasteizetik dator
-    Translation: The teacher is coming from Victoria today.
+  - Phrase: Medikua gaur Gasteizetik dator
+    Translation: The doctor is coming from Victoria today.
 
   - Phrase: Gu mendietatik gatoz gaur goizean.
     Alternative versions:
@@ -128,7 +128,7 @@ Mini-dictionary:
     - ahizpa: sister of a sister
     - ahizparen: sister’s
     - ahuntzak: goats
-    - aiton-amonak: grandparents
+    - aitona-amonak: grandparents
     - aiton: grandfather
     - aitona: grandfather
     - aitonaren: grandfather’s
@@ -693,7 +693,7 @@ Mini-dictionary:
     - gray: gris
     - grandchildren: bilobak
     - granddaughter: biloba
-    - grandparents: aiton-amonak
+    - grandparents: aitona-amonak
     - grandfather: aiton
     - grandfather: aitona
     - grandfather’s: aitonaren
@@ -894,7 +894,9 @@ Mini-dictionary:
       - zineten
       - ziren
     - what: zer
-    - where: non
+    - where:
+      - non
+      - nondik (from)
     - when: noiz
     - which: zein
     - white: zuri

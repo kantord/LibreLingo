@@ -48,11 +48,13 @@ Phrases:
      - Atzo nondik zentozen?
     Translation: Where were you coming from yesterday?
 
-  - Phrase: Nondik zetorren irakaslea?
-    Translation: Where was the teacher coming from?
+  - Phrase: Nondik zetorren polizia?
+    Translation: Where was the police officer coming from?
 
-  - Phrase: Irakaslea atzo aireportutik zetorren.
-    Translation: The teacher was coming from the airport yesterday.
+  - Phrase: Erizaina atzo aireportutik zetorren.
+    Translation: The nurse was coming from the airport yesterday.
+    Alternative translations:
+    - A nurse was coming from the airport yesterday.
 
   - Phrase: Gu bankutik gentozen.
     Alternative versions:
@@ -67,8 +69,8 @@ Phrases:
     - Where were you (plural) coming from yesterday?
     - Where were you coming from yesterday?
 
-  - Phrase: Nondik zetozen turistak.
-    Translation: Where were the tourists coming from?
+  - Phrase: Nondik zetozen arrotzak.
+    Translation: Where were the strangers coming from?
 
   - Phrase: Ni eskolatik nentorren.
     Alternative versions:
@@ -96,8 +98,8 @@ Phrases:
   - Phrase: Txakur txiki grisak bankutik zetozen
     Translation: The small, gray dogs were coming from the bank.
 
-  - Phrase: Turistak  tren geltokitik  zetozen
-    Translation: The tourists were coming from the train station.
+  - Phrase: Lagunak tren geltokitik  zetozen
+    Translation: The friends were coming from the train station.
 
 Mini-dictionary:
   Basque:
@@ -126,7 +128,7 @@ Mini-dictionary:
     - ahuntzak: goats
     - aireportua: airport
     - aireportutik: from the airport
-    - aiton-amonak: grandparents
+    - aitona-amonak: grandparents
     - aiton: grandfather
     - aitona: grandfather
     - aitonaren: grandfather’s
@@ -154,6 +156,9 @@ Mini-dictionary:
     - arkatzak: pencils
     - arraina: fish
     - arratsalde: afternoon
+    - arrotz: stranger
+    - arrotza: stranger
+    - arrotzak: strangers
     - arreba: sister of a brother
     - arrebaren: sister’s
     - ateratzen: leave
@@ -397,6 +402,7 @@ Mini-dictionary:
     - laburrak: short
     - laburra: short
     - laguna: friend
+    - lagunak: friends
     - lagunaren: friend’s
     - lagunen: friend’s
     - lagun: friend
@@ -703,6 +709,7 @@ Mini-dictionary:
     - forest: baso
     - France: Francia
     - friend: laguna
+    - friends: lagunak
     - friend’s: lagunen
     - friends’: lagunaren
     - from: part of Ablative case
@@ -721,7 +728,7 @@ Mini-dictionary:
     - gray: gris
     - grandchildren: bilobak
     - granddaughter: biloba
-    - grandparents: aiton-amonak
+    - grandparents: aitona-amonak
     - grandfather: aiton
     - grandfather: aitona
     - grandfather’s: aitonaren
@@ -855,6 +862,8 @@ Mini-dictionary:
     - son’s: semearen
     - small: txiki
     - Spain: Espainia
+    - stranger: arrotz
+    - strangers: arrotzak
     - stay:
       - egoten
       - egongo
@@ -928,7 +937,9 @@ Mini-dictionary:
       - zineten
       - ziren
     - what: zer
-    - where: non
+    - where:
+      - non
+      - nondik (from)
     - when: noiz
     - which: zein
     - white: zuri
