@@ -10468,13 +10468,6 @@ makeerror@1.0.x:
   dependencies:
     tmpl "1.0.x"
 
-map-age-cleaner@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/map-age-cleaner/-/map-age-cleaner-0.2.0.tgz#0196bc278f7244ddeb7ca0cb3df329b06241a44b"
-  integrity sha512-AvxTC6id0fzSf6OyNBTp1syyCuKO7nOJvHgYlhT0Qkkjvk40zZo+av3ayVgXlxnF/DxEzEfY9mMdd7FHsd+wKQ==
-  dependencies:
-    p-defer "^1.0.0"
-
 map-cache@^0.2.2:
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/map-cache/-/map-cache-0.2.2.tgz#c32abd0bd6525d9b051645bb4f26ac5dc98a0dbf"
@@ -11686,11 +11679,6 @@ outpipe@^1.1.0:
   dependencies:
     shell-quote "^1.4.2"
 
-p-defer@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/p-defer/-/p-defer-1.0.0.tgz#9f6eb182f6c9aa8cd743004a7d4f96b196b0fb0c"
-  integrity sha1-n26xgvbJqozXQwBKfU+WsZaw+ww=
-
 p-each-series@^2.1.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/p-each-series/-/p-each-series-2.2.0.tgz#105ab0357ce72b202a8a8b94933672657b5e2a9a"
@@ -11781,12 +11769,11 @@ p-map@^4.0.0:
   dependencies:
     aggregate-error "^3.0.0"
 
-p-memoize@5.0.1:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/p-memoize/-/p-memoize-5.0.1.tgz#302ffb5822374ed9571af11236ecbe82c31e2473"
-  integrity sha512-io7CBCwDA0AjuS3qJgQ9lxQMBLdqdz0nAos/MUkEf+JjVXA6FDnmlq+L5p6AIyvrKXd61vDr54M5pvAgck9vxw==
+p-memoize@6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/p-memoize/-/p-memoize-6.0.1.tgz#786410dcc98d70e1e15cb81de6b38eaad8826e8e"
+  integrity sha512-DG0wxA5fIYor0ypRltebDEZs45ZFRvgztFGv/+glYMdUCIaI9eZKIsNJ2IVihw6LYVUgfhIHtPG5XUgvN+pLtQ==
   dependencies:
-    map-age-cleaner "^0.2.0"
     mimic-fn "^4.0.0"
 
 p-reduce@^2.0.0:
