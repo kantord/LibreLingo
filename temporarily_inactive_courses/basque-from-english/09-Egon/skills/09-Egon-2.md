@@ -16,7 +16,7 @@
 * hemen: here
 * hor: there
 * han: over there
-* Euskal Herrian: in Basque Country
+* Euskal Herrian: Basque Country
 * baso: forest,woods
 * laku: lake
 

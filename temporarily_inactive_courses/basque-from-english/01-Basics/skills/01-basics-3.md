@@ -1,5 +1,4 @@
 # ​Basics 3
-
 ## The NOR/Absolutive case
 *   This lesson continues introducing the main parts of the first case in Basque, the NOR/Absolutive case, which is used with the subject of intransitive verbs (verbs without objects) and the object of transitive verbs(verbs with objects), which will be discussed later.
 
@@ -17,14 +16,12 @@ Also, if the indefinite form of the word ends in an "r", for the Plural forms th
 + Ex: Txakur - txakurrak, but paper - paperak (not paperrak).
 
 ## Plural Pronouns and IZAN (to be)
-
 ### Plural Pronouns
 *   Gura (We)
 *   Zuek (You(plural))
 *   Haiek (They)
 
 ## Izan (to be)
-
 ### Izan declination
 *   The forms of Izan are irregular, and need to be memorized.
     * Gu gara: We are
