@@ -1,0 +1,1883 @@
+{
+  "id": "e8d35ef6e6c9",
+  "levels": 5,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Egun on. Ni aireportutik nator.",
+      "meaningInSourceLanguage": "Good morning. I am coming from the airport.",
+      "id": "010fffdbe094",
+      "priority": 0,
+      "group": "31e0220561bc"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Good",
+          "definition": "on\nonak\nondo"
+        },
+        {
+          "word": "morning.",
+          "definition": "goizean"
+        },
+        {
+          "word": "I",
+          "definition": "ni"
+        },
+        {
+          "word": "am",
+          "definition": "nago (egon)\nnaiz\nnaiz (izan)"
+        },
+        {
+          "word": "coming",
+          "definition": "dator (he/she/it is)\ndatoz (they are)\ngatoz (we are)\ngentozen (We were)\nnator (I am)\nnentorren (I was)\nzatoz (you are)\nzatozte (you(plural) are)\nzentozen (You were)\nzentozten (You (plural) were)\nzetorren (He/she/it was)\nzetozen (They were)"
+        },
+        {
+          "word": "from",
+          "definition": "part of Ablative case"
+        },
+        {
+          "word": "the",
+          "definition": "-a"
+        },
+        {
+          "word": "airport.",
+          "definition": "aireportua"
+        }
+      ],
+      "chips": [
+        "Egun",
+        "on",
+        "Ni",
+        "aireportutik",
+        "nator",
+        "Nor",
+        "Non",
+        "ni",
+        "Jon"
+      ],
+      "solutions": [
+        [
+          "Egun",
+          "on",
+          "Ni",
+          "aireportutik",
+          "nator"
+        ],
+        [
+          "Egun",
+          "on",
+          "Aireportutik",
+          "nator"
+        ]
+      ],
+      "formattedSolution": "Egun on. Ni aireportutik nator.",
+      "id": "4b92ee126d09",
+      "priority": 2,
+      "group": "31e0220561bc"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Egun",
+          "definition": "day"
+        },
+        {
+          "word": "on.",
+          "definition": "good"
+        },
+        {
+          "word": "Ni",
+          "definition": "I\nme"
+        },
+        {
+          "word": "aireportutik",
+          "definition": "from the airport"
+        },
+        {
+          "word": "nator.",
+          "definition": "I am coming"
+        }
+      ],
+      "chips": [
+        "Good",
+        "morning",
+        "I",
+        "am",
+        "coming",
+        "from",
+        "the",
+        "airport",
+        "or",
+        "on",
+        "o",
+        "to",
+        "one",
+        "Jon",
+        "dog"
+      ],
+      "solutions": [
+        [
+          "Good",
+          "morning",
+          "I",
+          "am",
+          "coming",
+          "from",
+          "the",
+          "airport"
+        ]
+      ],
+      "formattedSolution": "Good morning. I am coming from the airport.",
+      "id": "2def48451664",
+      "priority": 2,
+      "group": "31e0220561bc"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Arratsalde on. Zu autobus geltokitik dator?",
+      "meaningInSourceLanguage": "Good Afternoon. Are you coming from the bus station?",
+      "id": "d6c9a0db3bcb",
+      "priority": 0,
+      "group": "a3097afd3a27"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Good",
+          "definition": "on\nonak\nondo"
+        },
+        {
+          "word": "Afternoon.",
+          "definition": "arratsalde"
+        },
+        {
+          "word": "Are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "you",
+          "definition": "zu\nzuek"
+        },
+        {
+          "word": "coming",
+          "definition": "dator (he/she/it is)\ndatoz (they are)\ngatoz (we are)\ngentozen (We were)\nnator (I am)\nnentorren (I was)\nzatoz (you are)\nzatozte (you(plural) are)\nzentozen (You were)\nzentozten (You (plural) were)\nzetorren (He/she/it was)\nzetozen (They were)"
+        },
+        {
+          "word": "from",
+          "definition": "part of Ablative case"
+        },
+        {
+          "word": "the",
+          "definition": "-a"
+        },
+        {
+          "word": "bus",
+          "definition": "austobusa\nautobus\nautobusa"
+        },
+        {
+          "word": "station?",
+          "definition": "geltoki"
+        }
+      ],
+      "chips": [
+        "Arratsalde",
+        "on",
+        "Zu",
+        "autobus",
+        "geltokitik",
+        "dator",
+        "tour",
+        "al",
+        "nator",
+        "gatoz",
+        "datoz"
+      ],
+      "solutions": [
+        [
+          "Arratsalde",
+          "on",
+          "Zu",
+          "autobus",
+          "geltokitik",
+          "dator"
+        ],
+        [
+          "Arratsalde",
+          "on",
+          "Autobus",
+          "geltokitik",
+          "dator"
+        ]
+      ],
+      "formattedSolution": "Arratsalde on. Zu autobus geltokitik dator?",
+      "id": "edb06d333b59",
+      "priority": 2,
+      "group": "a3097afd3a27"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Arratsalde",
+          "definition": "afternoon"
+        },
+        {
+          "word": "on.",
+          "definition": "good"
+        },
+        {
+          "word": "Zu",
+          "definition": "you"
+        },
+        {
+          "word": "autobus",
+          "definition": "bus"
+        },
+        {
+          "word": "geltokitik",
+          "definition": "from the station"
+        },
+        {
+          "word": "dator?",
+          "definition": "He is coming\nIt is coming\nShe is coming"
+        }
+      ],
+      "chips": [
+        "Good",
+        "Afternoon",
+        "Are",
+        "you",
+        "coming",
+        "from",
+        "the",
+        "bus",
+        "station",
+        "son",
+        "Jon",
+        "on",
+        "to",
+        "one",
+        "boy",
+        "You",
+        "or"
+      ],
+      "solutions": [
+        [
+          "Good",
+          "Afternoon",
+          "Are",
+          "you",
+          "coming",
+          "from",
+          "the",
+          "bus",
+          "station"
+        ]
+      ],
+      "formattedSolution": "Good Afternoon. Are you coming from the bus station?",
+      "id": "7336941bd87d",
+      "priority": 2,
+      "group": "a3097afd3a27"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Apaiza zinematik dator.",
+      "meaningInSourceLanguage": "The priest is coming from the movie theater.",
+      "id": "592649f9c622",
+      "priority": 0,
+      "group": "d47e894ac834"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "The",
+          "definition": "-a"
+        },
+        {
+          "word": "priest",
+          "definition": "apaiz\napaiza\napiza"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "coming",
+          "definition": "dator (he/she/it is)\ndatoz (they are)\ngatoz (we are)\ngentozen (We were)\nnator (I am)\nnentorren (I was)\nzatoz (you are)\nzatozte (you(plural) are)\nzentozen (You were)\nzentozten (You (plural) were)\nzetorren (He/she/it was)\nzetozen (They were)"
+        },
+        {
+          "word": "from",
+          "definition": "part of Ablative case"
+        },
+        {
+          "word": "the",
+          "definition": "-a"
+        },
+        {
+          "word": "movie",
+          "definition": "filma"
+        },
+        {
+          "word": "theater.",
+          "definition": "antzerkia\nzinema"
+        }
+      ],
+      "chips": [
+        "Apaiza",
+        "zinematik",
+        "dator",
+        "nator",
+        "naiz"
+      ],
+      "solutions": [
+        [
+          "Apaiza",
+          "zinematik",
+          "dator"
+        ]
+      ],
+      "formattedSolution": "Apaiza zinematik dator.",
+      "id": "f3a95cd64981",
+      "priority": 2,
+      "group": "d47e894ac834"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Apaiza",
+          "definition": "priest\nthe priest"
+        },
+        {
+          "word": "zinematik",
+          "definition": "from the cinema\nfrom the movie theater"
+        },
+        {
+          "word": "dator.",
+          "definition": "He is coming\nIt is coming\nShe is coming"
+        }
+      ],
+      "chips": [
+        "The",
+        "priest",
+        "is",
+        "coming",
+        "from",
+        "the",
+        "movie",
+        "theater",
+        "lie",
+        "one",
+        "are",
+        "She",
+        "me",
+        "it",
+        "hee"
+      ],
+      "solutions": [
+        [
+          "The",
+          "priest",
+          "is",
+          "coming",
+          "from",
+          "the",
+          "movie",
+          "theater"
+        ],
+        [
+          "The",
+          "priest",
+          "is",
+          "coming",
+          "from",
+          "the",
+          "cinema"
+        ],
+        [
+          "A",
+          "priest",
+          "is",
+          "coming",
+          "from",
+          "the",
+          "cinema"
+        ],
+        [
+          "A",
+          "priest",
+          "is",
+          "coming",
+          "from",
+          "the",
+          "movie",
+          "theater"
+        ]
+      ],
+      "formattedSolution": "The priest is coming from the movie theater.",
+      "id": "124b77b860aa",
+      "priority": 2,
+      "group": "d47e894ac834"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Arratsalde on. Gu tren geltokitik gatoz.",
+      "meaningInSourceLanguage": "Good Afternoon. We are coming from the train station.",
+      "id": "333a48223cf0",
+      "priority": 0,
+      "group": "6db3a3e3a0a0"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Good",
+          "definition": "on\nonak\nondo"
+        },
+        {
+          "word": "Afternoon.",
+          "definition": "arratsalde"
+        },
+        {
+          "word": "We",
+          "definition": "gu"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "coming",
+          "definition": "dator (he/she/it is)\ndatoz (they are)\ngatoz (we are)\ngentozen (We were)\nnator (I am)\nnentorren (I was)\nzatoz (you are)\nzatozte (you(plural) are)\nzentozen (You were)\nzentozten (You (plural) were)\nzetorren (He/she/it was)\nzetozen (They were)"
+        },
+        {
+          "word": "from",
+          "definition": "part of Ablative case"
+        },
+        {
+          "word": "the",
+          "definition": "-a"
+        },
+        {
+          "word": "train",
+          "definition": "tren"
+        },
+        {
+          "word": "station.",
+          "definition": "geltoki"
+        }
+      ],
+      "chips": [
+        "Arratsalde",
+        "on",
+        "Gu",
+        "tren",
+        "geltokitik",
+        "gatoz",
+        "al",
+        "t",
+        "bat",
+        "ere",
+        "eta"
+      ],
+      "solutions": [
+        [
+          "Arratsalde",
+          "on",
+          "Gu",
+          "tren",
+          "geltokitik",
+          "gatoz"
+        ],
+        [
+          "Arratsalde",
+          "on",
+          "Tren",
+          "geltokitik",
+          "gatoz"
+        ]
+      ],
+      "formattedSolution": "Arratsalde on. Gu tren geltokitik gatoz.",
+      "id": "3da6f62015e5",
+      "priority": 2,
+      "group": "6db3a3e3a0a0"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Arratsalde",
+          "definition": "afternoon"
+        },
+        {
+          "word": "on.",
+          "definition": "good"
+        },
+        {
+          "word": "Gu",
+          "definition": "we"
+        },
+        {
+          "word": "tren",
+          "definition": "train"
+        },
+        {
+          "word": "geltokitik",
+          "definition": "from the station"
+        },
+        {
+          "word": "gatoz.",
+          "definition": "We are coming"
+        }
+      ],
+      "chips": [
+        "Good",
+        "Afternoon",
+        "We",
+        "are",
+        "coming",
+        "from",
+        "the",
+        "train",
+        "station",
+        "on",
+        "ten",
+        "son",
+        "to",
+        "Jon",
+        "thin",
+        "one",
+        "Are"
+      ],
+      "solutions": [
+        [
+          "Good",
+          "Afternoon",
+          "We",
+          "are",
+          "coming",
+          "from",
+          "the",
+          "train",
+          "station"
+        ]
+      ],
+      "formattedSolution": "Good Afternoon. We are coming from the train station.",
+      "id": "e5085904aceb",
+      "priority": 2,
+      "group": "6db3a3e3a0a0"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Kaixo. Zuek bankutik etortzen al zatozte?",
+      "meaningInSourceLanguage": "Hello. Are you all coming from the bank?",
+      "id": "8587aefcaa15",
+      "priority": 0,
+      "group": "ce2427de8b37"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Hello.",
+          "definition": "kaixo"
+        },
+        {
+          "word": "Are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "you",
+          "definition": "zu\nzuek"
+        },
+        {
+          "word": "all",
+          "definition": "part of plural form of you\npart of you plural, you all"
+        },
+        {
+          "word": "coming",
+          "definition": "dator (he/she/it is)\ndatoz (they are)\ngatoz (we are)\ngentozen (We were)\nnator (I am)\nnentorren (I was)\nzatoz (you are)\nzatozte (you(plural) are)\nzentozen (You were)\nzentozten (You (plural) were)\nzetorren (He/she/it was)\nzetozen (They were)"
+        },
+        {
+          "word": "from",
+          "definition": "part of Ablative case"
+        },
+        {
+          "word": "the",
+          "definition": "-a"
+        },
+        {
+          "word": "bank?",
+          "definition": "banku"
+        }
+      ],
+      "chips": [
+        "Kaixo",
+        "Zuek",
+        "bankutik",
+        "etortzen",
+        "al",
+        "zatozte",
+        "arte",
+        "atzo",
+        "bat",
+        "zatoz",
+        "naiz"
+      ],
+      "solutions": [
+        [
+          "Kaixo",
+          "Zuek",
+          "bankutik",
+          "etortzen",
+          "al",
+          "zatozte"
+        ],
+        [
+          "Kaixo",
+          "Bankutik",
+          "etortzen",
+          "al",
+          "zatozte"
+        ]
+      ],
+      "formattedSolution": "Kaixo. Zuek bankutik etortzen al zatozte?",
+      "id": "6e5a4a3a367d",
+      "priority": 2,
+      "group": "ce2427de8b37"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Kaixo.",
+          "definition": "hello"
+        },
+        {
+          "word": "Zuek",
+          "definition": "you\nyou all\nyou'll\nyou(plural)\nyour (plural)"
+        },
+        {
+          "word": "bankutik",
+          "definition": "from the bank"
+        },
+        {
+          "word": "etortzen",
+          "definition": "come"
+        },
+        {
+          "word": "al",
+          "definition": "question word\nquestion_word"
+        },
+        {
+          "word": "zatozte?",
+          "definition": "You (plural) are coming"
+        }
+      ],
+      "chips": [
+        "Hello",
+        "Are",
+        "you",
+        "all",
+        "coming",
+        "from",
+        "the",
+        "bank",
+        "are",
+        "one",
+        "Jon",
+        "on",
+        "son",
+        "to",
+        "am"
+      ],
+      "solutions": [
+        [
+          "Hello",
+          "Are",
+          "you",
+          "all",
+          "coming",
+          "from",
+          "the",
+          "bank"
+        ],
+        [
+          "Hello",
+          "Are",
+          "you",
+          "plural",
+          "coming",
+          "from",
+          "the",
+          "bank"
+        ],
+        [
+          "Hello",
+          "Are",
+          "you",
+          "coming",
+          "from",
+          "the",
+          "bank"
+        ]
+      ],
+      "formattedSolution": "Hello. Are you all coming from the bank?",
+      "id": "af9755c43dfe",
+      "priority": 2,
+      "group": "ce2427de8b37"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Aitona-amonak elizatik datoz.",
+      "meaningInSourceLanguage": "The grandparents are coming from the church.",
+      "id": "41fc7af76a77",
+      "priority": 0,
+      "group": "b7c7c4837bb7"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "The",
+          "definition": "-a"
+        },
+        {
+          "word": "grandparents",
+          "definition": "aiton-amonak\naitona-amonak"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "coming",
+          "definition": "dator (he/she/it is)\ndatoz (they are)\ngatoz (we are)\ngentozen (We were)\nnator (I am)\nnentorren (I was)\nzatoz (you are)\nzatozte (you(plural) are)\nzentozen (You were)\nzentozten (You (plural) were)\nzetorren (He/she/it was)\nzetozen (They were)"
+        },
+        {
+          "word": "from",
+          "definition": "part of Ablative case"
+        },
+        {
+          "word": "the",
+          "definition": "-a"
+        },
+        {
+          "word": "church.",
+          "definition": "eliza"
+        }
+      ],
+      "chips": [
+        "Aitona-amonak",
+        "elizatik",
+        "datoz",
+        "zatoz",
+        "Aitor"
+      ],
+      "solutions": [
+        [
+          "Aitona-amonak",
+          "elizatik",
+          "datoz"
+        ]
+      ],
+      "formattedSolution": "Aitona-amonak elizatik datoz.",
+      "id": "d9863ffde6ad",
+      "priority": 2,
+      "group": "b7c7c4837bb7"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Aitona-amonak",
+          "definition": "grandparents"
+        },
+        {
+          "word": "elizatik",
+          "definition": "from church"
+        },
+        {
+          "word": "datoz.",
+          "definition": "They are coming."
+        }
+      ],
+      "chips": [
+        "The",
+        "grandparents",
+        "are",
+        "coming",
+        "from",
+        "the",
+        "church",
+        "Are",
+        "one",
+        "She",
+        "car",
+        "chef",
+        "grey"
+      ],
+      "solutions": [
+        [
+          "The",
+          "grandparents",
+          "are",
+          "coming",
+          "from",
+          "the",
+          "church"
+        ]
+      ],
+      "formattedSolution": "The grandparents are coming from the church.",
+      "id": "ff53729f441e",
+      "priority": 2,
+      "group": "b7c7c4837bb7"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Epa. Ni bankutik nator.",
+      "meaningInSourceLanguage": "Hi. I am coming from the bank.",
+      "id": "b840ce95d83b",
+      "priority": 0,
+      "group": "24136687e0c1"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Hi.",
+          "definition": "epa"
+        },
+        {
+          "word": "I",
+          "definition": "ni"
+        },
+        {
+          "word": "am",
+          "definition": "nago (egon)\nnaiz\nnaiz (izan)"
+        },
+        {
+          "word": "coming",
+          "definition": "dator (he/she/it is)\ndatoz (they are)\ngatoz (we are)\ngentozen (We were)\nnator (I am)\nnentorren (I was)\nzatoz (you are)\nzatozte (you(plural) are)\nzentozen (You were)\nzentozten (You (plural) were)\nzetorren (He/she/it was)\nzetozen (They were)"
+        },
+        {
+          "word": "from",
+          "definition": "part of Ablative case"
+        },
+        {
+          "word": "the",
+          "definition": "-a"
+        },
+        {
+          "word": "bank.",
+          "definition": "banku"
+        }
+      ],
+      "chips": [
+        "Epa",
+        "Ni",
+        "bankutik",
+        "nator",
+        "bat",
+        "ni",
+        "da"
+      ],
+      "solutions": [
+        [
+          "Epa",
+          "Ni",
+          "bankutik",
+          "nator"
+        ],
+        [
+          "Epa",
+          "Bankutik",
+          "nator"
+        ]
+      ],
+      "formattedSolution": "Epa. Ni bankutik nator.",
+      "id": "c0f51a4905f0",
+      "priority": 2,
+      "group": "24136687e0c1"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Epa.",
+          "definition": "hi"
+        },
+        {
+          "word": "Ni",
+          "definition": "I\nme"
+        },
+        {
+          "word": "bankutik",
+          "definition": "from the bank"
+        },
+        {
+          "word": "nator.",
+          "definition": "I am coming"
+        }
+      ],
+      "chips": [
+        "Hi",
+        "I",
+        "am",
+        "coming",
+        "from",
+        "the",
+        "bank",
+        "an",
+        "on",
+        "a",
+        "i",
+        "n",
+        "o"
+      ],
+      "solutions": [
+        [
+          "Hi",
+          "I",
+          "am",
+          "coming",
+          "from",
+          "the",
+          "bank"
+        ]
+      ],
+      "formattedSolution": "Hi. I am coming from the bank.",
+      "id": "2913541a0d2d",
+      "priority": 2,
+      "group": "24136687e0c1"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Epa. Nondik zu zatoz?",
+      "meaningInSourceLanguage": "Hi. Where are you coming from?",
+      "id": "43f5cb913787",
+      "priority": 0,
+      "group": "04d2bcaa6c57"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Hi.",
+          "definition": "epa"
+        },
+        {
+          "word": "Where",
+          "definition": "non\nnondik (from)\nnora (to)"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "you",
+          "definition": "zu\nzuek"
+        },
+        {
+          "word": "coming",
+          "definition": "dator (he/she/it is)\ndatoz (they are)\ngatoz (we are)\ngentozen (We were)\nnator (I am)\nnentorren (I was)\nzatoz (you are)\nzatozte (you(plural) are)\nzentozen (You were)\nzentozten (You (plural) were)\nzetorren (He/she/it was)\nzetozen (They were)"
+        },
+        {
+          "word": "from?",
+          "definition": "part of Ablative case"
+        }
+      ],
+      "chips": [
+        "Epa",
+        "Nondik",
+        "zu",
+        "zatoz",
+        "da",
+        "on",
+        "Non"
+      ],
+      "solutions": [
+        [
+          "Epa",
+          "Nondik",
+          "zu",
+          "zatoz"
+        ],
+        [
+          "Epa",
+          "Nondik",
+          "zatoz"
+        ]
+      ],
+      "formattedSolution": "Epa. Nondik zu zatoz?",
+      "id": "c4fb06ddba1c",
+      "priority": 2,
+      "group": "04d2bcaa6c57"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Epa.",
+          "definition": "hi"
+        },
+        {
+          "word": "Nondik",
+          "definition": "from where"
+        },
+        {
+          "word": "zu",
+          "definition": "you"
+        },
+        {
+          "word": "zatoz?",
+          "definition": "You are coming"
+        }
+      ],
+      "chips": [
+        "Hi",
+        "Where",
+        "are",
+        "you",
+        "coming",
+        "from",
+        "or",
+        "Are",
+        "on",
+        "am",
+        "one"
+      ],
+      "solutions": [
+        [
+          "Hi",
+          "Where",
+          "are",
+          "you",
+          "coming",
+          "from"
+        ]
+      ],
+      "formattedSolution": "Hi. Where are you coming from?",
+      "id": "d47463da565d",
+      "priority": 2,
+      "group": "04d2bcaa6c57"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Etxekoandrea aireportutik dator.",
+      "meaningInSourceLanguage": "The housewife is coming from the airport.",
+      "id": "543162c495f8",
+      "priority": 0,
+      "group": "8a3381c7d6c5"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "The",
+          "definition": "-a"
+        },
+        {
+          "word": "housewife",
+          "definition": "etxekoandre\netxekoandrea"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "coming",
+          "definition": "dator (he/she/it is)\ndatoz (they are)\ngatoz (we are)\ngentozen (We were)\nnator (I am)\nnentorren (I was)\nzatoz (you are)\nzatozte (you(plural) are)\nzentozen (You were)\nzentozten (You (plural) were)\nzetorren (He/she/it was)\nzetozen (They were)"
+        },
+        {
+          "word": "from",
+          "definition": "part of Ablative case"
+        },
+        {
+          "word": "the",
+          "definition": "-a"
+        },
+        {
+          "word": "airport.",
+          "definition": "aireportua"
+        }
+      ],
+      "chips": [
+        "Etxekoandrea",
+        "aireportutik",
+        "dator",
+        "atera",
+        "Aitor"
+      ],
+      "solutions": [
+        [
+          "Etxekoandrea",
+          "aireportutik",
+          "dator"
+        ]
+      ],
+      "formattedSolution": "Etxekoandrea aireportutik dator.",
+      "id": "7d1e39136266",
+      "priority": 2,
+      "group": "8a3381c7d6c5"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Etxekoandrea",
+          "definition": "housewife\nthe housewife"
+        },
+        {
+          "word": "aireportutik",
+          "definition": "from the airport"
+        },
+        {
+          "word": "dator.",
+          "definition": "He is coming\nIt is coming\nShe is coming"
+        }
+      ],
+      "chips": [
+        "The",
+        "housewife",
+        "is",
+        "coming",
+        "from",
+        "the",
+        "airport",
+        "one",
+        "lie",
+        "are",
+        "or",
+        "it",
+        "fine"
+      ],
+      "solutions": [
+        [
+          "The",
+          "housewife",
+          "is",
+          "coming",
+          "from",
+          "the",
+          "airport"
+        ],
+        [
+          "A",
+          "housewife",
+          "is",
+          "coming",
+          "from",
+          "the",
+          "airport"
+        ]
+      ],
+      "formattedSolution": "The housewife is coming from the airport.",
+      "id": "3f3d47aaccf3",
+      "priority": 2,
+      "group": "8a3381c7d6c5"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Kaixo. Gu autobus geltokitik gatoz.",
+      "meaningInSourceLanguage": "Hello. We are coming from  the bus station",
+      "id": "bef5171ca5d1",
+      "priority": 0,
+      "group": "2b99031a5385"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Hello.",
+          "definition": "kaixo"
+        },
+        {
+          "word": "We",
+          "definition": "gu"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "coming",
+          "definition": "dator (he/she/it is)\ndatoz (they are)\ngatoz (we are)\ngentozen (We were)\nnator (I am)\nnentorren (I was)\nzatoz (you are)\nzatozte (you(plural) are)\nzentozen (You were)\nzentozten (You (plural) were)\nzetorren (He/she/it was)\nzetozen (They were)"
+        },
+        {
+          "word": "from",
+          "definition": "part of Ablative case"
+        },
+        {
+          "word": "the",
+          "definition": "-a"
+        },
+        {
+          "word": "bus",
+          "definition": "austobusa\nautobus\nautobusa"
+        },
+        {
+          "word": "station",
+          "definition": "geltoki"
+        }
+      ],
+      "chips": [
+        "Kaixo",
+        "Gu",
+        "autobus",
+        "geltokitik",
+        "gatoz",
+        "Katu",
+        "zatoz",
+        "datoz",
+        "aiton"
+      ],
+      "solutions": [
+        [
+          "Kaixo",
+          "Gu",
+          "autobus",
+          "geltokitik",
+          "gatoz"
+        ],
+        [
+          "Kaixo",
+          "Autobus",
+          "geltokitik",
+          "gatoz"
+        ]
+      ],
+      "formattedSolution": "Kaixo. Gu autobus geltokitik gatoz.",
+      "id": "c2f0a5c70c30",
+      "priority": 2,
+      "group": "2b99031a5385"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Kaixo.",
+          "definition": "hello"
+        },
+        {
+          "word": "Gu",
+          "definition": "we"
+        },
+        {
+          "word": "autobus",
+          "definition": "bus"
+        },
+        {
+          "word": "geltokitik",
+          "definition": "from the station"
+        },
+        {
+          "word": "gatoz.",
+          "definition": "We are coming"
+        }
+      ],
+      "chips": [
+        "Hello",
+        "We",
+        "are",
+        "coming",
+        "from",
+        "the",
+        "bus",
+        "station",
+        "to",
+        "one",
+        "He",
+        "me",
+        "on",
+        "ten",
+        "son"
+      ],
+      "solutions": [
+        [
+          "Hello",
+          "We",
+          "are",
+          "coming",
+          "from",
+          "the",
+          "bus",
+          "station"
+        ]
+      ],
+      "formattedSolution": "Hello. We are coming from  the bus station",
+      "id": "8bc2a34937d1",
+      "priority": 2,
+      "group": "2b99031a5385"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Arratsalde on. Zuek zinematik zatozte?",
+      "meaningInSourceLanguage": "Good Afternoon. Are you all coming from the cinema?",
+      "id": "f8dd1aeddb19",
+      "priority": 0,
+      "group": "38f6c4d94127"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Good",
+          "definition": "on\nonak\nondo"
+        },
+        {
+          "word": "Afternoon.",
+          "definition": "arratsalde"
+        },
+        {
+          "word": "Are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "you",
+          "definition": "zu\nzuek"
+        },
+        {
+          "word": "all",
+          "definition": "part of plural form of you\npart of you plural, you all"
+        },
+        {
+          "word": "coming",
+          "definition": "dator (he/she/it is)\ndatoz (they are)\ngatoz (we are)\ngentozen (We were)\nnator (I am)\nnentorren (I was)\nzatoz (you are)\nzatozte (you(plural) are)\nzentozen (You were)\nzentozten (You (plural) were)\nzetorren (He/she/it was)\nzetozen (They were)"
+        },
+        {
+          "word": "from",
+          "definition": "part of Ablative case"
+        },
+        {
+          "word": "the",
+          "definition": "-a"
+        },
+        {
+          "word": "cinema?",
+          "definition": "zinema"
+        }
+      ],
+      "chips": [
+        "Arratsalde",
+        "on",
+        "Zuek",
+        "zinematik",
+        "zatozte",
+        "zatoz",
+        "onak",
+        "bat",
+        "zarete"
+      ],
+      "solutions": [
+        [
+          "Arratsalde",
+          "on",
+          "Zuek",
+          "zinematik",
+          "zatozte"
+        ],
+        [
+          "Arratsalde",
+          "on",
+          "Zinematik",
+          "zatozte"
+        ]
+      ],
+      "formattedSolution": "Arratsalde on. Zuek zinematik zatozte?",
+      "id": "b69791177034",
+      "priority": 2,
+      "group": "38f6c4d94127"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Arratsalde",
+          "definition": "afternoon"
+        },
+        {
+          "word": "on.",
+          "definition": "good"
+        },
+        {
+          "word": "Zuek",
+          "definition": "you\nyou all\nyou'll\nyou(plural)\nyour (plural)"
+        },
+        {
+          "word": "zinematik",
+          "definition": "from the cinema\nfrom the movie theater"
+        },
+        {
+          "word": "zatozte?",
+          "definition": "You (plural) are coming"
+        }
+      ],
+      "chips": [
+        "Good",
+        "Afternoon",
+        "Are",
+        "you",
+        "all",
+        "coming",
+        "from",
+        "the",
+        "cinema",
+        "one",
+        "Jon",
+        "on",
+        "son",
+        "are",
+        "now",
+        "not",
+        "cow"
+      ],
+      "solutions": [
+        [
+          "Good",
+          "Afternoon",
+          "Are",
+          "you",
+          "all",
+          "coming",
+          "from",
+          "the",
+          "cinema"
+        ],
+        [
+          "Good",
+          "Afternoon",
+          "Are",
+          "you",
+          "plural",
+          "coming",
+          "from",
+          "the",
+          "cinema"
+        ],
+        [
+          "Good",
+          "Afternoon",
+          "Are",
+          "you",
+          "coming",
+          "from",
+          "the",
+          "cinema"
+        ],
+        [
+          "Good",
+          "Afternoon",
+          "Are",
+          "you",
+          "all",
+          "coming",
+          "from",
+          "the",
+          "movie",
+          "theater"
+        ],
+        [
+          "Good",
+          "Afternoon",
+          "Are",
+          "you",
+          "plural",
+          "coming",
+          "from",
+          "the",
+          "movie",
+          "theater"
+        ],
+        [
+          "Good",
+          "Afternoon",
+          "Are",
+          "you",
+          "coming",
+          "from",
+          "the",
+          "movie",
+          "theater"
+        ]
+      ],
+      "formattedSolution": "Good Afternoon. Are you all coming from the cinema?",
+      "id": "25a2fe5fe3b3",
+      "priority": 2,
+      "group": "38f6c4d94127"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Gurasoak tren geltokitik datoz.",
+      "meaningInSourceLanguage": "The parents are coming from the train station.",
+      "id": "de36bb544122",
+      "priority": 0,
+      "group": "5015e539e75e"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "The",
+          "definition": "-a"
+        },
+        {
+          "word": "parents",
+          "definition": "gurasoak"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "coming",
+          "definition": "dator (he/she/it is)\ndatoz (they are)\ngatoz (we are)\ngentozen (We were)\nnator (I am)\nnentorren (I was)\nzatoz (you are)\nzatozte (you(plural) are)\nzentozen (You were)\nzentozten (You (plural) were)\nzetorren (He/she/it was)\nzetozen (They were)"
+        },
+        {
+          "word": "from",
+          "definition": "part of Ablative case"
+        },
+        {
+          "word": "the",
+          "definition": "-a"
+        },
+        {
+          "word": "train",
+          "definition": "tren"
+        },
+        {
+          "word": "station.",
+          "definition": "geltoki"
+        }
+      ],
+      "chips": [
+        "Gurasoak",
+        "tren",
+        "geltokitik",
+        "datoz",
+        "gatoz",
+        "zatoz",
+        "dator"
+      ],
+      "solutions": [
+        [
+          "Gurasoak",
+          "tren",
+          "geltokitik",
+          "datoz"
+        ]
+      ],
+      "formattedSolution": "Gurasoak tren geltokitik datoz.",
+      "id": "31bbb79a9dc1",
+      "priority": 2,
+      "group": "5015e539e75e"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Gurasoak",
+          "definition": "parents"
+        },
+        {
+          "word": "tren",
+          "definition": "train"
+        },
+        {
+          "word": "geltokitik",
+          "definition": "from the station"
+        },
+        {
+          "word": "datoz.",
+          "definition": "They are coming."
+        }
+      ],
+      "chips": [
+        "The",
+        "parents",
+        "are",
+        "coming",
+        "from",
+        "the",
+        "train",
+        "station",
+        "thin",
+        "man",
+        "Are",
+        "an",
+        "tree",
+        "ten",
+        "son"
+      ],
+      "solutions": [
+        [
+          "The",
+          "parents",
+          "are",
+          "coming",
+          "from",
+          "the",
+          "train",
+          "station"
+        ]
+      ],
+      "formattedSolution": "The parents are coming from the train station.",
+      "id": "3f7c041af2d8",
+      "priority": 2,
+      "group": "5015e539e75e"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "banku",
+      "meaningInSourceLanguage": "bank",
+      "id": "8bebee524980",
+      "priority": 0,
+      "group": "5f42e009ab9d"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "banku"
+      ],
+      "phrase": [
+        {
+          "word": "bank",
+          "definition": "banku"
+        }
+      ],
+      "id": "0d760271ecee",
+      "priority": 1,
+      "group": "5f42e009ab9d"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "aireportua",
+      "meaningInSourceLanguage": "airport",
+      "id": "3b93f361a653",
+      "priority": 0,
+      "group": "6866605112d1"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "aireportua"
+      ],
+      "phrase": [
+        {
+          "word": "airport",
+          "definition": "aireportua"
+        }
+      ],
+      "id": "31234aa47821",
+      "priority": 1,
+      "group": "6866605112d1"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "autobus",
+      "meaningInSourceLanguage": "bus",
+      "id": "40b850cb3801",
+      "priority": 0,
+      "group": "9c45c155a411"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "autobus"
+      ],
+      "phrase": [
+        {
+          "word": "bus",
+          "definition": "austobusa\nautobus\nautobusa"
+        }
+      ],
+      "id": "ac10254fa8b8",
+      "priority": 1,
+      "group": "9c45c155a411"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "tren",
+      "meaningInSourceLanguage": "train",
+      "id": "ab22739f0acd",
+      "priority": 0,
+      "group": "ec55a5d3defc"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "tren"
+      ],
+      "phrase": [
+        {
+          "word": "train",
+          "definition": "tren"
+        }
+      ],
+      "id": "f8bc16307206",
+      "priority": 1,
+      "group": "ec55a5d3defc"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "geltoki",
+      "meaningInSourceLanguage": "station",
+      "id": "63ceab361978",
+      "priority": 0,
+      "group": "88f85b81e1c5"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "geltoki"
+      ],
+      "phrase": [
+        {
+          "word": "station",
+          "definition": "geltoki"
+        }
+      ],
+      "id": "cf0d0067300a",
+      "priority": 1,
+      "group": "88f85b81e1c5"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "zinema",
+      "meaningInSourceLanguage": "I am coming",
+      "id": "c28a0539a436",
+      "priority": 0,
+      "group": "4c1c2385753c"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "zinema"
+      ],
+      "phrase": [
+        {
+          "word": "I",
+          "definition": "ni"
+        },
+        {
+          "word": "am",
+          "definition": "nago (egon)\nnaiz\nnaiz (izan)"
+        },
+        {
+          "word": "coming",
+          "definition": "dator (he/she/it is)\ndatoz (they are)\ngatoz (we are)\ngentozen (We were)\nnator (I am)\nnentorren (I was)\nzatoz (you are)\nzatozte (you(plural) are)\nzentozen (You were)\nzentozten (You (plural) were)\nzetorren (He/she/it was)\nzetozen (They were)"
+        }
+      ],
+      "id": "eb636eaff55d",
+      "priority": 1,
+      "group": "4c1c2385753c"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "zu zatoz",
+      "meaningInSourceLanguage": "You are coming",
+      "id": "45f1826f3314",
+      "priority": 0,
+      "group": "3f4bc2d9294e"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "zu zatoz"
+      ],
+      "phrase": [
+        {
+          "word": "You",
+          "definition": "zu\nzuek"
+        },
+        {
+          "word": "are",
+          "definition": "daude (egon)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "coming",
+          "definition": "dator (he/she/it is)\ndatoz (they are)\ngatoz (we are)\ngentozen (We were)\nnator (I am)\nnentorren (I was)\nzatoz (you are)\nzatozte (you(plural) are)\nzentozen (You were)\nzentozten (You (plural) were)\nzetorren (He/she/it was)\nzetozen (They were)"
+        }
+      ],
+      "id": "9306694c571b",
+      "priority": 1,
+      "group": "3f4bc2d9294e"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "hura dator",
+      "meaningInSourceLanguage": "He is coming",
+      "id": "c33cb00c4336",
+      "priority": 0,
+      "group": "3ee375f651ac"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "hura dator"
+      ],
+      "phrase": [
+        {
+          "word": "He",
+          "definition": "hura"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago (egon)"
+        },
+        {
+          "word": "coming",
+          "definition": "dator (he/she/it is)\ndatoz (they are)\ngatoz (we are)\ngentozen (We were)\nnator (I am)\nnentorren (I was)\nzatoz (you are)\nzatozte (you(plural) are)\nzentozen (You were)\nzentozten (You (plural) were)\nzetorren (He/she/it was)\nzetozen (They were)"
+        }
+      ],
+      "id": "1987808151ae",
+      "priority": 1,
+      "group": "3ee375f651ac"
+    }
+  ]
+}
