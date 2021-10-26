@@ -12,6 +12,8 @@ from librelingo_types import (
     Skill,
     Word,
     Settings,
+    AudioSettings,
+    TextToSpeechSettings,
 )
 import markdown
 from yaml import safe_load
@@ -19,12 +21,14 @@ from yaml.constructor import SafeConstructor
 
 import html2markdown  # type: ignore
 
+from ._spelling import _run_skill_spellcheck, _convert_hunspell_settings
+
 
 def add_bool(self, node):
     return self.construct_scalar(node)
 
 
-SafeConstructor.add_constructor(u"tag:yaml.org,2002:bool", add_bool)
+SafeConstructor.add_constructor("tag:yaml.org,2002:bool", add_bool)
 
 
 def _load_yaml(path):
@@ -260,6 +264,8 @@ def _load_skill(path, course):
     except TypeError:
         raise RuntimeError('Skill file "{}" has an invalid word'.format(path))
 
+    _run_skill_spellcheck(phrases, words, course)
+
     return Skill(
         name=name,
         id=skill_id,
@@ -332,14 +338,52 @@ def _convert_license(raw_license):
     )
 
 
-def _convert_settings(data):
+def _convert_text_to_speech_settings_list(raw_audio_settings):
+    """
+    Creates an TextToSpeechSettings() object based on the data structure in the YAML
+    file
+    """
+    if "TTS" not in raw_audio_settings:
+        return AudioSettings().text_to_speech_settings_list
+
+    return [
+        TextToSpeechSettings(tts["Provider"], tts["Voice"], tts["Engine"])
+        for tts in raw_audio_settings["TTS"]
+    ]
+
+
+def _convert_audio_settings(raw_settings):
+    """
+    Creates an AudioSettings() object based on the data structure in the YAML
+    file
+    """
+    if "Audio" not in raw_settings:
+        return AudioSettings()
+
+    raw_audio_settings = raw_settings["Audio"]
+
+    if raw_audio_settings["Enabled"]:
+        text_to_speech_settings_list = _convert_text_to_speech_settings_list(
+            raw_audio_settings
+        )
+    else:
+        text_to_speech_settings_list = []
+
+    return AudioSettings(
+        enabled=raw_audio_settings["Enabled"] == "True",
+        text_to_speech_settings_list=text_to_speech_settings_list,
+    )
+
+
+def _convert_settings(data, course):
     if "Settings" not in data:
         return Settings()
 
     raw_settings = data["Settings"]
 
     return Settings(
-        audio_files_enabled="disable audio files" not in raw_settings,
+        audio_settings=_convert_audio_settings(raw_settings),
+        hunspell=_convert_hunspell_settings(raw_settings, course),
     )
 
 
@@ -357,14 +401,21 @@ def load_course(path):
         special_characters=course["Special characters"],
         dictionary=[],
         modules=[],
-        settings=_convert_settings(data),
+        settings=None,
         repository_url=course["Repository"],
+    )
+    dumb_course = Course(
+        **{
+            **dumb_course._asdict(),
+            "settings": _convert_settings(data, dumb_course),
+        }
     )
     modules = _load_modules(path, raw_modules, dumb_course)
 
     return Course(
         **{
             **dumb_course._asdict(),
+            "settings": _convert_settings(data, dumb_course),
             "dictionary": _load_dictionary(modules),
             "modules": modules,
         }

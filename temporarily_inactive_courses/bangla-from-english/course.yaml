@@ -1,0 +1,31 @@
+# This file contains generic meta-data about the course
+
+Course:
+  Language:
+    Name: Bangla
+    IETF BCP 47: bn
+  For speakers of:
+    Name: English
+    IETF BCP 47: en
+  License:
+    Name: Attribution-ShareAlike 4.0 International
+    Short name: CC BY-SA 4.0
+    Link: https://creativecommons.org/licenses/by-sa/4.0/legalcode
+  Repository: https://github.com/kantord/LibreLingo/tree/main/courses/bangla-from-english
+  Special characters:
+  - "ক্ত"
+  - "ভ্র"
+  - "স্ট্র"
+  - "ন্দ"
+  - "দ্র"
+  - "র্"
+  - "ক্ষ"
+  - "স্ক"
+  - "ত্র"
+
+Modules:
+  - basics/
+
+Settings:
+    Audio:
+      Enabled: False

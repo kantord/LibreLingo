@@ -22,7 +22,7 @@
 //@import "~bulma/sass/elements/notification.sass";
 @import "~bulma/sass/elements/icon.sass";
 @import "~bulma/sass/elements/image.sass";
-@import "~bulma/sass/elements/button.sass";
+// @import "~bulma/sass/elements/button.sass";
 // @import "~bulma/sass/elements/title.sass";
 @import "~bulma/sass/elements/content.sass";
 @import "~bulma/sass/elements/box.sass";
@@ -39,7 +39,7 @@
 //@import "~bulma/sass/components/message.sass";
 //@import "~bulma/sass/components/modal.sass";
 // @import "~bulma/sass/components/navbar.sass";
-@import "~bulma/sass/components/panel.sass";
+// @import "~bulma/sass/components/panel.sass";
 //@import "~bulma/sass/components/list.sass";
 //@import "~bulma/sass/components/breadcrumb.sass";
 //@import "~bulma/sass/components/menu.sass";
@@ -55,20 +55,8 @@
     margin-top: 12em;
 }
 
+.md-page a {
+    text-decoration: underline;
+}
 
 @import "~bulmaswatch/lumen/overrides.scss";
-
-:root {
-    --spacing-small: 8px;
-    --spacing-medium: 12px;
-    --spacing-large: calc(var(--spacing-small) + var(--spacing-medium));
-    --blue: #325f74;
-    --white: #bfb5af;
-
-    --navbar-background: var(--blue);
-    --navbar-text-color: var(--white);
-    --navbar-height: 52px;
-    --navbar-padding-vertical: var(--spacing-small);
-    --navbar-padding-horizontal: var(--spacing-medium);
-    --navbar-logo-height: calc(var(--navbar-height) - 2 * var(--spacing-small));
-}

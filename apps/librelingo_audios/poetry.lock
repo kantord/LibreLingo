@@ -22,14 +22,14 @@ tests_no_zope = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>
 
 [[package]]
 name = "beautifulsoup4"
-version = "4.9.3"
+version = "4.10.0"
 description = "Screen-scraping library"
 category = "main"
 optional = false
-python-versions = "*"
+python-versions = ">3.0.0"
 
 [package.dependencies]
-soupsieve = {version = ">1.2", markers = "python_version >= \"3.0\""}
+soupsieve = ">1.2"
 
 [package.extras]
 html5lib = ["html5lib"]
@@ -37,11 +37,11 @@ lxml = ["lxml"]
 
 [[package]]
 name = "bleach"
-version = "3.3.0"
+version = "4.1.0"
 description = "An easy safelist-based HTML-sanitizing tool."
 category = "main"
 optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+python-versions = ">=3.6"
 
 [package.dependencies]
 packaging = "*"
@@ -116,7 +116,7 @@ librelingo-types = ">=3.0.0,<4.0.0"
 
 [[package]]
 name = "librelingo-types"
-version = "3.0.1"
+version = "3.1.0"
 description = "Data types to be used in Python packages for LibreLingo"
 category = "main"
 optional = false
@@ -124,7 +124,7 @@ python-versions = ">=3.8,<4.0"
 
 [[package]]
 name = "librelingo-utils"
-version = "2.4.1"
+version = "2.5.0"
 description = "Utilities to be used in LibreLingo-related-packages"
 category = "main"
 optional = false
@@ -135,14 +135,14 @@ librelingo-types = ">=3.0.0,<4.0.0"
 
 [[package]]
 name = "librelingo-yaml-loader"
-version = "1.5.1"
+version = "1.6.0"
 description = "Load YAML-based LibreLingo courses in your Python project."
 category = "main"
 optional = false
 python-versions = ">=3.8,<4.0"
 
 [package.dependencies]
-bleach = ">=3.3.0,<4.0.0"
+bleach = ">=4.0.0,<5.0.0"
 bleach-whitelist = ">=0.0.11,<0.0.12"
 click = ">=7.1.2,<8.0.0"
 html2markdown = ">=0.1.7,<0.2.0"
@@ -167,25 +167,26 @@ testing = ["coverage", "pyyaml"]
 
 [[package]]
 name = "packaging"
-version = "20.9"
+version = "21.0"
 description = "Core utilities for Python packages"
 category = "main"
 optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+python-versions = ">=3.6"
 
 [package.dependencies]
 pyparsing = ">=2.0.2"
 
 [[package]]
 name = "pluggy"
-version = "0.13.1"
+version = "1.0.0"
 description = "plugin and hook calling mechanisms for python"
 category = "dev"
 optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+python-versions = ">=3.6"
 
 [package.extras]
 dev = ["pre-commit", "tox"]
+testing = ["pytest", "pytest-benchmark"]
 
 [[package]]
 name = "py"
@@ -197,11 +198,11 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [[package]]
 name = "pyfakefs"
-version = "4.5.0"
+version = "4.5.1"
 description = "pyfakefs implements a fake file system that mocks the Python file system modules."
 category = "main"
 optional = false
-python-versions = ">=3.5"
+python-versions = ">=3.6"
 
 [[package]]
 name = "pyparsing"
@@ -213,7 +214,7 @@ python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
 name = "pytest"
-version = "6.2.4"
+version = "6.2.5"
 description = "pytest: simple powerful testing with Python"
 category = "dev"
 optional = false
@@ -225,7 +226,7 @@ attrs = ">=19.2.0"
 colorama = {version = "*", markers = "sys_platform == \"win32\""}
 iniconfig = "*"
 packaging = "*"
-pluggy = ">=0.12,<1.0.0a1"
+pluggy = ">=0.12,<2.0"
 py = ">=1.8.2"
 toml = "*"
 
@@ -373,13 +374,12 @@ attrs = [
     {file = "attrs-21.2.0.tar.gz", hash = "sha256:ef6aaac3ca6cd92904cdd0d83f629a15f18053ec84e6432106f7a4d04ae4f5fb"},
 ]
 beautifulsoup4 = [
-    {file = "beautifulsoup4-4.9.3-py2-none-any.whl", hash = "sha256:4c98143716ef1cb40bf7f39a8e3eec8f8b009509e74904ba3a7b315431577e35"},
-    {file = "beautifulsoup4-4.9.3-py3-none-any.whl", hash = "sha256:fff47e031e34ec82bf17e00da8f592fe7de69aeea38be00523c04623c04fb666"},
-    {file = "beautifulsoup4-4.9.3.tar.gz", hash = "sha256:84729e322ad1d5b4d25f805bfa05b902dd96450f43842c4e99067d5e1369eb25"},
+    {file = "beautifulsoup4-4.10.0-py3-none-any.whl", hash = "sha256:9a315ce70049920ea4572a4055bc4bd700c940521d36fc858205ad4fcde149bf"},
+    {file = "beautifulsoup4-4.10.0.tar.gz", hash = "sha256:c23ad23c521d818955a4151a67d81580319d4bf548d3d49f4223ae041ff98891"},
 ]
 bleach = [
-    {file = "bleach-3.3.0-py2.py3-none-any.whl", hash = "sha256:6123ddc1052673e52bab52cdc955bcb57a015264a1c57d37bea2f6b817af0125"},
-    {file = "bleach-3.3.0.tar.gz", hash = "sha256:98b3170739e5e83dd9dc19633f074727ad848cbedb6026708c8ac2d3b697a433"},
+    {file = "bleach-4.1.0-py2.py3-none-any.whl", hash = "sha256:4d2651ab93271d1129ac9cbc679f524565cc8a1b791909c4a51eac4446a15994"},
+    {file = "bleach-4.1.0.tar.gz", hash = "sha256:0900d8b37eba61a802ee40ac0061f8c2b5dee29c1927dd1d233e075ebf5a71da"},
 ]
 bleach-whitelist = [
     {file = "bleach-whitelist-0.0.11.tar.gz", hash = "sha256:2f7cc5ac2283f14f0cd52251dad51382813db776f3bcb8a61c6123d57b8e2ab4"},
@@ -408,44 +408,44 @@ librelingo-fakes = [
     {file = "librelingo_fakes-3.0.1.tar.gz", hash = "sha256:e7532e2fc8f1a11a9029a80068f56c398e313847f240ee504289351e1e5c4940"},
 ]
 librelingo-types = [
-    {file = "librelingo_types-3.0.1-py3-none-any.whl", hash = "sha256:670ec7ae225003fdf381ef5a5a6b5ca8da85f4bc23e2745f624d29e8e0a7145c"},
-    {file = "librelingo_types-3.0.1.tar.gz", hash = "sha256:7de4c1b21e7c7f0944416302cd73b54f2961983c23f30ed20add8f6a327556f0"},
+    {file = "librelingo_types-3.1.0-py3-none-any.whl", hash = "sha256:b04d791022d1db5a5d4c90075321d990c9ef9e965d6c1df0fa942c9bd07b32be"},
+    {file = "librelingo_types-3.1.0.tar.gz", hash = "sha256:7c8e2b8c2f86bf37654819d0fbc45d6f78803674a3613183aa822cc5b2073fe4"},
 ]
 librelingo-utils = [
-    {file = "librelingo_utils-2.4.1-py3-none-any.whl", hash = "sha256:7a5de4b97273991b1d43fde444891126647ce46442b092f485d67d7d267e55d1"},
-    {file = "librelingo_utils-2.4.1.tar.gz", hash = "sha256:c26cff4a2f007e12d44c60fa1423ac8ecd2d25ee220417b2061cd98d42b9bd6a"},
+    {file = "librelingo_utils-2.5.0-py3-none-any.whl", hash = "sha256:cab92ebac06d9d47ea23604debdd6b1b3b96d3458a5db3c7e1ed3b91af122c6a"},
+    {file = "librelingo_utils-2.5.0.tar.gz", hash = "sha256:32c241f51480d7930cb6375633d1224a51a301c0fc1c419fd89b566801640f25"},
 ]
 librelingo-yaml-loader = [
-    {file = "librelingo_yaml_loader-1.5.1-py3-none-any.whl", hash = "sha256:189a063306f0f7214ecd5d6b28ae4f5ac276e683d9a178fd5d4e519297a5ee0c"},
-    {file = "librelingo_yaml_loader-1.5.1.tar.gz", hash = "sha256:b4cee8e9cf015af7c933a3b8f87b67aa12ca33070ecebb32fe6e20aea8bde4b2"},
+    {file = "librelingo_yaml_loader-1.6.0-py3-none-any.whl", hash = "sha256:6ec3a5b4cc83546c0ca86f9acdeba653d3325ede7888c7c33a13ad7f47f83a38"},
+    {file = "librelingo_yaml_loader-1.6.0.tar.gz", hash = "sha256:6445b5ec177ef6fc1fbc09f65c6ccabd3f9f2e88556c07069825c049d443de86"},
 ]
 markdown = [
     {file = "Markdown-3.3.4-py3-none-any.whl", hash = "sha256:96c3ba1261de2f7547b46a00ea8463832c921d3f9d6aba3f255a6f71386db20c"},
     {file = "Markdown-3.3.4.tar.gz", hash = "sha256:31b5b491868dcc87d6c24b7e3d19a0d730d59d3e46f4eea6430a321bed387a49"},
 ]
 packaging = [
-    {file = "packaging-20.9-py2.py3-none-any.whl", hash = "sha256:67714da7f7bc052e064859c05c595155bd1ee9f69f76557e21f051443c20947a"},
-    {file = "packaging-20.9.tar.gz", hash = "sha256:5b327ac1320dc863dca72f4514ecc086f31186744b84a230374cc1fd776feae5"},
+    {file = "packaging-21.0-py3-none-any.whl", hash = "sha256:c86254f9220d55e31cc94d69bade760f0847da8000def4dfe1c6b872fd14ff14"},
+    {file = "packaging-21.0.tar.gz", hash = "sha256:7dc96269f53a4ccec5c0670940a4281106dd0bb343f47b7471f779df49c2fbe7"},
 ]
 pluggy = [
-    {file = "pluggy-0.13.1-py2.py3-none-any.whl", hash = "sha256:966c145cd83c96502c3c3868f50408687b38434af77734af1e9ca461a4081d2d"},
-    {file = "pluggy-0.13.1.tar.gz", hash = "sha256:15b2acde666561e1298d71b523007ed7364de07029219b604cf808bfa1c765b0"},
+    {file = "pluggy-1.0.0-py2.py3-none-any.whl", hash = "sha256:74134bbf457f031a36d68416e1509f34bd5ccc019f0bcc952c7b909d06b37bd3"},
+    {file = "pluggy-1.0.0.tar.gz", hash = "sha256:4224373bacce55f955a878bf9cfa763c1e360858e330072059e10bad68531159"},
 ]
 py = [
     {file = "py-1.10.0-py2.py3-none-any.whl", hash = "sha256:3b80836aa6d1feeaa108e046da6423ab8f6ceda6468545ae8d02d9d58d18818a"},
     {file = "py-1.10.0.tar.gz", hash = "sha256:21b81bda15b66ef5e1a777a21c4dcd9c20ad3efd0b3f817e7a809035269e1bd3"},
 ]
 pyfakefs = [
-    {file = "pyfakefs-4.5.0-py3-none-any.whl", hash = "sha256:46234fa2dbce8ffb693ec906638449342afe83e45fa832932351d5050048159b"},
-    {file = "pyfakefs-4.5.0.tar.gz", hash = "sha256:58b017b3437bbe97803a23755876c6d6aeb5aea37e52cec15e5d86b59c4c7295"},
+    {file = "pyfakefs-4.5.1-py3-none-any.whl", hash = "sha256:03a0e8e34e7250a458a640ca72c4c2c569bafc7e51a4c2d6c4ac62a426f60301"},
+    {file = "pyfakefs-4.5.1.tar.gz", hash = "sha256:002a065dcbf59c2caa039e4fc4ba01d1d636aa63ee9c794d4c9fc01f0e2d6dc0"},
 ]
 pyparsing = [
     {file = "pyparsing-2.4.7-py2.py3-none-any.whl", hash = "sha256:ef9d7589ef3c200abe66653d3f1ab1033c3c419ae9b9bdb1240a85b024efc88b"},
     {file = "pyparsing-2.4.7.tar.gz", hash = "sha256:c203ec8783bf771a155b207279b9bccb8dea02d8f0c9e5f8ead507bc3246ecc1"},
 ]
 pytest = [
-    {file = "pytest-6.2.4-py3-none-any.whl", hash = "sha256:91ef2131a9bd6be8f76f1f08eac5c5317221d6ad1e143ae03894b862e8976890"},
-    {file = "pytest-6.2.4.tar.gz", hash = "sha256:50bcad0a0b9c5a72c8e4e7c9855a3ad496ca6a881a3641b4260605450772c54b"},
+    {file = "pytest-6.2.5-py3-none-any.whl", hash = "sha256:7310f8d27bc79ced999e760ca304d69f6ba6c6649c0b60fb0e04a4a77cacc134"},
+    {file = "pytest-6.2.5.tar.gz", hash = "sha256:131b36680866a76e6781d13f101efb86cf674ebb9762eb70d3082b6f29889e89"},
 ]
 pytest-mock = [
     {file = "pytest-mock-3.6.1.tar.gz", hash = "sha256:40217a058c52a63f1042f0784f62009e976ba824c418cced42e88d5f40ab0e62"},

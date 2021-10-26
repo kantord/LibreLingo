@@ -53,7 +53,7 @@
         <p class="help is-danger">{error}</p>
       {/if}
 
-      <Button on:click="{handleLogin}" submit>Log in</Button>
+      <Button on:click="{handleLogin}" type="submit">Log in</Button>
     </form>
   </div>
 </section>

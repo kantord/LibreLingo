@@ -1,7 +1,93 @@
 from collections import namedtuple
 
 
-class Settings(namedtuple("Settings", ["audio_files_enabled"], defaults=[True])):
+class TextToSpeechSettings(
+    namedtuple(
+        "TextToSpeechSettings",
+        [
+            "provider",
+            "voice",
+            "engine",
+        ],
+        defaults=["Polly", "Lupe", "standard"],
+    )
+):
+    """
+    Settings about how to use TTS to generate audios
+
+    ### Usage example:
+
+    ```python
+    TextToSpeechSettings(
+        provider="Polly",
+        voice="Aditi",
+        engine="standard"
+    )
+    ```
+    """
+
+    pass
+
+
+class AudioSettings(
+    namedtuple(
+        "AudioSettings",
+        [
+            "enabled",
+            "text_to_speech_settings_list",
+        ],
+        defaults=[False, []],
+    )
+):
+    """
+    Settings for audio in a course
+
+    ### Usage example:
+
+    ```python
+    AudioSettings(
+        enabled=True,
+        text_to_speech_settings_list=[TextToSpeechSettings()]
+    )
+    ```
+    """
+
+    pass
+
+
+class HunspellSettings(
+    namedtuple(
+        "HunspellSettings",
+        [
+            "source_language",
+            "target_language",
+        ],
+        defaults=[None, None],
+    )
+):
+    """
+    Settings for hunspell spell checking
+
+    ### Usage example:
+
+    ```python
+    HunspellSettings(
+        source_language="en-US",
+        target language="es-ES",
+    )
+    ```
+    """
+
+    pass
+
+
+class Settings(
+    namedtuple(
+        "Settings",
+        ["audio_settings", "hunspell"],
+        defaults=[AudioSettings(), HunspellSettings()],
+    )
+):
     """
     Settings for a course
 
@@ -12,9 +98,6 @@ class Settings(namedtuple("Settings", ["audio_files_enabled"], defaults=[True]))
     """
 
     pass
-
-
-default_settings = Settings()
 
 
 class Course(
@@ -30,7 +113,7 @@ class Course(
             "repository_url",
             "settings",
         ],
-        defaults=[default_settings],
+        defaults=[Settings()],
     )
 ):
     """

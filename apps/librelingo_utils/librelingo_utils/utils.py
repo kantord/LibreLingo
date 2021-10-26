@@ -89,3 +89,11 @@ def iterate_phrases(course):
         for skill in module.skills:
             for phrase in skill.phrases:
                 yield phrase
+
+
+def iterate_words(course):
+    '"Flatten" a course into a sequence of words'
+    for module in course.modules:
+        for skill in module.skills:
+            for word in skill.words:
+                yield word
