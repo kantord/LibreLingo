@@ -5,6 +5,6 @@ register("en", () => require("./translation/en.json"))
 
 
 init({
-    fallbackLocale: "en",
-    initialLocale: getLocaleFromNavigator(),
+    fallbackLocale: getLocaleFromNavigator(),
+    initialLocale: "en" ,
 })
