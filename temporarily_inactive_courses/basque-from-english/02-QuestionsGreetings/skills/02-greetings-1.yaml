@@ -6,7 +6,7 @@ Skill:
 
 New words:
   - Word: Arratsalde on
-    Translation: Good Afternoon
+    Translation: Good afternoon
     Images:
       - afternoon1
       - afternoon2
@@ -19,26 +19,21 @@ New words:
     Images:
 
 
-  - Word: berdin
-    Translation: fine
+  - Word: Berdin!
+    Translation: Same to you!
+    Also accepted:
+      - same
     Images:
       - imfine1
       - imfine2
       - imfine3
 
   - Word: Egon on
-    Translation: Good Morning
+    Translation: Good morning
     Images:
       - morning1
       - morning2
       - morning3
-
-  - Word: Eskerrik
-    Translation: thanks
-    Images:
-      - thankyou1
-      - thankyou2
-      - thankyou3
 
   - Word: Eskerrik asko
     Translation: Thank you
@@ -48,10 +43,11 @@ New words:
       - thankyou3
 
   - Word: ondo
-    Translation: good
+    Translation: well
     Also accepted:
       - fine
       - OK
+      - good
     Images:
       - imfine2
       - imfine3
@@ -74,10 +70,12 @@ New words:
 
 Phrases:
   - Phrase: Barkatu. Nor zara zu?
+    Alternative versions:
+     - Barkatu. Nor zara?
     Translation: Excuse me. Who are you?
 
   - Phrase: Egun on. Zer moduz?
-    Translation: Good Morning. How are you?
+    Translation: Good morning. How are you?
 
   - Phrase: Gu Mikel eta Joseba gara.
     Alternative versions:
@@ -94,10 +92,12 @@ Phrases:
      - Mikel eta Miren dira?
     Translation: Are they Mikel and Miren?
 
-  - Phrase: Arratsalde on. Zu al Mikel zara?
+  - Phrase: Arratsalde on. Zu Mikel al zara?
     Alternative versions:
-     - Arratsalde on. Al Mikel zara?
-    Translation: Good Afternoon. Are you Mikel?
+     - Arratsalde on. Mikel al zara?
+     - Arratsalde on. Mikel zara?
+     - Arratsalde on. Zu Mikel zara?
+    Translation: Good afternoon. Are you Mikel?
 
   - Phrase: Zu ondo zara?
     Alternative versions:
@@ -151,7 +151,7 @@ Mini-dictionary:
     - asko: a lot
     - bai: Yes
     - barkatu: sorry
-    - berdin: fine
+    - berdin: same to you, same
     - da: is
     - dira: are
     - egun: day
@@ -159,7 +159,7 @@ Mini-dictionary:
     - eta: and
     - on: good
     - ondo:
-      - good
+      - well
       - OK
       - fine
     - gara: are
@@ -198,6 +198,8 @@ Mini-dictionary:
     - me: ni
     - morning: goizean
     - OK: ondo
+    - same: berdin
+    - to: part of same to you translation of berdin
     - thank: eskerrik
     - they: haiek
     - we: gu
