@@ -1,161 +1,166 @@
 Skill:
-  Id: 113
-  Name: Family 3
+  Id: 112
+  Name: Family 2
   Thumbnails:
 
-
 New words:
-  - Word: ahizpa
-    Translation: sister of a sister
-    Images:
-      - sisterofsister1
-      - sisterofsister2
-      - sisterofsister3
-
-  - Word: anaia
-    Translation: brother of a brother
-    Images:
-      - brotherofbrother1
-      - brotherofbrother2
-      - brotherofbrother3
-
-  - Word: arreba
-    Translation: sister of a brother
-    Images:
-      - sisterofbrother1
-      - sisterofbrother2
-      - sisterofbrother3
-
-  - Word: neba
-    Translation: brother of a sister
-    Images:
-      - brotherofsister1
-      - brotherofsister2
-      - brotherofsister3
-
-  - Word: iloba
-    Translation: niece
+  - Word: biloba
+    Translation: grandson
     Also accepted:
-      - nephew
+      - granddaughter
     Images:
-      - niece1
-      - nephew2
-      - niece3
+      - grandson1
+      - granddaughter1
+      - grandson2
 
-  - Word: mutillaguna
-    Translation: boyfriend
+  - Word: emaztea
+    Translation: wife
     Images:
-      - boyfriend1
-      - boyfriend2
-      - boyfriend3
+      - wife1
+      - wife2
+      - wife3
 
-  - Word: neskalaguna
-    Translation: girlfriend
+  - Word: senarra
+    Translation: husband
     Images:
-      - girlfriend1
-      - girlfriend2
-      - girlfriend3
+      - husband1
+      - husband2
+      - husband3
+
+  - Word: izeba
+    Translation: aunt
+    Images:
+      - aunt1
+      - aunt2
+      - aunt3
+
+  - Word: osaba
+    Translation: uncle
+    Images:
+      - uncle1
+      - uncle2
+      - uncle3
+
+  - Word: lehengusu
+    Translation: cousin (male)
+    Images:
+      - cousinmale1
+      - cousinmale2
+      - cousinmale3
+
+  - Word: lehengusina
+    Translation: cousin (female)
+    Images:
+      - cousinfemale1
+      - cousinfemale2
+      - cousinfemale3
+
+  - Word: seme-alba
+    Translation: children
+    Also accepted:
+      - sons and daughters
+    Images:
+      - children1
+      - children2
+      - children3
+
+  - Word: ume
+    Translation: child
+    Images:
+      - child1
+      - child2
+      - child3
 
 Phrases:
-  - Phrase: Mirenen neba naiz.
-    Translation: I am Miren’s brother.
-    Alternative translations:
-    - I am  brother of Miren.
+  - Phrase: Haiek gure bilobak dira.
+    Translation: They are our grandchildren.
 
-  - Phrase: Mirenen ahizpa naiz.
-    Translation: I am Miren’s sister.
+  - Phrase: Nire semearen semea nire biloba da.
+    Translation: The son of my son is my grandson.
     Alternative translations:
-    - I am  sister of Miren.
+      - My son’s son is my grandson.
 
-  - Phrase: Aitorren anaia naiz
-    Translation: I am Aitor’s brother.
+  - Phrase: Nire alabaren alaba nire biloba da.
+    Translation: The daughter of my daughter is my granddaughter.
     Alternative translations:
-    - I am  brother of Aitor.
+      - My daughter’s daughter is my granddaughter.
 
-  - Phrase: Aitorren arreba naiz.
-    Translation: I am Aitor’s sister.
+  - Phrase: Emakumea hau nire emaztea da.
+    Translation: This woman is my wife.
+
+  - Phrase: Nire emaztea etxekoandrea da.
+    Translation: My wife is a housewife.
+
+  - Phrase: Nire aitaren emaztea nire ama da.
+    Translation: The wife of my father is my mother.
     Alternative translations:
-    - I am  sister of Aitor.
+      - My father’s wife is my mother.
 
-  - Phrase: Neska hau nire neskalaguna da.
-    Translation: This girl is my girlfriend.
+  - Phrase: Gizon hau nire senarra da.
+    Translation: This man is my husband.
 
-  - Phrase: Nire anaiaren neskalaguna jatorra da.
-    Alternative versions:
-     - Nire nebaren neskalaguna jatorra da.
-    Translation: My brother’s girlfriend is nice.
+  - Phrase: Bere senarra tour gida da.
+    Translation: Her husband is a tour guide.
+
+  - Phrase: Nire amaren senarra nire aita da.
+    Translation: The husband of my mother is my father.
     Alternative translations:
-    - The girlfriend of my brother is nice.
+      - My mother’s husband is my father.
 
-  - Phrase: Nire arrebaren mutillaguna altua da.
-    Alternative versions:
-     -  Nire ahizparen mutillaguna altua da.
-    Translation: My sister’s boyfriend is tall.
+  - Phrase: Ni zure osaba naiz.
+    Translation: I am your uncle.
     Alternative translations:
-    - The boyfriend of my sister is tall.
+      - I’m your uncle.
 
-  - Phrase: Mirenen ahizparen mutillaguna altua da.
-    Translation: Miren’s sister’s boyfriend is tall.
-    Alternative translations:
-    - The boyfriend of Miren’s sister is tall.
-    - The boyfriend of sister of Miren is tall.
+  - Phrase: Gure osaba erizaina bat da.
+    Translation: Our uncle is a nurse.
 
-  - Phrase: Aitorren anaiaren neskalaguna argala da.
-    Translation: Aitor’s brother’s girlfriend is thin.
-    Alternative translations:
-    - The girlfriend of Aitor’s brother is thin.
-    - The girlfriend of the brother of Aitor is thin.
+  - Phrase: Haien izeba medikua da.
+    Translation: Their aunt is a doctor.
 
-  - Phrase: Turista nire iloba da.
-    Translation: The tourist is my niece.
-    Alternative translations:
-    - The tourist is my nephew.
+  - Phrase: Hura gure izeba da.
+    Translation: She is our aunt.
 
-  - Phrase: Gu zure ilobak gara.
-    Translation: We are your nieces.
-    Alternative translations:
-    -  We are your nephews.
+  - Phrase: Gure izeba irakaslea da.
+    Translation: Our aunt is a teacher.
 
-  - Phrase: Umeak horiek gure seme-albak dira.
-    Translation: Those children are our sons and daughters.
+  - Phrase: Nire osabaren semea lehengusua da.
+    Translation: My uncle’s son is my cousin (male).
     Alternative translations:
-    - Those children are our children.
+      - My uncle’s son is my cousin.
 
-  - Phrase: Zure seme-albak ikasleak dira.
-    Translation: Your sons and daughters are students.
+  - Phrase: Nire lehengusua da ere camareroa.
+    Translation: My cousin (male) is also a waiter.
     Alternative translations:
-    - Your children are students.
+      - My cousin is also a waiter.
 
-  - Phrase: Gure aitaren anaia gure osaba da.
-    Translation: Our father’s brother is our uncle.
+  - Phrase: Nire izebaren alaba nire lehengusina da.
+    Translation: My aunt’s daughter is my cousin (female).
     Alternative translations:
-    - The brother of our father is our uncle.
+      - My aunt’s daughter is my cousin.
+      - The daughter of my aunt is my cousin (female).
+      - The daughter of my aunt is my cousin.
 
-  - Phrase: Gure amaren ahizpa gure izeba da.
-    Translation: Our mother’s sister is our aunt.
+  - Phrase: Nire lehengusina ere nire laguna da.
+    Translation: My cousin (female) is also my friend.
     Alternative translations:
-    - The sister of our mother is our aunt.
+      - My cousin is also my friend.
 
-  - Phrase: Gure amaren neba gure osaba da.
-    Translation: Our mother’s brother is our uncle.
-    Alternative translations:
-    - The brother of our mother is our uncle.
+  - Phrase: Haiek nire seme-alba dira.
+    Translation: They are my children.
 
-  - Phrase: Gure aitaren arreba gure izeba da.
-    Translation: Our father’s sister is our aunt.
-    Alternative translations:
-    - The sister of our father is our aunt.
+  - Phrase: Zu nire umea zara.
+    Translation: You are my child.
+
+  - Phrase: Umea nire semea da.
+    Translation: The child is my son.
 
 Mini-dictionary:
   Basque:
-    - Aitorren: Aitor’s (male name)
     - Anearenak: Anea’s (female name, plural object)
     - Mirenen: Miren’s (female name)
     - Xabieren: Xabier’s (male name)
     - Mikelenak: Mikel’s (male name)
-    - Miren: Miren’s (female name)
-    - ahizpa: sister of a sister
-    - ahizparen: sister’s
     - aitona-amonak: grandparents
     - aiton: grandfather
     - aitona: grandfather
@@ -171,17 +176,12 @@ Mini-dictionary:
     - amon: grandmother
     - amona: grandmother
     - amonaren: grandmother’s
-    - anaia: brother of a brother
-    - anaian: brother of a brother’s
-    - anaiaren: brother’s
     - animalia: animal
     - animaliak: animals
     - apaiza: priest
     - argala: thin
     - arkatza: pencil
     - arkatzak: pencils
-    - arreba: sister of a brother
-    - arrebaren: sister’s
     - aterki: umbrella
     - aterkia: umbrella
     - aterkiak: umbrellas
@@ -217,6 +217,7 @@ Mini-dictionary:
     - boligrafo: pen
     - boligrafoa: pen
     - boligrafoak: pens
+    - camareroa: waiter
     - da: is
     - dira: are
     - dortoka: a turtle
@@ -234,7 +235,6 @@ Mini-dictionary:
     - etxea: house
     - etxekoandrea: housewife
     - ez: not, no
-    - gara: are
     - gaztea: young
     - gizon: man
     - gida: guide
@@ -246,9 +246,8 @@ Mini-dictionary:
     - gris: gray
     - grisa: gray
     - grisak: gray
-    - gurasoak: parents
     - gurasoen: parents’
-    - gu: we
+    - gurasoak: parents
     - gure: our
     - gurea: ours
     - gureak: ours
@@ -279,19 +278,12 @@ Mini-dictionary:
       - it
     - ikasleak: students
     - ikasleenak: students’
-    - iloba:
-      - niece
-      - nephew
-    - ilobak:
-      - nieces
-      - nephews
     - ingeniari: engineer
     - ingeniaria: engineer
     - irakaslea: teacher
     - itsusia: ugly
     - izeba: aunt
     - izebaren: aunt’s
-    - jatorra: nice
     - katu: cat
     - katua: a cat
     - katuak: cats
@@ -323,12 +315,9 @@ Mini-dictionary:
     - mutil: boy
     - mutila: boy
     - mutilak: boys
-    - mutillaguna: boyfriend
     - naiz: am
-    - neba: brother of a sister
     - neska: girl
     - neskak: girls
-    - neskalaguna: girlfriend
     - ni: I
     - nire: my
     - nirea: mine
@@ -352,9 +341,6 @@ Mini-dictionary:
     - semeak: sons
     - semearen: son’s
     - seme-alba: children
-    - seme-albak:
-      - children
-      - sons and daughters
     - senarra: husband
     - tour: tour
     - turista: tourist
@@ -366,7 +352,6 @@ Mini-dictionary:
     - txoriak: birds
     - ume: child
     - umea: child
-    - umeak: children
     - urdin: blue
     - urdina: blue
     - urdinak: blue
@@ -396,12 +381,10 @@ Mini-dictionary:
     - zuriak: white
 
   English:
-    - Aitor’s: Aitorren (male name)
     - Anea’s: Anearenak (female name, plural object)
     - Miren’s: Mirenen (female name)
     - Xabier’s: Xabieren (male name)
     - Mikel’s: Mikelenak (male name)
-    - Miren’s: Miren (female name)
     - a: -a
     - also: ere
     - am: naiz
@@ -412,7 +395,6 @@ Mini-dictionary:
     - are:
       - dira
       - zara
-      - gara
     - aunt: izeba
     - aunt’s: izebaren
     - ball: baloi
@@ -430,16 +412,8 @@ Mini-dictionary:
     - books: liburuak
     - boy: mutil
     - boys: mutilak
-    - boyfriend: mutillaguna
-    - brother:
-      - neba
-      - anaia
-    - brother’s:
-      - nebanen
-      - anaianen
     - bus: autobusa
     - but: baina
-    - camareroa: waiter
     - car: kotxea
     - cars: kotxeak
     - cat: katu
@@ -473,7 +447,6 @@ Mini-dictionary:
     - friends’: lagunaren
     - girl: neska
     - girls: neskak
-    - girlfriend: neskalaguna
     - gray: gris
     - grandchildren: bilobak
     - granddaughter: biloba
@@ -487,6 +460,7 @@ Mini-dictionary:
     - grandson: biloba
     - green: berde
     - guide: gida
+    - hau: hau
     - he: hura
     - his:
       - bere
@@ -517,11 +491,6 @@ Mini-dictionary:
     - mothers: amak
     - my: nire
     - new: berri
-    - nephew: iloba
-    - nephews: ilobak
-    - nice: jatorra
-    - niece: iloba
-    - nieces: ilobak
     - no: ez
     - not: ez
     - now: orain
@@ -542,9 +511,9 @@ Mini-dictionary:
     - pencils: arkatzak
     - pens: boligrafoak
     - police: polizia
-    - priest: apaiza
     - plural: plurala
     - pretty: polit
+    - priest: apaiza
     - purple: morea
     - purse: poltsa
     - purses: poltsak
@@ -552,12 +521,6 @@ Mini-dictionary:
     - school: eskola
     - she: hura
     - short: labur
-    - sister:
-      - ahizpa
-      - arreba
-    - sister’s:
-      - ahizparen
-      - arrebaren
     - slow: motel
     - son: seme
     - sons: semeak
@@ -594,7 +557,6 @@ Mini-dictionary:
     - was: zen
     - watch: erloju
     - watches: erlojuak
-    - we: gu
     - what: zer
     - which: zein
     - white: zuri
