@@ -343,7 +343,7 @@ The mascot is designed by [@almostdesigner](https://github.com/almostdesigner).
 ## Contributors ✨
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-70-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-71-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
@@ -441,6 +441,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/EkaterinaMozheiko"><img src="https://avatars.githubusercontent.com/u/15523524?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ekaterina Mozheiko</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/commits?author=EkaterinaMozheiko" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/GeraAlcantara"><img src="https://avatars.githubusercontent.com/u/32178037?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gerardo Alcantara</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/commits?author=GeraAlcantara" title="Code">💻</a></td>
     <td align="center"><a href="https://cyrili.co"><img src="https://avatars.githubusercontent.com/u/19289022?v=4?s=100" width="100px;" alt=""/><br /><sub><b>JP Damas</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/commits?author=cyrilico" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/frostedkitsune"><img src="https://avatars.githubusercontent.com/u/92984571?v=4?s=100" width="100px;" alt=""/><br /><sub><b>frostedkitsune</b></sub></a><br /><a href="#ideas-frostedkitsune" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
