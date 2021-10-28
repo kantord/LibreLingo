@@ -343,7 +343,7 @@ The mascot is designed by [@almostdesigner](https://github.com/almostdesigner).
 ## Contributors ✨
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-71-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-72-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
@@ -444,6 +444,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/frostedkitsune"><img src="https://avatars.githubusercontent.com/u/92984571?v=4?s=100" width="100px;" alt=""/><br /><sub><b>frostedkitsune</b></sub></a><br /><a href="#ideas-frostedkitsune" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/sinhalaquiz"><img src="https://avatars.githubusercontent.com/u/15131066?v=4?s=100" width="100px;" alt=""/><br /><sub><b>sinhalaquiz</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/issues?q=author%3Asinhalaquiz" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
