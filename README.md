@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  <a href="https://matrix.to/#/+librelingo:matrix.org">💬 Chat</a> •
+  <a href="https://app.element.io/#/room/#space-librelingo:matrix.org">💬 Chat</a> •
   <a href="#become-a-contributor">👩‍💻 Contribute!</a> •
   <a href="https://github.com/sponsors/kantord">💵 Sponsor</a>  •
   <a href="https://librelingo.app/docs/">📄 Development docs</a>  •
