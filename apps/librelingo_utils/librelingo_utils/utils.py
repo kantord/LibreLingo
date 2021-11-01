@@ -1,7 +1,6 @@
-import re
+import regex
 import hashlib
 from librelingo_types.data_types import Phrase, Word
-
 
 def calculate_number_of_levels(nwords, nphrases):
     """
@@ -19,7 +18,7 @@ def get_words_from_phrase(phrase):
     # Regex matches all spaces not between { and }
     return [
         w.strip(" {}")
-        for w in re.split("( |\\{.*?\\}|'.*?')", phrase)
+        for w in regex.split("( |\\{.*?\\}|'.*?')", phrase)
         if w.strip(" {}")
     ]
 
@@ -38,8 +37,8 @@ def clean_word(word):
     """
     Remove punctuation and other special characters from a word.
     """
-    MATCH_NON_WORD_CHARACTERS_BEGINNING = re.compile("^[^\\w']+")
-    MATCH_NON_WORD_CHARACTERS_END = re.compile("[^\\w']+$")
+    MATCH_NON_WORD_CHARACTERS_BEGINNING = regex.compile("^[^\\w']+")
+    MATCH_NON_WORD_CHARACTERS_END = regex.compile("[^\\w']+$")
     return MATCH_NON_WORD_CHARACTERS_BEGINNING.sub(
         "", MATCH_NON_WORD_CHARACTERS_END.sub("", word)
     )
@@ -97,3 +96,4 @@ def iterate_words(course):
         for skill in module.skills:
             for word in skill.words:
                 yield word
+

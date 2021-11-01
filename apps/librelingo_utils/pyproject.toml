@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "librelingo_utils"
-version = "2.5.0"
+version = "2.6.0"
 description = "Utilities to be used in LibreLingo-related-packages"
 authors = ["Dániel Kántor <git@daniel-kantor.com>"]
 license = "AGPLv3"
@@ -9,6 +9,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.8"
 librelingo-types = "^3.0.0"
+regex = "^2021.10.23"
 
 [tool.poetry.dev-dependencies]
 pydoc-markdown = "^3.10.0"
