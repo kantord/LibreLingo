@@ -18,7 +18,6 @@
 """
 
 from librelingo_utils import clean_word, get_words_from_phrase
-import re
 
 
 def _get_raw_dictionary_item(course, word, is_in_target_language):

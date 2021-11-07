@@ -212,7 +212,7 @@ python-versions = ">=3.8,<4.0"
 
 [[package]]
 name = "librelingo-utils"
-version = "2.6.0"
+version = "2.6.1"
 description = "Utilities to be used in LibreLingo-related-packages"
 category = "main"
 optional = false
@@ -402,11 +402,11 @@ testing = ["pytest", "pytest-benchmark"]
 
 [[package]]
 name = "py"
-version = "1.10.0"
+version = "1.11.0"
 description = "library with cross-python path, ini-parsing, io, code, log facilities"
 category = "dev"
 optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [[package]]
 name = "pydoc-markdown"
@@ -795,8 +795,8 @@ librelingo-types = [
     {file = "librelingo_types-3.2.0.tar.gz", hash = "sha256:03edbf293d953484b74e326001458e9b1d0a0bc0e60e22e71000b2e0e55d44de"},
 ]
 librelingo-utils = [
-    {file = "librelingo_utils-2.6.0-py3-none-any.whl", hash = "sha256:08f047f5b39422883c0b7954680af1a0d169e6493710055cb5cb2a7f8950db12"},
-    {file = "librelingo_utils-2.6.0.tar.gz", hash = "sha256:31faf54c72ab13007a5afbf4c9d1209c0c6e3c458ef0f8514cc5dc236395cd96"},
+    {file = "librelingo_utils-2.6.1-py3-none-any.whl", hash = "sha256:d28ed25aab9ea57e0e657834b373ab21d42c0c94c67b084cafecb4d664e68d35"},
+    {file = "librelingo_utils-2.6.1.tar.gz", hash = "sha256:d74cb914793f8bd8a4ab9058271114fb8f484dde286a32b0c08852c45e976717"},
 ]
 librelingo-yaml-loader = [
     {file = "librelingo_yaml_loader-1.8.0-py3-none-any.whl", hash = "sha256:87cdfe80196758ea4fff862b73c2cde348640a64da61522c7190a6495449db44"},
@@ -854,8 +854,8 @@ pluggy = [
     {file = "pluggy-1.0.0.tar.gz", hash = "sha256:4224373bacce55f955a878bf9cfa763c1e360858e330072059e10bad68531159"},
 ]
 py = [
-    {file = "py-1.10.0-py2.py3-none-any.whl", hash = "sha256:3b80836aa6d1feeaa108e046da6423ab8f6ceda6468545ae8d02d9d58d18818a"},
-    {file = "py-1.10.0.tar.gz", hash = "sha256:21b81bda15b66ef5e1a777a21c4dcd9c20ad3efd0b3f817e7a809035269e1bd3"},
+    {file = "py-1.11.0-py2.py3-none-any.whl", hash = "sha256:607c53218732647dff4acdfcd50cb62615cedf612e72d1724fb1a0cc6405b378"},
+    {file = "py-1.11.0.tar.gz", hash = "sha256:51c75c4126074b472f746a24399ad32f6053d1b34b68d2fa41e558e6f4a98719"},
 ]
 pydoc-markdown = [
     {file = "pydoc-markdown-3.13.0.tar.gz", hash = "sha256:1f23ebd02756664e84535969fd200ae11ca5c84329dd89539e5b603ef0e6d98f"},
