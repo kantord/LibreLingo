@@ -1,5 +1,6 @@
 import regex  # type: ignore
 import hashlib
+from functools import lru_cache
 from librelingo_types.data_types import Phrase, Word
 
 
@@ -34,6 +35,7 @@ def remove_control_characters_for_display(phrase):
     return phrase.replace("}", "").replace("{", "")
 
 
+@lru_cache(maxsize=None)
 def clean_word(word):
     """
     Remove punctuation and other special characters from a word.
