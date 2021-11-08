@@ -43,6 +43,7 @@ words into a single mini-dictionary term.
 #### clean\_word
 
 ```python
+@lru_cache(maxsize=None)
 clean_word(word)
 ```
 
