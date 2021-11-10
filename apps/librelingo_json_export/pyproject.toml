@@ -6,6 +6,9 @@ authors = ["Dániel Kántor <git@daniel-kantor.com>"]
 license = "AGPLv3"
 readme = "README.md"
 
+[tool.poetry.scripts]
+export-cli = 'librelingo_json_export.cli:main'
+
 [tool.poetry.dependencies]
 python = "^3.8"
 librelingo-types = "^3.0.0"
