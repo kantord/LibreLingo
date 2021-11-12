@@ -26,7 +26,7 @@ def ensure_output_directory(output_path, settings):
 @click.argument("input_path")
 @click.argument("output_path")
 @click.option("--dry-run/--no-dry-run", default=DEFAULT_SETTINGS.dry_run)
-def _command(input_path, output_path, dry_run):
+def main(input_path, output_path, dry_run):
     """
     Convert a YAML course into JSON files to be consumed by the web app.
     """
@@ -39,4 +39,4 @@ def _command(input_path, output_path, dry_run):
 
 
 if __name__ == "__main__":
-    _command()
+    main()
