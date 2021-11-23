@@ -5,6 +5,7 @@
 
 <img align="right" src="/docs/branding/LibreLingo_Mascot/LightShadow/Turtle1_jetPack.svg" alt="" height="250" />
 
+
 <p align="center">
  <h1 align="center">LibreLingo</h1>
  <p align="right"><em>a community-owned language-learning platform</em></p>
