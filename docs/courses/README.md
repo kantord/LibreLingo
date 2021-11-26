@@ -102,5 +102,5 @@ If you are new in contributing to course data, these are the things you can do t
 
 Currently LibreLingo doesn't have enough features to support teaching new
 alphabets. Solving this is a priority, but will take time. Technically in most
-cases, language pairs that use the same alphabet (for example Ukranian for
+cases, language pairs that use the same alphabet (for example Ukrainian for
 Russian speakers) should work just fine, but it hasn't been tested yet.
