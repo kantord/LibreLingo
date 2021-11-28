@@ -55,7 +55,7 @@ These concepts represent a hierarchical structure to LibreLingo course material:
 
 To have a better understanding of how courses work, you can explore how the course files are organized on this repository.
 
-The source of the courses are in separate git repositories. You will find a list of courses at the bottom of [this page](#courses-open). The course repository name is usually structured in `<destination language>-from-<target audience's language>`. e.g. `french-from-english` teaches French to English speakers. In each course you'll find modules. And in each module you'll find skills, which are saved as individual .yaml files.
+The source of the courses are in separate git repositories. You will find a [list of courses](#courses-open) at the bottom of this page. The course repository name is usually structured in `<destination language>-from-<target audience's language>`. e.g. `french-from-english` teaches French to English speakers. In each course you'll find modules. And in each module you'll find skills, which are saved as individual .yaml files.
 
 Now let's look into how they look on the frontend, to the user.
 
