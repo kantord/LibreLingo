@@ -128,6 +128,7 @@ Translate the LibreLingo UI(LLUI) to make it more accessiable, you can start [he
 ### Attributions:
 #### Mascot:
 The mascot is designed by [@almostdesigner](https://github.com/almostdesigner).
+
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Mascot images are released under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
 
 ### Contributors:
