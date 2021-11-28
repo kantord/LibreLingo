@@ -1,13 +1,12 @@
-
-<img align="right" src="/docs/branding/LibreLingo_Mascot/LightShadow/Turtle1_jetPack.svg" alt="" height="250" />
-<center>
+<p align="center">
+  <img src="/docs/branding/LibreLingo_Mascot/LightShadow/Turtle1_jetPack.svg" height="250" />
+  <br/><br/>
   <font size="6"><b>LibreLingo</b></font>
- <p style="margin-top:.8em;"><em>a community-owned language-learning platform</em></p>
-</center> 
-
-*<center>*
-[![try now](https://img.shields.io/badge/Try_now-librelingo.app-darkcyan)](https://librelingo.app/)
-*</center>*
+  <br/>
+  <em>a community-owned language-learning platform</em>
+  <br/><br/>
+  <a href="https://librelingo.app/"><img src="https://img.shields.io/badge/Try_now-librelingo.app-darkcyan" /></a>
+</p>
 <hr/>
 
 [![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/LibreLingo/LibreLingo)
@@ -46,17 +45,17 @@ LibreLingo offers an official [web app](https://librelingo.app/), which is very 
 
 #### Screenshots:
 <p align="center">
-  <img src="/docs/screenshots/screenshot1.png" width="15%">
-  </img> <img src="/docs/screenshots/screenshot2.png" width="15%">
-  </img> <img src="/docs/screenshots/screenshot3.png" width="15%"></img> 
-  <img src="/docs/screenshots/screenshot4.png" width="15%"></img>
+  <img src="/docs/screenshots/screenshot1.png" width="15%" />
+  <img src="/docs/screenshots/screenshot2.png" width="15%" />
+  <img src="/docs/screenshots/screenshot3.png" width="15%" />
+  <img src="/docs/screenshots/screenshot4.png" width="15%" />
 </p>
 
 ### librelingo-yaml-loader
 [librelingo-yaml-loader](https://pypi.org/project/librelingo-yaml-loader/) is a Python 🐍 package that lets you load LibreLingo courses to create software based on LibreLingo. To see an extensive tutorial, [check out this article](https://dev.to/kantord/practice-tdd-by-creating-a-librelingo-based-language-learning-app-4apf).
 #### Setup:
 [librelingo-yaml-loader](https://pypi.org/project/librelingo-yaml-loader/) can be installed using pip:
-```bash
+```sh
 pip install librelingo-yaml-loader
 ```
 #### Loading courses in a Python program:
@@ -72,12 +71,12 @@ course = yaml_loader.load_course("./path/to/my/course")
 [librelingo-json-export](https://pypi.org/project/librelingo-json-export/) is a Python 🐍 package that contains modules that let's you export LibreLingo courses into JSON files that will be read by the web app. This might be useful if you want to deploy YAML-based LibreLingo courses as a web app.
 #### Setup:
 [librelingo-json-export](https://pypi.org/project/librelingo-json-export/) can be installed using pip:
-```bash
+```sh
 pip install librelingo-json-export
 ```
 #### Exporting courses to JSON:
 [librelingo-json-export](https://pypi.org/project/librelingo-json-export/) has a command line program that can export YAML-based LibreLingo courses into the JSON format used by the web app.
-```bash
+```sh
 Usage:
   cli.py [OPTIONS] INPUT_PATH OUTPUT_PATH
     Convert a YAML course into a JSON course.
@@ -104,33 +103,34 @@ Options:
 ## Roadmap
 - [ ] Officially releasing Basque course
 - [ ] Make it possible to contribute to courses through GitHub
-- [ ] Improving course creation UX over github
+- [ ] Improving course creation UX over Github
 
 
 ## Contribution
-### Become a contributer:
+### Become a contributor:
 #### are you a developer?
 You can help LibreLingo by testing it and submitting feature requests or bug reports: [here](https://github.com/kantord/LibreLingo/issues/new). If you want to get in touch, you can use my contact details on [my GitHub profile](https://github.com/kantord).
-Go through the dev cocs [here](https://librelingo.app/docs/)
+Go through the dev docs [here](https://librelingo.app/docs/).
 
 Still got questions? Our Matrix/FreeNode IRC channel is `#LibreLingo`, join the dev community there and feel free to ask anything.
 * Matrix: [`#LibreLingo`](https://riot.im/app/#/group/+librelingo:matrix.org) on `matrix.org`
 * IRC: connect to `irc.freenode.net` with your favourite client and join `#LibreLingo` 
 
 #### are you a linguaphile?
-Learning new language is an awesome experience right? If you wanna let others experience that too, make a course on LibreLingo! Get started [here](https://github.com/kantord/LibreLingo/tree/main/docs/courses)
+Learning new language is an awesome experience right? If you wanna let others experience that too, make a course on LibreLingo! Get started [here](https://github.com/kantord/LibreLingo/tree/main/docs/courses).
 
 We are working on the process of creating courses, to make it more streamlined, if you have an idea to make it better, do share with us, create an [issue](https://github.com/kantord/LibreLingo/issues/new).
 Note: You are always encouraged to release the courses under a free license.
 
 #### are you a wordsmith?
-Translate the LibreLingo UI to make it more accessiable, you can start [here](https://poeditor.com/join/project?hash=jKiKfen2Ye).
+Translate the LibreLingo UI(LLUI) to make it more accessiable, you can start [here](https://poeditor.com/join/project?hash=jKiKfen2Ye).
 
 ### Attributions:
+#### Mascot:
 The mascot is designed by [@almostdesigner](https://github.com/almostdesigner).
-#### Mascot <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Mascot images are released under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Mascot images are released under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
 
-#### Contributors:
+### Contributors:
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-74-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
@@ -146,7 +146,10 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 
 
 ## License
-LibreLingo is licensed under the AGPL-3.0 license. In addition, course content and other creative content might be licensed under different licenses, such as CC. This image shows a summary of the licensing of our dependencies: [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fkantord%2FLibreLingo.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fkantord%2FLibreLingo?ref=badge_large)
+
+LibreLingo is licensed under the AGPL-3.0 license. In addition, course content and other creative content might be licensed under different licenses, such as CC. This image shows a summary of the licensing of our dependencies:
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fkantord%2FLibreLingo.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fkantord%2FLibreLingo?ref=badge_large)
 
 
 ## See also
