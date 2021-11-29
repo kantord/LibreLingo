@@ -107,7 +107,7 @@ Options:
 
 
 ## Contribution
-### Become a contributor:
+### Become a contributor
 #### are you a developer?
 You can help LibreLingo by testing it and submitting feature requests or bug reports: [here](https://github.com/kantord/LibreLingo/issues/new). If you want to get in touch, you can use my contact details on [my GitHub profile](https://github.com/kantord).
 Go through the dev docs [here](https://librelingo.app/docs/).
