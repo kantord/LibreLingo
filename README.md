@@ -12,7 +12,7 @@
 [![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/LibreLingo/LibreLingo)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/kantord/LibreLingo?color=darkcyan)](https://github.com/kantord/LibreLingo/releases)
 ![Build status](https://kantord.semaphoreci.com/badges/LibreLingo.svg?style=shields "Build status")
-[![ Sponsors](https://img.shields.io/github/sponsors/kantord?color=darkcyan)](https://github/sponsors/kantord)
+[![ Sponsors](https://img.shields.io/github/sponsors/kantord?color=darkcyan)](https://github.com/sponsors/kantord)
 [![Matrix](https://img.shields.io/matrix/space-librelingo:matrix.org?color=%23000&label=chat%20on%20matrix&logo=matrix)](https://app.element.io/#/room/#space-librelingo:matrix.org)
 [![call](https://img.shields.io/badge/%E2%98%8E%EF%B8%8F-Schedule_a_call-darkcyan)](https://app.harmonizely.com/harmonizely-uoicqk)
 [![Mastodon](https://img.shields.io/mastodon/follow/000318010?domain=https%3A%2F%2Ffosstodon.org%2F&style=social)](https://fosstodon.org/@librelingo)
