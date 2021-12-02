@@ -23,7 +23,7 @@
 
 ## About LibreLingo
 
-LibreLingo's mission is to create a modern language-learning platform that is owned by the community of its users. All software is licensed under AGPLv3, which guarantees the freedom to run, study, share, and modify the software. Course authors are encouraged to release their courses with free licenses.
+LibreLingo's mission is to create a modern language-learning platform owned by the community of its users. All software is licensed under AGPLv3, which guarantees the freedom to run, study, share and modify the software. Course authors are encouraged to release their courses with free licenses.
 
  If you want to know why I built LibreLingo, [I recommend reading my article](https://dev.to/kantord/why-i-built-librelingo-280o). If you agree with LibreLingo's mission, [consider helping to build and maintain it](#become-a-contributor), and [please consider making a monetary contribution](https://github.com/sponsors/kantord).
 
@@ -176,8 +176,8 @@ course = yaml_loader.load_course("./path/to/my/course")
 <td>
 
 
-[librelingo-json-export](https://pypi.org/project/librelingo-json-export/) is a Python 🐍 package that contains modules that let's you
-export LibreLingo courses into JSON files that will be read by the web app. This might be useful if you want to deploy
+[librelingo-json-export](https://pypi.org/project/librelingo-json-export/) is a Python 🐍 package that contains modules that let you
+export LibreLingo courses into JSON files that the web app will read. This might be useful if you want to deploy
 YAML-based LibreLingo courses as a web app.
 
 #### Setup
@@ -188,7 +188,7 @@ pip install librelingo-json-export
 ```
 
 #### Exporting courses to JSON
-[librelingo-json-export](https://pypi.org/project/librelingo-json-export/) has a command line program that can export YAML-based LibreLingo
+[librelingo-json-export](https://pypi.org/project/librelingo-json-export/) has a command-line program that can export YAML-based LibreLingo
 courses into the JSON format used by the web app.
 
 ```
@@ -327,7 +327,7 @@ There is a Matrix/FreeNode IRC channel `#LibreLingo`, instructions for joining:
 - [Practice TDD by creating a LibreLingo-based language-learning app](https://dev.to/kantord/practice-tdd-by-creating-a-librelingo-based-language-learning-app-4apf)
 
 ## License
-LibreLingo is licensed under the AGPL-3.0 License. Course content and other creative content might be licensed under other licenses, such as CC.
+LibreLingo is licensed under the AGPL-3.0 license. In addition, course content and other creative content might be licensed under different licenses, such as CC.
 
 This image shows a summary of the licensing of our dependencies:
 
@@ -343,7 +343,7 @@ The mascot is designed by [@almostdesigner](https://github.com/almostdesigner).
 ## Contributors ✨
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-73-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-74-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
@@ -446,6 +446,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/frostedkitsune"><img src="https://avatars.githubusercontent.com/u/92984571?v=4?s=100" width="100px;" alt=""/><br /><sub><b>frostedkitsune</b></sub></a><br /><a href="#ideas-frostedkitsune" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/sinhalaquiz"><img src="https://avatars.githubusercontent.com/u/15131066?v=4?s=100" width="100px;" alt=""/><br /><sub><b>sinhalaquiz</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/issues?q=author%3Asinhalaquiz" title="Bug reports">🐛</a> <a href="https://github.com/kantord/LibreLingo/commits?author=sinhalaquiz" title="Code">💻</a></td>
     <td align="center"><a href="https://capecod.world"><img src="https://avatars.githubusercontent.com/u/26460352?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Peter Cruckshank</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/commits?author=petercr" title="Code">💻</a></td>
+    <td align="center"><a href="https://szabgab.com/"><img src="https://avatars.githubusercontent.com/u/48833?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gabor Szabo</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/issues?q=author%3Aszabgab" title="Bug reports">🐛</a> <a href="https://github.com/kantord/LibreLingo/commits?author=szabgab" title="Code">💻</a> <a href="#ideas-szabgab" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
