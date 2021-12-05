@@ -343,7 +343,7 @@ The mascot is designed by [@almostdesigner](https://github.com/almostdesigner).
 ## Contributors ✨
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-74-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-75-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
@@ -447,6 +447,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/sinhalaquiz"><img src="https://avatars.githubusercontent.com/u/15131066?v=4?s=100" width="100px;" alt=""/><br /><sub><b>sinhalaquiz</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/issues?q=author%3Asinhalaquiz" title="Bug reports">🐛</a> <a href="https://github.com/kantord/LibreLingo/commits?author=sinhalaquiz" title="Code">💻</a></td>
     <td align="center"><a href="https://capecod.world"><img src="https://avatars.githubusercontent.com/u/26460352?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Peter Cruckshank</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/commits?author=petercr" title="Code">💻</a></td>
     <td align="center"><a href="https://szabgab.com/"><img src="https://avatars.githubusercontent.com/u/48833?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gabor Szabo</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/issues?q=author%3Aszabgab" title="Bug reports">🐛</a> <a href="https://github.com/kantord/LibreLingo/commits?author=szabgab" title="Code">💻</a> <a href="#ideas-szabgab" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/dimkard"><img src="https://avatars.githubusercontent.com/u/5058312?v=4?s=100" width="100px;" alt=""/><br /><sub><b>dimkard</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/commits?author=dimkard" title="Code">💻</a></td>
   </tr>
 </table>
 
