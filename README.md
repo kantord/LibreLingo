@@ -235,6 +235,10 @@ Options:
   </table>
 </p>
 
+### Projects
+* [Better audio support](https://github.com/kantord/LibreLingo/projects/14?add_cards_query=is%3Aopen)
+
+### Past milestones
 * 🏁 Demo course content in Spanish for English speakers
 * 🏁 Some basic building blocks of course content implemented
 * 🏁 Developers can use course editor
