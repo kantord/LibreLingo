@@ -71,6 +71,18 @@
                     Start learning Basque
                   </Translate>
                 </Button>
+
+                <Button style="primary" href="course/ladino-from-english">
+                  <Translate key="index.start_ladino_course">
+                    Start learning Ladino (for English speakers)
+                  </Translate>
+                </Button>
+
+                <Button style="primary" href="course/ladino-from-hebrew">
+                  <Translate key="index.start_parsig_course">
+                    Start learning Ladino (for Hebrew speakers)
+                  </Translate>
+                </Button>
               </Hidden>
               <Button style="primary" href="about">
                 <Translate key="index.about_librelingo">
