@@ -79,8 +79,14 @@
                 </Button>
 
                 <Button style="primary" href="course/ladino-from-hebrew">
-                  <Translate key="index.start_parsig_course">
+                  <Translate key="index.start_ladino_course">
                     Start learning Ladino (for Hebrew speakers)
+                  </Translate>
+                </Button>
+
+                <Button style="primary" href="course/ladino-from-spanish">
+                  <Translate key="index.start_ladino_course">
+                    Start learning Ladino (for Spanish speakers)
                   </Translate>
                 </Button>
               </Hidden>
