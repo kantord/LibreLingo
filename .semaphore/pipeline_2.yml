@@ -10,7 +10,7 @@ blocks:
       jobs:
         - name: gh-pages
           commands:
-            - sem-version node 12
+            - sem-version node 14
             - sem-version python 3.9
             - checkout
             - sudo apt-get update
