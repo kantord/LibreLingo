@@ -236,7 +236,8 @@ Options:
 </p>
 
 ### Projects
-* [Better audio support](https://github.com/kantord/LibreLingo/projects/14?add_cards_query=is%3Aopen)
+* [Better audio support](https://github.com/kantord/LibreLingo/projects/14)
+* [Support non-latin scripts](https://github.com/kantord/LibreLingo/projects/15)
 
 ### Past milestones
 * 🏁 Demo course content in Spanish for English speakers
