@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[209],{506:function(n,o,t){"use strict";t.r(o),o.default="# Introduction to animals"}}]);

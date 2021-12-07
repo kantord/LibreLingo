@@ -372,7 +372,12 @@ yarn
 <p>You will need <a href="https://python-poetry.org/">Poetry</a>.</p>
 <p>Install dependencies at the top level and for the app:</p>
 <pre><code class="language-sh">poetry install
+
 cd apps/librelingo_yaml_loader
+poetry install
+cd ../..
+
+cd apps/librelingo_json_export
 poetry install
 cd ../..
 </code></pre>
