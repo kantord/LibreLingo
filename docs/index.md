@@ -70,7 +70,12 @@ You will need [Poetry](https://python-poetry.org/).
 Install dependencies at the top level and for the app:
 ```sh
 poetry install
+
 cd apps/librelingo_yaml_loader
+poetry install
+cd ../..
+
+cd apps/librelingo_json_export
 poetry install
 cd ../..
 ```
