@@ -2955,7 +2955,7 @@
   dependencies:
     "@types/node" "*"
 
-"@types/hast@^2.0.0", "@types/hast@^2.3.2":
+"@types/hast@^2.0.0":
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/@types/hast/-/hast-2.3.2.tgz#236201acca9e2695e42f713d7dd4f151dc2982e4"
   integrity sha512-Op5W7jYgZI7AWKY5wQ0/QNMzQM7dGQPyW1rXKNiymVCy5iTfdPuGu4HhYNOM2sIv8gUfIuIdcYlXmAepwaowow==
@@ -12349,12 +12349,12 @@ regjsparser@^0.6.4:
   dependencies:
     jsesc "~0.5.0"
 
-rehype-format@4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/rehype-format/-/rehype-format-4.0.0.tgz#d7c681a91523413461479f0a1a98d6b49db8e0be"
-  integrity sha512-nN9b17h+uZdHOONIHSxUbemgJ8ImoJbQGsFoLUWjYxZL4wo4fitMdREveJv4GwBEYi9JYJ7NdwRu1YRMscEDFw==
+rehype-format@4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/rehype-format/-/rehype-format-4.0.1.tgz#0d4ad47733699dd8e3fcd9f73d04f210246b39e1"
+  integrity sha512-HA92WeqFri00yiClrz54IIpM9no2DH9Mgy5aFmInNODoAYn+hN42a6oqJTIie2nj0HwFyV7JvOYx5YHBphN8mw==
   dependencies:
-    "@types/hast" "^2.3.2"
+    "@types/hast" "^2.0.0"
     hast-util-embedded "^2.0.0"
     hast-util-is-element "^2.0.0"
     hast-util-phrasing "^2.0.0"
