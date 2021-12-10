@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[231],{528:function(n,a,o){"use strict";o.r(a),a.default="# Kantar\n\nkantar - to sing\n| yo                 | kanto     |\n| tu                 | kantas    |\n| el/eya             | kanta     |\n| mozotros/mozotras  | kantamos  |\n| vozotros/vozotras  | kantash   |\n| eyos               | kantan    |"}}]);
