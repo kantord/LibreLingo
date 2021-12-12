@@ -24,17 +24,62 @@ LibreLingo's mission is to create a modern language-learning platform that is ow
 
 If you want to know why I built LibreLingo, I recommend reading my article. If you agree with LibreLingo's mission, consider helping to build and maintain it, and please consider making a monetary contribution.
 
-<b>articles:</b>
+<b>articles</b>
 - [Why I built LibreLingo](https://dev.to/kantord/why-i-built-librelingo-280o)
 - [Practice TDD by creating a LibreLingo-based language-learning app](https://dev.to/kantord/practice-tdd-by-creating-a-librelingo-based-language-learning-app-4apf)
+
+## Navigation
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about">About</a>
+    </li>
+    <li>
+      <a href="#navigation">Navigation</a>
+    </li>
+    <li>
+      <a href="#using-librelingo">Using LibreLingo</a>
+      <ul>
+        <li><a href="#web-app">Web app</a></li>
+        <li><a href="#librelingo-yaml-loader">librelingo-yaml-loader</a></li>
+        <li><a href="#librelingo-json-export">librelingo-json-export</a></li>
+      </ul>
+    </li>
+    <li>
+     <a href="#milestones">Milestones</a>
+   </li>
+    <li>
+     <a href="#roadmap">Roadmap</a>
+   </li>
+   <li>
+     <a href="#contribution">Contribution</a>
+     <ul>
+        <li><a href="#become-a-contributor">Become a contributor</a></li>
+        <li><a href="#attributions">Attributions</a></li>
+        <li><a href="#contributors">contributors</a></li>
+     </ul>
+    </li>
+    <li>
+      <a href="#license">License</a>
+    </li>
+    <li>
+      <a href="#see-also">See also</a>
+    </li>
+    <li>
+      <a href="#donate">Donate</a>
+    </li>
+  </ol>
+</details>
+
 
 
 ## Using LibreLingo
 
-### Web
+### Web app
 LibreLingo offers an official [web app](https://librelingo.app/), which is very lightweight and written in Javascript using svelte framework and pouchDB by the way, to try out LibreLingo courses interactively right in your browser, no installation required!
 
-#### Features:
+#### Features
 * :bow_and_arrow: practice using interactive exercises
 * :juggling_person: spaced repetition
 * :bar_chart: save and monitor progress
@@ -43,7 +88,7 @@ LibreLingo offers an official [web app](https://librelingo.app/), which is very 
 * :people_holding_hands: owned by you, the community
 * :dove: most courses are free, as in freedom and also as in beer
 
-#### Screenshots:
+#### Screenshots
 <p align="center">
   <img src="/docs/screenshots/screenshot1.png" width="15%" />
   <img src="/docs/screenshots/screenshot2.png" width="15%" />
@@ -53,12 +98,12 @@ LibreLingo offers an official [web app](https://librelingo.app/), which is very 
 
 ### librelingo-yaml-loader
 [librelingo-yaml-loader](https://pypi.org/project/librelingo-yaml-loader/) is a Python 🐍 package that lets you load LibreLingo courses to create software based on LibreLingo. To see an extensive tutorial, [check out this article](https://dev.to/kantord/practice-tdd-by-creating-a-librelingo-based-language-learning-app-4apf).
-#### Setup:
+#### Setup
 [librelingo-yaml-loader](https://pypi.org/project/librelingo-yaml-loader/) can be installed using pip:
 ```sh
 pip install librelingo-yaml-loader
 ```
-#### Loading courses in a Python program:
+#### Loading courses in a Python program
 You can use librelingo-yaml-loader to load YAML-based LibreLingo courses in your Python program.
 ```python
 from librelingo_yaml_loader import yaml_loader
@@ -69,12 +114,12 @@ course = yaml_loader.load_course("./path/to/my/course")
 
 ### librelingo-json-export
 [librelingo-json-export](https://pypi.org/project/librelingo-json-export/) is a Python 🐍 package that contains modules that let's you export LibreLingo courses into JSON files that will be read by the web app. This might be useful if you want to deploy YAML-based LibreLingo courses as a web app.
-#### Setup:
+#### Setup
 [librelingo-json-export](https://pypi.org/project/librelingo-json-export/) can be installed using pip:
 ```sh
 pip install librelingo-json-export
 ```
-#### Exporting courses to JSON:
+#### Exporting courses to JSON
 [librelingo-json-export](https://pypi.org/project/librelingo-json-export/) has a command line program that can export YAML-based LibreLingo courses into the JSON format used by the web app.
 ```sh
 Usage:
@@ -125,13 +170,13 @@ Note: You are always encouraged to release the courses under a free license.
 #### are you a wordsmith?
 Translate the LibreLingo UI(LLUI) to make it more accessiable, you can start [here](https://poeditor.com/join/project?hash=jKiKfen2Ye).
 
-### Attributions:
-#### Mascot:
+### Attributions
+#### Mascot
 The mascot is designed by [@almostdesigner](https://github.com/almostdesigner).
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Mascot images are released under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
 
-### Contributors:
+### Contributors
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-74-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
@@ -158,4 +203,6 @@ LibreLingo is licensed under the AGPL-3.0 license. In addition, course content a
 
 
 ## Donate
+Help us to keep going
 
+[![ Sponsors](https://img.shields.io/github/sponsors/kantord?color=darkcyan)](https://github.com/sponsors/kantord)
