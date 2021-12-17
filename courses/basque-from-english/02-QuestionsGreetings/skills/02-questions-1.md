@@ -1,9 +1,10 @@
 # ​Questions 1
 ### Yes/No Questions:
 * The easiest way to make a question is to change the tone to a rising one.
-* Naroa zara zu? Are you Nora?
+* Miren zara zu? Are you Miren?
 
-* Alternatively, you can add "al" and ask "Noroa al zara zu?"
+* Alternatively, you can be a bit more polite/formal and add "al" and ask "Miren al zara zu?"
+
 
 ### Interrogative questions
 Interrogative questions (as opposed to yes/no questions) use question words, such as:
