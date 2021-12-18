@@ -64,5 +64,6 @@ __Bat(one):__ The word "bat" (one) is used as an adjective, so the accompanying 
 *   hura da: he/she/it is
 *   bat: one
 *   kaizo: hello
+*   zelan zaude: How are you
 
 [ Go Back to Home Page!](..)
