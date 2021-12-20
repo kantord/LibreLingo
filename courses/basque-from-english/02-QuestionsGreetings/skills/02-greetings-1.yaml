@@ -3,7 +3,6 @@ Skill:
   Name: Greetings 1
   Thumbnails:
 
-
 New words:
   - Word: Arratsalde on
     Translation: Good afternoon
@@ -15,20 +14,13 @@ New words:
   - Word: barkatu
     Translation: sorry
     Also accepted:
-      - excuse me
+      -  excuse me
     Images:
+      - sorry1
+      - sorry2
+      - sorry3
 
-
-  - Word: Berdin!
-    Translation: Same to you!
-    Also accepted:
-      - same
-    Images:
-      - imfine1
-      - imfine2
-      - imfine3
-
-  - Word: Egon on
+  - Word: Egun on
     Translation: Good morning
     Images:
       - morning1
@@ -43,18 +35,24 @@ New words:
       - thankyou3
 
   - Word: ondo
-    Translation: well
+    Translation: good
     Also accepted:
       - fine
       - OK
-      - good
     Images:
       - imfine2
       - imfine3
       - imfine1
 
+  - Word: Ni nago
+    Translation: I am
+    Images:
+      - iam1
+      - iam2
+      - iam3
+
   - Word: bai
-    Translation: Yes
+    Translation: yes
     Images:
       - imfine3
       - imfine1
@@ -67,30 +65,39 @@ New words:
       - howareyou2
       - howareyou3
 
-
 Phrases:
   - Phrase: Barkatu. Nor zara zu?
     Alternative versions:
      - Barkatu. Nor zara?
     Translation: Excuse me. Who are you?
-
-  - Phrase: Egun on. Zer moduz?
-    Translation: Good morning. How are you?
+    Alternative translations:
+      - Sorry. Who are you?
 
   - Phrase: Gu Mikel eta Joseba gara.
     Alternative versions:
      - Mikel eta Joseba gara.
     Translation: We are Mikel and Joseba.
 
-  - Phrase: Eskerrik asko. Gu ondo gara.
+  - Phrase: Egun on. Zer moduz?
+    Translation: Good morning. How are you?
+
+  - Phrase: Ni ondo nago. Eskerrik asko.
     Alternative versions:
-     - Eskerrik asko. Ondo gara.
-    Translation: Thank you. We are fine.
+     - Ondo nago. Eskerrik asko.
+     - Ondo. Eskerrik asko.
+    Translation: I am fine. Thank you.
+    Alternative translations:
+      - I am good. Thank you.
 
   - Phrase: Haiek Mikel eta Miren dira?
     Alternative versions:
      - Mikel eta Miren dira?
     Translation: Are they Mikel and Miren?
+
+  - Phrase: Bai. Gu Mikel eta Miren gara.
+    Alternative versions:
+     - Bai Mikel eta Miren gara.
+    Translation: Yes. We are Mikel and Miren.
 
   - Phrase: Arratsalde on. Zu Mikel al zara?
     Alternative versions:
@@ -99,47 +106,37 @@ Phrases:
      - Arratsalde on. Zu Mikel zara?
     Translation: Good afternoon. Are you Mikel?
 
-  - Phrase: Zu ondo zara?
-    Alternative versions:
-     - Ondo zara?
-    Translation: Are you OK?
+  - Phrase: Arratsalde on. Zer moduz?
+    Translation: Good Afternoon. How are you?
 
-  - Phrase: Bai. Ni ondo naiz.
-    Alternative versions:
-     - Bai. Ondo naiz.
-    Translation: Yes. I am fine.
-    Alternative translations:
-      - Yes. I am OK.
+  - Phrase: Kaixo Mikel. Zer moduz?
+    Translation: Hello Mikel. How are you.
 
-  - Phrase: Bai. Ni ere berdin naiz.
+  - Phrase: Ni ondo nago. Eta zu?
     Alternative versions:
-     - Bai. Ere berdin naiz.
-    Translation: Yes. I am also fine.
+     - Ondo nago. Eta zu?
+     - Ondo. Eta zu?
+    Translation: I am fine. And you?
     Alternative translations:
-      - Yes. I am also OK.
+      - I am good. And you?
+
+  - Phrase: Ni ere ondo nago. Eskerrik asko.
+    Alternative versions:
+     - Ere ondo nago. Eskerrik asko.
+     - Ere ondo. Eskerrik asko.
+    Translation: I am also fine. Thank you.
+    Alternative translations:
+      - I am also good. Thank you.
 
   - Phrase: Hura al Mikel da?
     Alternative versions:
      - Al Mikel da?
     Translation: Is he Mikel?
 
-  - Phrase: Bai. Hura Mikel da.
+  - Phrase: Bai. Hura Miren da.
     Alternative versions:
-     - Bai. Mikel da.
-    Translation: Yes. He is Mikel.
-
-  - Phrase: Kaixo Mikel. Zer moduz?
-    Translation: Hello Mikel. How are you.
-
-  - Phrase: Ondo. Eskerrik asko.
-    Translation: Good. Thank you.
-    Alternative translations:
-      - Fine. Thank you.
-
-  - Phrase: Berdin. Eta zu?
-    Translation: Fine. And you?
-    Alternative translations:
-      - I am also fine. And you?
+     - Bai. Miren da.
+    Translation: Yes. She is Miren.
 
 Mini-dictionary:
   Basque:
@@ -168,6 +165,7 @@ Mini-dictionary:
     - hura: he
     - kaixo: hello
     - moduz: are you
+    - nago: I am
     - ni:
       - I
       - me
@@ -182,6 +180,9 @@ Mini-dictionary:
     - Miren: Miren (female name)
     - and: eta
     - afternoon: arratsalde
+    - am:
+      - naiz (izan)
+      - nago (egon)
     - are:
       - zara
       - gara

@@ -25,12 +25,19 @@ New words:
       - tall2
       - tall3
 
-  - Word: labur
+  - Word: motz
     Translation: short
     Images:
       - short1
       - short2
       - short3
+
+  - Word: labur
+    Translation: short
+    Images:
+      - shortlength1
+      - shortlength2
+      - shortlength3
 
   - Word: gizen
     Translation: fat
@@ -88,12 +95,12 @@ Phrases:
     Alternative translations:
       - It was the short purple car.
 
-  - Phrase: Kotxe labura zuria eta zaharra da.
+  - Phrase: Kotxe laburra zuria eta zaharra da.
     Translation: The short car is white and old.
     Alternative translations:
       - A short car is white and old.
 
-  - Phrase: Gidari gaztea argala eta labura zen.
+  - Phrase: Gidari gaztea argala eta motza zen.
     Translation: The young driver was thin and short.
     Alternative translations:
       - A young driver was thin and short.
@@ -122,7 +129,7 @@ Phrases:
   - Phrase: Kotxeak grisak dira.
     Translation: The cars are gray.
 
-  - Phrase: Etxekoandrea altua da eta laguna labura da.
+  - Phrase: Etxekoandrea altua da eta laguna motza da.
     Translation: The housewife is tall and the friend is short.
 
   - Phrase: Camareroa argala zen, eta sukaldaria gizena zen.
@@ -132,14 +139,14 @@ Phrases:
       - A waiter was thin and a cook was fat.
       - A waiter was thin and a chef was fat.
 
-  - Phrase: Medikua labura da, baina ez da gizena.
+  - Phrase: Medikua motza da, baina ez da gizena.
     Translation: The doctor is short, but he is not fat.
     Alternative translations:
       - The doctor is short, but she is not fat.
       - A doctor is short, but he is not fat.
       - A doctor is short, but she is not fat.
 
-  - Phrase: Apiza altua eta argala da, ez da labura eta gizena.
+  - Phrase: Apiza altua eta argala da, ez da motza eta gizena.
     Translation: The priest is tall and thin, not short and fat.
     Alternative translations:
       - A priest is tall and thin, not short and fat.
@@ -149,7 +156,7 @@ Phrases:
     Alternative translations:
       - A stranger was old and thin.
 
-  - Phrase: Sukaldaria labura eta gizena da.
+  - Phrase: Sukaldaria motza eta gizena da.
     Translation: The cook is short and fat.
     Alternative translations:
       - A cook is short and fat.
@@ -196,7 +203,7 @@ Mini-dictionary:
     - kotxea: car
     - kotxeak: cars
     - labur: short
-    - labura: short
+    - laburra: short
     - laguna: friend
     - laranja: orange
     - laranjak: orange
@@ -204,6 +211,8 @@ Mini-dictionary:
     - medikua: doctor
     - more: purple
     - morea: purple
+    - motz: short
+    - motza: short
     - orain: now
     - poltsa: purse
     - poltsak: purses
@@ -251,6 +260,9 @@ Mini-dictionary:
     - purse: poltsa
     - purses: poltsak
     - red: gorri
+    - short:
+      - motz
+      - labur
     - small: txiki
     - stranger: arrotza
     - tall: altu

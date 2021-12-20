@@ -16,19 +16,30 @@ While word order in Basque can be very flexible, normally adjectives follow noun
 * (NP) Kotxe(N) gorri(A) handiAK(A) dira(V). : They are big, red cars.
 
 ### Complementary Adjectives
-When a sentence includes a complementary adjective(CA), (which in English is separated by the verb ‘to be’), both the noun, or last part of a noun phrase of the subject (S) and the complementary adjective (CA) have a grammatical suffix added.
+* When a sentence includes a complementary adjective(CA), (which in English is separated by the verb ‘to be’),
+* both the noun, or last part of a noun phrase of the subject (S) and the complementary adjective (CA) have a grammatical suffix added.
 * (NP) Kotxe(N) gorri(A) handiA(A) altuA(CA) da(V). : The big, red car is tall
 * (NP) Kotxe(N) gorri(A) handiAK(A) altuAK(CA) dira(V). : The big, red cars are tall.
 
+### Zein - which
+* Note that Basque uses the word zein (which) in cases that English would use what.
+* For example, "What color is the bus" is "Zein koloretakoa da autobusa?"
+* as opposed to "What are you? - Zer zara zu?"
+* The idea being that there is a limted number of colors, at least for us males who only see 16. :-)
+* Ok, the joke is lame, but hopefully will help you remember to use Zein with color. :-)
+* PS - koloretakoa is the genetive locative (nongo) case of kolore, but don't worry about it for now, juse use koloretakoa when asking the color. :-)
+
 ### Vocabulary Adjectives & No 1
-* beltz : black
-* zuri : white
-* gorri : red
-* laranja : orange
-* hori : yellow
-* berde : green
-* urdin : blue
-* gris : gray
-* poltsa : purse
+* beltz: black
+* zuri: white
+* gorri: red
+* laranja: orange
+* hori: yellow
+* berde: green
+* urdin: blue
+* gris: gray
+* poltsa: purse
+* zein:  which
+* koloretakoa: color (nongo)
 
 [ Go Back to Home Page!](..)
