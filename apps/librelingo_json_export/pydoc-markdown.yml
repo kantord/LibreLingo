@@ -1,5 +1,7 @@
 loaders:
   - type: python
+    modules:
+    - librelingo_json_export.export
 processors:
   - type: filter
     skip_empty_modules: true
