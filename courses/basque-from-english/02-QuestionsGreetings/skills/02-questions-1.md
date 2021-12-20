@@ -1,9 +1,13 @@
 # ​Questions 1
 ### Yes/No Questions:
 * The easiest way to make a question is to change the tone to a rising one.
-* Naroa zara zu? Are you Nora?
-
-* Alternatively, you can add "al" and ask "Noroa al zara zu?"
+* Miren zara zu? Are you Miren?
+### "al" question word
+* Alternatively, you can be a bit more polite/formal and add "al" and ask "Miren al zara zu?"
+* You also need to keep in mind that Basque sentences have the most important pronoun or noun before the verb.
+* So "Zu irakaslea (al) zara?" ("al" optional) means "Are you a teacher?" with irakaslea/teacher stressed.
+* In other words, I thought you were the janitor. :-)
+* "Zu al zara irakaslea?" would be "Are you THE teacher?" with "zu" stressed or I thought the guy in a tie by the desk was the teacher. :-)
 
 ### Interrogative questions
 Interrogative questions (as opposed to yes/no questions) use question words, such as:
