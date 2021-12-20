@@ -81,7 +81,7 @@ Phrases:
      - Haien aitona-amonak gara.
     Translation: We are their grandparents.
 
-  - Phrase: Bere aitona-amonak zaharrak eta laburrak dira.
+  - Phrase: Bere aitona-amonak zaharrak eta motzak dira.
     Translation: His grandparents are old and short.
     Alternative translations:
       - Her grandparents are old and short.
@@ -99,7 +99,7 @@ Phrases:
     Alternative translations:
       - The horse of grandfather is big and black.
 
-  - Phrase: Haien amona laburra eta gizena da.
+  - Phrase: Haien amona motza eta gizena da.
     Translation: Their grandmother is short and fat.
 
   - Phrase: Zure amonaren baloia da.
@@ -342,6 +342,9 @@ Mini-dictionary:
     - medikuak: doctors
     - motxila: backpack
     - motxilak: backpacks
+    - motz: short
+    - motza: short
+    - motzak: short
     - morea: purple
     - motela: slow
     - mutil: boy
@@ -531,7 +534,9 @@ Mini-dictionary:
     - red: gorri
     - school: eskola
     - she: hura
-    - short: labur
+    - short:
+      - labur
+      - motz
     - slow: motel
     - son: seme
     - sons: semeak
