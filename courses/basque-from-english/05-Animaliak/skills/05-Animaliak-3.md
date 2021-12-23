@@ -9,5 +9,6 @@
 * luze: long
 * on: good
 * txar: bad
-
+* euskal: Basque
+* Note that Euskal goes before the noun, not after like most adjectives
 [ Go Back to Home Page!](..)
