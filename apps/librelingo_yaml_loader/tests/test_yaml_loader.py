@@ -99,6 +99,7 @@ class TestLoadCourseMeta(YamlImportTestCase):
             "license_full_name": str(fakes.fake_value()),
             "license_link": str(fakes.fake_value()),
             "repository_url": str(fakes.fake_value()),
+            "course_dir": str(fakes.fake_value()),
         }
 
     def set_up_patches(self):
@@ -642,7 +643,7 @@ Mini-dictionary:
 
         french = Language(self.fake_values["word3"], "")
         english = Language("English", "")
-        self.fake_course = Course(french, english, [], [], None, None, "")
+        self.fake_course = Course(french, english, [], [], None, None, "", "course/path")
         self.result = _load_skill(self.fake_path / "food.yaml", self.fake_course)
 
     def test_returns_a_correctly_types_course(self):

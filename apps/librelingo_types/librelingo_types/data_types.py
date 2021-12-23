@@ -111,6 +111,7 @@ class Course(
             "license",
             "dictionary",
             "repository_url",
+            "course_dir",
             "settings",
         ],
         defaults=[Settings()],

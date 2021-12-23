@@ -220,6 +220,7 @@ courseEmpty = Course(
     modules=[],
     dictionary=fake_dictionary,
     repository_url="https://github.com/kantord/LibreLingo/tree/main/courses/spanish-from-english",
+    course_dir="/some/dir",
 )
 
 
@@ -246,6 +247,7 @@ course1 = Course(
             enabled=True, text_to_speech_settings_list=[TextToSpeechSettings()]
         )
     ),
+    course_dir="/some/dir",
 )
 
 course2 = Course(
@@ -258,6 +260,7 @@ course2 = Course(
     ],
     dictionary=fake_dictionary,
     repository_url="https://github.com/kantord/LibreLingo-Spanish-from-English",
+    course_dir="/some/dir",
 )
 
 

@@ -403,6 +403,7 @@ def load_course(path):
         modules=[],
         settings=None,
         repository_url=course["Repository"],
+        course_dir=str(path),
     )
     dumb_course = Course(
         **{
