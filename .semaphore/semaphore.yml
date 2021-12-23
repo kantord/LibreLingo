@@ -125,6 +125,14 @@ blocks:
             - pip install poetry
             - poetry install
             - poetry run black apps --check
+        - name: Python code style (pylint)
+          commands:
+            - sem-version python 3.8
+            - checkout
+            - cache restore
+            - pip install poetry
+            - poetry install
+            - pylint $(git ls-files '*.py')
         - name: Python types (mypy)
           commands:
             - sem-version python 3.8
