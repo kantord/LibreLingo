@@ -1,5 +1,6 @@
 import collections
 from pathlib import Path
+import os
 
 import bleach
 from librelingo_types import (
@@ -268,7 +269,7 @@ def _load_skill(path, course):
 
     return Skill(
         name=name,
-        filename=str(path)[len(course.course_dir)+1:],
+        filename=os.path.relpath(path, start=course.course_dir),
         id=skill_id,
         words=words,
         phrases=phrases,
@@ -317,7 +318,7 @@ def _load_module(path, course):
             'Module file "{}" needs to have module name'.format(filepath)
         )
 
-    return Module(title=title, filename=str(path)[len(course.course_dir)+1:], skills=_load_skills(path, skills, course))
+    return Module(title=title, filename=os.path.relpath(path, start=course.course_dir), skills=_load_skills(path, skills, course))
 
 
 def _load_modules(path, modules, course):
