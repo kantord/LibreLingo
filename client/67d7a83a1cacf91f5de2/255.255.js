@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[255],{552:function(o,e,t){"use strict";t.r(e),e.default="# Komer\n\nkomer to eat\nyo                komo    (I) eat\ntu                komes   (you) eat\nel/eya            kome    he/she eats\nmozotros/mozotras komemos (we) eat\nvozotros/vozotras komesh  (you) eat (plural)\neyos              komen   (they) eat"}}]);
