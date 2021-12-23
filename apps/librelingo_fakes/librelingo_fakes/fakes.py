@@ -199,7 +199,7 @@ skills = [
     emptySkill,
     Skill(
         name="Mammals and birds",
-        filename="mammals_and_birds.yaml",
+        filename="animals/skills/mammals_and_birds.yaml",
         id=3,
         words=[word1],
         phrases=[],

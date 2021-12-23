@@ -200,7 +200,7 @@ class Module(
     ### Usage examples:
 
     ```python
-    my_module = Module(title="Basics", filenama="basic/module.yaml", skills=[skill1, skill2])
+    my_module = Module(title="Basics", filename="basic/module.yaml", skills=[skill1, skill2])
     ```
     """
 
