@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[205],{502:function(n,e,o){"use strict";o.r(e),e.default="# 18. Egon2 (Past)and the NON(Inessive) Case\n\n### Vocabulary Egon2 2\n\n*   dirudun: rich\n*   pobre: poor\n*   bustia: wet\n*   lehorra: dry\n*   garbi: clean\n*   zikin: dirty\n*   gose: hungry\n*   egarri: thirsty\n\n[ Go Back to Home Page!](..)"}}]);
