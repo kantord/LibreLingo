@@ -240,13 +240,14 @@ course1 = Course(
     modules=[
         Module(
             title="Basics",
+            filename="basic/module.yaml",
             skills=[
                 skills[0],
                 skills[1],
                 skills[2],
             ],
         ),
-        Module(title="Phrases", skills=[]),
+        Module(title="Phrases", filename="phrases/module.yaml", skills=[]),
     ],
     dictionary=fake_dictionary,
     repository_url="https://github.com/kantord/LibreLingo/tree/main/courses/spanish-from-english",
@@ -264,7 +265,7 @@ course2 = Course(
     special_characters=["ç", "ş"],
     license=license2,
     modules=[
-        Module(title="Animals", skills=[skills[3]]),
+        Module(title="Animals", filename="animals/module.yaml", skills=[skills[3]]),
     ],
     dictionary=fake_dictionary,
     repository_url="https://github.com/kantord/LibreLingo-Spanish-from-English",

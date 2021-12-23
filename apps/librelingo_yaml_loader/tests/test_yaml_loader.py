@@ -882,7 +882,7 @@ def get_fake_word():
 @pytest.fixture
 def module_with_word():
     word, in_source_language, in_target_language = get_fake_word()
-    my_module = Module("", skills=[Skill("", "", "", [word], [], [], None, None)])
+    my_module = Module("", "", skills=[Skill("", "", "", [word], [], [], None, None)])
 
     return my_module, in_source_language, in_target_language
 
@@ -938,12 +938,13 @@ def test_load_dictionary_handles_multiple_skills_per_module(module_with_word):
 
 
 def test_load_dictionary_handles_multiple_modules(module_with_word):
-    new_module = Module("", [Skill("", "", "", [get_fake_word()[0]], [], [], None, None)])
+    new_module = Module("", "", [Skill("", "", "", [get_fake_word()[0]], [], [], None, None)])
     assert len(_load_dictionary([module_with_word[0], new_module])) == 4
 
 
 def test_load_dictionary_includes_duplicate_words_only_once(module_with_word):
     new_module = Module(
+        "",
         "",
         [Skill("", "", "", [module_with_word[0].skills[0].words[0]], [], [], None, None)],
     )
@@ -964,7 +965,7 @@ def test_load_dictionary_includes_duplicate_words_includes_multiple_definitions(
         in_target_language=random_new_word.in_target_language,
         pictures=[],
     )
-    new_module = Module("", [Skill("", "", "", [duplicate_word], [], [], None, None)])
+    new_module = Module("", "", [Skill("", "", "", [duplicate_word], [], [], None, None)])
     definition = _load_dictionary([module_with_word[0], new_module])[0].definition
     assert (
         random_new_word.in_target_language[0] in definition

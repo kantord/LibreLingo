@@ -317,7 +317,7 @@ def _load_module(path, course):
             'Module file "{}" needs to have module name'.format(filepath)
         )
 
-    return Module(title=title, skills=_load_skills(path, skills, course))
+    return Module(title=title, filename=str(path)[len(course.course_dir)+1:], skills=_load_skills(path, skills, course))
 
 
 def _load_modules(path, modules, course):
