@@ -210,6 +210,7 @@ class Skill(
         "Skill",
         [
             "name",
+            "filename",
             "id",
             "words",
             "phrases",

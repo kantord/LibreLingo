@@ -268,6 +268,7 @@ def _load_skill(path, course):
 
     return Skill(
         name=name,
+        filename=str(path)[len(course.course_dir)+1:],
         id=skill_id,
         words=words,
         phrases=phrases,
