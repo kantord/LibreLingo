@@ -47,7 +47,7 @@ def get_fake_skill(introduction=None):
     randomname = str(random.randint(0, 5000))
     return randomname, fakes.customize(
         fakes.skillWithPhraseAndWord,
-        name="Animals {}".format(randomname),
+        name=f"Animals {randomname}",
         introduction=introduction,
     )
 
@@ -101,18 +101,16 @@ class TestExportSkill(FakeFsTestCase):
         _export_skill(self.export_path, fake_skill, fakes.course1)
         self.assertTrue(
             os.path.exists(
-                self.export_path / "challenges" / "animals-{}.json".format(randomname)
+                self.export_path / "challenges" / f"animals-{randomname}.json"
             )
         )
 
     def test_creates_the_introduction_file(self):
         fake_name = str(fakes.fake_value())
-        introduction = "# *Hello* (https://example.com)[_{}_]!".format(fake_name)
+        introduction = f"# *Hello* (https://example.com)[_{fake_name}_]!"
         randomname, fake_skill = get_fake_skill(introduction=introduction)
         _export_skill(self.export_path, fake_skill, fakes.course1)
-        with open(
-            self.export_path / "introduction" / "animals-{}.md".format(randomname)
-        ) as f:
+        with open(self.export_path / "introduction" / f"animals-{randomname}.md") as f:
             introduction_file_content = f.read()
             self.assertEqual(introduction_file_content, introduction)
 
@@ -121,7 +119,7 @@ class TestExportSkill(FakeFsTestCase):
         _export_skill(self.export_path, fake_skill, fakes.course1)
         self.assertFalse(
             os.path.exists(
-                self.export_path / "introduction" / "animals-{}.md".format(randomname)
+                self.export_path / "introduction" / f"animals-{randomname}.md"
             )
         )
 
@@ -143,10 +141,9 @@ class TestExportSkill(FakeFsTestCase):
         with self.assertLogs("librelingo_json_export", level="INFO") as log:
             _, fake_skill = get_fake_skill()
             _export_skill(self.export_path, fake_skill, fakes.course1)
-            assert log.output[
-                0
-            ] == "INFO:librelingo_json_export:Writing skill '{}'".format(
-                fake_skill.name
+            assert (
+                log.output[0]
+                == f"INFO:librelingo_json_export:Writing skill '{fake_skill.name}'"
             )
 
 
@@ -184,10 +181,9 @@ class TestExportCourseData(FakeFsTestCase):
                 source_language=Language(name=randomname2, code=""),
             )
             _export_course_data(self.export_path, fake_course)
-            assert log.output[
-                0
-            ] == "INFO:librelingo_json_export:Writing course '{}' for '{}' speakers".format(
-                randomname1, randomname2
+            assert (
+                log.output[0]
+                == f"INFO:librelingo_json_export:Writing course {randomname1} for {randomname2} speakers"
             )
 
 
@@ -449,9 +445,7 @@ class TestDefineWord(TestCase):
     def test_definition_not_found(self):
         word = str(fakes.fake_value())
         pattern = re.escape(
-            'The another language word "{}" does not have a definition. Please add it to the mini-dictionary.'.format(
-                word
-            )
+            f'The another language word "{word}" does not have a definition. Please add it to the mini-dictionary.'
         )
         with pytest.raises(ValueError, match=pattern):
             assert _define_word(fakes.course1, word, is_in_target_language=False)
