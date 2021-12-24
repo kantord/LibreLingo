@@ -165,6 +165,20 @@ def _convert_word(raw_word):
 def _convert_words(raw_words):
     """
     Converts each YAML word definition into Word() objects
+    >>> _convert_words([
+    ...     {
+    ...         'Word': "l'homme",
+    ...         'Translation': 'the man',
+    ...         'Images': ['man1', 'man2', 'man3']
+    ...     },
+    ...     {
+    ...         'Word': 'la femme',
+    ...         'Synonyms': ['la dame'],
+    ...         'Translation': 'the woman',
+    ...         'Also accepted': ['the female']
+    ...     }
+    ... ])
+    [Word(in_target_language=["l'homme"], in_source_language=['the man'], pictures=['man1', 'man2', 'man3']), Word(in_target_language=['la femme', 'la dame'], in_source_language=['the woman', 'the female'], pictures=None)]
     """
     return list(map(_convert_word, raw_words))
 
