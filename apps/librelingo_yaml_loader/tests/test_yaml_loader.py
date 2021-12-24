@@ -670,7 +670,7 @@ Mini-dictionary:
         assert self.result.phrases == self.convert_phrases.return_value
 
     def test_returned_object_has_correct_introduction(self):
-        print(self.result)
+        #print(self.result)
         assert self.result.introduction == self.fake_values["introduction"]
 
     def test_dictionary_is_a_list_of_dictionary_items(self):
