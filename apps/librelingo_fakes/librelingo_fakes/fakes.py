@@ -279,4 +279,4 @@ def customize(fake, **kwargs):
 
 
 def path():
-    return Path("./path{}".format(random.randint(0, 5000)))
+    return Path(f"./path{random.randint(0, 5000)}")
