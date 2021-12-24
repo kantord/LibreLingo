@@ -65,6 +65,7 @@ class TestExportCourseSkills(FakeFsTestCase):
         _, fake_skill_3 = get_fake_skill()
         fake_module_1 = Module(
             title="",
+            filename="",
             skills=[
                 fake_skill_1,
                 fake_skill_2,
@@ -72,6 +73,7 @@ class TestExportCourseSkills(FakeFsTestCase):
         )
         fake_module_2 = Module(
             title="",
+            filename="",
             skills=[
                 fake_skill_3,
             ],

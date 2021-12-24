@@ -117,6 +117,7 @@ word_with_spaces = Word(
 
 emptySkill = Skill(
     name="Neuter",
+    filename="basic/skills/neuter.yaml",
     id=3,
     words=[],
     phrases=[],
@@ -127,6 +128,7 @@ emptySkill = Skill(
 
 skillWithPhrase = Skill(
     name="Masculine",
+    filename="basic/skills/masculine.yaml",
     id=3,
     phrases=[phrase2],
     words=[],
@@ -138,6 +140,7 @@ skillWithPhrase = Skill(
 
 skillWithWord = Skill(
     name="Masculine",
+    filename="basic/skills/masculine.yaml",
     id=3,
     phrases=[],
     words=[word1],
@@ -149,6 +152,7 @@ skillWithWord = Skill(
 
 skillWithPhraseAndWord = Skill(
     name="Masculine",
+    filename="basic/skills/masculine.yaml",
     id=3,
     phrases=[phrase2],
     words=[word1],
@@ -160,6 +164,7 @@ skillWithPhraseAndWord = Skill(
 
 skillWith3Words = Skill(
     name="Masculine",
+    filename="basic/skills/masculine.yaml",
     id=3,
     phrases=[],
     words=[word1, word2, word2],
@@ -170,6 +175,7 @@ skillWith3Words = Skill(
 
 skillWith3Phrases = Skill(
     name="Masculine",
+    filename="basic/skills/masculine.yaml",
     id=3,
     phrases=[phrase1, phrase2, phrase2],
     words=[],
@@ -182,6 +188,7 @@ skills = [
     skillWithPhrase,
     Skill(
         name="Feminine",
+        filename="basic/skills/feminine.yaml",
         id=3,
         words=[word1, word2, word1, word2],
         phrases=[phrase1],
@@ -192,6 +199,7 @@ skills = [
     emptySkill,
     Skill(
         name="Mammals and birds",
+        filename="animals/skills/mammals_and_birds.yaml",
         id=3,
         words=[word1],
         phrases=[],
@@ -220,6 +228,7 @@ courseEmpty = Course(
     modules=[],
     dictionary=fake_dictionary,
     repository_url="https://github.com/kantord/LibreLingo/tree/main/courses/spanish-from-english",
+    course_dir="/some/dir",
 )
 
 
@@ -231,13 +240,14 @@ course1 = Course(
     modules=[
         Module(
             title="Basics",
+            filename="basic/module.yaml",
             skills=[
                 skills[0],
                 skills[1],
                 skills[2],
             ],
         ),
-        Module(title="Phrases", skills=[]),
+        Module(title="Phrases", filename="phrases/module.yaml", skills=[]),
     ],
     dictionary=fake_dictionary,
     repository_url="https://github.com/kantord/LibreLingo/tree/main/courses/spanish-from-english",
@@ -246,6 +256,7 @@ course1 = Course(
             enabled=True, text_to_speech_settings_list=[TextToSpeechSettings()]
         )
     ),
+    course_dir="/some/dir",
 )
 
 course2 = Course(
@@ -254,10 +265,11 @@ course2 = Course(
     special_characters=["ç", "ş"],
     license=license2,
     modules=[
-        Module(title="Animals", skills=[skills[3]]),
+        Module(title="Animals", filename="animals/module.yaml", skills=[skills[3]]),
     ],
     dictionary=fake_dictionary,
     repository_url="https://github.com/kantord/LibreLingo-Spanish-from-English",
+    course_dir="/some/dir",
 )
 
 
