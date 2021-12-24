@@ -115,7 +115,7 @@ blocks:
             - cache restore
             - pip install poetry
             - poetry install
-            - poetry run pytest
+            - poetry run pytest --doctest-modules
             - cache store
         - name: Python code style (black)
           commands:
