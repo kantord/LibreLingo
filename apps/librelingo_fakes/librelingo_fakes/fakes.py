@@ -117,7 +117,7 @@ word_with_spaces = Word(
 
 emptySkill = Skill(
     name="Neuter",
-    filename="neuter.yaml",
+    filename="basic/skills/neuter.yaml",
     id=3,
     words=[],
     phrases=[],
@@ -128,7 +128,7 @@ emptySkill = Skill(
 
 skillWithPhrase = Skill(
     name="Masculine",
-    filename="masculine.yaml",
+    filename="basic/skills/masculine.yaml",
     id=3,
     phrases=[phrase2],
     words=[],
@@ -140,7 +140,7 @@ skillWithPhrase = Skill(
 
 skillWithWord = Skill(
     name="Masculine",
-    filename="masculine.yaml",
+    filename="basic/skills/masculine.yaml",
     id=3,
     phrases=[],
     words=[word1],
@@ -152,7 +152,7 @@ skillWithWord = Skill(
 
 skillWithPhraseAndWord = Skill(
     name="Masculine",
-    filename="masculine.yaml",
+    filename="basic/skills/masculine.yaml",
     id=3,
     phrases=[phrase2],
     words=[word1],
@@ -164,7 +164,7 @@ skillWithPhraseAndWord = Skill(
 
 skillWith3Words = Skill(
     name="Masculine",
-    filename="masculine.yaml",
+    filename="basic/skills/masculine.yaml",
     id=3,
     phrases=[],
     words=[word1, word2, word2],
@@ -175,7 +175,7 @@ skillWith3Words = Skill(
 
 skillWith3Phrases = Skill(
     name="Masculine",
-    filename="masculine.yaml",
+    filename="basic/skills/masculine.yaml",
     id=3,
     phrases=[phrase1, phrase2, phrase2],
     words=[],
@@ -188,7 +188,7 @@ skills = [
     skillWithPhrase,
     Skill(
         name="Feminine",
-        filename="feminine.yaml",
+        filename="basic/skills/feminine.yaml",
         id=3,
         words=[word1, word2, word1, word2],
         phrases=[phrase1],
