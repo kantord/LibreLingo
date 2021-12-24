@@ -1,5 +1,12 @@
 import itertools
-from .challenge_types import *
+from .challenge_types import (
+    get_options_challenge,
+    get_listening_challenge,
+    get_chips_challenge,
+    get_reverse_chips_challenge,
+    get_cards_challenge,
+    get_short_input_challenge,
+)
 
 
 def _make_challenges_using(callback, data_source, course):
