@@ -148,6 +148,9 @@ def _solution_from_yaml(raw_object, solution_key, alternatives_key):
 def _convert_word(raw_word):
     """
     Converts a YAML word definition into a Word() object
+
+    >>> _convert_word({'Images': ["abc"], 'Word': "cat", 'Synonyms': ["kitten"], 'Translation': "gato"})
+    Word(in_target_language=['cat', 'kitten'], in_source_language=['gato'], pictures=['abc'])
     """
     return Word(
         in_target_language=_solution_from_yaml(raw_word, "Word", "Synonyms"),
