@@ -15,7 +15,7 @@ def _get_module_summary(module):
 
     def get_introduction(skill):
         if skill.introduction:
-            return {"introduction": "{}.md".format(slugify(skill.name))}
+            return {"introduction": f"{slugify(skill.name)}.md"}
         else:
             return {}
 
