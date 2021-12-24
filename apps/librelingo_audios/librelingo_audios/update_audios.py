@@ -11,7 +11,7 @@ def update_audios_for_course(output_path, course_name, course, settings):
     if not course.settings.audio_settings.enabled:
         return
 
-    index_file_path = Path(Path(output_path) / "{}.json".format(course_name))
+    index_file_path = Path(Path(output_path) / f"{course_name}.json")
 
     phrases_with_existing_audios = _load_index_file(index_file_path)
 
@@ -70,7 +70,7 @@ def _fetch_phrases(phrases, output_path, course, settings):
 
 def _fetch_audio_for_phrase(phrase_identity, output_path, course, settings):
     file_name = audio_id(course.target_language, phrase_identity.text)
-    destination_path = Path(Path(output_path) / "{}.mp3".format(file_name))
+    destination_path = Path(Path(output_path) / f"{file_name}.mp3")
 
     # This is where more audio sources would be added with an if statement. For
     # now there is only TTS.
@@ -85,24 +85,18 @@ def _generate_audio_with_tts(
     tts_settings_list = course.settings.audio_settings.text_to_speech_settings_list
     if tts_settings_list == []:
         raise RuntimeError(
-            "Cannot generate {} because there are no TTS settings configured".format(
-                destination_path
-            )
+            f"Cannot generate {destination_path} because there are no TTS settings configured"
         )
 
     chosen_tts_settings = random.choice(tts_settings_list)
 
     if settings.dry_run:
         print(
-            "Would generate {} using {} {}".format(
-                destination_path, chosen_tts_settings.voice, chosen_tts_settings.engine
-            )
+            f"Would generate {destination_path} using {chosen_tts_settings.voice} {chosen_tts_settings.engine}"
         )
     else:
         print(
-            "Generating {} using {} {}".format(
-                destination_path, chosen_tts_settings.voice, chosen_tts_settings.engine
-            )
+            f"Generating {destination_path} using {chosen_tts_settings.voice} {chosen_tts_settings.engine}"
         )
         # This is where more more TTS providers would be added with an if statement.
         # For now there is only Polly.
@@ -142,16 +136,16 @@ def _delete_phrases(phrases, output_path, existing_index, settings):
 
 
 def _delete_audio_for_phrase(index_entry, output_path, settings):
-    target_path = Path(Path(output_path) / "{}.mp3".format(index_entry["id"]))
+    target_path = Path(Path(output_path) / f"{index_entry['id']}.mp3")
 
     if not target_path.is_file():
         # It's already not there, for whatever reason
         return
 
     if settings.dry_run:
-        print("Would delete {}".format(target_path))
+        print("Would delete {target_path}")
     else:
-        print("Deleting {}".format(target_path))
+        print(f"Deleting {target_path}")
         target_path.unlink()
 
 
