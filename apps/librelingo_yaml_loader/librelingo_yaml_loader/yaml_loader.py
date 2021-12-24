@@ -186,6 +186,13 @@ def _convert_words(raw_words):
 def _convert_phrase(raw_phrase):
     """
     Converts a YAML phrase definition into a Phrase() object
+    >>> _convert_phrase({
+    ...     'Phrase': 'La femme dit bonjour',
+    ...     'Alternative versions': ['la femme dit salut'],
+    ...     'Translation': 'The woman says hello',
+    ...     'Alternative translations': ['The woman says hi']
+    ... })
+    Phrase(in_target_language=['La femme dit bonjour', 'la femme dit salut'], in_source_language=['The woman says hello', 'The woman says hi'])
     """
     try:
         return Phrase(
