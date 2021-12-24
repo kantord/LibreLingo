@@ -405,7 +405,7 @@ def load_course(path):
         modules=[],
         settings=None,
         repository_url=course["Repository"],
-        course_dir=str(path),
+        course_dir=path,
     )
     dumb_course = Course(
         **{
