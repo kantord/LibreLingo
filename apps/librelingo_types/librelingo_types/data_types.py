@@ -17,13 +17,12 @@ class TextToSpeechSettings(
 
     ### Usage example:
 
-    ```python
-    TextToSpeechSettings(
-        provider="Polly",
-        voice="Aditi",
-        engine="standard"
-    )
-    ```
+    >>> TextToSpeechSettings(
+    ...     provider="Polly",
+    ...     voice="Aditi",
+    ...     engine="standard"
+    ... )
+    TextToSpeechSettings(provider='Polly', voice='Aditi', engine='standard')
     """
 
     pass
@@ -44,12 +43,11 @@ class AudioSettings(
 
     ### Usage example:
 
-    ```python
-    AudioSettings(
-        enabled=True,
-        text_to_speech_settings_list=[TextToSpeechSettings()]
-    )
-    ```
+    >>> AudioSettings(
+    ...     enabled=True,
+    ...     text_to_speech_settings_list=[TextToSpeechSettings()]
+    ... )
+    AudioSettings(enabled=True, text_to_speech_settings_list=[TextToSpeechSettings(provider='Polly', voice='Lupe', engine='standard')])
     """
 
     pass
@@ -70,12 +68,11 @@ class HunspellSettings(
 
     ### Usage example:
 
-    ```python
-    HunspellSettings(
-        source_language="en-US",
-        target language="es-ES",
-    )
-    ```
+    >>> HunspellSettings(
+    ...     source_language="en-US",
+    ...     target_language="es-ES",
+    ... )
+    HunspellSettings(source_language='en-US', target_language='es-ES')
     """
 
     pass
@@ -92,9 +89,8 @@ class Settings(
     Settings for a course
 
     ### Usage example:
-    ```python
-        my_settings = Settings()
-    ```
+
+    >>> my_settings = Settings()
     """
 
     pass
