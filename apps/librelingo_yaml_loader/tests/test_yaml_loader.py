@@ -99,6 +99,7 @@ class TestLoadCourseMeta(YamlImportTestCase):
             "license_full_name": str(fakes.fake_value()),
             "license_link": str(fakes.fake_value()),
             "repository_url": str(fakes.fake_value()),
+            "course_dir": str(fakes.fake_value()),
         }
 
     def set_up_patches(self):
@@ -390,6 +391,7 @@ def test_load_course_output_matches_value(fs):
     assert len(result.modules[0].skills) == 1
     assert result.modules[0].skills[0] == Skill(
         name="Hello",
+        filename="basics/skills/hello.yaml",
         id=4,
         image_set=["people1", "woman1", "man1"],
         phrases=result.modules[0].skills[0].phrases,
@@ -642,7 +644,9 @@ Mini-dictionary:
 
         french = Language(self.fake_values["word3"], "")
         english = Language("English", "")
-        self.fake_course = Course(french, english, [], [], None, None, "")
+        self.fake_course = Course(
+            french, english, [], [], None, None, "", "course/path"
+        )
         self.result = _load_skill(self.fake_path / "food.yaml", self.fake_course)
 
     def test_returns_a_correctly_types_course(self):
@@ -668,7 +672,7 @@ Mini-dictionary:
         assert self.result.phrases == self.convert_phrases.return_value
 
     def test_returned_object_has_correct_introduction(self):
-        print(self.result)
+        # print(self.result)
         assert self.result.introduction == self.fake_values["introduction"]
 
     def test_dictionary_is_a_list_of_dictionary_items(self):
@@ -880,7 +884,7 @@ def get_fake_word():
 @pytest.fixture
 def module_with_word():
     word, in_source_language, in_target_language = get_fake_word()
-    my_module = Module("", skills=[Skill("", "", [word], [], [], None, None)])
+    my_module = Module("", "", skills=[Skill("", "", "", [word], [], [], None, None)])
 
     return my_module, in_source_language, in_target_language
 
@@ -930,20 +934,27 @@ def test_load_dictionary_handles_multiple_word_per_skill(module_with_word):
 
 def test_load_dictionary_handles_multiple_skills_per_module(module_with_word):
     module_with_word[0].skills.append(
-        Skill("", "", [get_fake_word()[0]], [], [], None, None)
+        Skill("", "", "", [get_fake_word()[0]], [], [], None, None)
     )
     assert len(_load_dictionary([module_with_word[0]])) == 4
 
 
 def test_load_dictionary_handles_multiple_modules(module_with_word):
-    new_module = Module("", [Skill("", "", [get_fake_word()[0]], [], [], None, None)])
+    new_module = Module(
+        "", "", [Skill("", "", "", [get_fake_word()[0]], [], [], None, None)]
+    )
     assert len(_load_dictionary([module_with_word[0], new_module])) == 4
 
 
 def test_load_dictionary_includes_duplicate_words_only_once(module_with_word):
     new_module = Module(
         "",
-        [Skill("", "", [module_with_word[0].skills[0].words[0]], [], [], None, None)],
+        "",
+        [
+            Skill(
+                "", "", "", [module_with_word[0].skills[0].words[0]], [], [], None, None
+            )
+        ],
     )
     assert len(_load_dictionary([module_with_word[0], new_module])) == 2
 
@@ -962,7 +973,9 @@ def test_load_dictionary_includes_duplicate_words_includes_multiple_definitions(
         in_target_language=random_new_word.in_target_language,
         pictures=[],
     )
-    new_module = Module("", [Skill("", "", [duplicate_word], [], [], None, None)])
+    new_module = Module(
+        "", "", [Skill("", "", "", [duplicate_word], [], [], None, None)]
+    )
     definition = _load_dictionary([module_with_word[0], new_module])[0].definition
     assert (
         random_new_word.in_target_language[0] in definition
