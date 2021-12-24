@@ -120,6 +120,7 @@ class Course(
             "license",
             "dictionary",
             "repository_url",
+            "course_dir",
             "settings",
         ],
         defaults=[Settings()],
@@ -143,7 +144,8 @@ my_course = Course(
     ),
     dictionary=[dict_item1, dict_item2, dict_item3, dict_item4],
     repository_url="https://example.com",
-    setttings=Settings()
+    course_dir="some_language/course",
+    settings=Settings()
 )
 ```
 
@@ -197,6 +199,7 @@ class Module(
         "Module",
         [
             "title",
+            "filename",
             "skills",
         ],
     ))
@@ -207,7 +210,7 @@ A module of a LibreLingo course.
 ### Usage examples:
 
 ```python
-my_module = Module(title="Basics", skills=[skill1, skill2])
+my_module = Module(title="Basics", filename="basic/module.yaml", skills=[skill1, skill2])
 ```
 
 <a name="librelingo_types.data_types.Skill"></a>
@@ -219,6 +222,7 @@ class Skill(
         "Skill",
         [
             "name",
+            "filename",
             "id",
             "words",
             "phrases",
@@ -240,6 +244,7 @@ A skill of a module of a LibreLingo course.
 ```python
 my_skill = Skill(
     name="Animals",
+    filename="basic/skills/hello.yaml",
     id="3adc78da-ea42-4ecd-9e3d-2e0986a3b914",
     words=[word1, word2, word3],
     phrases=[phrases1, phrases2, phrases3],
