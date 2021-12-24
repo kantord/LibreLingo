@@ -27,6 +27,8 @@ types-PyYAML = "^6.0.0"
 types-bleach = "^4.0.0"
 types-Markdown = "^3.3.0"
 pylint = "^2.12.2"
+autopep8 = "^1.6.0"
+yapf = "^0.31.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

@@ -44,7 +44,6 @@ from librelingo_types import Settings
 from librelingo_types import AudioSettings
 from librelingo_types import TextToSpeechSettings
 
-
 challenge1 = "challenge1"
 challenge2 = "challenge2"
 challenge3 = "challenge3"
@@ -135,7 +134,6 @@ skillWithPhrase = Skill(
     introduction=None,
 )
 
-
 skillWithWord = Skill(
     name="Masculine",
     id=3,
@@ -146,7 +144,6 @@ skillWithWord = Skill(
     introduction=None,
 )
 
-
 skillWithPhraseAndWord = Skill(
     name="Masculine",
     id=3,
@@ -156,7 +153,6 @@ skillWithPhraseAndWord = Skill(
     dictionary=fake_dictionary,
     introduction=None,
 )
-
 
 skillWith3Words = Skill(
     name="Masculine",
@@ -206,7 +202,6 @@ language_1 = Language(
     code="de",
 )
 
-
 language_2 = Language(
     name="another language",
     code="tr",
@@ -221,7 +216,6 @@ courseEmpty = Course(
     dictionary=fake_dictionary,
     repository_url="https://github.com/kantord/LibreLingo/tree/main/courses/spanish-from-english",
 )
-
 
 course1 = Course(
     target_language=language_1,

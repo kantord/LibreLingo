@@ -4,7 +4,6 @@ from __future__ import unicode_literals
 
 from snapshottest import Snapshot  # type: ignore
 
-
 snapshots = Snapshot()
 
 snapshots["test_loaded_yaml_is_exported_to_correct_json 1"] = {
