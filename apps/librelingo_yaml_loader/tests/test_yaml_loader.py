@@ -62,29 +62,27 @@ class TestLoadCourseMeta(YamlImportTestCase):
             f.write(self.get_fake_course_yaml(**kwargs))
 
     def get_fake_course_yaml(self, **kwargs):
-        return """
+        return f"""
     Course:
       Language:
-        Name: {target_language_name}
-        IETF BCP 47: {target_language_code}
+        Name: {kwargs["target_language_name"]}
+        IETF BCP 47: {kwargs["target_language_code"]}
       For speakers of:
-        Name: {source_language_name}
-        IETF BCP 47: {source_language_code}
+        Name: {kwargs["source_language_name"]}
+        IETF BCP 47: {kwargs["source_language_code"]}
       License:
-        Name: {license_full_name}
-        Short name: {license_name}
-        Link: {license_link}
+        Name: {kwargs["license_full_name"]}
+        Short name: {kwargs["license_name"]}
+        Link: {kwargs["license_link"]}
       Special characters:
-        - {first_special_character}
-        - {second_special_character}
-      Repository: {repository_url}
+        - {kwargs["first_special_character"]}
+        - {kwargs["second_special_character"]}
+      Repository: {kwargs["repository_url"]}
 
     Modules:
-      - {fake_module}
+      - {kwargs["fake_module"]}
 
-    """.format(
-            **kwargs
-        )
+    """
 
     def get_fake_values(self):
         return {
@@ -233,15 +231,12 @@ class TestLoadCourseMeta(YamlImportTestCase):
     @patch("librelingo_yaml_loader._spelling.hunspell")
     def test_creates_correct_hunspell_settings_1(self, hunspell):
         self._append_settings_to_file(
-            """
+            f"""
     Settings:
         Hunspell:
-            "{target_language_name}": en-US
-            "{source_language_name}": es-ES
-        """.format(
-                target_language_name=self.fake_values["target_language_name"],
-                source_language_name=self.fake_values["source_language_name"],
-            )
+            "{self.fake_values["target_language_name"]}": en-US
+            "{self.fake_values["source_language_name"]}": es-ES
+        """
         )
 
         self.result = load_course(self.fake_path)
@@ -252,15 +247,12 @@ class TestLoadCourseMeta(YamlImportTestCase):
     @patch("librelingo_yaml_loader._spelling.hunspell")
     def test_creates_correct_hunspell_settings_2(self, hunspell):
         self._append_settings_to_file(
-            """
+            f"""
     Settings:
         Hunspell:
-            "{target_language_name}": hu-HU
-            "{source_language_name}": es-ES
-        """.format(
-                target_language_name=self.fake_values["target_language_name"],
-                source_language_name=self.fake_values["source_language_name"],
-            )
+            "{self.fake_values["target_language_name"]}": hu-HU
+            "{self.fake_values["source_language_name"]}": es-ES
+        """
         )
 
         self.result = load_course(self.fake_path)
@@ -271,15 +263,12 @@ class TestLoadCourseMeta(YamlImportTestCase):
     @patch("librelingo_yaml_loader._spelling.hunspell")
     def test_returns_correct_hunspell_settings(self, hunspell):
         self._append_settings_to_file(
-            """
+            f"""
     Settings:
         Hunspell:
-            "{target_language_name}": hu-HU
-            "{source_language_name}": es-ES
-        """.format(
-                target_language_name=self.fake_values["target_language_name"],
-                source_language_name=self.fake_values["source_language_name"],
-            )
+            "{self.fake_values["target_language_name"]}": hu-HU
+            "{self.fake_values["source_language_name"]}": es-ES
+        """
         )
 
         self.result = load_course(self.fake_path)
@@ -463,15 +452,13 @@ class TestConvertLicense(YamlImportTestCase):
 
 class TestLoadModuleMeta(YamlImportTestCase):
     def get_fake_module_yaml(self, **kwargs):
-        return """
+        return f"""
     Module:
-        Name: {module_name}
+        Name: {kwargs["module_name"]}
 
     Skills:
-      - {skill_name}
-    """.format(
-            **kwargs
-        )
+      - {kwargs["skill_name"]}
+    """
 
     def create_fake_module_meta(self, path, **kwargs):
         with open(Path(path) / "module.yaml", "w") as f:
@@ -562,31 +549,29 @@ class TestLoadSkills(TestCase):
 
 class TestLoadSkill(YamlImportTestCase):
     def get_fake_skill_yaml(self, **kwargs):
-        return """
+        return f"""
 Skill:
-  Name: {skill_name}
-  Id: {skill_id}
+  Name: {kwargs["skill_name"]}
+  Id: {kwargs["skill_id"]}
   Thumbnails:
-    - {img1}
-    - {img2}
-    - {img3}
-New words: {fake_words}
-Phrases: {fake_phrases}
+    - {kwargs["img1"]}
+    - {kwargs["img2"]}
+    - {kwargs["img3"]}
+New words: {kwargs["fake_words"]}
+Phrases: {kwargs["fake_phrases"]}
 Mini-dictionary:
-  {word3}:
-    - {word2}: {word1}
-    - {word4}:
+  {kwargs["word3"]}:
+    - {kwargs["word2"]}: {kwargs["word1"]}
+    - {kwargs["word4"]}:
       - hello
-      - {word5}
+      - {kwargs["word5"]}
     - L'homme: the man
   English:
-    - {word6}: {word7}
+    - {kwargs["word6"]}: {kwargs["word7"]}
     - hello:
       - bonjour
       - salut
-    """.format(
-            **kwargs
-        )
+    """
 
     def get_fake_skill_markdown(self):
         return "<script />" + self.fake_values["introduction"]
@@ -611,9 +596,7 @@ Mini-dictionary:
             "word5": str(fakes.fake_value()),
             "word6": str(fakes.fake_value()),
             "word7": str(fakes.fake_value()),
-            "introduction": "# [https://example.com](_{}_)".format(
-                str(fakes.fake_value())
-            ),
+            "introduction": f"# [https://example.com](_{str(fakes.fake_value())}_)"
         }
 
     def set_up_patches(self):
@@ -976,9 +959,7 @@ def test_load_module_complains_about_an_empty_file(load_yaml):
     load_yaml.return_value = None
     with pytest.raises(
         RuntimeError,
-        match='Module file "{}/module.yaml" is empty or does not exist'.format(
-            randomPath
-        ),
+        match=f'Module file "{randomPath}/module.yaml" is empty or does not exist'
     ):
         _load_module(randomPath, fakes.course1)
 
@@ -987,9 +968,7 @@ def test_load_module_complains_about_an_empty_file(load_yaml):
 def test_load_module_complains_missing_module_key(load_yaml):
     randomPath = str(random.randint(0, 1000))
     load_yaml.return_value = {}
-    expected_error = 'Module file "{}/module.yaml" needs to have a "Module" key'.format(
-        randomPath
-    )
+    expected_error = f'Module file "{randomPath}/module.yaml" needs to have a "Module" key'
     with pytest.raises(RuntimeError, match=expected_error):
         _load_module(randomPath, fakes.course1)
 
@@ -998,9 +977,7 @@ def test_load_module_complains_missing_module_key(load_yaml):
 def test_load_module_complains_missing_skills_key(load_yaml):
     randomPath = str(random.randint(0, 1000))
     load_yaml.return_value = {"Module": {}}
-    expected_error = 'Module file "{}/module.yaml" needs to have a "Skills" key'.format(
-        randomPath
-    )
+    expected_error = f'Module file "{randomPath}/module.yaml" needs to have a "Skills" key'
     with pytest.raises(RuntimeError, match=expected_error):
         _load_module(randomPath, fakes.course1)
 
@@ -1009,9 +986,7 @@ def test_load_module_complains_missing_skills_key(load_yaml):
 def test_load_module_complains_missing_module_name(load_yaml):
     randomPath = str(random.randint(0, 1000))
     load_yaml.return_value = {"Module": {}, "Skills": []}
-    expected_error = 'Module file "{}/module.yaml" needs to have module name'.format(
-        randomPath
-    )
+    expected_error = f'Module file "{randomPath}/module.yaml" needs to have module name'
     with pytest.raises(RuntimeError, match=expected_error):
         _load_module(randomPath, fakes.course1)
 
@@ -1020,7 +995,7 @@ def test_load_module_complains_missing_module_name(load_yaml):
 def test_load_skills_complains_missing_skills(load_yaml):
     randomPath = str(random.randint(0, 1000))
     expected_error = (
-        'Module file "{}/module.yaml" needs to have a list of skills'.format(randomPath)
+        f'Module file "{randomPath}/module.yaml" needs to have a list of skills'
     )
     with pytest.raises(RuntimeError, match=expected_error):
         _load_skills(randomPath, skills=None, course=fakes.course1)
@@ -1032,7 +1007,7 @@ def test_load_skill_complains_about_an_empty_file(load_yaml):
     load_yaml.return_value = None
     with pytest.raises(
         RuntimeError,
-        match='Skill file "{}" is empty or does not exist'.format(randomPath),
+        match=f'Skill file "{randomPath}" is empty or does not exist'
     ):
         _load_skill(randomPath, fakes.course1)
 
@@ -1041,7 +1016,7 @@ def test_load_skill_complains_about_an_empty_file(load_yaml):
 def test_load_skill_complains_missing_skills_key(load_yaml):
     randomPath = str(random.randint(0, 1000))
     load_yaml.return_value = {}
-    expected_error = 'Skill file "{}" needs to have a "Skill" key'.format(randomPath)
+    expected_error = f'Skill file "{randomPath}" needs to have a "Skill" key'
     with pytest.raises(RuntimeError, match=expected_error):
         _load_skill(randomPath, fakes.course1)
 
@@ -1050,9 +1025,7 @@ def test_load_skill_complains_missing_skills_key(load_yaml):
 def test_load_skill_complains_missing_new_words_key(load_yaml):
     randomPath = str(random.randint(0, 1000))
     load_yaml.return_value = {"Skill": []}
-    expected_error = 'Skill file "{}" needs to have a "New words" key'.format(
-        randomPath
-    )
+    expected_error = f'Skill file "{randomPath}" needs to have a "New words" key'
     with pytest.raises(RuntimeError, match=expected_error):
         _load_skill(randomPath, fakes.course1)
 
@@ -1061,7 +1034,7 @@ def test_load_skill_complains_missing_new_words_key(load_yaml):
 def test_load_skill_complains_missing_skill_name(load_yaml):
     randomPath = str(random.randint(0, 1000))
     load_yaml.return_value = {"Skill": {}, "New words": [], "Phrases": []}
-    expected_error = 'Skill file "{}" needs to have skill name'.format(randomPath)
+    expected_error = f'Skill file "{randomPath}" needs to have skill name'
     with pytest.raises(RuntimeError, match=expected_error):
         _load_skill(randomPath, fakes.course1)
 
@@ -1070,7 +1043,7 @@ def test_load_skill_complains_missing_skill_name(load_yaml):
 def test_load_skill_complains_missing_skill_id(load_yaml):
     randomPath = str(random.randint(0, 1000))
     load_yaml.return_value = {"Skill": {"Name": "asd"}, "New words": [], "Phrases": []}
-    expected_error = 'Skill file "{}" needs to have skill id'.format(randomPath)
+    expected_error = f'Skill file "{randomPath}" needs to have skill id'
     with pytest.raises(RuntimeError, match=expected_error):
         _load_skill(randomPath, fakes.course1)
 
@@ -1094,7 +1067,7 @@ def test_load_skill_complains_about_invalid_phrase(load_yaml):
         "New words": [],
         "Phrases": [""],
     }
-    expected_error = 'Skill file "{}" has an invalid phrase'.format(randomPath)
+    expected_error = f'Skill file "{randomPath}" has an invalid phrase'
     with pytest.raises(RuntimeError, match=expected_error):
         _load_skill(randomPath, fakes.course1)
 
@@ -1107,14 +1080,14 @@ def test_load_skill_complains_about_invalid_word(load_yaml):
         "Phrases": [],
         "New words": [""],
     }
-    expected_error = 'Skill file "{}" has an invalid word'.format(randomPath)
+    expected_error = f'Skill file "{randomPath}" has an invalid word'
     with pytest.raises(RuntimeError, match=expected_error):
         _load_skill(randomPath, fakes.course1)
 
 
 def test_convert_phrase_complains_about_missing_translation():
     randomPhrase = str(random.randint(0, 1000))
-    expected_error = 'Phrase "{}" needs to have a "Translation".'.format(randomPhrase)
+    expected_error = f'Phrase "{randomPhrase}" needs to have a "Translation".'
     with pytest.raises(RuntimeError, match=expected_error):
         _convert_phrase({"Phrase": randomPhrase})
 
