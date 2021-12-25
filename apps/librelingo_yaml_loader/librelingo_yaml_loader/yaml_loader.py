@@ -227,11 +227,14 @@ def _sanitize_markdown(mdtext):
 
 def _load_introduction(path):
     "Loads the introduction text from a Markdown file"
+    if not os.path.exists(path):
+        return None
+
     try:
         with open(path) as f:
             return _sanitize_markdown(f.read())
-    except:
-        return None
+    except Exception as err:
+        raise RuntimeError(f'Makrdown file "{path}" could not be loaded: {err}')
 
 
 def _load_skill(path, course):
