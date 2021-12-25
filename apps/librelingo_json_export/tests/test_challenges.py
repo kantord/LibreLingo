@@ -11,7 +11,6 @@ from librelingo_json_export.challenge_types import get_listening_challenge
 from librelingo_json_export.challenge_types import get_chips_challenge
 from librelingo_json_export.challenge_types import get_options_challenge
 from librelingo_json_export.challenge_types import get_chips_from_phrase
-from librelingo_types import Phrase
 from librelingo_types import Settings, AudioSettings
 from librelingo_fakes import fakes
 
