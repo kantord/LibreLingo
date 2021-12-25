@@ -14,18 +14,15 @@ from librelingo_json_export.export import (
     _export_course_data,
     export_course,
 )
-from librelingo_types import Module, Language
-from librelingo_json_export.challenges import _get_word_challenges
-from librelingo_json_export.challenges import _get_phrase_challenges
-from librelingo_utils import get_dumb_opaque_id
-from librelingo_utils import clean_word
-from librelingo_types import Course
-from librelingo_types import DictionaryItem
-from librelingo_json_export.dictionary import _define_words_in_sentence
-from librelingo_json_export.dictionary import _define_word
+from librelingo_types import Module, Language, DictionaryItem
+from librelingo_utils import get_dumb_opaque_id, clean_word, calculate_number_of_levels
+from librelingo_json_export.challenges import (
+    _get_word_challenges,
+    _get_phrase_challenges,
+)
+from librelingo_json_export.dictionary import _define_words_in_sentence, _define_word
 from librelingo_json_export.course import _get_course_data
 from librelingo_json_export.skills import _get_skill_data
-from librelingo_utils import calculate_number_of_levels
 
 course_with_markdown = fakes.customize(
     fakes.course2,
