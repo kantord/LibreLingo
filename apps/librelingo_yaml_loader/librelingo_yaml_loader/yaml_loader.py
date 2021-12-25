@@ -234,7 +234,7 @@ def _load_introduction(path):
         with open(path) as f:
             return _sanitize_markdown(f.read())
     except Exception as err:
-        raise RuntimeError(f'Makrdown file "{path}" could not be loaded: {err}')
+        raise RuntimeError(f'Markdown file "{path}" could not be loaded: {err}')
 
 
 def _load_skill(path, course):
