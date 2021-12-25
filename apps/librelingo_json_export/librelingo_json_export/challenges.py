@@ -1,4 +1,3 @@
-import itertools
 from .challenge_types import (
     get_options_challenge,
     get_listening_challenge,

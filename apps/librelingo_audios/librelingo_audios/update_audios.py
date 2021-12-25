@@ -1,5 +1,5 @@
 from librelingo_audios.functions import list_required_audios
-from librelingo_utils import audio_id, iterate_phrases, iterate_words
+from librelingo_utils import audio_id
 from pathlib import Path
 import subprocess
 import json
