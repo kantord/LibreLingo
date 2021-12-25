@@ -29,7 +29,7 @@ def _export_skill(export_path, skill, course, settings=None):
     try:
         skill_data = _get_skill_data(skill, course)
     except Exception as error:
-        raise RuntimeError('Error while exporting skill "{skill.name}": {error}')
+        raise RuntimeError(f'Error while exporting skill "{skill.name}": {error}')
     slug = slugify(skill.name)
     Path(Path(export_path) / "challenges").mkdir(parents=True, exist_ok=True)
     with open(
