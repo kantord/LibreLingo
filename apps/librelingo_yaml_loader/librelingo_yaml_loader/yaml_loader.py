@@ -230,11 +230,8 @@ def _load_introduction(path):
     if not os.path.exists(path):
         return None
 
-    try:
-        with open(path) as f:
-            return _sanitize_markdown(f.read())
-    except Exception as err:
-        raise RuntimeError(f'Markdown file "{path}" could not be loaded: {err}')
+    with open(path) as f:
+        return _sanitize_markdown(f.read())
 
 
 def _load_skill(path, course):
