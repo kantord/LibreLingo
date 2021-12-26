@@ -111,6 +111,7 @@ class Course(
             "license",
             "dictionary",
             "repository_url",
+            "course_dir",
             "settings",
         ],
         defaults=[Settings()],
@@ -134,7 +135,8 @@ class Course(
         ),
         dictionary=[dict_item1, dict_item2, dict_item3, dict_item4],
         repository_url="https://example.com",
-        setttings=Settings()
+        course_dir="some_language/course",
+        settings=Settings()
     )
     ```
     """
@@ -187,6 +189,7 @@ class Module(
         "Module",
         [
             "title",
+            "filename",
             "skills",
         ],
     )
@@ -197,7 +200,7 @@ class Module(
     ### Usage examples:
 
     ```python
-    my_module = Module(title="Basics", skills=[skill1, skill2])
+    my_module = Module(title="Basics", filename="basic/module.yaml", skills=[skill1, skill2])
     ```
     """
 
@@ -209,6 +212,7 @@ class Skill(
         "Skill",
         [
             "name",
+            "filename",
             "id",
             "words",
             "phrases",
@@ -230,6 +234,7 @@ class Skill(
     ```python
     my_skill = Skill(
         name="Animals",
+        filename="basic/skills/hello.yaml",
         id="3adc78da-ea42-4ecd-9e3d-2e0986a3b914",
         words=[word1, word2, word3],
         phrases=[phrases1, phrases2, phrases3],

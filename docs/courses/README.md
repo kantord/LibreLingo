@@ -55,7 +55,7 @@ These concepts represent a hierarchical structure to LibreLingo course material:
 
 To have a better understanding of how courses work, you can explore how the course files are organized on this repository.
 
-You will find courses in the `courses` directory of [LibreLingo's repository](https://github.com/kantord/LibreLingo/tree/main/courses). The course directory name is usually structured in `<destination language>-from-<target audience's language>`. e.g. `french-from-english` teaches French to English speakers. In each course you'll find modules. And in each module you'll find skills, which are saved as individual .yaml files.
+The source of the courses are in separate git repositories. You will find a [list of courses](#courses-open) at the bottom of this page. The course repository name is usually structured in `<destination language>-from-<target audience's language>`. e.g. `french-from-english` teaches French to English speakers. In each course you'll find modules. And in each module you'll find skills, which are saved as individual .yaml files.
 
 Now let's look into how they look on the frontend, to the user.
 
@@ -89,8 +89,8 @@ If you are new in contributing to course data, these are the things you can do t
 <a id="courses-from-english"></a>
 ### For English speakers
 
-- [Spanish for English speakers](https://github.com/kantord/LibreLingo/tree/master/courses/spanish-from-english) ([Preview](https://librelingo.app/course/spanish-from-english/))
-- [German for English speakers](https://github.com/kantord/LibreLingo/tree/master/courses/german-from-english) ([Preview](https://librelingo.app/course/german-from-english/))
+- [Spanish for English speakers](https://github.com/kantord/LibreLingo-ES-from-EN) ([Preview](https://librelingo.app/course/spanish-from-english/))
+- [German for English speakers](https://codeberg.org/Lamdarer/LibreLingo-DE-from-EN) ([Preview](https://librelingo.app/course/german-from-english/))
 - [French for English speakers](https://github.com/kantord/LibreLingo/tree/master/courses/french-from-english)
 - [Bangla for English speakers](https://github.com/kantord/LibreLingo/tree/master/courses/bangla-from-english)
 

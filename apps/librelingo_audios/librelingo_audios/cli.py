@@ -4,7 +4,6 @@ import collections
 from librelingo_yaml_loader import load_course
 from librelingo_audios.update_audios import update_audios_for_course
 
-
 Settings = collections.namedtuple(
     "Settings",
     [

@@ -101,9 +101,9 @@ Phrases:
   - Phrase: Behiak dira. Ez dira ahuntzak.
     Translation: They are cows. They are not goats.
 
-  - Phrase: Zuek txerri altuak eta ardi laburak zarete.
+  - Phrase: Zuek txerri altuak eta ardi motzak zarete.
     Alternative versions:
-      - Txerri altuak eta ardi laburak zarete.
+      - Txerri altuak eta ardi motzak zarete.
     Translation: You(plural) are tall pigs and short sheep.
     Alternative translations:
       - You'll are tall pigs and short sheep.
@@ -226,13 +226,16 @@ Mini-dictionary:
     - kotxe: car
     - kotxea: car
     - kotxeak: cars
-    - labura: short
-    - laburak: short
+    - laburra: short
+    - laburrak: short
     - laranja: orange
     - laranjak: orange
     - marroia: brown
     - morea: purple
     - motela: slow
+    - motz: short
+    - motza: short
+    - motzak: short
     - mutila: boy
     - mutilak: boys
     - neska: girl
@@ -351,7 +354,9 @@ Mini-dictionary:
     - rather: baizik
     - red: gorri
     - sheep: ardi
-    - short: labur
+    - short:
+      - labur
+      - motz
     - slow: motel
     - small: txiki
     - snake: suge

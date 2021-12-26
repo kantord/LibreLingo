@@ -25,17 +25,15 @@ def _export_skill(export_path, skill, course, settings=None):
     You probably don't need to call this function directly, because you
     can export the entire course as a whole into a JSON using export_course
     """
-    logger.info("Writing skill {}".format(repr(skill.name)))
+    logger.info("Writing skill %s", repr(skill.name))
     try:
         skill_data = _get_skill_data(skill, course)
     except Exception as error:
-        raise RuntimeError(
-            'Error while exporting skill "{}": {}'.format(skill.name, error)
-        )
+        raise RuntimeError('Error while exporting skill "{skill.name}": {error}')
     slug = slugify(skill.name)
     Path(Path(export_path) / "challenges").mkdir(parents=True, exist_ok=True)
     with open(
-        Path(export_path) / "challenges" / "{}.json".format(slug), "w", encoding="utf-8"
+        Path(export_path) / "challenges" / f"{slug}.json", "w", encoding="utf-8"
     ) as f:
         if settings is not None and settings.dry_run:
             json.dumps(skill_data, ensure_ascii=False, indent=2)
@@ -45,7 +43,7 @@ def _export_skill(export_path, skill, course, settings=None):
     if skill.introduction:
         Path(Path(export_path) / "introduction").mkdir(parents=True, exist_ok=True)
         with open(
-            Path(export_path) / "introduction" / "{}.md".format(slug),
+            Path(export_path) / "introduction" / f"{slug}.md",
             "w",
             encoding="utf-8",
         ) as f:
@@ -62,9 +60,9 @@ def _export_course_data(export_path, course, settings=None):
     can export the entire course as a whole into a JSON using export_course
     """
     logger.info(
-        "Writing course {} for {} speakers".format(
-            repr(course.target_language.name), repr(course.source_language.name)
-        )
+        "Writing course %s for %s speakers",
+        course.target_language.name,
+        course.source_language.name,
     )
     course_data = _get_course_data(course)
     Path(Path(export_path)).mkdir(parents=True, exist_ok=True)

@@ -23,7 +23,7 @@ click = ">=7.0.0,<8.0.0"
 pytest = "^6.2.2"
 pytest-watch = "^4.2.0"
 pyfakefs = "^4.3.3"
-librelingo-fakes = {path = "../librelingo_fakes", develop = true}
+librelingo-fakes = {path = "../librelingo_fakes", develop = true}  # Only used in local development
 pytest-mock = "^3.5.1"
 pydoc-markdown = "^3.10.0"
 

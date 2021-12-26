@@ -1,5 +1,6 @@
 import collections
 from pathlib import Path
+import os
 
 import bleach
 from librelingo_types import (
@@ -148,6 +149,9 @@ def _solution_from_yaml(raw_object, solution_key, alternatives_key):
 def _convert_word(raw_word):
     """
     Converts a YAML word definition into a Word() object
+
+    >>> _convert_word({'Images': ["abc"], 'Word': "cat", 'Synonyms': ["kitten"], 'Translation': "gato"})
+    Word(in_target_language=['cat', 'kitten'], in_source_language=['gato'], pictures=['abc'])
     """
     return Word(
         in_target_language=_solution_from_yaml(raw_word, "Word", "Synonyms"),
@@ -180,7 +184,7 @@ def _convert_phrase(raw_phrase):
         )
     except KeyError:
         raise RuntimeError(
-            'Phrase "{}" needs to have a "Translation".'.format(raw_phrase["Phrase"])
+            f'Phrase "{raw_phrase["Phrase"]}" needs to have a "Translation".'
         )
 
 
@@ -238,36 +242,35 @@ def _load_skill(path, course):
         words = data["New words"]
         phrases = data["Phrases"]
     except TypeError:
-        raise RuntimeError('Skill file "{}" is empty or does not exist'.format(path))
+        raise RuntimeError(f'Skill file "{path}" is empty or does not exist')
     except KeyError as error:
-        raise RuntimeError(
-            'Skill file "{}" needs to have a "{}" key'.format(path, error.args[0])
-        )
+        raise RuntimeError(f'Skill file "{path}" needs to have a "{error.args[0]}" key')
 
     try:
         name = skill["Name"]
     except Exception:
-        raise RuntimeError('Skill file "{}" needs to have skill name'.format(path))
+        raise RuntimeError(f'Skill file "{path}" needs to have skill name')
 
     try:
         skill_id = skill["Id"]
     except Exception:
-        raise RuntimeError('Skill file "{}" needs to have skill id'.format(path))
+        raise RuntimeError(f'Skill file "{path}" needs to have skill id')
 
     try:
         phrases = _convert_phrases(phrases)
     except TypeError:
-        raise RuntimeError('Skill file "{}" has an invalid phrase'.format(path))
+        raise RuntimeError(f'Skill file "{path}" has an invalid phrase')
 
     try:
         words = _convert_words(words)
     except TypeError:
-        raise RuntimeError('Skill file "{}" has an invalid word'.format(path))
+        raise RuntimeError(f'Skill file "{path}" has an invalid word')
 
     _run_skill_spellcheck(phrases, words, course)
 
     return Skill(
         name=name,
+        filename=os.path.relpath(path, start=course.course_dir),
         id=skill_id,
         words=words,
         phrases=phrases,
@@ -287,7 +290,7 @@ def _load_skills(path, skills, course):
         return [_load_skill(Path(path) / "skills" / skill, course) for skill in skills]
     except TypeError:
         raise RuntimeError(
-            'Module file "{}/module.yaml" needs to have a list of skills'.format(path)
+            f'Module file "{path}/module.yaml" needs to have a list of skills'
         )
 
 
@@ -301,22 +304,22 @@ def _load_module(path, course):
         module = data["Module"]
         skills = data["Skills"]
     except TypeError:
-        raise RuntimeError(
-            'Module file "{}" is empty or does not exist'.format(filepath)
-        )
+        raise RuntimeError(f'Module file "{filepath}" is empty or does not exist')
     except KeyError as error:
         raise RuntimeError(
-            'Module file "{}" needs to have a "{}" key'.format(filepath, error.args[0])
+            f'Module file "{filepath}" needs to have a "{error.args[0]}" key'
         )
 
     try:
         title = module["Name"]
     except Exception:
-        raise RuntimeError(
-            'Module file "{}" needs to have module name'.format(filepath)
-        )
+        raise RuntimeError(f'Module file "{filepath}" needs to have module name')
 
-    return Module(title=title, skills=_load_skills(path, skills, course))
+    return Module(
+        title=title,
+        filename=os.path.relpath(path, start=course.course_dir),
+        skills=_load_skills(path, skills, course),
+    )
 
 
 def _load_modules(path, modules, course):
@@ -403,6 +406,7 @@ def load_course(path):
         modules=[],
         settings=None,
         repository_url=course["Repository"],
+        course_dir=path,
     )
     dumb_course = Course(
         **{

@@ -9,7 +9,7 @@ Feature: Short text input challange
     And I read "dog"
     And I read "in Test Language!"
     Given I open "/course/test/skill/short-input-test-1?testChallenge=fc0a3426d589"
-    Then I read "foo"
+    Then I see a tooltip that says "foo"
     And I see a panel with only a skip button
     And I'm not able to submit
     And I don't see a "Submit" button
