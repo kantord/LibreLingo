@@ -194,7 +194,7 @@ class TestExportCourse(FakeFsTestCase):
 
     @patch("librelingo_json_export.export._export_course_skills")
     def test_calls__export_course_skills_with_correct_value(
-        self, _export_course_skills
+            self, _export_course_skills
     ):
         export_course(self.export_path, fakes.course1)
         _export_course_skills.assert_called_with(self.export_path, fakes.course1, None)

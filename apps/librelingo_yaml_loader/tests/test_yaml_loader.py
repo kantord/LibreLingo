@@ -330,10 +330,10 @@ class TestLoadCourseMeta(YamlImportTestCase):
                 provider="Polly",
                 voice="Aditi",
                 engine="standard"),
-            TextToSpeechSettings(
-                provider="Polly",
-                voice="Lupe",
-                engine="neural")])
+             TextToSpeechSettings(
+                 provider="Polly",
+                 voice="Lupe",
+                 engine="neural")])
 
     def test_returned_object_has_correct_repository_url(self):
         self.assertEqual(
@@ -964,7 +964,7 @@ def test_load_dictionary_has_a_single_string_definition(module_with_word):
 
 
 def test_load_dictionary_includes_duplicate_words_includes_multiple_definitions(
-    module_with_word,
+        module_with_word,
 ):
     random_new_word = get_fake_word()[0]
     existing_word = module_with_word[0].skills[0].words[0]
@@ -988,8 +988,8 @@ def test_load_module_complains_about_an_empty_file(load_yaml):
     randomPath = str(random.randint(0, 1000))
     load_yaml.return_value = None
     with pytest.raises(
-        RuntimeError,
-        match=f'Module file "{randomPath}/module.yaml" is empty or does not exist',
+            RuntimeError,
+            match=f'Module file "{randomPath}/module.yaml" is empty or does not exist',
     ):
         _load_module(randomPath, fakes.course1)
 
@@ -1040,7 +1040,7 @@ def test_load_skill_complains_about_an_empty_file(load_yaml):
     randomPath = str(random.randint(0, 1000))
     load_yaml.return_value = None
     with pytest.raises(
-        RuntimeError, match=f'Skill file "{randomPath}" is empty or does not exist'
+            RuntimeError, match=f'Skill file "{randomPath}" is empty or does not exist'
     ):
         _load_skill(randomPath, fakes.course1)
 
