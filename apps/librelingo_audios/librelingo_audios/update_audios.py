@@ -80,7 +80,7 @@ def _fetch_audio_for_phrase(phrase_identity, output_path, course, settings):
 
 
 def _generate_audio_with_tts(
-    phrase_identity, file_name, destination_path, course, settings
+        phrase_identity, file_name, destination_path, course, settings
 ):
     tts_settings_list = course.settings.audio_settings.text_to_speech_settings_list
     if tts_settings_list == []:
