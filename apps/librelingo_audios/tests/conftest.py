@@ -114,7 +114,7 @@ def index_file(tmp_path):
         assert list(tmp_path.iterdir()) == [tmp_path / "test.json"]
 
     def assert_does_not_exist():
-        assert len(list(tmp_path.iterdir())) == 0
+        assert not list(tmp_path.iterdir())
 
     def set_entries(entries):
         with open(tmp_path / "test.json", "w", encoding="utf-8") as f:

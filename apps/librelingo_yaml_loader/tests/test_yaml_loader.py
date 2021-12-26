@@ -62,6 +62,7 @@ class TestLoadCourseMeta(YamlImportTestCase):
             f.write(self.get_fake_course_yaml(**kwargs))
 
     def get_fake_course_yaml(self, **kwargs):
+        # pylint: disable=no-self-use
         return f"""
     Course:
       Language:
@@ -85,6 +86,7 @@ class TestLoadCourseMeta(YamlImportTestCase):
     """
 
     def get_fake_values(self):
+        # pylint: disable=no-self-use
         return {
             "target_language_name": str(fakes.fake_value()),
             "target_language_code": str(fakes.fake_value()),
@@ -121,39 +123,39 @@ class TestLoadCourseMeta(YamlImportTestCase):
         self.result = load_course(self.fake_path)
 
     def test_returns_a_correctly_types_course(self):
-        assert type(self.result) == Course
+        self.assertIsInstance(self.result, Course)
 
     def test_returns_correct_language_name(self):
-        assert (
-            self.result.target_language.name == self.fake_values["target_language_name"]
+        self.assertEqual(
+            self.result.target_language.name, self.fake_values["target_language_name"]
         )
 
     def test_returns_correct_language_code(self):
-        assert (
-            self.result.target_language.code == self.fake_values["target_language_code"]
+        self.assertEqual(
+            self.result.target_language.code, self.fake_values["target_language_code"]
         )
 
     def test_returns_correct_source_language_name(self):
-        assert (
-            self.result.source_language.name == self.fake_values["source_language_name"]
+        self.assertEqual(
+            self.result.source_language.name, self.fake_values["source_language_name"]
         )
 
     def test_returns_correct_source_language_code(self):
-        assert (
-            self.result.source_language.code == self.fake_values["source_language_code"]
+        self.assertEqual(
+            self.result.source_language.code, self.fake_values["source_language_code"]
         )
 
     def test_returns_correct_dictionary(self):
-        assert self.result.dictionary == self.load_dictionary.return_value
+        self.assertEqual(self.result.dictionary, self.load_dictionary.return_value)
 
     def test_returns_correct_modules(self):
-        assert self.result.modules == self.load_modules.return_value
+        self.assertEqual(self.result.modules, self.load_modules.return_value)
 
     def test_returns_correct_license(self):
-        assert self.result.license == self.convert_license.return_value
+        self.assertEqual(self.result.license, self.convert_license.return_value)
 
     def test_returns_empty_hunspell_list(self):
-        assert self.result.settings.hunspell == HunspellSettings()
+        self.assertEqual(self.result.settings.hunspell, HunspellSettings())
 
     def test_calls_convert_license_with_correct_argumetns(self):
         self.convert_license.assert_called_with(
@@ -177,19 +179,22 @@ class TestLoadCourseMeta(YamlImportTestCase):
         self.load_dictionary.assert_called_with(self.load_modules.return_value)
 
     def test_returns_correct_special_characters(self):
-        assert self.result.special_characters == [
-            self.fake_values["first_special_character"],
-            self.fake_values["second_special_character"],
-        ]
+        self.assertEqual(
+            self.result.special_characters,
+            [
+                self.fake_values["first_special_character"],
+                self.fake_values["second_special_character"],
+            ],
+        )
 
     def test_returns_correct_settings_audio_settings_enabled(self):
-        assert self.result.settings.audio_settings.enabled == False
+        self.assertFalse(self.result.settings.audio_settings.enabled)
 
     def test_returns_correct_settings_audio_settings_tts(self):
         tts_settings_list = (
             self.result.settings.audio_settings.text_to_speech_settings_list
         )
-        assert tts_settings_list == []
+        self.assertEqual(tts_settings_list, [])
 
     def _append_settings_to_file(self, new_settings):
         with open(Path(self.fake_path) / "course.yaml", "a") as f:
@@ -205,12 +210,12 @@ class TestLoadCourseMeta(YamlImportTestCase):
         )
 
         self.result = load_course(self.fake_path)
-        assert self.result.settings.audio_settings.enabled == False
+        self.assertFalse(self.result.settings.audio_settings.enabled)
 
         tts_settings_list = (
             self.result.settings.audio_settings.text_to_speech_settings_list
         )
-        assert tts_settings_list == []
+        self.assertEqual(tts_settings_list, [])
 
     def test_returns_correct_settings_audio_enabled(self):
         self._append_settings_to_file(
@@ -222,12 +227,12 @@ class TestLoadCourseMeta(YamlImportTestCase):
         )
 
         self.result = load_course(self.fake_path)
-        assert self.result.settings.audio_settings.enabled == True
+        self.assertTrue(self.result.settings.audio_settings.enabled)
 
         tts_settings_list = (
             self.result.settings.audio_settings.text_to_speech_settings_list
         )
-        assert tts_settings_list == []
+        self.assertEqual(tts_settings_list, [])
 
     @patch("librelingo_yaml_loader._spelling.hunspell")
     def test_creates_correct_hunspell_settings_1(self, hunspell):
@@ -273,13 +278,13 @@ class TestLoadCourseMeta(YamlImportTestCase):
         )
 
         self.result = load_course(self.fake_path)
-        assert (
-            self.result.settings.hunspell.target_language
-            == hunspell.HunSpell.return_value
+        self.assertEqual(
+            self.result.settings.hunspell.target_language,
+            hunspell.HunSpell.return_value,
         )
-        assert (
-            self.result.settings.hunspell.source_language
-            == hunspell.HunSpell.return_value
+        self.assertEqual(
+            self.result.settings.hunspell.source_language,
+            hunspell.HunSpell.return_value,
         )
 
     def test_returns_correct_settings_audio_enabled_no_tts(self):
@@ -293,12 +298,12 @@ class TestLoadCourseMeta(YamlImportTestCase):
         )
 
         self.result = load_course(self.fake_path)
-        assert self.result.settings.audio_settings.enabled == True
+        self.assertTrue(self.result.settings.audio_settings.enabled)
 
         tts_settings_list = (
             self.result.settings.audio_settings.text_to_speech_settings_list
         )
-        assert tts_settings_list == []
+        self.assertEqual(tts_settings_list, [])
 
     def test_returns_correct_settings_audio_enabled_and_tts(self):
         self._append_settings_to_file(
@@ -317,26 +322,23 @@ class TestLoadCourseMeta(YamlImportTestCase):
         )
 
         self.result = load_course(self.fake_path)
-        assert self.result.settings.audio_settings.enabled == True
+        self.assertTrue(self.result.settings.audio_settings.enabled)
 
         tts_settings_list = (
             self.result.settings.audio_settings.text_to_speech_settings_list
         )
-        assert tts_settings_list == [
-            TextToSpeechSettings(
-                provider="Polly",
-                voice="Aditi",
-                engine="standard",
-            ),
-            TextToSpeechSettings(
-                provider="Polly",
-                voice="Lupe",
-                engine="neural",
-            ),
-        ]
+        self.assertEqual(
+            tts_settings_list,
+            [
+                TextToSpeechSettings(
+                    provider="Polly", voice="Aditi", engine="standard"
+                ),
+                TextToSpeechSettings(provider="Polly", voice="Lupe", engine="neural"),
+            ],
+        )
 
     def test_returned_object_has_correct_repository_url(self):
-        assert self.result.repository_url == self.fake_values["repository_url"]
+        self.assertEqual(self.result.repository_url, self.fake_values["repository_url"])
 
 
 def test_load_course_output_matches_value(fs):
@@ -430,6 +432,7 @@ def test_load_course_output_matches_value(fs):
 
 class TestConvertLicense(YamlImportTestCase):
     def get_fake_values(self):
+        # pylint: disable=no-self-use
         return {
             "Name": str(fakes.fake_value()),
             "Short name": str(fakes.fake_value()),
@@ -440,20 +443,21 @@ class TestConvertLicense(YamlImportTestCase):
         self.result = _convert_license(self.fake_values)
 
     def test_returns_a_correctly_types_license(self):
-        assert type(self.result) == License
+        self.assertEqual(type(self.result), License)
 
     def test_returned_object_has_correct_name(self):
-        assert self.result.name == self.fake_values["Short name"]
+        self.assertEqual(self.result.name, self.fake_values["Short name"])
 
     def test_returned_object_has_correct_full_name(self):
-        assert self.result.full_name == self.fake_values["Name"]
+        self.assertEqual(self.result.full_name, self.fake_values["Name"])
 
     def test_returned_object_has_correct_license(self):
-        assert self.result.link == self.fake_values["Link"]
+        self.assertEqual(self.result.link, self.fake_values["Link"])
 
 
 class TestLoadModuleMeta(YamlImportTestCase):
     def get_fake_module_yaml(self, **kwargs):
+        # pylint: disable=no-self-use
         return f"""
     Module:
         Name: {kwargs["module_name"]}
@@ -467,6 +471,7 @@ class TestLoadModuleMeta(YamlImportTestCase):
             f.write(self.get_fake_module_yaml(**kwargs))
 
     def get_fake_values(self):
+        # pylint: disable=no-self-use
         return {
             "module_name": str(fakes.fake_value()),
             "skill_name": str(fakes.fake_value()),
@@ -489,13 +494,13 @@ class TestLoadModuleMeta(YamlImportTestCase):
         self.result = _load_module(self.fake_path, fakes.course1)
 
     def test_returns_a_correctly_types_course(self):
-        assert type(self.result) == Module
+        self.assertIsInstance(self.result, Module)
 
     def test_returned_object_has_correct_title(self):
-        assert self.result.title == self.fake_values["module_name"]
+        self.assertEqual(self.result.title, self.fake_values["module_name"])
 
     def test_returned_object_has_correct_skills(self):
-        assert self.result.skills == self.load_skills.return_value
+        self.assertEqual(self.result.skills, self.load_skills.return_value)
 
     def test_calls_load_skills_with_the_correct_arguments(self):
         self.load_skills.assert_called_with(
@@ -511,20 +516,21 @@ class LoadModulesTestCase(TestCase):
     @patch("librelingo_yaml_loader.yaml_loader._load_module")
     def test_returns_correct_value(self, load_module):
         load_module.return_value = fakes.fake_value()
-        assert _load_modules("foo", ["bar"], fakes.course1) == [
-            load_module.return_value
-        ]
+        self.assertEqual(
+            _load_modules("foo", ["bar"], fakes.course1), [load_module.return_value]
+        )
 
     @patch("librelingo_yaml_loader.yaml_loader._load_module")
     def test_handles_every_module(self, load_module):
         load_module.return_value = fakes.fake_value()
-        assert (
-            _load_modules("foo", ["bar", "baz"], fakes.course1)
-            == [load_module.return_value] * 2
+        self.assertEqual(
+            _load_modules("foo", ["bar", "baz"], fakes.course1),
+            [load_module.return_value] * 2,
         )
 
     @patch("librelingo_yaml_loader.yaml_loader._load_module")
     def test_calls_load_modules_with_correct_arguments(self, load_module):
+        # pylint: disable=no-self-use
         _load_modules("foo", ["bar"], fakes.course1)
         load_module.assert_called_with(Path("foo/bar"), fakes.course1)
 
@@ -533,24 +539,28 @@ class TestLoadSkills(TestCase):
     @patch("librelingo_yaml_loader.yaml_loader._load_skill")
     def test_returns_correct_value(self, load_skill):
         load_skill.return_value = fakes.fake_value()
-        assert _load_skills("foo", ["bar"], fakes.course1) == [load_skill.return_value]
+        self.assertEqual(
+            _load_skills("foo", ["bar"], fakes.course1), [load_skill.return_value]
+        )
 
     @patch("librelingo_yaml_loader.yaml_loader._load_skill")
     def test_handles_every_module(self, load_skill):
         load_skill.return_value = fakes.fake_value()
-        assert (
-            _load_skills("foo", ["bar", "baz"], fakes.course1)
-            == [load_skill.return_value] * 2
+        self.assertEqual(
+            _load_skills("foo", ["bar", "baz"], fakes.course1),
+            [load_skill.return_value] * 2,
         )
 
     @patch("librelingo_yaml_loader.yaml_loader._load_skill")
     def test_calls_load_skills_with_correct_arguments(self, load_skill):
+        # pylint: disable=no-self-use
         _load_skills("foo", ["bar.yaml"], fakes.course1)
         load_skill.assert_called_with(Path("foo/skills/bar.yaml"), fakes.course1)
 
 
 class TestLoadSkill(YamlImportTestCase):
     def get_fake_skill_yaml(self, **kwargs):
+        # pylint: disable=no-self-use
         return f"""
 Skill:
   Name: {kwargs["skill_name"]}
@@ -576,6 +586,7 @@ Mini-dictionary:
     """
 
     def get_fake_skill_markdown(self):
+        # pylint: disable=no-self-use
         return "<script />" + self.fake_values["introduction"]
 
     def create_fake_skill_meta(self, path, **kwargs):
@@ -583,6 +594,7 @@ Mini-dictionary:
             f.write(self.get_fake_skill_yaml(**kwargs))
 
     def get_fake_values(self):
+        # pylint: disable=no-self-use
         return {
             "skill_name": str(fakes.fake_value()),
             "skill_id": str(fakes.fake_value()),
@@ -633,65 +645,68 @@ Mini-dictionary:
         self.result = _load_skill(self.fake_path / "food.yaml", self.fake_course)
 
     def test_returns_a_correctly_types_course(self):
-        assert type(self.result) == Skill
+        self.assertIsInstance(self.result, Skill)
 
     def test_returned_object_has_correct_name(self):
-        assert self.result.name == self.fake_values["skill_name"]
+        self.assertEqual(self.result.name, self.fake_values["skill_name"])
 
     def test_returned_object_has_correct_id(self):
-        assert self.result.id == self.fake_values["skill_id"]
+        self.assertEqual(self.result.id, self.fake_values["skill_id"])
 
     def test_returned_object_has_correct_image_set(self):
-        assert self.result.image_set == [
-            self.fake_values["img1"],
-            self.fake_values["img2"],
-            self.fake_values["img3"],
-        ]
-
-    def test_returned_object_has_correct_words(self):
-        assert self.result.words == self.convert_words.return_value
-
-    def test_returned_object_has_correct_phrases(self):
-        assert self.result.phrases == self.convert_phrases.return_value
-
-    def test_returned_object_has_correct_introduction(self):
-        # print(self.result)
-        assert self.result.introduction == self.fake_values["introduction"]
-
-    def test_dictionary_is_a_list_of_dictionary_items(self):
-        assert type(self.result.dictionary) == list and all(
-            type(x) == tuple for x in self.result.dictionary
+        self.assertEqual(
+            self.result.image_set,
+            [
+                self.fake_values["img1"],
+                self.fake_values["img2"],
+                self.fake_values["img3"],
+            ],
         )
 
+    def test_returned_object_has_correct_words(self):
+        self.assertEqual(self.result.words, self.convert_words.return_value)
+
+    def test_returned_object_has_correct_phrases(self):
+        self.assertEqual(self.result.phrases, self.convert_phrases.return_value)
+
+    def test_returned_object_has_correct_introduction(self):
+        self.assertEqual(self.result.introduction, self.fake_values["introduction"])
+
+    def test_dictionary_is_a_list_of_dictionary_items(self):
+        self.assertIsInstance(self.result.dictionary, list)
+        for _ in self.result.dictionary:
+            self.assertIsInstance(_, tuple)
+
     def test_dictionary_is_a_contains_reverse_and_normal_items(self):
-        assert set(x[2] for x in self.result.dictionary) == {True, False}
+        self.assertEqual(set(x[2] for x in self.result.dictionary), {True, False})
 
     def test_includes_all_dictionary_items(self):
-        assert len(self.result.dictionary) == 5
+        self.assertEqual(len(self.result.dictionary), 5)
 
     def test_includes_all_reverse_dictionary_items(self):
-        assert len([x for x in self.result.dictionary if x[2]]) == 3
+        self.assertEqual(len([x for x in self.result.dictionary if x[2]]), 3)
 
     def test_includes_items_based_on_yaml_file_1(self):
-        assert (
-            self.fake_values["word2"],
-            tuple([self.fake_values["word1"]]),
-            True,
-        ) in self.result.dictionary
+        self.assertIn(
+            (self.fake_values["word2"], tuple([self.fake_values["word1"]]), True),
+            self.result.dictionary,
+        )
 
     def test_includes_items_based_on_yaml_file_2(self):
-        assert (
-            self.fake_values["word4"],
-            tuple(["hello", self.fake_values["word5"]]),
-            True,
-        ) in self.result.dictionary
+        self.assertIn(
+            (
+                self.fake_values["word4"],
+                tuple(["hello", self.fake_values["word5"]]),
+                True,
+            ),
+            self.result.dictionary,
+        )
 
     def test_includes_items_based_on_yaml_file_3(self):
-        assert (
-            self.fake_values["word6"],
-            tuple([self.fake_values["word7"]]),
-            False,
-        ) in self.result.dictionary
+        self.assertIn(
+            (self.fake_values["word6"], tuple([self.fake_values["word7"]]), False),
+            self.result.dictionary,
+        )
 
     def test_calls_convert_words_with_correct_values(self):
         self.convert_words.assert_called_with(self.fake_values["fake_words"])
@@ -702,20 +717,21 @@ Mini-dictionary:
 
 class TestConvertWords(TestCase):
     def test_returns_a_list(self):
-        assert type(_convert_words([])) == list
+        self.assertIsInstance(_convert_words([]), list)
 
     @patch("librelingo_yaml_loader.yaml_loader._convert_word")
     def test_converts_every_word(self, convert_word):
         raw_words = [None] * random.randint(0, 1000)
-        assert len(_convert_words(raw_words)) == len(raw_words)
+        self.assertEqual(len(_convert_words(raw_words)), len(raw_words))
 
     @patch("librelingo_yaml_loader.yaml_loader._convert_word")
     def test_returns_correct_value(self, convert_word):
         convert_word.return_value = fakes.fake_value()
-        assert _convert_words([None]) == [convert_word.return_value]
+        self.assertEqual(_convert_words([None]), [convert_word.return_value])
 
     @patch("librelingo_yaml_loader.yaml_loader._convert_word")
     def test_calls_convert_word_with_correct_values(self, convert_word):
+        # pylint: disable=no-self-use
         word1 = fakes.fake_value()
         word2 = fakes.fake_value()
         _convert_words([word1, word2])
@@ -740,61 +756,62 @@ class TestConvertWord(TestCase):
         }
 
     def test_returns_a_word_object(self):
-        assert type(_convert_word(self.fakeWord)) == Word
+        self.assertIsInstance(_convert_word(self.fakeWord), Word)
 
     def test_includes_the_correct_pictures(self):
-        assert _convert_word(self.fakeWord).pictures == self.fakeWord["Images"]
+        self.assertEqual(_convert_word(self.fakeWord).pictures, self.fakeWord["Images"])
 
     def test_pictures_are_optional(self):
         del self.fakeWord["Images"]
-        assert _convert_word(self.fakeWord).pictures is None
+        self.assertIsNone(_convert_word(self.fakeWord).pictures)
 
     def test_includes_main_word(self):
-        assert (
-            _convert_word(self.fakeWord).in_target_language[0] == self.fakeWord["Word"]
+        self.assertEqual(
+            _convert_word(self.fakeWord).in_target_language[0], self.fakeWord["Word"]
         )
 
     def test_includes_synonyms(self):
         result = _convert_word(self.fakeWord).in_target_language
-        assert self.fakeWord["Synonyms"][0] in result
-        assert self.fakeWord["Synonyms"][1] in result
+        self.assertIn(self.fakeWord["Synonyms"][0], result)
+        self.assertIn(self.fakeWord["Synonyms"][1], result)
 
     def test_synonyms_are_optional(self):
         del self.fakeWord["Synonyms"]
-        assert len(_convert_word(self.fakeWord).in_target_language) == 1
+        self.assertEqual(len(_convert_word(self.fakeWord).in_target_language), 1)
 
     def test_includes_translation(self):
-        assert (
-            _convert_word(self.fakeWord).in_source_language[0]
-            == self.fakeWord["Translation"]
+        self.assertEqual(
+            _convert_word(self.fakeWord).in_source_language[0],
+            self.fakeWord["Translation"],
         )
 
     def test_includes_alternative_translations(self):
         result = _convert_word(self.fakeWord).in_source_language
-        assert self.fakeWord["Also accepted"][0] in result
-        assert self.fakeWord["Also accepted"][1] in result
+        self.assertIn(self.fakeWord["Also accepted"][0], result)
+        self.assertIn(self.fakeWord["Also accepted"][1], result)
 
     def test_alternative_translations_are_optional(self):
         del self.fakeWord["Also accepted"]
-        assert len(_convert_word(self.fakeWord).in_source_language) == 1
+        self.assertEqual(len(_convert_word(self.fakeWord).in_source_language), 1)
 
 
 class TestConvertPhrases(TestCase):
     def test_returns_a_list(self):
-        assert type(_convert_phrases([])) == list
+        self.assertIsInstance(_convert_phrases([]), list)
 
     @patch("librelingo_yaml_loader.yaml_loader._convert_phrase")
     def test_converts_every_word(self, convert_phrase):
         raw_words = [None] * random.randint(0, 1000)
-        assert len(_convert_phrases(raw_words)) == len(raw_words)
+        self.assertEqual(len(_convert_phrases(raw_words)), len(raw_words))
 
     @patch("librelingo_yaml_loader.yaml_loader._convert_phrase")
     def test_returns_correct_value(self, convert_phrase):
         convert_phrase.return_value = fakes.fake_value()
-        assert _convert_phrases([None]) == [convert_phrase.return_value]
+        self.assertEqual(_convert_phrases([None]), [convert_phrase.return_value])
 
     @patch("librelingo_yaml_loader.yaml_loader._convert_phrase")
     def test_calls_convert_phrases_with_correct_values(self, convert_phrase):
+        # pylint: disable=no-self-use
         word1 = fakes.fake_value()
         word2 = fakes.fake_value()
         _convert_phrases([word1, word2])
@@ -818,37 +835,37 @@ class TestConvertPhrase(TestCase):
         }
 
     def test_returns_a_phrase_object(self):
-        assert type(_convert_phrase(self.fakePhrase)) == Phrase
+        self.assertIsInstance(_convert_phrase(self.fakePhrase), Phrase)
 
     def test_includes_main_version(self):
-        assert (
-            _convert_phrase(self.fakePhrase).in_target_language[0]
-            == self.fakePhrase["Phrase"]
+        self.assertEqual(
+            _convert_phrase(self.fakePhrase).in_target_language[0],
+            self.fakePhrase["Phrase"],
         )
 
     def test_includes_alternative_versions(self):
         result = _convert_phrase(self.fakePhrase).in_target_language
-        assert self.fakePhrase["Alternative versions"][0] in result
-        assert self.fakePhrase["Alternative versions"][1] in result
+        self.assertIn(self.fakePhrase["Alternative versions"][0], result)
+        self.assertIn(self.fakePhrase["Alternative versions"][1], result)
 
     def test_alternative_versions_are_optional(self):
         del self.fakePhrase["Alternative versions"]
-        assert len(_convert_phrase(self.fakePhrase).in_target_language) == 1
+        self.assertEqual(len(_convert_phrase(self.fakePhrase).in_target_language), 1)
 
     def test_includes_translation(self):
-        assert (
-            _convert_phrase(self.fakePhrase).in_source_language[0]
-            == self.fakePhrase["Translation"]
+        self.assertEqual(
+            _convert_phrase(self.fakePhrase).in_source_language[0],
+            self.fakePhrase["Translation"],
         )
 
     def test_includes_alternative_translations(self):
         result = _convert_phrase(self.fakePhrase).in_source_language
-        assert self.fakePhrase["Alternative translations"][0] in result
-        assert self.fakePhrase["Alternative translations"][1] in result
+        self.assertIn(self.fakePhrase["Alternative translations"][0], result)
+        self.assertIn(self.fakePhrase["Alternative translations"][1], result)
 
     def test_alternative_translations_are_optional(self):
         del self.fakePhrase["Alternative translations"]
-        assert len(_convert_phrase(self.fakePhrase).in_source_language) == 1
+        self.assertEqual(len(_convert_phrase(self.fakePhrase).in_source_language), 1)
 
 
 def get_fake_word_values():
