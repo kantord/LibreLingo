@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[266],{563:function(o,n,e){"use strict";e.r(n),n.default="# Pronouns\n\n*   yo - I\n*   tu - you\n*   el - he\n*   eya - she\n*   mozotros - we (masc.)\n*   mozotras - we (fem.)\n*   vozotros - you (masc. plural)\n*   vozotras - you (fem. plural)\n*   eyos - they (masc.)\n*   eyas - they (fem.)"}}]);
