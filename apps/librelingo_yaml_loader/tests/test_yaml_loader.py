@@ -127,34 +127,32 @@ class TestLoadCourseMeta(YamlImportTestCase):
 
     def test_returns_correct_language_name(self):
         self.assertEqual(
-            self.result.target_language.name,
-            self.fake_values["target_language_name"])
+            self.result.target_language.name, self.fake_values["target_language_name"]
+        )
 
     def test_returns_correct_language_code(self):
         self.assertEqual(
-            self.result.target_language.code,
-            self.fake_values["target_language_code"])
+            self.result.target_language.code, self.fake_values["target_language_code"]
+        )
 
     def test_returns_correct_source_language_name(self):
         self.assertEqual(
-            self.result.source_language.name,
-            self.fake_values["source_language_name"])
+            self.result.source_language.name, self.fake_values["source_language_name"]
+        )
 
     def test_returns_correct_source_language_code(self):
         self.assertEqual(
-            self.result.source_language.code,
-            self.fake_values["source_language_code"])
+            self.result.source_language.code, self.fake_values["source_language_code"]
+        )
 
     def test_returns_correct_dictionary(self):
-        self.assertEqual(
-            self.result.dictionary, self.load_dictionary.return_value)
+        self.assertEqual(self.result.dictionary, self.load_dictionary.return_value)
 
     def test_returns_correct_modules(self):
         self.assertEqual(self.result.modules, self.load_modules.return_value)
 
     def test_returns_correct_license(self):
-        self.assertEqual(
-            self.result.license, self.convert_license.return_value)
+        self.assertEqual(self.result.license, self.convert_license.return_value)
 
     def test_returns_empty_hunspell_list(self):
         self.assertEqual(self.result.settings.hunspell, HunspellSettings())
@@ -183,8 +181,11 @@ class TestLoadCourseMeta(YamlImportTestCase):
     def test_returns_correct_special_characters(self):
         self.assertEqual(
             self.result.special_characters,
-            [self.fake_values["first_special_character"],
-             self.fake_values["second_special_character"]])
+            [
+                self.fake_values["first_special_character"],
+                self.fake_values["second_special_character"],
+            ],
+        )
 
     def test_returns_correct_settings_audio_settings_enabled(self):
         self.assertFalse(self.result.settings.audio_settings.enabled)
@@ -279,10 +280,12 @@ class TestLoadCourseMeta(YamlImportTestCase):
         self.result = load_course(self.fake_path)
         self.assertEqual(
             self.result.settings.hunspell.target_language,
-            hunspell.HunSpell.return_value)
+            hunspell.HunSpell.return_value,
+        )
         self.assertEqual(
             self.result.settings.hunspell.source_language,
-            hunspell.HunSpell.return_value)
+            hunspell.HunSpell.return_value,
+        )
 
     def test_returns_correct_settings_audio_enabled_no_tts(self):
         self._append_settings_to_file(
@@ -326,18 +329,16 @@ class TestLoadCourseMeta(YamlImportTestCase):
         )
         self.assertEqual(
             tts_settings_list,
-            [TextToSpeechSettings(
-                provider="Polly",
-                voice="Aditi",
-                engine="standard"),
-             TextToSpeechSettings(
-                 provider="Polly",
-                 voice="Lupe",
-                 engine="neural")])
+            [
+                TextToSpeechSettings(
+                    provider="Polly", voice="Aditi", engine="standard"
+                ),
+                TextToSpeechSettings(provider="Polly", voice="Lupe", engine="neural"),
+            ],
+        )
 
     def test_returned_object_has_correct_repository_url(self):
-        self.assertEqual(
-            self.result.repository_url, self.fake_values["repository_url"])
+        self.assertEqual(self.result.repository_url, self.fake_values["repository_url"])
 
 
 def test_load_course_output_matches_value(fs):
@@ -516,15 +517,16 @@ class LoadModulesTestCase(TestCase):
     def test_returns_correct_value(self, load_module):
         load_module.return_value = fakes.fake_value()
         self.assertEqual(
-            _load_modules("foo", ["bar"], fakes.course1),
-            [load_module.return_value])
+            _load_modules("foo", ["bar"], fakes.course1), [load_module.return_value]
+        )
 
     @patch("librelingo_yaml_loader.yaml_loader._load_module")
     def test_handles_every_module(self, load_module):
         load_module.return_value = fakes.fake_value()
         self.assertEqual(
             _load_modules("foo", ["bar", "baz"], fakes.course1),
-            [load_module.return_value] * 2)
+            [load_module.return_value] * 2,
+        )
 
     @patch("librelingo_yaml_loader.yaml_loader._load_module")
     def test_calls_load_modules_with_correct_arguments(self, load_module):
@@ -538,15 +540,16 @@ class TestLoadSkills(TestCase):
     def test_returns_correct_value(self, load_skill):
         load_skill.return_value = fakes.fake_value()
         self.assertEqual(
-            _load_skills("foo", ["bar"], fakes.course1),
-            [load_skill.return_value])
+            _load_skills("foo", ["bar"], fakes.course1), [load_skill.return_value]
+        )
 
     @patch("librelingo_yaml_loader.yaml_loader._load_skill")
     def test_handles_every_module(self, load_skill):
         load_skill.return_value = fakes.fake_value()
         self.assertEqual(
             _load_skills("foo", ["bar", "baz"], fakes.course1),
-            [load_skill.return_value] * 2)
+            [load_skill.return_value] * 2,
+        )
 
     @patch("librelingo_yaml_loader.yaml_loader._load_skill")
     def test_calls_load_skills_with_correct_arguments(self, load_skill):
@@ -653,20 +656,21 @@ Mini-dictionary:
     def test_returned_object_has_correct_image_set(self):
         self.assertEqual(
             self.result.image_set,
-            [self.fake_values["img1"],
-             self.fake_values["img2"],
-             self.fake_values["img3"]])
+            [
+                self.fake_values["img1"],
+                self.fake_values["img2"],
+                self.fake_values["img3"],
+            ],
+        )
 
     def test_returned_object_has_correct_words(self):
         self.assertEqual(self.result.words, self.convert_words.return_value)
 
     def test_returned_object_has_correct_phrases(self):
-        self.assertEqual(
-            self.result.phrases, self.convert_phrases.return_value)
+        self.assertEqual(self.result.phrases, self.convert_phrases.return_value)
 
     def test_returned_object_has_correct_introduction(self):
-        self.assertEqual(
-            self.result.introduction, self.fake_values["introduction"])
+        self.assertEqual(self.result.introduction, self.fake_values["introduction"])
 
     def test_dictionary_is_a_list_of_dictionary_items(self):
         self.assertIsInstance(self.result.dictionary, list)
@@ -674,8 +678,7 @@ Mini-dictionary:
             self.assertIsInstance(_, tuple)
 
     def test_dictionary_is_a_contains_reverse_and_normal_items(self):
-        self.assertEqual(
-            set(x[2] for x in self.result.dictionary), {True, False})
+        self.assertEqual(set(x[2] for x in self.result.dictionary), {True, False})
 
     def test_includes_all_dictionary_items(self):
         self.assertEqual(len(self.result.dictionary), 5)
@@ -685,31 +688,31 @@ Mini-dictionary:
 
     def test_includes_items_based_on_yaml_file_1(self):
         self.assertIn(
-            (self.fake_values["word2"],
-             tuple([self.fake_values["word1"]]),
-             True),
-            self.result.dictionary)
+            (self.fake_values["word2"], tuple([self.fake_values["word1"]]), True),
+            self.result.dictionary,
+        )
 
     def test_includes_items_based_on_yaml_file_2(self):
         self.assertIn(
-            (self.fake_values["word4"],
-             tuple(["hello", self.fake_values["word5"]]),
-             True),
-            self.result.dictionary)
+            (
+                self.fake_values["word4"],
+                tuple(["hello", self.fake_values["word5"]]),
+                True,
+            ),
+            self.result.dictionary,
+        )
 
     def test_includes_items_based_on_yaml_file_3(self):
         self.assertIn(
-            (self.fake_values["word6"],
-             tuple([self.fake_values["word7"]]),
-             False),
-            self.result.dictionary)
+            (self.fake_values["word6"], tuple([self.fake_values["word7"]]), False),
+            self.result.dictionary,
+        )
 
     def test_calls_convert_words_with_correct_values(self):
         self.convert_words.assert_called_with(self.fake_values["fake_words"])
 
     def test_calls_convert_phrases_with_correct_values(self):
-        self.convert_phrases.assert_called_with(
-            self.fake_values["fake_phrases"])
+        self.convert_phrases.assert_called_with(self.fake_values["fake_phrases"])
 
 
 class TestConvertWords(TestCase):
@@ -756,8 +759,7 @@ class TestConvertWord(TestCase):
         self.assertIsInstance(_convert_word(self.fakeWord), Word)
 
     def test_includes_the_correct_pictures(self):
-        self.assertEqual(
-            _convert_word(self.fakeWord).pictures, self.fakeWord["Images"])
+        self.assertEqual(_convert_word(self.fakeWord).pictures, self.fakeWord["Images"])
 
     def test_pictures_are_optional(self):
         del self.fakeWord["Images"]
@@ -765,8 +767,8 @@ class TestConvertWord(TestCase):
 
     def test_includes_main_word(self):
         self.assertEqual(
-            _convert_word(self.fakeWord).in_target_language[0],
-            self.fakeWord["Word"])
+            _convert_word(self.fakeWord).in_target_language[0], self.fakeWord["Word"]
+        )
 
     def test_includes_synonyms(self):
         result = _convert_word(self.fakeWord).in_target_language
@@ -775,13 +777,13 @@ class TestConvertWord(TestCase):
 
     def test_synonyms_are_optional(self):
         del self.fakeWord["Synonyms"]
-        self.assertEqual(
-            len(_convert_word(self.fakeWord).in_target_language), 1)
+        self.assertEqual(len(_convert_word(self.fakeWord).in_target_language), 1)
 
     def test_includes_translation(self):
         self.assertEqual(
             _convert_word(self.fakeWord).in_source_language[0],
-            self.fakeWord["Translation"])
+            self.fakeWord["Translation"],
+        )
 
     def test_includes_alternative_translations(self):
         result = _convert_word(self.fakeWord).in_source_language
@@ -790,8 +792,7 @@ class TestConvertWord(TestCase):
 
     def test_alternative_translations_are_optional(self):
         del self.fakeWord["Also accepted"]
-        self.assertEqual(
-            len(_convert_word(self.fakeWord).in_source_language), 1)
+        self.assertEqual(len(_convert_word(self.fakeWord).in_source_language), 1)
 
 
 class TestConvertPhrases(TestCase):
@@ -806,8 +807,7 @@ class TestConvertPhrases(TestCase):
     @patch("librelingo_yaml_loader.yaml_loader._convert_phrase")
     def test_returns_correct_value(self, convert_phrase):
         convert_phrase.return_value = fakes.fake_value()
-        self.assertEqual(
-            _convert_phrases([None]), [convert_phrase.return_value])
+        self.assertEqual(_convert_phrases([None]), [convert_phrase.return_value])
 
     @patch("librelingo_yaml_loader.yaml_loader._convert_phrase")
     def test_calls_convert_phrases_with_correct_values(self, convert_phrase):
@@ -840,7 +840,8 @@ class TestConvertPhrase(TestCase):
     def test_includes_main_version(self):
         self.assertEqual(
             _convert_phrase(self.fakePhrase).in_target_language[0],
-            self.fakePhrase["Phrase"])
+            self.fakePhrase["Phrase"],
+        )
 
     def test_includes_alternative_versions(self):
         result = _convert_phrase(self.fakePhrase).in_target_language
@@ -849,13 +850,13 @@ class TestConvertPhrase(TestCase):
 
     def test_alternative_versions_are_optional(self):
         del self.fakePhrase["Alternative versions"]
-        self.assertEqual(
-            len(_convert_phrase(self.fakePhrase).in_target_language), 1)
+        self.assertEqual(len(_convert_phrase(self.fakePhrase).in_target_language), 1)
 
     def test_includes_translation(self):
         self.assertEqual(
             _convert_phrase(self.fakePhrase).in_source_language[0],
-            self.fakePhrase["Translation"])
+            self.fakePhrase["Translation"],
+        )
 
     def test_includes_alternative_translations(self):
         result = _convert_phrase(self.fakePhrase).in_source_language
@@ -864,8 +865,7 @@ class TestConvertPhrase(TestCase):
 
     def test_alternative_translations_are_optional(self):
         del self.fakePhrase["Alternative translations"]
-        self.assertEqual(
-            len(_convert_phrase(self.fakePhrase).in_source_language), 1)
+        self.assertEqual(len(_convert_phrase(self.fakePhrase).in_source_language), 1)
 
 
 def get_fake_word_values():
@@ -964,7 +964,7 @@ def test_load_dictionary_has_a_single_string_definition(module_with_word):
 
 
 def test_load_dictionary_includes_duplicate_words_includes_multiple_definitions(
-        module_with_word,
+    module_with_word,
 ):
     random_new_word = get_fake_word()[0]
     existing_word = module_with_word[0].skills[0].words[0]
@@ -988,8 +988,8 @@ def test_load_module_complains_about_an_empty_file(load_yaml):
     randomPath = str(random.randint(0, 1000))
     load_yaml.return_value = None
     with pytest.raises(
-            RuntimeError,
-            match=f'Module file "{randomPath}/module.yaml" is empty or does not exist',
+        RuntimeError,
+        match=f'Module file "{randomPath}/module.yaml" is empty or does not exist',
     ):
         _load_module(randomPath, fakes.course1)
 
@@ -1040,7 +1040,7 @@ def test_load_skill_complains_about_an_empty_file(load_yaml):
     randomPath = str(random.randint(0, 1000))
     load_yaml.return_value = None
     with pytest.raises(
-            RuntimeError, match=f'Skill file "{randomPath}" is empty or does not exist'
+        RuntimeError, match=f'Skill file "{randomPath}" is empty or does not exist'
     ):
         _load_skill(randomPath, fakes.course1)
 

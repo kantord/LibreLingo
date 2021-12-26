@@ -17,8 +17,7 @@ from librelingo_fakes import fakes
 
 class TestGetChallengesData(TestCase):
     def test_empty_skill(self):
-        self.assertEqual(
-            _get_challenges_data(fakes.emptySkill, fakes.course1), [])
+        self.assertEqual(_get_challenges_data(fakes.emptySkill, fakes.course1), [])
 
     @patch("librelingo_json_export.challenges._get_phrase_challenges")
     def test_generates_phrase_challenges_correctly(self, mock):
@@ -50,10 +49,8 @@ class TestGetChallengesData(TestCase):
         mock2.return_value = [fakes.challenge3, fakes.challenge4]
         self.assertEqual(
             _get_challenges_data(fakes.skillWithPhraseAndWord, fakes.course1),
-            [fakes.challenge1,
-             fakes.challenge2,
-             fakes.challenge3,
-             fakes.challenge4])
+            [fakes.challenge1, fakes.challenge2, fakes.challenge3, fakes.challenge4],
+        )
 
 
 class TestGetWordChallenges(TestCase):
@@ -62,21 +59,24 @@ class TestGetWordChallenges(TestCase):
         fake_value = fakes.fake_value()
         mock.return_value = [fake_value]
         self.assertEqual(
-            _get_word_challenges(fakes.word1, fakes.course1)[0], fake_value)
+            _get_word_challenges(fakes.word1, fakes.course1)[0], fake_value
+        )
 
     @patch("librelingo_json_export.challenges.get_short_input_challenge")
     def test_includes_short_input_challenges(self, mock):
         fake_value = fakes.fake_value()
         mock.return_value = [fake_value]
         self.assertEqual(
-            _get_word_challenges(fakes.word1, fakes.course1)[1], fake_value)
+            _get_word_challenges(fakes.word1, fakes.course1)[1], fake_value
+        )
 
     @patch("librelingo_json_export.challenges.get_listening_challenge")
     def test_includes_listening_challenge(self, mock):
         fake_value = fakes.fake_value()
         mock.return_value = [fake_value]
         self.assertEqual(
-            _get_word_challenges(fakes.word1, fakes.course1)[2], fake_value)
+            _get_word_challenges(fakes.word1, fakes.course1)[2], fake_value
+        )
 
 
 class TestGetPhraseChallenges(TestCase):
@@ -85,48 +85,57 @@ class TestGetPhraseChallenges(TestCase):
         fake_value = fakes.fake_value()
         mock.return_value = [fake_value]
         self.assertEqual(
-            _get_phrase_challenges(fakes.phrase1, fakes.course1)[0],
-            fake_value)
+            _get_phrase_challenges(fakes.phrase1, fakes.course1)[0], fake_value
+        )
 
     @patch("librelingo_json_export.challenges.get_listening_challenge")
     def test_includes_listening_challenge(self, mock):
         fake_value = fakes.fake_value()
         mock.return_value = [fake_value]
         self.assertEqual(
-            _get_phrase_challenges(fakes.phrase1, fakes.course1)[1],
-            fake_value)
+            _get_phrase_challenges(fakes.phrase1, fakes.course1)[1], fake_value
+        )
 
     @patch("librelingo_json_export.challenges.get_chips_challenge")
     def test_includes_chips_challenge(self, mock):
         fake_value = fakes.fake_value()
         mock.return_value = [fake_value]
         self.assertEqual(
-            _get_phrase_challenges(fakes.long_phrase, fakes.course1)[2],
-            fake_value)
+            _get_phrase_challenges(fakes.long_phrase, fakes.course1)[2], fake_value
+        )
 
     @patch("librelingo_json_export.challenges.get_reverse_chips_challenge")
     def test_includes_reverse_chips_challenge(self, mock):
         fake_value = fakes.fake_value()
         mock.return_value = [fake_value]
         self.assertEqual(
-            _get_phrase_challenges(fakes.long_phrase, fakes.course1)[3],
-            fake_value)
+            _get_phrase_challenges(fakes.long_phrase, fakes.course1)[3], fake_value
+        )
 
     def test_returns_correct_number_of_challenged(self):
         self.assertEqual(
-            len(_get_phrase_challenges(fakes.long_phrase, fakes.course1)), 4)
+            len(_get_phrase_challenges(fakes.long_phrase, fakes.course1)), 4
+        )
 
     def test_doesnt_include_chips_if_sentence_is_short(self):
         self.assertEqual(
-            len(list(filter(
-                lambda x: x["type"] == "chips",
-                _get_phrase_challenges(
-                    fakes.customize(
-                        fakes.phrase1,
-                        in_target_language=["foo"],
-                        in_source_language=["bar"]),
-                    fakes.course1)))),
-            0)
+            len(
+                list(
+                    filter(
+                        lambda x: x["type"] == "chips",
+                        _get_phrase_challenges(
+                            fakes.customize(
+                                fakes.phrase1,
+                                in_target_language=["foo"],
+                                in_source_language=["bar"],
+                            ),
+                            fakes.course1,
+                        ),
+                    )
+                )
+            ),
+            0,
+        )
 
 
 class TestGetCardsChallenge(TestCase):
@@ -157,8 +166,7 @@ class TestGetCardsChallenge(TestCase):
         self.assertEqual(challenge, expected_challenge)
 
     def test_returns_correct_value_with_spaces(self):
-        challenge = get_cards_challenge(
-            fakes.word_with_spaces, fakes.course1)[0]
+        challenge = get_cards_challenge(fakes.word_with_spaces, fakes.course1)[0]
         expected_challenge = {
             "id": "5bc48626f40f",
             "type": "cards",
@@ -197,8 +205,7 @@ class TestGetOptionsChallenge(TestCase):
         self.assertEqual(challenge, expected_challenge)
 
     def test_returns_correct_value_with_spaces(self):
-        challenge = get_options_challenge(
-            fakes.word_with_spaces, fakes.course1)[0]
+        challenge = get_options_challenge(fakes.word_with_spaces, fakes.course1)[0]
         expected_challenge = {
             "id": "98220c0c74ac",
             "type": "options",
@@ -238,15 +245,13 @@ class TestGetShortInputChallenge(TestCase):
         self.assertEqual(challenge, expected_challenge)
 
     def test_returns_correct_value_with_spaces(self):
-        challenge = get_short_input_challenge(
-            fakes.word_with_spaces, fakes.course1)[0]
+        challenge = get_short_input_challenge(fakes.word_with_spaces, fakes.course1)[0]
         expected_challenge = {
             "id": "3b0f6c9df85b",
             "type": "shortInput",
             "pictures": ["1.jpg", "2.jpg", "3.jpg"],
             "formInTargetLanguage": ["three word term"],
-            "phrase":
-                [{"word": "foo bar baz", "definition": "three word term"}],
+            "phrase": [{"word": "foo bar baz", "definition": "three word term"}],
             "priority": 1,
             "group": "e707f76a703d",
         }
@@ -324,10 +329,12 @@ class TestChipsChallenge(TestCase):
     @patch("librelingo_json_export.challenge_types.get_solutions_from_phrase")
     @patch("librelingo_json_export.challenge_types.get_chips_from_phrase")
     def test_returns_correct_value2(
-            self, get_chips_from_phrase, get_solutions_from_phrase):
+        self, get_chips_from_phrase, get_solutions_from_phrase
+    ):
         get_chips_from_phrase.return_value = fakes.fake_value()
-        challenge = get_chips_challenge(
-            fakes.phrase_with_alternatives, fakes.course1)[0]
+        challenge = get_chips_challenge(fakes.phrase_with_alternatives, fakes.course1)[
+            0
+        ]
         expected_challenge = {
             "type": "chips",
             "translatesToSourceLanguage": False,
@@ -361,8 +368,7 @@ class TestChipsChallenge(TestCase):
             "id": "3e4d0ed7d738",
             "group": "e87212735da5",
             "priority": 2,
-            "chips":
-                ["foous", "barus", "very", "big", "word", "lorem", "ipsum"],
+            "chips": ["foous", "barus", "very", "big", "word", "lorem", "ipsum"],
             "solutions": [["foous", "barus", "very", "big", "word"]],
             "formattedSolution": "foous barus very big word",
         }
@@ -371,8 +377,7 @@ class TestChipsChallenge(TestCase):
 
 class GetChipsTest(TestCase):
     def test_empty_string(self):
-        self.assertEqual(
-            get_chips_from_phrase(lambda _: [""], None, fakes.course1), [])
+        self.assertEqual(get_chips_from_phrase(lambda _: [""], None, fakes.course1), [])
 
     @patch("librelingo_json_export.challenge_types.clean_word")
     def test_empty_string_doesnt_call_clean_word(self, clean_word):
@@ -390,18 +395,23 @@ class GetChipsTest(TestCase):
         clean_word.return_value = fakes.fake_value()
         self.assertEqual(
             get_chips_from_phrase(lambda _: "foo", None, fakes.course1),
-            [clean_word.return_value])
+            [clean_word.return_value],
+        )
 
     @patch("librelingo_json_export.challenge_types.clean_word")
     def test_returns_correct_number_of_words(self, clean_word):
         # Includes extra words
         clean_word.side_effect = lambda x: x
         self.assertEqual(
-            len(get_chips_from_phrase(
-                lambda x: ["Sleep well!"] if x is None else x[0],
-                None,
-                fakes.course1)),
-            4)
+            len(
+                get_chips_from_phrase(
+                    lambda x: ["Sleep well!"] if x is None else x[0],
+                    None,
+                    fakes.course1,
+                )
+            ),
+            4,
+        )
 
     def test_includes_words_from_other_phrases_sorted_by_edit_distance(self):
         extra_chips = list(
@@ -452,8 +462,8 @@ class GetChipsTest(TestCase):
 
     def test_returns_correct_number_of_words_2(self):
         fake_course_with_duplicated_chip = fakes.customize(
-            fakes.course1,
-            modules=[fakes.course1.modules[0], fakes.course1.modules[0]])
+            fakes.course1, modules=[fakes.course1.modules[0], fakes.course1.modules[0]]
+        )
         chips = list(
             get_chips_from_phrase(
                 lambda x: ["something lipsum dolor"] if x is None else x[0],
