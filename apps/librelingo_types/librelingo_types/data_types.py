@@ -2,15 +2,15 @@ from collections import namedtuple
 
 
 class TextToSpeechSettings(
-        namedtuple(
-            "TextToSpeechSettings",
-            [
-                "provider",
-                "voice",
-                "engine",
-            ],
-            defaults=["Polly", "Lupe", "standard"],
-        )
+    namedtuple(
+        "TextToSpeechSettings",
+        [
+            "provider",
+            "voice",
+            "engine",
+        ],
+        defaults=["Polly", "Lupe", "standard"],
+    )
 ):
     """
     Settings about how to use TTS to generate audios
@@ -30,14 +30,14 @@ class TextToSpeechSettings(
 
 
 class AudioSettings(
-        namedtuple(
-            "AudioSettings",
-            [
-                "enabled",
-                "text_to_speech_settings_list",
-            ],
-            defaults=[False, []],
-        )
+    namedtuple(
+        "AudioSettings",
+        [
+            "enabled",
+            "text_to_speech_settings_list",
+        ],
+        defaults=[False, []],
+    )
 ):
     """
     Settings for audio in a course
@@ -56,14 +56,14 @@ class AudioSettings(
 
 
 class HunspellSettings(
-        namedtuple(
-            "HunspellSettings",
-            [
-                "source_language",
-                "target_language",
-            ],
-            defaults=[None, None],
-        )
+    namedtuple(
+        "HunspellSettings",
+        [
+            "source_language",
+            "target_language",
+        ],
+        defaults=[None, None],
+    )
 ):
     """
     Settings for hunspell spell checking
@@ -82,11 +82,11 @@ class HunspellSettings(
 
 
 class Settings(
-        namedtuple(
-            "Settings",
-            ["audio_settings", "hunspell"],
-            defaults=[AudioSettings(), HunspellSettings()],
-        )
+    namedtuple(
+        "Settings",
+        ["audio_settings", "hunspell"],
+        defaults=[AudioSettings(), HunspellSettings()],
+    )
 ):
     """
     Settings for a course
@@ -101,21 +101,21 @@ class Settings(
 
 
 class Course(
-        namedtuple(
-            "Course",
-            [
-                "target_language",
-                "source_language",
-                "special_characters",
-                "modules",
-                "license",
-                "dictionary",
-                "repository_url",
-                "course_dir",
-                "settings",
-            ],
-            defaults=[Settings()],
-        )
+    namedtuple(
+        "Course",
+        [
+            "target_language",
+            "source_language",
+            "special_characters",
+            "modules",
+            "license",
+            "dictionary",
+            "repository_url",
+            "course_dir",
+            "settings",
+        ],
+        defaults=[Settings()],
+    )
 ):
     """
     A LibreLingo course
@@ -158,14 +158,14 @@ class Language(namedtuple("Language", ["name", "code"])):
 
 
 class License(
-        namedtuple(
-            "License",
-            [
-                "name",
-                "full_name",
-                "link",
-            ],
-        )
+    namedtuple(
+        "License",
+        [
+            "name",
+            "full_name",
+            "link",
+        ],
+    )
 ):
     """
     Metadata about the license of a LibreLingo course
@@ -185,14 +185,14 @@ class License(
 
 
 class Module(
-        namedtuple(
-            "Module",
-            [
-                "title",
-                "filename",
-                "skills",
-            ],
-        )
+    namedtuple(
+        "Module",
+        [
+            "title",
+            "filename",
+            "skills",
+        ],
+    )
 ):
     """
     A module of a LibreLingo course.
@@ -208,19 +208,19 @@ class Module(
 
 
 class Skill(
-        namedtuple(
-            "Skill",
-            [
-                "name",
-                "filename",
-                "id",
-                "words",
-                "phrases",
-                "image_set",
-                "dictionary",
-                "introduction",
-            ],
-        )
+    namedtuple(
+        "Skill",
+        [
+            "name",
+            "filename",
+            "id",
+            "words",
+            "phrases",
+            "image_set",
+            "dictionary",
+            "introduction",
+        ],
+    )
 ):
     """
     A skill of a module of a LibreLingo course.
@@ -249,14 +249,14 @@ class Skill(
 
 
 class Word(
-        namedtuple(
-            "Word",
-            [
-                "in_target_language",
-                "in_source_language",
-                "pictures",
-            ],
-        )
+    namedtuple(
+        "Word",
+        [
+            "in_target_language",
+            "in_source_language",
+            "pictures",
+        ],
+    )
 ):
     """
     A new word taught in a LibreLingo skill.
@@ -288,13 +288,13 @@ class Word(
 
 
 class Phrase(
-        namedtuple(
-            "Phrase",
-            [
-                "in_target_language",
-                "in_source_language",
-            ],
-        )
+    namedtuple(
+        "Phrase",
+        [
+            "in_target_language",
+            "in_source_language",
+        ],
+    )
 ):
     """
     A new phrase taught in a LibreLingo skill.
@@ -325,8 +325,7 @@ class Phrase(
 
 
 class DictionaryItem(
-        namedtuple(
-            "DictionaryItem", ["word", "definition", "is_in_target_language"])
+    namedtuple("DictionaryItem", ["word", "definition", "is_in_target_language"])
 ):
     """
     A dictionary item for a LibreLingo course. It contains the definition of

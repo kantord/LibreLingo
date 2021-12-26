@@ -33,7 +33,7 @@ def _export_skill(export_path, skill, course, settings=None):
     slug = slugify(skill.name)
     Path(Path(export_path) / "challenges").mkdir(parents=True, exist_ok=True)
     with open(
-            Path(export_path) / "challenges" / f"{slug}.json", "w", encoding="utf-8"
+        Path(export_path) / "challenges" / f"{slug}.json", "w", encoding="utf-8"
     ) as f:
         if settings is not None and settings.dry_run:
             json.dumps(skill_data, ensure_ascii=False, indent=2)
@@ -43,9 +43,9 @@ def _export_skill(export_path, skill, course, settings=None):
     if skill.introduction:
         Path(Path(export_path) / "introduction").mkdir(parents=True, exist_ok=True)
         with open(
-                Path(export_path) / "introduction" / f"{slug}.md",
-                "w",
-                encoding="utf-8",
+            Path(export_path) / "introduction" / f"{slug}.md",
+            "w",
+            encoding="utf-8",
         ) as f:
             if settings is not None and settings.dry_run:
                 pass
