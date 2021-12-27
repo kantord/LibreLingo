@@ -2,7 +2,7 @@ from librelingo_fakes import fakes
 from librelingo_types import Settings, AudioSettings, TextToSpeechSettings
 
 from librelingo_audios.update_audios import update_audios_for_course
-import librelingo_audios.cli as cli
+from librelingo_audios import cli
 
 course = fakes.customize(
     fakes.course1,
