@@ -17,13 +17,12 @@ class TextToSpeechSettings(
 
     ### Usage example:
 
-    ```python
-    TextToSpeechSettings(
-        provider="Polly",
-        voice="Aditi",
-        engine="standard"
-    )
-    ```
+    >>> TextToSpeechSettings(
+    ...     provider="Polly",
+    ...     voice="Aditi",
+    ...     engine="standard"
+    ... )
+    TextToSpeechSettings(provider='Polly', voice='Aditi', engine='standard')
     """
 
     pass
@@ -44,12 +43,11 @@ class AudioSettings(
 
     ### Usage example:
 
-    ```python
-    AudioSettings(
-        enabled=True,
-        text_to_speech_settings_list=[TextToSpeechSettings()]
-    )
-    ```
+    >>> AudioSettings(
+    ...     enabled=True,
+    ...     text_to_speech_settings_list=[TextToSpeechSettings()]
+    ... )
+    AudioSettings(enabled=True, text_to_speech_settings_list=[TextToSpeechSettings(provider='Polly', voice='Lupe', engine='standard')])
     """
 
     pass
@@ -70,12 +68,11 @@ class HunspellSettings(
 
     ### Usage example:
 
-    ```python
-    HunspellSettings(
-        source_language="en-US",
-        target language="es-ES",
-    )
-    ```
+    >>> HunspellSettings(
+    ...     source_language="en-US",
+    ...     target_language="es-ES",
+    ... )
+    HunspellSettings(source_language='en-US', target_language='es-ES')
     """
 
     pass
@@ -92,9 +89,9 @@ class Settings(
     Settings for a course
 
     ### Usage example:
-    ```python
-        my_settings = Settings()
-    ```
+
+    >>> Settings()
+    Settings(audio_settings=AudioSettings(enabled=False, text_to_speech_settings_list=[]), hunspell=HunspellSettings(source_language=None, target_language=None))
     """
 
     pass
@@ -149,9 +146,9 @@ class Language(namedtuple("Language", ["name", "code"])):
     Metadata about a language
 
     ### Usage example:
-    ```python
-        my_language = Language("English", "en")
-    ```
+
+    >>> Language("English", "en")
+    Language(name='English', code='en')
     """
 
     pass
@@ -172,13 +169,12 @@ class License(
 
     ### Usage example:
 
-    ```python
-    License(
-        full_name="Attribution 4.0 International (CC BY 4.0)",
-        name="CC BY 4.0",
-        link="https://creativecommons.org/licenses/by/4.0/"
-    )
-    ```
+    >>> License(
+    ...     full_name="Attribution 4.0 International (CC BY 4.0)",
+    ...     name="CC BY 4.0",
+    ...     link="https://creativecommons.org/licenses/by/4.0/"
+    ... )
+    License(name='CC BY 4.0', full_name='Attribution 4.0 International (CC BY 4.0)', link='https://creativecommons.org/licenses/by/4.0/')
     """
 
     pass
@@ -275,13 +271,12 @@ class Word(
 
     ### Usage example:
 
-    ```python
-    my_word = Word(
-        in_target_language=["perro"],
-        in_target_language=["dog"],
-        pictures=["dog1", "dog2", "dog3"]
-    )
-    ```
+    >>> Word(
+    ...     in_target_language=["perro"],
+    ...     in_source_language=["dog"],
+    ...     pictures=["dog1", "dog2", "dog3"]
+    ... )
+    Word(in_target_language=['perro'], in_source_language=['dog'], pictures=['dog1', 'dog2', 'dog3'])
     """
 
     pass
@@ -313,12 +308,11 @@ class Phrase(
 
     ### Usage example:
 
-    ```python
-    my_phrase = Phrase(
-        in_target_language=["perro"],
-        in_target_language=["dog"],
-    )
-    ```
+    >>> Phrase(
+    ...     in_target_language=["perro", "can"],
+    ...     in_source_language=["dog"],
+    ... )
+    Phrase(in_target_language=['perro', 'can'], in_source_language=['dog'])
     """
 
     pass
@@ -332,13 +326,13 @@ class DictionaryItem(
     a word. The word can be either in the source language or the target
     language.
 
-    ```python
-    # Definition in the source language (Spanish in this case)
-    my_dict_item_1 = DictionaryItem("hablo", "I speak", False)
+    Definition in the source language (Spanish in this case)
+    >>> DictionaryItem("hablo", "I speak", False)
+    DictionaryItem(word='hablo', definition='I speak', is_in_target_language=False)
 
-    # Definition in the target language (English in this case)
-    my_dict_item_2 = DictionaryItem("speak", "hablo", True)
-    ```
+    Definition in the target language (English in this case)
+    >>> DictionaryItem("speak", "hablo", True)
+    DictionaryItem(word='speak', definition='hablo', is_in_target_language=True)
     """
 
     pass
