@@ -12,7 +12,7 @@ from librelingo_json_export.export import export_course
 
 errors = []
 warnings = []
-images = {
+images: dict = {
     "tiny": set(),
     "tinier": set(),
     "regular": set(),
