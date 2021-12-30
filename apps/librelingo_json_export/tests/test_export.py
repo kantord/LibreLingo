@@ -150,7 +150,6 @@ class TestExportCourseData(FakeFsTestCase):
         self.export_path = fakes.path()
 
     def test_creates_the_correct_file(self):
-        randomname, fake_skill = get_fake_skill()
         _export_course_data(self.export_path, fakes.course1)
         self.assertTrue(os.path.exists(self.export_path / "courseData.json"))
 
