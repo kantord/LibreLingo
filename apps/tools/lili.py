@@ -150,6 +150,15 @@ def export_main_html_page(course, count, html_dir):
 
 def export_json(language, filename, html_dir):
     all_words = {}
+    for word, translations in language["words"].items():
+        if word not in all_words:
+            all_words[word] = []
+        for translation in translations:
+            if filename == "source-to-target.json":
+                all_words[word].extend(translation["word"].in_target_language)
+            else:
+                all_words[word].extend(translation["word"].in_source_language)
+
     for word, translations in language["dictionary"].items():
         if word not in all_words:
             all_words[word] = []
