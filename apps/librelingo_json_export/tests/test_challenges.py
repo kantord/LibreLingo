@@ -2,7 +2,6 @@ import collections
 
 from unittest.mock import patch
 from unittest import TestCase
-from librelingo_json_export.challenges import _get_challenges_data
 from librelingo_json_export.challenges import _get_word_challenges
 from librelingo_json_export.challenges import _get_phrase_challenges
 from librelingo_json_export.challenge_types import get_cards_challenge
@@ -13,44 +12,6 @@ from librelingo_json_export.challenge_types import get_options_challenge
 from librelingo_json_export.challenge_types import get_chips_from_phrase
 from librelingo_types import Settings, AudioSettings
 from librelingo_fakes import fakes
-
-
-class TestGetChallengesData(TestCase):
-    def test_empty_skill(self):
-        self.assertEqual(_get_challenges_data(fakes.emptySkill, fakes.course1), [])
-
-    @patch("librelingo_json_export.challenges._get_phrase_challenges")
-    def test_generates_phrase_challenges_correctly(self, mock):
-        # pylint: disable=no-self-use
-        _get_challenges_data(fakes.skillWithPhrase, fakes.course1)
-        mock.assert_called_with(fakes.phrase2, fakes.course1)
-
-    @patch("librelingo_json_export.challenges._get_phrase_challenges")
-    def test_includes_every_phrase(self, mock):
-        _get_challenges_data(fakes.skillWith3Phrases, fakes.course1)
-        self.assertEqual(mock.call_count, 3)
-
-    @patch("librelingo_json_export.challenges._get_word_challenges")
-    def test_generates_word_challenges_correctly(self, mock):
-        # pylint: disable=no-self-use
-        _get_challenges_data(fakes.skillWithWord, fakes.course1)
-        mock.assert_called_with(fakes.word1, fakes.course1)
-
-    @patch("librelingo_json_export.challenges._get_word_challenges")
-    def test_includes_every_word(self, mock):
-        _get_challenges_data(fakes.skillWith3Words, fakes.course1)
-        self.assertEqual(mock.call_count, 3)
-
-    @patch("librelingo_json_export.challenges._get_word_challenges")
-    @patch("librelingo_json_export.challenges._get_phrase_challenges")
-    def test_returns_correct_challenges(self, mock1, mock2):
-
-        mock1.return_value = [fakes.challenge1, fakes.challenge2]
-        mock2.return_value = [fakes.challenge3, fakes.challenge4]
-        self.assertEqual(
-            _get_challenges_data(fakes.skillWithPhraseAndWord, fakes.course1),
-            [fakes.challenge1, fakes.challenge2, fakes.challenge3, fakes.challenge4],
-        )
 
 
 class TestGetWordChallenges(TestCase):
