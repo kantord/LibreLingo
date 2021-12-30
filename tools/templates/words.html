@@ -1,0 +1,17 @@
+{% include 'incl/header.html' %}
+
+    <h1>{{ title }}</h1>
+
+    <table>
+      <tr><th>Word</th><th>Word #</th><th>Dictionary #</th><th>Phrases #</th></tr>
+      {% for word in all_words | sort %}
+        <tr class="{{ loop.cycle('odd', 'even') }}">
+        <td><a href="{{ path }}/{{ word.lower() }}.html">{{ word }}</a></td>
+        <td>{{ words[word] | count }}</td>
+        <td>{{ dictionary[word] | count }}</td>
+        <td>{{ phrases[word] | count }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+
+{% include 'incl/footer.html' %}

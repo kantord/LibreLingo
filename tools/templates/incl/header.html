@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <title>{{ title }}</title>
+    <style>
+        .odd {
+            background-color: #EEEEEE;
+        }
+        .even {
+            background-color: #FFFFFF;
+        }
+        .warning {
+            background-color: #FF5555;
+        }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="{{ rel }}index.html">home</a>
+      |
+      <a href="{{ rel }}modules.html">modules</a>
+      |
+      <a href="{{ rel }}target.html">{{ course.target_language.name }}</a>
+      |
+      <a href="{{ rel }}source.html">{{ course.source_language.name }}</a>
+    </nav>
+

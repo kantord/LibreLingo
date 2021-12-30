@@ -1,0 +1,87 @@
+{% include 'incl/header.html' %}
+
+    <h1>{{ title }}</h1>
+    <div><a href="{{ course.repository_url }}">Repository</a></div>
+    <div>License: {{ course.license.name }}: <a href="{{ course.license.link }}">{{ course.license.full_name }}</a></div>
+    <div>Total number of words: {{ count.target_words }}</div>
+    <div>Number of phrases: {{ count.target_phrases }}</div>
+
+    <div>
+    <a href="target.html">words in {{ course.target_language.name }}</a>
+    </div>
+    <div>
+    <a href="modules.html">modules</a>
+    </div>
+
+
+<hr>
+
+<style>
+#input-text {
+    width: 50%;
+    height: 100px;
+}
+.missing {
+    background-color: #FF6666;
+}
+</style>
+<div>
+<textarea id="input-text">
+</textarea>
+</div>
+<div>
+<button id="translate">Translate</button>
+</div>
+<div id="output">
+<div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    var source_to_target = null;
+    var target_to_source = null;
+
+    var translate = function() {
+        const original = $("#input-text").val();
+        const cleaned = original.replace(/"';,!?/g, " ");
+        const words = cleaned.split(" ");
+        var html = "<table>";
+        html += "<tr><th>Word</th><th>Translations</th></tr>";
+        for (var ix = 0; ix < words.length; ix++) {
+            if (words[ix] == "") {
+                continue;
+            }
+            var word = words[ix].toLowerCase()
+            var translation = target_to_source[word];
+            if (translation) {
+                html += '<tr><td><a href="target/' + word + '.html">' + words[ix] + '</a></td><td>' + translation + '</td></tr>';
+            } else {
+                html += '<tr class="missing"><td>' + words[ix] + '</td><td>' + '</td></tr>';
+            }
+        }
+        html += "</table>";
+
+        $("#output").html(html);
+    };
+    $.getJSON("source-to-target.json", function(data){
+        console.log('received');
+        source_to_target = data;
+    }).fail(function(){
+        console.log("An error has occurred.");
+    });
+
+    $.getJSON("target-to-source.json", function(data){
+        console.log('received');
+        target_to_source = data;
+    }).fail(function(){
+        console.log("An error has occurred.");
+    });
+
+    $('#input-text').bind('input propertychange', translate)
+    $("#translate").click(translate);
+});
+</script>
+
+
+
+{% include 'incl/footer.html' %}

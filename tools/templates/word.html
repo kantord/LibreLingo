@@ -1,0 +1,30 @@
+{% include 'incl/header.html' %}
+
+<h2>{{ target_word }}</h2>
+
+<h2>Word</h2>
+<ul>
+{% for translation in word_translations %}
+  {% for xx in translation['word'].in_source_language %}
+        <li>{{ xx }} <a href="{{ repository_url }}/blob/{{ branch }}/{{ course.course_dir }}/{{ translation["skill"].filename }}">{{ translation["skill"].name }}</a></li>
+  {% endfor %}
+{% endfor %}
+</ul>
+
+<h2>Dictionary</h2>
+<ul>
+{% for translation in dictionary_words %}
+  {% for xx in translation['word'] %}
+    <li>{{ xx }} <a href="{{ repository_url }}/blob/{{ branch }}/{{ course.course_dir }}/{{ translation["skill"].filename }}">{{ translation["skill"].name }}</a></li>
+  {% endfor %}
+{% endfor %}
+</ul>
+
+<h2>Phrases</h2>
+<ul>
+{% for phrase in phrases %}
+  <li>{{ phrase["sentence"] }} <a href="{{ repository_url }}/blob/{{ branch }}/{{ course.course_dir }}/{{ phrase["skill"].filename }}">{{ phrase["skill"].name }}</a></li>
+{% endfor %}
+</ul>
+
+{% include 'incl/footer.html' %}
