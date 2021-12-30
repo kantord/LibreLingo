@@ -66,8 +66,3 @@ def test_doesnt_include_chips_if_sentence_is_short():
             ),
         )
     )
-
-
-@pytest.fixture
-def mock_(mocker):
-    return mocker.patch("")
