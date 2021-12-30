@@ -40,13 +40,14 @@
 $(document).ready(function(){
     var source_to_target = null;
     var target_to_source = null;
+    var course_data = null;
 
     var translate = function() {
         const original = $("#input-text").val();
         const cleaned = original.replace(/"';,!?/g, " ");
         const words = cleaned.split(" ");
         var html = "<table>";
-        html += "<tr><th>Word</th><th>Translations</th></tr>";
+        html += '<tr><th>' + course_data['target_language_name']  + '</th><th>' + course_data['source_language_name'] + '</th></tr>';
         for (var ix = 0; ix < words.length; ix++) {
             if (words[ix] == "") {
                 continue;
@@ -63,6 +64,13 @@ $(document).ready(function(){
 
         $("#output").html(html);
     };
+    $.getJSON("stats.json", function(data){
+        console.log('received');
+        course_data = data;
+    }).fail(function(){
+        console.log("An error has occurred.");
+    });
+
     $.getJSON("source-to-target.json", function(data){
         console.log('received');
         source_to_target = data;

@@ -246,6 +246,8 @@ def generate_html(course, html_dir):
     count = {
         'target_phrases': 0,
         'source_phrases': 0,
+        'target_language_name': course.target_language.name,
+        'source_language_name': course.source_language.name,
     }
 
     for module in course.modules:
