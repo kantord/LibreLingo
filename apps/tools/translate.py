@@ -1,14 +1,16 @@
 #!/usr/bin/env python
 
-#import os
+# import os
 import sys
 import re
-#from collections import defaultdict
-#from librelingo_yaml_loader.yaml_loader import load_course
+
+# from collections import defaultdict
+# from librelingo_yaml_loader.yaml_loader import load_course
+
 
 def found(search_word, expressions):
     for expression in expressions:
-        for word in re.split(r'[ .,]', expression):
+        for word in re.split(r"[ .,]", expression):
             if search_word == word.lower():
                 return True
 
@@ -24,13 +26,13 @@ def main():
     # tools/translate.py:18:0: R0912: Too many branches (22/12) (too-many-branches)
     # so for now I comment this code out
 
-    #course_path = 'course'
-    #original_search_word = sys.argv[1]
-    #search_word = original_search_word.lower()
-    #course = load_course(course_path)
-    #translations = defaultdict(list)
-    #phrases = defaultdict(list)
-    #for module in course.modules:
+    # course_path = 'course'
+    # original_search_word = sys.argv[1]
+    # search_word = original_search_word.lower()
+    # course = load_course(course_path)
+    # translations = defaultdict(list)
+    # phrases = defaultdict(list)
+    # for module in course.modules:
     #    for skill in module.skills:
     #        for left, right, _ in skill.dictionary:
     #            if left.lower() == search_word:
@@ -56,13 +58,11 @@ def main():
     #                if found(search_word, [sentence]):
     #                    phrases[sentence].append({"filename": skill.filename, "translations": phrase.in_target_language})
 
-
-
-    #for expression in sorted(translations.keys()):
+    # for expression in sorted(translations.keys()):
     #    for filename in translations[expression]:
     #        print(f"{expression:10}   {os.path.join(course_path, filename)}")
 
-    #if phrases:
+    # if phrases:
     #    print("--- Usage ---")
     #    for phrase in sorted(phrases.keys()):
     #        print(f"{phrase:40}")
@@ -70,5 +70,6 @@ def main():
     #            for trans in exp['translations']:
     #                print(f"{' ' * 40}{trans}")
     #            print(f"{' ' * 40}{os.path.join(course_path, exp['filename'])}")
+
 
 main()
