@@ -28,9 +28,9 @@ def test_includes_every_phrase(mock_get_phrase_challenges):
     assert mock_get_phrase_challenges.call_count == 3
 
 
-def test_generates_word_challenges_correctly(mock_get_word_challenge):
+def test_generates_word_challenges_correctly(mock_get_word_challenges):
     _get_challenges_data(fakes.skillWithWord, fakes.course1)
-    mock_get_word_challenge.assert_called_with(fakes.word1, fakes.course1)
+    mock_get_word_challenges.assert_called_with(fakes.word1, fakes.course1)
 
 
 def test_includes_every_word(mock_get_word_challenges):
