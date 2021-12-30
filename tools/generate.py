@@ -91,4 +91,5 @@ def main():
     generate_html(start_time, end_time, links, outdir)
 
 
-main()
+if __name__ == '__main__':
+    main()

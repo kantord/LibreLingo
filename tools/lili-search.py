@@ -51,4 +51,5 @@ def main():
             print(f"-- {key} --")
             for found in reports[key]:
                 print(found)
-main()
+if __name__ == '__main__':
+    main()
