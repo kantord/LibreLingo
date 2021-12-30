@@ -2,7 +2,6 @@ import collections
 
 from unittest.mock import patch
 from unittest import TestCase
-from librelingo_json_export.challenges import _get_word_challenges
 from librelingo_json_export.challenges import _get_phrase_challenges
 from librelingo_json_export.challenge_types import get_cards_challenge
 from librelingo_json_export.challenge_types import get_short_input_challenge
@@ -12,32 +11,6 @@ from librelingo_json_export.challenge_types import get_options_challenge
 from librelingo_json_export.challenge_types import get_chips_from_phrase
 from librelingo_types import Settings, AudioSettings
 from librelingo_fakes import fakes
-
-
-class TestGetWordChallenges(TestCase):
-    @patch("librelingo_json_export.challenges.get_cards_challenge")
-    def test_includes_cards_challenges(self, mock):
-        fake_value = fakes.fake_value()
-        mock.return_value = [fake_value]
-        self.assertEqual(
-            _get_word_challenges(fakes.word1, fakes.course1)[0], fake_value
-        )
-
-    @patch("librelingo_json_export.challenges.get_short_input_challenge")
-    def test_includes_short_input_challenges(self, mock):
-        fake_value = fakes.fake_value()
-        mock.return_value = [fake_value]
-        self.assertEqual(
-            _get_word_challenges(fakes.word1, fakes.course1)[1], fake_value
-        )
-
-    @patch("librelingo_json_export.challenges.get_listening_challenge")
-    def test_includes_listening_challenge(self, mock):
-        fake_value = fakes.fake_value()
-        mock.return_value = [fake_value]
-        self.assertEqual(
-            _get_word_challenges(fakes.word1, fakes.course1)[2], fake_value
-        )
 
 
 class TestGetPhraseChallenges(TestCase):
