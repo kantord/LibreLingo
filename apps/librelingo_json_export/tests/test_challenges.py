@@ -2,7 +2,6 @@ import collections
 
 from unittest.mock import patch
 from unittest import TestCase
-from librelingo_json_export.challenges import _get_phrase_challenges
 from librelingo_json_export.challenge_types import get_cards_challenge
 from librelingo_json_export.challenge_types import get_short_input_challenge
 from librelingo_json_export.challenge_types import get_listening_challenge
@@ -11,65 +10,6 @@ from librelingo_json_export.challenge_types import get_options_challenge
 from librelingo_json_export.challenge_types import get_chips_from_phrase
 from librelingo_types import Settings, AudioSettings
 from librelingo_fakes import fakes
-
-
-class TestGetPhraseChallenges(TestCase):
-    @patch("librelingo_json_export.challenges.get_options_challenge")
-    def test_includes_options_challenges(self, mock):
-        fake_value = fakes.fake_value()
-        mock.return_value = [fake_value]
-        self.assertEqual(
-            _get_phrase_challenges(fakes.phrase1, fakes.course1)[0], fake_value
-        )
-
-    @patch("librelingo_json_export.challenges.get_listening_challenge")
-    def test_includes_listening_challenge(self, mock):
-        fake_value = fakes.fake_value()
-        mock.return_value = [fake_value]
-        self.assertEqual(
-            _get_phrase_challenges(fakes.phrase1, fakes.course1)[1], fake_value
-        )
-
-    @patch("librelingo_json_export.challenges.get_chips_challenge")
-    def test_includes_chips_challenge(self, mock):
-        fake_value = fakes.fake_value()
-        mock.return_value = [fake_value]
-        self.assertEqual(
-            _get_phrase_challenges(fakes.long_phrase, fakes.course1)[2], fake_value
-        )
-
-    @patch("librelingo_json_export.challenges.get_reverse_chips_challenge")
-    def test_includes_reverse_chips_challenge(self, mock):
-        fake_value = fakes.fake_value()
-        mock.return_value = [fake_value]
-        self.assertEqual(
-            _get_phrase_challenges(fakes.long_phrase, fakes.course1)[3], fake_value
-        )
-
-    def test_returns_correct_number_of_challenged(self):
-        self.assertEqual(
-            len(_get_phrase_challenges(fakes.long_phrase, fakes.course1)), 4
-        )
-
-    def test_doesnt_include_chips_if_sentence_is_short(self):
-        self.assertEqual(
-            len(
-                list(
-                    filter(
-                        lambda x: x["type"] == "chips",
-                        _get_phrase_challenges(
-                            fakes.customize(
-                                fakes.phrase1,
-                                in_target_language=["foo"],
-                                in_source_language=["bar"],
-                            ),
-                            fakes.course1,
-                        ),
-                    )
-                )
-            ),
-            0,
-        )
 
 
 class TestGetCardsChallenge(TestCase):
