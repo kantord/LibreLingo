@@ -3,6 +3,7 @@ import argparse
 import collections
 import json
 import os
+import sys
 import re
 from jinja2 import Environment, FileSystemLoader
 
@@ -41,11 +42,6 @@ def print_ids(ids):
 
 def load_images(images_dir):
     for img in os.listdir(images_dir):
-        # TODO: do we want to accpet dash (-) in the filenames or make them all use underscores?
-        #if re.search(r'[^a-zA-Z0-9_.-]', img):
-        #    errors.append(f"Bad character in image: {img}")
-
-        # TODO: do we want to use any images that are not .jpg?
         if not img.endswith('.jpg'):
             continue
 
@@ -61,7 +57,7 @@ def load_images(images_dir):
         if match:
             images['regular'].add(match.group(1))
             continue
-        exit(f"Unhandled image: {img}")
+        sys.exit(f"Unhandled image: {img}")
     unused_images["regular"] = set(images["regular"])
     return images
 
@@ -84,10 +80,10 @@ def check_export(course):
     output_path = 'output'
     if not os.path.exists(output_path):
         os.mkdir(output_path)
-    try:
-        export_course(output_path, course, settings)
-    except Exception as err:
-        errors.append(f"Exception while exporting to JSON {err}")
+    export_course(output_path, course, settings)
+    #try:
+    #except Exception as err:
+    #    errors.append(f"Exception while exporting to JSON {err}")
 
 def guess_path_to_course(path_to_course):
     if not path_to_course:
@@ -106,7 +102,7 @@ def render(template_file, **args):
     return html
 
 def export_main_html_page(course, count, html_dir):
-    branch = 'main' # TODO how to know?
+    branch = 'main' # how can we know which is the default branch of a repository?
     #'count', 'dictionary', 'index', 'license', 'modules', 'repository_url', 'settings', 'source_language', 'special_characters', 'target_language'
     #course.modules[0].skills[0].phrases
     #from ptpython.repl import embed
@@ -143,16 +139,16 @@ def export_json(dictionary, filename, html_dir):
     with open(os.path.join(html_dir, filename), 'w') as fh:
         json.dump(all_words, fh)
 
-def export_words_html_page(course, all_words, words, dictionary, phrases, count, path, html_file):
+def export_words_html_page(course, all_words, language, count, path, html_file):
     html = render('words.html',
         title = f"{course.target_language.name} for {course.source_language.name} speakers",
         rel="",
         path=path,
         course=course,
         all_words=all_words,
-        words=words,
-        dictionary=dictionary,
-        phrases=phrases,
+        words=language['words'],
+        dictionary=language['dictionary'],
+        phrases=language['phrases'],
     )
     with open(html_file, 'w') as fh:
         fh.write(html)
@@ -175,8 +171,8 @@ def get_repository_url(course):
         repository_url = 'https://github.com/kantord/LibreLingo'
     return repository_url
 
-def export_word_html_pages(course, all_words, words, dictionary, phrases, words_dir):
-    branch = 'main' # TODO how to know?
+def export_word_html_pages(course, all_words, language, words_dir):
+    branch = 'main'
 
     repository_url = get_repository_url(course)
 
@@ -185,9 +181,9 @@ def export_word_html_pages(course, all_words, words, dictionary, phrases, words_
             title = f"{target_word} in {course.target_language.name}",
             rel="../",
             target_word=target_word,
-            word_translations=words[target_word],
-            dictionary_words=dictionary[target_word],
-            phrases=phrases[target_word],
+            word_translations=language['words'][target_word],
+            dictionary_words=language['dictionary'][target_word],
+            phrases=language['phrases'][target_word],
             repository_url=repository_url,
             branch=branch,
             course=course,
@@ -196,40 +192,57 @@ def export_word_html_pages(course, all_words, words, dictionary, phrases, words_
         with open(os.path.join(words_dir, target_word.lower() + '.html'), 'w') as fh:
             fh.write(html)
 
-def export_to_html(course, target_words, target_dictionary, target_phrases, source_words, source_dictionary, source_phrases, count, html_dir):
+def export_to_html(course, target, source, count, html_dir):
     if not os.path.exists(html_dir):
         os.mkdir(html_dir)
     for path in ['target', 'source']:
         words_dir = os.path.join(html_dir, path)
         if not os.path.exists(words_dir):
             os.mkdir(words_dir)
-    all_target_words = set(target_words.keys()).union(set(target_dictionary.keys())).union(set(target_phrases.keys()))
+    all_target_words = set(target['words'].keys()).union(set(target['dictionary'].keys())).union(set(target['phrases'].keys()))
     count['target_words'] = len(all_target_words)
 
-    all_source_words = set(source_words.keys()).union(set(source_dictionary.keys())).union(set(source_phrases.keys()))
+    all_source_words = set(source['words'].keys()).union(set(source['dictionary'].keys())).union(set(source['phrases'].keys()))
     count['source_words'] = len(all_source_words)
 
-    export_json(source_dictionary, 'source-to-target.json', html_dir)
-    export_json(target_dictionary, 'target-to-source.json', html_dir)
+    export_json(source['dictionary'], 'source-to-target.json', html_dir)
+    export_json(target['dictionary'], 'target-to-source.json', html_dir)
 
     export_main_html_page(course, count, html_dir)
-    export_words_html_page(course, all_target_words, target_words, target_dictionary, target_phrases, count, 'target', os.path.join(html_dir, 'target.html'))
-    export_words_html_page(course, all_source_words, source_words, source_dictionary, source_phrases, count, 'source', os.path.join(html_dir, 'source.html'))
-    export_word_html_pages(course, all_target_words, target_words, target_dictionary, target_phrases, os.path.join(html_dir, 'target'))
-    export_word_html_pages(course, all_source_words, source_words, source_dictionary, source_phrases, os.path.join(html_dir, 'source'))
+    export_words_html_page(course, all_target_words, target, count, 'target', os.path.join(html_dir, 'target.html'))
+    export_words_html_page(course, all_source_words, source, count, 'source', os.path.join(html_dir, 'source.html'))
+    export_word_html_pages(course, all_target_words, target, os.path.join(html_dir, 'target'))
+    export_word_html_pages(course, all_source_words, source, os.path.join(html_dir, 'source'))
     with open(os.path.join(html_dir, 'stats.json'), 'w') as fh:
         json.dump(count, fh)
 
 def clean(text):
     return re.sub(r'[{}.!?¡¿",/]', '', text)
 
+
+def _collect_phrases(skill, count, target, source):
+    for phrase in skill.phrases:
+        for sentence in phrase.in_target_language:
+            count['target_phrases'] += 1
+            for word in clean(sentence).split(' '):
+                target['phrases'][word.lower()].append({'sentence': sentence, 'skill': skill})
+        for sentence in phrase.in_source_language:
+            count['source_phrases'] += 1
+            for word in clean(sentence).split(' '):
+                source['phrases'][word.lower()].append({'sentence': sentence, 'skill': skill})
+
 def generate_html(course, html_dir):
-    target_words = collections.defaultdict(list)
-    source_words = collections.defaultdict(list)
-    target_dictionary = collections.defaultdict(list)
-    source_dictionary = collections.defaultdict(list)
-    target_phrases = collections.defaultdict(list)
-    source_phrases = collections.defaultdict(list)
+    target = {
+        'words'     : collections.defaultdict(list),
+        'dictionary': collections.defaultdict(list),
+        'phrases'   : collections.defaultdict(list),
+    }
+    source = {
+        'words'     : collections.defaultdict(list),
+        'dictionary': collections.defaultdict(list),
+        'phrases'   : collections.defaultdict(list),
+    }
+
     count = {
         'target_phrases': 0,
         'source_phrases': 0,
@@ -239,43 +252,21 @@ def generate_html(course, html_dir):
         for skill in module.skills:
             for word in skill.words:
                 for txt in word.in_target_language:
-                    target_words[clean(txt).lower()].append({'word': word, 'skill': skill})
+                    target['words'][clean(txt).lower()].append({'word': word, 'skill': skill})
                 for txt in word.in_source_language:
-                    source_words[clean(txt).lower()].append({'word': word, 'skill': skill})
+                    source['words'][clean(txt).lower()].append({'word': word, 'skill': skill})
 
             for left, right, target_to_source in skill.dictionary:
                 if target_to_source:
-                    target_dictionary[clean(left).lower()].append({'word': right, 'skill': skill})
+                    target['dictionary'][clean(left).lower()].append({'word': right, 'skill': skill})
                 else:
-                    source_dictionary[clean(left).lower()].append({'word': right, 'skill': skill})
+                    source['dictionary'][clean(left).lower()].append({'word': right, 'skill': skill})
 
-            for phrase in skill.phrases:
-                for sentence in phrase.in_target_language:
-                    count['target_phrases'] += 1
-                    # TODO extract words and sections between {} without the punctuation
-                    for word in clean(sentence).split(' '):
-                        target_phrases[word.lower()].append({'sentence': sentence, 'skill': skill})
-                for sentence in phrase.in_source_language:
-                    count['source_phrases'] += 1
-                    # TODO extract words and sections between {} without the punctuation
-                    for word in clean(sentence).split(' '):
-                        source_phrases[word.lower()].append({'sentence': sentence, 'skill': skill})
+            _collect_phrases(skill, count, target, source)
 
-    export_to_html(course, target_words, target_dictionary, target_phrases, source_words, source_dictionary, source_phrases, count, html_dir)
+    export_to_html(course, target, source, count, html_dir)
 
-def main():
-    args = get_args()
-
-    path_to_course = guess_path_to_course(args.course)
-    try:
-        course = load_course(path_to_course)
-    except Exception as err:
-        exit(f"Could not load course {err}")
-
-    images = None
-    if args.images:
-        images = load_images(args.images)
-
+def collect_ids_and_names(args, course):
     skill_ids = {}
     skill_names = {}
     for module in course.modules:
@@ -294,6 +285,22 @@ def main():
                 'module': module,
                 'skill': skill,
             }
+    return skill_ids
+
+def main():
+    args = get_args()
+
+    path_to_course = guess_path_to_course(args.course)
+    course = load_course(path_to_course)
+    #try:
+    #except Exception as err:
+    #    sys.exit(f"Could not load course {err}")
+
+    #images = None
+    #if args.images:
+    #    images = load_images(args.images)
+
+    skill_ids = collect_ids_and_names(args, course)
 
     if args.export:
         check_export(course)
@@ -318,7 +325,7 @@ def main():
         print('------------------ ERRORS ---------------------')
         for err in errors:
             print(err)
-        exit(1)
+        sys.exit(1)
 
 
 main()

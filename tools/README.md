@@ -31,3 +31,24 @@
 * Easily locate where a word is defined either in the source or the target language.
 * List all the occurances of a word. (Basically a smart grep)
 
+* do we want to accpet dash (-) in the filenames or make them all use underscores?
+```
+if re.search(r'[^a-zA-Z0-9_.-]', img):
+    errors.append(f"Bad character in image: {img}")
+```
+* do we want to use any images that are not .jpg?
+* extract words and sections between {} without the punctuation
+
+## Lili-search features:
+
+* given a path to a course and a string, find all the occurances of that word in the text
+* In the Word/Synonyme section, in the translations
+* In the Mini-Dictionary or the translations
+* Among the Phrases or the translations.
+
+* There might be words that exist in both languages (e.g. David) that will appear both in the target and in the source reports,
+* but other than these words should be either in one or the other section.
+* TODO: we might want to add a warning if the appear in both (that could be silenced by a flag)
+* should find "mujer" in "la mujer" but not "mu" in "la mujer" maybe should indicate it is partial match
+
+

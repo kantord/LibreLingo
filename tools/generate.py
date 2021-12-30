@@ -35,7 +35,7 @@ def download_course(url, tempdir):
     filename = os.path.join(tempdir.name, "course.zip")
     if res.status_code == 200:
         with open(filename, 'wb') as fh:
-            res.raw.decode_content
+            #res.raw.decode_content
             shutil.copyfileobj(res.raw, fh)
 
     # unzip
@@ -92,4 +92,3 @@ def main():
 
 
 main()
-

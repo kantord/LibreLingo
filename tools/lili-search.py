@@ -4,18 +4,6 @@ import sys
 import re
 from librelingo_yaml_loader.yaml_loader import load_course
 
-# Features:
-# given a path to a course and a string, find all the occurances of that word in the text
-# In the Word/Synonyme section, in the translations
-# In the Mini-Dictionary or the translations
-# Among the Phrases or the translations.
-
-# There might be words that exist in both languages (e.g. David) that will appear both in the target and in the source reports,
-# but other than these words should be either in one or the other section.
-# TODO: we might want to add a warning if the appear in both (that could be silenced by a flag)
-
-# should find "mujer" in "la mujer" but not "mu" in "la mujer" maybe should indicate it is partial match
-
 reports = {}
 
 def collect(key, module, skill, search_word, expressions):
@@ -29,8 +17,8 @@ def collect(key, module, skill, search_word, expressions):
 
 def main():
     if len(sys.argv) != 3:
-        exit(f"Usage: {sys.argv[0]} COURSE_DIR WORD")
-    course_path, original_search_word = sys.argv[1:]
+        sys.exit(f"Usage: {sys.argv[0]} COURSE_DIR WORD")
+    course_path, original_search_word = sys.argv[1], sys.argv[2]
     search_word = original_search_word.lower()
     course = load_course(course_path)
     for module in course.modules:
@@ -64,4 +52,3 @@ def main():
             for found in reports[key]:
                 print(found)
 main()
-
