@@ -44,10 +44,16 @@ $(document).ready(function(){
     var source_to_target = null;
     var target_to_source = null;
     var course_data = null;
+    var loaded = 0;
 
+    var try_translate = function() {
+        if (loaded == 3) {
+            translate();
+        }
+    };
     var translate = function() {
         const original = $("#input-text").val();
-        const cleaned = original.replace(/"';,!?/g, " ");
+        const cleaned = original.replace(/["';,!?.]/g, " ");
         const words = cleaned.split(" ");
         var html = "<table>";
         html += '<tr>';
@@ -85,23 +91,29 @@ $(document).ready(function(){
     };
     $.getJSON("stats.json", function(data){
         course_data = data;
+        loaded++;
+        try_translate();
     }).fail(function(){
         console.log("An error has occurred.");
     });
 
     $.getJSON("source-to-target.json", function(data){
         source_to_target = data;
+        loaded++;
+        try_translate();
     }).fail(function(){
         console.log("An error has occurred.");
     });
 
     $.getJSON("target-to-source.json", function(data){
         target_to_source = data;
+        loaded++;
+        try_translate();
     }).fail(function(){
         console.log("An error has occurred.");
     });
 
-    $('#input-text').bind('input propertychange', translate)
+    $('#input-text').bind('input propertychange', translate);
     $("#translate").click(translate);
 });
 </script>
