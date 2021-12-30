@@ -148,9 +148,9 @@ def export_main_html_page(course, count, html_dir):
         fh.write(html)
 
 
-def export_json(dictionary, filename, html_dir):
+def export_json(language, filename, html_dir):
     all_words = {}
-    for word, translations in dictionary.items():
+    for word, translations in language["dictionary"].items():
         if word not in all_words:
             all_words[word] = []
         for translation in translations:
@@ -236,8 +236,8 @@ def export_to_html(course, target, source, count, html_dir):
     )
     count["source_words"] = len(all_source_words)
 
-    export_json(source["dictionary"], "source-to-target.json", html_dir)
-    export_json(target["dictionary"], "target-to-source.json", html_dir)
+    export_json(source, "source-to-target.json", html_dir)
+    export_json(target, "target-to-source.json", html_dir)
 
     export_main_html_page(course, count, html_dir)
     export_words_html_page(
