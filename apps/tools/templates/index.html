@@ -24,6 +24,9 @@
 .missing {
     background-color: #FF6666;
 }
+.middle {
+    width: 30px;
+}
 </style>
 <div>
 <textarea id="input-text">
@@ -47,39 +50,52 @@ $(document).ready(function(){
         const cleaned = original.replace(/"';,!?/g, " ");
         const words = cleaned.split(" ");
         var html = "<table>";
-        html += '<tr><th>' + course_data['target_language_name']  + '</th><th>' + course_data['source_language_name'] + '</th></tr>';
+        html += '<tr>';
+        html += '<th>' + course_data['target_language_name']  + '</th><th>' + course_data['source_language_name'] + '</th>'
+        html += '<th class="middle"></th>';
+        html += '<th>' + course_data['source_language_name']  + '</th><th>' + course_data['target_language_name'] + '</th>'
+        html += '</tr>';
         for (var ix = 0; ix < words.length; ix++) {
             if (words[ix] == "") {
                 continue;
             }
             var word = words[ix].toLowerCase()
+
+            html += '<tr>';
             var translation = target_to_source[word];
             if (translation) {
-                html += '<tr><td><a href="target/' + word + '.html">' + words[ix] + '</a></td><td>' + translation + '</td></tr>';
+                html += '<td><a href="target/' + word + '.html">' + words[ix] + '</a></td><td>' + translation + '</td>';
             } else {
-                html += '<tr class="missing"><td>' + words[ix] + '</td><td>' + '</td></tr>';
+                html += '<td class="missing">' + words[ix] + '</td><td class="missing">' + '</td>';
             }
+            html += '<td class="middle"></td>';
+
+            var translation = source_to_target[word];
+            if (translation) {
+                html += '<td><a href="source/' + word + '.html">' + words[ix] + '</a></td><td>' + translation + '</td>';
+            } else {
+                html += '<td class="missing">' + words[ix] + '</td><td class="missing">' + '</td>';
+            }
+
+            html += '</tr>';
         }
         html += "</table>";
 
         $("#output").html(html);
     };
     $.getJSON("stats.json", function(data){
-        console.log('received');
         course_data = data;
     }).fail(function(){
         console.log("An error has occurred.");
     });
 
     $.getJSON("source-to-target.json", function(data){
-        console.log('received');
         source_to_target = data;
     }).fail(function(){
         console.log("An error has occurred.");
     });
 
     $.getJSON("target-to-source.json", function(data){
-        console.log('received');
         target_to_source = data;
     }).fail(function(){
         console.log("An error has occurred.");
