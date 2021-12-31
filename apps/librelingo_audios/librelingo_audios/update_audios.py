@@ -1,11 +1,10 @@
-from librelingo_audios.functions import list_required_audios
-from librelingo_utils import audio_id
 from pathlib import Path
 import subprocess
 import json
 import random
 from collections import namedtuple
-
+from librelingo_audios.functions import list_required_audios
+from librelingo_utils import audio_id
 
 def update_audios_for_course(output_path, course_name, course, settings):
     if not course.settings.audio_settings.enabled:
