@@ -184,7 +184,7 @@ The mascot is designed by [@almostdesigner](https://github.com/almostdesigner).
 
 ### Contributors
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-77-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-78-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
@@ -291,6 +291,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/dimkard"><img src="https://avatars.githubusercontent.com/u/5058312?v=4?s=100" width="100px;" alt=""/><br /><sub><b>dimkard</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/commits?author=dimkard" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/dushyantbhardwaj9"><img src="https://avatars.githubusercontent.com/u/43706857?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dushyant Bhardwaj</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/commits?author=dushyantbhardwaj9" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/vil02"><img src="https://avatars.githubusercontent.com/u/65706193?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Piotr Idzik</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/commits?author=vil02" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/qbecb1zen"><img src="https://avatars.githubusercontent.com/u/66479002?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Amine Louzar</b></sub></a><br /><a href="https://github.com/kantord/LibreLingo/commits?author=qbecb1zen" title="Code">💻</a></td>
   </tr>
 </table>
 
