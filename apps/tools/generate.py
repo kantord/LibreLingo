@@ -81,26 +81,33 @@ def main():
     os.mkdir(outdir)
 
     links = []
+    courses_data = {}
 
     for course in courses:
         download_course(course["url"], tempdir)
+        tdir = course["tdir"]
         links.append(
             generate_course(
                 sdir=os.path.join(tempdir.name, course["sdir"]),
                 outdir=outdir,
-                tdir=course["tdir"],
+                tdir=tdir,
                 course_dir="course",
             )
         )
+        with open(os.path.join(outdir, tdir, "course.json")) as fh:
+            courses_data[tdir] = json.load(fh)
 
+    tdir = "basque-from-english"
     links.append(
         generate_course(
             sdir="LibreLingo",
             outdir=outdir,
-            tdir="basque-from-english",
-            course_dir="courses/basque-from-english",
+            tdir=tdir,
+            course_dir=f"courses/{tdir}",
         )
     )
+    with open(os.path.join(outdir, tdir, "course.json")) as fh:
+        courses_data[tdir] = json.load(fh)
 
     for tdir in os.listdir("LibreLingo/temporarily_inactive_courses/"):
         if tdir == "basque-from-english":
@@ -113,8 +120,12 @@ def main():
                 course_dir=f"temporarily_inactive_courses/{tdir}",
             )
         )
+        with open(os.path.join(outdir, tdir, "course.json")) as fh:
+            courses_data[tdir] = json.load(fh)
 
     end_time = datetime.datetime.now()
+    with open(os.path.join(outdir, "courses.json"), "w") as fh:
+        json.dump(courses_data, fh)
     generate_html(start_time, end_time, links, outdir)
 
 
