@@ -1,12 +1,12 @@
 import argparse
 import datetime
 import json
-import requests
 import os
 import sys
 import zipfile
 import shutil
 import tempfile
+import requests
 from jinja2 import Environment, FileSystemLoader
 
 
