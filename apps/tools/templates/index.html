@@ -53,7 +53,8 @@ $(document).ready(function(){
     };
     var translate = function() {
         const original = $("#input-text").val();
-        const cleaned = original.replace(/["';,!?.]/g, " ");
+        //const cleaned = original.replace(/["';,!?.:]/g, " ");
+        const cleaned = original.replace(/[^a-zA-Z-]/g, " ");
         const words = cleaned.split(" ");
         var html = "<table>";
         html += '<tr>';
