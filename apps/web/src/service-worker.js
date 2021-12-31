@@ -1,4 +1,4 @@
-import { timestamp, files, shell } from "@sapper/service-worker"
+import { timestamp, files, shell } from "$service-worker"
 
 // eslint-disable-next-line no-constant-condition
 if (false) {
