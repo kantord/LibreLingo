@@ -2,6 +2,7 @@
   "name": "@librelingo/web",
   "description": "A web app for learning with LibreLingo courses",
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "cy:run": "cypress run",
     "cy:open": "cypress open",
