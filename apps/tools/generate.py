@@ -53,7 +53,7 @@ def generate_course(sdir, outdir, tdir, course_dir):
     print(cmd)
     success = os.system(cmd) == 0
     os.chdir(current_dir)
-    with open(os.path.join(docs_dir, "stats.json")) as fh:
+    with open(os.path.join(docs_dir, "course.json")) as fh:
         count = json.load(fh)
     return {
         "tdir": tdir,

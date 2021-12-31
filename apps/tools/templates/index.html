@@ -105,7 +105,7 @@ $(document).ready(function(){
 
         $("#output").html(html);
     };
-    $.getJSON("stats.json", function(data){
+    $.getJSON("course.json", function(data){
         course_data = data;
         loaded++;
         try_translate();
