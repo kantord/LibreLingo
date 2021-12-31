@@ -8,14 +8,14 @@ import os
 import random
 from pyfakefs.fake_filesystem_unittest import TestCase as FakeFsTestCase  # type: ignore
 from librelingo_fakes import fakes
+from librelingo_types import Module, Language, DictionaryItem
+from librelingo_utils import get_dumb_opaque_id, clean_word, calculate_number_of_levels
 from librelingo_json_export.export import (
     _export_course_skills,
     _export_skill,
     _export_course_data,
     export_course,
 )
-from librelingo_types import Module, Language, DictionaryItem
-from librelingo_utils import get_dumb_opaque_id, clean_word, calculate_number_of_levels
 from librelingo_json_export.challenges import (
     _get_word_challenges,
     _get_phrase_challenges,

@@ -1,12 +1,12 @@
 import os
 import random
 import re
-from librelingo_types.data_types import Settings
 import pytest
 from pathlib import Path
 from unittest.mock import Mock, patch
 from unittest import TestCase
 from pyfakefs.fake_filesystem_unittest import TestCase as FakeFsTestCase  # type: ignore
+from librelingo_types.data_types import Settings
 from librelingo_types import (
     Course,
     License,
