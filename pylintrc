@@ -84,10 +84,8 @@ disable=raw-checker-failed,
         file-ignored,
         suppressed-message,
         useless-suppression,
-        deprecated-pragma,
+        deprecated-pragma, #TODO: enable
         duplicate-code,  # TODO: enable
-        ungrouped-imports,  # TODO: enable
-        wrong-import-order,  # TODO: enable
         invalid-name,  # TODO: enable
         missing-function-docstring,  # TODO: enable
         redefined-outer-name,  # TODO: enable

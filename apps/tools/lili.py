@@ -147,6 +147,15 @@ def export_main_html_page(course, count, html_dir):
     with open(os.path.join(html_dir, "modules.html"), "w") as fh:
         fh.write(html)
 
+    html = render(
+        "missing_words.html",
+        title=f"Missing {course.source_language.name} words",
+        rel="",
+        course=course,
+    )
+    with open(os.path.join(html_dir, "words.html"), "w") as fh:
+        fh.write(html)
+
 
 def export_json(language, filename, html_dir):
     all_words = {}
@@ -271,7 +280,7 @@ def export_to_html(course, target, source, count, html_dir):
     export_word_html_pages(
         course, all_source_words, source, os.path.join(html_dir, "source")
     )
-    with open(os.path.join(html_dir, "stats.json"), "w") as fh:
+    with open(os.path.join(html_dir, "course.json"), "w") as fh:
         json.dump(count, fh)
 
 
@@ -312,6 +321,8 @@ def generate_html(course, html_dir):
         "source_phrases": 0,
         "target_language_name": course.target_language.name,
         "source_language_name": course.source_language.name,
+        "target_language_code": course.target_language.code,
+        "source_language_code": course.source_language.code,
     }
 
     for module in course.modules:
