@@ -1,11 +1,11 @@
 import re
 from unittest import TestCase
-import pytest
-
 from unittest.mock import patch, call
+
 import json
 import os
 import random
+import pytest
 from pyfakefs.fake_filesystem_unittest import TestCase as FakeFsTestCase  # type: ignore
 from librelingo_fakes import fakes
 from librelingo_types import Module, Language, DictionaryItem
