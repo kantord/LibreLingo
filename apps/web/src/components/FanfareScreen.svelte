@@ -5,7 +5,7 @@
   import sound from "../media/sound"
   import hotkeys from "hotkeys-js"
   import { onMount } from "svelte"
-  import { goto } from "@sapper/app"
+  import { goto } from "$app/navigation"
   import Mascot from "./Mascot.svelte"
   import TwitterButton from "./TwitterButton.svelte"
   import Button from "lluis/Button.svelte"
