@@ -1,6 +1,6 @@
 from pathlib import Path
-import click  # type: ignore
 import collections
+import click  # type: ignore
 from librelingo_yaml_loader import load_course
 from librelingo_audios.update_audios import update_audios_for_course
 
