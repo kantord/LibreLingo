@@ -16,7 +16,7 @@
   import Button from "lluis/Button.svelte"
   import isCypress from "../utils/isCypress"
   // eslint-disable-next-line @typescript-eslint/no-var-requires
-  const pMemoize = require("p-memoize")
+  const pMemoize = await import("p-memoize")
 
   type WindowWithStars = Window & {
     stars: number

@@ -5,7 +5,7 @@ export default (listener) => {
     listener(db)
     if (isBrowser() === true && process.env.JEST_WORKER_ID === undefined) {
     // eslint-disable-next-line @typescript-eslint/no-var-requires
-        const authStore = require("../auth").default
+        const authStore = await import("../auth").default
         authStore.subscribe(() => listener(db))
     }
 }
