@@ -245,6 +245,9 @@ def export_to_html(course, target, source, count, html_dir):
     )
     count["source_words"] = len(all_source_words)
 
+    with open(os.path.join(html_dir, "course.json"), "w") as fh:
+        json.dump(course, fh)
+
     export_json(source, "source-to-target.json", html_dir)
     export_json(target, "target-to-source.json", html_dir)
 
