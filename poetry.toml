@@ -1,0 +1,4 @@
+# enforce the local creation of .venv
+[virtualenvs]
+create = true
+in-project = true
