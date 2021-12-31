@@ -84,7 +84,7 @@ disable=raw-checker-failed,
         file-ignored,
         suppressed-message,
         useless-suppression,
-        deprecated-pragma,
+        deprecated-pragma, #TODO: enable
         duplicate-code,  # TODO: enable
         wrong-import-order,  # TODO: enable
         simplifiable-if-expression,  # TODO: enable
