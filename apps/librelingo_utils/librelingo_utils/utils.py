@@ -1,6 +1,6 @@
-import regex  # type: ignore
-import hashlib
 from functools import lru_cache
+import hashlib
+import regex  # type: ignore
 from librelingo_types.data_types import Phrase, Word
 
 
