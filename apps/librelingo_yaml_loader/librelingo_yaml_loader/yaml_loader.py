@@ -229,7 +229,7 @@ def _convert_mini_dictionary(raw_mini_dictionary, course):
             word = list(item.keys())[0]
             raw_definition = list(item.values())[0]
             definition = (
-                raw_definition if type(raw_definition) == list else [raw_definition]
+                raw_definition if isinstance(raw_definition, list) else [raw_definition]
             )
             yield (word, tuple(definition), is_in_target_language)
 

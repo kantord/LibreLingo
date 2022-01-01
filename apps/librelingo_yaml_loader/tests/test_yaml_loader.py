@@ -888,11 +888,11 @@ def module_with_word():
 
 
 def test_load_dictionary_returns_a_list(module_with_word):
-    assert type(_load_dictionary([module_with_word[0]])) == list
+    assert isinstance(_load_dictionary([module_with_word[0]]), list)
 
 
 def test_load_dictionary_returns_a_list_of_dictionary_items(module_with_word):
-    assert type(_load_dictionary([module_with_word[0]])[0]) == DictionaryItem
+    assert isinstance(_load_dictionary([module_with_word[0]])[0], DictionaryItem)
 
 
 def test_load_dictionary_includes_word_from_new_word(module_with_word):
@@ -958,7 +958,7 @@ def test_load_dictionary_includes_duplicate_words_only_once(module_with_word):
 
 
 def test_load_dictionary_has_a_single_string_definition(module_with_word):
-    assert type(_load_dictionary([module_with_word[0]])[0].definition) == str
+    assert isinstance(_load_dictionary([module_with_word[0]])[0].definition, str)
 
 
 def test_load_dictionary_includes_duplicate_words_includes_multiple_definitions(
