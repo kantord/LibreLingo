@@ -639,10 +639,8 @@ Mini-dictionary:
 
         french = Language(self.fake_values["word3"], "")
         english = Language("English", "")
-        self.fake_course = Course(
-            french, english, [], [], None, None, "", "course/path"
-        )
-        self.result = _load_skill(self.fake_path / "food.yaml", self.fake_course)
+        fake_course = Course(french, english, [], [], None, None, "", "course/path")
+        self.result = _load_skill(self.fake_path / "food.yaml", fake_course)
 
     def test_returns_a_correctly_types_course(self):
         self.assertIsInstance(self.result, Skill)
@@ -1174,7 +1172,7 @@ def test_load_skill_complains_about_misspelled_word_in_target_language(load_yaml
         ],
     }
     fake_hunspell = Mock()
-    fake_hunspell.spell = lambda word: False if word == fake_word_value_simple else True
+    fake_hunspell.spell = lambda word: word != fake_word_value_simple
     fake_course = fakes.customize(
         fakes.course1,
         source_language=Language(fakes.fake_value(), fakes.fake_value),
@@ -1208,7 +1206,7 @@ def test_load_skill_complains_about_misspelled_phrase_in_target_language(load_ya
         "New words": [],
     }
     fake_hunspell = Mock()
-    fake_hunspell.spell = lambda word: False if word == fake_word else True
+    fake_hunspell.spell = lambda word: word != fake_word
     fake_course = fakes.customize(
         fakes.course1,
         source_language=Language(fakes.fake_value(), fakes.fake_value),
@@ -1242,7 +1240,7 @@ def test_load_skill_complains_about_misspelled_phrase_in_source_language(load_ya
         "New words": [],
     }
     fake_hunspell = Mock()
-    fake_hunspell.spell = lambda word: False if word == fake_word else True
+    fake_hunspell.spell = lambda word: word != fake_word
     fake_course = fakes.customize(
         fakes.course1,
         source_language=Language(fakes.fake_value(), fakes.fake_value),
