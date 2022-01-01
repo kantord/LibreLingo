@@ -2,53 +2,11 @@ import collections
 
 from unittest.mock import patch
 from unittest import TestCase
-from librelingo_json_export.challenge_types import get_short_input_challenge
 from librelingo_json_export.challenge_types import get_listening_challenge
 from librelingo_json_export.challenge_types import get_chips_challenge
 from librelingo_json_export.challenge_types import get_chips_from_phrase
 from librelingo_types import Settings, AudioSettings
 from librelingo_fakes import fakes
-
-
-class TestGetShortInputChallenge(TestCase):
-    def test_returns_correct_value1(self):
-        challenge = get_short_input_challenge(fakes.word1, fakes.course1)[0]
-        expected_challenge = {
-            "id": "749e7c734898",
-            "type": "shortInput",
-            "pictures": ["foo.jpg", "bar.jpg", "baz.jpg"],
-            "formInTargetLanguage": ["foous"],
-            "phrase": [{"word": "foo", "definition": "barrus"}],
-            "priority": 1,
-            "group": "aab69500f014",
-        }
-        self.assertEqual(challenge, expected_challenge)
-
-    def test_returns_correct_value2(self):
-        challenge = get_short_input_challenge(fakes.word2, fakes.course1)[0]
-        expected_challenge = {
-            "id": "5f1b4778039c",
-            "type": "shortInput",
-            "pictures": ["1.jpg", "2.jpg", "3.jpg"],
-            "formInTargetLanguage": ["apfel"],
-            "phrase": [{"word": "apple", "definition": "red fruit"}],
-            "priority": 1,
-            "group": "9dbe235cb2d6",
-        }
-        self.assertEqual(challenge, expected_challenge)
-
-    def test_returns_correct_value_with_spaces(self):
-        challenge = get_short_input_challenge(fakes.word_with_spaces, fakes.course1)[0]
-        expected_challenge = {
-            "id": "3b0f6c9df85b",
-            "type": "shortInput",
-            "pictures": ["1.jpg", "2.jpg", "3.jpg"],
-            "formInTargetLanguage": ["three word term"],
-            "phrase": [{"word": "foo bar baz", "definition": "three word term"}],
-            "priority": 1,
-            "group": "e707f76a703d",
-        }
-        self.assertEqual(challenge, expected_challenge)
 
 
 class TestListeningChallenge(TestCase):
