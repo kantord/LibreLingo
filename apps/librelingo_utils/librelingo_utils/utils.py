@@ -80,9 +80,9 @@ def audio_id(language, text):
     """
     Generate the ID that will identify the audio file of a sentence.
     """
-    hash = hashlib.sha256()
-    hash.update((language.name.lower() + "|" + text).encode("utf-8"))
-    return hash.hexdigest()
+    audio_id = hashlib.sha256()
+    audio_id.update((language.name.lower() + "|" + text).encode("utf-8"))
+    return audio_id.hexdigest()
 
 
 def iterate_phrases(course):
