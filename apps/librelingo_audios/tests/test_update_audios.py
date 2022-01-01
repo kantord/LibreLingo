@@ -23,7 +23,7 @@ empty_course = fakes.customize(
 )
 
 
-def test_dry_run_does_nothing(tmp_path, capsys, terminal, index_file):
+def test_dry_run_does_nothing(tmp_path, _capsys, terminal, index_file):
     update_audios_for_course(
         tmp_path, "test", course, cli.Settings(dry_run=True, destructive=False)
     )
@@ -38,7 +38,7 @@ def test_dry_run_does_nothing(tmp_path, capsys, terminal, index_file):
     )
 
 
-def test_dry_run_does_nothing_with_destructive(tmp_path, capsys, terminal, index_file):
+def test_dry_run_does_nothing_with_destructive(tmp_path, _capsys, terminal, index_file):
     update_audios_for_course(
         tmp_path, "test", course, cli.Settings(dry_run=True, destructive=True)
     )
@@ -54,7 +54,7 @@ def test_dry_run_does_nothing_with_destructive(tmp_path, capsys, terminal, index
 
 
 def test_generate_from_scratch(
-    aws_cli, tmp_path, capsys, terminal, mock_index_entry, index_file
+    aws_cli, tmp_path, _capsys, terminal, mock_index_entry, index_file
 ):
     update_audios_for_course(
         tmp_path, "test", course, cli.Settings(dry_run=False, destructive=False)
@@ -85,7 +85,7 @@ def test_generate_from_scratch(
 def test_generate_from_scratch_with_destructive(
     aws_cli,
     tmp_path,
-    capsys,
+    _capsys,
     terminal,
     mock_index_entry,
     index_file,
@@ -118,7 +118,7 @@ def test_generate_from_scratch_with_destructive(
     )
 
 
-def test_noop_update(aws_cli, tmp_path, capsys, mock_index_entry, index_file, terminal):
+def test_noop_update(aws_cli, tmp_path, _capsys, mock_index_entry, index_file, terminal):
     index_file.set_entries(
         [
             mock_index_entry("foous barus"),
@@ -145,7 +145,7 @@ def test_noop_update(aws_cli, tmp_path, capsys, mock_index_entry, index_file, te
 
 
 def test_overwrite_with_destructive(
-    aws_cli, tmp_path, capsys, terminal, mock_index_entry, index_file
+    aws_cli, tmp_path, _capsys, terminal, mock_index_entry, index_file
 ):
     index_file.set_entries(
         [
@@ -182,7 +182,7 @@ def test_overwrite_with_destructive(
 
 
 def test_partial_update(
-    aws_cli, tmp_path, capsys, terminal, mock_index_entry, index_file
+    aws_cli, tmp_path, _capsys, terminal, mock_index_entry, index_file
 ):
     index_file.set_entries(
         [
@@ -216,7 +216,7 @@ def test_partial_update(
 def test_partial_update_with_deletion(
     aws_cli,
     tmp_path,
-    capsys,
+    _capsys,
     terminal,
     mock_index_entry,
     write_mock_audio_file_for_text,
@@ -257,7 +257,7 @@ def test_partial_update_with_deletion(
 def test_overwrite_with_deletion(
     aws_cli,
     tmp_path,
-    capsys,
+    _capsys,
     terminal,
     mock_index_entry,
     write_mock_audio_file_for_text,
@@ -300,7 +300,7 @@ def test_overwrite_with_deletion(
 def test_delete_all(
     aws_cli,
     tmp_path,
-    capsys,
+    _capsys,
     terminal,
     mock_index_entry,
     write_mock_audio_file_for_text,
@@ -331,7 +331,7 @@ def test_delete_all(
 def test_delete_all_with_destructive(
     aws_cli,
     tmp_path,
-    capsys,
+    _capsys,
     terminal,
     mock_index_entry,
     write_mock_audio_file_for_text,
