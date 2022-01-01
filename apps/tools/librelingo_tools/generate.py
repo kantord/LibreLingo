@@ -100,7 +100,7 @@ def main():
     tdir = "basque-from-english"
     links.append(
         generate_course(
-            sdir="LibreLingo",
+            sdir=".",
             outdir=outdir,
             tdir=tdir,
             course_dir=f"courses/{tdir}",
@@ -109,12 +109,12 @@ def main():
     with open(os.path.join(outdir, tdir, "course.json")) as fh:
         courses_data[tdir] = json.load(fh)
 
-    for tdir in os.listdir("LibreLingo/temporarily_inactive_courses/"):
+    for tdir in os.listdir("./temporarily_inactive_courses/"):
         if tdir == "basque-from-english":
             continue
         links.append(
             generate_course(
-                sdir="LibreLingo",
+                sdir=".",
                 outdir=outdir,
                 tdir=tdir,
                 course_dir=f"temporarily_inactive_courses/{tdir}",

@@ -2,7 +2,7 @@
 import argparse
 import random
 
-from lili import guess_path_to_course, collect_data, collect_words, collect_phrases
+from librelingo_tools import guess_path_to_course, collect_data, collect_words, collect_phrases
 from librelingo_yaml_loader.yaml_loader import load_course
 
 
@@ -21,7 +21,7 @@ def get_args():
     return args
 
 
-def check(translation, lookup, word):
+def check(translation, lookup, word)
     return translation.lower() in [wrd.lower() for wrd in lookup[word]]
 
 
