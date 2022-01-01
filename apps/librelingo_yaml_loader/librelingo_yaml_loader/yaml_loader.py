@@ -203,10 +203,10 @@ def _convert_phrase(raw_phrase):
                 raw_phrase, "Translation", "Alternative translations"
             ),
         )
-    except KeyError:
+    except KeyError as key_error:
         raise RuntimeError(
             f'Phrase "{raw_phrase["Phrase"]}" needs to have a "Translation".'
-        )
+        ) from key_error
 
 
 def _convert_phrases(raw_phrases):
@@ -229,7 +229,7 @@ def _convert_mini_dictionary(raw_mini_dictionary, course):
             word = list(item.keys())[0]
             raw_definition = list(item.values())[0]
             definition = (
-                raw_definition if type(raw_definition) == list else [raw_definition]
+                raw_definition if isinstance(raw_definition, list) else [raw_definition]
             )
             yield (word, tuple(definition), is_in_target_language)
 
@@ -262,30 +262,36 @@ def _load_skill(path, course):
         skill = data["Skill"]
         words = data["New words"]
         phrases = data["Phrases"]
-    except TypeError:
-        raise RuntimeError(f'Skill file "{path}" is empty or does not exist')
+    except TypeError as type_error:
+        raise RuntimeError(
+            f'Skill file "{path}" is empty or does not exist'
+        ) from type_error
     except KeyError as error:
-        raise RuntimeError(f'Skill file "{path}" needs to have a "{error.args[0]}" key')
+        raise RuntimeError(
+            f'Skill file "{path}" needs to have a "{error.args[0]}" key'
+        ) from error
 
     try:
         name = skill["Name"]
-    except Exception:
-        raise RuntimeError(f'Skill file "{path}" needs to have skill name')
+    except Exception as exception:
+        raise RuntimeError(
+            f'Skill file "{path}" needs to have skill name'
+        ) from exception
 
     try:
         skill_id = skill["Id"]
-    except Exception:
-        raise RuntimeError(f'Skill file "{path}" needs to have skill id')
+    except Exception as exception:
+        raise RuntimeError(f'Skill file "{path}" needs to have skill id') from exception
 
     try:
         phrases = _convert_phrases(phrases)
-    except TypeError:
-        raise RuntimeError(f'Skill file "{path}" has an invalid phrase')
+    except TypeError as type_error:
+        raise RuntimeError(f'Skill file "{path}" has an invalid phrase') from type_error
 
     try:
         words = _convert_words(words)
-    except TypeError:
-        raise RuntimeError(f'Skill file "{path}" has an invalid word')
+    except TypeError as type_error:
+        raise RuntimeError(f'Skill file "{path}" has an invalid word') from type_error
 
     _run_skill_spellcheck(phrases, words, course)
 
@@ -309,10 +315,10 @@ def _load_skills(path, skills, course):
     """
     try:
         return [_load_skill(Path(path) / "skills" / skill, course) for skill in skills]
-    except TypeError:
+    except TypeError as type_error:
         raise RuntimeError(
             f'Module file "{path}/module.yaml" needs to have a list of skills'
-        )
+        ) from type_error
 
 
 def _load_module(path, course):
@@ -324,17 +330,21 @@ def _load_module(path, course):
     try:
         module = data["Module"]
         skills = data["Skills"]
-    except TypeError:
-        raise RuntimeError(f'Module file "{filepath}" is empty or does not exist')
+    except TypeError as type_error:
+        raise RuntimeError(
+            f'Module file "{filepath}" is empty or does not exist'
+        ) from type_error
     except KeyError as error:
         raise RuntimeError(
             f'Module file "{filepath}" needs to have a "{error.args[0]}" key'
-        )
+        ) from error
 
     try:
         title = module["Name"]
-    except Exception:
-        raise RuntimeError(f'Module file "{filepath}" needs to have module name')
+    except Exception as exception:
+        raise RuntimeError(
+            f'Module file "{filepath}" needs to have module name'
+        ) from exception
 
     return Module(
         title=title,
