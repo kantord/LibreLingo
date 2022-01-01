@@ -1024,7 +1024,7 @@ def test_load_module_complains_missing_module_name(load_yaml):
 
 
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
-def test_load_skills_complains_missing_skills(_load_yaml):
+def test_load_skills_complains_missing_skills(load_yaml):
     randomPath = str(random.randint(0, 1000))
     expected_error = (
         f'Module file "{randomPath}/module.yaml" needs to have a list of skills'
