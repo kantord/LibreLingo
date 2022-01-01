@@ -798,7 +798,7 @@ class TestConvertPhrases(TestCase):
         self.assertIsInstance(_convert_phrases([]), list)
 
     @patch("librelingo_yaml_loader.yaml_loader._convert_phrase")
-    def test_converts_every_word(self, _convert_phrase):
+    def test_converts_every_word(self, convert_phrase):
         raw_words = [None] * random.randint(0, 1000)
         self.assertEqual(len(_convert_phrases(raw_words)), len(raw_words))
 
@@ -1024,7 +1024,7 @@ def test_load_module_complains_missing_module_name(load_yaml):
 
 
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
-def test_load_skills_complains_missing_skills():
+def test_load_skills_complains_missing_skills(_load_yaml):
     randomPath = str(random.randint(0, 1000))
     expected_error = (
         f'Module file "{randomPath}/module.yaml" needs to have a list of skills'

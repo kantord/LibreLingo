@@ -22,7 +22,7 @@ def mocks(mocker):
 
 
 @pytest.fixture
-def invoke(_mocks, _fs):
+def invoke(mocks, fs):
     def f(args):
         runner = CliRunner()
         return runner.invoke(main, args)
@@ -42,17 +42,17 @@ def test_yaml_to_json_exports_correct_course(mocks, inputs, invoke):
     )
 
 
-def test_yaml_to_json_has_help_text(_mocks, _inputs, _invoke):
+def test_yaml_to_json_has_help_text(mocks, inputs, invoke):
     assert main.help
 
 
-def test_creates_output_directory_if_it_doesnt_exist(_mocks, inputs, invoke, _fs):
+def test_creates_output_directory_if_it_doesnt_exist(mocks, inputs, invoke, fs):
     output_path = f"foo/{random.randint(0, 500)}/bar"
     invoke([inputs[0], output_path])
     assert os.path.isdir(output_path)
 
 
-def test_has_a_dry_run_option(_mocks, inputs, invoke):
+def test_has_a_dry_run_option(mocks, inputs, invoke):
     result = invoke([*inputs, "--dry-run"])
     assert result.exit_code == 0
 
