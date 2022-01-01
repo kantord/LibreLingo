@@ -263,14 +263,20 @@ def _load_skill(path, course):
         words = data["New words"]
         phrases = data["Phrases"]
     except TypeError as type_error:
-        raise RuntimeError(f'Skill file "{path}" is empty or does not exist') from type_error
+        raise RuntimeError(
+            f'Skill file "{path}" is empty or does not exist'
+        ) from type_error
     except KeyError as error:
-        raise RuntimeError(f'Skill file "{path}" needs to have a "{error.args[0]}" key') from error
+        raise RuntimeError(
+            f'Skill file "{path}" needs to have a "{error.args[0]}" key'
+        ) from error
 
     try:
         name = skill["Name"]
     except Exception as exception:
-        raise RuntimeError(f'Skill file "{path}" needs to have skill name') from exception
+        raise RuntimeError(
+            f'Skill file "{path}" needs to have skill name'
+        ) from exception
 
     try:
         skill_id = skill["Id"]
@@ -325,7 +331,9 @@ def _load_module(path, course):
         module = data["Module"]
         skills = data["Skills"]
     except TypeError as type_error:
-        raise RuntimeError(f'Module file "{filepath}" is empty or does not exist') from type_error
+        raise RuntimeError(
+            f'Module file "{filepath}" is empty or does not exist'
+        ) from type_error
     except KeyError as error:
         raise RuntimeError(
             f'Module file "{filepath}" needs to have a "{error.args[0]}" key'
@@ -334,7 +342,9 @@ def _load_module(path, course):
     try:
         title = module["Name"]
     except Exception as exception:
-        raise RuntimeError(f'Module file "{filepath}" needs to have module name') from exception
+        raise RuntimeError(
+            f'Module file "{filepath}" needs to have module name'
+        ) from exception
 
     return Module(
         title=title,
