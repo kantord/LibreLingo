@@ -118,7 +118,9 @@ def test_generate_from_scratch_with_destructive(
     )
 
 
-def test_noop_update(aws_cli, tmp_path, _capsys, mock_index_entry, index_file, terminal):
+def test_noop_update(
+    aws_cli, tmp_path, _capsys, mock_index_entry, index_file, terminal
+):
     index_file.set_entries(
         [
             mock_index_entry("foous barus"),
