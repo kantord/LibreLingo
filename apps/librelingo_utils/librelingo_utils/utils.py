@@ -54,7 +54,7 @@ def get_dumb_opaque_id(name, id_, salt=""):
     """
     sha256 = hashlib.sha256()
 
-    if (type(id_)) in [Phrase, Word]:
+    if type(id_) in [Phrase, Word]:
         id_ = type(id_)(
             **{
                 **(id_._asdict()),
