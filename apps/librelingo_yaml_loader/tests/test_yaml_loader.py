@@ -639,9 +639,7 @@ Mini-dictionary:
 
         french = Language(self.fake_values["word3"], "")
         english = Language("English", "")
-        fake_course = Course(
-            french, english, [], [], None, None, "", "course/path"
-        )
+        fake_course = Course(french, english, [], [], None, None, "", "course/path")
         self.result = _load_skill(self.fake_path / "food.yaml", fake_course)
 
     def test_returns_a_correctly_types_course(self):
