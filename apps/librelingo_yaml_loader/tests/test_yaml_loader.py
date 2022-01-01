@@ -639,10 +639,8 @@ Mini-dictionary:
 
         french = Language(self.fake_values["word3"], "")
         english = Language("English", "")
-        self.fake_course = Course(
-            french, english, [], [], None, None, "", "course/path"
-        )
-        self.result = _load_skill(self.fake_path / "food.yaml", self.fake_course)
+        fake_course = Course(french, english, [], [], None, None, "", "course/path")
+        self.result = _load_skill(self.fake_path / "food.yaml", fake_course)
 
     def test_returns_a_correctly_types_course(self):
         self.assertIsInstance(self.result, Skill)
@@ -720,7 +718,7 @@ class TestConvertWords(TestCase):
         self.assertIsInstance(_convert_words([]), list)
 
     @patch("librelingo_yaml_loader.yaml_loader._convert_word")
-    def test_converts_every_word(self, convert_word):
+    def test_converts_every_word(self, _convert_word):
         raw_words = [None] * random.randint(0, 1000)
         self.assertEqual(len(_convert_words(raw_words)), len(raw_words))
 
@@ -890,11 +888,11 @@ def module_with_word():
 
 
 def test_load_dictionary_returns_a_list(module_with_word):
-    assert type(_load_dictionary([module_with_word[0]])) == list
+    assert isinstance(_load_dictionary([module_with_word[0]]), list)
 
 
 def test_load_dictionary_returns_a_list_of_dictionary_items(module_with_word):
-    assert type(_load_dictionary([module_with_word[0]])[0]) == DictionaryItem
+    assert isinstance(_load_dictionary([module_with_word[0]])[0], DictionaryItem)
 
 
 def test_load_dictionary_includes_word_from_new_word(module_with_word):
@@ -960,7 +958,7 @@ def test_load_dictionary_includes_duplicate_words_only_once(module_with_word):
 
 
 def test_load_dictionary_has_a_single_string_definition(module_with_word):
-    assert type(_load_dictionary([module_with_word[0]])[0].definition) == str
+    assert isinstance(_load_dictionary([module_with_word[0]])[0].definition, str)
 
 
 def test_load_dictionary_includes_duplicate_words_includes_multiple_definitions(
@@ -1174,7 +1172,7 @@ def test_load_skill_complains_about_misspelled_word_in_target_language(load_yaml
         ],
     }
     fake_hunspell = Mock()
-    fake_hunspell.spell = lambda word: False if word == fake_word_value_simple else True
+    fake_hunspell.spell = lambda word: word != fake_word_value_simple
     fake_course = fakes.customize(
         fakes.course1,
         source_language=Language(fakes.fake_value(), fakes.fake_value),
@@ -1208,7 +1206,7 @@ def test_load_skill_complains_about_misspelled_phrase_in_target_language(load_ya
         "New words": [],
     }
     fake_hunspell = Mock()
-    fake_hunspell.spell = lambda word: False if word == fake_word else True
+    fake_hunspell.spell = lambda word: word != fake_word
     fake_course = fakes.customize(
         fakes.course1,
         source_language=Language(fakes.fake_value(), fakes.fake_value),
@@ -1242,7 +1240,7 @@ def test_load_skill_complains_about_misspelled_phrase_in_source_language(load_ya
         "New words": [],
     }
     fake_hunspell = Mock()
-    fake_hunspell.spell = lambda word: False if word == fake_word else True
+    fake_hunspell.spell = lambda word: word != fake_word
     fake_course = fakes.customize(
         fakes.course1,
         source_language=Language(fakes.fake_value(), fakes.fake_value),
