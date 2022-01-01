@@ -10,14 +10,12 @@ def _get_module_summary(module):
     def get_imageset(images):
         if images and len(images) == 3 and all(images):
             return {"imageSet": images}
-        else:
-            return {}
+        return {}
 
     def get_introduction(skill):
         if skill.introduction:
             return {"introduction": f"{slugify(skill.name)}.md"}
-        else:
-            return {}
+        return {}
 
     def get_summary(words, phrases):
         words = [word.in_target_language[0] for word in words]
