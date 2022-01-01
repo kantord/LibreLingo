@@ -178,7 +178,7 @@ def export_json(language, filename, html_dir):
         json.dump(all_words, fh)
 
 
-def export_words_html_page(course, all_words, language, count, path, html_file):
+def export_words_html_page(course, all_words, language, path, html_file):
     html = render(
         "words.html",
         title=f"{course.target_language.name} for {course.source_language.name} speakers",
@@ -262,7 +262,6 @@ def export_to_html(course, target, source, count, html_dir):
         course,
         all_target_words,
         target,
-        count,
         "target",
         os.path.join(html_dir, "target.html"),
     )
@@ -270,7 +269,6 @@ def export_to_html(course, target, source, count, html_dir):
         course,
         all_source_words,
         source,
-        count,
         "source",
         os.path.join(html_dir, "source.html"),
     )

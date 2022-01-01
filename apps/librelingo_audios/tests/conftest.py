@@ -44,9 +44,9 @@ def mock_index_entry():
 @pytest.fixture
 def terminal(tmp_path, capsys):
     def assert_output_matches(set_of_messages):
-        assert set(set_of_messages) == set(
-            [l for l in capsys.readouterr().out.split("\n") if l != ""]
-        )
+        assert set(set_of_messages) == {
+            l for l in capsys.readouterr().out.split("\n") if l != ""
+        }
 
     return SimpleNamespace(
         assert_output_matches=assert_output_matches,
