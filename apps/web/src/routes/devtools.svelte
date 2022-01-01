@@ -2,9 +2,9 @@
   export async function preload() {
       try {
       // eslint-disable-next-line @typescript-eslint/no-var-requires
-          const fs = require("fs")
+          const fs = await import("fs")
           // eslint-disable-next-line @typescript-eslint/no-var-requires
-          const util = require("util")
+          const util = await import("util")
           const readdir = util.promisify(fs.readdir)
 
           return {

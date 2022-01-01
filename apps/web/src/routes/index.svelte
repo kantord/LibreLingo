@@ -126,9 +126,9 @@
     height: 3em;
   }
 
-  .hero {
-    background-color: $primary;
-  }
+  /* .hero { */
+    /* background-color: $primary; */
+  /* } */
 
   .license {
     position: absolute;

@@ -11,8 +11,8 @@ let syncHandler
 const createLocalPouchDb = (dbName) => {
     const PouchDB =
     process.env.JEST_WORKER_ID !== undefined
-        ? require("pouchdb")
-        : require("pouchdb").default
+        ? await import("pouchdb")
+        : await import("pouchdb").default
     const newDb = new PouchDB(dbName).setMaxListeners(
         settings.database.maxNumberOfListeners
     )
@@ -27,7 +27,7 @@ const createLocalPouchDb = (dbName) => {
             if (process.env.JEST_WORKER_ID !== undefined) {
                 return
             }
-            const authStore = require("../auth").default
+            const authStore = await import("../auth").default
             authStore.update((value) => ({
                 ...value,
                 dbUpdatedAt: Date.now(),
@@ -38,8 +38,8 @@ const createLocalPouchDb = (dbName) => {
 }
 
 if (isBrowser() === true) {
-    const authStore = require("../auth").default
-    const PouchDB = require("pouchdb").default
+    const authStore = await import("../auth").default
+    const PouchDB = await import("pouchdb").default
 
     // Connect to remote database
     remoteDB = new PouchDB(
