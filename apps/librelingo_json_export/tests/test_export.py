@@ -15,10 +15,10 @@ from librelingo_json_export.export import (
 
 
 def get_fake_skill(introduction=None):
-    random_name = str(random.randint(0, 5000))
-    return random_name, fakes.customize(
+    randomname = str(random.randint(0, 5000))
+    return randomname, fakes.customize(
         fakes.skillWithPhraseAndWord,
-        name=f"Animals {random_name}",
+        name=f"Animals {randomname}",
         introduction=introduction,
     )
 

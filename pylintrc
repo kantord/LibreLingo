@@ -95,6 +95,7 @@ disable=raw-checker-failed,
         unspecified-encoding,  # TODO: enable
         import-error,  # TODO: enable
         missing-module-docstring,  # TODO: enable
+        too-many-lines,  # TODO: enable
         line-too-long,  # TODO: enable
         import-outside-toplevel,  # TODO: enable
         global-statement,  # TODO: enable
