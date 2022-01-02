@@ -1,4 +1,3 @@
-import pytest
 from librelingo_fakes import fakes
 from librelingo_utils import calculate_number_of_levels
 from utils import FakeLanguages
@@ -18,6 +17,7 @@ course_with_markdown = fakes.customize(
         )
     ],
 )
+
 
 def test__get_course_data_return_value():
     """

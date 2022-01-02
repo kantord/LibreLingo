@@ -30,20 +30,29 @@ def test_calls_define_word_with_the_correct_word_that_has_space(mock_define_word
 
 def test_returns_correct_value(mock_define_word):
     mock_define_word.return_value = fakes.fake_value()
-    assert _define_words_in_sentence(fakes.course1, FakeLanguages.LANG_1, True) == [mock_define_word.return_value]
+    assert _define_words_in_sentence(fakes.course1, FakeLanguages.LANG_1, True) == [
+        mock_define_word.return_value
+    ]
 
 
 def test_returns_correct_value_for_word_that_has_space(mock_define_word):
     mock_define_word.return_value = fakes.fake_value()
-    assert _define_words_in_sentence(fakes.course1, "{foo bar}", True) == [mock_define_word.return_value]
+    assert _define_words_in_sentence(fakes.course1, "{foo bar}", True) == [
+        mock_define_word.return_value
+    ]
 
 
 def test_defines_every_word(mock_define_word):
     mock_define_word.return_value = fakes.fake_value()
-    assert _define_words_in_sentence(fakes.course1, "foo bar", True) == [mock_define_word.return_value, mock_define_word.return_value]
+    assert _define_words_in_sentence(fakes.course1, "foo bar", True) == [
+        mock_define_word.return_value,
+        mock_define_word.return_value,
+    ]
 
 
 def test_defines_every_word_that_has_space(mock_define_word):
     mock_define_word.return_value = fakes.fake_value()
-    assert _define_words_in_sentence(fakes.course1, "{foo bar} {baz quux}", True) == [mock_define_word.return_value, mock_define_word.return_value]
-
+    assert _define_words_in_sentence(fakes.course1, "{foo bar} {baz quux}", True) == [
+        mock_define_word.return_value,
+        mock_define_word.return_value,
+    ]
