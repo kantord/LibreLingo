@@ -2,7 +2,8 @@ from unittest.mock import patch, call
 
 import json
 import os
-import random
+from utils import generate_random_int
+
 from pyfakefs.fake_filesystem_unittest import TestCase as FakeFsTestCase  # type: ignore
 from librelingo_fakes import fakes
 from librelingo_types import Module, Language
@@ -15,7 +16,7 @@ from librelingo_json_export.export import (
 
 
 def get_fake_skill(introduction=None):
-    randomname = str(random.randint(0, 5000))
+    randomname = str(generate_random_int(5000))
     return randomname, fakes.customize(
         fakes.skillWithPhraseAndWord,
         name=f"Animals {randomname}",
@@ -104,7 +105,7 @@ class TestExportSkill(FakeFsTestCase):
 
     @patch("librelingo_json_export.export._get_skill_data")
     def test_writes_correct_value_into_json_file(self, _get_skill_data):
-        fake_skill_data = {"fake_skill_data": random.randint(0, 1000)}
+        fake_skill_data = {"fake_skill_data": generate_random_int(1000)}
         _get_skill_data.return_value = fake_skill_data
         _export_skill(self.export_path, fakes.skillWithPhraseAndWord, fakes.course1)
         with open(self.export_path / "challenges" / "masculine.json") as masculine_file:
@@ -137,7 +138,7 @@ class TestExportCourseData(FakeFsTestCase):
 
     @patch("librelingo_json_export.export._get_course_data")
     def test_writes_correct_value_into_json_file(self, _get_course_data):
-        fake_course_data = {"fake_course_data": random.randint(0, 1000)}
+        fake_course_data = {"fake_course_data": generate_random_int(1000)}
         _get_course_data.return_value = fake_course_data
         _export_course_data(self.export_path, fakes.course1)
         with open(self.export_path / "courseData.json") as f:
@@ -145,8 +146,8 @@ class TestExportCourseData(FakeFsTestCase):
 
     def test_assert_logs_correctly(self):
         with self.assertLogs("librelingo_json_export", level="INFO") as log:
-            randomname1 = str(random.randint(0, 5000))
-            randomname2 = str(random.randint(0, 5000))
+            randomname1 = str(generate_random_int(5000))
+            randomname2 = str(generate_random_int(5000))
             fake_course = fakes.customize(
                 fakes.course1,
                 target_language=Language(name=randomname1, code=""),
