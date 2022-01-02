@@ -60,7 +60,7 @@ def test_has_a_dry_run_option(mocks, inputs, invoke):
 def test_dry_run_doesnt_create_output_files(mocks, inputs, invoke):
     mocks["export_course"].side_effect = lambda p, _: open(p, "w").write("x")
     invoke([*inputs, "--dry-run"])
-    assert os.listdir(".") == ["tmp"]
+    assert os.listdir(".") == ["var"]
 
 
 def test_dry_run_calls_real_export_course(mocks, inputs, invoke):
