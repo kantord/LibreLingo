@@ -145,17 +145,17 @@ class TestExportCourseData(FakeFsTestCase):
 
     def test_assert_logs_correctly(self):
         with self.assertLogs("librelingo_json_export", level="INFO") as log:
-            random_name1 = str(random.randint(0, 5000))
-            random_name2 = str(random.randint(0, 5000))
+            randomname1 = str(random.randint(0, 5000))
+            randomname2 = str(random.randint(0, 5000))
             fake_course = fakes.customize(
                 fakes.course1,
-                target_language=Language(name=random_name1, code=""),
-                source_language=Language(name=random_name2, code=""),
+                target_language=Language(name=randomname1, code=""),
+                source_language=Language(name=randomname2, code=""),
             )
             _export_course_data(self.export_path, fake_course)
             self.assertEqual(
                 log.output[0],
-                f"INFO:librelingo_json_export:Writing course {random_name1} for {random_name2} speakers",
+                f"INFO:librelingo_json_export:Writing course {randomname1} for {randomname2} speakers",
             )
 
 
