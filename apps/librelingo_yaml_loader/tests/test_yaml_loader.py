@@ -27,7 +27,6 @@ from librelingo_yaml_loader.yaml_loader import (
     _load_skill,
     _convert_words,
     _convert_word,
-    _convert_phrases,
     _load_dictionary,
 )
 from librelingo_fakes import fakes
@@ -790,30 +789,6 @@ class TestConvertWord(TestCase):
     def test_alternative_translations_are_optional(self):
         del self.fakeWord["Also accepted"]
         self.assertEqual(len(_convert_word(self.fakeWord).in_source_language), 1)
-
-
-class TestConvertPhrases(TestCase):
-    def test_returns_a_list(self):
-        self.assertIsInstance(_convert_phrases([]), list)
-
-    @patch("librelingo_yaml_loader.yaml_loader._convert_phrase")
-    def test_converts_every_word(self, convert_phrase):
-        raw_words = [None] * tu.get_some_int()
-        self.assertEqual(len(_convert_phrases(raw_words)), len(raw_words))
-
-    @patch("librelingo_yaml_loader.yaml_loader._convert_phrase")
-    def test_returns_correct_value(self, convert_phrase):
-        convert_phrase.return_value = fakes.fake_value()
-        self.assertEqual(_convert_phrases([None]), [convert_phrase.return_value])
-
-    @patch("librelingo_yaml_loader.yaml_loader._convert_phrase")
-    def test_calls_convert_phrases_with_correct_values(self, convert_phrase):
-        # pylint: disable=no-self-use
-        word1 = fakes.fake_value()
-        word2 = fakes.fake_value()
-        _convert_phrases([word1, word2])
-        convert_phrase.assert_any_call(word1)
-        convert_phrase.assert_any_call(word2)
 
 
 def get_fake_word_values():
