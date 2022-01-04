@@ -933,142 +933,144 @@ def test_load_dictionary_includes_duplicate_words_includes_multiple_definitions(
 
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
 def test_load_module_complains_about_an_empty_file(load_yaml):
-    randomPath = tu.get_some_str()
+    random_path = tu.get_some_str()
     load_yaml.return_value = None
     with pytest.raises(
         RuntimeError,
-        match=f'Module file "{randomPath}/module.yaml" is empty or does not exist',
+        match=f'Module file "{random_path}/module.yaml" is empty or does not exist',
     ):
-        _load_module(randomPath, fakes.course1)
+        _load_module(random_path, fakes.course1)
 
 
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
 def test_load_module_complains_missing_module_key(load_yaml):
-    randomPath = tu.get_some_str()
+    random_path = tu.get_some_str()
     load_yaml.return_value = {}
     expected_error = (
-        f'Module file "{randomPath}/module.yaml" needs to have a "Module" key'
+        f'Module file "{random_path}/module.yaml" needs to have a "Module" key'
     )
     with pytest.raises(RuntimeError, match=expected_error):
-        _load_module(randomPath, fakes.course1)
+        _load_module(random_path, fakes.course1)
 
 
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
 def test_load_module_complains_missing_skills_key(load_yaml):
-    randomPath = tu.get_some_str()
+    random_path = tu.get_some_str()
     load_yaml.return_value = {"Module": {}}
     expected_error = (
-        f'Module file "{randomPath}/module.yaml" needs to have a "Skills" key'
+        f'Module file "{random_path}/module.yaml" needs to have a "Skills" key'
     )
     with pytest.raises(RuntimeError, match=expected_error):
-        _load_module(randomPath, fakes.course1)
+        _load_module(random_path, fakes.course1)
 
 
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
 def test_load_module_complains_missing_module_name(load_yaml):
-    randomPath = tu.get_some_str()
+    random_path = tu.get_some_str()
     load_yaml.return_value = {"Module": {}, "Skills": []}
-    expected_error = f'Module file "{randomPath}/module.yaml" needs to have module name'
+    expected_error = (
+        f'Module file "{random_path}/module.yaml" needs to have module name'
+    )
     with pytest.raises(RuntimeError, match=expected_error):
-        _load_module(randomPath, fakes.course1)
+        _load_module(random_path, fakes.course1)
 
 
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
 def test_load_skills_complains_missing_skills(load_yaml):
-    randomPath = tu.get_some_str()
+    random_path = tu.get_some_str()
     expected_error = (
-        f'Module file "{randomPath}/module.yaml" needs to have a list of skills'
+        f'Module file "{random_path}/module.yaml" needs to have a list of skills'
     )
     with pytest.raises(RuntimeError, match=expected_error):
-        _load_skills(randomPath, skills=None, course=fakes.course1)
+        _load_skills(random_path, skills=None, course=fakes.course1)
 
 
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
 def test_load_skill_complains_about_an_empty_file(load_yaml):
-    randomPath = tu.get_some_str()
+    random_path = tu.get_some_str()
     load_yaml.return_value = None
     with pytest.raises(
-        RuntimeError, match=f'Skill file "{randomPath}" is empty or does not exist'
+        RuntimeError, match=f'Skill file "{random_path}" is empty or does not exist'
     ):
-        _load_skill(randomPath, fakes.course1)
+        _load_skill(random_path, fakes.course1)
 
 
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
 def test_load_skill_complains_missing_skills_key(load_yaml):
-    randomPath = tu.get_some_str()
+    random_path = tu.get_some_str()
     load_yaml.return_value = {}
-    expected_error = f'Skill file "{randomPath}" needs to have a "Skill" key'
+    expected_error = f'Skill file "{random_path}" needs to have a "Skill" key'
     with pytest.raises(RuntimeError, match=expected_error):
-        _load_skill(randomPath, fakes.course1)
+        _load_skill(random_path, fakes.course1)
 
 
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
 def test_load_skill_complains_missing_new_words_key(load_yaml):
-    randomPath = tu.get_some_str()
+    random_path = tu.get_some_str()
     load_yaml.return_value = {"Skill": []}
-    expected_error = f'Skill file "{randomPath}" needs to have a "New words" key'
+    expected_error = f'Skill file "{random_path}" needs to have a "New words" key'
     with pytest.raises(RuntimeError, match=expected_error):
-        _load_skill(randomPath, fakes.course1)
+        _load_skill(random_path, fakes.course1)
 
 
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
 def test_load_skill_complains_missing_skill_name(load_yaml):
-    randomPath = tu.get_some_str()
+    random_path = tu.get_some_str()
     load_yaml.return_value = {"Skill": {}, "New words": [], "Phrases": []}
-    expected_error = f'Skill file "{randomPath}" needs to have skill name'
+    expected_error = f'Skill file "{random_path}" needs to have skill name'
     with pytest.raises(RuntimeError, match=expected_error):
-        _load_skill(randomPath, fakes.course1)
+        _load_skill(random_path, fakes.course1)
 
 
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
 def test_load_skill_complains_missing_skill_id(load_yaml):
-    randomPath = tu.get_some_str()
+    random_path = tu.get_some_str()
     load_yaml.return_value = {"Skill": {"Name": "asd"}, "New words": [], "Phrases": []}
-    expected_error = f'Skill file "{randomPath}" needs to have skill id'
+    expected_error = f'Skill file "{random_path}" needs to have skill id'
     with pytest.raises(RuntimeError, match=expected_error):
-        _load_skill(randomPath, fakes.course1)
+        _load_skill(random_path, fakes.course1)
 
 
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
 def test_load_skill_doesnt_fail_without_thumnails(load_yaml):
-    randomPath = tu.get_some_str()
+    random_path = tu.get_some_str()
     load_yaml.return_value = {
         "Skill": {"Name": "asd", "Id": "4234234"},
         "New words": [],
         "Phrases": [],
     }
-    _load_skill(randomPath, fakes.course1)
+    _load_skill(random_path, fakes.course1)
 
 
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
 def test_load_skill_complains_about_invalid_phrase(load_yaml):
-    randomPath = tu.get_some_str()
+    random_path = tu.get_some_str()
     load_yaml.return_value = {
         "Skill": {"Name": "asd", "Id": 32423423},
         "New words": [],
         "Phrases": [""],
     }
-    expected_error = f'Skill file "{randomPath}" has an invalid phrase'
+    expected_error = f'Skill file "{random_path}" has an invalid phrase'
     with pytest.raises(RuntimeError, match=expected_error):
-        _load_skill(randomPath, fakes.course1)
+        _load_skill(random_path, fakes.course1)
 
 
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
 def test_load_skill_complains_about_invalid_word(load_yaml):
-    randomPath = tu.get_some_str()
+    random_path = tu.get_some_str()
     load_yaml.return_value = {
         "Skill": {"Name": "asd", "Id": 32423423},
         "Phrases": [],
         "New words": [""],
     }
-    expected_error = f'Skill file "{randomPath}" has an invalid word'
+    expected_error = f'Skill file "{random_path}" has an invalid word'
     with pytest.raises(RuntimeError, match=expected_error):
-        _load_skill(randomPath, fakes.course1)
+        _load_skill(random_path, fakes.course1)
 
 
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
 def test_load_skill_complains_about_misspelled_word_in_source_language(load_yaml):
-    randomPath = tu.get_some_str()
+    random_path = tu.get_some_str()
     fake_word_value = str(fakes.fake_value())
     load_yaml.return_value = {
         "Skill": {"Name": "asd", "Id": 32423423},
@@ -1096,12 +1098,12 @@ def test_load_skill_complains_about_misspelled_word_in_source_language(load_yaml
         f'The {fake_course.source_language.name} word "{fake_word_value}" is misspelled.'
     )
     with pytest.raises(RuntimeError, match=expected_error):
-        _load_skill(randomPath, fake_course)
+        _load_skill(random_path, fake_course)
 
 
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
 def test_load_skill_complains_about_misspelled_word_in_target_language(load_yaml):
-    randomPath = tu.get_some_str()
+    random_path = tu.get_some_str()
     fake_word_value_simple = str(fakes.fake_value())
     fake_word_value = f"the {fake_word_value_simple}"
     load_yaml.return_value = {
@@ -1130,12 +1132,12 @@ def test_load_skill_complains_about_misspelled_word_in_target_language(load_yaml
         f'The {fake_course.target_language.name} word "{fake_word_value}" is misspelled.'
     )
     with pytest.raises(RuntimeError, match=expected_error):
-        _load_skill(randomPath, fake_course)
+        _load_skill(random_path, fake_course)
 
 
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
 def test_load_skill_complains_about_misspelled_phrase_in_target_language(load_yaml):
-    randomPath = tu.get_some_str()
+    random_path = tu.get_some_str()
     fake_word = str(fakes.fake_value())
     fake_phrase = f"the {fake_word} foo bar"
     load_yaml.return_value = {
@@ -1164,12 +1166,12 @@ def test_load_skill_complains_about_misspelled_phrase_in_target_language(load_ya
         f'The {fake_course.target_language.name} phrase "{fake_phrase}" is misspelled. The word "{fake_word}" is unknown.'
     )
     with pytest.raises(RuntimeError, match=expected_error):
-        _load_skill(randomPath, fake_course)
+        _load_skill(random_path, fake_course)
 
 
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
 def test_load_skill_complains_about_misspelled_phrase_in_source_language(load_yaml):
-    randomPath = tu.get_some_str()
+    random_path = tu.get_some_str()
     fake_word = str(fakes.fake_value())
     fake_phrase = f"the {fake_word} foo bar"
     load_yaml.return_value = {
@@ -1198,4 +1200,4 @@ def test_load_skill_complains_about_misspelled_phrase_in_source_language(load_ya
         f'The {fake_course.source_language.name} phrase "{fake_phrase}" is misspelled. The word "{fake_word}" is unknown.'
     )
     with pytest.raises(RuntimeError, match=expected_error):
-        _load_skill(randomPath, fake_course)
+        _load_skill(random_path, fake_course)
