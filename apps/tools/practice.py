@@ -52,16 +52,21 @@ def main():
     args = get_args()
     path_to_course = guess_path_to_course(args.course)
     course = load_course(path_to_course)
-    _, source, _ = collect_data(course)
+    target, source, _ = collect_data(course)
     _show_banner()
 
     # Randomly select a word, show it, ask the user to type the answer, verify the answer
     # Same with phrases
 
     source_to_target_words = collect_words(source, "source-to-target")
+    target_to_source_words = collect_words(target, "target-to-source")
     while True:
-        if guess_word(source_to_target_words):
-            break
+        if random.random() < 0.8:
+            if guess_word(source_to_target_words):
+                break
+        else:
+            if guess_word(target_to_source_words):
+                break
 
 
 if __name__ == "__main__":
