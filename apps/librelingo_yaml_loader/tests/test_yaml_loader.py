@@ -25,7 +25,6 @@ from librelingo_yaml_loader.yaml_loader import (
     _load_modules,
     _load_skills,
     _load_skill,
-    _convert_words,
     _convert_word,
     _load_dictionary,
 )
@@ -709,30 +708,6 @@ Mini-dictionary:
 
     def test_calls_convert_phrases_with_correct_values(self):
         self.convert_phrases.assert_called_with(self.fake_values["fake_phrases"])
-
-
-class TestConvertWords(TestCase):
-    def test_returns_a_list(self):
-        self.assertIsInstance(_convert_words([]), list)
-
-    @patch("librelingo_yaml_loader.yaml_loader._convert_word")
-    def test_converts_every_word(self, _convert_word):
-        raw_words = [None] * tu.get_some_int()
-        self.assertEqual(len(_convert_words(raw_words)), len(raw_words))
-
-    @patch("librelingo_yaml_loader.yaml_loader._convert_word")
-    def test_returns_correct_value(self, convert_word):
-        convert_word.return_value = fakes.fake_value()
-        self.assertEqual(_convert_words([None]), [convert_word.return_value])
-
-    @patch("librelingo_yaml_loader.yaml_loader._convert_word")
-    def test_calls_convert_word_with_correct_values(self, convert_word):
-        # pylint: disable=no-self-use
-        word1 = fakes.fake_value()
-        word2 = fakes.fake_value()
-        _convert_words([word1, word2])
-        convert_word.assert_any_call(word1)
-        convert_word.assert_any_call(word2)
 
 
 class TestConvertWord(TestCase):
