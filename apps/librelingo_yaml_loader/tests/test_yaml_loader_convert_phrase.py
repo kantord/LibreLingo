@@ -29,7 +29,7 @@ def raw_fake_phrase():
             fakes.fake_value(),
         ],
         "Translation": fakes.fake_value(),
-        _alt_translations: [
+        _alt_translations(): [
             fakes.fake_value(),
             fakes.fake_value(),
         ],
