@@ -28,7 +28,6 @@ from librelingo_yaml_loader.yaml_loader import (
     _convert_words,
     _convert_word,
     _convert_phrases,
-    _convert_phrase,
     _load_dictionary,
 )
 from librelingo_fakes import fakes
@@ -817,55 +816,6 @@ class TestConvertPhrases(TestCase):
         convert_phrase.assert_any_call(word2)
 
 
-class TestConvertPhrase(TestCase):
-    def setUp(self):
-        self.fakePhrase = {
-            "Phrase": fakes.fake_value(),
-            "Alternative versions": [
-                fakes.fake_value(),
-                fakes.fake_value(),
-            ],
-            "Translation": fakes.fake_value(),
-            "Alternative translations": [
-                fakes.fake_value(),
-                fakes.fake_value(),
-            ],
-        }
-
-    def test_returns_a_phrase_object(self):
-        self.assertIsInstance(_convert_phrase(self.fakePhrase), Phrase)
-
-    def test_includes_main_version(self):
-        self.assertEqual(
-            _convert_phrase(self.fakePhrase).in_target_language[0],
-            self.fakePhrase["Phrase"],
-        )
-
-    def test_includes_alternative_versions(self):
-        result = _convert_phrase(self.fakePhrase).in_target_language
-        self.assertIn(self.fakePhrase["Alternative versions"][0], result)
-        self.assertIn(self.fakePhrase["Alternative versions"][1], result)
-
-    def test_alternative_versions_are_optional(self):
-        del self.fakePhrase["Alternative versions"]
-        self.assertEqual(len(_convert_phrase(self.fakePhrase).in_target_language), 1)
-
-    def test_includes_translation(self):
-        self.assertEqual(
-            _convert_phrase(self.fakePhrase).in_source_language[0],
-            self.fakePhrase["Translation"],
-        )
-
-    def test_includes_alternative_translations(self):
-        result = _convert_phrase(self.fakePhrase).in_source_language
-        self.assertIn(self.fakePhrase["Alternative translations"][0], result)
-        self.assertIn(self.fakePhrase["Alternative translations"][1], result)
-
-    def test_alternative_translations_are_optional(self):
-        del self.fakePhrase["Alternative translations"]
-        self.assertEqual(len(_convert_phrase(self.fakePhrase).in_source_language), 1)
-
-
 def get_fake_word_values():
     in_target_language = [tu.get_some_str()]
     in_source_language = [tu.get_some_str()]
@@ -1114,13 +1064,6 @@ def test_load_skill_complains_about_invalid_word(load_yaml):
     expected_error = f'Skill file "{randomPath}" has an invalid word'
     with pytest.raises(RuntimeError, match=expected_error):
         _load_skill(randomPath, fakes.course1)
-
-
-def test_convert_phrase_complains_about_missing_translation():
-    randomPhrase = tu.get_some_str()
-    expected_error = f'Phrase "{randomPhrase}" needs to have a "Translation".'
-    with pytest.raises(RuntimeError, match=expected_error):
-        _convert_phrase({"Phrase": randomPhrase})
 
 
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
