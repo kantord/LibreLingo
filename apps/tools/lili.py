@@ -157,13 +157,13 @@ def export_main_html_page(course, count, html_dir):
         fh.write(html)
 
 
-def export_json(language, filename, html_dir):
+def collect_words(language, direction):
     all_words = {}
     for word, translations in language["words"].items():
         if word not in all_words:
             all_words[word] = []
         for translation in translations:
-            if filename == "source-to-target.json":
+            if direction == "source-to-target":
                 all_words[word].extend(translation["word"].in_target_language)
             else:
                 all_words[word].extend(translation["word"].in_source_language)
@@ -173,7 +173,10 @@ def export_json(language, filename, html_dir):
             all_words[word] = []
         for translation in translations:
             all_words[word].extend(translation["word"])
+    return all_words
 
+
+def export_json(all_words, filename, html_dir):
     with open(os.path.join(html_dir, filename), "w") as fh:
         json.dump(all_words, fh)
 
@@ -254,8 +257,12 @@ def export_to_html(course, target, source, count, html_dir):
     )
     count["source_words"] = len(all_source_words)
 
-    export_json(source, "source-to-target.json", html_dir)
-    export_json(target, "target-to-source.json", html_dir)
+    export_json(
+        collect_words(source, "source-to-target"), "source-to-target.json", html_dir
+    )
+    export_json(
+        collect_words(target, "target-to-source"), "target-to-source.json", html_dir
+    )
 
     export_main_html_page(course, count, html_dir)
     export_words_html_page(
