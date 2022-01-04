@@ -25,7 +25,6 @@ from librelingo_yaml_loader.yaml_loader import (
     _load_modules,
     _load_skills,
     _load_skill,
-    _convert_word,
     _load_dictionary,
 )
 from librelingo_fakes import fakes
@@ -708,62 +707,6 @@ Mini-dictionary:
 
     def test_calls_convert_phrases_with_correct_values(self):
         self.convert_phrases.assert_called_with(self.fake_values["fake_phrases"])
-
-
-class TestConvertWord(TestCase):
-    def setUp(self):
-        self.fakeWord = {
-            "Images": fakes.fake_value(),
-            "Word": fakes.fake_value(),
-            "Synonyms": [
-                fakes.fake_value(),
-                fakes.fake_value(),
-            ],
-            "Translation": fakes.fake_value(),
-            "Also accepted": [
-                fakes.fake_value(),
-                fakes.fake_value(),
-            ],
-        }
-
-    def test_returns_a_word_object(self):
-        self.assertIsInstance(_convert_word(self.fakeWord), Word)
-
-    def test_includes_the_correct_pictures(self):
-        self.assertEqual(_convert_word(self.fakeWord).pictures, self.fakeWord["Images"])
-
-    def test_pictures_are_optional(self):
-        del self.fakeWord["Images"]
-        self.assertIsNone(_convert_word(self.fakeWord).pictures)
-
-    def test_includes_main_word(self):
-        self.assertEqual(
-            _convert_word(self.fakeWord).in_target_language[0], self.fakeWord["Word"]
-        )
-
-    def test_includes_synonyms(self):
-        result = _convert_word(self.fakeWord).in_target_language
-        self.assertIn(self.fakeWord["Synonyms"][0], result)
-        self.assertIn(self.fakeWord["Synonyms"][1], result)
-
-    def test_synonyms_are_optional(self):
-        del self.fakeWord["Synonyms"]
-        self.assertEqual(len(_convert_word(self.fakeWord).in_target_language), 1)
-
-    def test_includes_translation(self):
-        self.assertEqual(
-            _convert_word(self.fakeWord).in_source_language[0],
-            self.fakeWord["Translation"],
-        )
-
-    def test_includes_alternative_translations(self):
-        result = _convert_word(self.fakeWord).in_source_language
-        self.assertIn(self.fakeWord["Also accepted"][0], result)
-        self.assertIn(self.fakeWord["Also accepted"][1], result)
-
-    def test_alternative_translations_are_optional(self):
-        del self.fakeWord["Also accepted"]
-        self.assertEqual(len(_convert_word(self.fakeWord).in_source_language), 1)
 
 
 def get_fake_word_values():
