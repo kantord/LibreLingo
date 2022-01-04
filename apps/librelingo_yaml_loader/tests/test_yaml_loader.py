@@ -32,7 +32,7 @@ from librelingo_yaml_loader.yaml_loader import (
     _load_dictionary,
 )
 from librelingo_fakes import fakes
-import testing_utilities as tu
+from . import testing_utilities as tu
 
 
 class YamlImportTestCase(FakeFsTestCase):
