@@ -11,17 +11,25 @@ from librelingo_fakes import fakes
 from . import testing_utilities as tu
 
 
+def _alt_versions():
+    return "Alternative versions"
+
+
+def _alt_translations():
+    return "Alternative translations"
+
+
 @pytest.fixture
 def raw_fake_phrase():
     """returns the raw data describing the phrase used in tests in this file"""
     return {
         "Phrase": fakes.fake_value(),
-        "Alternative versions": [
+        _alt_versions(): [
             fakes.fake_value(),
             fakes.fake_value(),
         ],
         "Translation": fakes.fake_value(),
-        "Alternative translations": [
+        _alt_translations: [
             fakes.fake_value(),
             fakes.fake_value(),
         ],
@@ -41,12 +49,12 @@ def test_includes_main_version(raw_fake_phrase):
 
 def test_includes_alternative_versions(raw_fake_phrase):
     result = _convert_phrase(raw_fake_phrase).in_target_language
-    assert raw_fake_phrase["Alternative versions"][0] in result
-    assert raw_fake_phrase["Alternative versions"][1] in result
+    assert raw_fake_phrase[_alt_versions()][0] in result
+    assert raw_fake_phrase[_alt_versions()][1] in result
 
 
 def test_alternative_versions_are_optional(raw_fake_phrase):
-    del raw_fake_phrase["Alternative versions"]
+    del raw_fake_phrase[_alt_versions()]
     assert len(_convert_phrase(raw_fake_phrase).in_target_language) == 1
 
 
@@ -59,12 +67,12 @@ def test_includes_translation(raw_fake_phrase):
 
 def test_includes_alternative_translations(raw_fake_phrase):
     result = _convert_phrase(raw_fake_phrase).in_source_language
-    assert raw_fake_phrase["Alternative translations"][0] in result
-    assert raw_fake_phrase["Alternative translations"][1] in result
+    assert raw_fake_phrase[_alt_translations()][0] in result
+    assert raw_fake_phrase[_alt_translations()][1] in result
 
 
 def test_alternative_translations_are_optional(raw_fake_phrase):
-    del raw_fake_phrase["Alternative translations"]
+    del raw_fake_phrase[_alt_translations()]
     assert len(_convert_phrase(raw_fake_phrase).in_source_language) == 1
 
 
