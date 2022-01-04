@@ -2,7 +2,7 @@
 import argparse
 import random
 
-from lili import guess_path_to_course, collect_data, collect_words
+from lili import guess_path_to_course, collect_data, collect_words, collect_phrases
 from librelingo_yaml_loader.yaml_loader import load_course
 
 
@@ -11,6 +11,12 @@ def get_args():
     parser.add_argument(
         "--course", help="path to course directory that contains the course.yaml"
     )
+    # parser.add_argument(
+    #    "--words",  help="teach words", action="store_true"
+    # )
+    # parser.add_argument(
+    #    "--phrases",  help="teach phrases", action="store_true"
+    # )
     args = parser.parse_args()
     return args
 
@@ -55,18 +61,25 @@ def main():
     target, source, _ = collect_data(course)
     _show_banner()
 
-    # Randomly select a word, show it, ask the user to type the answer, verify the answer
-    # Same with phrases
+    # Randomly select a word or a phrase, show it, ask the user to type the answer, verify the answer
+
+    challenges = {
+        "source_to_target_word": [0.1, lambda: guess_word(source_to_target_words)],
+        "target_to_source_word": [0.1, lambda: guess_word(target_to_source_words)],
+        "source_to_target_phrases": [0.4, lambda: guess_word(source_to_target_phrases)],
+        "target_to_source_phrases": [0.4, lambda: guess_word(target_to_source_phrases)],
+    }
+    challenges_list = list(challenges.keys())
+    challenges_weights = [challenges[chlg][0] for chlg in challenges_list]
 
     source_to_target_words = collect_words(source, "source-to-target")
     target_to_source_words = collect_words(target, "target-to-source")
+    target_to_source_phrases, source_to_target_phrases = collect_phrases(course)
     while True:
-        if random.random() < 0.8:
-            if guess_word(source_to_target_words):
-                break
-        else:
-            if guess_word(target_to_source_words):
-                break
+        choices = random.choices(challenges_list, weights=challenges_weights, k=1)
+        for choice in choices:
+            if challenges[choice][1]():
+                return
 
 
 if __name__ == "__main__":

@@ -157,6 +157,24 @@ def export_main_html_page(course, count, html_dir):
         fh.write(html)
 
 
+def collect_phrases(course):
+    target_to_source = {}
+    source_to_target = {}
+    for module in course.modules:
+        for skill in module.skills:
+            for phrase in skill.phrases:
+                # print(phrase)
+                for sentence in phrase.in_target_language:
+                    # if sentence in target_to_source:
+                    #    print(f"Same sentence '{sentence}' found twice")
+                    target_to_source[sentence] = phrase.in_source_language
+                for sentence in phrase.in_source_language:
+                    # if sentence in source_to_target:
+                    #    print(f"Same sentence '{sentence}' found twice")
+                    source_to_target[sentence] = phrase.in_target_language
+    return target_to_source, source_to_target
+
+
 def collect_words(language, direction):
     all_words = {}
     for word, translations in language["words"].items():
