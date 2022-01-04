@@ -302,7 +302,7 @@ def _collect_phrases(skill, count, target, source):
                 )
 
 
-def generate_html(course, html_dir):
+def collect_data(course):
     target = {
         "words": collections.defaultdict(list),
         "dictionary": collections.defaultdict(list),
@@ -346,8 +346,7 @@ def generate_html(course, html_dir):
                     )
 
             _collect_phrases(skill, count, target, source)
-
-    export_to_html(course, target, source, count, html_dir)
+    return target, source, count
 
 
 def collect_ids_and_names(args, course):
@@ -395,7 +394,8 @@ def main():
         check_export(course)
 
     if args.html:
-        generate_html(course, args.html)
+        target, source, count = collect_data(course)
+        export_to_html(course, target, source, count, args.html)
 
     if args.ids:
         print_ids(skill_ids)
