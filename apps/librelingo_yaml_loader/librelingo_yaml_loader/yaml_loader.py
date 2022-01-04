@@ -1,5 +1,6 @@
 import collections
 from pathlib import Path
+import os
 
 import bleach
 from librelingo_types import (
@@ -148,6 +149,9 @@ def _solution_from_yaml(raw_object, solution_key, alternatives_key):
 def _convert_word(raw_word):
     """
     Converts a YAML word definition into a Word() object
+
+    >>> _convert_word({'Images': ["abc"], 'Word': "cat", 'Synonyms': ["kitten"], 'Translation': "gato"})
+    Word(in_target_language=['cat', 'kitten'], in_source_language=['gato'], pictures=['abc'])
     """
     return Word(
         in_target_language=_solution_from_yaml(raw_word, "Word", "Synonyms"),
@@ -161,6 +165,20 @@ def _convert_word(raw_word):
 def _convert_words(raw_words):
     """
     Converts each YAML word definition into Word() objects
+    >>> _convert_words([
+    ...     {
+    ...         'Word': "l'homme",
+    ...         'Translation': 'the man',
+    ...         'Images': ['man1', 'man2', 'man3']
+    ...     },
+    ...     {
+    ...         'Word': 'la femme',
+    ...         'Synonyms': ['la dame'],
+    ...         'Translation': 'the woman',
+    ...         'Also accepted': ['the female']
+    ...     }
+    ... ])
+    [Word(in_target_language=["l'homme"], in_source_language=['the man'], pictures=['man1', 'man2', 'man3']), Word(in_target_language=['la femme', 'la dame'], in_source_language=['the woman', 'the female'], pictures=None)]
     """
     return list(map(_convert_word, raw_words))
 
@@ -168,6 +186,13 @@ def _convert_words(raw_words):
 def _convert_phrase(raw_phrase):
     """
     Converts a YAML phrase definition into a Phrase() object
+    >>> _convert_phrase({
+    ...     'Phrase': 'La femme dit bonjour',
+    ...     'Alternative versions': ['la femme dit salut'],
+    ...     'Translation': 'The woman says hello',
+    ...     'Alternative translations': ['The woman says hi']
+    ... })
+    Phrase(in_target_language=['La femme dit bonjour', 'la femme dit salut'], in_source_language=['The woman says hello', 'The woman says hi'])
     """
     try:
         return Phrase(
@@ -178,10 +203,10 @@ def _convert_phrase(raw_phrase):
                 raw_phrase, "Translation", "Alternative translations"
             ),
         )
-    except KeyError:
+    except KeyError as key_error:
         raise RuntimeError(
-            'Phrase "{}" needs to have a "Translation".'.format(raw_phrase["Phrase"])
-        )
+            f'Phrase "{raw_phrase["Phrase"]}" needs to have a "Translation".'
+        ) from key_error
 
 
 def _convert_phrases(raw_phrases):
@@ -204,7 +229,7 @@ def _convert_mini_dictionary(raw_mini_dictionary, course):
             word = list(item.keys())[0]
             raw_definition = list(item.values())[0]
             definition = (
-                raw_definition if type(raw_definition) == list else [raw_definition]
+                raw_definition if isinstance(raw_definition, list) else [raw_definition]
             )
             yield (word, tuple(definition), is_in_target_language)
 
@@ -223,11 +248,11 @@ def _sanitize_markdown(mdtext):
 
 def _load_introduction(path):
     "Loads the introduction text from a Markdown file"
-    try:
-        with open(path) as f:
-            return _sanitize_markdown(f.read())
-    except:
+    if not os.path.exists(path):
         return None
+
+    with open(path) as f:
+        return _sanitize_markdown(f.read())
 
 
 def _load_skill(path, course):
@@ -237,37 +262,42 @@ def _load_skill(path, course):
         skill = data["Skill"]
         words = data["New words"]
         phrases = data["Phrases"]
-    except TypeError:
-        raise RuntimeError('Skill file "{}" is empty or does not exist'.format(path))
+    except TypeError as type_error:
+        raise RuntimeError(
+            f'Skill file "{path}" is empty or does not exist'
+        ) from type_error
     except KeyError as error:
         raise RuntimeError(
-            'Skill file "{}" needs to have a "{}" key'.format(path, error.args[0])
-        )
+            f'Skill file "{path}" needs to have a "{error.args[0]}" key'
+        ) from error
 
     try:
         name = skill["Name"]
-    except Exception:
-        raise RuntimeError('Skill file "{}" needs to have skill name'.format(path))
+    except Exception as exception:
+        raise RuntimeError(
+            f'Skill file "{path}" needs to have skill name'
+        ) from exception
 
     try:
         skill_id = skill["Id"]
-    except Exception:
-        raise RuntimeError('Skill file "{}" needs to have skill id'.format(path))
+    except Exception as exception:
+        raise RuntimeError(f'Skill file "{path}" needs to have skill id') from exception
 
     try:
         phrases = _convert_phrases(phrases)
-    except TypeError:
-        raise RuntimeError('Skill file "{}" has an invalid phrase'.format(path))
+    except TypeError as type_error:
+        raise RuntimeError(f'Skill file "{path}" has an invalid phrase') from type_error
 
     try:
         words = _convert_words(words)
-    except TypeError:
-        raise RuntimeError('Skill file "{}" has an invalid word'.format(path))
+    except TypeError as type_error:
+        raise RuntimeError(f'Skill file "{path}" has an invalid word') from type_error
 
     _run_skill_spellcheck(phrases, words, course)
 
     return Skill(
         name=name,
+        filename=os.path.relpath(path, start=course.course_dir),
         id=skill_id,
         words=words,
         phrases=phrases,
@@ -285,10 +315,10 @@ def _load_skills(path, skills, course):
     """
     try:
         return [_load_skill(Path(path) / "skills" / skill, course) for skill in skills]
-    except TypeError:
+    except TypeError as type_error:
         raise RuntimeError(
-            'Module file "{}/module.yaml" needs to have a list of skills'.format(path)
-        )
+            f'Module file "{path}/module.yaml" needs to have a list of skills'
+        ) from type_error
 
 
 def _load_module(path, course):
@@ -300,23 +330,27 @@ def _load_module(path, course):
     try:
         module = data["Module"]
         skills = data["Skills"]
-    except TypeError:
+    except TypeError as type_error:
         raise RuntimeError(
-            'Module file "{}" is empty or does not exist'.format(filepath)
-        )
+            f'Module file "{filepath}" is empty or does not exist'
+        ) from type_error
     except KeyError as error:
         raise RuntimeError(
-            'Module file "{}" needs to have a "{}" key'.format(filepath, error.args[0])
-        )
+            f'Module file "{filepath}" needs to have a "{error.args[0]}" key'
+        ) from error
 
     try:
         title = module["Name"]
-    except Exception:
+    except Exception as exception:
         raise RuntimeError(
-            'Module file "{}" needs to have module name'.format(filepath)
-        )
+            f'Module file "{filepath}" needs to have module name'
+        ) from exception
 
-    return Module(title=title, skills=_load_skills(path, skills, course))
+    return Module(
+        title=title,
+        filename=os.path.relpath(path, start=course.course_dir),
+        skills=_load_skills(path, skills, course),
+    )
 
 
 def _load_modules(path, modules, course):
@@ -403,6 +437,7 @@ def load_course(path):
         modules=[],
         settings=None,
         repository_url=course["Repository"],
+        course_dir=path,
     )
     dumb_course = Course(
         **{

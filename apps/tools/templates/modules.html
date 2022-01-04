@@ -1,0 +1,20 @@
+{% include 'incl/header.html' %}
+
+    <h1>{{ title }}</h1>
+
+    <h2>Modules</h2>
+    <ul>
+      {% for module in course.modules %}
+        <li>{{ module.title }}
+          <ul>
+            {% for skill in module.skills %}
+              <li><a href="{{ repository_url }}/blob/{{ branch }}/{{ course.course_dir }}/{{ skill.filename }}">{{ skill.name }}</a></li>
+            {% endfor %}
+          </ul>
+        </li>
+
+      {% endfor %}
+    </ul>
+
+
+{% include 'incl/footer.html' %}

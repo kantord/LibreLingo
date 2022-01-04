@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+  <head>
+    <title>LibreLingo courses</title>
+    <style>
+        .odd {
+            background-color: #EEEEEE;
+        }
+        .even {
+            background-color: #FFFFFF;
+        }
+        .warning {
+            background-color: #FF5555;
+        }
+    </style>
+  </head>
+  <body>
+    <h1><a href="https://librelingo.app/">LibreLingo courses</a></h1>
+    <table>
+        <tr><th>Course</th><th>Words</th><th>Phrases</th></tr>
+        {% for link in links|sort(attribute='tdir') %}
+            <tr {% if not link['success'] %}class="warning"{% endif %}><td><a href="{{ link['tdir'] }}">{{ link['text'] }}</a></td><td>{{ link["words"] }}</td><td>{{ link["phrases"] }}</td></tr>
+        {% endfor %}
+    </table>
+    <div>Generated at {{ start_time }} Elapsed time: {{ (end_time-start_time).seconds }} seconds</div>
+  </body>
+</html>
+

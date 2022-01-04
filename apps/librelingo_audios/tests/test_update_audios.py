@@ -1,17 +1,8 @@
-import re
-import inspect
-import json
-from types import SimpleNamespace
-
-import pytest
-
-from unittest.mock import patch
-
 from librelingo_fakes import fakes
 from librelingo_types import Settings, AudioSettings, TextToSpeechSettings
 
 from librelingo_audios.update_audios import update_audios_for_course
-import librelingo_audios.cli as cli
+from librelingo_audios import cli
 
 course = fakes.customize(
     fakes.course1,
@@ -111,7 +102,7 @@ def test_generate_from_scratch_with_destructive(
             terminal.message.generating("foous"),
         ],
     )
-    aws_cli.assert_call_count == 4
+    aws_cli.assert_call_count(4)
     aws_cli.assert_audio_generated_for("foous barus")
     aws_cli.assert_audio_generated_for("lorem ipsum")
     aws_cli.assert_audio_generated_for("apfel")
@@ -174,7 +165,7 @@ def test_overwrite_with_destructive(
             terminal.message.generating("foous"),
         ],
     )
-    aws_cli.assert_call_count == 4
+    aws_cli.assert_call_count(4)
     aws_cli.assert_audio_generated_for("foous barus")
     aws_cli.assert_audio_generated_for("lorem ipsum")
     aws_cli.assert_audio_generated_for("apfel")
@@ -209,7 +200,7 @@ def test_partial_update(
             terminal.message.generating("foous"),
         ],
     )
-    aws_cli.assert_call_count == 3
+    aws_cli.assert_call_count(3)
     aws_cli.assert_audio_generated_for("lorem ipsum")
 
     index_file.assert_entries_match(
@@ -250,7 +241,7 @@ def test_partial_update_with_deletion(
             terminal.message.generating("foous"),
         ],
     )
-    aws_cli.assert_call_count == 3
+    aws_cli.assert_call_count(3)
     aws_cli.assert_audio_generated_for("lorem ipsum")
 
     index_file.assert_entries_match(
@@ -292,7 +283,7 @@ def test_overwrite_with_deletion(
             terminal.message.generating("foous"),
         ],
     )
-    aws_cli.assert_call_count == 4
+    aws_cli.assert_call_count(4)
     aws_cli.assert_audio_generated_for("foous barus")
     aws_cli.assert_audio_generated_for("lorem ipsum")
 
@@ -333,7 +324,7 @@ def test_delete_all(
             terminal.message.deleting("foous barus"),
         ],
     )
-    aws_cli.assert_call_count == 0
+    aws_cli.assert_call_count(0)
     index_file.assert_entries_match([])
 
 
@@ -364,5 +355,5 @@ def test_delete_all_with_destructive(
             terminal.message.deleting("foous barus"),
         ],
     )
-    aws_cli.assert_call_count == 0
+    aws_cli.assert_call_count(0)
     index_file.assert_entries_match([])
