@@ -7,7 +7,7 @@
 * -eko is added after a consonant
     * Hoteleko - of the hotel
 
-### Vocabulary Egon2 2
+### Vocabulary 2
 * bankuko: of the bank
 * dendako: of the store
 * elizako: of the church
