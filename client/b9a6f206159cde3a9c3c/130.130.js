@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[130],{433:function(e){e.exports=JSON.parse('{"id":"80f0e87b8a5d","levels":1,"challenges":[{"type":"options","formInTargetLanguage":"Inkluir","meaningInSourceLanguage":"To include","id":"3e023ff86473","priority":0,"group":"7223c4ff8e0d"}]}')}}]);
