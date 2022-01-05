@@ -1,0 +1,133 @@
+{% include 'incl/header.html' %}
+
+<style>
+#input-text {
+    width: 50%;
+    height: 100px;
+}
+.missing {
+    background-color: #FF6666;
+}
+.middle {
+    width: 30px;
+}
+.selected {
+    background-color: yellow;
+}
+</style>
+<div>
+<textarea id="input-text">
+</textarea>
+</div>
+<div>
+<button id="target-to-source">{{ course.target_language.name }} to {{ course.source_language.name }}</button>
+<button id="source-to-target">{{ course.source_language.name }} to {{ course.target_language.name }}</button>
+</div>
+<div id="output">
+<div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    var source_to_target = null;
+    var target_to_source = null;
+    var course_data = null;
+    var loaded = 0;
+    var direction = 'target-to-source';
+
+    const update_direction_selector = function() {
+        $('#target-to-source').removeClass('selected');
+        $('#source-to-target').removeClass('selected');
+        $('#' + direction).addClass('selected');
+    };
+
+    var try_translate = function() {
+        if (loaded == 3) {
+            update_direction_selector();
+            translate();
+        }
+    };
+    var translate = function() {
+        const original = $("#input-text").val();
+        //const cleaned = original.replace(/["';,!?.:]/g, " ");
+        const cleaned = original.replace(/[^a-zA-Z-]/g, " ");
+        const words = cleaned.split(" ");
+        var html = "<table>";
+        html += '<tr>';
+        if (direction == 'target-to-source') {
+            html += '<th>' + course_data['target_language_name']  + '</th><th>' + course_data['source_language_name'] + '</th>'
+        } else {
+            html += '<th>' + course_data['source_language_name']  + '</th><th>' + course_data['target_language_name'] + '</th>'
+        }
+        html += '</tr>';
+        for (var ix = 0; ix < words.length; ix++) {
+            if (words[ix] == "") {
+                continue;
+            }
+            var word = words[ix].toLowerCase()
+
+            html += '<tr>';
+            if (direction == 'target-to-source') {
+                const translation = target_to_source[word];
+                if (translation) {
+                    html += '<td><a href="target/' + word + '.html">' + words[ix] + '</a></td><td>' + translation + '</td>';
+                } else {
+                    html += '<td class="missing">' + words[ix] + '</td><td class="missing">' + '</td>';
+                }
+            } else {
+                const translation = source_to_target[word];
+                if (translation) {
+                    html += '<td><a href="source/' + word + '.html">' + words[ix] + '</a></td><td>' + translation + '</td>';
+                } else {
+                    html += '<td class="missing">' + words[ix] + '</td><td class="missing">' + '</td>';
+                }
+            }
+
+            html += '</tr>';
+        }
+        html += "</table>";
+
+        $("#output").html(html);
+    };
+    $.getJSON("course.json", function(data){
+        course_data = data;
+        loaded++;
+        try_translate();
+    }).fail(function(){
+        console.log("An error has occurred.");
+    });
+
+    $.getJSON("source-to-target.json", function(data){
+        source_to_target = data;
+        loaded++;
+        try_translate();
+    }).fail(function(){
+        console.log("An error has occurred.");
+    });
+
+    $.getJSON("target-to-source.json", function(data){
+        target_to_source = data;
+        loaded++;
+        try_translate();
+    }).fail(function(){
+        console.log("An error has occurred.");
+    });
+
+    $('#input-text').bind('input propertychange', translate);
+    $("#target-to-source").click(function() {
+        direction = 'target-to-source';
+        update_direction_selector();
+        translate();
+    });
+    $("#source-to-target").click(function() {
+        direction = 'source-to-target';
+        update_direction_selector();
+        translate();
+    });
+    update_direction_selector();
+});
+</script>
+
+
+
+{% include 'incl/footer.html' %}

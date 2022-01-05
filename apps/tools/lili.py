@@ -137,6 +137,15 @@ def export_main_html_page(course, count, html_dir):
         fh.write(html)
 
     html = render(
+        "converter.html",
+        title=f"{course.target_language.name} for {course.source_language.name} speakers",
+        rel="",
+        course=course,
+    )
+    with open(os.path.join(html_dir, "converter.html"), "w") as fh:
+        fh.write(html)
+
+    html = render(
         "modules.html",
         title=f"{course.target_language.name} for {course.source_language.name} speakers",
         rel="",
