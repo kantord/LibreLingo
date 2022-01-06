@@ -28,7 +28,6 @@ from librelingo_yaml_loader.yaml_loader import (
     _load_dictionary,
 )
 from librelingo_fakes import fakes
-from . import testing_utilities as tu
 
 
 class YamlImportTestCase(FakeFsTestCase):
@@ -36,12 +35,12 @@ class YamlImportTestCase(FakeFsTestCase):
         patcher = patch(module)
         self.addCleanup(patcher.stop)
         mock = patcher.start()
-        mock.return_value = tu.get_some_int()
+        mock.return_value = fakes.fake_value().id
         return mock
 
     def setUp(self):
         self.setUpPyfakefs()
-        self.fake_path = Path(".") / tu.get_some_str()
+        self.fake_path = fakes.path()
         self.fake_path.mkdir()
         self.fake_values = self.get_fake_values()
         self.result = None
@@ -710,8 +709,8 @@ Mini-dictionary:
 
 
 def get_fake_word_values():
-    in_target_language = [tu.get_some_str()]
-    in_source_language = [tu.get_some_str()]
+    in_target_language = [str(fakes.fake_value().id)]
+    in_source_language = [str(fakes.fake_value().id)]
 
     return in_source_language, in_target_language
 
@@ -826,7 +825,7 @@ def test_load_dictionary_includes_duplicate_words_includes_multiple_definitions(
 
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
 def test_load_module_complains_about_an_empty_file(load_yaml):
-    random_path = tu.get_some_str()
+    random_path = fakes.path()
     load_yaml.return_value = None
     with pytest.raises(
         RuntimeError,
@@ -837,7 +836,7 @@ def test_load_module_complains_about_an_empty_file(load_yaml):
 
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
 def test_load_module_complains_missing_module_key(load_yaml):
-    random_path = tu.get_some_str()
+    random_path = fakes.path()
     load_yaml.return_value = {}
     expected_error = (
         f'Module file "{random_path}/module.yaml" needs to have a "Module" key'
@@ -848,7 +847,7 @@ def test_load_module_complains_missing_module_key(load_yaml):
 
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
 def test_load_module_complains_missing_skills_key(load_yaml):
-    random_path = tu.get_some_str()
+    random_path = fakes.path()
     load_yaml.return_value = {"Module": {}}
     expected_error = (
         f'Module file "{random_path}/module.yaml" needs to have a "Skills" key'
@@ -859,7 +858,7 @@ def test_load_module_complains_missing_skills_key(load_yaml):
 
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
 def test_load_module_complains_missing_module_name(load_yaml):
-    random_path = tu.get_some_str()
+    random_path = fakes.path()
     load_yaml.return_value = {"Module": {}, "Skills": []}
     expected_error = (
         f'Module file "{random_path}/module.yaml" needs to have module name'
@@ -870,7 +869,7 @@ def test_load_module_complains_missing_module_name(load_yaml):
 
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
 def test_load_skills_complains_missing_skills(load_yaml):
-    random_path = tu.get_some_str()
+    random_path = fakes.path()
     expected_error = (
         f'Module file "{random_path}/module.yaml" needs to have a list of skills'
     )
@@ -880,7 +879,7 @@ def test_load_skills_complains_missing_skills(load_yaml):
 
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
 def test_load_skill_complains_about_an_empty_file(load_yaml):
-    random_path = tu.get_some_str()
+    random_path = fakes.path()
     load_yaml.return_value = None
     with pytest.raises(
         RuntimeError, match=f'Skill file "{random_path}" is empty or does not exist'
@@ -890,7 +889,7 @@ def test_load_skill_complains_about_an_empty_file(load_yaml):
 
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
 def test_load_skill_complains_missing_skills_key(load_yaml):
-    random_path = tu.get_some_str()
+    random_path = fakes.path()
     load_yaml.return_value = {}
     expected_error = f'Skill file "{random_path}" needs to have a "Skill" key'
     with pytest.raises(RuntimeError, match=expected_error):
@@ -899,7 +898,7 @@ def test_load_skill_complains_missing_skills_key(load_yaml):
 
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
 def test_load_skill_complains_missing_new_words_key(load_yaml):
-    random_path = tu.get_some_str()
+    random_path = fakes.path()
     load_yaml.return_value = {"Skill": []}
     expected_error = f'Skill file "{random_path}" needs to have a "New words" key'
     with pytest.raises(RuntimeError, match=expected_error):
@@ -908,7 +907,7 @@ def test_load_skill_complains_missing_new_words_key(load_yaml):
 
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
 def test_load_skill_complains_missing_skill_name(load_yaml):
-    random_path = tu.get_some_str()
+    random_path = fakes.path()
     load_yaml.return_value = {"Skill": {}, "New words": [], "Phrases": []}
     expected_error = f'Skill file "{random_path}" needs to have skill name'
     with pytest.raises(RuntimeError, match=expected_error):
@@ -917,7 +916,7 @@ def test_load_skill_complains_missing_skill_name(load_yaml):
 
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
 def test_load_skill_complains_missing_skill_id(load_yaml):
-    random_path = tu.get_some_str()
+    random_path = fakes.path()
     load_yaml.return_value = {"Skill": {"Name": "asd"}, "New words": [], "Phrases": []}
     expected_error = f'Skill file "{random_path}" needs to have skill id'
     with pytest.raises(RuntimeError, match=expected_error):
@@ -926,7 +925,7 @@ def test_load_skill_complains_missing_skill_id(load_yaml):
 
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
 def test_load_skill_doesnt_fail_without_thumnails(load_yaml):
-    random_path = tu.get_some_str()
+    random_path = fakes.path()
     load_yaml.return_value = {
         "Skill": {"Name": "asd", "Id": "4234234"},
         "New words": [],
@@ -937,7 +936,7 @@ def test_load_skill_doesnt_fail_without_thumnails(load_yaml):
 
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
 def test_load_skill_complains_about_invalid_phrase(load_yaml):
-    random_path = tu.get_some_str()
+    random_path = fakes.path()
     load_yaml.return_value = {
         "Skill": {"Name": "asd", "Id": 32423423},
         "New words": [],
@@ -950,7 +949,7 @@ def test_load_skill_complains_about_invalid_phrase(load_yaml):
 
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
 def test_load_skill_complains_about_invalid_word(load_yaml):
-    random_path = tu.get_some_str()
+    random_path = fakes.path()
     load_yaml.return_value = {
         "Skill": {"Name": "asd", "Id": 32423423},
         "Phrases": [],
@@ -963,7 +962,7 @@ def test_load_skill_complains_about_invalid_word(load_yaml):
 
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
 def test_load_skill_complains_about_misspelled_word_in_source_language(load_yaml):
-    random_path = tu.get_some_str()
+    random_path = fakes.path()
     fake_word_value = str(fakes.fake_value())
     load_yaml.return_value = {
         "Skill": {"Name": "asd", "Id": 32423423},
@@ -996,7 +995,7 @@ def test_load_skill_complains_about_misspelled_word_in_source_language(load_yaml
 
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
 def test_load_skill_complains_about_misspelled_word_in_target_language(load_yaml):
-    random_path = tu.get_some_str()
+    random_path = fakes.path()
     fake_word_value_simple = str(fakes.fake_value())
     fake_word_value = f"the {fake_word_value_simple}"
     load_yaml.return_value = {
@@ -1030,7 +1029,7 @@ def test_load_skill_complains_about_misspelled_word_in_target_language(load_yaml
 
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
 def test_load_skill_complains_about_misspelled_phrase_in_target_language(load_yaml):
-    random_path = tu.get_some_str()
+    random_path = fakes.path()
     fake_word = str(fakes.fake_value())
     fake_phrase = f"the {fake_word} foo bar"
     load_yaml.return_value = {
@@ -1064,7 +1063,7 @@ def test_load_skill_complains_about_misspelled_phrase_in_target_language(load_ya
 
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
 def test_load_skill_complains_about_misspelled_phrase_in_source_language(load_yaml):
-    random_path = tu.get_some_str()
+    random_path = fakes.path()
     fake_word = str(fakes.fake_value())
     fake_phrase = f"the {fake_word} foo bar"
     load_yaml.return_value = {

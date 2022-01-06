@@ -8,7 +8,6 @@ from librelingo_types import Phrase
 from librelingo_yaml_loader.yaml_loader import _convert_phrase
 
 from librelingo_fakes import fakes
-from . import testing_utilities as tu
 
 
 def _alt_versions():
@@ -77,7 +76,7 @@ def test_alternative_translations_are_optional(raw_fake_phrase):
 
 
 def test_convert_phrase_complains_about_missing_translation():
-    random_phrase = tu.get_some_str()
+    random_phrase = fakes.fake_value().id
     expected_error = f'Phrase "{random_phrase}" needs to have a "Translation".'
     with pytest.raises(RuntimeError, match=expected_error):
         _convert_phrase({"Phrase": random_phrase})

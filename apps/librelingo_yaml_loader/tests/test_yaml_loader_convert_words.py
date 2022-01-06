@@ -7,7 +7,6 @@ import pytest
 from librelingo_yaml_loader.yaml_loader import _convert_words
 
 from librelingo_fakes import fakes
-from . import testing_utilities as tu
 
 
 def test_returns_a_list():
@@ -21,7 +20,7 @@ def mock_convert_word(mocker):
 
 def test_converts_every_word(mock_convert_word):
     # pylint: disable=unused-argument
-    raw_words = [None] * tu.get_some_int()
+    raw_words = [None] * fakes.fake_value().id
     assert len(_convert_words(raw_words)) == len(raw_words)
 
 
