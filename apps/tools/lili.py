@@ -70,7 +70,6 @@ def load_images(images_dir):
             continue
         sys.exit(f"Unhandled image: {img}")
     unused_images["regular"] = set(images["regular"])
-    return images
 
 
 def check_images(module, skill):
@@ -418,9 +417,8 @@ def main():
     # except Exception as err:
     #    sys.exit(f"Could not load course {err}")
 
-    # images = None
-    # if args.images:
-    #    images = load_images(args.images)
+    if args.images:
+        load_images(args.images)
 
     skill_ids = collect_ids_and_names(args, course)
 
