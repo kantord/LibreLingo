@@ -4,6 +4,11 @@ from librelingo_json_export.challenges import _get_word_challenges
 from librelingo_fakes import fakes
 
 
+challenges = _get_word_challenges(fakes.word1, fakes.course1)
+WORD_GROUPS = [challenge["group"] for challenge in challenges]
+WORD_IDS = [challenge["id"] for challenge in challenges]
+
+
 @pytest.fixture
 def mock_get_cards_challenge(mocker):
     return mocker.patch("librelingo_json_export.challenges.get_cards_challenge")
@@ -35,3 +40,11 @@ def test_includes_listening_challenge(mock_get_listening_challenge):
     fake_value = fakes.fake_value()
     mock_get_listening_challenge.return_value = [fake_value]
     assert _get_word_challenges(fakes.word1, fakes.course1)[2] == fake_value
+
+
+def test_group_is_the_same_in_each_challenge_type():
+    assert len(set(WORD_GROUPS)) == 1
+
+
+def test_id_is_different_in_each_challenge_type():
+    assert len(set(WORD_IDS)) == len(WORD_IDS)
