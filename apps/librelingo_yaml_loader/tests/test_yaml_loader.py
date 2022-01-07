@@ -35,7 +35,7 @@ class YamlImportTestCase(FakeFsTestCase):
         patcher = patch(module)
         self.addCleanup(patcher.stop)
         mock = patcher.start()
-        mock.return_value = fakes.fake_value().id
+        mock.return_value = fakes.number()
         return mock
 
     def setUp(self):
@@ -709,8 +709,8 @@ Mini-dictionary:
 
 
 def get_fake_word_values():
-    in_target_language = [str(fakes.fake_value().id)]
-    in_source_language = [str(fakes.fake_value().id)]
+    in_target_language = [str(fakes.number())]
+    in_source_language = [str(fakes.number())]
 
     return in_source_language, in_target_language
 

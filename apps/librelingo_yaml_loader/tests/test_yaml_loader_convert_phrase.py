@@ -76,7 +76,7 @@ def test_alternative_translations_are_optional(raw_fake_phrase):
 
 
 def test_convert_phrase_complains_about_missing_translation():
-    random_phrase = fakes.fake_value().id
+    random_phrase = fakes.number()
     expected_error = f'Phrase "{random_phrase}" needs to have a "Translation".'
     with pytest.raises(RuntimeError, match=expected_error):
         _convert_phrase({"Phrase": random_phrase})
