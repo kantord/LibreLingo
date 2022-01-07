@@ -1,127 +1,135 @@
 Skill:
-  Id: 194
-  Name: Nongo 3
+  Id: 201
+  Name: Because 1-1
   Thumbnails:
 
 New words:
-  - Word: mendietako
-    Translation: of the mountains
+  - Word: aspertu
+    Translation: bored
     Images:
       - nothing
       - nothing
       - nothing
 
-  - Word: dendetako
-    Translation: of the stores
+  - Word: beldur
+    Translation: afraid
     Images:
       - nothing
       - nothing
       - nothing
 
-  - Word: elizetako
-    Translation: of the churches
+  - Word: bizirik
+    Translation: alive
     Images:
       - nothing
       - nothing
       - nothing
 
-  - Word: eskoletako
-    Translation: of the schools
+  - Word: galdu
+    Translation: lost
     Images:
       - nothing
       - nothing
       - nothing
 
-  - Word: etxeetako
-    Translation: of the houses
+  - Word: lanpetu
+    Translation: busy
     Images:
       - nothing
       - nothing
       - nothing
 
-  - Word: geltokietako
-    Translation: of the stations
+  - Word: pozik
+    Translation: happy
     Images:
       - nothing
       - nothing
       - nothing
 
-  - Word: hoteletako
-    Translation: of the hotels
+  - Word: ondo
+    Translation: well
+    Also accepted:
+      - fine
     Images:
       - nothing
       - nothing
       - nothing
 
-  - Word: parketako
-    Translation: of the parks
-    Images:
-      - nothing
-      - nothing
-      - nothing
-
-  - Word: gela
-    Translation: room
+  - Word: nola
+    Translation: how
     Images:
       - nothing
       - nothing
       - nothing
 
 Phrases:
-  - Phrase: Mendietako zuhaitzak marroiak dira.
-    Translation: The trees of the mountains are brown.
+  - Phrase: Zu nola dago?
+    Alternative versions:
+     - Zer moduz?
+    Translation: How are you?
     Alternative translations:
-      - The house`s door is red.
+      - How are you doing?
 
-  - Phrase: Mendietako etxeak politak dira.
-    Translation: The houses of the mountains are pretty.
-    Alternative translations:
-      - The mountains' houses are pretty.
+  - Phrase: Ni aspertua nengoen, baina ni orain lanpetua nago.
+    Alternative versions:
+     - Aspertua nengoen, baina ni orain lanpetua nago.
+     - Ni aspertua nengoen, baina orain lanpetua nago.
+     - Aspertua nengoen, baina orain lanpetua nago.
+    Translation: I was bored, but now I am busy.
 
-  - Phrase: Dendetako leihoak handiak dira.
-    Translation: The windows of the stores are big.
-    Alternative translations:
-      - The stores' windows are big.
+  - Phrase: Zu galdu zaude?
+    Alternative versions:
+     - Galdu zaude?
+    Translation: Are you lost?
 
-  - Phrase: Dendetako ateak ere handiak dira.
-    Translation: The doors of the stores are also big.
-    Alternative translations:
-      - The stores' doors are also big.
+  - Phrase: Zu beldur zeuden?
+    Alternative versions:
+     - Beldur zeuden?
+    Translation: Were you afraid?
 
-  - Phrase: Elizetako leihoak ere handiak dira.
-    Translation: The windows of the churches are also big.
-    Alternative translations:
-      - The churches' windows are also big.
+  - Phrase: Nola dago behia?
+    Alternative versions:
+     - Zer moduz dago behia?
+    Translation: How is the cow?
 
-  - Phrase: Elizetako aulkiak marroiak dira.
-    Translation: The chairs of the churches are brown.
+  - Phrase: Behia bizirik eta ondo dago.
+    Translation: The cow is alive and well.
     Alternative translations:
-      - The churches' chairs are brown.
+      - The cow is alive and fine.
 
-  - Phrase: Eskoletako gelak handiak dira.
-    Translation: The rooms of the schools are big.
-    Alternative translations:
-      - The schools' rooms are big.
+  - Phrase: Dortoka bizirik dago?
+    Translation: Is the turtle alive?
 
-  - Phrase: Eskoletako teilatuak gorriak dira.
-    Translation: The roofs of the schools are red.
-    Alternative translations:
-      -  The schools' roofs are red.
+  - Phrase: Gu galdu eta beldur gaude.
+    Alternative versions:
+     - Galdu eta beldur gaude.
+    Translation: We are lost and afraid.
 
-  - Phrase: Etxeetako ateak marroiak dira.
-    Translation: The doors of the houses are brown.
+  - Phrase: Zer moduz zaudete?
+    Alternative versions:
+     - Nola zaudete zuek?
+     - Nola zaudete?
+    Translation: How are you all?
     Alternative translations:
-      - The houses's doors are brown.
+      - How are you'll?
+      - How are you (plural)?
+      - How are you?
 
-  - Phrase: Geltokietako aulkiak beltzak dira.
-    Translation: The chairs of the stations are black.
+  - Phrase: Zuek lanpetua zaudete.
+    Alternative versions:
+     - Lanpetua zaudete.
+    Translation: You all are busy.
     Alternative translations:
-      - The stations's chairs are black.
+      - You'll are busy.
+      - You (plural) are busy.
+      - You are busy.
 
-  - Phrase: Hoteletako teilatuak gorriak dira.
-    Translation: The roofs of the hotels are red.
+  - Phrase: Gure gurasoak bizirik eta ondo daude.
+    Alternative versions:
+     - Gurasoak bizirik eta ondo daude.
+    Translation: Our parents are alive and well.
     Alternative translations:
-      - The hotels' roofs are red.
+      -  parents are alive and fine.
 
 Mini-dictionary:
   Basque:
@@ -241,6 +249,9 @@ Mini-dictionary:
     - arrebaren: sister’s
     - arropa: clothing
     - artean: between
+    - aspertu: bored
+    - aspertua: bored
+    - aspertuak: bored
     - atearen: door (Noren case)
     - atea: the door
     - ateak: doors
@@ -296,6 +307,8 @@ Mini-dictionary:
     - behia: cow
     - behiak: cows
     - behiaren: cow (Noren)
+    - beldur: afraid
+    - bizirik: alive
     - beltz: black
     - beltza: black
     - beltzak: black
@@ -445,6 +458,7 @@ Mini-dictionary:
     - gainean:
       - on
       - over
+    - galdu: lost
     - galtzerdi: socks(noren case)
     - gara: are
     - garaiz: on time
@@ -626,6 +640,8 @@ Mini-dictionary:
     - lagun: friend
     - laku: lake
     - lakura: to the lake
+    - lanpetu: busy
+    - lanpetua: busy
     - laranjak: orange
     - laranja: orange
     - larangaren: orange (noren case)
@@ -667,6 +683,7 @@ Mini-dictionary:
     - merkatua: market
     - merkatuaren: market (noren case)
     - nindoan: I was going
+    - moduz: are you
     - morea: purple
     - moreen: purple(noren case)
     - motela: slow
@@ -691,6 +708,7 @@ Mini-dictionary:
     - nire: my
     - nago: am (egon)
     - noa: I am going
+    - nola: how
     - nongoa:
       - of which place
       - from which place
@@ -710,6 +728,9 @@ Mini-dictionary:
     - ona: good
     - onak: good
     - on: good
+    - ondo:
+      - well
+      - fine
     - orain : now
     - ondoan:
       - next to
@@ -740,6 +761,9 @@ Mini-dictionary:
     - poltsak: purses
     - poltsa: purse
     - poltsaren: purse(Noren case)
+    - pozik:
+      - glad
+      - happy
     - pozten:
       - am glad
       - rejoice
@@ -932,6 +956,8 @@ Mini-dictionary:
     - eighteen: hemazortzi
     - nineteen: hemeretzi
     - a: -a
+    - afraid: beldur
+    - alive: bizirik
     - afternoon: arratsalde
     - ago: duela
     - airport: aireportua
@@ -991,6 +1017,7 @@ Mini-dictionary:
     - blue: urdin
     - book: liburu
     - books: liburuak
+    - bored: aspertu
     - boy: mutil
     - boys: mutilak
     - boyfriend: mutillaguna
@@ -1005,6 +1032,7 @@ Mini-dictionary:
     - brown: marroia
     - bus: autobusa
     - buses: autobusak
+    - busy: lanpetua
     - but: baina
     - camareroa: waiter
     - car: kotxea
@@ -1089,6 +1117,7 @@ Mini-dictionary:
       - eroriko
     - fell: erori
     - female: emakumezkoa
+    - fine: ondo
     - fish: arraina
     - forest: baso
     - France: Francia
@@ -1105,6 +1134,7 @@ Mini-dictionary:
     - glad:
       - pozten (present)
       - poztuko (future)
+      - pozik
     - glasses: betaurrekoak
     - goat: ahuntz
     - goats: ahuntzak
@@ -1141,6 +1171,7 @@ Mini-dictionary:
     - green: berde
     - guide: gida
     - had: part of past verb form
+    - happy: pozik
     - hat: txanoaren (noren case)
     - he: hura
     - hello: kaixo
@@ -1161,6 +1192,7 @@ Mini-dictionary:
     - hotel: hotel
     - hotels: hotelak
     - house: etxea
+    - how: nola
     - hungry: gose
     - hura: hura
     - husband: senarra
@@ -1188,6 +1220,7 @@ Mini-dictionary:
     - lived: bizi + past of izan
     - long: luzea
     - look: begira!
+    - lost: galdu
     - male: gizonezkoa
     - man: gizon
     - mine: nirea
@@ -1403,6 +1436,7 @@ Mini-dictionary:
     - watches: erlojuak
     - we: gu
     - weak: ahul
+    - well: ondo
     - were:
       - zinen (izan)
       - ginen (izan)
