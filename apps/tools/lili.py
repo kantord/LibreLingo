@@ -70,7 +70,6 @@ def load_images(images_dir):
             continue
         sys.exit(f"Unhandled image: {img}")
     unused_images["regular"] = set(images["regular"])
-    return images
 
 
 def check_images(module, skill):
@@ -137,6 +136,15 @@ def export_main_html_page(course, count, html_dir):
         fh.write(html)
 
     html = render(
+        "converter.html",
+        title=f"{course.target_language.name} for {course.source_language.name} speakers",
+        rel="",
+        course=course,
+    )
+    with open(os.path.join(html_dir, "converter.html"), "w") as fh:
+        fh.write(html)
+
+    html = render(
         "modules.html",
         title=f"{course.target_language.name} for {course.source_language.name} speakers",
         rel="",
@@ -147,20 +155,59 @@ def export_main_html_page(course, count, html_dir):
     with open(os.path.join(html_dir, "modules.html"), "w") as fh:
         fh.write(html)
 
+    html = render(
+        "missing_words.html",
+        title=f"Missing {course.source_language.name} words",
+        rel="",
+        course=course,
+    )
+    with open(os.path.join(html_dir, "words.html"), "w") as fh:
+        fh.write(html)
 
-def export_json(dictionary, filename, html_dir):
+
+def collect_phrases(course):
+    target_to_source = {}
+    source_to_target = {}
+    for module in course.modules:
+        for skill in module.skills:
+            for phrase in skill.phrases:
+                # print(phrase)
+                for sentence in phrase.in_target_language:
+                    # if sentence in target_to_source:
+                    #    print(f"Same sentence '{sentence}' found twice")
+                    target_to_source[sentence] = phrase.in_source_language
+                for sentence in phrase.in_source_language:
+                    # if sentence in source_to_target:
+                    #    print(f"Same sentence '{sentence}' found twice")
+                    source_to_target[sentence] = phrase.in_target_language
+    return target_to_source, source_to_target
+
+
+def collect_words(language, direction):
     all_words = {}
-    for word, translations in dictionary.items():
+    for word, translations in language["words"].items():
+        if word not in all_words:
+            all_words[word] = []
+        for translation in translations:
+            if direction == "source-to-target":
+                all_words[word].extend(translation["word"].in_target_language)
+            else:
+                all_words[word].extend(translation["word"].in_source_language)
+
+    for word, translations in language["dictionary"].items():
         if word not in all_words:
             all_words[word] = []
         for translation in translations:
             all_words[word].extend(translation["word"])
+    return all_words
 
+
+def export_json(all_words, filename, html_dir):
     with open(os.path.join(html_dir, filename), "w") as fh:
         json.dump(all_words, fh)
 
 
-def export_words_html_page(course, all_words, language, count, path, html_file):
+def export_words_html_page(course, all_words, language, path, html_file):
     html = render(
         "words.html",
         title=f"{course.target_language.name} for {course.source_language.name} speakers",
@@ -236,15 +283,18 @@ def export_to_html(course, target, source, count, html_dir):
     )
     count["source_words"] = len(all_source_words)
 
-    export_json(source["dictionary"], "source-to-target.json", html_dir)
-    export_json(target["dictionary"], "target-to-source.json", html_dir)
+    export_json(
+        collect_words(source, "source-to-target"), "source-to-target.json", html_dir
+    )
+    export_json(
+        collect_words(target, "target-to-source"), "target-to-source.json", html_dir
+    )
 
     export_main_html_page(course, count, html_dir)
     export_words_html_page(
         course,
         all_target_words,
         target,
-        count,
         "target",
         os.path.join(html_dir, "target.html"),
     )
@@ -252,7 +302,6 @@ def export_to_html(course, target, source, count, html_dir):
         course,
         all_source_words,
         source,
-        count,
         "source",
         os.path.join(html_dir, "source.html"),
     )
@@ -262,7 +311,7 @@ def export_to_html(course, target, source, count, html_dir):
     export_word_html_pages(
         course, all_source_words, source, os.path.join(html_dir, "source")
     )
-    with open(os.path.join(html_dir, "stats.json"), "w") as fh:
+    with open(os.path.join(html_dir, "course.json"), "w") as fh:
         json.dump(count, fh)
 
 
@@ -286,7 +335,7 @@ def _collect_phrases(skill, count, target, source):
                 )
 
 
-def generate_html(course, html_dir):
+def collect_data(course):
     target = {
         "words": collections.defaultdict(list),
         "dictionary": collections.defaultdict(list),
@@ -303,6 +352,8 @@ def generate_html(course, html_dir):
         "source_phrases": 0,
         "target_language_name": course.target_language.name,
         "source_language_name": course.source_language.name,
+        "target_language_code": course.target_language.code,
+        "source_language_code": course.source_language.code,
     }
 
     for module in course.modules:
@@ -328,8 +379,7 @@ def generate_html(course, html_dir):
                     )
 
             _collect_phrases(skill, count, target, source)
-
-    export_to_html(course, target, source, count, html_dir)
+    return target, source, count
 
 
 def collect_ids_and_names(args, course):
@@ -367,9 +417,8 @@ def main():
     # except Exception as err:
     #    sys.exit(f"Could not load course {err}")
 
-    # images = None
-    # if args.images:
-    #    images = load_images(args.images)
+    if args.images:
+        load_images(args.images)
 
     skill_ids = collect_ids_and_names(args, course)
 
@@ -377,7 +426,8 @@ def main():
         check_export(course)
 
     if args.html:
-        generate_html(course, args.html)
+        target, source, count = collect_data(course)
+        export_to_html(course, target, source, count, args.html)
 
     if args.ids:
         print_ids(skill_ids)

@@ -14,7 +14,7 @@
 
 
 
-### Vocabulary Egon2 1
+### Vocabulary 1
 * Alemaniako: from Germany
 * Espainiako: from Spain
 * Gasteizeko: from Victoria

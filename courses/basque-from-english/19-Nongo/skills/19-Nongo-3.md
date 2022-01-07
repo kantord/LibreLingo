@@ -5,7 +5,7 @@
 * note if the noun ends in an "e" the final noun will have two "e"s
 * etxeetako - of the houses
 
-### Vocabulary Egon2 1
+### Vocabulary 3
 * mendietako: of the mountains
 * dendetako: of the stores
 * elizetako: of the churches

@@ -1,10 +1,10 @@
-from librelingo_audios.functions import list_required_audios
-from librelingo_utils import audio_id
 from pathlib import Path
 import subprocess
 import json
 import random
 from collections import namedtuple
+from librelingo_audios.functions import list_required_audios
+from librelingo_utils import audio_id
 
 
 def update_audios_for_course(output_path, course_name, course, settings):
@@ -18,12 +18,12 @@ def update_audios_for_course(output_path, course_name, course, settings):
     # We want to go from the old state (the existing audios) to the new state
     # (the phrases now in the course). So we determine which phrases are the
     # same in both, which are new, and which are no longer needed.
-    new_phrase_set = set(
-        [_phrase_identity_info_from_text(p[1]) for p in list_required_audios(course)]
-    )
-    old_phrase_set = set(
-        [_phrase_identity_info_from_index(p) for p in phrases_with_existing_audios]
-    )
+    new_phrase_set = {
+        _phrase_identity_info_from_text(p[1]) for p in list_required_audios(course)
+    }
+    old_phrase_set = {
+        _phrase_identity_info_from_index(p) for p in phrases_with_existing_audios
+    }
 
     if settings.destructive:
         phrases_to_keep = set()
