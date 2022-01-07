@@ -1,6 +1,6 @@
 # 22. Weather 1
 ## Change Nouns into Adjectives
-* Nouns can be made into adjectives by adding the suffix -su after a consonant or -tsu after a vowel.
+* Nouns can be made into adjectives by adding the suffix -su after a consonant or  -tsu after a vowel.
 * cloud: hodei
 * cloudy: hodeitsu
 * fog: laino
@@ -11,6 +11,7 @@
 * sunny: eguzkitsu
 * wind: haize
 * windy: haizetsu
+
 
 ### Vocabulary 1
 * eguraldi: weather
