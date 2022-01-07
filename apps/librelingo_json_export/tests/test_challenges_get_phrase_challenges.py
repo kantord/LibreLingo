@@ -3,6 +3,10 @@ import pytest
 from librelingo_json_export.challenges import _get_phrase_challenges
 from librelingo_fakes import fakes
 
+challenges = _get_phrase_challenges(fakes.phrase1, fakes.course1)
+PHRASES_GROUPS = [challenge["group"] for challenge in challenges]
+PHRASES_IDS = [challenge["id"] for challenge in challenges]
+
 
 @pytest.fixture
 def mock_get_options_challenge(mocker):
@@ -66,3 +70,11 @@ def test_doesnt_include_chips_if_sentence_is_short():
             ),
         )
     )
+
+
+def test_group_is_the_same_in_each_challenge_type():
+    assert len(set(PHRASES_GROUPS)) == 1
+
+
+def test_id_is_different_in_each_challenge_type():
+    assert len(set(PHRASES_IDS)) == len(PHRASES_IDS)
