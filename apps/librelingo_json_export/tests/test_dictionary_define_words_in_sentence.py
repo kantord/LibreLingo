@@ -1,6 +1,7 @@
 import pytest
 from librelingo_fakes import fakes
 from librelingo_json_export.dictionary import _define_words_in_sentence
+from utils import FakeLanguages
 
 
 def test_empty_sentence():
@@ -15,21 +16,21 @@ def mock_define_word(mocker):
 def test_calls_define_word_with_the_correct_data(mock_define_word):
     _define_words_in_sentence(fakes.course1, "foo bar baz", False)
     assert mock_define_word.call_count == 3
-    mock_define_word.assert_any_call(fakes.course1, "foo", False)
-    mock_define_word.assert_any_call(fakes.course1, "bar", False)
+    mock_define_word.assert_any_call(fakes.course1, FakeLanguages.LANG_1, False)
+    mock_define_word.assert_any_call(fakes.course1, FakeLanguages.LANG_2, False)
     mock_define_word.assert_any_call(fakes.course1, "baz", False)
 
 
 def test_calls_define_word_with_the_correct_word_that_has_space(mock_define_word):
     _define_words_in_sentence(fakes.course1, "foo {bar baz}", False)
     assert mock_define_word.call_count == 2
-    mock_define_word.assert_any_call(fakes.course1, "foo", False)
+    mock_define_word.assert_any_call(fakes.course1, FakeLanguages.LANG_1, False)
     mock_define_word.assert_any_call(fakes.course1, "bar baz", False)
 
 
 def test_returns_correct_value(mock_define_word):
     mock_define_word.return_value = fakes.fake_value()
-    assert _define_words_in_sentence(fakes.course1, "foo", True) == [
+    assert _define_words_in_sentence(fakes.course1, FakeLanguages.LANG_1, True) == [
         mock_define_word.return_value
     ]
 

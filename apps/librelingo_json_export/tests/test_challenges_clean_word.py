@@ -1,3 +1,4 @@
+from utils import FakeLanguages
 from librelingo_utils import clean_word
 
 
@@ -6,11 +7,11 @@ def test_empty_string():
 
 
 def test_removes_parentheses():
-    assert clean_word("(foo") == "foo"
+    assert clean_word("(foo") == FakeLanguages.LANG_1
 
 
 def test_removes_comma():
-    assert clean_word("foo,") == "foo"
+    assert clean_word("foo,") == FakeLanguages.LANG_1
 
 
 def test_doesnt_remove_parts_of_word_1():

@@ -1,5 +1,6 @@
 from librelingo_fakes import fakes
 from librelingo_utils import calculate_number_of_levels
+from utils import FakeLanguages
 from librelingo_json_export.course import _get_course_data
 
 course_with_markdown = fakes.customize(
@@ -29,7 +30,7 @@ def test__get_course_data_return_value():
         "specialCharacters": ["ä", "ß"],
         "license": {
             "name": {
-                "short": "foo",
+                "short": FakeLanguages.LANG_1,
                 "full": "foo bar license",
             },
             "link": None,
