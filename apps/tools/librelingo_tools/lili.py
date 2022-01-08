@@ -111,7 +111,7 @@ def guess_path_to_course(path_to_course):
 def render(template_file, **args):
     root = os.path.dirname(os.path.abspath(__file__))
     templates_dir = os.path.join(root, "templates")
-    env = Environment(loader=FileSystemLoader(templates_dir))
+    env = Environment(loader=FileSystemLoader(templates_dir), autoescape=True)
     template = env.get_template(template_file)
     html = template.render(**args)
     return html
