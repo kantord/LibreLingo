@@ -2,7 +2,7 @@ from pathlib import Path
 import subprocess
 import json
 import random
-from typing import Union
+from typing import Set, Union
 from librelingo_audios.functions import list_required_audios
 from librelingo_types.data_types import Course, PhraseIdentity
 from librelingo_utils import audio_id
@@ -59,7 +59,7 @@ def _load_index_file(file_path: Path):
         return json.loads(f.read())
 
 
-def _keep_phrases(phrases_to_keep: Union[set, set[PhraseIdentity]], existing_index):
+def _keep_phrases(phrases_to_keep: Union[Set, Set[PhraseIdentity]], existing_index):
     return [
         phrase
         for phrase in existing_index
@@ -68,7 +68,7 @@ def _keep_phrases(phrases_to_keep: Union[set, set[PhraseIdentity]], existing_ind
 
 
 def _fetch_phrases(
-    phrases: set[PhraseIdentity], output_path: str, course: Course, settings
+    phrases: Set[PhraseIdentity], output_path: str, course: Course, settings
 ):
     return [
         _fetch_audio_for_phrase(phrase_identity, output_path, course, settings)
@@ -144,7 +144,7 @@ def _generate_audio_with_tts(
 
 
 def _delete_phrases(
-    phrases: set[PhraseIdentity], output_path: str, existing_index, settings
+    phrases: Set[PhraseIdentity], output_path: str, existing_index, settings
 ):
     for phrase_index in existing_index:
         if _phrase_identity_info_from_index(phrase_index) in phrases:

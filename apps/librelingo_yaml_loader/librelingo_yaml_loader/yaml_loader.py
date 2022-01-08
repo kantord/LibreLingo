@@ -1,7 +1,7 @@
 import collections
 from pathlib import Path
 import os
-from typing import Union
+from typing import List, Union
 
 import bleach
 from librelingo_types import (
@@ -68,7 +68,7 @@ def _get_dictionary_items_from_skill_mini_dictionary(skill: Skill):
             yield word, definition, is_in_target_language
 
 
-def _get_all_skills(modules: list[Module]):
+def _get_all_skills(modules: List[Module]):
     """
     Iterate over all skills in the supplied list of modules
     """
@@ -77,7 +77,7 @@ def _get_all_skills(modules: list[Module]):
             yield skill
 
 
-def _get_dictionary_items(modules: list[Module]):
+def _get_dictionary_items(modules: List[Module]):
     """
     Extract all dictionary items from every module in the supplied list
     """
@@ -101,7 +101,7 @@ def _merge_dictionary_definitions(items_generator):
     return list(items.items())
 
 
-def _get_merged_dictionary_items(modules: list[Module]):
+def _get_merged_dictionary_items(modules: List[Module]):
     """
     Generates merged dictionary items using every skill in every module that is
     passed in the argument.
@@ -112,7 +112,7 @@ def _get_merged_dictionary_items(modules: list[Module]):
     return _merge_dictionary_definitions(_get_dictionary_items(modules))
 
 
-def _load_dictionary(modules: list[Module]) -> list:
+def _load_dictionary(modules: List[Module]) -> list:
     """
     Generates a dictionary using every skill in every module that is
     passed in the argument
@@ -163,7 +163,7 @@ def _convert_word(raw_word) -> Word:
     )
 
 
-def _convert_words(raw_words: list[Word]) -> list[Word]:
+def _convert_words(raw_words: List[Word]) -> List[Word]:
     """
     Converts each YAML word definition into Word() objects
     >>> _convert_words([
@@ -210,7 +210,7 @@ def _convert_phrase(raw_phrase) -> Phrase:
         ) from key_error
 
 
-def _convert_phrases(raw_phrases) -> list[Phrase]:
+def _convert_phrases(raw_phrases) -> List[Phrase]:
     """
     Converts each YAML phrase definition into Phrase() objects
     """
@@ -310,7 +310,7 @@ def _load_skill(path: Path, course: Course) -> Skill:
     )
 
 
-def _load_skills(path: str, skills, course: Course) -> list[Skill]:
+def _load_skills(path: str, skills, course: Course) -> List[Skill]:
     """
     Load each YAML skill specified in the list
     """
