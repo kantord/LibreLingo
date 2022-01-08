@@ -1,7 +1,8 @@
+from librelingo_types.data_types import Course
 from .module import _get_module_summary
 
 
-def _get_course_data(course):
+def _get_course_data(course: Course):
     """
     Format Course according to the JSON structure
     """

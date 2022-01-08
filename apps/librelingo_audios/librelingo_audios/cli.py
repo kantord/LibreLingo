@@ -34,7 +34,7 @@ def ensure_output_directory(output_path, settings):
     show_default=True,
     help="--destructive deletes existing audio and re-generates from scratch. --non-destructive performs an iterative update.",
 )
-def _command(input_path, output_path, course_name, dry_run, destructive):
+def _command(input_path: str, output_path: str, course_name: str, dry_run, destructive):
     """
     Generate audios for a YAML course.
     """
