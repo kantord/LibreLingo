@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[134],{437:function(e){e.exports=JSON.parse('{"id":"bdb0c4192e06","levels":1,"challenges":[]}')}}]);
