@@ -21,7 +21,7 @@ def get_args():
 def generate_html(start_time, end_time, links, outdir):
     root = os.path.dirname(os.path.abspath(__file__))
     templates_dir = os.path.join(root, "templates")
-    env = Environment(loader=FileSystemLoader(templates_dir))
+    env = Environment(loader=FileSystemLoader(templates_dir), autoescape=True)
     template = env.get_template("courses.html")
     html = template.render(start_time=start_time, end_time=end_time, links=links)
 
@@ -51,7 +51,10 @@ def generate_course(sdir, outdir, tdir, course_dir):
     python = sys.executable
     cmd = f"{python} {lilipy} --course {course_dir} --html {docs_dir}"
     print(cmd)
-    success = os.system(cmd) == 0
+    success = (
+        os.system(cmd) == 0
+    )  # replace this arbitrary system call with a simple Python call
+    # {or refactor this file as a shell script. But Python code is preferable)
     os.chdir(current_dir)
     with open(os.path.join(docs_dir, "course.json")) as fh:
         count = json.load(fh)
@@ -100,7 +103,7 @@ def main():
     tdir = "basque-from-english"
     links.append(
         generate_course(
-            sdir="LibreLingo",
+            sdir=".",
             outdir=outdir,
             tdir=tdir,
             course_dir=f"courses/{tdir}",
@@ -109,12 +112,12 @@ def main():
     with open(os.path.join(outdir, tdir, "course.json")) as fh:
         courses_data[tdir] = json.load(fh)
 
-    for tdir in os.listdir("LibreLingo/temporarily_inactive_courses/"):
+    for tdir in os.listdir("./temporarily_inactive_courses/"):
         if tdir == "basque-from-english":
             continue
         links.append(
             generate_course(
-                sdir="LibreLingo",
+                sdir=".",
                 outdir=outdir,
                 tdir=tdir,
                 course_dir=f"temporarily_inactive_courses/{tdir}",
