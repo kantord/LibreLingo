@@ -1,5 +1,4 @@
 import os
-import random
 import pytest
 
 from click.testing import CliRunner  # type: ignore
@@ -48,7 +47,7 @@ def test_yaml_to_json_has_help_text(mocks, inputs, invoke):
 
 
 def test_creates_output_directory_if_it_doesnt_exist(mocks, inputs, invoke, fs):
-    output_path = f"foo/{random.randint(0, 500)}/bar"
+    output_path = "foo/500/bar"
     invoke([inputs[0], output_path])
     assert os.path.isdir(output_path)
 
