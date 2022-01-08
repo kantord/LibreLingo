@@ -51,7 +51,9 @@ def generate_course(sdir, outdir, tdir, course_dir):
     python = sys.executable
     cmd = f"{python} {lilipy} --course {course_dir} --html {docs_dir}"
     print(cmd)
-    success = os.system(cmd) == 0  # TODO: replace this arbitrary system call with a simple Python call
+    success = (
+        os.system(cmd) == 0
+    )  # replace this arbitrary system call with a simple Python call
     # {or refactor this file as a shell script. But Python code is preferable)
     os.chdir(current_dir)
     with open(os.path.join(docs_dir, "course.json")) as fh:
