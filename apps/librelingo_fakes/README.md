@@ -38,6 +38,6 @@ fake_course = fakes.customize(fakes.course1, modules=[
 number(max_value=10000)
 ```
 
-Returns some 'random' non-negatve integer.
+Returns a 'random' non-negatve integer.
 It is NOT cryptographically-secure.
 

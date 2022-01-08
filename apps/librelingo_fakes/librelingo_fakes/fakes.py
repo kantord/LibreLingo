@@ -269,7 +269,7 @@ course2 = Course(
 
 def number(max_value=10000):
     """
-    Returns some 'random' non-negatve integer.
+    Returns a 'random' non-negatve integer.
     It is NOT cryptographically-secure.
     """
     return random.randint(0, max_value)  # NOSONAR
