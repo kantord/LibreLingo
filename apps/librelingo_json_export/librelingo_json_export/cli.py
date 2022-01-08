@@ -16,7 +16,7 @@ DEFAULT_SETTINGS = Settings(
 )
 
 
-def ensure_output_directory(output_path, settings):
+def ensure_output_directory(output_path: str, settings: Settings):
     if not settings.dry_run:
         Path(output_path).mkdir(parents=True, exist_ok=True)
 
@@ -25,7 +25,7 @@ def ensure_output_directory(output_path, settings):
 @click.argument("input_path")
 @click.argument("output_path")
 @click.option("--dry-run/--no-dry-run", default=DEFAULT_SETTINGS.dry_run)
-def main(input_path, output_path, dry_run):
+def main(input_path: str, output_path: str, dry_run):
     """
     Convert a YAML course into JSON files to be consumed by the web app.
     """
