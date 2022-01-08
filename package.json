@@ -2,8 +2,8 @@
   "name": "@librelingo/monorepo",
   "private": true,
   "scripts": {
-    "export:production": "yarn web installAllExternalCourses && yarn exportAllCourses && yarn web export && yarn docs:build && mv ./apps/web/__sapper__/ .",
-    "export": "yarn web export && mv ./apps/web/__sapper__/ . && poetry run python apps/tools/librelingo_tools/generate.py --courses ./config/courses.json --outdir ./__sapper__/export/course-tools-legacy",
+    "export:production": "yarn web installAllExternalCourses && yarn exportAllCourses && yarn web export && yarn docs:build && mv ./apps/web/__sapper__/ . && poetry run python apps/tools/librelingo_tools/generate.py --courses ./config/courses.json --outdir ./__sapper__/export/course-tools-legacy",
+    "export": "yarn web export && mv ./apps/web/__sapper__/ .",
     "deploy": "echo 'librelingo.app' > __sapper__/export/CNAME && gh-pages -d __sapper__/export",
     "commit": "git-cz",
     "test": "jest",
@@ -50,7 +50,7 @@
     "semantic-release": "18.0.1",
     "semantic-release-monorepo": "7.0.5",
     "source-map-loader": "3.0.1",
-    "svelte": "3.45.0",
+    "svelte": "3.44.3",
     "svelte-check": "2.2.11",
     "svelte-preprocess": "4.10.1",
     "typescript": "4.5.4"
