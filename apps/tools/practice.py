@@ -21,7 +21,7 @@ def get_args():
     return args
 
 
-def check(translation, lookup, word)
+def check(translation, lookup, word):
     return translation.lower() in [wrd.lower() for wrd in lookup[word]]
 
 
