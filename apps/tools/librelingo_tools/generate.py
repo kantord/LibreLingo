@@ -98,7 +98,6 @@ def main():
 
     for course in courses:
         download_course(course["url"], tempdir)
-        tdir = course["tdir"]
         sdir = os.path.join(tempdir.name, course["sdir"])
         generate_course(
             links=links,
@@ -106,7 +105,7 @@ def main():
             sdir=sdir,
             reldir="course",
             outdir=outdir,
-            tdir=tdir,
+            tdir=course["tdir"],
             course_dir=os.path.join(sdir, "course"),
         )
 
@@ -114,16 +113,16 @@ def main():
         os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     )
 
-    tdir = "basque-from-english"
     generate_course(
         links=links,
         courses_data=courses_data,
         sdir=root,
         reldir="course",
         outdir=outdir,
-        tdir=tdir,
-        course_dir=os.path.join(root, "courses", tdir),
+        tdir="basque-from-english",
+        course_dir=os.path.join(root, "courses", "basque-from-english"),
     )
+
     courses_dir = os.path.join(root, "temporarily_inactive_courses")
     for tdir in os.listdir(courses_dir):
         if tdir == "basque-from-english":
