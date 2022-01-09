@@ -1,8 +1,9 @@
+from librelingo_types.data_types import Course
 from librelingo_utils import audio_id, iterate_phrases
 from librelingo_utils.utils import iterate_words
 
 
-def list_required_audios(course):
+def list_required_audios(course: Course):
     for phrase in iterate_phrases(course):
         # Returning only the first version because
         # the other versions never need audio.
