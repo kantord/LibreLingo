@@ -3,12 +3,13 @@ import datetime
 import json
 import logging
 import os
-import sys
 import zipfile
 import shutil
 import tempfile
 import requests
 from jinja2 import Environment, FileSystemLoader
+
+import lili
 
 
 def get_args():
@@ -46,27 +47,26 @@ def download_course(url, tempdir):
 
 
 def generate_course(sdir, reldir, outdir, tdir, course_dir):
-    lilipy = os.path.join(os.path.dirname(os.path.abspath(__file__)), "lili.py")
+    logging.info("generate_course %s", course_dir)
+    # pylint complains of "Catching too general exception Exception (broad-except)"
+    # but I don't know what kind of exception can happen there, so for now let's not catch any exception.
+    # try:
     docs_dir = os.path.join(outdir, tdir)
-    python = sys.executable
-    cmd = f"{python} {lilipy} --course {course_dir} --rel {reldir} --html {docs_dir}"
-    logging.info(cmd)
-    success = (
-        os.system(cmd) == 0
-    )  # replace this arbitrary system call with a simple Python call
-    # {or refactor this file as a shell script. But Python code is preferable)
-    if success:
-        with open(os.path.join(docs_dir, "course.json")) as fh:
-            count = json.load(fh)
-    else:
-        logging.error("Failed to generate course in %s", course_dir)
-        return None
+    course = lili.load_course(course_dir)
+    target, source, count = lili.collect_data(course)
+    lili.export_to_html(course, target, source, count, reldir, docs_dir)
+    with open(os.path.join(docs_dir, "course.json")) as fh:
+        count = json.load(fh)
+    # except Exception as err:
+    #    logging.error("Failed to generate course in %s. Exception %s", course_dir, err)
+    #    return None
+
     return {
         "tdir": tdir,
         "text": tdir,
         "words": count["target_words"],
         "phrases": count["target_phrases"],
-        "success": success,
+        "success": True,
     }
 
 
