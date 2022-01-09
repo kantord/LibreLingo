@@ -110,20 +110,21 @@ def main():
             with open(os.path.join(outdir, tdir, "course.json")) as fh:
                 courses_data[tdir] = json.load(fh)
 
+    root = os.path.dirname(
+        os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    )
+
     tdir = "basque-from-english"
     results = generate_course(
         sdir=".",
         outdir=outdir,
         tdir=tdir,
-        course_dir=os.path.join("courses", tdir),
+        course_dir=os.path.join(root, "courses", tdir),
     )
     if results:
         links.append(results)
         with open(os.path.join(outdir, tdir, "course.json")) as fh:
             courses_data[tdir] = json.load(fh)
-    root = os.path.dirname(
-        os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    )
     courses_dir = os.path.join(root, "temporarily_inactive_courses")
     for tdir in os.listdir(courses_dir):
         if tdir == "basque-from-english":
