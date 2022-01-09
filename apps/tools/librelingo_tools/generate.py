@@ -143,7 +143,7 @@ def main():
 
     end_time = datetime.datetime.now()
     with open(os.path.join(outdir, "courses.json"), "w") as fh:
-        json.dump(courses_data, fh)
+        json.dump(courses_data, fh, sort_keys=True)
     generate_html(start_time, end_time, links, outdir)
 
 
