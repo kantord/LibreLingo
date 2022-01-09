@@ -382,12 +382,12 @@ def collect_data(course):
     return target, source, count
 
 
-def collect_ids_and_names(args, course):
+def collect_ids_and_names(images, course):
     skill_ids = {}
     skill_names = {}
     for module in course.modules:
         for skill in module.skills:
-            if args.images:
+            if images:
                 check_images(module, skill)
             if skill.id in skill_ids:
                 errors.append(
@@ -420,7 +420,7 @@ def main():
     if args.images:
         load_images(args.images)
 
-    skill_ids = collect_ids_and_names(args, course)
+    skill_ids = collect_ids_and_names(args.images, course)
 
     if args.export:
         check_export(course)
