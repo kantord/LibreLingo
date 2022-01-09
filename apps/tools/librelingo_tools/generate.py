@@ -1,6 +1,7 @@
 import argparse
 import datetime
 import json
+import logging
 import os
 import sys
 import zipfile
@@ -14,6 +15,7 @@ def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--outdir", required=True, help="path to output directory")
     parser.add_argument("--courses", required=True, help="path to courses.json file")
+    parser.add_argument("--log", action="store_true", help="Additional logging")
     args = parser.parse_args()
     return args
 
@@ -50,14 +52,18 @@ def generate_course(sdir, outdir, tdir, course_dir):
     docs_dir = os.path.join(outdir, tdir)
     python = sys.executable
     cmd = f"{python} {lilipy} --course {course_dir} --html {docs_dir}"
-    print(cmd)
+    logging.info(cmd)
     success = (
         os.system(cmd) == 0
     )  # replace this arbitrary system call with a simple Python call
     # {or refactor this file as a shell script. But Python code is preferable)
     os.chdir(current_dir)
-    with open(os.path.join(docs_dir, "course.json")) as fh:
-        count = json.load(fh)
+    if success:
+        with open(os.path.join(docs_dir, "course.json")) as fh:
+            count = json.load(fh)
+    else:
+        logging.error("Failed to generate course in %s", course_dir)
+        return None
     return {
         "tdir": tdir,
         "text": tdir,
@@ -69,6 +75,10 @@ def generate_course(sdir, outdir, tdir, course_dir):
 
 def main():
     args = get_args()
+    if args.log:
+        logging.basicConfig(level=logging.INFO)
+
+    logging.info("Start generating HTML files")
     outdir = os.path.abspath(args.outdir)
     courses_file = args.courses
 
@@ -77,7 +87,7 @@ def main():
     with open(courses_file) as fh:
         courses = json.load(fh)
 
-    print(tempdir.name)
+    logging.info("The temporary directory: %s", tempdir.name)
 
     if os.path.exists(outdir):
         shutil.rmtree(outdir)
@@ -89,42 +99,45 @@ def main():
     for course in courses:
         download_course(course["url"], tempdir)
         tdir = course["tdir"]
-        links.append(
-            generate_course(
-                sdir=os.path.join(tempdir.name, course["sdir"]),
-                outdir=outdir,
-                tdir=tdir,
-                course_dir="course",
-            )
+        results = generate_course(
+            sdir=os.path.join(tempdir.name, course["sdir"]),
+            outdir=outdir,
+            tdir=tdir,
+            course_dir="course",
         )
-        with open(os.path.join(outdir, tdir, "course.json")) as fh:
-            courses_data[tdir] = json.load(fh)
+        if results:
+            links.append(results)
+            with open(os.path.join(outdir, tdir, "course.json")) as fh:
+                courses_data[tdir] = json.load(fh)
 
     tdir = "basque-from-english"
-    links.append(
-        generate_course(
+    results = generate_course(
+        sdir=".",
+        outdir=outdir,
+        tdir=tdir,
+        course_dir=os.path.join("courses", tdir),
+    )
+    if results:
+        links.append(results)
+        with open(os.path.join(outdir, tdir, "course.json")) as fh:
+            courses_data[tdir] = json.load(fh)
+    root = os.path.dirname(
+        os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    )
+    courses_dir = os.path.join(root, "temporarily_inactive_courses")
+    for tdir in os.listdir(courses_dir):
+        if tdir == "basque-from-english":
+            continue
+        results = generate_course(
             sdir=".",
             outdir=outdir,
             tdir=tdir,
-            course_dir=f"courses/{tdir}",
+            course_dir=os.path.join(courses_dir, tdir),
         )
-    )
-    with open(os.path.join(outdir, tdir, "course.json")) as fh:
-        courses_data[tdir] = json.load(fh)
-
-    for tdir in os.listdir("./temporarily_inactive_courses/"):
-        if tdir == "basque-from-english":
-            continue
-        links.append(
-            generate_course(
-                sdir=".",
-                outdir=outdir,
-                tdir=tdir,
-                course_dir=f"temporarily_inactive_courses/{tdir}",
-            )
-        )
-        with open(os.path.join(outdir, tdir, "course.json")) as fh:
-            courses_data[tdir] = json.load(fh)
+        if results:
+            links.append(results)
+            with open(os.path.join(outdir, tdir, "course.json")) as fh:
+                courses_data[tdir] = json.load(fh)
 
     end_time = datetime.datetime.now()
     with open(os.path.join(outdir, "courses.json"), "w") as fh:
