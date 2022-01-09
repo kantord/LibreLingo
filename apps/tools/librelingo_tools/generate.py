@@ -46,7 +46,7 @@ def download_course(url, tempdir):
     zf.extractall(path=tempdir.name)
 
 
-def generate_course(sdir, reldir, outdir, tdir, course_dir):
+def generate_course(links, courses_data, sdir, reldir, outdir, tdir, course_dir):
     logging.info("generate_course %s", course_dir)
     # pylint complains of "Catching too general exception Exception (broad-except)"
     # but I don't know what kind of exception can happen there, so for now let's not catch any exception.
@@ -61,13 +61,16 @@ def generate_course(sdir, reldir, outdir, tdir, course_dir):
     #    logging.error("Failed to generate course in %s. Exception %s", course_dir, err)
     #    return None
 
-    return {
+    results = {
         "tdir": tdir,
         "text": tdir,
         "words": count["target_words"],
         "phrases": count["target_phrases"],
         "success": True,
     }
+    links.append(results)
+    with open(os.path.join(outdir, tdir, "course.json")) as fh:
+        courses_data[tdir] = json.load(fh)
 
 
 def main():
@@ -97,49 +100,43 @@ def main():
         download_course(course["url"], tempdir)
         tdir = course["tdir"]
         sdir = os.path.join(tempdir.name, course["sdir"])
-        results = generate_course(
+        generate_course(
+            links=links,
+            courses_data=courses_data,
             sdir=sdir,
             reldir="course",
             outdir=outdir,
             tdir=tdir,
             course_dir=os.path.join(sdir, "course"),
         )
-        if results:
-            links.append(results)
-            with open(os.path.join(outdir, tdir, "course.json")) as fh:
-                courses_data[tdir] = json.load(fh)
 
     root = os.path.dirname(
         os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     )
 
     tdir = "basque-from-english"
-    results = generate_course(
+    generate_course(
+        links=links,
+        courses_data=courses_data,
         sdir=root,
         reldir="course",
         outdir=outdir,
         tdir=tdir,
         course_dir=os.path.join(root, "courses", tdir),
     )
-    if results:
-        links.append(results)
-        with open(os.path.join(outdir, tdir, "course.json")) as fh:
-            courses_data[tdir] = json.load(fh)
     courses_dir = os.path.join(root, "temporarily_inactive_courses")
     for tdir in os.listdir(courses_dir):
         if tdir == "basque-from-english":
             continue
-        results = generate_course(
+        generate_course(
+            links=links,
+            courses_data=courses_data,
             sdir=root,
             reldir=os.path.join("temporarily_inactive_courses", tdir),
             outdir=outdir,
             tdir=tdir,
             course_dir=os.path.join(courses_dir, tdir),
         )
-        if results:
-            links.append(results)
-            with open(os.path.join(outdir, tdir, "course.json")) as fh:
-                courses_data[tdir] = json.load(fh)
 
     end_time = datetime.datetime.now()
     with open(os.path.join(outdir, "courses.json"), "w") as fh:
