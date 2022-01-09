@@ -11,15 +11,6 @@ from jinja2 import Environment, FileSystemLoader
 from librelingo_yaml_loader.yaml_loader import load_course
 from librelingo_json_export.export import export_course
 
-errors = []
-warnings = []
-images: dict = {
-    "tiny": set(),
-    "tinier": set(),
-    "regular": set(),
-}
-unused_images = {}
-
 Settings = collections.namedtuple(
     "Settings",
     [
@@ -56,41 +47,6 @@ def print_ids(ids):
         print(f"{idnum:6}  {ids[idnum]['module'].title}/{ids[idnum]['skill'].name}")
 
 
-def load_images(images_dir):
-    for img in os.listdir(images_dir):
-        if not img.endswith(".jpg"):
-            continue
-
-        match = re.search(r"(.*)_tiny\.jpg$", img)
-        if match:
-            images["tiny"].add(match.group(1))
-            continue
-        match = re.search(r"(.*)_tinier\.jpg$", img)
-        if match:
-            images["tinier"].add(match.group(1))
-            continue
-        match = re.search(r"(.*)\.jpg$", img)
-        if match:
-            images["regular"].add(match.group(1))
-            continue
-        sys.exit(f"Unhandled image: {img}")
-    unused_images["regular"] = set(images["regular"])
-
-
-def check_images(module, skill):
-    # print(skill.image_set) # The values from the thumbnails
-    for word in skill.words:
-        for picture in word.pictures:
-            if picture not in images["regular"]:
-                warnings.append(
-                    f"Image {picture} used in {module.title}/{skill.name} does not exist"
-                )
-            if picture in unused_images["regular"]:
-                unused_images["regular"].remove(picture)
-        # print(word.pictures)
-    # Word(in_target_language=['la mujer'], in_source_language=['the woman'], pictures=['woman1', 'woman2', 'woman3'])
-
-
 def check_export(course):
     settings = Settings(
         dry_run=False,
@@ -101,7 +57,7 @@ def check_export(course):
     export_course(output_path, course, settings)
     # try:
     # except Exception as err:
-    #    errors.append(f"Exception while exporting to JSON {err}")
+    #    self.errors.append(f"Exception while exporting to JSON {err}")
 
 
 def guess_path_to_course(path_to_course):
@@ -391,30 +347,72 @@ def collect_data(course):
     return target, source, count
 
 
-def collect_ids_and_names(images, course):
-    skill_ids = {}
-    skill_names = {}
-    for module in course.modules:
-        for skill in module.skills:
-            if images:
-                check_images(module, skill)
-            if skill.id in skill_ids:
-                errors.append(
-                    f"Duplicate id: {skill.id} in {module.title}/{skill.name} and in {skill_ids[skill.id]['module'].title}/{skill_ids[skill.id]['skill'].name}"
-                )
-            if skill.name in skill_names:
-                errors.append(
-                    f"Duplicate name: {skill.name} in {module.title}/{skill.name} and in {skill_names[skill.name]['module'].title}/{skill_names[skill.name]['skill'].name}"
-                )
-            skill_ids[skill.id] = {
-                "module": module,
-                "skill": skill,
-            }
-            skill_names[skill.name] = {
-                "module": module,
-                "skill": skill,
-            }
-    return skill_ids
+class Lili:
+    def __init__(self):
+        self.skill_ids = {}
+        self.skill_names = {}
+        self.errors = []
+        self.warnings = []
+        self.images: dict = {
+            "tiny": set(),
+            "tinier": set(),
+            "regular": set(),
+        }
+        self.unused_images = {}
+
+    def load_images(self, images_dir):
+        for img in os.listdir(images_dir):
+            if not img.endswith(".jpg"):
+                continue
+            match = re.search(r"(.*)_tiny\.jpg$", img)
+            if match:
+                self.images["tiny"].add(match.group(1))
+                continue
+            match = re.search(r"(.*)_tinier\.jpg$", img)
+            if match:
+                self.images["tinier"].add(match.group(1))
+                continue
+            match = re.search(r"(.*)\.jpg$", img)
+            if match:
+                self.images["regular"].add(match.group(1))
+                continue
+            sys.exit(f"Unhandled image: {img}")
+        self.unused_images["regular"] = set(self.images["regular"])
+
+    def check_images(self, module, skill):
+        # print(skill.image_set) # The values from the thumbnails
+        for word in skill.words:
+            for picture in word.pictures:
+                if picture not in self.images["regular"]:
+                    self.warnings.append(
+                        f"Image {picture} used in {module.title}/{skill.name} does not exist"
+                    )
+                if picture in self.unused_images["regular"]:
+                    self.unused_images["regular"].remove(picture)
+            # print(word.pictures)
+        # Word(in_target_language=['la mujer'], in_source_language=['the woman'], pictures=['woman1', 'woman2', 'woman3'])
+
+    def collect_ids_and_names(self, images, course):
+        for module in course.modules:
+            for skill in module.skills:
+                if images:
+                    self.check_images(module, skill)
+                if skill.id in self.skill_ids:
+                    self.errors.append(
+                        f"Duplicate id: {skill.id} in {module.title}/{skill.name} and in {self.skill_ids[skill.id]['module'].title}/{self.skill_ids[skill.id]['skill'].name}"
+                    )
+                if skill.name in self.skill_names:
+                    self.errors.append(
+                        f"Duplicate name: {skill.name} in {module.title}/{skill.name} and in {self.skill_names[skill.name]['module'].title}/{self.skill_names[skill.name]['skill'].name}"
+                    )
+                self.skill_ids[skill.id] = {
+                    "module": module,
+                    "skill": skill,
+                }
+                self.skill_names[skill.name] = {
+                    "module": module,
+                    "skill": skill,
+                }
 
 
 def main():
@@ -430,10 +428,11 @@ def main():
     # except Exception as err:
     #    sys.exit(f"Could not load course {err}")
 
+    lili = Lili()
     if args.images:
-        load_images(args.images)
+        lili.load_images(args.images)
 
-    skill_ids = collect_ids_and_names(args.images, course)
+    lili.collect_ids_and_names(args.images, course)
 
     if args.export:
         check_export(course)
@@ -443,21 +442,21 @@ def main():
         export_to_html(course, target, source, count, args.reldir, args.html)
 
     if args.ids:
-        print_ids(skill_ids)
+        print_ids(lili.skill_ids)
 
     if args.images:
         print("----------------- Unused images ---------------------")
-        for img in sorted(unused_images["regular"]):
+        for img in sorted(lili.unused_images["regular"]):
             print(img)
 
-    if warnings:
+    if lili.warnings:
         print("------------------ WARNINGS ---------------------")
-        for warn in warnings:
+        for warn in lili.warnings:
             print(warn)
 
-    if errors:
+    if lili.errors:
         print("------------------ ERRORS ---------------------")
-        for err in errors:
+        for err in lili.errors:
             print(err)
         sys.exit(1)
 
