@@ -45,19 +45,16 @@ def download_course(url, tempdir):
     zf.extractall(path=tempdir.name)
 
 
-def generate_course(sdir, outdir, tdir, course_dir):
+def generate_course(sdir, reldir, outdir, tdir, course_dir):
     lilipy = os.path.join(os.path.dirname(os.path.abspath(__file__)), "lili.py")
-    current_dir = os.getcwd()
-    os.chdir(sdir)
     docs_dir = os.path.join(outdir, tdir)
     python = sys.executable
-    cmd = f"{python} {lilipy} --course {course_dir} --html {docs_dir}"
+    cmd = f"{python} {lilipy} --course {course_dir} --rel {reldir} --html {docs_dir}"
     logging.info(cmd)
     success = (
         os.system(cmd) == 0
     )  # replace this arbitrary system call with a simple Python call
     # {or refactor this file as a shell script. But Python code is preferable)
-    os.chdir(current_dir)
     if success:
         with open(os.path.join(docs_dir, "course.json")) as fh:
             count = json.load(fh)
@@ -99,11 +96,13 @@ def main():
     for course in courses:
         download_course(course["url"], tempdir)
         tdir = course["tdir"]
+        sdir = os.path.join(tempdir.name, course["sdir"])
         results = generate_course(
-            sdir=os.path.join(tempdir.name, course["sdir"]),
+            sdir=sdir,
+            reldir="course",
             outdir=outdir,
             tdir=tdir,
-            course_dir="course",
+            course_dir=os.path.join(sdir, "course"),
         )
         if results:
             links.append(results)
@@ -116,7 +115,8 @@ def main():
 
     tdir = "basque-from-english"
     results = generate_course(
-        sdir=".",
+        sdir=root,
+        reldir="course",
         outdir=outdir,
         tdir=tdir,
         course_dir=os.path.join(root, "courses", tdir),
@@ -130,7 +130,8 @@ def main():
         if tdir == "basque-from-english":
             continue
         results = generate_course(
-            sdir=".",
+            sdir=root,
+            reldir=os.path.join("temporarily_inactive_courses", tdir),
             outdir=outdir,
             tdir=tdir,
             course_dir=os.path.join(courses_dir, tdir),

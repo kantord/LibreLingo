@@ -2,6 +2,7 @@
 import argparse
 import collections
 import json
+import logging
 import os
 import sys
 import re
@@ -32,6 +33,9 @@ def get_args():
     parser.add_argument(
         "--course", help="path to course directory that contains the course.yaml"
     )
+    parser.add_argument(
+        "--reldir", help="relative path of the course in the repository"
+    )
     parser.add_argument("--ids", action="store_true", help="show ids of skills")
     parser.add_argument(
         "--export",
@@ -42,6 +46,7 @@ def get_args():
     parser.add_argument(
         "--html", help="path to directory where to generate html report"
     )
+    parser.add_argument("--log", action="store_true", help="Additional logging")
     args = parser.parse_args()
     return args
 
@@ -117,7 +122,7 @@ def render(template_file, **args):
     return html
 
 
-def export_main_html_page(course, count, html_dir):
+def export_main_html_page(course, count, reldir, html_dir):
     branch = "main"  # how can we know which is the default branch of a repository?
     #'count', 'dictionary', 'index', 'license', 'modules', 'repository_url', 'settings', 'source_language', 'special_characters', 'target_language'
     # course.modules[0].skills[0].phrases
@@ -207,11 +212,12 @@ def export_json(all_words, filename, html_dir):
         json.dump(all_words, fh)
 
 
-def export_words_html_page(course, all_words, language, path, html_file):
+def export_words_html_page(course, all_words, language, path, reldir, html_file):
     html = render(
         "words.html",
         title=f"{course.target_language.name} for {course.source_language.name} speakers",
         rel="",
+        rel_dir=reldir,
         path=path,
         course=course,
         all_words=all_words,
@@ -240,7 +246,7 @@ def get_repository_url(course):
     return repository_url
 
 
-def export_word_html_pages(course, all_words, language, words_dir):
+def export_word_html_pages(course, all_words, language, reldir, words_dir):
     branch = "main"
 
     repository_url = get_repository_url(course)
@@ -250,6 +256,7 @@ def export_word_html_pages(course, all_words, language, words_dir):
             "word.html",
             title=f"{target_word} in {course.target_language.name}",
             rel="../",
+            rel_dir=reldir,
             target_word=target_word,
             word_translations=language["words"][target_word],
             dictionary_words=language["dictionary"][target_word],
@@ -262,7 +269,7 @@ def export_word_html_pages(course, all_words, language, words_dir):
             fh.write(html)
 
 
-def export_to_html(course, target, source, count, html_dir):
+def export_to_html(course, target, source, count, reldir, html_dir):
     if not os.path.exists(html_dir):
         os.mkdir(html_dir)
     for path in ["target", "source"]:
@@ -290,12 +297,13 @@ def export_to_html(course, target, source, count, html_dir):
         collect_words(target, "target-to-source"), "target-to-source.json", html_dir
     )
 
-    export_main_html_page(course, count, html_dir)
+    export_main_html_page(course, count, reldir, html_dir)
     export_words_html_page(
         course,
         all_target_words,
         target,
         "target",
+        reldir,
         os.path.join(html_dir, "target.html"),
     )
     export_words_html_page(
@@ -303,13 +311,14 @@ def export_to_html(course, target, source, count, html_dir):
         all_source_words,
         source,
         "source",
+        reldir,
         os.path.join(html_dir, "source.html"),
     )
     export_word_html_pages(
-        course, all_target_words, target, os.path.join(html_dir, "target")
+        course, all_target_words, target, reldir, os.path.join(html_dir, "target")
     )
     export_word_html_pages(
-        course, all_source_words, source, os.path.join(html_dir, "source")
+        course, all_source_words, source, reldir, os.path.join(html_dir, "source")
     )
     with open(os.path.join(html_dir, "course.json"), "w") as fh:
         json.dump(count, fh)
@@ -410,8 +419,12 @@ def collect_ids_and_names(images, course):
 
 def main():
     args = get_args()
+    if args.log:
+        logging.basicConfig(level=logging.INFO)
+    logging.info("Start Lili")
 
     path_to_course = guess_path_to_course(args.course)
+    logging.info("Path to course: '%s'", path_to_course)
     course = load_course(path_to_course)
     # try:
     # except Exception as err:
@@ -427,7 +440,7 @@ def main():
 
     if args.html:
         target, source, count = collect_data(course)
-        export_to_html(course, target, source, count, args.html)
+        export_to_html(course, target, source, count, args.reldir, args.html)
 
     if args.ids:
         print_ids(skill_ids)
