@@ -54,4 +54,4 @@ TCData = collections.namedtuple("TCData", ["word", "course", "expected_result", 
 )
 def test_get_options_challenge(test_case_data):
     cur_res = get_options_challenge(test_case_data.word, test_case_data.course)[0]
-    assert cur_res == test_case_data.excpected_result
+    assert cur_res == test_case_data.expected_result
