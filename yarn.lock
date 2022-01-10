@@ -14525,16 +14525,16 @@ supports-hyperlinks@^2.0.0, supports-hyperlinks@^2.1.0:
     has-flag "^4.0.0"
     supports-color "^7.0.0"
 
-svelte-check@2.2.11:
-  version "2.2.11"
-  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-2.2.11.tgz#d436fd71dbc15876a1a5575a4924133620ac3f37"
-  integrity sha512-clotPGGZPj3LuS9qP1lk+Wwnsj+js42ehCPmHk+qtyaQh/dU95e0qkpPmtmOMYHN6My5Y75XqeN1QNLj5V5gwA==
+svelte-check@2.2.12:
+  version "2.2.12"
+  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-2.2.12.tgz#986d79409fedb2d4d41b804baff26a958c476fee"
+  integrity sha512-ryQSuZaZSOrhrJWU7dE/Gyq/xGwgjPEkur6GMjeNIjYH0BIDKId6YKXWI14CE2BZl7Ra5zrBDEc548kX6TcnlQ==
   dependencies:
-    chalk "^4.0.0"
     chokidar "^3.4.1"
     fast-glob "^3.2.7"
     import-fresh "^3.2.1"
     minimist "^1.2.5"
+    picocolors "^1.0.0"
     sade "^1.7.4"
     source-map "^0.7.3"
     svelte-preprocess "^4.0.0"
