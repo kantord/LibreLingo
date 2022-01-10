@@ -55,7 +55,7 @@ TCData = collections.namedtuple(
     ids=lambda cur_test_case_data: cur_test_case_data.name,
 )
 def test_returns_correct_value(test_case_data):
-    cur_res = get_chips_challenge(test_case_data.phrase, test_case_data.course)
+    cur_res = get_chips_challenge(test_case_data.phrase, test_case_data.course)[0]
     assert cur_res == test_case_data.expected_result
 
 
