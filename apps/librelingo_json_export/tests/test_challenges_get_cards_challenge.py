@@ -4,13 +4,15 @@ import pytest
 from librelingo_json_export.challenge_types import get_cards_challenge
 from librelingo_fakes import fakes
 
-TCData = collections.namedtuple("TCData", ["word", "course", "expected_result", "name"])
+Example = collections.namedtuple(
+    "Example", ["word", "course", "expected_result", "name"]
+)
 
 
 @pytest.mark.parametrize(
-    "test_case_data",
+    "example",
     [
-        TCData(
+        Example(
             fakes.word1,
             fakes.course1,
             {
@@ -24,7 +26,7 @@ TCData = collections.namedtuple("TCData", ["word", "course", "expected_result", 
             },
             "data_set_1",
         ),
-        TCData(
+        Example(
             fakes.word2,
             fakes.course1,
             {
@@ -38,7 +40,7 @@ TCData = collections.namedtuple("TCData", ["word", "course", "expected_result", 
             },
             "data_set_2",
         ),
-        TCData(
+        Example(
             fakes.word_with_spaces,
             fakes.course1,
             {
@@ -53,8 +55,8 @@ TCData = collections.namedtuple("TCData", ["word", "course", "expected_result", 
             "word_with_spaces",
         ),
     ],
-    ids=lambda cur_test_case_data: cur_test_case_data.name,
+    ids=lambda example: example.name,
 )
-def test_get_cards_challenge(test_case_data):
-    cur_res = get_cards_challenge(test_case_data.word, test_case_data.course)[0]
-    assert cur_res == test_case_data.expected_result
+def test_get_cards_challenge(example):
+    cur_res = get_cards_challenge(example.word, example.course)[0]
+    assert cur_res == example.expected_result

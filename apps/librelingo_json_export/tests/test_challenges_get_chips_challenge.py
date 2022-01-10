@@ -4,15 +4,15 @@ import pytest
 from librelingo_json_export.challenge_types import get_chips_challenge
 from librelingo_fakes import fakes
 
-TCData = collections.namedtuple(
-    "TCData", ["phrase", "course", "expected_result", "name"]
+Example = collections.namedtuple(
+    "Example", ["phrase", "course", "expected_result", "name"]
 )
 
 
 @pytest.mark.parametrize(
-    "test_case_data",
+    "example",
     [
-        TCData(
+        Example(
             fakes.phrase1,
             fakes.course1,
             {
@@ -31,7 +31,7 @@ TCData = collections.namedtuple(
             },
             "simple_data_set",
         ),
-        TCData(
+        Example(
             fakes.phrase_with_multi_word_terms,
             fakes.course1,
             {
@@ -52,11 +52,11 @@ TCData = collections.namedtuple(
             "multi_word_terms",
         ),
     ],
-    ids=lambda cur_test_case_data: cur_test_case_data.name,
+    ids=lambda example: example.name,
 )
-def test_returns_correct_value(test_case_data):
-    cur_res = get_chips_challenge(test_case_data.phrase, test_case_data.course)[0]
-    assert cur_res == test_case_data.expected_result
+def test_returns_correct_value(example):
+    cur_res = get_chips_challenge(example.phrase, example.course)[0]
+    assert cur_res == example.expected_result
 
 
 @pytest.fixture
