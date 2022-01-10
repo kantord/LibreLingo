@@ -11,7 +11,7 @@ python = "^3.8"
 librelingo-types = "^3.0.0"
 
 [tool.poetry.dev-dependencies]
-pydoc-markdown = "^3.10.0"
+pydoc-markdown = "^4.0.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
