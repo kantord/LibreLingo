@@ -4,7 +4,9 @@ import pytest
 from librelingo_json_export.challenge_types import get_chips_challenge
 from librelingo_fakes import fakes
 
-TCData = collections.namedtuple("TCData", ["phrase", "course", "expected", "name"])
+TCData = collections.namedtuple(
+    "TCData", ["phrase", "course", "expected_result", "name"]
+)
 
 
 @pytest.mark.parametrize(
