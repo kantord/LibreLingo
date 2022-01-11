@@ -21,7 +21,7 @@
 ### Vocabulary Egon Egon 3
  * Mendi: mountain
 * Donostia: San Sebastian
-* Gasteiz: Victoria
+* Gasteiz: Vitoria
 * Bilbo: Bilboa
 * kale: street
 * Frantzia: France
