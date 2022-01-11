@@ -17,7 +17,7 @@ python-slugify = "^4.0.1"
 librelingo-yaml-loader = "^1.0.0"
 editdistance = "^0.6.0"
 hunspell = { version = "^0.5.5", optional = true }
-click = ">=7.0.0,<8.0.0"
+click = ">=7.0.0,<8.0.4"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.2"
