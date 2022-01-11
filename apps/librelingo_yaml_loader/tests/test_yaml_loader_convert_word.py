@@ -10,8 +10,17 @@ from librelingo_yaml_loader.yaml_loader import _convert_word
 from librelingo_fakes import fakes
 
 
-def _also_accepted():
-    return "Also accepted"
+def _access_functions(in_key):
+    def getter(raw_word):
+        return raw_word[in_key]
+
+    def remover(raw_word):
+        del raw_word[in_key]
+
+    return getter, remover
+
+
+_GET_ALSO_ACCEPTED, _REMOVE_ALSO_ACCEPTED = _access_functions("Also accepted")
 
 
 @pytest.fixture
@@ -25,7 +34,7 @@ def raw_fake_word():
             fakes.fake_value(),
         ],
         "Translation": fakes.fake_value(),
-        _also_accepted(): [
+        "Also accepted": [
             fakes.fake_value(),
             fakes.fake_value(),
         ],
@@ -68,9 +77,9 @@ def test_includes_translation(raw_fake_word):
 
 def test_includes_alternative_translations(raw_fake_word):
     result = _convert_word(raw_fake_word).in_source_language
-    assert all(_ in result for _ in raw_fake_word[_also_accepted()])
+    assert all(_ in result for _ in _GET_ALSO_ACCEPTED(raw_fake_word))
 
 
 def test_alternative_translations_are_optional(raw_fake_word):
-    del raw_fake_word[_also_accepted()]
+    _REMOVE_ALSO_ACCEPTED(raw_fake_word)
     assert len(_convert_word(raw_fake_word).in_source_language) == 1
