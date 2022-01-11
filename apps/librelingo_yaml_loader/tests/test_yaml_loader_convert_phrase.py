@@ -59,8 +59,7 @@ def test_includes_main_version(raw_fake_phrase):
 
 def test_includes_alternative_versions(raw_fake_phrase):
     result = _convert_phrase(raw_fake_phrase).in_target_language
-    assert _GET_ALTERNATIVE_VERSIONS(raw_fake_phrase)[0] in result
-    assert _GET_ALTERNATIVE_VERSIONS(raw_fake_phrase)[1] in result
+    assert all(_ in result for _ in _GET_ALTERNATIVE_VERSIONS(raw_fake_phrase))
 
 
 def test_alternative_versions_are_optional(raw_fake_phrase):
@@ -77,8 +76,7 @@ def test_includes_translation(raw_fake_phrase):
 
 def test_includes_alternative_translations(raw_fake_phrase):
     result = _convert_phrase(raw_fake_phrase).in_source_language
-    assert _GET_ALTERNATIVE_TRANSLATIONS(raw_fake_phrase)[0] in result
-    assert _GET_ALTERNATIVE_TRANSLATIONS(raw_fake_phrase)[1] in result
+    assert all(_ in result for _ in _GET_ALTERNATIVE_TRANSLATIONS(raw_fake_phrase))
 
 
 def test_alternative_translations_are_optional(raw_fake_phrase):
