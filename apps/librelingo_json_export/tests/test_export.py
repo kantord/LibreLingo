@@ -1,11 +1,11 @@
-from unittest.mock import patch, call
+from unittest.mock import patch
 
 import json
 import os
 
 from pyfakefs.fake_filesystem_unittest import TestCase as FakeFsTestCase  # type: ignore
 from librelingo_fakes import fakes
-from librelingo_types import Module, Language
+from librelingo_types import Language
 from librelingo_json_export.export import (
     _export_skill,
     _export_course_data,
