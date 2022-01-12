@@ -1,13 +1,12 @@
-from unittest.mock import patch, call
+from unittest.mock import patch
 
 import json
 import os
 
 from pyfakefs.fake_filesystem_unittest import TestCase as FakeFsTestCase  # type: ignore
 from librelingo_fakes import fakes
-from librelingo_types import Module, Language
+from librelingo_types import Language
 from librelingo_json_export.export import (
-    _export_course_skills,
     _export_skill,
     _export_course_data,
     export_course,
@@ -21,45 +20,6 @@ def get_fake_skill(introduction=None):
         name=f"Animals {random_word}",
         introduction=introduction,
     )
-
-
-class TestExportCourseSkills(FakeFsTestCase):
-    def setUp(self):
-        self.setUpPyfakefs()
-        self.export_path = fakes.path()
-
-    @patch("librelingo_json_export.export._export_skill")
-    def test_exports_all_skills(self, _export_skill):
-        _, fake_skill_1 = get_fake_skill()
-        _, fake_skill_2 = get_fake_skill()
-        _, fake_skill_3 = get_fake_skill()
-        fake_module_1 = Module(
-            title="",
-            filename="",
-            skills=[
-                fake_skill_1,
-                fake_skill_2,
-            ],
-        )
-        fake_module_2 = Module(
-            title="",
-            filename="",
-            skills=[
-                fake_skill_3,
-            ],
-        )
-        fake_course = fakes.customize(
-            fakes.course1, modules=[fake_module_1, fake_module_2]
-        )
-        _export_course_skills(self.export_path, fake_course)
-        _export_skill.assert_has_calls(
-            [
-                call(self.export_path, fake_skill_1, fake_course, None),
-                call(self.export_path, fake_skill_2, fake_course, None),
-                call(self.export_path, fake_skill_3, fake_course, None),
-            ],
-            any_order=True,
-        )
 
 
 class TestExportSkill(FakeFsTestCase):
