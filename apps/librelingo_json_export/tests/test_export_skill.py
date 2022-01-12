@@ -64,11 +64,12 @@ def test_writes_correct_value_into_json_file(
         assert json.loads(masculine_file.read()) == fake_skill_data
 
 
-def test_assert_logs_correctly(fs, export_path):  # pylint:disable=invalid-name
-    with logging.getLogger("librelingo_json_export").setLevel(logging.INFO) as log:
+def test_assert_logs_correctly(fs, caplog, export_path):  # pylint:disable=invalid-name
+    with caplog.at_level(logging.INFO, logger="librelingo_json_export"):
         _, fake_skill = fakes.get_fake_skill()
         _export_skill(export_path, fake_skill, fakes.course1)
-        assert (
-            log.output[0]
-            == f"INFO:librelingo_json_export:Writing skill '{fake_skill.name}'"
+        assert caplog.record_tuples[0] == (
+            logging.INFO,
+            "librelingo_json_export",
+            f"Writing skill '{fake_skill.name}'",
         )
