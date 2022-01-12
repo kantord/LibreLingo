@@ -1,7 +1,7 @@
 import os
 import json
-import pytest
 import logging
+import pytest
 
 from librelingo_json_export.export import _export_skill
 
