@@ -5,15 +5,6 @@ from librelingo_types import Module
 from librelingo_fakes import fakes
 
 
-def get_fake_skill(introduction=None):
-    random_word = "quiz"
-    return random_word, fakes.customize(
-        fakes.skillWithPhraseAndWord,
-        name=f"Animals {random_word}",
-        introduction=introduction,
-    )
-
-
 @pytest.fixture
 def export_path():
     return fakes.path()
@@ -27,9 +18,9 @@ def mock_export_skill(mocker):
 def test_exports_all_skills(
     mocker, fs, export_path, mock_export_skill
 ):  # pylint:disable=invalid-name
-    _, fake_skill_1 = get_fake_skill()
-    _, fake_skill_2 = get_fake_skill()
-    _, fake_skill_3 = get_fake_skill()
+    _, fake_skill_1 = fakes.get_fake_skill()
+    _, fake_skill_2 = fakes.get_fake_skill()
+    _, fake_skill_3 = fakes.get_fake_skill()
     fake_module_1 = Module(
         title="",
         filename="",
