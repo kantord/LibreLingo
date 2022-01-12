@@ -69,7 +69,7 @@ def test_assert_logs_correctly(fs, caplog, export_path):  # pylint:disable=inval
         _, fake_skill = fakes.get_fake_skill()
         _export_skill(export_path, fake_skill, fakes.course1)
         assert caplog.record_tuples[0] == (
-            logging.INFO,
             "librelingo_json_export",
+            logging.INFO,
             f"Writing skill '{fake_skill.name}'",
         )
