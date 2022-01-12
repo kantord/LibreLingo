@@ -4,7 +4,14 @@ from librelingo_json_export.export import _export_course_skills
 from librelingo_types import Module
 from librelingo_fakes import fakes
 
-from . import test_export as te
+
+def get_fake_skill(introduction=None):
+    random_word = "quiz"
+    return random_word, fakes.customize(
+        fakes.skillWithPhraseAndWord,
+        name=f"Animals {random_word}",
+        introduction=introduction,
+    )
 
 
 @pytest.fixture
@@ -20,9 +27,9 @@ def mock_export_skill(mocker):
 def test_exports_all_skills(
     mocker, fs, export_path, mock_export_skill
 ):  # pylint:disable=invalid-name
-    _, fake_skill_1 = te.get_fake_skill()
-    _, fake_skill_2 = te.get_fake_skill()
-    _, fake_skill_3 = te.get_fake_skill()
+    _, fake_skill_1 = get_fake_skill()
+    _, fake_skill_2 = get_fake_skill()
+    _, fake_skill_3 = get_fake_skill()
     fake_module_1 = Module(
         title="",
         filename="",
