@@ -7,7 +7,6 @@ from pyfakefs.fake_filesystem_unittest import TestCase as FakeFsTestCase  # type
 from librelingo_fakes import fakes
 from librelingo_types import Language
 from librelingo_json_export.export import (
-    _export_skill,
     _export_course_data,
     export_course,
 )
