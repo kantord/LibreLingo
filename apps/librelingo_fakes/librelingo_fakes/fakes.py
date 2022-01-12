@@ -280,3 +280,12 @@ def customize(fake, **kwargs):
 
 def path():
     return Path(f"./path{random.randint(0, 5000)}")
+
+
+def get_fake_skill(introduction=None):
+    random_word = "quiz"
+    return random_word, customize(
+        fakes.skillWithPhraseAndWord,
+        name=f"Animals {random_word}",
+        introduction=introduction,
+    )
