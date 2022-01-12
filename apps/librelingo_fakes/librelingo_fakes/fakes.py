@@ -285,7 +285,7 @@ def path():
 def get_fake_skill(introduction=None):
     random_word = "quiz"
     return random_word, customize(
-        fakes.skillWithPhraseAndWord,
+        skillWithPhraseAndWord,
         name=f"Animals {random_word}",
         introduction=introduction,
     )
