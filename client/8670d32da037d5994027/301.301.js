@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[301],{598:function(a,n,o){"use strict";o.r(n),n.default="# Avlar\n\n*   avlar - to speak\n*   yo avlo\n*   tu avlas\n*   el avla\n*   eya avla\n*   mozotros avlamos\n*   vozotros avlash\n*   eyos avlan"}}]);
