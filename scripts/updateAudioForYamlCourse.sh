@@ -8,5 +8,4 @@ if [ $? -eq 0 ]; then
 else
 		echo -en "\r⚠️  Couldn't update audio for course $1"
 fi
-cd - > /dev/null
 echo

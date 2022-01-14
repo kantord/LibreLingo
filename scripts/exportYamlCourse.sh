@@ -9,5 +9,4 @@ else
 		echo -en "\r⚠️  Couldn't export course $1"
 		exit 1
 fi
-cd - > /dev/null
 echo
