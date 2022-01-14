@@ -3,7 +3,7 @@
 DIRNAME=$(dirname "$0")
 DEFAULT_OUTPUT_DIR="$DIRNAME/bin"
 if [ -n "$1" ]; then
-    WEBSITE_DIR="$1"    
+    WEBSITE_DIR="$1"
 else
     echo "This script packs the LibreLingo website into a single executable file"
     echo "Usage: build.sh WEBSITE-DIR [OUTPUT-DIR]"
@@ -24,9 +24,9 @@ function cleanup {
 trap cleanup EXIT
 
 # copy the website files to the build directory
-cp -r "$WEBSITE_DIR" "$BUILD_DIR/static" 
+cp -r "$WEBSITE_DIR" "$BUILD_DIR/static"
 # copy the go files to the build directory
-cd $DIRNAME
+cd "$DIRNAME"
 cp -r ./* "$BUILD_DIR"
 
 set -eux
