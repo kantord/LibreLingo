@@ -29,11 +29,15 @@ def get_args():
     return args
 
 
-def generate_html(start_time, end_time, links, outdir):
+def get_template(filename):
     root = os.path.dirname(os.path.abspath(__file__))
     templates_dir = os.path.join(root, "templates")
     env = Environment(loader=FileSystemLoader(templates_dir), autoescape=True)
-    template = env.get_template("courses.html")
+    return env.get_template(filename)
+
+
+def generate_html(start_time, end_time, links, outdir):
+    template = get_template("courses.html")
     html = template.render(
         start_time=start_time,
         end_time=end_time,
