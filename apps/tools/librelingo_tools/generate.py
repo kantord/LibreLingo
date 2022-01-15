@@ -96,45 +96,33 @@ def main():
     links = []
     courses_data = {}
 
-    for course in courses:
-        download_course(course["url"], tempdir)
-        sdir = os.path.join(tempdir.name, course["sdir"])
-        generate_course(
-            links=links,
-            courses_data=courses_data,
-            sdir=sdir,
-            reldir="course",
-            outdir=outdir,
-            tdir=course["tdir"],
-            course_dir=os.path.join(sdir, "course"),
-        )
-
     root = os.path.dirname(
         os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     )
 
-    generate_course(
-        links=links,
-        courses_data=courses_data,
-        sdir=root,
-        reldir="course",
-        outdir=outdir,
-        tdir="basque-from-english",
-        course_dir=os.path.join(root, "courses", "basque-from-english"),
-    )
+    for course in courses:
+        if "url" in course:
+            download_course(course["url"], tempdir)
+            sdir = os.path.join(tempdir.name, course["sdir"])
+        else:
+            sdir = root
 
-    courses_dir = os.path.join(root, "temporarily_inactive_courses")
-    for tdir in os.listdir(courses_dir):
-        if tdir == "basque-from-english":
-            continue
+        reldir = "course"
+        if "reldir" in course:
+            reldir = course["reldir"]
+
+        course_dir = os.path.join(sdir, "course")
+        if "course_dir" in course:
+            course_dir = os.path.join(root, course["course_dir"])
+
         generate_course(
             links=links,
             courses_data=courses_data,
-            sdir=root,
-            reldir=os.path.join("temporarily_inactive_courses", tdir),
+            sdir=sdir,
+            reldir=reldir,
             outdir=outdir,
-            tdir=tdir,
-            course_dir=os.path.join(courses_dir, tdir),
+            tdir=course["tdir"],
+            course_dir=course_dir,
         )
 
     end_time = datetime.datetime.now()
