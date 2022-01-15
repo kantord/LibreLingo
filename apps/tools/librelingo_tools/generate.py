@@ -112,10 +112,6 @@ def main():
         if "reldir" in course:
             reldir = course["reldir"]
 
-        course_dir = os.path.join(sdir, "course")
-        if "course_dir" in course:
-            course_dir = os.path.join(root, course["course_dir"])
-
         generate_course(
             links=links,
             courses_data=courses_data,
@@ -123,7 +119,7 @@ def main():
             reldir=reldir,
             outdir=outdir,
             tdir=course["tdir"],
-            course_dir=course_dir,
+            course_dir=os.path.join(sdir, reldir),
         )
 
     end_time = datetime.datetime.now()
