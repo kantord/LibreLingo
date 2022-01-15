@@ -34,7 +34,12 @@ def generate_html(start_time, end_time, links, outdir):
     templates_dir = os.path.join(root, "templates")
     env = Environment(loader=FileSystemLoader(templates_dir), autoescape=True)
     template = env.get_template("courses.html")
-    html = template.render(start_time=start_time, end_time=end_time, links=links)
+    html = template.render(
+        start_time=start_time,
+        end_time=end_time,
+        links=links,
+        title="LibreLingo courses",
+    )
 
     with open(os.path.join(outdir, "index.html"), "w") as fh:
         fh.write(html)

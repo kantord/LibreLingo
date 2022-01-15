@@ -1,23 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-  <head>
-    <title>LibreLingo courses</title>
-    <style>
-        .odd {
-            background-color: #EEEEEE;
-        }
-        .even {
-            background-color: #FFFFFF;
-        }
-        .warning {
-            background-color: #FF5555;
-        }
-    </style>
-  </head>
-  <body>
+{% include 'central/header.html' %}
+
     <h1><a href="https://librelingo.app/">LibreLingo courses</a></h1>
     <table>
         <tr><th>Course</th><th>Target Words</th><th>Target Phrases</th><th>Source Words</th><th>Source Phrases</th></tr>
@@ -32,6 +14,5 @@
         {% endfor %}
     </table>
     <div>Generated at {{ start_time }} Elapsed time: {{ (end_time-start_time).seconds }} seconds</div>
-  </body>
-</html>
 
+{% include 'central/footer.html' %}
