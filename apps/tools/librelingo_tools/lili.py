@@ -84,7 +84,6 @@ def export_main_html_page(course, count, reldir, html_dir):
     # course.modules[0].skills[0].phrases
     # from ptpython.repl import embed
     # embed(globals(), locals())
-    repository_url = get_repository_url(course)
 
     html = render(
         "index.html",
@@ -111,7 +110,7 @@ def export_main_html_page(course, count, reldir, html_dir):
         rel="",
         branch=branch,
         course=course,
-        repository_url=repository_url,
+        repository_url=get_repository_url(course),
     )
     with open(os.path.join(html_dir, "modules.html"), "w") as fh:
         fh.write(html)
@@ -199,13 +198,16 @@ def get_repository_url(course):
     repository_url = course.repository_url
     if "https://github.com/kantord/LibreLingo/tree/main/courses/" in repository_url:
         repository_url = "https://github.com/kantord/LibreLingo"
+    if (
+        "https://github.com/kantord/LibreLingo/tree/main/temporarily_inactive_courses/"
+        in repository_url
+    ):
+        repository_url = "https://github.com/kantord/LibreLingo"
     return repository_url
 
 
 def export_word_html_pages(course, all_words, language, reldir, words_dir):
     branch = "main"
-
-    repository_url = get_repository_url(course)
 
     for target_word in all_words:
         html = render(
@@ -217,7 +219,7 @@ def export_word_html_pages(course, all_words, language, reldir, words_dir):
             word_translations=language["words"][target_word],
             dictionary_words=language["dictionary"][target_word],
             phrases=language["phrases"][target_word],
-            repository_url=repository_url,
+            repository_url=get_repository_url(course),
             branch=branch,
             course=course,
         )
