@@ -22,7 +22,7 @@
     <table>
         <tr><th>Course</th><th>Words</th><th>Phrases</th></tr>
         {% for link in links|sort(attribute='tdir') %}
-            <tr {% if not link['success'] %}class="warning"{% endif %}><td><a href="{{ link['tdir'] }}">{{ link['text'] }}</a></td><td>{{ link["words"] }}</td><td>{{ link["phrases"] }}</td></tr>
+            <tr {% if not link['success'] %}class="warning"{% endif %}><td><a href="{{ link['tdir'] }}/">{{ link['text'] }}</a></td><td>{{ link["words"] }}</td><td>{{ link["phrases"] }}</td></tr>
         {% endfor %}
     </table>
     <div>Generated at {{ start_time }} Elapsed time: {{ (end_time-start_time).seconds }} seconds</div>
