@@ -13,8 +13,15 @@ from jinja2 import Environment, FileSystemLoader
 import lili
 
 
+def myconverter(o):
+    if isinstance(o, datetime.datetime):
+        return o.__str__()
+    return None
+
+
 def get_args():
     parser = argparse.ArgumentParser()
+    parser.add_argument("--history", help="path to history.json file")
     parser.add_argument("--outdir", required=True, help="path to output directory")
     parser.add_argument("--courses", required=True, help="path to courses.json file")
     parser.add_argument("--log", action="store_true", help="Additional logging")
@@ -127,6 +134,16 @@ def main():
     end_time = datetime.datetime.now()
     with open(os.path.join(outdir, "courses.json"), "w") as fh:
         json.dump(courses_data, fh, sort_keys=True)
+    if args.history:
+        with open(args.history, "a") as fh:
+            json.dump(
+                {"courses": courses_data, "date": start_time},
+                fh,
+                sort_keys=True,
+                default=myconverter,
+            )
+            fh.write("\n")
+        shutil.copy(args.history, os.path.join(outdir, "history.json"))
     generate_html(start_time, end_time, links, outdir)
 
 
