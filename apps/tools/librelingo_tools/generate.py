@@ -36,7 +36,18 @@ def get_template(filename):
     return env.get_template(filename)
 
 
-def generate_html(start_time, end_time, links, outdir):
+def generate_history_html(history, outdir):
+    template = get_template("history.html")
+    html = template.render(
+        history=history,
+        title="LibreLingo history",
+    )
+
+    with open(os.path.join(outdir, "history.html"), "w") as fh:
+        fh.write(html)
+
+
+def generate_index_html(start_time, end_time, links, outdir):
     template = get_template("courses.html")
     html = template.render(
         start_time=start_time,
@@ -92,6 +103,24 @@ def generate_course(links, courses_data, sdir, reldir, outdir, tdir, course_dir)
         courses_data[tdir] = json.load(fh)
 
 
+def save_history(history_file, start_time, courses_data, outdir):
+    with open(history_file, "a") as fh:
+        json.dump(
+            {"courses": courses_data, "date": start_time},
+            fh,
+            sort_keys=True,
+            default=myconverter,
+        )
+        fh.write("\n")
+    shutil.copy(history_file, os.path.join(outdir, "history.json"))
+    history = []
+    with open(history_file) as fh:
+        for line in fh:
+            res = json.loads(line)
+            history.append(res)
+    generate_history_html(history, outdir)
+
+
 def main():
     args = get_args()
     if args.log:
@@ -144,16 +173,8 @@ def main():
     with open(os.path.join(outdir, "courses.json"), "w") as fh:
         json.dump(courses_data, fh, sort_keys=True)
     if args.history:
-        with open(args.history, "a") as fh:
-            json.dump(
-                {"courses": courses_data, "date": start_time},
-                fh,
-                sort_keys=True,
-                default=myconverter,
-            )
-            fh.write("\n")
-        shutil.copy(args.history, os.path.join(outdir, "history.json"))
-    generate_html(start_time, end_time, links, outdir)
+        save_history(args.history, start_time, courses_data, outdir)
+    generate_index_html(start_time, end_time, links, outdir)
 
 
 if __name__ == "__main__":
