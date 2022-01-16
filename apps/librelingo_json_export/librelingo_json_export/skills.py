@@ -1,8 +1,9 @@
 from librelingo_utils import get_opaque_id, calculate_number_of_levels
+from librelingo_types.data_types import Course, Skill
 from .challenges import _get_challenges_data
 
 
-def _get_skill_data(skill, course):
+def _get_skill_data(skill: Skill, course: Course):
     """
     Format Course according to the JSON structure
     """

@@ -1,3 +1,4 @@
+from librelingo_types.data_types import Course
 from .challenge_types import (
     get_options_challenge,
     get_listening_challenge,
@@ -8,7 +9,7 @@ from .challenge_types import (
 )
 
 
-def _make_challenges_using(callback, data_source, course):
+def _make_challenges_using(callback, data_source, course: Course):
     """
     Calls a callback function with an item (Word or Phrase)
     to create challenges. Each item in the data source will
@@ -29,7 +30,7 @@ def _challenge_mapper(challenge_types):
     of the given course.
     """
 
-    def map_challenge_creators(item, course):
+    def map_challenge_creators(item, course: Course):
         challenges = []
         for challenge_type_callback in challenge_types:
             for challenge in challenge_type_callback(item, course):
@@ -40,7 +41,7 @@ def _challenge_mapper(challenge_types):
     return map_challenge_creators
 
 
-def _get_phrase_challenges(phrase, course):
+def _get_phrase_challenges(phrase, course: Course):
     "Generate challenges based on a Phrase"
     return _challenge_mapper(
         [
@@ -52,14 +53,14 @@ def _get_phrase_challenges(phrase, course):
     )(phrase, course)
 
 
-def _get_word_challenges(word, course):
+def _get_word_challenges(word, course: Course):
     "Generate challenges based on a Word"
     return _challenge_mapper(
         [get_cards_challenge, get_short_input_challenge, get_listening_challenge]
     )(word, course)
 
 
-def _get_challenges_data(skill, course):
+def _get_challenges_data(skill, course: Course):
     """
     Generates challenges for a certain Skill
     """

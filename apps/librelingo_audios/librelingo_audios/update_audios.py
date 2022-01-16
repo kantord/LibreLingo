@@ -2,12 +2,15 @@ from pathlib import Path
 import subprocess
 import json
 import random
-from collections import namedtuple
+from typing import Set, Union
 from librelingo_audios.functions import list_required_audios
+from librelingo_types.data_types import Course, PhraseIdentity
 from librelingo_utils import audio_id
 
 
-def update_audios_for_course(output_path, course_name, course, settings):
+def update_audios_for_course(
+    output_path: str, course_name: str, course: Course, settings
+):
     if not course.settings.audio_settings.enabled:
         return
 
@@ -48,7 +51,7 @@ def update_audios_for_course(output_path, course_name, course, settings):
         _save_index(result_index, index_file_path)
 
 
-def _load_index_file(file_path):
+def _load_index_file(file_path: Path):
     if not file_path.is_file():
         return []
 
@@ -56,19 +59,26 @@ def _load_index_file(file_path):
         return json.loads(f.read())
 
 
-def _keep_phrases(phrases_to_keep, existing_index):
+def _keep_phrases(phrases_to_keep: Union[Set, Set[PhraseIdentity]], existing_index):
     return [
-        p
-        for p in existing_index
-        if _phrase_identity_info_from_index(p) in phrases_to_keep
+        phrase
+        for phrase in existing_index
+        if _phrase_identity_info_from_index(phrase) in phrases_to_keep
     ]
 
 
-def _fetch_phrases(phrases, output_path, course, settings):
-    return [_fetch_audio_for_phrase(p, output_path, course, settings) for p in phrases]
+def _fetch_phrases(
+    phrases: Set[PhraseIdentity], output_path: str, course: Course, settings
+):
+    return [
+        _fetch_audio_for_phrase(phrase_identity, output_path, course, settings)
+        for phrase_identity in phrases
+    ]
 
 
-def _fetch_audio_for_phrase(phrase_identity, output_path, course, settings):
+def _fetch_audio_for_phrase(
+    phrase_identity: PhraseIdentity, output_path: str, course: Course, settings
+):
     file_name = audio_id(course.target_language, phrase_identity.text)
     destination_path = Path(Path(output_path) / f"{file_name}.mp3")
 
@@ -80,7 +90,11 @@ def _fetch_audio_for_phrase(phrase_identity, output_path, course, settings):
 
 
 def _generate_audio_with_tts(
-    phrase_identity, file_name, destination_path, course, settings
+    phrase_identity: PhraseIdentity,
+    file_name: str,
+    destination_path: Path,
+    course: Course,
+    settings,
 ):
     tts_settings_list = course.settings.audio_settings.text_to_speech_settings_list
     if tts_settings_list == []:
@@ -129,13 +143,15 @@ def _generate_audio_with_tts(
     }
 
 
-def _delete_phrases(phrases, output_path, existing_index, settings):
-    for p in existing_index:
-        if _phrase_identity_info_from_index(p) in phrases:
-            _delete_audio_for_phrase(p, output_path, settings)
+def _delete_phrases(
+    phrases: Set[PhraseIdentity], output_path: str, existing_index, settings
+):
+    for phrase_index in existing_index:
+        if _phrase_identity_info_from_index(phrase_index) in phrases:
+            _delete_audio_for_phrase(phrase_index, output_path, settings)
 
 
-def _delete_audio_for_phrase(index_entry, output_path, settings):
+def _delete_audio_for_phrase(index_entry, output_path: str, settings):
     target_path = Path(Path(output_path) / f"{index_entry['id']}.mp3")
 
     if not target_path.is_file():
@@ -149,28 +165,15 @@ def _delete_audio_for_phrase(index_entry, output_path, settings):
         target_path.unlink()
 
 
-def _save_index(result_index, index_file_path):
+def _save_index(result_index: list, index_file_path: Path):
     with open(index_file_path, "w", encoding="utf-8") as f:
         json.dump(
             sorted(result_index, key=lambda i: i["id"]), f, ensure_ascii=False, indent=4
         )
 
 
-class PhraseIdentity(namedtuple("PhraseIdentity", ["text", "source"])):
-    """
-    This is the set of information that identifies a phrase as 'the same'. If any
-    of these things change, the phrase will be seen as 'new' and re-generated.
-    """
-
-    pass
-
-
 def _phrase_identity_info_from_text(text):
     return PhraseIdentity(text, "TTS")
-
-
-def _phrase_identity_info_from_phrase(phrase_object):
-    return _phrase_identity_info_from_text(phrase_object.in_target_language[0])
 
 
 def _phrase_identity_info_from_index(phrase_index_entry):

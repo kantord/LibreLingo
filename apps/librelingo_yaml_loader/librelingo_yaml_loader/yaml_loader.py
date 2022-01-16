@@ -1,6 +1,7 @@
 import collections
 from pathlib import Path
 import os
+from typing import List, Union
 
 import bleach
 from librelingo_types import (
@@ -32,13 +33,13 @@ def add_bool(self, node):
 SafeConstructor.add_constructor("tag:yaml.org,2002:bool", add_bool)
 
 
-def _load_yaml(path):
+def _load_yaml(path: Path):
     """Helper function for reading a YAML file"""
-    with open(path) as f:
-        return safe_load(f)
+    with open(path) as yaml_file:
+        return safe_load(yaml_file)
 
 
-def _convert_language(raw_language):
+def _convert_language(raw_language) -> Language:
     """
     Convert a YAML langauge description to a Language() object
     """
@@ -48,7 +49,7 @@ def _convert_language(raw_language):
     )
 
 
-def _get_dictionary_items_from_new_words(skill):
+def _get_dictionary_items_from_new_words(skill: Skill):
     """
     Extract new words in a skill as dictionary items
     """
@@ -57,7 +58,7 @@ def _get_dictionary_items_from_new_words(skill):
         yield word.in_target_language[0], word.in_source_language[0], True
 
 
-def _get_dictionary_items_from_skill_mini_dictionary(skill):
+def _get_dictionary_items_from_skill_mini_dictionary(skill: Skill):
     """
     Iterate over all dictionary items from the mini-dictionary of a skill
     """
@@ -67,7 +68,7 @@ def _get_dictionary_items_from_skill_mini_dictionary(skill):
             yield word, definition, is_in_target_language
 
 
-def _get_all_skills(modules):
+def _get_all_skills(modules: List[Module]):
     """
     Iterate over all skills in the supplied list of modules
     """
@@ -76,7 +77,7 @@ def _get_all_skills(modules):
             yield skill
 
 
-def _get_dictionary_items(modules):
+def _get_dictionary_items(modules: List[Module]):
     """
     Extract all dictionary items from every module in the supplied list
     """
@@ -100,7 +101,7 @@ def _merge_dictionary_definitions(items_generator):
     return list(items.items())
 
 
-def _get_merged_dictionary_items(modules):
+def _get_merged_dictionary_items(modules: List[Module]):
     """
     Generates merged dictionary items using every skill in every module that is
     passed in the argument.
@@ -111,7 +112,7 @@ def _get_merged_dictionary_items(modules):
     return _merge_dictionary_definitions(_get_dictionary_items(modules))
 
 
-def _load_dictionary(modules):
+def _load_dictionary(modules: List[Module]) -> list:
     """
     Generates a dictionary using every skill in every module that is
     passed in the argument
@@ -129,7 +130,7 @@ def _load_dictionary(modules):
     return items
 
 
-def _alternatives_from_yaml(raw_object, key):
+def _alternatives_from_yaml(raw_object, key: str):
     """
     Returns alternative solutions based on the key, or an empty list if
     there are no alternative solutions specified
@@ -137,7 +138,7 @@ def _alternatives_from_yaml(raw_object, key):
     return raw_object[key] if key in raw_object else []
 
 
-def _solution_from_yaml(raw_object, solution_key, alternatives_key):
+def _solution_from_yaml(raw_object, solution_key: str, alternatives_key: str) -> list:
     """
     Converts a solution and it's alternatives into a single list, where
     the alternatives are optional
@@ -146,7 +147,7 @@ def _solution_from_yaml(raw_object, solution_key, alternatives_key):
     return [solution, *_alternatives_from_yaml(raw_object, alternatives_key)]
 
 
-def _convert_word(raw_word):
+def _convert_word(raw_word) -> Word:
     """
     Converts a YAML word definition into a Word() object
 
@@ -162,7 +163,7 @@ def _convert_word(raw_word):
     )
 
 
-def _convert_words(raw_words):
+def _convert_words(raw_words: List[Word]) -> List[Word]:
     """
     Converts each YAML word definition into Word() objects
     >>> _convert_words([
@@ -183,7 +184,7 @@ def _convert_words(raw_words):
     return list(map(_convert_word, raw_words))
 
 
-def _convert_phrase(raw_phrase):
+def _convert_phrase(raw_phrase) -> Phrase:
     """
     Converts a YAML phrase definition into a Phrase() object
     >>> _convert_phrase({
@@ -209,14 +210,14 @@ def _convert_phrase(raw_phrase):
         ) from key_error
 
 
-def _convert_phrases(raw_phrases):
+def _convert_phrases(raw_phrases) -> List[Phrase]:
     """
     Converts each YAML phrase definition into Phrase() objects
     """
     return list(map(_convert_phrase, raw_phrases))
 
 
-def _convert_mini_dictionary(raw_mini_dictionary, course):
+def _convert_mini_dictionary(raw_mini_dictionary, course: Course):
     """
     Handles loading the mini-dictionary form the YAML format
     """
@@ -234,7 +235,7 @@ def _convert_mini_dictionary(raw_mini_dictionary, course):
             yield (word, tuple(definition), is_in_target_language)
 
 
-def _sanitize_markdown(mdtext):
+def _sanitize_markdown(mdtext: str) -> str:
     "Removes unsafe text content from Markdown"
     dirty_html = markdown.markdown(mdtext)
     clean_html = bleach.clean(
@@ -246,7 +247,7 @@ def _sanitize_markdown(mdtext):
     return html2markdown.convert(clean_html)
 
 
-def _load_introduction(path):
+def _load_introduction(path: str) -> Union[str, None]:
     "Loads the introduction text from a Markdown file"
     if not os.path.exists(path):
         return None
@@ -255,7 +256,7 @@ def _load_introduction(path):
         return _sanitize_markdown(f.read())
 
 
-def _load_skill(path, course):
+def _load_skill(path: Path, course: Course) -> Skill:
     try:
         data = _load_yaml(path)
         introduction = _load_introduction(str(path).replace(".yaml", ".md"))
@@ -309,7 +310,7 @@ def _load_skill(path, course):
     )
 
 
-def _load_skills(path, skills, course):
+def _load_skills(path: str, skills, course: Course) -> List[Skill]:
     """
     Load each YAML skill specified in the list
     """
@@ -321,7 +322,7 @@ def _load_skills(path, skills, course):
         ) from type_error
 
 
-def _load_module(path, course):
+def _load_module(path: str, course: Course):
     """
     Load a YAML module
     """
@@ -353,7 +354,7 @@ def _load_module(path, course):
     )
 
 
-def _load_modules(path, modules, course):
+def _load_modules(path: str, modules, course: Course):
     """
     Load each YAML module specified in the list
     """
@@ -409,7 +410,7 @@ def _convert_audio_settings(raw_settings):
     )
 
 
-def _convert_settings(data, course):
+def _convert_settings(data, course: Course):
     if "Settings" not in data:
         return Settings()
 
@@ -421,7 +422,7 @@ def _convert_settings(data, course):
     )
 
 
-def load_course(path):
+def load_course(path: str):
     """
     Load a YAML-based course into a Course() object
     """
