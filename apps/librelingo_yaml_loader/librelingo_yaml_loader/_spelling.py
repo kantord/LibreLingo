@@ -67,7 +67,7 @@ def _convert_hunspell_settings_for_language(raw_language_name):
     # Only import hunspell if actually needed. Still allow mocking it.
     global hunspell
     if not hunspell:
-        import hunspell  # type: ignore
+        import hunspell  # type: ignore # pylint: disable=import-error
 
     return hunspell.HunSpell(
         f"/usr/share/hunspell/{language_code}.dic",
