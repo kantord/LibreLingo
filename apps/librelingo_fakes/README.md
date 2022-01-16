@@ -31,3 +31,13 @@ fake_course = fakes.customize(fakes.course1, modules=[
 ])
 ```
 
+<a name="librelingo_fakes.fakes.number"></a>
+#### number
+
+```python
+number(max_value=10000)
+```
+
+Returns a 'random' non-negative integer.
+It is NOT cryptographically-secure.
+
