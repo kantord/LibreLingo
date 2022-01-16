@@ -1,10 +1,10 @@
 from functools import lru_cache
 import hashlib
 import regex  # type: ignore
-from librelingo_types.data_types import Phrase, Word
+from librelingo_types.data_types import Course, Language, Phrase, Word
 
 
-def calculate_number_of_levels(nwords, nphrases):
+def calculate_number_of_levels(nwords: int, nphrases: int) -> int:
     """
     Calculates how many levels a skill should have
     """
@@ -36,7 +36,7 @@ def remove_control_characters_for_display(phrase):
 
 
 @lru_cache(maxsize=None)
-def clean_word(word):
+def clean_word(word: Word):
     """
     Remove punctuation and other special characters from a word.
     """
@@ -47,7 +47,7 @@ def clean_word(word):
     )
 
 
-def get_dumb_opaque_id(name, id_, salt=""):
+def get_dumb_opaque_id(name: str, id_, salt: str = "") -> str:
     """
     Generate a unique, opaque ID based on a name, and id_ and a salt
     id
@@ -68,15 +68,15 @@ def get_dumb_opaque_id(name, id_, salt=""):
     return sha256.hexdigest()[0:12]
 
 
-def get_opaque_id(obj, salt=""):
+def get_opaque_id(obj, salt: str = "") -> str:
     """
-    Generate a unique, opaque ID based on a type and a type specific
+    Generate a unique, opaque ID based on a salt and the type of the object
     id
     """
     return get_dumb_opaque_id(type(obj).__name__.lower(), str(obj.id), salt)
 
 
-def audio_id(language, text):
+def audio_id(language: Language, text: str) -> str:
     """
     Generate the ID that will identify the audio file of a sentence.
     """
@@ -85,7 +85,7 @@ def audio_id(language, text):
     return audio_id.hexdigest()
 
 
-def iterate_phrases(course):
+def iterate_phrases(course: Course):
     '"Flatten" a course into a sequence of phrases'
     for module in course.modules:
         for skill in module.skills:
@@ -93,7 +93,7 @@ def iterate_phrases(course):
                 yield phrase
 
 
-def iterate_words(course):
+def iterate_words(course: Course):
     '"Flatten" a course into a sequence of words'
     for module in course.modules:
         for skill in module.skills:

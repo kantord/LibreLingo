@@ -5,7 +5,7 @@
 #### load\_course
 
 ```python
-load_course(path)
+load_course(path: str)
 ```
 
 Load a YAML-based course into a Course() object

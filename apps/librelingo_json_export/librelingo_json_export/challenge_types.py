@@ -1,5 +1,6 @@
 import editdistance  # type: ignore
 
+
 from librelingo_utils import (
     get_dumb_opaque_id,
     audio_id,
@@ -7,10 +8,13 @@ from librelingo_utils import (
     clean_word,
     iterate_phrases,
 )
+
+from librelingo_types import Course, Word
+
 from .dictionary import _define_words_in_sentence
 
 
-def get_listening_challenge(source, course):
+def get_listening_challenge(source: Word, course: Course):
     if not course.settings.audio_settings.enabled:
         return []
 
@@ -34,7 +38,7 @@ def get_listening_challenge(source, course):
     ]
 
 
-def get_short_input_challenge(source, course):
+def get_short_input_challenge(source: Word, course: Course):
     return [
         {
             "type": "shortInput",
@@ -55,7 +59,7 @@ def get_short_input_challenge(source, course):
     ]
 
 
-def get_cards_challenge(word, _):
+def get_cards_challenge(word: Word, _):
     return [
         {
             "type": "cards",
@@ -96,7 +100,7 @@ def get_chips_from_string(phrase):
     return list(map(clean_word, phrase.split()))
 
 
-def get_chips_from_phrase(get_input_texts, phrase, course):
+def get_chips_from_phrase(get_input_texts, phrase, course: Course):
     extra_chips = []
     solution_chips = get_chips_from_string(get_input_texts(phrase)[0])
 
@@ -125,7 +129,7 @@ def get_chips_from_phrase(get_input_texts, phrase, course):
 
 
 def get_solutions_from_phrase(get_input_texts, phrase):
-    return [get_chips_from_string(x) for x in get_input_texts(phrase)]
+    return [get_chips_from_string(text) for text in get_input_texts(phrase)]
 
 
 def create_chips_challenge_generator(reverse):
@@ -148,7 +152,7 @@ def create_chips_challenge_generator(reverse):
             return False
         return True
 
-    def get_chips_challenge(phrase, course):
+    def get_chips_challenge(phrase, course: Course):
         if not is_long_enough_to_have_chips(phrase):
             return []
 
