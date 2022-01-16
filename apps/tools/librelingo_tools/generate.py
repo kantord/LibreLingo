@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import argparse
 import datetime
 import json
@@ -12,8 +13,15 @@ from jinja2 import Environment, FileSystemLoader
 import lili
 
 
+def myconverter(o):
+    if isinstance(o, datetime.datetime):
+        return o.__str__()
+    return None
+
+
 def get_args():
     parser = argparse.ArgumentParser()
+    parser.add_argument("--history", help="path to history.json file")
     parser.add_argument("--outdir", required=True, help="path to output directory")
     parser.add_argument("--courses", required=True, help="path to courses.json file")
     parser.add_argument("--log", action="store_true", help="Additional logging")
@@ -21,12 +29,32 @@ def get_args():
     return args
 
 
-def generate_html(start_time, end_time, links, outdir):
+def get_template(filename):
     root = os.path.dirname(os.path.abspath(__file__))
     templates_dir = os.path.join(root, "templates")
     env = Environment(loader=FileSystemLoader(templates_dir), autoescape=True)
-    template = env.get_template("courses.html")
-    html = template.render(start_time=start_time, end_time=end_time, links=links)
+    return env.get_template(filename)
+
+
+def generate_history_html(history, outdir):
+    template = get_template("history.html")
+    html = template.render(
+        history=history,
+        title="LibreLingo history",
+    )
+
+    with open(os.path.join(outdir, "history.html"), "w") as fh:
+        fh.write(html)
+
+
+def generate_index_html(start_time, end_time, links, outdir):
+    template = get_template("courses.html")
+    html = template.render(
+        start_time=start_time,
+        end_time=end_time,
+        links=links,
+        title="LibreLingo courses",
+    )
 
     with open(os.path.join(outdir, "index.html"), "w") as fh:
         fh.write(html)
@@ -64,13 +92,33 @@ def generate_course(links, courses_data, sdir, reldir, outdir, tdir, course_dir)
     results = {
         "tdir": tdir,
         "text": tdir,
-        "words": count["target_words"],
-        "phrases": count["target_phrases"],
+        "target_words": count["target_words"],
+        "target_phrases": count["target_phrases"],
+        "source_words": count["source_words"],
+        "source_phrases": count["source_phrases"],
         "success": True,
     }
     links.append(results)
     with open(os.path.join(outdir, tdir, "course.json")) as fh:
         courses_data[tdir] = json.load(fh)
+
+
+def save_history(history_file, start_time, courses_data, outdir):
+    with open(history_file, "a") as fh:
+        json.dump(
+            {"courses": courses_data, "date": start_time},
+            fh,
+            sort_keys=True,
+            default=myconverter,
+        )
+        fh.write("\n")
+    shutil.copy(history_file, os.path.join(outdir, "history.json"))
+    history = []
+    with open(history_file) as fh:
+        for line in fh:
+            res = json.loads(line)
+            history.append(res)
+    generate_history_html(history, outdir)
 
 
 def main():
@@ -96,51 +144,37 @@ def main():
     links = []
     courses_data = {}
 
-    for course in courses:
-        download_course(course["url"], tempdir)
-        sdir = os.path.join(tempdir.name, course["sdir"])
-        generate_course(
-            links=links,
-            courses_data=courses_data,
-            sdir=sdir,
-            reldir="course",
-            outdir=outdir,
-            tdir=course["tdir"],
-            course_dir=os.path.join(sdir, "course"),
-        )
-
     root = os.path.dirname(
         os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     )
 
-    generate_course(
-        links=links,
-        courses_data=courses_data,
-        sdir=root,
-        reldir="course",
-        outdir=outdir,
-        tdir="basque-from-english",
-        course_dir=os.path.join(root, "courses", "basque-from-english"),
-    )
+    for course in courses:
+        if "url" in course:
+            download_course(course["url"], tempdir)
+            sdir = os.path.join(tempdir.name, course["sdir"])
+        else:
+            sdir = root
 
-    courses_dir = os.path.join(root, "temporarily_inactive_courses")
-    for tdir in os.listdir(courses_dir):
-        if tdir == "basque-from-english":
-            continue
+        reldir = "course"
+        if "reldir" in course:
+            reldir = course["reldir"]
+
         generate_course(
             links=links,
             courses_data=courses_data,
-            sdir=root,
-            reldir=os.path.join("temporarily_inactive_courses", tdir),
+            sdir=sdir,
+            reldir=reldir,
             outdir=outdir,
-            tdir=tdir,
-            course_dir=os.path.join(courses_dir, tdir),
+            tdir=course["tdir"],
+            course_dir=os.path.join(sdir, reldir),
         )
 
     end_time = datetime.datetime.now()
     with open(os.path.join(outdir, "courses.json"), "w") as fh:
         json.dump(courses_data, fh, sort_keys=True)
-    generate_html(start_time, end_time, links, outdir)
+    if args.history:
+        save_history(args.history, start_time, courses_data, outdir)
+    generate_index_html(start_time, end_time, links, outdir)
 
 
 if __name__ == "__main__":

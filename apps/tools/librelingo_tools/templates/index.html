@@ -3,14 +3,12 @@
     <h1>{{ title }}</h1>
     <div><a href="{{ course.repository_url }}">Repository</a></div>
     <div>License: {{ course.license.name }}: <a href="{{ course.license.link }}">{{ course.license.full_name }}</a></div>
-    <div>Total number of words: {{ count.target_words }}</div>
-    <div>Number of phrases: {{ count.target_phrases }}</div>
-
     <div>
-    <a href="target.html">words in {{ course.target_language.name }}</a>
-    </div>
-    <div>
-    <a href="modules.html">modules</a>
+     <table>
+     <tr><th></th>        <th>{{ count.target_language_name }}</th> <th>{{ count.source_language_name }}</th></tr>
+     <tr><th>Words</th>   <td>{{ count.target_words }}</td>         <td>{{ count.source_words }}</td></tr>
+     <tr><th>Phrases</th> <td>{{ count.target_phrases }}</td>       <td>{{ count.source_phrases }}</td></tr>
+     </table>
     </div>
 
 {% include 'incl/footer.html' %}
