@@ -5,7 +5,7 @@
 #### export\_course
 
 ```python
-export_course(export_path, course, settings=None)
+export_course(export_path: str, course: Course, settings=None)
 ```
 
 Writes the course to JSON files in the specified path.
