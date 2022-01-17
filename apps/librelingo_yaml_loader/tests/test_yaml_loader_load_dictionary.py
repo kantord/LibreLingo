@@ -1,3 +1,5 @@
+import pytest
+
 from librelingo_types import (
     Module,
     Skill,
@@ -10,6 +12,12 @@ from librelingo_yaml_loader.yaml_loader import (
 
 from .utils import get_fake_word
 
+@pytest.fixture
+def module_with_word():
+    word, in_source_language, in_target_language = get_fake_word()
+    my_module = Module("", "", skills=[Skill("", "", "", [word], [], [], None, None)])
+
+    return my_module, in_source_language, in_target_language
 
 def test_load_dictionary_returns_a_list(module_with_word):
     assert isinstance(_load_dictionary([module_with_word[0]]), list)

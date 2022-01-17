@@ -28,8 +28,6 @@ from librelingo_yaml_loader.yaml_loader import (
 )
 from librelingo_fakes import fakes
 
-from .utils import get_fake_word
-
 
 class YamlImportTestCase(FakeFsTestCase):
     def create_patch(self, module):
@@ -709,12 +707,7 @@ Mini-dictionary:
         self.convert_phrases.assert_called_with(self.fake_values["fake_phrases"])
 
 
-@pytest.fixture
-def module_with_word():
-    word, in_source_language, in_target_language = get_fake_word()
-    my_module = Module("", "", skills=[Skill("", "", "", [word], [], [], None, None)])
 
-    return my_module, in_source_language, in_target_language
 
 
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
