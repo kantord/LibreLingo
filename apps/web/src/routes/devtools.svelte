@@ -51,6 +51,11 @@
             <b>Typography</b>
           </a>
         </li>
+        <li>
+          <a target="_blank" href="/course-tools-legacy/">
+            <b>The legacy dev tool</b>
+          </a>
+        </li>
       </ul>
     </Content>
   </div>
