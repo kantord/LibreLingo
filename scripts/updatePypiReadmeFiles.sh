@@ -11,6 +11,10 @@ find apps/ -name pyproject.toml -exec dirname {} \; |
 			}
 			poetry install
 			make README.md -B "$1"
-			cd -
+			cd - ||
+			{
+				echo -en "\r⚠️  Could not return to previous directory"
+				exit 1
+			}
 			echo
     done
