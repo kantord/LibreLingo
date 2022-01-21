@@ -15,7 +15,7 @@
     "installAllExternalCourses": "./scripts/installExternalCourses.sh",
     "fetchPhotos": "./scripts/fetchPhotos.sh",
     "fetchAudios": "./scripts/fetchAudios.sh",
-    "percypress": "sh ./percypress.sh",
+    "percypress": "bash ./percypress.sh",
     "test": "yarn dev & yarn percypress",
     "test:ci": "npx serve __sapper__/export -l 3000 & yarn percypress",
     "prettierfix": "yarn prettierfix:src && yarn prettierfix:cypress && yarn prettierfix:svelte",
