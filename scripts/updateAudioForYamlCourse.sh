@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euo pipefail
+
 echo -en "⏳ Updating audio for course $1"
 cd ./apps/librelingo_audios/ ||
 {

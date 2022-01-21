@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
+
 if output=$(git status --porcelain) && [ -z "$output" ]; then
   echo "Working directory clean. Fetching course data..."
-else 
+else
   echo "Working directory not clean. Please commit your changes before running this script."
   exit 1
 fi

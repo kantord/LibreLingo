@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euo pipefail
+
 ./scripts/updatePypiReadmeFiles.sh -B
 
 if git diff --exit-code --name-only; then
