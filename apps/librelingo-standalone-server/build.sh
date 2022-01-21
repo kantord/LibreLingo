@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euo pipefail
+
 DIRNAME=$(dirname "$0")
 DEFAULT_OUTPUT_DIR="$DIRNAME/bin"
 if [ -n "$1" ]; then
@@ -29,7 +31,7 @@ cp -r "$WEBSITE_DIR" "$BUILD_DIR/static"
 cd "$DIRNAME"
 cp -r ./* "$BUILD_DIR"
 
-set -eux
+set -x
 cd "$BUILD_DIR"
 
 # prepare pkger
