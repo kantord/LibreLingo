@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-./scripts/updatePypiReadmeFiles.sh -B
+./scripts/updatePypiReadmeFiles.sh
 
 if git diff --exit-code --name-only; then
 	echo "🎉 Amazing, PyPi readme files are up to date"
