@@ -19,12 +19,14 @@
     * Irun/Irún (almost the same, but not quite)
 
 ### Vocabulary Egon Egon 3
- * Mendi: mountain
+* Mendi: mountain
+* Irun: Irun
 * Donostia: San Sebastian
 * Gasteiz: Vitoria
 * Bilbo: Bilboa
 * kale: street
 * Frantzia: France
 * ibai: river
+* Begira!: Look!
 
 [ Go Back to Home Page!](..)
