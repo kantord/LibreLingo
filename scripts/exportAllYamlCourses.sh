@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euo pipefail
+
 ANY_FAILED="0"
 for d in ./courses/*/ ; do
 		d=$(echo "$d" | sed 's/[^/]*\/[^/]*\///' | sed 's/\///')
