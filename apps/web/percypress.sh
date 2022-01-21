@@ -1,4 +1,7 @@
 #!/bin/bash
+
+set -euo pipefail
+
 # if [ "$KNAPSACK_PRO_TEST_SUITE_TOKEN_RSPEC" = "" ]; then
 #   echo "KNAPSACK PRO NOT ENABLED"
 #   KNAPSACK_PRO_ENDPOINT=https://api-disabled-for-fork.knapsackpro.com \
