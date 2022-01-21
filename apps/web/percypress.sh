@@ -3,7 +3,7 @@
 #   echo "KNAPSACK PRO NOT ENABLED"
 #   KNAPSACK_PRO_ENDPOINT=https://api-disabled-for-fork.knapsackpro.com \
 #     KNAPSACK_PRO_TEST_SUITE_TOKEN_RSPEC=disabled-for-fork \
-#     KNAPSACK_PRO_MAX_REQUEST_RETRIES=0 
+#     KNAPSACK_PRO_MAX_REQUEST_RETRIES=0
 #     # percy exec -- yarn cy:run
 #     yarn cy:run
 # else
