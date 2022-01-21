@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euo pipefail
+
 find apps/ -name pyproject.toml -exec dirname {} \; |
   while IFS="" read -r directory
     do
