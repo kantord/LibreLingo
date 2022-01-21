@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euo pipefail
+
 yarn exportCourse test
 
 if git diff --exit-code --name-only; then
