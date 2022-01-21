@@ -1,6 +1,8 @@
 #!/bin/bash
 
-./scripts/updatePypiReadmeFiles.sh -B
+set -euo pipefail
+
+./scripts/updatePypiReadmeFiles.sh
 
 if git diff --exit-code --name-only; then
 	echo "🎉 Amazing, PyPi readme files are up to date"
