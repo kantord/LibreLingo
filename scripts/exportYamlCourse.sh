@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euo pipefail
+
 echo -en "⏳ Exporting course $1"
 cd ./apps/librelingo_json_export/ ||
 {
