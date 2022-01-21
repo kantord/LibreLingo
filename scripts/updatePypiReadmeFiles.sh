@@ -14,7 +14,7 @@ find apps/ -name pyproject.toml -exec dirname {} \; |
 			poetry install
 			make README.md -B ||
       {
-        echo -en "\r⚠️Could not update README.md for Python package '$(basename "$directory")'..."
+        echo -en "\r⚠️  Could not update README.md for Python package '$(basename "$directory")'..."
       }
 			cd - ||
 			{
