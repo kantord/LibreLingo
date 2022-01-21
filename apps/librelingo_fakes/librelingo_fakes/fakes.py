@@ -13,7 +13,7 @@ fakes.course2  # This is another Course() object
 fakes.courseEmpty  # This is an empty course
 ```
 
-For the full list of fakes, use the autocomplete or check out the [this file](https://github.com/kantord/LibreLingo/blob/main/apps/librelingo_fakes/librelingo_fakes/fakes.py).
+For the full list of fakes, use the autocomplete or check out the [this file](https://github.com/LibreLingo/LibreLingo/blob/main/apps/librelingo_fakes/librelingo_fakes/fakes.py).
 
 ### Customizing fakes
 
@@ -262,7 +262,7 @@ course2 = Course(
         Module(title="Animals", filename="animals/module.yaml", skills=[skills[3]]),
     ],
     dictionary=fake_dictionary,
-    repository_url="https://github.com/kantord/LibreLingo-Spanish-from-English",
+    repository_url="https://github.com/LibreLingo/LibreLingo-ES-from-EN",
     course_dir="/some/dir",
 )
 

@@ -196,13 +196,13 @@ def export_words_html_page(course, all_words, language, path, reldir, html_file)
 
 def get_repository_url(course):
     repository_url = course.repository_url
-    if "https://github.com/kantord/LibreLingo/tree/main/courses/" in repository_url:
-        repository_url = "https://github.com/kantord/LibreLingo"
+    if "https://github.com/LibreLingo/LibreLingo/tree/main/courses/" in repository_url:
+        repository_url = "https://github.com/LibreLingo/LibreLingo"
     if (
-        "https://github.com/kantord/LibreLingo/tree/main/temporarily_inactive_courses/"
+        "https://github.com/LibreLingo/LibreLingo/tree/main/temporarily_inactive_courses/"
         in repository_url
     ):
-        repository_url = "https://github.com/kantord/LibreLingo"
+        repository_url = "https://github.com/LibreLingo/LibreLingo"
     return repository_url
 
 
