@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
+
 url=$(echo "$1" | cut -d',' -f2)
 image_name=$(echo "$1" | cut -d',' -f1)
 image_id=$(echo "$url" | cut -d'/' -f5)
