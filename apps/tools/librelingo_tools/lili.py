@@ -4,8 +4,9 @@ import collections
 import json
 import logging
 import os
-import sys
 import re
+import sys
+import markdown
 from jinja2 import Environment, FileSystemLoader
 
 from librelingo_yaml_loader.yaml_loader import load_course
@@ -87,6 +88,8 @@ def render(template_file, **args):
     templates_dir = os.path.join(root, "templates")
     env = Environment(loader=FileSystemLoader(templates_dir), autoescape=True)
     env.filters["skillfile"] = skillfile_filter
+    env.filters["yaml2md"] = lambda path: re.sub(r"\.yaml$", ".md", path)
+    env.filters["md2html"] = markdown.markdown
     template = env.get_template(template_file)
     html = template.render(**args)
     return html
