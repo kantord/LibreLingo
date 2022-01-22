@@ -70,7 +70,7 @@ def guess_path_to_course(path_to_course):
 
 
 def skillfile_filter(path):
-    match = re.search(r"^([a-z0-9]+)/skills/([a-z0-9-]+)\.yaml$", path)
+    match = re.search(r"^([a-z0-9]+)/skills/([a-z0-9_-]+)\.yaml$", path)
     if not match:
         raise Exception(f"unrecoginized skill path: '{path}'")
     # return match.group(1) + '/' + match.group(2)
@@ -147,7 +147,7 @@ def export_skill_html_pages(course, count, reldir, html_dir):
                 skill=skill,
                 repository_url=get_repository_url(course),
             )
-            match = re.search(r"^([a-z0-9]+)/skills/([a-z0-9-]+).yaml", skill.filename)
+            match = re.search(r"^([a-z0-9]+)/skills/([a-z0-9_-]+).yaml", skill.filename)
             if match is None:
                 exit(skill.filename)
             module_name = match.group(1)
