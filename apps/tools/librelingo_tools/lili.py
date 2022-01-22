@@ -69,10 +69,19 @@ def guess_path_to_course(path_to_course):
     return path_to_course
 
 
+def skillfile_filter(path):
+    match = re.search(r"^([a-z0-9]+)/skills/([a-z0-9-]+)\.yaml$", path)
+    if not match:
+        raise Exception(f"unrecoginized skill path: '{path}'")
+    # return match.group(1) + '/' + match.group(2)
+    return match.group(2)
+
+
 def render(template_file, **args):
     root = os.path.dirname(os.path.abspath(__file__))
     templates_dir = os.path.join(root, "templates")
     env = Environment(loader=FileSystemLoader(templates_dir), autoescape=True)
+    env.filters["skillfile"] = skillfile_filter
     template = env.get_template(template_file)
     html = template.render(**args)
     return html
@@ -123,6 +132,33 @@ def export_main_html_page(course, count, reldir, html_dir):
     )
     with open(os.path.join(html_dir, "words.html"), "w") as fh:
         fh.write(html)
+
+
+def export_skill_html_pages(course, count, reldir, html_dir):
+    branch = "main"  # how can we know which is the default branch of a repository?
+    for module in course.modules:
+        for skill in module.skills:
+            html = render(
+                "skill.html",
+                title=f"{course.target_language.name} for {course.source_language.name} speakers",
+                rel="../../../",
+                branch=branch,
+                course=course,
+                skill=skill,
+                repository_url=get_repository_url(course),
+            )
+            match = re.search(r"^([a-z0-9]+)/skills/([a-z0-9-]+).yaml", skill.filename)
+            if match is None:
+                exit(skill.filename)
+            module_name = match.group(1)
+            file_name = match.group(2)
+            dir_path = os.path.join(html_dir, "course", module_name, "skills")
+            # print(dir_path)
+            if not os.path.exists(dir_path):
+                os.makedirs(dir_path)
+            # filename = skillurl_filter(skill.filename)
+            with open(os.path.join(dir_path, file_name + ".html"), "w") as fh:
+                fh.write(html)
 
 
 def collect_phrases(course):
@@ -256,6 +292,7 @@ def export_to_html(course, target, source, count, reldir, html_dir):
     )
 
     export_main_html_page(course, count, reldir, html_dir)
+    export_skill_html_pages(course, count, reldir, html_dir)
     export_words_html_page(
         course,
         all_target_words,

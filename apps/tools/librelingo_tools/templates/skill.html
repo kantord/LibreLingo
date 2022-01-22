@@ -1,0 +1,62 @@
+{% include 'incl/header.html' %}
+
+    <h1>{{ skill.name }}</h1>
+    <div>
+        Id: {{ skill.id }}
+    </div>
+    
+
+    <a href="{{ repository_url }}/blob/{{ branch }}/course/{{ rel_dir }}/{{ skill.filename }}">source</a>
+
+    <h2>Introduction</h2>
+
+    {{skill.introduction}}
+
+    <h2>Words</h2>
+    <table>
+        {% for word in skill.words %}
+          <tr>
+              <td>{{word.in_target_language}}</td>
+              <td>{{word.in_source_language}}</td>
+              <td>{{word.pictures}}</td>
+            </tr> 
+    {% endfor %}
+    </table>
+
+    <h2>Phrases</h2>
+    <table>
+        {% for phrase in skill.phrases %}
+          <tr>
+              <td>{{phrase.in_target_language}}</td>
+              <td>{{phrase.in_source_language}}</td>
+            </tr> 
+    {% endfor %}
+    </table>
+
+    <h2>Dictionary</h2>
+    <table>
+        <tr><th>{{ course.source_language.name }}</th><th>{{ course.target_language.name }}</th></tr>
+        {% for pair in skill.dictionary %}
+          {% if not pair[2] %}
+            <tr>
+              <td><a href="{{ rel }}/source/{{ pair[0] }}.html">{{ pair[0] }}</a></td>
+              <td>{{pair[1]}}</td>
+          </tr> 
+          {% endif %}
+    {% endfor %}
+    </table>
+
+    <table>
+        <tr><th>{{ course.target_language.name }}</th><th>{{ course.source_language.name }}</th></tr>
+        {% for pair in skill.dictionary %}
+          {% if pair[2] %}
+            <tr>
+                <td><a href="{{ rel }}/target/{{ pair[0] }}.html">{{ pair[0] }}</a></td>
+                <td>{{pair[1]}}</td>
+            </tr> 
+          {% endif %}
+    {% endfor %}
+    </table>
+
+
+{% include 'incl/footer.html' %}
