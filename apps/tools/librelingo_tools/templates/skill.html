@@ -10,28 +10,55 @@
 
     <h2>Introduction</h2>
 
-    {{skill.introduction}}
+    {% if skill.introduction %}
+      <div id="introduction">
+        {{ skill.introduction | md2html | safe }}
+      </div>
+      
+      <div><a href="{{ repository_url }}/blob/{{ branch }}/course/{{ rel_dir }}/{{ skill.filename | yaml2md }}">source</a></div>
+      
+    {% else %}
+    Each skill can have an introduction in Markdown file. This skill could have it in <a href="{{ repository_url }}/blob/{{ branch }}/course/{{ rel_dir }}/{{ skill.filename | yaml2md }}">source</a>
+
+    {% endif %}
 
     <h2>Words</h2>
-    <table>
-        {% for word in skill.words %}
+    {% if skill.words %}
+      <table>
+          <tr><th>{{ course.target_language.name }}</th><th>{{ course.source_language.name }}</th><th>Images</th></tr>
+        {% for words in skill.words %}
           <tr>
-              <td>{{word.in_target_language}}</td>
-              <td>{{word.in_source_language}}</td>
-              <td>{{word.pictures}}</td>
+              <td>{% for word in words.in_target_language %}<a href="{{ rel }}/target/{{ word }}.html">{{ word }}</a>{%- if not loop.last %},{%- endif %}{% endfor %}</td>
+              <td>{% for word in words.in_source_language %}<a href="{{ rel }}/source/{{ word }}.html">{{ word }}</a>{%- if not loop.last %},{%- endif %}{% endfor %}</td>
+              <td>{{words.pictures}}</td>
             </tr> 
-    {% endfor %}
-    </table>
+        {% endfor %}
+      </table>
+    {% else %}
+    There are no entries in the Words section.
+    {% endif %}
 
     <h2>Phrases</h2>
-    <table>
-        {% for phrase in skill.phrases %}
-          <tr>
-              <td>{{phrase.in_target_language}}</td>
-              <td>{{phrase.in_source_language}}</td>
-            </tr> 
-    {% endfor %}
-    </table>
+    {% if skill.phrases %}
+        <table>
+            {% for phrase in skill.phrases %}
+            <tr>
+                <td>
+                    {% for phrs in phrase.in_target_language %}
+                    {{ phrs }}<br>
+                    {% endfor %}
+                </td>
+                <td>
+                    {% for phrs in phrase.in_source_language %}
+                    {{ phrs }}<br>
+                    {% endfor %}
+                </td>
+                </tr> 
+        {% endfor %}
+        </table>
+    {% else %}
+    There are no entries in the Phrases section.
+    {% endif %}
 
     <h2>Dictionary</h2>
     <table>
