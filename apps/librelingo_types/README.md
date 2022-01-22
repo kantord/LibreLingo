@@ -344,3 +344,13 @@ Definition in the target language (English in this case)
 >>> DictionaryItem("speak", "hablo", True)
 DictionaryItem(word='speak', definition='hablo', is_in_target_language=True)
 
+<a name="librelingo_types.data_types.PhraseIdentity"></a>
+## PhraseIdentity Objects
+
+```python
+class PhraseIdentity(namedtuple("PhraseIdentity", ["text", "source"]))
+```
+
+This is the set of information that identifies a phrase as 'the same'. If any
+of these things change, the phrase will be seen as 'new' and re-generated.
+

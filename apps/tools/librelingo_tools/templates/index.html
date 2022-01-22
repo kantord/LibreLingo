@@ -1,0 +1,14 @@
+{% include 'incl/header.html' %}
+
+    <h1>{{ title }}</h1>
+    <div><a href="{{ course.repository_url }}">Repository</a></div>
+    <div>License: {{ course.license.name }}: <a href="{{ course.license.link }}">{{ course.license.full_name }}</a></div>
+    <div>
+     <table>
+     <tr><th></th>        <th>{{ count.target_language_name }}</th> <th>{{ count.source_language_name }}</th></tr>
+     <tr><th>Words</th>   <td>{{ count.target_words }}</td>         <td>{{ count.source_words }}</td></tr>
+     <tr><th>Phrases</th> <td>{{ count.target_phrases }}</td>       <td>{{ count.source_phrases }}</td></tr>
+     </table>
+    </div>
+
+{% include 'incl/footer.html' %}

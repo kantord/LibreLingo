@@ -11,7 +11,7 @@ to create Python software that works with LibreLingo courses.
 #### calculate\_number\_of\_levels
 
 ```python
-calculate_number_of_levels(nwords, nphrases)
+calculate_number_of_levels(nwords: int, nphrases: int) -> int
 ```
 
 Calculates how many levels a skill should have
@@ -44,7 +44,7 @@ words into a single mini-dictionary term.
 
 ```python
 @lru_cache(maxsize=None)
-clean_word(word)
+clean_word(word: Word)
 ```
 
 Remove punctuation and other special characters from a word.
@@ -53,7 +53,7 @@ Remove punctuation and other special characters from a word.
 #### get\_dumb\_opaque\_id
 
 ```python
-get_dumb_opaque_id(name, id_, salt="")
+get_dumb_opaque_id(name: str, id_, salt: str = "") -> str
 ```
 
 Generate a unique, opaque ID based on a name, and id_ and a salt
@@ -63,17 +63,17 @@ id
 #### get\_opaque\_id
 
 ```python
-get_opaque_id(obj, salt="")
+get_opaque_id(obj, salt: str = "") -> str
 ```
 
-Generate a unique, opaque ID based on a type and a type specific
+Generate a unique, opaque ID based on a salt and the type of the object
 id
 
 <a name="librelingo_utils.utils.audio_id"></a>
 #### audio\_id
 
 ```python
-audio_id(language, text)
+audio_id(language: Language, text: str) -> str
 ```
 
 Generate the ID that will identify the audio file of a sentence.
@@ -82,7 +82,7 @@ Generate the ID that will identify the audio file of a sentence.
 #### iterate\_phrases
 
 ```python
-iterate_phrases(course)
+iterate_phrases(course: Course)
 ```
 
 "Flatten" a course into a sequence of phrases
@@ -91,7 +91,7 @@ iterate_phrases(course)
 #### iterate\_words
 
 ```python
-iterate_words(course)
+iterate_words(course: Course)
 ```
 
 "Flatten" a course into a sequence of words

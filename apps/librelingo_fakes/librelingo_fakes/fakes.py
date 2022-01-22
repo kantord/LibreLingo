@@ -13,7 +13,7 @@ fakes.course2  # This is another Course() object
 fakes.courseEmpty  # This is an empty course
 ```
 
-For the full list of fakes, use the autocomplete or check out the [this file](https://github.com/kantord/LibreLingo/blob/main/apps/librelingo_fakes/librelingo_fakes/fakes.py).
+For the full list of fakes, use the autocomplete or check out the [this file](https://github.com/LibreLingo/LibreLingo/blob/main/apps/librelingo_fakes/librelingo_fakes/fakes.py).
 
 ### Customizing fakes
 
@@ -262,14 +262,22 @@ course2 = Course(
         Module(title="Animals", filename="animals/module.yaml", skills=[skills[3]]),
     ],
     dictionary=fake_dictionary,
-    repository_url="https://github.com/kantord/LibreLingo-Spanish-from-English",
+    repository_url="https://github.com/LibreLingo/LibreLingo-ES-from-EN",
     course_dir="/some/dir",
 )
 
 
+def number(max_value=10000):
+    """
+    Returns a 'random' non-negative integer.
+    It is NOT cryptographically-secure.
+    """
+    return random.randint(0, max_value)  # NOSONAR
+
+
 def fake_value():
     FakeValue = namedtuple("FakeValue", ["id"])
-    return FakeValue(random.randint(0, 10000))
+    return FakeValue(number())
 
 
 def customize(fake, **kwargs):
@@ -280,3 +288,12 @@ def customize(fake, **kwargs):
 
 def path():
     return Path(f"./path{random.randint(0, 5000)}")
+
+
+def get_fake_skill(introduction=None):
+    random_word = "quiz"
+    return random_word, customize(
+        skillWithPhraseAndWord,
+        name=f"Animals {random_word}",
+        introduction=introduction,
+    )

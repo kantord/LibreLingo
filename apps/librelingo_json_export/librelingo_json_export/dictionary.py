@@ -18,9 +18,10 @@
 """
 
 from librelingo_utils import clean_word, get_words_from_phrase
+from librelingo_types.data_types import Course, Word
 
 
-def _get_raw_dictionary_item(course, word, is_in_target_language):
+def _get_raw_dictionary_item(course: Course, word: Word, is_in_target_language):
     """
     Find the matching raw dictionary item for a word.
     """
@@ -35,7 +36,7 @@ def _get_raw_dictionary_item(course, word, is_in_target_language):
     return dictionary_item[0] if dictionary_item else None
 
 
-def _define_word(course, word, is_in_target_language):
+def _define_word(course: Course, word: Word, is_in_target_language):
     """
     Creates the definition object for a word.
     """
@@ -53,7 +54,7 @@ def _define_word(course, word, is_in_target_language):
     )
 
 
-def _define_words_in_sentence(course, sentence, reverse):
+def _define_words_in_sentence(course: Course, sentence, reverse):
     """
     Converts a sentence into a list of definition objects.
     """
