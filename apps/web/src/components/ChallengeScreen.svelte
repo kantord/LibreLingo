@@ -77,7 +77,6 @@
 
   let currentChallenge = remainingChallenges.shift()
   let solvedChallenges = []
-  let skipAllChallenges = null
 
   let progress = 0
   let stats = {
@@ -102,7 +101,6 @@
   $: registerResult = (isCorrect: boolean) => {
       if (isCorrect) {
           stats.correct++
-          skipAllChallenges = skipAllChallengesFunc
           sound.correct.play()
           solvedChallenges.push(currentChallenge)
       } else {
@@ -125,7 +123,11 @@
       resolveChallenge()
   }
 
-  $: skipAllChallengesFunc = async () => {
+  $: skipAllChallenges = async () => {
+      if (solvedChallenges.length == 0) {
+          window.location.replace("/course/test")
+          return
+      }
       stats.skipped++
       remainingChallenges.forEach(() => stats.skipped++)
       remainingChallenges = []
