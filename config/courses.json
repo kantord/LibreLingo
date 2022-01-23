@@ -2,42 +2,63 @@
   {
     "url": "https://github.com/LibreLingo/LibreLingo-ES-from-EN/archive/refs/heads/main.zip",
     "sdir": "LibreLingo-ES-from-EN-main",
-    "tdir": "spanish-from-english"
+    "tdir": "spanish-from-english",
+    "dev": true,
+    "enable": true
   },
   {
     "url": "https://github.com/szabgab/LibreLingo-Judeo-Spanish-from-English/archive/refs/heads/main.zip",
     "sdir": "LibreLingo-Judeo-Spanish-from-English-main",
-    "tdir": "ladino-from-english"
+    "tdir": "ladino-from-english",
+    "dev": true,
+    "enable": false
   },
   {
     "url": "https://github.com/szabgab/LibreLingo-Judeo-Spanish-from-Hebrew/archive/refs/heads/main.zip",
     "sdir": "LibreLingo-Judeo-Spanish-from-Hebrew-main",
-    "tdir": "ladino-from-hebrew"
+    "tdir": "ladino-from-hebrew",
+    "dev": true,
+    "enable": false
   },
   {
     "url": "https://github.com/szabgab/LibreLingo-Judeo-Spanish-from-Spanish/archive/refs/heads/main.zip",
     "sdir": "LibreLingo-Judeo-Spanish-from-Spanish-main",
-    "tdir": "ladino-from-spanish"
+    "tdir": "ladino-from-spanish",
+    "dev": true,
+    "enable": false
   },
   {
     "url": "https://codeberg.org/Lamdarer/LibreLingo-DE-from-EN/archive/main.zip",
     "sdir": "librelingo-de-from-en",
-    "tdir": "german-from-english"
+    "tdir": "german-from-english",
+    "dev": true,
+    "enable": false
   },
   {
     "tdir": "basque-from-english",
-    "reldir": "courses/basque-from-english"
+    "reldir": "courses/basque-from-english",
+    "dev": true,
+    "enable": false
   },
   {
+    "url": "https://github.com/LibreLingo/LibreLingo-BN-from-EN/archive/refs/heads/main.zip",
+    "sdir": "LibreLingo-BN-from-EN",
     "tdir": "bangla-from-english",
-    "reldir": "temporarily_inactive_courses/bangla-from-english"
+    "dev": false,
+    "enable": false
   },
   {
+    "url": "https://github.com/LibreLingo/LibreLingo-FR-from-EN/archive/refs/heads/main.zip",
+    "sdir": "LibreLingo-FR-from-EN",
     "tdir": "french-from-english",
-    "reldir": "temporarily_inactive_courses/french-from-english"
+    "dev": false,
+    "enable": false
   },
   {
+    "url": "https://github.com/LibreLingo/LibreLingo-PAL-from-EN/archive/refs/heads/main.zip",
+    "sdir": "LibreLingo-PAL-from-EN",
     "tdir": "parsig-from-english",
-    "reldir": "temporarily_inactive_courses/parsig-from-english"
+    "dev": false,
+    "enable": false
   }
 ]
