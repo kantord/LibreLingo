@@ -10,7 +10,7 @@ Feature: Short text input challange
     And I read "in Test Language!"
     Given I open "/course/test/skill/short-input-test-1?testChallenge=fc0a3426d589"
     Then I see a tooltip that says "foo"
-    And I see a panel with only a skip button
+    And I see a panel with only a Skip and a Cancel button
     And I'm not able to submit
     And I don't see a "Submit" button
     And I see a card with an image
@@ -80,14 +80,14 @@ Feature: Short text input challange
     And I type "agua"
     And I click "Submit"
     And I click "Continue"
-    Then I see a panel with only a skip and a finish early button
+    Then I see a panel with only a Skip and a Cancel button
 
   Scenario: Going to the next challenge with keyboard only
     Given I open "/course/test/skill/short-input-test-2?testChallenge=aa171956aefe"
     And I type "agua"
     And I hit the enter key
     And I hit the enter key
-    Then I see a panel with only a skip and a finish early button
+    Then I see a panel with only a Skip and a Cancel button
 
   Scenario: using the hover-over dictionary
     Given I open "/course/test/skill/short-input-test-3?testChallenge=86665e4f61fa"
