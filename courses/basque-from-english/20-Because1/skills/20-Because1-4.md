@@ -7,6 +7,6 @@
 * barrez: laughing
 * lasai: relaxed, calm
 * triste: sad
-* hilik: dead
+* hilda: dead
 
 [ Go Back to Home Page!](..)
