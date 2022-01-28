@@ -9,7 +9,7 @@
 * Using the verb ETORRI (to come) or other motion verbs to show that the subject comes from a location,
 * causes the object of the sentence to be changed into the Ablative/Nondik form. (introduced earlier)
 * The question word to go with this form is Nondik, “from/through where”.
-* Note the word order:Hura gaur CaliforniaTIK dator: Today California comes from. He's coming from California today.
+* Note the word order:Hura gaur CaliforniaTIK dator: Today California comes from. He`s coming from California today.
 
 ## Lesson 1 Vocabulary
 * ni nator I am coming
