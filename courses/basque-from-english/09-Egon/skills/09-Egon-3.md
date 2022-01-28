@@ -3,7 +3,7 @@
 ## Inessive(NON) Case
 * In this lesson you will be introduced to the Plural Nouns form of the NON - Inessive
 * This case is used to show that the subjects are in/on/upon places.
-* The Indefinte is also shown below, but won't be used yet.
+* The Indefinte is also shown below, but won`t be used yet.
 * Indefinite
     *   Ending: -(E)TAN
     *   Examples:  etxeTAN (house) haranETAN (valley)
@@ -19,12 +19,14 @@
     * Irun/Irún (almost the same, but not quite)
 
 ### Vocabulary Egon Egon 3
- * Mendi: mountain
+* Mendi: mountain
+* Irun: Irun
 * Donostia: San Sebastian
-* Gasteiz: Victoria
+* Gasteiz: Vitoria
 * Bilbo: Bilboa
 * kale: street
 * Frantzia: France
 * ibai: river
+* Begira!: Look!
 
 [ Go Back to Home Page!](..)
