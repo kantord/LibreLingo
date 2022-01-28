@@ -66,7 +66,7 @@ Given("I complete a lesson", () => {
     cy.get("input[type=text]").type("el perro")
     cy.contains("Submit").click()
     cy.contains("Continue").click()
-    cy.contains("Finish early").click()
+    cy.contains("Cancel").click()
     cy.contains("Continue to course page").click()
 })
 
