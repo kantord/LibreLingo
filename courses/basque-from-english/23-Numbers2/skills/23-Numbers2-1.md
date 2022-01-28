@@ -1,5 +1,5 @@
 # 23. Numbers 2-1
-## CNumbers 20 to 99
+## Numbers 20 to 99
 * Basque counts by twenties.
 * Numbers from 20 to 99 are formed from the base multiple (hogei(20), berrogei(2 x 20, 40), hirurogei(3 x 20, 60), and laurogei(4 x 20, 80)
 * with ta attached and numbers 1-19 added so twenty one (hogeita bat) is twenty(hogei) + ta + one(bat).
