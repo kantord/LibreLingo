@@ -10,7 +10,7 @@
 * The near past is used for past actions in present time frame, usually earlier that day.
 * It is formed with the perfect stem + present of“to be” (IZAN)
 * Ni gaur iristi naiz. I arrived today.
-* Note that bizi didn`t have a near past as it doesn't make sense to have lived one place prior to today,
+* Note that bizi didn`t have a near past as it doesn`t make sense to have lived one place prior to today,
 * another place this morning and yet another now.
 
 

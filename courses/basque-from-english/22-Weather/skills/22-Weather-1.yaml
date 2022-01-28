@@ -70,7 +70,7 @@ Phrases:
   - Phrase: Hotza, bustia eta hodeitsu dago.
     Translation: It is cold, wet and cloudy today.
     Alternative translations:
-      - It's cold, wet and cloudy today.
+      - It`s cold, wet and cloudy today.
 
   - Phrase: Ni etxera noa, beroa dagoelako.
     Alternative versions:
@@ -88,7 +88,9 @@ Phrases:
   - Phrase: Zerua urdina dago eta eguzkia horia da.
     Translation: The sky is blue and the sun is yellow.
 
-  - Phrase: Hiru hodei zuriak daude zeruan.
+  - Phrase: Badaude hiru hodei zuriak zeruan.
+    Alternative versions:
+     - Hiru hodei zuriak daude zeruan.
     Translation: There are three white clouds in the sky.
 
   - Phrase: Eguzkia beroa eta horia da.
@@ -103,13 +105,23 @@ Phrases:
   - Phrase: Hodeitsu eta hoztu zegoen atzo.
     Translation: It was cloudy and cool yesterday.
 
-  - Phrase: Gaur eguraldi ona dago.
-    Translation: Today there is good weather.
+  - Phrase: Badago eguraldi ona gaur.
+    Alternative versions:
+     - Eguraldi ona dago gaur.
+     - Gaur eguraldi ona dago.
+     - Gaur badago eguraldi ona.
+    Translation: There is good weather today.
 
-  - Phrase: Atzo eguraldi txarra zegoen.
-    Translation: Yesterday there was bad weather
+  - Phrase: Bazegoen eguraldi txarra zegoen atzo.
+    Alternative versions:
+     - Eguraldi txarra zegoen atzo.
+     - Atzo bazegoen eguraldi txarra .
+     - Atzo eguraldi txarra zegoen.
+    Translation: There was bad weather yesterday.
 
-  - Phrase: Begira! Hodei beltzak daude.
+  - Phrase: Begira! Badaude hodei beltzak.
+    Alternative versions:
+     - Begira! Hodei beltzak daude.
     Translation: Look! There are black clouds.
 
   - Phrase: Hodeitsu zegoen, baina epela atzo.
@@ -119,69 +131,86 @@ Mini-dictionary:
   Basque:
     - Aitorren: Aitor’s (male name)
     - Alemania: Germany
-    - Alemaniakoa: from Germany
-    - Alemaniakoak: from Germany
-    - Alemaniako: from Germany
+    - Alemaniakoak: of Germany
+    - Alemaniakoa: of Germany
+    - Alemaniako: of Germany
     - Alemanian: in Germany
     - Alemaniara: To Germany
     - Anearenak: Anea’s (female name, plural object)
     - Anitza: Anitza (female name)
-    - Anitzaen: Anitza's (female name, single object)
+    - Anitzaen: Anitza`s (female name, single object)
     - Arrano: Arrano (name of a street)
     - Bilbo: Bilbao
-    - Bilbokoa: from  Bilbao
-    - Bilbokoak: from  Bilbao
-    - Bilboko: from  Bilbao
+    - Bilbokoak: of  Bilbao
+    - Bilbokoa: of  Bilbao
+    - Bilboko: of  Bilbao
     - Bilbon: in Bilbao
     - Bilbora: To Bilbao
-    - Donostiakoa: from San Sebastian
-    - Donostiakoak: from San Sebastian
-    - Donostiako: from San Sebastian
+    - Done: Saint
+    - Donostiakoak: of San Sebastian
+    - Donostiakoa: of San Sebastian
+    - Donostiako: of San Sebastian
     - Donostian: in San Sebastian
     - Donostiara: To San Sebastian
+    - Donostia:  San Sebastian
     - Donostiatik: from San Sebastian
-    - Espainiakoa: from Spain
-    - Espainiakoak: from Spain
-    - Espainiako: from Spain
+    - Espainiakoak: of Spain
+    - Espainiakoa: of Spain
+    - Espainiako: of Spain
     - Espainian: in Spain
     - Espainiara: To Spain
     - Espainiatik: from Spain
+    - espainiera: Spanish Language
+    - espainieraz: in Spanish
     - Europan: in Europe
     - Europara: To Europe
     - Europatik: from Europe
     - euskal: basque
     - Euskal Herri: Basque Country
     - Euskal Herrira: to Basque Country
+    - euskara: Basque Language
+    - euskaraz: in Basque
     - Francian: in France
     - Frantzian: in France
     - Frantziara: To France
     - Frantziatik: from France
-    - Gasteizekoa: from Victoria
-    - Gasteizekoak: from Victoria
-    - Gasteizeko: from Victoria
-    - Gasteizen: in Victoria (city in Basque Country)
-    - Gasteizera: To Victoria
-    - Gasteizetik: from Victoria
-    - Gasteiztik: from Victoria
-    - Gasteiz: Victoria
+    - Gasteizekoak: of Vitoria
+    - Gasteizekoa: of Vitoria
+    - Gasteizeko: from Vitoria
+    - Gasteizen: in Vitoria (city in Basque Country)
+    - Gasteizera: To Vitoria
+    - Gasteizetik: from Vitoria
+    - Gasteiztik: from Vitoria
+    - Gasteiz: Vitoria
+    - Herriko: of the country
     - Herrira: in the country
-    - Irunan: in Irun
+    - ingelesa: English language
+    - ingeles: English language
+    - ingelesez: In English
+    - Irunen: in Irun
     - Irunera: To Irun
-    - Irungoa: from Irun
-    - Irungoak: from Irun
-    - Irungo: from Irun
+    - Irunetik: from Irun
+    - Irungoak: of Irun
+    - Irungoa: of Irun
+    - Irungo: of Irun
     - Italia: Italy
     - Italian: in Italy
     - Italiara: To Italy
     - Itziaren: Itziar’s
+    - Jakue: James
     - Lili: Lili (LibreLingo Turtle)
     - Madrilen: in madrid
     - Madrilera: To Madrid
-    - Mikelen: Mikel’s (male name)
     - Mikelenak: Mikel’s (male name)
+    - Mikelen: Mikel’s (male name)
     - Mirenen: Miren’s (female name)
     - Miren: Miren’s (female name)
+    - Olentzero: Olentzero (Basque Santa)
     - Parisetik: from Paris
+    - Santa: Santa
+    - Santiagon: in Santiago
+    - Santiagora: to Santiago
+    - Santiago: Santiago de Compostela (city in Galicia, Spain)
     - Xabieren: Xabier’s (male name)
     - ahizpa: sister of a sister
     - ahizparen: sister’s
@@ -569,7 +598,7 @@ Mini-dictionary:
     - hemeretzi: nineteen
     - herrian: country
     - hilero: every month
-    - hilik: dead
+    - hilda: dead
     - hiru: three
     - hodei: cloud
     - hodeia: cloud
@@ -983,7 +1012,7 @@ Mini-dictionary:
     - Aitor’s: Aitorren (male name)
     - Anea’s: Anearenak (female name, plural object)
     - Anitza: Anitza (female name)
-    - Anitza's: Anitzaen (female name, plural object)
+    - Anitza`s: Anitzaen (female name, plural object)
     - Lili: Lili (LibreLingo Turtle)
     - Mikel’s: Mikelenak (male name)
     - Miren’s: Mirenen (female name)
@@ -1002,7 +1031,7 @@ Mini-dictionary:
     - Paris: Paris
     - San Sebastian: Donostia
     - Spain: Espainia
-    - Victoria: Gasteis (city in Basque Country)
+    - Vitoria: Gasteiz (city in Basque Country)
     - one: bat
     - two: bi
     - three: hiru
@@ -1183,7 +1212,7 @@ Mini-dictionary:
     - daughter: alaba
     - daughters: alabak
     - daughter’s: alabaren
-    - dead: hilik
+    - dead: hilda
     - do: not translated
     - does: not translated
     - doctor: medikua
