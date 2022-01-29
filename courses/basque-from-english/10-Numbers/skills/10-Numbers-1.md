@@ -1,7 +1,7 @@
 # Numbers and Math 1
 ### Numbers one to five
 * The number one (bat) is treated as an adjective, and goes to the right, and as takes grammatical suffixes.
-    * Mutil baten liburua da.  It is one boy`s book.
+    * Mutil baten liburua da.  It is one boy's book.
 * The rest of the numbers go the the left and are not changed.
     * Bi gizon daude. There are two men.
     * (note that gizon is in the Indefinite form)
