@@ -14,7 +14,7 @@ version: '3.3'
 services:
     librelingo-dev:
         volumes:
-            - (path to your course)
+            - '(path to your course):/LibreLingo/courses/your-course'
         ports:
             - '3000:3000'
         container_name: LibreLingo-Dev
