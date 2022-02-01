@@ -287,7 +287,7 @@ def customize(fake, **kwargs):
 
 
 def path():
-    return Path(f"./path{random.randint(0, 5000)}")
+    return Path(f"./path{number(5000)}")
 
 
 def get_fake_skill(introduction=None):
