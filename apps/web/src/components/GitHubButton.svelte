@@ -1,6 +1,6 @@
 <script lang="typescript" context="module">
   export async function preload() {
-      const repo = await fetch("https://api.github.com/repos/kantord/LibreLingo")
+      const repo = await fetch("https://api.github.com/repos/LibreLingo/LibreLingo")
 
       const { stargazers_count } = await repo.json()
       return {
@@ -36,7 +36,7 @@
       }
 
       pMemoize(fetch, { maxAge: 5 * 60 * 1000 })(
-          "https://api.github.com/repos/kantord/LibreLingo"
+          "https://api.github.com/repos/LibreLingo/LibreLingo"
       )
           .then((res) => res.json())
           .then(({ stargazers_count }) => {
@@ -51,7 +51,7 @@
 <Button
   target="_blank"
   size="{size}"
-  href="https://github.com/kantord/LibreLingo"
+  href="https://github.com/LibreLingo/LibreLingo"
 >
   {#if stars}
     <span class="tag is-white">

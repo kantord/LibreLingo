@@ -8,7 +8,7 @@ Feature: Cards challenge
     And I read "Which of these is"
     And I see 3 cards
     And I see 3 inactive cards
-    And I see a panel with only a skip button
+    And I see a panel with only a Skip and a Cancel button
     And I don't see a "Submit" button
 
   Scenario: Getting a cards challenge in an iPhone

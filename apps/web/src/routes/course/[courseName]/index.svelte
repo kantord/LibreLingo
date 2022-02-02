@@ -53,7 +53,7 @@
         by
         <a href="https://github.com/kantord">Dániel Kántor</a>
         and
-        <a href="https://github.com/kantord/LibreLingo#contributors-">
+        <a href="https://github.com/LibreLingo/LibreLingo#contributors">
           various contributors
         </a>
         .
@@ -62,7 +62,7 @@
         The source code is licensed
         <a href="https://opensource.org/licenses/AGPL-3.0">AGPL-3.0.</a>
         <br />
-        <a href="https://github.com/kantord/LibreLingo">
+        <a href="https://github.com/LibreLingo/LibreLingo">
           Source code available on GitHub.
         </a>
       </Column>

@@ -1,0 +1,89 @@
+{% include 'incl/header.html' %}
+
+    <h1>{{ skill.name }}</h1>
+    <div>
+        Id: {{ skill.id }}
+    </div>
+    
+
+    <a href="{{ repository_url }}/blob/{{ branch }}/course/{{ rel_dir }}/{{ skill.filename }}">source</a>
+
+    <h2>Introduction</h2>
+
+    {% if skill.introduction %}
+      <div id="introduction">
+        {{ skill.introduction | md2html | safe }}
+      </div>
+      
+      <div><a href="{{ repository_url }}/blob/{{ branch }}/course/{{ rel_dir }}/{{ skill.filename | yaml2md }}">source</a></div>
+      
+    {% else %}
+    Each skill can have an introduction in Markdown file. This skill could have it in <a href="{{ repository_url }}/blob/{{ branch }}/course/{{ rel_dir }}/{{ skill.filename | yaml2md }}">source</a>
+
+    {% endif %}
+
+    <h2>Words</h2>
+    {% if skill.words %}
+      <table>
+          <tr><th>{{ course.target_language.name }}</th><th>{{ course.source_language.name }}</th><th>Images</th></tr>
+        {% for words in skill.words %}
+          <tr>
+              <td>{% for word in words.in_target_language %}<a href="{{ rel }}/target/{{ word }}.html">{{ word }}</a>{%- if not loop.last %},{%- endif %}{% endfor %}</td>
+              <td>{% for word in words.in_source_language %}<a href="{{ rel }}/source/{{ word }}.html">{{ word }}</a>{%- if not loop.last %},{%- endif %}{% endfor %}</td>
+              <td>{{words.pictures}}</td>
+            </tr> 
+        {% endfor %}
+      </table>
+    {% else %}
+    There are no entries in the Words section.
+    {% endif %}
+
+    <h2>Phrases</h2>
+    {% if skill.phrases %}
+        <table>
+            {% for phrase in skill.phrases %}
+            <tr>
+                <td>
+                    {% for phrs in phrase.in_target_language %}
+                    {{ phrs }}<br>
+                    {% endfor %}
+                </td>
+                <td>
+                    {% for phrs in phrase.in_source_language %}
+                    {{ phrs }}<br>
+                    {% endfor %}
+                </td>
+                </tr> 
+        {% endfor %}
+        </table>
+    {% else %}
+    There are no entries in the Phrases section.
+    {% endif %}
+
+    <h2>Dictionary</h2>
+    <table>
+        <tr><th>{{ course.source_language.name }}</th><th>{{ course.target_language.name }}</th></tr>
+        {% for pair in skill.dictionary %}
+          {% if not pair[2] %}
+            <tr>
+              <td><a href="{{ rel }}/source/{{ pair[0] }}.html">{{ pair[0] }}</a></td>
+              <td>{{pair[1]}}</td>
+          </tr> 
+          {% endif %}
+    {% endfor %}
+    </table>
+
+    <table>
+        <tr><th>{{ course.target_language.name }}</th><th>{{ course.source_language.name }}</th></tr>
+        {% for pair in skill.dictionary %}
+          {% if pair[2] %}
+            <tr>
+                <td><a href="{{ rel }}/target/{{ pair[0] }}.html">{{ pair[0] }}</a></td>
+                <td>{{pair[1]}}</td>
+            </tr> 
+          {% endif %}
+    {% endfor %}
+    </table>
+
+
+{% include 'incl/footer.html' %}
