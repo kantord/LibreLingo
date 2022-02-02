@@ -1,18 +1,13 @@
-<nav
-  data-test-id="navbar"
-  aria-label="main navigation"
->
-
+<nav data-test-id="site-navbar" aria-label="main navigation">
   <div class="left">
     <slot name="left" />
   </div>
 
-  <div class="middle"></div>
+  <div class="middle" />
 
   <div class="right">
     <slot name="right" />
   </div>
-
 </nav>
 
 <style type="text/scss">
@@ -28,7 +23,7 @@
     color: var(--navbar-text-color);
     border: 0;
 
-    >* {
+    > * {
       img {
         height: var(--navbar-logo-height);
       }
