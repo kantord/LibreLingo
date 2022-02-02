@@ -9,7 +9,7 @@ Feature: Chips challenge
     And I read "are"
     And I read "you"
     And I read "today?"
-    And I see a panel with only a skip button
+    And I see a panel with only a Skip and a Cancel button
     And I see the correct chips
     And chips challenge looks correct
 
@@ -27,7 +27,7 @@ Feature: Chips challenge
     And I read "Correct answer: ¿Como, estás hoy?"
     And I see a "Continue" button
     Given I click "Continue"
-    Then I see a panel with only a skip button
+    Then I see a panel with only a Skip and a Cancel button
 
   Scenario: Submitting a correct solution
     Given I open "/course/test/skill/chips-test-0?testChallenge=5000997897bb"
@@ -36,11 +36,11 @@ Feature: Chips challenge
     And I click "hoy"
     Then I have unused chips
     Given I click "Submit"
-    Then I see the challenge panel with no skip button
+    Then I see the challenge panel with no Skip button
     And I read "Correct solution"
     And I see a "Continue" button
     Given I click "Continue"
-    Then I see a panel with only a skip and a finish early button
+    Then I see a panel with only a Skip and a Cancel button
 
   Scenario: Submitting an alternative correct solution
     Given I open "/course/test/skill/chips-test-0?testChallenge=5000997897bb"
@@ -48,11 +48,11 @@ Feature: Chips challenge
     And I click "como"
     And I click "estás"
     Given I click "Submit"
-    Then I see the challenge panel with no skip button
+    Then I see the challenge panel with no Skip button
     And I read "Correct solution"
     And I see a "Continue" button
     Given I click "Continue"
-    Then I see a panel with only a skip and a finish early button
+    Then I see a panel with only a Skip and a Cancel button
 
     Scenario: Submitting an alternative correct solution with uncapitalized chips
       Given I open "/course/test/skill/chips-test-0?testChallenge=59cd9b603be9"
@@ -60,8 +60,8 @@ Feature: Chips challenge
       And I click "estás"
       And I click "hoy"
       Given I click "Submit"
-      Then I see the challenge panel with no skip button
+      Then I see the challenge panel with no Skip button
       And I read "Correct solution"
       And I see a "Continue" button
       Given I click "Continue"
-      Then I see a panel with only a skip and a finish early button
+      Then I see a panel with only a Skip and a Cancel button

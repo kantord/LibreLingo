@@ -149,6 +149,9 @@ def main():
     )
 
     for course in courses:
+        if not course["dev"]:
+            continue
+
         if "url" in course:
             download_course(course["url"], tempdir)
             sdir = os.path.join(tempdir.name, course["sdir"])

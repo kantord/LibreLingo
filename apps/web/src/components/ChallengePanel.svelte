@@ -34,9 +34,7 @@
     {#if skipAction}
       <Button on:click="{skipAction}">Skip</Button>
     {/if}
-    {#if skipAllAction}
-      <Button on:click="{skipAllAction}">Finish early</Button>
-    {/if}
+    <Button on:click="{skipAllAction}">Cancel</Button>
     {#if skipAllVoice}
       <Button on:click="{skipAllVoice}">Can't listen now</Button>
     {/if}
