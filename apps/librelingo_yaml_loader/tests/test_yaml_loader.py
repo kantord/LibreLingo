@@ -707,9 +707,6 @@ Mini-dictionary:
         self.convert_phrases.assert_called_with(self.fake_values["fake_phrases"])
 
 
-
-
-
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
 def test_load_module_complains_about_an_empty_file(load_yaml):
     random_path = fakes.path()
