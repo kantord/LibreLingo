@@ -27,6 +27,7 @@ def test__get_course_data_return_value():
         "languageName": "my language",
         "languageCode": "de",
         "specialCharacters": ["ä", "ß"],
+        "repositoryURL": "https://github.com/kantord/LibreLingo/tree/main/courses/spanish-from-english",
         "license": {
             "name": {
                 "short": "foo",
@@ -78,6 +79,7 @@ def test__get_course_data_return_value_2():
         "languageName": "another language",
         "languageCode": "tr",
         "specialCharacters": ["ç", "ş"],
+        "repositoryURL": "https://github.com/LibreLingo/LibreLingo-ES-from-EN",
         "license": {
             "name": {"short": "lorem", "full": "ipsum lorem license"},
             "link": "https://example.com/lipsum_license",
@@ -109,6 +111,7 @@ def test__get_course_data_return_value_with_introduction():
         "languageName": "another language",
         "languageCode": "tr",
         "specialCharacters": ["ç", "ş"],
+        "repositoryURL": "https://github.com/LibreLingo/LibreLingo-ES-from-EN",
         "license": {
             "name": {"short": "lorem", "full": "ipsum lorem license"},
             "link": "https://example.com/lipsum_license",
