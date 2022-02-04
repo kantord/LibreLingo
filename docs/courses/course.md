@@ -2,12 +2,12 @@
 
 A **Course** is the highest element on the course structure. It contains modules, which in turn contains skills. There are usually one course for each language.
 
-To get a better understanding, you can explore the [`courses` directory](https://github.com/kantord/LibreLingo/tree/main/courses) on this repository and read the [course basics](README.md#basics).
+To get a better understanding, you can explore the [`courses` directory](https://github.com/LibreLingo/LibreLingo/tree/main/courses) on this repository and read the [course basics](README.md#basics).
 
 ---
 
 **Confused?**
-[Ask people](https://github.com/kantord/LibreLingo/discussions) on GitHub Discussions.
+[Ask people](https://github.com/LibreLingo/LibreLingo/discussions) on GitHub Discussions.
 
 ---
 

@@ -20,14 +20,14 @@ graph LR
  TYPES[librelingo-types] --> LOAD
  UTILS[librelingo-utils] --> LOAD
 
- click APP "https://github.com/kantord/LibreLingo/tree/main/apps/web"
+ click APP "https://github.com/LibreLingo/LibreLingo/tree/main/apps/web"
  click EXPORT "https://pypi.org/project/librelingo-json-export/"
  click UTILS "https://pypi.org/project/librelingo-utils/"
  click TYPES "https://pypi.org/project/librelingo-types/"
- click IMAGE "https://github.com/kantord/LibreLingo/tree/main/apps/web/static/images"
- click AUDIO "https://github.com/kantord/LibreLingo/tree/main/apps/web/static/voice"
+ click IMAGE "https://github.com/LibreLingo/LibreLingo/tree/main/apps/web/static/images"
+ click AUDIO "https://github.com/LibreLingo/LibreLingo/tree/main/apps/web/static/voice"
  click LOAD "https://pypi.org/project/librelingo-yaml-loader/"
- click YAML "https://github.com/kantord/LibreLingo/tree/main/courses"
+ click YAML "https://github.com/LibreLingo/LibreLingo/tree/main/courses"
 ```
 
 ## Setting up the development environment
@@ -35,7 +35,7 @@ graph LR
 Clone the repository:
 
 ```sh
-git clone git@github.com:kantord/LibreLingo.git
+git clone git@github.com:LibreLingo/LibreLingo.git
 ```
 
 Move into the repo directory:

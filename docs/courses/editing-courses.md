@@ -7,7 +7,7 @@ To get a better understanding, we recommend you read the [course basics](README.
 ---
 
 **Confused?**
-[Ask people](https://github.com/kantord/LibreLingo/discussions) on GitHub Discussions.
+[Ask people](https://github.com/LibreLingo/LibreLingo/discussions) on GitHub Discussions.
 
 ---
 
@@ -27,10 +27,10 @@ To get a better understanding, we recommend you read the [course basics](README.
 
 LibreLingo uses Git repository for maintaining code. In order to contribute changes, you need to first fork this project. To fork:
 - [login](https://github.com/login) to GitHub
-- then go to [LibreLingo repository](https://github.com/kantord/LibreLingo/)
+- then go to [LibreLingo repository](https://github.com/LibreLingo/LibreLingo/)
 - click the "Fork" button (beside Watch and Star)
 
-In a moment you will be taken to a new repository. Closely notice the url as it will be `https://github.com/<your github username>/LibreLingo/` instead of `https://github.com/kantord/LibreLingo/`. Now you should have a copy of the project source code under your name.
+In a moment you will be taken to a new repository. Closely notice the url as it will be `https://github.com/<your github username>/LibreLingo/` instead of `https://github.com/LibreLingo/LibreLingo/`. Now you should have a copy of the project source code under your name.
 
 This is called "[forking](https://guides.github.com/activities/forking/)". Forking allows you to apply your changes without directly changing the original project.
 
@@ -163,4 +163,4 @@ When you are done, you can continue to the [pull request section](#pushing-and-p
 <a id="editing-existing"></a>
 ## Editing existing courses
 
-If you want to make edits to course data, consult [Course](course.md), [Module](module.md) or [Skill](skill.md) documentation for details or [discuss](https://github.com/kantord/LibreLingo/discussions) if you're unsure on how to do something.
+If you want to make edits to course data, consult [Course](course.md), [Module](module.md) or [Skill](skill.md) documentation for details or [discuss](https://github.com/LibreLingo/LibreLingo/discussions) if you're unsure on how to do something.

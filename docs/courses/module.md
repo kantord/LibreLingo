@@ -9,7 +9,7 @@ To get a better understanding, you can read the [course basics](README.md#basics
 ---
 
 **Confused?**
-[Ask people](https://github.com/kantord/LibreLingo/discussions) on GitHub Discussions.
+[Ask people](https://github.com/LibreLingo/LibreLingo/discussions) on GitHub Discussions.
 
 ---
 

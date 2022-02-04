@@ -9,7 +9,7 @@ The words and phrases that make up a skill are taught to the user using [automat
 ---
 
 **Confused?**
-[Ask people](https://github.com/kantord/LibreLingo/discussions) on GitHub Discussions.
+[Ask people](https://github.com/LibreLingo/LibreLingo/discussions) on GitHub Discussions.
 
 ---
 
@@ -107,7 +107,7 @@ Mini-dictionary:
 **`Skill`** has information about the skill.
 - `Skill > Name`: The human friendly name of the skill.
 - `Skill > Id`: The ID of the course. **NOTE:** This should be unchanged if you're translating or editing existing course. Only if you're creating a new course, this should have a unique [UUID v4](https://www.uuidgenerator.net/version4) string. Details for which you can find [here](creating-courses.md).
-- `Skill > Thumbnails`: A list of filenames of the thumbnails to be used on the course page to give an idea of the skill. A list of available files can be found on [`apps/web/static/images/`](https://github.com/kantord/LibreLingo/tree/main/apps/web/static/images). The names should be used without extension and without `_tiny` or `_tinier` parts. e.g. `banana2_tinier.jpg` should be written as `banana2`.
+- `Skill > Thumbnails`: A list of filenames of the thumbnails to be used on the course page to give an idea of the skill. A list of available files can be found on [`apps/web/static/images/`](https://github.com/LibreLingo/LibreLingo/tree/main/apps/web/static/images). The names should be used without extension and without `_tiny` or `_tinier` parts. e.g. `banana2_tinier.jpg` should be written as `banana2`.
 
 **`New words`** has a list of new words that the lesson teaches.
 - `Word`: The word in the target language, i.e. the language the user is learning.

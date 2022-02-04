@@ -7,7 +7,7 @@ Challenges are not configured directly, but [automatically generated from Skill 
 ---
 
 **Confused?**
-[Ask people](https://github.com/kantord/LibreLingo/discussions) on GitHub Discussions.
+[Ask people](https://github.com/LibreLingo/LibreLingo/discussions) on GitHub Discussions.
 
 ---
 
