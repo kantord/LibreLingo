@@ -1,3 +1,4 @@
+# pylint: disable=unused-argument
 import os
 import re
 from pathlib import Path
