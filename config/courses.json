@@ -3,6 +3,7 @@
     "url": "https://github.com/LibreLingo/LibreLingo-ES-from-EN/archive/refs/heads/main.zip",
     "sdir": "LibreLingo-ES-from-EN-main",
     "tdir": "spanish-from-english",
+    "deploy": true,
     "dev": true,
     "enable": true
   },
@@ -10,6 +11,7 @@
     "url": "https://github.com/szabgab/LibreLingo-Judeo-Spanish-from-English/archive/refs/heads/main.zip",
     "sdir": "LibreLingo-Judeo-Spanish-from-English-main",
     "tdir": "ladino-from-english",
+    "deploy": true,
     "dev": true,
     "enable": false
   },
@@ -17,6 +19,7 @@
     "url": "https://github.com/szabgab/LibreLingo-Judeo-Spanish-from-Hebrew/archive/refs/heads/main.zip",
     "sdir": "LibreLingo-Judeo-Spanish-from-Hebrew-main",
     "tdir": "ladino-from-hebrew",
+    "deploy": true,
     "dev": true,
     "enable": false
   },
@@ -24,6 +27,7 @@
     "url": "https://github.com/szabgab/LibreLingo-Judeo-Spanish-from-Spanish/archive/refs/heads/main.zip",
     "sdir": "LibreLingo-Judeo-Spanish-from-Spanish-main",
     "tdir": "ladino-from-spanish",
+    "deploy": true,
     "dev": true,
     "enable": false
   },
@@ -31,6 +35,7 @@
     "url": "https://codeberg.org/Lamdarer/LibreLingo-DE-from-EN/archive/main.zip",
     "sdir": "librelingo-de-from-en",
     "tdir": "german-from-english",
+    "deploy": true,
     "dev": true,
     "enable": false
   },
@@ -38,6 +43,7 @@
     "tdir": "basque-from-english",
     "sdir": "LibreLingo-EU-from-EN-main",
     "url": "https://github.com/LibreLingo/LibreLingo-EU-from-EN/archive/refs/heads/main.zip",
+    "deploy": true,
     "dev": true,
     "enable": false
   },
@@ -45,6 +51,7 @@
     "url": "https://github.com/LibreLingo/LibreLingo-BN-from-EN/archive/refs/heads/main.zip",
     "sdir": "LibreLingo-BN-from-EN-main",
     "tdir": "bangla-from-english",
+    "deploy": false,
     "dev": true,
     "enable": false
   },
@@ -52,6 +59,7 @@
     "url": "https://github.com/LibreLingo/LibreLingo-FR-from-EN/archive/refs/heads/main.zip",
     "sdir": "LibreLingo-FR-from-EN-main",
     "tdir": "french-from-english",
+    "deploy": false,
     "dev": true,
     "enable": false
   },
@@ -59,6 +67,7 @@
     "url": "https://github.com/LibreLingo/LibreLingo-PAL-from-EN/archive/refs/heads/main.zip",
     "sdir": "LibreLingo-PAL-from-EN-main",
     "tdir": "parsig-from-english",
+    "deploy": false,
     "dev": true,
     "enable": false
   }
