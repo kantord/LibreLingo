@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[345],{642:function(e,n,a){"use strict";a.r(n),n.default="# 22. Weather 3\n\n### Vocabulary 3\n\n*   beraz: so-so\n*   hezea: humid\n*   hezetasun: humidity\n*   tenperatura: temperature\n*   baxua: low\n*   zentigradu: centigrade\n*   gradu: degree\n*   bakarra: only\n\n[ Go Back to Home Page!](..)"}}]);
