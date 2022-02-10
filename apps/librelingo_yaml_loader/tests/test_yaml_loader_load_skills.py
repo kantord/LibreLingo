@@ -16,11 +16,13 @@ def mock_load_skill(mocker):
 
 
 def test_returns_correct_value(fs, mock_load_skill):
+    # pylint: disable=unused-argument
     mock_load_skill.return_value = fakes.fake_value()
     assert _load_skills("foo", ["bar"], fakes.course1) == [mock_load_skill.return_value]
 
 
 def test_handles_every_module(fs, mock_load_skill):
+    # pylint: disable=unused-argument
     mock_load_skill.return_value = fakes.fake_value()
     assert (
         _load_skills("foo", ["bar", "baz"], fakes.course1)
@@ -29,5 +31,6 @@ def test_handles_every_module(fs, mock_load_skill):
 
 
 def test_calls_load_skills_with_correct_arguments(fs, mock_load_skill):
+    # pylint: disable=unused-argument
     _load_skills("foo", ["bar.yaml"], fakes.course1)
     mock_load_skill.assert_called_with(Path("foo/skills/bar.yaml"), fakes.course1)
