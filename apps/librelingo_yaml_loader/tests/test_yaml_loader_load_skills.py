@@ -2,10 +2,9 @@
 this file contains tests of the funcion
 librelingo_yaml_loader.yaml_loader._load_skills
 """
-
+from pathlib import Path
 import pytest
 
-from pathlib import Path
 from librelingo_yaml_loader.yaml_loader import _load_skills
 from librelingo_fakes import fakes
 
