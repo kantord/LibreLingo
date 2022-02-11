@@ -31,9 +31,7 @@ def test_calls__get_course_data_with_correct_value(
     mock_get_course_data.assert_called_with(fakes.course1)
 
 
-def test_writes_correct_value_into_json_file(
-    fs, export_path, mock_get_course_data
-):  # pylint:disable=invalid-name
+def test_writes_correct_value_into_json_file(fs, export_path, mock_get_course_data):
     fake_course_data = {"fake_course_data": 1000}
     mock_get_course_data.return_value = fake_course_data
     _export_course_data(export_path, fakes.course1)

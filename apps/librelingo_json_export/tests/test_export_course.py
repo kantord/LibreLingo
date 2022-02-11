@@ -16,7 +16,7 @@ def mock_export_course_data(mocker):
 
 def test_calls__export_course_data_with_correct_value(
     fs, export_path, mock_export_course_data
-):  # pylint:disable=invalid-name
+):
     export_course(export_path, fakes.course1)
     mock_export_course_data.assert_called_with(export_path, fakes.course1, None)
 
@@ -28,6 +28,6 @@ def mock_export_course_skills(mocker):
 
 def test_calls__export_course_skills_with_correct_value(
     fs, export_path, mock_export_course_skills
-):  # pylint:disable=invalid-name
+):
     export_course(export_path, fakes.course1)
     mock_export_course_skills.assert_called_with(export_path, fakes.course1, None)
