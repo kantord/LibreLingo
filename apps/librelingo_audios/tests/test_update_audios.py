@@ -1,4 +1,3 @@
-# pylint: disable=unused-argument
 from librelingo_fakes import fakes
 from librelingo_types import Settings, AudioSettings, TextToSpeechSettings
 
