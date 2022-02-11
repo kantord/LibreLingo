@@ -13,7 +13,7 @@ def export_path():
     return fakes.path()
 
 
-def test_creates_the_correct_file(fs, export_path):  # pylint:disable=invalid-name
+def test_creates_the_correct_file(fs, export_path):
     _export_course_data(export_path, fakes.course1)
     assert os.path.exists(export_path / "courseData.json")
 
@@ -25,7 +25,7 @@ def mock_get_course_data(mocker):
 
 def test_calls__get_course_data_with_correct_value(
     fs, export_path, mock_get_course_data
-):  # pylint:disable=invalid-name
+):
     mock_get_course_data.return_value = []
     _export_course_data(export_path, fakes.course1)
     mock_get_course_data.assert_called_with(fakes.course1)
@@ -41,7 +41,7 @@ def test_writes_correct_value_into_json_file(
         assert json.loads(f.read()) == fake_course_data
 
 
-def test_assert_logs_correctly(caplog, fs, export_path):  # pylint:disable=invalid-name
+def test_assert_logs_correctly(caplog, fs, export_path):
     with caplog.at_level(logging.INFO, logger="librelingo_json_export"):
         course_name = "Animals"
         target_name = "English"
