@@ -95,7 +95,7 @@ def render(template_file, **args):
     return html
 
 
-def export_main_html_page(course, count, reldir, html_dir):
+def export_main_html_page(course, count, html_dir):
     branch = "main"  # how can we know which is the default branch of a repository?
     #'count', 'dictionary', 'index', 'license', 'modules', 'repository_url', 'settings', 'source_language', 'special_characters', 'target_language'
     # course.modules[0].skills[0].phrases
@@ -142,7 +142,7 @@ def export_main_html_page(course, count, reldir, html_dir):
         fh.write(html)
 
 
-def export_skill_html_pages(course, count, reldir, html_dir):
+def export_skill_html_pages(course, html_dir):
     branch = "main"  # how can we know which is the default branch of a repository?
     for module in course.modules:
         for skill in module.skills:
@@ -297,8 +297,8 @@ def export_to_html(course, target, source, count, reldir, html_dir):
         collect_words(target, "target-to-source"), "target-to-source.json", html_dir
     )
 
-    export_main_html_page(course, count, reldir, html_dir)
-    export_skill_html_pages(course, count, reldir, html_dir)
+    export_main_html_page(course, count, html_dir)
+    export_skill_html_pages(course, html_dir)
     export_words_html_page(
         course,
         all_target_words,

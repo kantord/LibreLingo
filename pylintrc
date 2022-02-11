@@ -45,7 +45,7 @@ limit-inference-results=100
 
 # List of plugins (as comma separated values of python module names) to load,
 # usually to register additional checkers.
-load-plugins=
+load-plugins=pylint_pytest
 
 # Pickle collected data for later comparisons.
 persistent=yes
@@ -84,12 +84,10 @@ disable=raw-checker-failed,
         file-ignored,
         suppressed-message,
         useless-suppression,
-        deprecated-pragma, #TODO: enable
         duplicate-code,  # TODO: enable
         invalid-name,  # TODO: enable
         missing-function-docstring,  # TODO: enable
         redefined-outer-name,  # TODO: enable
-        unused-argument,  # TODO: enable
         missing-class-docstring,  # TODO: enable
         too-many-public-methods,  # TODO: enable
         unspecified-encoding,  # TODO: enable

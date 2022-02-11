@@ -74,7 +74,7 @@ def download_course(url, tempdir):
     zf.extractall(path=tempdir.name)
 
 
-def generate_course(links, courses_data, sdir, reldir, outdir, tdir, course_dir):
+def generate_course(links, courses_data, reldir, outdir, tdir, course_dir):
     logging.info("generate_course %s", course_dir)
     # pylint complains of "Catching too general exception Exception (broad-except)"
     # but I don't know what kind of exception can happen there, so for now let's not catch any exception.
@@ -165,7 +165,6 @@ def main():
         generate_course(
             links=links,
             courses_data=courses_data,
-            sdir=sdir,
             reldir=reldir,
             outdir=outdir,
             tdir=course["tdir"],
