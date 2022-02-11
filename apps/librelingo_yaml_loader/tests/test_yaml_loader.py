@@ -730,6 +730,7 @@ def test_load_module_complains_missing_module_name(load_yaml):
 
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
 def test_load_skills_complains_missing_skills(load_yaml):
+    # pylint: disable=unused-argument
     random_path = fakes.path()
     expected_error = (
         f'Module file "{random_path}/module.yaml" needs to have a list of skills'
