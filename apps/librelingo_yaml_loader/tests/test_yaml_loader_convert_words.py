@@ -19,7 +19,6 @@ def mock_convert_word(mocker):
 
 
 def test_converts_every_word(mock_convert_word):
-    # pylint: disable=unused-argument
     raw_words = [None] * fakes.number()
     assert len(_convert_words(raw_words)) == len(raw_words)
 
