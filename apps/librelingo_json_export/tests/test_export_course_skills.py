@@ -1,4 +1,3 @@
-# pylint: disable=unused-argument
 import pytest
 
 from librelingo_json_export.export import _export_course_skills
