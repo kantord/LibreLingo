@@ -530,29 +530,6 @@ class LoadModulesTestCase(TestCase):
         load_module.assert_called_with(Path("foo/bar"), fakes.course1)
 
 
-class TestLoadSkills(TestCase):
-    @patch("librelingo_yaml_loader.yaml_loader._load_skill")
-    def test_returns_correct_value(self, load_skill):
-        load_skill.return_value = fakes.fake_value()
-        self.assertEqual(
-            _load_skills("foo", ["bar"], fakes.course1), [load_skill.return_value]
-        )
-
-    @patch("librelingo_yaml_loader.yaml_loader._load_skill")
-    def test_handles_every_module(self, load_skill):
-        load_skill.return_value = fakes.fake_value()
-        self.assertEqual(
-            _load_skills("foo", ["bar", "baz"], fakes.course1),
-            [load_skill.return_value] * 2,
-        )
-
-    @patch("librelingo_yaml_loader.yaml_loader._load_skill")
-    def test_calls_load_skills_with_correct_arguments(self, load_skill):
-        # pylint: disable=no-self-use
-        _load_skills("foo", ["bar.yaml"], fakes.course1)
-        load_skill.assert_called_with(Path("foo/skills/bar.yaml"), fakes.course1)
-
-
 class TestLoadSkill(YamlImportTestCase):
     def get_fake_skill_yaml(self, **kwargs):
         # pylint: disable=no-self-use
