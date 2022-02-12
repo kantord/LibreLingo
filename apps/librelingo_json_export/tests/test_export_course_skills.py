@@ -1,4 +1,3 @@
-# pylint: disable=unused-argument
 import pytest
 
 from librelingo_json_export.export import _export_course_skills
@@ -16,9 +15,7 @@ def mock_export_skill(mocker):
     return mocker.patch("librelingo_json_export.export._export_skill")
 
 
-def test_exports_all_skills(
-    mocker, fs, export_path, mock_export_skill
-):  # pylint:disable=invalid-name
+def test_exports_all_skills(mocker, fs, export_path, mock_export_skill):
     _, fake_skill_1 = fakes.get_fake_skill()
     _, fake_skill_2 = fakes.get_fake_skill()
     _, fake_skill_3 = fakes.get_fake_skill()

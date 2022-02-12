@@ -19,7 +19,6 @@ def mock_convert_phrase(mocker):
 
 
 def test_converts_every_word(mock_convert_phrase):
-    # pylint: disable=unused-argument
     # mock_convert_phrase is needed here becasue
     # _convert_phrase crashes for input None
     raw_words = [None] * fakes.number()
