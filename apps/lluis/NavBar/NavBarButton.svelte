@@ -14,6 +14,7 @@
 
 <style type="text/scss">
   div :global(*) {
+    height: 36px;
     display: block;
     padding: 6px;
     color: var(--navbar-text-color);
