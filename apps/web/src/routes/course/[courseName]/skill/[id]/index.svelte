@@ -5,6 +5,7 @@
           languageName,
           languageCode,
           specialCharacters,
+          repositoryURL,
       } = await import(`../../../../../courses/${courseName}/courseData.json`)
       const skillData = await import(
           `../../../../../courses/${courseName}/challenges/${id}.json`
@@ -19,6 +20,7 @@
           languageName,
           languageCode,
           specialCharacters,
+          repositoryURL,
           id,
           skillId,
           challengesPerLevel,
@@ -36,6 +38,7 @@
   export let languageName: string
   export let languageCode: string
   export let specialCharacters: Array<string>
+  export let repositoryURL: string
   export let id: string
   export let courseURL: string
   export let skillId: string
@@ -51,7 +54,7 @@
   <title>LibreLingo - learn {id} in {languageName} for free</title>
 </svelte:head>
 
-<NavBar />
+<NavBar {repositoryURL} />
 
 <ChallengeScreen
   {expectedNumberOfChallenges}

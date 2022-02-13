@@ -8,6 +8,7 @@
   import NavBarItem from "lluis/NavBar/NavBarItem.svelte"
   import NavBarButtonSet from "lluis/NavBar/NavBarButtonSet.svelte"
   export let hasAuth = false
+  export let repositoryURL = null
 
   type WindowWithLogout = Window & {
     _Logout: () => void
@@ -22,6 +23,9 @@
 
   <div slot="right">
     <NavBarButtonSet>
+      {#if repositoryURL}
+        <NavBarButton href={repositoryURL} target="_blank">Feedback</NavBarButton>
+      {/if}
       {#if hasAuth && settings.features.authEnabled}
         {#if $authStore.user}
           <NavBarItem>
