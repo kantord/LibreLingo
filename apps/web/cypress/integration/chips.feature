@@ -12,6 +12,7 @@ Feature: Chips challenge
     And I see a panel with only a Skip and a Cancel button
     And I see the correct chips
     And chips challenge looks correct
+    And I see a "Feedback" link in the navbar
 
   Scenario: Using the mini-dictionary
     Given I open "/course/test/skill/chips-test-0?testChallenge=c3f7fcb9c86c"
