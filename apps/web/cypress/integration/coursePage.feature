@@ -11,6 +11,7 @@ Feature: Course page
     And I see a skill that has no image set
     And I see 3 skills that have an image set
     And I see a "Log in" link in the navbar
+    And I see a "Feedback" link in the navbar
 
   Scenario: Opening course page with a stale skill
     Given I open "/course/test"
