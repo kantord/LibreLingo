@@ -4,10 +4,11 @@
 
   const dispatch = createEventDispatcher()
   export let href: string | null = null
+  export let target: "_blank" | undefined = undefined
 </script>
 
 <div>
-  <LinkOrButton href={href} on:click="{() => dispatch('click')}">
+  <LinkOrButton href={href} on:click="{() => dispatch('click')}" target={target}>
     <slot />
   </LinkOrButton>
 </div>
