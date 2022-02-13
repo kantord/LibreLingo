@@ -1,11 +1,11 @@
 <script lang="typescript" context="module">
   export async function preload(page) {
       const { courseName } = page.params
-      const { modules, languageName } = await import(
+      const { modules, languageName, repositoryURL } = await import(
           `../../../courses/${courseName}/courseData.json`
       )
 
-      return { courseName, modules, languageName }
+      return { courseName, modules, languageName, repositoryURL }
   }
 </script>
 
@@ -20,13 +20,14 @@
   export let courseName = null
   export let modules: ModulesType = null
   export let languageName = null
+  export let repositoryURL = null
 </script>
 
 <svelte:head>
   <title>LibreLingo - learn {languageName} for free</title>
 </svelte:head>
 
-<NavBar hasAuth />
+<NavBar hasAuth {repositoryURL} />
 
 {#each modules as { title, skills }}
   <section class="section">
