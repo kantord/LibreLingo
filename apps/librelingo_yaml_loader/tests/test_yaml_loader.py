@@ -2,7 +2,6 @@ import os
 import re
 from pathlib import Path
 from unittest.mock import Mock, patch
-from unittest import TestCase
 import pytest
 from pyfakefs.fake_filesystem_unittest import TestCase as FakeFsTestCase  # type: ignore
 from librelingo_types.data_types import Settings
