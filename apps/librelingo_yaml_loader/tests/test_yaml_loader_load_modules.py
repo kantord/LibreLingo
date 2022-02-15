@@ -16,14 +16,16 @@ def mock_load_module(mocker):
 
 def test_returns_correct_value(mock_load_module):
     mock_load_module.return_value = fakes.fake_value()
-    assert _load_modules("foo", ["bar"], fakes.course1) == [load_module.return_value]
+    assert _load_modules("foo", ["bar"], fakes.course1) == [
+        mock_load_module.return_value
+    ]
 
 
 def test_handles_every_module(mock_load_module):
     mock_load_module.return_value = fakes.fake_value()
     assert (
         _load_modules("foo", ["bar", "baz"], fakes.course1)
-        == [load_module.return_value] * 2
+        == [mock_load_module.return_value] * 2
     )
 
 
