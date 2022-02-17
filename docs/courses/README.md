@@ -23,7 +23,6 @@ This is also a good resource if you just want to learn about the course system i
   - [Exploring the courses](#exploring-courses)
   - [Things to do for new contributors](#things-new-contributors)
 - [Courses currently open for contributions](#courses-open)
-  - [For English speakers](#courses-from-english)
 - [Caution](#caution)
   - [Languages that don't use the Latin alphabet](#non-latin-alphabet)
 
@@ -86,14 +85,7 @@ If you are new in contributing to course data, these are the things you can do t
 <a id="courses-open"></a>
 ## Courses currently open for contributions
 
-<a id="courses-from-english"></a>
-### For English speakers
-
-- [Spanish for English speakers](https://github.com/kantord/LibreLingo-ES-from-EN) ([Preview](https://librelingo.app/course/spanish-from-english/))
-- [German for English speakers](https://codeberg.org/Lamdarer/LibreLingo-DE-from-EN) ([Preview](https://librelingo.app/course/german-from-english/))
-- [French for English speakers](https://github.com/kantord/LibreLingo/tree/master/courses/french-from-english)
-- [Bangla for English speakers](https://github.com/kantord/LibreLingo/tree/master/courses/bangla-from-english)
-
+[Check out our devtool page for the up to date list](https://librelingo.app/dev/).
 
 ## Caution
 
