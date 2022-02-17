@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[346],{643:function(a,n,e){"use strict";e.r(n),n.default="# 24. Calendar 5\n\n## Week\n\n### Vocabulary 5\n\n*   aste: Week\n*   astelehena: Monday\n*   asteartea: Tuesday\n*   asteazkena: Wednesday\n*   osteguna: Thursday\n*   ostirala: Friday\n*   larunbata: Saturday\n*   igandea: Sunday\n\n[ Go Back to Home Page!](..)"}}]);
