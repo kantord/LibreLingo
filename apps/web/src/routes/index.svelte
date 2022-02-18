@@ -89,6 +89,12 @@
                     Start learning Ladino (for Spanish speakers)
                   </Translate>
                 </Button>
+
+                <Button style="primary" href="course/houma-from-spanish">
+                  <Translate key="index.start_houma_course">
+                    Start learning Houma (for English speakers)
+                  </Translate>
+                </Button>
               </Hidden>
               <Button style="primary" href="about">
                 <Translate key="index.about_librelingo">
