@@ -90,7 +90,7 @@
                   </Translate>
                 </Button>
 
-                <Button style="primary" href="course/houma-from-spanish">
+                <Button style="primary" href="course/houma-from-english">
                   <Translate key="index.start_houma_course">
                     Start learning Houma (for English speakers)
                   </Translate>
