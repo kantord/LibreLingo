@@ -1,33 +1,19 @@
 import os
 import re
 from pathlib import Path
-from unittest import TestCase
 from unittest.mock import Mock, patch
 
 import pytest
 from librelingo_fakes import fakes
-from librelingo_types import (
-    Course,
-    DictionaryItem,
-    HunspellSettings,
-    Language,
-    License,
-    Module,
-    Phrase,
-    Skill,
-    TextToSpeechSettings,
-    Word,
-)
+from librelingo_types import (Course, DictionaryItem, HunspellSettings,
+                              Language, License, Module, Phrase, Skill,
+                              TextToSpeechSettings, Word)
 from librelingo_types.data_types import Settings
-from librelingo_yaml_loader.yaml_loader import (
-    _convert_license,
-    _load_module,
-    _load_modules,
-    _load_skill,
-    _load_skills,
-    load_course,
-)
-from pyfakefs.fake_filesystem_unittest import TestCase as FakeFsTestCase  # type: ignore
+from librelingo_yaml_loader.yaml_loader import (_convert_license, _load_module,
+                                                _load_skill, _load_skills,
+                                                load_course)
+from pyfakefs.fake_filesystem_unittest import \
+    TestCase as FakeFsTestCase  # type: ignore
 
 
 class YamlImportTestCase(FakeFsTestCase):
@@ -505,29 +491,6 @@ class TestLoadModuleMeta(YamlImportTestCase):
             ],
             fakes.course1,
         )
-
-
-class LoadModulesTestCase(TestCase):
-    @patch("librelingo_yaml_loader.yaml_loader._load_module")
-    def test_returns_correct_value(self, load_module):
-        load_module.return_value = fakes.fake_value()
-        self.assertEqual(
-            _load_modules("foo", ["bar"], fakes.course1), [load_module.return_value]
-        )
-
-    @patch("librelingo_yaml_loader.yaml_loader._load_module")
-    def test_handles_every_module(self, load_module):
-        load_module.return_value = fakes.fake_value()
-        self.assertEqual(
-            _load_modules("foo", ["bar", "baz"], fakes.course1),
-            [load_module.return_value] * 2,
-        )
-
-    @patch("librelingo_yaml_loader.yaml_loader._load_module")
-    def test_calls_load_modules_with_correct_arguments(self, load_module):
-        # pylint: disable=no-self-use
-        _load_modules("foo", ["bar"], fakes.course1)
-        load_module.assert_called_with(Path("foo/bar"), fakes.course1)
 
 
 class TestLoadSkill(YamlImportTestCase):
