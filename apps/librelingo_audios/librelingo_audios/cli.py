@@ -1,7 +1,9 @@
-from pathlib import Path
 import collections
+from pathlib import Path
+
 import click  # type: ignore
 from librelingo_yaml_loader import load_course
+
 from librelingo_audios.update_audios import update_audios_for_course
 
 Settings = collections.namedtuple(
@@ -32,7 +34,8 @@ def ensure_output_directory(output_path, settings):
     "--destructive/--non-destructive",
     default=DEFAULT_SETTINGS.destructive,
     show_default=True,
-    help="--destructive deletes existing audio and re-generates from scratch. --non-destructive performs an iterative update.",
+    help="--destructive deletes existing audio and re-generates from scratch."
+    "--non-destructive performs an iterative update.",
 )
 def _command(input_path: str, output_path: str, course_name: str, dry_run, destructive):
     """
