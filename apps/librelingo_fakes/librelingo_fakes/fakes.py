@@ -1,7 +1,8 @@
 """
 This package contains fake data for testing LibreLingo-related packages.
 
-The fake data is returned using the types from [librelingo-types](https://pypi.org/project/librelingo-types/).
+The fake data is returned using the types from
+[librelingo-types](https://pypi.org/project/librelingo-types/).
 
 ## Usage
 ```python
@@ -13,7 +14,8 @@ fakes.course2  # This is another Course() object
 fakes.courseEmpty  # This is an empty course
 ```
 
-For the full list of fakes, use the autocomplete or check out the [this file](https://github.com/LibreLingo/LibreLingo/blob/main/apps/librelingo_fakes/librelingo_fakes/fakes.py).
+# pylint: disable=line-too-long
+For the full list of fakes, use the autocomplete or check out[this file](https://github.com/LibreLingo/LibreLingo/blob/main/apps/librelingo_fakes/librelingo_fakes/fakes.py).
 
 ### Customizing fakes
 
@@ -29,20 +31,23 @@ fake_course = fakes.customize(fakes.course1, modules=[
 
 """
 
-from pathlib import Path
 import random
 from collections import namedtuple
-from librelingo_types import Course
-from librelingo_types import Module
-from librelingo_types import Skill
-from librelingo_types import Phrase
-from librelingo_types import Word
-from librelingo_types import License
-from librelingo_types import Language
-from librelingo_types import DictionaryItem
-from librelingo_types import Settings
-from librelingo_types import AudioSettings
-from librelingo_types import TextToSpeechSettings
+from pathlib import Path
+
+from librelingo_types import (
+    AudioSettings,
+    Course,
+    DictionaryItem,
+    Language,
+    License,
+    Module,
+    Phrase,
+    Settings,
+    Skill,
+    TextToSpeechSettings,
+    Word,
+)
 
 challenge1 = "challenge1"
 challenge2 = "challenge2"

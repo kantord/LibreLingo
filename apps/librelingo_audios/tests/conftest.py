@@ -50,6 +50,7 @@ def terminal(tmp_path, capsys):
 
     return SimpleNamespace(
         assert_output_matches=assert_output_matches,
+        # pylint: disable=line-too-long
         message=SimpleNamespace(
             **{
                 "generating": lambda text: f"Generating {tmp_path / _mock_audio_file_for_text(text)} using Lupe standard",

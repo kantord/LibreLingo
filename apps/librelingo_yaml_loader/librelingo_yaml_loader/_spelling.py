@@ -26,7 +26,8 @@ def _validate_phrase_in_target_language(phrase, course):
         for variant_subword in variant.split():
             if not course.settings.hunspell.target_language.spell(variant_subword):
                 raise RuntimeError(
-                    f'The {course.target_language.name} phrase "{variant}" is misspelled. The word "{variant_subword}" is unknown.'
+                    f'The {course.target_language.name} phrase "{variant}" is misspelled.'
+                    f'The word "{variant_subword}" is unknown.'
                 )
 
 
@@ -35,7 +36,8 @@ def _validate_phrase_in_source_language(phrase, course):
         for variant_subword in variant.split():
             if not course.settings.hunspell.source_language.spell(variant_subword):
                 raise RuntimeError(
-                    f'The {course.source_language.name} phrase "{variant}" is misspelled. The word "{variant_subword}" is unknown.'
+                    f'The {course.source_language.name} phrase "{variant}" is misspelled.'
+                    f'The word "{variant_subword}" is unknown.'
                 )
 
 
