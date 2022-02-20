@@ -2,13 +2,10 @@
 import argparse
 import random
 
-from librelingo_tools.lili import (  # type: ignore
-    guess_path_to_course,
-    collect_data,
-    collect_words,
-    collect_phrases,
-)
 from librelingo_yaml_loader.yaml_loader import load_course
+
+from librelingo_tools.lili import collect_data  # type: ignore
+from librelingo_tools.lili import collect_phrases, collect_words, guess_path_to_course
 
 
 def get_args():

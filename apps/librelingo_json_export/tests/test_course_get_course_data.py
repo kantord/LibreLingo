@@ -1,6 +1,6 @@
 from librelingo_fakes import fakes
-from librelingo_utils import calculate_number_of_levels
 from librelingo_json_export.course import _get_course_data
+from librelingo_utils import calculate_number_of_levels
 
 course_with_markdown = fakes.customize(
     fakes.course2,

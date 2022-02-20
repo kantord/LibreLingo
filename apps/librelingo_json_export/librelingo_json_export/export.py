@@ -1,10 +1,12 @@
-import logging
 import json
+import logging
 from pathlib import Path
+
 from librelingo_types.data_types import Course, Skill
 from slugify import slugify
-from .skills import _get_skill_data
+
 from .course import _get_course_data
+from .skills import _get_skill_data
 
 logger = logging.getLogger("librelingo_json_export")
 

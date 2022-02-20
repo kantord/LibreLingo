@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 
-import sys
 import re
+import sys
+
 from librelingo_yaml_loader.yaml_loader import load_course
 
 reports = {}

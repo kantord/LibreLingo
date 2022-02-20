@@ -1,29 +1,28 @@
 import collections
-from pathlib import Path
 import os
+from pathlib import Path
 from typing import List, Union
 
 import bleach
+import html2markdown  # type: ignore
+import markdown
 from librelingo_types import (
+    AudioSettings,
     Course,
     DictionaryItem,
     Language,
     License,
     Module,
     Phrase,
-    Skill,
-    Word,
     Settings,
-    AudioSettings,
+    Skill,
     TextToSpeechSettings,
+    Word,
 )
-import markdown
 from yaml import safe_load
 from yaml.constructor import SafeConstructor
 
-import html2markdown  # type: ignore
-
-from ._spelling import _run_skill_spellcheck, _convert_hunspell_settings
+from ._spelling import _convert_hunspell_settings, _run_skill_spellcheck
 
 
 def add_bool(self, node):
