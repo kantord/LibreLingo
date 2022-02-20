@@ -5,15 +5,27 @@ from unittest.mock import Mock, patch
 
 import pytest
 from librelingo_fakes import fakes
-from librelingo_types import (Course, DictionaryItem, HunspellSettings,
-                              Language, License, Module, Phrase, Skill,
-                              TextToSpeechSettings, Word)
+from librelingo_types import (
+    Course,
+    DictionaryItem,
+    HunspellSettings,
+    Language,
+    License,
+    Module,
+    Phrase,
+    Skill,
+    TextToSpeechSettings,
+    Word,
+)
 from librelingo_types.data_types import Settings
-from librelingo_yaml_loader.yaml_loader import (_convert_license, _load_module,
-                                                _load_skill, _load_skills,
-                                                load_course)
-from pyfakefs.fake_filesystem_unittest import \
-    TestCase as FakeFsTestCase  # type: ignore
+from librelingo_yaml_loader.yaml_loader import (
+    _convert_license,
+    _load_module,
+    _load_skill,
+    _load_skills,
+    load_course,
+)
+from pyfakefs.fake_filesystem_unittest import TestCase as FakeFsTestCase  # type: ignore
 
 
 class YamlImportTestCase(FakeFsTestCase):
