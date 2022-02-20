@@ -47,7 +47,15 @@ class AudioSettings(
     ...     enabled=True,
     ...     text_to_speech_settings_list=[TextToSpeechSettings()]
     ... )
-    AudioSettings(enabled=True, text_to_speech_settings_list=[TextToSpeechSettings(provider='Polly', voice='Lupe', engine='standard')])
+    AudioSettings(
+        enabled=True, text_to_speech_settings_list=[
+            TextToSpeechSettings(
+                provider='Polly',
+                voice='Lupe',
+                engine='standard'
+            )
+        ]
+    )
     """
 
     pass
@@ -91,7 +99,16 @@ class Settings(
     ### Usage example:
 
     >>> Settings()
-    Settings(audio_settings=AudioSettings(enabled=False, text_to_speech_settings_list=[]), hunspell=HunspellSettings(source_language=None, target_language=None))
+    Settings(
+        audio_settings=AudioSettings(
+            enabled=False,
+            text_to_speech_settings_list=[]
+        ),
+        hunspell=HunspellSettings(
+            source_language=None,
+            target_language=None
+        )
+    )
     """
 
     pass
@@ -174,7 +191,11 @@ class License(
     ...     name="CC BY 4.0",
     ...     link="https://creativecommons.org/licenses/by/4.0/"
     ... )
-    License(name='CC BY 4.0', full_name='Attribution 4.0 International (CC BY 4.0)', link='https://creativecommons.org/licenses/by/4.0/')
+    License(
+        name='CC BY 4.0',
+        full_name='Attribution 4.0 International (CC BY 4.0)',
+        link='https://creativecommons.org/licenses/by/4.0/'
+    )
     """
 
     pass
@@ -276,7 +297,11 @@ class Word(
     ...     in_source_language=["dog"],
     ...     pictures=["dog1", "dog2", "dog3"]
     ... )
-    Word(in_target_language=['perro'], in_source_language=['dog'], pictures=['dog1', 'dog2', 'dog3'])
+    Word(
+        in_target_language=['perro'],
+        in_source_language=['dog'],
+        pictures=['dog1', 'dog2', 'dog3']
+    )
     """
 
     pass
