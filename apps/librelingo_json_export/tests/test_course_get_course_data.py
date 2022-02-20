@@ -1,6 +1,6 @@
 from librelingo_fakes import fakes
-from librelingo_utils import calculate_number_of_levels
 from librelingo_json_export.course import _get_course_data
+from librelingo_utils import calculate_number_of_levels
 
 course_with_markdown = fakes.customize(
     fakes.course2,
@@ -27,6 +27,7 @@ def test__get_course_data_return_value():
         "languageName": "my language",
         "languageCode": "de",
         "specialCharacters": ["ä", "ß"],
+        # pylint: disable=line-too-long
         "repositoryURL": "https://github.com/kantord/LibreLingo/tree/main/courses/spanish-from-english",
         "license": {
             "name": {

@@ -2,29 +2,18 @@ import os
 import re
 from pathlib import Path
 from unittest.mock import Mock, patch
+
 import pytest
-from pyfakefs.fake_filesystem_unittest import TestCase as FakeFsTestCase  # type: ignore
-from librelingo_types.data_types import Settings
-from librelingo_types import (
-    Course,
-    License,
-    Module,
-    Skill,
-    Word,
-    Phrase,
-    Language,
-    DictionaryItem,
-    TextToSpeechSettings,
-    HunspellSettings,
-)
-from librelingo_yaml_loader.yaml_loader import (
-    load_course,
-    _convert_license,
-    _load_module,
-    _load_skills,
-    _load_skill,
-)
 from librelingo_fakes import fakes
+from librelingo_types import (Course, DictionaryItem, HunspellSettings,
+                              Language, License, Module, Phrase, Skill,
+                              TextToSpeechSettings, Word)
+from librelingo_types.data_types import Settings
+from librelingo_yaml_loader.yaml_loader import (_convert_license, _load_module,
+                                                _load_skill, _load_skills,
+                                                load_course)
+from pyfakefs.fake_filesystem_unittest import \
+    TestCase as FakeFsTestCase  # type: ignore
 
 
 class YamlImportTestCase(FakeFsTestCase):
@@ -892,7 +881,8 @@ def test_load_skill_complains_about_misspelled_phrase_in_target_language(load_ya
         ),
     )
     expected_error = re.escape(
-        f'The {fake_course.target_language.name} phrase "{fake_phrase}" is misspelled. The word "{fake_word}" is unknown.'
+        f'The {fake_course.target_language.name} phrase "{fake_phrase}" is misspelled.'
+        f'The word "{fake_word}" is unknown.'
     )
     with pytest.raises(RuntimeError, match=expected_error):
         _load_skill(random_path, fake_course)
@@ -926,7 +916,8 @@ def test_load_skill_complains_about_misspelled_phrase_in_source_language(load_ya
         ),
     )
     expected_error = re.escape(
-        f'The {fake_course.source_language.name} phrase "{fake_phrase}" is misspelled. The word "{fake_word}" is unknown.'
+        f'The {fake_course.source_language.name} phrase "{fake_phrase}" is misspelled.'
+        f'The word "{fake_word}" is unknown.'
     )
     with pytest.raises(RuntimeError, match=expected_error):
         _load_skill(random_path, fake_course)
