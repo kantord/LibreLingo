@@ -1,7 +1,6 @@
 import pytest
-
-from librelingo_json_export.challenges import _get_phrase_challenges
 from librelingo_fakes import fakes
+from librelingo_json_export.challenges import _get_phrase_challenges
 
 challenges = _get_phrase_challenges(fakes.phrase1, fakes.course1)
 PHRASES_GROUPS = [challenge["group"] for challenge in challenges]

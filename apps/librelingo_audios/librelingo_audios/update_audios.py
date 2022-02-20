@@ -1,11 +1,13 @@
-from pathlib import Path
-import subprocess
 import json
 import random
+import subprocess
+from pathlib import Path
 from typing import Set, Union
-from librelingo_audios.functions import list_required_audios
+
 from librelingo_types.data_types import Course, PhraseIdentity
 from librelingo_utils import audio_id
+
+from librelingo_audios.functions import list_required_audios
 
 
 def update_audios_for_course(
@@ -106,11 +108,13 @@ def _generate_audio_with_tts(
 
     if settings.dry_run:
         print(
-            f"Would generate {destination_path} using {chosen_tts_settings.voice} {chosen_tts_settings.engine}"
+            f"Would generate {destination_path} "
+            f"using {chosen_tts_settings.voice} {chosen_tts_settings.engine}"
         )
     else:
         print(
-            f"Generating {destination_path} using {chosen_tts_settings.voice} {chosen_tts_settings.engine}"
+            f"Generating {destination_path} "
+            f"using {chosen_tts_settings.voice} {chosen_tts_settings.engine}"
         )
         # This is where more more TTS providers would be added with an if statement.
         # For now there is only Polly.

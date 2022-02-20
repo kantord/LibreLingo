@@ -1,15 +1,16 @@
 import re
-import pytest
 
+import pytest
 from librelingo_fakes import fakes
-from librelingo_types import DictionaryItem
 from librelingo_json_export.dictionary import _define_word
+from librelingo_types import DictionaryItem
 
 
 def test_definition_not_found():
     word = str(fakes.fake_value())
     pattern = re.escape(
-        f'The another language word "{word}" does not have a definition. Please add it to the mini-dictionary.'
+        f'The another language word "{word}" does not have a definition.'
+        "Please add it to the mini-dictionary."
     )
     with pytest.raises(ValueError, match=pattern):
         assert _define_word(fakes.course1, word, is_in_target_language=False) is True

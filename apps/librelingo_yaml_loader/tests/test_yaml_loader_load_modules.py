@@ -3,10 +3,10 @@ this file contains tests of the funcion
 librelingo_yaml_loader.yaml_loader._load_modules
 """
 from pathlib import Path
-import pytest
 
-from librelingo_yaml_loader.yaml_loader import _load_modules
+import pytest
 from librelingo_fakes import fakes
+from librelingo_yaml_loader.yaml_loader import _load_modules
 
 
 @pytest.fixture
