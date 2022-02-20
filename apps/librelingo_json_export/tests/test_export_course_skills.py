@@ -1,8 +1,7 @@
 import pytest
-
+from librelingo_fakes import fakes
 from librelingo_json_export.export import _export_course_skills
 from librelingo_types import Module
-from librelingo_fakes import fakes
 
 
 @pytest.fixture

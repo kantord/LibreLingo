@@ -6,11 +6,11 @@ import logging
 import os
 import re
 import sys
+
 import markdown
 from jinja2 import Environment, FileSystemLoader
-
-from librelingo_yaml_loader.yaml_loader import load_course
 from librelingo_json_export.export import export_course
+from librelingo_yaml_loader.yaml_loader import load_course
 
 Settings = collections.namedtuple(
     "Settings",

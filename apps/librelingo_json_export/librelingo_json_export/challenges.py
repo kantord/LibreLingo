@@ -1,10 +1,11 @@
 from librelingo_types.data_types import Course
+
 from .challenge_types import (
-    get_options_challenge,
-    get_listening_challenge,
-    get_chips_challenge,
-    get_reverse_chips_challenge,
     get_cards_challenge,
+    get_chips_challenge,
+    get_listening_challenge,
+    get_options_challenge,
+    get_reverse_chips_challenge,
     get_short_input_challenge,
 )
 

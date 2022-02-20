@@ -1,9 +1,9 @@
 import re
-import pytest
 
+import pytest
 from librelingo_fakes import fakes
-from librelingo_types import DictionaryItem
 from librelingo_json_export.dictionary import _define_word
+from librelingo_types import DictionaryItem
 
 
 def test_definition_not_found():

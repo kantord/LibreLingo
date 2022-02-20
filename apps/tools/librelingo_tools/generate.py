@@ -4,9 +4,10 @@ import datetime
 import json
 import logging
 import os
-import zipfile
 import shutil
 import tempfile
+import zipfile
+
 import requests
 from jinja2 import Environment, FileSystemLoader
 

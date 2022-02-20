@@ -1,5 +1,6 @@
-from librelingo_utils import get_opaque_id, calculate_number_of_levels
 from librelingo_types.data_types import Course, Skill
+from librelingo_utils import calculate_number_of_levels, get_opaque_id
+
 from .challenges import _get_challenges_data
 
 

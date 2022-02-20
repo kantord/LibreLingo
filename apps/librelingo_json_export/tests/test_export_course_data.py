@@ -1,11 +1,11 @@
-import os
 import json
 import logging
-import pytest
+import os
 
+import pytest
+from librelingo_fakes import fakes
 from librelingo_json_export.export import _export_course_data
 from librelingo_types import Language
-from librelingo_fakes import fakes
 
 
 @pytest.fixture

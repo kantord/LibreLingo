@@ -1,4 +1,5 @@
 from librelingo_types.data_types import Course
+
 from .module import _get_module_summary
 
 
