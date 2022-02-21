@@ -2,29 +2,30 @@ import os
 import re
 from pathlib import Path
 from unittest.mock import Mock, patch
+
 import pytest
-from pyfakefs.fake_filesystem_unittest import TestCase as FakeFsTestCase  # type: ignore
-from librelingo_types.data_types import Settings
+from librelingo_fakes import fakes
 from librelingo_types import (
     Course,
+    DictionaryItem,
+    HunspellSettings,
+    Language,
     License,
     Module,
-    Skill,
-    Word,
     Phrase,
-    Language,
-    DictionaryItem,
+    Skill,
     TextToSpeechSettings,
-    HunspellSettings,
+    Word,
 )
+from librelingo_types.data_types import Settings
 from librelingo_yaml_loader.yaml_loader import (
-    load_course,
     _convert_license,
     _load_module,
-    _load_skills,
     _load_skill,
+    _load_skills,
+    load_course,
 )
-from librelingo_fakes import fakes
+from pyfakefs.fake_filesystem_unittest import TestCase as FakeFsTestCase  # type: ignore
 
 
 class YamlImportTestCase(FakeFsTestCase):

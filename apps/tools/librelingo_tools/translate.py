@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
 # import os
-import sys
 import re
+import sys
 
 # from collections import defaultdict
 # from librelingo_yaml_loader.yaml_loader import load_course

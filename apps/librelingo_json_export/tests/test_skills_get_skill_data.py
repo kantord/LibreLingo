@@ -1,6 +1,5 @@
 import pytest
 from librelingo_fakes import fakes
-
 from librelingo_json_export.skills import _get_skill_data
 
 

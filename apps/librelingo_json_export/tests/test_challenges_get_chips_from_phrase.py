@@ -1,8 +1,8 @@
 import collections
-import pytest
 
-from librelingo_json_export.challenge_types import get_chips_from_phrase
+import pytest
 from librelingo_fakes import fakes
+from librelingo_json_export.challenge_types import get_chips_from_phrase
 
 
 def test_empty_string():

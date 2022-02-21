@@ -1,15 +1,12 @@
 import editdistance  # type: ignore
-
-
-from librelingo_utils import (
-    get_dumb_opaque_id,
-    audio_id,
-    remove_control_characters_for_display,
-    clean_word,
-    iterate_phrases,
-)
-
 from librelingo_types import Course, Word
+from librelingo_utils import (
+    audio_id,
+    clean_word,
+    get_dumb_opaque_id,
+    iterate_phrases,
+    remove_control_characters_for_display,
+)
 
 from .dictionary import _define_words_in_sentence
 

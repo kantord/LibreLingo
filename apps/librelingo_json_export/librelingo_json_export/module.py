@@ -1,5 +1,5 @@
+from librelingo_utils import calculate_number_of_levels, get_opaque_id
 from slugify import slugify
-from librelingo_utils import get_opaque_id, calculate_number_of_levels
 
 
 def _get_module_summary(module):

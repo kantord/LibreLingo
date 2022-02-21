@@ -1,7 +1,6 @@
 import pytest
-
-from librelingo_json_export.challenges import _get_challenges_data
 from librelingo_fakes import fakes
+from librelingo_json_export.challenges import _get_challenges_data
 
 
 @pytest.fixture

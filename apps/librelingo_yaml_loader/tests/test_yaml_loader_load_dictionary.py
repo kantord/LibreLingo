@@ -1,14 +1,6 @@
 import pytest
-
-from librelingo_types import (
-    Module,
-    Skill,
-    Word,
-    DictionaryItem,
-)
-from librelingo_yaml_loader.yaml_loader import (
-    _load_dictionary,
-)
+from librelingo_types import DictionaryItem, Module, Skill, Word
+from librelingo_yaml_loader.yaml_loader import _load_dictionary
 
 from .utils import get_fake_word
 

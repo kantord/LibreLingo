@@ -3,11 +3,9 @@ this file contains tests of the funcion
 librelingo_yaml_loader.yaml_loader._convert_phrase
 """
 import pytest
-
+from librelingo_fakes import fakes
 from librelingo_types import Phrase
 from librelingo_yaml_loader.yaml_loader import _convert_phrase
-
-from librelingo_fakes import fakes
 
 
 def _access_functions(in_key):
