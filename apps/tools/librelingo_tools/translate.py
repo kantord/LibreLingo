@@ -53,10 +53,14 @@ def main():
     #            #exit()
     #            for sentence in phrase.in_target_language:
     #                if found(search_word, [sentence]):
-    #                    phrases[sentence].append({"filename": skill.filename, "translations": phrase.in_source_language})
+    #                    phrases[sentence].append(
+    #                       {"filename": skill.filename, "translations": phrase.in_source_language}
+    #                   )
     #            for sentence in phrase.in_source_language:
     #                if found(search_word, [sentence]):
-    #                    phrases[sentence].append({"filename": skill.filename, "translations": phrase.in_target_language})
+    #                    phrases[sentence].append(
+    #                       {"filename": skill.filename, "translations": phrase.in_target_language}
+    #                    )
 
     # for expression in sorted(translations.keys()):
     #    for filename in translations[expression]:

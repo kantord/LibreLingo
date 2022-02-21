@@ -27,7 +27,11 @@ def main():
     for module in course.modules:
         for skill in module.skills:
 
-            # Word(in_target_language=['el chapeo', 'el chapeyo'], in_source_language=['the hat'], pictures=['hat1', 'hat2', 'hat3'])
+            # Word(
+            #   in_target_language=['el chapeo', 'el chapeyo'],
+            #   in_source_language=['the hat'],
+            #   pictures=['hat1', 'hat2', 'hat3']
+            # )
             for word in skill.words:
                 collect(
                     "target_word", module, skill, search_word, word.in_target_language

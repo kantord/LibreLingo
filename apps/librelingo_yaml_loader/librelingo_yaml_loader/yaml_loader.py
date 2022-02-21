@@ -150,7 +150,9 @@ def _convert_word(raw_word) -> Word:
     """
     Converts a YAML word definition into a Word() object
 
-    >>> _convert_word({'Images': ["abc"], 'Word': "cat", 'Synonyms': ["kitten"], 'Translation': "gato"})
+    >>> _convert_word(
+    ...     {'Images': ["abc"], 'Word': "cat", 'Synonyms': ["kitten"], 'Translation': "gato"}
+    ... )
     Word(in_target_language=['cat', 'kitten'], in_source_language=['gato'], pictures=['abc'])
     """
     return Word(
@@ -162,6 +164,7 @@ def _convert_word(raw_word) -> Word:
     )
 
 
+# pylint: disable=line-too-long
 def _convert_words(raw_words: List[Word]) -> List[Word]:
     """
     Converts each YAML word definition into Word() objects
@@ -183,6 +186,7 @@ def _convert_words(raw_words: List[Word]) -> List[Word]:
     return list(map(_convert_word, raw_words))
 
 
+# pylint: disable=line-too-long
 def _convert_phrase(raw_phrase) -> Phrase:
     """
     Converts a YAML phrase definition into a Phrase() object
