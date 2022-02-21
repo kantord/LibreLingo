@@ -1,7 +1,9 @@
-from pathlib import Path
 import collections
+from pathlib import Path
+
 import click  # type: ignore
 from librelingo_yaml_loader import load_course
+
 from librelingo_json_export.export import export_course
 
 Settings = collections.namedtuple(

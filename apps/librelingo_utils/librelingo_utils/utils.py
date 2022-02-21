@@ -1,5 +1,6 @@
-from functools import lru_cache
 import hashlib
+from functools import lru_cache
+
 import regex  # type: ignore
 from librelingo_types.data_types import Course, Language, Phrase, Word
 

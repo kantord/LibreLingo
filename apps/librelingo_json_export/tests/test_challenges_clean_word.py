@@ -1,6 +1,6 @@
 import collections
-import pytest
 
+import pytest
 from librelingo_utils import clean_word
 
 Example = collections.namedtuple("Example", ["input_str", "expected", "name"])

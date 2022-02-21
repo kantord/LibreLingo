@@ -27,6 +27,8 @@ yarn-error.log
 .yarn
 .yarnrc
 *.pyc
+/apps/librelingo_json_export/profile.png
+profile.dat
 
 
 # Static files
@@ -34,7 +36,6 @@ yarn-error.log
 /static/files
 staticfiles/
 apps/web/static/files/noto-*
-/apps/librelingo_json_export/profile.png
 
 
 # Cypress files
@@ -67,10 +68,11 @@ git_stats/
 /course_editor/db.sqlite3
 /db.sqlite3
 /src/audios_to_fetch.csv
+/apps/librelingo_json_export/profile.png
 localData/
 
 
 # Courses
 /apps/web/src/courses/*-*
 /courses/*-*
-profile.dat
+

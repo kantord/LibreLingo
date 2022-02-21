@@ -1,8 +1,8 @@
 import collections
-import pytest
 
-from librelingo_json_export.challenge_types import get_cards_challenge
+import pytest
 from librelingo_fakes import fakes
+from librelingo_json_export.challenge_types import get_cards_challenge
 
 Example = collections.namedtuple(
     "Example", ["word", "course", "expected_result", "name"]
