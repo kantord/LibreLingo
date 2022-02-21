@@ -3,10 +3,8 @@ this file contains tests of the funcion
 librelingo_yaml_loader.yaml_loader._convert_phrases
 """
 import pytest
-
-from librelingo_yaml_loader.yaml_loader import _convert_phrases
-
 from librelingo_fakes import fakes
+from librelingo_yaml_loader.yaml_loader import _convert_phrases
 
 
 def test_returns_a_list():

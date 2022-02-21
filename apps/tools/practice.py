@@ -2,13 +2,10 @@
 import argparse
 import random
 
-from librelingo_tools.lili import (  # type: ignore
-    guess_path_to_course,
-    collect_data,
-    collect_words,
-    collect_phrases,
-)
 from librelingo_yaml_loader.yaml_loader import load_course
+
+from librelingo_tools.lili import collect_data  # type: ignore
+from librelingo_tools.lili import collect_phrases, collect_words, guess_path_to_course
 
 
 def get_args():
@@ -66,7 +63,8 @@ def main():
     target, source, _ = collect_data(course)
     _show_banner()
 
-    # Randomly select a word or a phrase, show it, ask the user to type the answer, verify the answer
+    # Randomly select a word or a phrase, show it
+    # ask the user to type the answer, verify the answer
 
     challenges = {
         "source_to_target_word": [0.1, lambda: guess_word(source_to_target_words)],

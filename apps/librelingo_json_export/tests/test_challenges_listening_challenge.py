@@ -1,10 +1,9 @@
 import collections
+
 import pytest
-
-from librelingo_json_export.challenge_types import get_listening_challenge
-from librelingo_types import Settings, AudioSettings
-
 from librelingo_fakes import fakes
+from librelingo_json_export.challenge_types import get_listening_challenge
+from librelingo_types import AudioSettings, Settings
 
 Example = collections.namedtuple(
     "Example", ["word", "course", "expected_result", "name"]
