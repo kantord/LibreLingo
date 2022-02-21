@@ -893,7 +893,8 @@ def test_load_skill_complains_about_misspelled_phrase_in_target_language(load_ya
         ),
     )
     expected_error = re.escape(
-        f'The {fake_course.target_language.name} phrase "{fake_phrase}" is misspelled. The word "{fake_word}" is unknown.'
+        f'The {fake_course.target_language.name} phrase "{fake_phrase}" is misspelled.'
+        f'The word "{fake_word}" is unknown.'
     )
     with pytest.raises(RuntimeError, match=expected_error):
         _load_skill(random_path, fake_course)
@@ -927,7 +928,8 @@ def test_load_skill_complains_about_misspelled_phrase_in_source_language(load_ya
         ),
     )
     expected_error = re.escape(
-        f'The {fake_course.source_language.name} phrase "{fake_phrase}" is misspelled. The word "{fake_word}" is unknown.'
+        f'The {fake_course.source_language.name} phrase "{fake_phrase}" is misspelled.'
+        f'The word "{fake_word}" is unknown.'
     )
     with pytest.raises(RuntimeError, match=expected_error):
         _load_skill(random_path, fake_course)

@@ -28,6 +28,7 @@ class TextToSpeechSettings(
     pass
 
 
+# pylint: disable=line-too-long
 class AudioSettings(
     namedtuple(
         "AudioSettings",
@@ -78,6 +79,7 @@ class HunspellSettings(
     pass
 
 
+# pylint: disable=line-too-long
 class Settings(
     namedtuple(
         "Settings",
@@ -154,6 +156,7 @@ class Language(namedtuple("Language", ["name", "code"])):
     pass
 
 
+# pylint: disable=line-too-long
 class License(
     namedtuple(
         "License",
@@ -244,6 +247,7 @@ class Skill(
     pass
 
 
+# pylint: disable=line-too-long
 class Word(
     namedtuple(
         "Word",

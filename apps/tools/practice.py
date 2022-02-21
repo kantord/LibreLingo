@@ -63,7 +63,8 @@ def main():
     target, source, _ = collect_data(course)
     _show_banner()
 
-    # Randomly select a word or a phrase, show it, ask the user to type the answer, verify the answer
+    # Randomly select a word or a phrase, show it
+    # ask the user to type the answer, verify the answer
 
     challenges = {
         "source_to_target_word": [0.1, lambda: guess_word(source_to_target_words)],

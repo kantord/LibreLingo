@@ -27,6 +27,7 @@ def test__get_course_data_return_value():
         "languageName": "my language",
         "languageCode": "de",
         "specialCharacters": ["ä", "ß"],
+        # pylint: disable=line-too-long
         "repositoryURL": "https://github.com/kantord/LibreLingo/tree/main/courses/spanish-from-english",
         "license": {
             "name": {

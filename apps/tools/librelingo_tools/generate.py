@@ -78,7 +78,8 @@ def download_course(url, tempdir):
 def generate_course(links, courses_data, reldir, outdir, tdir, course_dir):
     logging.info("generate_course %s", course_dir)
     # pylint complains of "Catching too general exception Exception (broad-except)"
-    # but I don't know what kind of exception can happen there, so for now let's not catch any exception.
+    # but I don't know what kind of exception can happen there,
+    # so for now let's not catch any exception.
     # try:
     docs_dir = os.path.join(outdir, tdir)
     course = lili.load_course(course_dir)

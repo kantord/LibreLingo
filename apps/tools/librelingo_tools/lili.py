@@ -97,7 +97,8 @@ def render(template_file, **args):
 
 def export_main_html_page(course, count, html_dir):
     branch = "main"  # how can we know which is the default branch of a repository?
-    #'count', 'dictionary', 'index', 'license', 'modules', 'repository_url', 'settings', 'source_language', 'special_characters', 'target_language'
+    #'count', 'dictionary', 'index', 'license', 'modules', 'repository_url',
+    #'settings', 'source_language', 'special_characters', 'target_language'
     # course.modules[0].skills[0].phrases
     # from ptpython.repl import embed
     # embed(globals(), locals())
@@ -435,7 +436,11 @@ class Lili:
                 if picture in self.unused_images["regular"]:
                     self.unused_images["regular"].remove(picture)
             # print(word.pictures)
-        # Word(in_target_language=['la mujer'], in_source_language=['the woman'], pictures=['woman1', 'woman2', 'woman3'])
+        # Word(
+        #   in_target_language=['la mujer'],
+        #   in_source_language=['the woman'],
+        #   pictures=['woman1', 'woman2', 'woman3']
+        # )
 
     def collect_ids_and_names(self, images, course):
         for module in course.modules:
@@ -444,11 +449,15 @@ class Lili:
                     self.check_images(module, skill)
                 if skill.id in self.skill_ids:
                     self.errors.append(
-                        f"Duplicate id: {skill.id} in {module.title}/{skill.name} and in {self.skill_ids[skill.id]['module'].title}/{self.skill_ids[skill.id]['skill'].name}"
+                        f"Duplicate id: {skill.id} in {module.title}/{skill.name}"
+                        f"and in {self.skill_ids[skill.id]['module'].title}"
+                        f"/{self.skill_ids[skill.id]['skill'].name}"
                     )
                 if skill.name in self.skill_names:
                     self.errors.append(
-                        f"Duplicate name: {skill.name} in {module.title}/{skill.name} and in {self.skill_names[skill.name]['module'].title}/{self.skill_names[skill.name]['skill'].name}"
+                        f"Duplicate name: {skill.name} in {module.title}/{skill.name} "
+                        f"and in {self.skill_names[skill.name]['module'].title}/"
+                        f"{self.skill_names[skill.name]['skill'].name}"
                     )
                 self.skill_ids[skill.id] = {
                     "module": module,

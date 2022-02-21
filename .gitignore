@@ -1,48 +1,78 @@
-.DS_Store
+# IDE
+**/.DS_Store
+**/.vscode
+**/.idea/codeStyles/codeStyleConfig.xml
+**/.idea/jsLinters/eslint.xml
+**/.idea/LibreLingo.iml
+**/.idea/misc.xml
+**/.idea/modules.xml
+**/.idea/codeStyles/Project.xml
+**/.idea/inspectionProfiles/Project_Default.xml
+**/.idea/vcs.xml
+**/.idea/workspace.xml
+**/.vim
+
+
+# Dependencies
 /node_modules/
 **/node_modules/
 /src/node_modules/@sapper/
+.venv/
+.env
+/apps/*/poetry.lock
+
+
+# Development
 yarn-error.log
-apps/web/cypress/screenshots/
+.yarn
+.yarnrc
+*.pyc
+/apps/librelingo_json_export/profile.png
+profile.dat
+
+
+# Static files
 /apps/web/__sapper__/
 /static/files
+staticfiles/
+apps/web/static/files/noto-*
+
+
+# Cypress files
 .nyc_output/
 cypress-coverage/
 jest-coverage/
-cypress/videos
-.venv/
-/course_editor/db.sqlite3
-*.pyc
-.env
-/db.sqlite3
-/src/audios_to_fetch.csv
-localData/
-staticfiles/
-git_stats/
-/.idea/codeStyles/codeStyleConfig.xml
-/.idea/jsLinters/eslint.xml
-/.idea/LibreLingo.iml
-/.idea/misc.xml
-/.idea/modules.xml
-/.idea/codeStyles/Project.xml
-/.idea/inspectionProfiles/Project_Default.xml
-/.idea/vcs.xml
-/.idea/workspace.xml
-apps/web/static/files/noto-*
+**/cypress/videos
+apps/web/cypress/screenshots/
 apps/web/cypress/screenshots/**/__tkey-*.png
-.vim
+**/coverage/
+
+
+# Build
 apps/librelingo_tools/dist
 **/dist/
-*.tsbuildinfo
-report.*.*.json
-/coverage/
+
+
+# Documentation
 apps/docs/build/
+report.*.*.json
+*.tsbuildinfo
 __sapper__
-.yarn
-.yarnrc
+
+
+# Stats
+git_stats/
+
+
+# Data
+/course_editor/db.sqlite3
+/db.sqlite3
+/src/audios_to_fetch.csv
+/apps/librelingo_json_export/profile.png
+localData/
+
+
+# Courses
 /apps/web/src/courses/*-*
 /courses/*-*
-profile.dat
-/apps/librelingo_json_export/profile.png
-/apps/*/poetry.lock
-.vscode/
+
