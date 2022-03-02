@@ -98,7 +98,6 @@ def generate_course(links, courses_data, reldir, outdir, tdir, course_dir):
         "target_phrases": count["target_phrases"],
         "source_words": count["source_words"],
         "source_phrases": count["source_phrases"],
-        "success": True,
     }
     links.append(results)
     with open(os.path.join(outdir, tdir, "course.json")) as fh:

@@ -7,7 +7,7 @@
       </thead>
       <tbody>
         {% for link in links|sort(attribute='tdir') %}
-            <tr {% if not link['success'] %}class="warning"{% endif %}>
+            <tr>
                <td><a href="{{ link['tdir'] }}/">{{ link['text'] }}</a></td>
                <td>{{ link["target_words"] }}</td>
                <td>{{ link["target_phrases"] }}</td>
