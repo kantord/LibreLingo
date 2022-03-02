@@ -106,6 +106,7 @@ def export_main_html_page(course, count, html_dir):
     html = render(
         "index.html",
         title=f"{course.target_language.name} for {course.source_language.name} speakers",
+        page="index",
         rel="",
         course=course,
         count=count,
@@ -116,6 +117,7 @@ def export_main_html_page(course, count, html_dir):
     html = render(
         "converter.html",
         title=f"{course.target_language.name} for {course.source_language.name} speakers",
+        page="converter",
         rel="",
         course=course,
     )
@@ -125,6 +127,7 @@ def export_main_html_page(course, count, html_dir):
     html = render(
         "modules.html",
         title=f"{course.target_language.name} for {course.source_language.name} speakers",
+        page="modules",
         rel="",
         branch=branch,
         course=course,
@@ -136,6 +139,7 @@ def export_main_html_page(course, count, html_dir):
     html = render(
         "missing_words.html",
         title=f"Missing {course.source_language.name} words",
+        page="words",
         rel="",
         course=course,
     )
@@ -214,6 +218,7 @@ def export_words_html_page(course, all_words, language, path, reldir, html_file)
     html = render(
         "words.html",
         title=f"{course.target_language.name} for {course.source_language.name} speakers",
+        page=path,
         rel="",
         rel_dir=reldir,
         path=path,

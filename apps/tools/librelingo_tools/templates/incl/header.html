@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
     <title>{{ title }}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <style>
         .odd {
             background-color: #EEEEEE;
@@ -20,17 +21,16 @@
     </style>
   </head>
   <body>
-    <nav>
-      <a href="{{ rel }}index.html">home</a>
-      |
-      <a href="{{ rel }}converter.html">converter</a>
-      |
-      <a href="{{ rel }}words.html">words</a>
-      |
-      <a href="{{ rel }}modules.html">modules</a>
-      |
-      <a href="{{ rel }}target.html">{{ course.target_language.name }}</a>
-      |
-      <a href="{{ rel }}source.html">{{ course.source_language.name }}</a>
-    </nav>
+    <section class="section">
+      <div class="container">
+    <div class="tabs">
+      <ul>
+        <li {% if page == "index" %}class="is-active"{% endif %}><a href="{{ rel }}index.html">home</a></li>
+        <li {% if page == "converter" %}class="is-active"{% endif %}><a href="{{ rel }}converter.html">converter</a></li>
+        <li {% if page == "words" %}class="is-active"{% endif %}><a href="{{ rel }}words.html">words</a></li>
+        <li {% if page == "modules" %}class="is-active"{% endif %}><a href="{{ rel }}modules.html">modules</a></li>
+        <li {% if page == "target" %}class="is-active"{% endif %}><a href="{{ rel }}target.html">{{ course.target_language.name }}</a></li>
+        <li {% if page == "source" %}class="is-active"{% endif %}><a href="{{ rel }}source.html">{{ course.source_language.name }}</a></li>
+      </ul>
+    </div>
 
