@@ -8,7 +8,7 @@
       <tbody>
         {% for link in links|sort(attribute='tdir') %}
             <tr>
-               <td><a href="{{ link['tdir'] }}/">{{ link['text'] }}</a></td>
+               <td><a href="{{ link['tdir'] }}/">{{ link['source_name'] }} =&gt; {{ link['target_name'] }}</a></td>
                <td>{{ link["target_words"] }}</td>
                <td>{{ link["target_phrases"] }}</td>
                <td>{{ link["source_words"] }}</td>

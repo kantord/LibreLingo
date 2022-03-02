@@ -93,7 +93,8 @@ def generate_course(links, courses_data, reldir, outdir, tdir, course_dir):
 
     results = {
         "tdir": tdir,
-        "text": tdir,
+        "source_name": course.source_language.name,
+        "target_name": course.target_language.name,
         "target_words": count["target_words"],
         "target_phrases": count["target_phrases"],
         "source_words": count["source_words"],
