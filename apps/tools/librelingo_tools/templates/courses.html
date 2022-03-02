@@ -1,8 +1,11 @@
 {% include 'central/header.html' %}
 
-    <h1><a href="https://librelingo.app/">LibreLingo courses</a></h1>
-    <table>
+    <h1 class="title"><a href="https://librelingo.app/">LibreLingo courses</a></h1>
+    <table class="table">
+      <thead>
         <tr><th>Course</th><th>Target Words</th><th>Target Phrases</th><th>Source Words</th><th>Source Phrases</th></tr>
+      </thead>
+      <tbody>
         {% for link in links|sort(attribute='tdir') %}
             <tr {% if not link['success'] %}class="warning"{% endif %}>
                <td><a href="{{ link['tdir'] }}/">{{ link['text'] }}</a></td>
@@ -12,6 +15,7 @@
                <td>{{ link["source_phrases"] }}</td>
             </tr>
         {% endfor %}
+      </tbody>
     </table>
     <div>Generated at {{ start_time }} Elapsed time: {{ (end_time-start_time).seconds }} seconds</div>
 
