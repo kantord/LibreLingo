@@ -89,6 +89,7 @@ def render(template_file, **args):
     env = Environment(loader=FileSystemLoader(templates_dir), autoescape=True)
     env.filters["skillfile"] = skillfile_filter
     env.filters["yaml2md"] = lambda path: re.sub(r"\.yaml$", ".md", path)
+    env.filters["yaml2html"] = lambda path: re.sub(r"\.yaml$", ".html", path)
     env.filters["md2html"] = markdown.markdown
     template = env.get_template(template_file)
     html = template.render(**args)

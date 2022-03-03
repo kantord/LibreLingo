@@ -7,8 +7,11 @@
   <h2 class="subtitle">Word</h2>
   <ul>
   {% for translation in word_translations %}
-    {% for xx in translation['word'].in_source_language %}
-          <li>{{ xx }} <a href="{{ repository_url }}/blob/{{ branch }}/{{ rel_dir }}/{{ translation["skill"].filename }}">{{ translation["skill"].name }}</a></li>
+    {% for word in translation['word'].in_source_language %}
+          <li>{{ word }}
+             <a href="{{ rel }}course/{{ translation["skill"].filename | yaml2html }}">{{ translation["skill"].name }}</a>
+             <a href="{{ repository_url }}/blob/{{ branch }}/{{ rel_dir }}/{{ translation["skill"].filename }}"><span class="icon fa-github"></span></a>
+          </li>
     {% endfor %}
   {% endfor %}
   </ul>
@@ -16,8 +19,10 @@
   <h2 class="subtitle">Dictionary</h2>
   <ul>
   {% for translation in dictionary_words %}
-    {% for xx in translation['word'] %}
-      <li>{{ xx }} <a href="{{ repository_url }}/blob/{{ branch }}/{{ rel_dir }}/{{ translation["skill"].filename }}">{{ translation["skill"].name }}</a></li>
+    {% for word in translation['word'] %}
+      <li>{{ word }}
+         <a href="{{ rel }}course/{{ translation["skill"].filename | yaml2html }}">{{ translation["skill"].name }}</a>
+         <a href="{{ repository_url }}/blob/{{ branch }}/{{ rel_dir }}/{{ translation["skill"].filename }}"><span class="icon fa-github"></span></a></li>
     {% endfor %}
   {% endfor %}
   </ul>
@@ -25,7 +30,11 @@
   <h2 class="subtitle">Phrases</h2>
   <ul>
   {% for phrase in phrases %}
-    <li>{{ phrase["sentence"] }} <a href="{{ repository_url }}/blob/{{ branch }}/{{ rel_dir }}/{{ phrase["skill"].filename }}">{{ phrase["skill"].name }}</a></li>
+    <li>{{ phrase["sentence"] }}
+        <a href="{{ rel }}course/{{ phrase["skill"].filename | yaml2html }}">{{ phrase["skill"].name }}</a>
+        <a href="{{ repository_url }}/blob/{{ branch }}/{{ rel_dir }}/{{ phrase["skill"].filename }}"><span class="icon fa-github"></span></a>
+    </li>
+
   {% endfor %}
   </ul>
 </div>
