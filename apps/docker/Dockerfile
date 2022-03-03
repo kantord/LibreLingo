@@ -12,11 +12,13 @@ RUN curl -sSL https://install.python-poetry.org | python3 - && \
 # Git clone LibreLingo repo
 RUN git clone https://github.com/LibreLingo/LibreLingo.git
   
-# Setup LibreLingo and ability to import courses
+# Setup LibreLingo 
 RUN cd /LibreLingo && \
   yarn set version classic && \
-  yarn && \
-  poetry install && \
+  yarn
+ 
+# Setup tools to import courses
+RUN poetry install && \
   cd /LibreLingo/apps/librelingo_yaml_loader && \
   poetry install && \
   cd /LibreLingo/apps/librelingo_json_export && \
