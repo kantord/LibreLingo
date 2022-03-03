@@ -1,6 +1,6 @@
 FROM archlinux:base-20220227.0.49015
 
-# Setup packages and Librelingo
+# Setup packages
 RUN pacman -Syu --noconfirm git nodejs-lts-fermium gcc yarn python3 python-pip
 
 # Setup Poetry and LibreLingo Python Packages
