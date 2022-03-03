@@ -1,17 +1,23 @@
 {% include 'incl/header.html' %}
 
-    <h1>{{ title }}</h1>
+    <h1 class="title">{{ title }}</h1>
+    <div class="content">
 
-    <table>
-      <tr><th>Word</th><th>Word #</th><th>Dictionary #</th><th>Phrases #</th></tr>
-      {% for word in all_words | sort %}
-        <tr class="{{ loop.cycle('odd', 'even') }}">
-        <td><a href="{{ path }}/{{ word.lower() }}.html">{{ word }}</a></td>
-        <td>{{ words[word] | count }}</td>
-        <td>{{ dictionary[word] | count }}</td>
-        <td>{{ phrases[word] | count }}</td>
-        </tr>
-      {% endfor %}
+    <table class="table is-striped is-hoverable">
+      <thead>
+        <tr><th>Word</th><th>Word #</th><th>Dictionary #</th><th>Phrases #</th></tr>
+      </thead>
+      <tbody>
+        {% for word in all_words | sort %}
+          <tr>
+          <td><a href="{{ path }}/{{ word.lower() }}.html">{{ word }}</a></td>
+          <td>{{ words[word] | count }}</td>
+          <td>{{ dictionary[word] | count }}</td>
+          <td>{{ phrases[word] | count }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
     </table>
+    </div>
 
 {% include 'incl/footer.html' %}

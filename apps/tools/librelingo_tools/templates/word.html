@@ -1,30 +1,33 @@
 {% include 'incl/header.html' %}
 
-<h2>{{ target_word }}</h2>
+<h1 class="title">{{ target_word }}</h1>
+<hr>
 
-<h2>Word</h2>
-<ul>
-{% for translation in word_translations %}
-  {% for xx in translation['word'].in_source_language %}
-        <li>{{ xx }} <a href="{{ repository_url }}/blob/{{ branch }}/{{ rel_dir }}/{{ translation["skill"].filename }}">{{ translation["skill"].name }}</a></li>
+<div class="content">
+  <h2 class="subtitle">Word</h2>
+  <ul>
+  {% for translation in word_translations %}
+    {% for xx in translation['word'].in_source_language %}
+          <li>{{ xx }} <a href="{{ repository_url }}/blob/{{ branch }}/{{ rel_dir }}/{{ translation["skill"].filename }}">{{ translation["skill"].name }}</a></li>
+    {% endfor %}
   {% endfor %}
-{% endfor %}
-</ul>
+  </ul>
 
-<h2>Dictionary</h2>
-<ul>
-{% for translation in dictionary_words %}
-  {% for xx in translation['word'] %}
-    <li>{{ xx }} <a href="{{ repository_url }}/blob/{{ branch }}/{{ rel_dir }}/{{ translation["skill"].filename }}">{{ translation["skill"].name }}</a></li>
+  <h2 class="subtitle">Dictionary</h2>
+  <ul>
+  {% for translation in dictionary_words %}
+    {% for xx in translation['word'] %}
+      <li>{{ xx }} <a href="{{ repository_url }}/blob/{{ branch }}/{{ rel_dir }}/{{ translation["skill"].filename }}">{{ translation["skill"].name }}</a></li>
+    {% endfor %}
   {% endfor %}
-{% endfor %}
-</ul>
+  </ul>
 
-<h2>Phrases</h2>
-<ul>
-{% for phrase in phrases %}
-  <li>{{ phrase["sentence"] }} <a href="{{ repository_url }}/blob/{{ branch }}/{{ rel_dir }}/{{ phrase["skill"].filename }}">{{ phrase["skill"].name }}</a></li>
-{% endfor %}
-</ul>
+  <h2 class="subtitle">Phrases</h2>
+  <ul>
+  {% for phrase in phrases %}
+    <li>{{ phrase["sentence"] }} <a href="{{ repository_url }}/blob/{{ branch }}/{{ rel_dir }}/{{ phrase["skill"].filename }}">{{ phrase["skill"].name }}</a></li>
+  {% endfor %}
+  </ul>
+</div>
 
 {% include 'incl/footer.html' %}
