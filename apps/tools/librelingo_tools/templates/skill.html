@@ -1,38 +1,42 @@
 {% include 'incl/header.html' %}
 
-    <h1>{{ skill.name }}</h1>
-    <div>
-        Id: {{ skill.id }}
-    </div>
-    
+  <h1 class="title">{{ skill.name }}</h1>
+  <div class="content">
+      Id: {{ skill.id }}
+  </div>
 
+  <div class="content">
     <a href="{{ repository_url }}/blob/{{ branch }}/course/{{ rel_dir }}/{{ skill.filename }}">source</a>
 
     <h2>Introduction</h2>
 
-    {% if skill.introduction %}
-      <div id="introduction">
-        {{ skill.introduction | md2html | safe }}
-      </div>
-      
-      <div><a href="{{ repository_url }}/blob/{{ branch }}/course/{{ rel_dir }}/{{ skill.filename | yaml2md }}">source</a></div>
-      
-    {% else %}
-    Each skill can have an introduction in Markdown file. This skill could have it in <a href="{{ repository_url }}/blob/{{ branch }}/course/{{ rel_dir }}/{{ skill.filename | yaml2md }}">source</a>
 
+    <div class="block light" id="introduction">
+    {% if skill.introduction %}
+        {{ skill.introduction | md2html | safe }}
+
+        <div><a href="{{ repository_url }}/blob/{{ branch }}/course/{{ rel_dir }}/{{ skill.filename | yaml2md }}">source</a></div>
+    {% else %}
+      Each skill can have an introduction in Markdown file. This skill does not have one yet, but it can be added as <a href="{{ repository_url }}/blob/{{ branch }}/course/{{ rel_dir }}/{{ skill.filename | yaml2md }}">this</a> (currently
+missing) file.
     {% endif %}
+    </div>
 
     <h2>Words</h2>
     {% if skill.words %}
       <table>
+        <thead>
           <tr><th>{{ course.target_language.name }}</th><th>{{ course.source_language.name }}</th><th>Images</th></tr>
-        {% for words in skill.words %}
-          <tr>
+        </thead>
+        <tbody>
+          {% for words in skill.words %}
+            <tr>
               <td>{% for word in words.in_target_language %}<a href="{{ rel }}/target/{{ word }}.html">{{ word }}</a>{%- if not loop.last %},{%- endif %}{% endfor %}</td>
               <td>{% for word in words.in_source_language %}<a href="{{ rel }}/source/{{ word }}.html">{{ word }}</a>{%- if not loop.last %},{%- endif %}{% endfor %}</td>
               <td>{{words.pictures}}</td>
-            </tr> 
-        {% endfor %}
+            </tr>
+          {% endfor %}
+        </tbody>
       </table>
     {% else %}
     There are no entries in the Words section.
@@ -40,7 +44,7 @@
 
     <h2>Phrases</h2>
     {% if skill.phrases %}
-        <table>
+        <table class="table">
             {% for phrase in skill.phrases %}
             <tr>
                 <td>
@@ -53,37 +57,39 @@
                     {{ phrs }}<br>
                     {% endfor %}
                 </td>
-                </tr> 
+                </tr>
         {% endfor %}
         </table>
     {% else %}
     There are no entries in the Phrases section.
     {% endif %}
 
-    <h2>Dictionary</h2>
-    <table>
+    {% if skill.dictionary %}
+      <h2 class="subtitle">Dictionary</h2>
+      <table>
         <tr><th>{{ course.source_language.name }}</th><th>{{ course.target_language.name }}</th></tr>
         {% for pair in skill.dictionary %}
           {% if not pair[2] %}
             <tr>
               <td><a href="{{ rel }}/source/{{ pair[0] }}.html">{{ pair[0] }}</a></td>
               <td>{{pair[1]}}</td>
-          </tr> 
+          </tr>
           {% endif %}
-    {% endfor %}
-    </table>
+        {% endfor %}
+      </table>
 
-    <table>
+      <table>
         <tr><th>{{ course.target_language.name }}</th><th>{{ course.source_language.name }}</th></tr>
         {% for pair in skill.dictionary %}
           {% if pair[2] %}
             <tr>
                 <td><a href="{{ rel }}/target/{{ pair[0] }}.html">{{ pair[0] }}</a></td>
                 <td>{{pair[1]}}</td>
-            </tr> 
+            </tr>
           {% endif %}
-    {% endfor %}
-    </table>
+        {% endfor %}
+      </table>
+    {% endif %}
 
 
 {% include 'incl/footer.html' %}

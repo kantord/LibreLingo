@@ -95,7 +95,7 @@ def render(template_file, **args):
     return html
 
 
-def export_main_html_page(course, count, html_dir):
+def export_main_html_page(course, count, reldir, html_dir):
     branch = "main"  # how can we know which is the default branch of a repository?
     #'count', 'dictionary', 'index', 'license', 'modules', 'repository_url',
     #'settings', 'source_language', 'special_characters', 'target_language'
@@ -129,6 +129,7 @@ def export_main_html_page(course, count, html_dir):
         title=f"{course.target_language.name} for {course.source_language.name} speakers",
         page="modules",
         rel="",
+        rel_dir=reldir,
         branch=branch,
         course=course,
         repository_url=get_repository_url(course),
@@ -303,7 +304,7 @@ def export_to_html(course, target, source, count, reldir, html_dir):
         collect_words(target, "target-to-source"), "target-to-source.json", html_dir
     )
 
-    export_main_html_page(course, count, html_dir)
+    export_main_html_page(course, count, reldir, html_dir)
     export_skill_html_pages(course, html_dir)
     export_words_html_page(
         course,
