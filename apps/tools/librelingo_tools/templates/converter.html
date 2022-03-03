@@ -1,27 +1,12 @@
 {% include 'incl/header.html' %}
 
-<style>
-#input-text {
-    width: 50%;
-    height: 100px;
-}
-.missing {
-    background-color: #FF6666;
-}
-.middle {
-    width: 30px;
-}
-.selected {
-    background-color: yellow;
-}
-</style>
 <div>
-<textarea id="input-text">
+<textarea class="textarea" id="input-text">
 </textarea>
 </div>
 <div>
-<button id="target-to-source">{{ course.target_language.name }} to {{ course.source_language.name }}</button>
-<button id="source-to-target">{{ course.source_language.name }} to {{ course.target_language.name }}</button>
+<button class="button" id="target-to-source">{{ course.target_language.name }} to {{ course.source_language.name }}</button>
+<button class="button" id="source-to-target">{{ course.source_language.name }} to {{ course.target_language.name }}</button>
 </div>
 <div id="output">
 <div>
@@ -36,9 +21,9 @@ $(document).ready(function(){
     var direction = 'target-to-source';
 
     const update_direction_selector = function() {
-        $('#target-to-source').removeClass('selected');
-        $('#source-to-target').removeClass('selected');
-        $('#' + direction).addClass('selected');
+        $('#target-to-source').removeClass('is-warning');
+        $('#source-to-target').removeClass('is-warning');
+        $('#' + direction).addClass('is-warning');
     };
 
     var try_translate = function() {
@@ -52,7 +37,7 @@ $(document).ready(function(){
         //const cleaned = original.replace(/["';,!?.:]/g, " ");
         const cleaned = original.replace(/[^a-zA-Z-]/g, " ");
         const words = cleaned.split(" ");
-        var html = "<table>";
+        var html = `<table class="table">`;
         html += '<tr>';
         if (direction == 'target-to-source') {
             html += '<th>' + course_data['target_language_name']  + '</th><th>' + course_data['source_language_name'] + '</th>'
@@ -72,14 +57,14 @@ $(document).ready(function(){
                 if (translation) {
                     html += '<td><a href="target/' + word + '.html">' + words[ix] + '</a></td><td>' + translation + '</td>';
                 } else {
-                    html += '<td class="missing">' + words[ix] + '</td><td class="missing">' + '</td>';
+                    html += '<td class="has-background-danger-light">' + words[ix] + '</td><td class="has-background-danger-light">' + '</td>';
                 }
             } else {
                 const translation = source_to_target[word];
                 if (translation) {
                     html += '<td><a href="source/' + word + '.html">' + words[ix] + '</a></td><td>' + translation + '</td>';
                 } else {
-                    html += '<td class="missing">' + words[ix] + '</td><td class="missing">' + '</td>';
+                    html += '<td class="has-background-danger-light">' + words[ix] + '</td><td class="has-background-danger-light">' + '</td>';
                 }
             }
 
