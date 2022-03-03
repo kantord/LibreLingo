@@ -18,7 +18,8 @@ RUN cd /LibreLingo && \
   yarn
  
 # Setup tools to import courses
-RUN /root/.local/bin/poetry install && \
+RUN cd /LibreLingo && \
+  /root/.local/bin/poetry install && \
   cd /LibreLingo/apps/librelingo_yaml_loader && \
   /root/.local/bin/poetry install && \
   cd /LibreLingo/apps/librelingo_json_export && \
