@@ -11,7 +11,6 @@
 <div id="output">
 <div>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
 $(document).ready(function(){
     var source_to_target = null;
@@ -38,13 +37,16 @@ $(document).ready(function(){
         const cleaned = original.replace(/[^a-zA-Z-]/g, " ");
         const words = cleaned.split(" ");
         var html = `<table class="table">`;
+        html += '<thead>';
         html += '<tr>';
         if (direction == 'target-to-source') {
-            html += '<th>' + course_data['target_language_name']  + '</th><th>' + course_data['source_language_name'] + '</th>'
+            html += `<th>${course_data['target_language_name']}</th><th>${course_data['source_language_name']}</th>`;
         } else {
-            html += '<th>' + course_data['source_language_name']  + '</th><th>' + course_data['target_language_name'] + '</th>'
+            html += `<th>${course_data['source_language_name']}</th><th>${course_data['target_language_name']}</th>`;
         }
         html += '</tr>';
+        html += '</thead>';
+        html += '<tbody>';
         for (var ix = 0; ix < words.length; ix++) {
             if (words[ix] == "") {
                 continue;
@@ -55,21 +57,22 @@ $(document).ready(function(){
             if (direction == 'target-to-source') {
                 const translation = target_to_source[word];
                 if (translation) {
-                    html += '<td><a href="target/' + word + '.html">' + words[ix] + '</a></td><td>' + translation + '</td>';
+                    html += `<td><a href="target/${word}.html">${words[ix]}</a></td><td>${translation}</td>`;
                 } else {
-                    html += '<td class="has-background-danger-light">' + words[ix] + '</td><td class="has-background-danger-light">' + '</td>';
+                    html += `<td class="has-background-danger-light">${words[ix]}</td><td class="has-background-danger-light"></td>`;
                 }
             } else {
                 const translation = source_to_target[word];
                 if (translation) {
-                    html += '<td><a href="source/' + word + '.html">' + words[ix] + '</a></td><td>' + translation + '</td>';
+                    html += `<td><a href="source/${word}.html">${words[ix]}</a></td><td>${translation}</td>`;
                 } else {
-                    html += '<td class="has-background-danger-light">' + words[ix] + '</td><td class="has-background-danger-light">' + '</td>';
+                    html += `<td class="has-background-danger-light">${words[ix]}</td><td class="has-background-danger-light"></td>`;
                 }
             }
 
             html += '</tr>';
         }
+        html += '</tbody>';
         html += "</table>";
 
         $("#output").html(html);

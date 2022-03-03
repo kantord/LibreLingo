@@ -48,7 +48,7 @@ $(document).ready(function(){
         words_array.sort();
 
         var count_our_words = 0;
-        var html = "<table>";
+        var html = `<table class="table">`;
         html += "<tr><th>word</th><th>count</th></tr>";
         for (var ix=0; ix < words_array.length; ix++) {
             var word = words_array[ix];
