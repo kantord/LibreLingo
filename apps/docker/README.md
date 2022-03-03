@@ -1,6 +1,6 @@
 [Docker Hub](https://hub.docker.com/r/librelingo/librelingo)
 ## Usage
-After using one of the methods below successfully, you can access LibreLingo at ```http://{ip address}:3000```
+After using one of the methods below successfully, you can access your LibreLingo instance at ```http://{ip address}:3000```
 
 If you have volumed mounted your own course that was imported successfully, you can access the course here: ```http://{ip address}:3000/course/{name of course}```
 
