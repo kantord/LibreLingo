@@ -1,29 +1,19 @@
 {% include 'incl/header.html' %}
 
-<style>
-.missing {
-    background-color: red;
-}
-.exists {
-    background-color: white;
-}
-.onlywe {
-    background-color: yellow;
-}
-</style>
+<h1 class="title">Missing Words</h1>
 
-<h2>Missing Words</h2>
+<div class="content">
+   List all the words in the source language ({{ course.source_language_name }}) from all the courses with the same source language and mark which are
+   <span class="has-background-danger-light">missing</span> or
+   which we <span class="has-background-warning-light">have but the other courses don't</a>.
+   <span class="has-background-success-light"></span>
 
-List all the words in the source language ({{ course.source_language_name }}) from all the courses with the same source language and mark which are <span class="missing">missing</span> or which we <span class="onlywe">have but they
-don't</a>.
-
-<div>Total number of words: <span id="total_words"></span></div>
-<div>Number of words we have: <span id="our_words"></span></div>
-<div id="output">
+   <div>Total number of words: <span id="total_words"></span></div>
+   <div>Number of words we have: <span id="our_words"></span></div>
+   <div id="output">
+   </div>
 </div>
 
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
 $(document).ready(function(){
     //var source_to_target = null;
@@ -62,12 +52,12 @@ $(document).ready(function(){
         html += "<tr><th>word</th><th>count</th></tr>";
         for (var ix=0; ix < words_array.length; ix++) {
             var word = words_array[ix];
-            var css_class = "missing";
+            var css_class = "has-background-danger-light";
             if (word in this_source_to_target) {
                 count_our_words++;
-                css_class = "exists";
+                css_class = "has-background-success-light";
                 if (words[word] == 1) {
-                    css_class = "onlywe";
+                    css_class = "has-background-warning-light";
                 }
             }
             html += `<tr class="${css_class}"><td>${word}</td><td>${words[word]}</td></tr>`;
