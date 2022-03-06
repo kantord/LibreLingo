@@ -30,7 +30,7 @@
 @import "~bulma/sass/elements/container.sass";
 @import "~bulma/sass/elements/tag.sass";
 @import "~bulma/sass/layout/section.sass";
-@import "~bulma/sass/layout/footer.sass";
+/* @import "~bulma/sass/layout/footer.sass"; */
 @import "~bulma/sass/layout/hero.sass";
 @import "~bulma/sass/base/generic.sass";
 @import "~bulma/sass/helpers/_all.sass";
@@ -50,10 +50,6 @@
 
 @import "~bulma-pageloader";
 @import "~bulma-tooltip";
-
-.footer {
-    margin-top: 12em;
-}
 
 .md-page a {
     text-decoration: underline;
