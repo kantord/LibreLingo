@@ -15,6 +15,7 @@
   import Column from "lluis/Column.svelte"
   import Columns from "lluis/Columns.svelte"
   import Content from "lluis/Content.svelte"
+  import Footer from "lluis/Footer.svelte"
   import type { ModulesType } from "../../../types/ModulesType"
 
   export let courseName = null
@@ -46,7 +47,7 @@
   </section>
 {/each}
 
-<footer class="footer">
+<Footer>
   <Content>
     <Columns>
       <Column>
@@ -71,7 +72,7 @@
     </Columns>
     <p></p>
   </Content>
-</footer>
+</Footer>
 
 <style type="text/scss">
   @import "../../../variables";
