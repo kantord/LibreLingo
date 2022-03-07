@@ -11,17 +11,6 @@ ENV PATH="/root/.local/bin/:${PATH}"
 ENV GIT_REPO=TRUE
 
 WORKDIR /LibreLingo
-  
-# Setup LibreLingo 
-RUN yarn set version classic && \
-  yarn install --frozen-lockfile
- 
-# Setup tools to import courses
-RUN poetry install && \
-  cd /LibreLingo/apps/librelingo_yaml_loader && \
-  poetry install && \
-  cd /LibreLingo/apps/librelingo_json_export && \
-  poetry install
 
 # Entrypoint script that will convert all the courses in /LibreLingo/courses and make it available in Librelingo
 COPY docker-entrypoint.sh /LibreLingo/docker-entrypoint.sh
