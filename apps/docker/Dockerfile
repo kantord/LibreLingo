@@ -3,9 +3,11 @@ FROM archlinux:base-20220227.0.49015
 # Setup packages
 RUN pacman -Syu --noconfirm git nodejs-lts-fermium gcc yarn python3 python-pip
 
-# Setup Poetry and LibreLingo Python Packages
-RUN curl -sSL https://install.python-poetry.org | python3 - && \
-  cp /root/.local/bin/poetry /bin
+# Setup Poetry
+RUN curl -sSL https://install.python-poetry.org | python3 -
+
+# Update path to include poetry
+ENV PATH="/root/.local/bin/:${PATH}"
   
 # Git clone LibreLingo repo
 RUN git clone https://github.com/LibreLingo/LibreLingo.git
