@@ -1,9 +1,10 @@
 <script lang="typescript">
-  import {  onMount } from "svelte"
+  import { onMount } from "svelte"
 
   import live from "../../db/live"
   import getSkillStats from "../../db/skill/getSkillStats"
   import Icon from "lluis/Icon.svelte"
+  import Card from "lluis/Card.svelte"
   import Buttons from "./Buttons.svelte"
   import ContentLeft from "./ContentLeft.svelte"
   import ContentCenter from "./ContentCenter.svelte"
@@ -20,29 +21,52 @@
   let started = null
   let stale = null
   let progress = null
-  let introductionPageHref = introduction ? `${practiceHref}/introduction` : null
+  let introductionPageHref = introduction
+    ? `${practiceHref}/introduction`
+    : null
+  let backgroundColor = "white"
+  let foregroundColor = "black"
+
+  $: {
+    backgroundColor = (() => {
+      if (completed) return "var(--panel-background-success)"
+      if (stale) return "var(--panel-background-failure)"
+      return "white"
+    })()
+  }
+
+  $: {
+    foregroundColor = (() => {
+      if (completed) return "white"
+      if (stale) return "white"
+      return "black"
+    })()
+  }
 
   onMount(() => {
-      live((db) =>
-          getSkillStats(db, { id })
-              .then((stats) => {
-                  completed = stats.progress >= levels
-                  progress = stats.progress
-                  started = stats.started
-                  stale = stats.stale && completed
-              })
-              // eslint-disable-next-line @typescript-eslint/no-empty-function
-              .catch(() => {})
-      )
+    live((db) =>
+      getSkillStats(db, { id })
+        .then((stats) => {
+          completed = stats.progress >= levels
+          progress = stats.progress
+          started = stats.started
+          stale = stats.stale && completed
+        })
+        // eslint-disable-next-line @typescript-eslint/no-empty-function
+        .catch(() => {})
+    )
   })
 </script>
 
-<div
+<Card
   class="card"
+  {backgroundColor}
+  {foregroundColor}
   data-test="skill card"
-  data-started="{started}"
-  data-completed="{completed}"
-  data-stale="{stale}">
+  data-started={started}
+  data-completed={completed}
+  data-stale={stale}
+>
   {#if completed}
     {#if stale}
       <span class="icon">
@@ -54,32 +78,31 @@
       </span>
     {/if}
   {/if}
-  <div class="card-content">
+  <div slot="content">
     <div class="media">
-      <ContentLeft
-        imageSet="{imageSet}"
-        stale="{stale}"
-        completed="{completed}" />
+      <ContentLeft {imageSet} {stale} {completed} />
       <ContentCenter
-        progress="{progress}"
-        stale="{stale}"
-        levels="{levels}"
-        title="{title}"
-        completed="{completed}"
-        started="{started}"
-        summary="{summary}" />
+        {progress}
+        {stale}
+        {levels}
+        {title}
+        {completed}
+        {started}
+        {summary}
+      />
     </div>
   </div>
-  <footer class="card-footer">
-    <div href="{practiceHref}" class="card-footer-item">
+  <footer slot="footer">
+    <div href={practiceHref} class="card-footer-item">
       <Buttons
-        title="{title}"
-        practiceHref="{introductionPageHref || practiceHref}"
-        started="{started}"
-        completed="{completed}" />
+        {title}
+        practiceHref={introductionPageHref || practiceHref}
+        {started}
+        {completed}
+      />
     </div>
   </footer>
-</div>
+</Card>
 
 <style type="text/scss">
   @import "../../variables";
