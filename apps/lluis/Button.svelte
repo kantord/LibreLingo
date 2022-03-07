@@ -1,7 +1,8 @@
-<script lang="typescript">
+<script lang="ts">
   import { createEventDispatcher } from "svelte"
   import LinkOrButton from "./primitives/LinkOrButton.svelte"
   import Icon from "lluis/Icon.svelte"
+  import Stack from "lluis/Stack.svelte"
 
   const dispatch = createEventDispatcher()
   export let href: string | null = null
@@ -34,7 +35,10 @@
         <Icon icon="spinner" />
       </span>
     {:else}
-      <slot />
+      <Stack>
+        <div slot="icon-left" />
+        <slot />
+      </Stack>
     {/if}
   </LinkOrButton>
 </div>
@@ -52,10 +56,11 @@
 
   .lluis-button {
     display: inline-block;
+    max-width: 100%;
   }
 
   div > :global(*) {
-    display: flex;
+    display: inline-block;
     border-radius: var(--button-radius-small);
     padding: 6px 20px;
     margin: 4px;
