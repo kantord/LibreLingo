@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
   import { scale } from "svelte/transition"
   import db from "../db/db"
   import savePractice from "../db/skill/savePractice"

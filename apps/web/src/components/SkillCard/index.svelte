@@ -1,9 +1,10 @@
-<script lang="typescript">
-  import {  onMount } from "svelte"
+<script lang="ts">
+  import { onMount } from "svelte"
 
   import live from "../../db/live"
   import getSkillStats from "../../db/skill/getSkillStats"
   import Icon from "lluis/Icon.svelte"
+  import Card from "lluis/Card.svelte"
   import Buttons from "./Buttons.svelte"
   import ContentLeft from "./ContentLeft.svelte"
   import ContentCenter from "./ContentCenter.svelte"
@@ -20,103 +21,82 @@
   let started = null
   let stale = null
   let progress = null
-  let introductionPageHref = introduction ? `${practiceHref}/introduction` : null
+  let introductionPageHref = introduction
+    ? `${practiceHref}/introduction`
+    : null
+  let backgroundColor = "white"
+  let foregroundColor = "black"
+
+  $: {
+    backgroundColor = (() => {
+      if (stale) return "var(--panel-background-failure)"
+      if (completed) return "var(--panel-background-success)"
+      return "white"
+    })()
+  }
+
+  $: {
+    foregroundColor = (() => {
+      if (completed) return "white"
+      if (stale) return "white"
+      return "black"
+    })()
+  }
 
   onMount(() => {
-      live((db) =>
-          getSkillStats(db, { id })
-              .then((stats) => {
-                  completed = stats.progress >= levels
-                  progress = stats.progress
-                  started = stats.started
-                  stale = stats.stale && completed
-              })
-              // eslint-disable-next-line @typescript-eslint/no-empty-function
-              .catch(() => {})
-      )
+    live((db) =>
+      getSkillStats(db, { id })
+        .then((stats) => {
+          completed = stats.progress >= levels
+          progress = stats.progress
+          started = stats.started
+          stale = stats.stale && completed
+        })
+        // eslint-disable-next-line @typescript-eslint/no-empty-function
+        .catch(() => {})
+    )
   })
 </script>
 
-<div
-  class="card"
+<Card
+  {backgroundColor}
+  {foregroundColor}
   data-test="skill card"
-  data-started="{started}"
-  data-completed="{completed}"
-  data-stale="{stale}">
-  {#if completed}
-    {#if stale}
-      <span class="icon">
+  data-started={started}
+  data-completed={completed}
+  data-stale={stale}
+>
+  <div slot="icon">
+    {#if completed}
+      {#if stale}
         <Icon icon="dumbbell" size="large" />
-      </span>
-    {:else}
-      <span class="icon">
+      {:else}
         <Icon icon="check-square" size="large" />
-      </span>
+      {/if}
     {/if}
-  {/if}
-  <div class="card-content">
+  </div>
+  <div slot="content">
     <div class="media">
-      <ContentLeft
-        imageSet="{imageSet}"
-        stale="{stale}"
-        completed="{completed}" />
+      <ContentLeft {imageSet} {stale} {completed} />
       <ContentCenter
-        progress="{progress}"
-        stale="{stale}"
-        levels="{levels}"
-        title="{title}"
-        completed="{completed}"
-        started="{started}"
-        summary="{summary}" />
+        {progress}
+        {stale}
+        {levels}
+        {title}
+        {completed}
+        {started}
+        {summary}
+      />
     </div>
   </div>
-  <footer class="card-footer">
-    <div href="{practiceHref}" class="card-footer-item">
+  <footer slot="footer">
+    <div href={practiceHref} class="card-footer-item">
       <Buttons
-        title="{title}"
-        practiceHref="{introductionPageHref || practiceHref}"
-        started="{started}"
-        completed="{completed}" />
+        {title}
+        practiceHref={introductionPageHref || practiceHref}
+        {started}
+        {completed}
+      />
     </div>
   </footer>
-</div>
-
-<style type="text/scss">
-  @import "../../variables";
-
-  .card-content {
-    height: 147px;
-  }
-
-  .card {
-    $completed-color: lighten(desaturate($green, 15%), 20%);
-    $stale-color: lighten(desaturate($green, 45%), 20%);
-    background: white;
-
-    &[data-completed="true"] {
-      background-color: $completed-color;
-
-      &[data-stale="true"] {
-        background-color: $stale-color;
-
-        & > .icon {
-          position: absolute;
-          right: 1em;
-          top: 0.5em;
-        }
-      }
-
-      .title,
-      .media-content,
-      .icon {
-        color: $white;
-      }
-    }
-
-    & > .icon {
-      position: absolute;
-      right: 0.5em;
-      top: 0.5em;
-    }
-  }
-</style>
+</Card>

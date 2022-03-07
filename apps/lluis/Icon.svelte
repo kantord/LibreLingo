@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
   export let size = "medium"
   export let prefix = "fas"
   export let icon: string
