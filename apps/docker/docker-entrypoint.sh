@@ -1,10 +1,13 @@
 #!/bin/bash
 set -euo pipefail
 if [[ "${GIT_REPO}" == "TRUE" ]]; then
-    cd /
-    git clone https://github.com/LibreLingo/LibreLingo.git
-    cd /LibreLingo
-    git pull
+    if [ "$(ls -A /LibreLingo)" ]; then
+       cd /LibreLingo
+       git pull
+     else
+       cd /
+       git clone https://github.com/LibreLingo/LibreLingo.git
+    fi
 fi
 yarn set version classic 
 yarn install --frozen-lockfile
