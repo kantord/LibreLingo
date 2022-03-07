@@ -51,8 +51,6 @@
 </ul>
 
 <style type="text/scss">
-  @import "../variables";
-
   .options {
     list-style: none;
     padding-top: 1.5em;
