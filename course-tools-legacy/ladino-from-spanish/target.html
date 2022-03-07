@@ -4,141 +4,137 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
     <title>Ladino for Spanish speakers</title>
-    <style>
-        .odd {
-            background-color: #EEEEEE;
-        }
-        .even {
-            background-color: #FFFFFF;
-        }
-        .warning {
-            background-color: #FF5555;
-        }
-        #introduction {
-          background-color: gray;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/57525b30bb.js"></script>
   </head>
   <body>
-    <nav>
-      <a href="index.html">home</a>
-      |
-      <a href="converter.html">converter</a>
-      |
-      <a href="words.html">words</a>
-      |
-      <a href="modules.html">modules</a>
-      |
-      <a href="target.html">Ladino</a>
-      |
-      <a href="source.html">Spanish</a>
-    </nav>
+    <section class="section">
+      <div class="container">
+    <div class="tabs">
+      <ul>
+        <li ><a href="index.html">home</a></li>
+        <li ><a href="converter.html">converter</a></li>
+        <li ><a href="words.html">words</a></li>
+        <li ><a href="modules.html">modules</a></li>
+        <li class="is-active"><a href="target.html">Ladino</a></li>
+        <li ><a href="source.html">Spanish</a></li>
+      </ul>
+    </div>
 
 
-    <h1>Ladino for Spanish speakers</h1>
+    <h1 class="title">Ladino for Spanish speakers</h1>
+    <div class="content">
 
-    <table>
-      <tr><th>Word</th><th>Word #</th><th>Dictionary #</th><th>Phrases #</th></tr>
-      
-        <tr class="odd">
-        <td><a href="target/el.html">el</a></td>
-        <td>0</td>
-        <td>1</td>
-        <td>2</td>
-        </tr>
-      
-        <tr class="even">
-        <td><a href="target/el ombre.html">el ombre</a></td>
-        <td>1</td>
-        <td>0</td>
-        <td>0</td>
-        </tr>
-      
-        <tr class="odd">
-        <td><a href="target/es.html">es</a></td>
-        <td>0</td>
-        <td>1</td>
-        <td>2</td>
-        </tr>
-      
-        <tr class="even">
-        <td><a href="target/eya.html">eya</a></td>
-        <td>0</td>
-        <td>1</td>
-        <td>1</td>
-        </tr>
-      
-        <tr class="odd">
-        <td><a href="target/la.html">la</a></td>
-        <td>0</td>
-        <td>1</td>
-        <td>0</td>
-        </tr>
-      
-        <tr class="even">
-        <td><a href="target/la mujer.html">la mujer</a></td>
-        <td>1</td>
-        <td>0</td>
-        <td>0</td>
-        </tr>
-      
-        <tr class="odd">
-        <td><a href="target/mujer.html">mujer</a></td>
-        <td>1</td>
-        <td>0</td>
-        <td>3</td>
-        </tr>
-      
-        <tr class="even">
-        <td><a href="target/ombre.html">ombre</a></td>
-        <td>1</td>
-        <td>0</td>
-        <td>6</td>
-        </tr>
-      
-        <tr class="odd">
-        <td><a href="target/so.html">so</a></td>
-        <td>0</td>
-        <td>1</td>
-        <td>2</td>
-        </tr>
-      
-        <tr class="even">
-        <td><a href="target/sos.html">sos</a></td>
-        <td>0</td>
-        <td>1</td>
-        <td>1</td>
-        </tr>
-      
-        <tr class="odd">
-        <td><a href="target/tu.html">tu</a></td>
-        <td>0</td>
-        <td>1</td>
-        <td>1</td>
-        </tr>
-      
-        <tr class="even">
-        <td><a href="target/un.html">un</a></td>
-        <td>0</td>
-        <td>1</td>
-        <td>5</td>
-        </tr>
-      
-        <tr class="odd">
-        <td><a href="target/una.html">una</a></td>
-        <td>0</td>
-        <td>1</td>
-        <td>3</td>
-        </tr>
-      
-        <tr class="even">
-        <td><a href="target/yo.html">yo</a></td>
-        <td>0</td>
-        <td>1</td>
-        <td>2</td>
-        </tr>
-      
+    <table class="table is-striped is-hoverable">
+      <thead>
+        <tr><th>Word</th><th>Word #</th><th>Dictionary #</th><th>Phrases #</th></tr>
+      </thead>
+      <tbody>
+        
+          <tr>
+          <td><a href="target/el.html">el</a></td>
+          <td>0</td>
+          <td>1</td>
+          <td>2</td>
+          </tr>
+        
+          <tr>
+          <td><a href="target/el ombre.html">el ombre</a></td>
+          <td>1</td>
+          <td>0</td>
+          <td>0</td>
+          </tr>
+        
+          <tr>
+          <td><a href="target/es.html">es</a></td>
+          <td>0</td>
+          <td>1</td>
+          <td>2</td>
+          </tr>
+        
+          <tr>
+          <td><a href="target/eya.html">eya</a></td>
+          <td>0</td>
+          <td>1</td>
+          <td>1</td>
+          </tr>
+        
+          <tr>
+          <td><a href="target/la.html">la</a></td>
+          <td>0</td>
+          <td>1</td>
+          <td>0</td>
+          </tr>
+        
+          <tr>
+          <td><a href="target/la mujer.html">la mujer</a></td>
+          <td>1</td>
+          <td>0</td>
+          <td>0</td>
+          </tr>
+        
+          <tr>
+          <td><a href="target/mujer.html">mujer</a></td>
+          <td>1</td>
+          <td>0</td>
+          <td>3</td>
+          </tr>
+        
+          <tr>
+          <td><a href="target/ombre.html">ombre</a></td>
+          <td>1</td>
+          <td>0</td>
+          <td>6</td>
+          </tr>
+        
+          <tr>
+          <td><a href="target/so.html">so</a></td>
+          <td>0</td>
+          <td>1</td>
+          <td>2</td>
+          </tr>
+        
+          <tr>
+          <td><a href="target/sos.html">sos</a></td>
+          <td>0</td>
+          <td>1</td>
+          <td>1</td>
+          </tr>
+        
+          <tr>
+          <td><a href="target/tu.html">tu</a></td>
+          <td>0</td>
+          <td>1</td>
+          <td>1</td>
+          </tr>
+        
+          <tr>
+          <td><a href="target/un.html">un</a></td>
+          <td>0</td>
+          <td>1</td>
+          <td>5</td>
+          </tr>
+        
+          <tr>
+          <td><a href="target/una.html">una</a></td>
+          <td>0</td>
+          <td>1</td>
+          <td>3</td>
+          </tr>
+        
+          <tr>
+          <td><a href="target/yo.html">yo</a></td>
+          <td>0</td>
+          <td>1</td>
+          <td>2</td>
+          </tr>
+        
+      </tbody>
     </table>
+    </div>
 
+      </div>
+    </section>
   </body>
 </html>

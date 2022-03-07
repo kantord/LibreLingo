@@ -4,51 +4,42 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
     <title>Ladino for English speakers</title>
-    <style>
-        .odd {
-            background-color: #EEEEEE;
-        }
-        .even {
-            background-color: #FFFFFF;
-        }
-        .warning {
-            background-color: #FF5555;
-        }
-        #introduction {
-          background-color: gray;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/57525b30bb.js"></script>
   </head>
   <body>
-    <nav>
-      <a href="../../../index.html">home</a>
-      |
-      <a href="../../../converter.html">converter</a>
-      |
-      <a href="../../../words.html">words</a>
-      |
-      <a href="../../../modules.html">modules</a>
-      |
-      <a href="../../../target.html">Ladino</a>
-      |
-      <a href="../../../source.html">English</a>
-    </nav>
-
-
-    <h1>Language Names</h1>
-    <div>
-        Id: 73
+    <section class="section">
+      <div class="container">
+    <div class="tabs">
+      <ul>
+        <li ><a href="../../../index.html">home</a></li>
+        <li ><a href="../../../converter.html">converter</a></li>
+        <li ><a href="../../../words.html">words</a></li>
+        <li ><a href="../../../modules.html">modules</a></li>
+        <li ><a href="../../../target.html">Ladino</a></li>
+        <li ><a href="../../../source.html">English</a></li>
+      </ul>
     </div>
-    
 
+
+  <h1 class="title">Language Names</h1>
+  <div class="content">
+      Id: 73
+  </div>
+
+  <div class="content">
     <a href="https://github.com/szabgab/LibreLingo-Judeo-Spanish-from-English/blob/main/course//names/skills/language.yaml">source</a>
 
     <h2>Introduction</h2>
 
-    
-    Each skill can have an introduction in Markdown file. This skill could have it in <a href="https://github.com/szabgab/LibreLingo-Judeo-Spanish-from-English/blob/main/course//names/skills/language.md">source</a>
 
+    <div class="block light" id="introduction">
     
+      Each skill can have an introduction in Markdown file. This skill does not have one yet, but it can be added as <a href="https://github.com/szabgab/LibreLingo-Judeo-Spanish-from-English/blob/main/course//names/skills/language.md">this</a> (currently
+missing) file.
+    
+    </div>
 
     <h2>Words</h2>
     
@@ -57,7 +48,7 @@
 
     <h2>Phrases</h2>
     
-        <table>
+        <table class="table">
             
             <tr>
                 <td>
@@ -70,238 +61,242 @@
                     I speak Ladino<br>
                     
                 </td>
-                </tr> 
+                </tr>
         
         </table>
     
 
-    <h2>Dictionary</h2>
-    <table>
+    
+      <h2 class="subtitle">Dictionary</h2>
+      <table>
         <tr><th>English</th><th>Ladino</th></tr>
         
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
             <tr>
               <td><a href="../../..//source/Arab.html">Arab</a></td>
               <td>(&#39;Arabo&#39;,)</td>
-          </tr> 
+          </tr>
           
-    
+        
           
             <tr>
               <td><a href="../../..//source/English.html">English</a></td>
               <td>(&#39;Inglez&#39;,)</td>
-          </tr> 
+          </tr>
           
-    
+        
           
             <tr>
               <td><a href="../../..//source/French.html">French</a></td>
               <td>(&#39;Fransez&#39;,)</td>
-          </tr> 
+          </tr>
           
-    
+        
           
             <tr>
               <td><a href="../../..//source/Greek.html">Greek</a></td>
               <td>(&#39;Grego&#39;,)</td>
-          </tr> 
+          </tr>
           
-    
+        
           
             <tr>
               <td><a href="../../..//source/Hebrew.html">Hebrew</a></td>
               <td>(&#39;Ebreo&#39;, &#39;Ivrit&#39;)</td>
-          </tr> 
+          </tr>
           
-    
+        
           
             <tr>
               <td><a href="../../..//source/Ladino.html">Ladino</a></td>
               <td>(&#39;Espanyol&#39;, &#39;Ladino&#39;, &#39;Djudeo-espanyol&#39;)</td>
-          </tr> 
+          </tr>
           
-    
+        
           
             <tr>
               <td><a href="../../..//source/Spanish.html">Spanish</a></td>
               <td>(&#39;Kasteyano&#39;, &#39;Kastilyano&#39;)</td>
-          </tr> 
+          </tr>
           
-    
+        
           
             <tr>
               <td><a href="../../..//source/Portuguese.html">Portuguese</a></td>
               <td>(&#39;Portugez&#39;,)</td>
-          </tr> 
+          </tr>
           
-    
+        
           
             <tr>
               <td><a href="../../..//source/Turkish.html">Turkish</a></td>
               <td>(&#39;Turko&#39;,)</td>
-          </tr> 
+          </tr>
           
-    
-    </table>
+        
+      </table>
 
-    <table>
+      <table>
         <tr><th>Ladino</th><th>English</th></tr>
         
           
             <tr>
                 <td><a href="../../..//target/Aleman.html">Aleman</a></td>
                 <td>(&#39;German&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
             <tr>
                 <td><a href="../../..//target/Arabo.html">Arabo</a></td>
                 <td>(&#39;Arab&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
             <tr>
                 <td><a href="../../..//target/Djudeo-espanyol.html">Djudeo-espanyol</a></td>
                 <td>(&#39;Ladino&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
             <tr>
                 <td><a href="../../..//target/Ebreo.html">Ebreo</a></td>
                 <td>(&#39;Hebrew&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
             <tr>
                 <td><a href="../../..//target/Espanyol.html">Espanyol</a></td>
                 <td>(&#39;Ladino&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
             <tr>
                 <td><a href="../../..//target/Fransez.html">Fransez</a></td>
                 <td>(&#39;French&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
             <tr>
                 <td><a href="../../..//target/Grego.html">Grego</a></td>
                 <td>(&#39;Greek&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
             <tr>
                 <td><a href="../../..//target/Inglez.html">Inglez</a></td>
                 <td>(&#39;English&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
             <tr>
                 <td><a href="../../..//target/Ivrit.html">Ivrit</a></td>
                 <td>(&#39;Hebrew&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
             <tr>
                 <td><a href="../../..//target/Judeo-Espanyol.html">Judeo-Espanyol</a></td>
                 <td>(&#39;Ladino&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
             <tr>
                 <td><a href="../../..//target/Kasteyano.html">Kasteyano</a></td>
                 <td>(&#39;(Modern) Spanish&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
             <tr>
                 <td><a href="../../..//target/Kastilyano.html">Kastilyano</a></td>
                 <td>(&#39;(Modern) Spanish&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
             <tr>
                 <td><a href="../../..//target/Ladino.html">Ladino</a></td>
                 <td>(&#39;Ladino&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
             <tr>
                 <td><a href="../../..//target/Portugez.html">Portugez</a></td>
                 <td>(&#39;Portuguese&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
             <tr>
                 <td><a href="../../..//target/Turko.html">Turko</a></td>
                 <td>(&#39;Turkish&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
+        
+      </table>
     
-    </table>
 
 
+      </div>
+    </section>
   </body>
 </html>

@@ -4,135 +4,130 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
     <title>German for English speakers</title>
-    <style>
-        .odd {
-            background-color: #EEEEEE;
-        }
-        .even {
-            background-color: #FFFFFF;
-        }
-        .warning {
-            background-color: #FF5555;
-        }
-        #introduction {
-          background-color: gray;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/57525b30bb.js"></script>
   </head>
   <body>
-    <nav>
-      <a href="../../../index.html">home</a>
-      |
-      <a href="../../../converter.html">converter</a>
-      |
-      <a href="../../../words.html">words</a>
-      |
-      <a href="../../../modules.html">modules</a>
-      |
-      <a href="../../../target.html">German</a>
-      |
-      <a href="../../../source.html">English</a>
-    </nav>
-
-
-    <h1>Animals</h1>
-    <div>
-        Id: 2
+    <section class="section">
+      <div class="container">
+    <div class="tabs">
+      <ul>
+        <li ><a href="../../../index.html">home</a></li>
+        <li ><a href="../../../converter.html">converter</a></li>
+        <li ><a href="../../../words.html">words</a></li>
+        <li ><a href="../../../modules.html">modules</a></li>
+        <li ><a href="../../../target.html">German</a></li>
+        <li ><a href="../../../source.html">English</a></li>
+      </ul>
     </div>
-    
 
+
+  <h1 class="title">Animals</h1>
+  <div class="content">
+      Id: 2
+  </div>
+
+  <div class="content">
     <a href="https://codeberg.org/Lamdarer/LibreLingo-DE-from-EN/blob/main/course//basics/skills/animals.yaml">source</a>
 
     <h2>Introduction</h2>
 
-    
-    Each skill can have an introduction in Markdown file. This skill could have it in <a href="https://codeberg.org/Lamdarer/LibreLingo-DE-from-EN/blob/main/course//basics/skills/animals.md">source</a>
 
+    <div class="block light" id="introduction">
     
+      Each skill can have an introduction in Markdown file. This skill does not have one yet, but it can be added as <a href="https://codeberg.org/Lamdarer/LibreLingo-DE-from-EN/blob/main/course//basics/skills/animals.md">this</a> (currently
+missing) file.
+    
+    </div>
 
     <h2>Words</h2>
     
       <table>
+        <thead>
           <tr><th>German</th><th>English</th><th>Images</th></tr>
-        
-          <tr>
+        </thead>
+        <tbody>
+          
+            <tr>
               <td><a href="../../..//target/Hund.html">Hund</a></td>
               <td><a href="../../..//source/dog.html">dog</a>,<a href="../../..//source/hound.html">hound</a></td>
               <td>[&#39;dog1&#39;, &#39;dog2&#39;, &#39;dog3&#39;]</td>
-            </tr> 
-        
-          <tr>
+            </tr>
+          
+            <tr>
               <td><a href="../../..//target/Katze.html">Katze</a></td>
               <td><a href="../../..//source/cat.html">cat</a></td>
               <td>[&#39;cat1&#39;, &#39;cat2&#39;, &#39;cat3&#39;]</td>
-            </tr> 
-        
-          <tr>
+            </tr>
+          
+            <tr>
               <td><a href="../../..//target/Bär.html">Bär</a></td>
               <td><a href="../../..//source/bear.html">bear</a></td>
               <td>[&#39;bear1&#39;, &#39;bear2&#39;, &#39;bear1&#39;]</td>
-            </tr> 
-        
-          <tr>
+            </tr>
+          
+            <tr>
               <td><a href="../../..//target/Löwe.html">Löwe</a></td>
               <td><a href="../../..//source/lion.html">lion</a></td>
               <td>[&#39;lion1&#39;, &#39;lion2&#39;, &#39;lion3&#39;]</td>
-            </tr> 
-        
-          <tr>
+            </tr>
+          
+            <tr>
               <td><a href="../../..//target/Ente.html">Ente</a></td>
               <td><a href="../../..//source/duck.html">duck</a></td>
               <td>[&#39;duck1&#39;, &#39;duck2&#39;, &#39;duck3&#39;]</td>
-            </tr> 
-        
-          <tr>
+            </tr>
+          
+            <tr>
               <td><a href="../../..//target/Pferd.html">Pferd</a></td>
               <td><a href="../../..//source/horse.html">horse</a></td>
               <td>[&#39;horse1&#39;, &#39;horse2&#39;, &#39;horse3&#39;]</td>
-            </tr> 
-        
-          <tr>
+            </tr>
+          
+            <tr>
               <td><a href="../../..//target/die Katze.html">die Katze</a></td>
               <td><a href="../../..//source/the cat.html">the cat</a></td>
               <td>[&#39;cat1&#39;, &#39;cat2&#39;, &#39;cat3&#39;]</td>
-            </tr> 
-        
-          <tr>
+            </tr>
+          
+            <tr>
               <td><a href="../../..//target/ein Bär.html">ein Bär</a></td>
               <td><a href="../../..//source/a bear.html">a bear</a></td>
               <td>[&#39;bear1&#39;, &#39;bear2&#39;, &#39;bear1&#39;]</td>
-            </tr> 
-        
-          <tr>
+            </tr>
+          
+            <tr>
               <td><a href="../../..//target/ein Löwe.html">ein Löwe</a></td>
               <td><a href="../../..//source/a lion.html">a lion</a></td>
               <td>[&#39;lion1&#39;, &#39;lion2&#39;, &#39;lion3&#39;]</td>
-            </tr> 
-        
-          <tr>
+            </tr>
+          
+            <tr>
               <td><a href="../../..//target/die Ente.html">die Ente</a></td>
               <td><a href="../../..//source/the duck.html">the duck</a></td>
               <td>[&#39;duck1&#39;, &#39;duck2&#39;, &#39;duck3&#39;]</td>
-            </tr> 
-        
-          <tr>
+            </tr>
+          
+            <tr>
               <td><a href="../../..//target/ein Pferd.html">ein Pferd</a></td>
               <td><a href="../../..//source/a horse.html">a horse</a></td>
               <td>[&#39;horse1&#39;, &#39;horse2&#39;, &#39;horse3&#39;]</td>
-            </tr> 
-        
-          <tr>
+            </tr>
+          
+            <tr>
               <td><a href="../../..//target/der Hund.html">der Hund</a></td>
               <td><a href="../../..//source/the dog.html">the dog</a>,<a href="../../..//source/the hound.html">the hound</a></td>
               <td>[&#39;dog1&#39;, &#39;dog2&#39;, &#39;dog3&#39;]</td>
-            </tr> 
-        
+            </tr>
+          
+        </tbody>
       </table>
     
 
     <h2>Phrases</h2>
     
-        <table>
+        <table class="table">
             
             <tr>
                 <td>
@@ -145,7 +140,7 @@
                     It&#39;s a horse<br>
                     
                 </td>
-                </tr> 
+                </tr>
         
             <tr>
                 <td>
@@ -158,7 +153,7 @@
                     Max is a dog<br>
                     
                 </td>
-                </tr> 
+                </tr>
         
             <tr>
                 <td>
@@ -171,130 +166,134 @@
                     A duck and a horse<br>
                     
                 </td>
-                </tr> 
+                </tr>
         
         </table>
     
 
-    <h2>Dictionary</h2>
-    <table>
+    
+      <h2 class="subtitle">Dictionary</h2>
+      <table>
         <tr><th>English</th><th>German</th></tr>
         
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
             <tr>
               <td><a href="../../..//source/the.html">the</a></td>
               <td>(&#39;der&#39;, &#39;die&#39;, &#39;das&#39;)</td>
-          </tr> 
+          </tr>
           
-    
+        
           
             <tr>
               <td><a href="../../..//source/it&#39;s.html">it&#39;s</a></td>
               <td>(&#39;es ist&#39;,)</td>
-          </tr> 
+          </tr>
           
-    
+        
           
             <tr>
               <td><a href="../../..//source/a.html">a</a></td>
               <td>(&#39;ein&#39;,)</td>
-          </tr> 
+          </tr>
           
-    
+        
           
             <tr>
               <td><a href="../../..//source/Max.html">Max</a></td>
               <td>(&#39;Max (name)&#39;,)</td>
-          </tr> 
+          </tr>
           
-    
+        
           
             <tr>
               <td><a href="../../..//source/is.html">is</a></td>
               <td>(&#39;ist&#39;,)</td>
-          </tr> 
+          </tr>
           
-    
+        
           
             <tr>
               <td><a href="../../..//source/and.html">and</a></td>
               <td>(&#39;und&#39;,)</td>
-          </tr> 
+          </tr>
           
-    
-    </table>
+        
+      </table>
 
-    <table>
+      <table>
         <tr><th>German</th><th>English</th></tr>
         
           
             <tr>
                 <td><a href="../../..//target/ein.html">ein</a></td>
                 <td>(&#39;a/an (masc.)&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
             <tr>
                 <td><a href="../../..//target/eine.html">eine</a></td>
                 <td>(&#39;a/an (fem.)&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
             <tr>
                 <td><a href="../../..//target/es.html">es</a></td>
                 <td>(&#39;it&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
             <tr>
                 <td><a href="../../..//target/ist.html">ist</a></td>
                 <td>(&#39;is&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
             <tr>
                 <td><a href="../../..//target/Max.html">Max</a></td>
                 <td>(&#39;Max (name)&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
             <tr>
                 <td><a href="../../..//target/und.html">und</a></td>
                 <td>(&#39;and&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
+        
+      </table>
     
-    </table>
 
 
+      </div>
+    </section>
   </body>
 </html>

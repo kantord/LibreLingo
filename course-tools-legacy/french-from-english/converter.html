@@ -4,64 +4,36 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
     <title>French for English speakers</title>
-    <style>
-        .odd {
-            background-color: #EEEEEE;
-        }
-        .even {
-            background-color: #FFFFFF;
-        }
-        .warning {
-            background-color: #FF5555;
-        }
-        #introduction {
-          background-color: gray;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/57525b30bb.js"></script>
   </head>
   <body>
-    <nav>
-      <a href="index.html">home</a>
-      |
-      <a href="converter.html">converter</a>
-      |
-      <a href="words.html">words</a>
-      |
-      <a href="modules.html">modules</a>
-      |
-      <a href="target.html">French</a>
-      |
-      <a href="source.html">English</a>
-    </nav>
+    <section class="section">
+      <div class="container">
+    <div class="tabs">
+      <ul>
+        <li ><a href="index.html">home</a></li>
+        <li class="is-active"><a href="converter.html">converter</a></li>
+        <li ><a href="words.html">words</a></li>
+        <li ><a href="modules.html">modules</a></li>
+        <li ><a href="target.html">French</a></li>
+        <li ><a href="source.html">English</a></li>
+      </ul>
+    </div>
 
 
-<style>
-#input-text {
-    width: 50%;
-    height: 100px;
-}
-.missing {
-    background-color: #FF6666;
-}
-.middle {
-    width: 30px;
-}
-.selected {
-    background-color: yellow;
-}
-</style>
 <div>
-<textarea id="input-text">
+<textarea class="textarea" id="input-text">
 </textarea>
 </div>
 <div>
-<button id="target-to-source">French to English</button>
-<button id="source-to-target">English to French</button>
+<button class="button" id="target-to-source">French to English</button>
+<button class="button" id="source-to-target">English to French</button>
 </div>
 <div id="output">
 <div>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
 $(document).ready(function(){
     var source_to_target = null;
@@ -71,9 +43,9 @@ $(document).ready(function(){
     var direction = 'target-to-source';
 
     const update_direction_selector = function() {
-        $('#target-to-source').removeClass('selected');
-        $('#source-to-target').removeClass('selected');
-        $('#' + direction).addClass('selected');
+        $('#target-to-source').removeClass('is-warning');
+        $('#source-to-target').removeClass('is-warning');
+        $('#' + direction).addClass('is-warning');
     };
 
     var try_translate = function() {
@@ -87,14 +59,17 @@ $(document).ready(function(){
         //const cleaned = original.replace(/["';,!?.:]/g, " ");
         const cleaned = original.replace(/[^a-zA-Z-]/g, " ");
         const words = cleaned.split(" ");
-        var html = "<table>";
+        var html = `<table class="table">`;
+        html += '<thead>';
         html += '<tr>';
         if (direction == 'target-to-source') {
-            html += '<th>' + course_data['target_language_name']  + '</th><th>' + course_data['source_language_name'] + '</th>'
+            html += `<th>${course_data['target_language_name']}</th><th>${course_data['source_language_name']}</th>`;
         } else {
-            html += '<th>' + course_data['source_language_name']  + '</th><th>' + course_data['target_language_name'] + '</th>'
+            html += `<th>${course_data['source_language_name']}</th><th>${course_data['target_language_name']}</th>`;
         }
         html += '</tr>';
+        html += '</thead>';
+        html += '<tbody>';
         for (var ix = 0; ix < words.length; ix++) {
             if (words[ix] == "") {
                 continue;
@@ -105,21 +80,22 @@ $(document).ready(function(){
             if (direction == 'target-to-source') {
                 const translation = target_to_source[word];
                 if (translation) {
-                    html += '<td><a href="target/' + word + '.html">' + words[ix] + '</a></td><td>' + translation + '</td>';
+                    html += `<td><a href="target/${word}.html">${words[ix]}</a></td><td>${translation}</td>`;
                 } else {
-                    html += '<td class="missing">' + words[ix] + '</td><td class="missing">' + '</td>';
+                    html += `<td class="has-background-danger-light">${words[ix]}</td><td class="has-background-danger-light"></td>`;
                 }
             } else {
                 const translation = source_to_target[word];
                 if (translation) {
-                    html += '<td><a href="source/' + word + '.html">' + words[ix] + '</a></td><td>' + translation + '</td>';
+                    html += `<td><a href="source/${word}.html">${words[ix]}</a></td><td>${translation}</td>`;
                 } else {
-                    html += '<td class="missing">' + words[ix] + '</td><td class="missing">' + '</td>';
+                    html += `<td class="has-background-danger-light">${words[ix]}</td><td class="has-background-danger-light"></td>`;
                 }
             }
 
             html += '</tr>';
         }
+        html += '</tbody>';
         html += "</table>";
 
         $("#output").html(html);
@@ -165,5 +141,7 @@ $(document).ready(function(){
 
 
 
+      </div>
+    </section>
   </body>
 </html>

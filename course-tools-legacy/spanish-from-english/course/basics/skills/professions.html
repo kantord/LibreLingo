@@ -4,105 +4,100 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
     <title>Spanish for English speakers</title>
-    <style>
-        .odd {
-            background-color: #EEEEEE;
-        }
-        .even {
-            background-color: #FFFFFF;
-        }
-        .warning {
-            background-color: #FF5555;
-        }
-        #introduction {
-          background-color: gray;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/57525b30bb.js"></script>
   </head>
   <body>
-    <nav>
-      <a href="../../../index.html">home</a>
-      |
-      <a href="../../../converter.html">converter</a>
-      |
-      <a href="../../../words.html">words</a>
-      |
-      <a href="../../../modules.html">modules</a>
-      |
-      <a href="../../../target.html">Spanish</a>
-      |
-      <a href="../../../source.html">English</a>
-    </nav>
-
-
-    <h1>Professions</h1>
-    <div>
-        Id: 12
+    <section class="section">
+      <div class="container">
+    <div class="tabs">
+      <ul>
+        <li ><a href="../../../index.html">home</a></li>
+        <li ><a href="../../../converter.html">converter</a></li>
+        <li ><a href="../../../words.html">words</a></li>
+        <li ><a href="../../../modules.html">modules</a></li>
+        <li ><a href="../../../target.html">Spanish</a></li>
+        <li ><a href="../../../source.html">English</a></li>
+      </ul>
     </div>
-    
 
+
+  <h1 class="title">Professions</h1>
+  <div class="content">
+      Id: 12
+  </div>
+
+  <div class="content">
     <a href="https://github.com/kantord/LibreLingo-ES-from-EN/blob/main/course//basics/skills/professions.yaml">source</a>
 
     <h2>Introduction</h2>
 
-    
-    Each skill can have an introduction in Markdown file. This skill could have it in <a href="https://github.com/kantord/LibreLingo-ES-from-EN/blob/main/course//basics/skills/professions.md">source</a>
 
+    <div class="block light" id="introduction">
     
+      Each skill can have an introduction in Markdown file. This skill does not have one yet, but it can be added as <a href="https://github.com/kantord/LibreLingo-ES-from-EN/blob/main/course//basics/skills/professions.md">this</a> (currently
+missing) file.
+    
+    </div>
 
     <h2>Words</h2>
     
       <table>
+        <thead>
           <tr><th>Spanish</th><th>English</th><th>Images</th></tr>
-        
-          <tr>
+        </thead>
+        <tbody>
+          
+            <tr>
               <td><a href="../../..//target/médico.html">médico</a>,<a href="../../..//target/médica.html">médica</a></td>
               <td><a href="../../..//source/doctor.html">doctor</a></td>
               <td>[&#39;doctor1&#39;, &#39;doctor2&#39;, &#39;doctor3&#39;]</td>
-            </tr> 
-        
-          <tr>
+            </tr>
+          
+            <tr>
               <td><a href="../../..//target/bombera.html">bombera</a>,<a href="../../..//target/bombero.html">bombero</a></td>
               <td><a href="../../..//source/firefighter.html">firefighter</a></td>
               <td>[&#39;firefighter1&#39;, &#39;firefighter2&#39;, &#39;firefighter3&#39;]</td>
-            </tr> 
-        
-          <tr>
+            </tr>
+          
+            <tr>
               <td><a href="../../..//target/bombero.html">bombero</a>,<a href="../../..//target/bombera.html">bombera</a></td>
               <td><a href="../../..//source/firefighter.html">firefighter</a></td>
               <td>[&#39;firefighter1&#39;, &#39;firefighter2&#39;, &#39;firefighter3&#39;]</td>
-            </tr> 
-        
-          <tr>
+            </tr>
+          
+            <tr>
               <td><a href="../../..//target/granjera.html">granjera</a>,<a href="../../..//target/granjero.html">granjero</a></td>
               <td><a href="../../..//source/farmer.html">farmer</a></td>
               <td>[&#39;farmer1&#39;, &#39;farmer2&#39;, &#39;farmer3&#39;]</td>
-            </tr> 
-        
-          <tr>
+            </tr>
+          
+            <tr>
               <td><a href="../../..//target/granjero.html">granjero</a>,<a href="../../..//target/granjera.html">granjera</a></td>
               <td><a href="../../..//source/farmer.html">farmer</a></td>
               <td>[&#39;farmer1&#39;, &#39;farmer2&#39;, &#39;farmer3&#39;]</td>
-            </tr> 
-        
-          <tr>
+            </tr>
+          
+            <tr>
               <td><a href="../../..//target/una médica.html">una médica</a>,<a href="../../..//target/un médico.html">un médico</a></td>
               <td><a href="../../..//source/a doctor.html">a doctor</a></td>
               <td>[&#39;doctor1&#39;, &#39;doctor2&#39;, &#39;doctor3&#39;]</td>
-            </tr> 
-        
-          <tr>
+            </tr>
+          
+            <tr>
               <td><a href="../../..//target/granjeras.html">granjeras</a>,<a href="../../..//target/granjeros.html">granjeros</a></td>
               <td><a href="../../..//source/farmers.html">farmers</a></td>
               <td>[&#39;farmer1&#39;, &#39;farmer2&#39;, &#39;farmer3&#39;]</td>
-            </tr> 
-        
+            </tr>
+          
+        </tbody>
       </table>
     
 
     <h2>Phrases</h2>
     
-        <table>
+        <table class="table">
             
             <tr>
                 <td>
@@ -117,7 +112,7 @@
                     The doctor drinks water<br>
                     
                 </td>
-                </tr> 
+                </tr>
         
             <tr>
                 <td>
@@ -132,7 +127,7 @@
                     The waiter works<br>
                     
                 </td>
-                </tr> 
+                </tr>
         
             <tr>
                 <td>
@@ -147,7 +142,7 @@
                     The firefighters arrive<br>
                     
                 </td>
-                </tr> 
+                </tr>
         
             <tr>
                 <td>
@@ -162,7 +157,7 @@
                     The farmer sees the animals<br>
                     
                 </td>
-                </tr> 
+                </tr>
         
             <tr>
                 <td>
@@ -177,7 +172,7 @@
                     The nurses live here<br>
                     
                 </td>
-                </tr> 
+                </tr>
         
             <tr>
                 <td>
@@ -194,247 +189,251 @@
                     The singer sings well<br>
                     
                 </td>
-                </tr> 
+                </tr>
         
         </table>
     
 
-    <h2>Dictionary</h2>
-    <table>
+    
+      <h2 class="subtitle">Dictionary</h2>
+      <table>
         <tr><th>English</th><th>Spanish</th></tr>
         
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
             <tr>
               <td><a href="../../..//source/waiter.html">waiter</a></td>
               <td>(&#39;camarero&#39;,)</td>
-          </tr> 
+          </tr>
           
-    
+        
           
             <tr>
               <td><a href="../../..//source/works.html">works</a></td>
               <td>(&#39;trabaja&#39;, &#39;funciona&#39;)</td>
-          </tr> 
+          </tr>
           
-    
+        
           
             <tr>
               <td><a href="../../..//source/arrive.html">arrive</a></td>
               <td>(&#39;llegan&#39;, &#39;llego&#39;, &#39;llegas&#39;)</td>
-          </tr> 
+          </tr>
           
-    
+        
           
             <tr>
               <td><a href="../../..//source/firefighters.html">firefighters</a></td>
               <td>(&#39;bomberos&#39;, &#39;bomberas&#39;)</td>
-          </tr> 
+          </tr>
           
-    
+        
           
             <tr>
               <td><a href="../../..//source/sees.html">sees</a></td>
               <td>(&#39;ve&#39;,)</td>
-          </tr> 
+          </tr>
           
-    
+        
           
             <tr>
               <td><a href="../../..//source/animals.html">animals</a></td>
               <td>(&#39;animales&#39;,)</td>
-          </tr> 
+          </tr>
           
-    
+        
           
             <tr>
               <td><a href="../../..//source/nurses.html">nurses</a></td>
               <td>(&#39;enfermeros&#39;, &#39;enfermeras&#39;)</td>
-          </tr> 
+          </tr>
           
-    
+        
           
             <tr>
               <td><a href="../../..//source/live.html">live</a></td>
               <td>(&#39;vive&#39;, &#39;viven&#39;, &#39;vivo&#39;)</td>
-          </tr> 
+          </tr>
           
-    
+        
           
             <tr>
               <td><a href="../../..//source/here.html">here</a></td>
               <td>(&#39;aquí&#39;,)</td>
-          </tr> 
+          </tr>
           
-    
+        
           
             <tr>
               <td><a href="../../..//source/singer.html">singer</a></td>
               <td>(&#39;cantante&#39;,)</td>
-          </tr> 
+          </tr>
           
-    
+        
           
             <tr>
               <td><a href="../../..//source/sings.html">sings</a></td>
               <td>(&#39;canta&#39;,)</td>
-          </tr> 
+          </tr>
           
-    
+        
           
             <tr>
               <td><a href="../../..//source/well.html">well</a></td>
               <td>(&#39;bien&#39;,)</td>
-          </tr> 
+          </tr>
           
-    
-    </table>
+        
+      </table>
 
-    <table>
+      <table>
         <tr><th>Spanish</th><th>English</th></tr>
         
           
             <tr>
                 <td><a href="../../..//target/médica.html">médica</a></td>
                 <td>(&#39;doctor&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
             <tr>
                 <td><a href="../../..//target/camarero.html">camarero</a></td>
                 <td>(&#39;waiter&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
             <tr>
                 <td><a href="../../..//target/trabaja.html">trabaja</a></td>
                 <td>(&#39;works&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
             <tr>
                 <td><a href="../../..//target/bomberas.html">bomberas</a></td>
                 <td>(&#39;firefighters&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
             <tr>
                 <td><a href="../../..//target/llegan.html">llegan</a></td>
                 <td>(&#39;arrive&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
             <tr>
                 <td><a href="../../..//target/ve.html">ve</a></td>
                 <td>(&#39;sees&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
             <tr>
                 <td><a href="../../..//target/animales.html">animales</a></td>
                 <td>(&#39;animals&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
             <tr>
                 <td><a href="../../..//target/enfermeros.html">enfermeros</a></td>
                 <td>(&#39;nurses&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
             <tr>
                 <td><a href="../../..//target/viven.html">viven</a></td>
                 <td>(&#39;live&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
             <tr>
                 <td><a href="../../..//target/aquí.html">aquí</a></td>
                 <td>(&#39;here&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
             <tr>
                 <td><a href="../../..//target/cantante.html">cantante</a></td>
                 <td>(&#39;singer&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
             <tr>
                 <td><a href="../../..//target/canta.html">canta</a></td>
                 <td>(&#39;sings&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
             <tr>
                 <td><a href="../../..//target/bien.html">bien</a></td>
                 <td>(&#39;well&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
+        
+      </table>
     
-    </table>
 
 
+      </div>
+    </section>
   </body>
 </html>

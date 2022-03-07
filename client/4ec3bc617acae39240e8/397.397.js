@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[397],{694:function(n,e,a){"use strict";a.r(e),e.default="# 36. Transitive Verbs 2-2\n\n### Transitive Verbs 2-2 (Present)\n\n*   irakasten: teach\n*   eramaten: carry\n*   esaten: say\n*   hiltzen: kill\n*   gelditzen: stop\n*   hartzen: take\n\n[ Go Back to Home Page!](..)"}}]);

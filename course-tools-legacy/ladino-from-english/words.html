@@ -4,61 +4,39 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
     <title>Missing English words</title>
-    <style>
-        .odd {
-            background-color: #EEEEEE;
-        }
-        .even {
-            background-color: #FFFFFF;
-        }
-        .warning {
-            background-color: #FF5555;
-        }
-        #introduction {
-          background-color: gray;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/57525b30bb.js"></script>
   </head>
   <body>
-    <nav>
-      <a href="index.html">home</a>
-      |
-      <a href="converter.html">converter</a>
-      |
-      <a href="words.html">words</a>
-      |
-      <a href="modules.html">modules</a>
-      |
-      <a href="target.html">Ladino</a>
-      |
-      <a href="source.html">English</a>
-    </nav>
+    <section class="section">
+      <div class="container">
+    <div class="tabs">
+      <ul>
+        <li ><a href="index.html">home</a></li>
+        <li ><a href="converter.html">converter</a></li>
+        <li class="is-active"><a href="words.html">words</a></li>
+        <li ><a href="modules.html">modules</a></li>
+        <li ><a href="target.html">Ladino</a></li>
+        <li ><a href="source.html">English</a></li>
+      </ul>
+    </div>
 
 
-<style>
-.missing {
-    background-color: red;
-}
-.exists {
-    background-color: white;
-}
-.onlywe {
-    background-color: yellow;
-}
-</style>
+<h1 class="title">Missing Words</h1>
 
-<h2>Missing Words</h2>
+<div class="content">
+   List all the words in the source language () from all the courses with the same source language and mark which are
+   <span class="has-background-danger-light">missing</span> or
+   which we <span class="has-background-warning-light">have but the other courses don't</a>.
+   <span class="has-background-success-light"></span>
 
-List all the words in the source language () from all the courses with the same source language and mark which are <span class="missing">missing</span> or which we <span class="onlywe">have but they
-don't</a>.
-
-<div>Total number of words: <span id="total_words"></span></div>
-<div>Number of words we have: <span id="our_words"></span></div>
-<div id="output">
+   <div>Total number of words: <span id="total_words"></span></div>
+   <div>Number of words we have: <span id="our_words"></span></div>
+   <div id="output">
+   </div>
 </div>
 
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
 $(document).ready(function(){
     //var source_to_target = null;
@@ -93,16 +71,16 @@ $(document).ready(function(){
         words_array.sort();
 
         var count_our_words = 0;
-        var html = "<table>";
+        var html = `<table class="table">`;
         html += "<tr><th>word</th><th>count</th></tr>";
         for (var ix=0; ix < words_array.length; ix++) {
             var word = words_array[ix];
-            var css_class = "missing";
+            var css_class = "has-background-danger-light";
             if (word in this_source_to_target) {
                 count_our_words++;
-                css_class = "exists";
+                css_class = "has-background-success-light";
                 if (words[word] == 1) {
-                    css_class = "onlywe";
+                    css_class = "has-background-warning-light";
                 }
             }
             html += `<tr class="${css_class}"><td>${word}</td><td>${words[word]}</td></tr>`;
@@ -171,5 +149,7 @@ $(document).ready(function(){
 });
 </script>
 
+      </div>
+    </section>
   </body>
 </html>

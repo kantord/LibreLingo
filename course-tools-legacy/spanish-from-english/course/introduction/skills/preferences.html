@@ -4,93 +4,88 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
     <title>Spanish for English speakers</title>
-    <style>
-        .odd {
-            background-color: #EEEEEE;
-        }
-        .even {
-            background-color: #FFFFFF;
-        }
-        .warning {
-            background-color: #FF5555;
-        }
-        #introduction {
-          background-color: gray;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/57525b30bb.js"></script>
   </head>
   <body>
-    <nav>
-      <a href="../../../index.html">home</a>
-      |
-      <a href="../../../converter.html">converter</a>
-      |
-      <a href="../../../words.html">words</a>
-      |
-      <a href="../../../modules.html">modules</a>
-      |
-      <a href="../../../target.html">Spanish</a>
-      |
-      <a href="../../../source.html">English</a>
-    </nav>
-
-
-    <h1>Preferences</h1>
-    <div>
-        Id: 13
+    <section class="section">
+      <div class="container">
+    <div class="tabs">
+      <ul>
+        <li ><a href="../../../index.html">home</a></li>
+        <li ><a href="../../../converter.html">converter</a></li>
+        <li ><a href="../../../words.html">words</a></li>
+        <li ><a href="../../../modules.html">modules</a></li>
+        <li ><a href="../../../target.html">Spanish</a></li>
+        <li ><a href="../../../source.html">English</a></li>
+      </ul>
     </div>
-    
 
+
+  <h1 class="title">Preferences</h1>
+  <div class="content">
+      Id: 13
+  </div>
+
+  <div class="content">
     <a href="https://github.com/kantord/LibreLingo-ES-from-EN/blob/main/course//introduction/skills/preferences.yaml">source</a>
 
     <h2>Introduction</h2>
 
-    
-    Each skill can have an introduction in Markdown file. This skill could have it in <a href="https://github.com/kantord/LibreLingo-ES-from-EN/blob/main/course//introduction/skills/preferences.md">source</a>
 
+    <div class="block light" id="introduction">
     
+      Each skill can have an introduction in Markdown file. This skill does not have one yet, but it can be added as <a href="https://github.com/kantord/LibreLingo-ES-from-EN/blob/main/course//introduction/skills/preferences.md">this</a> (currently
+missing) file.
+    
+    </div>
 
     <h2>Words</h2>
     
       <table>
+        <thead>
           <tr><th>Spanish</th><th>English</th><th>Images</th></tr>
-        
-          <tr>
+        </thead>
+        <tbody>
+          
+            <tr>
               <td><a href="../../..//target/café.html">café</a></td>
               <td><a href="../../..//source/coffee.html">coffee</a></td>
               <td>[&#39;coffee1&#39;, &#39;coffee2&#39;, &#39;coffee3&#39;]</td>
-            </tr> 
-        
-          <tr>
+            </tr>
+          
+            <tr>
               <td><a href="../../..//target/vino.html">vino</a></td>
               <td><a href="../../..//source/wine.html">wine</a></td>
               <td>[&#39;wine1&#39;, &#39;wine2&#39;, &#39;wine3&#39;]</td>
-            </tr> 
-        
-          <tr>
+            </tr>
+          
+            <tr>
               <td><a href="../../..//target/cerveza.html">cerveza</a></td>
               <td><a href="../../..//source/beer.html">beer</a></td>
               <td>[&#39;beer1&#39;, &#39;beer2&#39;, &#39;beer3&#39;]</td>
-            </tr> 
-        
-          <tr>
+            </tr>
+          
+            <tr>
               <td><a href="../../..//target/un café.html">un café</a></td>
               <td><a href="../../..//source/a coffee.html">a coffee</a></td>
               <td>[&#39;coffee1&#39;, &#39;coffee2&#39;, &#39;coffee3&#39;]</td>
-            </tr> 
-        
-          <tr>
+            </tr>
+          
+            <tr>
               <td><a href="../../..//target/el vino.html">el vino</a></td>
               <td><a href="../../..//source/the wine.html">the wine</a></td>
               <td>[&#39;wine1&#39;, &#39;wine2&#39;, &#39;wine3&#39;]</td>
-            </tr> 
-        
+            </tr>
+          
+        </tbody>
       </table>
     
 
     <h2>Phrases</h2>
     
-        <table>
+        <table class="table">
             
             <tr>
                 <td>
@@ -105,7 +100,7 @@
                     Do you like coffee?<br>
                     
                 </td>
-                </tr> 
+                </tr>
         
             <tr>
                 <td>
@@ -120,7 +115,7 @@
                     I like pasta<br>
                     
                 </td>
-                </tr> 
+                </tr>
         
             <tr>
                 <td>
@@ -135,7 +130,7 @@
                     I like beer<br>
                     
                 </td>
-                </tr> 
+                </tr>
         
             <tr>
                 <td>
@@ -150,7 +145,7 @@
                     I don&#39;t like wine<br>
                     
                 </td>
-                </tr> 
+                </tr>
         
             <tr>
                 <td>
@@ -165,7 +160,7 @@
                     He doesn&#39;t eat meat<br>
                     
                 </td>
-                </tr> 
+                </tr>
         
             <tr>
                 <td>
@@ -180,7 +175,7 @@
                     I drink wine<br>
                     
                 </td>
-                </tr> 
+                </tr>
         
             <tr>
                 <td>
@@ -193,7 +188,7 @@
                     Cecilia doesn&#39;t eat pasta<br>
                     
                 </td>
-                </tr> 
+                </tr>
         
             <tr>
                 <td>
@@ -206,7 +201,7 @@
                     A beer please!<br>
                     
                 </td>
-                </tr> 
+                </tr>
         
             <tr>
                 <td>
@@ -219,7 +214,7 @@
                     Do you like wine?<br>
                     
                 </td>
-                </tr> 
+                </tr>
         
             <tr>
                 <td>
@@ -234,58 +229,62 @@
                     You don&#39;t like bread?<br>
                     
                 </td>
-                </tr> 
+                </tr>
         
         </table>
     
 
-    <h2>Dictionary</h2>
-    <table>
+    
+      <h2 class="subtitle">Dictionary</h2>
+      <table>
         <tr><th>English</th><th>Spanish</th></tr>
         
           
-    
+        
           
             <tr>
               <td><a href="../../..//source/do.html">do</a></td>
               <td>(&#39;hace&#39;, &#39;hago&#39;, &#39;haces&#39;, &#39;hacemos&#39;)</td>
-          </tr> 
+          </tr>
           
-    
+        
           
             <tr>
               <td><a href="../../..//source/don&#39;t.html">don&#39;t</a></td>
               <td>(&#39;no&#39;,)</td>
-          </tr> 
+          </tr>
           
-    
+        
           
             <tr>
               <td><a href="../../..//source/doesn&#39;t.html">doesn&#39;t</a></td>
               <td>(&#39;no&#39;,)</td>
-          </tr> 
+          </tr>
           
-    
-    </table>
+        
+      </table>
 
-    <table>
+      <table>
         <tr><th>Spanish</th><th>English</th></tr>
         
           
             <tr>
                 <td><a href="../../..//target/una.html">una</a></td>
                 <td>(&#39;a&#39;, &#39;one&#39;)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
-    
+        
           
-    
+        
           
+        
+      </table>
     
-    </table>
 
 
+      </div>
+    </section>
   </body>
 </html>

@@ -4,87 +4,82 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
     <title>Ladino for Spanish speakers</title>
-    <style>
-        .odd {
-            background-color: #EEEEEE;
-        }
-        .even {
-            background-color: #FFFFFF;
-        }
-        .warning {
-            background-color: #FF5555;
-        }
-        #introduction {
-          background-color: gray;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/57525b30bb.js"></script>
   </head>
   <body>
-    <nav>
-      <a href="../../../index.html">home</a>
-      |
-      <a href="../../../converter.html">converter</a>
-      |
-      <a href="../../../words.html">words</a>
-      |
-      <a href="../../../modules.html">modules</a>
-      |
-      <a href="../../../target.html">Ladino</a>
-      |
-      <a href="../../../source.html">Spanish</a>
-    </nav>
-
-
-    <h1>Basic 1</h1>
-    <div>
-        Id: 101
+    <section class="section">
+      <div class="container">
+    <div class="tabs">
+      <ul>
+        <li ><a href="../../../index.html">home</a></li>
+        <li ><a href="../../../converter.html">converter</a></li>
+        <li ><a href="../../../words.html">words</a></li>
+        <li ><a href="../../../modules.html">modules</a></li>
+        <li ><a href="../../../target.html">Ladino</a></li>
+        <li ><a href="../../../source.html">Spanish</a></li>
+      </ul>
     </div>
-    
 
+
+  <h1 class="title">Basic 1</h1>
+  <div class="content">
+      Id: 101
+  </div>
+
+  <div class="content">
     <a href="https://github.com/szabgab/LibreLingo-Judeo-Spanish-from-Spanish/blob/main/course//basic/skills/basic1.yaml">source</a>
 
     <h2>Introduction</h2>
 
-    
-    Each skill can have an introduction in Markdown file. This skill could have it in <a href="https://github.com/szabgab/LibreLingo-Judeo-Spanish-from-Spanish/blob/main/course//basic/skills/basic1.md">source</a>
 
+    <div class="block light" id="introduction">
     
+      Each skill can have an introduction in Markdown file. This skill does not have one yet, but it can be added as <a href="https://github.com/szabgab/LibreLingo-Judeo-Spanish-from-Spanish/blob/main/course//basic/skills/basic1.md">this</a> (currently
+missing) file.
+    
+    </div>
 
     <h2>Words</h2>
     
       <table>
+        <thead>
           <tr><th>Ladino</th><th>Spanish</th><th>Images</th></tr>
-        
-          <tr>
+        </thead>
+        <tbody>
+          
+            <tr>
               <td><a href="../../..//target/la mujer.html">la mujer</a></td>
               <td><a href="../../..//source/la mujer.html">la mujer</a></td>
               <td>[&#39;woman1&#39;, &#39;woman2&#39;, &#39;woman3&#39;]</td>
-            </tr> 
-        
-          <tr>
+            </tr>
+          
+            <tr>
               <td><a href="../../..//target/mujer.html">mujer</a></td>
               <td><a href="../../..//source/mujer.html">mujer</a></td>
               <td>[&#39;woman1&#39;, &#39;woman2&#39;, &#39;woman3&#39;]</td>
-            </tr> 
-        
-          <tr>
+            </tr>
+          
+            <tr>
               <td><a href="../../..//target/ombre.html">ombre</a></td>
               <td><a href="../../..//source/hombre.html">hombre</a></td>
               <td>[&#39;man1&#39;, &#39;man2&#39;, &#39;man3&#39;]</td>
-            </tr> 
-        
-          <tr>
+            </tr>
+          
+            <tr>
               <td><a href="../../..//target/el ombre.html">el ombre</a></td>
               <td><a href="../../..//source/el hombre.html">el hombre</a></td>
               <td>[&#39;man1&#39;, &#39;man2&#39;, &#39;man3&#39;]</td>
-            </tr> 
-        
+            </tr>
+          
+        </tbody>
       </table>
     
 
     <h2>Phrases</h2>
     
-        <table>
+        <table class="table">
             
             <tr>
                 <td>
@@ -97,7 +92,7 @@
                     yo soy una mujer<br>
                     
                 </td>
-                </tr> 
+                </tr>
         
             <tr>
                 <td>
@@ -110,7 +105,7 @@
                     un hombre<br>
                     
                 </td>
-                </tr> 
+                </tr>
         
             <tr>
                 <td>
@@ -123,7 +118,7 @@
                     el hombre<br>
                     
                 </td>
-                </tr> 
+                </tr>
         
             <tr>
                 <td>
@@ -136,7 +131,7 @@
                     yo soy un hombre<br>
                     
                 </td>
-                </tr> 
+                </tr>
         
             <tr>
                 <td>
@@ -149,7 +144,7 @@
                     una mujer, un hombre<br>
                     
                 </td>
-                </tr> 
+                </tr>
         
             <tr>
                 <td>
@@ -162,7 +157,7 @@
                     ella es una mujer<br>
                     
                 </td>
-                </tr> 
+                </tr>
         
             <tr>
                 <td>
@@ -175,7 +170,7 @@
                     el es un hombre<br>
                     
                 </td>
-                </tr> 
+                </tr>
         
             <tr>
                 <td>
@@ -188,202 +183,206 @@
                     tu eres un hombre<br>
                     
                 </td>
-                </tr> 
+                </tr>
         
         </table>
     
 
-    <h2>Dictionary</h2>
-    <table>
+    
+      <h2 class="subtitle">Dictionary</h2>
+      <table>
         <tr><th>Spanish</th><th>Ladino</th></tr>
         
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
             <tr>
               <td><a href="../../..//source/yo.html">yo</a></td>
               <td>(&#39;yo&#39;,)</td>
-          </tr> 
+          </tr>
           
-    
+        
           
             <tr>
               <td><a href="../../..//source/tu.html">tu</a></td>
               <td>(&#39;tu&#39;,)</td>
-          </tr> 
+          </tr>
           
-    
+        
           
             <tr>
               <td><a href="../../..//source/soy.html">soy</a></td>
               <td>(&#39;so&#39;,)</td>
-          </tr> 
+          </tr>
           
-    
+        
           
             <tr>
               <td><a href="../../..//source/eres.html">eres</a></td>
               <td>(&#39;sos&#39;,)</td>
-          </tr> 
+          </tr>
           
-    
+        
           
             <tr>
               <td><a href="../../..//source/una.html">una</a></td>
               <td>(&#39;una&#39;,)</td>
-          </tr> 
+          </tr>
           
-    
+        
           
             <tr>
               <td><a href="../../..//source/un.html">un</a></td>
               <td>(&#39;un&#39;,)</td>
-          </tr> 
+          </tr>
           
-    
+        
           
             <tr>
               <td><a href="../../..//source/el.html">el</a></td>
               <td>(&#39;el&#39;,)</td>
-          </tr> 
+          </tr>
           
-    
+        
           
             <tr>
               <td><a href="../../..//source/la.html">la</a></td>
               <td>(&#39;la&#39;,)</td>
-          </tr> 
+          </tr>
           
-    
+        
           
             <tr>
               <td><a href="../../..//source/es.html">es</a></td>
               <td>(&#39;es&#39;,)</td>
-          </tr> 
+          </tr>
           
-    
+        
           
             <tr>
               <td><a href="../../..//source/ella.html">ella</a></td>
               <td>(&#39;eya&#39;,)</td>
-          </tr> 
+          </tr>
           
-    
-    </table>
+        
+      </table>
 
-    <table>
+      <table>
         <tr><th>Ladino</th><th>Spanish</th></tr>
         
           
             <tr>
                 <td><a href="../../..//target/yo.html">yo</a></td>
                 <td>(&#39;yo&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
             <tr>
                 <td><a href="../../..//target/tu.html">tu</a></td>
                 <td>(&#39;tu&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
             <tr>
                 <td><a href="../../..//target/sos.html">sos</a></td>
                 <td>(&#39;eres&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
             <tr>
                 <td><a href="../../..//target/so.html">so</a></td>
                 <td>(&#39;soy&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
             <tr>
                 <td><a href="../../..//target/una.html">una</a></td>
                 <td>(&#39;una&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
             <tr>
                 <td><a href="../../..//target/un.html">un</a></td>
                 <td>(&#39;un&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
             <tr>
                 <td><a href="../../..//target/el.html">el</a></td>
                 <td>(&#39;el&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
             <tr>
                 <td><a href="../../..//target/la.html">la</a></td>
                 <td>(&#39;la&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
             <tr>
                 <td><a href="../../..//target/eya.html">eya</a></td>
                 <td>(&#39;ella&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
             <tr>
                 <td><a href="../../..//target/es.html">es</a></td>
                 <td>(&#39;es&#39;,)</td>
-            </tr> 
+            </tr>
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
-    
+        
           
+        
+      </table>
     
-    </table>
 
 
+      </div>
+    </section>
   </body>
 </html>

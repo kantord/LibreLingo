@@ -4,106 +4,102 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
     <title>French for English speakers</title>
-    <style>
-        .odd {
-            background-color: #EEEEEE;
-        }
-        .even {
-            background-color: #FFFFFF;
-        }
-        .warning {
-            background-color: #FF5555;
-        }
-        #introduction {
-          background-color: gray;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/57525b30bb.js"></script>
   </head>
   <body>
-    <nav>
-      <a href="index.html">home</a>
-      |
-      <a href="converter.html">converter</a>
-      |
-      <a href="words.html">words</a>
-      |
-      <a href="modules.html">modules</a>
-      |
-      <a href="target.html">French</a>
-      |
-      <a href="source.html">English</a>
-    </nav>
+    <section class="section">
+      <div class="container">
+    <div class="tabs">
+      <ul>
+        <li ><a href="index.html">home</a></li>
+        <li ><a href="converter.html">converter</a></li>
+        <li ><a href="words.html">words</a></li>
+        <li ><a href="modules.html">modules</a></li>
+        <li ><a href="target.html">French</a></li>
+        <li class="is-active"><a href="source.html">English</a></li>
+      </ul>
+    </div>
 
 
-    <h1>French for English speakers</h1>
+    <h1 class="title">French for English speakers</h1>
+    <div class="content">
 
-    <table>
-      <tr><th>Word</th><th>Word #</th><th>Dictionary #</th><th>Phrases #</th></tr>
-      
-        <tr class="odd">
-        <td><a href="source/hello.html">hello</a></td>
-        <td>0</td>
-        <td>1</td>
-        <td>2</td>
-        </tr>
-      
-        <tr class="even">
-        <td><a href="source/hi.html">hi</a></td>
-        <td>0</td>
-        <td>0</td>
-        <td>2</td>
-        </tr>
-      
-        <tr class="odd">
-        <td><a href="source/man.html">man</a></td>
-        <td>0</td>
-        <td>1</td>
-        <td>2</td>
-        </tr>
-      
-        <tr class="even">
-        <td><a href="source/says.html">says</a></td>
-        <td>0</td>
-        <td>1</td>
-        <td>4</td>
-        </tr>
-      
-        <tr class="odd">
-        <td><a href="source/the.html">the</a></td>
-        <td>0</td>
-        <td>2</td>
-        <td>4</td>
-        </tr>
-      
-        <tr class="even">
-        <td><a href="source/the female.html">the female</a></td>
-        <td>1</td>
-        <td>0</td>
-        <td>0</td>
-        </tr>
-      
-        <tr class="odd">
-        <td><a href="source/the man.html">the man</a></td>
-        <td>1</td>
-        <td>0</td>
-        <td>0</td>
-        </tr>
-      
-        <tr class="even">
-        <td><a href="source/the woman.html">the woman</a></td>
-        <td>1</td>
-        <td>0</td>
-        <td>0</td>
-        </tr>
-      
-        <tr class="odd">
-        <td><a href="source/woman.html">woman</a></td>
-        <td>0</td>
-        <td>1</td>
-        <td>2</td>
-        </tr>
-      
+    <table class="table is-striped is-hoverable">
+      <thead>
+        <tr><th>Word</th><th>Word #</th><th>Dictionary #</th><th>Phrases #</th></tr>
+      </thead>
+      <tbody>
+        
+          <tr>
+          <td><a href="source/hello.html">hello</a></td>
+          <td>0</td>
+          <td>1</td>
+          <td>2</td>
+          </tr>
+        
+          <tr>
+          <td><a href="source/hi.html">hi</a></td>
+          <td>0</td>
+          <td>0</td>
+          <td>2</td>
+          </tr>
+        
+          <tr>
+          <td><a href="source/man.html">man</a></td>
+          <td>0</td>
+          <td>1</td>
+          <td>2</td>
+          </tr>
+        
+          <tr>
+          <td><a href="source/says.html">says</a></td>
+          <td>0</td>
+          <td>1</td>
+          <td>4</td>
+          </tr>
+        
+          <tr>
+          <td><a href="source/the.html">the</a></td>
+          <td>0</td>
+          <td>2</td>
+          <td>4</td>
+          </tr>
+        
+          <tr>
+          <td><a href="source/the female.html">the female</a></td>
+          <td>1</td>
+          <td>0</td>
+          <td>0</td>
+          </tr>
+        
+          <tr>
+          <td><a href="source/the man.html">the man</a></td>
+          <td>1</td>
+          <td>0</td>
+          <td>0</td>
+          </tr>
+        
+          <tr>
+          <td><a href="source/the woman.html">the woman</a></td>
+          <td>1</td>
+          <td>0</td>
+          <td>0</td>
+          </tr>
+        
+          <tr>
+          <td><a href="source/woman.html">woman</a></td>
+          <td>0</td>
+          <td>1</td>
+          <td>2</td>
+          </tr>
+        
+      </tbody>
     </table>
+    </div>
 
+      </div>
+    </section>
   </body>
 </html>
