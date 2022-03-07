@@ -1,8 +1,8 @@
-<script lang="typescript">
+<script lang="ts">
   import { onMount } from "svelte"
   import hotkeys from "hotkeys-js"
   import shuffle from "lodash.shuffle"
-  import OptionCard from "../components/OptionCard.svelte"
+  import OptionCard from "./OptionCard.svelte"
   export let options
   export let selectedOption
   export let disabled
@@ -51,7 +51,7 @@
 </ul>
 
 <style type="text/scss">
-  @import "../variables";
+  @import "../../variables";
 
   .options {
     list-style: none;
