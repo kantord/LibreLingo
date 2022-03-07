@@ -1,4 +1,4 @@
-<script lang="typescript" context="module">
+<script lang="ts" context="module">
   import NavBar from "../components/NavBar.svelte"
   import Title from "lluis/Title.svelte"
   import Button from "../../../lluis/Button.svelte"
