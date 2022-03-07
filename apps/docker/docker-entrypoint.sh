@@ -6,5 +6,12 @@ if [[ "${GIT_REPO}" == "TRUE" ]]; then
     cd /LibreLingo
     git pull
 fi
-yarn exportAllCourses
-yarn web dev
+yarn set version classic 
+yarn install --frozen-lockfile
+poetry install
+cd /LibreLingo/apps/librelingo_yaml_loader
+poetry install 
+cd /LibreLingo/apps/librelingo_json_export 
+poetry install
+yarn exportAllCourses # Exports all courses in /LibreLingo/courses
+yarn web dev # Runs LibreLingo
