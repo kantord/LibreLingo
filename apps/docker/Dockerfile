@@ -8,7 +8,7 @@ RUN pacman -Syu --noconfirm git nodejs-lts-fermium gcc yarn python3 python-pip &
 ENV PATH="/root/.local/bin/:${PATH}"
   
 # Git clone LibreLingo repo
-RUN git clone https://github.com/LibreLingo/LibreLingo.git
+ENV GIT_CLONE=TRUE
 
 WORKDIR /LibreLingo
   
