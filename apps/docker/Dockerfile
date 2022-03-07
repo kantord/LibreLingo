@@ -19,7 +19,7 @@ RUN cd /LibreLingo && \
  
 # Setup tools to import courses
 RUN cd /LibreLingo && \
-  /root/.local/bin/poetry install && \
+  poetry install && \
   cd /LibreLingo/apps/librelingo_yaml_loader && \
   /root/.local/bin/poetry install && \
   cd /LibreLingo/apps/librelingo_json_export && \
