@@ -1,4 +1,4 @@
-<script lang="typescript" context="module">
+<script lang="ts" context="module">
   import { waitLocale } from "svelte-i18n"
   import isBrowser from "../utils/isBrowser"
 

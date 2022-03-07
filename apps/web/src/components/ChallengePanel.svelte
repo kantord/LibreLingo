@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
   import Button from "lluis/Button.svelte"
   import Panel from "lluis/Panel.svelte"
 
