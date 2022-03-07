@@ -1,9 +1,0 @@
-version: '3.3'
-services:
-    librelingo:
-        volumes:
-            - '{path to course}:/LibreLingo/courses/{name of course}'
-        ports:
-            - '3000:3000'
-        container_name: LibreLingo
-        image: librelingo/librelingo
