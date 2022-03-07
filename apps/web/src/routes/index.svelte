@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
   import Mascot from "../components/Mascot.svelte"
   import LicenseLogo from "../components/LicenseLogo.svelte"
   import Button from "lluis/Button.svelte"

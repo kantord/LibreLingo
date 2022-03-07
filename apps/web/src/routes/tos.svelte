@@ -1,4 +1,4 @@
-<script lang="typescript" context="module">
+<script lang="ts" context="module">
   import MarkDownPage from "../components/MarkDownPage.svelte"
   import parseMarkdown from "../utils/parseMarkdown"
 
@@ -17,7 +17,7 @@
   }
 </script>
 
-<script lang="typescript">
+<script lang="ts">
   export let readmeHTML: string
 </script>
 
