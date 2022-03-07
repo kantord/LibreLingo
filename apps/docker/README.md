@@ -1,18 +1,16 @@
 [Docker Hub](https://hub.docker.com/r/librelingo/librelingo)
 ## Usage
-After using one of the methods below successfully, you can access your LibreLingo instance at ```http://{ip address}:3000```
+The LibreLingo container has an environment variable that you can change when the docker container is ran: GIT_REPO
 
-If you have volumed mounted your own course that was imported successfully, you can access the course here: ```http://{ip address}:3000/course/{name of course}```
+The default for GIT_REPO is TRUE
 
-Anything wrapped in curly braces in this README.md is for things to change
+If GIT_REPO is not changed/set to TRUE, then when the container is ran for the first time the LibreLingo repo will be git cloned into the folder ```/LibreLingo``` that is in the container and every start up after the first start up will run git pull on ```/LibreLingo``` to get the most up to date version of LibreLingo
 
-The LibreLingo container has on environment variable you can change: GIT_REPO
+If GIT_REPO is set to FALSE, then the git repo will NOT be git cloned and "git pull" will NOT be ran at start up of the container. You must clone the repo yourself and volume mount it to ```/LibreLingo``` that is inside the container. This option is to allow developers to work on the project and then test their changes inside the container.
 
-If GIT_REPO is set to TRUE, then everytime the container starts the LibreLingo/LibreLingo repo will be git cloned into the /LibreLingo and have "git pull" ran on the repo to ensure the latest version.
+If you volume mount any courses to /LibreLingo/courses then they will be automatically be exported and put into the containerised LibreLingo and you can access the course in the containerised LibreLingo at: ```http://{ip address}:3000/course/{name of course}```
 
-If GIT_REPO is set to FALSE, then the git repo will NOT be git cloned and "git pull" will NOT be ran on the repo. You must clone the repo yourself and volume mount it to /LibreLingo. This is to allow developers to work on the project and test their changes.
-
-If you volume mount any courses to /LibreLingo/courses then they will automatically be exported and put into LibreLingo
+After successfully running the container, you can access the containerised LibreLingo web instance at ```http://{ip address}:3000```
 ### Docker CLI Usage Example
 Example:
 ```
@@ -39,7 +37,8 @@ services:
         image: librelingo/librelingo
 ```
 ### Building the image
-1. Move into this directory (using cd or other) 
+1. Move into this directory (using cd or other)
+
 Example:
 ```
 cd LibreLingo/apps/docker/
@@ -48,4 +47,4 @@ cd LibreLingo/apps/docker/
 ```
 docker build . -t {image name}
 ```
-3. Then run using any of the above methods but substituting the image name of "librelingo/librelingo" with your image name
+3. Then run the image as described above but substituting the image name of "librelingo/librelingo" with your image name
