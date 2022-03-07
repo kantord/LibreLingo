@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[426],{723:function(a,n,e){"use strict";e.r(n),n.default="This section covers basic greetings and introductions in Uma. \nVocabulary:\nAletu: Hello\nTcematcúkumahũ?: Are you good?\nAmatcúkumah: I am good\nÃ: Yes\nKeyu: No\nSeyulhtcefuyat Sammy: My name is Sammy\nBalbãsa' ámẽteleh: I am from Balbancha"}}]);

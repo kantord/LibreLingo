@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[207],{510:function(e){e.exports=JSON.parse('{"id":"1735039e549f","levels":1,"challenges":[{"type":"options","formInTargetLanguage":"la meza","meaningInSourceLanguage":"table","id":"18dbd7d5a8fe","priority":0,"group":"05090a1cbc17"}]}')}}]);

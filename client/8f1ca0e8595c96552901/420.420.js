@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[420],{717:function(n,o,a){"use strict";a.r(o),o.default="# 22. Weather 2\n\n### Vocabulary 2\n\n*   laino: fog\n*   lainotsu: foggy\n*   euri: rain\n*   euritsu: rainy\n*   elur: snow\n*   ekaitz: storm\n*   izoztuta: frozen\n*   haizetsu: windy\n*   oso: very\n\n[ Go Back to Home Page!](..)"}}]);

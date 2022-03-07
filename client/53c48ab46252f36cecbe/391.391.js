@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[391],{688:function(n,o,e){"use strict";e.r(o),o.default="# 27 Time 1\n\n## Talking about time\n\n*   These lessons will focus on how to discuss time\n\n### Time 1\n\n*   denbora: time\n*   ordu: hour\n*   minutu: minute\n*   laster: soon\n*   oraindik: still/yet\n*   garaiz: on time\n\n[ Go Back to Home Page!](..)"}}]);

@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[344],{641:function(n,o,e){"use strict";e.r(o),o.default="# 38. Egin 2\n\n### Egin 2\n\n*   hots: call\n*   irribarre: smile\n*   korri: run\n*   kosk: bite\n*   lan: work\n*   lo: sleep\n\n[ Go Back to Home Page!](..)"}}]);
