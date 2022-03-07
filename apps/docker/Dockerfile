@@ -5,9 +5,7 @@ RUN pacman -Syu --noconfirm git nodejs-lts-fermium gcc yarn python3 python-pip
 
 # Setup Poetry and LibreLingo Python Packages
 RUN curl -sSL https://install.python-poetry.org | python3 - && \
-  cp /root/.local/bin/poetry /bin && \
-  pip install librelingo-yaml-loader && \
-  pip install librelingo-json-export
+  cp /root/.local/bin/poetry /bin
   
 # Git clone LibreLingo repo
 RUN git clone https://github.com/LibreLingo/LibreLingo.git
@@ -21,9 +19,9 @@ RUN cd /LibreLingo && \
 RUN cd /LibreLingo && \
   poetry install && \
   cd /LibreLingo/apps/librelingo_yaml_loader && \
-  /root/.local/bin/poetry install && \
+  poetry install && \
   cd /LibreLingo/apps/librelingo_json_export && \
-  /root/.local/bin/poetry install
+  poetry install
 
 WORKDIR /LibreLingo
 
