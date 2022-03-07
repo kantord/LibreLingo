@@ -8,7 +8,7 @@ RUN pacman -Syu --noconfirm git nodejs-lts-fermium gcc yarn python3 python-pip &
 ENV PATH="/root/.local/bin/:${PATH}"
   
 # Git clone environment variable that can be override when running container
-ENV GIT_CLONE=TRUE
+ENV GIT_REPO=TRUE
 
 WORKDIR /LibreLingo
   
