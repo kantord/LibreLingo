@@ -1,11 +1,9 @@
 FROM archlinux:base-20220227.0.49015
 
-# Setup packages
-RUN pacman -Syu --noconfirm git nodejs-lts-fermium gcc yarn python3 python-pip
-
-# Setup Poetry
-RUN curl -sSL https://install.python-poetry.org | python3 -
-
+# Setup packages and poetry
+RUN pacman -Syu --noconfirm git nodejs-lts-fermium gcc yarn python3 python-pip && \
+  curl -sSL https://install.python-poetry.org | python3 -
+ 
 # Update path to include poetry
 ENV PATH="/root/.local/bin/:${PATH}"
   
