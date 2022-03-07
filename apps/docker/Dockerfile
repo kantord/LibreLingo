@@ -14,7 +14,7 @@ RUN git clone https://github.com/LibreLingo/LibreLingo.git
   
 # Setup LibreLingo 
 RUN cd /LibreLingo && \
-  yarn set version classic && \
+  yarn install --frozen-lockfile && \
   yarn
  
 # Setup tools to import courses
