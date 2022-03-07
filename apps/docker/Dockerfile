@@ -11,21 +11,19 @@ ENV PATH="/root/.local/bin/:${PATH}"
   
 # Git clone LibreLingo repo
 RUN git clone https://github.com/LibreLingo/LibreLingo.git
+
+WORKDIR /LibreLingo
   
 # Setup LibreLingo 
-RUN cd /LibreLingo && \
-  yarn install --frozen-lockfile && \
+RUN yarn install --frozen-lockfile && \
   yarn
  
 # Setup tools to import courses
-RUN cd /LibreLingo && \
-  poetry install && \
+RUN poetry install && \
   cd /LibreLingo/apps/librelingo_yaml_loader && \
   poetry install && \
   cd /LibreLingo/apps/librelingo_json_export && \
   poetry install
-
-WORKDIR /LibreLingo
 
 # Entrypoint script that will convert all the courses in /LibreLingo/courses and make it available in Librelingo
 COPY docker-entrypoint.sh /LibreLingo/docker-entrypoint.sh
