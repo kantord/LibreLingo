@@ -23,14 +23,6 @@ Then("I see a skill that has no image set", () => {
   cy.get(".column:first-child .card img").should("have.length", 0)
 })
 
-Then("I see 3 skills that have an image set", () => {
-  cy.get(".column:nth-child(2) .card img").should("have.length", 3)
-})
-
-Then("I see 3 skills that have an image set", () => {
-  cy.get(".column:nth-child(2) .card img").should("have.length", 3)
-})
-
 Given("I have a stale skill", () => {
   cy.window().then((window) => {
     const db = window._DB
