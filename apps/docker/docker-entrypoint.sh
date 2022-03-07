@@ -9,6 +9,7 @@ if [[ "${GIT_REPO}" == "TRUE" ]]; then
        git clone https://github.com/LibreLingo/LibreLingo.git
     fi
 fi
+cd /LibreLingo
 yarn set version classic 
 yarn install --frozen-lockfile
 poetry install
