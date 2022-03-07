@@ -4,6 +4,7 @@
   import live from "../../db/live"
   import getSkillStats from "../../db/skill/getSkillStats"
   import Icon from "lluis/Icon.svelte"
+  import Card from "lluis/Card.svelte"
   import Buttons from "./Buttons.svelte"
   import ContentLeft from "./ContentLeft.svelte"
   import ContentCenter from "./ContentCenter.svelte"
@@ -37,7 +38,7 @@
   })
 </script>
 
-<div
+<Card
   class="card"
   data-test="skill card"
   data-started="{started}"
@@ -51,10 +52,10 @@
     {:else}
       <span class="icon">
         <Icon icon="check-square" size="large" />
-      </span>
+      </span>:kis
     {/if}
   {/if}
-  <div class="card-content">
+  <div slot="content">
     <div class="media">
       <ContentLeft
         imageSet="{imageSet}"
@@ -70,7 +71,7 @@
         summary="{summary}" />
     </div>
   </div>
-  <footer class="card-footer">
+  <footer slot="footer">
     <div href="{practiceHref}" class="card-footer-item">
       <Buttons
         title="{title}"
@@ -79,7 +80,7 @@
         completed="{completed}" />
     </div>
   </footer>
-</div>
+</Card>
 
 <style type="text/scss">
   @import "../../variables";
