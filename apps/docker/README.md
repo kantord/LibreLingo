@@ -5,22 +5,34 @@ After using one of the methods below successfully, you can access your LibreLing
 If you have volumed mounted your own course that was imported successfully, you can access the course here: ```http://{ip address}:3000/course/{name of course}```
 
 Anything wrapped in curly braces in this README.md is for things to change
-### Docker CLI
-Without importing a course:
+
+The LibreLingo container has on environment variable you can change: GIT_REPO
+
+If GIT_REPO is set to TRUE, then everytime the container starts the LibreLingo/LibreLingo repo will be git cloned into the /LibreLingo and have "git pull" ran on the repo to ensure the latest version.
+
+If GIT_REPO is set to FALSE, then the git repo will NOT be git cloned and "git pull" will NOT be ran on the repo. You must clone the repo yourself and volume mount it to /LibreLingo. This is to allow developers to work on the project and test their changes.
+
+If you volume mount any courses to /LibreLingo/courses then they will automatically be exported and put into LibreLingo
+### Docker CLI Usage Example
+Example:
 ```
 docker container run -p 3000:3000 -d --name LibreLingo librelingo/librelingo
 ```
-With importing a course:
+Example with importing a course:
 ```
-docker container run -v {path to course}:/LibreLingo/courses/{name of course} -p 3000:3000 -d --name LibreLingo librelingo/librelingo
+docker container run -v /home/user/french-from-english:/LibreLingo/courses/french-from-english -p 3000:3000 -d --name LibreLingo librelingo/librelingo
 ```
-### Docker-compose
+Example for developers:
+```
+TODO
+```
+### Docker-compose Example
 ```
 version: '3.3'
 services:
     librelingo:
         volumes:
-            - '{path to course}:/LibreLingo/courses/{name of course}'
+            - '/home/user/french-from-english:/LibreLingo/courses/french-from-english'
         ports:
             - '3000:3000'
         container_name: LibreLingo
