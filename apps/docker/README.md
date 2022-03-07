@@ -11,7 +11,7 @@ If GIT_REPO is set to FALSE, then the git repo will NOT be git cloned and "git p
 If you volume mount any courses to /LibreLingo/courses then they will be automatically be exported and put into the containerised LibreLingo and you can access the course in the containerised LibreLingo at: ```http://{ip address}:3000/course/{name of course}```
 
 After successfully running the container, you can access the containerised LibreLingo web instance at ```http://{ip address}:3000```
-### Docker CLI Usage Example
+### Examples
 Example:
 ```
 docker container run -p 3000:3000 -d --name LibreLingo librelingo/librelingo
