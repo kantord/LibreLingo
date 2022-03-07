@@ -13,10 +13,10 @@ ENV GIT_REPO=TRUE
 WORKDIR /LibreLingo
 
 # Entrypoint script that will convert all the courses in /LibreLingo/courses and make it available in Librelingo
-COPY docker-entrypoint.sh /LibreLingo/docker-entrypoint.sh
-RUN chmod +x /LibreLingo/docker-entrypoint.sh
+COPY docker-entrypoint.sh /docker-entrypoint.sh
+RUN chmod +x /docker-entrypoint.sh
 
 EXPOSE 3000
 
 # Run entrypoint script as the entrypoint
-ENTRYPOINT ["/LibreLingo/docker-entrypoint.sh"]
+ENTRYPOINT ["/docker-entrypoint.sh"]
