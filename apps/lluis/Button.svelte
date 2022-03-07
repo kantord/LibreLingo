@@ -52,10 +52,11 @@
 
   .lluis-button {
     display: inline-block;
+    max-width: 100%;
   }
 
   div > :global(*) {
-    display: flex;
+    display: inline-block;
     border-radius: var(--button-radius-small);
     padding: 6px 20px;
     margin: 4px;

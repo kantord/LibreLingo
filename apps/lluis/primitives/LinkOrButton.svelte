@@ -10,23 +10,39 @@
 </script>
 
 {#if href !== null}
-	<a href={href} target={target} tabindex="{tabIndex}" {...$$restProps}>
+  <a {href} {target} tabindex={tabIndex} {...$$restProps}>
     <slot />
-	</a>
+  </a>
 {/if}
 
 {#if href === null}
-	<button type={type} tabindex="{tabIndex}" disabled={disabled} on:click={() => dispatch("click")} {...$$restProps}>
+  <button
+    {type}
+    tabindex={tabIndex}
+    {disabled}
+    on:click={() => dispatch("click")}
+    {...$$restProps}
+  >
     <slot />
-	</button>
+  </button>
 {/if}
 
 <style type="text/scss">
   button {
-    display: inline-block;
     background: transparent;
     border: 0;
     font-size: inherit;
     cursor: pointer;
+  }
+
+  a,
+  button {
+    display: inline-block;
+    max-width: 100%;
+    text-overflow: ellipsis;
+
+    /* Needed to make it work */
+    overflow: hidden;
+    white-space: nowrap;
   }
 </style>
