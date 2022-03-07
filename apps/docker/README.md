@@ -24,7 +24,7 @@ docker container run -v /home/user/french-from-english:/LibreLingo/courses/frenc
 ```
 Example for developers:
 ```
-TODO
+docker container run -p 3000:3000 --env GIT_REPO=FALSE -v /home/user/LibreLingo:/LibreLingo -d --name LibreLingo librelingo/librelingo
 ```
 ### Docker-compose Example
 ```
