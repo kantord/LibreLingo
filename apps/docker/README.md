@@ -24,18 +24,6 @@ Example for developers:
 ```
 docker container run -p 3000:3000 --env GIT_REPO=FALSE -v /home/user/LibreLingo:/LibreLingo -d --name LibreLingo librelingo/librelingo
 ```
-### Docker-compose Example
-```
-version: '3.3'
-services:
-    librelingo:
-        volumes:
-            - '/home/user/french-from-english:/LibreLingo/courses/french-from-english'
-        ports:
-            - '3000:3000'
-        container_name: LibreLingo
-        image: librelingo/librelingo
-```
 ### Building the image
 1. Move into this directory (using cd or other)
 
