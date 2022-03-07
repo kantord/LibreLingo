@@ -24,11 +24,7 @@ Then("I see a skill that has no image set", () => {
 })
 
 Then("I see 3 skills that have an image set", () => {
-  cy.get(".column:nth-child(2) .card img").should("have.length", 3)
-})
-
-Then("I see 3 skills that have an image set", () => {
-  cy.get(".column:nth-child(2) .card img").should("have.length", 3)
+  cy.get(".lluis-card-content .image-set").should("have.length", 3)
 })
 
 Given("I have a stale skill", () => {
