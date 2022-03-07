@@ -28,4 +28,8 @@
 <style type="text/scss">
   @import "./node_modules/bulma/sass/utilities/_all";
   @import "./node_modules/bulma/sass/elements/title.sass";
+
+  h1 {
+    color: inherit !important;
+  }
 </style>
