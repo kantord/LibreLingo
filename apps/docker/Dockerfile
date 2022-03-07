@@ -13,8 +13,8 @@ RUN git clone https://github.com/LibreLingo/LibreLingo.git
 WORKDIR /LibreLingo
   
 # Setup LibreLingo 
-RUN yarn install --frozen-lockfile && \
-  yarn
+RUN yarn set version classic && \
+  yarn install --frozen-lockfile
  
 # Setup tools to import courses
 RUN poetry install && \
