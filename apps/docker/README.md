@@ -1,33 +1,39 @@
-[Docker Hub](https://hub.docker.com/r/cutthroat78/librelingo-dev)
-
+[Docker Hub](https://hub.docker.com/r/librelingo/librelingo)
 ## Usage
-After using one of the methods below and it runs successfully, you can access LibreLingo at http://(ip of host that is running the container):3000.
+After using one of the methods below successfully, you can access your LibreLingo instance at ```http://{ip address}:3000```
 
-If you have volumed mounted your own course (to /LibreLingo/courses/your-course inside of the container), you can access it here http://(ip of host that is running the container):3000/course/your-course
-### docker cli
+If you have volumed mounted your own course that was imported successfully, you can access the course here: ```http://{ip address}:3000/course/{name of course}```
+
+Anything wrapped in curly braces in this README.md is for things to change
+### Docker CLI
+Without importing a course:
 ```
-docker container run -v (path to your course):/LibreLingo/courses/your-course -p 3000:3000 -d --name LibreLingo-Dev cutthroat78/librelingo-dev
+docker container run -p 3000:3000 -d --name LibreLingo librelingo/librelingo
 ```
-### docker-compose
+With importing a course:
+```
+docker container run -v {path to course}:/LibreLingo/courses/{name of course} -p 3000:3000 -d --name LibreLingo librelingo/librelingo
+```
+### Docker-compose
 ```
 version: '3.3'
 services:
-    librelingo-dev:
+    librelingo:
         volumes:
-            - '(path to your course):/LibreLingo/courses/your-course'
+            - '{path to course}:/LibreLingo/courses/{name of course}'
         ports:
             - '3000:3000'
-        container_name: LibreLingo-Dev
-        image: cutthroat78/librelingo-dev
+        container_name: LibreLingo
+        image: librelingo/librelingo
 ```
-### Build the image yourself
+### Building the image
 1. Move into this directory (using cd or other) 
 Example:
 ```
-cd LibreLingo/apps/docker/README.md
+cd LibreLingo/apps/docker/
 ```
 2. Build the image
 ```
-docker build . -t (insert username here)/(insert image name here)
+docker build . -t {image name}
 ```
-3. Then run using any of the above methods but substituting the image name of "cutthroat78/librelingo-dev" with your image name
+3. Then run using any of the above methods but substituting the image name of "librelingo/librelingo" with your image name
