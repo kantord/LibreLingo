@@ -7,7 +7,7 @@ RUN pacman -Syu --noconfirm git nodejs-lts-fermium gcc yarn python3 python-pip &
 # Update path to include poetry
 ENV PATH="/root/.local/bin/:${PATH}"
   
-# Git clone LibreLingo repo
+# Git clone environment variable that can be override when using docker run
 ENV GIT_CLONE=TRUE
 
 WORKDIR /LibreLingo
