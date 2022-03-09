@@ -5,11 +5,11 @@
   import { _ } from "svelte-i18n"
 
   export async function preload(page) {
-      const { courseName, id } = page.params
+      const { courseName, skillName } = page.params
       const { modules } = await import(`../../../../../courses/${courseName}/courseData.json`)
       for (const module of modules) {
           for (const skill of module.skills) {
-              if (skill.practiceHref === id) {
+              if (skill.practiceHref === skillName) {
                   return {
                       courseName,
                       title: skill.title,
