@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`get_course returns correct course data 1`] = `
+Object {
+  "courseName": "test",
+  "languageName": "Test Language",
+  "modules": Array [
+    Object {
+      "skills": Array [
+        Object {
+          "id": "e70976d68b28",
+          "levels": 1,
+          "practiceHref": "short-input-test-0",
+          "summary": Array [
+            "perro",
+            "perro",
+          ],
+          "title": "Short Input Test 0",
+        },
+        Object {
+          "id": "38c2ea1c36d2",
+          "imageSet": Array [
+            "dog1",
+            "lion3",
+            "cat3",
+          ],
+          "introduction": "animals.md",
+          "levels": 3,
+          "practiceHref": "animals",
+          "summary": Array [
+            "perro",
+            "gato",
+            "oso",
+            "león",
+            "pato",
+            "caballo",
+            "el gato",
+            "un oso",
+            "un león",
+            "el pato",
+            "un caballo",
+            "el perro",
+            "Es un caballo",
+            "Max es un perro",
+            "Un pato y un caballo",
+          ],
+          "title": "Animals",
+        },
+        Object {
+          "id": "a3eb592daaf6",
+          "levels": 1,
+          "practiceHref": "short-input-test-1",
+          "summary": Array [
+            "foo",
+          ],
+          "title": "Short Input Test 1",
+        },
+        Object {
+          "id": "30f35fdbc4c9",
+          "levels": 1,
+          "practiceHref": "short-input-test-2",
+          "summary": Array [
+            "agua",
+            "agua2",
+          ],
+          "title": "Short Input Test 2",
+        },
+        Object {
+          "id": "4fdcd0f561a5",
+          "levels": 1,
+          "practiceHref": "short-input-test-3",
+          "summary": Array [
+            "Cómo estás tu?",
+          ],
+          "title": "Short Input Test 3",
+        },
+        Object {
+          "id": "7d7ba7d56abb",
+          "levels": 1,
+          "practiceHref": "listening-test-0",
+          "summary": Array [
+            "perro",
+            "perro",
+          ],
+          "title": "Listening test 0",
+        },
+        Object {
+          "id": "07b599369280",
+          "levels": 2,
+          "practiceHref": "options-test-0",
+          "summary": Array [
+            "perro",
+            "león",
+            "cerdo",
+          ],
+          "title": "Options test 0",
+        },
+        Object {
+          "id": "6ef61f72a217",
+          "levels": 1,
+          "practiceHref": "chips-test-0",
+          "summary": Array [
+            "¿Como, estás hoy?",
+            "Tu como estás hoy?",
+          ],
+          "title": "Chips test 0",
+        },
+        Object {
+          "id": "42f05dd67031",
+          "levels": 1,
+          "practiceHref": "continuous",
+          "summary": Array [],
+          "title": "Continuous",
+        },
+        Object {
+          "id": "a8dbe791bff7",
+          "levels": 2,
+          "practiceHref": "cards-test",
+          "summary": Array [
+            "pasta",
+            "pasta1",
+            "pasta2",
+            "pasta3",
+          ],
+          "title": "Cards test",
+        },
+      ],
+      "title": "Basics",
+    },
+  ],
+  "repositoryURL": "https://github.com/LibreLingo/LibreLingo/",
+}
+`;
