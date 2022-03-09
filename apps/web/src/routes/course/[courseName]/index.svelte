@@ -1,11 +1,9 @@
 <script lang="typescript" context="module">
   export async function preload(page) {
+      const { get_course } = await import("../../../course-client")
       const { courseName } = page.params
-      const { modules, languageName, repositoryURL } = await import(
-          `../../../courses/${courseName}/courseData.json`
-      )
 
-      return { courseName, modules, languageName, repositoryURL }
+      return await get_course({ courseName })
   }
 </script>
 
@@ -28,7 +26,7 @@
   <title>LibreLingo - learn {languageName} for free</title>
 </svelte:head>
 
-<NavBar hasAuth {repositoryURL} />
+<NavBar hasAuth repositoryURL="{repositoryURL}" />
 
 {#each modules as { title, skills }}
   <section class="section">
@@ -38,8 +36,9 @@
         {#each skills as skill}
           <Column sizeDesktop="1/3" sizeTablet="1/2">
             <SkillCard
-              {... { ...skill } }
-              practiceHref="{`/course/${courseName}/skill/${skill.practiceHref}`}" />
+              {...{ ...skill }}
+              practiceHref="{`/course/${courseName}/skill/${skill.practiceHref}`}"
+            />
           </Column>
         {/each}
       </Columns>
