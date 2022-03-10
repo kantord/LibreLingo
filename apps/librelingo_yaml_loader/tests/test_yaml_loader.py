@@ -368,6 +368,11 @@ def test_load_course_output_matches_value(fs):
                 word="the", definition="la\nle", is_in_target_language=False
             ),
             DictionaryItem(word="La", definition="the", is_in_target_language=True),
+            DictionaryItem(
+                word="source_word",
+                definition="target_translation_1\ntarget_translation_2",
+                is_in_target_language=False,
+            ),
         ]
     )
     assert len(result.modules) == 1
