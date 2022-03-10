@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[427],{724:function(n,o,e){"use strict";e.r(o),o.default="# 34. Ukan/Edun 2-3\n\n### Ukan/Edun 2-3\n\n*   irakurriko: will read\n*   ikusiko: will see\n*   egostiko: will cook\n*   jango: will eat\n*   datorren hilabetean: next month\n\n[ Go Back to Home Page!](..)"}}]);

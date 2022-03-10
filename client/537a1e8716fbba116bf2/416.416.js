@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[416],{713:function(n,e,a){"use strict";a.r(e),e.default="# 34. Ukan/Edun 2-2\n\n### Ukan/Edun 2-2\n\n*   irakurtzen: read (present)\n*   ikusten: see\n*   egosten: cook (verb)\n*   jaten: eat\n*   batzuk: a few\n\n[ Go Back to Home Page!](..)"}}]);

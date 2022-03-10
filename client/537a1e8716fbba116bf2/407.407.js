@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[407],{704:function(n,e,t){"use strict";t.r(e),e.default="# 35. Transitive Verbs 1-2\n\n### Transitive Verbs 1-2 (Present)\n\n*   abesten: sing\n*   aldatzen: change\n*   ekartzen: bring\n*   erabiltzen: use\n*   idazten: write\n*   entzuten: hear/ listen to\n\n[ Go Back to Home Page!](..)"}}]);
