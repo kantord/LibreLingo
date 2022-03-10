@@ -1,31 +1,9 @@
 <script lang="typescript" context="module">
+  import { get_skill_data } from "../../../../../course-client"
+
   export async function preload(page) {
-      const { id, courseName } = page.params
-      const {
-          languageName,
-          languageCode,
-          specialCharacters,
-          repositoryURL,
-      } = await import(`../../../../../courses/${courseName}/courseData.json`)
-      const skillData = await import(
-          `../../../../../courses/${courseName}/challenges/${id}.json`
-      )
-      const rawChallenges = skillData.challenges
-      const challengesPerLevel = skillData.challenges.length / skillData.levels
-
-      const skillId = skillData.id
-
-      return {
-          rawChallenges: Array.from(rawChallenges),
-          languageName,
-          languageCode,
-          specialCharacters,
-          repositoryURL,
-          id,
-          skillId,
-          challengesPerLevel,
-          courseURL: `/course/${courseName}`,
-      }
+    const { id, courseName } = page.params
+    return get_skill_data({ skillName: id, courseName })
   }
 </script>
 
@@ -45,8 +23,8 @@
   export let challengesPerLevel: number
 
   let expectedNumberOfChallenges = Math.max(
-      4,
-      Math.round(challengesPerLevel * 1.2)
+    4,
+    Math.round(challengesPerLevel * 1.2)
   )
 </script>
 
@@ -54,14 +32,15 @@
   <title>LibreLingo - learn {id} in {languageName} for free</title>
 </svelte:head>
 
-<NavBar {repositoryURL} />
+<NavBar repositoryURL="{repositoryURL}" />
 
 <ChallengeScreen
-  {expectedNumberOfChallenges}
-  {skillId}
-  {rawChallenges}
-  {languageName}
-  {languageCode}
-  {specialCharacters}
-  {sortChallengeGroups}
-  {courseURL} />
+  expectedNumberOfChallenges="{expectedNumberOfChallenges}"
+  skillId="{skillId}"
+  rawChallenges="{rawChallenges}"
+  languageName="{languageName}"
+  languageCode="{languageCode}"
+  specialCharacters="{specialCharacters}"
+  sortChallengeGroups="{sortChallengeGroups}"
+  courseURL="{courseURL}"
+/>
