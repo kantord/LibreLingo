@@ -373,6 +373,34 @@ def test_load_course_output_matches_value(fs):
                 definition="target_translation_1\ntarget_translation_2",
                 is_in_target_language=False,
             ),
+            DictionaryItem(
+                word="source_1", definition="target_1", is_in_target_language=False
+            ),
+            DictionaryItem(
+                word="target_1", definition="source_1", is_in_target_language=True
+            ),
+            DictionaryItem(
+                word="source_2",
+                definition="target_2_a\ntarget_2_b",
+                is_in_target_language=False,
+            ),
+            DictionaryItem(
+                word="target_2_a", definition="source_2", is_in_target_language=True
+            ),
+            DictionaryItem(
+                word="target_2_b", definition="source_2", is_in_target_language=True
+            ),
+            DictionaryItem(
+                word="source_3_a", definition="target_3", is_in_target_language=False
+            ),
+            DictionaryItem(
+                word="source_3_b", definition="target_3", is_in_target_language=False
+            ),
+            DictionaryItem(
+                word="target_3",
+                definition="source_3_a\nsource_3_b",
+                is_in_target_language=True,
+            ),
         ]
     )
     assert len(result.modules) == 1
