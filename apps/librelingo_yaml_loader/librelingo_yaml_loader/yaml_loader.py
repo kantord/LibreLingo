@@ -220,10 +220,14 @@ def _convert_phrases(raw_phrases) -> List[Phrase]:
     return list(map(_convert_phrase, raw_phrases))
 
 
-def _convert_mini_dictionary(raw_mini_dictionary, course: Course):
+def _convert_mini_dictionary(data, course: Course):
     """
     Handles loading the mini-dictionary form the YAML format
     """
+    if "Mini-dictionary" not in data:
+        return []
+
+    raw_mini_dictionary = data["Mini-dictionary"]
     configurations = (
         (course.target_language.name, True),
         (course.source_language.name, False),
@@ -306,9 +310,7 @@ def _load_skill(path: Path, course: Course) -> Skill:
         words=words,
         phrases=phrases,
         image_set=skill["Thumbnails"] if "Thumbnails" in skill else [],
-        dictionary=list(_convert_mini_dictionary(data["Mini-dictionary"], course))
-        if "Mini-dictionary" in data
-        else [],
+        dictionary=list(_convert_mini_dictionary(data, course)),
         introduction=introduction,
     )
 
