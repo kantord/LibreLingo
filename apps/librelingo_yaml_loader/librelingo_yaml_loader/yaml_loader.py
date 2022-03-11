@@ -220,12 +220,13 @@ def _convert_phrases(raw_phrases) -> List[Phrase]:
     return list(map(_convert_phrase, raw_phrases))
 
 
-def _convert_mini_dictionary(data, course: Course):
+def _convert_mini_dictionary(data, course: Course) -> List[tuple]:
     """
     Handles loading the mini-dictionary form the YAML format
     """
+    dictionary: List[tuple] = []
     if "Mini-dictionary" not in data:
-        return []
+        return dictionary
 
     raw_mini_dictionary = data["Mini-dictionary"]
     configurations = (
@@ -239,7 +240,8 @@ def _convert_mini_dictionary(data, course: Course):
             definition = (
                 raw_definition if isinstance(raw_definition, list) else [raw_definition]
             )
-            yield (word, tuple(definition), is_in_target_language)
+            dictionary.append((word, tuple(definition), is_in_target_language))
+    return dictionary
 
 
 def _sanitize_markdown(mdtext: str) -> str:
