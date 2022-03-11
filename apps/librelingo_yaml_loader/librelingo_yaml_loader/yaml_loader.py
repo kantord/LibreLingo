@@ -220,11 +220,11 @@ def _convert_phrases(raw_phrases) -> List[Phrase]:
     return list(map(_convert_phrase, raw_phrases))
 
 
-def _convert_two_way_dictionary(data):
+def _convert_two_way_dictionary(data) -> List[tuple]:
     """
     Handles loading the twoway-dictionary form the YAML format
     """
-    dictionary = []
+    dictionary: List[tuple] = []
     # return dictionary
     if "Twoway-dictionary" not in data:
         return dictionary
