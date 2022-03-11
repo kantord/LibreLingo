@@ -220,7 +220,7 @@ def _convert_phrases(raw_phrases) -> List[Phrase]:
     return list(map(_convert_phrase, raw_phrases))
 
 
-def _convert_two_way_dictionary(data, course: Course):
+def _convert_two_way_dictionary(data):
     """
     Handles loading the twoway-dictionary form the YAML format
     """
@@ -330,7 +330,7 @@ def _load_skill(path: Path, course: Course) -> Skill:
         phrases=phrases,
         image_set=skill["Thumbnails"] if "Thumbnails" in skill else [],
         dictionary=list(_convert_mini_dictionary(data, course))
-        + _convert_two_way_dictionary(data, course),
+        + _convert_two_way_dictionary(data),
         introduction=introduction,
     )
 
