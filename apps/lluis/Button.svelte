@@ -28,7 +28,7 @@
 </div>
 
 {#if asHref != null}
-  <a class="hidden-link" href={asHref} />
+  <a class="hidden-link" href={asHref}>&nbsp;</a>
 {/if}
 
 <style type="text/scss">
