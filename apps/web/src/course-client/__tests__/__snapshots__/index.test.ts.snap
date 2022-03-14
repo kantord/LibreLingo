@@ -1041,3 +1041,13 @@ perro",
   ],
 }
 `;
+
+exports[`get_skill_introduction returns correct course data 1`] = `
+Object {
+  "courseName": "test",
+  "practiceHref": "animals",
+  "readmeHTML": undefined,
+  "skillName": "animals",
+  "title": "Animals",
+}
+`;
