@@ -1,6 +1,6 @@
 module.exports = {
     parser: "@typescript-eslint/parser",
-    ignorePatterns: ["node_modules/"],
+    ignorePatterns: ["node_modules/", "dist", "__sapper__"],
     env: {
         browser: true,
         es6: true,
@@ -8,10 +8,7 @@ module.exports = {
         "jest/globals": true,
         "cypress/globals": true,
     },
-    extends: [
-        "eslint:recommended",
-        "plugin:@typescript-eslint/recommended",
-    ],
+    extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended", "plugin:prettier/recommended"],
     globals: {
         Atomics: "readonly",
         SharedArrayBuffer: "readonly",
@@ -22,7 +19,7 @@ module.exports = {
         sourceType: "module",
         extraFileExtensions: [".svelte"],
     },
-    plugins: ["svelte3", "jest", "cypress", "@typescript-eslint"],
+    plugins: ["svelte3", "jest", "cypress", "@typescript-eslint", "prettier"],
     overrides: [
         {
             files: ["**/*.svelte"],
@@ -36,15 +33,12 @@ module.exports = {
         },
     ],
     rules: {
+        "prettier/prettier": ["error", { "semi": false }],
         "@typescript-eslint/no-unused-vars": "error",
-        indent: ["error", 4],
         "linebreak-style": ["error", "unix"],
-        quotes: ["error", "double"],
-        semi: ["error", "never"],
     },
     settings: {
         "svelte3/ignore-styles": () => true,
         "svelte3/typescript": require("typescript"),
     },
 }
-
