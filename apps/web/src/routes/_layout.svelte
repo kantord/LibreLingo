@@ -51,10 +51,6 @@
   }
 </script>
 
-<script lang="typescript">
-  export let segment
-</script>
-
 <svelte:head>
   <meta name="twitter:card" content="summary_large_image" />
   <meta
