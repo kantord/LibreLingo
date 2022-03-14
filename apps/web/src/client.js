@@ -3,15 +3,15 @@ import "./mystyles.scss"
 import "./i18n"
 import { library, dom } from "@fortawesome/fontawesome-svg-core"
 import {
-    faVolumeUp,
-    faCheckSquare,
-    faDumbbell,
-    faStar,
-    faUser,
-    faLock,
-    faEnvelope,
-    faHeart,
-    faSpinner
+  faVolumeUp,
+  faCheckSquare,
+  faDumbbell,
+  faStar,
+  faUser,
+  faLock,
+  faEnvelope,
+  faHeart,
+  faSpinner,
 } from "@fortawesome/free-solid-svg-icons"
 import { faTwitter } from "@fortawesome/free-brands-svg-icons"
 
@@ -28,10 +28,9 @@ library.add(faSpinner)
 dom.watch()
 
 sapper.start({
-    target: document.querySelector("#sapper"),
+  target: document.querySelector("#sapper"),
 })
 
-
 if (!window.isCypress) {
-    require("@openfonts/noto-sans_all")
+  require("@openfonts/noto-sans_all")
 }
