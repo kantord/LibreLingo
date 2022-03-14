@@ -13,7 +13,6 @@
   import Columns from "lluis/Columns.svelte"
   import Title from "lluis/Title.svelte"
 
-  export let rawChallenges
   export let courseURL
   export let skillId
   export let stats

@@ -21,5 +21,5 @@ import "@percy/cypress"
 // require('./commands')
 
 Cypress.on("window:before:load", (win) => {
-    win.isCypress = true
+  win.isCypress = true
 })
