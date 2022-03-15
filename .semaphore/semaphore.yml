@@ -26,19 +26,18 @@ blocks:
   - name: Jest
     task:
       jobs:
-        - name: jest
+        - name: yarn jest
           commands:
             - sem-version node 14
             - checkout
             - cache restore node-$(checksum yarn.lock)
             - yarn jest
     dependencies:
-      - Eslint
+      - JavaScript Linting
   - name: Cypress
     task:
       jobs:
-        - name: cypress
-          # parallelism: 2
+        - name: cypress and percy
           commands:
             - sem-version node 14
             - checkout
@@ -48,30 +47,18 @@ blocks:
             - cache restore sapper-build-$SEMAPHORE_GIT_SHA
             - yarn install
             - find ./apps/web/src
-            # - SEMAPHORE_BUILD_NUMBER=$SEMAPHORE_PIPELINE_ID SEMAPHORE_THREAD_COUNT=3 yarn test:ci
-            - yarn test:ci
+            - 'yarn test:ci'
       secrets:
         - name: Percy token
         - name: KnapsackPro token
     dependencies:
       - Sapper static build
-  - name: Eslint
+  - name: JavaScript Linting
     dependencies:
       - Set up dependencies
     task:
       jobs:
-        - name: eslint
-          commands:
-            - sem-version node 14
-            - checkout
-            - cache restore node-$(checksum yarn.lock)
-            - yarn lint
-  - name: Eslint Cypress
-    dependencies:
-      - Set up dependencies
-    task:
-      jobs:
-        - name: eslint
+        - name: yarn lint
           commands:
             - sem-version node 14
             - checkout
@@ -79,10 +66,10 @@ blocks:
             - yarn lint
   - name: TypeScript check
     dependencies:
-      - Eslint
+      - Jest
     task:
       jobs:
-        - name: tsc
+        - name: yarn types
           commands:
             - sem-version node 14
             - checkout
@@ -91,7 +78,7 @@ blocks:
             - yarn types
   - name: Sapper static build
     dependencies:
-      - Eslint Cypress
+      - Set up dependencies
     task:
       jobs:
         - name: yarn web export
