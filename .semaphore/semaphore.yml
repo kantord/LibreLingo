@@ -26,14 +26,14 @@ blocks:
   - name: Jest
     task:
       jobs:
-        - name: jest
+        - name: yarn jest
           commands:
             - sem-version node 14
             - checkout
             - cache restore node-$(checksum yarn.lock)
             - yarn jest
     dependencies:
-      - Eslint
+      - JavaScript Linting
   - name: Cypress
     task:
       jobs:
@@ -60,7 +60,7 @@ blocks:
       - Set up dependencies
     task:
       jobs:
-        - name: eslint
+        - name: yarn lint
           commands:
             - sem-version node 14
             - checkout
@@ -71,7 +71,7 @@ blocks:
       - Set up dependencies
     task:
       jobs:
-        - name: eslint
+        - name: yarn types
           commands:
             - sem-version node 14
             - checkout
