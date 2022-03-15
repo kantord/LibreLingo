@@ -1,5 +1,4 @@
 <nav
-  role="navigation"
   aria-label="main navigation"
 >
 
