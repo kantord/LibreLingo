@@ -100,6 +100,12 @@ Mini-dictionary:
     - hello:
         - bonjour
         - salut
+
+Two-way-dictionary:
+  - hello: bonjour
+  - hello: salut
+  - says: dit
+  - the man: L'homme
 ```
 
 ### Data breakdown
@@ -132,6 +138,9 @@ Note that all `New words` are automatically added to the `Mini-dictionary`, in b
 
 - `<destination language>`: A list of terms in destination language as key and meaning in target audience's language.
 - `<target audience's language>`: A list of terms in target audience's language as key and meaning in destination language.
+
+**`Two-way-dictionary`** has a list of term translating from the source language to the target language. This is a newer form of the the `Mini-dictionary` in which we only need to write down pairs of words once
+and they will be included in the dictionary in both directions. Unlike the Mini-dictionary, here each word has exactly one translation (so no list), but the same word can appear multiple times.
 
 ## How skills are taught to the user
 
