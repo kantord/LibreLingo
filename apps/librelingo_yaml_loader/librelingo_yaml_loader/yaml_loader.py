@@ -220,6 +220,23 @@ def _convert_phrases(raw_phrases) -> List[Phrase]:
     return list(map(_convert_phrase, raw_phrases))
 
 
+def _convert_two_way_dictionary(data) -> List[tuple]:
+    """
+    Handles loading the twoway-dictionary form the YAML format
+    """
+    dictionary: List[tuple] = []
+    # return dictionary
+    if "Two-way-dictionary" not in data:
+        return dictionary
+    raw_two_way_dictionary = data["Two-way-dictionary"]
+    for item in raw_two_way_dictionary:
+        word = list(item.keys())[0]
+        translation = item[word]
+        dictionary.append((word, ([translation]), False))
+        dictionary.append((translation, ([word]), True))
+    return dictionary
+
+
 def _convert_mini_dictionary(data, course: Course) -> List[tuple]:
     """
     Handles loading the mini-dictionary form the YAML format
@@ -312,7 +329,8 @@ def _load_skill(path: Path, course: Course) -> Skill:
         words=words,
         phrases=phrases,
         image_set=skill["Thumbnails"] if "Thumbnails" in skill else [],
-        dictionary=list(_convert_mini_dictionary(data, course)),
+        dictionary=list(_convert_mini_dictionary(data, course))
+        + _convert_two_way_dictionary(data),
         introduction=introduction,
     )
 
