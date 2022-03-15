@@ -4,7 +4,7 @@
 </script>
 
 <a href="/" class="logo">
-  <img src={src} alt={alt}/>
+  <img {src} {alt} />
 </a>
 
 <style type="text/scss">

@@ -1,15 +1,15 @@
 <script lang="typescript">
-  import Icon from "lluis/Icon.svelte";
+  import Icon from "lluis/Icon.svelte"
 
-  export let name: string;
-  export let id: string;
-  export let icon: string;
-  export let type = "text";
-  export let value: string | boolean | number;
-  export let formStatus = {};
-  let error = null;
+  export let name: string
+  export let id: string
+  export let icon: string
+  export let type = "text"
+  export let value: string | boolean | number
+  export let formStatus = {}
+  let error = null
   $: {
-    error = formStatus[id];
+    error = formStatus[id]
   }
 </script>
 

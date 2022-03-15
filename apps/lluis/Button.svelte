@@ -15,8 +15,20 @@
   export let disabled = false
 </script>
 
-<div class="lluis-button" class:small={size === "small"} class:large={size === "large"} data-style={style}>
-  <LinkOrButton href={href} on:click="{() => dispatch('click')}" type={type} target={target} tabIndex={tabIndex} disabled={disabled}>
+<div
+  class="lluis-button"
+  class:small={size === "small"}
+  class:large={size === "large"}
+  data-style={style}
+>
+  <LinkOrButton
+    {href}
+    on:click={() => dispatch("click")}
+    {type}
+    {target}
+    {tabIndex}
+    {disabled}
+  >
     {#if loading}
       <span class="spinner">
         <Icon icon="spinner" />
@@ -33,34 +45,37 @@
 
 <style type="text/scss">
   @keyframes spinner {
-    to {transform: rotate(360deg);}
+    to {
+      transform: rotate(360deg);
+    }
   }
 
   .lluis-button {
     display: inline-block;
   }
 
-  div>:global(*) {
+  div > :global(*) {
     display: flex;
     border-radius: var(--button-radius-small);
     padding: 6px 20px;
     margin: 4px;
     transition-property: filter;
-    transition-duration: .1s;
+    transition-duration: 0.1s;
     transition-timing-function: ease-in-out;
 
-		:global(.icon) {
-				width: unset;
-				height: unset;
-				margin-right: 8px;
-		}
+    :global(.icon) {
+      width: unset;
+      height: unset;
+      margin-right: 8px;
+    }
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       filter: brightness(1.2);
     }
 
     &:active {
-      filter: brightness(.9);
+      filter: brightness(0.9);
       transform: scale(0.9);
     }
   }
@@ -71,7 +86,7 @@
     height: 16px;
     align-items: center;
     justify-content: center;
-    animation: spinner .6s linear infinite;
+    animation: spinner 0.6s linear infinite;
 
     :global(.icon) {
       display: block;
@@ -79,19 +94,21 @@
     }
   }
 
-  div[data-style=primary]>:global(*) {
+  div[data-style="primary"] > :global(*) {
     border: 1px solid var(--button-primary-border);
-    color: var(--button-primary-text-color) !important; /* TODO: remove when hero is remoevd */
+    color: var(
+      --button-primary-text-color
+    ) !important; /* TODO: remove when hero is remoevd */
     background-color: var(--button-primary-background-color) !important;
   }
 
-  div[data-style=secondary]>:global(*) {
+  div[data-style="secondary"] > :global(*) {
     border: 1px solid var(--button-secondary-border);
     color: var(--button-secondary-text-color) !important;
     background-color: var(--button-secondary-background-color) !important;
   }
 
-  div[data-style=key]>:global(*) {
+  div[data-style="key"] > :global(*) {
     margin: 6px;
     padding: 6px 0;
     text-align: center;
@@ -101,17 +118,17 @@
     background-color: var(--button-key-background-color) !important;
   }
 
-  .small>:global(*) {
+  .small > :global(*) {
     font-size: 16px;
     padding: 3px 12px;
   }
 
-  .medium>:global(*) {
+  .medium > :global(*) {
     font-size: 18px;
     padding: 3px 12px;
   }
 
-  .large>:global(*) {
+  .large > :global(*) {
     font-size: 20px;
     padding: 9px 14px;
   }
