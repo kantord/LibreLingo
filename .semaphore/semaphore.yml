@@ -81,13 +81,6 @@ blocks:
       - Set up dependencies
     task:
       jobs:
-        - name: yarn web export
-          commands:
-            - sem-version node 14
-            - checkout
-            - cache restore node-$(checksum yarn.lock)
-            - cache restore cypress-$(checksum yarn.lock)
-            - cache restore packages-web-$(checksum yarn.lock)
             - yarn web export
             - find ./apps/web/__sapper__/
             - cache store sapper-build-$SEMAPHORE_GIT_SHA ./apps/web/__sapper__/
@@ -97,7 +90,7 @@ blocks:
       jobs:
         - name: test python packages
           commands:
-            - sem-version python 3.8
+            - sem-version node 14
             - checkout
             - cache restore
             - pip install poetry

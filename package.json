@@ -1,19 +1,26 @@
 {
+  "name": "@librelingo/monorepo",
   "private": true,
   "scripts": {
-    "export": "yarn web export && mv ./workspaces/web/__sapper__/ .",
+    "cypress": "yarn web cypress",
+    "export:production": "yarn web installAllExternalCourses && yarn exportAllCourses && yarn web export && yarn docs:build && mv ./apps/web/__sapper__/ . && poetry run python apps/tools/librelingo_tools/generate.py --courses ./config/courses.json --outdir ./__sapper__/export/course-tools-legacy",
+    "export": "yarn web export && mv ./apps/web/__sapper__/ .",
     "deploy": "echo 'librelingo.app' > __sapper__/export/CNAME && gh-pages -d __sapper__/export",
     "commit": "git-cz",
-    "test": "yarn web test",
+    "test": "jest",
     "test:ci": "yarn web test:ci",
-    "web": "yarn workspace web",
-    "stylefix": "yarn web run prettierfix && yarn web run eslintfix",
-    "stylecheck": "yarn web run prettiercheck && yarn web run eslintcheck",
-    "docs": "mkdocs serve"
+    "web": "yarn workspace @librelingo/web",
+    "types": "yarn workspaces run types",
+    "format": "eslint . --fix --max-warnings=0 && prettier --write apps/**/*.svelte --ignore-path ./.prettierignore_for_svelte",
+    "lint": "eslint . --max-warnings=0 && prettier --check apps/**/*.svelte --ignore-path ./.prettierignore_for_svelte",
+    "exportAllCourses": "./scripts/exportAllYamlCourses.sh",
+    "exportCourse": "./scripts/exportYamlCourse.sh",
+    "docs": "poetry run mkdocs serve",
+    "docs:build": "poetry run mkdocs build --site-dir ./apps/web/__sapper__/export/docs/"
   },
   "workspaces": {
     "packages": [
-      "workspaces/*"
+      "apps/*"
     ],
     "nohoist": [
       "**/bulma",
@@ -30,14 +37,28 @@
     ]
   },
   "devDependencies": {
-    "eslint": "6.8.0",
-    "eslint-plugin-cypress": "2.11.2",
-    "eslint-plugin-jest": "24.1.0",
-    "eslint-plugin-svelte3": "2.7.3",
-    "svelte": "3.29.0",
-    "svelte-preprocess": "4.5.1",
-    "ts-jest": "26.4.1",
-    "typescript": "4.0.3"
+    "@babel/preset-typescript": "7.16.7",
+    "@tsconfig/svelte": "3.0.0",
+    "@types/jest": "27.4.0",
+    "@types/node": "16.11.19",
+    "@typescript-eslint/eslint-plugin": "5.9.1",
+    "@typescript-eslint/parser": "5.9.1",
+    "eslint": "8.7.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-cypress": "2.12.1",
+    "eslint-plugin-jest": "25.7.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-svelte3": "3.4.0",
+    "prettier": "2.5.1",
+    "prettier-plugin-svelte": "^2.6.0",
+    "sapper": "0.29.3",
+    "semantic-release": "18.0.1",
+    "semantic-release-monorepo": "7.0.5",
+    "source-map-loader": "3.0.1",
+    "svelte": "3.46.2",
+    "svelte-check": "2.3.0",
+    "svelte-preprocess": "4.10.1",
+    "typescript": "4.5.4"
   },
   "nyc": {
     "report-dir": "cypress-coverage",
@@ -61,8 +82,10 @@
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
   },
-  "dependencies": {
-    "source-map-loader": "1.1.1",
-    "ts-loader": "8.0.5"
+  "release": {
+    "extends": "semantic-release-monorepo",
+    "branches": [
+      "main"
+    ]
   }
 }

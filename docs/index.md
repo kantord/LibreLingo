@@ -1,118 +1,89 @@
 # Development
 
+## Why does this project exist?
+This project exists to create a beginner-friendly, community-oriented,
+free software licensed language learning application. If you want to learn more
+about LibreLingo's background, [I recommend reading my article](https://dev.to/kantord/why-i-built-librelingo-280o).
+
+## Project structure
+
+### Clickable flow chart
+``` mermaid
+graph LR
+ YAML[YAML course] --> LOAD
+ LOAD[librelingo-yaml-loader] --> EXPORT[librelingo-json-export]
+ EXPORT -->|JSON files| APP
+ LOAD -->|TODO| AUDIO
+ LOAD -->|TODO| IMAGE
+ AUDIO[Audio files] --> APP
+ IMAGE[Image files] --> APP
+ TYPES[librelingo-types] --> LOAD
+ UTILS[librelingo-utils] --> LOAD
+
+ click APP "https://github.com/LibreLingo/LibreLingo/tree/main/apps/web"
+ click EXPORT "https://pypi.org/project/librelingo-json-export/"
+ click UTILS "https://pypi.org/project/librelingo-utils/"
+ click TYPES "https://pypi.org/project/librelingo-types/"
+ click IMAGE "https://github.com/LibreLingo/LibreLingo/tree/main/apps/web/static/images"
+ click AUDIO "https://github.com/LibreLingo/LibreLingo/tree/main/apps/web/static/voice"
+ click LOAD "https://pypi.org/project/librelingo-yaml-loader/"
+ click YAML "https://github.com/LibreLingo/LibreLingo/tree/main/courses"
+```
+
 ## Setting up the development environment
 
 Clone the repository:
 
-```
-git clone git@github.com:kantord/LibreLingo.git
+```sh
+git clone git@github.com:LibreLingo/LibreLingo.git
 ```
 
 Move into the repo directory:
 
-```
+```sh
 cd LibreLingo
 ```
 
-### Frontend
+### Web app
+
+You will need [Node](https://nodejs.org/en/). Note that this project is not yet compatible with Node v16.
 
 Install dependencies:
 
-```
+```sh
+yarn set version classic
 yarn
 ```
 
 Start the development server:
 
-```
+```sh
 yarn web dev
 ```
 
 Now you should be able to see your app on [http://localhost:3000/](http://localhost:3000/)
 
-### Course editor (backend)
+### Exporting a course from YAML
 
-Make sure you have `pipenv` installed.
+You will need [Poetry](https://python-poetry.org/).
 
-Install dependencies using `pipenv`:
+Install dependencies at the top level and for the app:
+```sh
+poetry install
 
-```
-pipenv install
-```
+cd apps/librelingo_yaml_loader
+poetry install
+cd ../..
 
-In order to configure the local database, simply create `.env` file with these contents:
-
-```
-DATABASE_URL=sqlite:///db.sqlite3
-DEBUG=true
-```
-
-You can now drop into a Pipenv shell so that you can make use of the dependencies you installed.
-
-```
-pipenv shell
+cd apps/librelingo_json_export
+poetry install
+cd ../..
 ```
 
-To be able to run the course editor locally, first we have to install migrations in the local database:
-
+Export a course:
+```sh
+./scripts/exportYamlCourse.sh <course directory name>
 ```
-python manage.py migrate
-```
-
-On OSX, you will have to specifically use python3:
-
-```
-python3 manage.py migrate
-```
-
-You are able to run the course editor now, but you will need to create a user to actually log in into the interface. Let's do it:
-
-```
-python manage.py createsuperuser
-```
-
-Now you should be able to launch the course editor server using:
-
-```
-python manage.py runserver
-```
-
-Open the course editor on [https://localhost:8000/admin](https://localhost:8000/admin) and log in using your newly created user.
-
-### Loading real course data into the course editor
-
-If you've set up the course editor locally, you can load production course data into your local server using:
-
-```
-python manage.py loaddata dumps/courseData.json
-```
-
-## Deployment to production
-
-LibreLingo's frontend is a static site, therefore you can simply deploy it using the static HTTP server of your choice!
-
-To generate the static files (assuming that you have set up a working development mode), you just have to export them using:
-
-```
-yarn export
-```
-
-This will create a `__sapper__/export` folder with a production-ready build of your site.
-
-See Sapper's documentation for more detail: [https://sapper.svelte.dev/docs#Exporting](https://sapper.svelte.dev/docs#Exporting)
-
-## Using the course editor
-
-The course editor is in a very early stage, and is only usable by developers. Since it's not publicly hosted yet, you can only use it for testing purposes.
-
-The course editor is implemented as a django project in the `course_editor` folder.
-
-If you want to set up your course editor with real data, you can find a database dump here: `src/courses/spanish-from-english/courseData.json`
-
-To export a course created from the course editor directly to the frontend, use the command `pipenv run python manage.py exportcourse $COURSE_ID`, where `$COURSE_ID` is the ID of the course in the database.
-
-Check out Django's documentation about database dumps: [https://docs.djangoproject.com/en/3.0/ref/django-admin/#loaddata](https://docs.djangoproject.com/en/3.0/ref/django-admin/#loaddata)
-
 
 ## Setting up Semaphore CI in a clone
 

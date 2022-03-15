@@ -1,9 +1,11 @@
-site_name: LibreLingo Dev Docs
+site_name: LibreLingo Documentation
 repo_url: https://github.com/kantord/LibreLingo
+use_directory_urls: false
 theme:
-    name: readthedocs
-    highlightjs: true
-    hljs_languages:
-        - python
-        - bash
-        - javascript
+  name: material
+  palette:
+    primary: #325f74;
+
+plugins:
+    - search
+    - mermaid2
