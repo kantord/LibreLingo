@@ -1,16 +1,17 @@
 <script lang="typescript" context="module">
-  import MarkDownPage, {
-      getMarkDownData,
-  } from "../components/MarkDownPage.svelte"
+  import MarkDownPage from "../components/MarkDownPage.svelte"
+  import parseMarkdown from "../utils/parseMarkdown"
 
   export async function preload() {
-      return {
-          readmeHTML: await getMarkDownData(
-              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-              // @ts-ignore
-              await import("../../../../docs/LICENSE.md")
-          ),
-      }
+    const { default: rawMarkdown } = await import("../../../../docs/LICENSE.md")
+
+    return {
+      readmeHTML: parseMarkdown(
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
+        rawMarkdown
+      ),
+    }
   }
 </script>
 
@@ -18,4 +19,4 @@
   export let readmeHTML: string
 </script>
 
-<MarkDownPage readmeHTML="{readmeHTML}" title="License" />
+<MarkDownPage {readmeHTML} title="License" />
