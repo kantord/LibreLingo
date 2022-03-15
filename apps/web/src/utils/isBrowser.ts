@@ -1,3 +1,4 @@
 export default function isBrowser(): boolean {
-    return new Boolean((process as any).browser).valueOf()
+  // @ts-ignore
+  return new Boolean(process.browser).valueOf()
 }

@@ -1,11 +1,11 @@
 import { Then, Given } from "cypress-cucumber-preprocessor/steps"
 
 Given("I submit solution", () => {
-    cy.get("input[type=text]").type("asdfg")
-    cy.contains("Submit").click()
+  cy.get("input[type=text]").type("asdfg")
+  cy.contains("Submit").click()
 })
 
 Then("I'm not able to submit", () => {
-    cy.get("form").submit()
-    cy.get(".panel button").contains("Submit").should("not.exist")
+  cy.get("form").submit()
+  cy.get(".panel button").contains("Submit").should("not.exist")
 })
