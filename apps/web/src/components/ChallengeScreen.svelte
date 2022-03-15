@@ -231,7 +231,6 @@
   <div class="container">
     <FanfareScreen
       courseURL="{courseURL}"
-      rawChallenges="{rawChallenges}"
       skillId="{skillId}"
       stats="{stats}"
     />

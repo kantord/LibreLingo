@@ -1,5 +1,5 @@
 <nav
-  role="navigation"
+  data-test-id="navbar"
   aria-label="main navigation"
 >
 

@@ -17,17 +17,7 @@
     "fetchAudios": "./scripts/fetchAudios.sh",
     "percypress": "bash ./percypress.sh",
     "test": "yarn dev & yarn percypress",
-    "test:ci": "npx serve __sapper__/export -l 3000 & yarn percypress",
-    "prettierfix": "yarn prettierfix:src && yarn prettierfix:cypress && yarn prettierfix:svelte",
-    "prettierfix:src": "prettier --write --plugin-search-dir=. ./src/**/*.js",
-    "prettierfix:cypress": "prettier --write --plugin-search-dir=. ./cypress/**/*.js",
-    "prettierfix:svelte": "prettier --write --plugin-search-dir=. ./src/**/*.svelte",
-    "eslintfix": "eslint ./src --fix && eslint ./cypress --fix",
-    "prettiercheck": "yarn prettiercheck:src && yarn prettiercheck:cypress && yarn prettiercheck:svelte",
-    "prettiercheck:src": "prettier --plugin-search-dir=. ./src/**/*.js",
-    "prettiercheck:cypress": "prettier --plugin-search-dir=. ./cypress/**/*.js",
-    "prettiercheck:svelte": "prettier --plugin-search-dir=. ./src/**/*.svelte",
-    "eslintcheck": "eslint ./src && eslint ./cypress"
+    "test:ci": "npx serve __sapper__/export -l 3000 & yarn percypress"
   },
   "publishConfig": {
     "access": "public"
@@ -93,8 +83,6 @@
     "node-sass": "5.0.0",
     "npm-run-all": "4.1.5",
     "nyc": "15.1.0",
-    "prettier": "2.5.1",
-    "prettier-plugin-svelte": "2.6.0",
     "raw-loader": "4.0.2",
     "sapper": "0.29.3",
     "sass-loader": "10.2.1",
