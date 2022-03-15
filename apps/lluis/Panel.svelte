@@ -42,11 +42,11 @@
       max-width: 960px;
       margin: auto;
 
-      :global( [slot="left"] ) {
+      :global([slot="left"]) {
         flex-grow: 1;
       }
 
-      :global( [slot="right"] ) {
+      :global([slot="right"]) {
         flex-grow: 0;
       }
     }
