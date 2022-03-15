@@ -37,7 +37,7 @@ blocks:
   - name: Cypress
     task:
       jobs:
-        - name: cypress
+        - name: cypress and percy
           commands:
             - sem-version node 14
             - checkout
