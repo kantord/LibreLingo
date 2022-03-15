@@ -5,125 +5,157 @@ agent:
     type: e1-standard-2
     os_image: ubuntu1804
 blocks:
-  - name: Install dependencies
+  - name: Set up dependencies
     task:
       jobs:
         - name: yarn install
           commands:
-            - sem-version node 12
+            - sem-version node 14
             - checkout
+            - cache restore
             - cache restore node-$(checksum yarn.lock)
             - cache restore cypress-$(checksum yarn.lock)
             - cache restore packages-web-$(checksum yarn.lock)
             - yarn install --frozen-lockfile
             - yarn cypress install
+            - cache store
             - cache store node-$(checksum yarn.lock) node_modules
             - cache store cypress-$(checksum yarn.lock) /home/semaphore/.cache/Cypress
-            - cache store packages-web-$(checksum yarn.lock) workspaces/web/node_modules
+            - cache store packages-web-$(checksum yarn.lock) apps/web/node_modules
     dependencies: []
   - name: Jest
     task:
       jobs:
-        - name: jest
+        - name: yarn jest
           commands:
-            - sem-version node 12
+            - sem-version node 14
             - checkout
             - cache restore node-$(checksum yarn.lock)
-            - yarn ts-jest
+            - yarn jest
     dependencies:
-      - Eslint
+      - JavaScript Linting
   - name: Cypress
     task:
       jobs:
         - name: cypress
-          parallelism: 3
           commands:
-            - sem-version node 12
+            - sem-version node 14
             - checkout
             - cache restore node-$(checksum yarn.lock)
             - cache restore cypress-$(checksum yarn.lock)
             - cache restore packages-web-$(checksum yarn.lock)
-            - cache restore sapper-build-$SEMAPHORE_GIT_PR_SHA
+            - cache restore sapper-build-$SEMAPHORE_GIT_SHA
             - yarn install
-            - SEMAPHORE_BUILD_NUMBER=$SEMAPHORE_PIPELINE_ID SEMAPHORE_THREAD_COUNT=3 yarn test
+            - find ./apps/web/src
+            - 'yarn test:ci'
       secrets:
         - name: Percy token
         - name: KnapsackPro token
     dependencies:
-      - Sapper build
-  - name: Eslint
+      - Sapper static build
+  - name: JavaScript Linting
     dependencies:
-      - Install dependencies
+      - Set up dependencies
     task:
       jobs:
-        - name: eslint
+        - name: yarn lint
           commands:
-            - sem-version node 12
+            - sem-version node 14
             - checkout
             - cache restore node-$(checksum yarn.lock)
-            - yarn eslint workspaces/*/src
-  - name: Eslint Cypress
+            - yarn lint
+  - name: TypeScript check
     dependencies:
-      - Install dependencies
+      - Jest
     task:
       jobs:
-        - name: eslint
+        - name: yarn types
           commands:
-            - sem-version node 12
-            - checkout
-            - cache restore node-$(checksum yarn.lock)
-            - yarn eslint workspaces/*/cypress
-  - name: Typescript Code Style Check
-    dependencies:
-      - Eslint
-    task:
-      jobs:
-        - name: typecodestyle
-          commands:
-            - sem-version node 12
+            - sem-version node 14
             - checkout
             - cache restore node-$(checksum yarn.lock)
             - cache restore packages-web-$(checksum yarn.lock)
-            - yarn stylecheck
-  - name: Python Code Style Check
-    dependencies: []
-    task:
-      jobs:
-        - name: pycodestyle
-          commands:
-            - sem-version python 3.8
-            - checkout
-            - pip install pipenv
-            - pipenv install
-            - pycodestyle . --exclude="course/migrations" --max-line-length 119
-  - name: Django test
+            - yarn types
+  - name: Sapper static build
     dependencies:
-      - Python Code Style Check
+      - Set up dependencies
     task:
       jobs:
-        - name: manage.py test
+        - name: yarn web export
           commands:
-            - sem-version python 3.8
-            - checkout
-            - pip install pipenv
-            - pipenv install
-            - 'DATABASE_URL=sqlite:///db.sqlite3 python manage.py test'
-  - name: Sapper build
-    dependencies:
-      - Eslint Cypress
-    task:
-      jobs:
-        - name: yarn web build
-          commands:
-            - sem-version node 12
+            - sem-version node 14
             - checkout
             - cache restore node-$(checksum yarn.lock)
             - cache restore cypress-$(checksum yarn.lock)
             - cache restore packages-web-$(checksum yarn.lock)
-            - yarn web build
-            - cache store sapper-build-$SEMAPHORE_GIT_PR_SHA workspaces/web/__sapper__
+            - yarn web export
+            - find ./apps/web/__sapper__/
+            - cache store sapper-build-$SEMAPHORE_GIT_SHA ./apps/web/__sapper__/
+  - name: python packages
+    dependencies: []
+    task:
+      jobs:
+        - name: test python packages
+          commands:
+            - sem-version python 3.8
+            - checkout
+            - cache restore
+            - pip install poetry
+            - poetry install
+            - poetry run pytest --doctest-modules
+            - cache store
+        - name: Python code style (black)
+          commands:
+            - sem-version python 3.8
+            - checkout
+            - cache restore
+            - pip install poetry
+            - poetry install
+            - poetry run black apps --check
+        - name: Python code style (pylint)
+          commands:
+            - sem-version python 3.8
+            - checkout
+            - cache restore
+            - pip install poetry
+            - poetry install
+            - pylint $(git ls-files '*.py')
+        - name: Python types (mypy)
+          commands:
+            - sem-version python 3.8
+            - checkout
+            - cache restore
+            - pip install poetry
+            - poetry install
+            - poetry run mypy apps
+  - name: Test Course Json Files
+    dependencies: []
+    task:
+      jobs:
+        - name: validate that Test Course Json files are up to date
+          commands:
+            - sem-version python 3.8
+            - checkout
+            - cache restore python-$(checksum poetry.lock)
+            - pip install poetry
+            - poetry install --no-interaction
+            - cd apps/librelingo_yaml_loader
+            - cache restore python-$(checksum poetry.lock)
+            - poetry install --no-interaction
+            - cache store python-$(checksum poetry.lock) /home/semaphore/.cache/pypoetry
+            - cd ../librelingo_json_export
+            - cache restore python-$(checksum poetry.lock)
+            - poetry install --no-interaction
+            - cache store python-$(checksum poetry.lock) /home/semaphore/.cache/pypoetry
+            - cd ../..
+            - ./scripts/verifyTestCourseJsonFiles.sh
+            - cache store python-$(checksum poetry.lock) /home/semaphore/.cache/pypoetry
 promotions:
   - name: Deploy to production
     pipeline_file: pipeline_2.yml
     auto_promote:
-      when: branch = 'master' AND result = 'passed'
+      when: branch = 'main' AND result = 'passed'
+  - name: Release packages
+    pipeline_file: pipeline_3.yml
+    auto_promote:
+      when: branch = 'main' AND result = 'passed'
