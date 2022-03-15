@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`get_course returns correct course data 1`] = `
+exports[`get_course returns correct course data: test course data 1`] = `
 Object {
   "courseName": "test",
   "languageCode": "test",
@@ -1039,15 +1039,5 @@ perro",
     "¿",
     "¡",
   ],
-}
-`;
-
-exports[`get_skill_introduction returns correct course data 1`] = `
-Object {
-  "courseName": "test",
-  "practiceHref": "animals",
-  "readmeHTML": undefined,
-  "skillName": "animals",
-  "title": "Animals",
 }
 `;
