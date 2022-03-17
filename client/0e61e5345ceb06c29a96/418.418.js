@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[418],{715:function(n,i,e){"use strict";e.r(i),i.default="# 35. Transitive Verbs 1-3\n\n### Transitive Verbs 1-3 (Future)\n\n*   abestuko: will sing\n*   aldatuko: will change\n*   ekarriko: will bring\n*   erabiliko: will use\n*   idatziko: will write\n*   entzungo: will hear/listen to\n\n[ Go Back to Home Page!](..)"}}]);
