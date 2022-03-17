@@ -329,7 +329,7 @@ def _load_skill(path: Path, course: Course) -> Skill:
         words=words,
         phrases=phrases,
         image_set=skill["Thumbnails"] if "Thumbnails" in skill else [],
-        dictionary=list(_convert_mini_dictionary(data, course))
+        dictionary=_convert_mini_dictionary(data, course)
         + _convert_two_way_dictionary(data),
         introduction=introduction,
     )
