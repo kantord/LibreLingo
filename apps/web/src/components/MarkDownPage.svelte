@@ -1,8 +1,8 @@
 <script lang="typescript" context="module">
-  import loadMarkdownModule from "../utils/loadMarkdownModule"
+  import parseMarkdown from "../utils/parseMarkdown"
 
   export async function getMarkDownData(markdownModule) {
-      return loadMarkdownModule(markdownModule)
+      return parseMarkdown(markdownModule)
   }
 </script>
 
