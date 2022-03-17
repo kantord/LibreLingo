@@ -106,7 +106,7 @@ module.exports = {
     ].filter(Boolean),
     devtool: dev && "inline-source-map",
     performance: {
-      hints: "error",
+      hints: "warning",
       maxEntrypointSize: 370000,
       maxAssetSize: 256000,
     },
