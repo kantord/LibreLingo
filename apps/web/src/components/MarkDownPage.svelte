@@ -1,11 +1,3 @@
-<script lang="typescript" context="module">
-  import loadMarkdownModule from "../utils/loadMarkdownModule"
-
-  export async function getMarkDownData(markdownModule) {
-      return loadMarkdownModule(markdownModule)
-  }
-</script>
-
 <script lang="typescript">
   import NavBar from "../components/NavBar.svelte"
   import Content from "lluis/Content.svelte"

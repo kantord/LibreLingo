@@ -2,8 +2,14 @@
   import { get_skill_data } from "../../../../../course-client"
 
   export async function preload(page) {
-      const { skillName, courseName } = page.params
-      return get_skill_data({ skillName, courseName })
+    const { skillName, courseName } = page.params
+
+    if (courseName === "gist") {
+      const gistId = page.query.gistId
+      return get_skill_data({ skillName, courseName, gistId })
+    }
+
+    return get_skill_data({ skillName, courseName })
   }
 </script>
 
@@ -23,8 +29,8 @@
   export let challengesPerLevel: number
 
   let expectedNumberOfChallenges = Math.max(
-      4,
-      Math.round(challengesPerLevel * 1.2)
+    4,
+    Math.round(challengesPerLevel * 1.2)
   )
 </script>
 
@@ -32,15 +38,15 @@
   <title>LibreLingo - learn {skillName} in {languageName} for free</title>
 </svelte:head>
 
-<NavBar repositoryURL="{repositoryURL}" />
+<NavBar {repositoryURL} />
 
 <ChallengeScreen
-  expectedNumberOfChallenges="{expectedNumberOfChallenges}"
-  skillId="{skillId}"
-  rawChallenges="{rawChallenges}"
-  languageName="{languageName}"
-  languageCode="{languageCode}"
-  specialCharacters="{specialCharacters}"
-  sortChallengeGroups="{sortChallengeGroups}"
-  courseURL="{courseURL}"
+  {expectedNumberOfChallenges}
+  {skillId}
+  {rawChallenges}
+  {languageName}
+  {languageCode}
+  {specialCharacters}
+  {sortChallengeGroups}
+  {courseURL}
 />
