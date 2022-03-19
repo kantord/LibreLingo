@@ -1,5 +1,6 @@
 import collections
 import os
+import re
 from pathlib import Path
 from typing import List, Union
 
@@ -222,7 +223,7 @@ def _convert_phrases(raw_phrases) -> List[Phrase]:
 
 def _convert_two_way_dictionary(data) -> List[tuple]:
     """
-    Handles loading the twoway-dictionary form the YAML format
+    Handles loading the Two-way-dictionary form the YAML format
     """
     dictionary: List[tuple] = []
     # return dictionary
@@ -230,10 +231,12 @@ def _convert_two_way_dictionary(data) -> List[tuple]:
         return dictionary
     raw_two_way_dictionary = data["Two-way-dictionary"]
     for item in raw_two_way_dictionary:
-        word = list(item.keys())[0]
-        translation = item[word]
-        dictionary.append((word, ([translation]), False))
-        dictionary.append((translation, ([word]), True))
+        source_text = list(item.keys())[0]
+        source_word = re.sub(r"\([^)]*\) *", "", source_text)
+        target_text = item[source_text]
+        target_word = re.sub(r"\([^)]*\) *", "", target_text)
+        dictionary.append((source_word, ([target_text]), False))
+        dictionary.append((target_word, ([source_text]), True))
     return dictionary
 
 

@@ -401,6 +401,12 @@ def test_load_course_output_matches_value(fs):
                 definition="source_3_a\nsource_3_b",
                 is_in_target_language=True,
             ),
+            DictionaryItem(
+                word="eat", definition="(yo) como", is_in_target_language=False
+            ),
+            DictionaryItem(
+                word="como", definition="(I) eat", is_in_target_language=True
+            ),
         ]
     )
     assert len(result.modules) == 1

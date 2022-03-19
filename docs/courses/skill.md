@@ -142,6 +142,44 @@ Note that all `New words` are automatically added to the `Mini-dictionary`, in b
 **`Two-way-dictionary`** has a list of term translating from the source language to the target language. This is a newer form of the the `Mini-dictionary` in which we only need to write down pairs of words once
 and they will be included in the dictionary in both directions. Unlike the Mini-dictionary, here each word has exactly one translation (so no list), but the same word can appear multiple times.
 
+```
+Two-way-dictionary:
+  - eat: como
+  - eat: comer
+```
+
+Is the same as:
+
+```
+Mini-dictionary:
+  English:
+    - eat:
+      - como
+      - comer
+  Spanish:
+    - como: eat
+    - comer: eat
+```
+
+The Two-way-dictionary also disregards any parentheses on original side, but includes them on the translation side:
+
+
+```
+Two-way-dictionary:
+  - (I) eat: (yo) como
+```
+
+Is the same as writing
+
+```
+Mini-dictionary:
+  English:
+    - eat: (yo) como
+  Spanish
+    - como: (I) eat
+```
+
+
 ## How skills are taught to the user
 
 As the course author, you have to specify the words and phrases you want to teach. LibreLingo will know how to present skills as a series of individual questions and tasks -- LibreLingo calls these "challenges." It is useful to understand what challenges will be generated.
