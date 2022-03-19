@@ -444,6 +444,31 @@ Two-way-dictionary:
 </ul>
 <p><strong><code>Two-way-dictionary</code></strong> has a list of term translating from the source language to the target language. This is a newer form of the the <code>Mini-dictionary</code> in which we only need to write down pairs of words once
 and they will be included in the dictionary in both directions. Unlike the Mini-dictionary, here each word has exactly one translation (so no list), but the same word can appear multiple times.</p>
+<pre><code>Two-way-dictionary:
+  - eat: como
+  - eat: comer
+</code></pre>
+<p>Is the same as:</p>
+<pre><code>Mini-dictionary:
+  English:
+    - eat:
+      - como
+      - comer
+  Spanish:
+    - como: eat
+    - comer: eat
+</code></pre>
+<p>The Two-way-dictionary also disregards any parentheses on original side, but includes them on the translation side:</p>
+<pre><code>Two-way-dictionary:
+  - (I) eat: (yo) como
+</code></pre>
+<p>Is the same as writing</p>
+<pre><code>Mini-dictionary:
+  English:
+    - eat: (yo) como
+  Spanish
+    - como: (I) eat
+</code></pre>
 <h2 id="how-skills-are-taught-to-the-user">How skills are taught to the user</h2>
 <p>As the course author, you have to specify the words and phrases you want to teach. LibreLingo will know how to present skills as a series of individual questions and tasks -- LibreLingo calls these "challenges." It is useful to understand what challenges will be generated.</p>
 <p>For each vocabulary word (that is, each <code>New words</code> entry) in a skill, LibreLingo generates:
