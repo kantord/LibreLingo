@@ -19,7 +19,6 @@ def test_exported_test_course_matches_snapshot(tmpdir):
     root = os.path.dirname(root)
     root = os.path.dirname(root)
     root = os.path.dirname(root)
-    print(root)
 
     path_to_course = os.path.join(root, "courses", "test")
     course = load_course(path_to_course)
