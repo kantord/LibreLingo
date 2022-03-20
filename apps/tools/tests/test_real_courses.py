@@ -5,18 +5,18 @@ import pytest
 from librelingo_json_export.export import export_course
 from librelingo_yaml_loader.yaml_loader import load_course
 from librelingo_types import (
-    AudioSettings,
-    Course,
-    DictionaryItem,
-    HunspellSettings,
+    #    AudioSettings,
+    #    Course,
+    #    DictionaryItem,
+    #    HunspellSettings,
     Language,
     License,
     Module,
-    Phrase,
+    #    Phrase,
     #    Settings,
     Skill,
-    TextToSpeechSettings,
-    Word,
+    #    TextToSpeechSettings,
+    #    Word,
 )
 
 Settings = collections.namedtuple(
@@ -46,7 +46,8 @@ def test_error_1(tmpdir):
         export_course(str(tmpdir), course, settings)
     assert (
         str(err.value)
-        == """Error while exporting skill "Hello": The English word "Excuse me" does not have a definition.Please add it to the mini-dictionary."""
+        # pylint: disable=line-too-long
+        == """Error while exporting skill "Hello" in file "basics/skills/hello.yaml": The English word "Excuse me" does not have a definition.Please add it to the mini-dictionary."""
     )
 
 
@@ -61,7 +62,8 @@ def test_error_2(tmpdir):
         export_course(str(tmpdir), course, settings)
     assert (
         str(err.value)
-        == """Error while exporting skill "Hello": The English word "," does not have a definition.Please add it to the mini-dictionary."""
+        # pylint: disable=line-too-long
+        == """Error while exporting skill "Hello" in file "basics/skills/hello.yaml": The English word "," does not have a definition.Please add it to the mini-dictionary."""
     )
 
 
