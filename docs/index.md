@@ -1,6 +1,7 @@
 # Development
 
 ## Why does this project exist?
+
 This project exists to create a beginner-friendly, community-oriented,
 free software licensed language learning application. If you want to learn more
 about LibreLingo's background, [I recommend reading my article](https://dev.to/kantord/why-i-built-librelingo-280o).
@@ -8,7 +9,8 @@ about LibreLingo's background, [I recommend reading my article](https://dev.to/k
 ## Project structure
 
 ### Clickable flow chart
-``` mermaid
+
+```mermaid
 graph LR
  YAML[YAML course] --> LOAD
  LOAD[librelingo-yaml-loader] --> EXPORT[librelingo-json-export]
@@ -61,13 +63,14 @@ Start the development server:
 yarn web dev
 ```
 
-Now you should be able to see your app on [http://localhost:3000/](http://localhost:3000/)
+Now you should be able to see your app on <http://localhost:3000/>
 
 ### Exporting a course from YAML
 
 You will need [Poetry](https://python-poetry.org/).
 
 Install dependencies at the top level and for the app:
+
 ```sh
 poetry install
 
@@ -81,6 +84,7 @@ cd ../..
 ```
 
 Export a course:
+
 ```sh
 ./scripts/exportYamlCourse.sh <course directory name>
 ```
@@ -95,6 +99,25 @@ This might not be necessary for you in all cases, but it cannot be avoided if yo
 
 Here's a list of the tokens you need to set up. Each of them is a link to a page explaining how to obtain the token:
 
-- [GH_TOKEN](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token)
-- [KNAPSACK_PRO_TEST_SUITE_TOKEN_CYPRESS](https://www.npmjs.com/package/@knapsack-pro/cypress#configuration-steps)
-- [PERCY_TOKEN](https://docs.percy.io/docs/environment-variables)
+*   [GH\_TOKEN](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token)
+*   [KNAPSACK\_PRO\_TEST\_SUITE\_TOKEN\_CYPRESS](https://www.npmjs.com/package/@knapsack-pro/cypress#configuration-steps)
+*   [PERCY\_TOKEN](https://docs.percy.io/docs/environment-variables)
+
+## Testing courses using GitHub gists
+
+It's possible to test courses without them as HTML and deploying them.
+
+One way of doing that is using GitHub gists. You can create a GitHub gist with the course JSON files.
+
+The first step is to export the course as JSON. Then, you have to create a GitHub gist with the
+course files.
+
+Keep in mind, that you have to prefix all file names with `librelingo___` and therefore
+The first step is to export the course as JSON. Then, you have to create a GitHub gist with the
+course files.
+
+Keep in mind, that you have to prefix all file names with `librelingo___` and replace
+`/` with `___` in your paths, as GitHub gists don't natively support uploading folders.
+
+So, for example `challenges/animals.json` should be uploaded as the GitHub gist file
+`librelingo___challenges___animals.json`.

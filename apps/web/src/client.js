@@ -2,6 +2,8 @@ import * as sapper from "@sapper/app"
 import "./mystyles.scss"
 import "./i18n"
 import { library, dom } from "@fortawesome/fontawesome-svg-core"
+import { setupWorker, rest } from "msw"
+import { getHandlers } from "../src/mocks/handlers"
 import {
   faVolumeUp,
   faCheckSquare,
@@ -34,3 +36,12 @@ sapper.start({
 if (!window.isCypress) {
   require("@openfonts/noto-sans_all")
 }
+
+const worker = setupWorker(...getHandlers(rest, { mockAll: false }))
+console.log("🍅", worker)
+console.log(
+  "🐒",
+  worker.start()
+    .then((x) => console.log("💥", x))
+    .catch((x) => console.log("😞", x))
+)
