@@ -13,7 +13,7 @@ Settings = collections.namedtuple(
 )
 
 
-def test_course(tmpdir):
+def test_exported_test_course_matches_snapshot(tmpdir):
     root = os.path.abspath(__file__)
     root = os.path.dirname(root)
     root = os.path.dirname(root)
