@@ -16,6 +16,8 @@
 // Import commands.js using ES2015 syntax:
 import "./commands"
 import "@percy/cypress"
+import { setupWorker, rest } from "msw"
+import { getHandlers } from "../../src/mocks/handlers"
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
@@ -23,3 +25,5 @@ import "@percy/cypress"
 Cypress.on("window:before:load", (win) => {
   win.isCypress = true
 })
+
+setupWorker(...getHandlers(rest))
