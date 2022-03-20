@@ -29,7 +29,6 @@ def test_course(tmpdir):
     )
     output_path = str(tmpdir)
     expected_path = os.path.join(root, "apps", "web", "src", "courses", "test")
-    print(output_path)
 
     export_course(output_path, course, settings)
     for dirname, _, files in os.walk(output_path):
