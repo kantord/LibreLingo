@@ -1,10 +1,16 @@
 <script lang="typescript" context="module">
   import { _ } from "svelte-i18n"
+  import { get_skill_data } from "../../../../../course-client"
 
   export async function preload(page) {
-      const { courseName, skillName } = page.params
+    const { courseName, skillName } = page.params
 
-      return get_skill_introduction({ courseName, skillName })
+    if (courseName === "gist") {
+      const gistId = page.query.gistId
+      return get_skill_introduction({ courseName, skillName, gistId })
+    }
+
+    return get_skill_introduction({ courseName, skillName })
   }
 </script>
 
@@ -17,19 +23,11 @@
   export let title: string
   export let practiceHref: string
   export let courseName: string
-
-
 </script>
 
-<MarkDownPage
-  readmeHTML="{readmeHTML}"
-  title="{title}"
-  description="{$_('about.meta.description')}"
->
+<MarkDownPage {readmeHTML} {title} description={$_("about.meta.description")}>
   <div>
-    <Button
-      style="primary"
-      href="{`course/${courseName}/skill/${practiceHref}`}"
+    <Button style="primary" href={`course/${courseName}/skill/${practiceHref}`}
       >Practice {title}</Button
     >
   </div>
