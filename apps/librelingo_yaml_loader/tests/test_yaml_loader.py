@@ -407,6 +407,16 @@ def test_load_course_output_matches_value(fs):
             DictionaryItem(
                 word="como", definition="(I) eat", is_in_target_language=True
             ),
+            DictionaryItem(
+                word="target_4",
+                definition="(before_s) source_4 (after_s)",
+                is_in_target_language=True,
+            ),
+            DictionaryItem(
+                word="source_4",
+                definition="(before_t) target_4 (after_t)",
+                is_in_target_language=False,
+            ),
         ]
     )
     assert len(result.modules) == 1

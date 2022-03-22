@@ -232,9 +232,9 @@ def _convert_two_way_dictionary(data) -> List[tuple]:
     raw_two_way_dictionary = data["Two-way-dictionary"]
     for item in raw_two_way_dictionary:
         source_text = list(item.keys())[0]
-        source_word = re.sub(r"\([^)]*\) *", "", source_text)
+        source_word = re.sub(r" *\([^)]*\) *", "", source_text)
         target_text = item[source_text]
-        target_word = re.sub(r"\([^)]*\) *", "", target_text)
+        target_word = re.sub(r" *\([^)]*\) *", "", target_text)
         dictionary.append((source_word, ([target_text]), False))
         dictionary.append((target_word, ([source_text]), True))
     return dictionary
