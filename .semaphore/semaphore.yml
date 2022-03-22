@@ -88,7 +88,7 @@ blocks:
             - cache restore node-$(checksum yarn.lock)
             - cache restore cypress-$(checksum yarn.lock)
             - cache restore packages-web-$(checksum yarn.lock)
-            - yarn web export
+            - ENABLE_MSW=true yarn web export
             - find ./apps/web/__sapper__/
             - cache store sapper-build-$SEMAPHORE_GIT_SHA ./apps/web/__sapper__/
   - name: python packages
