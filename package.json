@@ -51,6 +51,7 @@
     "eslint-plugin-svelte3": "3.4.0",
     "prettier": "2.5.1",
     "prettier-plugin-svelte": "^2.6.0",
+    "remark": "^14.0.2",
     "sapper": "0.29.3",
     "semantic-release": "18.0.1",
     "semantic-release-monorepo": "7.0.5",
@@ -87,5 +88,8 @@
     "branches": [
       "main"
     ]
+  },
+  "msw": {
+    "workerDirectory": "apps/web/static"
   }
 }
