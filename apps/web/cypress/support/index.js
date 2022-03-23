@@ -23,3 +23,5 @@ import "@percy/cypress"
 Cypress.on("window:before:load", (win) => {
   win.isCypress = true
 })
+
+
