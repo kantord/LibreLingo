@@ -1,18 +1,19 @@
 <script lang="typescript" context="module">
-  import MarkDownPage, {
-      getMarkDownData,
-  } from "../components/MarkDownPage.svelte"
+  import MarkDownPage from "../components/MarkDownPage.svelte"
+  import parseMarkdown from "../utils/parseMarkdown"
 
   export async function preload() {
-      return {
-          readmeHTML: await getMarkDownData(
-              // ignored because TypeScript doesn't seem to recognize Markdown files
-              // as modules
-              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-              // @ts-ignore
-              await import("../../../../docs/website_tos.md")
-          ),
-      }
+    // ignored because TypeScript doesn't seem to recognize Markdown files
+    // as modules
+    const { default: rawMarkdown } = await import(
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      "../../../../docs/website_tos.md"
+    )
+
+    return {
+      readmeHTML: parseMarkdown(rawMarkdown),
+    }
   }
 </script>
 
@@ -20,4 +21,4 @@
   export let readmeHTML: string
 </script>
 
-<MarkDownPage readmeHTML="{readmeHTML}" title="Terms of Service" />
+<MarkDownPage {readmeHTML} title="Terms of Service" />
