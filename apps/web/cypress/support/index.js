@@ -16,10 +16,21 @@
 // Import commands.js using ES2015 syntax:
 import "./commands"
 import "@percy/cypress"
+import { handlerDefinitions } from "../../src/mocks/handlers.js"
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
 Cypress.on("window:before:load", (win) => {
   win.isCypress = true
+})
+
+beforeEach(() => {
+  console.log("Setting up request interceptors")
+  handlerDefinitions.map(({ method, url, handler }) => {
+    console.log(`Intercepting ${method}: '${url}'`)
+    cy.intercept(method, url, (req, ...rest) => {
+      req.reply(handler(req, ...rest))
+    })
+  })
 })

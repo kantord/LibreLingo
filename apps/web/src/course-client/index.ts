@@ -83,6 +83,7 @@ export const get_course = async ({
     return formatCourseData(files["courseData.json"], { courseName })
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
   const rawCourseData = require(`../courses/${courseName}/courseData.json`) // eslint-disable-line @typescript-eslint/no-var-requires
 
   return formatCourseData(rawCourseData, { courseName })

@@ -14,7 +14,6 @@ import {
   faSpinner,
 } from "@fortawesome/free-solid-svg-icons"
 import { faTwitter } from "@fortawesome/free-brands-svg-icons"
-import { worker } from "./mocks/browser"
 
 library.add(faVolumeUp)
 library.add(faCheckSquare)
@@ -28,8 +27,12 @@ library.add(faHeart)
 library.add(faSpinner)
 dom.watch()
 
-// Intercept certain HTTP requests
-worker.start()
+window.startMsw = () => {
+  // Intercept certain HTTP requests
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  const { worker } = require("./mocks/browser")
+  worker.start()
+}
 
 sapper.start({
   target: document.querySelector("#sapper"),
