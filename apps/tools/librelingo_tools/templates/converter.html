@@ -35,7 +35,7 @@ $(document).ready(function(){
         const original = $("#input-text").val();
         //const cleaned = original.replace(/["';,!?.:]/g, " ");
         //const cleaned = original.replace(/[^a-zA-Z-]/g, " ");
-        const cleaned = original.replace(/[<>,.!?\n*()]/g, " ");
+        const cleaned = original.replace(/[<>,.:!?"'\n*()=\[\]]/g, " ");
         const words = cleaned.split(" ");
         var html = `<table class="table">`;
         html += '<thead>';
