@@ -25,3 +25,10 @@ Feature: Option selection challenge
     Then I read "Correct solution"
     And I see a "Continue" button
 
+  Scenario: Submitting incorrect answer
+    Given I open "course/test/skill/options-test-0?testChallenge=5075bbb5a7df"
+    And I select an incorrect option
+    And I click "Submit"
+    Then I read "Incorrect solution"
+    And I read "Correct answer: perro"
+    And I see a "Continue" button
