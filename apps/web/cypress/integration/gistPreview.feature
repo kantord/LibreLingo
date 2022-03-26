@@ -7,7 +7,7 @@ Feature: Previewing courses using GitHub Gists
     Given I open "/course/preview/skill/gist?skillName=helloworld&gistId=2428349a05d81f96b2311c2749ea5c6d"
     Then I see a "Skip" button
 
-  # Scenario: Opening a skill introduction from a GitHub Gist directly
-  #   Given I open "/course/preview/skill/gist/introduction?skillName=animals&gistId=2428349a05d81f96b2311c2749ea5c6d"
-  #   Then I see a "Practice Animals" button
-  #
+  Scenario: Opening a skill introduction from a GitHub Gist directly
+    Given I open "/course/preview/skill/gist/introduction?skillName=animals&gistId=2428349a05d81f96b2311c2749ea5c6d"
+    Then I see a "Practice Animals" button
+
