@@ -30,6 +30,7 @@
 <script lang="typescript">
   import Button from "lluis/Button.svelte"
   import MarkDownPage from "../../../../../components/MarkDownPage.svelte"
+  import isBrowser from "../../../../../utils/isBrowser"
 
   export let preview = null
   export let loading = true
@@ -40,7 +41,13 @@
 
   // Fetching preview data
   if (preview !== null) {
-    const { skillName, gistId } = preview
+    let gistParams = preview.gistId
+    if (isBrowser()) {
+      const urlSearchParams = new URLSearchParams(window.location.search)
+      gistParams = Object.fromEntries(urlSearchParams.entries())
+    }
+
+    const { skillName, gistId } = gistParams
 
     get_skill_introduction({ courseName: "preview", skillName, gistId }).then(
       (skillData) => {

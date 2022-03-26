@@ -30,6 +30,7 @@
   import ChallengeScreen from "../../../../../components/ChallengeScreen.svelte"
   import NavBar from "../../../../../components/NavBar.svelte"
   import { sortChallengeGroups } from "./_logic"
+  import isBrowser from "../../../../../utils/isBrowser"
 
   export let preview = null
   export let loading = true
@@ -50,9 +51,17 @@
 
   // Fetching preview data
   if (preview !== null) {
+    let gistParams = preview.gistId
+    if (isBrowser()) {
+      const urlSearchParams = new URLSearchParams(window.location.search)
+      gistParams = Object.fromEntries(urlSearchParams.entries())
+    }
+
+    const { skillName, gistId } = gistParams
+
     get_skill_data({
-      gistId: preview.gistId,
-      skillName: preview.skillName,
+      gistId,
+      skillName,
       courseName: "preview",
     }).then((skillData) => {
       rawChallenges = skillData.rawChallenges
@@ -60,7 +69,6 @@
       languageCode = skillData.languageCode
       specialCharacters = skillData.specialCharacters
       repositoryURL = skillData.repositoryURL
-      skillName = skillData.skillName
       skillId = skillData.skillId
       challengesPerLevel = skillData.challengesPerLevel
       courseURL = skillData.courseURL
