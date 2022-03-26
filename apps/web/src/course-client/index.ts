@@ -34,6 +34,13 @@ const formatCourseData = (rawCourseData, { courseName }) => {
     specialCharacters,
   } = rawCourseData
 
+  console.log("🥒", {
+    languageName,
+    languageCode,
+    specialCharacters,
+    repositoryURL,
+  })
+
   return {
     courseName,
     modules,
@@ -64,6 +71,7 @@ const fetchGistFiles = async (gistId) => {
         ]
       )
     )
+    console.log("💫", gistFiles)
 
     return gistFiles
   } catch (error) {
@@ -80,6 +88,8 @@ export const get_course = async ({
 }): Promise<CourseDataType> => {
   if (gistId !== null) {
     const files = await fetchGistFiles(gistId)
+    console.log("🐒", files)
+    console.log("👩", files["courseData.json"])
     return formatCourseData(files["courseData.json"], { courseName })
   }
 
@@ -94,6 +104,13 @@ const formatSkilldata = async (
 ) => {
   const { languageName, languageCode, specialCharacters, repositoryURL } =
     await get_course({ courseName, gistId })
+  console.log(
+    "🍅",
+    languageName,
+    languageCode,
+    specialCharacters,
+    repositoryURL
+  )
   const rawChallenges = skillData.challenges
   const challengesPerLevel = skillData.challenges.length / skillData.levels
 
