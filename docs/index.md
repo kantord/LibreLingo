@@ -121,3 +121,9 @@ Keep in mind, that you have to prefix all file names with `librelingo___` and re
 
 So, for example `challenges/animals.json` should be uploaded as the GitHub gist file
 `librelingo___challenges___animals.json`.
+
+
+## Mocks
+
+For mocks in the frontend, LibreLingo uses [MSW](https://mswjs.io/). For Cypress tests, `cy.intercept()` is
+used. All of these mocks are defined in apps/web/src/mocks/handlers.js.
