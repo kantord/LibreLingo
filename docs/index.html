@@ -179,6 +179,11 @@
     Testing courses using GitHub gists
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mocks">
+    Mocks
+  </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -324,6 +329,11 @@
     Testing courses using GitHub gists
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mocks">
+    Mocks
+  </a>
+</li>
 </ul>
 </nav>
 </div>
@@ -416,6 +426,9 @@ course files.</p>
 <code>/</code> with <code>___</code> in your paths, as GitHub gists don't natively support uploading folders.</p>
 <p>So, for example <code>challenges/animals.json</code> should be uploaded as the GitHub gist file
 <code>librelingo___challenges___animals.json</code>.</p>
+<h2 id="mocks">Mocks</h2>
+<p>For mocks in the frontend, LibreLingo uses <a href="https://mswjs.io/">MSW</a>. For Cypress tests, <code>cy.intercept()</code> is
+used. All of these mocks are defined in apps/web/src/mocks/handlers.js.</p>
 </article>
 </div>
 </div>
