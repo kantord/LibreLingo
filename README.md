@@ -295,6 +295,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/qbecb1zen"><img src="https://avatars.githubusercontent.com/u/66479002?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Amine Louzar</b></sub></a><br /><a href="https://github.com/LibreLingo/LibreLingo/commits?author=qbecb1zen" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/najmieh"><img src="https://avatars.githubusercontent.com/u/31998054?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Najmieh Sadat Safarabadi</b></sub></a><br /><a href="https://github.com/LibreLingo/LibreLingo/commits?author=najmieh" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/mellishim"><img src="https://avatars.githubusercontent.com/u/99303778?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ben</b></sub></a><br /><a href="#content-mellishim" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/cutthroat78"><img src="https://avatars.githubusercontent.com/u/55604778?v=4?s=100" width="100px;" alt=""/><br /><sub><b>CutThroat</b></sub></a><br /><a href="https://github.com/LibreLingo/LibreLingo/commits?author=cutthroat78" title="Code">💻</a></td>
   </tr>
 </table>
