@@ -19,7 +19,7 @@ bleach-whitelist = "^0.0.11"
 hunspell = { version = "^0.5.5", optional = true }
 
 [tool.poetry.dev-dependencies]
-pytest = "^6.1.1"
+pytest = "^7.0.0"
 pytest-watch = "^4.2.0"
 pylint = "^2.6.0"
 pytest-mock = "^3.5.0"
