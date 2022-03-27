@@ -17,7 +17,7 @@ librelingo-utils = { path = "./apps/librelingo_utils", develop = true }
 librelingo-audios = { path = "./apps/librelingo_audios", develop = true }
 librelingo-types = { path = "./apps/librelingo_types", develop = true }
 librelingo-tools = { path = "./apps/tools", develop = true }
-pytest = "^6.2.2"
+pytest = "^7.0.0"
 pytest-mock = "^3.5.1"
 pytest-watch = "^4.2.0"
 mkdocs-material = "^8.0.0"

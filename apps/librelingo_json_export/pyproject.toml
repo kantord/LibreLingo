@@ -20,7 +20,7 @@ hunspell = { version = "^0.5.5", optional = true }
 click = "^7.0.0"
 
 [tool.poetry.dev-dependencies]
-pytest = "^6.2.2"
+pytest = "^7.0.0"
 pytest-watch = "^4.2.0"
 pyfakefs = "^4.3.3"
 librelingo-fakes = {path = "../librelingo_fakes", develop = true}  # Only used in local development
