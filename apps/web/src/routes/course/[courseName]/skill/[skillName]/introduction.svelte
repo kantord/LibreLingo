@@ -68,6 +68,11 @@
         href={`course/${courseName}/skill/${practiceHref}`}
         >Practice {title}</Button
       >
+      <Button
+        style="primary"
+        href={`course/${courseName}`}
+        >Go back {title}</Button
+      >
     </div>
   </MarkDownPage>
 {/if}
