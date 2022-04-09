@@ -64,14 +64,14 @@
   <MarkDownPage {readmeHTML} {title} description={$_("about.meta.description")}>
     <div>
       <Button
-        style="primary"
-        href={`course/${courseName}/skill/${practiceHref}`}
-        >Practice {title}</Button
+        style="secondary"
+        href={`course/${courseName}`}
+        >Go back to the course</Button
       >
       <Button
         style="primary"
-        href={`course/${courseName}`}
-        >Go back to the course</Button
+        href={`course/${courseName}/skill/${practiceHref}`}
+        >Practice {title}</Button
       >
     </div>
   </MarkDownPage>
