@@ -71,7 +71,7 @@
       <Button
         style="primary"
         href={`course/${courseName}`}
-        >Go back {title}</Button
+        >Go back to the course</Button
       >
     </div>
   </MarkDownPage>
