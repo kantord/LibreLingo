@@ -12,6 +12,8 @@ import {
   faEnvelope,
   faHeart,
   faSpinner,
+  faCircleArrowRight,
+  faCircleArrowLeft,
 } from "@fortawesome/free-solid-svg-icons"
 import { faTwitter } from "@fortawesome/free-brands-svg-icons"
 
@@ -25,6 +27,8 @@ library.add(faLock)
 library.add(faEnvelope)
 library.add(faHeart)
 library.add(faSpinner)
+library.add(faCircleArrowRight)
+library.add(faCircleArrowLeft)
 dom.watch()
 
 window.startMsw = () => {
