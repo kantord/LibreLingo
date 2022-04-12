@@ -857,7 +857,7 @@ python-versions = ">=3.6"
 
 [[package]]
 name = "types-bleach"
-version = "4.1.4"
+version = "5.0.0"
 description = "Typing stubs for bleach"
 category = "dev"
 optional = false
@@ -993,7 +993,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "d9620f20de51e26cf0ce5680a1f7d27e9c4b9b46940bdbc2db96de70a90ddc0e"
+content-hash = "fe3a100a1fcb846cdca1ca019a310b4623a068fa46eaaf8e74dd9677e74669d7"
 
 [metadata.files]
 astroid = [
@@ -1519,8 +1519,8 @@ tomli = [
     {file = "tomli-1.2.3.tar.gz", hash = "sha256:05b6166bff487dc068d322585c7ea4ef78deed501cc124060e0f238e89a9231f"},
 ]
 types-bleach = [
-    {file = "types-bleach-4.1.4.tar.gz", hash = "sha256:2d30c2c4fb6854088ac636471352c9a51bf6c089289800d2a8060820a01cd43a"},
-    {file = "types_bleach-4.1.4-py3-none-any.whl", hash = "sha256:edffe173ed6d7b6f3543036a96204a9319c3bf6c3645917b14274e43f000cc9b"},
+    {file = "types-bleach-5.0.0.tar.gz", hash = "sha256:f4d20c74d1b6b2bdee4489d342496d8a6357d92acfe5a6de23e21355f83321a6"},
+    {file = "types_bleach-5.0.0-py3-none-any.whl", hash = "sha256:d6f37ce4c303a587e5ca76eb484e266e157a47dfbbeff5f36bc6b453e5770c6d"},
 ]
 types-markdown = [
     {file = "types-Markdown-3.3.12.tar.gz", hash = "sha256:bcc56dfb95be2389646e01808dc637c45805a9bb38047c93a509d96d183ca79d"},
