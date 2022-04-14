@@ -93,7 +93,7 @@ def get_options_challenge(phrase, _):
     ]
 
 def get_pairing_challenge(words, _):
-    if isinstance(words, []):
+    if not isinstance(words, list):
         words = [words]
     return [
         {
