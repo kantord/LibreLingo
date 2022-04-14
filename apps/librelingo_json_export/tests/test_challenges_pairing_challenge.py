@@ -1,10 +1,8 @@
 import collections
-from pprint import pprint
 
 import pytest
 from librelingo_fakes import fakes
 from librelingo_json_export.challenge_types import get_pairing_challenge
-from librelingo_types import AudioSettings, Settings
 
 Example = collections.namedtuple(
     "Example", ["word", "course", "expected_result", "name"]
@@ -28,7 +26,7 @@ Example = collections.namedtuple(
                 "group": "b4be982a043f",
             },
             "data_set_1",
-        ), 
+        ),
         Example(
             fakes.pairs2,
             fakes.course1,
@@ -54,4 +52,3 @@ def test_get_pairing_challenge(example):
     print(example.word)
     cur_res = get_pairing_challenge(example.word, example.course)[0]
     assert cur_res == example.expected_result
-

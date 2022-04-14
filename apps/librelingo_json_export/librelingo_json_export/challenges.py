@@ -58,7 +58,12 @@ def _get_phrase_challenges(phrase, course: Course):
 def _get_word_challenges(word, course: Course):
     "Generate challenges based on a Word"
     return _challenge_mapper(
-        [get_cards_challenge, get_short_input_challenge, get_listening_challenge, get_pairing_challenge]
+        [
+            get_cards_challenge,
+            get_short_input_challenge,
+            get_listening_challenge,
+            get_pairing_challenge,
+        ]
     )(word, course)
 
 

@@ -93,16 +93,17 @@ def get_options_challenge(phrase, _):
     ]
 
 def get_pairing_challenge(words, _):
-    if type(words) != type(list()):
+    if isinstance(words, []):
         words = [words]
     return [
         {
             "type": "pairing",
-            "pairs" : [ 
-                {"formInTargetLanguage": remove_control_characters_for_display(word.in_target_language[0]),
+            "pairs" : [
+                {
+                    "formInTargetLanguage": remove_control_characters_for_display(
+                        word.in_target_language[0]),
                     "meaningInSourceLanguage": remove_control_characters_for_display(
-                        word.in_source_language[0]
-                    )
+                        word.in_source_language[0])
                 }
             for word in words],
             "id": get_dumb_opaque_id("Word", words[0], "pairs"),
