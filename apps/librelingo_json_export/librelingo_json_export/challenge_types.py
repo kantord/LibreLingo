@@ -95,6 +95,7 @@ def get_options_challenge(phrase, _):
 def get_pairing_challenge(words, _):
     if not isinstance(words, list):
         words = [words]
+
     return [
         {
             "type": "pairing",
