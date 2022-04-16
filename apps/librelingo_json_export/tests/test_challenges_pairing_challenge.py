@@ -49,6 +49,5 @@ Example = collections.namedtuple(
     ids=lambda example: example.name,
 )
 def test_get_pairing_challenge(example):
-    print(example.word)
     cur_res = get_pairing_challenge(example.word, example.course)[0]
     assert cur_res == example.expected_result
