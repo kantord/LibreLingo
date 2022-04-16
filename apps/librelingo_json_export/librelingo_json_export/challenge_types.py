@@ -92,6 +92,26 @@ def get_options_challenge(phrase, _):
         }
     ]
 
+def get_pairing_challenge(words, _):
+    if not isinstance(words, list):
+        words = [words]
+    return [
+        {
+            "type": "pairing",
+            "pairs" : [
+                {
+                    "formInTargetLanguage": remove_control_characters_for_display(
+                        word.in_target_language[0]),
+                    "meaningInSourceLanguage": remove_control_characters_for_display(
+                        word.in_source_language[0])
+                }
+            for word in words],
+            "id": get_dumb_opaque_id("Word", words[0], "pairs"),
+            "priority": 0,
+            "group": get_dumb_opaque_id("Group", words[0]),
+        }
+    ]
+
 
 def get_chips_from_string(phrase):
     return list(map(clean_word, phrase.split()))
