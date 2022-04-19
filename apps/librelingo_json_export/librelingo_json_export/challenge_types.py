@@ -92,13 +92,14 @@ def get_options_challenge(phrase, _):
         }
     ]
 
-def get_pairing_challenge(words, _):
-    if not isinstance(words, list):
-        words = [words]
+def get_pairing_challenge(skill, _):
+    words = skill.words
+    if not words:
+        return []
 
     return [
         {
-            "type": "pairing",
+            "type": "pairingChallenge",
             "pairs" : [
                 {
                     "formInTargetLanguage": remove_control_characters_for_display(
@@ -107,9 +108,9 @@ def get_pairing_challenge(words, _):
                         word.in_source_language[0])
                 }
             for word in words],
-            "id": get_dumb_opaque_id("Word", words[0], "pairs"),
+            "id": get_dumb_opaque_id("PairingChallenge", skill.id, "pairs"),
             "priority": 0,
-            "group": get_dumb_opaque_id("Group", words[0]),
+            "group": get_dumb_opaque_id("Group", skill.id),
         }
     ]
 

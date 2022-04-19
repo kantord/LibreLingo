@@ -62,9 +62,14 @@ def _get_word_challenges(word, course: Course):
             get_cards_challenge,
             get_short_input_challenge,
             get_listening_challenge,
-            get_pairing_challenge,
         ]
     )(word, course)
+
+
+def _make_skill_challenges(skill, course):
+    "Generate challenges using an entire skill, rather than just one word or phrase"
+
+    return [] + get_pairing_challenge(skill, course)
 
 
 def _get_challenges_data(skill, course: Course):
@@ -75,6 +80,7 @@ def _get_challenges_data(skill, course: Course):
         [
             _make_challenges_using(_get_phrase_challenges, skill.phrases, course),
             _make_challenges_using(_get_word_challenges, skill.words, course),
+            _make_skill_challenges(skill, course),
         ],
         start=[],
     )

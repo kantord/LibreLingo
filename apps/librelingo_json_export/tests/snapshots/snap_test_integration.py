@@ -284,18 +284,6 @@ le''',
                 'type': 'listeningExercise'
             },
             {
-                'group': 'f20e2aa89c50',
-                'id': '768fad8e408a',
-                'pairs': [
-                    {
-                        'formInTargetLanguage': "l'homme",
-                        'meaningInSourceLanguage': 'the man'
-                    }
-                ],
-                'priority': 0,
-                'type': 'pairing'
-            },
-            {
                 'formInTargetLanguage': 'la femme',
                 'group': '2729f22db5bf',
                 'id': 'bd13dcfe4d22',
@@ -336,16 +324,20 @@ le''',
                 'type': 'listeningExercise'
             },
             {
-                'group': '2729f22db5bf',
-                'id': '889c3e7932df',
+                'group': 'bdd61716c336',
+                'id': 'a792ccab8ef5',
                 'pairs': [
+                    {
+                        'formInTargetLanguage': "l'homme",
+                        'meaningInSourceLanguage': 'the man'
+                    },
                     {
                         'formInTargetLanguage': 'la femme',
                         'meaningInSourceLanguage': 'the woman'
                     }
                 ],
                 'priority': 0,
-                'type': 'pairing'
+                'type': 'pairingChallenge'
             }
         ],
         'id': '379dca1c8ae9',

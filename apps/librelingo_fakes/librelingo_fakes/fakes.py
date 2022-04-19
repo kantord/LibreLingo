@@ -113,24 +113,6 @@ word2 = Word(
     in_target_language=["apfel"], in_source_language=["apple"], pictures=["1", "2", "3"]
 )
 
-pairs1 = [Word(
-    in_target_language=["perro"], in_source_language=["dog"], pictures=["1", "2", "3"],
-), Word(
-    in_target_language=["gata"], in_source_language=["cat"], pictures=["1", "2", "3"],
-)]
-
-pairs2 = [Word(
-    in_target_language=["perro"], in_source_language=["dog"], pictures=["1", "2", "3"],
-), Word(
-    in_target_language=["gata"], in_source_language=["cat"], pictures=["1", "2", "3"],
-), Word(
-    in_target_language=["pato"], in_source_language=["duck"], pictures=["1", "2", "3"],
-), Word(
-    in_target_language=["leon"], in_source_language=["lion"], pictures=["1", "2", "3"],
-), Word(
-    in_target_language=["caballo"], in_source_language=["horse"], pictures=["1", "2", "3"],
-)]
-
 word_with_spaces = Word(
     in_target_language=["{three word term}"],
     in_source_language=["{foo bar baz}"],
