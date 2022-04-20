@@ -16,9 +16,6 @@ Then("clicking on a key types into the input field", () => {
   cy.get("input").should("have.value", "á")
 })
 
-Then("the virtual keyboard is inactive", () => {
-  cy.get(".virtual-keyboard .keys")
-    .find(">*")
-    .contains("á")
-    .should("be.disabled")
+Then("I don't see a virtual keyboard anymore", () => {
+  cy.get(".virtual-keyboard").should("not.exist")
 })

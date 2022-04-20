@@ -24,7 +24,7 @@ Feature: Short text input challange
     And the keys on the virtual keyboard have proper labels
     And clicking on a key types into the input field
     Given I submit solution
-    Then the virtual keyboard is inactive
+    Then I don't see a virtual keyboard anymore
 
   Scenario: Typing into the input field
     Given I open "/course/test/skill/short-input-test-0?testChallenge=14fc2ae4fb35"

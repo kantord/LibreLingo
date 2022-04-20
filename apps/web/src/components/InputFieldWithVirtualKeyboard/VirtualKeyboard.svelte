@@ -4,7 +4,6 @@
   import HorizontalScroller from "../../../../lluis/HorizontalScroller.svelte"
 
   export let characters: Array<string>
-  export let disabled: boolean
   export let handleVirtualKey
 </script>
 
@@ -17,7 +16,6 @@
             style="key"
             tabIndex={-1}
             size="small"
-            {disabled}
             on:click={handleVirtualKey(character)}
           >
             {character}
