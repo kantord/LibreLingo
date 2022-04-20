@@ -47,4 +47,3 @@ Example = collections.namedtuple(
 )
 def test_get_pairing_challenge(example):
     assert get_pairing_challenge(example.skill, example.course) == [example.expected_result]
-
