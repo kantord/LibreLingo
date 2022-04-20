@@ -92,6 +92,28 @@ def get_options_challenge(phrase, _):
         }
     ]
 
+def get_pairing_challenge(skill, _):
+    words = skill.words
+    if not words:
+        return []
+
+    return [
+        {
+            "type": "pairingChallenge",
+            "pairs" : [
+                {
+                    "formInTargetLanguage": remove_control_characters_for_display(
+                        word.in_target_language[0]),
+                    "meaningInSourceLanguage": remove_control_characters_for_display(
+                        word.in_source_language[0])
+                }
+            for word in words],
+            "id": get_dumb_opaque_id("PairingChallenge", skill.id, "pairs"),
+            "priority": 0,
+            "group": get_dumb_opaque_id("Group", skill.id),
+        }
+    ]
+
 
 def get_chips_from_string(phrase):
     return list(map(clean_word, phrase.split()))
