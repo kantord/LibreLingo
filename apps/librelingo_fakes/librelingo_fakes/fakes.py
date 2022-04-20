@@ -53,6 +53,8 @@ challenge1 = "challenge1"
 challenge2 = "challenge2"
 challenge3 = "challenge3"
 challenge4 = "challenge4"
+challenge5 = "challenge5"
+challenge6 = "challenge6"
 
 fake_dictionary = [
     DictionaryItem("foo", "barrus", False),
