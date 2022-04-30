@@ -28,4 +28,15 @@
 <style type="text/scss">
   @import "./node_modules/bulma/sass/utilities/_all";
   @import "./node_modules/bulma/sass/elements/title.sass";
+
+  h1 {
+    display: inline-block;
+    max-width: 100%;
+    text-overflow: ellipsis;
+
+    /* Needed to make it work */
+    overflow: hidden;
+    white-space: nowrap;
+    color: inherit !important;
+  }
 </style>
