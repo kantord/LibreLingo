@@ -29,4 +29,8 @@
     font-size: inherit;
     cursor: pointer;
   }
+
+  a, button {
+    line-clamp: 1;
+  }
 </style>
