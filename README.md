@@ -164,7 +164,7 @@ You can help LibreLingo by testing it and submitting feature requests or bug rep
 Go through the dev docs [here](https://librelingo.app/docs/).
 
 Still got questions? Our Matrix/FreeNode IRC channel is `#LibreLingo`, join the dev community there and feel free to ask anything.
-* Matrix: [`#LibreLingo`](https://riot.im/app/#/group/+librelingo:matrix.org) on `matrix.org`
+* Matrix: [`#LibreLingo`](https://app.element.io/#/room/#space-librelingo:matrix.org) on `matrix.org`
 * IRC: connect to `irc.freenode.net` with your favourite client and join `#LibreLingo` 
 
 #### are you a linguaphile?
