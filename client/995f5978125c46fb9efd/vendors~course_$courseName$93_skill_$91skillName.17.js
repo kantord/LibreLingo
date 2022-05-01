@@ -1,6 +1,6 @@
 (window.webpackJsonp=window.webpackJsonp||[]).push([[17,18],{158:function(e,t,n){"use strict";n.d(t,"a",(function(){return T}));
 /**! 
- * hotkeys-js v3.9.1 
+ * hotkeys-js v3.9.2 
  * A simple micro-library for defining and dispatching keyboard shortcuts. It has no dependencies. 
  * 
  * Copyright (c) 2022 kenny wong <wowohoo@qq.com> 
