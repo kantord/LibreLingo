@@ -9,7 +9,6 @@ Feature: Course page
     And I read "Animals"
     And I see 10 skills that are not started
     And I see a skill that has no image set
-    And I see 3 skills that have an image set
     And I see a "Log in" link in the navbar
     And I see a "Feedback" link in the navbar
 
