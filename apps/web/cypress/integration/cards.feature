@@ -20,6 +20,7 @@ Feature: Cards challenge
     Given I open "course/test/skill/cards-test"
     And I click a card
     And I see a "Submit" button
+    And the highlighted card looks correct
     And I see an active card
     And I see 2 inactive cards
     And I see a "Skip" button

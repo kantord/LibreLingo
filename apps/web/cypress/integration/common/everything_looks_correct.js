@@ -8,6 +8,7 @@ Then("{} looks correct", (snapshotsName) => {
   // Normalize problematic pages to avoid flaky tests
   switch (snapshotsName) {
     case "cards challenge":
+    case "the highlighted card":
       cy.get('[data-test="card-img-1"]').invoke(
         "attr",
         "src",
