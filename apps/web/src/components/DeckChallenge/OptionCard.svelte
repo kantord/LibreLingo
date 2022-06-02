@@ -1,45 +1,35 @@
 <script lang="typescript">
-  export let active
-  export let inactive
-  export let number
-  export let picture
-  export let correct
-  export let formInTargetLanguage
+  import Card from "lluis/Card.svelte"
+
+  export let active: boolean
+  export let inactive: boolean
+  export let correct: boolean
+  export let number: number
+  export let picture: string
+  export let formInTargetLanguage: string
 </script>
 
 <li class:active class:inactive>
-  <div
-    class="card"
-    data-test="{active ? 'active' : inactive ? 'inactive' : 'neutral'}"
-    data-test-correct="{correct}"
+  <Card
+    data-test={active ? "active" : inactive ? "inactive" : "neutral"}
+    data-test-correct={correct}
   >
-    <div class="card-image">
-      <figure class="image is-1by1">
-        <img
-          src="{`images/${picture}`}"
-          alt=""
-          data-test="{`card-img-${number}`}"
-        />
-      </figure>
+    <div slot="media">
+      <img src={`images/${picture}`} alt="" data-test={`card-img-${number}`} />
     </div>
-    <div class="card-content">
-      <div
-        class="is-size-5 has-text-centered is-size-6-mobile card-text"
-        data-test="{`card-text-${number}`}"
-      >
+    <div slot="footer">
+      <div data-test={`card-text-${number}`}>
         {formInTargetLanguage}
       </div>
-      <div
-        class="is-size-6 has-text-centered is-hidden-touch is-hidden-tablet-only"
-      >
+      <div>
         {number}
       </div>
     </div>
-  </div>
+  </Card>
 </li>
 
 <style type="text/scss">
-  @import "../variables";
+  @import "../../variables";
 
   .card {
     transition: opacity 0.15s, border-color 0.2s;
