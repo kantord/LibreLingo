@@ -22,11 +22,7 @@
 
 LibreLingo's mission is to create a modern language-learning platform that is owned by the community of its users. All software is licensed under AGPLv3, which guarantees the freedom to run, study, share, and modify the software. Course authors are encouraged to release their courses with free licenses.
 
-If you want to know why I built LibreLingo, I recommend reading my article. If you agree with LibreLingo's mission, consider helping to build and maintain it, and please consider making a monetary contribution.
-
-### Articles
-- [Why I built LibreLingo](https://dev.to/kantord/why-i-built-librelingo-280o)
-- [Practice TDD by creating a LibreLingo-based language-learning app](https://dev.to/kantord/practice-tdd-by-creating-a-librelingo-based-language-learning-app-4apf)
+If you want to know why I built LibreLingo, [I recommend reading my article on dev.to](https://dev.to/kantord/why-i-built-librelingo-280o). If you agree with LibreLingo's mission, consider helping to build and maintain it, and please [consider making a monetary contribution](https://github.com/sponsors/kantord).
 
 <details open="open">
   <summary>Table of Contents</summary>
