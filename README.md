@@ -39,6 +39,9 @@ If you want to know why I built LibreLingo, [I recommend reading my article on d
       </ul>
     </li>
     <li>
+      <a href="#developing-librelingo">Developing LibreLingo</a>
+    </li>
+    <li>
      <a href="#milestones">Milestones</a>
    </li>
     <li>
@@ -122,6 +125,11 @@ Options:
     Show this message and exit.
 ```
 
+## Developing LibreLingo
+
+Want to contribute to LibreLingo? Or create your own fork? Perhaps you want to use it in your creative project?
+
+To get started with running the development environment on your computer and understanding the software architecture, [head to our development documentation](https://librelingo.app/docs/).
 
 ## Milestones
 
