@@ -24,19 +24,15 @@ LibreLingo's mission is to create a modern language-learning platform that is ow
 
 If you want to know why I built LibreLingo, I recommend reading my article. If you agree with LibreLingo's mission, consider helping to build and maintain it, and please consider making a monetary contribution.
 
-<b>articles</b>
+### Articles
 - [Why I built LibreLingo](https://dev.to/kantord/why-i-built-librelingo-280o)
 - [Practice TDD by creating a LibreLingo-based language-learning app](https://dev.to/kantord/practice-tdd-by-creating-a-librelingo-based-language-learning-app-4apf)
 
-## Navigation
 <details open="open">
   <summary>Table of Contents</summary>
   <ol>
     <li>
       <a href="#about">About</a>
-    </li>
-    <li>
-      <a href="#navigation">Navigation</a>
     </li>
     <li>
       <a href="#using-librelingo">Using LibreLingo</a>
