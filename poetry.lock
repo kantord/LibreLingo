@@ -873,7 +873,7 @@ python-versions = "*"
 
 [[package]]
 name = "types-python-slugify"
-version = "5.0.3"
+version = "6.1.0"
 description = "Typing stubs for python-slugify"
 category = "dev"
 optional = false
@@ -993,7 +993,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "aee07704e93df9822ae235cd8b724084196813dde22f63a460d6800c2ed59fe0"
+content-hash = "38e40590e29161fc62917909dfbae0edb4baaea4dda65e5464050c9824339bdd"
 
 [metadata.files]
 astroid = [
@@ -1527,8 +1527,8 @@ types-markdown = [
     {file = "types_Markdown-3.3.12-py3-none-any.whl", hash = "sha256:9a1428bfe856a0df0ac1e74507ee0cfe841c8b2a676cb83672ca249cb9f54a00"},
 ]
 types-python-slugify = [
-    {file = "types-python-slugify-5.0.3.tar.gz", hash = "sha256:76169f4a6d40896fea76fb45a25c50ac7ba2ca03eee759ecac322a05fe4dd21c"},
-    {file = "types_python_slugify-5.0.3-py3-none-any.whl", hash = "sha256:a5761d3c55e949f8ace0694eb5be81210087084bb78df495de14ee5eaad6ac54"},
+    {file = "types-python-slugify-6.1.0.tar.gz", hash = "sha256:556d9b387ef632e588445b9e0edbb0e57e939ab387e53a05ad9c5a6d1321b2a3"},
+    {file = "types_python_slugify-6.1.0-py3-none-any.whl", hash = "sha256:663de4a7ce61c5448e838ffd2e34748df6631d4588dc0ed9a7c2bf973c0314ed"},
 ]
 types-pyyaml = [
     {file = "types-PyYAML-6.0.4.tar.gz", hash = "sha256:6252f62d785e730e454dfa0c9f0fb99d8dae254c5c3c686903cf878ea27c04b7"},
