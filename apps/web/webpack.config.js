@@ -76,7 +76,7 @@ module.exports = {
         },
         // TO-DO: config?
         {
-          test: /\.ts$/,
+          test: /\.[jt]s$/,
           loader: "ts-loader",
         },
       ],
@@ -142,7 +142,7 @@ module.exports = {
         },
         // TO-DO: config?
         {
-          test: /\.ts$/,
+          test: /\.[jt]s$/,
           loader: "ts-loader",
         },
       ],
