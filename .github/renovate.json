@@ -2,6 +2,9 @@
   "extends": [
     "config:base"
   ],
+  "ignoreDeps": [
+    "msw"
+  ],
   "packageRules": [
     {
       "updateTypes": ["minor", "patch", "pin", "digest"],
