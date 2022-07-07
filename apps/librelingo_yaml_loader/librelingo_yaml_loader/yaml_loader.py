@@ -1,3 +1,5 @@
+from concurrent.futures import ProcessPoolExecutor
+from itertools import repeat
 import collections
 import os
 import re
@@ -386,7 +388,11 @@ def _load_modules(path: str, modules, course: Course):
     """
     Load each YAML module specified in the list
     """
-    return [_load_module(Path(path) / module, course) for module in modules]
+    pool = ProcessPoolExecutor(max_workers=os.cpu_count())
+    return list(pool.map(
+        _load_module,
+        [Path(path) / module for module in modules],
+        repeat(course)))
 
 
 def _convert_license(raw_license):
