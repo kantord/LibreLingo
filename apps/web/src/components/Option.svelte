@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
   export let active
   export let inactive
   export let correct

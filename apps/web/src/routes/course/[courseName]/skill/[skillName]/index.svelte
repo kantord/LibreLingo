@@ -1,4 +1,4 @@
-<script lang="typescript" context="module">
+<script lang="ts" context="module">
   import { get_skill_data } from "../../../../../course-client"
 
   export async function preload(page) {
@@ -26,7 +26,7 @@
   }
 </script>
 
-<script lang="typescript">
+<script lang="ts">
   import ChallengeScreen from "../../../../../components/ChallengeScreen.svelte"
   import NavBar from "../../../../../components/NavBar.svelte"
   import { sortChallengeGroups } from "./_logic"

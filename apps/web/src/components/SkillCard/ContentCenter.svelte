@@ -1,6 +1,7 @@
-<script lang="typescript">
+<script lang="ts">
   import Summary from "./Summary.svelte"
   import Title from "lluis/Title.svelte"
+  import Progress from "lluis/Progress.svelte"
 
   export let title
   export let completed
@@ -14,10 +15,10 @@
 <div class="media-content" class:completed class:stale>
   <Title size={4}>{title}</Title>
   {#if completed || !started}
-    <Summary summary="{summary}" stale="{stale}" completed="{completed}" />
+    <Summary {summary} {stale} {completed} />
   {/if}
   {#if !completed && started}
-    <progress class="progress" value="{progress}" max="{levels}"></progress>
+    <Progress value={progress} max={levels} />
   {/if}
 </div>
 
