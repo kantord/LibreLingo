@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
   import Icon from "lluis/Icon.svelte"
 
   export let name: string

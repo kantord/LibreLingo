@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
   import LinkOrButton from "../primitives/LinkOrButton.svelte"
   import { createEventDispatcher } from "svelte"
 

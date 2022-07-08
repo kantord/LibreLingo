@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
   import settings from "../settings"
   import authStore from "../auth"
   import NavBar from "lluis/NavBar/NavBar.svelte"
