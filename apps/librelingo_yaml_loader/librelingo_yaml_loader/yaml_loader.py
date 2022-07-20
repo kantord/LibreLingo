@@ -20,7 +20,7 @@ from librelingo_types import (
     TextToSpeechSettings,
     Word,
 )
-from yaml import safe_load
+from yaml import load, CSafeLoader
 from yaml.constructor import SafeConstructor
 
 from ._spelling import _convert_hunspell_settings, _run_skill_spellcheck
@@ -36,7 +36,7 @@ SafeConstructor.add_constructor("tag:yaml.org,2002:bool", add_bool)
 def _load_yaml(path: Path):
     """Helper function for reading a YAML file"""
     with open(path) as yaml_file:
-        return safe_load(yaml_file)
+        return load(yaml_file, Loader=CSafeLoader)
 
 
 def _convert_language(raw_language) -> Language:
