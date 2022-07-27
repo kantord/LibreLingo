@@ -101,6 +101,12 @@
                     Start learning Brazilian Portuguese (for English speakers)
                   </Translate>
                 </Button>
+
+                <Button style="primary" href="course/neolatin-from-english">
+                  <Translate key="index.start_neolatin-from-english">
+                    Start learning Neolatin (for English speakers)
+                  </Translate>
+                </Button>
               </Hidden>
               <Button style="primary" href="about">
                 <Translate key="index.about_librelingo">
