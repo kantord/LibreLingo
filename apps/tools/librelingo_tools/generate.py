@@ -151,7 +151,7 @@ def main():
     )
 
     for course in courses:
-        if not course["dev"]:
+        if not course["devtoolsEnabled"]:
             continue
 
         if "url" in course:
