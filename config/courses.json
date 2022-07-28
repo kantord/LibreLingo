@@ -7,7 +7,7 @@
     },
     "deploy": true,
     "devtoolsEnabled": true,
-    "enable": true
+    "inProduction": true
   },
   {
     "url": "https://github.com/szabgab/LibreLingo-Judeo-Spanish-from-English/archive/refs/heads/main.zip",
@@ -17,7 +17,7 @@
     },
     "deploy": false,
     "devtoolsEnabled": false,
-    "enable": false
+    "inProduction": false
   },
   {
     "url": "https://github.com/szabgab/LibreLingo-Judeo-Spanish-from-Hebrew/archive/refs/heads/main.zip",
@@ -27,7 +27,7 @@
     },
     "deploy": false,
     "devtoolsEnabled": false,
-    "enable": false
+    "inProduction": false
   },
   {
     "url": "https://github.com/szabgab/LibreLingo-Judeo-Spanish-from-Spanish/archive/refs/heads/main.zip",
@@ -37,7 +37,7 @@
     },
     "deploy": false,
     "devtoolsEnabled": false,
-    "enable": false
+    "inProduction": false
   },
   {
     "url": "https://github.com/szabgab/LibreLingo-Hungarian-from-Spanish/archive/refs/heads/main.zip",
@@ -47,7 +47,7 @@
     },
     "deploy": false,
     "devtoolsEnabled": true,
-    "enable": false
+    "inProduction": false
   },
   {
     "url": "https://codeberg.org/Lamdarer/LibreLingo-DE-from-EN/archive/main.zip",
@@ -57,7 +57,7 @@
     },
     "deploy": true,
     "devtoolsEnabled": true,
-    "enable": false
+    "inProduction": false
   },
   {
     "url": "https://github.com/LibreLingo/LibreLingo-EU-from-EN/archive/refs/heads/main.zip",
@@ -67,7 +67,7 @@
     },
     "deploy": true,
     "devtoolsEnabled": true,
-    "enable": false
+    "inProduction": false
   },
   {
     "url": "https://github.com/LibreLingo/LibreLingo-BN-from-EN/archive/refs/heads/main.zip",
@@ -77,7 +77,7 @@
     },
     "deploy": false,
     "devtoolsEnabled": true,
-    "enable": false
+    "inProduction": false
   },
   {
     "url": "https://codeberg.org/kate/LibreLingo_FR_from_EN/archive/master.zip",
@@ -87,7 +87,7 @@
     },
     "deploy": false,
     "devtoolsEnabled": false,
-    "enable": false
+    "inProduction": false
   },
   {
     "url": "https://github.com/LibreLingo/LibreLingo-PAL-from-EN/archive/refs/heads/main.zip",
@@ -97,7 +97,7 @@
     },
     "deploy": false,
     "devtoolsEnabled": true,
-    "enable": false
+    "inProduction": false
   },
   {
     "url": "https://github.com/LibreLingo/LibreLingo-Houma-from-EN/archive/refs/heads/main.zip",
@@ -107,7 +107,7 @@
     },
     "deploy": true,
     "devtoolsEnabled": false,
-    "enable": false
+    "inProduction": false
   },
   {
     "url": "https://github.com/LibreLingo/LibreLingo-ptBR-from-EN/archive/refs/heads/main.zip",
@@ -117,7 +117,7 @@
     },
     "deploy": true,
     "devtoolsEnabled": false,
-    "enable": false
+    "inProduction": false
   },
   {
     "url": "https://github.com/LibreLingo/LibreLingo-Neolatin-from-English/archive/refs/heads/main.zip",
@@ -127,6 +127,6 @@
     },
     "deploy": true,
     "devtoolsEnabled": false,
-    "enable": false
+    "inProduction": false
   }
 ]
