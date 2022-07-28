@@ -156,7 +156,7 @@ def main():
 
         if "url" in course:
             download_course(course["url"], tempdir)
-            sdir = os.path.join(tempdir.name, course["paths"]["sdir"])
+            sdir = os.path.join(tempdir.name, course["paths"]["yamlFolder"])
         else:
             sdir = root
 
