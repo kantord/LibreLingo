@@ -151,12 +151,12 @@ def main():
     )
 
     for course in courses:
-        if not course["dev"]:
+        if not course["devtoolsEnabled"]:
             continue
 
         if "url" in course:
             download_course(course["url"], tempdir)
-            sdir = os.path.join(tempdir.name, course["sdir"])
+            sdir = os.path.join(tempdir.name, course["paths"]["yamlFolder"])
         else:
             sdir = root
 
@@ -169,7 +169,7 @@ def main():
             courses_data=courses_data,
             reldir=reldir,
             outdir=outdir,
-            tdir=course["tdir"],
+            tdir=course["paths"]["jsonFolder"],
             course_dir=os.path.join(sdir, reldir),
         )
 
