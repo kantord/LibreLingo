@@ -169,7 +169,7 @@ def main():
             courses_data=courses_data,
             reldir=reldir,
             outdir=outdir,
-            tdir=course["paths"]["tdir"],
+            tdir=course["paths"]["jsonFolder"],
             course_dir=os.path.join(sdir, reldir),
         )
 
