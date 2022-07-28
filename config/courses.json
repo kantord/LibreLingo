@@ -1,104 +1,130 @@
 [
   {
     "url": "https://github.com/LibreLingo/LibreLingo-ES-from-EN/archive/refs/heads/main.zip",
-    "sdir": "LibreLingo-ES-from-EN-main",
-    "tdir": "spanish-from-english",
+    "paths": {
+      "yamlFolder": "LibreLingo-ES-from-EN-main",
+      "jsonFolder": "spanish-from-english"
+    },
     "deploy": true,
     "dev": true,
     "enable": true
   },
   {
     "url": "https://github.com/szabgab/LibreLingo-Judeo-Spanish-from-English/archive/refs/heads/main.zip",
-    "sdir": "LibreLingo-Judeo-Spanish-from-English-main",
-    "tdir": "ladino-from-english",
+    "paths": {
+      "yamlFolder": "LibreLingo-Judeo-Spanish-from-English-main",
+      "jsonFolder": "ladino-from-english"
+    },
     "deploy": false,
     "dev": false,
     "enable": false
   },
   {
     "url": "https://github.com/szabgab/LibreLingo-Judeo-Spanish-from-Hebrew/archive/refs/heads/main.zip",
-    "sdir": "LibreLingo-Judeo-Spanish-from-Hebrew-main",
-    "tdir": "ladino-from-hebrew",
+    "paths": {
+      "yamlFolder": "LibreLingo-Judeo-Spanish-from-Hebrew-main",
+      "jsonFolder": "ladino-from-hebrew"
+    },
     "deploy": false,
     "dev": false,
     "enable": false
   },
   {
     "url": "https://github.com/szabgab/LibreLingo-Judeo-Spanish-from-Spanish/archive/refs/heads/main.zip",
-    "sdir": "LibreLingo-Judeo-Spanish-from-Spanish-main",
-    "tdir": "ladino-from-spanish",
+    "paths": {
+      "yamlFolder": "LibreLingo-Judeo-Spanish-from-Spanish-main",
+      "jsonFolder": "ladino-from-spanish"
+    },
     "deploy": false,
     "dev": false,
     "enable": false
   },
   {
     "url": "https://github.com/szabgab/LibreLingo-Hungarian-from-Spanish/archive/refs/heads/main.zip",
-    "sdir": "LibreLingo-Hungarian-from-Spanish-main",
-    "tdir": "hungarian-from-spanish",
+    "paths": {
+      "yamlFolder": "LibreLingo-Hungarian-from-Spanish-main",
+      "jsonFolder": "hungarian-from-spanish"
+    },
     "deploy": false,
     "dev": true,
     "enable": false
   },
   {
     "url": "https://codeberg.org/Lamdarer/LibreLingo-DE-from-EN/archive/main.zip",
-    "sdir": "librelingo-de-from-en",
-    "tdir": "german-from-english",
+    "paths": {
+      "yamlFolder": "librelingo-de-from-en",
+      "jsonFolder": "german-from-english"
+    },
     "deploy": true,
     "dev": true,
     "enable": false
   },
   {
-    "tdir": "basque-from-english",
-    "sdir": "LibreLingo-EU-from-EN-main",
     "url": "https://github.com/LibreLingo/LibreLingo-EU-from-EN/archive/refs/heads/main.zip",
+    "paths": {
+      "yamlFolder": "LibreLingo-EU-from-EN-main",
+      "jsonFolder": "basque-from-english"
+    },
     "deploy": true,
     "dev": true,
     "enable": false
   },
   {
     "url": "https://github.com/LibreLingo/LibreLingo-BN-from-EN/archive/refs/heads/main.zip",
-    "sdir": "LibreLingo-BN-from-EN-main",
-    "tdir": "bangla-from-english",
+    "paths": {
+      "yamlFolder": "LibreLingo-BN-from-EN-main",
+      "jsonFolder": "bangla-from-english"
+    },
     "deploy": false,
     "dev": true,
     "enable": false
   },
   {
     "url": "https://codeberg.org/kate/LibreLingo_FR_from_EN/archive/master.zip",
-    "sdir": "LibreLingo-FR-from-EN",
-    "tdir": "french-from-english",
+    "paths": {
+      "yamlFolder": "LibreLingo-FR-from-EN",
+      "jsonFolder": "french-from-english"
+    },
     "deploy": false,
     "dev": false,
     "enable": false
   },
   {
     "url": "https://github.com/LibreLingo/LibreLingo-PAL-from-EN/archive/refs/heads/main.zip",
-    "sdir": "LibreLingo-PAL-from-EN-main",
-    "tdir": "parsig-from-english",
+    "paths": {
+      "yamlFolder": "LibreLingo-PAL-from-EN-main",
+      "jsonFolder": "parsig-from-english"
+    },
     "deploy": false,
     "dev": true,
     "enable": false
   },
   {
-    "tdir": "houma-from-english",
-    "sdir": "LibreLingo-Houma-from-EN-main",
     "url": "https://github.com/LibreLingo/LibreLingo-Houma-from-EN/archive/refs/heads/main.zip",
+    "paths": {
+      "yamlFolder": "LibreLingo-Houma-from-EN-main",
+      "jsonFolder": "houma-from-english"
+    },
     "deploy": true,
     "dev": false,
     "enable": false
   },
   {
-    "tdir": "brazilian-portuguese-from-english",
-    "sdir": "LibreLingo-ptBR-from-EN",
     "url": "https://github.com/LibreLingo/LibreLingo-ptBR-from-EN/archive/refs/heads/main.zip",
+    "paths": {
+      "yamlFolder": "LibreLingo-ptBR-from-EN",
+      "jsonFolder": "brazilian-portuguese-from-english"
+    },
     "deploy": true,
     "dev": false,
     "enable": false
   },
-  {  
+  {
     "url": "https://github.com/LibreLingo/LibreLingo-Neolatin-from-English/archive/refs/heads/main.zip",
-    "sdir": "LibreLingo-Neolatin-from-English",
-    "tdir": "neolatin-from-english",
+    "paths": {
+      "yamlFolder": "LibreLingo-Neolatin-from-English",
+      "jsonFolder": "neolatin-from-english"
+    },
     "deploy": true,
     "dev": false,
     "enable": false
