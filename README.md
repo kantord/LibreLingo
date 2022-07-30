@@ -309,6 +309,12 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
 
 
+## Contributors who don't have a GitHub account.
+
+Since [All Contributors](https://allcontributors.org/) relies on GitHub accounts to show user info, it's not possible to use it to credit people who don't have a GitHub account. This place is intended as a list of people who contributed without registering for a GitHub account.
+
+* **[Kate](https://codeberg.org/kate)** - creating a [LibreLingo course](https://codeberg.org/kate/LibreLingo_FR_from_EN) on Codeberg
+
 ## License
 
 LibreLingo is licensed under the AGPL-3.0 license. In addition, course content and other creative content might be licensed under different licenses, such as CC. This image shows a summary of the licensing of our dependencies:
