@@ -1,4 +1,5 @@
 <script lang="typescript">
+  import { stores } from '@sapper/app';
   import settings from "../settings"
   import authStore from "../auth"
   import NavBar from "lluis/NavBar/NavBar.svelte"
@@ -14,11 +15,14 @@
     _Logout: () => void
   }
   const _Logout = () => (window as unknown as WindowWithLogout)._Logout()
+
+  const { page } = stores();
+  const linkToCoursePage = ($page.params.courseName && `course/${$page.params.courseName}/`) || "/";
 </script>
 
 <NavBar data-test="navbar">
   <div slot="left">
-    <Logo src="/images/logo.svg" alt="LibreLingo" />
+    <Logo src="/images/logo.svg" alt="LibreLingo" link={linkToCoursePage}/>
   </div>
 
   <div slot="right">
