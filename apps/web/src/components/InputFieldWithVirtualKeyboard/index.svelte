@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
   import VirtualKeyboard from "./VirtualKeyboard.svelte"
   export let value
   export let specialCharacters

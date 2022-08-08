@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
   import NavBar from "../components/NavBar.svelte"
   import Content from "lluis/Content.svelte"
 

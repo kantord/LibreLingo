@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
   import type { SizeType } from "./types"
 
   export let size: null | SizeType = null

@@ -1,4 +1,4 @@
-<script lang="typescript" context="module">
+<script lang="ts" context="module">
   export async function preload(page) {
       const { get_course } = await import("../../../course-client")
       const { courseName } = page.params
@@ -7,7 +7,7 @@
   }
 </script>
 
-<script lang="typescript">
+<script lang="ts">
   import SkillCard from "../../../components/SkillCard/index.svelte"
   import NavBar from "../../../components/NavBar.svelte"
   import Column from "lluis/Column.svelte"

@@ -1,4 +1,4 @@
-<script lang="typescript" context="module">
+<script lang="ts" context="module">
   export async function preload() {
       const repo = await fetch("https://api.github.com/repos/LibreLingo/LibreLingo")
 
@@ -9,7 +9,7 @@
   }
 </script>
 
-<script lang="typescript">
+<script lang="ts">
   import { onMount } from "svelte"
   import isBrowser from "../utils/isBrowser"
   import Icon from "lluis/Icon.svelte"

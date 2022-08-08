@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
   import ImageSet from "./ImageSet.svelte"
 
   export let imageSet
