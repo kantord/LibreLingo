@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
   export let imageSet
   export let completed
   export let stale

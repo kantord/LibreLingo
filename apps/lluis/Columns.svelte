@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
   export let multiline = false
   export let reversed = false
 </script>
