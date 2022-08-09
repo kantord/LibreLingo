@@ -1,4 +1,4 @@
-<script lang="typescript" context="module">
+<script lang="ts" context="module">
   import { _ } from "svelte-i18n"
   import { get_skill_introduction } from "../../../../../course-client"
 
@@ -27,7 +27,7 @@
   }
 </script>
 
-<script lang="typescript">
+<script lang="ts">
   import Button from "lluis/Button.svelte"
   import MarkDownPage from "../../../../../components/MarkDownPage.svelte"
   import isBrowser from "../../../../../utils/isBrowser"

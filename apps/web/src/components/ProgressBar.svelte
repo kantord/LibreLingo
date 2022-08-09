@@ -1,4 +1,5 @@
-<script lang="typescript">
+<script lang="ts">
+  import Progress from "lluis/Progress.svelte"
   import { tweened } from "svelte/motion"
 
   export let value
@@ -8,18 +9,12 @@
 </script>
 
 <div>
-  <progress class="progress" value="{$progress}" max="1">
-    {$progress * 100}%
-  </progress>
+  <Progress value={$progress} />
 </div>
 
 <style type="text/scss">
   @import "../variables";
   div {
     padding-bottom: $size-6;
-  }
-
-  .progress {
-    border: 1px solid transparentize($blue, 0.9);
   }
 </style>
