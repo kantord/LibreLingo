@@ -1,4 +1,4 @@
-<script lang="typescript" context="module">
+<script lang="ts" context="module">
   export async function preload() {
     try {
       // eslint-disable-next-line @typescript-eslint/no-var-requires
@@ -18,7 +18,7 @@
   }
 </script>
 
-<script lang="typescript">
+<script lang="ts">
   import NavBar from "../components/NavBar.svelte"
   import Content from "lluis/Content.svelte"
 

@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
   import type { SizeType } from "./types"
 
   export let sizeMobile: null | SizeType = null
@@ -28,4 +28,14 @@
 <style type="text/scss">
   @import "./node_modules/bulma/sass/utilities/_all";
   @import "./node_modules/bulma/sass/elements/title.sass";
+
+  h1 {
+    max-width: 100%;
+    text-overflow: ellipsis;
+
+    /* Needed to make it work */
+    overflow: hidden;
+    white-space: nowrap;
+    color: inherit !important;
+  }
 </style>

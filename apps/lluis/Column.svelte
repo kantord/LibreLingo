@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
   import type { SizeType } from "./types"
 
   export let size: null | SizeType = null
@@ -16,6 +16,7 @@
   class:is-one-quarter={size === "1/4"}
   class:is-one-third={size === "1/3"}
   class:is-three-fifths={size === "3/5"}
+  class:is-two-fifths={size === "2/5"}
   class:is-1={size === "1"}
   class="column"
 >

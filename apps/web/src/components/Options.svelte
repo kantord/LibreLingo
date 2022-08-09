@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
   import { onMount } from "svelte"
   import hotkeys from "hotkeys-js"
   import Option from "../components/Option.svelte"
