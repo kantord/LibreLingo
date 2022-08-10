@@ -6,7 +6,7 @@
         <tr><th>Course</th><th>Target Words</th><th>Target Phrases</th><th>Source Words</th><th>Source Phrases</th></tr>
       </thead>
       <tbody>
-        {% for link in links|sort(attribute='tdir') %}
+        {% for link in links|sort(attribute='url') %}
             <tr>
                <td><a href="{{ link['tdir'] }}/">{{ link['source_name'] }} =&gt; {{ link['target_name'] }}</a></td>
                <td>{{ link["target_words"] }}</td>

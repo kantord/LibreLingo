@@ -12,11 +12,11 @@ def main():
 
     for course in config:
         if course["deploy"]:
-            cmd = f"""yarn installCourse "{course['url']}" {course['tdir']}"""
+            cmd = f"""yarn installCourse "{course['url']}" {course["paths"]["jsonFolder"]}"""
             print(cmd)
             exit_code = os.system(cmd)
             if exit_code != 0:
-                sys.exit("We failed to install {course['tdir']}. Terminating")
+                sys.exit(f"""We failed to install {course["paths"]["jsonFolder"]}. Terminating""")
 
 
 if __name__ == "__main__":
