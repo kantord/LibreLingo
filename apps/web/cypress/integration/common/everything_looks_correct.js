@@ -76,11 +76,14 @@ Then("{} looks correct", (snapshotsName) => {
     case "course page with a stale skill":
     case "course page":
     case "listening challenge":
+    case "devtools index page":
       // These tests are deterministic and thus don't need normalization.
       break
 
     default:
-      throw new Error(`unhandled visual test "${snapshotsName}"`)
+      throw new Error(
+        `unhandled visual test "${snapshotsName}". Edit '${__filename}' to fix.`
+      )
   }
 
   cy.percySnapshot(snapshotsName)
