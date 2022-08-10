@@ -17,12 +17,15 @@
   const _Logout = () => (window as unknown as WindowWithLogout)._Logout()
 
   const { page } = stores();
-  const linkToCoursePage = ($page.params.courseName && `course/${$page.params.courseName}/`) || "/";
+  
+  const homepageLink = $page?.params?.courseName
+    ? `course/${$page.params.courseName}/`
+    : "/";
 </script>
 
 <NavBar data-test="navbar">
   <div slot="left">
-    <Logo src="/images/logo.svg" alt="LibreLingo" link={linkToCoursePage}/>
+    <Logo src="/images/logo.svg" alt="LibreLingo" link={homepageLink}/>
   </div>
 
   <div slot="right">
