@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
   import ClampedText from "lluis/ClampedText.svelte"
 
   export let summary: Array<string>

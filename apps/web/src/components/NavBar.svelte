@@ -1,5 +1,5 @@
-<script lang="typescript">
-  import { stores } from '@sapper/app';
+<script lang="ts">
+import { stores } from '@sapper/app';
   import settings from "../settings"
   import authStore from "../auth"
   import NavBar from "lluis/NavBar/NavBar.svelte"

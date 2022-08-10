@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
   import Button from "lluis/Button.svelte"
 
   export let practiceHref
@@ -7,12 +7,19 @@
   export let title
 </script>
 
-<div class="button-container">
+<div class="container">
   {#if completed}
-    <Button style="primary" href="{practiceHref}">Practice {title}</Button>
+    <Button style="primary" href={practiceHref}>Practice {title}</Button>
   {:else if started}
-    <Button style="primary" href="{practiceHref}">Continue {title}</Button>
+    <Button style="primary" href={practiceHref}>Continue {title}</Button>
   {:else}
-    <Button style="primary" href="{practiceHref}">Learn {title}</Button>
+    <Button style="primary" href={practiceHref}>Learn {title}</Button>
   {/if}
 </div>
+
+<style>
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+</style>

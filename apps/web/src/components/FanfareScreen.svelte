@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
   import { scale } from "svelte/transition"
   import db from "../db/db"
   import savePractice from "../db/skill/savePractice"
@@ -18,18 +18,18 @@
   export let stats
 
   onMount(async () => {
-      sound.fanfare.play()
+    sound.fanfare.play()
   })
 
   onMount(async () => {
-      await savePractice(db, { id: skillId, ...stats })
+    await savePractice(db, { id: skillId, ...stats })
   })
 
   onMount(() => {
-      hotkeys.unbind("enter")
-      hotkeys("enter", () => {
-          goto(courseURL)
-      })
+    hotkeys.unbind("enter")
+    hotkeys("enter", () => {
+      goto(courseURL)
+    })
   })
 </script>
 
@@ -42,19 +42,19 @@
             <Mascot />
           </div>
         </Column>
-        <Column>
+        <Column size="2/5">
           <div class="is-centered-mobile">
-            <Title size="{2}" sizeMobile="3">Lesson completed!</Title>
-            <Title size="{2}" isSubtitle="{true}">
+            <Title size={2} sizeMobile="3" multiline>Lesson completed!</Title>
+            <Title size={2} isSubtitle={true} multiline>
               You've completed
               {stats.correct}
               challenges
             </Title>
-            <Button size="medium" href="{courseURL}" style="primary">
+            <Button size="medium" href={courseURL} style="primary">
               Continue to course page
             </Button>
             <div class="bottom">
-              <Title size="{5}">Excited about LibreLingo?</Title>
+              <Title size={5}>Excited about LibreLingo?</Title>
               <TwitterButton />
             </div>
           </div>

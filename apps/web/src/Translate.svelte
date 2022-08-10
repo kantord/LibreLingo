@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
   import { format } from "svelte-i18n"
   import isBrowser from "./utils/isBrowser"
 

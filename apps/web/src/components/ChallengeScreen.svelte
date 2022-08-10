@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
   import sound from "../media/sound"
   import DeckChallenge from "./DeckChallenge/index.svelte"
   import OptionChallenge from "./OptionChallenge/index.svelte"
