@@ -184,7 +184,7 @@ The mascot is designed by [@almostdesigner](https://github.com/almostdesigner).
 
 ### Contributors
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-82-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-83-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
@@ -298,6 +298,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/mellishim"><img src="https://avatars.githubusercontent.com/u/99303778?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ben</b></sub></a><br /><a href="#content-mellishim" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/cutthroat78"><img src="https://avatars.githubusercontent.com/u/55604778?v=4?s=100" width="100px;" alt=""/><br /><sub><b>CutThroat</b></sub></a><br /><a href="https://github.com/LibreLingo/LibreLingo/commits?author=cutthroat78" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/rodrigo-pova"><img src="https://avatars.githubusercontent.com/u/83843080?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rodrigo Pova</b></sub></a><br /><a href="https://github.com/LibreLingo/LibreLingo/commits?author=rodrigo-pova" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/yulyasystem"><img src="https://avatars.githubusercontent.com/u/33153002?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Yulia</b></sub></a><br /><a href="https://github.com/LibreLingo/LibreLingo/commits?author=yulyasystem" title="Code">💻</a></td>
   </tr>
 </table>
 
