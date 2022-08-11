@@ -13,7 +13,7 @@
 
 <svelte:head>
   <title>{$_("meta.title")}</title>
-  <meta name="description" content="{$_('index.meta.description')}" />
+  <meta name="description" content={$_("index.meta.description")} />
 </svelte:head>
 
 <section class="hero is-bold is-fullheight">
@@ -22,7 +22,7 @@
       <Columns>
         <Column size="1/4">
           <div class="mascot">
-            <Mascot shadow="{false}" glow="{true}" />
+            <Mascot shadow={false} glow={true} />
           </div>
         </Column>
         <Column>
@@ -96,7 +96,10 @@
                   </Translate>
                 </Button>
 
-                <Button style="primary" href="course/brazilian-portuguese-from-english">
+                <Button
+                  style="primary"
+                  href="course/brazilian-portuguese-from-english"
+                >
                   <Translate key="index.start_brazilian_portuguese_course">
                     Start learning Brazilian Portuguese (for English speakers)
                   </Translate>
@@ -118,6 +121,10 @@
                 <Button style="primary" href="/devtools">
                   Development tools
                 </Button>
+              </Hidden>
+
+              <Hidden>
+                <Button style="primary" href="/dev">Development tools</Button>
               </Hidden>
 
               <Button style="primary" href="https://librelingo.app/docs/">
