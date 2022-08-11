@@ -16,7 +16,9 @@ def main():
             print(cmd)
             exit_code = os.system(cmd)
             if exit_code != 0:
-                sys.exit(f"""We failed to install {course["paths"]["jsonFolder"]}. Terminating""")
+                sys.exit(
+                    f"""We failed to install {course["paths"]["jsonFolder"]}. Terminating"""
+                )
 
 
 if __name__ == "__main__":
