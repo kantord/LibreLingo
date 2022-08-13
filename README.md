@@ -6,6 +6,7 @@
   <em>a community-owned language-learning platform</em>
   <br/><br/>
   <a href="https://librelingo.app/"><img src="https://img.shields.io/badge/Try_now-librelingo.app-darkcyan" /></a>
+  <a href="https://librelingo.app/dev/"><img src="https://img.shields.io/badge/List_of_courses-librelingo.app/dev-darkcyan" /></a>
 </p>
 <hr/>
 
