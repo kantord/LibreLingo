@@ -9,18 +9,43 @@
 <Title size={2}>Developer tools</Title>
 <Title size={3}>Courses</Title>
 
-<ul>
+<table>
+  <thead>
+    <td>Course name</td>
+    <td>Devtools</td>
+    <td>Repo</td>
+  </thead>
   {#each courses as course}
-    {#if course.devtoolsEnabled}
-      <li>
-        <a href={`course-tools-legacy/${course.paths.jsonFolder}/`}>
+    <tr>
+      <td>
+        <a href={`/course/${course.paths.jsonFolder}`}>
           {course.paths.jsonFolder}
         </a>
-      </li>
-    {:else}
-      <li>
-        {course.paths.jsonFolder} (Devtools disabled)
-      </li>
-    {/if}
+      </td>
+      {#if course.devtoolsEnabled}
+        <td>
+          <a href={`course-tools-legacy/${course.paths.jsonFolder}/`}>
+            dev tools
+          </a>
+        </td>
+      {:else}
+        <td />
+      {/if}
+      <td
+        ><a href={course.repositoryURL} target="_blank"
+          >{new URL(course.repositoryURL).hostname.replace("www.", "")}</a
+        ></td
+      >
+    </tr>
   {/each}
-</ul>
+</table>
+
+<style>
+  td {
+    padding: 4px 16px;
+  }
+
+  thead {
+    font-weight: bold;
+  }
+</style>
