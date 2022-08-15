@@ -44,13 +44,10 @@
   })
 </script>
 
-<p class="is-size-1 is-size-2-tablet is-size-4-mobile has-text-centered">
+<h2 class="challenge-prompt">
   Which of these is
-  <strong data-test="meaning-in-source-language">
-    {currentChallenge.meaningInSourceLanguage}
-  </strong>
-  ?
-</p>
+  <b class="challenge-prompt__phrase" data-test="meaning-in-source-language">{currentChallenge.meaningInSourceLanguage}</b>?
+</h2>
 
 <form on:submit|preventDefault="{submitChallenge}">
   <Options {options} bind:selectedOption disabled="{submitted}" />

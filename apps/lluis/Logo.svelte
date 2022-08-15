@@ -6,13 +6,3 @@
 <a href="/" class="logo">
   <img {src} {alt} />
 </a>
-
-<style type="text/scss">
-  .logo {
-    display: block;
-
-    img {
-      height: var(--navbar-logo-height);
-    }
-  }
-</style>

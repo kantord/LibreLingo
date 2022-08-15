@@ -20,13 +20,3 @@
     <slot />
 	</button>
 {/if}
-
-<style type="text/scss">
-  button {
-    display: inline-block;
-    background: transparent;
-    border: 0;
-    font-size: inherit;
-    cursor: pointer;
-  }
-</style>

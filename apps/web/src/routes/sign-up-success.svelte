@@ -8,10 +8,12 @@
 
 <NavBar />
 
-<section class="section">
-  <div class="container">
-    <h2 class="is-size-2">Registration successful!</h2>
-    <p>You can now log in.</p>
-    <Button href="/login">Log in</Button>
-  </div>
-</section>
+<main class="main-content layout-container" role="main">
+  <Columns>
+    <Column size="4" centered>
+      <h2>Registration successful!</h2>
+      <p>You can now log in.</p>
+      <Button href="/login">Log in</Button>
+    </Column>
+  </Columns>
+</main>

@@ -5,21 +5,22 @@
 
   const dispatch = createEventDispatcher()
   export let href: string | null = null
-  export let size: "small" | "normal" | "medium" | "large" = "normal"
+  export let size: "small" | "medium" | "large" = "medium"
   export let loading = false
   export let asHref: string | null = null
   export let type: "button" | "submit" = "button"
-  export let style: "primary" | "secondary" | "key" = "secondary"
+  export let style: "primary" | "secondary" | "accent" | "key" = "primary"
   export let target: string | undefined = undefined
   export let tabIndex: number | undefined = undefined
   export let disabled = false
 </script>
 
 <div
-  class="lluis-button"
-  class:small={size === "small"}
-  class:large={size === "large"}
+  class="btn"
   data-style={style}
+  class:btn--small={size === "small"}
+  class:btn--medium={size === "medium"}
+  class:btn--large={size === "large"}
 >
   <LinkOrButton
     {href}
@@ -42,94 +43,3 @@
 {#if asHref != null}
   <a class="hidden-link" href={asHref}>&nbsp;</a>
 {/if}
-
-<style type="text/scss">
-  @keyframes spinner {
-    to {
-      transform: rotate(360deg);
-    }
-  }
-
-  .lluis-button {
-    display: inline-block;
-  }
-
-  div > :global(*) {
-    display: flex;
-    border-radius: var(--button-radius-small);
-    padding: 6px 20px;
-    margin: 4px;
-    transition-property: filter;
-    transition-duration: 0.1s;
-    transition-timing-function: ease-in-out;
-
-    :global(.icon) {
-      width: unset;
-      height: unset;
-      margin-right: 8px;
-    }
-
-    &:hover,
-    &:focus {
-      filter: brightness(1.2);
-    }
-
-    &:active {
-      filter: brightness(0.9);
-      transform: scale(0.9);
-    }
-  }
-
-  .spinner {
-    display: flex;
-    width: 16px;
-    height: 16px;
-    align-items: center;
-    justify-content: center;
-    animation: spinner 0.6s linear infinite;
-
-    :global(.icon) {
-      display: block;
-      margin: 0 !important;
-    }
-  }
-
-  div[data-style="primary"] > :global(*) {
-    border: 1px solid var(--button-primary-border);
-    color: var(
-      --button-primary-text-color
-    ) !important; /* TODO: remove when hero is remoevd */
-    background-color: var(--button-primary-background-color) !important;
-  }
-
-  div[data-style="secondary"] > :global(*) {
-    border: 1px solid var(--button-secondary-border);
-    color: var(--button-secondary-text-color) !important;
-    background-color: var(--button-secondary-background-color) !important;
-  }
-
-  div[data-style="key"] > :global(*) {
-    margin: 6px;
-    padding: 6px 0;
-    text-align: center;
-    width: calc(1em + 22px);
-    border: 1px solid var(--button-key-border);
-    color: var(--button-key-text-color) !important;
-    background-color: var(--button-key-background-color) !important;
-  }
-
-  .small > :global(*) {
-    font-size: 16px;
-    padding: 3px 12px;
-  }
-
-  .medium > :global(*) {
-    font-size: 18px;
-    padding: 3px 12px;
-  }
-
-  .large > :global(*) {
-    font-size: 20px;
-    padding: 9px 14px;
-  }
-</style>

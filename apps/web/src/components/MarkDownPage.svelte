@@ -1,6 +1,8 @@
 <script lang="typescript">
   import NavBar from "../components/NavBar.svelte"
   import Content from "lluis/Content.svelte"
+  import Columns from "lluis/Columns.svelte"
+  import Column from "lluis/Column.svelte"
 
   export let readmeHTML: string
   export let title: string | null
@@ -16,16 +18,14 @@
 
 <NavBar />
 
-<section class="hero is-primary md-page">
-  <div class="hero-body">
-    <div class="container">
+<main class="main-content layout-container" role="main">
+  <Columns>
+    <Column size="10" centered>
       <h1 class="title">{title}</h1>
-      <div class="section box">
-        <slot />
-        <Content>
-          {@html readmeHTML}
-        </Content>
-      </div>
-    </div>
-  </div>
-</section>
+      <slot />
+      <Content>
+        {@html readmeHTML}
+      </Content>
+    </Column>
+  </Columns>
+</main>

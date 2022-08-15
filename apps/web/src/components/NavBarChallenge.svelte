@@ -3,18 +3,13 @@
   import authStore from "../auth"
   import NavBar from "lluis/NavBar/NavBar.svelte"
   import Icon from "lluis/Icon.svelte"
+  import Hidden from "lluis/Hidden.svelte"
   import NavBarButton from "lluis/NavBar/NavBarButton.svelte"
   import Logo from "lluis/Logo.svelte"
   import NavBarItem from "lluis/NavBar/NavBarItem.svelte"
   import NavBarButtonSet from "lluis/NavBar/NavBarButtonSet.svelte"
   export let hasAuth = false
   export let repositoryURL = null
-
-  export let dark = false
-  let logoURL =
-    dark === true
-        ? "/images/logo.svg"
-        : "/images/logo-dark.svg"
 
   type WindowWithLogout = Window & {
     _Logout: () => void
@@ -23,18 +18,23 @@
 </script>
 
 <NavBar data-test="navbar">
-  <div slot="left" class="navbar__logo col-3">
-    <Logo src="{logoURL}" alt="LibreLingo" />
+  <div slot="left" class="navbar__logo navbar__logo--icon col-2">
+    <Logo src="/images/logo-icon.svg" alt="LibreLingo" />
   </div>
 
-  <div slot="middle" class="navbar__middle col-6">
+  <div slot="middle" class="navbar__middle col-8">
+    <!-- TODO: Move from ChallengeScreen -->
+    <Hidden>
+      <progress class="progress" value="" max=""></progress>
+    </Hidden>
   </div>
 
-  <div slot="right" class="navbar__nav col-3">
+  <div slot="right" class="navbar__nav col-2">
     <NavBarButtonSet>
-      {#if repositoryURL}
-        <NavBarButton href={repositoryURL} target="_blank">Feedback</NavBarButton>
-      {/if}
+      <!-- TODO: Implement flag -->
+      <Hidden>
+        <a href="/"><img src="/images/flag-spanish.png" alt="Flag" class="navbar__flag"></a>
+      </Hidden>
       {#if hasAuth && settings.features.authEnabled}
         {#if $authStore.user}
           <NavBarItem>

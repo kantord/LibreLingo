@@ -1,41 +1,14 @@
-<nav
-  data-test-id="navbar"
-  aria-label="main navigation"
->
+<script lang="typescript">
+  import Column from "lluis/Column.svelte"
+  import Columns from "lluis/Columns.svelte"
+</script>
 
-  <div class="left">
-    <slot name="left" />
+<nav class="navbar">
+  <div class="navbar__content layout-container">
+    <Columns>
+      <slot name="left" />
+      <slot name="middle" />
+      <slot name="right" />
+    </Columns>
   </div>
-
-  <div class="middle"></div>
-
-  <div class="right">
-    <slot name="right" />
-  </div>
-
 </nav>
-
-<style type="text/scss">
-  nav {
-    display: flex;
-    position: relative;
-    left: 0;
-    right: 0;
-    height: var(--navbar-height);
-    padding: var(--navbar-padding-vertical) var(--navbar-padding-horizontal);
-
-    background: var(--navbar-background);
-    color: var(--navbar-text-color);
-    border: 0;
-
-    >* {
-      img {
-        height: var(--navbar-logo-height);
-      }
-    }
-
-    .middle {
-      flex-grow: 1;
-    }
-  }
-</style>

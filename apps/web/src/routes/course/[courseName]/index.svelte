@@ -28,55 +28,47 @@
 
 <NavBar hasAuth repositoryURL="{repositoryURL}" />
 
-{#each modules as { title, skills }}
-  <section class="section">
-    <div class="container">
-      <h2 class="is-size-2">{title}</h2>
-      <Columns multiline>
-        {#each skills as skill}
-          <Column sizeDesktop="1/3" sizeTablet="1/2">
+<main class="main-content layout-container" role="main">
+  <Columns>
+    <Column size="8" centered>
+      {#each modules as { title, skills }}
+        <h2>{title}</h2>
+        <div class="grid skill-cards">
+          {#each skills as skill}
             <SkillCard
               {...{ ...skill }}
               practiceHref="{`/course/${courseName}/skill/${skill.practiceHref}`}"
             />
-          </Column>
-        {/each}
-      </Columns>
-    </div>
-  </section>
-{/each}
+          {/each}
+        </div>
+      {/each}
+    </Column>
+  </Columns>
+</main>
 
 <Footer>
   <Content>
-    <Columns>
-      <Column>
-        <strong>LibreLingo</strong>
-        by
-        <a href="https://github.com/kantord">Dániel Kántor</a>
-        and
-        <a href="https://github.com/LibreLingo/LibreLingo#contributors">
-          various contributors
-        </a>
-        .
-      </Column>
-      <Column>
-        The source code is licensed
-        <a href="https://opensource.org/licenses/AGPL-3.0">AGPL-3.0.</a>
-        <br />
-        <a href="https://github.com/LibreLingo/LibreLingo">
-          Source code available on GitHub.
-        </a>
-      </Column>
-      <Column />
-    </Columns>
-    <p></p>
+    <div class="layout-container">
+      <Columns>
+        <Column size="6">
+          <strong>LibreLingo</strong>
+          by
+          <a href="https://github.com/kantord">Dániel Kántor</a>
+          and
+          <a href="https://github.com/LibreLingo/LibreLingo#contributors">
+            various contributors
+          </a>
+          .
+        </Column>
+        <Column size="6">
+          The source code is licensed
+          <a href="https://opensource.org/licenses/AGPL-3.0">AGPL-3.0.</a>
+          <br />
+          <a href="https://github.com/LibreLingo/LibreLingo">
+            Source code available on GitHub.
+          </a>
+        </Column>
+      </Columns>
+    </div>
   </Content>
 </Footer>
-
-<style type="text/scss">
-  @import "../../../variables";
-  .container {
-    padding-right: 20px;
-    padding-left: 20px;
-  }
-</style>

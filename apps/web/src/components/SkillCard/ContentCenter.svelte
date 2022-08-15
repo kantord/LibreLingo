@@ -11,8 +11,8 @@
   export let stale
 </script>
 
-<div class="media-content" class:completed class:stale>
-  <Title size={4}>{title}</Title>
+<div class="skill-card__content" class:is-completed={completed} class:is-stale={stale}>
+  <h3 class="h5">{title}</h3>
   {#if completed || !started}
     <Summary summary="{summary}" stale="{stale}" completed="{completed}" />
   {/if}
@@ -20,14 +20,3 @@
     <progress class="progress" value="{progress}" max="{levels}"></progress>
   {/if}
 </div>
-
-<style type="text/scss">
-  @import "../../variables";
-
-  .completed,
-  .stale {
-    * {
-      color: $white;
-    }
-  }
-</style>
