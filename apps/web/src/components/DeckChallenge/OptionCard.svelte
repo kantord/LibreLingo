@@ -19,16 +19,17 @@
       <img src={`images/${picture}`} alt="" data-test={`card-img-${number}`} />
     </div>
     <div slot="footer">
-     <Stack justify="center"> 
-        {formInTargetLanguage}
-     </Stack> 
+      <Stack justify="center">
+        <div data-test={`card-text-${number}`}>
+          {formInTargetLanguage}
+        </div>
+      </Stack>
     </div>
   </Card>
 </li>
 
 <style type="text/scss">
   @import "../../variables";
-
 
   li {
     border: 3px solid transparent;
