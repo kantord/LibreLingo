@@ -67,6 +67,9 @@ Now you should be able to see your app on <http://localhost:3000/>
 
 ### Exporting a course from YAML
 
+If you want to test new features in the YAML format, or some changes in how they are being used
+in the frontend, you need to be able to export YAML courses locally.
+
 You will need [Poetry](https://python-poetry.org/).
 
 Install dependencies at the top level and for the app:
@@ -83,11 +86,33 @@ poetry install
 cd ../..
 ```
 
-Export a course:
+### Locally test LibreLingo with real courses
 
-```sh
-./scripts/exportYamlCourse.sh <course directory name>
+In order to test LiberLingo with real courses just like in the deployed production version, you
+need to install courses locally and export them from YAML to JSON.
+
+#### Install courses
+
+The following command installs all courses listed in the courses.json file just like
+in production. *Keep in mind that in order to use them in the frontend, the courses
+also need to be exported!*
+
+```bash
+yarn web run installAllExternalCourses
 ```
+
+#### Export courses
+
+In order to use a locally installed course when locally testing the frontend, you should
+export the course first. You should also export the course every time you make local
+changes to this course and you want the changes to be visible in the frontend.
+
+Use the following command:
+
+```bash
+yarn exportAllCourses
+```
+
 
 ## Setting up Semaphore CI in a clone
 
