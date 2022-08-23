@@ -28,47 +28,21 @@
 
 <NavBar hasAuth repositoryURL="{repositoryURL}" />
 
-<main class="main-content layout-container" role="main">
-  <Columns>
-    <Column size="8" centered>
-      {#each modules as { title, skills }}
-        <h2>{title}</h2>
-        <div class="grid skill-cards">
-          {#each skills as skill}
-            <SkillCard
-              {...{ ...skill }}
-              practiceHref="{`/course/${courseName}/skill/${skill.practiceHref}`}"
-            />
-          {/each}
-        </div>
+<main class="main-content container-md grid">
+  <h1 class="h5 m-bottom-1">{languageName}</h1>
+  {#each modules as { title, skills }}
+    <h2>{title}</h2>
+    <ul class="skill-cards">
+      {#each skills as skill}
+        <li>
+          <SkillCard
+            {...{ ...skill }}
+            practiceHref="{`/course/${courseName}/skill/${skill.practiceHref}`}"
+          />
+        </li>
       {/each}
-    </Column>
-  </Columns>
+    </ul>
+  {/each}
 </main>
 
-<Footer>
-  <Content>
-    <div class="layout-container">
-      <Columns>
-        <Column size="6">
-          <strong>LibreLingo</strong>
-          by
-          <a href="https://github.com/kantord">Dániel Kántor</a>
-          and
-          <a href="https://github.com/LibreLingo/LibreLingo#contributors">
-            various contributors
-          </a>
-          .
-        </Column>
-        <Column size="6">
-          The source code is licensed
-          <a href="https://opensource.org/licenses/AGPL-3.0">AGPL-3.0.</a>
-          <br />
-          <a href="https://github.com/LibreLingo/LibreLingo">
-            Source code available on GitHub.
-          </a>
-        </Column>
-      </Columns>
-    </div>
-  </Content>
-</Footer>
+<Footer />

@@ -6,6 +6,6 @@
   export let completed: boolean
 </script>
 
-<div class:is-completed={completed} class:is-stale={stale}>
+<div class="skill-card__summary" class:is-completed={completed} class:is-stale={stale}>
   <ClampedText text="{`Learn: ${summary.join(', ')}`}" />
 </div>

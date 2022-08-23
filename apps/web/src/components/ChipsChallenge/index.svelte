@@ -117,10 +117,10 @@
 </script>
 
 <form on:submit|preventDefault="{submitChallenge}">
-  <h2 class="challenge-prompt">
+  <h1 class="challenge-prompt">
     Translate
     <Phrase phrase="{challenge.phrase}" />
-  </h2>
+  </h1>
 
   <div>
     <div class="challenge-chips__solution">
@@ -163,7 +163,7 @@
   {#if submitted}
     {#if !correct}
       <ChallengePanel
-        message="Incorrect solution!"
+        message="Incorrect!"
         messageDetail="{`Correct answer: ${challenge.formattedSolution}`}"
         buttonText="Continue"
         incorrect
@@ -171,7 +171,7 @@
     {/if}
     {#if correct}
       <ChallengePanel
-        message="Correct solution!"
+        message="Correct!"
         buttonText="Continue"
         correct
         buttonAction="{finishChallenge}" />

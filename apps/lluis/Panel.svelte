@@ -5,13 +5,9 @@
   export let state: "default" | "success" | "failure" | "info" = "default"
 </script>
 
-<div class="layout-container panel" data-state={state}>
-  <Columns>
-    <Column size="8" centered>
-      <div class="panel__content">
-        <slot name="left" />
-        <slot name="right" />
-      </div>
-    </Column>
-  </Columns>
+<div class="container-md panel" data-state={state}>
+  <div class="panel__content">
+    <slot name="left" />
+    <slot name="right" />
+  </div>
 </div>

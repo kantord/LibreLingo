@@ -59,12 +59,12 @@
 </script>
 
 <form on:submit|preventDefault="{submitChallenge}">
-  <h2 class="challenge-prompt">
+  <h1 class="challenge-prompt">
     Type
     <Phrase phrase="{challenge.phrase}" />
     in
     {languageName}!
-  </h2>
+  </h1>
 
   <div class="challenge-short-input">
     <Columns>
@@ -110,7 +110,7 @@
   {#if submitted}
     {#if !correct}
       <ChallengePanel
-        message="Incorrect solution!"
+        message="Incorrect!"
         messageDetail="{`Correct answer: ${challenge.formInTargetLanguage[0]}`}"
         buttonText="Continue"
         incorrect
@@ -120,7 +120,7 @@
     {#if correct}
       {#if !spellingSuggestion}
         <ChallengePanel
-          message="Correct solution!"
+          message="Correct!"
           messageDetail=""
           buttonText="Continue"
           correct

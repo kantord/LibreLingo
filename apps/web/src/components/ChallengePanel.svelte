@@ -11,7 +11,6 @@
   export let messageDetail = null
   export let submit = null
   export let skipAction = null
-  export let skipAllAction = null
   export let skipAllVoice = null
 
   let state: "default" | "success" | "failure" | "info" = (() => {
@@ -31,22 +30,21 @@
 
 <Panel state="{state}">
   <div slot="left" class="panel__left">
-    <div class="buttonset buttonset--wrap">
+    <div class="buttonset">
       {#if skipAction}
         <Button on:click="{skipAction}" style="secondary">Skip</Button>
       {/if}
-      <Button on:click="{skipAllAction}" style="secondary">Cancel</Button>
       {#if skipAllVoice}
         <Button on:click="{skipAllVoice}" style="secondary">Can't listen now</Button>
       {/if}
-    </div>
-    <div class="panel__message">
-      {#if message}
-        <b>{message}</b>
-      {/if}
-      {#if messageDetail}
-        <div>{messageDetail}</div>
-      {/if}
+      <div class="panel__message">
+        {#if message}
+          <b>{message}</b>
+        {/if}
+        {#if messageDetail}
+          <div>{messageDetail}</div>
+        {/if}
+      </div>
     </div>
   </div>
 

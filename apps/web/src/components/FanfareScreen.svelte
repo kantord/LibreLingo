@@ -33,30 +33,26 @@
   })
 </script>
 
-<main class="main-content main-content--challenge full-width-container" role="main">
-  <div class="layout-container">
-    <Columns>
-      <Column size="8" centered>
-        <div class="fanfare-screen">
-          <div class="fanfare-screen__mascot">
-            <Mascot />
-          </div>
-          <div class="fanfare-screen__content">
-            <h2>Lesson completed!</h2>
-            <p>
-              You've completed
-              {stats.correct}
-              challenges
-            </p>
-            <Button style="primary" href="{courseURL}">
-              Continue to course page
-            </Button>
+<main class="main-content main-content--challenge full-width-container">
+  <div class="container-md">
+    <div class="fanfare-screen">
+      <div class="fanfare-screen__mascot">
+        <Mascot />
+      </div>
+      <div class="fanfare-screen__content grid">
+        <h2>Lesson completed!</h2>
+        <p>
+          You've completed
+          {stats.correct}
+          challenges
+        </p>
+        <Button style="primary" href="{courseURL}">
+          Continue to course page
+        </Button>
 
-            <h3 class="m-top-2">Excited about LibreLingo?</h3>
-            <TwitterButton />
-          </div>
-        </div>
-      </Column>
-    </Columns>
+        <h3 class="m-top-2">Excited about LibreLingo?</h3>
+        <TwitterButton />
+      </div>
+    </div>
   </div>
 </main>

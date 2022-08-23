@@ -62,7 +62,7 @@
 
 {#if !loading}
   <MarkDownPage {readmeHTML} {title} description={$_("about.meta.description")}>
-    <div class="buttonset m-bottom-2">
+    <div class="buttonset m-top-1 m-bottom-2">
       <Button
         style="secondary"
         href={`course/${courseName}`}

@@ -12,11 +12,11 @@
 </script>
 
 <div class="skill-card__content" class:is-completed={completed} class:is-stale={stale}>
-  <h3 class="h5">{title}</h3>
+  <h3 class="skill-card__heading">{title}</h3>
   {#if completed || !started}
     <Summary summary="{summary}" stale="{stale}" completed="{completed}" />
   {/if}
   {#if !completed && started}
-    <progress class="progress" value="{progress}" max="{levels}"></progress>
+    <progress class="progress skill-card__progress" value="{progress}" max="{levels}"></progress>
   {/if}
 </div>

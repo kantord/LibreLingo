@@ -1,69 +1,9 @@
 @charset "utf-8";
-// @import "~bulmaswatch/lumen/variables.scss";
-// @import "~bulmaswatch/lumen/variables.scss";
-// @import "./custom_variables";
-
-// @import "~bulma/sass/utilities/_all.sass";
-
-// // Don't remove commented out code here: they are disabled bulma modules
-
-// @import "~bulma/sass/base/minireset.sass";
-// //@import "~bulma/sass/form/file.sass";
-// @import "~bulma/sass/form/shared.sass";
-// @import "~bulma/sass/form/input-textarea.sass";
-// @import "~bulma/sass/form/all.sass";
-// //@import "~bulma/sass/form/select.sass";
-// //@import "~bulma/sass/form/checkbox-radio.sass";
-// //@import "~bulma/sass/form/tools.sass";
-// //@import "~bulma/sass/grid/tiles.sass";
-// @import "~bulma/sass/grid/columns.sass";
-// @import "~bulma/sass/elements/progress.sass";
-// //@import "~bulma/sass/elements/other.sass";
-// //@import "~bulma/sass/elements/notification.sass";
-// @import "~bulma/sass/elements/icon.sass";
-// @import "~bulma/sass/elements/image.sass";
-// // @import "~bulma/sass/elements/button.sass";
-// // @import "~bulma/sass/elements/title.sass";
-// @import "~bulma/sass/elements/content.sass";
-// @import "~bulma/sass/elements/box.sass";
-// //@import "~bulma/sass/elements/table.sass";
-// @import "~bulma/sass/elements/container.sass";
-// @import "~bulma/sass/elements/tag.sass";
-// @import "~bulma/sass/layout/section.sass";
-// /* @import "~bulma/sass/layout/footer.sass"; */
-// @import "~bulma/sass/layout/hero.sass";
-// @import "~bulma/sass/base/generic.sass";
-// @import "~bulma/sass/helpers/_all.sass";
-// //@import "~bulma/sass/components/pagination.sass";
-// //@import "~bulma/sass/components/level.sass";
-// //@import "~bulma/sass/components/message.sass";
-// //@import "~bulma/sass/components/modal.sass";
-// // @import "~bulma/sass/components/navbar.sass";
-// // @import "~bulma/sass/components/panel.sass";
-// //@import "~bulma/sass/components/list.sass";
-// //@import "~bulma/sass/components/breadcrumb.sass";
-// //@import "~bulma/sass/components/menu.sass";
-// //@import "~bulma/sass/components/tabs.sass";
-// //@import "~bulma/sass/components/dropdown.sass";
-// @import "~bulma/sass/components/card.sass";
-// @import "~bulma/sass/components/media.sass";
-
-// @import "~bulma-pageloader";
-// @import "~bulma-tooltip";
-
-// .md-page a {
-//     text-decoration: underline;
-// }
-
-// @import "~bulmaswatch/lumen/overrides.scss";
-
-// ============================================
 
 // Variables
 // --------------------------------------------
 
 $font-family: "Noto Sans", sans-serif;
-// Font sizes are in mixins.scss
 
 $border-radius: 1.5rem;
 $border-radius-internal: 1.25rem;
@@ -89,8 +29,14 @@ $accent-color: $yellow;
 $accent-color-dark: adjust-color($accent-color, $saturation: 20%, $lightness: -10%);
 $accent-color-light: adjust-color($accent-color, $saturation: 20%, $lightness: 40%);
 $error-color: $red;
+$error-color-dark: adjust-color($error-color, $lightness: -10%);
+$error-color-light: adjust-color($error-color, $lightness: 40%);
 $correct-color: $green;
+$correct-color-dark: adjust-color($correct-color, $lightness: -10%);
+$correct-color-light: adjust-color($correct-color, $lightness: 40%);
 $incorrect-color: $red;
+$incorrect-color-dark: adjust-color($incorrect-color, $lightness: -10%);
+$incorrect-color-light: adjust-color($incorrect-color, $lightness: 40%);
 
 $body-background: $white;
 $body-background-inverted: $primary-color;
@@ -100,8 +46,12 @@ $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
 
-$layout-container-padding: 3.5rem;
-$layout-container-padding-mobile: 1.5rem;
+$container-padding: 3.5rem;
+$container-padding-sm: 1.5rem;
+$container-min-width: 20rem; // 320px
+$container-lg-width: 90rem; // 1440px
+$container-md-width: $container-lg-width * 0.66;
+$container-sm-width: $container-lg-width * 0.33;
 
 $gutter-lg: 2rem;
 $gutter-md: 1rem;
@@ -152,34 +102,22 @@ $nav-height: 6rem;
 
 // Headings
 @mixin h1 {
-  @include text-size-lg-3;
-  font-weight: normal;
-  margin: 0 0 2rem;
+  @include text-size-lg-2;
 }
 @mixin h2 {
-  @include text-size-lg-2;
-  font-weight: normal;
-  margin: 0 0 2rem;
+  @include text-size-lg-1;
 }
 @mixin h3 {
-  @include text-size-lg-1;
-  font-weight: normal;
-  margin: 0 0 1rem;
+  @include text-size-md-3;
 }
 @mixin h4 {
-  @include text-size-md-3;
-  font-weight: bold;
-  margin: 0 0 0.5rem;
+  @include text-size-md-2;
 }
 @mixin h5 {
-  @include text-size-md-2;
-  font-weight: bold;
-  margin: 0 0 0.5rem;
+  @include text-size-md-1;
 }
 @mixin h6 {
   @include text-size-md-1;
-  font-weight: bold;
-  margin: 0 0 0.5rem;
 }
 
 @mixin button {
@@ -199,6 +137,9 @@ $nav-height: 6rem;
   &:hover {
     background-color: $primary-color-dark;
     color: $white;
+  }
+  &:active {
+    transform: scale(0.98);
   }
   &:disabled,
   &.is-disabled {
@@ -230,7 +171,7 @@ $nav-height: 6rem;
   gap: $gap;
 }
 
-// Align items horizontally, centered vertically, with a small gap in between
+// Align items horizontally, centered vertically, with a gap in between
 @mixin align-vc($gap: $gutter-md) {
   gap: $gap;
   align-items: center;
@@ -240,14 +181,16 @@ $nav-height: 6rem;
 @mixin card {
   background: $white;
   border: 1px solid $grey-40;
-  // box-shadow: 4px 4px 24px rgba($grey-80, 0.1);
   border-radius: $border-radius;
   color: $text-color;
   transition: all 0.15s;
+  &:active {
+    transform: scale(0.98);
+  }
   &:hover {
     color: $text-color;
     border: 1px solid $primary-color;
-    // box-shadow: 4px 4px 32px rgba($grey-80, 0.3);
+    box-shadow: 4px 4px 32px rgba(desaturate($primary-color-dark, 30%), 0.075);
   }
   &.is-active {
     background-color: $primary-color;
@@ -260,7 +203,7 @@ $nav-height: 6rem;
   }
 }
 
-// 
+// Line clamp
 @mixin line-clamp($lines: 2) {
   display: -webkit-box;
   -webkit-line-clamp: $lines;
@@ -300,7 +243,7 @@ body {
   font-family: $font-family;
   color: $text-color;
   background-color: $body-background;
-  min-width: 20rem; // 320px
+  min-width: $container-min-width;
   height: 100vh;
   margin: 0;
 }
@@ -324,6 +267,16 @@ a {
 }
 
 // Headings
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-weight: normal;
+  margin: 0;
+}
+
 h1, .h1 {
   @include h1;
 }
@@ -341,6 +294,16 @@ h5, .h5 {
 }
 h6, .h6 {
   @include h6;
+}
+
+// Paragraphs 
+p {
+  margin: 0;
+}
+
+// Pre
+pre {
+  text-align: left;
 }
 
 // Buttons
@@ -386,6 +349,7 @@ h6, .h6 {
     height: 2rem;
   }
   .icon {
+    display: inline-flex;
     width: unset;
     height: unset;
   }
@@ -393,23 +357,9 @@ h6, .h6 {
 
 // Icons
 .icon {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  height: 1.5rem;
-  width: 1.5rem;
-  &--large {
-    height: 3rem;
-    width: 3rem
-  }
-  &--medium {
-    height: 2rem;
-    width: 2rem
-  }
-  &--small {
-    height: 1rem;
-    width: 1rem
-  }
 }
 .spinner {
   display: inline-flex;
@@ -423,7 +373,8 @@ h6, .h6 {
 }
 
 // Progress bar
-progress {
+progress,
+.progress {
   -moz-appearance: none;
   -webkit-appearance: none;
   border: none;
@@ -433,29 +384,22 @@ progress {
   overflow: hidden;
   padding: 0;
   width: 100%;
+  background-color: $grey-20;
   &::-webkit-progress-bar {
     background-color: $grey-20;
   }
   &::-webkit-progress-value {
-    background-color: $primary-color;
+    background-color: $correct-color;
   }
   &::-moz-progress-bar {
-    background-color: $primary-color;
+    background-color: $correct-color;
   }
   &::-ms-fill {
-    background-color: $primary-color;
+    background-color: $correct-color;
     border: none;
   }
-}
-.progress {
-  &::-moz-progress-bar {
-    background-color: $primary-color;
-  }
-  &::-ms-fill {
-    background-color: $primary-color;
-  }
   &:indeterminate {
-    background-image:linear-gradient(to right, $primary-color 30%, $grey-20 30%);
+    background-image:linear-gradient(to right, $correct-color 30%, $grey-20 30%);
   }
 }
 
@@ -468,6 +412,7 @@ textarea {
   background-color: $white;
   border: 1px solid $primary-color;
   border-radius: $border-radius;
+  font-family: $font-family;
   @include text-size-md-1;
   padding: 0 1rem;
   min-height: 2.5rem;
@@ -479,6 +424,13 @@ textarea {
     background-color: $grey-20;
     border-color: $grey-40;
   }
+}
+
+textarea {
+  border-radius: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  min-height: 7rem;
 }
 
 .form__error {
@@ -545,6 +497,14 @@ textarea {
   @include line-clamp(2);
 }
 
+// License logo
+.license-logo {
+  width: 7em;
+  min-width: 7em;
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+}
+
 // Horizontal scroller
 .horizontal-scroller {
   width: 100%;
@@ -584,6 +544,96 @@ textarea {
   background: linear-gradient(90deg, transparent, white, white);
 }
 
+// Text content
+// ----------------------------------------------
+
+// Re-add spacing
+.text-content {
+  // Headings
+  h1, .h1 {
+    margin-bottom: 2rem;
+  }
+  h2, .h2 {
+    margin-bottom: 1rem;
+  }
+  h3, .h3,
+  h4, .h4,
+  h5, .h5,
+  h6, .h6 {
+    margin-bottom: 0.5rem;
+  }
+  p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+// Page loader
+// ----------------------------------------------
+
+// Pageloader from https://github.com/Wikiki/bulma-pageloader
+.pageloader {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  position: fixed;
+  padding-top: 2em;
+  background: $white;
+  z-index: 999998;
+  transition: transform .35s ease-out;
+  will-change: transform;
+  &:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    border-radius: 100%;
+    content: '';
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    box-sizing: border-box;
+    border: 0 solid $primary-color;
+    animation: loader-figure 1.15s infinite cubic-bezier(.215, .61, .355, 1);
+  }
+}
+.pageloader__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  margin: 2em 0 0 0;
+  color: $primary-color;
+  white-space: nowrap;
+}
+@keyframes loader-figure {
+  0% {
+    height: 0;
+    width: 0;
+    background-color: $primary-color;
+  }
+  29% {
+    background-color: $primary-color;
+  }
+  30% {
+    height: 2em;
+    width: 2em;
+    background-color: transparent;
+    border-width: 1em;
+    opacity: 1;
+  }
+  100% {
+    height: 2em;
+    width: 2em;
+    border-width: 0;
+    opacity: 0;
+    background-color: transparent;
+  }
+}
+
 // Utilities
 // ----------------------------------------------
 
@@ -596,7 +646,8 @@ textarea {
 .buttonset {
   @include align-vc;
   display: flex;
-  &--wrap {
+  flex-wrap: wrap;
+  &--no-wrap {
     flex-wrap: wrap;
   }
 }
@@ -613,19 +664,35 @@ textarea {
     margin-bottom: #{$num}rem;
   }
 }
+// Center items
+.flex-j-center {
+  @include flex;
+  justify-content: center;
+  text-align: center;
+}
 
 // Layout
 // ----------------------------------------------
 
-// Container
-.layout-container {
+.container-lg,
+.container-md,
+.container-sm {
   width: 100%;
-  max-width: 90rem; // 1440px
-  min-width: 20rem; // 320px
-  padding-left: $layout-container-padding;
-  padding-right: $layout-container-padding;
+  min-width: $container-min-width;
+  padding-left: $container-padding;
+  padding-right: $container-padding;
   margin-left: auto;
   margin-right: auto;
+}
+
+.container-lg {
+  max-width: $container-lg-width;
+}
+.container-md {
+  max-width: $container-md-width;
+}
+.container-sm {
+  max-width: $container-sm-width;
 }
 
 // 12 column grid
@@ -657,13 +724,21 @@ textarea {
   z-index: 10;
   background-color: rgba($body-background, 0.85);
 }
-.navbar__content .row {
+.navbar__content {
   align-items: center;
   min-height: $nav-height;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  @include grid;
+  grid-auto-flow: column;
+  &.has-middle {
+    grid-template-columns: minmax(140px, 180px) auto minmax(140px, 180px);
+  }
 }
 .navbar__logo {
+  a {
+    display: block;
+  }
   img {
     width: 180px;
     min-width: 140px;
@@ -671,12 +746,11 @@ textarea {
   &--icon {
     img {
       width: 61px;
-      min-width: 20px;
+      min-width: 40px;
     }
   }
 }
 .navbar__middle {
-  flex-grow: 1;
   text-align: center;
   margin-bottom: 0;
 }
@@ -684,9 +758,16 @@ textarea {
   white-space: nowrap;
   display: flex;
   justify-content: flex-end;
+  .buttonset {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
-.navbar__flag {
-  border-radius: $border-radius;
+.navbar__progress {
+  width: 100%;
+  max-width: $container-md-width - ($container-padding * 2);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 // Main content
@@ -711,25 +792,14 @@ textarea {
 // ----------------------------------------------
 
 .main-footer {
-  margin-top: 2rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
 .main-footer__content {
-  @include align-vc;
-  display: flex;
-  justify-content: center;
-}
-.main-footer__left {
-  @include align-vc($gutter-md);
-  display: flex;
-  justify-content: flex-start;
-  flex-grow: 1;
-}
-.main-footer__right { 
-  @include align-vc($gutter-md);
-  display: flex;
-  justify-content: flex-end;
+  @include flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
 }
 
 // Home
@@ -737,36 +807,37 @@ textarea {
 
 .home-hero {
   padding-top: $nav-height + 1rem; // Override .main-content
+  padding-bottom: 8rem;
 }
-
-.home-hero__content {
-  @include grid($gutter-lg);
-  color: $text-color;
-  position: relative;
-}
-.home-hero__bg-shape {
+.home-hero__bg-shape-back,
+.home-hero__bg-shape-front {
   position: absolute;
   width: 100%;
   display: flex;
   justify-content: center;
   overflow: hidden;
-  &--back {
-    z-index: -1;
-    img {
-      width: 69%;
-      min-width: 960px;
-      max-width: 1023px;
-    }
+}
+.home-hero__bg-shape-back {
+  z-index: -1;
+  img {
+    width: 69%;
+    min-width: 960px;
+    max-width: 1023px;
   }
-  &--front {
-    z-index: -2;
-    margin-top: 2rem;
-    img {
-      width: 72%;
-      min-width: 1000px;
-      max-width: 1068px;
-    }
+}
+.home-hero__bg-shape-front {
+  z-index: -2;
+  margin-top: 2rem;
+  img {
+    width: 72%;
+    min-width: 1000px;
+    max-width: 1068px;
   }
+}
+.home-hero__content {
+  @include grid($gutter-lg);
+  color: $text-color;
+  position: relative;
 }
 .home-hero__intro {
   @include align-vc($gutter-lg);
@@ -791,7 +862,9 @@ textarea {
   display: flex;
   padding-left: 5rem;
   padding-right: 5rem;
-  .language-selector__label { }
+  .language-selector__label {
+    font-weight: bold;
+  }
   .language-selector__dropdown {
     @include align-vc;
     display: flex;
@@ -815,12 +888,6 @@ textarea {
   display: flex;
   justify-content: center;
   margin-top: 1rem;
-}
-
-.home__license-icon img {
-  height: 2.5em;
-  mix-blend-mode: multiply;
-  opacity: 0.5;
 }
 
 // Fanfare screen
@@ -851,20 +918,45 @@ textarea {
 .skill-cards {
   @include grid-cols(2);
   @include reset-list;
+  &:not(:last-of-type) {
+    margin-bottom: 2rem;
+  }
+  li {
+    display: grid;
+  }
 }
 .skill-cards__skill-card {
   @include card;
   @include align-vc;
   display: flex;
-  padding: 1.5rem;
+  padding: 1rem;
   cursor: pointer;
+  &[data-started="true"] {
+    background-color: lighten(desaturate($accent-color, 10%), 45%);
+    border-color: $accent-color;
+    &:hover {
+      border-color: $accent-color-dark;
+    }
+    .skill-card__progress {
+      background-color: $white;
+      &::-webkit-progress-bar {
+        background-color: $white;
+      }
+    }
+  }
   &[data-completed="true"] {
-    background-color: lighten(desaturate($correct-color, 15%), 45%);
+    background-color: lighten(desaturate($correct-color, 15%), 47%);
     border-color: $correct-color;
+    &:hover {
+      border-color: $correct-color-dark;
+    }
   }
   &[data-stale="true"] {
-    background-color: lighten(desaturate($correct-color, 60%), 45%);
-    border-color: $correct-color;
+    background-color: lighten(desaturate($correct-color, 58%), 48%);
+    border-color: desaturate($correct-color, 58%);
+    &:hover {
+      border-color: desaturate($correct-color-dark, 58%);
+    }
   }
   .skill-card__image {
     flex: 1;
@@ -878,10 +970,14 @@ textarea {
   }
   .skill-card__content {
     flex: 2;
-    p {
-      margin: 0;
-      @include line-clamp(2);
-    }
+  }
+  .skill-card__heading {
+    @include h5;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  .skill-card__summary {
+    color: $grey-60;
   }
 }
 
@@ -920,6 +1016,9 @@ textarea {
   }
   &[data-state="failure"] .panel__message {
     color: $incorrect-color;
+  }
+  &[data-state="info"] .panel__message {
+    color: $accent-color-dark;
   }
   .panel__content {
     @include align-vc;
@@ -1101,14 +1200,18 @@ textarea {
       grid-column-end: auto;
     }
   }
-
-  .navbar__content .row {
-    display: flex;
-    .navbar__logo { }
+  .navbar__content {
+    @include flex;
+    justify-content: space-between;
+    .navbar__logo {
+      min-width: 40px;
+    }
     .navbar__middle {
       flex-grow: 1;
     }
-    .navbar__nav { }
+    .navbar__nav {
+      min-width: 40px;
+    }
   }
   .challenge-option-deck__option-card {
     .option-card__shortcut {
@@ -1141,18 +1244,17 @@ textarea {
   }
   .main-content {
     padding-top: $nav-height + 1rem; // Accommodate fixed header
+    padding-bottom: 1rem;
   }
-  .home-hero__bg-shape {
-    &--back {
-      img {
-        min-width: 825px;
-      }
+  .home-hero__bg-shape-back {
+    img {
+      min-width: 825px;
     }
-    &--front {
-      margin-top: 1.5rem;
-      img {
-        min-width: 860px;
-      }
+  }
+  .home-hero__bg-shape-front {
+    margin-top: 1.5rem;
+    img {
+      min-width: 860px;
     }
   }
   .home-hero__intro {
@@ -1166,41 +1268,44 @@ textarea {
   }
   .skill-cards {
     grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: $gutter-md;
   }
   .skill-cards__skill-card {
-    padding: 0.5rem;
-  }
-  .main-footer {
-    margin-top: 1rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-  .main-footer__content {
-    flex-direction: column;
-    text-align: center;
-  }
-  .main-footer__left {
-    flex-direction: column;
-    text-align: center;
-  }
-  .main-footer__right {
-    flex-direction: column;
-    text-align: center;
+    &.has-image {
+      padding: 0.5rem 1rem 0.5rem 0.5rem;
+    }
   }
 }
 
 @media screen and (max-width: $breakpoint-sm) {
-  .layout-container {
-    padding-left: $layout-container-padding-mobile;
-    padding-right: $layout-container-padding-mobile;
+  .container-lg,
+  .container-md,
+  .container-sm {
+    padding-left: $container-padding-sm;
+    padding-right: $container-padding-sm;
   }
 
   .main-content {
     padding-top: $nav-height; // Accommodate fixed header
   }
 
+  .navbar__content {
+    font-size: 0.9375rem;
+  }
+
   .home-hero {
     overflow-x: hidden;
+    padding-bottom: 5rem;
+  }
+  .home-hero__bg-shape-back {
+    img {
+      min-width: 680px;
+    }
+  }
+  .home-hero__bg-shape-front {
+    img {
+      min-width: 690px;
+    }
   }
   .home-hero__intro {
     flex-direction: column;
@@ -1229,6 +1334,7 @@ textarea {
   }
   .challenge-option-deck {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: $gutter-md;
   }
   .challenge-option-deck__option-card {
     .option-card__text {
@@ -1256,5 +1362,15 @@ textarea {
   }
   .buttonset {
     gap: $gutter-sm;
+  }
+  .main-footer {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .main-footer__content {
+    align-items: flex-start;
+    text-align: left;
+    font-size: 0.9375rem;
   }
 }

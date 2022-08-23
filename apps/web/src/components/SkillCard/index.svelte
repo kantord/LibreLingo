@@ -37,6 +37,7 @@
   })
 </script>
 
+<!-- TODO: Add `has-image` class to `skill-cards__skill-card` if an image exists -->
 <a
   class="skill-cards__skill-card"
   data-test="skill card"

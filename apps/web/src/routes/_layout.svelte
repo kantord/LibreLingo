@@ -34,4 +34,10 @@
   />
 </svelte:head>
 
+{#if isBrowser() !== true}
+  <div class="pageloader is-active">
+    <span class="pageloader__title">Loading LibreLingo...</span>
+  </div>
+{/if}
+
 <slot />

@@ -45,10 +45,10 @@
   })
 </script>
 
-<h2 class="challenge-prompt">
+<h1 class="challenge-prompt">
   Which of these is
   <b class="challenge-prompt__phrase" data-test="meaning-in-source-language">{currentChallenge.meaningInSourceLanguage}</b>?
-</h2>
+</h1>
 
 <form on:submit|preventDefault="{submitChallenge}">
   <OptionDeck {options} bind:selectedOption disabled="{submitted}" />
@@ -73,14 +73,14 @@
   {#if submitted}
     {#if options[selectedOption].correct}
       <ChallengePanel
-        message="Correct solution!"
+        message="Correct!"
         buttonText="Continue"
         correct
         buttonAction="{finishChallenge}" />
     {/if}
     {#if !options[selectedOption].correct}
       <ChallengePanel
-        message="Incorrect solution!"
+        message="Incorrect!"
         buttonText="Continue"
         incorrect
         buttonAction="{finishChallenge}" />

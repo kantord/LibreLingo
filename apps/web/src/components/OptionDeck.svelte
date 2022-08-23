@@ -23,7 +23,7 @@
   })
 </script>
 
-<ul class="grid challenge-option-deck">
+<ul class="challenge-option-deck">
   {#each options as { pictures, formInTargetLanguage, correct, fake }, i}
     <li
       class:is-fake="{fake && true}"

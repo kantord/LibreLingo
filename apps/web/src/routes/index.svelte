@@ -18,133 +18,109 @@
   <meta name="description" content="{$_('index.meta.description')}" />
 </svelte:head>
 
-<NavBar />
+<NavBar hasAuth />
 
-<main class="main-content home-hero" role="main">
-  <div class="home-hero__bg-shape home-hero__bg-shape--back">
-    <img src="/images/home-background-shape-back.svg" />
+<main class="main-content home-hero">
+  <div class="home-hero__bg-shape-back">
+    <img src="/images/home-background-shape-back.svg" alt="" aria-hidden="true" />
   </div>
-  <div class="home-hero__bg-shape home-hero__bg-shape--front">
-    <img src="/images/home-background-shape-front.svg" />
+  <div class="home-hero__bg-shape-front">
+    <img src="/images/home-background-shape-front.svg" alt="" aria-hidden="true" />
   </div>
-  <div class="layout-container home-hero__content">
-    <Columns>
-      <Column size="8" centered>
-        <div class="home-hero__intro">
-          <div class="intro__mascot">
-            <Mascot shadow="{false}" glow="{true}" />
-          </div>
-          <h2 class="intro__description">A community-driven <b class="text-highlight">language-learning platform</b></h2>
-        </div>
-      </Column>
-    </Columns>
-    <Columns>
-      <Column size="8" centered>
-        <Hidden>
-          <Box> 
-            <div class="home-hero__language-selector">
-              <div class="language-selector__label">
-                <label><b>Choose a language to study</b></label>
-              </div>
-              <div class="language-selector__dropdown">
-                <span class="language-selector__flag"><a href="/"><img src="/images/flag-spanish.png" alt="Flag"></a></span> <a href="/course/test">Spanish</a>
-              </div>
-              <Button style="accent" size="medium" href="/course/test">
-                Go!
-              </Button>
-            </div>
-          </Box>
-        </Hidden>
-        <div class="home-hero__language-buttons">
-          <div class="buttonset buttonset--wrap">
-            <Button style="primary" size="large" href="course/spanish-from-english">
-              <Translate key="index.start_spanish_course">
-                Start learning Spanish
-              </Translate>
-            </Button>
-            <Hidden>
-              <Button style="primary" href="course/german-from-english">
-                <Translate key="index.start_german_course">
-                  Start learning German
-                </Translate>
-              </Button>
-
-              <Button style="primary" href="course/french-from-english">
-                <Translate key="index.start_french_course">
-                  Start learning French
-                </Translate>
-              </Button>
-
-              <Button style="primary" href="course/bangla-from-english">
-                <Translate key="index.start_french_course">
-                  Start learning Bangla
-                </Translate>
-              </Button>
-
-              <Button style="primary" href="course/parsig-from-english">
-                <Translate key="index.start_parsig_course">
-                  Start learning Middle Persian
-                </Translate>
-              </Button>
-
-              <Button style="primary" href="course/basque-from-english">
-                <Translate key="index.start_parsig_course">
-                  Start learning Basque
-                </Translate>
-              </Button>
-
-              <Button style="primary" href="course/ladino-from-english">
-                <Translate key="index.start_ladino_course">
-                  Start learning Ladino (for English speakers)
-                </Translate>
-              </Button>
-
-              <Button style="primary" href="course/ladino-from-hebrew">
-                <Translate key="index.start_ladino_course">
-                  Start learning Ladino (for Hebrew speakers)
-                </Translate>
-              </Button>
-
-              <Button style="primary" href="course/ladino-from-spanish">
-                <Translate key="index.start_ladino_course">
-                  Start learning Ladino (for Spanish speakers)
-                </Translate>
-              </Button>
-
-              <Button style="primary" href="course/houma-from-english">
-                <Translate key="index.start_houma_course">
-                  Start learning Houma (for English speakers)
-                </Translate>
-              </Button>
-            </Hidden>
-          </div>
-        </div>
-      </Column> 
-    </Columns>
-  </div>
-</main>
-
-<Footer>
-  <div class="layout-container">
-    <div class="main-footer__content">
-      <a href="about">
-        <Translate key="index.about_librelingo">
-          About LibreLingo
+  <div class="home-hero__content container-md grid">
+    <div class="home-hero__intro">
+      <div class="intro__mascot">
+        <Mascot shadow="{false}" glow="{true}" />
+      </div>
+      <h1 class="intro__description">
+        <Translate key="index.subtitle">
+          A community-driven <b class="text-highlight">language-learning platform</b>
         </Translate>
-      </a>
-      <Hidden>
-        <Button style="primary" href="/devtools">
-          Development tools
+      </h1>
+    </div>
+    <!-- <Box> 
+      <div class="home-hero__language-selector">
+        <div class="language-selector__label">
+          <label for="home-language-selector">Choose a language to study</label>
+        </div>
+        <div class="language-selector__dropdown">
+          <span class="language-selector__flag">
+            <img src="/images/flag-spanish.png" alt="" aria-hidden="true">
+          </span>
+          <Translate key="index.start_spanish_course">
+            Spanish
+          </Translate>
+        </div>
+        <Button style="accent" href="/course/test">
+          Go!
         </Button>
-      </Hidden>
-      <a href="https://librelingo.app/docs/">
-        <Translate key="index.development_docs_english_only">
-          Development documentation
-        </Translate>
-      </a>
-      <div class="home__license-icon">
-        <LicenseLogo />
+      </div>
+    </Box> -->
+    <div class="home-hero__language-buttons">
+      <div class="buttonset">
+        <Button style="primary" size="large" href="course/spanish-from-english">
+          <Translate key="index.start_spanish_course">
+            Start learning Spanish
+          </Translate>
+        </Button>
+        <Hidden>
+          <Button style="primary" href="course/german-from-english">
+            <Translate key="index.start_german_course">
+              Start learning German
+            </Translate>
+          </Button>
+
+          <Button style="primary" href="course/french-from-english">
+            <Translate key="index.start_french_course">
+              Start learning French
+            </Translate>
+          </Button>
+
+          <Button style="primary" href="course/bangla-from-english">
+            <Translate key="index.start_french_course">
+              Start learning Bangla
+            </Translate>
+          </Button>
+
+          <Button style="primary" href="course/parsig-from-english">
+            <Translate key="index.start_parsig_course">
+              Start learning Middle Persian
+            </Translate>
+          </Button>
+
+          <Button style="primary" href="course/basque-from-english">
+            <Translate key="index.start_parsig_course">
+              Start learning Basque
+            </Translate>
+          </Button>
+
+          <Button style="primary" href="course/ladino-from-english">
+            <Translate key="index.start_ladino_course">
+              Start learning Ladino (for English speakers)
+            </Translate>
+          </Button>
+
+          <Button style="primary" href="course/ladino-from-hebrew">
+            <Translate key="index.start_ladino_course">
+              Start learning Ladino (for Hebrew speakers)
+            </Translate>
+          </Button>
+
+          <Button style="primary" href="course/ladino-from-spanish">
+            <Translate key="index.start_ladino_course">
+              Start learning Ladino (for Spanish speakers)
+            </Translate>
+          </Button>
+
+          <Button style="primary" href="course/houma-from-english">
+            <Translate key="index.start_houma_course">
+              Start learning Houma (for English speakers)
+            </Translate>
+          </Button>
+        </Hidden>
       </div>
     </div>
   </div>
-</Footer>
+</main>
+
+<Footer />

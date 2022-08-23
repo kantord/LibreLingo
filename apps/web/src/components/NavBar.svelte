@@ -23,14 +23,11 @@
 </script>
 
 <NavBar data-test="navbar">
-  <div slot="left" class="navbar__logo col-3">
+  <div slot="left" class="navbar__logo">
     <Logo src="{logoURL}" alt="LibreLingo" />
   </div>
-
-  <div slot="middle" class="navbar__middle col-6">
-  </div>
-
-  <div slot="right" class="navbar__nav col-3">
+  
+  <div slot="right" class="navbar__nav">
     <NavBarButtonSet>
       {#if repositoryURL}
         <NavBarButton href={repositoryURL} target="_blank">Feedback</NavBarButton>

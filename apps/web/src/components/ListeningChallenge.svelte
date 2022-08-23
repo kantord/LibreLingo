@@ -75,7 +75,7 @@
 </script>
 
 <form on:submit|preventDefault="{submitChallenge}">
-  <h2 class="challenge-prompt">Type what you hear</h2>
+  <h1 class="challenge-prompt">Type what you hear</h1>
 
   <div class="challenge-listening">
     <div class="challenge-listening__button-and-input">
@@ -114,7 +114,7 @@
     {#if submitted}
       {#if !correct}
         <ChallengePanel
-          message="Incorrect solution!"
+          message="Incorrect!"
           messageDetail="{`Correct answer: ${challenge.answer}`}"
           buttonText="Continue"
           incorrect
@@ -125,7 +125,7 @@
       {#if correct}
         {#if !spellingSuggestion}
           <ChallengePanel
-            message="Correct solution!"
+            message="Correct!"
             messageDetail="{`Meaning: "${challenge.meaning}"`}"
             buttonText="Continue"
             correct

@@ -3,6 +3,7 @@
   import Content from "lluis/Content.svelte"
   import Columns from "lluis/Columns.svelte"
   import Column from "lluis/Column.svelte"
+  import Footer from "lluis/Footer.svelte"
 
   export let readmeHTML: string
   export let title: string | null
@@ -16,16 +17,14 @@
   {/if}
 </svelte:head>
 
-<NavBar />
+<NavBar hasAuth />
 
-<main class="main-content layout-container" role="main">
-  <Columns>
-    <Column size="10" centered>
-      <h1 class="title">{title}</h1>
-      <slot />
-      <Content>
-        {@html readmeHTML}
-      </Content>
-    </Column>
-  </Columns>
+<main class="main-content container-md">
+  <h1>{title}</h1>
+  <slot />
+  <Content>
+    {@html readmeHTML}
+  </Content>
 </main>
+
+<Footer />
