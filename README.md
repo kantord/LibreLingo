@@ -7,8 +7,10 @@
   <br/><br/>
   <a href="https://librelingo.app/"><img src="https://img.shields.io/badge/Try_now-librelingo.app-darkcyan" /></a>
   <a href="https://librelingo.app/dev/"><img src="https://img.shields.io/badge/List_of_courses-librelingo.app/dev-darkcyan" /></a>
+  <a href="https://librelingo.app/docs/"><img src="https://img.shields.io/badge/Documentation-librelingo.app/docs-darkcyan" /></a>
 </p>
 <hr/>
+
 
 [![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/LibreLingo/LibreLingo)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/kantord/LibreLingo?color=darkcyan)](https://github.com/kantord/LibreLingo/releases)
