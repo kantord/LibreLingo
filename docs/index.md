@@ -34,6 +34,26 @@ graph LR
 
 ## Setting up the development environment
 
+### Prerequisites
+
+In order to install the dependencies of this project, you will need to have some basic
+development tools installed.
+
+#### Ubuntu
+If you are on Ubuntu, run this command in order to make sure you have all the basic dependencies:
+
+```bash
+apt-get install curl git python3-venv libpython3-dev wget unzip gcc libyaml-dev npm
+```
+
+On Ubuntu, it is also recommended to use Python 3.x as your default Python version:
+
+```bash
+apt-get install python-is-python3
+```
+
+### Obtaining the source code
+
 Clone the repository:
 
 ```sh
@@ -48,15 +68,32 @@ cd LibreLingo
 
 ### Web app
 
+#### Having the correct version of Node
+
 You will need [Node](https://nodejs.org/en/). Note that this project is not yet compatible with Node v16.
 
-Install dependencies:
+In order to make sure you have the correct `node` version, it's recommended to use
+`nvm`. To install `nvm`, please [consult nvm's official documentation](https://github.com/nvm-sh/nvm#installing-and-updating).
 
-```sh
-yarn set version classic
-yarn
+First, install the correct `node` version with this command:
+
+```bash
+nvm install 14
 ```
 
+Then, to choose this version of `node` in your terminal, use
+
+```bash
+nvm use 14
+```
+
+#### Install dependencies:
+
+```sh
+yarn install
+```
+
+#### Starting the development server
 Start the development server:
 
 ```sh
