@@ -26,22 +26,3 @@
     <slot />
   </button>
 {/if}
-
-<style type="text/scss">
-  button {
-    background: transparent;
-    border: 0;
-    font-size: inherit;
-    cursor: pointer;
-  }
-
-  a,
-  button {
-    display: inline-block;
-    max-width: 100%;
-    text-overflow: ellipsis;
-
-    overflow: hidden;
-    white-space: nowrap;
-  }
-</style>
