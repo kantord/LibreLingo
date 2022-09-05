@@ -7,13 +7,15 @@
   import ChipsChallenge from "./ChipsChallenge/index.svelte"
   import FanfareScreen from "./FanfareScreen.svelte"
   import ProgressBar from "./ProgressBar.svelte"
+  import Column from "lluis/Column.svelte"
+  import Columns from "lluis/Columns.svelte"
+  import Hidden from "lluis/Hidden.svelte"
   import shuffle from "lodash.shuffle"
   import { fade, scale } from "svelte/transition"
   // TODO: deal with this ignore comment
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   import db from "../db/db"
   import isBrowser from "../utils/isBrowser"
-
 
   export let rawChallenges
   export let languageName
@@ -158,13 +160,13 @@
 </script>
 
 {#if currentChallenge}
-  <div class="container" in:scale>
-    <section class="section">
+  <main class="main-content main-content--challenge" in:scale>
+    <div class="container-md">
+      <!-- TODO: Move progress bar to NavBarChallenge -->
       <ProgressBar value="{progress}" />
       {#each challenges as challenge, i (challenge.id)}
         {#if challenge.id === currentChallenge.id}
           <div
-            class="challenge"
             in:fade|local="{{ duration: 300, delay: 350 }}"
             out:fade|local="{{ duration: 300 }}"
           >
@@ -224,25 +226,14 @@
           </div>
         {/if}
       {/each}
-    </section>
-  </div>
+    </div>
+  </main>
 {/if}
 
 {#if !currentChallenge}
-  <div class="container">
-    <FanfareScreen
-      courseURL="{courseURL}"
-      skillId="{skillId}"
-      stats="{stats}"
-    />
-  </div>
+  <FanfareScreen
+    courseURL="{courseURL}"
+    skillId="{skillId}"
+    stats="{stats}"
+  />
 {/if}
-
-<style type="text/scss">
-  .section {
-    padding: 1.5em;
-  }
-  .challenge {
-    padding: 2em 0;
-  }
-</style>

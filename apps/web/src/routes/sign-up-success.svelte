@@ -4,14 +4,14 @@
   import db from "../db/db.js"
   import NavBar from "../components/NavBar.svelte"
   import Button from "lluis/Button.svelte"
+  import Column from "lluis/Column.svelte"
+  import Columns from "lluis/Columns.svelte"
 </script>
 
-<NavBar />
+<NavBar hasAuth />
 
-<section class="section">
-  <div class="container">
-    <h2 class="is-size-2">Registration successful!</h2>
-    <p>You can now log in.</p>
-    <Button href="/login">Log in</Button>
-  </div>
-</section>
+<main class="main-content container-sm grid">
+  <h1>Registration successful!</h1>
+  <p>You can now log in.</p>
+  <Button href="/login">Log in</Button>
+</main>
