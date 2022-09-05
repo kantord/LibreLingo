@@ -33,59 +33,26 @@
   })
 </script>
 
-<section class="hero is-fullheight-with-navbar">
-  <div class="hero-body">
-    <div class="container" in:scale>
-      <Columns>
-        <Column size="3/5">
-          <div class="mascot">
-            <Mascot />
-          </div>
-        </Column>
-        <Column size="2/5">
-          <div class="is-centered-mobile">
-            <Title size={2} sizeMobile="3" multiline>Lesson completed!</Title>
-            <Title size={2} isSubtitle={true} multiline>
-              You've completed
-              {stats.correct}
-              challenges
-            </Title>
-            <Button size="medium" href={courseURL} style="primary">
-              Continue to course page
-            </Button>
-            <div class="bottom">
-              <Title size={5}>Excited about LibreLingo?</Title>
-              <TwitterButton />
-            </div>
-          </div>
-        </Column>
-      </Columns>
+<main class="main-content main-content--challenge full-width-container">
+  <div class="container-md">
+    <div class="fanfare-screen">
+      <div class="fanfare-screen__mascot">
+        <Mascot />
+      </div>
+      <div class="fanfare-screen__content grid">
+        <h2>Lesson completed!</h2>
+        <p>
+          You've completed
+          {stats.correct}
+          challenges
+        </p>
+        <Button style="primary" href="{courseURL}">
+          Continue to course page
+        </Button>
+
+        <h3 class="m-top-2">Excited about LibreLingo?</h3>
+        <TwitterButton />
+      </div>
     </div>
   </div>
-</section>
-
-<style type="text/scss">
-  @import "../variables";
-
-  @include from($tablet) {
-    .bottom {
-      position: absolute;
-      bottom: 0;
-    }
-  }
-
-  @include until($tablet) {
-    .mascot {
-      width: 45%;
-      margin: auto;
-    }
-
-    .bottom {
-      margin-top: 4em;
-    }
-
-    .is-centered-mobile {
-      text-align: center;
-    }
-  }
-</style>
+</main>
