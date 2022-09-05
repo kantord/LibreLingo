@@ -58,45 +58,24 @@
   })
 </script>
 
-<Card
-  {backgroundColor}
-  {foregroundColor}
+<!-- TODO: Add `has-image` class to `skill-cards__skill-card` if an image exists -->
+<a
+  class="skill-cards__skill-card"
   data-test="skill card"
-  data-started={started}
-  data-completed={completed}
-  data-stale={stale}
->
-  <div slot="icon">
-    {#if completed}
-      {#if stale}
-        <Icon icon="dumbbell" size="large" />
-      {:else}
-        <Icon icon="check-square" size="large" />
-      {/if}
-    {/if}
-  </div>
-  <div slot="content">
-    <div class="media">
-      <ContentLeft {imageSet} {stale} {completed} />
-      <ContentCenter
-        {progress}
-        {stale}
-        {levels}
-        {title}
-        {completed}
-        {started}
-        {summary}
-      />
-    </div>
-  </div>
-  <footer slot="footer">
-    <div href={practiceHref} class="card-footer-item">
-      <Buttons
-        {title}
-        practiceHref={introductionPageHref || practiceHref}
-        {started}
-        {completed}
-      />
-    </div>
-  </footer>
-</Card>
+  data-started="{started}"
+  data-completed="{completed}"
+  data-stale="{stale}"
+  href="{practiceHref}">
+  <ContentLeft
+    imageSet="{imageSet}"
+    stale="{stale}"
+    completed="{completed}" />
+  <ContentCenter
+    progress="{progress}"
+    stale="{stale}"
+    levels="{levels}"
+    title="{title}"
+    completed="{completed}"
+    started="{started}"
+    summary="{summary}" />
+</a>
