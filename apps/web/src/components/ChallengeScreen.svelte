@@ -7,9 +7,6 @@
   import ChipsChallenge from "./ChipsChallenge/index.svelte"
   import FanfareScreen from "./FanfareScreen.svelte"
   import ProgressBar from "./ProgressBar.svelte"
-  import Column from "lluis/Column.svelte"
-  import Columns from "lluis/Columns.svelte"
-  import Hidden from "lluis/Hidden.svelte"
   import shuffle from "lodash.shuffle"
   import { fade, scale } from "svelte/transition"
   // TODO: deal with this ignore comment
