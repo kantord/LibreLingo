@@ -1,5 +1,4 @@
 <script lang="ts">
-  import Progress from "lluis/Progress.svelte"
   import { tweened } from "svelte/motion"
 
   export let value

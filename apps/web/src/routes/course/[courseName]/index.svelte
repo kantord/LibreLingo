@@ -10,9 +10,6 @@
 <script lang="ts">
   import SkillCard from "../../../components/SkillCard/index.svelte"
   import NavBar from "../../../components/NavBar.svelte"
-  import Column from "lluis/Column.svelte"
-  import Columns from "lluis/Columns.svelte"
-  import Content from "lluis/Content.svelte"
   import Footer from "lluis/Footer.svelte"
   import type { ModulesType } from "../../../types/ModulesType"
 

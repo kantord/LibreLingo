@@ -1,8 +1,5 @@
 <script lang="ts" context="module">
   import NavBar from "../components/NavBar.svelte"
-  import Title from "lluis/Title.svelte"
-  import Column from "lluis/Column.svelte"
-  import Columns from "lluis/Columns.svelte"
   import Content from "lluis/Content.svelte"
   import Button from "../../../lluis/Button.svelte"
 </script>
