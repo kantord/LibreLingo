@@ -13,16 +13,18 @@
   }
 </script>
 
-<div class="field">
-  <label class="label" for={id}>{name}</label>
-  <div class="control has-icons-left">
+<div class="form-field" class:has-error={error != null}>
+  <label class="form-field__label" for={id}>{name}</label>
+    <div class="form-field__control" class:has-icon={icon != null}>
+    {#if icon}
+      <Icon size="small" {icon} />
+    {/if}
     {#if type === "text"}
       <input
         class="input"
         type="text"
         name={id}
         {id}
-        class:is-danger={error != null}
         bind:value
       />
     {/if}
@@ -32,13 +34,11 @@
         type="password"
         name={id}
         {id}
-        class:is-danger={error != null}
         bind:value
       />
     {/if}
-    <Icon size="small" {icon} left />
   </div>
   {#if error != null}
-    <p class="help is-danger">{error}</p>
+    <div class="form-field__help">{error}</div>
   {/if}
 </div>

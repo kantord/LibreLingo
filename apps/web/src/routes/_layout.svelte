@@ -1,54 +1,26 @@
 <script lang="ts" context="module">
   import { waitLocale } from "svelte-i18n"
   import isBrowser from "../utils/isBrowser"
+  
+  export async function preload() {
+      return waitLocale()
+  }
 
   /* Adding var css styels to JSON format */
 
   const defaultTheme = {
-      "spacing-small": "8px",
-      "spacing-medium": "12px",
-      "spacing-large": "calc(var(--spacing-small) + var(--spacing-medium))",
-      "blue": "#325f74",
-      "white": "#faf4f0",
-
-      "animation-short": ".1s",
-
-      /* primary button stuff */
-      "button-primary-background-color": "#325f74",
-      "button-primary-text-color": "#fff",
-      "button-primary-border": "transparent",
-      /* secondary button stuff */
-      "button-secondary-background-color": "#f5f5f5",
-      "button-secondary-text-color": "#111",
-      "button-secondary-border": "#b5b5b5",
-      /* virtual keyboard button stuff */
-      "button-key-background-color": "#f5f5f5",
-      "button-key-text-color": "#111",
-      "button-key-border": "#b5b5b5",
-      /* generic button stuff */
-      "button-radius-small": "calc(var(--spacing-small) / 2)",
-
-      "navbar-background": "var(--blue)",
-      "navbar-text-color": "var(--white)",
-      "navbar-highlight-color":" rgba(255, 255, 255, .1)",
-      "navbar-height": "52px",
-      "navbar-padding-vertical": "var(--spacing-small)",
-      "navbar-padding-horizontal": "var(--spacing-medium)",
-      "navbar-logo-height": "calc(var(--navbar-height) - 2 * var(--spacing-small))",
-
-      "panel-background": "white",
-      "panel-background-success": "#84b83f",
-      "panel-background-failure": "#ab2149",
-      "panel-background-info": "#fcb141",
+    "font-size-normal": "16px",
+    "font-size-large": "20px",
+    "font-size-xlarge": "24px",
+    "button-color-primary": "#864dcb",
   }
   let theme 
   theme = Object.entries(defaultTheme)
       .map(([key, value]) => `--${key}:${value}`)
       .join(";")
 
-  export async function preload() {
-      return waitLocale()
-  }
+
+
 </script>
 
 <svelte:head>
@@ -79,7 +51,9 @@
 </svelte:head>
 
 {#if isBrowser() !== true}
-  <div class="pageloader is-active"><span class="title">LibreLingo</span></div>
+  <div class="pageloader is-active">
+    <span class="pageloader__title">Loading LibreLingo...</span>
+  </div>
 {/if}
 
 <main style="{theme}">
