@@ -1,7 +1,5 @@
 <script lang="ts">
   import Summary from "./Summary.svelte"
-  import Title from "lluis/Title.svelte"
-  import Progress from "lluis/Progress.svelte"
 
   export let title
   export let completed

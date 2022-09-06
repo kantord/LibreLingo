@@ -31,9 +31,11 @@ import { stores } from '@sapper/app';
 
 <NavBar data-test="navbar">
   <div slot="left" class="navbar__logo">
-    <Logo src="{logoURL}" alt="LibreLingo" />
+    <a href={homepageLink}>
+      <Logo src="{logoURL}" alt="LibreLingo" />
+    </a>
   </div>
-  
+
   <div slot="right" class="navbar__nav">
     <NavBarButtonSet>
       {#if repositoryURL}
