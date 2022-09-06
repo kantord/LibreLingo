@@ -4,8 +4,6 @@
   import db from "../db/db.js"
   import NavBar from "../components/NavBar.svelte"
   import Button from "lluis/Button.svelte"
-  import Column from "lluis/Column.svelte"
-  import Columns from "lluis/Columns.svelte"
   import FormField from "lluis/FormField.svelte"
 
   let error: string | null = null

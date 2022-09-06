@@ -7,8 +7,6 @@
   import InputFieldWithVirtualKeyboard from "./InputFieldWithVirtualKeyboard/index.svelte"
   import { playAudio } from "../media/sound"
   import Button from "lluis/Button.svelte"
-  import Column from "lluis/Column.svelte"
-  import Columns from "lluis/Columns.svelte"
 
   export let challenge
   export let registerResult

@@ -5,6 +5,34 @@
   export async function preload() {
       return waitLocale()
   }
+
+  /* Adding var css styels to JSON format */
+
+  const defaultTheme = {
+    // Colors
+    "color-primary": "#864dcb",
+    "color-accent": "hsl(36, 80%, 50%)",
+
+    // Text colors
+    "text-color-default": "#000",
+    "text-color-inverted": "#fff",
+
+    // Font sizes
+    "font-size-normal": "16px",
+    "font-size-large": "20px",
+    "font-size-xlarge": "24px",
+
+    // Button specific styles
+    "button-color-primary": "var(--color-primary)",
+    "button-color-accent": "var(--color-accent)",
+  }
+  let theme 
+  theme = Object.entries(defaultTheme)
+      .map(([key, value]) => `--${key}:${value}`)
+      .join(";")
+
+
+
 </script>
 
 <svelte:head>
@@ -40,4 +68,6 @@
   </div>
 {/if}
 
-<slot />
+<main style="{theme}">
+  <slot />
+</main>
