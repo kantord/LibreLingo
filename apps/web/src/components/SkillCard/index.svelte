@@ -3,9 +3,6 @@
 
   import live from "../../db/live"
   import getSkillStats from "../../db/skill/getSkillStats"
-  import Icon from "lluis/Icon.svelte"
-  import Card from "lluis/Card.svelte"
-  import Buttons from "./Buttons.svelte"
   import ContentLeft from "./ContentLeft.svelte"
   import ContentCenter from "./ContentCenter.svelte"
 
@@ -65,7 +62,7 @@
   data-started="{started}"
   data-completed="{completed}"
   data-stale="{stale}"
-  href="{practiceHref}">
+  href="{introductionPageHref || practiceHref}">
   <ContentLeft
     imageSet="{imageSet}"
     stale="{stale}"

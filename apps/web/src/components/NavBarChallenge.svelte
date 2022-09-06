@@ -1,13 +1,7 @@
 <script lang="typescript">
-  import settings from "../settings"
-  import authStore from "../auth"
   import NavBar from "lluis/NavBar/NavBar.svelte"
   import Icon from "lluis/Icon.svelte"
-  import Hidden from "lluis/Hidden.svelte"
-  import Button from "lluis/Button.svelte"
-  import NavBarButton from "lluis/NavBar/NavBarButton.svelte"
   import Logo from "lluis/Logo.svelte"
-  import NavBarItem from "lluis/NavBar/NavBarItem.svelte"
   import NavBarButtonSet from "lluis/NavBar/NavBarButtonSet.svelte"
 </script>
 

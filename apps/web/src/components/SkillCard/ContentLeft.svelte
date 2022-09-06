@@ -1,6 +1,4 @@
 <script lang="ts">
-  import ImageSet from "./ImageSet.svelte"
-
   export let imageSet
   export let stale
   export let completed

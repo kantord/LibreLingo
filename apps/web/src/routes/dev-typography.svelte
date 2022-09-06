@@ -1,9 +1,7 @@
 <script lang="ts" context="module">
   import NavBar from "../components/NavBar.svelte"
-  import Title from "lluis/Title.svelte"
-  import Column from "lluis/Column.svelte"
-  import Columns from "lluis/Columns.svelte"
   import Content from "lluis/Content.svelte"
+  import Stack from "lluis/Stack.svelte"
   import Button from "../../../lluis/Button.svelte"
 </script>
 
@@ -26,23 +24,32 @@
     <div class="h6">Title 6</div>
     <hr>
     <h2>Buttons</h2>
-    <div>
+    <Stack>
       <Button>Click me</Button>
-    </div>
-    <div>
+    </Stack>
+    <Stack>
       <Button size="small">Click me</Button>
-    </div>
-    <div>
+    </Stack>
+    <Stack>
       <Button size="large">Click me</Button>
-    </div>
-    <div>
+    </Stack>
+    <Stack>
       <Button size="small" style="primary">Click me</Button>
-    </div>
-    <div>
+    </Stack>
+    <Stack>
       <Button size="large" style="primary">Click me</Button>
-    </div>
-    <div>
+    </Stack>
+    <Stack>
       <Button loading style="primary">Click me</Button>
-    </div>
+    </Stack>
+    <Stack>
+      <Button size="small" style="accent">Click me</Button>
+    </Stack>
+    <Stack>
+      <Button size="large" style="accent">Click me</Button>
+    </Stack>
+    <Stack>
+      <Button loading style="accent">Click me</Button>
+    </Stack>
   </Content>
 </main>

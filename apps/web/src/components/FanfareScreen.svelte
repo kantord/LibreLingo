@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { scale } from "svelte/transition"
   import db from "../db/db"
   import savePractice from "../db/skill/savePractice"
   import sound from "../media/sound"
@@ -9,9 +8,6 @@
   import Mascot from "./Mascot.svelte"
   import TwitterButton from "./TwitterButton.svelte"
   import Button from "lluis/Button.svelte"
-  import Column from "lluis/Column.svelte"
-  import Columns from "lluis/Columns.svelte"
-  import Title from "lluis/Title.svelte"
 
   export let courseURL
   export let skillId
