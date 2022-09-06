@@ -1,7 +1,7 @@
 <script lang="ts">
   import { createEventDispatcher } from "svelte"
   import LinkOrButton from "./primitives/LinkOrButton.svelte"
-  import Icon from "lluis/Icon.svelte"
+  import Spinner from "./Spinner.svelte"
   import Stack from "lluis/Stack.svelte"
 
   const dispatch = createEventDispatcher()
@@ -16,34 +16,57 @@
   export let disabled = false
 </script>
 
-<div
-  class="btn"
-  data-style={style}
-  class:btn--small={size === "small"}
-  class:btn--medium={size === "medium"}
-  class:btn--large={size === "large"}
+
+<LinkOrButton
+  ref="button"
+  data-size={size}
+  {href}
+  on:click={() => dispatch("click")}
+  {type}
+  {target}
+  {tabIndex}
+  {disabled}
 >
-  <LinkOrButton
-    {href}
-    on:click={() => dispatch("click")}
-    {type}
-    {target}
-    {tabIndex}
-    {disabled}
-  >
-    {#if loading}
-      <span class="spinner">
-        <Icon icon="spinner" />
-      </span>
-    {:else}
-      <Stack>
-        <div slot="icon-left" />
-        <slot />
-      </Stack>
-    {/if}
-  </LinkOrButton>
-</div>
+  {#if loading}
+    <Spinner />
+  {:else}
+    <Stack>
+      <div slot="icon-left" />
+      <slot />
+    </Stack>
+  {/if}
+</LinkOrButton>
 
 {#if asHref != null}
   <a class="hidden-link" href={asHref}>&nbsp;</a>
 {/if}
+
+<style>
+  :global([ref=button]) {
+    font-size: var(--font-size-normal);
+    line-height: calc(var(--font-size-normal) * 1.5);
+    gap: 0.5rem;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    border-radius: 2.5rem;
+    padding: 0 1.5rem;
+    height: 2.5rem;
+    color: #fff;
+    background-color: var(--button-color-primary);
+    border: 1px solid transparent;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  :global([ref=button][data-size=medium]) {
+    font-size: var(--font-size-large);
+    line-height: calc(var(--font-size-large) * 1.5);
+  }
+
+  :global([ref=button][data-size=large]) {
+    font-size: var(--font-size-xlarge);
+    line-height: calc(var(--font-size-xlarge) * 1.5);
+  }
+</style>

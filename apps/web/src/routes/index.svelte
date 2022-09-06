@@ -1,12 +1,7 @@
 <script lang="ts">
   import Mascot from "../components/Mascot.svelte"
-  import LicenseLogo from "../components/LicenseLogo.svelte"
   import Button from "lluis/Button.svelte"
-  import Box from "lluis/Box.svelte"
-  import Column from "lluis/Column.svelte"
-  import Columns from "lluis/Columns.svelte"
   import Hidden from "lluis/Hidden.svelte"
-  import Title from "lluis/Title.svelte"
   import Footer from "lluis/Footer.svelte"
   import { _ } from "svelte-i18n"
   import Translate from "../Translate.svelte"

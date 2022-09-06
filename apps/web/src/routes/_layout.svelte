@@ -5,6 +5,22 @@
   export async function preload() {
       return waitLocale()
   }
+
+  /* Adding var css styels to JSON format */
+
+  const defaultTheme = {
+    "font-size-normal": "16px",
+    "font-size-large": "20px",
+    "font-size-xlarge": "24px",
+    "button-color-primary": "#864dcb",
+  }
+  let theme 
+  theme = Object.entries(defaultTheme)
+      .map(([key, value]) => `--${key}:${value}`)
+      .join(";")
+
+
+
 </script>
 
 <svelte:head>
@@ -40,4 +56,6 @@
   </div>
 {/if}
 
-<slot />
+<main style="{theme}">
+  <slot />
+</main>

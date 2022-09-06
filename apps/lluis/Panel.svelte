@@ -1,7 +1,4 @@
 <script lang="typescript">
-  import Columns from "lluis/Columns.svelte"
-  import Column from "lluis/Column.svelte"
-
   export let state: "default" | "success" | "failure" | "info" = "default"
 </script>
 
