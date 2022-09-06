@@ -5,8 +5,6 @@
   import settings from "../settings"
   import NavBar from "../components/NavBar.svelte"
   import Button from "lluis/Button.svelte"
-  import Column from "lluis/Column.svelte"
-  import Columns from "lluis/Columns.svelte"
   import FormField from "lluis/FormField.svelte"
   import { _ } from "svelte-i18n"
   import isBrowser from "../utils/isBrowser"

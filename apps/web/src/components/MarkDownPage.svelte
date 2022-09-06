@@ -1,8 +1,6 @@
 <script lang="ts">
   import NavBar from "../components/NavBar.svelte"
   import Content from "lluis/Content.svelte"
-  import Columns from "lluis/Columns.svelte"
-  import Column from "lluis/Column.svelte"
   import Footer from "lluis/Footer.svelte"
 
   export let readmeHTML: string
