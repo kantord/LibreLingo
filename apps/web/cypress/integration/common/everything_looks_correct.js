@@ -34,7 +34,7 @@ Then("{} looks correct", (snapshotsName) => {
       Cypress.$('[data-test="card-text-1"]').text("pasta")
       Cypress.$('[data-test="card-text-2"]').text("dog")
       Cypress.$('[data-test="card-text-3"]').text("cat")
-      Cypress.$(".fake .card-text").text("cat")
+      Cypress.$(".fake [data-test^=card-text-]").text("cat")
       Cypress.$('[data-test="meaning-in-source-language"]').text("pasta")
       break
 
