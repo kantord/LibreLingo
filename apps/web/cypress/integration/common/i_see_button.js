@@ -6,3 +6,7 @@ Given(/I see an? "(.*)" button/, (text) => {
 Given(/I don't see an? "(.*)" button/, (text) => {
   cy.get("[ref=lluis-button]").contains(text).should("not.exist")
 })
+
+Then("I see a cancel button", () => {
+  cy.get("[aria-label=Cancel]").should("be.visible")
+})
