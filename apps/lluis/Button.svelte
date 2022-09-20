@@ -10,9 +10,11 @@
   export let loading = false
   export let asHref: string | null = null
   export let type: "button" | "submit" = "button"
-  export let style: "primary" | "secondary" | "accent" | "key" = "primary"
+  // TODO: fix secondary button style needs to have purple outline
+  export let style: "primary" | "secondary" | "accent" | "key" | "linkButton" = "primary"
   export let target: string | undefined = undefined
   export let tabIndex: number | undefined = undefined
+  export let ariaLabel: string | null = null
   export let disabled = false
 </script>
 
@@ -20,8 +22,10 @@
 <LinkOrButton
   ref="lluis-button"
   data-size={size}
+  data-style={style}
   {href}
   on:click={() => dispatch("click")}
+  label={ariaLabel}
   {type}
   {target}
   {tabIndex}
@@ -78,5 +82,10 @@
   :global([ref=lluis-button][data-style=secondary]) {
     background-color: var(--button-color-secondary);
     color: var(--text-color-default);
+  }
+
+  :global([ref=lluis-button][data-style=linkButton]) {
+    background-color: var(--button-color-secondary);
+    color: var(--button-color-primary);
   }
 </style>
