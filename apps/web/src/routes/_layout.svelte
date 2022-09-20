@@ -1,15 +1,16 @@
 <script lang="ts" context="module">
   import { waitLocale } from "svelte-i18n"
   import isBrowser from "../utils/isBrowser"
-  
+
   export async function preload() {
-      return waitLocale()
+    return waitLocale()
   }
 
   /* Adding var css styels to JSON format */
 
   const defaultTheme = {
     // Colors
+    white: "#fff",
     "color-primary": "#864dcb",
     "color-accent": "hsl(36, 80%, 50%)",
 
@@ -25,14 +26,14 @@
     // Button specific styles
     "button-color-primary": "var(--color-primary)",
     "button-color-accent": "var(--color-accent)",
+
+    // NavBar specific styles
+    "navbar-background": "rgba(255, 255, 255, .85)",
   }
-  let theme 
+  let theme
   theme = Object.entries(defaultTheme)
-      .map(([key, value]) => `--${key}:${value}`)
-      .join(";")
-
-
-
+    .map(([key, value]) => `--${key}:${value}`)
+    .join(";")
 </script>
 
 <svelte:head>
@@ -68,6 +69,6 @@
   </div>
 {/if}
 
-<main style="{theme}">
+<main style={theme}>
   <slot />
 </main>
