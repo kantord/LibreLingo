@@ -18,7 +18,7 @@
   <div slot="right" class="navbar__nav">
     <NavBarButtonSet>
       <!-- TODO: Link to course -->
-      <a href="/">
+      <a href="/" aria-label="Cancel">
         <Icon icon="xmark" size="large" />
       </a>
     </NavBarButtonSet>
