@@ -24,6 +24,7 @@
     <div class="h6">Title 6</div>
     <hr>
     <h2>Buttons</h2>
+    <h3>Default style</h3>
     <Stack>
       <Button>Click me</Button>
     </Stack>
@@ -33,6 +34,8 @@
     <Stack>
       <Button size="large">Click me</Button>
     </Stack>
+
+    <h3>Default style</h3>
     <Stack>
       <Button size="small" style="primary">Click me</Button>
     </Stack>
@@ -41,6 +44,15 @@
     </Stack>
     <Stack>
       <Button loading style="primary">Click me</Button>
+    </Stack>
+    <Stack>
+      <Button size="small" style="secondary">Click me</Button>
+    </Stack>
+    <Stack>
+      <Button size="large" style="secondary">Click me</Button>
+    </Stack>
+    <Stack>
+      <Button loading style="secondary">Click me</Button>
     </Stack>
     <Stack>
       <Button size="small" style="accent">Click me</Button>
