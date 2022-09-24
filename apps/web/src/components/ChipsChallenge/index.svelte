@@ -117,29 +117,27 @@
 </script>
 
 <form on:submit|preventDefault="{submitChallenge}">
-  <div class="section">
-    <p class="is-size-1 is-size-2-tablet is-size-4-mobile has-text-centered">
-      Translate
-      <Phrase phrase="{challenge.phrase}" />
-    </p>
-  </div>
+  <h1 class="challenge-prompt">
+    Translate
+    <Phrase phrase="{challenge.phrase}" />
+  </h1>
 
   <div>
-    <div class="solution">
-      <div id="answer" class="chips" bind:this={answerElement}>
+    <div class="challenge-chips__solution">
+      <div id="answer" class="chips chips--active" bind:this={answerElement}>
         {#each answerToRender as chip, index}
           <span class="chip" data-id={chip} on:click="{handleChipClick}">
-            <span class="tag is-medium">{chip}</span>
+            <span>{chip}</span>
           </span>
         {/each}
       </div>
     </div>
 
-    <p class="sub-instructions">Use these words:</p>
-    <div id="chips" class="chips" bind:this={chipsElement}>
+    <p class="challenge-chips__instruction">Use these words:</p>
+    <div id="chips" class="chips chips--inactive" bind:this={chipsElement}>
       {#each chipsToRender as chip, index}
         <span class="chip" data-id={chip} on:click="{handleChipClick}">
-          <span class="tag is-medium">{chip}</span>
+          <span>{chip}</span>
         </span>
       {/each}
     </div>
@@ -165,7 +163,7 @@
   {#if submitted}
     {#if !correct}
       <ChallengePanel
-        message="Incorrect solution!"
+        message="Incorrect!"
         messageDetail="{`Correct answer: ${challenge.formattedSolution}`}"
         buttonText="Continue"
         incorrect
@@ -173,42 +171,10 @@
     {/if}
     {#if correct}
       <ChallengePanel
-        message="Correct solution!"
+        message="Correct!"
         buttonText="Continue"
         correct
         buttonAction="{finishChallenge}" />
     {/if}
   {/if}
 </form>
-
-<style type="text/scss">
-  @import "../../variables";
-
-  .chip {
-    user-select: none;
-    margin: 0.5em 0.3em;
-    cursor: pointer;
-  }
-
-  .solution {
-    z-index: 10;
-    margin-top: -4em;
-    padding-top: 4em;
-    border-bottom: 2px solid rgba($blue, 0.1);
-    height: 6.2em;
-  }
-
-  .sub-instructions {
-    margin-top: 3em;
-  }
-
-  :global(.chips .sortable-ghost .tag) {
-    background: $blue !important;
-    color: transparent !important;
-    opacity: 0.1;
-  }
-
-  :global(.sortable-drag) {
-    opacity: 1 !important;
-  }
-</style>
