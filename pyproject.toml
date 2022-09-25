@@ -4,6 +4,9 @@ version = "0.1.0"
 description = ""
 authors = ["Dániel Kántor <git@daniel-kantor.com>"]
 
+[tool.poetry.scripts]
+librelingo-export-cli = 'librelingo_json_export.cli:main'
+
 [tool.poetry.dependencies]
 python = "^3.8"
 mkdocs-mermaid2-plugin = "^0.6.0"
