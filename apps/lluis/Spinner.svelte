@@ -1,11 +1,10 @@
 <script>
-  import Icon from './Icon.svelte'
+  import Icon from "./Icon.svelte"
 </script>
 
 <span class="spinner">
   <Icon icon="spinner" ref="icon" />
 </span>
-
 
 <style>
   .spinner {
@@ -15,7 +14,7 @@
     animation: spinner 0.6s linear infinite;
   }
 
-  :global([ref=icon]) {
+  :global([ref="icon"]) {
     display: block;
     margin: 0 !important;
   }

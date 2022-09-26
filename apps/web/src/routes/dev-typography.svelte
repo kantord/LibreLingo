@@ -3,6 +3,10 @@
   import Content from "lluis/Content.svelte"
   import Stack from "lluis/Stack.svelte"
   import Button from "../../../lluis/Button.svelte"
+
+  const buttonStyles = ["primary", "secondary", "accent", "key", "linkButton"]
+  const buttonSizes = ["small", "medium", "large"]
+  const buttonSelectors = [null, "active", "hover"]
 </script>
 
 <svelte:head>
@@ -24,44 +28,21 @@
     <div class="h6">Title 6</div>
     <hr>
     <h2>Buttons</h2>
-    <h3>Default style</h3>
-    <Stack>
-      <Button>Click me</Button>
-    </Stack>
-    <Stack>
-      <Button size="small">Click me</Button>
-    </Stack>
-    <Stack>
-      <Button size="large">Click me</Button>
-    </Stack>
-
-    <h3>Default style</h3>
-    <Stack>
-      <Button size="small" style="primary">Click me</Button>
-    </Stack>
-    <Stack>
-      <Button size="large" style="primary">Click me</Button>
-    </Stack>
-    <Stack>
-      <Button loading style="primary">Click me</Button>
-    </Stack>
-    <Stack>
-      <Button size="small" style="secondary">Click me</Button>
-    </Stack>
-    <Stack>
-      <Button size="large" style="secondary">Click me</Button>
-    </Stack>
-    <Stack>
-      <Button loading style="secondary">Click me</Button>
-    </Stack>
-    <Stack>
-      <Button size="small" style="accent">Click me</Button>
-    </Stack>
-    <Stack>
-      <Button size="large" style="accent">Click me</Button>
-    </Stack>
-    <Stack>
-      <Button loading style="accent">Click me</Button>
-    </Stack>
+    {#each buttonStyles as buttonStyle}
+      <h3>{buttonStyle} style</h3>
+      {#each buttonSelectors as buttonSelector}
+      <h4>{buttonSelector || "normal"}</h4>
+      <Stack>
+        {#each buttonSizes as buttonSize}
+          <Stack>
+            <Button size={buttonSize} style={buttonStyle}>Click me</Button>
+          </Stack>
+          <Stack>
+            <Button loading size={buttonSize} style={buttonStyle}>Click me</Button>
+          </Stack>
+        {/each}
+          </Stack>
+      {/each}
+    {/each}
   </Content>
 </main>

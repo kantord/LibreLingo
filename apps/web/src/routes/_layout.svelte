@@ -12,6 +12,7 @@
     // Colors
     white: "#fff",
     "color-primary": "#864dcb",
+    "color-dark": "red",
     "color-accent": "hsl(36, 80%, 50%)",
 
     // Text colors
@@ -24,8 +25,18 @@
     "font-size-xlarge": "24px",
 
     // Button specific styles
+    // Primary
     "button-color-primary": "var(--color-primary)",
+    "button-border-color-primary": "transparent",
+    "button-color-primary-hover": "var(--color-primary-dark)",
+
+    // Accent
     "button-color-accent": "var(--color-accent)",
+    "button-border-color-accent": "transparent",
+
+    // Secondary
+    "button-color-secondary": "var(--white)",
+    "button-border-color-secondary": "var(--button-color-primary)",
 
     // NavBar specific styles
     "navbar-background": "rgba(255, 255, 255, .85)",

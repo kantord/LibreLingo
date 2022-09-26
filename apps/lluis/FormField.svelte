@@ -15,27 +15,15 @@
 
 <div class="form-field" class:has-error={error != null}>
   <label class="form-field__label" for={id}>{name}</label>
-    <div class="form-field__control" class:has-icon={icon != null}>
+  <div class="form-field__control" class:has-icon={icon != null}>
     {#if icon}
       <Icon size="small" {icon} />
     {/if}
     {#if type === "text"}
-      <input
-        class="input"
-        type="text"
-        name={id}
-        {id}
-        bind:value
-      />
+      <input class="input" type="text" name={id} {id} bind:value />
     {/if}
     {#if type === "password"}
-      <input
-        class="input"
-        type="password"
-        name={id}
-        {id}
-        bind:value
-      />
+      <input class="input" type="password" name={id} {id} bind:value />
     {/if}
   </div>
   {#if error != null}
