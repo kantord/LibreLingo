@@ -25,15 +25,23 @@
 </script>
 
 <div class="horizontal-scroller">
-  <div class="horizontal-scroller__content" bind:this={scroller} on:scroll={updateScrollPosition}>
+  <div
+    class="horizontal-scroller__content"
+    bind:this={scroller}
+    on:scroll={updateScrollPosition}
+  >
     <slot />
   </div>
 
   {#if scrollPosition > 0}
-    <div class="horizontal-scroller__shadow-left"><Icon icon="circle-arrow-left" /></div>
+    <div class="horizontal-scroller__shadow-left">
+      <Icon icon="circle-arrow-left" />
+    </div>
   {/if}
 
   {#if needsScroll && scrollPosition < scrollWidth}
-    <div class="horizontal-scroller__shadow-right"><Icon icon="circle-arrow-right" /></div>
+    <div class="horizontal-scroller__shadow-right">
+      <Icon icon="circle-arrow-right" />
+    </div>
   {/if}
 </div>

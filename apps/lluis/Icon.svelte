@@ -8,7 +8,6 @@
   <i class={`${prefix} fa-${icon} ${size === "large" ? "fa-2x" : ""}`} />
 </span>
 
-
 <style>
   .icon {
     display: flex;

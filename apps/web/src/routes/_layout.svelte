@@ -24,8 +24,17 @@
     "font-size-xlarge": "24px",
 
     // Button specific styles
+    // Primary
     "button-color-primary": "var(--color-primary)",
+    "button-border-color-primary": "transparent",
+
+    // Accent
     "button-color-accent": "var(--color-accent)",
+    "button-border-color-accent": "transparent",
+
+    // Secondary
+    "button-color-secondary": "var(--white)",
+    "button-border-color-secondary": "var(--button-color-primary)",
 
     // NavBar specific styles
     "navbar-background": "rgba(255, 255, 255, .85)",

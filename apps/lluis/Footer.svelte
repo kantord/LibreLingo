@@ -9,9 +9,7 @@
     <slot />
     <div class="buttonset">
       <a href="about">
-        <Translate key="index.about_librelingo">
-          About LibreLingo
-        </Translate>
+        <Translate key="index.about_librelingo">About LibreLingo</Translate>
       </a>
       <a href="https://librelingo.app/docs/">
         <Translate key="index.development_docs_english_only">
@@ -19,10 +17,8 @@
         </Translate>
       </a>
       <Hidden>
-        <br>
-        <a href="/devtools">
-          Development tools
-        </a>
+        <br />
+        <a href="/devtools"> Development tools </a>
       </Hidden>
     </div>
     <div>
@@ -30,8 +26,10 @@
       was created by
       <a href="https://github.com/kantord">Dániel Kántor</a>
       and
-      <a href="https://github.com/LibreLingo/LibreLingo#contributors">various contributors</a>. 
-      The <a href="https://github.com/LibreLingo/LibreLingo">source code</a> is licensed
+      <a href="https://github.com/LibreLingo/LibreLingo#contributors"
+        >various contributors</a
+      >. The <a href="https://github.com/LibreLingo/LibreLingo">source code</a>
+      is licensed
       <a href="https://opensource.org/licenses/AGPL-3.0">AGPL-3.0.</a>
     </div>
     <LicenseLogo />
