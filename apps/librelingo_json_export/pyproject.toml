@@ -23,7 +23,7 @@ librelingo-yaml-loader = "^1.10.1"
 pyfakefs = "^4.3.3"
 librelingo-fakes = {path = "../librelingo_fakes", develop = true}  # Only used in local development
 pytest-mock = "^3.5.1"
-pydoc-markdown = "^3.10.0"
+pydoc-markdown = "^4.0.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
