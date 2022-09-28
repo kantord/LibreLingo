@@ -1,16 +1,9 @@
-import collections
 import json
 import os
 
 from librelingo_json_export.export import export_course
 from librelingo_yaml_loader.yaml_loader import load_course
-
-Settings = collections.namedtuple(
-    "Settings",
-    [
-        "dry_run",
-    ],
-)
+from librelingo_fakes import fakes
 
 
 def test_exported_test_course_matches_snapshot(tmpdir):
@@ -19,11 +12,10 @@ def test_exported_test_course_matches_snapshot(tmpdir):
     root = os.path.dirname(root)
     root = os.path.dirname(root)
     root = os.path.dirname(root)
-
     path_to_course = os.path.join(root, "courses", "test")
     course = load_course(path_to_course)
 
-    settings = Settings(
+    settings = fakes.Settings(
         dry_run=False,
     )
     output_path = str(tmpdir)
