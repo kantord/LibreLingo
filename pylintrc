@@ -85,7 +85,6 @@ disable=raw-checker-failed,
         suppressed-message,
         useless-suppression,
         duplicate-code,  # TODO: enable
-        invalid-name,  # TODO: enable
         missing-function-docstring,  # TODO: enable
         redefined-outer-name,  # TODO: enable
         missing-class-docstring,  # TODO: enable
@@ -108,7 +107,7 @@ disable=raw-checker-failed,
 # multiple time (only on the command line, not in the configuration file where
 # it should appear only once). See also the "--disable" option for examples.
 # enable=c-extension-no-member
-
+enable = invalid-name, 
 
 [REPORTS]
 
