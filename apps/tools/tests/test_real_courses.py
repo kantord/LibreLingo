@@ -18,13 +18,7 @@ from librelingo_types import (
     #    TextToSpeechSettings,
     #    Word,
 )
-
-Settings = collections.namedtuple(
-    "Settings",
-    [
-        "dry_run",
-    ],
-)
+from librelingo_fakes import fakes
 
 
 def load(name):
@@ -38,7 +32,7 @@ def load(name):
 
 def test_error_1(tmpdir):
     course = load("e1")
-    settings = Settings(
+    settings = fakes.Settings(
         dry_run=False,
     )
 
@@ -53,7 +47,7 @@ def test_error_1(tmpdir):
 
 def test_error_2(tmpdir):
     course = load("e2")
-    settings = Settings(
+    settings = fakes.Settings(
         dry_run=False,
     )
 
@@ -103,7 +97,7 @@ def test_minimal(tmpdir):
         )
     ]
 
-    settings = Settings(
+    settings = fakes.Settings(
         dry_run=False,
     )
 
