@@ -1,26 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`get_course returns correct course data: test course data 1`] = `
-Object {
+{
   "courseName": "test",
   "languageCode": "test",
   "languageName": "Test Language",
-  "modules": Array [
-    Object {
-      "skills": Array [
-        Object {
+  "modules": [
+    {
+      "skills": [
+        {
           "id": "e70976d68b28",
           "levels": 1,
           "practiceHref": "short-input-test-0",
-          "summary": Array [
+          "summary": [
             "perro",
             "perro",
           ],
           "title": "Short Input Test 0",
         },
-        Object {
+        {
           "id": "38c2ea1c36d2",
-          "imageSet": Array [
+          "imageSet": [
             "dog1",
             "lion3",
             "cat3",
@@ -28,7 +28,7 @@ Object {
           "introduction": "animals.md",
           "levels": 3,
           "practiceHref": "animals",
-          "summary": Array [
+          "summary": [
             "perro",
             "gato",
             "oso",
@@ -47,77 +47,77 @@ Object {
           ],
           "title": "Animals",
         },
-        Object {
+        {
           "id": "a3eb592daaf6",
           "levels": 1,
           "practiceHref": "short-input-test-1",
-          "summary": Array [
+          "summary": [
             "foo",
           ],
           "title": "Short Input Test 1",
         },
-        Object {
+        {
           "id": "30f35fdbc4c9",
           "levels": 1,
           "practiceHref": "short-input-test-2",
-          "summary": Array [
+          "summary": [
             "agua",
             "agua2",
           ],
           "title": "Short Input Test 2",
         },
-        Object {
+        {
           "id": "4fdcd0f561a5",
           "levels": 1,
           "practiceHref": "short-input-test-3",
-          "summary": Array [
+          "summary": [
             "Cómo estás tu?",
           ],
           "title": "Short Input Test 3",
         },
-        Object {
+        {
           "id": "7d7ba7d56abb",
           "levels": 1,
           "practiceHref": "listening-test-0",
-          "summary": Array [
+          "summary": [
             "perro",
             "perro",
           ],
           "title": "Listening test 0",
         },
-        Object {
+        {
           "id": "07b599369280",
           "levels": 2,
           "practiceHref": "options-test-0",
-          "summary": Array [
+          "summary": [
             "perro",
             "león",
             "cerdo",
           ],
           "title": "Options test 0",
         },
-        Object {
+        {
           "id": "6ef61f72a217",
           "levels": 1,
           "practiceHref": "chips-test-0",
-          "summary": Array [
+          "summary": [
             "¿Como, estás hoy?",
             "Tu como estás hoy?",
           ],
           "title": "Chips test 0",
         },
-        Object {
+        {
           "id": "42f05dd67031",
           "levels": 1,
           "practiceHref": "continuous",
-          "summary": Array [],
+          "summary": [],
           "title": "Continuous",
         },
-        Object {
+        {
           "id": "a8dbe791bff7",
           "levels": 2,
           "practiceHref": "cards-test",
-          "summary": Array [
+          "summary": [
             "pasta",
             "pasta1",
             "pasta2",
@@ -130,7 +130,7 @@ Object {
     },
   ],
   "repositoryURL": "https://github.com/LibreLingo/LibreLingo/",
-  "specialCharacters": Array [
+  "specialCharacters": [
     "á",
     "Á",
     "é",
@@ -152,13 +152,13 @@ Object {
 `;
 
 exports[`get_skill_data returns correct course data 1`] = `
-Object {
+{
   "challengesPerLevel": 16,
   "courseURL": "/course/test",
   "languageCode": "test",
   "languageName": "Test Language",
-  "rawChallenges": Array [
-    Object {
+  "rawChallenges": [
+    {
       "formInTargetLanguage": "Es un caballo",
       "group": "353b3be9ecc5",
       "id": "d8fba73a8b08",
@@ -166,7 +166,7 @@ Object {
       "priority": 0,
       "type": "options",
     },
-    Object {
+    {
       "answer": "Es un caballo",
       "audio": "c8caa295c49f0dcf7cdeb74f620d8df89c0c15f28aff535d863959e47657ae5f",
       "group": "353b3be9ecc5",
@@ -175,8 +175,8 @@ Object {
       "priority": 1,
       "type": "listeningExercise",
     },
-    Object {
-      "chips": Array [
+    {
+      "chips": [
         "Es",
         "un",
         "caballo",
@@ -186,24 +186,24 @@ Object {
       "formattedSolution": "Es un caballo",
       "group": "353b3be9ecc5",
       "id": "390f4df6b328",
-      "phrase": Array [
-        Object {
+      "phrase": [
+        {
           "definition": "es",
           "word": "It's",
         },
-        Object {
+        {
           "definition": "un
 una",
           "word": "a",
         },
-        Object {
+        {
           "definition": "caballo",
           "word": "horse",
         },
       ],
       "priority": 2,
-      "solutions": Array [
-        Array [
+      "solutions": [
+        [
           "Es",
           "un",
           "caballo",
@@ -212,8 +212,8 @@ una",
       "translatesToSourceLanguage": false,
       "type": "chips",
     },
-    Object {
-      "chips": Array [
+    {
+      "chips": [
         "It's",
         "a",
         "horse",
@@ -223,23 +223,23 @@ una",
       "formattedSolution": "It's a horse",
       "group": "353b3be9ecc5",
       "id": "b1e719e8de24",
-      "phrase": Array [
-        Object {
+      "phrase": [
+        {
           "definition": "is",
           "word": "Es",
         },
-        Object {
+        {
           "definition": "a/an (masc.)",
           "word": "un",
         },
-        Object {
+        {
           "definition": "horse",
           "word": "caballo",
         },
       ],
       "priority": 2,
-      "solutions": Array [
-        Array [
+      "solutions": [
+        [
           "It's",
           "a",
           "horse",
@@ -248,7 +248,7 @@ una",
       "translatesToSourceLanguage": true,
       "type": "chips",
     },
-    Object {
+    {
       "formInTargetLanguage": "Max es un perro",
       "group": "3b3665db19af",
       "id": "b1ae0631e52a",
@@ -256,7 +256,7 @@ una",
       "priority": 0,
       "type": "options",
     },
-    Object {
+    {
       "answer": "Max es un perro",
       "audio": "d4d634de9930f4a01fab5acb342abcaa492d1558d3788956c9ff4e12f88f5dc8",
       "group": "3b3665db19af",
@@ -265,8 +265,8 @@ una",
       "priority": 1,
       "type": "listeningExercise",
     },
-    Object {
-      "chips": Array [
+    {
+      "chips": [
         "Max",
         "es",
         "un",
@@ -278,35 +278,35 @@ una",
       "formattedSolution": "Max es un perro",
       "group": "3b3665db19af",
       "id": "a2edb67c79cf",
-      "phrase": Array [
-        Object {
+      "phrase": [
+        {
           "definition": "Max (name)",
           "word": "Max",
         },
-        Object {
+        {
           "definition": "es",
           "word": "is",
         },
-        Object {
+        {
           "definition": "un
 una",
           "word": "a",
         },
-        Object {
+        {
           "definition": "can
 perro",
           "word": "dog",
         },
       ],
       "priority": 2,
-      "solutions": Array [
-        Array [
+      "solutions": [
+        [
           "Max",
           "es",
           "un",
           "perro",
         ],
-        Array [
+        [
           "Max",
           "es",
           "un",
@@ -316,8 +316,8 @@ perro",
       "translatesToSourceLanguage": false,
       "type": "chips",
     },
-    Object {
-      "chips": Array [
+    {
+      "chips": [
         "Max",
         "is",
         "a",
@@ -329,28 +329,28 @@ perro",
       "formattedSolution": "Max is a dog",
       "group": "3b3665db19af",
       "id": "0de5f458a546",
-      "phrase": Array [
-        Object {
+      "phrase": [
+        {
           "definition": "Max (name)",
           "word": "Max",
         },
-        Object {
+        {
           "definition": "is",
           "word": "es",
         },
-        Object {
+        {
           "definition": "a/an (masc.)",
           "word": "un",
         },
-        Object {
+        {
           "definition": "dog
 the dog",
           "word": "perro",
         },
       ],
       "priority": 2,
-      "solutions": Array [
-        Array [
+      "solutions": [
+        [
           "Max",
           "is",
           "a",
@@ -360,7 +360,7 @@ the dog",
       "translatesToSourceLanguage": true,
       "type": "chips",
     },
-    Object {
+    {
       "formInTargetLanguage": "Un pato y un caballo",
       "group": "882c91cd979e",
       "id": "a6bc83a45629",
@@ -368,7 +368,7 @@ the dog",
       "priority": 0,
       "type": "options",
     },
-    Object {
+    {
       "answer": "Un pato y un caballo",
       "audio": "02ef373b1ecd6cb272d135a9d9401f83038eec1a083eaae99adecd0cc8822d22",
       "group": "882c91cd979e",
@@ -377,8 +377,8 @@ the dog",
       "priority": 1,
       "type": "listeningExercise",
     },
-    Object {
-      "chips": Array [
+    {
+      "chips": [
         "Un",
         "pato",
         "y",
@@ -392,33 +392,33 @@ the dog",
       "formattedSolution": "Un pato y un caballo",
       "group": "882c91cd979e",
       "id": "07d42f76c5cf",
-      "phrase": Array [
-        Object {
+      "phrase": [
+        {
           "definition": "un
 una",
           "word": "A",
         },
-        Object {
+        {
           "definition": "pato",
           "word": "duck",
         },
-        Object {
+        {
           "definition": "y",
           "word": "and",
         },
-        Object {
+        {
           "definition": "un
 una",
           "word": "a",
         },
-        Object {
+        {
           "definition": "caballo",
           "word": "horse",
         },
       ],
       "priority": 2,
-      "solutions": Array [
-        Array [
+      "solutions": [
+        [
           "Un",
           "pato",
           "y",
@@ -429,8 +429,8 @@ una",
       "translatesToSourceLanguage": false,
       "type": "chips",
     },
-    Object {
-      "chips": Array [
+    {
+      "chips": [
         "A",
         "duck",
         "and",
@@ -444,31 +444,31 @@ una",
       "formattedSolution": "A duck and a horse",
       "group": "882c91cd979e",
       "id": "d6182c2ffeec",
-      "phrase": Array [
-        Object {
+      "phrase": [
+        {
           "definition": "a/an (masc.)",
           "word": "Un",
         },
-        Object {
+        {
           "definition": "duck",
           "word": "pato",
         },
-        Object {
+        {
           "definition": "and",
           "word": "y",
         },
-        Object {
+        {
           "definition": "a/an (masc.)",
           "word": "un",
         },
-        Object {
+        {
           "definition": "horse",
           "word": "caballo",
         },
       ],
       "priority": 2,
-      "solutions": Array [
-        Array [
+      "solutions": [
+        [
           "A",
           "duck",
           "and",
@@ -479,12 +479,12 @@ una",
       "translatesToSourceLanguage": true,
       "type": "chips",
     },
-    Object {
+    {
       "formInTargetLanguage": "perro",
       "group": "80ce380e3103",
       "id": "34538f2dd5fb",
       "meaningInSourceLanguage": "dog",
-      "pictures": Array [
+      "pictures": [
         "dog1.jpg",
         "dog2.jpg",
         "dog3.jpg",
@@ -492,21 +492,21 @@ una",
       "priority": 0,
       "type": "cards",
     },
-    Object {
-      "formInTargetLanguage": Array [
+    {
+      "formInTargetLanguage": [
         "perro",
         "can",
       ],
       "group": "80ce380e3103",
       "id": "5525da287ae4",
-      "phrase": Array [
-        Object {
+      "phrase": [
+        {
           "definition": "can
 perro",
           "word": "dog",
         },
       ],
-      "pictures": Array [
+      "pictures": [
         "dog1.jpg",
         "dog2.jpg",
         "dog3.jpg",
@@ -514,7 +514,7 @@ perro",
       "priority": 1,
       "type": "shortInput",
     },
-    Object {
+    {
       "answer": "perro",
       "audio": "ec7c10ee24ad5f0e4ce849100627093c241de12de6f58fe86eccd0e15a86d98e",
       "group": "80ce380e3103",
@@ -523,12 +523,12 @@ perro",
       "priority": 1,
       "type": "listeningExercise",
     },
-    Object {
+    {
       "formInTargetLanguage": "gato",
       "group": "499c2ff87207",
       "id": "8b5c69a1d503",
       "meaningInSourceLanguage": "cat",
-      "pictures": Array [
+      "pictures": [
         "cat1.jpg",
         "cat2.jpg",
         "cat3.jpg",
@@ -536,19 +536,19 @@ perro",
       "priority": 0,
       "type": "cards",
     },
-    Object {
-      "formInTargetLanguage": Array [
+    {
+      "formInTargetLanguage": [
         "gato",
       ],
       "group": "499c2ff87207",
       "id": "10a8fbd5bdb6",
-      "phrase": Array [
-        Object {
+      "phrase": [
+        {
           "definition": "gato",
           "word": "cat",
         },
       ],
-      "pictures": Array [
+      "pictures": [
         "cat1.jpg",
         "cat2.jpg",
         "cat3.jpg",
@@ -556,7 +556,7 @@ perro",
       "priority": 1,
       "type": "shortInput",
     },
-    Object {
+    {
       "answer": "gato",
       "audio": "82c40010d4dab18b64ee7dac690afa6b2d0841b485d1205421c8cf0eb99177d1",
       "group": "499c2ff87207",
@@ -565,12 +565,12 @@ perro",
       "priority": 1,
       "type": "listeningExercise",
     },
-    Object {
+    {
       "formInTargetLanguage": "oso",
       "group": "5fe33898f3f4",
       "id": "a29a33e3d267",
       "meaningInSourceLanguage": "bear",
-      "pictures": Array [
+      "pictures": [
         "bear1.jpg",
         "bear2.jpg",
         "bear1.jpg",
@@ -578,19 +578,19 @@ perro",
       "priority": 0,
       "type": "cards",
     },
-    Object {
-      "formInTargetLanguage": Array [
+    {
+      "formInTargetLanguage": [
         "oso",
       ],
       "group": "5fe33898f3f4",
       "id": "cacb8f13a3e8",
-      "phrase": Array [
-        Object {
+      "phrase": [
+        {
           "definition": "oso",
           "word": "bear",
         },
       ],
-      "pictures": Array [
+      "pictures": [
         "bear1.jpg",
         "bear2.jpg",
         "bear1.jpg",
@@ -598,7 +598,7 @@ perro",
       "priority": 1,
       "type": "shortInput",
     },
-    Object {
+    {
       "answer": "oso",
       "audio": "c33fb805b0edcaa8c64980e5055be2a3e739bdb56a185f0a00eea0bec361c6a7",
       "group": "5fe33898f3f4",
@@ -607,12 +607,12 @@ perro",
       "priority": 1,
       "type": "listeningExercise",
     },
-    Object {
+    {
       "formInTargetLanguage": "león",
       "group": "f1c4f9069794",
       "id": "8a293244390a",
       "meaningInSourceLanguage": "lion",
-      "pictures": Array [
+      "pictures": [
         "lion1.jpg",
         "lion2.jpg",
         "lion3.jpg",
@@ -620,19 +620,19 @@ perro",
       "priority": 0,
       "type": "cards",
     },
-    Object {
-      "formInTargetLanguage": Array [
+    {
+      "formInTargetLanguage": [
         "león",
       ],
       "group": "f1c4f9069794",
       "id": "59cc971773bd",
-      "phrase": Array [
-        Object {
+      "phrase": [
+        {
           "definition": "león",
           "word": "lion",
         },
       ],
-      "pictures": Array [
+      "pictures": [
         "lion1.jpg",
         "lion2.jpg",
         "lion3.jpg",
@@ -640,7 +640,7 @@ perro",
       "priority": 1,
       "type": "shortInput",
     },
-    Object {
+    {
       "answer": "león",
       "audio": "61c49163c6b66e815712f76c7d29526cae2869360adb30072d50064af6b6febe",
       "group": "f1c4f9069794",
@@ -649,12 +649,12 @@ perro",
       "priority": 1,
       "type": "listeningExercise",
     },
-    Object {
+    {
       "formInTargetLanguage": "pato",
       "group": "42b787861888",
       "id": "657d03aa4080",
       "meaningInSourceLanguage": "duck",
-      "pictures": Array [
+      "pictures": [
         "duck1.jpg",
         "duck2.jpg",
         "duck3.jpg",
@@ -662,19 +662,19 @@ perro",
       "priority": 0,
       "type": "cards",
     },
-    Object {
-      "formInTargetLanguage": Array [
+    {
+      "formInTargetLanguage": [
         "pato",
       ],
       "group": "42b787861888",
       "id": "4abdbad9d94b",
-      "phrase": Array [
-        Object {
+      "phrase": [
+        {
           "definition": "pato",
           "word": "duck",
         },
       ],
-      "pictures": Array [
+      "pictures": [
         "duck1.jpg",
         "duck2.jpg",
         "duck3.jpg",
@@ -682,7 +682,7 @@ perro",
       "priority": 1,
       "type": "shortInput",
     },
-    Object {
+    {
       "answer": "pato",
       "audio": "f8cdc4d959e3901e785f24031adb3278817f8a0eedab085d505f84f8202e902a",
       "group": "42b787861888",
@@ -691,12 +691,12 @@ perro",
       "priority": 1,
       "type": "listeningExercise",
     },
-    Object {
+    {
       "formInTargetLanguage": "caballo",
       "group": "80881eb450de",
       "id": "281615db0129",
       "meaningInSourceLanguage": "horse",
-      "pictures": Array [
+      "pictures": [
         "horse1.jpg",
         "horse2.jpg",
         "horse3.jpg",
@@ -704,19 +704,19 @@ perro",
       "priority": 0,
       "type": "cards",
     },
-    Object {
-      "formInTargetLanguage": Array [
+    {
+      "formInTargetLanguage": [
         "caballo",
       ],
       "group": "80881eb450de",
       "id": "8c50d4ba8e87",
-      "phrase": Array [
-        Object {
+      "phrase": [
+        {
           "definition": "caballo",
           "word": "horse",
         },
       ],
-      "pictures": Array [
+      "pictures": [
         "horse1.jpg",
         "horse2.jpg",
         "horse3.jpg",
@@ -724,7 +724,7 @@ perro",
       "priority": 1,
       "type": "shortInput",
     },
-    Object {
+    {
       "answer": "caballo",
       "audio": "4a118d1b5f28e5c8caba8124691d13560a68e54dad613867f174a0fccb8a0036",
       "group": "80881eb450de",
@@ -733,12 +733,12 @@ perro",
       "priority": 1,
       "type": "listeningExercise",
     },
-    Object {
+    {
       "formInTargetLanguage": "el gato",
       "group": "4ee3354aceed",
       "id": "ee1532beb159",
       "meaningInSourceLanguage": "the cat",
-      "pictures": Array [
+      "pictures": [
         "cat1.jpg",
         "cat2.jpg",
         "cat3.jpg",
@@ -746,24 +746,24 @@ perro",
       "priority": 0,
       "type": "cards",
     },
-    Object {
-      "formInTargetLanguage": Array [
+    {
+      "formInTargetLanguage": [
         "el gato",
       ],
       "group": "4ee3354aceed",
       "id": "07228bae98c2",
-      "phrase": Array [
-        Object {
+      "phrase": [
+        {
           "definition": "el
 la",
           "word": "the",
         },
-        Object {
+        {
           "definition": "gato",
           "word": "cat",
         },
       ],
-      "pictures": Array [
+      "pictures": [
         "cat1.jpg",
         "cat2.jpg",
         "cat3.jpg",
@@ -771,7 +771,7 @@ la",
       "priority": 1,
       "type": "shortInput",
     },
-    Object {
+    {
       "answer": "el gato",
       "audio": "4bb467d83dad76412c01811549cc2338bedaefc54995c3cf67bb3e41cf19fc8a",
       "group": "4ee3354aceed",
@@ -780,12 +780,12 @@ la",
       "priority": 1,
       "type": "listeningExercise",
     },
-    Object {
+    {
       "formInTargetLanguage": "un oso",
       "group": "bd9d31c43fd7",
       "id": "057fb513e788",
       "meaningInSourceLanguage": "a bear",
-      "pictures": Array [
+      "pictures": [
         "bear1.jpg",
         "bear2.jpg",
         "bear1.jpg",
@@ -793,24 +793,24 @@ la",
       "priority": 0,
       "type": "cards",
     },
-    Object {
-      "formInTargetLanguage": Array [
+    {
+      "formInTargetLanguage": [
         "un oso",
       ],
       "group": "bd9d31c43fd7",
       "id": "6d217d2824f6",
-      "phrase": Array [
-        Object {
+      "phrase": [
+        {
           "definition": "un
 una",
           "word": "a",
         },
-        Object {
+        {
           "definition": "oso",
           "word": "bear",
         },
       ],
-      "pictures": Array [
+      "pictures": [
         "bear1.jpg",
         "bear2.jpg",
         "bear1.jpg",
@@ -818,7 +818,7 @@ una",
       "priority": 1,
       "type": "shortInput",
     },
-    Object {
+    {
       "answer": "un oso",
       "audio": "f3df3caf8a295bce0cc892e6e4fd5857567a0ecf1f1ca6b229fa32a7932badac",
       "group": "bd9d31c43fd7",
@@ -827,12 +827,12 @@ una",
       "priority": 1,
       "type": "listeningExercise",
     },
-    Object {
+    {
       "formInTargetLanguage": "un león",
       "group": "3958592ea672",
       "id": "e58fa078f707",
       "meaningInSourceLanguage": "a lion",
-      "pictures": Array [
+      "pictures": [
         "lion1.jpg",
         "lion2.jpg",
         "lion3.jpg",
@@ -840,24 +840,24 @@ una",
       "priority": 0,
       "type": "cards",
     },
-    Object {
-      "formInTargetLanguage": Array [
+    {
+      "formInTargetLanguage": [
         "un león",
       ],
       "group": "3958592ea672",
       "id": "8aa4a159aa9d",
-      "phrase": Array [
-        Object {
+      "phrase": [
+        {
           "definition": "un
 una",
           "word": "a",
         },
-        Object {
+        {
           "definition": "león",
           "word": "lion",
         },
       ],
-      "pictures": Array [
+      "pictures": [
         "lion1.jpg",
         "lion2.jpg",
         "lion3.jpg",
@@ -865,7 +865,7 @@ una",
       "priority": 1,
       "type": "shortInput",
     },
-    Object {
+    {
       "answer": "un león",
       "audio": "35c3e015c58213f911089e32ca76728a423c0686b43b2069efc3a51eb2f0b55d",
       "group": "3958592ea672",
@@ -874,12 +874,12 @@ una",
       "priority": 1,
       "type": "listeningExercise",
     },
-    Object {
+    {
       "formInTargetLanguage": "el pato",
       "group": "0e72f647be1e",
       "id": "f3ec01d6882e",
       "meaningInSourceLanguage": "the duck",
-      "pictures": Array [
+      "pictures": [
         "duck1.jpg",
         "duck2.jpg",
         "duck3.jpg",
@@ -887,24 +887,24 @@ una",
       "priority": 0,
       "type": "cards",
     },
-    Object {
-      "formInTargetLanguage": Array [
+    {
+      "formInTargetLanguage": [
         "el pato",
       ],
       "group": "0e72f647be1e",
       "id": "06a6fc0c0805",
-      "phrase": Array [
-        Object {
+      "phrase": [
+        {
           "definition": "el
 la",
           "word": "the",
         },
-        Object {
+        {
           "definition": "pato",
           "word": "duck",
         },
       ],
-      "pictures": Array [
+      "pictures": [
         "duck1.jpg",
         "duck2.jpg",
         "duck3.jpg",
@@ -912,7 +912,7 @@ la",
       "priority": 1,
       "type": "shortInput",
     },
-    Object {
+    {
       "answer": "el pato",
       "audio": "c9e375874e561dfc71c50ce870b0a7a96b83170a9d0fb7913b96907e69c9c43a",
       "group": "0e72f647be1e",
@@ -921,12 +921,12 @@ la",
       "priority": 1,
       "type": "listeningExercise",
     },
-    Object {
+    {
       "formInTargetLanguage": "un caballo",
       "group": "39ca9bde2b5b",
       "id": "e5b5219601d5",
       "meaningInSourceLanguage": "a horse",
-      "pictures": Array [
+      "pictures": [
         "horse1.jpg",
         "horse2.jpg",
         "horse3.jpg",
@@ -934,24 +934,24 @@ la",
       "priority": 0,
       "type": "cards",
     },
-    Object {
-      "formInTargetLanguage": Array [
+    {
+      "formInTargetLanguage": [
         "un caballo",
       ],
       "group": "39ca9bde2b5b",
       "id": "d1ef1f9a3927",
-      "phrase": Array [
-        Object {
+      "phrase": [
+        {
           "definition": "un
 una",
           "word": "a",
         },
-        Object {
+        {
           "definition": "caballo",
           "word": "horse",
         },
       ],
-      "pictures": Array [
+      "pictures": [
         "horse1.jpg",
         "horse2.jpg",
         "horse3.jpg",
@@ -959,7 +959,7 @@ una",
       "priority": 1,
       "type": "shortInput",
     },
-    Object {
+    {
       "answer": "un caballo",
       "audio": "d8bc42f9d887eb6b01dbd15b8c3fb752559b6423568bed57a49d331b30147297",
       "group": "39ca9bde2b5b",
@@ -968,12 +968,12 @@ una",
       "priority": 1,
       "type": "listeningExercise",
     },
-    Object {
+    {
       "formInTargetLanguage": "el perro",
       "group": "dc51787e55a3",
       "id": "26eaf9940451",
       "meaningInSourceLanguage": "the dog",
-      "pictures": Array [
+      "pictures": [
         "dog1.jpg",
         "dog2.jpg",
         "dog3.jpg",
@@ -981,26 +981,26 @@ una",
       "priority": 0,
       "type": "cards",
     },
-    Object {
-      "formInTargetLanguage": Array [
+    {
+      "formInTargetLanguage": [
         "el perro",
         "el can",
       ],
       "group": "dc51787e55a3",
       "id": "b174b698c4cd",
-      "phrase": Array [
-        Object {
+      "phrase": [
+        {
           "definition": "el
 la",
           "word": "the",
         },
-        Object {
+        {
           "definition": "can
 perro",
           "word": "dog",
         },
       ],
-      "pictures": Array [
+      "pictures": [
         "dog1.jpg",
         "dog2.jpg",
         "dog3.jpg",
@@ -1008,7 +1008,7 @@ perro",
       "priority": 1,
       "type": "shortInput",
     },
-    Object {
+    {
       "answer": "el perro",
       "audio": "2184ed4937d5df0e572d49d89248d5b503b3a0a4c27f03dcf09e11f3b74a010a",
       "group": "dc51787e55a3",
@@ -1021,7 +1021,7 @@ perro",
   "repositoryURL": "https://github.com/LibreLingo/LibreLingo/",
   "skillId": "38c2ea1c36d2",
   "skillName": "animals",
-  "specialCharacters": Array [
+  "specialCharacters": [
     "á",
     "Á",
     "é",
