@@ -95,15 +95,6 @@ blocks:
     dependencies: []
     task:
       jobs:
-        - name: test python packages
-          commands:
-            - sem-version python 3.8
-            - checkout
-            - cache restore
-            - pip install poetry
-            - poetry install
-            - poetry run pytest --doctest-modules
-            - cache store
         - name: Python code style (black)
           commands:
             - sem-version python 3.8
