@@ -1,0 +1,23 @@
+name: Python verifications
+on: [push]
+
+jobs:
+  ci:
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.9"]
+        os: [ubuntu-18.04]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Set up Poetry
+        run: curl -sSL https://install.python-poetry.org | python3 -
+      - name: Install Python Dependencies
+        run: poetry install
+      - name: Test Python packages
+        run: poetry run pytest --doctest-modules
+
