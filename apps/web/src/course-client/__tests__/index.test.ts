@@ -15,7 +15,7 @@ describe("get_course", () => {
           "db0545fc1ace67dd8c67d3bcae571b4442161060cd3cfc3890c55e351ec79245",
       })
     ).rejects.toThrowErrorMatchingInlineSnapshot(
-      `"Could not load gist with Id \\"db0545fc1ace67dd8c67d3bcae571b4442161060cd3cfc3890c55e351ec79245\\". TypeError: Cannot convert undefined or null to object"`
+      `"Could not load gist with Id "db0545fc1ace67dd8c67d3bcae571b4442161060cd3cfc3890c55e351ec79245". TypeError: Cannot convert undefined or null to object"`
     )
   })
 
@@ -45,7 +45,7 @@ describe("get_skill_data", () => {
           "db0545fc1ace67dd8c67d3bcae571b4442161060cd3cfc3890c55e351ec79245",
       })
     ).rejects.toThrowErrorMatchingInlineSnapshot(
-      `"Could not load gist with Id \\"db0545fc1ace67dd8c67d3bcae571b4442161060cd3cfc3890c55e351ec79245\\". TypeError: Cannot convert undefined or null to object"`
+      `"Could not load gist with Id "db0545fc1ace67dd8c67d3bcae571b4442161060cd3cfc3890c55e351ec79245". TypeError: Cannot convert undefined or null to object"`
     )
   })
 
@@ -71,7 +71,7 @@ describe("get_skill_introduction", () => {
     expect(
       await get_skill_introduction({ courseName: "test", skillName: "animals" })
     ).toMatchInlineSnapshot(`
-      Object {
+      {
         "courseName": "test",
         "practiceHref": "animals",
         "readmeHTML": undefined,
