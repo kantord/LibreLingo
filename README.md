@@ -187,7 +187,7 @@ The mascot is designed by [@almostdesigner](https://github.com/almostdesigner).
 
 ### Contributors
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-85-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-86-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
@@ -307,6 +307,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center"><a href="https://github.com/DanielGall500"><img src="https://avatars.githubusercontent.com/u/7033470?v=4?s=100" width="100px;" alt="Daniel Gallagher"/><br /><sub><b>Daniel Gallagher</b></sub></a><br /><a href="https://github.com/LibreLingo/LibreLingo/commits?author=DanielGall500" title="Code">💻</a></td>
+      <td align="center"><a href="https://github.com/Frey0-0"><img src="https://avatars.githubusercontent.com/u/94757729?v=4?s=100" width="100px;" alt="Frey0-0"/><br /><sub><b>Frey0-0</b></sub></a><br /><a href="https://github.com/LibreLingo/LibreLingo/commits?author=Frey0-0" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
