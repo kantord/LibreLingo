@@ -22,4 +22,7 @@ jobs:
         run: poetry run pytest --doctest-modules
       - name: Test Python types (mypy)
         run: poetry run mypy apps
-
+      - name: Python code style (black)
+        run: poetry run black apps --check
+      - name: Python code style (pylint)
+        run: pylint $(git ls-files '*.py')
