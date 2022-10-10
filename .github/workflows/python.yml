@@ -25,4 +25,4 @@ jobs:
       - name: Python code style (black)
         run: poetry run black apps --check
       - name: Python code style (pylint)
-        run: pylint $(git ls-files '*.py')
+        run: poetry run pylint $(git ls-files '*.py')
