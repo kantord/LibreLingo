@@ -20,7 +20,7 @@ click = "^7.0.0"
 librelingo-yaml-loader = "^1.10.1"
 
 [tool.poetry.dev-dependencies]
-pyfakefs = "^4.3.3"
+pyfakefs = "^5.0.0"
 librelingo-fakes = {path = "../librelingo_fakes", develop = true}  # Only used in local development
 pytest-mock = "^3.5.1"
 pydoc-markdown = "^4.0.0"
