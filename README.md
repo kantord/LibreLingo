@@ -23,7 +23,7 @@
 
 ## About
 
-LibreLingo's mission is to create a modern language-learning platform that is owned by the community of its users. All software is licensed under AGPLv3, which guarantees the freedom to run, study, share, and modify the software. Course authors are encouraged to release their courses with free licenses.
+LibreLingo's mission is to create a modern language-learning platform that is owned by the community of it's users. All software is licensed under AGPLv3, which guarantees the freedom to run, study, share, and modify the software. Course authors are encouraged to release their courses with free licenses.
 
 If you want to know why I built LibreLingo, [I recommend reading my article on dev.to](https://dev.to/kantord/why-i-built-librelingo-280o). If you agree with LibreLingo's mission, consider helping to build and maintain it, and please [consider making a monetary contribution](https://github.com/sponsors/kantord).
 
@@ -75,7 +75,7 @@ If you want to know why I built LibreLingo, [I recommend reading my article on d
 ## Using LibreLingo
 
 ### Web app
-LibreLingo offers an official [web app](https://librelingo.app/), which is very lightweight and written in Javascript using svelte framework and pouchDB by the way, to try out LibreLingo courses interactively right in your browser, no installation required!
+LibreLingo offers an official [web app](https://librelingo.app/), which is very lightweight and written in Javascript using Svelte framework and pouchDB by the way, to try out LibreLingo courses interactively right in your browser, no installation required!
 
 #### Features
 * :bow_and_arrow: practice using interactive exercises
@@ -177,7 +177,7 @@ We are working on the process of creating courses, to make it more streamlined, 
 Note: You are always encouraged to release the courses under a free license.
 
 #### are you a wordsmith?
-Translate the LibreLingo UI(LLUI) to make it more accessiable, you can start [here](https://poeditor.com/join/project?hash=jKiKfen2Ye).
+Translate the LibreLingo UI(LLUI) to make it more accessible, you can start [here](https://poeditor.com/join/project?hash=jKiKfen2Ye).
 
 ### Attributions
 #### Mascot
