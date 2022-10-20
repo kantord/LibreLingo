@@ -1,4 +1,3 @@
-import re
 import hashlib
 from functools import lru_cache
 
