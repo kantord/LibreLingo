@@ -1,5 +1,6 @@
 import json
 import logging
+import os
 from pathlib import Path
 
 from librelingo_types.data_types import Course, Skill
@@ -52,10 +53,9 @@ def _export_skill(export_path: str, skill: Skill, course: Course, settings=None)
             "w",
             encoding="utf-8",
         ) as f:
-            if settings is not None and settings.dry_run:
-                pass
-            else:
-                f.write(skill.introduction)
+            (os.devnull if settings is not None and settings.dry_run else f).write(
+                skill.introduction
+            )
 
 
 def _export_course_data(export_path: str, course: Course, settings=None):
