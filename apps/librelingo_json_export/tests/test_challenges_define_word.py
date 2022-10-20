@@ -9,7 +9,7 @@ from librelingo_types import DictionaryItem
 def test_definition_not_found():
     word = str(fakes.fake_value())
     pattern = re.escape(
-        f'The another language word "{word}" does not have a definition.'
+        f'The another language word "{word}" does not have a definition. '
         "Please add it to the mini-dictionary."
     )
     with pytest.raises(ValueError, match=pattern):

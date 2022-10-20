@@ -47,7 +47,7 @@ def test_error_1(tmpdir):
     assert (
         str(err.value)
         # pylint: disable=line-too-long
-        == """Error while exporting skill "Hello" in file "basics/skills/hello.yaml": The English word "Excuse me" does not have a definition.Please add it to the mini-dictionary."""
+        == """Error while exporting skill "Hello" in file "basics/skills/hello.yaml": The English word "Excuse me" does not have a definition. Please add it to the mini-dictionary."""
     )
 
 
@@ -63,7 +63,7 @@ def test_error_2(tmpdir):
     assert (
         str(err.value)
         # pylint: disable=line-too-long
-        == """Error while exporting skill "Hello" in file "basics/skills/hello.yaml": The English word "," does not have a definition.Please add it to the mini-dictionary."""
+        == """Error while exporting skill "Hello" in file "basics/skills/hello.yaml": The English word "uncompersick" does not have a definition. Please add it to the mini-dictionary."""
     )
 
 
