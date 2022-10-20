@@ -48,14 +48,17 @@ def _export_skill(export_path: str, skill: Skill, course: Course, settings=None)
 
     if skill.introduction:
         Path(Path(export_path) / "introduction").mkdir(parents=True, exist_ok=True)
+        output_path = (
+            Path(os.devnull)
+            if settings is not None and settings.dry_run
+            else Path(export_path) / "introduction" / f"{slug}.md"
+        )
         with open(
-            Path(export_path) / "introduction" / f"{slug}.md",
+            output_path,
             "w",
             encoding="utf-8",
         ) as f:
-            (os.devnull if settings is not None and settings.dry_run else f).write(
-                skill.introduction
-            )
+            f.write(skill.introduction)
 
 
 def _export_course_data(export_path: str, course: Course, settings=None):
