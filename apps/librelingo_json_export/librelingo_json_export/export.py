@@ -37,7 +37,7 @@ def _export_skill(export_path: str, skill: Skill, course: Course, settings=None)
             f'Error while exporting skill "{skill.name}" in file "{skill.filename}": {error}'
         ) from error
     slug = slugify(skill.name)
-    Path(Path(export_path) / "challenges").mkdir(parents=True, exist_ok=True)
+    (Path(export_path) / "challenges").mkdir(parents=True, exist_ok=True)
     with open(
         Path(export_path) / "challenges" / f"{slug}.json", "w", encoding="utf-8"
     ) as f:
@@ -47,7 +47,7 @@ def _export_skill(export_path: str, skill: Skill, course: Course, settings=None)
             json.dump(skill_data, f, ensure_ascii=False, indent=2)
 
     if skill.introduction:
-        Path(Path(export_path) / "introduction").mkdir(parents=True, exist_ok=True)
+        (Path(export_path) / "introduction").mkdir(parents=True, exist_ok=True)
         output_path = (
             Path(os.devnull)
             if settings is not None and settings.dry_run
@@ -73,7 +73,7 @@ def _export_course_data(export_path: str, course: Course, settings=None):
         course.source_language.name,
     )
     course_data = _get_course_data(course)
-    Path(Path(export_path)).mkdir(parents=True, exist_ok=True)
+    (Path(export_path)).mkdir(parents=True, exist_ok=True)
     with open(Path(export_path) / "courseData.json", "w", encoding="utf-8") as f:
         if settings is not None and settings.dry_run:
             json.dumps(course_data, ensure_ascii=False, indent=2)
