@@ -1,3 +1,4 @@
+import re
 import hashlib
 from functools import lru_cache
 
@@ -19,10 +20,11 @@ def get_words_from_phrase(phrase):
     be split from each other.
     """
     # Regex matches all spaces not between { and }
+
     return [
         w.strip(" {}")
         for w in regex.split("( |\\{.*?\\}|'.*?')", phrase)
-        if w.strip(" {}")
+        if w.strip(" {}") and not re.match(r"^\W+$", w.strip(" {}"))
     ]
 
 
