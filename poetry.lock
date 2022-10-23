@@ -338,7 +338,7 @@ develop = true
 click = "^7.0.0"
 editdistance = "^0.6.0"
 librelingo-types = "^3.0.0"
-librelingo-utils = "^2.6.0"
+librelingo-utils = "^2.6.2"
 librelingo-yaml-loader = "^1.10.1"
 python-slugify = "^6.0.0"
 
@@ -383,7 +383,7 @@ url = "apps/librelingo_types"
 
 [[package]]
 name = "librelingo-utils"
-version = "2.6.1"
+version = "2.6.2"
 description = "Utilities to be used in LibreLingo-related-packages"
 category = "dev"
 optional = false
