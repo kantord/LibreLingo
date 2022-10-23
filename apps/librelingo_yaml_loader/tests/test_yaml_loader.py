@@ -55,7 +55,6 @@ class TestLoadCourseMeta(YamlImportTestCase):
             f.write(self.get_fake_course_yaml(**kwargs))
 
     def get_fake_course_yaml(self, **kwargs):
-        # pylint: disable=no-self-use
         return f"""
     Course:
       Language:
@@ -79,7 +78,6 @@ class TestLoadCourseMeta(YamlImportTestCase):
     """
 
     def get_fake_values(self):
-        # pylint: disable=no-self-use
         return {
             "target_language_name": str(fakes.fake_value()),
             "target_language_code": str(fakes.fake_value()),
@@ -474,7 +472,6 @@ def test_load_course_output_matches_value(fs):
 
 class TestConvertLicense(YamlImportTestCase):
     def get_fake_values(self):
-        # pylint: disable=no-self-use
         return {
             "Name": str(fakes.fake_value()),
             "Short name": str(fakes.fake_value()),
@@ -499,7 +496,6 @@ class TestConvertLicense(YamlImportTestCase):
 
 class TestLoadModuleMeta(YamlImportTestCase):
     def get_fake_module_yaml(self, **kwargs):
-        # pylint: disable=no-self-use
         return f"""
     Module:
         Name: {kwargs["module_name"]}
@@ -513,7 +509,6 @@ class TestLoadModuleMeta(YamlImportTestCase):
             f.write(self.get_fake_module_yaml(**kwargs))
 
     def get_fake_values(self):
-        # pylint: disable=no-self-use
         return {
             "module_name": str(fakes.fake_value()),
             "skill_name": str(fakes.fake_value()),
@@ -556,7 +551,6 @@ class TestLoadModuleMeta(YamlImportTestCase):
 
 class TestLoadSkill(YamlImportTestCase):
     def get_fake_skill_yaml(self, **kwargs):
-        # pylint: disable=no-self-use
         return f"""
 Skill:
   Name: {kwargs["skill_name"]}
@@ -582,7 +576,6 @@ Mini-dictionary:
     """
 
     def get_fake_skill_markdown(self):
-        # pylint: disable=no-self-use
         return "<script />" + self.fake_values["introduction"]
 
     def create_fake_skill_meta(self, path, **kwargs):
@@ -590,7 +583,6 @@ Mini-dictionary:
             f.write(self.get_fake_skill_yaml(**kwargs))
 
     def get_fake_values(self):
-        # pylint: disable=no-self-use
         return {
             "skill_name": str(fakes.fake_value()),
             "skill_id": str(fakes.fake_value()),

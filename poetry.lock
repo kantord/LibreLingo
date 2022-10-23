@@ -327,7 +327,7 @@ url = "apps/librelingo_fakes"
 
 [[package]]
 name = "librelingo-json-export"
-version = "0.10.1"
+version = "0.10.2"
 description = "Export LibreLingo courses in the JSON format used by the web app"
 category = "dev"
 optional = false
@@ -339,7 +339,7 @@ click = "^7.0.0"
 editdistance = "^0.6.0"
 librelingo-types = "^3.0.0"
 librelingo-utils = "^2.6.2"
-librelingo-yaml-loader = "^1.10.1"
+librelingo-yaml-loader = "^1.10.2"
 python-slugify = "^6.0.0"
 
 [package.extras]
@@ -400,7 +400,7 @@ url = "apps/librelingo_utils"
 
 [[package]]
 name = "librelingo-yaml-loader"
-version = "1.10.1"
+version = "1.10.3"
 description = "Load YAML-based LibreLingo courses in your Python project."
 category = "dev"
 optional = false
@@ -414,7 +414,7 @@ click = "^7.0.0"
 html2markdown = "^0.1.7"
 librelingo-types = "^3.3.0"
 Markdown = "^3.3.4"
-pyfakefs = "^4.3.3"
+pyfakefs = "^5.0.0"
 pyyaml = "^5.3.1"
 snapshottest = "^0.6.0"
 
@@ -618,7 +618,7 @@ python-versions = ">=3.6"
 
 [[package]]
 name = "pyfakefs"
-version = "4.7.0"
+version = "5.0.0"
 description = "pyfakefs implements a fake file system that mocks the Python file system modules."
 category = "dev"
 optional = false
@@ -1353,8 +1353,8 @@ pycodestyle = [
     {file = "pycodestyle-2.9.1.tar.gz", hash = "sha256:2c9607871d58c76354b697b42f5d57e1ada7d261c261efac224b664affdc5785"},
 ]
 pyfakefs = [
-    {file = "pyfakefs-4.7.0-py3-none-any.whl", hash = "sha256:29203a7482b25406dd3ea41c8740be2697c6058b0f6577485c3ae9cd4c5e96cd"},
-    {file = "pyfakefs-4.7.0.tar.gz", hash = "sha256:f22d30d93d2989bf2d2c67b606a14cbab2df0be912c09dcdb590ea4931073ade"},
+    {file = "pyfakefs-5.0.0-py3-none-any.whl", hash = "sha256:e1b01954978fe2d9a4d75f079359d7f8d3af3bb12ff2dc8633a4cc0a0dc7fbda"},
+    {file = "pyfakefs-5.0.0.tar.gz", hash = "sha256:19d1d8f1ee520891d78b6ed05c2078e0792d545f83dee33461fbaa5cc72e187d"},
 ]
 pygments = [
     {file = "Pygments-2.13.0-py3-none-any.whl", hash = "sha256:f643f331ab57ba3c9d89212ee4a2dabc6e94f117cf4eefde99a0574720d14c42"},

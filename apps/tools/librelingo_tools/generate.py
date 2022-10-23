@@ -16,7 +16,7 @@ import lili
 
 def myconverter(o):
     if isinstance(o, datetime.datetime):
-        return o.__str__()
+        return str(o)
     return None
 
 
@@ -63,7 +63,7 @@ def generate_index_html(start_time, end_time, links, outdir):
 
 def download_course(url, tempdir):
     # download zip file
-    res = requests.get(url, stream=True)
+    res = requests.get(url, stream=True, timeout=5)
     filename = os.path.join(tempdir.name, "course.zip")
     if res.status_code == 200:
         with open(filename, "wb") as fh:
