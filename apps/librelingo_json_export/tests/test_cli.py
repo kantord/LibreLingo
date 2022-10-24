@@ -25,7 +25,21 @@ def mocks(mocker):
 def invoke(mocks, fs):
     def f(args):
         runner = CliRunner()
-        return runner.invoke(main, args)
+        return runner.invoke(main, args, catch_exceptions=False)
+
+    return f
+
+
+@pytest.fixture
+def load_course_mock(mocker):
+    return mocker.patch("librelingo_json_export.cli.load_course")
+
+
+@pytest.fixture
+def invoke_with_load_course_mock(load_course_mock, fs):
+    def f(args):
+        runner = CliRunner()
+        return runner.invoke(main, args, catch_exceptions=False)
 
     return f
 
@@ -57,10 +71,16 @@ def test_has_a_dry_run_option(mocks, inputs, invoke):
     assert result.exit_code == 0
 
 
-def test_dry_run_doesnt_create_output_files(mocks, inputs, invoke):
-    mocks["export_course"].side_effect = lambda p, _: open(p, "w").write("x")
-    invoke([*inputs, "--dry-run"])
-    assert os.listdir(".") == ["tmp"]
+@pytest.mark.parametrize(
+    "loaded_course", [fakes.courseEmpty, fakes.course1, fakes.course2]
+)
+def test_dry_run_doesnt_create_output_files(
+    inputs, load_course_mock, invoke_with_load_course_mock, loaded_course
+):
+    files_before_dry_run = os.listdir(".")
+    load_course_mock.return_value = loaded_course
+    invoke_with_load_course_mock([*inputs, "--dry-run"])
+    assert os.listdir(".") == files_before_dry_run
 
 
 def test_dry_run_calls_real_export_course(mocks, inputs, invoke):
