@@ -12,6 +12,14 @@ from .skills import _get_skill_data
 logger = logging.getLogger("librelingo_json_export")
 
 
+def _is_dry_run(settings):
+    return settings is not None and settings.dry_run
+
+
+def _prepare_output_dir(output_file_path):
+    output_file_path.parent.mkdir(parents=True, exist_ok=True)
+
+
 def _export_course_skills(export_path: str, course: Course, settings=None):
     """
     Writes every skill in a course into separate JSON files.
@@ -37,22 +45,21 @@ def _export_skill(export_path: str, skill: Skill, course: Course, settings=None)
             f'Error while exporting skill "{skill.name}" in file "{skill.filename}": {error}'
         ) from error
     slug = slugify(skill.name)
-    (Path(export_path) / "challenges").mkdir(parents=True, exist_ok=True)
-    with open(
-        Path(export_path) / "challenges" / f"{slug}.json", "w", encoding="utf-8"
-    ) as f:
-        if settings is not None and settings.dry_run:
-            json.dumps(skill_data, ensure_ascii=False, indent=2)
-        else:
+    if _is_dry_run(settings):
+        json.dumps(skill_data, ensure_ascii=False, indent=2)
+    else:
+        output_path = Path(export_path) / "challenges" / f"{slug}.json"
+        _prepare_output_dir(output_path)
+        with open(output_path, "w", encoding="utf-8") as f:
             json.dump(skill_data, f, ensure_ascii=False, indent=2)
 
     if skill.introduction:
-        (Path(export_path) / "introduction").mkdir(parents=True, exist_ok=True)
         output_path = (
             Path(os.devnull)
-            if settings is not None and settings.dry_run
+            if _is_dry_run(settings)
             else Path(export_path) / "introduction" / f"{slug}.md"
         )
+        _prepare_output_dir(output_path)
         with open(
             output_path,
             "w",
@@ -73,11 +80,12 @@ def _export_course_data(export_path: str, course: Course, settings=None):
         course.source_language.name,
     )
     course_data = _get_course_data(course)
-    (Path(export_path)).mkdir(parents=True, exist_ok=True)
-    with open(Path(export_path) / "courseData.json", "w", encoding="utf-8") as f:
-        if settings is not None and settings.dry_run:
-            json.dumps(course_data, ensure_ascii=False, indent=2)
-        else:
+    if _is_dry_run(settings):
+        json.dumps(course_data, ensure_ascii=False, indent=2)
+    else:
+        output_path = Path(export_path) / "courseData.json"
+        _prepare_output_dir(output_path)
+        with open(output_path, "w", encoding="utf-8") as f:
             json.dump(course_data, f, ensure_ascii=False, indent=2)
 
 
