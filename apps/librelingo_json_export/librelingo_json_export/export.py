@@ -20,6 +20,12 @@ def _ensure_output_dir(output_file_path):
     output_file_path.parent.mkdir(parents=True, exist_ok=True)
 
 
+def _save_as_json_file(data, output_path):
+    _ensure_output_dir(output_path)
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+
 def _export_course_skills(export_path: str, course: Course, settings=None):
     """
     Writes every skill in a course into separate JSON files.
@@ -48,10 +54,9 @@ def _export_skill(export_path: str, skill: Skill, course: Course, settings=None)
     if _is_dry_run(settings):
         json.dumps(skill_data, ensure_ascii=False, indent=2)
     else:
-        output_path = Path(export_path) / "challenges" / f"{slug}.json"
-        _ensure_output_dir(output_path)
-        with open(output_path, "w", encoding="utf-8") as f:
-            json.dump(skill_data, f, ensure_ascii=False, indent=2)
+        _save_as_json_file(
+            skill_data, Path(export_path) / "challenges" / f"{slug}.json"
+        )
 
     if skill.introduction:
         output_path = (
@@ -83,10 +88,7 @@ def _export_course_data(export_path: str, course: Course, settings=None):
     if _is_dry_run(settings):
         json.dumps(course_data, ensure_ascii=False, indent=2)
     else:
-        output_path = Path(export_path) / "courseData.json"
-        _ensure_output_dir(output_path)
-        with open(output_path, "w", encoding="utf-8") as f:
-            json.dump(course_data, f, ensure_ascii=False, indent=2)
+        _save_as_json_file(course_data, Path(export_path) / "courseData.json")
 
 
 def export_course(export_path: str, course: Course, settings=None):
