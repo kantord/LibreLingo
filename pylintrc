@@ -84,7 +84,6 @@ disable=raw-checker-failed,
         file-ignored,
         suppressed-message,
         useless-suppression,
-        duplicate-code,  # TODO: enable
         invalid-name,  # TODO: enable
         missing-function-docstring,  # TODO: enable
         redefined-outer-name,  # TODO: enable
@@ -448,10 +447,10 @@ ignore-comments=yes
 ignore-docstrings=yes
 
 # Imports are removed from the similarity computation
-ignore-imports=no
+ignore-imports=yes
 
 # Signatures are removed from the similarity computation
-ignore-signatures=no
+ignore-signatures=yes
 
 # Minimum lines number of a similarity.
 min-similarity-lines=4

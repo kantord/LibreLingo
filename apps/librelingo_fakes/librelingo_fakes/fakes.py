@@ -302,3 +302,8 @@ def get_fake_skill(introduction=None):
         name=f"Animals {random_word}",
         introduction=introduction,
     )
+
+
+def settings_not_dry_run():
+    SettingsDryRun = namedtuple("Settings", ["dry_run"])
+    return SettingsDryRun(False)
