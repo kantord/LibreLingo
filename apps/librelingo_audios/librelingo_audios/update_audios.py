@@ -16,7 +16,7 @@ def update_audios_for_course(
     if not course.settings.audio_settings.enabled:
         return
 
-    index_file_path = Path(Path(output_path) / f"{course_name}.json")
+    index_file_path = Path(output_path) / f"{course_name}.json"
 
     phrases_with_existing_audios = _load_index_file(index_file_path)
 
@@ -82,7 +82,7 @@ def _fetch_audio_for_phrase(
     phrase_identity: PhraseIdentity, output_path: str, course: Course, settings
 ):
     file_name = audio_id(course.target_language, phrase_identity.text)
-    destination_path = Path(Path(output_path) / f"{file_name}.mp3")
+    destination_path = Path(output_path) / f"{file_name}.mp3"
 
     # This is where more audio sources would be added with an if statement. For
     # now there is only TTS.
@@ -156,7 +156,7 @@ def _delete_phrases(
 
 
 def _delete_audio_for_phrase(index_entry, output_path: str, settings):
-    target_path = Path(Path(output_path) / f"{index_entry['id']}.mp3")
+    target_path = Path(output_path) / f"{index_entry['id']}.mp3"
 
     if not target_path.is_file():
         # It's already not there, for whatever reason
