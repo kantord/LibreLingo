@@ -705,7 +705,8 @@ Mini-dictionary:
 def test_load_module_complains_about_an_empty_file(load_yaml):
     random_path = fakes.path()
     load_yaml.return_value = None
-    expected_error = f'Module file "{str(Path(random_path)/"module.yaml")}" is empty or does not exist'
+    file_path = str(Path(random_path) / "module.yaml")
+    expected_error = f'Module file "{file_path}" is empty or does not exist'
     with pytest.raises(
         RuntimeError,
         match=re.escape(expected_error),
@@ -717,7 +718,8 @@ def test_load_module_complains_about_an_empty_file(load_yaml):
 def test_load_module_complains_missing_module_key(load_yaml):
     random_path = fakes.path()
     load_yaml.return_value = {}
-    expected_error = f'Module file "{str(Path(random_path)/"module.yaml")}" needs to have a "Module" key'
+    file_path = str(Path(random_path) / "module.yaml")
+    expected_error = f'Module file "{file_path}" needs to have a "Module" key'
     with pytest.raises(RuntimeError, match=re.escape(expected_error)):
         _load_module(random_path, fakes.course1)
 
@@ -726,7 +728,8 @@ def test_load_module_complains_missing_module_key(load_yaml):
 def test_load_module_complains_missing_skills_key(load_yaml):
     random_path = fakes.path()
     load_yaml.return_value = {"Module": {}}
-    expected_error = f'Module file "{str(Path(random_path)/"module.yaml")}" needs to have a "Skills" key'
+    file_path = str(Path(random_path) / "module.yaml")
+    expected_error = f'Module file "{file_path}" needs to have a "Skills" key'
     with pytest.raises(RuntimeError, match=re.escape(expected_error)):
         _load_module(random_path, fakes.course1)
 
@@ -735,7 +738,8 @@ def test_load_module_complains_missing_skills_key(load_yaml):
 def test_load_module_complains_missing_module_name(load_yaml):
     random_path = fakes.path()
     load_yaml.return_value = {"Module": {}, "Skills": []}
-    expected_error = f'Module file "{str(Path(random_path)/"module.yaml")}" needs to have module name'
+    file_path = str(Path(random_path) / "module.yaml")
+    expected_error = f'Module file "{file_path}" needs to have module name'
     with pytest.raises(RuntimeError, match=re.escape(expected_error)):
         _load_module(random_path, fakes.course1)
 
