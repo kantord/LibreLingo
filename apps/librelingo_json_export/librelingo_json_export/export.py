@@ -22,8 +22,8 @@ def _ensure_output_dir(output_file_path):
 
 def _save_as_json_file(data, output_path):
     _ensure_output_dir(output_path)
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+    with open(output_path, "w", encoding="utf-8") as save_file:
+        json.dump(data, save_file, ensure_ascii=False, indent=2)
 
 
 def _export_course_skills(export_path: str, course: Course, settings=None):
@@ -69,8 +69,8 @@ def _export_skill(export_path: str, skill: Skill, course: Course, settings=None)
             output_path,
             "w",
             encoding="utf-8",
-        ) as f:
-            f.write(skill.introduction)
+        ) as skill_file:
+            skill_file.write(skill.introduction)
 
 
 def _export_course_data(export_path: str, course: Course, settings=None):

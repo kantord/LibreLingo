@@ -112,8 +112,8 @@ def export_main_html_page(course, count, reldir, html_dir):
         course=course,
         count=count,
     )
-    with open(os.path.join(html_dir, "index.html"), "w") as fh:
-        fh.write(html)
+    with open(os.path.join(html_dir, "index.html"), "w") as index_file:
+        index_file.write(html)
 
     html = render(
         "converter.html",
@@ -122,8 +122,8 @@ def export_main_html_page(course, count, reldir, html_dir):
         rel="",
         course=course,
     )
-    with open(os.path.join(html_dir, "converter.html"), "w") as fh:
-        fh.write(html)
+    with open(os.path.join(html_dir, "converter.html"), "w") as converter_file:
+        converter_file.write(html)
 
     html = render(
         "modules.html",
@@ -135,8 +135,8 @@ def export_main_html_page(course, count, reldir, html_dir):
         course=course,
         repository_url=get_repository_url(course),
     )
-    with open(os.path.join(html_dir, "modules.html"), "w") as fh:
-        fh.write(html)
+    with open(os.path.join(html_dir, "modules.html"), "w") as modules_file:
+        modules_file.write(html)
 
     html = render(
         "missing_words.html",
@@ -145,8 +145,8 @@ def export_main_html_page(course, count, reldir, html_dir):
         rel="",
         course=course,
     )
-    with open(os.path.join(html_dir, "words.html"), "w") as fh:
-        fh.write(html)
+    with open(os.path.join(html_dir, "words.html"), "w") as words_file:
+        words_file.write(html)
 
 
 def export_skill_html_pages(course, html_dir):
@@ -170,8 +170,8 @@ def export_skill_html_pages(course, html_dir):
             if not os.path.exists(dir_path):
                 os.makedirs(dir_path)
             # filename = skillurl_filter(skill.filename)
-            with open(os.path.join(dir_path, file_name + ".html"), "w") as fh:
-                fh.write(html)
+            with open(os.path.join(dir_path, file_name + ".html"), "w") as html_file:
+                html_file.write(html)
 
 
 def collect_phrases(course):
@@ -212,8 +212,8 @@ def collect_words(language, direction):
 
 
 def export_json(all_words, filename, html_dir):
-    with open(os.path.join(html_dir, filename), "w") as fh:
-        json.dump(all_words, fh)
+    with open(os.path.join(html_dir, filename), "w") as html_file:
+        json.dump(all_words, html_file)
 
 
 def export_words_html_page(course, all_words, language, path, reldir, html_file):
@@ -230,8 +230,8 @@ def export_words_html_page(course, all_words, language, path, reldir, html_file)
         dictionary=language["dictionary"],
         phrases=language["phrases"],
     )
-    with open(html_file, "w") as fh:
-        fh.write(html)
+    with open(html_file, "w") as html_file_object:
+        html_file_object.write(html)
 
     #    word_class = ""
     #    if len(words[word]) > 1:
@@ -273,8 +273,8 @@ def export_word_html_pages(course, all_words, language, reldir, words_dir):
             branch=branch,
             course=course,
         )
-        with open(os.path.join(words_dir, target_word.lower() + ".html"), "w") as fh:
-            fh.write(html)
+        with open(os.path.join(words_dir, target_word.lower() + ".html"), "w") as words_file:
+            words_file.write(html)
 
 
 def export_to_html(course, target, source, count, reldir, html_dir):
@@ -329,8 +329,8 @@ def export_to_html(course, target, source, count, reldir, html_dir):
     export_word_html_pages(
         course, all_source_words, source, reldir, os.path.join(html_dir, "source")
     )
-    with open(os.path.join(html_dir, "course.json"), "w") as fh:
-        json.dump(count, fh)
+    with open(os.path.join(html_dir, "course.json"), "w") as course_file:
+        json.dump(count, course_file)
 
 
 def clean(text):

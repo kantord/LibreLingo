@@ -7,8 +7,8 @@ def main():
     if len(sys.argv) != 2:
         sys.exit(f"Usage: {sys.argv[0]} PATH_TO_CONFIG_FILE")
     config_filename = sys.argv[1]
-    with open(config_filename) as fh:
-        config = json.load(fh)
+    with open(config_filename) as config_file:
+        config = json.load(config_file)
 
     for course in config:
         if course["deploy"]:
