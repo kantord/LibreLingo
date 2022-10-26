@@ -90,6 +90,6 @@ def test_returns_correct_value2(
         "priority": 2,
         "solutions": mock_get_solutions_from_phrase.return_value,
         "chips": mock_get_chips_from_phrase.return_value,
-        "formattedSolution": "foous barus foous barus ",
+        "formattedSolution": "foous barus foous barus",
     }
     assert challenge == expected_challenge
