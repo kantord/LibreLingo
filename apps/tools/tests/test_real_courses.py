@@ -2,6 +2,7 @@
 import collections
 import os
 import pytest
+from pathlib import Path
 
 from librelingo_json_export.export import export_course
 from librelingo_yaml_loader.yaml_loader import load_course
@@ -48,7 +49,7 @@ def test_error_1(tmpdir):
     assert (
         str(err.value)
         # pylint: disable=line-too-long
-        == """Error while exporting skill "Hello" in file "basics/skills/hello.yaml": The English word "Excuse me" does not have a definition. Please add it to the mini-dictionary."""
+        == f"""Error while exporting skill "Hello" in file "{str(Path("basics/skills/hello.yaml"))}": The English word "Excuse me" does not have a definition. Please add it to the mini-dictionary."""
     )
 
 
@@ -64,7 +65,7 @@ def test_error_2(tmpdir):
     assert (
         str(err.value)
         # pylint: disable=line-too-long
-        == """Error while exporting skill "Hello" in file "basics/skills/hello.yaml": The English word "uncompersick" does not have a definition. Please add it to the mini-dictionary."""
+        == f"""Error while exporting skill "Hello" in file "{str(Path("basics/skills/hello.yaml"))}": The English word "uncompersick" does not have a definition. Please add it to the mini-dictionary."""
     )
 
 
@@ -79,7 +80,7 @@ def test_minimal(tmpdir):
     )
     assert course.dictionary == []
     assert course.repository_url == "https://www.example.com/course"
-    assert course.course_dir.endswith("tools/tests/fixtures/minimal")
+    assert course.course_dir.endswith(str(Path("tools/tests/fixtures/minimal")))
     # assert course.settings == Settings(
     #    audio_settings=AudioSettings(enabled=False, text_to_speech_settings_list=[]),
     #    hunspell=HunspellSettings(source_language=None, target_language=None),
@@ -92,7 +93,7 @@ def test_minimal(tmpdir):
             skills=[
                 Skill(
                     name="Hello",
-                    filename="basics/skills/hello.yaml",
+                    filename=str(Path("basics/skills/hello.yaml")),
                     id=1,
                     words=[],
                     phrases=[],
