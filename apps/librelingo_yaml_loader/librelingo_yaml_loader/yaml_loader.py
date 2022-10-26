@@ -21,6 +21,7 @@ from librelingo_types import (
     Word,
 )
 from yaml import load
+
 try:
     from yaml import CSafeLoader as SafeLoader
 except ImportError:

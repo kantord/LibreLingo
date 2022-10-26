@@ -20,7 +20,9 @@ def test_loaded_yaml_is_exported_to_correct_json(fs, snapshot):
     export_course("./output", course)
     files = glob.glob("./output/**/*")
     data = {
-        str(Path(fname)): read_json_file(fname) if fname.endswith(".json") else open(fname).read()
+        str(Path(fname)): read_json_file(fname)
+        if fname.endswith(".json")
+        else open(fname).read()
         for fname in files
     }
 
