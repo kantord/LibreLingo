@@ -30,4 +30,4 @@ def test_creates_result_path_when_no_dry_run(is_dry_run_mock, fs):
 def test_calls_is_dry_run(is_dry_run_mock, fs):
     settings = []
     _prepare_output_path(fakes.path() / "some_file.txt", settings)
-    is_dry_run_mock.assert_called_with(settings)
+    is_dry_run_mock.assert_called_once_with(settings)
