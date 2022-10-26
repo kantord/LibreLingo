@@ -43,10 +43,10 @@ def clean_word(word: Word):
     """
     Remove punctuation and other special characters from a word.
     """
-    MATCH_NON_WORD_CHARACTERS_BEGINNING = regex.compile("^[^\\w']+")
-    MATCH_NON_WORD_CHARACTERS_END = regex.compile("[^\\w']+$")
-    return MATCH_NON_WORD_CHARACTERS_BEGINNING.sub(
-        "", MATCH_NON_WORD_CHARACTERS_END.sub("", word)
+    match_non_word_characters_beginning = regex.compile("^[^\\w']+")
+    match_non_word_characters_end = regex.compile("[^\\w']+$")
+    return match_non_word_characters_beginning.sub(
+        "", match_non_word_characters_end.sub("", word)
     )
 
 

@@ -7,14 +7,14 @@ from librelingo_yaml_loader import load_course
 
 
 def read_json_file(path):
-    with open(path) as fp:
-        return json.load(fp)
+    with open(path) as file_path:
+        return json.load(file_path)
 
 
-def test_loaded_yaml_is_exported_to_correct_json(fs, snapshot):
+def test_loaded_yaml_is_exported_to_correct_json(file_system, snapshot):
     fixture_path = os.path.join(os.path.dirname(__file__), "fixtures", "fake_course")
-    fs.add_real_directory(fixture_path)
-    fs.create_dir("output")
+    file_system.add_real_directory(fixture_path)
+    file_system.create_dir("output")
     course = load_course(fixture_path)
     export_course("./output", course)
     files = glob.glob("./output/**/*")
@@ -23,5 +23,5 @@ def test_loaded_yaml_is_exported_to_correct_json(fs, snapshot):
         for fname in files
     }
 
-    fs.pause()  # Write snapshots to the real fs, not the fake
+    file_system.pause()  # Write snapshots to the real fs, not the fake
     snapshot.assert_match(data)
