@@ -7,8 +7,8 @@ from librelingo_yaml_loader import load_course
 
 
 def read_json_file(path):
-    with open(path) as fp:
-        return json.load(fp)
+    with open(path) as file_path:
+        return json.load(file_path)
 
 
 def test_loaded_yaml_is_exported_to_correct_json(fs, snapshot):

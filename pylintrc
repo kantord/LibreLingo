@@ -85,7 +85,6 @@ disable=raw-checker-failed,
         suppressed-message,
         useless-suppression,
         duplicate-code,  # TODO: enable
-        invalid-name,  # TODO: enable
         missing-function-docstring,  # TODO: enable
         redefined-outer-name,  # TODO: enable
         missing-class-docstring,  # TODO: enable
@@ -320,7 +319,8 @@ good-names=i,
            k,
            ex,
            Run,
-           _
+           _,   
+           fs
 
 # Good variable names regexes, separated by a comma. If names match any regex,
 # they will always be accepted
