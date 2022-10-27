@@ -1,5 +1,6 @@
 from librelingo_types.data_types import HunspellSettings
 
+# pylint: disable=invalid-name
 hunspell = None  # Needed so that hunspell can be mocked
 
 

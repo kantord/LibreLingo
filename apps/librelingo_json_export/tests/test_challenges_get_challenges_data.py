@@ -40,11 +40,11 @@ def test_includes_every_word(mock_get_word_challenges):
 def test_returns_correct_challenges(
     mock_get_phrase_challenges, mock_get_word_challenges
 ):
-    mock_get_phrase_challenges.return_value = [fakes.challenge1, fakes.challenge2]
-    mock_get_word_challenges.return_value = [fakes.challenge3, fakes.challenge4]
+    mock_get_phrase_challenges.return_value = [fakes.CHALLENGE1, fakes.CHALLENGE2]
+    mock_get_word_challenges.return_value = [fakes.CHALLENGE3, fakes.CHALLENGE4]
     assert _get_challenges_data(fakes.skillWithPhraseAndWord, fakes.course1) == [
-        fakes.challenge1,
-        fakes.challenge2,
-        fakes.challenge3,
-        fakes.challenge4,
+        fakes.CHALLENGE1,
+        fakes.CHALLENGE2,
+        fakes.CHALLENGE3,
+        fakes.CHALLENGE4,
     ]
