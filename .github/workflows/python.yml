@@ -7,7 +7,10 @@ jobs:
       fail-fast: false
       matrix:
         python-version: ["3.9"]
-        os: [ubuntu-18.04, macos-11]
+        os: [ubuntu-18.04, windows-latest, macos-11]
+    defaults:
+      run:
+        shell: bash
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v3

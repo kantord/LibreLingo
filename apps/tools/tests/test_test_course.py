@@ -40,9 +40,9 @@ def assert_folders_are_identical(expected_path, actual_path):
             relpath = os.path.join(dirname[len(actual_path) + 1 :], filename)
 
             if filename.endswith(".json"):
-                with open(os.path.join(actual_path, relpath)) as fh:
+                with open(os.path.join(actual_path, relpath), encoding="utf-8") as fh:
                     actual = json.load(fh)
-                with open(os.path.join(expected_path, relpath)) as fh:
+                with open(os.path.join(expected_path, relpath), encoding="utf-8") as fh:
                     expected = json.load(fh)
                 assert actual == expected, relpath
                 continue
