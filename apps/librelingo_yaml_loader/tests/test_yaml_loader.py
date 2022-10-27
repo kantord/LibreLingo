@@ -332,9 +332,9 @@ class TestLoadCourseMeta(YamlImportTestCase):
         self.assertEqual(self.result.repository_url, self.fake_values["repository_url"])
 
 
-def test_load_course_output_matches_value(file_system):
+def test_load_course_output_matches_value(fs):
     fixture_path = os.path.join(os.path.dirname(__file__), "fixtures", "fake_course")
-    file_system.add_real_directory(fixture_path)
+    fs.add_real_directory(fixture_path)
     result = load_course(fixture_path)
     assert result.target_language == Language(name="French", code="fr")
     assert result.source_language == Language(name="English", code="en")

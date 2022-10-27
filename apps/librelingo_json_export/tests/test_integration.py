@@ -11,10 +11,10 @@ def read_json_file(path):
         return json.load(file_path)
 
 
-def test_loaded_yaml_is_exported_to_correct_json(file_system, snapshot):
+def test_loaded_yaml_is_exported_to_correct_json(fs, snapshot):
     fixture_path = os.path.join(os.path.dirname(__file__), "fixtures", "fake_course")
-    file_system.add_real_directory(fixture_path)
-    file_system.create_dir("output")
+    fs.add_real_directory(fixture_path)
+    fs.create_dir("output")
     course = load_course(fixture_path)
     export_course("./output", course)
     files = glob.glob("./output/**/*")
@@ -23,5 +23,5 @@ def test_loaded_yaml_is_exported_to_correct_json(file_system, snapshot):
         for fname in files
     }
 
-    file_system.pause()  # Write snapshots to the real fs, not the fake
+    fs.pause()  # Write snapshots to the real fs, not the fake
     snapshot.assert_match(data)

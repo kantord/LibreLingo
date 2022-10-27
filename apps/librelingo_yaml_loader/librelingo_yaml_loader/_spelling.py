@@ -1,7 +1,7 @@
 from librelingo_types.data_types import HunspellSettings
 
-HUNSPELL = None  # Needed so that hunspell can be mocked
-
+# pylint: disable=invalid-name
+hunspell = None  # Needed so that hunspell can be mocked
 
 def _validate_word_in_source_language(word, course):
     for variant in word.in_source_language:
@@ -67,11 +67,11 @@ def _convert_hunspell_settings_for_language(raw_language_name):
     language_code = raw_language_name.replace("-", "_")
 
     # Only import hunspell if actually needed. Still allow mocking it.
-    global HUNSPELL
-    if not HUNSPELL:
-        import hunspell as HUNSPELL # type: ignore # pylint: disable=import-error
+    global hunspell
+    if not hunspell:
+        import hunspell # type: ignore # pylint: disable=import-error
 
-    return HUNSPELL.HunSpell(
+    return hunspell.HunSpell(
         f"/usr/share/hunspell/{language_code}.dic",
         f"/usr/share/hunspell/{language_code}.aff",
     )
