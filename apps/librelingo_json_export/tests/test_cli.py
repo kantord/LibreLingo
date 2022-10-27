@@ -23,11 +23,11 @@ def mocks(mocker):
 
 @pytest.fixture
 def invoke(mocks, fs):
-    def f(args):
+    def fun(args):
         runner = CliRunner()
         return runner.invoke(main, args, catch_exceptions=False)
 
-    return f
+    return fun
 
 
 @pytest.fixture
@@ -37,11 +37,11 @@ def load_course_mock(mocker):
 
 @pytest.fixture
 def invoke_with_load_course_mock(load_course_mock, fs):
-    def f(args):
+    def fun(args):
         runner = CliRunner()
         return runner.invoke(main, args, catch_exceptions=False)
 
-    return f
+    return fun
 
 
 def test_yaml_to_json_loads_correct_course(mocks, inputs, invoke):

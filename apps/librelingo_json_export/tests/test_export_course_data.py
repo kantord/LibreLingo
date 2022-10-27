@@ -35,8 +35,8 @@ def test_writes_correct_value_into_json_file(fs, export_path, mock_get_course_da
     fake_course_data = {"fake_course_data": 1000}
     mock_get_course_data.return_value = fake_course_data
     _export_course_data(export_path, fakes.course1)
-    with open(export_path / "courseData.json") as f:
-        assert json.loads(f.read()) == fake_course_data
+    with open(export_path / "courseData.json") as course_data_file:
+        assert json.loads(course_data_file.read()) == fake_course_data
 
 
 def test_assert_logs_correctly(caplog, fs, export_path):

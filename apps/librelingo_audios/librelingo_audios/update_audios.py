@@ -57,8 +57,8 @@ def _load_index_file(file_path: Path):
     if not file_path.is_file():
         return []
 
-    with open(file_path, "r") as f:
-        return json.loads(f.read())
+    with open(file_path, "r") as index_file:
+        return json.loads(index_file.read())
 
 
 def _keep_phrases(phrases_to_keep: Union[Set, Set[PhraseIdentity]], existing_index):
@@ -170,9 +170,12 @@ def _delete_audio_for_phrase(index_entry, output_path: str, settings):
 
 
 def _save_index(result_index: list, index_file_path: Path):
-    with open(index_file_path, "w", encoding="utf-8") as f:
+    with open(index_file_path, "w", encoding="utf-8") as index_file:
         json.dump(
-            sorted(result_index, key=lambda i: i["id"]), f, ensure_ascii=False, indent=4
+            sorted(result_index, key=lambda i: i["id"]),
+            index_file,
+            ensure_ascii=False,
+            indent=4,
         )
 
 
