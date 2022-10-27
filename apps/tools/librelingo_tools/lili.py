@@ -273,7 +273,9 @@ def export_word_html_pages(course, all_words, language, reldir, words_dir):
             branch=branch,
             course=course,
         )
-        with open(os.path.join(words_dir, target_word.lower() + ".html"), "w") as words_file:
+        with open(
+            os.path.join(words_dir, target_word.lower() + ".html"), "w"
+        ) as words_file:
             words_file.write(html)
 
 
