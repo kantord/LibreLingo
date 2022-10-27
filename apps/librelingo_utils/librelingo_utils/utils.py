@@ -22,9 +22,10 @@ def get_words_from_phrase(phrase):
     # Regex matches all spaces not between { and }
 
     return [
-        w.strip(" {}")
-        for w in regex.split("( |\\{.*?\\}|'.*?')", phrase)
-        if w.strip(" {}") and not re.match(r"^\W+$", w.strip(" {}"))
+        remove_control_characters_for_display(w)
+        for w in regex.split("(\\s|\\{.*?\\})", phrase)
+        if remove_control_characters_for_display(w)
+        and not re.match(r"^\W+$", w.strip(" {}"))
     ]
 
 
@@ -35,7 +36,7 @@ def remove_control_characters_for_display(phrase):
     At the moment, this only applies to curly brackets used to group several
     words into a single mini-dictionary term.
     """
-    return phrase.replace("}", "").replace("{", "")
+    return phrase.strip(" ").replace("{", "").replace("}", "")
 
 
 @lru_cache(maxsize=None)
