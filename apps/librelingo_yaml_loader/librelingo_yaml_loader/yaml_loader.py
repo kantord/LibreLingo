@@ -39,11 +39,16 @@ def _load_yaml(path: Path):
     with open(path) as yaml_file:
         try:
             from yaml import CSafeLoader
+
             return load(yaml_file, Loader=CSafeLoader)
         except ImportError:
-            print("Warning! PyYAML LibYAML C bindings are not installed. Course loading still works, but it will be slower. For more details, check https://github.com/yaml/pyyaml#Installation")
+            print(
+                "Warning! PyYAML LibYAML C bindings are not installed. Course loading still works, but it will be slower. For more details, check https://github.com/yaml/pyyaml#Installation"
+            )
             from yaml import SafeLoader
+
             return load(yaml_file, Loader=SafeLoader)
+
 
 def _convert_language(raw_language) -> Language:
     """
