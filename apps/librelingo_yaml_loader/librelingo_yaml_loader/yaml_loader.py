@@ -20,7 +20,16 @@ from librelingo_types import (
     TextToSpeechSettings,
     Word,
 )
-from yaml import load, CSafeLoader
+from yaml import load
+
+try:
+    from yaml import CSafeLoader as YamlLoader
+except ImportError:
+    print(
+        "Warning! PyYAML LibYAML C bindings are not installed. Course loading still works, but it will be slower. For more details, check https://github.com/yaml/pyyaml#Installation"
+    )
+    from yaml import SafeLoader as YamlLoader
+
 from yaml.constructor import SafeConstructor
 
 from ._spelling import _convert_hunspell_settings, _run_skill_spellcheck
@@ -36,7 +45,7 @@ SafeConstructor.add_constructor("tag:yaml.org,2002:bool", add_bool)
 def _load_yaml(path: Path):
     """Helper function for reading a YAML file"""
     with open(path) as yaml_file:
-        return load(yaml_file, Loader=CSafeLoader)
+        return load(yaml_file, Loader=YamlLoader)
 
 
 def _convert_language(raw_language) -> Language:
