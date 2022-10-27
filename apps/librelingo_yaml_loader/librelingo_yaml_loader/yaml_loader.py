@@ -181,18 +181,12 @@ def _convert_words(raw_words: List[Word]) -> List[Word]:
     ...         'Also accepted': ['the female']
     ...     }
     ... ])
-    [
-        Word(
-                in_target_language=["l'homme"],
-                in_source_language=['the man'],
-                pictures=['man1', 'man2', 'man3']
-        ),
-        Word(
-                in_target_language=['la femme', 'la dame'],
-                in_source_language=['the woman', 'the female'],
-                pictures=None
-        )
-    ]
+    [Word(in_target_language=["l'homme"],
+          in_source_language=['the man'],
+          pictures=['man1', 'man2', 'man3']),
+     Word(in_target_language=['la femme', 'la dame'],
+          in_source_language=['the woman', 'the female'],
+          pictures=None)]
     """
     return list(map(_convert_word, raw_words))
 
@@ -206,10 +200,8 @@ def _convert_phrase(raw_phrase) -> Phrase:
     ...     'Translation': 'The woman says hello',
     ...     'Alternative translations': ['The woman says hi']
     ... })
-    Phrase(
-            in_target_language=['La femme dit bonjour', 'la femme dit salut'],
-            in_source_language=['The woman says hello', 'The woman says hi']
-    )
+    Phrase(in_target_language=['La femme dit bonjour', 'la femme dit salut'],
+           in_source_language=['The woman says hello', 'The woman says hi'])
     """
     try:
         return Phrase(
