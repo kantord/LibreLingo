@@ -21,11 +21,11 @@ def _ensure_output_dir(output_file_path):
 
 
 def _prepare_output_path(output_file_path, settings):
-    res = Path(os.devnull)
-    if not _is_dry_run(settings):
-        res = output_file_path
-        _ensure_output_dir(res)
-    return res
+    if settings.dry_run:
+        return Path(os.devnull)
+
+    _ensure_output_dir(output_file_path)
+    return output_file_path
 
 
 def _save_as_json_file(data, output_path, settings):
