@@ -21,7 +21,7 @@ def _ensure_output_dir(output_file_path):
 
 
 def _prepare_output_path(output_file_path, settings):
-    if settings.dry_run:
+    if _is_dry_run(settings):
         return Path(os.devnull)
 
     _ensure_output_dir(output_file_path)
