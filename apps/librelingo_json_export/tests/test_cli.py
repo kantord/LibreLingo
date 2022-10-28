@@ -103,7 +103,6 @@ def test_creates_excpected_files(fs, invoke_with_no_mocks, no_dry_run_arg):
     input_path = Path(__file__).parent / "fixtures" / "fake_course"
     fs.add_real_directory(input_path)
     output_path = fakes.path()
-    assert not output_path.exists()
     expected_files = {
         output_path / _
         for _ in ("courseData.json", "challenges/hello.json", "introduction/hello.md")
