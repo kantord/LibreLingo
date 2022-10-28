@@ -28,8 +28,12 @@ def _prepare_output_path(output_file_path, settings):
     return output_file_path
 
 
-def _save_as_json_file(data, output_path, settings):
-    with open(_prepare_output_path(output_path, settings), "w", encoding="utf-8") as f:
+def _open_output_file(output_file_path, settings):
+    return open(_prepare_output_path(output_file_path, settings), "w", encoding="utf-8")
+
+
+def _save_as_json_file(data, output_file_path, settings):
+    with _open_output_file(output_file_path, settings) as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 
@@ -63,12 +67,8 @@ def _export_skill(export_path: str, skill: Skill, course: Course, settings=None)
     )
 
     if skill.introduction:
-        with open(
-            _prepare_output_path(
-                Path(export_path) / "introduction" / f"{slug}.md", settings
-            ),
-            "w",
-            encoding="utf-8",
+        with _open_output_file(
+            Path(export_path) / "introduction" / f"{slug}.md", settings
         ) as f:
             f.write(skill.introduction)
 
