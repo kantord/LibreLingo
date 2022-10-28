@@ -20,9 +20,16 @@ def _ensure_output_dir(output_file_path):
     output_file_path.parent.mkdir(parents=True, exist_ok=True)
 
 
-def _save_as_json_file(data, output_path):
-    _ensure_output_dir(output_path)
-    with open(output_path, "w", encoding="utf-8") as f:
+def _prepare_output_path(output_file_path, settings):
+    if settings.dry_run:
+        return Path(os.devnull)
+
+    _ensure_output_dir(output_file_path)
+    return output_file_path
+
+
+def _save_as_json_file(data, output_path, settings):
+    with open(_prepare_output_path(output_path, settings), "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 
@@ -51,22 +58,15 @@ def _export_skill(export_path: str, skill: Skill, course: Course, settings=None)
             f'Error while exporting skill "{skill.name}" in file "{skill.filename}": {error}'
         ) from error
     slug = slugify(skill.name)
-    if _is_dry_run(settings):
-        json.dumps(skill_data, ensure_ascii=False, indent=2)
-    else:
-        _save_as_json_file(
-            skill_data, Path(export_path) / "challenges" / f"{slug}.json"
-        )
+    _save_as_json_file(
+        skill_data, Path(export_path) / "challenges" / f"{slug}.json", settings
+    )
 
     if skill.introduction:
-        output_path = (
-            Path(os.devnull)
-            if _is_dry_run(settings)
-            else Path(export_path) / "introduction" / f"{slug}.md"
-        )
-        _ensure_output_dir(output_path)
         with open(
-            output_path,
+            _prepare_output_path(
+                Path(export_path) / "introduction" / f"{slug}.md", settings
+            ),
             "w",
             encoding="utf-8",
         ) as f:
@@ -84,11 +84,9 @@ def _export_course_data(export_path: str, course: Course, settings=None):
         course.target_language.name,
         course.source_language.name,
     )
-    course_data = _get_course_data(course)
-    if _is_dry_run(settings):
-        json.dumps(course_data, ensure_ascii=False, indent=2)
-    else:
-        _save_as_json_file(course_data, Path(export_path) / "courseData.json")
+    _save_as_json_file(
+        _get_course_data(course), Path(export_path) / "courseData.json", settings
+    )
 
 
 def export_course(export_path: str, course: Course, settings=None):
