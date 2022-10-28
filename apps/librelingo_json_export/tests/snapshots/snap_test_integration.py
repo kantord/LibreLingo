@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
 # snapshottest: v1 - https://goo.gl/zC4yUc
 from __future__ import unicode_literals
+from pathlib import Path
 
 from snapshottest import Snapshot  # type: ignore
 
 snapshots = Snapshot()
 
 snapshots["test_loaded_yaml_is_exported_to_correct_json 1"] = {
-    "./output/challenges/hello.json": {
+    str(Path("./output/challenges/hello.json")): {
         "challenges": [
             {
                 "formInTargetLanguage": "La femme dit bonjour",
@@ -214,7 +215,9 @@ le""",
         "id": "379dca1c8ae9",
         "levels": 2,
     },
-    "./output/introduction/hello.md": """# Lorem Ipsum
+    str(
+        Path("./output/introduction/hello.md")
+    ): """# Lorem Ipsum
 
 ## Dolor sit amet
 
