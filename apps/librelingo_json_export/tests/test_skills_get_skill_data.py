@@ -22,10 +22,10 @@ def mock_get_challenges_data(mocker):
 
 
 def test_correct_number_of_levels(mock_calculate_number_of_levels):
-    FAKE_NUMBER = "fake number"
-    mock_calculate_number_of_levels.return_value = FAKE_NUMBER
+    fake_number = "fake number"
+    mock_calculate_number_of_levels.return_value = fake_number
     converted_skill = _get_skill_data(fakes.emptySkill, fakes.course1)
-    assert converted_skill["levels"] == FAKE_NUMBER
+    assert converted_skill["levels"] == fake_number
 
 
 def test_calculates_levels_correctly(mock_calculate_number_of_levels):
@@ -34,10 +34,10 @@ def test_calculates_levels_correctly(mock_calculate_number_of_levels):
 
 
 def test_correct_challenges(mock_get_challenges_data):
-    FAKE_CHALLENGES = "fake challenges"
-    mock_get_challenges_data.return_value = FAKE_CHALLENGES
+    fake_challenges = "fake challenges"
+    mock_get_challenges_data.return_value = fake_challenges
     converted_skill = _get_skill_data(fakes.skills[1], fakes.course1)
-    assert converted_skill["challenges"] == FAKE_CHALLENGES
+    assert converted_skill["challenges"] == fake_challenges
 
 
 def test_formats_challenges_correctly(mock_get_challenges_data):

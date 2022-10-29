@@ -290,8 +290,8 @@ def _load_introduction(path: str) -> Union[str, None]:
     if not os.path.exists(path):
         return None
 
-    with open(path) as f:
-        return _sanitize_markdown(f.read())
+    with open(path) as introduction_file:
+        return _sanitize_markdown(introduction_file.read())
 
 
 def _load_skill(path: Path, course: Course) -> Skill:
