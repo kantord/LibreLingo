@@ -13,16 +13,12 @@ from .skills import _get_skill_data
 logger = logging.getLogger("librelingo_json_export")
 
 
-def _is_dry_run(settings):
-    return settings is not None and settings.dry_run
-
-
 def _ensure_output_dir(output_file_path):
     output_file_path.parent.mkdir(parents=True, exist_ok=True)
 
 
 def _prepare_output_path(output_file_path, settings):
-    if _is_dry_run(settings):
+    if settings.dry_run:
         return Path(os.devnull)
 
     _ensure_output_dir(output_file_path)
