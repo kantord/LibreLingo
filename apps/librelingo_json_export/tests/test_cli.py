@@ -104,8 +104,9 @@ def test_creates_excpected_files(fs, invoke_with_no_mocks, no_dry_run_arg):
     fs.add_real_directory(input_path)
     output_path = fakes.path()
     expected_files = {
-        output_path / _
-        for _ in ("courseData.json", "challenges/hello.json", "introduction/hello.md")
+        output_path / "courseData.json",
+        output_path / "challenges/hello.json",
+        output_path / "introduction/hello.md",
     }
     invoke_with_no_mocks([str(input_path), str(output_path)] + no_dry_run_arg)
     actual_files = {_ for _ in output_path.glob("**/*") if _.is_file()}
