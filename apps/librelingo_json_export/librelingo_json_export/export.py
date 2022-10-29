@@ -22,7 +22,7 @@ def _prepare_output_path(output_file_path):
     return output_file_path
 
 
-def _open_output_file(output_file_path, settings):
+def _open_output_stream(output_file_path, settings):
     return (
         io.StringIO()
         if settings.dry_run
@@ -31,7 +31,7 @@ def _open_output_file(output_file_path, settings):
 
 
 def _save_as_json_file(data, output_file_path, settings):
-    with _open_output_file(output_file_path, settings) as f:
+    with _open_output_stream(output_file_path, settings) as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 
@@ -67,7 +67,7 @@ def _export_skill(
     )
 
     if skill.introduction:
-        with _open_output_file(
+        with _open_output_stream(
             Path(export_path) / "introduction" / f"{slug}.md", settings
         ) as f:
             f.write(skill.introduction)
