@@ -14,9 +14,9 @@ from jinja2 import Environment, FileSystemLoader
 import lili
 
 
-def myconverter(o):
-    if isinstance(o, datetime.datetime):
-        return str(o)
+def convert_date_time_to_string(date_time):
+    if isinstance(date_time, datetime.datetime):
+        return str(date_time)
     return None
 
 
@@ -44,8 +44,8 @@ def generate_history_html(history, outdir):
         title="LibreLingo history",
     )
 
-    with open(os.path.join(outdir, "history.html"), "w") as fh:
-        fh.write(html)
+    with open(os.path.join(outdir, "history.html"), "w") as history_file:
+        history_file.write(html)
 
 
 def generate_index_html(start_time, end_time, links, outdir):
@@ -57,8 +57,8 @@ def generate_index_html(start_time, end_time, links, outdir):
         title="LibreLingo courses",
     )
 
-    with open(os.path.join(outdir, "index.html"), "w") as fh:
-        fh.write(html)
+    with open(os.path.join(outdir, "index.html"), "w") as index_file:
+        index_file.write(html)
 
 
 def download_course(url, tempdir):
@@ -66,13 +66,13 @@ def download_course(url, tempdir):
     res = requests.get(url, stream=True, timeout=5)
     filename = os.path.join(tempdir.name, "course.zip")
     if res.status_code == 200:
-        with open(filename, "wb") as fh:
+        with open(filename, "wb") as course_file:
             # res.raw.decode_content
-            shutil.copyfileobj(res.raw, fh)
+            shutil.copyfileobj(res.raw, course_file)
 
     # unzip
-    zf = zipfile.ZipFile(filename)
-    zf.extractall(path=tempdir.name)
+    zip_file = zipfile.ZipFile(filename)
+    zip_file.extractall(path=tempdir.name)
 
 
 def generate_course(links, courses_data, reldir, outdir, tdir, course_dir):
@@ -85,8 +85,8 @@ def generate_course(links, courses_data, reldir, outdir, tdir, course_dir):
     course = lili.load_course(course_dir)
     target, source, count = lili.collect_data(course)
     lili.export_to_html(course, target, source, count, reldir, docs_dir)
-    with open(os.path.join(docs_dir, "course.json")) as fh:
-        count = json.load(fh)
+    with open(os.path.join(docs_dir, "course.json")) as course_file:
+        count = json.load(course_file)
     # except Exception as err:
     #    logging.error("Failed to generate course in %s. Exception %s", course_dir, err)
     #    return None
@@ -101,23 +101,23 @@ def generate_course(links, courses_data, reldir, outdir, tdir, course_dir):
         "source_phrases": count["source_phrases"],
     }
     links.append(results)
-    with open(os.path.join(outdir, tdir, "course.json")) as fh:
-        courses_data[tdir] = json.load(fh)
+    with open(os.path.join(outdir, tdir, "course.json")) as course_file:
+        courses_data[tdir] = json.load(course_file)
 
 
 def save_history(history_file, start_time, courses_data, outdir):
-    with open(history_file, "a") as fh:
+    with open(history_file, "a") as history_file:
         json.dump(
             {"courses": courses_data, "date": start_time},
-            fh,
+            history_file,
             sort_keys=True,
-            default=myconverter,
+            default=convert_date_time_to_string,
         )
-        fh.write("\n")
+        history_file.write("\n")
     shutil.copy(history_file, os.path.join(outdir, "history.json"))
     history = []
-    with open(history_file) as fh:
-        for line in fh:
+    with open(history_file) as history_file:
+        for line in history_file:
             res = json.loads(line)
             history.append(res)
     generate_history_html(history, outdir)
@@ -134,8 +134,8 @@ def main():
 
     tempdir = tempfile.TemporaryDirectory()
     start_time = datetime.datetime.now()
-    with open(courses_file) as fh:
-        courses = json.load(fh)
+    with open(courses_file) as course_file:
+        courses = json.load(course_file)
 
     logging.info("The temporary directory: %s", tempdir.name)
 
@@ -174,8 +174,8 @@ def main():
         )
 
     end_time = datetime.datetime.now()
-    with open(os.path.join(outdir, "courses.json"), "w") as fh:
-        json.dump(courses_data, fh, sort_keys=True)
+    with open(os.path.join(outdir, "courses.json"), "w") as courses_file:
+        json.dump(courses_data, courses_file, sort_keys=True)
     if args.history:
         save_history(args.history, start_time, courses_data, outdir)
     generate_index_html(start_time, end_time, links, outdir)

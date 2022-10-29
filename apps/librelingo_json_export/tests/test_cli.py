@@ -23,11 +23,13 @@ def mocks(mocker):
 
 @pytest.fixture
 def invoke(mocks, fs):
-    def f(args):
+    # Disable pylint because it doesn't understand fixtures and complaints about fs
+    # pylint: disable=invalid-name
+    def invoker(args):
         runner = CliRunner()
         return runner.invoke(main, args, catch_exceptions=False)
 
-    return f
+    return invoker
 
 
 @pytest.fixture
@@ -37,11 +39,13 @@ def load_course_mock(mocker):
 
 @pytest.fixture
 def invoke_with_load_course_mock(load_course_mock, fs):
-    def f(args):
+    # Disable pylint because it doesn't understand fixtures and complaints about fs
+    # pylint: disable=invalid-name
+    def invoker(args):
         runner = CliRunner()
         return runner.invoke(main, args, catch_exceptions=False)
 
-    return f
+    return invoker
 
 
 def test_yaml_to_json_loads_correct_course(mocks, inputs, invoke):
@@ -61,6 +65,8 @@ def test_yaml_to_json_has_help_text(mocks, inputs, invoke):
 
 
 def test_creates_output_directory_if_it_doesnt_exist(mocks, inputs, invoke, fs):
+    # Disable pylint because it doesn't understand fixtures and complaints about fs
+    # pylint: disable=invalid-name
     output_path = "foo/500/bar"
     invoke([inputs[0], output_path])
     assert os.path.isdir(output_path)
