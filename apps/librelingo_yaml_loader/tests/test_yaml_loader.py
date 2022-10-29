@@ -333,6 +333,8 @@ class TestLoadCourseMeta(YamlImportTestCase):
 
 
 def test_load_course_output_matches_value(fs):
+    # Disable pylint because it doesn't understand fixtures and complaints about fs
+    # pylint: disable=invalid-name
     fixture_path = os.path.join(os.path.dirname(__file__), "fixtures", "fake_course")
     fs.add_real_directory(fixture_path)
     result = load_course(fixture_path)
@@ -622,8 +624,8 @@ Mini-dictionary:
             },
         )
 
-        with open(self.fake_path / "food.md", "w") as fake_file:
-            fake_file.write(self.get_fake_skill_markdown())
+        with open(self.fake_path / "food.md", "w") as skill_introduction_file:
+            skill_introduction_file.write(self.get_fake_skill_markdown())
 
         french = Language(self.fake_values["word3"], "")
         english = Language("English", "")

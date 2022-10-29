@@ -69,8 +69,8 @@ def _export_skill(export_path: str, skill: Skill, course: Course, settings=None)
             output_path,
             "w",
             encoding="utf-8",
-        ) as skill_file:
-            skill_file.write(skill.introduction)
+        ) as skill_introduction_file:
+            skill_introduction_file.write(skill.introduction)
 
 
 def _export_course_data(export_path: str, course: Course, settings=None):

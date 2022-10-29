@@ -170,8 +170,10 @@ def export_skill_html_pages(course, html_dir):
             if not os.path.exists(dir_path):
                 os.makedirs(dir_path)
             # filename = skillurl_filter(skill.filename)
-            with open(os.path.join(dir_path, file_name + ".html"), "w") as html_file:
-                html_file.write(html)
+            with open(
+                os.path.join(dir_path, file_name + ".html"), "w"
+            ) as html_page_file:
+                html_page_file.write(html)
 
 
 def collect_phrases(course):
@@ -212,8 +214,8 @@ def collect_words(language, direction):
 
 
 def export_json(all_words, filename, html_dir):
-    with open(os.path.join(html_dir, filename), "w") as html_file:
-        json.dump(all_words, html_file)
+    with open(os.path.join(html_dir, filename), "w") as json_file:
+        json.dump(all_words, json_file)
 
 
 def export_words_html_page(course, all_words, language, path, reldir, html_file):

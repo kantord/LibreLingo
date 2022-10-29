@@ -8,11 +8,13 @@ from librelingo_yaml_loader import load_course
 
 
 def read_json_file(path):
-    with open(path) as file_path:
-        return json.load(file_path)
+    with open(path) as json_file:
+        return json.load(json_file)
 
 
 def test_loaded_yaml_is_exported_to_correct_json(fs, snapshot):
+    # Disable pylint because it doesn't understand fixtures and complaints about fs
+    # pylint: disable=invalid-name
     fixture_path = os.path.join(os.path.dirname(__file__), "fixtures", "fake_course")
     fs.add_real_directory(fixture_path)
     fs.create_dir("output")

@@ -14,7 +14,7 @@ from jinja2 import Environment, FileSystemLoader
 import lili
 
 
-def myconverter(date_time):
+def convert_date_time_to_string(date_time):
     if isinstance(date_time, datetime.datetime):
         return str(date_time)
     return None
@@ -111,7 +111,7 @@ def save_history(history_file, start_time, courses_data, outdir):
             {"courses": courses_data, "date": start_time},
             history_file,
             sort_keys=True,
-            default=myconverter,
+            default=convert_date_time_to_string,
         )
         history_file.write("\n")
     shutil.copy(history_file, os.path.join(outdir, "history.json"))
@@ -174,8 +174,8 @@ def main():
         )
 
     end_time = datetime.datetime.now()
-    with open(os.path.join(outdir, "courses.json"), "w") as course_file:
-        json.dump(courses_data, course_file, sort_keys=True)
+    with open(os.path.join(outdir, "courses.json"), "w") as courses_file:
+        json.dump(courses_data, courses_file, sort_keys=True)
     if args.history:
         save_history(args.history, start_time, courses_data, outdir)
     generate_index_html(start_time, end_time, links, outdir)

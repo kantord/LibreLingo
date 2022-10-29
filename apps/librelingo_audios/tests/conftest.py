@@ -107,8 +107,8 @@ def write_mock_audio_file_for_text(tmp_path):
 @pytest.fixture
 def index_file(tmp_path):
     def assert_entries_match(expected_entries):
-        with open(tmp_path / "test.json", "r") as entries_file:
-            entries = json.loads(entries_file.read())
+        with open(tmp_path / "test.json", "r") as index_file:
+            entries = json.loads(index_file.read())
             assert entries == expected_entries
 
     def assert_exists():
@@ -118,8 +118,8 @@ def index_file(tmp_path):
         assert not list(tmp_path.iterdir())
 
     def set_entries(entries):
-        with open(tmp_path / "test.json", "w", encoding="utf-8") as entries_file:
-            json.dump(entries, entries_file, ensure_ascii=False, indent=4)
+        with open(tmp_path / "test.json", "w", encoding="utf-8") as index_file:
+            json.dump(entries, index_file, ensure_ascii=False, indent=4)
 
     return SimpleNamespace(
         **{

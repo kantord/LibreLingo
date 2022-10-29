@@ -5,6 +5,9 @@ from functools import lru_cache
 import regex  # type: ignore
 from librelingo_types.data_types import Course, Language, Phrase, Word
 
+NON_WORD_CHARACTERS_BEGINNING_REGEX = regex.compile("^[^\\w']+")
+NON_WORD_CHARACTERS_END_REGEX = regex.compile("[^\\w']+$")
+
 
 def calculate_number_of_levels(nwords: int, nphrases: int) -> int:
     """
@@ -44,10 +47,8 @@ def clean_word(word: Word):
     """
     Remove punctuation and other special characters from a word.
     """
-    match_non_word_characters_beginning = regex.compile("^[^\\w']+")
-    match_non_word_characters_end = regex.compile("[^\\w']+$")
-    return match_non_word_characters_beginning.sub(
-        "", match_non_word_characters_end.sub("", word)
+    return NON_WORD_CHARACTERS_BEGINNING_REGEX.sub(
+        "", NON_WORD_CHARACTERS_END_REGEX.sub("", word)
     )
 
 
