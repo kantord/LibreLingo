@@ -1,6 +1,7 @@
 import pytest
 from librelingo_json_export.export import _is_dry_run
-from librelingo_json_export.cli import Settings, DEFAULT_SETTINGS
+from librelingo_json_export.settings import Settings
+from librelingo_json_export.settings import DEFAULT_SETTINGS
 
 
 def test_returns_true_when_dry_run():

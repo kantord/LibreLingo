@@ -6,6 +6,7 @@ from pathlib import Path
 from librelingo_types.data_types import Course, Skill
 from slugify import slugify
 
+from librelingo_json_export.settings import DEFAULT_SETTINGS
 from .course import _get_course_data
 from .skills import _get_skill_data
 
@@ -37,7 +38,7 @@ def _save_as_json_file(data, output_file_path, settings):
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 
-def _export_course_skills(export_path: str, course: Course, settings=None):
+def _export_course_skills(export_path: str, course: Course, settings=DEFAULT_SETTINGS):
     """
     Writes every skill in a course into separate JSON files.
     You probably don't need to call this function directly, because you
@@ -48,7 +49,9 @@ def _export_course_skills(export_path: str, course: Course, settings=None):
             _export_skill(export_path, skill, course, settings)
 
 
-def _export_skill(export_path: str, skill: Skill, course: Course, settings=None):
+def _export_skill(
+    export_path: str, skill: Skill, course: Course, settings=DEFAULT_SETTINGS
+):
     """
     Writes the given skill to a JSON file in the specified path.
     You probably don't need to call this function directly, because you
@@ -73,7 +76,7 @@ def _export_skill(export_path: str, skill: Skill, course: Course, settings=None)
             f.write(skill.introduction)
 
 
-def _export_course_data(export_path: str, course: Course, settings=None):
+def _export_course_data(export_path: str, course: Course, settings=DEFAULT_SETTINGS):
     """
     Writes the metadata of a course to a JSON file in the specified path.
     You probably don't need to call this function directly, because you
