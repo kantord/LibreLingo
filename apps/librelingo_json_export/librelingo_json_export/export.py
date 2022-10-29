@@ -92,7 +92,7 @@ def _export_course_data(export_path: str, course: Course, settings=DEFAULT_SETTI
     )
 
 
-def export_course(export_path: str, course: Course, settings=None):
+def export_course(export_path: str, course: Course, settings=DEFAULT_SETTINGS):
     """
     Writes the course to JSON files in the specified path.
 
