@@ -1,6 +1,6 @@
 import json
 import logging
-import os
+import io
 from pathlib import Path
 
 from librelingo_types.data_types import Course, Skill
@@ -17,16 +17,17 @@ def _ensure_output_dir(output_file_path):
     output_file_path.parent.mkdir(parents=True, exist_ok=True)
 
 
-def _prepare_output_path(output_file_path, settings):
-    if settings.dry_run:
-        return Path(os.devnull)
-
+def _prepare_output_path(output_file_path):
     _ensure_output_dir(output_file_path)
     return output_file_path
 
 
 def _open_output_file(output_file_path, settings):
-    return open(_prepare_output_path(output_file_path, settings), "w", encoding="utf-8")
+    return (
+        io.StringIO()
+        if settings.dry_run
+        else open(_prepare_output_path(output_file_path), "w", encoding="utf-8")
+    )
 
 
 def _save_as_json_file(data, output_file_path, settings):
