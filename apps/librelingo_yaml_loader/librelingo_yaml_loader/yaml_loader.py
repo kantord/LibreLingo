@@ -1,3 +1,4 @@
+import logging
 import collections
 import os
 import re
@@ -26,6 +27,8 @@ from yaml.constructor import SafeConstructor
 
 from ._spelling import _convert_hunspell_settings, _run_skill_spellcheck
 
+logger = logging.getLogger("librelingo_yaml_loader")
+
 
 def add_bool(self, node):
     return self.construct_scalar(node)
@@ -42,7 +45,7 @@ def _load_yaml(path: Path):
 
             return load(yaml_file, Loader=CSafeLoader)
         except ImportError:
-            print(
+            logger.warning(
                 """Warning! PyYAML LibYAML C bindings are not installed.
              Course loading still works, but it will be slower.
              For more details, check https://github.com/yaml/pyyaml#Installation"""
