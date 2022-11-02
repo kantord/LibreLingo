@@ -50,7 +50,7 @@ def _define_word(course: Course, word: Word, is_in_target_language):
         else course.source_language.name
     )
     raise ValueError(
-        f'The {language_name} word "{word}" does not have a definition. '
+        f'The {language_name} word "{clean_word(word)}" does not have a definition. '
         "Please add it to the mini-dictionary."
     )
 

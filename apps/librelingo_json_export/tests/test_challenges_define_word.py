@@ -7,13 +7,26 @@ from librelingo_types import DictionaryItem
 
 
 def test_definition_not_found():
-    word = str(fakes.fake_value())
+    word = "megszentségteleníthetetlenségeskedéseitekért"
     pattern = re.escape(
         f'The another language word "{word}" does not have a definition. '
         "Please add it to the mini-dictionary."
     )
     with pytest.raises(ValueError, match=pattern):
         assert _define_word(fakes.course1, word, is_in_target_language=False) is True
+
+
+def test_missing_definition_error_shows_cleaned_word():
+    word = "l'amor"
+    dirty_word = f":{word}!!"
+    pattern = re.escape(
+        f'The another language word "{word}" does not have a definition. '
+        "Please add it to the mini-dictionary."
+    )
+    with pytest.raises(ValueError, match=pattern):
+        assert (
+            _define_word(fakes.course1, dirty_word, is_in_target_language=False) is True
+        )
 
 
 def test_includes_definition():
