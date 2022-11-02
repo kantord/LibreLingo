@@ -1,6 +1,7 @@
 import pytest
 from librelingo_fakes import fakes
 from librelingo_json_export.export import _export_course_skills
+from librelingo_json_export.settings import DEFAULT_SETTINGS
 from librelingo_types import Module
 
 
@@ -37,9 +38,9 @@ def test_exports_all_skills(mocker, fs, export_path, mock_export_skill):
     _export_course_skills(export_path, fake_course)
     mock_export_skill.assert_has_calls(
         [
-            mocker.call(export_path, fake_skill_1, fake_course, None),
-            mocker.call(export_path, fake_skill_2, fake_course, None),
-            mocker.call(export_path, fake_skill_3, fake_course, None),
+            mocker.call(export_path, fake_skill_1, fake_course, DEFAULT_SETTINGS),
+            mocker.call(export_path, fake_skill_2, fake_course, DEFAULT_SETTINGS),
+            mocker.call(export_path, fake_skill_3, fake_course, DEFAULT_SETTINGS),
         ],
         any_order=True,
     )

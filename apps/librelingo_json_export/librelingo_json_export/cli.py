@@ -1,4 +1,3 @@
-import collections
 from pathlib import Path
 
 import click  # type: ignore
@@ -6,16 +5,7 @@ from librelingo_yaml_loader import load_course
 
 from librelingo_json_export.export import export_course
 
-Settings = collections.namedtuple(
-    "Settings",
-    [
-        "dry_run",
-    ],
-)
-
-DEFAULT_SETTINGS = Settings(
-    dry_run=False,
-)
+from librelingo_json_export.settings import Settings, DEFAULT_SETTINGS
 
 
 def ensure_output_directory(output_path: str, settings: Settings):
