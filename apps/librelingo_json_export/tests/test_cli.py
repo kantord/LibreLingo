@@ -1,5 +1,6 @@
 import os
 
+from pathlib import Path
 import pytest
 from click.testing import CliRunner  # type: ignore
 from librelingo_fakes import fakes
@@ -37,6 +38,15 @@ def load_course_mock(mocker):
 
 @pytest.fixture
 def invoke_with_load_course_mock(load_course_mock, fs):
+    def f(args):
+        runner = CliRunner()
+        return runner.invoke(main, args, catch_exceptions=False)
+
+    return f
+
+
+@pytest.fixture
+def invoke_with_no_mocks(fs):
     def f(args):
         runner = CliRunner()
         return runner.invoke(main, args, catch_exceptions=False)
@@ -86,3 +96,18 @@ def test_dry_run_doesnt_create_output_files(
 def test_dry_run_calls_real_export_course(mocks, inputs, invoke):
     invoke([*inputs, "--dry-run"])
     assert mocks["export_course"].call_count == 1
+
+
+@pytest.mark.parametrize("no_dry_run_arg", [["--no-dry-run"], []])
+def test_creates_excpected_files(fs, invoke_with_no_mocks, no_dry_run_arg):
+    input_path = Path(__file__).parent / "fixtures" / "fake_course"
+    fs.add_real_directory(input_path)
+    output_path = fakes.path()
+    expected_files = {
+        output_path / "courseData.json",
+        output_path / "challenges/hello.json",
+        output_path / "introduction/hello.md",
+    }
+    invoke_with_no_mocks([str(input_path), str(output_path)] + no_dry_run_arg)
+    actual_files = {_ for _ in output_path.glob("**/*") if _.is_file()}
+    assert expected_files == actual_files

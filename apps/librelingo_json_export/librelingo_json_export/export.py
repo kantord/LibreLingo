@@ -1,32 +1,41 @@
 import json
 import logging
-import os
+import io
 from pathlib import Path
 
 from librelingo_types.data_types import Course, Skill
 from slugify import slugify
 
+from librelingo_json_export.settings import DEFAULT_SETTINGS
 from .course import _get_course_data
 from .skills import _get_skill_data
 
 logger = logging.getLogger("librelingo_json_export")
 
 
-def _is_dry_run(settings):
-    return settings is not None and settings.dry_run
-
-
 def _ensure_output_dir(output_file_path):
     output_file_path.parent.mkdir(parents=True, exist_ok=True)
 
 
-def _save_as_json_file(data, output_path):
-    _ensure_output_dir(output_path)
-    with open(output_path, "w", encoding="utf-8") as f:
+def _prepare_output_path(output_file_path):
+    _ensure_output_dir(output_file_path)
+    return output_file_path
+
+
+def _open_output_stream(output_file_path, settings):
+    return (
+        io.StringIO()
+        if settings.dry_run
+        else open(_prepare_output_path(output_file_path), "w", encoding="utf-8")
+    )
+
+
+def _save_as_json_file(data, output_file_path, settings):
+    with _open_output_stream(output_file_path, settings) as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 
-def _export_course_skills(export_path: str, course: Course, settings=None):
+def _export_course_skills(export_path: str, course: Course, settings=DEFAULT_SETTINGS):
     """
     Writes every skill in a course into separate JSON files.
     You probably don't need to call this function directly, because you
@@ -37,7 +46,9 @@ def _export_course_skills(export_path: str, course: Course, settings=None):
             _export_skill(export_path, skill, course, settings)
 
 
-def _export_skill(export_path: str, skill: Skill, course: Course, settings=None):
+def _export_skill(
+    export_path: str, skill: Skill, course: Course, settings=DEFAULT_SETTINGS
+):
     """
     Writes the given skill to a JSON file in the specified path.
     You probably don't need to call this function directly, because you
@@ -51,29 +62,18 @@ def _export_skill(export_path: str, skill: Skill, course: Course, settings=None)
             f'Error while exporting skill "{skill.name}" in file "{skill.filename}": {error}'
         ) from error
     slug = slugify(skill.name)
-    if _is_dry_run(settings):
-        json.dumps(skill_data, ensure_ascii=False, indent=2)
-    else:
-        _save_as_json_file(
-            skill_data, Path(export_path) / "challenges" / f"{slug}.json"
-        )
+    _save_as_json_file(
+        skill_data, Path(export_path) / "challenges" / f"{slug}.json", settings
+    )
 
     if skill.introduction:
-        output_path = (
-            Path(os.devnull)
-            if _is_dry_run(settings)
-            else Path(export_path) / "introduction" / f"{slug}.md"
-        )
-        _ensure_output_dir(output_path)
-        with open(
-            output_path,
-            "w",
-            encoding="utf-8",
+        with _open_output_stream(
+            Path(export_path) / "introduction" / f"{slug}.md", settings
         ) as f:
             f.write(skill.introduction)
 
 
-def _export_course_data(export_path: str, course: Course, settings=None):
+def _export_course_data(export_path: str, course: Course, settings=DEFAULT_SETTINGS):
     """
     Writes the metadata of a course to a JSON file in the specified path.
     You probably don't need to call this function directly, because you
@@ -84,14 +84,12 @@ def _export_course_data(export_path: str, course: Course, settings=None):
         course.target_language.name,
         course.source_language.name,
     )
-    course_data = _get_course_data(course)
-    if _is_dry_run(settings):
-        json.dumps(course_data, ensure_ascii=False, indent=2)
-    else:
-        _save_as_json_file(course_data, Path(export_path) / "courseData.json")
+    _save_as_json_file(
+        _get_course_data(course), Path(export_path) / "courseData.json", settings
+    )
 
 
-def export_course(export_path: str, course: Course, settings=None):
+def export_course(export_path: str, course: Course, settings=DEFAULT_SETTINGS):
     """
     Writes the course to JSON files in the specified path.
 
