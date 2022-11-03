@@ -51,7 +51,7 @@ class YamlImportTestCase(FakeFsTestCase):
 
 class TestLoadCourseMeta(YamlImportTestCase):
     def create_fake_course_meta(self, path, **kwargs):
-        with open(Path(path) / "course.yaml", "w") as f:
+        with open(Path(path) / "course.yaml", "w", encoding="utf-8") as f:
             f.write(self.get_fake_course_yaml(**kwargs))
 
     def get_fake_course_yaml(self, **kwargs):
@@ -188,7 +188,7 @@ class TestLoadCourseMeta(YamlImportTestCase):
         self.assertEqual(tts_settings_list, [])
 
     def _append_settings_to_file(self, new_settings):
-        with open(Path(self.fake_path) / "course.yaml", "a") as f:
+        with open(Path(self.fake_path) / "course.yaml", "a", encoding="utf-8") as f:
             f.write(new_settings)
 
     def test_returns_correct_settings_audio_disabled(self):
@@ -505,7 +505,7 @@ class TestLoadModuleMeta(YamlImportTestCase):
     """
 
     def create_fake_module_meta(self, path, **kwargs):
-        with open(Path(path) / "module.yaml", "w") as f:
+        with open(Path(path) / "module.yaml", "w", encoding="utf-8") as f:
             f.write(self.get_fake_module_yaml(**kwargs))
 
     def get_fake_values(self):
@@ -579,7 +579,7 @@ Mini-dictionary:
         return "<script />" + self.fake_values["introduction"]
 
     def create_fake_skill_meta(self, path, **kwargs):
-        with open(Path(path) / "food.yaml", "w") as f:
+        with open(Path(path) / "food.yaml", "w", encoding="utf-8") as f:
             f.write(self.get_fake_skill_yaml(**kwargs))
 
     def get_fake_values(self):
@@ -622,7 +622,7 @@ Mini-dictionary:
             },
         )
 
-        with open(self.fake_path / "food.md", "w") as f:
+        with open(self.fake_path / "food.md", "w", encoding="utf-8") as f:
             f.write(self.get_fake_skill_markdown())
 
         french = Language(self.fake_values["word3"], "")
