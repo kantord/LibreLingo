@@ -50,7 +50,7 @@ SafeConstructor.add_constructor("tag:yaml.org,2002:bool", add_bool)
 
 def _load_yaml(path: Path):
     """Helper function for reading a YAML file"""
-    with open(path) as yaml_file:
+    with open(path, encoding="utf-8") as yaml_file:
         return load(yaml_file, Loader=SafeLoader)
 
 
@@ -300,7 +300,7 @@ def _load_introduction(path: str) -> Union[str, None]:
     if not os.path.exists(path):
         return None
 
-    with open(path) as f:
+    with open(path, encoding="utf-8") as f:
         return _sanitize_markdown(f.read())
 
 
