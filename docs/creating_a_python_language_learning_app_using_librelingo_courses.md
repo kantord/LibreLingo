@@ -6,8 +6,8 @@ language-learning apps in Python.
 We'll build a simple function that lists the audio files required by
 a LibreLingo course. (Whether they exist or not yet)
 
-LibreLingo comes with some tools that make it easier to build such
-programs and also to test them. I structured the tutorial as a small
+LibreLingo comes with some tools that make building and testing such
+programs easier. I structured the tutorial as a small
 Test-Driven-Development session so that you'll see how to use these tools.
 
 By the end of the tutorial, you should have a good basis to build
@@ -22,7 +22,7 @@ as well as the [poetry dependency management tool](https://python-poetry.org/).
 
 ## Setting up your project
 
-To set up our project, we're going to first create an empty folder.
+To set up our project, we're first going to create an empty folder.
 
 If you are creating your app inside the LibreLingo monorepo,
 that's how you'd do it:
@@ -227,7 +227,7 @@ would have some disadvantages:
 - A real course can take up a lot of memory
 - Loading real courses could slow our tests down
 
-Thankfully, LibreLingo comes with a library that has fake data to simplify
+Thankfully, LibreLingo comes with a library with fake data to simplify
 writing tests! Let's install it:
 
 ```bash
@@ -342,7 +342,7 @@ In [43]: count
 Out[43]: 0
 ```
 
-Let's change the test for the empty course to instead use course2:
+Let's change the test for the empty course to use course2 instead:
 
 ```python
 def test_a_course_with_0_phrases_needs_zero_audios():
@@ -396,8 +396,8 @@ Our tests are now passing!
 One problem is that although now every phrase is there,
 the output format is still useless.
 
-We need to include the text of each phrase in the target language
-of the course. Let's make sure it's always the second item in the output:
+We need to include the text of each phrase in the course's target language.
+Let's make sure it's always the second item in the output:
 
 ```python
 def test_result_includes_the_phrase_in_the_target_language():
@@ -623,7 +623,7 @@ def test_calls_audio_id_to_get_the_id(mocker):
 ```
 
 This will mock the `audio_id` function and see how many times it has been called.
-We assert that it has to run twice, since there are 2 phrases that need audio files.
+We assert that it has to run twice since there are 2 phrases that need audio files.
 
 
 ```console
@@ -785,7 +785,7 @@ tests/test_list_missing_audios.py ......                                        
 ===================================== 6 passed in 0.02s ======================================
 ```
 
-Notice, though, we are actually passing the source language instead of
+Notice, though, that we are actually passing the source language instead of
 the target language! Also, we're calling it with an empty string instead of
 the actual string:
 
@@ -860,8 +860,8 @@ def list_missing_audios(course):
 This looks good, but we're still not returning the ID!
 You guessed it, that's a new test case for us!
 
-We will make our mock function return a fake value, and we'll
-assert that value shows up in the result.
+We will make our mock function return a fake value and assert
+that the value shows up in the result.
 
 ```python
 def test_returns_correct_audio_id(mocker):
