@@ -1,6 +1,6 @@
 # Create your own language learning app using Python and LibreLingo (TDD)
 
-In this tutorial you'll learn how to use LibreLingo course data to create
+In this tutorial, you'll learn how to use LibreLingo course data to create
 language-learning apps in Python.
 
 We'll build a simple function that lists the audio files required by
@@ -10,8 +10,8 @@ LibreLingo comes with some tools that make it easier to build such
 programs and also to test them. I structured the tutorial as a small
 Test-Driven-Development session so that you'll see how to use these tools.
 
-By the end of the tutorial you should have a good basis to build
-your own apps, APIs or software using LibreLingo, or to contribute
+By the end of the tutorial, you should have a good basis to build
+your own apps, APIs, or software using LibreLingo, or to contribute
 to LibreLingo or existing LibreLingo-based software.
 
 ## Requirements
@@ -118,7 +118,7 @@ ERROR apps/librelingo_audios/tests/test_list_missing_audios.py
 
 Makes sense, because we haven't created our implementation yet!
 
-Lets create `librelingo_audios/list_missing_audios.py` with the following content:
+Let's create `librelingo_audios/list_missing_audios.py` with the following content:
 
 ```python
 def list_missing_audios():
@@ -342,7 +342,7 @@ In [43]: count
 Out[43]: 0
 ```
 
-Lets change the test for the empty course to instead use course2:
+Let's change the test for the empty course to instead use course2:
 
 ```python
 def test_a_course_with_0_phrases_needs_zero_audios():
