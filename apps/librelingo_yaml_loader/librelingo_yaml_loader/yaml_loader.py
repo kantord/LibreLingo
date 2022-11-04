@@ -1,3 +1,4 @@
+import logging
 import collections
 import os
 import re
@@ -22,13 +23,22 @@ from librelingo_types import (
 )
 from yaml import load
 
-try:
-    from yaml import CSafeLoader as SafeLoader
-except ImportError:
-    from yaml import SafeLoader  # type: ignore
 from yaml.constructor import SafeConstructor
 
 from ._spelling import _convert_hunspell_settings, _run_skill_spellcheck
+
+logger = logging.getLogger("librelingo_yaml_loader")
+try:
+    from yaml import CSafeLoader as SafeLoader
+except ImportError:
+    logger.warning(
+        """
+    Warning! PyYAML LibYAML C bindings are not installed.
+    Course loading still works, but it will be slower.
+    For more details, check https://github.com/yaml/pyyaml#Installation
+    """
+    )
+    from yaml import SafeLoader  # type: ignore
 
 
 def add_bool(self, node):
@@ -290,7 +300,7 @@ def _load_introduction(path: str) -> Union[str, None]:
     if not os.path.exists(path):
         return None
 
-    with open(path) as f:
+    with open(path, encoding="utf-8") as f:
         return _sanitize_markdown(f.read())
 
 
