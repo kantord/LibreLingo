@@ -1,6 +1,6 @@
 # LibreLingo Documentation on Challenge
 
-Users who study using LibreLingo respond to a series of tasks or questions called **Challenge**s.
+As they study using LibreLingo, users respond to a series of tasks or questions called **Challenge**s.
 
 Challenges are not configured directly but [automatically generated from Skill configuration](skill.md#how-skills-are-taught-to-the-user).
 
