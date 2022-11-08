@@ -1,6 +1,6 @@
 # LibreLingo Documentation on Course
 
-A **Course** is the highest element on the course structure. It contains modules, which in turn contains skills. There are usually one course for each language.
+A **Course** is the highest element in the course structure. It contains modules, which in turn contain skills. There is usually one course for each language.
 
 To get a better understanding, you can explore the [`courses` directory](https://github.com/LibreLingo/LibreLingo/tree/main/courses) on this repository and read the [course basics](README.md#basics).
 
@@ -47,7 +47,7 @@ courses/spanish-from-english/
         └── preferences.yaml
 ```
 
-Here, `activities`, `basics` and `introduction` are [modules](module.md). The `continuous.yaml`, `animals.yaml` etc. are [skills](skill.md). Directly inside the course directory there is also a file called `course.yaml`. This file contains information about the course ([see below](#yaml)).
+Here, `activities`, `basics`, and `introduction` are [modules](module.md). The `continuous.yaml`, `animals.yaml` etc., are [skills](skill.md). There is also a file called `course.yaml` directly inside the course directory. This file contains information about the course ([see below](#yaml)).
 
 A course directory name should not have spaces and should be written in `slug-form` in plain English.
 
@@ -105,9 +105,9 @@ Modules:
   - `For speakers of > Name`: The name of the language your target audience already speaks.
   - `For speakers of > IETF BCP 47`: The IETF BCP 47 code of the above language. List available [here](http://www.iana.org/assignments/language-subtag-registry).
 - `License`
-  - `License > Name`: Full license name under which your course is made available. In most cases it's ok to keep it as is.
-  - `License > Short name`: Short name for the license. e.g. `CC BY-SA 4.0`
-  - `License > Link`: URL to reach to the full text of the license. e.g. `https://creativecommons.org/licenses/by-sa/4.0/legalcode`
+  - `License > Name`: Full license name under which your course is made available. In most cases, it's ok to keep it as is.
+  - `License > Short name`: Short name for the license, e.g., `CC BY-SA 4.0`
+  - `License > Link`: URL to reach the full text of the license, e.g., `https://creativecommons.org/licenses/by-sa/4.0/legalcode`
 - `Special characters`: An array of special characters that might not be present on a typical English keyboard.
 
 **`Modules`** has a list of module directory names followed by a `/`.
@@ -115,10 +115,10 @@ Modules:
 <a id="spell-checker"></a>
 #### Automated spell checker
 
-To avoid mistakes, you can enable automatic spell checking in your course. Automatic spell checking won't let you export
+To avoid mistakes, you can enable automatic spell-checking in your course. Automatic spell-checking won't let you export
 a course if it has spelling mistakes. This can prevent incorrect changes from being merged into your course.
 
-The spell checker is implemneted using Hunspell. In order to use it, you need to have Hunspell installed on your
+The spell checker is implemeneted using Hunspell. In order to use it, you need to have Hunspell installed on your
 computer.
 
 To install Hunspell, follow the instructions of your operating system. On Ubuntu, you can install Hunspell like so:
@@ -136,8 +136,8 @@ In order to enable Hunspell in your course, add the following section to your `c
 ```yaml
 Settings:
   Hunspell:
-    German: de  # replace with the langauge code for your language
-    English: en-US  # replace with the langauge code for your language
+    German: de  # replace with the language code for your language
+    English: en-US  # replace with the language code for your language
 ```
 
 Keep in mind that you also need to have the `hunspell` Python package installed. To install it, just run:
