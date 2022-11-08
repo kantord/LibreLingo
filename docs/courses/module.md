@@ -2,7 +2,7 @@
 
 A **Module** resides below the courses within the course structure. It contains [skills](skill.md).
 
-They have less complexity as they're here just to group skills and nothing else. On the frontend they appear as headings to group skills.
+They have less complexity as they're here to group skills and nothing else. On the frontend, they appear as headings to group skills.
 
 To get a better understanding, you can read the [course basics](README.md#basics).
 
@@ -37,9 +37,9 @@ courses/spanish-from-english/basics/
     └── verbs.yaml
 ```
 
-Here, `animals.yaml`, `clothes.yaml` and `food.yaml` etc. are [skills](skill.md). Directly inside the module directory there is also a file called `module.yaml`. This file contains information about the module (see below).
+Here, `animals.yaml`, `clothes.yaml` and `food.yaml` etc. are [skills](skill.md). Directly inside the module directory, there is also a file called `module.yaml`. This file contains information about the module (see below).
 
-NOTE: A module directory name should not have spaces, should be written in slug-form and ideally in plain English characters. If your source language is not English, you can try roughly to follow the pronunciation and write it using English characters. The human friendly `Name` in the yaml however, can contain uppercase, spaces and the actual name in source language. The yaml skill files under it should be always inside a directory named `skills`.
+NOTE: A module directory name should not have spaces, be written in slug-form, and ideally in plain English characters. If your source language is not English, you can try roughly to follow the pronunciation and write it using English characters. The human-friendly `Name` in the yaml, however, can contain uppercase, spaces, and the actual name in the source language. The yaml skill files under it should always be inside a directory named `skills`.
 
 NOTE: When a new module is created, it should be listed on the [`course.yaml`](course.md#yaml) under [`Modules` key](course.md#data-breakdown).
 
@@ -65,15 +65,15 @@ Skills:
 
 ### Data breakdown
 
-**`Name`** is the human friendly name of the module. The name should be in the target audience's language or the language you set under `For speakers of` key on your `course.yaml`. For example, if the course is `spanish-from-english`, it should be in English.
+**`Name`** is the human-friendly name of the module. The name should be in the target audience's language or the language you set under `For speakers of` key on your `course.yaml`. For example, if the course is `spanish-from-english`, it should be in English.
 **`Skills`** has a list of yaml files for the skills under the module. NOTE: The order in which the skills appear in this YAML file is the order they will appear in the web app as well.
 
 <a id="creating-new"></a>
-## Creating new module
+## Creating a new module
 
 To create a new module,
 
-- just create a directory under the course with the module name (keep it lowercase and no spaces)
+- Create a directory under the course with the module name (keep it lowercase and no spaces)
 - Create a `module.yaml` file and put yaml code for the module.
 
 
@@ -87,4 +87,4 @@ Skills:
   - hello.yaml
 ```
 
-Now [create skills](skill.md#creating-new) as you want and list under `Skills` key.
+Now [create skills](skill.md#creating-new) as you want and list them under the `Skills` key.
