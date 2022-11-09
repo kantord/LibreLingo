@@ -597,7 +597,7 @@
 
 
 <h1 id="librelingo-documentation-on-course">LibreLingo Documentation on Course</h1>
-<p>A <strong>Course</strong> is the highest element on the course structure. It contains modules, which in turn contains skills. There are usually one course for each language.</p>
+<p>A <strong>Course</strong> is the highest element in the course structure. It contains modules, which in turn contain skills. There is usually one course for each language.</p>
 <p>To get a better understanding, you can explore the <a href="https://github.com/LibreLingo/LibreLingo/tree/main/courses"><code>courses</code> directory</a> on this repository and read the <a href="index.html#basics">course basics</a>.</p>
 <hr />
 <p><strong>Confused?</strong>
@@ -634,7 +634,7 @@
         ├── phrases.yaml
         └── preferences.yaml
 </code></pre>
-<p>Here, <code>activities</code>, <code>basics</code> and <code>introduction</code> are <a href="module.html">modules</a>. The <code>continuous.yaml</code>, <code>animals.yaml</code> etc. are <a href="skill.html">skills</a>. Directly inside the course directory there is also a file called <code>course.yaml</code>. This file contains information about the course (<a href="#yaml">see below</a>).</p>
+<p>Here, <code>activities</code>, <code>basics</code>, and <code>introduction</code> are <a href="module.html">modules</a>. The <code>continuous.yaml</code>, <code>animals.yaml</code> etc., are <a href="skill.html">skills</a>. There is also a file called <code>course.yaml</code> directly inside the course directory. This file contains information about the course (<a href="#yaml">see below</a>).</p>
 <p>A course directory name should not have spaces and should be written in <code>slug-form</code> in plain English.</p>
 <p><a id="yaml"></a></p>
 <h2 id="courseyaml"><code>course.yaml</code></h2>
@@ -685,16 +685,16 @@ Modules:
   - <code>For speakers of &gt; Name</code>: The name of the language your target audience already speaks.
   - <code>For speakers of &gt; IETF BCP 47</code>: The IETF BCP 47 code of the above language. List available <a href="http://www.iana.org/assignments/language-subtag-registry">here</a>.
 - <code>License</code>
-  - <code>License &gt; Name</code>: Full license name under which your course is made available. In most cases it's ok to keep it as is.
-  - <code>License &gt; Short name</code>: Short name for the license. e.g. <code>CC BY-SA 4.0</code>
-  - <code>License &gt; Link</code>: URL to reach to the full text of the license. e.g. <code>https://creativecommons.org/licenses/by-sa/4.0/legalcode</code>
+  - <code>License &gt; Name</code>: Full license name under which your course is made available. In most cases, it's ok to keep it as is.
+  - <code>License &gt; Short name</code>: Short name for the license, e.g., <code>CC BY-SA 4.0</code>
+  - <code>License &gt; Link</code>: URL to reach the full text of the license, e.g., <code>https://creativecommons.org/licenses/by-sa/4.0/legalcode</code>
 - <code>Special characters</code>: An array of special characters that might not be present on a typical English keyboard.</p>
 <p><strong><code>Modules</code></strong> has a list of module directory names followed by a <code>/</code>.</p>
 <p><a id="spell-checker"></a></p>
 <h4 id="automated-spell-checker">Automated spell checker</h4>
-<p>To avoid mistakes, you can enable automatic spell checking in your course. Automatic spell checking won't let you export
+<p>To avoid mistakes, you can enable automatic spell-checking in your course. Automatic spell-checking won't let you export
 a course if it has spelling mistakes. This can prevent incorrect changes from being merged into your course.</p>
-<p>The spell checker is implemneted using Hunspell. In order to use it, you need to have Hunspell installed on your
+<p>The spell checker is implemeneted using Hunspell. In order to use it, you need to have Hunspell installed on your
 computer.</p>
 <p>To install Hunspell, follow the instructions of your operating system. On Ubuntu, you can install Hunspell like so:</p>
 <pre><code class="language-bash">sudo apt-get update -y
@@ -705,8 +705,8 @@ dictionary packages available on Ubuntu: https://packages.ubuntu.com/bionic/huns
 <p>In order to enable Hunspell in your course, add the following section to your <code>course.yaml</code>:</p>
 <pre><code class="language-yaml">Settings:
   Hunspell:
-    German: de  # replace with the langauge code for your language
-    English: en-US  # replace with the langauge code for your language
+    German: de  # replace with the language code for your language
+    English: en-US  # replace with the language code for your language
 </code></pre>
 <p>Keep in mind that you also need to have the <code>hunspell</code> Python package installed. To install it, just run:</p>
 <pre><code class="language-bash">pip install hunspell

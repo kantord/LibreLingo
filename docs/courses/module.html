@@ -469,8 +469,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creating-new-module" class="md-nav__link">
-    Creating new module
+  <a href="#creating-a-new-module" class="md-nav__link">
+    Creating a new module
   </a>
   
 </li>
@@ -558,8 +558,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creating-new-module" class="md-nav__link">
-    Creating new module
+  <a href="#creating-a-new-module" class="md-nav__link">
+    Creating a new module
   </a>
   
 </li>
@@ -586,7 +586,7 @@
 
 <h1 id="librelingo-documentation-on-module">LibreLingo Documentation on Module</h1>
 <p>A <strong>Module</strong> resides below the courses within the course structure. It contains <a href="skill.html">skills</a>.</p>
-<p>They have less complexity as they're here just to group skills and nothing else. On the frontend they appear as headings to group skills.</p>
+<p>They have less complexity as they're here to group skills and nothing else. On the frontend, they appear as headings to group skills.</p>
 <p>To get a better understanding, you can read the <a href="index.html#basics">course basics</a>.</p>
 <hr />
 <p><strong>Confused?</strong>
@@ -611,8 +611,8 @@
     ├── verb_plurals.yaml
     └── verbs.yaml
 </code></pre>
-<p>Here, <code>animals.yaml</code>, <code>clothes.yaml</code> and <code>food.yaml</code> etc. are <a href="skill.html">skills</a>. Directly inside the module directory there is also a file called <code>module.yaml</code>. This file contains information about the module (see below).</p>
-<p>NOTE: A module directory name should not have spaces, should be written in slug-form and ideally in plain English characters. If your source language is not English, you can try roughly to follow the pronunciation and write it using English characters. The human friendly <code>Name</code> in the yaml however, can contain uppercase, spaces and the actual name in source language. The yaml skill files under it should be always inside a directory named <code>skills</code>.</p>
+<p>Here, <code>animals.yaml</code>, <code>clothes.yaml</code> and <code>food.yaml</code> etc. are <a href="skill.html">skills</a>. Directly inside the module directory, there is also a file called <code>module.yaml</code>. This file contains information about the module (see below).</p>
+<p>NOTE: A module directory name should not have spaces, be written in slug-form, and ideally in plain English characters. If your source language is not English, you can try roughly to follow the pronunciation and write it using English characters. The human-friendly <code>Name</code> in the yaml, however, can contain uppercase, spaces, and the actual name in the source language. The yaml skill files under it should always be inside a directory named <code>skills</code>.</p>
 <p>NOTE: When a new module is created, it should be listed on the <a href="course.html#yaml"><code>course.yaml</code></a> under <a href="course.html#data-breakdown"><code>Modules</code> key</a>.</p>
 <p><a id="yaml"></a></p>
 <h2 id="moduleyaml"><code>module.yaml</code></h2>
@@ -631,13 +631,13 @@ Skills:
   - professions.yaml
 </code></pre>
 <h3 id="data-breakdown">Data breakdown</h3>
-<p><strong><code>Name</code></strong> is the human friendly name of the module. The name should be in the target audience's language or the language you set under <code>For speakers of</code> key on your <code>course.yaml</code>. For example, if the course is <code>spanish-from-english</code>, it should be in English.
+<p><strong><code>Name</code></strong> is the human-friendly name of the module. The name should be in the target audience's language or the language you set under <code>For speakers of</code> key on your <code>course.yaml</code>. For example, if the course is <code>spanish-from-english</code>, it should be in English.
 <strong><code>Skills</code></strong> has a list of yaml files for the skills under the module. NOTE: The order in which the skills appear in this YAML file is the order they will appear in the web app as well.</p>
 <p><a id="creating-new"></a></p>
-<h2 id="creating-new-module">Creating new module</h2>
+<h2 id="creating-a-new-module">Creating a new module</h2>
 <p>To create a new module,</p>
 <ul>
-<li>just create a directory under the course with the module name (keep it lowercase and no spaces)</li>
+<li>Create a directory under the course with the module name (keep it lowercase and no spaces)</li>
 <li>Create a <code>module.yaml</code> file and put yaml code for the module.</li>
 </ul>
 <p>For example, <code>courses/french-from-english/traveling/module.yaml</code> from the example above:</p>
@@ -647,7 +647,7 @@ Skills:
 Skills:
   - hello.yaml
 </code></pre>
-<p>Now <a href="skill.html#creating-new">create skills</a> as you want and list under <code>Skills</code> key.</p>
+<p>Now <a href="skill.html#creating-new">create skills</a> as you want and list them under the <code>Skills</code> key.</p>
 
 
 

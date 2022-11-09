@@ -602,7 +602,7 @@
 
 <h1 id="librelingo-documentation-on-challenge">LibreLingo Documentation on Challenge</h1>
 <p>As they study using LibreLingo, users respond to a series of tasks or questions called <strong>Challenge</strong>s.</p>
-<p>Challenges are not configured directly, but <a href="skill.html#how-skills-are-taught-to-the-user">automatically generated from Skill configuration</a>.</p>
+<p>Challenges are not configured directly but <a href="skill.html#how-skills-are-taught-to-the-user">automatically generated from Skill configuration</a>.</p>
 <hr />
 <p><strong>Confused?</strong>
 <a href="https://github.com/LibreLingo/LibreLingo/discussions">Ask people</a> on GitHub Discussions.</p>
@@ -615,9 +615,9 @@
 - <a href="#chips-challenge">Chips challenge</a>
 - <a href="#listening-challenge">Listening challenge</a></p>
 <h2 id="challenge-order">Challenge order</h2>
-<p>Within a skill, the order of words and phrases is random, but certain challenge types always come before other types. This is denoted by the <em>Priority</em> values listed under each challenge type. First priority challenges come before second priority challenges, which come before third priority challenges.</p>
+<p>The order of words and phrases within a skill is random, but certain challenge types always come before others. This is denoted by the <em>Priority</em> values listed under each challenge type. First-priority challenges come before second-priority challenges, which come before third-priority challenges.</p>
 <h2 id="cards-challenge">Cards challenge</h2>
-<p><img alt="Text asks the user: which of these is &quot;river&quot;?. Below this heading are three cards. Each card contains a Spanish word and corresponding image. In the center the correct choice (río) is selected." src="/docs/screenshots/cards-challenge.png" /></p>
+<p><img alt="Text asks the user: which of these is &quot;river&quot;? Below this heading are three cards. Each card contains a Spanish word and a corresponding image. In the center, the correct choice (río) is selected." src="/docs/screenshots/cards-challenge.png" /></p>
 <ul>
 <li><em>Generated from:</em> <code>New words</code> only</li>
 <li><em>Task:</em> translation, multiple-choice</li>
@@ -626,10 +626,10 @@
 <li><em>Mini-dictionary available:</em> No</li>
 <li><em>Priority</em>: First</li>
 </ul>
-<p>In this challenge type, the user is presented with a word in their source language, and three (four on mobile) cards to choose from. Each card contains a target language word and a matching image, the latter of which functions as a big hint since the user may have never seen this target language word before.</p>
+<p>In this challenge type, the user is presented with a word in their source language and three (four on mobile) cards to choose from. Each card contains a target language word and a matching image, which is a big hint since the user may have never seen this target language word before.</p>
 <p>Note that for each card, a random image is selected from the word's <code>Images</code> array.</p>
 <h2 id="short-input-challenge">Short input challenge</h2>
-<p><img alt="Text asks the user to type the word &quot;river&quot; in Spanish. Below this heading is a text box, and underneath that a set of buttons to insert Spanish-specific characters. At right is an image of a river." src="/docs/screenshots/short-input-challenge.png" /></p>
+<p><img alt="Text asks the user to type the word &quot;river&quot; in Spanish. Below this heading is a text box and a set of buttons to insert Spanish-specific characters. At right is an image of a river." src="/docs/screenshots/short-input-challenge.png" /></p>
 <ul>
 <li><em>Generated from:</em> <code>New words</code> only</li>
 <li><em>Task:</em> translation, free-form</li>
@@ -638,7 +638,7 @@
 <li><em>Mini-dictionary available:</em> Yes</li>
 <li><em>Priority</em>: Second</li>
 </ul>
-<p>In this challenge type, the user is presented with a word in their source language, and a text box in which to input the translation into the target language. There is also a random image from the <code>Images</code> array on the right, but since this challenge asks for the target language, the image does not give the user any additional information. If the user does need a hint, the mini-dictionary is available for this challenge.</p>
+<p>In this challenge type, the user is presented with a word in their source language and a text box in which to input the translation into the target language. There is also a random image from the <code>Images</code> array on the right, but since this challenge asks for the target language, the image does not give the user any additional information. If the user does need a hint, the mini-dictionary is available for this challenge.</p>
 <h2 id="options-challenge">Options challenge</h2>
 <p><img alt="Text asks the user which one of the options is \&quot;Let's go to the beach!\&quot;. Below this question are three Spanish sentences with radio buttons to their left." src="/docs/screenshots/options-challenge.png" /></p>
 <ul>
@@ -649,7 +649,7 @@
 <li><em>Mini-dictionary available:</em> No</li>
 <li><em>Priority</em>: First</li>
 </ul>
-<p>In this challenge type, the user is presented with a phrase in their source language, and three options from which they must choose the correct translation into the target language. There are no hints available.</p>
+<p>In this challenge type, the user is presented with a phrase in their source language and three options from which they must choose the correct translation into the target language. There are no hints available.</p>
 <h2 id="chips-challenge">Chips challenge</h2>
 <p><img alt="Text instructs the user to translate the phrase &quot;Let's go to the beach!&quot;. At the bottom of the image, there is a group of draggable Spanish words." src="/docs/screenshots/chips-challenge.png" /></p>
 <ul>
@@ -662,11 +662,11 @@
 <li><em>Mini-dictionary available:</em> Yes</li>
 <li><em>Priority</em>: Third</li>
 </ul>
-<p>In this challenge type, the user is presented with a phrase in one language and a set of words in the other language. This set will always include all words of the <code>Translation</code> field. The user's task is to use this words as "building blocks" to create <em>any</em> acceptable translation for the phrase they've been presented with.</p>
-<p>The mini-dictionary is available to give hints about individual words but there are no hints about grammar or sentence structure.</p>
+<p>In this challenge type, the user is presented with a phrase in one language and a set of words in the other language. This set will always include all words of the <code>Translation</code> field. The user's task is to use these words as "building blocks" to create <em>any</em> acceptable translation for the phrase they've been presented with.</p>
+<p>The mini-dictionary is available to give hints about individual words, but there are no hints about grammar or sentence structure.</p>
 <p>The chips will never include exact duplicates of each other.</p>
 <h2 id="listening-challenge">Listening challenge</h2>
-<p><img alt="Text instructs the user: &quot;Type what you hear&quot;. Below this heading is a text box, and underneath that a set of buttons to insert Spanish-specific characters." src="/docs/screenshots/listening-challenge.png" /></p>
+<p><img alt="Text instructs the user: &quot;Type what you hear&quot;. Below this heading is a text box and a set of buttons to insert Spanish-specific characters." src="/docs/screenshots/listening-challenge.png" /></p>
 <ul>
 <li><em>Generated from:</em> <code>New words</code> and <code>Phrases</code></li>
 <li><em>Task:</em> transcription</li>
@@ -675,7 +675,7 @@
 <li><em>Mini-dictionary available:</em> No</li>
 <li><em>Priority</em>: Second</li>
 </ul>
-<p>In this challenge type, the user is played audio of a word or phrase in the target language, and is presented with a text box to transcribe the audio (still in the target language). The user can re-listen to the audio, if necessary.</p>
+<p>In this challenge type, the user is played audio of a word or phrase in the target language and is presented with a text box to transcribe the audio (still in the target language). The user can re-listen to the audio if necessary.</p>
 
 
 

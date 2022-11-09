@@ -680,9 +680,9 @@
 </ul>
 <h2 id="basics">Basics</h2>
 <h3 id="terminology">Terminology</h3>
-<p>You'll need to have an idea on basic terminology used in LibreLingo:</p>
+<p>You'll need to have an idea of the basic terminology used in LibreLingo:</p>
 <ul>
-<li>A <strong>Course</strong> is a set of Modules. There is typically one course for each language pair. e.g. Spanish for English speakers, Japanese for Italian speakers, etc.</li>
+<li>A <strong>Course</strong> is a set of Modules. There is typically one course for each language pair, e.g, Spanish for English speakers, Japanese for Italian speakers, etc.</li>
 <li>A <strong>Module</strong> is a set of Skills.</li>
 <li>A <strong>Skill</strong> is a small unit of course material. In the web app, the user will typically practice a Skill at a time.</li>
 </ul>
@@ -693,36 +693,36 @@
 </ul>
 <p><a id="exploring-courses"></a></p>
 <h3 id="exploring-the-courses">Exploring the courses</h3>
-<p>To have a better understanding of how courses work, you can explore how the course files are organized on this repository.</p>
-<p>The source of the courses are in separate git repositories. You will find a <a href="#courses-open">list of courses</a> at the bottom of this page. The course repository name is usually structured in <code>&lt;destination language&gt;-from-&lt;target audience's language&gt;</code>. e.g. <code>french-from-english</code> teaches French to English speakers. In each course you'll find modules. And in each module you'll find skills, which are saved as individual .yaml files.</p>
-<p>Now let's look into how they look on the frontend, to the user.</p>
-<p>Go to <a href="https://librelingo.app/">LibreLingo web app</a>. Courses are listed there. e.g. You see a "START LEARNING SPANISH" button. (<strong>NOTE:</strong> Depending on the state and completeness of the courses, all of them might not be shown there on the website.)</p>
-<p>When you enter a course page, for example the <a href="https://librelingo.app/course/spanish-from-english/">Spanish course</a>, you'll see headings like Basics, Introduction, Activities. These are modules. Each module contains a set of skills. Modules organize skills into groups, which is their only purpose. Think of them as groups of units or chapters.</p>
-<p>"Skills" are units of course content focused on a particular topic. Each skill is a set of new knowledge, such as new words or phrases.  Skills can focus on vocabulary and follow a theme: the "Animal" skill has words and phrases related to animals, the "Food" skill is all about food. Skills can also focus on teaching grammar.</p>
+<p>To better understand how courses work, you can explore how the course files are organized on this repository.</p>
+<p>The source of the courses are in separate git repositories. You will find a <a href="#courses-open">list of courses</a> at the bottom of this page. The course repository name is usually structured in <code>&lt;destination language&gt;-from-&lt;target audience's language&gt;</code>, e.g., <code>french-from-english</code> teaches French to English speakers. In each course, you'll find modules. And in each module, you'll find skills, which are saved as individual .yaml files.</p>
+<p>Now let's look into how they look on the frontend to the user.</p>
+<p>Go to <a href="https://librelingo.app/">LibreLingo web app</a>. Courses are listed there, e.g., You see a "START LEARNING SPANISH" button. (<strong>NOTE:</strong> Depending on the state and completeness of the courses, all of them might not be shown there on the website.)</p>
+<p>When you enter a course page, for example, the <a href="https://librelingo.app/course/spanish-from-english/">Spanish course</a>, you'll see headings like Basics, Introduction, and Activities. These are modules. Each module contains a set of skills. Modules organize skills into groups, which is their only purpose. Think of them as groups of units or chapters.</p>
+<p>"Skills" are units of course content focused on a particular topic. Each skill is a set of new knowledge, such as new words or phrases.  Skills can focus on vocabulary and follow a theme: the "Animal" skill has words and phrases related to animals, and the "Food" skill is all about food. Skills can also focus on teaching grammar.</p>
 <p>Inside a skill YAML file there are some keys that you might want to learn of, which is explained in detail <a href="skill.html">here</a>.</p>
 <p><a id="things-new-contributors"></a></p>
 <h3 id="things-you-can-do-as-a-new-contributor">Things you can do as a new contributor</h3>
-<p>If you are new in contributing to course data, these are the things you can do to get a proper understanding of the courses and have a good time with the project:</p>
+<p>If you are new to contributing to course data, these are the things you can do to get a proper understanding of the courses and have a good time with the project:</p>
 <ul>
-<li>Go to <a href="https://librelingo.app/course/spanish-from-english">LibreLingo's Spanish course</a> and try out some of the skills. Just get an idea on how the questions are structured and the type of answers made available.</li>
-<li><a href="https://github.com/kantord/LibreLingo/">Browse this repository</a> or <a href="https://github.com/kantord/LibreLingo/archive/main.zip">download it</a> and study the <code>courses</code> directory and how everything's laid out. Be sure to have a good text editor, such as <a href="https://notepad-plus-plus.org/">Notepad++</a>, <a href="https://geany.org/">Geany</a> in hand to view or edit files.</li>
-<li>Try to learn how data is organized within .yaml files and directories. <a href="course.html">Course</a>, <a href="module.html">Module</a> and <a href="skill.html">Skill</a> documentation may help you on this.</li>
+<li>Go to <a href="https://librelingo.app/course/spanish-from-english">LibreLingo's Spanish course</a> and try out some of the skills. Just get an idea of how the questions are structured and the type of answers made available.</li>
+<li><a href="https://github.com/kantord/LibreLingo/">Browse this repository</a> or <a href="https://github.com/kantord/LibreLingo/archive/main.zip">download it</a> and study the <code>courses</code> directory and how everything's laid out. Be sure to have a good text editor, such as <a href="https://notepad-plus-plus.org/">Notepad++</a> or <a href="https://geany.org/">Geany</a>, in order to view or edit files.</li>
+<li>Try to learn how data is organized within .yaml files and directories. <a href="course.html">Course</a>, <a href="module.html">Module</a> and <a href="skill.html">Skill</a> documentation may help you with this.</li>
 <li>Try to learn how YAML works. (see <a href="https://en.wikipedia.org/wiki/YAML#Syntax">here</a> or <a href="https://blog.stackpath.com/yaml/">here</a> or <a href="https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started/">here</a>)</li>
 <li>Determine some information about the language you're working with.</li>
-<li>Your language name in English. e.g. French, Ancient Greek</li>
-<li>Language slug (lowercase and no spaces). e.g. french, ancient-greek</li>
-<li>IETF BCP 47 tag name for your language, which you can get from <a href="http://www.iana.org/assignments/language-subtag-registry">here</a>. Just look for the <code>Subtag</code> for your language. e.g. fr, grc</li>
+<li>Your language name in English, e.g., French, Ancient Greek</li>
+<li>Language slug (lowercase and no spaces), e.g., french, ancient-greek</li>
+<li>IETF BCP 47 tag name for your language, which you can get from <a href="http://www.iana.org/assignments/language-subtag-registry">here</a>. Just look for the <code>Subtag</code> for your language, e.g., fr, grc</li>
 <li>If you have questions, feel free to ask on <a href="https://github.com/kantord/LibreLingo/discussions">Discussions</a>.</li>
 </ul>
 <p><a id="courses-open"></a></p>
 <h2 id="courses-currently-open-for-contributions">Courses currently open for contributions</h2>
-<p><a href="https://librelingo.app/dev/">Check out our devtool page for the up to date list</a>.</p>
+<p><a href="https://librelingo.app/dev/">Check out our devtool page for the up-to-date list</a>.</p>
 <h2 id="caution">Caution</h2>
 <p><a id="non-latin-alphabet"></a></p>
 <h3 id="languages-that-dont-use-the-latin-alphabet">Languages that don't use the Latin alphabet</h3>
-<p>Currently LibreLingo doesn't have enough features to support teaching new
-alphabets. Solving this is a priority, but will take time. Technically in most
-cases, language pairs that use the same alphabet (for example Ukrainian for
+<p>Currently, LibreLingo doesn't have enough features to support teaching new
+alphabets. Solving this is a priority, but it will take time. Technically in most
+cases, language pairs that use the same alphabet (for example, Ukrainian for
 Russian speakers) should work just fine, but it hasn't been tested yet.</p>
 
 
