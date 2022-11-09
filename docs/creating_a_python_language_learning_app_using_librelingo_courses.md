@@ -1,17 +1,17 @@
 # Create your own language learning app using Python and LibreLingo (TDD)
 
-In this tutorial you'll learn how to use LibreLingo course data to create
+In this tutorial, you'll learn how to use LibreLingo course data to create
 language-learning apps in Python.
 
 We'll build a simple function that lists the audio files required by
 a LibreLingo course. (Whether they exist or not yet)
 
-LibreLingo comes with some tools that make it easier to build such
-programs and also to test them. I structured the tutorial as a small
+LibreLingo comes with some tools that make building and testing such
+programs easier. I structured the tutorial as a small
 Test-Driven-Development session so that you'll see how to use these tools.
 
-By the end of the tutorial you should have a good basis to build
-your own apps, APIs or software using LibreLingo, or to contribute
+By the end of the tutorial, you should have a good basis to build
+your own apps, APIs, or software using LibreLingo, or to contribute
 to LibreLingo or existing LibreLingo-based software.
 
 ## Requirements
@@ -22,7 +22,7 @@ as well as the [poetry dependency management tool](https://python-poetry.org/).
 
 ## Setting up your project
 
-To set up our project, we're going to first create an empty folder.
+To set up our project, we're first going to create an empty folder.
 
 If you are creating your app inside the LibreLingo monorepo,
 that's how you'd do it:
@@ -118,7 +118,7 @@ ERROR apps/librelingo_audios/tests/test_list_missing_audios.py
 
 Makes sense, because we haven't created our implementation yet!
 
-Lets create `librelingo_audios/list_missing_audios.py` with the following content:
+Let's create `librelingo_audios/list_missing_audios.py` with the following content:
 
 ```python
 def list_missing_audios():
@@ -219,15 +219,15 @@ Out[6]:
 
 ## Adding some tests
 
-We'll need some data to write our tests. We could use real data here, but hat
+We'll need some data to write our tests. We could use real data here, but that
 would have some disadvantages:
 
 - Real courses evolve over time, so they might break our tests in the future
-- A real course can be difficult to navigate due to it's size
+- A real course can be difficult to navigate due to its size
 - A real course can take up a lot of memory
 - Loading real courses could slow our tests down
 
-Thankfully, LibreLingo comes with a library that has fake data to simplify
+Thankfully, LibreLingo comes with a library with fake data to simplify
 writing tests! Let's install it:
 
 ```bash
@@ -342,7 +342,7 @@ In [43]: count
 Out[43]: 0
 ```
 
-Lets change the test for the empty course to instead use course2:
+Let's change the test for the empty course to use course2 instead:
 
 ```python
 def test_a_course_with_0_phrases_needs_zero_audios():
@@ -377,7 +377,7 @@ FAILED tests/test_list_missing_audios.py::test_a_course_with_0_phrases_needs_zer
 ================================ 1 failed, 1 passed in 0.03s =================================
 ```
 
-Since `course2` has modules (all with no phrases) this time it's not as easy to
+Since `course2` has modules (all with no phrases) this time, it's not as easy to
 cheat with the implementation.
 
 The simplest way to make the test pass is probably actually
@@ -396,8 +396,8 @@ Our tests are now passing!
 One problem is that although now every phrase is there,
 the output format is still useless.
 
-We need to include the text of each phrase in the target language
-of the course. Let's make sure it's always the second item in the output:
+We need to include the text of each phrase in the course's target language.
+Let's make sure it's always the second item in the output:
 
 ```python
 def test_result_includes_the_phrase_in_the_target_language():
@@ -468,7 +468,7 @@ FAILED tests/test_list_missing_audios.py::test_result_includes_the_phrase_in_the
 ================================ 1 failed, 2 passed in 0.03s =================================
 ```
 
-We can continue cheating though:
+We can continue cheating, though:
 
 ```python
 def list_missing_audios(course):
@@ -480,7 +480,7 @@ def list_missing_audios(course):
 
 Our tests are now passing again 🎉!
 
-This shows our test wasn't specific enough. Let's add another example:
+This shows that our test wasn't specific enough. Let's add another example:
 
 ```python
 def test_result_includes_the_phrase_in_the_target_language_2():
@@ -516,7 +516,7 @@ FAILED tests/test_list_missing_audios.py::test_result_includes_the_phrase_in_the
 ================================ 1 failed, 3 passed in 0.03s =================================
 ```
 
-This time around writing the actual implementation is easier than
+This time around, writing the actual implementation is easier than
 trying to trick the tests:
 
 ```python
@@ -545,13 +545,13 @@ def list_missing_audios(course):
 The reason anyone would call the function `list_missing_audios` is probably because
 they want to download/create those audios somehow.
 
-If they want to create those files, then for practical reasons the filenames
+If they want to create those files, then for practical reasons, the filenames
 should follow a standardized system that other LibreLingo-related software
 can also recognize.
 
 To achieve that, we can use the `audio_id` function from [librelingo-utils](https://pypi.org/project/librelingo-utils/).
 
-Let's start simple. First let's make sure that the IDs are string:
+Let's start simple. First, let's make sure that the IDs are string:
 
 ```python
 def test_audio_id_is_a_string():
@@ -596,15 +596,15 @@ def list_missing_audios(course):
 ```
 
 And out tests are passing again... We better make sure somehow that
-`audio_id` is actually used to perform the filename-logic.
+`audio_id` is actually used to perform the filename logic.
 
-First let's install `librelingo-utils`:
+First, let's install `librelingo-utils`:
 
 ```bash
 poetry add librelingo-utils
 ```
 
-And write a tests that only passes if our function calls `audio_id`.
+And write a test that only passes if our function calls `audio_id`.
 
 To do that, we'll need to install `pytest-mock`:
 
@@ -623,7 +623,7 @@ def test_calls_audio_id_to_get_the_id(mocker):
 ```
 
 This will mock the `audio_id` function and see how many times it has been called.
-We assert that it has to run twice, since there are 2 phrases that need audio files.
+We assert that it has to run twice since there are 2 phrases that need audio files.
 
 
 ```console
@@ -687,10 +687,10 @@ FAILED tests/test_list_missing_audios.py::test_calls_audio_id_to_get_the_id - At
 ```
 
 That's not exactly what I expected. Looks like mocking is problematic in Python when your
-file name is the same of a function name, because it will try to mock an attribute of the
+file name is the same as a function name, because it will try to mock an attribute of the
 function instead of the file.
 
-After some Googling I couldn't find an easy and clean solution for this, so
+After some Googling, I couldn't find an easy and clean solution for this, so
 let's just rename `list_missing_audios.py` to `functions.py` to avoid trouble.
 
 I'm planning to put more functions here anyway.
@@ -718,7 +718,7 @@ __version__ = '0.1.0'
 from librelingo_audios.functions import list_missing_audios
 ```
 
-Now if we run our tests, we see the failure that I originally expected, or at least something similar:
+Now, if we run our tests, we see the failure that I originally expected, or at least something similar:
 
 ```console
 ==================================== test session starts =====================================
@@ -747,7 +747,7 @@ FAILED tests/test_list_missing_audios.py::test_calls_audio_id_to_get_the_id - As
 ================================ 1 failed, 5 passed in 0.04s =================================
 ```
 
-Whoops, our test forgot to actually iterate over the result, lets wrap the function call in
+Whoops, our test forgot to actually iterate over the result; let's wrap the function call in
 `list()` to fix that.
 
 ```python
@@ -785,15 +785,15 @@ tests/test_list_missing_audios.py ......                                        
 ===================================== 6 passed in 0.02s ======================================
 ```
 
-Notice though, we are actually passing the source language instead of
-the target language! Also we're calling it with an empty string instead of
+Notice, though, that we are actually passing the source language instead of
+the target language! Also, we're calling it with an empty string instead of
 the actual string:
 
 ```python
 audio_id(course.source_language, "")
 ```
 
-We need to be a lot stricter in our tests so let's fix that:
+We need to be a lot stricter in our tests, so let's fix that:
 
 ```python
 def test_calls_audio_id_with_the_correct_arguments(mocker):
@@ -829,8 +829,8 @@ tests/test_list_missing_audios.py .......                                       
 ===================================== 7 passed in 0.03s ======================================
 ```
 
-But you'll notice this is still cheating, because we're always using
-`"lorem ipsum"` as the text.  Let's extend our test case to fix that.
+But you'll notice this is still cheating because we're always using
+`"lorem ipsum"` as the text. Let's extend our test case to fix that.
 
 ```python
 def test_calls_audio_id_with_the_correct_arguments(mocker):
@@ -860,8 +860,8 @@ def list_missing_audios(course):
 This looks good, but we're still not returning the ID!
 You guessed it, that's a new test case for us!
 
-We will make our mock function return a fake value and we'll
-assert that value shows up in the result.
+We will make our mock function return a fake value and assert
+that the value shows up in the result.
 
 ```python
 def test_returns_correct_audio_id(mocker):
@@ -870,7 +870,7 @@ def test_returns_correct_audio_id(mocker):
     assert list(list_missing_audios(fakes.course1))[0][0] == "omg"
 ```
 
-If we run the tests we get the error that we expected:
+If we run the tests, we get the error that we expected:
 
 ```console
 ==================================== test session starts =====================================
@@ -921,7 +921,7 @@ Since the return value of the mock function is entirely determined by the fake
 value that we supply in our test case, this is a value the implementation can
 only reproduce by actually calling the function and taking the return value.
 
-The only one way our implementation can cheat is if the return value is
+The only way our implementation can cheat is if the return value is
 one simple static example, which is exactly what we have right now.
 
 The most straightforward way to avoid that is by adding an identical test case
