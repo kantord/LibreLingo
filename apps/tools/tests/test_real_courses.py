@@ -1,5 +1,4 @@
 # pylint: skip-file
-import collections
 import os
 import pytest
 from pathlib import Path
@@ -20,13 +19,7 @@ from librelingo_types import (
     #    TextToSpeechSettings,
     #    Word,
 )
-
-Settings = collections.namedtuple(
-    "Settings",
-    [
-        "dry_run",
-    ],
-)
+from librelingo_fakes import fakes
 
 
 def load(name):
@@ -40,9 +33,7 @@ def load(name):
 
 def test_error_1(tmpdir):
     course = load("e1")
-    settings = Settings(
-        dry_run=False,
-    )
+    settings = fakes.settings_not_dry_run()
 
     with pytest.raises(RuntimeError) as err:
         export_course(str(tmpdir), course, settings)
@@ -55,9 +46,7 @@ def test_error_1(tmpdir):
 
 def test_error_2(tmpdir):
     course = load("e2")
-    settings = Settings(
-        dry_run=False,
-    )
+    settings = fakes.settings_not_dry_run()
 
     # issue: https://github.com/LibreLingo/LibreLingo/issues/1885
     with pytest.raises(RuntimeError) as err:
@@ -105,9 +94,7 @@ def test_minimal(tmpdir):
         )
     ]
 
-    settings = Settings(
-        dry_run=False,
-    )
+    settings = fakes.settings_not_dry_run()
 
     # We make sure there is no exception.
     # Maybe we should also compare the results to some expected files?

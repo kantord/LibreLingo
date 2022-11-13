@@ -118,10 +118,11 @@ def _generate_audio_with_tts(
         )
         # This is where more more TTS providers would be added with an if statement.
         # For now there is only Polly.
+        tts_provider = "polly"
         subprocess.run(
             [
                 "aws",
-                "polly",
+                tts_provider,
                 "synthesize-speech",
                 "--output-format",
                 "mp3",

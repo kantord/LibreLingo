@@ -1,17 +1,10 @@
 # pylint: skip-file
-import collections
 import json
 import os
 
 from librelingo_json_export.export import export_course
 from librelingo_yaml_loader.yaml_loader import load_course
-
-Settings = collections.namedtuple(
-    "Settings",
-    [
-        "dry_run",
-    ],
-)
+from librelingo_fakes import fakes
 
 
 def test_exported_test_course_matches_snapshot(tmpdir):
@@ -20,13 +13,10 @@ def test_exported_test_course_matches_snapshot(tmpdir):
     root = os.path.dirname(root)
     root = os.path.dirname(root)
     root = os.path.dirname(root)
-
     path_to_course = os.path.join(root, "courses", "test")
     course = load_course(path_to_course)
 
-    settings = Settings(
-        dry_run=False,
-    )
+    settings = fakes.settings_not_dry_run()
     output_path = str(tmpdir)
     expected_path = os.path.join(root, "apps", "web", "src", "courses", "test")
 
