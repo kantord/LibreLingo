@@ -13,7 +13,7 @@
   export let resolveChallenge
   export let skipChallenge
   export let skipAllChallenges
-  
+
   let submitted = false
   let correct = null
   let chipsElement: HTMLElement
@@ -24,103 +24,100 @@
   const chips = writable(chipsToRender)
 
   $: submitChallenge = () => {
-      if (!$answer) return
-      if (submitted) return
-      correct = false
-      const answerForm = $answer.join(" ").toLowerCase()
-      challenge.solutions.map((solution: string[]) => {
-          correct = correct || answerForm === solution.join(" ").toLowerCase()
-      })
-      registerResult(correct)
-      submitted = true
+    if (!$answer) return
+    if (submitted) return
+    correct = false
+    const answerForm = $answer.join(" ").toLowerCase()
+    challenge.solutions.map((solution: string[]) => {
+      correct = correct || answerForm === solution.join(" ").toLowerCase()
+    })
+    registerResult(correct)
+    submitted = true
   }
 
   $: finishChallenge = () => {
-      $answer = []
-      submitted = false
-      resolveChallenge()
+    $answer = []
+    submitted = false
+    resolveChallenge()
   }
 
-  
-
   $: handleChipClick = (event) => {
-      if (submitted) return
-      const node = event.target
-      const chipType = getNodeType(node)
-      const chipText = node.innerText
-      const chipIndex = getChipIndex(node)
+    if (submitted) return
+    const node = event.target
+    const chipType = getNodeType(node)
+    const chipText = node.innerText
+    const chipIndex = getChipIndex(node)
 
-      if (chipType === "chips") {
-          chips.update(oldItems => {
-              const newItems = [...oldItems]
-              newItems.splice(chipIndex, 1)
-              return newItems
-          })
-          answer.update(oldItems => [...oldItems, chipText])
-      }
+    if (chipType === "chips") {
+      chips.update((oldItems) => {
+        const newItems = [...oldItems]
+        newItems.splice(chipIndex, 1)
+        return newItems
+      })
+      answer.update((oldItems) => [...oldItems, chipText])
+    }
 
-      if (chipType === "answer") {
-          answer.update(oldItems => {
-              const newItems = [...oldItems]
-              newItems.splice(chipIndex, 1)
-              return newItems
-          })
-          chips.update(oldItems => [...oldItems, chipText])
-      }
+    if (chipType === "answer") {
+      answer.update((oldItems) => {
+        const newItems = [...oldItems]
+        newItems.splice(chipIndex, 1)
+        return newItems
+      })
+      chips.update((oldItems) => [...oldItems, chipText])
+    }
 
-      rerenderSortables()
-
+    rerenderSortables()
   }
 
   const rerenderSortables = () => {
-      chipsSortable.destroy()
-      answerSortable.destroy()
-      answerToRender = $answer
-      chipsToRender = $chips
+    chipsSortable.destroy()
+    answerSortable.destroy()
+    answerToRender = $answer
+    chipsToRender = $chips
 
-      /*
+    /*
         Need to wait for the re-rendering of the chips
         otherwise the svelte store and the sortable
         store will be out of sync
       */
-      setTimeout(initializeDragAndDrop, 0)
+    setTimeout(initializeDragAndDrop, 0)
   }
 
   let chipsSortable
   let answerSortable
 
-  const initializeSortable1 = () =>  {
-      chipsSortable = createSortable(chipsElement, chips)
+  const initializeSortable1 = () => {
+    chipsSortable = createSortable(chipsElement, chips)
   }
 
   const initializeSortable2 = () => {
-      answerSortable = createSortable(answerElement, answer)
+    answerSortable = createSortable(answerElement, answer)
   }
 
   const initializeDragAndDrop = () => {
-      initializeSortable1()
-      initializeSortable2()
+    initializeSortable1()
+    initializeSortable2()
   }
 
   onMount(() => {
-      hotkeys.unbind("enter")
-      hotkeys("enter", () => {
-          if (submitted) {
-              finishChallenge()
-          } else {
-              submitChallenge()
-          }
-      })
+    hotkeys.unbind("enter")
+    hotkeys("enter", () => {
+      if (submitted) {
+        finishChallenge()
+      } else {
+        submitChallenge()
+      }
+    })
 
-      initializeDragAndDrop()
+    initializeDragAndDrop()
   })
 </script>
 
-<form on:submit|preventDefault="{submitChallenge}">
+<form on:submit|preventDefault={submitChallenge}>
   <div class="section">
     <p class="is-size-1 is-size-2-tablet is-size-4-mobile has-text-centered">
       Translate
-      <Phrase phrase="{challenge.phrase}" />
+      <Phrase phrase={challenge.phrase} />
     </p>
   </div>
 
@@ -128,7 +125,12 @@
     <div class="solution">
       <div id="answer" class="chips" bind:this={answerElement}>
         {#each answerToRender as chip, index}
-          <span class="chip" data-id={chip} on:click="{handleChipClick}">
+          <span
+            class="chip"
+            data-id={chip}
+            on:click={handleChipClick}
+            on:keypress={handleChipClick}
+          >
             <span class="tag is-medium">{chip}</span>
           </span>
         {/each}
@@ -138,7 +140,12 @@
     <p class="sub-instructions">Use these words:</p>
     <div id="chips" class="chips" bind:this={chipsElement}>
       {#each chipsToRender as chip, index}
-        <span class="chip" data-id={chip} on:click="{handleChipClick}">
+        <span
+          class="chip"
+          data-id={chip}
+          on:click={handleChipClick}
+          on:keypress={handleChipClick}
+        >
           <span class="tag is-medium">{chip}</span>
         </span>
       {/each}
@@ -147,10 +154,11 @@
 
   {#if $answer.length === 0 && !submitted}
     <ChallengePanel
-      message="{null}"
-      buttonText="{null}"
-      skipAction="{skipChallenge}"
-      skipAllAction="{skipAllChallenges}" />
+      message={null}
+      buttonText={null}
+      skipAction={skipChallenge}
+      skipAllAction={skipAllChallenges}
+    />
   {/if}
 
   {#if $answer.length > 0 && !submitted}
@@ -158,25 +166,28 @@
       message=""
       buttonText="Submit"
       submit
-      skipAction="{skipChallenge}"
-      skipAllAction="{skipAllChallenges}" />
+      skipAction={skipChallenge}
+      skipAllAction={skipAllChallenges}
+    />
   {/if}
 
   {#if submitted}
     {#if !correct}
       <ChallengePanel
         message="Incorrect solution!"
-        messageDetail="{`Correct answer: ${challenge.formattedSolution}`}"
+        messageDetail={`Correct answer: ${challenge.formattedSolution}`}
         buttonText="Continue"
         incorrect
-        buttonAction="{finishChallenge}" />
+        buttonAction={finishChallenge}
+      />
     {/if}
     {#if correct}
       <ChallengePanel
         message="Correct solution!"
         buttonText="Continue"
         correct
-        buttonAction="{finishChallenge}" />
+        buttonAction={finishChallenge}
+      />
     {/if}
   {/if}
 </form>
