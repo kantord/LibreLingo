@@ -40,6 +40,7 @@
 
     // NavBar specific styles
     "navbar-background": "rgba(255, 255, 255, .85)",
+    "navbar-height": "96px",
   }
   let theme
   theme = Object.entries(defaultTheme)
