@@ -24,6 +24,10 @@
     "font-size-large": "20px",
     "font-size-xlarge": "24px",
 
+    // Spacing
+    "spacing-none": "0",
+    "spacing-xl": "100px",
+
     // Button specific styles
     // Primary
     "button-color-primary": "var(--color-primary)",
