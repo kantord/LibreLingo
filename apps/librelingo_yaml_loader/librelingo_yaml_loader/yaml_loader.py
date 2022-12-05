@@ -228,9 +228,15 @@ def _convert_phrase(raw_phrase) -> Phrase:
             ),
         )
     except KeyError as key_error:
-        raise RuntimeError(
-            f'Phrase "{raw_phrase["Phrase"]}" needs to have a "Translation".'
-        ) from key_error
+        key_string = ", ".join('"' + key + '"' for key in raw_phrase.keys())
+        if "Phrase" not in raw_phrase.keys():
+            raise RuntimeError(
+                f'Key "Phrase" not found. Keys found: {key_string}'
+            ) from key_error
+        else:
+            raise RuntimeError(
+                f'Phrase "{raw_phrase["Phrase"]}" needs to have a "Translation".'
+            ) from key_error
 
 
 def _convert_phrases(raw_phrases) -> List[Phrase]:
