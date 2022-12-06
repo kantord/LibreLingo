@@ -87,3 +87,10 @@ def test_convert_phrase_complains_about_missing_translation():
     expected_error = f'Phrase "{random_phrase}" needs to have a "Translation".'
     with pytest.raises(RuntimeError, match=expected_error):
         _convert_phrase({"Phrase": random_phrase})
+
+
+def test_convert_phrase_complains_about_misspelled_phrase_key():
+    random_phrase = fakes.number()
+    expected_error = 'Key "Phrase" not found. Keys found: "Phaser"'
+    with pytest.raises(RuntimeError, match=expected_error):
+        _convert_phrase({"Phaser": random_phrase})
