@@ -17,6 +17,7 @@ html2markdown = "^0.1.7"
 bleach = "^6.0.0"
 hunspell = { version = "^0.5.5", optional = true }
 bleach-allowlist = "^1.0.3"
+jsonschema = "^4.17.3"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.0.0"
