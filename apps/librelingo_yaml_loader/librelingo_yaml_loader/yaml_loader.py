@@ -383,17 +383,15 @@ def _load_module(path: str, course: Course):
     filepath = Path(path) / "module.yaml"
     data = _load_yaml(filepath)
 
-    # Hardcoded is not great, should path lead to some other place?
     schemapath = "../../apps/librelingo_yaml_loader/schemas/module.json"
     with open(schemapath) as fp:
         schema = json.load(fp)
 
-    # Should I take out unnecessary exception handling below?
     try:
         jsonschema.validate(data, schema)
     except jsonschema.ValidationError as validation_error:
         raise RuntimeError(
-            f'There is an error with the schema at the following file path: {filepath}'
+            f"There is an error with the schema at the following file path: {filepath}"
         ) from validation_error
 
     try:
