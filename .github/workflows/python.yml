@@ -34,3 +34,13 @@ jobs:
       - name: Python code style (pylint)
         shell: bash
         run: poetry run pylint $(git ls-files '*.py')
+      - name: validate that Test Course Json files are up to date
+        run: |
+          poetry install --no-interaction
+          cd apps/librelingo_yaml_loader
+          poetry install --no-interaction
+          cd ../librelingo_json_export
+          poetry install --no-interaction
+          cd ../..
+          ./scripts/verifyTestCourseJsonFiles.sh
+
