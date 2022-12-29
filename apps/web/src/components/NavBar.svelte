@@ -1,5 +1,5 @@
 <script lang="ts">
-import { stores } from '@sapper/app';
+  import { stores } from "@sapper/app"
   import settings from "../settings"
   import authStore from "../auth"
   import NavBar from "lluis/NavBar/NavBar.svelte"
@@ -16,22 +16,24 @@ import { stores } from '@sapper/app';
   }
   const _Logout = () => (window as unknown as WindowWithLogout)._Logout()
 
-  const { page } = stores();
-  
+  const { page } = stores()
+
   const homepageLink = $page?.params?.courseName
     ? `course/${$page.params.courseName}/`
-    : "/";
+    : "/"
 </script>
 
-<NavBar data-test="navbar">
+<NavBar>
   <div slot="left">
-    <Logo src="/images/logo.svg" alt="LibreLingo" link={homepageLink}/>
+    <Logo src="/images/logo.svg" alt="LibreLingo" link={homepageLink} />
   </div>
 
   <div slot="right">
     <NavBarButtonSet>
       {#if repositoryURL}
-        <NavBarButton href={repositoryURL} target="_blank">Feedback</NavBarButton>
+        <NavBarButton href={repositoryURL} target="_blank"
+          >Feedback</NavBarButton
+        >
       {/if}
       {#if hasAuth && settings.features.authEnabled}
         {#if $authStore.user}
@@ -39,7 +41,7 @@ import { stores } from '@sapper/app';
             <Icon size="small" icon="user" />
             <span>{$authStore.user.name}</span>
           </NavBarItem>
-          <NavBarButton on:click="{() => _Logout()}">Log out</NavBarButton>
+          <NavBarButton on:click={() => _Logout()}>Log out</NavBarButton>
         {:else}
           <NavBarButton href="/sign-up">Sign up</NavBarButton>
           <NavBarButton href="/login">Log in</NavBarButton>
