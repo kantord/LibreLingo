@@ -7,7 +7,7 @@ describe("db/skill/savePractice", () => {
   })
 
   it("correctly creates new data", async () => {
-    await savePractice(db, { id: "fooBar", correct: 5, incorrect: 3 })
+    await savePractice(db, { id: "fooBar", correct: 5, incorrect: 3, skipped: 0 })
     expect(await db.get("skills/fooBar")).toEqual({
       _id: "skills/fooBar",
       _rev: expect.anything(),
@@ -34,8 +34,8 @@ describe("db/skill/savePractice", () => {
   })
 
   it("correctly updates data", async () => {
-    await savePractice(db, { id: "fooBar", correct: 5, incorrect: 10 })
-    await savePractice(db, { id: "fooBar", correct: 6, incorrect: 3 })
+    await savePractice(db, { id: "fooBar", correct: 5, incorrect: 10, skipped: 0 })
+    await savePractice(db, { id: "fooBar", correct: 6, incorrect: 3, skipped: 0 })
     expect(await db.get("skills/fooBar")).toEqual({
       _id: "skills/fooBar",
       _rev: expect.anything(),
