@@ -3691,13 +3691,14 @@
     axios-retry "^3.2.5"
     winston "^3.7.2"
 
-"@knapsack-pro/cypress@5.1.0":
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/@knapsack-pro/cypress/-/cypress-5.1.0.tgz#bffb5e8ba56d225a594d2ed292681ef09edaf2ab"
-  integrity sha512-0R7Bd+lKH4cD/CbjKQyxbIw6YD+KgCzmFxeJByn7Tf0WfojPUg76FytgSc4XvFPdZFjUqa90mZjyUsmdLch6Iw==
+"@knapsack-pro/cypress@5.2.0":
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/@knapsack-pro/cypress/-/cypress-5.2.0.tgz#0df8bd5889ad9e9839398dc7a1d8229220a208e5"
+  integrity sha512-5jUgtokQr2f31cVWZ2fSnnLoNmjMV/ohNIiGkqgkQ0CxC8Fs22P/fE6u8LNIdCdWEmsA4YASSe/qfraWbh+9nA==
   dependencies:
     "@knapsack-pro/core" "^3.2.0"
-    glob "^8.0.3"
+    glob "^8.1.0"
+    minimatch "^5.1.4"
     minimist "^1.2.6"
     uuid "^8.3.2"
 
@@ -8928,10 +8929,21 @@ glob@^7.0.0, glob@^7.0.3, glob@^7.1.0, glob@^7.1.2, glob@^7.1.3, glob@^7.1.4, gl
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-glob@^8.0.1, glob@^8.0.3:
+glob@^8.0.1:
   version "8.0.3"
   resolved "https://registry.yarnpkg.com/glob/-/glob-8.0.3.tgz#415c6eb2deed9e502c68fa44a272e6da6eeca42e"
   integrity sha512-ull455NHSHI/Y1FqGaaYFaLGkNMMJbavMrEGFXG/PGrg6y7sutWHUHrz6gy6WEBH6akM1M414dWKCNs+IhKdiQ==
+  dependencies:
+    fs.realpath "^1.0.0"
+    inflight "^1.0.4"
+    inherits "2"
+    minimatch "^5.0.1"
+    once "^1.3.0"
+
+glob@^8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/glob/-/glob-8.1.0.tgz#d388f656593ef708ee3e34640fdfb99a9fd1c33e"
+  integrity sha512-r8hpEjiQEYlF2QU0df3dS+nxxSIreXQS1qRhMJM0Q5NDdR386C7jb7Hwwod8Fgiuex+k0GFjgft18yvxm5XoCQ==
   dependencies:
     fs.realpath "^1.0.0"
     inflight "^1.0.4"
@@ -11978,6 +11990,13 @@ minimatch@^5.0.1:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-5.1.0.tgz#1717b464f4971b144f6aabe8f2d0b8e4511e09c7"
   integrity sha512-9TPBGGak4nHfGZsPBohm9AWg6NoT7QTCehS3BIJABslyZbzxfV78QM2Y6+i741OPZIafFAaiiEMh5OyIrJPgtg==
+  dependencies:
+    brace-expansion "^2.0.1"
+
+minimatch@^5.1.4:
+  version "5.1.4"
+  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-5.1.4.tgz#4e2d39d872684e97b309a9104251c3f1aa4e9d1c"
+  integrity sha512-U0iNYXt9wALljzfnGkhFSy5sAC6/SCR3JrHrlsdJz4kF8MvhTRQNiC59iUi1iqsitV7abrNAJWElVL9pdnoUgw==
   dependencies:
     brace-expansion "^2.0.1"
 
