@@ -31,11 +31,11 @@
       {:else}
         <td />
       {/if}
-      <td
-        ><a href={course.repositoryURL} target="_blank"
-          >{new URL(course.repositoryURL).hostname.replace("www.", "")}</a
-        ></td
-      >
+      <td>
+        <a href={course.repositoryURL} target="_blank" rel="noreferrer">
+          {new URL(course.repositoryURL).hostname.replace("www.", "")}</a
+        >
+      </td>
     </tr>
   {/each}
 </table>

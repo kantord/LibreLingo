@@ -40,7 +40,11 @@
         <li><a href="/course/test">Test course</a></li>
         {#each testSkills as testSkill}
           <li>
-            <a target="_blank" href="/course/test/skill/{testSkill}">
+            <a
+              target="_blank"
+              href="/course/test/skill/{testSkill}"
+              rel="noreferrer"
+            >
               Test skill:
               <b>{testSkill}</b>
             </a>
