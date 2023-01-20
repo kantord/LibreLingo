@@ -90,7 +90,7 @@
     </div>
   </div>
   <footer slot="footer">
-    <div href={practiceHref} class="card-footer-item">
+    <div class="card-footer-item">
       <Buttons
         {title}
         practiceHref={introductionPageHref || practiceHref}
