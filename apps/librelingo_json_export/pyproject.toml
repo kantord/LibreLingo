@@ -13,7 +13,7 @@ librelingo-export-cli = 'librelingo_json_export.cli:main'
 python = "^3.8"
 librelingo-types = "^3.0.0"
 librelingo-utils = "^2.6.2"
-python-slugify = "^7.0.0"
+python-slugify = "^8.0.0"
 editdistance = "^0.6.0"
 hunspell = { version = "^0.5.5", optional = true }
 click = "^7.0.0"
