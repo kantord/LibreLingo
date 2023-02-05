@@ -8,7 +8,11 @@
     },
     "deploy": true,
     "devtoolsEnabled": true,
-    "inProduction": true
+    "inProduction": true,
+    "name": "spanish-from-english",
+    "source": "English",
+    "target": "Spanish",
+    "description": "Spanish for English speakers"
   },
   {
     "url": "https://github.com/szabgab/LibreLingo-Judeo-Spanish-from-English/archive/refs/heads/main.zip",
@@ -19,7 +23,11 @@
     },
     "deploy": false,
     "devtoolsEnabled": false,
-    "inProduction": false
+    "inProduction": false,
+    "name": "ladino-from-english",
+    "source": "English",
+    "target": "Ladino",
+    "description": "Ladino for English speakers"
   },
   {
     "url": "https://github.com/szabgab/LibreLingo-Judeo-Spanish-from-Hebrew/archive/refs/heads/main.zip",
@@ -30,7 +38,11 @@
     },
     "deploy": false,
     "devtoolsEnabled": false,
-    "inProduction": false
+    "inProduction": false,
+    "name": "ladino-from-hebrew",
+    "source": "Hebrew",
+    "target": "Ladino",
+    "description": "Ladino for Hebrew speakers"
   },
   {
     "url": "https://github.com/szabgab/LibreLingo-Judeo-Spanish-from-Spanish/archive/refs/heads/main.zip",
@@ -41,7 +53,11 @@
     },
     "deploy": false,
     "devtoolsEnabled": false,
-    "inProduction": false
+    "inProduction": false,
+    "name": "ladino-from-spanish",
+    "source": "Spanish",
+    "target": "Ladino",
+    "description": "Ladino for Spanish speakers"
   },
   {
     "url": "https://github.com/szabgab/LibreLingo-Hungarian-from-Spanish/archive/refs/heads/main.zip",
@@ -52,7 +68,11 @@
     },
     "deploy": false,
     "devtoolsEnabled": true,
-    "inProduction": false
+    "inProduction": false,
+    "name": "hungarian-from-spanish",
+    "source": "Spanish",
+    "target": "Hungarian",
+    "description": "Hungarian for Spanish speakers"
   },
   {
     "url": "https://codeberg.org/Lamdarer/LibreLingo-DE-from-EN/archive/main.zip",
@@ -63,7 +83,11 @@
     },
     "deploy": true,
     "devtoolsEnabled": true,
-    "inProduction": false
+    "inProduction": false,
+    "name": "german-from-english",
+    "source": "English",
+    "target": "German",
+    "description": "German for English speakers"
   },
   {
     "url": "https://github.com/LibreLingo/LibreLingo-EU-from-EN/archive/refs/heads/main.zip",
@@ -74,7 +98,11 @@
     },
     "deploy": true,
     "devtoolsEnabled": true,
-    "inProduction": false
+    "inProduction": false,
+    "name": "basque-from-english",
+    "source": "English",
+    "target": "Basque",
+    "description": "Basque for English speakers"
   },
   {
     "url": "https://github.com/LibreLingo/LibreLingo-BN-from-EN/archive/refs/heads/main.zip",
@@ -85,7 +113,11 @@
     },
     "deploy": false,
     "devtoolsEnabled": true,
-    "inProduction": false
+    "inProduction": false,
+    "name": "bangla-from-english",
+    "source": "English",
+    "target": "Bangla",
+    "description": "Bangla for English speakers"
   },
   {
     "url": "https://codeberg.org/kate/LibreLingo_FR_from_EN/archive/master.zip",
@@ -96,7 +128,11 @@
     },
     "deploy": true,
     "devtoolsEnabled": false,
-    "inProduction": false
+    "inProduction": false,
+    "name": "french-from-english",
+    "source": "English",
+    "target": "French",
+    "description": "French for English speakers"
   },
   {
     "url": "https://github.com/LibreLingo/LibreLingo-PAL-from-EN/archive/refs/heads/main.zip",
@@ -107,7 +143,11 @@
     },
     "deploy": false,
     "devtoolsEnabled": true,
-    "inProduction": false
+    "inProduction": false,
+    "name": "parsig-from-english",
+    "source": "English",
+    "target": "Parsig",
+    "description": "Parsig for English speakers"
   },
   {
     "url": "https://github.com/LibreLingo/LibreLingo-Houma-from-EN/archive/refs/heads/main.zip",
@@ -118,7 +158,11 @@
     },
     "deploy": true,
     "devtoolsEnabled": false,
-    "inProduction": false
+    "inProduction": false,
+    "name": "houma-from-english",
+    "source": "English",
+    "target": "Houma",
+    "description": "Houma for English speakers"
   },
   {
     "url": "https://github.com/LibreLingo/LibreLingo-ptBR-from-EN/archive/refs/heads/main.zip",
@@ -129,7 +173,11 @@
     },
     "deploy": true,
     "devtoolsEnabled": false,
-    "inProduction": false
+    "inProduction": false,
+    "name": "brazilian-portuguese-from-english",
+    "source": "English",
+    "target": "Brazilian Portuguese",
+    "description": "Brazilian Portuguese for English speakers"
   },
   {
     "url": "https://github.com/LibreLingo/LibreLingo-Neolatin-from-English/archive/refs/heads/main.zip",
@@ -140,6 +188,10 @@
     },
     "deploy": true,
     "devtoolsEnabled": false,
-    "inProduction": false
+    "inProduction": false,
+    "name": "neolatin-from-english",
+    "source": "English",
+    "target": "Neo-Latin",
+    "description": "Neo-Latin for English speakers"
   }
 ]
