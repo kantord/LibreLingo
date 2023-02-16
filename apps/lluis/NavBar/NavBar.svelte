@@ -19,7 +19,7 @@
     height: var(--navbar-height);
     padding: var(--navbar-padding-vertical) var(--navbar-padding-horizontal);
 
-    background: var(--navbar-background);
+    background: var(--deprecated-navbar-background);
     color: var(--navbar-text-color);
     border: 0;
 
