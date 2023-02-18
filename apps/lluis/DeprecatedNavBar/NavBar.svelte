@@ -16,16 +16,17 @@
     position: relative;
     left: 0;
     right: 0;
-    height: var(--navbar-height);
-    padding: var(--navbar-padding-vertical) var(--navbar-padding-horizontal);
+    height: var(--deprecated-navbar-height);
+    padding: var(--deprecated-navbar-padding-vertical)
+      var(--deprecated-navbar-padding-horizontal);
 
-    background: var(--navbar-background);
-    color: var(--navbar-text-color);
+    background: var(--deprecated-navbar-background);
+    color: var(--deprecated-navbar-text-color);
     border: 0;
 
     > * {
       img {
-        height: var(--navbar-logo-height);
+        height: var(--deprecated-navbar-logo-height);
       }
     }
 
