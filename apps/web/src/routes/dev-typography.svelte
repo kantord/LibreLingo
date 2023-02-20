@@ -1,7 +1,8 @@
 <script lang="ts" context="module">
   import NavBar from "../components/NavBar.svelte"
   import Title from "lluis/Title.svelte"
-  import Button from "../../../lluis/Button.svelte"
+  import DeprecatedButton from "../../../lluis/DeprecatedButton.svelte"
+  import Button from "lluis/NewButton.svelte"
 </script>
 
 <svelte:head>
@@ -14,21 +15,44 @@
     <div class="tile is-ancestor">
       <div class="tile is-vertical is-8">
         <div class="tile is-parent is-vertical">
-          <Title size="{2}" align="centered">Fonts Visual Guide</Title>
+          <Title size={2} align="centered">Fonts Visual Guide</Title>
           <article class="tile is-child notification is-primary p-4">
-            <Title size="{3}" textWeight="semibold">Types of headings</Title>
+            <Title size={3} textWeight="semibold">Types of headings</Title>
             <Title>Title</Title>
-            <Title isSubtitle="{true}">Subtitle</Title>
+            <Title isSubtitle={true}>Subtitle</Title>
           </article>
           <article class="tile is-child notification is-primary p-4">
-            <Title size="{3}" textWeight="semibold">Sizes</Title>
-            <Title size="{1}">Title 1</Title>
-            <Title size="{2}">Title 2</Title>
-            <Title size="{3}">Title 3</Title>
-            <Title size="{4}">Title 4</Title>
-            <Title size="{5}">Title 5</Title>
-            <Title size="{6}">Title 6</Title>
+            <Title size={3} textWeight="semibold">Sizes</Title>
+            <Title size={1}>Title 1</Title>
+            <Title size={2}>Title 2</Title>
+            <Title size={3}>Title 3</Title>
+            <Title size={4}>Title 4</Title>
+            <Title size={5}>Title 5</Title>
+            <Title size={6}>Title 6</Title>
           </article>
+          <div>
+            <DeprecatedButton>Click me</DeprecatedButton>
+          </div>
+          <div>
+            <DeprecatedButton size="small">Click me</DeprecatedButton>
+          </div>
+          <div>
+            <DeprecatedButton size="large">Click me</DeprecatedButton>
+          </div>
+          <div>
+            <DeprecatedButton size="small" style="primary"
+              >Click me</DeprecatedButton
+            >
+          </div>
+          <div>
+            <DeprecatedButton size="large" style="primary"
+              >Click me</DeprecatedButton
+            >
+          </div>
+          <div>
+            <DeprecatedButton loading style="primary">Click me</DeprecatedButton
+            >
+          </div>
           <div>
             <Button>Click me</Button>
           </div>

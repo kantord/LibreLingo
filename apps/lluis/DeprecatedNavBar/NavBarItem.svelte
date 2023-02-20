@@ -1,4 +1,4 @@
-<div> 
+<div>
   <slot />
 </div>
 
@@ -6,6 +6,6 @@
   div {
     display: block;
     padding: 6px;
-    color: var(--navbar-text-color);
+    color: var(--deprecated-navbar-text-color);
   }
 </style>

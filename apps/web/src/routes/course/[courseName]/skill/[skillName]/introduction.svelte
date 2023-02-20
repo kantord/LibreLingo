@@ -28,7 +28,7 @@
 </script>
 
 <script lang="ts">
-  import Button from "lluis/Button.svelte"
+  import Button from "lluis/DeprecatedButton.svelte"
   import MarkDownPage from "../../../../../components/MarkDownPage.svelte"
   import isBrowser from "../../../../../utils/isBrowser"
 
