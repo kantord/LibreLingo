@@ -1,6 +1,6 @@
 <script lang="ts">
   // Manual test: http://localhost:3000/course/test/skill/short-input-test-3?testChallenge=86665e4f61fa
-  import Button from "../../../../lluis/Button.svelte"
+  import Button from "../../../../lluis/DeprecatedButton.svelte"
   import HorizontalScroller from "../../../../lluis/HorizontalScroller.svelte"
 
   export let characters: Array<string>

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Button from "lluis/Button.svelte"
+  import Button from "lluis/DeprecatedButton.svelte"
   import Panel from "lluis/Panel.svelte"
 
   export let buttonText
