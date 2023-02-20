@@ -13,7 +13,7 @@
   import { onMount } from "svelte"
   import isBrowser from "../utils/isBrowser"
   import Icon from "lluis/Icon.svelte"
-  import Button from "lluis/Button.svelte"
+  import Button from "lluis/DeprecatedButton.svelte"
   import isCypress from "../utils/isCypress"
   // eslint-disable-next-line @typescript-eslint/no-var-requires
   const pMemoize = require("p-memoize")
