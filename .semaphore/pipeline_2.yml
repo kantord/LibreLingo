@@ -16,7 +16,7 @@ blocks:
             - sudo apt-get update
             - sudo apt-get install -y hunspell libhunspell-dev
             - pip install poetry
-            - poetry install --no-interaction
+            - poetry install -vv --no-interaction
             - cd apps/librelingo_json_export/ && poetry install --extras hunspell && cd -
             - cache restore node-$(checksum yarn.lock)
             - cache restore packages-web-$(checksum yarn.lock)
