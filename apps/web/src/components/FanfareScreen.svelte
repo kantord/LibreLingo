@@ -8,7 +8,7 @@
   import { goto } from "@sapper/app"
   import Mascot from "./Mascot.svelte"
   import TwitterButton from "./TwitterButton.svelte"
-  import Button from "lluis/Button.svelte"
+  import Button from "lluis/DeprecatedButton.svelte"
   import Column from "lluis/Column.svelte"
   import Columns from "lluis/Columns.svelte"
   import Title from "lluis/Title.svelte"
