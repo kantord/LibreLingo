@@ -16,8 +16,9 @@ blocks:
             - sudo apt-get update
             - sudo apt-get install -y hunspell libhunspell-dev
             - pip install poetry
-            - poetry install -vv --no-interaction
-            - cd apps/librelingo_json_export/ && poetry install --extras hunspell && cd -
+            - poetry config virtualenvs.in-project true
+            - poetry install
+            - cd apps/librelingo_json_export/ && pip install hunspell && cd -
             - cache restore node-$(checksum yarn.lock)
             - cache restore packages-web-$(checksum yarn.lock)
             - 'NODE_ENV=production yarn export:production'
