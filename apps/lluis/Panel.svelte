@@ -16,25 +16,25 @@
     left: 0;
     bottom: 0;
     right: 0;
-    padding: var(--spacing-medium);
+    padding: var(--deprecated-spacing-medium);
 
     &[data-background="default"] {
-      background: var(--panel-background);
+      background: var(--deprecated-panel-background);
     }
 
     &[data-background="success"] {
-      background: var(--panel-background-success);
-      color: var(--panel-background);
+      background: var(--deprecated-panel-background-success);
+      color: var(--deprecated-panel-background);
     }
 
     &[data-background="failure"] {
-      background: var(--panel-background-failure);
-      color: var(--panel-background);
+      background: var(--deprecated-panel-background-failure);
+      color: var(--deprecated-panel-background);
     }
 
     &[data-background="info"] {
-      background: var(--panel-background-info);
-      color: var(--panel-background);
+      background: var(--deprecated-panel-background-info);
+      color: var(--deprecated-panel-background);
     }
 
     .content {

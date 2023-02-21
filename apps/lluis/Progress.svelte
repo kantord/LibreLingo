@@ -16,19 +16,19 @@
     border-radius: 6px;
     overflow: hidden;
     border: none;
-    background-color: var(--white);
+    background-color: var(--deprecated-color-white);
     padding: 0;
   }
 
   progress::-webkit-progress-bar {
-    background-color: var(--white);
+    background-color: var(--deprecated-color-white);
   }
 
   progress::-webkit-progress-value {
-    background-color: var(--blue);
+    background-color: var(--deprecated-color-blue);
   }
 
   progress::-moz-progress-bar {
-    background-color: var(--blue);
+    background-color: var(--deprecated-color-blue);
   }
 </style>
