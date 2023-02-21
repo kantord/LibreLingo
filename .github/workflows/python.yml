@@ -43,4 +43,8 @@ jobs:
           poetry install --no-interaction
           cd ../..
           ./scripts/verifyTestCourseJsonFiles.sh
+      - name: validate that the courses can be exported correctly
+        run: |
+          yarn install
+          NODE_ENV=production yarn export:production
 
