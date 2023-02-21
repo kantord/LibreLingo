@@ -61,7 +61,7 @@
 
   div > :global(*) {
     display: inline-block;
-    border-radius: var(--button-radius-small);
+    border-radius: var(--deprecated-button-radius-small);
     padding: 6px 20px;
     margin: 4px;
     transition-property: filter;
@@ -100,17 +100,21 @@
   }
 
   div[data-style="primary"] > :global(*) {
-    border: 1px solid var(--button-primary-border);
+    border: 1px solid var(--deprecated-button-primary-border);
     color: var(
-      --button-primary-text-color
+      --deprecated-button-primary-text-color
     ) !important; /* TODO: remove when hero is remoevd */
-    background-color: var(--button-primary-background-color) !important;
+    background-color: var(
+      --deprecated-button-primary-background-color
+    ) !important;
   }
 
   div[data-style="secondary"] > :global(*) {
-    border: 1px solid var(--button-secondary-border);
-    color: var(--button-secondary-text-color) !important;
-    background-color: var(--button-secondary-background-color) !important;
+    border: 1px solid var(--deprecated-button-secondary-border);
+    color: var(--deprecated-button-secondary-text-color) !important;
+    background-color: var(
+      --deprecated-button-secondary-background-color
+    ) !important;
   }
 
   div[data-style="key"] > :global(*) {
@@ -118,9 +122,9 @@
     padding: 6px 0;
     text-align: center;
     width: calc(1em + 22px);
-    border: 1px solid var(--button-key-border);
-    color: var(--button-key-text-color) !important;
-    background-color: var(--button-key-background-color) !important;
+    border: 1px solid var(--deprecated-button-key-border);
+    color: var(--deprecated-button-key-text-color) !important;
+    background-color: var(--deprecated-button-key-background-color) !important;
   }
 
   .small > :global(*) {

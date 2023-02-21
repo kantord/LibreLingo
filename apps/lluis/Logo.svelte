@@ -13,7 +13,7 @@
     display: block;
 
     img {
-      height: var(--navbar-logo-height);
+      height: var(--deprecated-navbar-logo-height);
     }
   }
 </style>

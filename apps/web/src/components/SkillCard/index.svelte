@@ -29,8 +29,8 @@
 
   $: {
     backgroundColor = (() => {
-      if (stale) return "var(--panel-background-failure)"
-      if (completed) return "var(--panel-background-success)"
+      if (stale) return "var(--deprecated-panel-background-failure)"
+      if (completed) return "var(--deprecated-panel-background-success)"
       return "white"
     })()
   }
