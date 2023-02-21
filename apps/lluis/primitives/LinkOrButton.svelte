@@ -7,10 +7,18 @@
   export let target: string | undefined = undefined
   export let tabIndex: number | undefined = undefined
   export let disabled = false
+  export let label: string | null = null
 </script>
 
 {#if href !== null}
-  <a {href} {target} tabindex={tabIndex} {...$$restProps}>
+  <a
+    {href}
+    {target}
+    tabindex={tabIndex}
+    {...$$restProps}
+    role="button"
+    aria-label={label}
+  >
     <slot />
   </a>
 {/if}
@@ -21,6 +29,7 @@
     tabindex={tabIndex}
     {disabled}
     on:click={() => dispatch("click")}
+    aria-label={label}
     {...$$restProps}
   >
     <slot />
