@@ -7,6 +7,7 @@ jobs:
       fail-fast: false
       matrix:
         python-version: ["3.9"]
+        node-version: ["14"]
         os: [ubuntu-20.04, windows-latest, macos-11]
     defaults:
       run:
@@ -14,6 +15,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
       - uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
@@ -43,4 +45,8 @@ jobs:
           poetry install --no-interaction
           cd ../..
           ./scripts/verifyTestCourseJsonFiles.sh
+      - name: validate that the courses can be exported correctly
+        run: |
+          yarn install
+          NODE_ENV=production yarn export:production
 
