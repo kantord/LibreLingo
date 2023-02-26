@@ -1,5 +1,5 @@
-name: Python verifications
-on: [push, pull_request]
+name: Deployment to production
+on: []
 
 jobs:
   ci:
@@ -8,14 +8,22 @@ jobs:
       matrix:
         python-version: ["3.9"]
         node-version: ["14"]
-        os: [ubuntu-20.04, windows-latest, macos-11]
+        os: [ubuntu-20.04]
     defaults:
       run:
         shell: bash
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Setup git user
+        run: |
+            git config --global user.name "$(git --no-pager log --format=format:'%an' -n 1)"
+            git config --global user.email "$(git --no-pager log --format=format:'%ae' -n 1)"
       - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
       - uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
@@ -24,18 +32,6 @@ jobs:
       - name: Install Python Dependencies
         shell: bash
         run: poetry install
-      - name: Test Python packages
-        shell: bash
-        run: poetry run pytest --doctest-modules
-      - name: Test Python types (mypy)
-        shell: bash
-        run: poetry run mypy apps
-      - name: Python code style (black)
-        shell: bash
-        run: poetry run black apps --check
-      - name: Python code style (pylint)
-        shell: bash
-        run: poetry run pylint $(git ls-files '*.py')
       - name: validate that Test Course Json files are up to date
         run: |
           poetry install --no-interaction
@@ -45,3 +41,13 @@ jobs:
           poetry install --no-interaction
           cd ../..
           ./scripts/verifyTestCourseJsonFiles.sh
+      - name: install node dependencies
+        run: yarn install
+      - name: statically build entire website
+        run: NODE_ENV=production yarn export:production
+      - name: deploy to github pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: __sapper__/export
+          cname: librelingo.app
