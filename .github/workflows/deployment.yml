@@ -1,5 +1,8 @@
 name: Deployment to production
-on: []
+on:
+  schedule:
+    # Runs "at minute 55 past every hour" (see https://crontab.guru)
+    - cron: '55 * * * *'
 
 jobs:
   ci:
