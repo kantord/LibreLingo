@@ -73,7 +73,7 @@ def guess_path_to_course(path_to_course):
 def parse_skill_path(path):
     match = re.search(r"^([a-zA-Z0-9-]+)/skills/([a-zA-Z0-9_-]+)\.yaml$", path)
     if not match:
-        raise Exception(f"unrecoginized skill path: '{path}'")
+        raise RuntimeError(f"unrecoginized skill path: '{path}'")
     return match
 
 
