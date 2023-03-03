@@ -1,8 +1,8 @@
 <script lang="ts">
   import Mascot from "../components/NewMascot.svelte"
-  import Button from "lluis/NewButton.svelte"
+  import Button from "lluis/Button.svelte"
   import Hidden from "lluis/Hidden.svelte"
-  import Footer from "lluis/NewFooter.svelte"
+  import Footer from "lluis/Footer.svelte"
   import Hero from "lluis/Hero/index.svelte"
   import Stack from "lluis/Stack.svelte"
   import Heading from "lluis/Heading.svelte"
