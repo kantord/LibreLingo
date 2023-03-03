@@ -2,7 +2,7 @@
   import NavBar from "../components/NavBar.svelte"
   import Title from "lluis/Title.svelte"
   import DeprecatedButton from "../../../lluis/DeprecatedButton.svelte"
-  import Button from "lluis/NewButton.svelte"
+  import Button from "lluis/Button.svelte"
 </script>
 
 <svelte:head>
