@@ -1,9 +1,9 @@
 <script lang="ts" context="module">
   export async function preload(page) {
-      const { get_course } = await import("../../../course-client")
-      const { courseName } = page.params
+    const { get_course } = await import("../../../course-client")
+    const { courseName } = page.params
 
-      return await get_course({ courseName })
+    return await get_course({ courseName })
   }
 </script>
 
@@ -13,7 +13,7 @@
   import Column from "lluis/Column.svelte"
   import Columns from "lluis/Columns.svelte"
   import Content from "lluis/Content.svelte"
-  import Footer from "lluis/Footer.svelte"
+  import Footer from "lluis/DeprecatedFooter.svelte"
   import type { ModulesType } from "../../../types/ModulesType"
 
   export let courseName = null
@@ -26,7 +26,7 @@
   <title>LibreLingo - learn {languageName} for free</title>
 </svelte:head>
 
-<NavBar hasAuth repositoryURL="{repositoryURL}" />
+<NavBar hasAuth {repositoryURL} />
 
 {#each modules as { title, skills }}
   <section class="section">
@@ -37,7 +37,7 @@
           <Column sizeDesktop="1/3" sizeTablet="1/2">
             <SkillCard
               {...{ ...skill }}
-              practiceHref="{`/course/${courseName}/skill/${skill.practiceHref}`}"
+              practiceHref={`/course/${courseName}/skill/${skill.practiceHref}`}
             />
           </Column>
         {/each}
@@ -69,7 +69,7 @@
       </Column>
       <Column />
     </Columns>
-    <p></p>
+    <p />
   </Content>
 </Footer>
 
