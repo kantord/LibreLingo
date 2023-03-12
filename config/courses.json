@@ -193,5 +193,21 @@
     "source": "English",
     "target": "Neo-Latin",
     "description": "Neo-Latin for English speakers"
+  },
+  {
+    "url": "https://github.com/LibreLingo/LibreLingo-OCauv-from-FR/archive/refs/heads/main.zip",
+    "repositoryURL": "https://github.com/LibreLingo/LibreLingo-OCauv-from-FR",
+    "paths": {
+      "yamlFolder": "LibreLingo-OCauv-from-FR",
+      "jsonFolder": "occitan-auvergnat-from-french"
+    },
+    "deploy": true,
+    "devtoolsEnabled": false,
+    "inProduction": false,
+    "name": "occitan-auvergnat-from-french",
+    "source": "French",
+    "target": "Occitan Auvergnat",
+    "description": "Occitan Auvergnat for French speakers"
   }
+
 ]
