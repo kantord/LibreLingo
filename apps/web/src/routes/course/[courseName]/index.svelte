@@ -12,8 +12,7 @@
   import NavBar from "../../../components/NavBar.svelte"
   import Column from "lluis/Column.svelte"
   import Columns from "lluis/Columns.svelte"
-  import Content from "lluis/Content.svelte"
-  import Footer from "lluis/DeprecatedFooter.svelte"
+  import Footer from "lluis/Footer.svelte"
   import type { ModulesType } from "../../../types/ModulesType"
 
   export let courseName = null
@@ -46,32 +45,7 @@
   </section>
 {/each}
 
-<Footer>
-  <Content>
-    <Columns>
-      <Column>
-        <strong>LibreLingo</strong>
-        by
-        <a href="https://github.com/kantord">Dániel Kántor</a>
-        and
-        <a href="https://github.com/LibreLingo/LibreLingo#contributors">
-          various contributors
-        </a>
-        .
-      </Column>
-      <Column>
-        The source code is licensed
-        <a href="https://opensource.org/licenses/AGPL-3.0">AGPL-3.0.</a>
-        <br />
-        <a href="https://github.com/LibreLingo/LibreLingo">
-          Source code available on GitHub.
-        </a>
-      </Column>
-      <Column />
-    </Columns>
-    <p />
-  </Content>
-</Footer>
+<Footer />
 
 <style type="text/scss">
   @import "../../../variables";
