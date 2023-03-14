@@ -9,7 +9,7 @@
 
 <script lang="ts">
   import SkillCard from "../../../components/SkillCard/index.svelte"
-  import NavBar from "../../../components/NavBar.svelte"
+  import NavBar from "../../../components/DeprecatedNavBar.svelte"
   import Column from "lluis/Column.svelte"
   import Columns from "lluis/Columns.svelte"
   import Content from "lluis/Content.svelte"
