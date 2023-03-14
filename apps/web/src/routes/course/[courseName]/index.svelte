@@ -14,6 +14,7 @@
   import Column from "lluis/Column.svelte"
   import Columns from "lluis/Columns.svelte"
   import Footer from "lluis/Footer.svelte"
+  import Page from "lluis/Page.svelte"
   import type { ModulesType } from "../../../types/ModulesType"
 
   export let courseName = null
@@ -29,32 +30,24 @@
   <title>LibreLingo - learn {languageName} for free</title>
 </svelte:head>
 
-<NavBar hasAuth {repositoryURL} />
-
-{#each modules as { title, skills }}
-  <section class="section">
-    <div class="container">
-      <h2 class="is-size-2">{title}</h2>
-      <Columns multiline>
-        {#each skills as skill}
-          <Column sizeDesktop="1/3" sizeTablet="1/2">
-            <SkillCard
-              {...{ ...skill }}
-              practiceHref={`/course/${courseName}/skill/${skill.practiceHref}`}
-            />
-          </Column>
-        {/each}
-      </Columns>
-    </div>
-  </section>
-{/each}
-
-<Footer />
-
-<style type="text/scss">
-  @import "../../../variables";
-  .container {
-    padding-right: 20px;
-    padding-left: 20px;
-  }
-</style>
+<Page>
+  <NavBar hasAuth {repositoryURL} />
+  {#each modules as { title, skills }}
+    <section class="section">
+      <div class="container">
+        <h2 class="is-size-2">{title}</h2>
+        <Columns multiline>
+          {#each skills as skill}
+            <Column sizeDesktop="1/3" sizeTablet="1/2">
+              <SkillCard
+                {...{ ...skill }}
+                practiceHref={`/course/${courseName}/skill/${skill.practiceHref}`}
+              />
+            </Column>
+          {/each}
+        </Columns>
+      </div>
+    </section>
+  {/each}
+  <Footer />
+</Page>
