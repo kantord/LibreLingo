@@ -2,7 +2,7 @@
   import { stores } from "@sapper/app"
   import settings from "../settings"
   import authStore from "../auth"
-  import NavBar from "lluis/NewNavBar/NavBar.svelte"
+  import NavBar from "lluis/NavBar/NavBar.svelte"
   import Icon from "lluis/Icon.svelte"
   import NavBarButton from "lluis/DeprecatedNavBar/NavBarButton.svelte"
   import Logo from "lluis/Logo.svelte"
