@@ -55,7 +55,7 @@
     "button-border-color-secondary": "var(--button-color-primary)",
 
     // NavBar specific styles
-    "new-navbar-background": "rgba(255, 255, 255, .85)",
+    "navbar-background": "rgb(255, 255, 255)",
     "navbar-height": "96px",
 
     // DEPRECATED variables
