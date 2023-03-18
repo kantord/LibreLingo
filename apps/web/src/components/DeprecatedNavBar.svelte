@@ -5,7 +5,7 @@
   import NavBar from "lluis/DeprecatedNavBar/NavBar.svelte"
   import Icon from "lluis/Icon.svelte"
   import NavBarButton from "lluis/DeprecatedNavBar/NavBarButton.svelte"
-  import Logo from "lluis/Logo.svelte"
+  import Logo from "lluis/DeprecatedLogo.svelte"
   import NavBarItem from "lluis/DeprecatedNavBar/NavBarItem.svelte"
   import NavBarButtonSet from "lluis/DeprecatedNavBar/NavBarButtonSet.svelte"
   export let hasAuth = false
