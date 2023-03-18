@@ -17,6 +17,10 @@
     left: 0;
     right: 0;
     z-index: 10;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 3.5em;
+    padding-right: 3.5em;
     background-color: var(--navbar-background);
   }
 

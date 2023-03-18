@@ -15,8 +15,12 @@
 
 <NavBar>
   <div slot="left">
-    <a href={homepageLink}>
-      <Logo src={logoURL} alt="LibreLingo" link="" />
-    </a>
+    <Logo src={logoURL} alt="LibreLingo" link={homepageLink} />
   </div>
 </NavBar>
+
+<style>
+  div {
+    height: 100%;
+  }
+</style>
