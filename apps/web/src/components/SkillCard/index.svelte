@@ -58,45 +58,54 @@
   })
 </script>
 
-<Card
-  {backgroundColor}
-  {foregroundColor}
-  data-test="skill card"
-  data-started={started}
-  data-completed={completed}
-  data-stale={stale}
->
-  <div slot="icon">
-    {#if completed}
-      {#if stale}
-        <Icon icon="dumbbell" size="large" />
-      {:else}
-        <Icon icon="check-square" size="large" />
-      {/if}
-    {/if}
-  </div>
-  <div slot="content">
-    <div class="media">
-      <ContentLeft {imageSet} {stale} {completed} />
-      <ContentCenter
-        {progress}
-        {stale}
-        {levels}
-        {title}
-        {completed}
-        {started}
-        {summary}
-      />
-    </div>
-  </div>
-  <footer slot="footer">
-    <div class="card-footer-item">
-      <Buttons
-        {title}
-        practiceHref={introductionPageHref || practiceHref}
-        {started}
-        {completed}
-      />
-    </div>
-  </footer>
-</Card>
+<!-- <Card -->
+<!--   {backgroundColor} -->
+<!--   {foregroundColor} -->
+<!--   data-test="skill card" -->
+<!--   data-started={started} -->
+<!--   data-completed={completed} -->
+<!--   data-stale={stale} -->
+<!-- > -->
+<!--   <div slot="icon"> -->
+<!--     {#if completed} -->
+<!--       {#if stale} -->
+<!--         <Icon icon="dumbbell" size="large" /> -->
+<!--       {:else} -->
+<!--         <Icon icon="check-square" size="large" /> -->
+<!--       {/if} -->
+<!--     {/if} -->
+<!--   </div> -->
+<!--   <div slot="content"> -->
+<!--     <div class="media"> -->
+<!--       <ContentLeft {imageSet} {stale} {completed} /> -->
+<!--       <ContentCenter -->
+<!--         {progress} -->
+<!--         {stale} -->
+<!--         {levels} -->
+<!--         {title} -->
+<!--         {completed} -->
+<!--         {started} -->
+<!--         {summary} -->
+<!--       /> -->
+<!--     </div> -->
+<!--   </div> -->
+<!--   <footer slot="footer"> -->
+<!--     <div class="card-footer-item"> -->
+<!--       <Buttons -->
+<!--         {title} -->
+<!--         practiceHref={introductionPageHref || practiceHref} -->
+<!--         {started} -->
+<!--         {completed} -->
+<!--       /> -->
+<!--     </div> -->
+<!--   </footer> -->
+<!-- </Card> -->
+
+<div>{title}</div>
+
+<style>
+  div {
+    display: flex;
+    background: red;
+  }
+</style>
