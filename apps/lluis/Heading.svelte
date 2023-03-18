@@ -26,6 +26,7 @@
 
   h1,
   h2 {
+    color: var(--text-color-default);
     font-weight: 400;
     line-height: 1.4; /* TODO: find multiplier that works with all font sizes */
   }

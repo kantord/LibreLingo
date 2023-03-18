@@ -15,6 +15,7 @@
   import Footer from "lluis/Footer.svelte"
   import Page from "lluis/Page.svelte"
   import type { ModulesType } from "../../../types/ModulesType"
+  import Heading from "../../../../../lluis/Heading.svelte"
 
   export let courseName = null
   export let modules: ModulesType = null
@@ -31,7 +32,7 @@
   {#each modules as { title, skills }}
     <section class="section">
       <div class="container">
-        <h2 class="is-size-2">{title}</h2>
+        <Heading level={2}>{title}</Heading>
         <Columns multiline>
           {#each skills as skill}
             <Column sizeDesktop="1/3" sizeTablet="1/2">
