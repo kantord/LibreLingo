@@ -1,8 +1,4 @@
-<script lang="ts">
-  export let text
-</script>
-
-<p class="is-6 clamp">{text}</p>
+<p class="clamp"><slot /></p>
 
 <style type="text/scss">
   .clamp {
