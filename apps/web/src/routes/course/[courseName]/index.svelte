@@ -11,12 +11,11 @@
   import { locale } from "svelte-i18n"
   import SkillCard from "../../../components/SkillCard/index.svelte"
   import NavBar from "../../../components/NavBar.svelte"
-  import Column from "lluis/Column.svelte"
-  import Columns from "lluis/Columns.svelte"
   import Footer from "lluis/Footer.svelte"
   import Page from "lluis/Page.svelte"
   import type { ModulesType } from "../../../types/ModulesType"
   import Heading from "../../../../../lluis/Heading.svelte"
+  import Stack from "../../../../../lluis/Stack.svelte"
 
   export let courseName = null
   export let modules: ModulesType = null
@@ -37,16 +36,14 @@
     <section class="section">
       <div class="container">
         <Heading level={2}>{title}</Heading>
-        <Columns multiline>
+        <Stack direction="row" wrap spacing="m">
           {#each skills as skill}
-            <Column sizeDesktop="1/3" sizeTablet="1/2">
-              <SkillCard
-                {...{ ...skill }}
-                practiceHref={`/course/${courseName}/skill/${skill.practiceHref}`}
-              />
-            </Column>
+            <SkillCard
+              {...{ ...skill }}
+              practiceHref={`/course/${courseName}/skill/${skill.practiceHref}`}
+            />
           {/each}
-        </Columns>
+        </Stack>
       </div>
     </section>
   {/each}
