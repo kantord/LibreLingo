@@ -161,6 +161,12 @@ Use the following command:
 yarn exportAllCourses
 ```
 
+You can export a single course using the following command (change the name of the course for the one that you need to export):
+
+```bash
+yarn run exportCourse spanish-from-english
+```
+
 
 ## Setting up Semaphore CI in a clone
 
