@@ -4,8 +4,10 @@ import os
 import re
 from pathlib import Path
 from typing import List, Union
-
+import importlib.resources
+import json
 import bleach
+import jsonschema
 import html2markdown  # type: ignore
 import markdown
 from librelingo_types import (
@@ -46,6 +48,9 @@ def add_bool(self, node):
 
 
 SafeConstructor.add_constructor("tag:yaml.org,2002:bool", add_bool)
+
+with importlib.resources.open_text(__package__, "module.json") as fp:
+    module_schema = json.load(fp)
 
 
 def _load_yaml(path: Path):
@@ -380,27 +385,24 @@ def _load_module(path: str, course: Course):
     """
     filepath = Path(path) / "module.yaml"
     data = _load_yaml(filepath)
-    try:
-        module = data["Module"]
-        skills = data["Skills"]
-    except TypeError as type_error:
-        raise RuntimeError(
-            f'Module file "{filepath}" is empty or does not exist'
-        ) from type_error
-    except KeyError as error:
-        raise RuntimeError(
-            f'Module file "{filepath}" needs to have a "{error.args[0]}" key'
-        ) from error
 
     try:
-        title = module["Name"]
-    except Exception as exception:
+        jsonschema.validate(data, module_schema)
+    except jsonschema.ValidationError as validation_error:
+        if str(validation_error).startswith("None is not of type 'object'"):
+            raise RuntimeError(
+                f'Module file "{filepath}" is empty or does not exist'
+            ) from validation_error
         raise RuntimeError(
-            f'Module file "{filepath}" needs to have module name'
-        ) from exception
+            f"There is an error with the schema at the following file path: {filepath}\n"
+            f"Original error message: {str(validation_error)}"
+        ) from validation_error
+
+    module = data["Module"]
+    skills = data["Skills"]
 
     return Module(
-        title=title,
+        title=module["Name"],
         filename=os.path.relpath(path, start=course.course_dir),
         skills=_load_skills(path, skills, course),
     )
