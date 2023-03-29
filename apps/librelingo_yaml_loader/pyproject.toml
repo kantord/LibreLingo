@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "librelingo_yaml_loader"
-version = "1.10.5"  # Do not edit before merge to 'main'
+version = "1.11.0"  # Do not edit before merge to 'main'
 description = "Load YAML-based LibreLingo courses in your Python project."
 authors = ["Dániel Kántor <git@daniel-kantor.com>"]
 readme = "README.md"
@@ -17,6 +17,7 @@ html2markdown = "^0.1.7"
 bleach = "^6.0.0"
 hunspell = { version = "^0.5.5", optional = true }
 bleach-allowlist = "^1.0.3"
+jsonschema = "^4.17.3"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.0.0"
