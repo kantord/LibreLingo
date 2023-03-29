@@ -739,8 +739,8 @@ def test_load_module_complains_missing_module_name(load_yaml):
     random_path = fakes.path()
     load_yaml.return_value = {"Module": {}, "Skills": []}
     file_path = str(Path(random_path) / "module.yaml")
-    expected_error = f'Module file "{file_path}" needs to have module name'
-    with pytest.raises(RuntimeError, match=re.escape(expected_error)):
+    expected_error = r".*'Name' is a required property.*"
+    with pytest.raises(RuntimeError, match=expected_error):
         _load_module(random_path, fakes.course1)
 
 
