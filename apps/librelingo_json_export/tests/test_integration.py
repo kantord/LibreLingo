@@ -3,6 +3,8 @@ import json
 import os
 from pathlib import Path
 
+import jsonschema
+
 from librelingo_json_export.export import export_course
 from librelingo_yaml_loader import load_course
 
@@ -15,6 +17,7 @@ def read_json_file(path):
 def test_loaded_yaml_is_exported_to_correct_json(fs, snapshot):
     fixture_path = os.path.join(os.path.dirname(__file__), "fixtures", "fake_course")
     fs.add_real_directory(fixture_path)
+    fs.add_real_directory(os.path.dirname(jsonschema.__file__))
     fs.create_dir("output")
     course = load_course(fixture_path)
     export_course("./output", course)

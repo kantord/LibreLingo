@@ -4,6 +4,8 @@ from pathlib import Path
 from unittest.mock import Mock, patch
 
 import pytest
+import jsonschema
+
 from librelingo_fakes import fakes
 from librelingo_types import (
     Course,
@@ -38,6 +40,7 @@ class YamlImportTestCase(FakeFsTestCase):
 
     def setUp(self):
         self.setUpPyfakefs()
+        self.copy_jsonschema_resources()
         self.fake_path = fakes.path()
         self.fake_path.mkdir()
         self.fake_values = self.get_fake_values()
@@ -47,6 +50,9 @@ class YamlImportTestCase(FakeFsTestCase):
 
     def set_up_patches(self):
         pass
+
+    def copy_jsonschema_resources(self):
+        self.fs.add_real_directory(os.path.dirname(jsonschema.__file__))
 
 
 class TestLoadCourseMeta(YamlImportTestCase):
@@ -334,6 +340,7 @@ class TestLoadCourseMeta(YamlImportTestCase):
 
 def test_load_course_output_matches_value(fs):
     fixture_path = os.path.join(os.path.dirname(__file__), "fixtures", "fake_course")
+    fs.add_real_directory(os.path.dirname(jsonschema.__file__))
     fs.add_real_directory(fixture_path)
     result = load_course(fixture_path)
     assert result.target_language == Language(name="French", code="fr")
@@ -718,9 +725,8 @@ def test_load_module_complains_about_an_empty_file(load_yaml):
 def test_load_module_complains_missing_module_key(load_yaml):
     random_path = fakes.path()
     load_yaml.return_value = {}
-    file_path = str(Path(random_path) / "module.yaml")
-    expected_error = f'Module file "{file_path}" needs to have a "Module" key'
-    with pytest.raises(RuntimeError, match=re.escape(expected_error)):
+    expected_error = r".*'Module' is a required property.*"
+    with pytest.raises(RuntimeError, match=expected_error):
         _load_module(random_path, fakes.course1)
 
 
@@ -728,9 +734,8 @@ def test_load_module_complains_missing_module_key(load_yaml):
 def test_load_module_complains_missing_skills_key(load_yaml):
     random_path = fakes.path()
     load_yaml.return_value = {"Module": {}}
-    file_path = str(Path(random_path) / "module.yaml")
-    expected_error = f'Module file "{file_path}" needs to have a "Skills" key'
-    with pytest.raises(RuntimeError, match=re.escape(expected_error)):
+    expected_error = r".*'Skills' is a required property.*"
+    with pytest.raises(RuntimeError, match=expected_error):
         _load_module(random_path, fakes.course1)
 
 
@@ -738,9 +743,8 @@ def test_load_module_complains_missing_skills_key(load_yaml):
 def test_load_module_complains_missing_module_name(load_yaml):
     random_path = fakes.path()
     load_yaml.return_value = {"Module": {}, "Skills": []}
-    file_path = str(Path(random_path) / "module.yaml")
-    expected_error = f'Module file "{file_path}" needs to have module name'
-    with pytest.raises(RuntimeError, match=re.escape(expected_error)):
+    expected_error = r".*'Name' is a required property.*"
+    with pytest.raises(RuntimeError, match=expected_error):
         _load_module(random_path, fakes.course1)
 
 
