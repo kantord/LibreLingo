@@ -3,6 +3,8 @@ import os
 from pathlib import Path
 import pytest
 from click.testing import CliRunner  # type: ignore
+import jsonschema
+
 from librelingo_fakes import fakes
 from librelingo_json_export.cli import DEFAULT_SETTINGS, main
 
@@ -102,6 +104,7 @@ def test_dry_run_calls_real_export_course(mocks, inputs, invoke):
 def test_creates_excpected_files(fs, invoke_with_no_mocks, no_dry_run_arg):
     input_path = Path(__file__).parent / "fixtures" / "fake_course"
     fs.add_real_directory(input_path)
+    fs.add_real_directory(os.path.dirname(jsonschema.__file__))
     output_path = fakes.path()
     expected_files = {
         output_path / "courseData.json",

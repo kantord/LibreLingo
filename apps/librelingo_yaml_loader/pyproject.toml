@@ -31,6 +31,9 @@ pydoc-markdown = ">=4.0.0,<5.0.0"
 [tool.poetry.extras]
 hunspell = ["hunspell"]
 
+[tool.poetry.group.dev.dependencies]
+types-jsonschema = "^4.17.0.7"
+
 [build-system]
 requires = ["poetry>=0.12"]
 build-backend = "poetry.core.masonry.api"
