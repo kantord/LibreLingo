@@ -208,6 +208,20 @@
     "source": "French",
     "target": "Occitan Auvergnat",
     "description": "Occitan Auvergnat for French speakers"
+  },
+  {
+    "url": "https://github.com/LibreLingo/LibreLingo-KAB-from-FR/archive/refs/tags/last-passing.zip",
+    "repositoryURL": "https://github.com/LibreLingo/LibreLingo-KAB-from-FR/tree/last-passing",
+    "paths": {
+      "yamlFolder": "LibreLingo-KAB-from-FR",
+      "jsonFolder": "kabyle-from-french"
+    },
+    "deploy": true,
+    "devtoolsEnabled": true,
+    "inProduction": false,
+    "name": "kabyle-from-french",
+    "source": "French",
+    "target": "Kabyle",
+    "description": "Kabyle course for French speakers."
   }
-
 ]
