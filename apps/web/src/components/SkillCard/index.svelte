@@ -92,7 +92,6 @@
   <footer slot="footer">
     <div class="card-footer-item">
       <Buttons
-        {title}
         practiceHref={introductionPageHref || practiceHref}
         {started}
         {completed}
