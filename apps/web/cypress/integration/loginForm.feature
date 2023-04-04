@@ -7,7 +7,7 @@ Feature: Login form
     Given I enable the feature "auth"
 
   Scenario: Opening the login form
-    When I open "/course/test/"
+    When I open "/course/test-1/"
     Given I am logged out
     When I click "Log in"
     Then login form looks correct
