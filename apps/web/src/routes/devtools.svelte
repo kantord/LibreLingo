@@ -42,7 +42,7 @@
           <li>
             <a
               target="_blank"
-              href="/course/test/skill/{testSkill}"
+              href="/course/test-1/skill/{testSkill}"
               rel="noreferrer"
             >
               Test skill:
