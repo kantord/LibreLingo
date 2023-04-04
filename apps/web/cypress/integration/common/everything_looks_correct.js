@@ -88,5 +88,6 @@ Then("{} looks correct", (snapshotsName) => {
 
   cy.percySnapshot(snapshotsName)
 
-  cy.generateTranslationScreenshots()
+  // TODO: re-enable this
+  // cy.generateTranslationScreenshots()
 })

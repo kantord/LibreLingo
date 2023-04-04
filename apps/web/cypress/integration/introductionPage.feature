@@ -5,7 +5,7 @@ Feature: Skill introduction page
 
   Scenario: Opening the introduction page
     When I open "/course/test"
-    And I click "Learn Animals"
+    And I click "Practice"
     Then I should be on "/course/test/skill/animals/introduction"
     Then I read "Introduction to animals"
 
