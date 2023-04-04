@@ -9,6 +9,7 @@
   import Page from "lluis/Page.svelte"
   import { _ } from "svelte-i18n"
   import Translate from "../Translate.svelte"
+
   // import NavBar from "../components/NewNavBar.svelte"
 </script>
 
