@@ -2,22 +2,12 @@
 
 exports[`get_course returns correct course data: test course data 1`] = `
 {
-  "courseName": "test",
+  "courseName": "test-1",
   "languageCode": "test",
   "languageName": "Test Language",
   "modules": [
     {
       "skills": [
-        {
-          "id": "e70976d68b28",
-          "levels": 1,
-          "practiceHref": "short-input-test-0",
-          "summary": [
-            "perro",
-            "perro",
-          ],
-          "title": "Short Input Test 0",
-        },
         {
           "id": "38c2ea1c36d2",
           "imageSet": [
@@ -46,6 +36,16 @@ exports[`get_course returns correct course data: test course data 1`] = `
             "Un pato y un caballo",
           ],
           "title": "Animals",
+        },
+        {
+          "id": "e70976d68b28",
+          "levels": 1,
+          "practiceHref": "short-input-test-0",
+          "summary": [
+            "perro",
+            "perro",
+          ],
+          "title": "Short Input Test 0",
         },
         {
           "id": "a3eb592daaf6",
@@ -154,7 +154,7 @@ exports[`get_course returns correct course data: test course data 1`] = `
 exports[`get_skill_data returns correct course data 1`] = `
 {
   "challengesPerLevel": 16,
-  "courseURL": "/course/test",
+  "courseURL": "/course/test-1",
   "languageCode": "test",
   "languageName": "Test Language",
   "rawChallenges": [

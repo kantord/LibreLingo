@@ -33,6 +33,6 @@ Feature: Login form
     And I introduce "baz" as "password"
     Given my credentials are correct
     When I click the "Log in" button
-    And I open "/course/test"
+    And I open "/course/test-1"
     Then I read "Log out"
     And I am on "/"

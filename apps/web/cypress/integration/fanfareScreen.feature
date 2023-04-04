@@ -14,9 +14,9 @@ Feature: Fanfare screen
   Scenario: Going to course page using the button
     Given I open "/course/test-1/skill/continuous"
     And I click "Continue to course page"
-    Then I should be on "/course/test"
+    Then I should be on "/course/test-1"
 
   Scenario: Going to course page using the keyboard
     Given I open "/course/test-1/skill/continuous"
     And I hit the enter key
-    Then I should be on "/course/test"
+    Then I should be on "/course/test-1"
