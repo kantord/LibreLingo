@@ -29,7 +29,7 @@ Feature: Course page
     And I see a completed skill
     And course page with a completed skill looks correct
     And I see 9 skills that are not started
-    And I see a "Practice Short Input Test 0" button
+    And I see a "Practice" button
 
   Scenario: Opening course page with a started, but not completed skill
     Given I complete a lesson
@@ -38,7 +38,7 @@ Feature: Course page
     And I see a started skill
     And course page with a started skill looks correct
     And I see 9 skills that are not started
-    And I see a "Continue Short Input Test 0" button
+    And I see a "Continue learning" button
     And I see a skill with 20% progress
     And I don't read "pan, leche"
 
