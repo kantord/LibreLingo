@@ -1,7 +1,7 @@
 Feature: Cancel button in a practice session
 
   Scenario: Getting a short text input challenge
-    Given I open "/course/test/skill/short-input-test-0?testChallenge=14fc2ae4fb35"
+    Given I open "/course/test-1/skill/short-input-test-0?testChallenge=14fc2ae4fb35"
     And I click "Cancel"
     Then I should be on "/course/test"
     # Test that the progress has been recorded

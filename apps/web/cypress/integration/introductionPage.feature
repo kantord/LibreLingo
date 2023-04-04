@@ -6,13 +6,13 @@ Feature: Skill introduction page
   Scenario: Opening the introduction page
     When I open "/course/test"
     And I click "Practice"
-    Then I should be on "/course/test/skill/animals/introduction"
+    Then I should be on "/course/test-1/skill/animals/introduction"
     Then I read "Introduction to animals"
 
   Scenario: Practicing the skill from the introduction page
-    When I open "/course/test/skill/animals/introduction"
+    When I open "/course/test-1/skill/animals/introduction"
     Then I read "Introduction to animals"
     When I click "Practice Animals" 
-    Then I should be on "/course/test/skill/animals"
+    Then I should be on "/course/test-1/skill/animals"
 
 
