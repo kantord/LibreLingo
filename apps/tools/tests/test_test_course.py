@@ -7,18 +7,18 @@ from librelingo_yaml_loader.yaml_loader import load_course
 from librelingo_fakes import fakes
 
 
-def test_exported_test_course_matches_snapshot(tmpdir):
+def test_exported_test_course_matches_snapshot_1(tmpdir):
     root = os.path.abspath(__file__)
     root = os.path.dirname(root)
     root = os.path.dirname(root)
     root = os.path.dirname(root)
     root = os.path.dirname(root)
-    path_to_course = os.path.join(root, "courses", "test")
+    path_to_course = os.path.join(root, "courses", "test-1")
     course = load_course(path_to_course)
 
     settings = fakes.settings_not_dry_run()
     output_path = str(tmpdir)
-    expected_path = os.path.join(root, "apps", "web", "src", "courses", "test")
+    expected_path = os.path.join(root, "apps", "web", "src", "courses", "test-1")
 
     export_course(output_path, course, settings)
     assert_folders_are_identical(expected_path, output_path)
