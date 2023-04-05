@@ -1,6 +1,6 @@
 import ExampleGistResponse from "./__fixtures__/example-gist-response.json"
-import { default as ExampleCourseDataFile } from "../courses/test/courseData.json"
-import { default as TestCourseAnimalsSkillFile } from "../courses/test/challenges/animals.json"
+import { default as ExampleCourseDataFile } from "../courses/test-1/courseData.json"
+import { default as TestCourseAnimalsSkillFile } from "../courses/test-1/challenges/animals.json"
 import gistsConfig from "../../../../config/gists.json"
 
 const FAKE_GIST_FILE = {
