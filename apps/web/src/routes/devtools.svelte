@@ -37,12 +37,12 @@
       <h1 class="is-size-1">Development tools</h1>
       <h2 class="is-size-2">Test pages</h2>
       <ul>
-        <li><a href="/course/test">Test course</a></li>
+        <li><a href="/course/test-1">Test course</a></li>
         {#each testSkills as testSkill}
           <li>
             <a
               target="_blank"
-              href="/course/test/skill/{testSkill}"
+              href="/course/test-1/skill/{testSkill}"
               rel="noreferrer"
             >
               Test skill:

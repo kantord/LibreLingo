@@ -4,7 +4,7 @@ Feature: Course page
 
   Scenario: Opening course page
     Given I enable the feature "auth"
-    And I open "/course/test"
+    And I open "/course/test-1"
     Then course page looks correct
     And I read "Animals"
     And I see 10 skills that are not started
@@ -13,7 +13,7 @@ Feature: Course page
     And I see a "Feedback" link in the navbar
 
   Scenario: Opening course page with a stale skill
-    Given I open "/course/test"
+    Given I open "/course/test-1"
     And I have a stale skill
     Then I see a stale skill
     And course page with a stale skill looks correct
@@ -43,8 +43,8 @@ Feature: Course page
     And I don't read "pan, leche"
 
   Scenario: Strengthening stale skill
-    Given I open "/course/test"
-    Given I open "/course/test"
+    Given I open "/course/test-1"
+    Given I open "/course/test-1"
     And I have a stale skill
     Then I see a stale skill
     Given I complete a lesson
