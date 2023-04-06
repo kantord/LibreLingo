@@ -2,7 +2,7 @@ import dayjs from "dayjs"
 import settings from "../../../src/settings"
 import { Before, Then, Given, And } from "cypress-cucumber-preprocessor/steps"
 
-const COURSE_PAGE_URL = "/course/test"
+const COURSE_PAGE_URL = "/course/test-1"
 const SKILL_PAGE_URL = `${COURSE_PAGE_URL}/skill/short-input-test-0?testChallenge=14fc2ae4fb35`
 
 Before(() => {

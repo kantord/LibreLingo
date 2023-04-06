@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-yarn exportCourse test
+yarn exportCourse test-1
 
 if git diff --exit-code --name-only; then
 	echo "🎉 Amazing, test course JSON files are up to date"

@@ -7,7 +7,7 @@ Feature: Login form
     Given I enable the feature "auth"
 
   Scenario: Opening the login form
-    When I open "/course/test/"
+    When I open "/course/test-1/"
     Given I am logged out
     When I click "Log in"
     Then login form looks correct
@@ -33,6 +33,6 @@ Feature: Login form
     And I introduce "baz" as "password"
     Given my credentials are correct
     When I click the "Log in" button
-    And I open "/course/test"
+    And I open "/course/test-1"
     Then I read "Log out"
     And I am on "/"

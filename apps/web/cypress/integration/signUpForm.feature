@@ -5,7 +5,7 @@ Feature: Sign up form
 
   Background:
     Given I enable the feature "auth"
-    When I open "/course/test/"
+    When I open "/course/test-1/"
     Given I am logged out
 
   Scenario: Opening the sign up form

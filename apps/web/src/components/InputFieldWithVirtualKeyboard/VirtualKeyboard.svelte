@@ -1,5 +1,5 @@
 <script lang="ts">
-  // Manual test: http://localhost:3000/course/test/skill/short-input-test-3?testChallenge=86665e4f61fa
+  // Manual test: http://localhost:3000/course/test-1/skill/short-input-test-3?testChallenge=86665e4f61fa
   import Button from "../../../../lluis/DeprecatedButton.svelte"
   import HorizontalScroller from "../../../../lluis/HorizontalScroller.svelte"
 
