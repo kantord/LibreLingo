@@ -1,0 +1,65 @@
+{
+  "languageName": "Test Language",
+  "languageCode": "test",
+  "specialCharacters": [
+    "á",
+    "Á",
+    "é",
+    "É",
+    "í",
+    "Í",
+    "ó",
+    "Ó",
+    "ú",
+    "Ú",
+    "ü",
+    "Ü",
+    "ñ",
+    "Ñ",
+    "¿",
+    "¡"
+  ],
+  "repositoryURL": "https://github.com/LibreLingo/LibreLingo/",
+  "license": {
+    "name": {
+      "short": "CC BY-SA 4.0",
+      "full": "Attribution-ShareAlike 4.0 International"
+    },
+    "link": "https://creativecommons.org/licenses/by-sa/4.0/legalcode"
+  },
+  "modules": [
+    {
+      "title": "Basics",
+      "skills": [
+        {
+          "imageSet": [
+            "dog1",
+            "lion3",
+            "cat3"
+          ],
+          "summary": [
+            "perro",
+            "gato",
+            "oso",
+            "león",
+            "pato",
+            "caballo",
+            "el gato",
+            "un oso",
+            "un león",
+            "el pato",
+            "un caballo",
+            "el perro",
+            "Es un caballo",
+            "Max es un perro",
+            "Un pato y un caballo"
+          ],
+          "practiceHref": "animals",
+          "id": "38c2ea1c36d2",
+          "title": "Animals",
+          "levels": 3
+        }
+      ]
+    }
+  ]
+}
