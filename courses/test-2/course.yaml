@@ -1,0 +1,40 @@
+Course:
+  Language:
+    Name: Test Language
+    IETF BCP 47: test
+
+  For speakers of:
+    Name: English
+    IETF BCP 47: en
+
+  License:
+    Name: Attribution-ShareAlike 4.0 International
+    Short name: CC BY-SA 4.0
+    Link: https://creativecommons.org/licenses/by-sa/4.0/legalcode
+
+  Repository: https://github.com/LibreLingo/LibreLingo/
+
+  Special characters:
+    - "á"
+    - "Á"
+    - "é"
+    - "É"
+    - "í"
+    - "Í"
+    - "ó"
+    - "Ó"
+    - "ú"
+    - "Ú"
+    - "ü"
+    - "Ü"
+    - "ñ"
+    - "Ñ"
+    - "¿"
+    - "¡"
+
+Modules:
+  - basics
+
+Settings:
+    Audio:
+      Enabled: True
