@@ -125,8 +125,7 @@
 
   $: skipAllChallenges = async () => {
     if (solvedChallenges.length == 0) {
-      // TODO: fix bug #2799
-      window.location.replace("/course/test-1")
+      window.location.replace(courseURL)
       return
     }
     stats.skipped++
