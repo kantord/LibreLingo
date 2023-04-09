@@ -32,6 +32,7 @@ const formatCourseData = (rawCourseData, { courseName }) => {
     repositoryURL,
     languageCode,
     specialCharacters,
+    uiLanguage,
   } = rawCourseData
 
   return {
@@ -41,6 +42,7 @@ const formatCourseData = (rawCourseData, { courseName }) => {
     repositoryURL,
     languageCode,
     specialCharacters,
+    uiLanguage,
   }
 }
 

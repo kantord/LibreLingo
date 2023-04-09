@@ -44,8 +44,13 @@ Feature: Course page
 
   Scenario: Strengthening stale skill
     Given I open "/course/test-1"
-    Given I open "/course/test-1"
     And I have a stale skill
     Then I see a stale skill
     Given I complete a lesson
     Then I don't see any stale skills
+
+
+  Scenario: Visiting a course page that is not in English
+    Given I open "/course/test-2"
+    And I have a stale skill
+    Then I see a "Practicar" button

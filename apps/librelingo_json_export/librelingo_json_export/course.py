@@ -11,6 +11,7 @@ def _get_course_data(course: Course):
     return {
         "languageName": course.target_language.name,
         "languageCode": course.target_language.code,
+        "uiLanguage": course.source_language.code,
         "specialCharacters": course.special_characters,
         "repositoryURL": course.repository_url,
         "license": {
