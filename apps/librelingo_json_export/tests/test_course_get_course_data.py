@@ -26,6 +26,7 @@ def test__get_course_data_return_value():
     assert _get_course_data(fakes.course1) == {
         "languageName": "my language",
         "languageCode": "de",
+        "uiLanguage": "tr",
         "specialCharacters": ["ä", "ß"],
         # pylint: disable=line-too-long
         "repositoryURL": "https://github.com/kantord/LibreLingo/tree/main/courses/spanish-from-english",
@@ -79,6 +80,7 @@ def test__get_course_data_return_value_2():
     assert _get_course_data(fakes.course2) == {
         "languageName": "another language",
         "languageCode": "tr",
+        "uiLanguage": "de",
         "specialCharacters": ["ç", "ş"],
         "repositoryURL": "https://github.com/LibreLingo/LibreLingo-ES-from-EN",
         "license": {
@@ -111,6 +113,7 @@ def test__get_course_data_return_value_with_introduction():
     assert _get_course_data(course_with_markdown) == {
         "languageName": "another language",
         "languageCode": "tr",
+        "uiLanguage": "de",
         "specialCharacters": ["ç", "ş"],
         "repositoryURL": "https://github.com/LibreLingo/LibreLingo-ES-from-EN",
         "license": {
