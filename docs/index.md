@@ -40,6 +40,7 @@ In order to install the dependencies of this project, you will need to have some
 development tools installed.
 
 #### Ubuntu
+
 If you are on Ubuntu, run this command in order to make sure you have all the basic dependencies:
 
 ```bash
@@ -94,6 +95,7 @@ yarn install
 ```
 
 #### Starting the development server
+
 Start the development server:
 
 ```sh
@@ -112,11 +114,10 @@ in the frontend, you need to be able to export YAML courses locally.
 You will need [Poetry](https://python-poetry.org/). If you don't have Poetry, you can install it with
 
 ```bash
-curl -sSL https://install.python-poetry.org | python - 
+curl -sSL https://install.python-poetry.org | python -
 ```
 
 For more information, check out [Poetry's official documentation](https://python-poetry.org/docs/#installation).
-
 
 #### Install dependencies using Poetry
 
@@ -142,8 +143,8 @@ need to install courses locally and export them from YAML to JSON.
 #### Install courses
 
 The following command installs all courses listed in the courses.json file just like
-in production. *Keep in mind that in order to use them in the frontend, the courses
-also need to be exported!*
+in production. _Keep in mind that in order to use them in the frontend, the courses
+also need to be exported!_
 
 ```bash
 yarn web run installAllExternalCourses
@@ -167,7 +168,6 @@ You can export a single course using the following command (change the name of t
 yarn run exportCourse spanish-from-english
 ```
 
-
 ## Setting up Semaphore CI in a clone
 
 In order for Semaphore CI to correctly operate, you will need to set up certain secrets.
@@ -178,9 +178,9 @@ This might not be necessary for you in all cases, but it cannot be avoided if yo
 
 Here's a list of the tokens you need to set up. Each of them is a link to a page explaining how to obtain the token:
 
-*   [GH\_TOKEN](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token)
-*   [KNAPSACK\_PRO\_TEST\_SUITE\_TOKEN\_CYPRESS](https://www.npmjs.com/package/@knapsack-pro/cypress#configuration-steps)
-*   [PERCY\_TOKEN](https://docs.percy.io/docs/environment-variables)
+- [GH_TOKEN](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token)
+- [KNAPSACK_PRO_TEST_SUITE_TOKEN_CYPRESS](https://www.npmjs.com/package/@knapsack-pro/cypress#configuration-steps)
+- [PERCY_TOKEN](https://docs.percy.io/docs/environment-variables)
 
 ## Testing courses using GitHub gists
 
@@ -200,7 +200,6 @@ Keep in mind, that you have to prefix all file names with `librelingo___` and re
 
 So, for example `challenges/animals.json` should be uploaded as the GitHub gist file
 `librelingo___challenges___animals.json`.
-
 
 ## Mocks
 

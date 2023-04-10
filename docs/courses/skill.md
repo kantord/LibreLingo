@@ -14,6 +14,7 @@ The words and phrases that make up a skill are taught to the user using [automat
 ---
 
 **Table of Contents:**
+
 - [Tree structure](#tree-structure)
 - [`(skill_name).yaml`](#yaml)
 - [Data breakdown](#data-breakdown)
@@ -44,6 +45,7 @@ Here, `animals.yaml`, `clothes.yaml`, and `food.yaml` are skills. These skill fi
 Skill yaml filenames should not have spaces and should be written in `slug-form`. The human-friendly `Name` in the yaml, however, can contain uppercase and spaces.
 
 <a id="yaml"></a>
+
 ## `(skill_name).yaml`
 
 As an example, let's look into the `courses/french-from-english/basics/skills/hello.yaml` file, which looks like this:
@@ -111,22 +113,25 @@ Two-way-dictionary:
 ### Data breakdown
 
 **`Skill`** has information about the skill.
+
 - `Skill > Name`: The human-friendly name of the skill.
 - `Skill > Id`: The ID of the course. **NOTE:** This should be unchanged if you're translating or editing an existing course. Only if you're creating a new course should this have a unique [UUID v4](https://www.uuidgenerator.net/version4) string. Details for which you can find [here](creating-courses.md).
 - `Skill > Thumbnails`: A list of filenames of the thumbnails to be used on the course page to give an idea of the skill. A list of available files can be found on [`apps/web/static/images/`](https://github.com/LibreLingo/LibreLingo/tree/main/apps/web/static/images). The names should be used without extension and without `_tiny` or `_tinier` parts, e.g., `banana2_tinier.jpg` should be written as `banana2`.
 
 **`New words`** has a list of new words that the lesson teaches.
+
 - `Word`: The word in the target language, i.e., the language the user is learning.
 - `Synonyms`: A list of synonyms of the above word. (optional)
 - `Translation`: Translation of the word in the source language, i.e., the language the user already knows.
-- `Also accepted`: A list of alternative translations to the source language, which will *not* be taught but will be accepted as correct translations of the `Word` field if supplied by the user. Currently has no effect, but may be used by future challenge types. (optional)
+- `Also accepted`: A list of alternative translations to the source language, which will _not_ be taught but will be accepted as correct translations of the `Word` field if supplied by the user. Currently has no effect, but may be used by future challenge types. (optional)
 - `Images`: A list of images for the word that is defined under `Word` or `Translation` above. The image names have to be without extension and without `_tiny` or `_tinier` parts.
 
 **`Phrases`** has a list of sentences or phrases that the lesson teaches.
+
 - `Phrase`: The phrase in the target language.
-- `Alternative versions`: A list of alternative versions of the phrase in the target language. These will *not* be taught but will be accepted as correct translations of the `Translation` field if supplied by the user. (optional)
+- `Alternative versions`: A list of alternative versions of the phrase in the target language. These will _not_ be taught but will be accepted as correct translations of the `Translation` field if supplied by the user. (optional)
 - `Translation`: Translation of the phrase to the source language.
-- `Alternative translations`: A list of alternative translations to the source language, which will *not* be taught but will be accepted as correct translations of the `Phrase` field if supplied by the user. (optional)
+- `Alternative translations`: A list of alternative translations to the source language, which will _not_ be taught but will be accepted as correct translations of the `Phrase` field if supplied by the user. (optional)
 
 **`Mini-dictionary`** has a list of terms and meanings the user can view as a sort of "hint" if they are stuck. Entries are accessed by mousing over terms in an exercise, which brings up a tooltip with the corresponding term(s) in the other language. An entry is required for every term used in a skill.
 
@@ -163,7 +168,6 @@ Mini-dictionary:
 
 The Two-way-dictionary also disregards any parentheses on the original side but includes them on the translation side:
 
-
 ```
 Two-way-dictionary:
   - (I) eat: (yo) como
@@ -179,22 +183,24 @@ Mini-dictionary:
     - como: (I) eat
 ```
 
-
 ## How skills are taught to the user
 
 As the course author, you have to specify the words and phrases you want to teach. LibreLingo will know how to present skills as a series of individual questions and tasks -- LibreLingo calls these "challenges." It is useful to understand what challenges will be generated.
 
 For each vocabulary word (that is, each `New words` entry) in a skill, LibreLingo generates:
+
 - A [cards challenge](challenge.md#cards-challenge) -- multiple-choice translation from the source language to the target language, with a visual clue
 - A [short input challenge](challenge.md#short-input-challenge) -- free-form translation from the source language to the target language
 - A [listening challenge](challenge.md#listening-challenge) -- transcription from target language audio to the target language text
 
 For each phrase in a skill, LibreLingo generates:
+
 - An [options challenge](challenge.md#options-challenge) -- multiple-choice translation from target language to source language
 - Two [chips challenges](challenge.md#chips-challenge) -- translation using provided words, one in each translation direction, unless the phrase is one word
 - A [listening challenge](challenge.md#listening-challenge) -- transcription from target language audio to the target language text
 
 <a id="creating-new"></a>
+
 ## Creating new skills
 
 Creating new skills is a matter of creating their corresponding YAML file.
@@ -207,6 +213,7 @@ That being said, there are a couple of things to keep in mind:
   a [`module.yaml`](module.md#yaml).
 
 <a id="example-edit"></a>
+
 ## Examples of editing a skill
 
 This is how you'd add a new alternative version to the
@@ -245,17 +252,18 @@ Mini-dictionary:
   French:
     - dit: says
     - bonjour:
-      - hello
-      - hi
-...
-  English:
-    - says: dit
-    - hello:
+        - hello
+        - hi
+---
+English:
+  - says: dit
+  - hello:
       - bonjour
       - salut
 ```
 
 <a id="tips"></a>
+
 ## Tips for creating good skills
 
 - When it comes to teaching grammar, your main tool is to teach by example.
@@ -263,6 +271,7 @@ Mini-dictionary:
 - Do not try to teach verbs, adjectives, etc., using words. Instead, use them in phrases.
 
 <a id="markdown"></a>
+
 ## `(skill_name).md`
 
 In order to create an introduction page for your skill, you need to create a [Markdown](https://en.wikipedia.org/wiki/Markdown)
