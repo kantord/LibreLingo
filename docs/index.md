@@ -74,7 +74,7 @@ cd LibreLingo
 You will need [Node](https://nodejs.org/en/). Note that this project is not yet compatible with Node v16.
 
 In order to make sure you have the correct `node` version, it's recommended to use
-`nvm`. To install `nvm`, please [consult nvm's official documentation](https://github.com/nvm-sh/nvm#installing-and-updating).
+`nvm`. To install `nvm`, please [consult nvm's official documentation](https://github.com/nvm-sh/nvm#installing-and-updating), but if you already have the correct version, you might not strictly need it.
 
 First, install the correct `node` version with this command:
 
@@ -89,6 +89,8 @@ nvm use 14
 ```
 
 #### Install dependencies:
+
+Yarn is a package manager for JavaScript that helps manage project dependencies, ensuring consistent and efficient installations. For more information about Yarn, [please refer to the official documentation](https://yarnpkg.com/). [The steps required to install yarn itself are documented here](https://classic.yarnpkg.com/lang/en/docs/install/#debian-stable).
 
 ```sh
 yarn install
