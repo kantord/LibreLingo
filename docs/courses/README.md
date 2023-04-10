@@ -3,6 +3,7 @@
 This document describes how LibreLingo's course system works and how to contribute to course content.
 
 Understanding this document is the first step if you want to:
+
 - edit or improve an existing course
 - contribute a new accepted answer
 - create a new course from scratch
@@ -17,6 +18,7 @@ This is also a good resource if you just want to learn about the course system i
 ---
 
 **Table of Contents:**
+
 - [Getting started](#getting-started)
 - [Basics](#basics)
   - [Terminology](#terminology)
@@ -31,7 +33,6 @@ This is also a good resource if you just want to learn about the course system i
 - Totally new to LibreLingo? Head to the [Basics](#basics) section! It will give you a general understanding of the course system.
 - Want to edit or improve existing courses? Check out [this page about editing courses](editing-courses.md).
 - If you want to create new courses (typically suited for course designers or advanced users), go to [this page](creating-courses.md).
-
 
 ## Basics
 
@@ -48,8 +49,8 @@ These concepts represent a hierarchical structure to LibreLingo course material:
 - The **target language** is the language the course is meant to teach.
 - The **source language** is a language that users of the course are assumed to know.
 
-
 <a id="exploring-courses"></a>
+
 ### Exploring the courses
 
 To better understand how courses work, you can explore how the course files are organized on this repository.
@@ -62,11 +63,12 @@ Go to [LibreLingo web app](https://librelingo.app/). Courses are listed there, e
 
 When you enter a course page, for example, the [Spanish course](https://librelingo.app/course/spanish-from-english/), you'll see headings like Basics, Introduction, and Activities. These are modules. Each module contains a set of skills. Modules organize skills into groups, which is their only purpose. Think of them as groups of units or chapters.
 
-"Skills" are units of course content focused on a particular topic. Each skill is a set of new knowledge, such as new words or phrases.  Skills can focus on vocabulary and follow a theme: the "Animal" skill has words and phrases related to animals, and the "Food" skill is all about food. Skills can also focus on teaching grammar.
+"Skills" are units of course content focused on a particular topic. Each skill is a set of new knowledge, such as new words or phrases. Skills can focus on vocabulary and follow a theme: the "Animal" skill has words and phrases related to animals, and the "Food" skill is all about food. Skills can also focus on teaching grammar.
 
 Inside a skill YAML file there are some keys that you might want to learn of, which is explained in detail [here](skill.md).
 
 <a id="things-new-contributors"></a>
+
 ### Things you can do as a new contributor
 
 If you are new to contributing to course data, these are the things you can do to get a proper understanding of the courses and have a good time with the project:
@@ -81,8 +83,8 @@ If you are new to contributing to course data, these are the things you can do t
   - IETF BCP 47 tag name for your language, which you can get from [here](http://www.iana.org/assignments/language-subtag-registry). Just look for the `Subtag` for your language, e.g., fr, grc
 - If you have questions, feel free to ask on [Discussions](https://github.com/kantord/LibreLingo/discussions).
 
-
 <a id="courses-open"></a>
+
 ## Courses currently open for contributions
 
 [Check out our devtool page for the up-to-date list](https://librelingo.app/dev/).
@@ -90,6 +92,7 @@ If you are new to contributing to course data, these are the things you can do t
 ## Caution
 
 <a id="non-latin-alphabet"></a>
+
 ### Languages that don't use the Latin alphabet
 
 Currently, LibreLingo doesn't have enough features to support teaching new

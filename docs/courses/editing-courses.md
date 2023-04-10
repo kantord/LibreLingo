@@ -12,6 +12,7 @@ To get a better understanding, we recommend you read the [course basics](README.
 ---
 
 **Table of Contents:**
+
 - [Setup](#setup)
   - [Pulling code and branching](#pulling-and-branching)
   - [Pushing code and creating Pull Request](#pushing-and-pr)
@@ -23,9 +24,11 @@ To get a better understanding, we recommend you read the [course basics](README.
 ## Setup
 
 <a id="pulling-and-branching"></a>
+
 ### Pulling code and branching
 
 LibreLingo uses a Git repository for maintaining code. In order to contribute changes, you first need to fork this project. To fork:
+
 - [login](https://github.com/login) to GitHub
 - then go to [LibreLingo repository](https://github.com/LibreLingo/LibreLingo/)
 - click the "Fork" button (beside Watch and Star)
@@ -71,6 +74,7 @@ You can name it as your language name if you want, but without spaces (e.g. `kor
 You are now ready to make changes.
 
 <a id="pushing-and-pr"></a>
+
 ### Pushing code and creating Pull Request
 
 These instructions are written to be used after making the changes. So you can read the rest of the page and continue from here if you want.
@@ -112,19 +116,23 @@ A pull request is a request to apply your changes to the original project. Such 
 After you post the pull request, project maintainers will look into your changes and respond. When they do, you'll get a [notification](https://github.com/notifications) on GitHub.
 
 <a id="following-up-pr"></a>
+
 ### Following up with PR responses
 
 Depending on the Pull Request (PR) you made earlier, you can either get accepted right away (in that case, it will be "merged"), or you may need to make some changes (you'll get comments). If the project maintainers ask for a change, do this:
 
 - `cd` into the git repository directory, or open a terminal on the directory
 - Make sure you're on the branch in which you made changes earlier. Check with `git status`, and if not on the proper branch, switch to it with:
+
 ```sh
 git checkout my-awesome-branch
 ```
+
 - **NOTE:** If you don't remember which branch you were in, check the Pull request you made or run `git branch -a` to find out and switch to it.
 - Make the changes requested.
 - Check that the changes are what you were asked to do by running `git diff` (Page up/down to scroll, q to quit).
 - When ready:
+
 ```sh
 git add courses/
 git commit --amend --no-edit
@@ -143,9 +151,10 @@ Right now, the only TTS provider supported by LibreLingo is Amazon Polly. You'll
 ./scripts/updateAudioForYamlCourse.sh <name of edited course, e.g. spanish-from-english>
 ```
 
-If you'd like to simply *see* the audio changes that need to be made without actually performing them, add the `--dry-run` flag. In rare circumstances, you may want to completely regenerate the audio for a course, overwriting everything that's already there. This can be done with the `--destructive` flag -- but use it with care!
+If you'd like to simply _see_ the audio changes that need to be made without actually performing them, add the `--dry-run` flag. In rare circumstances, you may want to completely regenerate the audio for a course, overwriting everything that's already there. This can be done with the `--destructive` flag -- but use it with care!
 
 <a id="translating"></a>
+
 ## Translating based on an existing course
 
 If you just want to translate an existing course, the simplest way is to copy the existing course. Right now, `spanish-from-english` is the most complete. So:
@@ -161,6 +170,7 @@ _**NOTE:** When editing existing skill yaml files, do not change the skill IDs s
 When you are done, you can continue to the [pull request section](#pushing-and-pr) to submit the changes.
 
 <a id="editing-existing"></a>
+
 ## Editing existing courses
 
 If you want to make edits to course data, consult [Course](course.md), [Module](module.md) or [Skill](skill.md) documentation for details or [discuss](https://github.com/LibreLingo/LibreLingo/discussions) if you're unsure on how to do something.
