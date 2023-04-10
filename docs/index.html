@@ -215,6 +215,29 @@
 <a class="md-nav__link" href="#install-dependencies-using-poetry">
     Install dependencies using Poetry
   </a>
+<nav aria-label="Install dependencies using Poetry" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#handling-outdated-local-dependencies">
+    Handling Outdated Local Dependencies
+  </a>
+<nav aria-label="Handling Outdated Local Dependencies" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#updating-javascript-dependencies-with-yarn">
+    Updating JavaScript Dependencies with Yarn
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#updating-python-dependencies-with-poetry">
+    Updating Python Dependencies with Poetry
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -441,6 +464,29 @@
 <a class="md-nav__link" href="#install-dependencies-using-poetry">
     Install dependencies using Poetry
   </a>
+<nav aria-label="Install dependencies using Poetry" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#handling-outdated-local-dependencies">
+    Handling Outdated Local Dependencies
+  </a>
+<nav aria-label="Handling Outdated Local Dependencies" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#updating-javascript-dependencies-with-yarn">
+    Updating JavaScript Dependencies with Yarn
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#updating-python-dependencies-with-poetry">
+    Updating Python Dependencies with Poetry
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -538,7 +584,7 @@ development tools installed.</p>
 <h4 id="having-the-correct-version-of-node">Having the correct version of Node</h4>
 <p>You will need <a href="https://nodejs.org/en/">Node</a>. Note that this project is not yet compatible with Node v16.</p>
 <p>In order to make sure you have the correct <code>node</code> version, it's recommended to use
-<code>nvm</code>. To install <code>nvm</code>, please <a href="https://github.com/nvm-sh/nvm#installing-and-updating">consult nvm's official documentation</a>.</p>
+<code>nvm</code>. To install <code>nvm</code>, please <a href="https://github.com/nvm-sh/nvm#installing-and-updating">consult nvm's official documentation</a>, but if you already have the correct version, you might not strictly need it.</p>
 <p>First, install the correct <code>node</code> version with this command:</p>
 <pre><code class="language-bash">nvm install 14
 </code></pre>
@@ -546,6 +592,7 @@ development tools installed.</p>
 <pre><code class="language-bash">nvm use 14
 </code></pre>
 <h4 id="install-dependencies">Install dependencies:</h4>
+<p>Yarn is a package manager for JavaScript that helps manage project dependencies, ensuring consistent and efficient installations. For more information about Yarn, <a href="https://yarnpkg.com/">please refer to the official documentation</a>. <a href="https://classic.yarnpkg.com/lang/en/docs/install/#debian-stable">The steps required to install yarn itself are documented here</a>.</p>
 <pre><code class="language-sh">yarn install
 </code></pre>
 <h4 id="starting-the-development-server">Starting the development server</h4>
@@ -573,6 +620,18 @@ cd apps/librelingo_json_export
 poetry install
 cd ../..
 </code></pre>
+<h5 id="handling-outdated-local-dependencies">Handling Outdated Local Dependencies</h5>
+<p>When you update your local repository by pulling remote changes, your local dependencies might become outdated. To ensure your local dependencies are in sync with the project requirements, follow these brief steps:</p>
+<h6 id="updating-javascript-dependencies-with-yarn">Updating JavaScript Dependencies with Yarn</h6>
+<p>Update your local dependencies:</p>
+<pre><code class="language-bash">yarn install
+</code></pre>
+<p>This command ensures your local dependencies match the project's <strong>package.json</strong> file. For more information, <a href="https://yarnpkg.com/getting-started/usage">refer to the Yarn documentation</a>.</p>
+<h6 id="updating-python-dependencies-with-poetry">Updating Python Dependencies with Poetry</h6>
+<p>Update your local dependencies:</p>
+<pre><code class="language-bash">poetry install
+</code></pre>
+<p>This command ensures your local dependencies match the project's <strong>pyproject.toml</strong> and <strong>poetry.lock</strong> files. For more information, <a href="https://python-poetry.org/docs/cli/#install">refer to the Poetry documentation</a>.</p>
 <h3 id="locally-test-librelingo-with-real-courses">Locally test LibreLingo with real courses</h3>
 <p>In order to test LiberLingo with real courses just like in the deployed production version, you
 need to install courses locally and export them from YAML to JSON.</p>
