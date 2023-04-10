@@ -12,7 +12,7 @@
         <link rel="prev" href="attributions.html">
       
       
-        <link rel="next" href="website_tos.html">
+        <link rel="next" href="ui_translation.html">
       
       <link rel="icon" href="assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
@@ -258,7 +258,7 @@
   
     <li class="md-nav__item">
       <a href="LICENSE.html" class="md-nav__link">
-        LICENSE
+        GNU Affero General Public License
       </a>
     </li>
   
@@ -364,6 +364,21 @@
   
   
     <li class="md-nav__item">
+      <a href="ui_translation.html" class="md-nav__link">
+        User interface translation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="website_tos.html" class="md-nav__link">
         Website tos
       </a>
@@ -384,17 +399,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
       
       
       
-        <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
           Courses
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_8">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
           Courses
         </label>
@@ -620,7 +635,7 @@ dependency of our project:</p>
 <pre><code class="language-console">==================================== test session starts =====================================
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
 rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
-collected 0 items                                                                            
+collected 0 items
 
 =================================== no tests ran in 0.00s ====================================
 </code></pre>
@@ -639,7 +654,7 @@ def test_returns_hello_world():
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
 rootdir: /home/kdani/repos/LibreLingo
 plugins: pyfakefs-4.4.0, mock-3.5.1, snapshottest-0.6.0
-collected 178 items / 1 error / 177 selected                                                 
+collected 178 items / 1 error / 177 selected
 
 =========================================== ERRORS ===========================================
 _________ ERROR collecting apps/librelingo_audios/tests/test_list_missing_audios.py __________
@@ -682,7 +697,7 @@ from librelingo_audios.list_missing_audios import list_missing_audios
 <pre><code class="language-console">==================================== test session starts =====================================
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
 rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
-collected 1 item                                                                             
+collected 1 item
 
 tests/test_list_missing_audios.py .                                                    [100%]
 
@@ -712,7 +727,7 @@ Out[4]: 'Basics'
 <p>We can list the Phrase objects included in
 the second Skill of the first Module like so:</p>
 <pre><code class="language-python">In [6]: course.modules[0].skills[1].phrases
-Out[6]: 
+Out[6]:
 [Phrase(in_target_language=['Buen provecho'], in_source_language=['Enjoy your meal']),
  Phrase(in_target_language=['Por favor'], in_source_language=['Please']),
  Phrase(in_target_language=['Pan, por favor'], in_source_language=['Bread, please']),
@@ -755,7 +770,7 @@ def test_an_empty_course_does_not_have_any_audios():
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
 rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
 plugins: pyfakefs-4.4.0, snapshottest-0.6.0
-collected 1 item                                                                             
+collected 1 item
 
 tests/test_list_missing_audios.py F                                                    [100%]
 
@@ -786,7 +801,7 @@ we figure out that this course has <code>2</code> phrases in total:</p>
 In [42]: for module in fakes.course1.modules:
     ...:     for skill in module.skills:
     ...:         count += len(skill.phrases)
-    ...: 
+    ...:
 
 In [43]: count
 Out[43]: 2
@@ -811,7 +826,7 @@ any phrases:</p>
 In [42]: for module in fakes.course2.modules:
     ...:     for skill in module.skills:
     ...:         count += len(skill.phrases)
-    ...: 
+    ...:
 
 In [43]: count
 Out[43]: 0
@@ -825,7 +840,7 @@ Out[43]: 0
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
 rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
 plugins: pyfakefs-4.4.0, snapshottest-0.6.0
-collected 2 items                                                                            
+collected 2 items
 
 tests/test_list_missing_audios.py F.                                                   [100%]
 
@@ -871,7 +886,7 @@ Let's make sure it's always the second item in the output:</p>
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
 rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
 plugins: pyfakefs-4.4.0, snapshottest-0.6.0
-collected 3 items                                                                            
+collected 3 items
 
 tests/test_list_missing_audios.py ..F                                                  [100%]
 
@@ -900,7 +915,7 @@ FAILED tests/test_list_missing_audios.py::test_result_includes_the_phrase_in_the
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
 rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
 plugins: pyfakefs-4.4.0, snapshottest-0.6.0
-collected 3 items                                                                            
+collected 3 items
 
 tests/test_list_missing_audios.py ..F                                                  [100%]
 
@@ -937,7 +952,7 @@ FAILED tests/test_list_missing_audios.py::test_result_includes_the_phrase_in_the
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
 rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
 plugins: pyfakefs-4.4.0, snapshottest-0.6.0
-collected 4 items                                                                            
+collected 4 items
 
 tests/test_list_missing_audios.py ...F                                                 [100%]
 
@@ -990,7 +1005,7 @@ can also recognize.</p>
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
 rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
 plugins: pyfakefs-4.4.0, snapshottest-0.6.0
-collected 5 items                                                                            
+collected 5 items
 
 tests/test_list_missing_audios.py ....F                                                [100%]
 
@@ -1040,7 +1055,7 @@ We assert that it has to run twice since there are 2 phrases that need audio fil
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
 rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
 plugins: pyfakefs-4.4.0, mock-3.5.1, snapshottest-0.6.0
-collected 6 items                                                                            
+collected 6 items
 
 tests/test_list_missing_audios.py .....F                                               [100%]
 
@@ -1052,8 +1067,8 @@ mocker = &lt;pytest_mock.plugin.MockerFixture object at 0x7ff94ee398e0&gt;
     def test_calls_audio_id_to_get_the_id(mocker):
 &gt;       audio_id = mocker.patch('librelingo_audios.list_missing_audios.audio_id')
 
-tests/test_list_missing_audios.py:29: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_list_missing_audios.py:29:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 /home/kdani/.cache/pypoetry/virtualenvs/librelingo-audios-yD2wurwN-py3.9/lib/python3.9/site-packages/pytest_mock/plugin.py:352: in __call__
     return self._start_patch(
 /home/kdani/.cache/pypoetry/virtualenvs/librelingo-audios-yD2wurwN-py3.9/lib/python3.9/site-packages/pytest_mock/plugin.py:161: in _start_patch
@@ -1062,7 +1077,7 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
     result = self.__enter__()
 /usr/lib/python3.9/unittest/mock.py:1405: in __enter__
     original, local = self.get_original()
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 self = &lt;unittest.mock._patch object at 0x7ff94ee39a00&gt;
 
@@ -1119,7 +1134,7 @@ from librelingo_audios.functions import list_missing_audios
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
 rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
 plugins: pyfakefs-4.4.0, mock-3.5.1, snapshottest-0.6.0
-collected 6 items                                                                            
+collected 6 items
 
 tests/test_list_missing_audios.py .....F                                               [100%]
 
@@ -1163,7 +1178,7 @@ FAILED tests/test_list_missing_audios.py::test_calls_audio_id_to_get_the_id - As
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
 rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
 plugins: pyfakefs-4.4.0, mock-3.5.1, snapshottest-0.6.0
-collected 6 items                                                                            
+collected 6 items
 
 tests/test_list_missing_audios.py ......                                               [100%]
 
@@ -1196,7 +1211,7 @@ the actual string:</p>
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
 rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
 plugins: pyfakefs-4.4.0, mock-3.5.1, snapshottest-0.6.0
-collected 7 items                                                                            
+collected 7 items
 
 tests/test_list_missing_audios.py .......                                              [100%]
 
@@ -1237,7 +1252,7 @@ that the value shows up in the result.</p>
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
 rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
 plugins: pyfakefs-4.4.0, mock-3.5.1, snapshottest-0.6.0
-collected 8 items                                                                            
+collected 8 items
 
 tests/test_list_missing_audios.py .......F                                             [100%]
 
@@ -1287,7 +1302,7 @@ with a different mock value:</p>
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
 rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
 plugins: pyfakefs-4.4.0, mock-3.5.1, snapshottest-0.6.0
-collected 9 items                                                                            
+collected 9 items
 
 tests/test_list_missing_audios.py ........F                                            [100%]
 
@@ -1343,7 +1358,7 @@ def list_required_audios(course):
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
 rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
 plugins: pyfakefs-4.4.0, mock-3.5.1, snapshottest-0.6.0
-collected 9 items                                                                            
+collected 9 items
 
 tests/test_list_missing_audios.py .........                                            [100%]
 

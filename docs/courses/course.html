@@ -258,7 +258,7 @@
   
     <li class="md-nav__item">
       <a href="../LICENSE.html" class="md-nav__link">
-        LICENSE
+        GNU Affero General Public License
       </a>
     </li>
   
@@ -302,6 +302,21 @@
   
   
     <li class="md-nav__item">
+      <a href="../ui_translation.html" class="md-nav__link">
+        User interface translation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../website_tos.html" class="md-nav__link">
         Website tos
       </a>
@@ -324,17 +339,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
       
       
       
-        <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
           Courses
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_8">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
           Courses
         </label>
@@ -609,10 +624,12 @@
 <p><strong>Confused?</strong>
 <a href="https://github.com/LibreLingo/LibreLingo/discussions">Ask people</a> on GitHub Discussions.</p>
 <hr />
-<p><strong>Table of Contents:</strong>
-- <a href="#tree-structure">Tree structure</a>
-- <a href="#yaml"><code>course.yaml</code></a>
-  - <a href="#data-breakdown">Data breakdown</a></p>
+<p><strong>Table of Contents:</strong></p>
+<ul>
+<li><a href="#tree-structure">Tree structure</a></li>
+<li><a href="#yaml"><code>course.yaml</code></a></li>
+<li><a href="#data-breakdown">Data breakdown</a></li>
+</ul>
 <h2 id="tree-structure">Tree structure</h2>
 <p>A typical tree structure for a course is like this:</p>
 <pre><code>courses/spanish-from-english/
@@ -683,18 +700,20 @@ Modules:
 </code></pre>
 <p><a id="data-breakdown"></a></p>
 <h3 id="data-breakdown">Data breakdown</h3>
-<p><strong><code>Course</code></strong> has information about the course.
-- <code>Language</code>
-  - <code>Language &gt; Name</code>: The name of the language you want to test for or teach.
-  - <code>Language &gt; IETF BCP 47</code>: The IETF BCP 47 code of the above language. List available <a href="http://www.iana.org/assignments/language-subtag-registry">here</a>.
-- <code>For speakers of</code>
-  - <code>For speakers of &gt; Name</code>: The name of the language your target audience already speaks.
-  - <code>For speakers of &gt; IETF BCP 47</code>: The IETF BCP 47 code of the above language. List available <a href="http://www.iana.org/assignments/language-subtag-registry">here</a>.
-- <code>License</code>
-  - <code>License &gt; Name</code>: Full license name under which your course is made available. In most cases, it's ok to keep it as is.
-  - <code>License &gt; Short name</code>: Short name for the license, e.g., <code>CC BY-SA 4.0</code>
-  - <code>License &gt; Link</code>: URL to reach the full text of the license, e.g., <code>https://creativecommons.org/licenses/by-sa/4.0/legalcode</code>
-- <code>Special characters</code>: An array of special characters that might not be present on a typical English keyboard.</p>
+<p><strong><code>Course</code></strong> has information about the course.</p>
+<ul>
+<li><code>Language</code></li>
+<li><code>Language &gt; Name</code>: The name of the language you want to test for or teach.</li>
+<li><code>Language &gt; IETF BCP 47</code>: The IETF BCP 47 code of the above language. List available <a href="http://www.iana.org/assignments/language-subtag-registry">here</a>.</li>
+<li><code>For speakers of</code></li>
+<li><code>For speakers of &gt; Name</code>: The name of the language your target audience already speaks.</li>
+<li><code>For speakers of &gt; IETF BCP 47</code>: The IETF BCP 47 code of the above language. List available <a href="http://www.iana.org/assignments/language-subtag-registry">here</a>.</li>
+<li><code>License</code></li>
+<li><code>License &gt; Name</code>: Full license name under which your course is made available. In most cases, it's ok to keep it as is.</li>
+<li><code>License &gt; Short name</code>: Short name for the license, e.g., <code>CC BY-SA 4.0</code></li>
+<li><code>License &gt; Link</code>: URL to reach the full text of the license, e.g., <code>https://creativecommons.org/licenses/by-sa/4.0/legalcode</code></li>
+<li><code>Special characters</code>: An array of special characters that might not be present on a typical English keyboard.</li>
+</ul>
 <p><strong><code>Modules</code></strong> has a list of module directory names followed by a <code>/</code>.</p>
 <p><a id="spell-checker"></a></p>
 <h4 id="automated-spell-checker">Automated spell checker</h4>
@@ -706,13 +725,13 @@ computer.</p>
 <pre><code class="language-bash">sudo apt-get update -y
 sudo apt-get install -y hunspell
 </code></pre>
-<p>Don't forget to also install a dictionary for the languages that you use in your course. Here's a list of 
+<p>Don't forget to also install a dictionary for the languages that you use in your course. Here's a list of
 dictionary packages available on Ubuntu: https://packages.ubuntu.com/bionic/hunspell-dictionary</p>
 <p>In order to enable Hunspell in your course, add the following section to your <code>course.yaml</code>:</p>
 <pre><code class="language-yaml">Settings:
   Hunspell:
-    German: de  # replace with the language code for your language
-    English: en-US  # replace with the language code for your language
+    German: de # replace with the language code for your language
+    English: en-US # replace with the language code for your language
 </code></pre>
 <p>Keep in mind that you also need to have the <code>hunspell</code> Python package installed. To install it, just run:</p>
 <pre><code class="language-bash">pip install hunspell
