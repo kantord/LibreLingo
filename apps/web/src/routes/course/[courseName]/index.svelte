@@ -8,6 +8,7 @@
 </script>
 
 <script lang="ts">
+  import { locale } from "svelte-i18n"
   import SkillCard from "../../../components/SkillCard/index.svelte"
   import NavBar from "../../../components/NavBar.svelte"
   import Column from "lluis/Column.svelte"
@@ -20,6 +21,9 @@
   export let modules: ModulesType = null
   export let languageName = null
   export let repositoryURL = null
+  export let uiLanguage = "es"
+
+  locale.set(uiLanguage)
 </script>
 
 <svelte:head>
