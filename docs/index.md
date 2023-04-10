@@ -116,7 +116,7 @@ in the frontend, you need to be able to export YAML courses locally.
 You will need [Poetry](https://python-poetry.org/). If you don't have Poetry, you can install it with
 
 ```bash
-curl -sSL https://install.python-poetry.org | python -
+curl -sSL https://install.python-poetry.org | python3 -
 ```
 
 For more information, check out [Poetry's official documentation](https://python-poetry.org/docs/#installation).
