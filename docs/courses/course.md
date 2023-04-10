@@ -12,6 +12,7 @@ To get a better understanding, you can explore the [`courses` directory](https:/
 ---
 
 **Table of Contents:**
+
 - [Tree structure](#tree-structure)
 - [`course.yaml`](#yaml)
   - [Data breakdown](#data-breakdown)
@@ -52,6 +53,7 @@ Here, `activities`, `basics`, and `introduction` are [modules](module.md). The `
 A course directory name should not have spaces and should be written in `slug-form` in plain English.
 
 <a id="yaml"></a>
+
 ## `course.yaml`
 
 A `course.yaml` file for the Spanish course looks like this:
@@ -95,9 +97,11 @@ Modules:
 ```
 
 <a id="data-breakdown"></a>
+
 ### Data breakdown
 
 **`Course`** has information about the course.
+
 - `Language`
   - `Language > Name`: The name of the language you want to test for or teach.
   - `Language > IETF BCP 47`: The IETF BCP 47 code of the above language. List available [here](http://www.iana.org/assignments/language-subtag-registry).
@@ -113,6 +117,7 @@ Modules:
 **`Modules`** has a list of module directory names followed by a `/`.
 
 <a id="spell-checker"></a>
+
 #### Automated spell checker
 
 To avoid mistakes, you can enable automatic spell-checking in your course. Automatic spell-checking won't let you export
@@ -128,7 +133,7 @@ sudo apt-get update -y
 sudo apt-get install -y hunspell
 ```
 
-Don't forget to also install a dictionary for the languages that you use in your course. Here's a list of 
+Don't forget to also install a dictionary for the languages that you use in your course. Here's a list of
 dictionary packages available on Ubuntu: https://packages.ubuntu.com/bionic/hunspell-dictionary
 
 In order to enable Hunspell in your course, add the following section to your `course.yaml`:
@@ -136,8 +141,8 @@ In order to enable Hunspell in your course, add the following section to your `c
 ```yaml
 Settings:
   Hunspell:
-    German: de  # replace with the language code for your language
-    English: en-US  # replace with the language code for your language
+    German: de # replace with the language code for your language
+    English: en-US # replace with the language code for your language
 ```
 
 Keep in mind that you also need to have the `hunspell` Python package installed. To install it, just run:
@@ -145,4 +150,3 @@ Keep in mind that you also need to have the `hunspell` Python package installed.
 ```bash
 pip install hunspell
 ```
-

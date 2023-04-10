@@ -14,6 +14,7 @@ To get a better understanding, you can read the [course basics](README.md#basics
 ---
 
 **Table of Contents:**
+
 - [Tree structure](#tree-structure)
 - [`module.yaml`](#yaml)
   - [Data breakdown](#data-breakdown)
@@ -44,6 +45,7 @@ NOTE: A module directory name should not have spaces, be written in slug-form, a
 NOTE: When a new module is created, it should be listed on the [`course.yaml`](course.md#yaml) under [`Modules` key](course.md#data-breakdown).
 
 <a id="yaml"></a>
+
 ## `module.yaml`
 
 A `module.yaml` file for the Spanish Basics module looks like this:
@@ -69,13 +71,13 @@ Skills:
 **`Skills`** has a list of yaml files for the skills under the module. NOTE: The order in which the skills appear in this YAML file is the order they will appear in the web app as well.
 
 <a id="creating-new"></a>
+
 ## Creating a new module
 
 To create a new module,
 
 - Create a directory under the course with the module name (keep it lowercase and no spaces)
 - Create a `module.yaml` file and put yaml code for the module.
-
 
 For example, `courses/french-from-english/traveling/module.yaml` from the example above:
 

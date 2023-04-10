@@ -1,11 +1,11 @@
-# LibreLingo UI Translation Documentation
+# User interface translation
+
 ## Contribute to UI Translation (Non-Technical)
 
 POEditor is an online platform for collaborative translation and localization management. It allows contributors, both technical and non-technical, to help translate the user interface of LibreLingo into various languages.
 
 To help translate the user interface of LibreLingo and make it more accessible,
 [start by joining the project on POEditor here](https://poeditor.com/join/project?hash=jKiKfen2Ye).
-
 
 ## Technical Overview of UI Translation in LibreLingo
 
@@ -23,7 +23,6 @@ import Translate from "../../Translate.svelte";
 <Translate key="course_page.button_continue">Continue learning</Translate>
 <Translate key="course_page.button_learn">Learn</Translate>
 ```
-
 
 ### Translation Keys
 
