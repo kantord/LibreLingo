@@ -69,7 +69,7 @@ The output is:
 ==================================== test session starts =====================================
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
 rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
-collected 0 items                                                                            
+collected 0 items
 
 =================================== no tests ran in 0.00s ====================================
 ```
@@ -98,7 +98,7 @@ We get this error:
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
 rootdir: /home/kdani/repos/LibreLingo
 plugins: pyfakefs-4.4.0, mock-3.5.1, snapshottest-0.6.0
-collected 178 items / 1 error / 177 selected                                                 
+collected 178 items / 1 error / 177 selected
 
 =========================================== ERRORS ===========================================
 _________ ERROR collecting apps/librelingo_audios/tests/test_list_missing_audios.py __________
@@ -157,7 +157,7 @@ You'll get the following output:
 ==================================== test session starts =====================================
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
 rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
-collected 1 item                                                                             
+collected 1 item
 
 tests/test_list_missing_audios.py .                                                    [100%]
 
@@ -206,7 +206,7 @@ the second Skill of the first Module like so:
 
 ```python
 In [6]: course.modules[0].skills[1].phrases
-Out[6]: 
+Out[6]:
 [Phrase(in_target_language=['Buen provecho'], in_source_language=['Enjoy your meal']),
  Phrase(in_target_language=['Por favor'], in_source_language=['Please']),
  Phrase(in_target_language=['Pan, por favor'], in_source_language=['Bread, please']),
@@ -234,7 +234,7 @@ writing tests! Let's install it:
 poetry add --dev librelingo-fakes
 ```
 
-Let's *remove* our existing test:
+Let's _remove_ our existing test:
 
 ```python
 
@@ -262,7 +262,7 @@ If we run our tests again, we see the following failure:
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
 rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
 plugins: pyfakefs-4.4.0, snapshottest-0.6.0
-collected 1 item                                                                             
+collected 1 item
 
 tests/test_list_missing_audios.py F                                                    [100%]
 
@@ -300,7 +300,7 @@ In [41]: count = 0
 In [42]: for module in fakes.course1.modules:
     ...:     for skill in module.skills:
     ...:         count += len(skill.phrases)
-    ...: 
+    ...:
 
 In [43]: count
 Out[43]: 2
@@ -329,14 +329,13 @@ def list_missing_audios(course):
 By further exploration, we learn that the second fake course doesn't have
 any phrases:
 
-
 ```python
 In [41]: count = 0
 
 In [42]: for module in fakes.course2.modules:
     ...:     for skill in module.skills:
     ...:         count += len(skill.phrases)
-    ...: 
+    ...:
 
 In [43]: count
 Out[43]: 0
@@ -356,7 +355,7 @@ Our tests are failing again:
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
 rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
 plugins: pyfakefs-4.4.0, snapshottest-0.6.0
-collected 2 items                                                                            
+collected 2 items
 
 tests/test_list_missing_audios.py F.                                                   [100%]
 
@@ -414,7 +413,7 @@ Let's run our tests again:
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
 rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
 plugins: pyfakefs-4.4.0, snapshottest-0.6.0
-collected 3 items                                                                            
+collected 3 items
 
 tests/test_list_missing_audios.py ..F                                                  [100%]
 
@@ -449,7 +448,7 @@ Now we get this error:
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
 rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
 plugins: pyfakefs-4.4.0, snapshottest-0.6.0
-collected 3 items                                                                            
+collected 3 items
 
 tests/test_list_missing_audios.py ..F                                                  [100%]
 
@@ -496,7 +495,7 @@ We get the following failure:
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
 rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
 plugins: pyfakefs-4.4.0, snapshottest-0.6.0
-collected 4 items                                                                            
+collected 4 items
 
 tests/test_list_missing_audios.py ...F                                                 [100%]
 
@@ -563,7 +562,7 @@ def test_audio_id_is_a_string():
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
 rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
 plugins: pyfakefs-4.4.0, snapshottest-0.6.0
-collected 5 items                                                                            
+collected 5 items
 
 tests/test_list_missing_audios.py ....F                                                [100%]
 
@@ -625,13 +624,12 @@ def test_calls_audio_id_to_get_the_id(mocker):
 This will mock the `audio_id` function and see how many times it has been called.
 We assert that it has to run twice since there are 2 phrases that need audio files.
 
-
 ```console
 ==================================== test session starts =====================================
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
 rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
 plugins: pyfakefs-4.4.0, mock-3.5.1, snapshottest-0.6.0
-collected 6 items                                                                            
+collected 6 items
 
 tests/test_list_missing_audios.py .....F                                               [100%]
 
@@ -643,8 +641,8 @@ mocker = <pytest_mock.plugin.MockerFixture object at 0x7ff94ee398e0>
     def test_calls_audio_id_to_get_the_id(mocker):
 >       audio_id = mocker.patch('librelingo_audios.list_missing_audios.audio_id')
 
-tests/test_list_missing_audios.py:29: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_list_missing_audios.py:29:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 /home/kdani/.cache/pypoetry/virtualenvs/librelingo-audios-yD2wurwN-py3.9/lib/python3.9/site-packages/pytest_mock/plugin.py:352: in __call__
     return self._start_patch(
 /home/kdani/.cache/pypoetry/virtualenvs/librelingo-audios-yD2wurwN-py3.9/lib/python3.9/site-packages/pytest_mock/plugin.py:161: in _start_patch
@@ -653,27 +651,27 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
     result = self.__enter__()
 /usr/lib/python3.9/unittest/mock.py:1405: in __enter__
     original, local = self.get_original()
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 self = <unittest.mock._patch object at 0x7ff94ee39a00>
 
     def get_original(self):
         target = self.getter()
         name = self.attribute
-    
+
         original = DEFAULT
         local = False
-    
+
         try:
             original = target.__dict__[name]
         except (AttributeError, KeyError):
             original = getattr(target, name, DEFAULT)
         else:
             local = True
-    
+
         if name in _builtins and isinstance(target, ModuleType):
             self.create = True
-    
+
         if not self.create and original is DEFAULT:
 >           raise AttributeError(
                 "%s does not have the attribute %r" % (target, name)
@@ -725,7 +723,7 @@ Now, if we run our tests, we see the failure that I originally expected, or at l
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
 rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
 plugins: pyfakefs-4.4.0, mock-3.5.1, snapshottest-0.6.0
-collected 6 items                                                                            
+collected 6 items
 
 tests/test_list_missing_audios.py .....F                                               [100%]
 
@@ -778,7 +776,7 @@ Our tests are now passing:
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
 rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
 plugins: pyfakefs-4.4.0, mock-3.5.1, snapshottest-0.6.0
-collected 6 items                                                                            
+collected 6 items
 
 tests/test_list_missing_audios.py ......                                               [100%]
 
@@ -822,7 +820,7 @@ def list_missing_audios(course):
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
 rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
 plugins: pyfakefs-4.4.0, mock-3.5.1, snapshottest-0.6.0
-collected 7 items                                                                            
+collected 7 items
 
 tests/test_list_missing_audios.py .......                                              [100%]
 
@@ -877,7 +875,7 @@ If we run the tests, we get the error that we expected:
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
 rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
 plugins: pyfakefs-4.4.0, mock-3.5.1, snapshottest-0.6.0
-collected 8 items                                                                            
+collected 8 items
 
 tests/test_list_missing_audios.py .......F                                             [100%]
 
@@ -934,13 +932,12 @@ def test_returns_correct_audio_id_2(mocker):
     assert list(list_missing_audios(fakes.course1))[0][0] == "foobar"
 ```
 
-
 ```console
 ==================================== test session starts =====================================
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
 rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
 plugins: pyfakefs-4.4.0, mock-3.5.1, snapshottest-0.6.0
-collected 9 items                                                                            
+collected 9 items
 
 tests/test_list_missing_audios.py ........F                                            [100%]
 
@@ -1006,7 +1003,7 @@ Just checking that the tests still pass...
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
 rootdir: /home/kdani/repos/LibreLingo/apps/librelingo_audios
 plugins: pyfakefs-4.4.0, mock-3.5.1, snapshottest-0.6.0
-collected 9 items                                                                            
+collected 9 items
 
 tests/test_list_missing_audios.py .........                                            [100%]
 
