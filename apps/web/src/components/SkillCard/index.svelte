@@ -3,11 +3,14 @@
 
   import live from "../../db/live"
   import getSkillStats from "../../db/skill/getSkillStats"
+  import ClampedText from "lluis/ClampedText.svelte"
   import Icon from "lluis/Icon.svelte"
   import Card from "lluis/Card.svelte"
   import Buttons from "./Buttons.svelte"
   import ContentLeft from "./ContentLeft.svelte"
   import ContentCenter from "./ContentCenter.svelte"
+  import Content from "../../../../lluis/Content.svelte"
+  import Heading from "../../../../lluis/Heading.svelte"
 
   export let title: string
   export let levels: number
@@ -58,44 +61,96 @@
   })
 </script>
 
-<Card
-  {backgroundColor}
-  {foregroundColor}
-  data-test="skill card"
-  data-started={started}
-  data-completed={completed}
-  data-stale={stale}
->
-  <div slot="icon">
-    {#if completed}
-      {#if stale}
-        <Icon icon="dumbbell" size="large" />
-      {:else}
-        <Icon icon="check-square" size="large" />
-      {/if}
-    {/if}
+<!-- <Card -->
+<!--   {backgroundColor} -->
+<!--   {foregroundColor} -->
+<!--   data-test="skill card" -->
+<!--   data-started={started} -->
+<!--   data-completed={completed} -->
+<!--   data-stale={stale} -->
+<!-- > -->
+<!--   <div slot="icon"> -->
+<!--     {#if completed} -->
+<!--       {#if stale} -->
+<!--         <Icon icon="dumbbell" size="large" /> -->
+<!--       {:else} -->
+<!--         <Icon icon="check-square" size="large" /> -->
+<!--       {/if} -->
+<!--     {/if} -->
+<!--   </div> -->
+<!--   <div slot="content"> -->
+<!--     <div class="media"> -->
+<!--       <ContentLeft {imageSet} {stale} {completed} /> -->
+<!--       <ContentCenter -->
+<!--         {progress} -->
+<!--         {stale} -->
+<!--         {levels} -->
+<!--         {title} -->
+<!--         {completed} -->
+<!--         {started} -->
+<!--         {summary} -->
+<!--       /> -->
+<!--     </div> -->
+<!--   </div> -->
+<!--   <footer slot="footer"> -->
+<!--     <div class="card-footer-item"> -->
+<!--       <Buttons -->
+<!--         {title} -->
+<!--         practiceHref={introductionPageHref || practiceHref} -->
+<!--         {started} -->
+<!--         {completed} -->
+<!--       /> -->
+<!--     </div> -->
+<!--   </footer> -->
+<!-- </Card> -->
+
+<div class="card">
+  {#if imageSet.length >= 1}
+    <div class="image"><img src={`images/${imageSet[0]}_tiny.jpg`} /></div>
+  {/if}
+  <div class="content">
+    <Heading level={3}>{title}</Heading>
+    <div><ClampedText>{summary}</ClampedText></div>
   </div>
-  <div slot="content">
-    <div class="media">
-      <ContentLeft {imageSet} {stale} {completed} />
-      <ContentCenter
-        {progress}
-        {stale}
-        {levels}
-        {title}
-        {completed}
-        {started}
-        {summary}
-      />
-    </div>
-  </div>
-  <footer slot="footer">
-    <div class="card-footer-item">
-      <Buttons
-        practiceHref={introductionPageHref || practiceHref}
-        {started}
-        {completed}
-      />
-    </div>
-  </footer>
-</Card>
+</div>
+
+<style>
+  .card {
+    max-width: 460px;
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    gap: 1rem;
+    cursor: pointer;
+    transition: all 0.15s;
+    align-items: center;
+    user-select: none;
+  }
+
+  .card:hover {
+    border: 1px solid #864dcb;
+    box-shadow: 4px 4px 32px rgb(112 86 143 / 8%);
+  }
+
+  .card:active {
+    transform: scale(0.98);
+  }
+
+  .image {
+    flex: 0 0 95px;
+    height: 95px;
+    display: block;
+    border-radius: 1.25rem;
+    background: red;
+    overflow: hidden;
+  }
+
+  .image img {
+    width: 95px;
+  }
+
+  .content {
+    flex: 1;
+  }
+</style>

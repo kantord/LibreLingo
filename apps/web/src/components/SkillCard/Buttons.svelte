@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Button from "lluis/DeprecatedButton.svelte"
   import Translate from "../../Translate.svelte"
+  import Button from "lluis/Button.svelte"
 
   export let practiceHref
   export let completed
