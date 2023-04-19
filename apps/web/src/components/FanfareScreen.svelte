@@ -12,7 +12,7 @@
   import Column from "lluis/Column.svelte"
   import Columns from "lluis/Columns.svelte"
   import Title from "lluis/Title.svelte"
-
+  import MastodonButton from "./MastodonButton.svelte"
   export let courseURL
   export let skillId
   export let stats
@@ -56,6 +56,7 @@
             <div class="bottom">
               <Title size={5}>Excited about LibreLingo?</Title>
               <TwitterButton />
+              <MastodonButton/>
             </div>
           </div>
         </Column>
