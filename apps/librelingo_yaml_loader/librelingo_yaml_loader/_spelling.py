@@ -1,6 +1,6 @@
 from librelingo_types.data_types import HunspellSettings
 
-hunspell = None  # Needed so that hunspell can be mocked
+HUNSPELL = None  # Needed so that hunspell can be mocked
 
 
 def _validate_word_in_source_language(word, course):
@@ -64,18 +64,17 @@ def _run_skill_spellcheck(phrases, words, course):
 
 
 def _convert_hunspell_settings_for_language(raw_language_name):
+    global HUNSPELL
+    language_code = raw_language_name
+    if not HUNSPELL:
+        HUNSPELL = HUNSPELL.HunSpell(
+            f"/usr/share/hunspell/{language_code}.dic",
+            f"/usr/share/hunspell/{language_code}.aff",
+        )
+
     language_code = raw_language_name.replace("-", "_")
 
-    # Only import hunspell if actually needed. Still allow mocking it.
-    global hunspell
-    if not hunspell:
-        import hunspell  # type: ignore # pylint: disable=import-error
-
-    return hunspell.HunSpell(
-        f"/usr/share/hunspell/{language_code}.dic",
-        f"/usr/share/hunspell/{language_code}.aff",
-    )
-
+    return HUNSPELL
 
 def _convert_hunspell_settings(raw_settings, course):
     if "Hunspell" not in raw_settings:

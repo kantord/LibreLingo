@@ -57,8 +57,8 @@ class YamlImportTestCase(FakeFsTestCase):
 
 class TestLoadCourseMeta(YamlImportTestCase):
     def create_fake_course_meta(self, path, **kwargs):
-        with open(Path(path) / "course.yaml", "w", encoding="utf-8") as f:
-            f.write(self.get_fake_course_yaml(**kwargs))
+        with open(Path(path) / "course.yaml", "w", encoding="utf-8") as file:
+            file.write(self.get_fake_course_yaml(**kwargs))
 
     def get_fake_course_yaml(self, **kwargs):
         return f"""
@@ -194,8 +194,8 @@ class TestLoadCourseMeta(YamlImportTestCase):
         self.assertEqual(tts_settings_list, [])
 
     def _append_settings_to_file(self, new_settings):
-        with open(Path(self.fake_path) / "course.yaml", "a", encoding="utf-8") as f:
-            f.write(new_settings)
+        with open(Path(self.fake_path) / "course.yaml", "a", encoding="utf-8") as file:
+            file.write(new_settings)
 
     def test_returns_correct_settings_audio_disabled(self):
         self._append_settings_to_file(
@@ -338,10 +338,10 @@ class TestLoadCourseMeta(YamlImportTestCase):
         self.assertEqual(self.result.repository_url, self.fake_values["repository_url"])
 
 
-def test_load_course_output_matches_value(fs):
+def test_load_course_output_matches_value(f_s):
     fixture_path = os.path.join(os.path.dirname(__file__), "fixtures", "fake_course")
-    fs.add_real_directory(os.path.dirname(jsonschema.__file__))
-    fs.add_real_directory(fixture_path)
+    f_s.add_real_directory(os.path.dirname(jsonschema.__file__))
+    f_s.add_real_directory(fixture_path)
     result = load_course(fixture_path)
     assert result.target_language == Language(name="French", code="fr")
     assert result.source_language == Language(name="English", code="en")
@@ -512,8 +512,8 @@ class TestLoadModuleMeta(YamlImportTestCase):
     """
 
     def create_fake_module_meta(self, path, **kwargs):
-        with open(Path(path) / "module.yaml", "w", encoding="utf-8") as f:
-            f.write(self.get_fake_module_yaml(**kwargs))
+        with open(Path(path) / "module.yaml", "w", encoding="utf-8") as file:
+            file.write(self.get_fake_module_yaml(**kwargs))
 
     def get_fake_values(self):
         return {
@@ -586,8 +586,8 @@ Mini-dictionary:
         return "<script />" + self.fake_values["introduction"]
 
     def create_fake_skill_meta(self, path, **kwargs):
-        with open(Path(path) / "food.yaml", "w", encoding="utf-8") as f:
-            f.write(self.get_fake_skill_yaml(**kwargs))
+        with open(Path(path) / "food.yaml", "w", encoding="utf-8") as file:
+            file.write(self.get_fake_skill_yaml(**kwargs))
 
     def get_fake_values(self):
         return {
@@ -629,8 +629,8 @@ Mini-dictionary:
             },
         )
 
-        with open(self.fake_path / "food.md", "w", encoding="utf-8") as f:
-            f.write(self.get_fake_skill_markdown())
+        with open(self.fake_path / "food.md", "w", encoding="utf-8") as file:
+            file.write(self.get_fake_skill_markdown())
 
         french = Language(self.fake_values["word3"], "")
         english = Language("English", "")

@@ -25,12 +25,12 @@ def mocks(mocker):
 
 
 @pytest.fixture
-def invoke(mocks, fs):
-    def f(args):
+def invoke(mocks):
+    def file(args):
         runner = CliRunner()
         return runner.invoke(main, args, catch_exceptions=False)
 
-    return f
+    return file
 
 
 @pytest.fixture
@@ -39,21 +39,21 @@ def load_course_mock(mocker):
 
 
 @pytest.fixture
-def invoke_with_load_course_mock(load_course_mock, fs):
-    def f(args):
+def invoke_with_load_course_mock(load_course_mock):
+    def file(args):
         runner = CliRunner()
         return runner.invoke(main, args, catch_exceptions=False)
 
-    return f
+    return file
 
 
 @pytest.fixture
-def invoke_with_no_mocks(fs):
-    def f(args):
+def invoke_with_no_mocks():
+    def file(args):
         runner = CliRunner()
         return runner.invoke(main, args, catch_exceptions=False)
 
-    return f
+    return file
 
 
 def test_yaml_to_json_loads_correct_course(mocks, inputs, invoke):
@@ -72,7 +72,7 @@ def test_yaml_to_json_has_help_text(mocks, inputs, invoke):
     assert main.help
 
 
-def test_creates_output_directory_if_it_doesnt_exist(mocks, inputs, invoke, fs):
+def test_creates_output_directory_if_it_doesnt_exist(mocks, inputs, invoke):
     output_path = "foo/500/bar"
     invoke([inputs[0], output_path])
     assert os.path.isdir(output_path)
@@ -101,10 +101,10 @@ def test_dry_run_calls_real_export_course(mocks, inputs, invoke):
 
 
 @pytest.mark.parametrize("no_dry_run_arg", [["--no-dry-run"], []])
-def test_creates_excpected_files(fs, invoke_with_no_mocks, no_dry_run_arg):
+def test_creates_excpected_files(f_s, invoke_with_no_mocks, no_dry_run_arg):
     input_path = Path(__file__).parent / "fixtures" / "fake_course"
-    fs.add_real_directory(input_path)
-    fs.add_real_directory(os.path.dirname(jsonschema.__file__))
+    f_s.add_real_directory(input_path)
+    f_s.add_real_directory(os.path.dirname(jsonschema.__file__))
     output_path = fakes.path()
     expected_files = {
         output_path / "courseData.json",

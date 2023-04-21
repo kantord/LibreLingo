@@ -49,10 +49,10 @@ from librelingo_types import (
     Word,
 )
 
-challenge1 = "challenge1"
-challenge2 = "challenge2"
-challenge3 = "challenge3"
-challenge4 = "challenge4"
+CHALLENGE1 = "CHALLENGE1"
+CHALLENGE2 = "CHALLENGE2"
+CHALLENGE3 = "CHALLENGE3"
+CHALLENGE4 = "CHALLENGE4"
 
 fake_dictionary = [
     DictionaryItem("foo", "barrus", False),

@@ -14,9 +14,9 @@ from jinja2 import Environment, FileSystemLoader
 import lili
 
 
-def myconverter(o):
-    if isinstance(o, datetime.datetime):
-        return str(o)
+def myconverter(o_o):
+    if isinstance(o_o, datetime.datetime):
+        return str(o_o)
     return None
 
 
@@ -44,8 +44,8 @@ def generate_history_html(history, outdir):
         title="LibreLingo history",
     )
 
-    with open(os.path.join(outdir, "history.html"), "w") as fh:
-        fh.write(html)
+    with open(os.path.join(outdir, "history.html"), "w") as f_h:
+        f_h.write(html)
 
 
 def generate_index_html(start_time, end_time, links, outdir):
@@ -57,8 +57,8 @@ def generate_index_html(start_time, end_time, links, outdir):
         title="LibreLingo courses",
     )
 
-    with open(os.path.join(outdir, "index.html"), "w") as fh:
-        fh.write(html)
+    with open(os.path.join(outdir, "index.html"), "w") as f_h:
+        f_h.write(html)
 
 
 def download_course(url, tempdir):
@@ -66,13 +66,13 @@ def download_course(url, tempdir):
     res = requests.get(url, stream=True, timeout=5)
     filename = os.path.join(tempdir.name, "course.zip")
     if res.status_code == 200:
-        with open(filename, "wb") as fh:
+        with open(filename, "wb") as f_h:
             # res.raw.decode_content
-            shutil.copyfileobj(res.raw, fh)
+            shutil.copyfileobj(res.raw, f_h)
 
     # unzip
-    zf = zipfile.ZipFile(filename)
-    zf.extractall(path=tempdir.name)
+    z_f = zipfile.ZipFile(filename)
+    z_f.extractall(path=tempdir.name)
 
 
 def generate_course(links, courses_data, reldir, outdir, tdir, course_dir):
@@ -85,8 +85,8 @@ def generate_course(links, courses_data, reldir, outdir, tdir, course_dir):
     course = lili.load_course(course_dir)
     target, source, count = lili.collect_data(course)
     lili.export_to_html(course, target, source, count, reldir, docs_dir)
-    with open(os.path.join(docs_dir, "course.json")) as fh:
-        count = json.load(fh)
+    with open(os.path.join(docs_dir, "course.json")) as f_h:
+        count = json.load(f_h)
     # except Exception as err:
     #    logging.error("Failed to generate course in %s. Exception %s", course_dir, err)
     #    return None
@@ -101,23 +101,23 @@ def generate_course(links, courses_data, reldir, outdir, tdir, course_dir):
         "source_phrases": count["source_phrases"],
     }
     links.append(results)
-    with open(os.path.join(outdir, tdir, "course.json")) as fh:
-        courses_data[tdir] = json.load(fh)
+    with open(os.path.join(outdir, tdir, "course.json")) as f_h:
+        courses_data[tdir] = json.load(f_h)
 
 
 def save_history(history_file, start_time, courses_data, outdir):
-    with open(history_file, "a") as fh:
+    with open(history_file, "a") as f_h:
         json.dump(
             {"courses": courses_data, "date": start_time},
-            fh,
+            f_h,
             sort_keys=True,
             default=myconverter,
         )
-        fh.write("\n")
+        f_h.write("\n")
     shutil.copy(history_file, os.path.join(outdir, "history.json"))
     history = []
-    with open(history_file) as fh:
-        for line in fh:
+    with open(history_file) as f_h:
+        for line in f_h:
             res = json.loads(line)
             history.append(res)
     generate_history_html(history, outdir)
@@ -134,8 +134,8 @@ def main():
 
     tempdir = tempfile.TemporaryDirectory()
     start_time = datetime.datetime.now()
-    with open(courses_file) as fh:
-        courses = json.load(fh)
+    with open(courses_file) as f_h:
+        courses = json.load(f_h)
 
     logging.info("The temporary directory: %s", tempdir.name)
 
@@ -174,8 +174,8 @@ def main():
         )
 
     end_time = datetime.datetime.now()
-    with open(os.path.join(outdir, "courses.json"), "w") as fh:
-        json.dump(courses_data, fh, sort_keys=True)
+    with open(os.path.join(outdir, "courses.json"), "w") as f_h:
+        json.dump(courses_data, f_h, sort_keys=True)
     if args.history:
         save_history(args.history, start_time, courses_data, outdir)
     generate_index_html(start_time, end_time, links, outdir)
