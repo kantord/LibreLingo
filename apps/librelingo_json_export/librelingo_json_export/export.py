@@ -31,8 +31,8 @@ def _open_output_stream(output_file_path, settings):
 
 
 def _save_as_json_file(data, output_file_path, settings):
-    with _open_output_stream(output_file_path, settings) as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+    with _open_output_stream(output_file_path, settings) as file:
+        json.dump(data, file, ensure_ascii=False, indent=2)
 
 
 def _export_course_skills(export_path: str, course: Course, settings=DEFAULT_SETTINGS):
@@ -69,8 +69,8 @@ def _export_skill(
     if skill.introduction:
         with _open_output_stream(
             Path(export_path) / "introduction" / f"{slug}.md", settings
-        ) as f:
-            f.write(skill.introduction)
+        ) as file:
+            file.write(skill.introduction)
 
 
 def _export_course_data(export_path: str, course: Course, settings=DEFAULT_SETTINGS):
