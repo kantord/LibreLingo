@@ -285,6 +285,10 @@ def fake_value():
     return FakeValue(number())
 
 
+def fake_string():
+    return str(fake_value())
+
+
 def customize(fake, **kwargs):
     return type(fake)(
         **{**(fake._asdict()), **kwargs},
