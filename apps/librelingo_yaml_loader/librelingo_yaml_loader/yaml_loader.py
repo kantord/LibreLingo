@@ -1,3 +1,4 @@
+import copy
 import logging
 import collections
 import os
@@ -43,6 +44,10 @@ except ImportError:
     from yaml import SafeLoader  # type: ignore
 
 
+class ValidationError(RuntimeError):
+    pass
+
+
 def add_bool(self, node):
     return self.construct_scalar(node)
 
@@ -51,6 +56,9 @@ SafeConstructor.add_constructor("tag:yaml.org,2002:bool", add_bool)
 
 with importlib.resources.open_text(__package__, "module.json") as fp:
     module_schema = json.load(fp)
+
+with importlib.resources.open_text(__package__, "skill.json") as fp:
+    skill_schema = json.load(fp)
 
 
 def _load_yaml(path: Path):
@@ -314,9 +322,38 @@ def _load_introduction(path: str) -> Union[str, None]:
         return _sanitize_markdown(f.read())
 
 
+def _get_skill_schema(course: Course):
+    # Modifies the Skill schema to change the dynamic values
+    # to match the langauges of the course
+    new_schema = copy.deepcopy(skill_schema)
+    new_schema["properties"]["Mini-dictionary"]["required"] = [
+        course.source_language.name,
+        course.target_language.name,
+    ]
+    new_schema["properties"]["Mini-dictionary"][
+        course.source_language.name
+    ] = new_schema["properties"]["Mini-dictionary"]["properties"][
+        "ThisIsTheSourceLanguage"
+    ]
+    del new_schema["properties"]["Mini-dictionary"]["properties"][
+        "ThisIsTheSourceLanguage"
+    ]
+    new_schema["properties"]["Mini-dictionary"][
+        course.target_language.name
+    ] = new_schema["properties"]["Mini-dictionary"]["properties"][
+        "ThisIsTheTargetLanguage"
+    ]
+    del new_schema["properties"]["Mini-dictionary"]["properties"][
+        "ThisIsTheTargetLanguage"
+    ]
+
+    return new_schema
+
+
 def _load_skill(path: Path, course: Course) -> Skill:
     try:
         data = _load_yaml(path)
+        jsonschema.validate(data, _get_skill_schema(course))
         introduction = _load_introduction(str(path).replace(".yaml", ".md"))
         skill = data["Skill"]
         words = data["New words"]
@@ -329,6 +366,15 @@ def _load_skill(path: Path, course: Course) -> Skill:
         raise RuntimeError(
             f'Skill file "{path}" needs to have a "{error.args[0]}" key'
         ) from error
+    except jsonschema.ValidationError as validation_error:
+        if str(validation_error).startswith("None is not of type 'object'"):
+            raise ValidationError(
+                f'Skill file "{path}" is empty or does not exist'
+            ) from validation_error
+        raise ValidationError(
+            f"There is an error with the schema at the following file path: {path}\n"
+            f"Original error message: {str(validation_error)}"
+        ) from validation_error
 
     try:
         name = skill["Name"]
@@ -337,20 +383,9 @@ def _load_skill(path: Path, course: Course) -> Skill:
             f'Skill file "{path}" needs to have skill name'
         ) from exception
 
-    try:
-        skill_id = skill["Id"]
-    except Exception as exception:
-        raise RuntimeError(f'Skill file "{path}" needs to have skill id') from exception
-
-    try:
-        phrases = _convert_phrases(phrases)
-    except TypeError as type_error:
-        raise RuntimeError(f'Skill file "{path}" has an invalid phrase') from type_error
-
-    try:
-        words = _convert_words(words)
-    except TypeError as type_error:
-        raise RuntimeError(f'Skill file "{path}" has an invalid word') from type_error
+    skill_id = skill["Id"]
+    phrases = _convert_phrases(phrases)
+    words = _convert_words(words)
 
     _run_skill_spellcheck(phrases, words, course)
 
@@ -390,10 +425,10 @@ def _load_module(path: str, course: Course):
         jsonschema.validate(data, module_schema)
     except jsonschema.ValidationError as validation_error:
         if str(validation_error).startswith("None is not of type 'object'"):
-            raise RuntimeError(
+            raise ValidationError(
                 f'Module file "{filepath}" is empty or does not exist'
             ) from validation_error
-        raise RuntimeError(
+        raise ValidationError(
             f"There is an error with the schema at the following file path: {filepath}\n"
             f"Original error message: {str(validation_error)}"
         ) from validation_error
