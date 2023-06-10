@@ -672,7 +672,7 @@ url = "apps/librelingo_fakes"
 
 [[package]]
 name = "librelingo-json-export"
-version = "0.10.3"
+version = "0.11.0"
 description = "Export LibreLingo courses in the JSON format used by the web app"
 category = "dev"
 optional = false
@@ -685,7 +685,7 @@ click = "^7.0.0"
 editdistance = "^0.6.0"
 librelingo-types = "^3.0.0"
 librelingo-utils = "^2.6.2"
-librelingo-yaml-loader = "^1.10.4"
+librelingo-yaml-loader = "^1.12.0"
 python-slugify = "^8.0.0"
 
 [package.extras]
@@ -749,7 +749,7 @@ url = "apps/librelingo_utils"
 
 [[package]]
 name = "librelingo-yaml-loader"
-version = "1.11.0"
+version = "1.12.0"
 description = "Load YAML-based LibreLingo courses in your Python project."
 category = "dev"
 optional = false
