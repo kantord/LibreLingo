@@ -30,8 +30,8 @@ def test_missing_definition_error_shows_cleaned_word():
 
 
 def test_includes_definition():
-    word = str(fakes.fake_value())
-    meaning = str(fakes.fake_value())
+    word = fakes.fake_string()
+    meaning = fakes.fake_string()
     is_in_target_language = fakes.fake_value()
     my_course = fakes.customize(
         fakes.course1,
@@ -49,8 +49,8 @@ def test_includes_definition():
 
 
 def test_normalizes_words():
-    word = str(fakes.fake_value())
-    meaning = str(fakes.fake_value())
+    word = fakes.fake_string()
+    meaning = fakes.fake_string()
     is_in_target_language = fakes.fake_value()
     my_course = fakes.customize(
         fakes.course1,
@@ -100,8 +100,8 @@ def test_matches_definitions_with_spaces():
 
 
 def test_doesnt_include_definition_with_different_word():
-    word = str(fakes.fake_value())
-    meaning = str(fakes.fake_value())
+    word = fakes.fake_string()
+    meaning = fakes.fake_string()
     is_in_target_language = fakes.fake_value()
     my_course = fakes.customize(
         fakes.course1,
@@ -118,8 +118,8 @@ def test_doesnt_include_definition_with_different_word():
 
 
 def test_doesnt_include_definition_with_different_is_in_target_language():
-    word = str(fakes.fake_value())
-    meaning = str(fakes.fake_value())
+    word = fakes.fake_string()
+    meaning = fakes.fake_string()
     is_in_target_language = fakes.fake_value()
     my_course = fakes.customize(
         fakes.course1,
@@ -132,8 +132,8 @@ def test_doesnt_include_definition_with_different_is_in_target_language():
 
 
 def test_skips_non_matching_definitions():
-    word = str(fakes.fake_value())
-    meaning = str(fakes.fake_value())
+    word = fakes.fake_string()
+    meaning = fakes.fake_string()
     is_in_target_language = fakes.fake_value()
     my_course = fakes.customize(
         fakes.course1,
@@ -156,7 +156,7 @@ def test_skips_non_matching_definitions():
 
 
 def test_skips_empty_definition():
-    word = str(fakes.fake_value())
+    word = fakes.fake_string()
     my_course = fakes.customize(
         fakes.course1,
         dictionary=[
