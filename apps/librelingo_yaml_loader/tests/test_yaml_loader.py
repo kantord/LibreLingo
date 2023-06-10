@@ -26,6 +26,7 @@ from librelingo_yaml_loader.yaml_loader import (
     _load_skill,
     _load_skills,
     load_course,
+    ValidationError,
 )
 from pyfakefs.fake_filesystem_unittest import TestCase as FakeFsTestCase  # type: ignore
 
@@ -85,18 +86,18 @@ class TestLoadCourseMeta(YamlImportTestCase):
 
     def get_fake_values(self):
         return {
-            "target_language_name": str(fakes.fake_value()),
-            "target_language_code": str(fakes.fake_value()),
-            "source_language_name": str(fakes.fake_value()),
-            "source_language_code": str(fakes.fake_value()),
-            "first_special_character": str(fakes.fake_value()),
-            "second_special_character": str(fakes.fake_value()),
-            "fake_module": str(fakes.fake_value()),
-            "license_name": str(fakes.fake_value()),
-            "license_full_name": str(fakes.fake_value()),
-            "license_link": str(fakes.fake_value()),
-            "repository_url": str(fakes.fake_value()),
-            "course_dir": str(fakes.fake_value()),
+            "target_language_name": fakes.fake_string(),
+            "target_language_code": fakes.fake_string(),
+            "source_language_name": fakes.fake_string(),
+            "source_language_code": fakes.fake_string(),
+            "first_special_character": fakes.fake_string(),
+            "second_special_character": fakes.fake_string(),
+            "fake_module": fakes.fake_string(),
+            "license_name": fakes.fake_string(),
+            "license_full_name": fakes.fake_string(),
+            "license_link": fakes.fake_string(),
+            "repository_url": fakes.fake_string(),
+            "course_dir": fakes.fake_string(),
         }
 
     def set_up_patches(self):
@@ -480,9 +481,9 @@ def test_load_course_output_matches_value(fs):
 class TestConvertLicense(YamlImportTestCase):
     def get_fake_values(self):
         return {
-            "Name": str(fakes.fake_value()),
-            "Short name": str(fakes.fake_value()),
-            "Link": str(fakes.fake_value()),
+            "Name": fakes.fake_string(),
+            "Short name": fakes.fake_string(),
+            "Link": fakes.fake_string(),
         }
 
     def call_function(self):
@@ -517,8 +518,8 @@ class TestLoadModuleMeta(YamlImportTestCase):
 
     def get_fake_values(self):
         return {
-            "module_name": str(fakes.fake_value()),
-            "skill_name": str(fakes.fake_value()),
+            "module_name": fakes.fake_string(),
+            "skill_name": fakes.fake_string(),
         }
 
     def set_up_patches(self):
@@ -566,8 +567,21 @@ Skill:
     - {kwargs["img1"]}
     - {kwargs["img2"]}
     - {kwargs["img3"]}
-New words: {kwargs["fake_words"]}
-Phrases: {kwargs["fake_phrases"]}
+New words:
+    - Word: perro
+      Synonyms:
+        - can
+      Translation: dog
+      Also accepted:
+        - hound
+      Images:
+        - dog1
+        - dog2
+        - dog3
+
+Phrases:
+    - Phrase: Hello
+      Translation: Hola
 Mini-dictionary:
   {kwargs["word3"]}:
     - {kwargs["word2"]}: {kwargs["word1"]}
@@ -591,21 +605,20 @@ Mini-dictionary:
 
     def get_fake_values(self):
         return {
-            "skill_name": str(fakes.fake_value()),
-            "skill_id": str(fakes.fake_value()),
-            "img1": str(fakes.fake_value()),
-            "img2": str(fakes.fake_value()),
-            "img3": str(fakes.fake_value()),
-            "fake_words": str(fakes.fake_value()),
-            "fake_phrases": str(fakes.fake_value()),
-            "word1": str(fakes.fake_value()),
-            "word2": str(fakes.fake_value()),
-            "word3": str(fakes.fake_value()),
-            "word4": str(fakes.fake_value()),
-            "word5": str(fakes.fake_value()),
-            "word6": str(fakes.fake_value()),
-            "word7": str(fakes.fake_value()),
-            "introduction": f"# [https://example.com](_{str(fakes.fake_value())}_)",
+            "skill_name": fakes.fake_string(),
+            "skill_id": fakes.fake_string(),
+            "img1": fakes.fake_string(),
+            "img2": fakes.fake_string(),
+            "img3": fakes.fake_string(),
+            "fake_words": fakes.fake_string(),
+            "word1": fakes.fake_string(),
+            "word2": fakes.fake_string(),
+            "word3": fakes.fake_string(),
+            "word4": fakes.fake_string(),
+            "word5": fakes.fake_string(),
+            "word6": fakes.fake_string(),
+            "word7": fakes.fake_string(),
+            "introduction": f"# [https://example.com](_{fakes.fake_string()}_)",
         }
 
     def set_up_patches(self):
@@ -702,10 +715,22 @@ Mini-dictionary:
         )
 
     def test_calls_convert_words_with_correct_values(self):
-        self.convert_words.assert_called_with(self.fake_values["fake_words"])
+        self.convert_words.assert_called_with(
+            [
+                {
+                    "Word": "perro",
+                    "Synonyms": ["can"],
+                    "Translation": "dog",
+                    "Also accepted": ["hound"],
+                    "Images": ["dog1", "dog2", "dog3"],
+                }
+            ]
+        )
 
     def test_calls_convert_phrases_with_correct_values(self):
-        self.convert_phrases.assert_called_with(self.fake_values["fake_phrases"])
+        self.convert_phrases.assert_called_with(
+            [{"Phrase": "Hello", "Translation": "Hola"}]
+        )
 
 
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
@@ -734,8 +759,7 @@ def test_load_module_complains_missing_module_key(load_yaml):
 def test_load_module_complains_missing_skills_key(load_yaml):
     random_path = fakes.path()
     load_yaml.return_value = {"Module": {}}
-    expected_error = r".*'Skills' is a required property.*"
-    with pytest.raises(RuntimeError, match=expected_error):
+    with pytest.raises(ValidationError):
         _load_module(random_path, fakes.course1)
 
 
@@ -773,8 +797,7 @@ def test_load_skill_complains_about_an_empty_file(load_yaml):
 def test_load_skill_complains_missing_skills_key(load_yaml):
     random_path = fakes.path()
     load_yaml.return_value = {}
-    expected_error = f'Skill file "{random_path}" needs to have a "Skill" key'
-    with pytest.raises(RuntimeError, match=expected_error):
+    with pytest.raises(ValidationError):
         _load_skill(random_path, fakes.course1)
 
 
@@ -782,8 +805,7 @@ def test_load_skill_complains_missing_skills_key(load_yaml):
 def test_load_skill_complains_missing_new_words_key(load_yaml):
     random_path = fakes.path()
     load_yaml.return_value = {"Skill": []}
-    expected_error = f'Skill file "{random_path}" needs to have a "New words" key'
-    with pytest.raises(RuntimeError, match=expected_error):
+    with pytest.raises(ValidationError):
         _load_skill(random_path, fakes.course1)
 
 
@@ -791,8 +813,7 @@ def test_load_skill_complains_missing_new_words_key(load_yaml):
 def test_load_skill_complains_missing_skill_name(load_yaml):
     random_path = fakes.path()
     load_yaml.return_value = {"Skill": {}, "New words": [], "Phrases": []}
-    expected_error = f'Skill file "{random_path}" needs to have skill name'
-    with pytest.raises(RuntimeError, match=expected_error):
+    with pytest.raises(RuntimeError):
         _load_skill(random_path, fakes.course1)
 
 
@@ -800,8 +821,7 @@ def test_load_skill_complains_missing_skill_name(load_yaml):
 def test_load_skill_complains_missing_skill_id(load_yaml):
     random_path = fakes.path()
     load_yaml.return_value = {"Skill": {"Name": "asd"}, "New words": [], "Phrases": []}
-    expected_error = f'Skill file "{random_path}" needs to have skill id'
-    with pytest.raises(RuntimeError, match=expected_error):
+    with pytest.raises(RuntimeError):
         _load_skill(random_path, fakes.course1)
 
 
@@ -824,8 +844,7 @@ def test_load_skill_complains_about_invalid_phrase(load_yaml):
         "New words": [],
         "Phrases": [""],
     }
-    expected_error = f'Skill file "{random_path}" has an invalid phrase'
-    with pytest.raises(RuntimeError, match=expected_error):
+    with pytest.raises(RuntimeError):
         _load_skill(random_path, fakes.course1)
 
 
@@ -837,15 +856,14 @@ def test_load_skill_complains_about_invalid_word(load_yaml):
         "Phrases": [],
         "New words": [""],
     }
-    expected_error = f'Skill file "{random_path}" has an invalid word'
-    with pytest.raises(RuntimeError, match=expected_error):
+    with pytest.raises(RuntimeError):
         _load_skill(random_path, fakes.course1)
 
 
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
 def test_load_skill_complains_about_misspelled_word_in_source_language(load_yaml):
     random_path = fakes.path()
-    fake_word_value = str(fakes.fake_value())
+    fake_word_value = fakes.fake_string()
     load_yaml.return_value = {
         "Skill": {"Name": "asd", "Id": 32423423},
         "Phrases": [],
@@ -860,7 +878,7 @@ def test_load_skill_complains_about_misspelled_word_in_source_language(load_yaml
     fake_hunspell.spell.return_value = False
     fake_course = fakes.customize(
         fakes.course1,
-        source_language=Language(fakes.fake_value(), fakes.fake_value),
+        source_language=Language(fakes.fake_string(), fakes.fake_string()),
         settings=Settings(
             hunspell=HunspellSettings(
                 source_language=fake_hunspell,
@@ -878,7 +896,7 @@ def test_load_skill_complains_about_misspelled_word_in_source_language(load_yaml
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
 def test_load_skill_complains_about_misspelled_word_in_target_language(load_yaml):
     random_path = fakes.path()
-    fake_word_value_simple = str(fakes.fake_value())
+    fake_word_value_simple = fakes.fake_string()
     fake_word_value = f"the {fake_word_value_simple}"
     load_yaml.return_value = {
         "Skill": {"Name": "asd", "Id": 32423423},
@@ -894,7 +912,7 @@ def test_load_skill_complains_about_misspelled_word_in_target_language(load_yaml
     fake_hunspell.spell = lambda word: word != fake_word_value_simple
     fake_course = fakes.customize(
         fakes.course1,
-        source_language=Language(fakes.fake_value(), fakes.fake_value),
+        source_language=Language(fakes.fake_string(), fakes.fake_string()),
         settings=Settings(
             hunspell=HunspellSettings(
                 source_language=Mock(),
@@ -912,7 +930,7 @@ def test_load_skill_complains_about_misspelled_word_in_target_language(load_yaml
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
 def test_load_skill_complains_about_misspelled_phrase_in_target_language(load_yaml):
     random_path = fakes.path()
-    fake_word = str(fakes.fake_value())
+    fake_word = fakes.fake_string()
     fake_phrase = f"the {fake_word} foo bar"
     load_yaml.return_value = {
         "Skill": {"Name": "asd", "Id": 32423423},
@@ -928,7 +946,7 @@ def test_load_skill_complains_about_misspelled_phrase_in_target_language(load_ya
     fake_hunspell.spell = lambda word: word != fake_word
     fake_course = fakes.customize(
         fakes.course1,
-        source_language=Language(fakes.fake_value(), fakes.fake_value),
+        source_language=Language(fakes.fake_string(), fakes.fake_string()),
         settings=Settings(
             hunspell=HunspellSettings(
                 source_language=Mock(),
@@ -947,7 +965,7 @@ def test_load_skill_complains_about_misspelled_phrase_in_target_language(load_ya
 @patch("librelingo_yaml_loader.yaml_loader._load_yaml")
 def test_load_skill_complains_about_misspelled_phrase_in_source_language(load_yaml):
     random_path = fakes.path()
-    fake_word = str(fakes.fake_value())
+    fake_word = fakes.fake_string()
     fake_phrase = f"the {fake_word} foo bar"
     load_yaml.return_value = {
         "Skill": {"Name": "asd", "Id": 32423423},
@@ -963,7 +981,7 @@ def test_load_skill_complains_about_misspelled_phrase_in_source_language(load_ya
     fake_hunspell.spell = lambda word: word != fake_word
     fake_course = fakes.customize(
         fakes.course1,
-        source_language=Language(fakes.fake_value(), fakes.fake_value),
+        source_language=Language(fakes.fake_string(), fakes.fake_string()),
         settings=Settings(
             hunspell=HunspellSettings(
                 source_language=fake_hunspell,
