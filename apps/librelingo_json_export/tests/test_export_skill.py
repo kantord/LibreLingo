@@ -19,7 +19,7 @@ def test_creates_the_challenges_file(fs, export_path):
 
 
 def test_creates_the_introduction_file(fs, export_path):
-    fake_name = str(fakes.fake_value())
+    fake_name = fakes.fake_string()
     introduction = f"# *Hello* (https://example.com)[_{fake_name}_]!"
     random_name, fake_skill = fakes.get_fake_skill(introduction=introduction)
     _export_skill(export_path, fake_skill, fakes.course1)

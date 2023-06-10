@@ -11,7 +11,7 @@ from librelingo_json_export.cli import DEFAULT_SETTINGS, main
 
 @pytest.fixture
 def inputs():
-    return str(fakes.fake_value()), str(fakes.fake_value())
+    return fakes.fake_string(), fakes.fake_string()
 
 
 @pytest.fixture
