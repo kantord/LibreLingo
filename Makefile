@@ -1,4 +1,4 @@
-PYTHON_FILEPATHS = `(find . -iname "*.py" -not -path "./.venv/*")`
+PYTHON_FILEPATHS = `(find . -iname "*.py" -not -path "./.venv/*" -not -path "./node_modules/*")`
 lint: ## Lint codebase
 	poetry run pylint --rcfile=pylintrc $(PYTHON_FILEPATHS)
 
@@ -8,7 +8,7 @@ format: ## Run black formatter
 format-fix: ## Run black formatter with automated fix
 	poetry run black $(PYTHON_FILEPATHS)
 
-type-check: ## Run black formatter with automated fix
+type-check: ## Run mypy
 	poetry run mypy $(PYTHON_FILEPATHS)
 
 pycache-delete: ## Delete the __pycache__ folders
