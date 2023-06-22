@@ -1,4 +1,4 @@
-PYTHON_FILEPATHS = `(find . -iname "*.py" -not -path "./.venv/*")`
+PYTHON_FILEPATHS = `(find . -iname "*.py" -not -path "./.venv/*" -not -path "./node_modules/*")`
 lint: ## Lint codebase
 	poetry run pylint --rcfile=pylintrc $(PYTHON_FILEPATHS)
 
