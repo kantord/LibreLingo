@@ -83,11 +83,6 @@
       filter: brightness(0.9);
       transform: scale(0.9);
     }
-
-    &:disabled {
-      filter: opacity(0.5) saturate(0);
-      pointer-events: none;
-    }
   }
 
   .spinner {
