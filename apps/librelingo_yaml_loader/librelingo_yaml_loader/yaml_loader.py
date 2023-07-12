@@ -3,6 +3,7 @@ import logging
 import collections
 import os
 import re
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from typing import List, Union
 import importlib.resources
@@ -447,7 +448,11 @@ def _load_modules(path: str, modules, course: Course):
     """
     Load each YAML module specified in the list
     """
-    return [_load_module(Path(path) / module, course) for module in modules]
+    with ThreadPoolExecutor(max_workers=os.cpu_count()) as pool:
+        futures = [
+            pool.submit(_load_module, Path(path) / module, course) for module in modules
+        ]
+        return [future.result() for future in futures]
 
 
 def _convert_license(raw_license):
