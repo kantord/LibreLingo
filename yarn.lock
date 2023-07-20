@@ -3538,25 +3538,25 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@knapsack-pro/core@^6.1.1":
-  version "6.1.1"
-  resolved "https://registry.yarnpkg.com/@knapsack-pro/core/-/core-6.1.1.tgz#e4b9c26e31a37b718563e2715a1cb2ef86f90ac9"
-  integrity sha512-HQ2N54giKTcIlD7XtQYmKUm+BN3ctfE1Q20InoLvWLT4xa/GqMFfRidgFrPud2g1/HlmytSyUvzmH+o72eHg7A==
+"@knapsack-pro/core@^6.2.0":
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/@knapsack-pro/core/-/core-6.2.0.tgz#2c194b7969bfeed1c042589d528778357fb5b1f6"
+  integrity sha512-LTSfd+8fvMHDYKcjXn7DlbV88GwFwdjW4woF0zfQKYWF+72bHkIGYbvsgcVwLnOubJfX5OG/XdNr85Qxd9S1Ug==
   dependencies:
     axios "^0.27.2"
     axios-retry "^3.2.5"
     winston "^3.7.2"
 
-"@knapsack-pro/cypress@7.1.1":
-  version "7.1.1"
-  resolved "https://registry.yarnpkg.com/@knapsack-pro/cypress/-/cypress-7.1.1.tgz#99093a9b2996c671ef18aa5d10484d1511a39dde"
-  integrity sha512-Bv9Dll5YsbFZuK0aBMi2lc3xRDg19arergXy5vl0s4KDlK/7dr6YcyYul3Ci1KmEqZZf4lKbiqiK0ZXCrdzZ0Q==
+"@knapsack-pro/cypress@7.2.0":
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/@knapsack-pro/cypress/-/cypress-7.2.0.tgz#8b5c39721ba69af14def4c0a1272c87abd77e1fe"
+  integrity sha512-mgFoYBEJyUZ+bgywiZu7oXOgJR2ntVoaMszOc5kqJx/1OinBoehrn9rurl/d90aV1EdTzlEEzO09B4ZGTqIlaA==
   dependencies:
-    "@knapsack-pro/core" "^6.1.1"
+    "@knapsack-pro/core" "^6.2.0"
     glob "^8.1.0"
     minimatch "^5.1.4"
     minimist "^1.2.6"
-    uuid "^8.3.2"
+    uuid "^9.0.0"
 
 "@mswjs/cookies@^0.2.0":
   version "0.2.0"
@@ -16249,6 +16249,11 @@ uuid@^3.3.2, uuid@^3.3.3:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
+
+uuid@^9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-9.0.0.tgz#592f550650024a38ceb0c562f2f6aa435761efb5"
+  integrity sha512-MXcSTerfPa4uqyzStbRoTgt5XIe3x5+42+q1sDuy3R5MDk66URdLMOZe5aPX/SQd+kuYAh0FdP/pO28IkQyTeg==
 
 uvu@^0.5.0:
   version "0.5.3"
