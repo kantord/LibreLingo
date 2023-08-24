@@ -3607,21 +3607,21 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@knapsack-pro/core@^6.2.1":
-  version "6.2.1"
-  resolved "https://registry.yarnpkg.com/@knapsack-pro/core/-/core-6.2.1.tgz#5b7c561ef0d794d2f403bdf68aa93e10ee46fdaf"
-  integrity sha512-oOozSqYKoGB2ueQ+VSfyb2PyQ1XmQvzo7kFEBxUase9ACuAVFBA26enuHFGdKLRfhDj0ht656rXMlm51mcP+/g==
+"@knapsack-pro/core@^6.3.0":
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/@knapsack-pro/core/-/core-6.3.0.tgz#7f99233a9544e1577fb0d37af76b4ef728c6ea3f"
+  integrity sha512-+9Z6z0+dNpxONK069gjUs6T25v2gOz6xMOHGHG3CyhGSyG9mD87/+8IyA6rYFuHetWMokcA1Nn6LnAacSPtMDw==
   dependencies:
     axios "^0.27.2"
     axios-retry "^3.2.5"
     winston "^3.7.2"
 
-"@knapsack-pro/cypress@7.2.1":
-  version "7.2.1"
-  resolved "https://registry.yarnpkg.com/@knapsack-pro/cypress/-/cypress-7.2.1.tgz#c326d8ad1ef4c5ba9a642a949b34092f0d37f89f"
-  integrity sha512-FDCFPzUi8ke1mNipb6O5BCR1zu5/L47rc1on6vpac8qnvm/Pej3vPLxy/MXnDLoEFFhJCvWlFH3sUgmv8x+f7w==
+"@knapsack-pro/cypress@7.3.0":
+  version "7.3.0"
+  resolved "https://registry.yarnpkg.com/@knapsack-pro/cypress/-/cypress-7.3.0.tgz#f679f1479b0e54ca0339c745a191fac3f400cf61"
+  integrity sha512-RpwJRJqtsbtbo9/+ISKR6L9VXJ1Wh2vnLd8lonRyDOjLvAOEbPdNLo8xJPlkblcl9Ed4Bh2y/DCC9NyfNYvWwQ==
   dependencies:
-    "@knapsack-pro/core" "^6.2.1"
+    "@knapsack-pro/core" "^6.3.0"
     glob "^8.1.0"
     minimatch "^5.1.4"
     minimist "^1.2.6"
