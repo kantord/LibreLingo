@@ -10,7 +10,7 @@ blocks:
       jobs:
         - name: yarn install
           commands:
-            - sem-version node 14
+            - sem-version node 16
             - checkout
             - cache restore
             - cache restore node-$(checksum yarn.lock)
@@ -28,7 +28,7 @@ blocks:
       jobs:
         - name: yarn jest
           commands:
-            - sem-version node 14
+            - sem-version node 16 
             - checkout
             - cache restore node-$(checksum yarn.lock)
             - yarn jest
@@ -39,7 +39,7 @@ blocks:
       jobs:
         - name: cypress and percy
           commands:
-            - sem-version node 14
+            - sem-version node 16 
             - checkout
             - cache restore node-$(checksum yarn.lock)
             - cache restore cypress-$(checksum yarn.lock)
@@ -60,7 +60,7 @@ blocks:
       jobs:
         - name: yarn lint
           commands:
-            - sem-version node 14
+            - sem-version node 16 
             - checkout
             - cache restore node-$(checksum yarn.lock)
             - yarn lint
@@ -71,7 +71,7 @@ blocks:
       jobs:
         - name: yarn types
           commands:
-            - sem-version node 14
+            - sem-version node 16
             - checkout
             - cache restore node-$(checksum yarn.lock)
             - cache restore packages-web-$(checksum yarn.lock)
@@ -83,7 +83,7 @@ blocks:
       jobs:
         - name: yarn web export
           commands:
-            - sem-version node 14
+            - sem-version node 16 
             - checkout
             - cache restore node-$(checksum yarn.lock)
             - cache restore cypress-$(checksum yarn.lock)
