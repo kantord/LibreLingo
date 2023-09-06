@@ -50,14 +50,14 @@
     "svelte-i18n": "3.0.3"
   },
   "devDependencies": {
-    "@babel/core": "7.22.15",
-    "@babel/preset-env": "7.22.15",
+    "@babel/core": "7.22.11",
+    "@babel/preset-env": "7.22.10",
     "@commitlint/cli": "17.7.1",
     "@commitlint/config-conventional": "17.7.0",
     "@knapsack-pro/cypress": "7.4.0",
-    "@percy/cli": "1.27.1",
+    "@percy/cli": "1.26.3",
     "@percy/cypress": "3.1.2",
-    "@types/node": "18.17.14",
+    "@types/node": "18.17.12",
     "@testing-library/cypress": "^9.0.0",
     "@types/sortablejs": "1.15.2",
     "babel-jest": "29.6.4",
@@ -94,7 +94,7 @@
     "svelte-preprocess-sass": "2.0.1",
     "ts-loader": "8.4.0",
     "webpack": "4.46.0",
-    "webpack-bundle-analyzer": "4.9.1",
+    "webpack-bundle-analyzer": "4.9.0",
     "webpack-cli": "5.1.4"
   }
 }
