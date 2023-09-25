@@ -341,7 +341,7 @@ LibreLingo is licensed under the AGPL-3.0 license. In addition, course content a
 
 
 ## See also
-* [omnilingo](https://omnilingo.xyz/), listening-based language learning
+* [omnilingo](https://github.com/omnilingo/omnilingo), listening-based language learning
 
 
 ## Donate
