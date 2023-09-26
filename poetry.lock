@@ -953,13 +953,13 @@ files = [
 
 [[package]]
 name = "mkdocs-mermaid2-plugin"
-version = "1.0.8"
+version = "1.1.1"
 description = "A MkDocs plugin for including mermaid graphs in markdown sources"
 optional = false
 python-versions = ">=3.6"
 files = [
-    {file = "mkdocs-mermaid2-plugin-1.0.8.tar.gz", hash = "sha256:aafab50e036a4c7db4f425ed7f4f37655a259c629d932d526d81becb5a9ba563"},
-    {file = "mkdocs_mermaid2_plugin-1.0.8-py3-none-any.whl", hash = "sha256:774793de2ea38d12398922ab3cd90c6d0303866785bfc681309a1088817176c9"},
+    {file = "mkdocs-mermaid2-plugin-1.1.1.tar.gz", hash = "sha256:bea5f3cbe6cb76bad21b81e49a01e074427ed466666c5d404e62fe8698bc2d7c"},
+    {file = "mkdocs_mermaid2_plugin-1.1.1-py3-none-any.whl", hash = "sha256:4e25876b59d1e151ca33a467207b346404b4a246f4f24af5e44c32408e175882"},
 ]
 
 [package.dependencies]
