@@ -18,7 +18,6 @@
 [![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/LibreLingo/LibreLingo)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/kantord/LibreLingo?color=darkcyan)](https://github.com/kantord/LibreLingo/releases)
 ![Build status](https://kantord.semaphoreci.com/badges/LibreLingo.svg?style=shields "Build status")
-[![ Sponsors](https://img.shields.io/github/sponsors/kantord?color=darkcyan)](https://github.com/sponsors/kantord)
 [![Matrix](https://img.shields.io/matrix/space-librelingo:matrix.org?color=%23000&label=chat%20on%20matrix&logo=matrix)](https://app.element.io/#/room/#space-librelingo:matrix.org)
 [![call](https://img.shields.io/badge/%E2%98%8E%EF%B8%8F-Schedule_a_call-darkcyan)](https://app.harmonizely.com/harmonizely-uoicqk)
 [![Mastodon](https://img.shields.io/mastodon/follow/000318010?domain=https%3A%2F%2Ffosstodon.org%2F&style=social)](https://fosstodon.org/@librelingo)
@@ -28,7 +27,7 @@
 
 LibreLingo's mission is to create a modern language-learning platform that is owned by the community of its users. All software is licensed under AGPLv3, which guarantees the freedom to run, study, share, and modify the software. Course authors are encouraged to release their courses with free licenses.
 
-If you want to know why I built LibreLingo, [I recommend reading my article on dev.to](https://dev.to/kantord/why-i-built-librelingo-280o). If you agree with LibreLingo's mission, consider helping to build and maintain it, and please [consider making a monetary contribution](https://github.com/sponsors/kantord).
+If you want to know why I built LibreLingo, [I recommend reading my article on dev.to](https://dev.to/kantord/why-i-built-librelingo-280o).
 
 <details open="open">
   <summary>Table of Contents</summary>
@@ -348,4 +347,3 @@ LibreLingo is licensed under the AGPL-3.0 license. In addition, course content a
 ## Donate
 Help us to keep going
 
-[![ Sponsors](https://img.shields.io/github/sponsors/kantord?color=darkcyan)](https://github.com/sponsors/kantord)
