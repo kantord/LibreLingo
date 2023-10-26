@@ -223,5 +223,20 @@
     "source": "French",
     "target": "Kabyle",
     "description": "Kabyle course for French speakers."
+  },
+  {
+    "url": "https://codeberg.org/kate/LibreLingo_NL_from_EN.git",
+    "repositoryURL": "https://codeberg.org/kate/LibreLingo_NL_from_EN",
+    "paths": {
+      "yamlFolder": "LibreLingo-NL-from-EN",
+      "jsonFolder": "dutch-from-english"
+    },
+    "deploy": true,
+    "devtoolsEnabled": false,
+    "inProduction": false,
+    "name": "dutch-from-english",
+    "source": "English",
+    "target": "Dutch",
+    "description": "Dutch for English speakers"
   }
 ]
