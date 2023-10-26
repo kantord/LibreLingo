@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
 # snapshottest: v1 - https://goo.gl/zC4yUc
 from __future__ import unicode_literals
-from pathlib import Path
 
 from snapshottest import Snapshot  # type: ignore
+
 
 snapshots = Snapshot()
 
 snapshots["test_loaded_yaml_is_exported_to_correct_json 1"] = {
-    str(Path("./output/challenges/hello.json")): {
+    "output/challenges/hello.json": {
         "challenges": [
             {
                 "formInTargetLanguage": "La femme dit bonjour",
@@ -179,17 +179,17 @@ le""",
             },
             {
                 "formInTargetLanguage": "la femme",
-                "group": "2729f22db5bf",
-                "id": "bd13dcfe4d22",
+                "group": "1c08a1db48bf",
+                "id": "38734148215a",
                 "meaningInSourceLanguage": "the woman",
-                "pictures": None,
+                "pictures": ["man1.jpg", "man2.jpg", "man3.jpg"],
                 "priority": 0,
                 "type": "cards",
             },
             {
                 "formInTargetLanguage": ["la femme", "la dame"],
-                "group": "2729f22db5bf",
-                "id": "19a877a0955d",
+                "group": "1c08a1db48bf",
+                "id": "1f9d7215444b",
                 "phrase": [
                     {
                         "definition": """la
@@ -198,15 +198,15 @@ le""",
                     },
                     {"definition": "femme", "word": "woman"},
                 ],
-                "pictures": None,
+                "pictures": ["man1.jpg", "man2.jpg", "man3.jpg"],
                 "priority": 1,
                 "type": "shortInput",
             },
             {
                 "answer": "la femme",
                 "audio": "cabd9d1b9cae7227bd640f6ec302ea9ce0c551e7f94d23a7ff843ced6846c7da",
-                "group": "2729f22db5bf",
-                "id": "f91de23ae173",
+                "group": "1c08a1db48bf",
+                "id": "0f716658c347",
                 "meaning": "the woman",
                 "priority": 1,
                 "type": "listeningExercise",
@@ -215,9 +215,7 @@ le""",
         "id": "379dca1c8ae9",
         "levels": 2,
     },
-    str(
-        Path("./output/introduction/hello.md")
-    ): """# Lorem Ipsum
+    "output/introduction/hello.md": """# Lorem Ipsum
 
 ## Dolor sit amet
 
