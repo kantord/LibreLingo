@@ -458,7 +458,7 @@ def test_load_course_output_matches_value(fs):
         Word(
             in_target_language=["la femme", "la dame"],
             in_source_language=["the woman", "the female"],
-            pictures=None,
+            pictures=["man1", "man2", "man3"],
         ),
     ]
     assert result.special_characters == [
@@ -871,6 +871,11 @@ def test_load_skill_complains_about_misspelled_word_in_source_language(load_yaml
             {
                 "Translation": fake_word_value,
                 "Word": "ola",
+                "Images": [
+                    "hello1",
+                    "hello2",
+                    "hello3",
+                ],
             }
         ],
     }
@@ -905,6 +910,11 @@ def test_load_skill_complains_about_misspelled_word_in_target_language(load_yaml
             {
                 "Translation": "le asd",
                 "Word": fake_word_value,
+                "Images": [
+                    "hello1",
+                    "hello2",
+                    "hello3",
+                ],
             }
         ],
     }
