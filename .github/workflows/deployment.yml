@@ -1,5 +1,8 @@
 name: Deployment to production
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
   schedule:
     # Runs "at minute 55 past every hour" (see https://crontab.guru)
