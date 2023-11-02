@@ -90,9 +90,13 @@
     new Image().src = `images/${imageName}`
   }
 
-  challenges
-    .filter(({ type }) => type === "cards")
-    .map(({ pictures }: CardChallengeType) => pictures.map(preloadImage))
+  challenges &&
+    challenges
+      .filter(({ type }) => type === "cards")
+      .map(
+        ({ pictures }: CardChallengeType) =>
+          pictures && pictures.map(preloadImage)
+      )
 
   $: alternativeChallenges =
     currentChallenge &&
