@@ -5,7 +5,7 @@ set -euo pipefail
 url=$(echo "$1" | cut -d',' -f2)
 image_name=$(echo "$1" | cut -d',' -f1)
 image_id=$(echo "$url" | cut -d'/' -f5)
-download_url="https://unsplash.com/photos/$image_id/download"
+download_url=$(curl "https://unsplash.com/photos/$image_id" | tidy  2> /dev/null | grep non-sponsored-photo-download-button -C 5 | grep https | sed 's/^[^"]*"//' | sed 's/".*//') || true
 
 if [ -e "./static/images/$image_name.jpg" ]; then
 	exit 0
