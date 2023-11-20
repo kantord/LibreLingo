@@ -1186,13 +1186,13 @@ testutils = ["gitpython (>3)"]
 
 [[package]]
 name = "pylint-pytest"
-version = "1.1.5"
+version = "1.1.6"
 description = "A Pylint plugin to suppress pytest-related false positives."
 optional = false
 python-versions = ">=3.6"
 files = [
-    {file = "pylint-pytest-1.1.5.tar.gz", hash = "sha256:d4b64fb8d81f9c7772fed4f6dd08e38cd53ab5dde0fdd50d4edc5de544148d5f"},
-    {file = "pylint_pytest-1.1.5-py3-none-any.whl", hash = "sha256:27789d309dbfdd159a91c6217d4db8ed833a27f3657411e812e97da49a077637"},
+    {file = "pylint-pytest-1.1.6.tar.gz", hash = "sha256:8a98235e0ce2f4ca7c5bb177823ed485c0c45453300fa107e10c041614140e53"},
+    {file = "pylint_pytest-1.1.6-py3-none-any.whl", hash = "sha256:e9d2a778918ee0f11a763d30758008b75ad33ab234f55b83954dbcce8c8db62c"},
 ]
 
 [package.dependencies]
