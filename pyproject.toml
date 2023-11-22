@@ -36,6 +36,7 @@ pylint-pytest = "^1.1.2"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^3.5.0"
+ruff = "^0.1.6"
 
 [tool.ruff]
 ignore-init-module-imports = true
