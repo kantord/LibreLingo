@@ -32,7 +32,7 @@ jobs:
         run: poetry run mypy apps
       - name: Python code style (ruff)
         shell: bash
-        run: poetry run ruff
+        run: poetry run ruff check apps
       - name: validate that Test Course Json files are up to date
         run: |
           poetry install --no-interaction
