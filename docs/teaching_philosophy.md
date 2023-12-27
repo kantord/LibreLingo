@@ -2,7 +2,7 @@
 
 ## What is the overall teaching approach of LibreLingo?
 
-LibreLingo focuses foremost on accessibility. Since one of the main factors in language-learning success is the time you spend learning, the courses should be easily approachable with flexible lessons. If the course material doesn't require preparation and a set amount of time, then the user is hopefully encouraged to make learning a routine that they can do regularly, on their own schedule.
+LibreLingo focuses foremost on removing barriers from language learning. Since one of the main factors in language-learning success is the time you spent learning, the courses should be easily approachable with flexible lessons. If the course material doesn't require preparation and a set amount of time, then the user is hopefully encouraged to make learning a routine that they can do regularly, on their own schedule.
 
 Specifically, LibreLingo uses [**spaced repetition**](https://en.wikipedia.org/wiki/Spaced_repetition), which is meant to continually give a student information before they might forget it, keeping words and phrases fresh. Ideally spaced repetition is implemented by the course content itself (i. e. relatively rare words are repeated at increasing intervals in the course content itself), but repetition for already completed skills is automatically already implemented in LibreLingo’s software with “stale skills” that must be practiced for them to become fresh again.
 
