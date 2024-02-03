@@ -58,8 +58,11 @@ apt-get install python-is-python3
 Clone the repository:
 
 ```sh
-git clone git@github.com:LibreLingo/LibreLingo.git
+git clone git@github.com:LibreLingo/LibreLingo.git --single-branch
 ```
+
+Using `--single-branch` is recommened in order to avoid having to clone the `gh-pages` branch,
+which you will probably never use locally.
 
 Move into the repo directory:
 
