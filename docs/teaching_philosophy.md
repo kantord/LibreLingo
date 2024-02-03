@@ -11,6 +11,7 @@ Looking at the big picture, the greater approach of LibreLingo is to fully embra
 ## What is the reasoning behind the set of challenges present, and the way they are designed?
 
 LibreLingo has five types of challenges:
+
 - **Cards challenges** are multiple choice questions that create associations between words and images. Visual association is a powerful learning technique, especially for simple words, and the images add fun and vibrancy to the learning experience. The photos also provide clues to the student, making this one of the easier challenges.
 - **Options challenges** are multiple choice questions that allow students to become comfortable with phrases, rather than single words. Unlike the card challenges, there are no clues.
 - **Short input challenges** serve to teach the target language's native writing system by requiring the learner to spell a word. If the student does need a hint, the mini-dictionary is available for this challenge.
@@ -26,6 +27,7 @@ First, a random subset of words and phrases are selected. Challenges are generat
 Challenges are split randomly into different levels so that you have smaller chunks of learning material for each skill, without requiring the course authors to create very small units manually. This also makes the general overview of a course more manageable as it reduces the overall number of skills needed in a course.
 
 Challenges are split randomly for the following reasons:
+
 - There's often a partial overlap between each level of a skill, thus it offers some repetition even before completing the skill.
 - Randomness reduces fatigue by making the practice sessions less predictable. It also reduces boredom by increasing the chance of encountering new words even as you practice the same skill by partially practicing material from a previous level.
 - Random splits do not require any manual work from the course creator.
