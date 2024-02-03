@@ -6,7 +6,7 @@ if [[ "${GIT_REPO}" == "TRUE" ]]; then
        git pull
      else
        cd /
-       git clone https://github.com/LibreLingo/LibreLingo.git
+       git clone https://github.com/LibreLingo/LibreLingo.git --single-branch
     fi
 fi
 cd /LibreLingo

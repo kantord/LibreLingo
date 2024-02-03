@@ -39,7 +39,7 @@ SHELL ["/bin/bash", "--login", "-c"]
 RUN npm install -g yarn
 
 # Add project files
-RUN git clone https://github.com/LibreLingo/LibreLingo.git
+RUN git clone https://github.com/LibreLingo/LibreLingo.git  --single-branch
 
 WORKDIR /LibreLingo
 
