@@ -44,7 +44,7 @@ RUN git clone https://github.com/LibreLingo/LibreLingo.git
 WORKDIR /LibreLingo
 
 # Install node dependencies
-RUN source $NVM_DIR/nvm.sh && nvm install 14 && nvm use 14 && yarn install
+RUN source $NVM_DIR/nvm.sh && nvm install 16 && nvm use 16 && yarn install
 
 # Install poetry
 RUN curl -sSL https://install.python-poetry.org | python - 
