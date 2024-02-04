@@ -51,7 +51,8 @@ RUN curl -sSL https://install.python-poetry.org | python -
 
 # Install Python dependencies
 RUN poetry install
-RUN cd apps/librelingo_yaml_loader && poetry install && cd ../.. && cd apps/librelingo_json_export && poetry install && cd ../..
+RUN cd apps/librelingo_yaml_loader && poetry install && cd ../..
+RUN cd apps/librelingo_json_export && poetry install && cd ../..
 
 # Prepare courses
 RUN yarn web run installAllExternalCourses
