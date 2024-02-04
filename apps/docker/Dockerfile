@@ -39,7 +39,7 @@ SHELL ["/bin/bash", "--login", "-c"]
 RUN npm install -g yarn
 
 # Add project files
-RUN git clone https://github.com/LibreLingo/LibreLingo.git  --single-branch
+RUN git clone https://github.com/novta/LibreLingo.git  --single-branch
 
 WORKDIR /LibreLingo
 
@@ -51,7 +51,8 @@ RUN curl -sSL https://install.python-poetry.org | python -
 
 # Install Python dependencies
 RUN poetry install
-RUN cd apps/librelingo_yaml_loader && poetry install && cd ../.. && cd apps/librelingo_json_export && poetry install && cd ../..
+RUN cd apps/librelingo_yaml_loader && poetry install && cd ../..
+RUN cd apps/librelingo_json_export && poetry install && cd ../..
 
 # Prepare courses
 RUN yarn web run installAllExternalCourses
