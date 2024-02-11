@@ -238,5 +238,20 @@
     "source": "English",
     "target": "Dutch",
     "description": "Dutch for English speakers"
+  },
+  {
+    "url": "https://github.com/novta/LibreLingo-RSK-from-SR/archive/refs/heads/main.zip",
+    "repositoryURL": "https://github.com/novta/LibreLingo-RSK-from-SR",
+    "paths": {
+      "yamlFolder": "LibreLingo-RSK-from-SR-main",
+      "jsonFolder": "rusyn-from-serbian"
+    },
+    "deploy": true,
+    "devtoolsEnabled": true,
+    "inProduction": true,
+    "name": "rusyn-from-serbian",
+    "source": "Serbian",
+    "target": "Rusyn",
+    "description": "Rusyn for Serbian speakers"
   }
 ]
