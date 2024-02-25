@@ -4,7 +4,7 @@
   import Options from "../Options.svelte"
   import ChallengePanel from "../ChallengePanel.svelte"
   import { prepareChallenge } from "../../logic"
-  import { t } from 'svelte-i18n';
+  import { t } from 'svelte-i18n'
 
   export let currentChallenge
   export let alternativeChallenges
@@ -46,7 +46,7 @@
 </script>
 
 <p class="is-size-1 is-size-2-tablet is-size-4-mobile has-text-centered">
-  {$t('index.which_of_these_is')}
+  {$t('option_challenge.which_of_these_is')}
   <strong data-test="meaning-in-source-language">
     {currentChallenge.meaningInSourceLanguage}
   </strong>
@@ -59,7 +59,7 @@
   {#if !submitted && selectedOption !== null}
     <ChallengePanel
       message=""
-      buttonText={$t('index.submit')}
+      buttonText={$t('option_challenge.submit')}
       submit
       skipAction="{skipChallenge}"
       skipAllAction="{skipAllChallenges}" />
@@ -72,16 +72,16 @@
   {#if submitted}
     {#if options[selectedOption].correct}
       <ChallengePanel
-        message={$t('index.correct_solution')}
-        buttonText={$t('index.continue')}
+        message={$t('option_challenge.correct_solution')}
+        buttonText={$t('option_challenge.continue')}
         correct
         buttonAction="{finishChallenge}" />
     {/if}
     {#if !options[selectedOption].correct}
       <ChallengePanel
-        message={$t('index.incorrect_solution')}
-        messageDetail="{`${$t('index.correct_answer')} ${currentChallenge.formInTargetLanguage}`}"
-        buttonText={$t('index.continue')}
+        message={$t('option_challenge.incorrect_solution')}
+        messageDetail="{`${$t('option_challenge.correct_answer')} ${currentChallenge.formInTargetLanguage}`}"
+        buttonText={$t('option_challenge.continue')}
         incorrect
         buttonAction="{finishChallenge}" />
     {/if}
