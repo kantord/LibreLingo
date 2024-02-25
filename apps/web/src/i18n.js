@@ -10,6 +10,6 @@ register("pl", () => require("./translation/pl.json"))
 register("sr", () => require("./translation/sr.json"))
 
 init({
-  fallbackLocale: "en",
-  initialLocale: "en",
+  fallbackLocale: "sr",
+  initialLocale: "sr",
 })
