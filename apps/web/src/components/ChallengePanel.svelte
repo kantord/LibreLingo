@@ -35,7 +35,7 @@
     {#if skipAction}
       <Button on:click="{skipAction}">{$t('challenge_panel.skip')}</Button>
     {/if}
-    <Button on:click="{skipAllAction}">{$t('challenge_panel.cancel')}Cancel</Button>
+    <Button on:click="{skipAllAction}">{$t('challenge_panel.cancel')}</Button>
     {#if skipAllVoice}
       <Button on:click="{skipAllVoice}">{$t('challenge_panel.cant_listen_now')}</Button>
     {/if}
