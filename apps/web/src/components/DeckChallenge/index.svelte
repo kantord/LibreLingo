@@ -4,6 +4,7 @@
   import OptionDeck from "./OptionDeck.svelte"
   import ChallengePanel from "../ChallengePanel.svelte"
   import { prepareChallenge } from "../../logic"
+  import { t } from 'svelte-i18n';
 
   export let currentChallenge
   export let alternativeChallenges
@@ -46,7 +47,7 @@
 </script>
 
 <p class="is-size-1 is-size-2-tablet is-size-4-mobile has-text-centered">
-  Which of these is
+  {$t('index.which_of_these_is')}
   <strong data-test="meaning-in-source-language">{currentChallenge.meaningInSourceLanguage}</strong>
   ?
 </p>
@@ -65,7 +66,7 @@
   {#if !submitted && selectedOption !== null}
     <ChallengePanel
       message=""
-      buttonText="Submit"
+      buttonText={$t('index.submit')}
       submit
       skipAction="{skipChallenge}"
       skipAllAction="{skipAllChallenges}" />
@@ -74,15 +75,15 @@
   {#if submitted}
     {#if options[selectedOption].correct}
       <ChallengePanel
-        message="Correct solution!"
-        buttonText="Continue"
+        message={$t('index.correct_solution')}
+        buttonText={$t('index.continue')}
         correct
         buttonAction="{finishChallenge}" />
     {/if}
     {#if !options[selectedOption].correct}
       <ChallengePanel
-        message="Incorrect solution!"
-        buttonText="Continue"
+        message={$t('index.incorrect_solution')}
+        buttonText={$t('index.continue')}
         incorrect
         buttonAction="{finishChallenge}" />
     {/if}
