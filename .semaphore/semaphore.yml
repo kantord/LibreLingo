@@ -2,8 +2,8 @@ version: v1.0
 name: Node JS
 agent:
   machine:
-    type: e1-standard-2
-    os_image: ubuntu1804
+    type: e2-standard-2
+    os_image: ubuntu2204
 blocks:
   - name: Set up dependencies
     task:
