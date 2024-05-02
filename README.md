@@ -1,4 +1,3 @@
-// This is a test comment
 <p align="center">
   <img src="/docs/branding/LibreLingo_Mascot/LightShadow/Turtle1_jetPack.svg" height="250" />
   <br/><br/>
