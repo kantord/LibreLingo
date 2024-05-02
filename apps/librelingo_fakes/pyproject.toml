@@ -1,18 +1,21 @@
-[tool.poetry]
+[project]
 name = "librelingo_fakes"
-version = "3.2.0"  # Do not edit before merge to 'main'
+version = "3.2.1"  # Do not edit before merge to 'main'
 description = "Fake data for testing LibreLingo-related packages"
-authors = ["Dániel Kántor <git@daniel-kantor.com>"]
-license = "GPLv3"
+authors = [
+    {name = "Dániel Kántor", email = "git@daniel-kantor.com"},
+]
+dependencies = [
+    "librelingo-types>=3.3.0",
+]
+requires-python = ">=3.11"
 readme = "README.md"
-
-[tool.poetry.dependencies]
-python = "^3.8"
-librelingo-types = "^3.0.0"
-
-[tool.poetry.dev-dependencies]
-pydoc-markdown = "^4.0.0"
+license = {text = "GPLv3"}
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+
+[tool.pdm]
+distribution = true
