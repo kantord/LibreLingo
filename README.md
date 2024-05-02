@@ -1,4 +1,3 @@
-// This is a test comment
 <p align="center">
   <img src="/docs/branding/LibreLingo_Mascot/LightShadow/Turtle1_jetPack.svg" height="250" />
   <br/><br/>
@@ -167,7 +166,7 @@ To get started with running the development environment on your computer and und
 ### Become a contributor
 #### are you a developer?
 You can help LibreLingo by testing it and submitting feature requests or bug reports: [here](https://github.com/kantord/LibreLingo/issues/new). If you want to get in touch, you can use my contact details on [my GitHub profile](https://github.com/kantord).
-Go through the dev docs [here](https://librelingo.app/docs/).
+Go through the dev docs [here](https://librelingo.app/docs/CONTRIBUTING.html).
 
 Still got questions? Our Matrix/FreeNode IRC channel is `#LibreLingo`, join the dev community there and feel free to ask anything.
 * Matrix: [`#LibreLingo`](https://app.element.io/#/room/#space-librelingo:matrix.org) on `matrix.org`
