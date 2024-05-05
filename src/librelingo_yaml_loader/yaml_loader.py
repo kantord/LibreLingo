@@ -9,6 +9,7 @@ from typing import List, Union
 import importlib.resources
 import json
 import bleach
+from yaml.constructor import SafeConstructor
 import jsonschema
 import html2markdown  # type: ignore
 import markdown
@@ -27,7 +28,7 @@ from librelingo_types import (
 )
 from yaml import load
 
-from yaml.constructor import SafeConstructor
+
 
 from ._spelling import _convert_hunspell_settings, _run_skill_spellcheck
 
