@@ -41,7 +41,6 @@ readme = "README.md"
 license = {text = "AGPL-3.0"}
 dependencies = [
     "python-slugify>=8.0.4",
-    "hunspell>=0.5.5",
     "editdistance>=0.8.1",
     "click>=8.1.7",
     "regex>=2024.4.28",

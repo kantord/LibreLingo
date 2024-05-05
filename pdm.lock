@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["cross_platform", "inherit_metadata"]
 lock_version = "4.4.1"
-content_hash = "sha256:01e0f68573ce548d43e1c6c04d2936b98d09dca31ff59e6a9938171a06dbf3d3"
+content_hash = "sha256:f1bc688f1ca588987b2530f20a151d7d18883c1d49c6042fa815a3d81c5a09fa"
 
 [[package]]
 name = "astroid"
@@ -498,15 +498,6 @@ dependencies = [
 ]
 files = [
     {file = "html2markdown-0.1.7.tar.gz", hash = "sha256:92baf932c7f216be6d9459a191d45b6401e204bda7a5413febafa875512cfa8c"},
-]
-
-[[package]]
-name = "hunspell"
-version = "0.5.5"
-summary = "Module for the Hunspell spellchecker engine"
-groups = ["default"]
-files = [
-    {file = "hunspell-0.5.5.tar.gz", hash = "sha256:0f830b68bd8c392f4d5b4e21c38e28809e14d64ec67bde48272c920b63686f53"},
 ]
 
 [[package]]
