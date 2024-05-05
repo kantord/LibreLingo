@@ -76,3 +76,11 @@ localData/
 /apps/web/src/courses/*-*
 /courses/*-*
 
+
+
+# PDM
+.pdm.toml
+.pdm-python
+.pdm-build/
+
+neovide_backtraces.log
