@@ -1,0 +1,139 @@
+Skill:
+  Name: Food
+  Id: 1
+  Thumbnails:
+    - bread1
+    - milk2
+    - pasta3
+
+New words:
+  - Word: hlěb
+    Translation: bread
+    Images:
+      - bread1
+      - bread2
+      - bread3
+
+  - Word: mlěko
+    Translation: milk
+    Images:
+      - milk1
+      - milk2
+      - milk3
+
+  # - Word: pasta
+  #   Translation: pasta
+  #   Images:
+  #     - pasta1
+  #     - pasta2
+  #     - pasta3
+
+  - Word: para
+    Translation: couple
+    Images:
+      - couple1
+      - couple2
+      - couple3
+
+
+Phrases:
+  # - Phrase: Buen provecho
+  #   Translation: Enjoy your meal
+
+  - Phrase: Prosim
+    Translation: Please
+
+  - Phrase: Hlěb, prosim
+    Translation: Bread, please
+
+  - Phrase: Vodu, prosim
+    Translation: Water, please
+
+  - Phrase: Cecilia pije vodu
+    Translation: Cecilia drinks water
+
+  - Phrase: Para pije pivo
+    Translation: The couple drinks beer
+
+  - Phrase: José jedaje hlěb
+    Translation: José eats bread
+
+
+Mini-dictionary:
+  # English:
+  #   - please: por favor
+  #   - water: agua
+  #   - Cecilia: Cecilia (name)
+  #   - drinks:
+  #     - bebe
+  #     - bebidas
+  #   - beer: cerveza
+  #   - José: José (name)
+  #   - eats: come
+  #   - I: yo
+  #   - eat:
+  #     - come
+  #     - comer
+  #   - like:
+  #     - gusta
+  #     - como
+  #   - it:
+  #     - lo
+  #     - eso
+  #   - how:
+  #     - cómo
+  #   - much:
+  #     - mucho
+  #     - mucha
+  #     - muy
+
+  # Interslavic:
+  #   - por: for
+  #   - favor: favor
+  #   - agua: water
+  #   - Cecilia: Cecilia (name)
+  #   - bebe: drinks
+  #   - cerveza: beer
+  #   - la: the
+  #   - José: José (name)
+  #   - come: eats
+  #   - yo:
+  #       - I
+  #       - me
+  #   - como:
+  #     - I eat
+  #     - like
+  #   - me:
+  #     - I
+  #     - me
+  #   - gusta:
+  #     - gusta
+  #     - taste
+  #   - cuánto:
+  #     - how much
+  #     - how many
+  #   - cuesta:
+  #     - cost
+  #     - costs
+  English:
+    - please: prosim
+    - water: voda
+    - Cecilia: Cecilia (name)
+    - drinks: pije
+    - beer: pivo
+    - couple: para
+    - José: José (name)
+    - eats: jedaje
+    - bread: hlěb
+
+  Interslavic:
+    - prosim: please
+    - voda: water
+    - Cecilia: Cecilia (name)
+    - pije: drinks
+    - pivo: beer
+    - para: couple
+    - José: José (name)
+    - jedaje: eats
+    - hlěb: bread
+    - vodu: "-"

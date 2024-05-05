@@ -1,0 +1,80 @@
+Skill:
+  Name: Animals
+  Id: 2
+  Thumbnails:
+    - dog1
+    - lion3
+    - cat3
+
+New words:
+  - Word: pes
+    Translation: dog
+    Also accepted:
+      - hound
+    Images:
+      - dog1
+      - dog2
+      - dog3
+
+  - Word: kot
+    Translation: cat
+    Images:
+      - cat1
+      - cat2
+      - cat3
+
+  - Word: medvěd
+    Translation: bear
+    Images:
+      - bear1
+      - bear2
+      - bear1
+
+  - Word: lev
+    Translation: lion
+    Images:
+      - lion1
+      - lion2
+      - lion3
+
+  - Word: katka
+    Translation: duck
+    Images:
+      - duck1
+      - duck2
+      - duck3
+
+  - Word: konj
+    Translation: horse
+    Images:
+      - horse1
+      - horse2
+      - horse3
+
+Phrases:
+  - Phrase: To jest konj
+    Translation: It's a horse
+
+  - Phrase: Max jest psom
+    Translation: Max is a dog
+
+  - Phrase: Katka i konj
+    Translation: A duck and a horse
+
+Mini-dictionary:
+  Interslavic:
+    - to: it
+    - psom: "-"
+    - jest: is
+    - Max: Max (name)
+    - i: and
+
+  English:
+    - the:
+        - sej
+        - sa
+    - a: "-"
+    - it's: to jest
+    - Max: Max (name)
+    - is: jest
+    - and: i

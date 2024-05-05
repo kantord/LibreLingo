@@ -1,0 +1,74 @@
+{
+  "languageName": "Interslavic",
+  "languageCode": "test",
+  "uiLanguage": "en",
+  "specialCharacters": [
+    "Č",
+    "č",
+    "Ě",
+    "ě",
+    "Š",
+    "š",
+    "Ž",
+    "ž"
+  ],
+  "repositoryURL": "https://github.com/LibreLingo/LibreLingo/",
+  "license": {
+    "name": {
+      "short": "CC BY-SA 4.0",
+      "full": "Attribution-ShareAlike 4.0 International"
+    },
+    "link": "https://creativecommons.org/licenses/by-sa/4.0/legalcode"
+  },
+  "modules": [
+    {
+      "title": "Basics",
+      "skills": [
+        {
+          "imageSet": [
+            "dog1",
+            "lion3",
+            "cat3"
+          ],
+          "summary": [
+            "pes",
+            "kot",
+            "medvěd",
+            "lev",
+            "katka",
+            "konj",
+            "To jest konj",
+            "Max jest psom",
+            "Katka i konj"
+          ],
+          "practiceHref": "animals",
+          "id": "38c2ea1c36d2",
+          "title": "Animals",
+          "levels": 2
+        },
+        {
+          "imageSet": [
+            "bread1",
+            "milk2",
+            "pasta3"
+          ],
+          "summary": [
+            "hlěb",
+            "mlěko",
+            "para",
+            "Prosim",
+            "Hlěb, prosim",
+            "Vodu, prosim",
+            "Cecilia pije vodu",
+            "Para pije pivo",
+            "José jedaje hlěb"
+          ],
+          "practiceHref": "food",
+          "id": "569673478a3d",
+          "title": "Food",
+          "levels": 3
+        }
+      ]
+    }
+  ]
+}

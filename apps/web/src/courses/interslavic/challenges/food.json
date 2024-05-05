@@ -1,0 +1,577 @@
+{
+  "id": "569673478a3d",
+  "levels": 3,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Prosim",
+      "meaningInSourceLanguage": "Please",
+      "id": "17b79b58d3c9",
+      "priority": 0,
+      "group": "a3805129dcad"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Prosim",
+      "meaning": "Please",
+      "audio": "e5fc72d152b8485b81ece99c100b196c96b991400fbe00e8e8db664fc1ab3ec9",
+      "id": "ac23cc2b593d",
+      "priority": 1,
+      "group": "a3805129dcad"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Hlěb, prosim",
+      "meaningInSourceLanguage": "Bread, please",
+      "id": "e59c7ee676ad",
+      "priority": 0,
+      "group": "ac65b2ef3200"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Hlěb, prosim",
+      "meaning": "Bread, please",
+      "audio": "5c1b3a64bdd61964d81fed5a507a5b65938a73b7e086d83301ea782a57bd4f91",
+      "id": "2e342fe34afd",
+      "priority": 1,
+      "group": "ac65b2ef3200"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Bread,",
+          "definition": "hlěb"
+        },
+        {
+          "word": "please",
+          "definition": "prosim"
+        }
+      ],
+      "chips": [
+        "Hlěb",
+        "prosim",
+        "psom",
+        "Prosim"
+      ],
+      "solutions": [
+        [
+          "Hlěb",
+          "prosim"
+        ]
+      ],
+      "formattedSolution": "Hlěb, prosim",
+      "id": "073b988779f1",
+      "priority": 2,
+      "group": "ac65b2ef3200"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Hlěb,",
+          "definition": "bread"
+        },
+        {
+          "word": "prosim",
+          "definition": "please"
+        }
+      ],
+      "chips": [
+        "Bread",
+        "please",
+        "Please",
+        "bread"
+      ],
+      "solutions": [
+        [
+          "Bread",
+          "please"
+        ]
+      ],
+      "formattedSolution": "Bread, please",
+      "id": "b190eef1fff4",
+      "priority": 2,
+      "group": "ac65b2ef3200"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Vodu, prosim",
+      "meaningInSourceLanguage": "Water, please",
+      "id": "c3a647327565",
+      "priority": 0,
+      "group": "0a8a99a8c16a"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Vodu, prosim",
+      "meaning": "Water, please",
+      "audio": "44ae72ae53f179045de93d4cddb8ee1e0cc6db8a3848031f9e801cefa2d987a7",
+      "id": "e06f0cc32879",
+      "priority": 1,
+      "group": "0a8a99a8c16a"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Water,",
+          "definition": "voda"
+        },
+        {
+          "word": "please",
+          "definition": "prosim"
+        }
+      ],
+      "chips": [
+        "Vodu",
+        "prosim",
+        "Prosim",
+        "vodu"
+      ],
+      "solutions": [
+        [
+          "Vodu",
+          "prosim"
+        ]
+      ],
+      "formattedSolution": "Vodu, prosim",
+      "id": "15fdf5e9a24d",
+      "priority": 2,
+      "group": "0a8a99a8c16a"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Vodu,",
+          "definition": "-"
+        },
+        {
+          "word": "prosim",
+          "definition": "please"
+        }
+      ],
+      "chips": [
+        "Water",
+        "please",
+        "Please",
+        "water"
+      ],
+      "solutions": [
+        [
+          "Water",
+          "please"
+        ]
+      ],
+      "formattedSolution": "Water, please",
+      "id": "96bb886b495c",
+      "priority": 2,
+      "group": "0a8a99a8c16a"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Cecilia pije vodu",
+      "meaningInSourceLanguage": "Cecilia drinks water",
+      "id": "aefb1e1abb02",
+      "priority": 0,
+      "group": "3b90338448e4"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Cecilia pije vodu",
+      "meaning": "Cecilia drinks water",
+      "audio": "296d1e922574911227189970c95ecfa047cb2b7c463d017c3586eb0a961cbf32",
+      "id": "9fc706d6e320",
+      "priority": 1,
+      "group": "3b90338448e4"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Cecilia",
+          "definition": "Cecilia (name)"
+        },
+        {
+          "word": "drinks",
+          "definition": "pije"
+        },
+        {
+          "word": "water",
+          "definition": "voda"
+        }
+      ],
+      "chips": [
+        "Cecilia",
+        "pije",
+        "vodu",
+        "Vodu",
+        "pivo"
+      ],
+      "solutions": [
+        [
+          "Cecilia",
+          "pije",
+          "vodu"
+        ]
+      ],
+      "formattedSolution": "Cecilia pije vodu",
+      "id": "66d7a8da276a",
+      "priority": 2,
+      "group": "3b90338448e4"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Cecilia",
+          "definition": "Cecilia (name)"
+        },
+        {
+          "word": "pije",
+          "definition": "drinks"
+        },
+        {
+          "word": "vodu",
+          "definition": "-"
+        }
+      ],
+      "chips": [
+        "Cecilia",
+        "drinks",
+        "water",
+        "Water",
+        "eats"
+      ],
+      "solutions": [
+        [
+          "Cecilia",
+          "drinks",
+          "water"
+        ]
+      ],
+      "formattedSolution": "Cecilia drinks water",
+      "id": "c6269aff8e10",
+      "priority": 2,
+      "group": "3b90338448e4"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Para pije pivo",
+      "meaningInSourceLanguage": "The couple drinks beer",
+      "id": "7404bcce1b08",
+      "priority": 0,
+      "group": "4b91c9317878"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Para pije pivo",
+      "meaning": "The couple drinks beer",
+      "audio": "d5157c69f3fec6bf373e222255c8af3176163676ad124e395e8b6817b3355626",
+      "id": "9b03b0056555",
+      "priority": 1,
+      "group": "4b91c9317878"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "The",
+          "definition": "sa\nsej"
+        },
+        {
+          "word": "couple",
+          "definition": "para"
+        },
+        {
+          "word": "drinks",
+          "definition": "pije"
+        },
+        {
+          "word": "beer",
+          "definition": "pivo"
+        }
+      ],
+      "chips": [
+        "Para",
+        "pije",
+        "pivo",
+        "psom",
+        "i"
+      ],
+      "solutions": [
+        [
+          "Para",
+          "pije",
+          "pivo"
+        ]
+      ],
+      "formattedSolution": "Para pije pivo",
+      "id": "4d8b1eb1c49c",
+      "priority": 2,
+      "group": "4b91c9317878"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Para",
+          "definition": "couple"
+        },
+        {
+          "word": "pije",
+          "definition": "drinks"
+        },
+        {
+          "word": "pivo",
+          "definition": "beer"
+        }
+      ],
+      "chips": [
+        "The",
+        "couple",
+        "drinks",
+        "beer",
+        "is",
+        "dog",
+        "duck"
+      ],
+      "solutions": [
+        [
+          "The",
+          "couple",
+          "drinks",
+          "beer"
+        ]
+      ],
+      "formattedSolution": "The couple drinks beer",
+      "id": "297d2aa7db76",
+      "priority": 2,
+      "group": "4b91c9317878"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "José jedaje hlěb",
+      "meaningInSourceLanguage": "José eats bread",
+      "id": "706fad6bd22f",
+      "priority": 0,
+      "group": "188637cbc635"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "José jedaje hlěb",
+      "meaning": "José eats bread",
+      "audio": "26906a044a3cbb41d1ae301463eca83165a31df0442e551e584b1fa430347290",
+      "id": "370360a85f74",
+      "priority": 1,
+      "group": "188637cbc635"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "José",
+          "definition": "José (name)"
+        },
+        {
+          "word": "eats",
+          "definition": "jedaje"
+        },
+        {
+          "word": "bread",
+          "definition": "hlěb"
+        }
+      ],
+      "chips": [
+        "José",
+        "jedaje",
+        "hlěb",
+        "jest",
+        "Hlěb"
+      ],
+      "solutions": [
+        [
+          "José",
+          "jedaje",
+          "hlěb"
+        ]
+      ],
+      "formattedSolution": "José jedaje hlěb",
+      "id": "02f5092b1d53",
+      "priority": 2,
+      "group": "188637cbc635"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "José",
+          "definition": "José (name)"
+        },
+        {
+          "word": "jedaje",
+          "definition": "eats"
+        },
+        {
+          "word": "hlěb",
+          "definition": "bread"
+        }
+      ],
+      "chips": [
+        "José",
+        "eats",
+        "bread",
+        "Bread",
+        "a"
+      ],
+      "solutions": [
+        [
+          "José",
+          "eats",
+          "bread"
+        ]
+      ],
+      "formattedSolution": "José eats bread",
+      "id": "c142f5120bdd",
+      "priority": 2,
+      "group": "188637cbc635"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "bread1.jpg",
+        "bread2.jpg",
+        "bread3.jpg"
+      ],
+      "formInTargetLanguage": "hlěb",
+      "meaningInSourceLanguage": "bread",
+      "id": "d46081f74cd4",
+      "priority": 0,
+      "group": "013a9de7008e"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "bread1.jpg",
+        "bread2.jpg",
+        "bread3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "hlěb"
+      ],
+      "phrase": [
+        {
+          "word": "bread",
+          "definition": "hlěb"
+        }
+      ],
+      "id": "64636357b209",
+      "priority": 1,
+      "group": "013a9de7008e"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "hlěb",
+      "meaning": "bread",
+      "audio": "cf97d4c376cc8b10608f22aff73306d347434f2bca86451d640b6066179b0202",
+      "id": "11c57077aa89",
+      "priority": 1,
+      "group": "013a9de7008e"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "milk1.jpg",
+        "milk2.jpg",
+        "milk3.jpg"
+      ],
+      "formInTargetLanguage": "mlěko",
+      "meaningInSourceLanguage": "milk",
+      "id": "733f590f9923",
+      "priority": 0,
+      "group": "bb57ae0d0aad"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "milk1.jpg",
+        "milk2.jpg",
+        "milk3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "mlěko"
+      ],
+      "phrase": [
+        {
+          "word": "milk",
+          "definition": "mlěko"
+        }
+      ],
+      "id": "55e59d5b5cba",
+      "priority": 1,
+      "group": "bb57ae0d0aad"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "mlěko",
+      "meaning": "milk",
+      "audio": "a9efefc6f44d833912b0fc2a9b4f88bed77d4e93289b16780727b811e55cae88",
+      "id": "14b6e416842c",
+      "priority": 1,
+      "group": "bb57ae0d0aad"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "couple1.jpg",
+        "couple2.jpg",
+        "couple3.jpg"
+      ],
+      "formInTargetLanguage": "para",
+      "meaningInSourceLanguage": "couple",
+      "id": "35b294ee35b1",
+      "priority": 0,
+      "group": "544315f6b6cd"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "couple1.jpg",
+        "couple2.jpg",
+        "couple3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "para"
+      ],
+      "phrase": [
+        {
+          "word": "couple",
+          "definition": "para"
+        }
+      ],
+      "id": "7abb07ef15cc",
+      "priority": 1,
+      "group": "544315f6b6cd"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "para",
+      "meaning": "couple",
+      "audio": "4ebec66b6d8c504ff5e26a3be0b8523bb1edcadeab597d5a2870d0aa8cedfa5c",
+      "id": "4cc1299029b5",
+      "priority": 1,
+      "group": "544315f6b6cd"
+    }
+  ]
+}
