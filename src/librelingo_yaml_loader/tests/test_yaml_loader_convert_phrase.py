@@ -2,6 +2,7 @@
 this file contains tests of the funcion
 librelingo_yaml_loader.yaml_loader._convert_phrase
 """
+
 import pytest
 from librelingo_fakes import fakes
 from librelingo_types import Phrase

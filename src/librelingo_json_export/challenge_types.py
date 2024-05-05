@@ -39,9 +39,9 @@ def get_short_input_challenge(source: Word, course: Course):
     return [
         {
             "type": "shortInput",
-            "pictures": [pic + ".jpg" for pic in source.pictures]
-            if source.pictures
-            else None,
+            "pictures": (
+                [pic + ".jpg" for pic in source.pictures] if source.pictures else None
+            ),
             "formInTargetLanguage": [
                 remove_control_characters_for_display(t)
                 for t in source.in_target_language
@@ -60,9 +60,9 @@ def get_cards_challenge(word: Word, _):
     return [
         {
             "type": "cards",
-            "pictures": [pic + ".jpg" for pic in word.pictures]
-            if word.pictures
-            else None,
+            "pictures": (
+                [pic + ".jpg" for pic in word.pictures] if word.pictures else None
+            ),
             "formInTargetLanguage": remove_control_characters_for_display(
                 word.in_target_language[0]
             ),

@@ -2,6 +2,7 @@
 this file contains tests of the funcion
 librelingo_yaml_loader.yaml_loader._load_modules
 """
+
 from pathlib import Path
 
 import pytest

@@ -31,7 +31,7 @@ jobs:
         run: pdm run mypy apps
       - name: Python code style (black)
         shell: bash
-        run: pdm run black apps --check
+        run: pdm run black src --check
       - name: Python code style (pylint)
         shell: bash
         run: pdm run pylint $(git ls-files '*.py')

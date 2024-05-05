@@ -29,7 +29,6 @@ from librelingo_types import (
 from yaml import load
 
 
-
 from ._spelling import _convert_hunspell_settings, _run_skill_spellcheck
 
 logger = logging.getLogger("librelingo_yaml_loader")
@@ -332,19 +331,19 @@ def _get_skill_schema(course: Course):
         course.source_language.name,
         course.target_language.name,
     ]
-    new_schema["properties"]["Mini-dictionary"][
-        course.source_language.name
-    ] = new_schema["properties"]["Mini-dictionary"]["properties"][
-        "ThisIsTheSourceLanguage"
-    ]
+    new_schema["properties"]["Mini-dictionary"][course.source_language.name] = (
+        new_schema["properties"]["Mini-dictionary"]["properties"][
+            "ThisIsTheSourceLanguage"
+        ]
+    )
     del new_schema["properties"]["Mini-dictionary"]["properties"][
         "ThisIsTheSourceLanguage"
     ]
-    new_schema["properties"]["Mini-dictionary"][
-        course.target_language.name
-    ] = new_schema["properties"]["Mini-dictionary"]["properties"][
-        "ThisIsTheTargetLanguage"
-    ]
+    new_schema["properties"]["Mini-dictionary"][course.target_language.name] = (
+        new_schema["properties"]["Mini-dictionary"]["properties"][
+            "ThisIsTheTargetLanguage"
+        ]
+    )
     del new_schema["properties"]["Mini-dictionary"]["properties"][
         "ThisIsTheTargetLanguage"
     ]
