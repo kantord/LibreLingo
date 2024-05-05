@@ -1,3 +1,5 @@
+# pylint: disable=wrong-import-order,use-yield-from
+
 import os
 import re
 from pathlib import Path

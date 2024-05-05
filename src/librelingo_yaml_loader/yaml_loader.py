@@ -1,3 +1,5 @@
+# pylint: disable=ungrouped-imports,use-yield-from,deprecated-method
+
 import copy
 import logging
 import collections
@@ -13,6 +15,8 @@ from yaml.constructor import SafeConstructor
 import jsonschema
 import html2markdown  # type: ignore
 import markdown
+from yaml import load
+
 from librelingo_types import (
     AudioSettings,
     Course,
@@ -26,10 +30,8 @@ from librelingo_types import (
     TextToSpeechSettings,
     Word,
 )
-from yaml import load
-
-
 from ._spelling import _convert_hunspell_settings, _run_skill_spellcheck
+
 
 logger = logging.getLogger("librelingo_yaml_loader")
 try:

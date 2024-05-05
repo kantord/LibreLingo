@@ -1,3 +1,5 @@
+# pylint: disable=wrong-import-order
+
 from librelingo_utils import calculate_number_of_levels, get_opaque_id
 from slugify import slugify
 

@@ -1,3 +1,5 @@
+# pylint: disable=use-yield-from
+
 import re
 import hashlib
 from functools import lru_cache
