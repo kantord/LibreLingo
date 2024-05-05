@@ -1,5 +1,4 @@
-from librelingo_fakes import fakes
-
+import librelingo_fakes as fakes
 from librelingo_audios.functions import list_required_audios
 
 
