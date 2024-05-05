@@ -15,6 +15,21 @@
     "description": "Spanish for English speakers"
   },
   {
+    "url": "https://example.com",
+    "repositoryURL": "https://github.com/olehmisar/LibreLingo",
+    "paths": {
+      "yamlFolder": "todo",
+      "jsonFolder": "interslavic"
+    },
+    "deploy": true,
+    "devtoolsEnabled": true,
+    "inProduction": true,
+    "name": "interslavic-from-english",
+    "source": "English",
+    "target": "Interslavic",
+    "description": "Interslavic for English speakers"
+  },
+  {
     "url": "https://github.com/szabgab/LibreLingo-Judeo-Spanish-from-English/archive/refs/heads/main.zip",
     "repositoryURL": "https://github.com/szabgab/LibreLingo-Judeo-Spanish-from-English",
     "paths": {

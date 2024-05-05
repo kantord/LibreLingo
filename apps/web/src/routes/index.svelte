@@ -48,6 +48,10 @@
       </Stack>
 
       <Hidden>
+        <Button style="primary" href="course/interslavic">
+          Start learning Interslavic
+        </Button>
+
         <Button style="primary" href="course/german-from-english">
           Start learning German
         </Button>
