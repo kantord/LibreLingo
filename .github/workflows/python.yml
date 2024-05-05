@@ -19,29 +19,22 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Set up Poetry
-        uses: snok/install-poetry@v1
-      - name: Install Python Dependencies
-        shell: bash
-        run: poetry install
+      - name: Setup PDM
+        uses: pdm-project/setup-pdm@v4
+      - name: Install dependencies
+        run: pdm install
       - name: Test Python packages
         shell: bash
-        run: poetry run pytest --doctest-modules
+        run: pdm run pytest --doctest-modules
       - name: Test Python types (mypy)
         shell: bash
-        run: poetry run mypy apps
+        run: pdm run mypy apps
       - name: Python code style (black)
         shell: bash
-        run: poetry run black apps --check
+        run: pdm run black src --check
       - name: Python code style (pylint)
         shell: bash
-        run: poetry run pylint $(git ls-files '*.py')
+        run: pdm run pylint $(git ls-files '*.py')
       - name: validate that Test Course Json files are up to date
         run: |
-          poetry install --no-interaction
-          cd apps/librelingo_yaml_loader
-          poetry install --no-interaction
-          cd ../librelingo_json_export
-          poetry install --no-interaction
-          cd ../..
           ./scripts/verifyTestCourseJsonFiles.sh
