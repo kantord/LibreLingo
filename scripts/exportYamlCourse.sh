@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-echo -en "⏳ Exporting course $1"
+echo -en "⏳ Exporting course $1\n"
 cd ./apps/librelingo_json_export/ ||
 {
   echo -en "\r⚠️  Wrong folder structure"

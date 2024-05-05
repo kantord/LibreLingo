@@ -49,6 +49,12 @@ def _define_word(course: Course, word: Word, is_in_target_language):
         if is_in_target_language
         else course.source_language.name
     )
+    print(
+        '\033[93m' + f'WARNING: The {language_name} word "{clean_word(word)}" does not have a definition. '
+        "Please add it to the mini-dictionary." + '\033[0m'
+    )
+    return {"word": word, "definition": word} # hack to disable mini-dictionary warnings because interslavic can have different word forms
+
     raise ValueError(
         f'The {language_name} word "{clean_word(word)}" does not have a definition. '
         "Please add it to the mini-dictionary."

@@ -14,7 +14,7 @@
     "lint": "eslint . --max-warnings=0 && prettier --check apps/**/*.svelte docs --ignore-path ./.prettierignore_for_svelte",
     "exportAllCourses": "./scripts/exportAllYamlCourses.sh",
     "exportCourse": "./scripts/exportYamlCourse.sh",
-    "exportCourse:watch": "while inotifywait -r -e modify,move,create,delete courses; do ./scripts/exportYamlCourse.sh interslavic; done",
+    "exportCourse:watch": "./scripts/exportYamlCourse.sh interslavic && while inotifywait -r -e modify,move,create,delete courses; do ./scripts/exportYamlCourse.sh interslavic; done",
     "docs": "poetry run mkdocs serve",
     "docs:build": "poetry run mkdocs build --site-dir ./apps/web/__sapper__/export/docs/"
   },
