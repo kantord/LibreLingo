@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["cross_platform", "inherit_metadata"]
 lock_version = "4.4.1"
-content_hash = "sha256:f1bc688f1ca588987b2530f20a151d7d18883c1d49c6042fa815a3d81c5a09fa"
+content_hash = "sha256:3e043d82cbfee298394293f5609e5458050081bd41ae2f6c0c97f0907747ad5f"
 
 [[package]]
 name = "astroid"
@@ -51,7 +51,7 @@ name = "beautifulsoup4"
 version = "4.12.3"
 requires_python = ">=3.6.0"
 summary = "Screen-scraping library"
-groups = ["default"]
+groups = ["default", "dev"]
 dependencies = [
     "soupsieve>1.2",
 ]
@@ -450,6 +450,15 @@ files = [
 ]
 
 [[package]]
+name = "editorconfig"
+version = "0.12.4"
+summary = "EditorConfig File Locator and Interpreter for Python"
+groups = ["dev"]
+files = [
+    {file = "EditorConfig-0.12.4.tar.gz", hash = "sha256:24857fa1793917dd9ccf0c7810a07e05404ce9b823521c7dce22a4fb5d125f80"},
+]
+
+[[package]]
 name = "exceptiongroup"
 version = "1.2.1"
 requires_python = ">=3.7"
@@ -574,6 +583,19 @@ dependencies = [
 files = [
     {file = "Jinja2-3.1.3-py3-none-any.whl", hash = "sha256:7d6d50dd97d52cbc355597bd845fabfbac3f551e1f99619e39a35ce8c370b5fa"},
     {file = "Jinja2-3.1.3.tar.gz", hash = "sha256:ac8bd6544d4bb2c9792bf3a159e80bba8fda7f07e81bc3aed565432d5925ba90"},
+]
+
+[[package]]
+name = "jsbeautifier"
+version = "1.15.1"
+summary = "JavaScript unobfuscator and beautifier."
+groups = ["dev"]
+dependencies = [
+    "editorconfig>=0.12.2",
+    "six>=1.13.0",
+]
+files = [
+    {file = "jsbeautifier-1.15.1.tar.gz", hash = "sha256:ebd733b560704c602d744eafc839db60a1ee9326e30a2a80c4adb8718adc1b24"},
 ]
 
 [[package]]
@@ -783,6 +805,25 @@ groups = ["dev"]
 files = [
     {file = "mkdocs_material_extensions-1.3.1-py3-none-any.whl", hash = "sha256:adff8b62700b25cb77b53358dad940f3ef973dd6db797907c49e3c2ef3ab4e31"},
     {file = "mkdocs_material_extensions-1.3.1.tar.gz", hash = "sha256:10c9511cea88f568257f960358a467d12b970e1f7b2c0e5fb2bb48cab1928443"},
+]
+
+[[package]]
+name = "mkdocs-mermaid2-plugin"
+version = "1.1.1"
+requires_python = ">=3.6"
+summary = "A MkDocs plugin for including mermaid graphs in markdown sources"
+groups = ["dev"]
+dependencies = [
+    "beautifulsoup4>=4.6.3",
+    "jsbeautifier",
+    "mkdocs>=1.0.4",
+    "pymdown-extensions>=8.0",
+    "requests",
+    "setuptools>=18.5",
+]
+files = [
+    {file = "mkdocs-mermaid2-plugin-1.1.1.tar.gz", hash = "sha256:bea5f3cbe6cb76bad21b81e49a01e074427ed466666c5d404e62fe8698bc2d7c"},
+    {file = "mkdocs_mermaid2_plugin-1.1.1-py3-none-any.whl", hash = "sha256:4e25876b59d1e151ca33a467207b346404b4a246f4f24af5e44c32408e175882"},
 ]
 
 [[package]]
@@ -1395,6 +1436,17 @@ files = [
 ]
 
 [[package]]
+name = "setuptools"
+version = "69.5.1"
+requires_python = ">=3.8"
+summary = "Easily download, build, install, upgrade, and uninstall Python packages"
+groups = ["dev"]
+files = [
+    {file = "setuptools-69.5.1-py3-none-any.whl", hash = "sha256:c636ac361bc47580504644275c9ad802c50415c7522212252c033bd15f301f32"},
+    {file = "setuptools-69.5.1.tar.gz", hash = "sha256:6c1fccdac05a97e598fb0ae3bbed5904ccb317337a51139dcd51453611bbb987"},
+]
+
+[[package]]
 name = "six"
 version = "1.16.0"
 requires_python = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
@@ -1425,7 +1477,7 @@ name = "soupsieve"
 version = "2.5"
 requires_python = ">=3.8"
 summary = "A modern CSS selector implementation for Beautiful Soup."
-groups = ["default"]
+groups = ["default", "dev"]
 files = [
     {file = "soupsieve-2.5-py3-none-any.whl", hash = "sha256:eaa337ff55a1579b6549dc679565eac1e3d000563bcb1c8ab0d0fefbc0c2cdc7"},
     {file = "soupsieve-2.5.tar.gz", hash = "sha256:5663d5a7b3bfaeee0bc4372e7fc48f9cff4940b3eec54a6451cc5299f1097690"},

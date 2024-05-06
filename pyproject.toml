@@ -24,7 +24,11 @@ dev = [
     "pyfakefs>=5.4.1",
     "pydoc-markdown>=4.7.0",
     "snapshottest>=0.6.0",
+    "mkdocs-mermaid2-plugin>=1.1.1",
 ]
+
+[tool.pdm.scripts]
+export-course = {call = "librelingo_json_export.cli:main"}
 [build-system]
 requires = ["pdm-backend"]
 build-backend = "pdm.backend"
@@ -51,4 +55,5 @@ dependencies = [
     "bleach-allowlist>=1.0.3",
     "jsonschema>=4.22.0",
 ]
+
 
