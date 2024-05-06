@@ -1,0 +1,641 @@
+{
+  "id": "d7279e4777cd",
+  "levels": 3,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Ja jesm",
+      "meaningInSourceLanguage": "I am",
+      "id": "419faffba1c7",
+      "priority": 0,
+      "group": "49b4b98394b7"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "I",
+          "definition": "I"
+        },
+        {
+          "word": "am",
+          "definition": "Jesm"
+        }
+      ],
+      "chips": [
+        "Ja",
+        "jesm",
+        "jesi",
+        "jest"
+      ],
+      "solutions": [
+        [
+          "Ja",
+          "jesm"
+        ]
+      ],
+      "formattedSolution": "Ja jesm",
+      "id": "54f783c5a494",
+      "priority": 2,
+      "group": "49b4b98394b7"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Ja",
+          "definition": "Ja"
+        },
+        {
+          "word": "jesm",
+          "definition": "Am"
+        }
+      ],
+      "chips": [
+        "I",
+        "am",
+        "a",
+        "We"
+      ],
+      "solutions": [
+        [
+          "I",
+          "am"
+        ]
+      ],
+      "formattedSolution": "I am",
+      "id": "831201642aa8",
+      "priority": 2,
+      "group": "49b4b98394b7"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Ty jesi",
+      "meaningInSourceLanguage": "You are (singular)",
+      "id": "02a77d0adba2",
+      "priority": 0,
+      "group": "cbc2b8cd62f0"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "You",
+          "definition": "You"
+        },
+        {
+          "word": "are",
+          "definition": "are"
+        },
+        {
+          "word": "(singular)",
+          "definition": "(singular)"
+        }
+      ],
+      "chips": [
+        "Ty",
+        "jesi",
+        "jesm",
+        "My"
+      ],
+      "solutions": [
+        [
+          "Ty",
+          "jesi"
+        ]
+      ],
+      "formattedSolution": "Ty jesi",
+      "id": "19a2d6bf6f8e",
+      "priority": 2,
+      "group": "cbc2b8cd62f0"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Ty",
+          "definition": "Ty"
+        },
+        {
+          "word": "jesi",
+          "definition": "(You) are"
+        }
+      ],
+      "chips": [
+        "You",
+        "are",
+        "singular",
+        "am",
+        "a"
+      ],
+      "solutions": [
+        [
+          "You",
+          "are",
+          "singular"
+        ]
+      ],
+      "formattedSolution": "You are (singular)",
+      "id": "b30eaf3be6c7",
+      "priority": 2,
+      "group": "cbc2b8cd62f0"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "My jesmo",
+      "meaningInSourceLanguage": "We are",
+      "id": "607bba952b01",
+      "priority": 0,
+      "group": "a0de40ee1ef7"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "We",
+          "definition": "We"
+        },
+        {
+          "word": "are",
+          "definition": "are"
+        }
+      ],
+      "chips": [
+        "My",
+        "jesmo",
+        "jesm",
+        "Ty"
+      ],
+      "solutions": [
+        [
+          "My",
+          "jesmo"
+        ]
+      ],
+      "formattedSolution": "My jesmo",
+      "id": "a4a496f7d420",
+      "priority": 2,
+      "group": "a0de40ee1ef7"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "My",
+          "definition": "My"
+        },
+        {
+          "word": "jesmo",
+          "definition": "(We) are"
+        }
+      ],
+      "chips": [
+        "We",
+        "are",
+        "am",
+        "a"
+      ],
+      "solutions": [
+        [
+          "We",
+          "are"
+        ]
+      ],
+      "formattedSolution": "We are",
+      "id": "428e612eaea1",
+      "priority": 2,
+      "group": "a0de40ee1ef7"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Vy jeste",
+      "meaningInSourceLanguage": "You are (plural)",
+      "id": "9c3b26db34ef",
+      "priority": 0,
+      "group": "a1ff8ae70e37"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "You",
+          "definition": "You"
+        },
+        {
+          "word": "are",
+          "definition": "are"
+        },
+        {
+          "word": "(plural)",
+          "definition": "(plural)"
+        }
+      ],
+      "chips": [
+        "Vy",
+        "jeste",
+        "jest",
+        "jesm"
+      ],
+      "solutions": [
+        [
+          "Vy",
+          "jeste"
+        ]
+      ],
+      "formattedSolution": "Vy jeste",
+      "id": "c22daeb3f741",
+      "priority": 2,
+      "group": "a1ff8ae70e37"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Vy",
+          "definition": "Vy"
+        },
+        {
+          "word": "jeste",
+          "definition": "You are (plural)"
+        }
+      ],
+      "chips": [
+        "You",
+        "are",
+        "plural",
+        "am",
+        "a"
+      ],
+      "solutions": [
+        [
+          "You",
+          "are",
+          "plural"
+        ]
+      ],
+      "formattedSolution": "You are (plural)",
+      "id": "180b2db132b1",
+      "priority": 2,
+      "group": "a1ff8ae70e37"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Oni sut",
+      "meaningInSourceLanguage": "They are (masculine)",
+      "id": "cb2ba7dddfcc",
+      "priority": 0,
+      "group": "e3e7caacd859"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "They",
+          "definition": "They"
+        },
+        {
+          "word": "are",
+          "definition": "are"
+        },
+        {
+          "word": "(masculine)",
+          "definition": "(masculine)"
+        }
+      ],
+      "chips": [
+        "Oni",
+        "sut",
+        "One",
+        "i"
+      ],
+      "solutions": [
+        [
+          "Oni",
+          "sut"
+        ]
+      ],
+      "formattedSolution": "Oni sut",
+      "id": "db4530feef7d",
+      "priority": 2,
+      "group": "e3e7caacd859"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Oni",
+          "definition": "Oni"
+        },
+        {
+          "word": "sut",
+          "definition": "They are (plural)"
+        }
+      ],
+      "chips": [
+        "They",
+        "are",
+        "masculine",
+        "The",
+        "We"
+      ],
+      "solutions": [
+        [
+          "They",
+          "are",
+          "masculine"
+        ]
+      ],
+      "formattedSolution": "They are (masculine)",
+      "id": "2bf49225ff97",
+      "priority": 2,
+      "group": "e3e7caacd859"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "One sut",
+      "meaningInSourceLanguage": "They are (feminine)",
+      "id": "943d0fa38302",
+      "priority": 0,
+      "group": "f040d2dfba8d"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "They",
+          "definition": "They"
+        },
+        {
+          "word": "are",
+          "definition": "are"
+        },
+        {
+          "word": "(feminine)",
+          "definition": "(feminine)"
+        }
+      ],
+      "chips": [
+        "One",
+        "sut",
+        "Oni",
+        "Ja"
+      ],
+      "solutions": [
+        [
+          "One",
+          "sut"
+        ]
+      ],
+      "formattedSolution": "One sut",
+      "id": "c5c94bc20c60",
+      "priority": 2,
+      "group": "f040d2dfba8d"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "One",
+          "definition": "One"
+        },
+        {
+          "word": "sut",
+          "definition": "They are (plural)"
+        }
+      ],
+      "chips": [
+        "They",
+        "are",
+        "feminine",
+        "The",
+        "We"
+      ],
+      "solutions": [
+        [
+          "They",
+          "are",
+          "feminine"
+        ]
+      ],
+      "formattedSolution": "They are (feminine)",
+      "id": "9522d5cbce37",
+      "priority": 2,
+      "group": "f040d2dfba8d"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Byti",
+      "meaningInSourceLanguage": "To be",
+      "id": "8cf04f0c48c1",
+      "priority": 0,
+      "group": "f3254c8727cc"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "Byti"
+      ],
+      "phrase": [
+        {
+          "word": "To",
+          "definition": "To"
+        },
+        {
+          "word": "be",
+          "definition": "be"
+        }
+      ],
+      "id": "7b7e28b73475",
+      "priority": 1,
+      "group": "f3254c8727cc"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Jesm",
+      "meaningInSourceLanguage": "Am",
+      "id": "37380c2c2a0b",
+      "priority": 0,
+      "group": "6693b47e8528"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "Jesm"
+      ],
+      "phrase": [
+        {
+          "word": "Am",
+          "definition": "Jesm"
+        }
+      ],
+      "id": "82a06328029c",
+      "priority": 1,
+      "group": "6693b47e8528"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Jesi",
+      "meaningInSourceLanguage": "(You) are",
+      "id": "3b39f24e6249",
+      "priority": 0,
+      "group": "91314918337e"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "Jesi"
+      ],
+      "phrase": [
+        {
+          "word": "(You)",
+          "definition": "(You)"
+        },
+        {
+          "word": "are",
+          "definition": "are"
+        }
+      ],
+      "id": "d27e0cef3f78",
+      "priority": 1,
+      "group": "91314918337e"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Jest",
+      "meaningInSourceLanguage": "is",
+      "id": "43f3112694b7",
+      "priority": 0,
+      "group": "02227432b988"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "Jest"
+      ],
+      "phrase": [
+        {
+          "word": "is",
+          "definition": "Jest\njest"
+        }
+      ],
+      "id": "99088be71cc6",
+      "priority": 1,
+      "group": "02227432b988"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Jesmo",
+      "meaningInSourceLanguage": "(We) are",
+      "id": "5f4e948d9860",
+      "priority": 0,
+      "group": "8ef36f8cc9bf"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "Jesmo"
+      ],
+      "phrase": [
+        {
+          "word": "(We)",
+          "definition": "(We)"
+        },
+        {
+          "word": "are",
+          "definition": "are"
+        }
+      ],
+      "id": "7543042402d5",
+      "priority": 1,
+      "group": "8ef36f8cc9bf"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Jeste",
+      "meaningInSourceLanguage": "You are (plural)",
+      "id": "48f4bfa3b67f",
+      "priority": 0,
+      "group": "b21e926d4dc0"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "Jeste"
+      ],
+      "phrase": [
+        {
+          "word": "You",
+          "definition": "You"
+        },
+        {
+          "word": "are",
+          "definition": "are"
+        },
+        {
+          "word": "(plural)",
+          "definition": "(plural)"
+        }
+      ],
+      "id": "aee78219d431",
+      "priority": 1,
+      "group": "b21e926d4dc0"
+    },
+    {
+      "type": "cards",
+      "pictures": null,
+      "formInTargetLanguage": "Sut",
+      "meaningInSourceLanguage": "They are (plural)",
+      "id": "42e122e8ee50",
+      "priority": 0,
+      "group": "3df3ee47bdd9"
+    },
+    {
+      "type": "shortInput",
+      "pictures": null,
+      "formInTargetLanguage": [
+        "Sut"
+      ],
+      "phrase": [
+        {
+          "word": "They",
+          "definition": "They"
+        },
+        {
+          "word": "are",
+          "definition": "are"
+        },
+        {
+          "word": "(plural)",
+          "definition": "(plural)"
+        }
+      ],
+      "id": "9e890267bedb",
+      "priority": 1,
+      "group": "3df3ee47bdd9"
+    }
+  ]
+}
