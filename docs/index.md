@@ -114,30 +114,22 @@ Now you should be able to see your app on <http://localhost:3000/>
 If you want to test new features in the YAML format, or some changes in how they are being used
 in the frontend, you need to be able to export YAML courses locally.
 
-#### Install Poetry
+#### Install `pdm`
 
-You will need [Poetry](https://python-poetry.org/). If you don't have Poetry, you can install it with
+You will need [PDM](https://pdm-project.org/latest/). If you don't have PDM, you can install it with
 
 ```bash
-curl -sSL https://install.python-poetry.org | python3 -
+curl -sSL https://pdm-project.org/install-pdm.py | python3 -
 ```
 
-For more information, check out [Poetry's official documentation](https://python-poetry.org/docs/#installation).
+For more information, check out [PDM's official documentation](https://pdm-project.org/latest/#installation).
 
-#### Install dependencies using Poetry
+#### Install dependencies using PDM
 
-Install dependencies at the top level and for the apps:
+Run
 
 ```sh
-poetry install
-
-cd apps/librelingo_yaml_loader
-poetry install
-cd ../..
-
-cd apps/librelingo_json_export
-poetry install
-cd ../..
+pdm install
 ```
 
 ##### Handling Outdated Local Dependencies
@@ -154,15 +146,15 @@ yarn install
 
 This command ensures your local dependencies match the project's **package.json** file. For more information, [refer to the Yarn documentation](https://yarnpkg.com/getting-started/usage).
 
-###### Updating Python Dependencies with Poetry
+###### Updating Python Dependencies with PDM
 
 Update your local dependencies:
 
 ```bash
-poetry install
+pdm install
 ```
 
-This command ensures your local dependencies match the project's **pyproject.toml** and **poetry.lock** files. For more information, [refer to the Poetry documentation](https://python-poetry.org/docs/cli/#install).
+This command ensures your local dependencies match the project's **pyproject.toml** and **pdm.lock** files.
 
 ### Locally test LibreLingo with real courses
 
