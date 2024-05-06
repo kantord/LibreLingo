@@ -52,3 +52,6 @@ dependencies = [
     "jsonschema>=4.22.0",
 ]
 
+
+[tool.pdm.scripts]
+export-course = {call = "librelingo_json_export.cli:main"}
