@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "cypress": "yarn web cypress",
-    "export:production": "yarn web installAllExternalCourses && yarn exportAllCourses && yarn web export && yarn docs:build && mv ./apps/web/__sapper__/ . && poetry run python apps/tools/librelingo_tools/generate.py --courses ./config/courses.json --outdir ./__sapper__/export/course-tools-legacy",
+    "export:production": "yarn web installAllExternalCourses && yarn exportAllCourses && yarn web export && yarn docs:build && mv ./apps/web/__sapper__/ . && pdm run python apps/tools/librelingo_tools/generate.py --courses ./config/courses.json --outdir ./__sapper__/export/course-tools-legacy",
     "export": "yarn web export && mv ./apps/web/__sapper__/ .",
     "commit": "git-cz",
     "test": "jest",
@@ -14,8 +14,8 @@
     "lint": "eslint . --max-warnings=0 && prettier --check apps/**/*.svelte docs --ignore-path ./.prettierignore_for_svelte",
     "exportAllCourses": "./scripts/exportAllYamlCourses.sh",
     "exportCourse": "./scripts/exportYamlCourse.sh",
-    "docs": "poetry run mkdocs serve",
-    "docs:build": "poetry run mkdocs build --site-dir ./apps/web/__sapper__/export/docs/"
+    "docs": "pdm run mkdocs serve",
+    "docs:build": "pdm run mkdocs build --site-dir ./apps/web/__sapper__/export/docs/"
   },
   "workspaces": {
     "packages": [

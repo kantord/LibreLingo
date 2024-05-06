@@ -1,40 +1,59 @@
-[tool.poetry]
-name = "librelingo"
-version = "0.1.0"
-description = ""
-authors = ["Dániel Kántor <git@daniel-kantor.com>"]
+[tool.pdm]
+distribution = true
 
-[tool.poetry.dependencies]
-python = "^3.8"
-mkdocs-mermaid2-plugin = "^1.0.0"
-types-requests = "^2.26.3"
+[tool.pdm.build]
+includes = []
 
-[tool.poetry.dev-dependencies]
-librelingo-yaml-loader = { path = "./apps/librelingo_yaml_loader/", develop = true }
-librelingo-json-export = { path = "./apps/librelingo_json_export", develop = true }
-librelingo-fakes = { path = "./apps/librelingo_fakes", develop = true }
-librelingo-utils = { path = "./apps/librelingo_utils", develop = true }
-librelingo-audios = { path = "./apps/librelingo_audios", develop = true }
-librelingo-types = { path = "./apps/librelingo_types", develop = true }
-librelingo-tools = { path = "./apps/tools", develop = true }
-pytest = "^7.0.0"
-pytest-mock = "^3.5.1"
-pytest-watch = "^4.2.0"
-mkdocs-material = "^9.0.0"
-mkdocs = "^1.2.3"
-black = "^21.6b0"
-mypy = "^0.982"
-types-python-slugify = "^6.0.0"
-types-PyYAML = "^6.0.0"
-types-bleach = "^5.0.0"
-types-Markdown = "^3.3.0"
-types-jsonschema = "^4.17.0.7"
-pylint = "^2.12.2"
-autopep8 = "^2.0.0"
-yapf = "^0.40.0"
-pylint-pytest = "^1.1.2"
+[tool.pdm.dev-dependencies]
+dev = [
+    "pytest>=8.2.0",
+    "pytest-mock>=3.14.0",
+    "pytest-watch>=4.2.0",
+    "mkdocs>=1.6.0",
+    "mkdocs-material>=9.5.21",
+    "black>=24.4.2",
+    "mypy>=1.10.0",
+    "types-python-slugify>=8.0.2.20240310",
+    "types-PyYAML>=6.0.12.20240311",
+    "types-bleach>=6.1.0.20240331",
+    "types-Markdown>=3.6.0.20240316",
+    "types-jsonschema>=4.22.0.20240501",
+    "pylint>=3.1.0",
+    "yapf>=0.40.2",
+    "pylint-pytest>=1.1.7",
+    "pyfakefs>=5.4.1",
+    "pydoc-markdown>=4.7.0",
+    "snapshottest>=0.6.0",
+    "mkdocs-mermaid2-plugin>=1.1.1",
+]
 
+[tool.pdm.scripts]
+export-course = {call = "librelingo_json_export.cli:main"}
 [build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[project]
+name = "librelingo-kit"
+version = "0.1.0"
+description = "a set of tools and libraries for building applications using librelingo courses"
+authors = [
+    {name = "Dániel Kántor", email = "git@daniel-kantor.com"},
+]
+requires-python = "<3.11,>=3.8"
+readme = "README.md"
+license = {text = "AGPL-3.0"}
+dependencies = [
+    "python-slugify>=8.0.4",
+    "editdistance>=0.8.1",
+    "click>=8.1.7",
+    "regex>=2024.4.28",
+    "pyyaml>=6.0.1",
+    "Markdown>=3.6",
+    "html2markdown>=0.1.7",
+    "bleach>=6.1.0",
+    "bleach-allowlist>=1.0.3",
+    "jsonschema>=4.22.0",
+]
+
 
