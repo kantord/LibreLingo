@@ -1,7 +1,10 @@
 Skill:
   Id: 11
   Name: Pozdrav!
-  
+    Thumbnails:
+    - man1
+    - woman1
+    - hello1
 
 
 New words:
@@ -63,9 +66,7 @@ New words:
     Synonyms:
       - on je
     Translation: he is
-    Also accepted:
-      - she is
-      - it is
+
     Images:
       - he1
       - he3
@@ -90,7 +91,7 @@ New words:
       - hello3
 
 Phrases:
-  - Phrase: Ja jesm člověk
+  - Phrase: Ja jesm muž
 #    Alternative versions:
 #     - Gizon bat naiz.
     Translation: I am a man.
@@ -176,6 +177,7 @@ Mini-dictionary:
         - the girl
     - jedin: one
     - pozdrav: hello
+    - člověk: human
 
   English:
     - Vojtěh: Vojtěh (male name)
@@ -196,4 +198,4 @@ Mini-dictionary:
     - a: -a
     - one: jedin
     - hello: pozdrav
-    - zelan zaude: Kako Ty Jesi
+    - human: člověk
