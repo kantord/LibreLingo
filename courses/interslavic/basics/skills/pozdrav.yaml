@@ -1,0 +1,199 @@
+Skill:
+  Id: 11
+  Name: Pozdrav!
+  
+
+
+New words:
+  - Word: muž
+    Translation: man
+    Images:
+      - man1
+      - man2
+      - man3
+
+  - Word: žena
+    Translation: woman
+    Images:
+      - woman1
+      - woman2
+      - woman3
+
+  - Word: hlapec
+    Translation: boy
+    Also accepted:
+      - the boy
+      - a boy
+    Images:
+      - boy1
+      - boy2
+      - boy3
+
+  - Word: děvčina
+    Translation: girl
+    Also accepted:
+      - the girl
+      - a girl
+    Images:
+      - girl1
+      - girl2
+      - girl3
+
+  - Word: Ja jesm
+    Synonyms:
+      - Jesm
+    Translation: I am
+    Images:
+      - iam1
+      - iam2
+      - iam3
+
+  - Word: Ty jesi
+    Synonyms:
+      - jesi
+    Translation: you are
+    Also accepted:
+      - you're
+    Images:
+      - you1
+      - you2
+      - you3
+
+  - Word: on jest
+    Synonyms:
+      - on je
+    Translation: he is
+    Also accepted:
+      - she is
+      - it is
+    Images:
+      - he1
+      - he3
+      - he2
+
+#  - Word: bat
+#    Translation: one
+#    Also accepted:
+#      - a
+#    Images:
+#      - one1
+#      - one2
+#      - one3
+
+  - Word: pozdrav
+    Translation: hello
+    Also accepted:
+      - hi
+    Images:
+      - hello1
+      - hello2
+      - hello3
+
+Phrases:
+  - Phrase: Ja jesm člověk
+#    Alternative versions:
+#     - Gizon bat naiz.
+    Translation: I am a man.
+#    Alternative translations:
+#      - I am one man.
+
+  - Phrase: Pozdrav, Ja jesm Katarina
+#    Alternative versions:
+#     - Kaixo. Terese naiz.
+    Translation: Hello I am Katarina
+
+  - Phrase: Ja jesm děvčina
+#    Alternative versions:
+#     - Neska bat naiz.
+    Translation: I am a girl.
+#    Alternative translations:
+#      - I am one girl.
+
+  - Phrase: Pozdrav, Ja jesm hlapec
+#    Alternative versions:
+#     - Kaixo, Mutil bat naiz.
+    Translation: Hello, I am a boy.
+#    Alternative translations:
+#      - Hello, I am one boy.
+
+  - Phrase: Ty jesi děvčina
+#    Alternative versions:
+#     - Neska bat zara.
+    Translation: You are a girl.
+#    Alternative translations:
+#      - You are one girl.
+
+  - Phrase: Ty Jesi žena
+#    Alternative versions:
+#     - Emakume bat zara
+    Translation: You are a woman.
+#    Alternative translations:
+#      - You are one woman.
+
+  - Phrase: Ty jesi muž
+#    Alternative versions:
+#     - Gizon bat zara.
+    Translation: You are a man.
+#    Alternative translations:
+#      - You are one man.
+
+  - Phrase: On jest Vojtěh
+    Alternative versions:
+      - On je Vojtěh
+    Translation: He is Vojtěh.
+
+  - Phrase: Jaroslav jest hlapec
+    Alternative versions:
+      - Jaroslav je hlapec
+    Translation: Jaroslav is a boy.
+
+
+  - Phrase: Tatjana jest žena
+    Alternative versions:
+      - Tatjana je žena
+    Translation: Tatjana is a woman.
+
+
+Mini-dictionary:
+
+  Interslavic:
+    - Vojtěh: Vojtěh (male name)
+    - Jaroslav: Jaroslav (male name)
+    - Katarina: Katarina (female name)
+    - Tatjana: Tatjana (female name)
+    - ja: I
+    - jesm: am
+    - ty: you
+    - jesi: are
+    - on: he
+    - jest: is
+    - muž: man
+    - žena: woman
+    - hlapec: boy
+    - děvčina:
+        - girl
+        - a girl
+        - the girl
+    - jedin: one
+    - pozdrav: hello
+
+  English:
+    - Vojtěh: Vojtěh (male name)
+    - Jaroslav: Jaroslav (male name)
+    - Katarina: Katarina (female name)
+    - Tatjana: Tatjana (female name)
+    - I: Ja
+    - am: jesm
+    - you: ty
+    - are: jesi
+    - he: on
+    - is: jest
+    - one: jedin
+    - man: muž
+    - woman: woman
+    - boy: hlapec
+    - girl: děvčina
+    - a: -a
+    - one: jedin
+    - hello: pozdrav
+    - zelan zaude: Kako Ty Jesi
