@@ -1,0 +1,2763 @@
+{
+  "id": "ae164a245a4d",
+  "levels": 6,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Bazkaria prest dago.",
+      "meaningInSourceLanguage": "Lunch is ready.",
+      "id": "4b43b8f6f44d",
+      "priority": 0,
+      "group": "f6074de7290b"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Lunch",
+          "definition": "bazkari"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago\ndago (egon)"
+        },
+        {
+          "word": "ready.",
+          "definition": "prest"
+        }
+      ],
+      "chips": [
+        "Bazkaria",
+        "prest",
+        "dago",
+        "zara",
+        "Baso"
+      ],
+      "solutions": [
+        [
+          "Bazkaria",
+          "prest",
+          "dago"
+        ]
+      ],
+      "formattedSolution": "Bazkaria prest dago.",
+      "id": "c0b49c9a737d",
+      "priority": 2,
+      "group": "f6074de7290b"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Bazkaria",
+          "definition": "lunch"
+        },
+        {
+          "word": "prest",
+          "definition": "ready"
+        },
+        {
+          "word": "dago.",
+          "definition": "he is (egon)\nis\nit is (egon)\nshe is (egon)"
+        }
+      ],
+      "chips": [
+        "Lunch",
+        "is",
+        "ready",
+        "an",
+        "red"
+      ],
+      "solutions": [
+        [
+          "Lunch",
+          "is",
+          "ready"
+        ]
+      ],
+      "formattedSolution": "Lunch is ready.",
+      "id": "6966c5ce0322",
+      "priority": 2,
+      "group": "f6074de7290b"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Egunero nik pizza jaten dut bazkaltzeko.",
+      "meaningInSourceLanguage": "Every day I eat pizza for lunch.",
+      "id": "53be8174af67",
+      "priority": 0,
+      "group": "ac780e13d9d2"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Every",
+          "definition": "-ero"
+        },
+        {
+          "word": "day",
+          "definition": "egun"
+        },
+        {
+          "word": "I",
+          "definition": "ni"
+        },
+        {
+          "word": "eat",
+          "definition": "jango (future)\njateko (in order to eat)\njaten\njaten (present)"
+        },
+        {
+          "word": "pizza",
+          "definition": "pizza"
+        },
+        {
+          "word": "for",
+          "definition": "part of dative case phrase for me"
+        },
+        {
+          "word": "lunch.",
+          "definition": "bazkari"
+        }
+      ],
+      "chips": [
+        "Egunero",
+        "nik",
+        "pizza",
+        "jaten",
+        "dut",
+        "bazkaltzeko",
+        "dute",
+        "batek",
+        "ate",
+        "bat",
+        "zen"
+      ],
+      "solutions": [
+        [
+          "Egunero",
+          "nik",
+          "pizza",
+          "jaten",
+          "dut",
+          "bazkaltzeko"
+        ],
+        [
+          "Egunero",
+          "pizza",
+          "jaten",
+          "dut",
+          "bazkaltzeko"
+        ]
+      ],
+      "formattedSolution": "Egunero nik pizza jaten dut bazkaltzeko.",
+      "id": "3e604689570c",
+      "priority": 2,
+      "group": "ac780e13d9d2"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Egunero",
+          "definition": "every day"
+        },
+        {
+          "word": "nik",
+          "definition": "I"
+        },
+        {
+          "word": "pizza",
+          "definition": "pizza"
+        },
+        {
+          "word": "jaten",
+          "definition": "eat\neat (present)"
+        },
+        {
+          "word": "dut",
+          "definition": "I have it\nI have/ukan it"
+        },
+        {
+          "word": "bazkaltzeko.",
+          "definition": "for lunch"
+        }
+      ],
+      "chips": [
+        "Every",
+        "day",
+        "I",
+        "eat",
+        "pizza",
+        "for",
+        "lunch",
+        "a",
+        "lay",
+        "far",
+        "or",
+        "car",
+        "an"
+      ],
+      "solutions": [
+        [
+          "Every",
+          "day",
+          "I",
+          "eat",
+          "pizza",
+          "for",
+          "lunch"
+        ]
+      ],
+      "formattedSolution": "Every day I eat pizza for lunch.",
+      "id": "0ce3da0ff231",
+      "priority": 2,
+      "group": "ac780e13d9d2"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Bazkaltzeko guk pintxoak jaten ari gara.",
+      "meaningInSourceLanguage": "We are eating tapas for lunch.",
+      "id": "5f11fdb528a2",
+      "priority": 0,
+      "group": "b9698bb1c74e"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "We",
+          "definition": "gu"
+        },
+        {
+          "word": "are",
+          "definition": "daude\ndaude (egon)\ndaude (izan)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzarete (izan)\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "eating",
+          "definition": "jaten ari"
+        },
+        {
+          "word": "tapas",
+          "definition": "pintxoak"
+        },
+        {
+          "word": "for",
+          "definition": "part of dative case phrase for me"
+        },
+        {
+          "word": "lunch.",
+          "definition": "bazkari"
+        }
+      ],
+      "chips": [
+        "Bazkaltzeko",
+        "guk",
+        "pintxoak",
+        "jaten",
+        "ari",
+        "gara",
+        "ate",
+        "jaka",
+        "zara",
+        "arte",
+        "ama"
+      ],
+      "solutions": [
+        [
+          "Bazkaltzeko",
+          "guk",
+          "pintxoak",
+          "jaten",
+          "ari",
+          "gara"
+        ],
+        [
+          "Bazkaltzeko",
+          "pintxoak",
+          "jaten",
+          "ari",
+          "gara"
+        ]
+      ],
+      "formattedSolution": "Bazkaltzeko guk pintxoak jaten ari gara.",
+      "id": "8b6c5d9e0a87",
+      "priority": 2,
+      "group": "b9698bb1c74e"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Bazkaltzeko",
+          "definition": "for lunch"
+        },
+        {
+          "word": "guk",
+          "definition": "we"
+        },
+        {
+          "word": "pintxoak",
+          "definition": "tapas"
+        },
+        {
+          "word": "jaten",
+          "definition": "eat\neat (present)"
+        },
+        {
+          "word": "ari",
+          "definition": "present perfect verb form"
+        },
+        {
+          "word": "gara.",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "We",
+        "are",
+        "eating",
+        "tapas",
+        "for",
+        "lunch",
+        "an",
+        "ate",
+        "and",
+        "ten",
+        "at"
+      ],
+      "solutions": [
+        [
+          "We",
+          "are",
+          "eating",
+          "tapas",
+          "for",
+          "lunch"
+        ]
+      ],
+      "formattedSolution": "We are eating tapas for lunch.",
+      "id": "386240179262",
+      "priority": 2,
+      "group": "b9698bb1c74e"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Atzo, nik Donostian bazkaldu nuen.",
+      "meaningInSourceLanguage": "Yesterday, I ate lunch in San Sebastian.",
+      "id": "f9000fb3cc31",
+      "priority": 0,
+      "group": "6ab5d98099cd"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Yesterday,",
+          "definition": "Atzo\natzo"
+        },
+        {
+          "word": "I",
+          "definition": "ni"
+        },
+        {
+          "word": "ate",
+          "definition": "jan"
+        },
+        {
+          "word": "lunch",
+          "definition": "bazkari"
+        },
+        {
+          "word": "in",
+          "definition": "Inessive case\nNON case, not a word"
+        },
+        {
+          "word": "San",
+          "definition": "santua (saint)"
+        },
+        {
+          "word": "Sebastian.",
+          "definition": "Saint Sebastian\nSebastian"
+        }
+      ],
+      "chips": [
+        "Atzo",
+        "nik",
+        "Donostian",
+        "bazkaldu",
+        "nuen",
+        "noa",
+        "naiz",
+        "onak",
+        "Atea"
+      ],
+      "solutions": [
+        [
+          "Atzo",
+          "nik",
+          "Donostian",
+          "bazkaldu",
+          "nuen"
+        ],
+        [
+          "Atzo",
+          "Donostian",
+          "bazkaldu",
+          "nuen"
+        ]
+      ],
+      "formattedSolution": "Atzo, nik Donostian bazkaldu nuen.",
+      "id": "9f28e69a6d97",
+      "priority": 2,
+      "group": "6ab5d98099cd"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Atzo,",
+          "definition": "yesterday"
+        },
+        {
+          "word": "nik",
+          "definition": "I"
+        },
+        {
+          "word": "Donostian",
+          "definition": "in San Sebastian"
+        },
+        {
+          "word": "bazkaldu",
+          "definition": "ate lunch\nhad lunch"
+        },
+        {
+          "word": "nuen.",
+          "definition": "I had it"
+        }
+      ],
+      "chips": [
+        "Yesterday",
+        "I",
+        "ate",
+        "lunch",
+        "in",
+        "San",
+        "Sebastian",
+        "an",
+        "ten",
+        "at",
+        "ran",
+        "a",
+        "man"
+      ],
+      "solutions": [
+        [
+          "Yesterday",
+          "I",
+          "ate",
+          "lunch",
+          "in",
+          "San",
+          "Sebastian"
+        ]
+      ],
+      "formattedSolution": "Yesterday, I ate lunch in San Sebastian.",
+      "id": "748f3a69fda3",
+      "priority": 2,
+      "group": "6ab5d98099cd"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Gaur, nik etxean bazkaldu dut.",
+      "meaningInSourceLanguage": "Today, I ate lunch at home.",
+      "id": "e1c8ec0c9992",
+      "priority": 0,
+      "group": "1e4e2d9f2835"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Today,",
+          "definition": "gaur"
+        },
+        {
+          "word": "I",
+          "definition": "ni"
+        },
+        {
+          "word": "ate",
+          "definition": "jan"
+        },
+        {
+          "word": "lunch",
+          "definition": "bazkari"
+        },
+        {
+          "word": "at",
+          "definition": "not translated, part of insessive case"
+        },
+        {
+          "word": "home.",
+          "definition": "etxe"
+        }
+      ],
+      "chips": [
+        "Gaur",
+        "nik",
+        "etxean",
+        "bazkaldu",
+        "dut",
+        "bat",
+        "hau",
+        "lau",
+        "du"
+      ],
+      "solutions": [
+        [
+          "Gaur",
+          "nik",
+          "etxean",
+          "bazkaldu",
+          "dut"
+        ],
+        [
+          "Gaur",
+          "etxean",
+          "bazkaldu",
+          "dut"
+        ]
+      ],
+      "formattedSolution": "Gaur, nik etxean bazkaldu dut.",
+      "id": "ae0b865b9d66",
+      "priority": 2,
+      "group": "1e4e2d9f2835"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Gaur,",
+          "definition": "today"
+        },
+        {
+          "word": "nik",
+          "definition": "I"
+        },
+        {
+          "word": "etxean",
+          "definition": "in a house\nin the house"
+        },
+        {
+          "word": "bazkaldu",
+          "definition": "ate lunch\nhad lunch"
+        },
+        {
+          "word": "dut.",
+          "definition": "I have it\nI have/ukan it"
+        }
+      ],
+      "chips": [
+        "Today",
+        "I",
+        "ate",
+        "lunch",
+        "at",
+        "home",
+        "am",
+        "a",
+        "an",
+        "one",
+        "me"
+      ],
+      "solutions": [
+        [
+          "Today",
+          "I",
+          "ate",
+          "lunch",
+          "at",
+          "home"
+        ]
+      ],
+      "formattedSolution": "Today, I ate lunch at home.",
+      "id": "75498085d7bb",
+      "priority": 2,
+      "group": "1e4e2d9f2835"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Egunero, nik hamabietan bazkaltzen dut.",
+      "meaningInSourceLanguage": "Every day, I eat lunch at twelve o'clock.",
+      "id": "fe26f9397d7c",
+      "priority": 0,
+      "group": "335931a695b9"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Every",
+          "definition": "-ero"
+        },
+        {
+          "word": "day,",
+          "definition": "egun"
+        },
+        {
+          "word": "I",
+          "definition": "ni"
+        },
+        {
+          "word": "eat",
+          "definition": "jango (future)\njateko (in order to eat)\njaten\njaten (present)"
+        },
+        {
+          "word": "lunch",
+          "definition": "bazkari"
+        },
+        {
+          "word": "at",
+          "definition": "not translated, part of insessive case"
+        },
+        {
+          "word": "twelve",
+          "definition": "hamabi"
+        },
+        {
+          "word": "o'clock.",
+          "definition": "number + a(k)"
+        }
+      ],
+      "chips": [
+        "Egunero",
+        "nik",
+        "hamabietan",
+        "bazkaltzen",
+        "dut",
+        "bat",
+        "zen",
+        "zuen",
+        "haien"
+      ],
+      "solutions": [
+        [
+          "Egunero",
+          "nik",
+          "hamabietan",
+          "bazkaltzen",
+          "dut"
+        ],
+        [
+          "Egunero",
+          "hamabietan",
+          "bazkaltzen",
+          "dut"
+        ]
+      ],
+      "formattedSolution": "Egunero, nik hamabietan bazkaltzen dut.",
+      "id": "b030dfef51c6",
+      "priority": 2,
+      "group": "335931a695b9"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Egunero,",
+          "definition": "every day"
+        },
+        {
+          "word": "nik",
+          "definition": "I"
+        },
+        {
+          "word": "hamabietan",
+          "definition": "at twelve"
+        },
+        {
+          "word": "bazkaltzen",
+          "definition": "eating lunch\nhaving lunch"
+        },
+        {
+          "word": "dut.",
+          "definition": "I have it\nI have/ukan it"
+        }
+      ],
+      "chips": [
+        "Every",
+        "day",
+        "I",
+        "eat",
+        "lunch",
+        "at",
+        "twelve",
+        "o'clock",
+        "lay",
+        "a",
+        "an",
+        "cat",
+        "lot",
+        "am",
+        "car"
+      ],
+      "solutions": [
+        [
+          "Every",
+          "day",
+          "I",
+          "eat",
+          "lunch",
+          "at",
+          "twelve",
+          "o'clock"
+        ]
+      ],
+      "formattedSolution": "Every day, I eat lunch at twelve o'clock.",
+      "id": "2e1f4f4d299c",
+      "priority": 2,
+      "group": "335931a695b9"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Gaur, sukaldariak bazkaltzen ari dira parkean.",
+      "meaningInSourceLanguage": "Today, the cooks are eating lunch in the park.",
+      "id": "a3bb53e6df0f",
+      "priority": 0,
+      "group": "68508ae88393"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Today,",
+          "definition": "gaur"
+        },
+        {
+          "word": "the",
+          "definition": "-a"
+        },
+        {
+          "word": "cooks",
+          "definition": "sukaldariak"
+        },
+        {
+          "word": "are",
+          "definition": "daude\ndaude (egon)\ndaude (izan)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzarete (izan)\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "eating",
+          "definition": "jaten ari"
+        },
+        {
+          "word": "lunch",
+          "definition": "bazkari"
+        },
+        {
+          "word": "in",
+          "definition": "Inessive case\nNON case, not a word"
+        },
+        {
+          "word": "the",
+          "definition": "-a"
+        },
+        {
+          "word": "park.",
+          "definition": "parke"
+        }
+      ],
+      "chips": [
+        "Gaur",
+        "sukaldariak",
+        "bazkaltzen",
+        "ari",
+        "dira",
+        "parkean",
+        "zara",
+        "gara",
+        "Hark",
+        "jaka",
+        "kale"
+      ],
+      "solutions": [
+        [
+          "Gaur",
+          "sukaldariak",
+          "bazkaltzen",
+          "ari",
+          "dira",
+          "parkean"
+        ]
+      ],
+      "formattedSolution": "Gaur, sukaldariak bazkaltzen ari dira parkean.",
+      "id": "719dd7ce6af8",
+      "priority": 2,
+      "group": "68508ae88393"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Gaur,",
+          "definition": "today"
+        },
+        {
+          "word": "sukaldariak",
+          "definition": "chefs\ncooks"
+        },
+        {
+          "word": "bazkaltzen",
+          "definition": "eating lunch\nhaving lunch"
+        },
+        {
+          "word": "ari",
+          "definition": "present perfect verb form"
+        },
+        {
+          "word": "dira",
+          "definition": "are\nare (izan)"
+        },
+        {
+          "word": "parkean.",
+          "definition": "in a park"
+        }
+      ],
+      "chips": [
+        "Today",
+        "the",
+        "cooks",
+        "are",
+        "eating",
+        "lunch",
+        "in",
+        "the",
+        "park",
+        "one",
+        "an",
+        "and",
+        "can",
+        "any",
+        "ate",
+        "man",
+        "car"
+      ],
+      "solutions": [
+        [
+          "Today",
+          "the",
+          "cooks",
+          "are",
+          "eating",
+          "lunch",
+          "in",
+          "the",
+          "park"
+        ]
+      ],
+      "formattedSolution": "Today, the cooks are eating lunch in the park.",
+      "id": "e49a6bebeb4b",
+      "priority": 2,
+      "group": "68508ae88393"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Bihar guk babarrun zopa jango dugu bazkaltzeko.",
+      "meaningInSourceLanguage": "Tomorrow we will eat bean soup for lunch.",
+      "id": "51d8a31d6f9d",
+      "priority": 0,
+      "group": "a185dc897796"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Tomorrow",
+          "definition": "bihar"
+        },
+        {
+          "word": "we",
+          "definition": "gu"
+        },
+        {
+          "word": "will",
+          "definition": "future tense"
+        },
+        {
+          "word": "eat",
+          "definition": "jango (future)\njateko (in order to eat)\njaten\njaten (present)"
+        },
+        {
+          "word": "bean",
+          "definition": "babarrun"
+        },
+        {
+          "word": "soup",
+          "definition": "zopa"
+        },
+        {
+          "word": "for",
+          "definition": "part of dative case phrase for me"
+        },
+        {
+          "word": "lunch.",
+          "definition": "bazkari"
+        }
+      ],
+      "chips": [
+        "Bihar",
+        "guk",
+        "babarrun",
+        "zopa",
+        "jango",
+        "dugu",
+        "bazkaltzeko",
+        "jaka",
+        "bata",
+        "bat",
+        "zara",
+        "gara",
+        "Sagu"
+      ],
+      "solutions": [
+        [
+          "Bihar",
+          "guk",
+          "babarrun",
+          "zopa",
+          "jango",
+          "dugu",
+          "bazkaltzeko"
+        ],
+        [
+          "Bihar",
+          "babarrun",
+          "zopa",
+          "jango",
+          "dugu",
+          "bazkaltzeko"
+        ]
+      ],
+      "formattedSolution": "Bihar guk babarrun zopa jango dugu bazkaltzeko.",
+      "id": "598760106ae3",
+      "priority": 2,
+      "group": "a185dc897796"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Bihar",
+          "definition": "tomorrow"
+        },
+        {
+          "word": "guk",
+          "definition": "we"
+        },
+        {
+          "word": "babarrun",
+          "definition": "bean"
+        },
+        {
+          "word": "zopa",
+          "definition": "soup"
+        },
+        {
+          "word": "jango",
+          "definition": "will eat"
+        },
+        {
+          "word": "dugu",
+          "definition": "We have it\nWe have/ukan it"
+        },
+        {
+          "word": "bazkaltzeko.",
+          "definition": "for lunch"
+        }
+      ],
+      "chips": [
+        "Tomorrow",
+        "we",
+        "will",
+        "eat",
+        "bean",
+        "soup",
+        "for",
+        "lunch",
+        "or",
+        "our",
+        "on",
+        "son",
+        "wer",
+        "man",
+        "men"
+      ],
+      "solutions": [
+        [
+          "Tomorrow",
+          "we",
+          "will",
+          "eat",
+          "bean",
+          "soup",
+          "for",
+          "lunch"
+        ],
+        [
+          "Tomorrow",
+          "we'll",
+          "eat",
+          "bean",
+          "soup",
+          "for",
+          "lunch"
+        ]
+      ],
+      "formattedSolution": "Tomorrow we will eat bean soup for lunch.",
+      "id": "ebc94acbe137",
+      "priority": 2,
+      "group": "a185dc897796"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Bihar guk Irunen bazkalduko dugu.",
+      "meaningInSourceLanguage": "Tomorrow we will eat lunch in Irun.",
+      "id": "6c9872a609f1",
+      "priority": 0,
+      "group": "807146597125"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Tomorrow",
+          "definition": "bihar"
+        },
+        {
+          "word": "we",
+          "definition": "gu"
+        },
+        {
+          "word": "will",
+          "definition": "future tense"
+        },
+        {
+          "word": "eat",
+          "definition": "jango (future)\njateko (in order to eat)\njaten\njaten (present)"
+        },
+        {
+          "word": "lunch",
+          "definition": "bazkari"
+        },
+        {
+          "word": "in",
+          "definition": "Inessive case\nNON case, not a word"
+        },
+        {
+          "word": "Irun.",
+          "definition": "Irun\nIrun (city)"
+        }
+      ],
+      "chips": [
+        "Bihar",
+        "guk",
+        "Irunen",
+        "bazkalduko",
+        "dugu",
+        "zuk",
+        "zuku",
+        "hau",
+        "zuen"
+      ],
+      "solutions": [
+        [
+          "Bihar",
+          "guk",
+          "Irunen",
+          "bazkalduko",
+          "dugu"
+        ],
+        [
+          "Bihar",
+          "Irunen",
+          "bazkalduko",
+          "dugu"
+        ]
+      ],
+      "formattedSolution": "Bihar guk Irunen bazkalduko dugu.",
+      "id": "6534e26d5f1d",
+      "priority": 2,
+      "group": "807146597125"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Bihar",
+          "definition": "tomorrow"
+        },
+        {
+          "word": "guk",
+          "definition": "we"
+        },
+        {
+          "word": "Irunen",
+          "definition": "in Irun"
+        },
+        {
+          "word": "bazkalduko",
+          "definition": "will eat lunch\nwill have lunch"
+        },
+        {
+          "word": "dugu.",
+          "definition": "We have it\nWe have/ukan it"
+        }
+      ],
+      "chips": [
+        "Tomorrow",
+        "we",
+        "will",
+        "eat",
+        "lunch",
+        "in",
+        "Irun",
+        "run",
+        "an",
+        "on",
+        "In",
+        "ran",
+        "man"
+      ],
+      "solutions": [
+        [
+          "Tomorrow",
+          "we",
+          "will",
+          "eat",
+          "lunch",
+          "in",
+          "Irun"
+        ],
+        [
+          "Tomorrow",
+          "we'll",
+          "eat",
+          "lunch",
+          "in",
+          "Irun"
+        ]
+      ],
+      "formattedSolution": "Tomorrow we will eat lunch in Irun.",
+      "id": "7698f6e4bdb8",
+      "priority": 2,
+      "group": "807146597125"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Bihar zaldiek bazkaria egingo dute baserrian.",
+      "meaningInSourceLanguage": "Tomorrow the horses will eat lunch on the farm.",
+      "id": "7bc57a4207d5",
+      "priority": 0,
+      "group": "96f058175cd7"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Tomorrow",
+          "definition": "bihar"
+        },
+        {
+          "word": "the",
+          "definition": "-a"
+        },
+        {
+          "word": "horses",
+          "definition": "zaldiak\nzaldiek"
+        },
+        {
+          "word": "will",
+          "definition": "future tense"
+        },
+        {
+          "word": "eat",
+          "definition": "jango (future)\njateko (in order to eat)\njaten\njaten (present)"
+        },
+        {
+          "word": "lunch",
+          "definition": "bazkari"
+        },
+        {
+          "word": "on",
+          "definition": "Inessive case\nNON case, not a word\ngainean\npart of phrase, not translated"
+        },
+        {
+          "word": "the",
+          "definition": "-a"
+        },
+        {
+          "word": "farm.",
+          "definition": "baserri"
+        }
+      ],
+      "chips": [
+        "Bihar",
+        "zaldiek",
+        "bazkaria",
+        "egingo",
+        "dute",
+        "baserrian",
+        "zaie",
+        "zara",
+        "dira",
+        "baina",
+        "aita"
+      ],
+      "solutions": [
+        [
+          "Bihar",
+          "zaldiek",
+          "bazkaria",
+          "egingo",
+          "dute",
+          "baserrian"
+        ]
+      ],
+      "formattedSolution": "Bihar zaldiek bazkaria egingo dute baserrian.",
+      "id": "7471555ac03f",
+      "priority": 2,
+      "group": "96f058175cd7"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Bihar",
+          "definition": "tomorrow"
+        },
+        {
+          "word": "zaldiek",
+          "definition": "horses"
+        },
+        {
+          "word": "bazkaria",
+          "definition": "lunch"
+        },
+        {
+          "word": "egingo",
+          "definition": "will be made\nwill do"
+        },
+        {
+          "word": "dute",
+          "definition": "They have it\nThey have/ukan it"
+        },
+        {
+          "word": "baserrian.",
+          "definition": "on a farm"
+        }
+      ],
+      "chips": [
+        "Tomorrow",
+        "the",
+        "horses",
+        "will",
+        "eat",
+        "lunch",
+        "on",
+        "the",
+        "farm",
+        "one",
+        "are",
+        "or",
+        "for",
+        "The",
+        "her",
+        "our",
+        "far"
+      ],
+      "solutions": [
+        [
+          "Tomorrow",
+          "the",
+          "horses",
+          "will",
+          "eat",
+          "lunch",
+          "on",
+          "the",
+          "farm"
+        ]
+      ],
+      "formattedSolution": "Tomorrow the horses will eat lunch on the farm.",
+      "id": "03a05fceb6c1",
+      "priority": 2,
+      "group": "96f058175cd7"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Afaria prest dago.",
+      "meaningInSourceLanguage": "Dinner is ready.",
+      "id": "d2bfb016f0b3",
+      "priority": 0,
+      "group": "47a0eca6cc4e"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Dinner",
+          "definition": "afari"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago\ndago (egon)"
+        },
+        {
+          "word": "ready.",
+          "definition": "prest"
+        }
+      ],
+      "chips": [
+        "Afaria",
+        "prest",
+        "dago",
+        "ari",
+        "zara"
+      ],
+      "solutions": [
+        [
+          "Afaria",
+          "prest",
+          "dago"
+        ]
+      ],
+      "formattedSolution": "Afaria prest dago.",
+      "id": "74d957e3e26e",
+      "priority": 2,
+      "group": "47a0eca6cc4e"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Afaria",
+          "definition": "dinner"
+        },
+        {
+          "word": "prest",
+          "definition": "ready"
+        },
+        {
+          "word": "dago.",
+          "definition": "he is (egon)\nis\nit is (egon)\nshe is (egon)"
+        }
+      ],
+      "chips": [
+        "Dinner",
+        "is",
+        "ready",
+        "red",
+        "in"
+      ],
+      "solutions": [
+        [
+          "Dinner",
+          "is",
+          "ready"
+        ]
+      ],
+      "formattedSolution": "Dinner is ready.",
+      "id": "ae9d5e30e71a",
+      "priority": 2,
+      "group": "47a0eca6cc4e"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Guk zortzietan afaldu genuen",
+      "meaningInSourceLanguage": "We ate dinner at eight o'clock",
+      "id": "abd7d077067f",
+      "priority": 0,
+      "group": "52aeb540f937"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "We",
+          "definition": "gu"
+        },
+        {
+          "word": "ate",
+          "definition": "jan"
+        },
+        {
+          "word": "dinner",
+          "definition": "afari"
+        },
+        {
+          "word": "at",
+          "definition": "not translated, part of insessive case"
+        },
+        {
+          "word": "eight",
+          "definition": "zortzi"
+        },
+        {
+          "word": "o'clock",
+          "definition": "number + a(k)"
+        }
+      ],
+      "chips": [
+        "Guk",
+        "zortzietan",
+        "afaldu",
+        "genuen",
+        "zuen",
+        "nuen",
+        "zenuen"
+      ],
+      "solutions": [
+        [
+          "Guk",
+          "zortzietan",
+          "afaldu",
+          "genuen"
+        ]
+      ],
+      "formattedSolution": "Guk zortzietan afaldu genuen",
+      "id": "7ad6fce33fc4",
+      "priority": 2,
+      "group": "52aeb540f937"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Guk",
+          "definition": "we"
+        },
+        {
+          "word": "zortzietan",
+          "definition": "at eight"
+        },
+        {
+          "word": "afaldu",
+          "definition": "ate dinner\nhad dinner"
+        },
+        {
+          "word": "genuen",
+          "definition": "We had it"
+        }
+      ],
+      "chips": [
+        "We",
+        "ate",
+        "dinner",
+        "at",
+        "eight",
+        "o'clock",
+        "it",
+        "lie",
+        "ice",
+        "one",
+        "are"
+      ],
+      "solutions": [
+        [
+          "We",
+          "ate",
+          "dinner",
+          "at",
+          "eight",
+          "o'clock"
+        ]
+      ],
+      "formattedSolution": "We ate dinner at eight o'clock",
+      "id": "b84bdcf83ec2",
+      "priority": 2,
+      "group": "52aeb540f937"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Atzo, hontzak zuhaitz batean afaldu zuen.",
+      "meaningInSourceLanguage": "Yesterday, the owl ate dinner in a tree.",
+      "id": "ab62f05f339a",
+      "priority": 0,
+      "group": "cbfd53ece7cc"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Yesterday,",
+          "definition": "Atzo\natzo"
+        },
+        {
+          "word": "the",
+          "definition": "-a"
+        },
+        {
+          "word": "owl",
+          "definition": "hontz\nhontza"
+        },
+        {
+          "word": "ate",
+          "definition": "jan"
+        },
+        {
+          "word": "dinner",
+          "definition": "afari"
+        },
+        {
+          "word": "in",
+          "definition": "Inessive case\nNON case, not a word"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "tree.",
+          "definition": "zuhaitz"
+        }
+      ],
+      "chips": [
+        "Atzo",
+        "hontzak",
+        "zuhaitz",
+        "batean",
+        "afaldu",
+        "zuen",
+        "atzo",
+        "Atea",
+        "hotz",
+        "ateak",
+        "hotza"
+      ],
+      "solutions": [
+        [
+          "Atzo",
+          "hontzak",
+          "zuhaitz",
+          "batean",
+          "afaldu",
+          "zuen"
+        ]
+      ],
+      "formattedSolution": "Atzo, hontzak zuhaitz batean afaldu zuen.",
+      "id": "ed8d402bc641",
+      "priority": 2,
+      "group": "cbfd53ece7cc"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Atzo,",
+          "definition": "yesterday"
+        },
+        {
+          "word": "hontzak",
+          "definition": "owls"
+        },
+        {
+          "word": "zuhaitz",
+          "definition": "tree"
+        },
+        {
+          "word": "batean",
+          "definition": "in a"
+        },
+        {
+          "word": "afaldu",
+          "definition": "ate dinner\nhad dinner"
+        },
+        {
+          "word": "zuen.",
+          "definition": "He had it\nhe had it\nit had it\nshe had it\nyour\nyour (plural)\nyour(plural)\nyour, plural\nyours"
+        }
+      ],
+      "chips": [
+        "Yesterday",
+        "the",
+        "owl",
+        "ate",
+        "dinner",
+        "in",
+        "a",
+        "tree",
+        "tea",
+        "one",
+        "are",
+        "ten",
+        "He",
+        "We",
+        "me"
+      ],
+      "solutions": [
+        [
+          "Yesterday",
+          "the",
+          "owl",
+          "ate",
+          "dinner",
+          "in",
+          "a",
+          "tree"
+        ]
+      ],
+      "formattedSolution": "Yesterday, the owl ate dinner in a tree.",
+      "id": "1ef4f8d8c280",
+      "priority": 2,
+      "group": "cbfd53ece7cc"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Gaur, katuak sagu bat jan du afaltzeko.",
+      "meaningInSourceLanguage": "Today, the cat ate a mouse for dinner.",
+      "id": "ff636df830b9",
+      "priority": 0,
+      "group": "a74b0ab99957"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Today,",
+          "definition": "gaur"
+        },
+        {
+          "word": "the",
+          "definition": "-a"
+        },
+        {
+          "word": "cat",
+          "definition": "katu"
+        },
+        {
+          "word": "ate",
+          "definition": "jan"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "mouse",
+          "definition": "sagu\nsagua"
+        },
+        {
+          "word": "for",
+          "definition": "part of dative case phrase for me"
+        },
+        {
+          "word": "dinner.",
+          "definition": "afari"
+        }
+      ],
+      "chips": [
+        "Gaur",
+        "katuak",
+        "sagu",
+        "bat",
+        "jan",
+        "du",
+        "afaltzeko",
+        "hau",
+        "lau",
+        "Katu",
+        "Bat",
+        "da",
+        "al"
+      ],
+      "solutions": [
+        [
+          "Gaur",
+          "katuak",
+          "sagu",
+          "bat",
+          "jan",
+          "du",
+          "afaltzeko"
+        ]
+      ],
+      "formattedSolution": "Gaur, katuak sagu bat jan du afaltzeko.",
+      "id": "111eb2fd4ef3",
+      "priority": 2,
+      "group": "a74b0ab99957"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Gaur,",
+          "definition": "today"
+        },
+        {
+          "word": "katuak",
+          "definition": "cats"
+        },
+        {
+          "word": "sagu",
+          "definition": "mouse"
+        },
+        {
+          "word": "bat",
+          "definition": "one"
+        },
+        {
+          "word": "jan",
+          "definition": "ate"
+        },
+        {
+          "word": "du",
+          "definition": "He has it\nHe/she/it has/ukan it"
+        },
+        {
+          "word": "afaltzeko.",
+          "definition": "for dinner"
+        }
+      ],
+      "chips": [
+        "Today",
+        "the",
+        "cat",
+        "ate",
+        "a",
+        "mouse",
+        "for",
+        "dinner",
+        "one",
+        "at",
+        "are",
+        "or",
+        "car",
+        "me",
+        "The"
+      ],
+      "solutions": [
+        [
+          "Today",
+          "the",
+          "cat",
+          "ate",
+          "a",
+          "mouse",
+          "for",
+          "dinner"
+        ]
+      ],
+      "formattedSolution": "Today, the cat ate a mouse for dinner.",
+      "id": "6e0cb4bbf5e7",
+      "priority": 2,
+      "group": "a74b0ab99957"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Egunero, guk etxean afaltzen dugu.",
+      "meaningInSourceLanguage": "Every day, we eat dinner at home.",
+      "id": "2f9931dd30eb",
+      "priority": 0,
+      "group": "ac4852be3a73"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Every",
+          "definition": "-ero"
+        },
+        {
+          "word": "day,",
+          "definition": "egun"
+        },
+        {
+          "word": "we",
+          "definition": "gu"
+        },
+        {
+          "word": "eat",
+          "definition": "jango (future)\njateko (in order to eat)\njaten\njaten (present)"
+        },
+        {
+          "word": "dinner",
+          "definition": "afari"
+        },
+        {
+          "word": "at",
+          "definition": "not translated, part of insessive case"
+        },
+        {
+          "word": "home.",
+          "definition": "etxe"
+        }
+      ],
+      "chips": [
+        "Egunero",
+        "guk",
+        "etxean",
+        "afaltzen",
+        "dugu",
+        "Egun",
+        "zuen",
+        "gure",
+        "luze"
+      ],
+      "solutions": [
+        [
+          "Egunero",
+          "guk",
+          "etxean",
+          "afaltzen",
+          "dugu"
+        ],
+        [
+          "Egunero",
+          "etxean",
+          "afaltzen",
+          "dugu"
+        ]
+      ],
+      "formattedSolution": "Egunero, guk etxean afaltzen dugu.",
+      "id": "b36b7d3187f7",
+      "priority": 2,
+      "group": "ac4852be3a73"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Egunero,",
+          "definition": "every day"
+        },
+        {
+          "word": "guk",
+          "definition": "we"
+        },
+        {
+          "word": "etxean",
+          "definition": "in a house\nin the house"
+        },
+        {
+          "word": "afaltzen",
+          "definition": "eating dinner\nhaving dinner"
+        },
+        {
+          "word": "dugu.",
+          "definition": "We have it\nWe have/ukan it"
+        }
+      ],
+      "chips": [
+        "Every",
+        "day",
+        "we",
+        "eat",
+        "dinner",
+        "at",
+        "home",
+        "me",
+        "ate",
+        "am",
+        "one",
+        "He",
+        "We"
+      ],
+      "solutions": [
+        [
+          "Every",
+          "day",
+          "we",
+          "eat",
+          "dinner",
+          "at",
+          "home"
+        ]
+      ],
+      "formattedSolution": "Every day, we eat dinner at home.",
+      "id": "c636efcfb5d4",
+      "priority": 2,
+      "group": "ac4852be3a73"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Gidariak jatetxe batean afaltzen ari dira.",
+      "meaningInSourceLanguage": "The drivers are eating dinner in a restaurant.",
+      "id": "dd261137771d",
+      "priority": 0,
+      "group": "19b5fe3710d4"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "The",
+          "definition": "-a"
+        },
+        {
+          "word": "drivers",
+          "definition": "gidariak\ngidariek"
+        },
+        {
+          "word": "are",
+          "definition": "daude\ndaude (egon)\ndaude (izan)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzarete (izan)\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "eating",
+          "definition": "jaten ari"
+        },
+        {
+          "word": "dinner",
+          "definition": "afari"
+        },
+        {
+          "word": "in",
+          "definition": "Inessive case\nNON case, not a word"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "restaurant.",
+          "definition": "jatetxe"
+        }
+      ],
+      "chips": [
+        "Gidariak",
+        "jatetxe",
+        "batean",
+        "afaltzen",
+        "ari",
+        "dira",
+        "arte",
+        "atera",
+        "ateak",
+        "bata",
+        "jaten"
+      ],
+      "solutions": [
+        [
+          "Gidariak",
+          "jatetxe",
+          "batean",
+          "afaltzen",
+          "ari",
+          "dira"
+        ]
+      ],
+      "formattedSolution": "Gidariak jatetxe batean afaltzen ari dira.",
+      "id": "bb7f5b043c2f",
+      "priority": 2,
+      "group": "19b5fe3710d4"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Gidariak",
+          "definition": "driver\ndrivers"
+        },
+        {
+          "word": "jatetxe",
+          "definition": "restaurant"
+        },
+        {
+          "word": "batean",
+          "definition": "in a"
+        },
+        {
+          "word": "afaltzen",
+          "definition": "eating dinner\nhaving dinner"
+        },
+        {
+          "word": "ari",
+          "definition": "present perfect verb form"
+        },
+        {
+          "word": "dira.",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "The",
+        "drivers",
+        "are",
+        "eating",
+        "dinner",
+        "in",
+        "a",
+        "restaurant",
+        "an",
+        "ate",
+        "ran",
+        "one",
+        "is",
+        "and",
+        "fine"
+      ],
+      "solutions": [
+        [
+          "The",
+          "drivers",
+          "are",
+          "eating",
+          "dinner",
+          "in",
+          "a",
+          "restaurant"
+        ]
+      ],
+      "formattedSolution": "The drivers are eating dinner in a restaurant.",
+      "id": "345ab8b82140",
+      "priority": 2,
+      "group": "19b5fe3710d4"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Bihar, irakasleek eskolan afalduko dute.",
+      "meaningInSourceLanguage": "Tomorrow, the teachers will eat dinner at school.",
+      "id": "7b40e882bca5",
+      "priority": 0,
+      "group": "3b60b5b08c1f"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Tomorrow,",
+          "definition": "bihar"
+        },
+        {
+          "word": "the",
+          "definition": "-a"
+        },
+        {
+          "word": "teachers",
+          "definition": "irakasleak\nirakasleen (of the teachers)"
+        },
+        {
+          "word": "will",
+          "definition": "future tense"
+        },
+        {
+          "word": "eat",
+          "definition": "jango (future)\njateko (in order to eat)\njaten\njaten (present)"
+        },
+        {
+          "word": "dinner",
+          "definition": "afari"
+        },
+        {
+          "word": "at",
+          "definition": "not translated, part of insessive case"
+        },
+        {
+          "word": "school.",
+          "definition": "eskola"
+        }
+      ],
+      "chips": [
+        "Bihar",
+        "irakasleek",
+        "eskolan",
+        "afalduko",
+        "dute",
+        "kale",
+        "ahal",
+        "kaleak",
+        "asko"
+      ],
+      "solutions": [
+        [
+          "Bihar",
+          "irakasleek",
+          "eskolan",
+          "afalduko",
+          "dute"
+        ]
+      ],
+      "formattedSolution": "Bihar, irakasleek eskolan afalduko dute.",
+      "id": "19b49d9693db",
+      "priority": 2,
+      "group": "3b60b5b08c1f"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Bihar,",
+          "definition": "tomorrow"
+        },
+        {
+          "word": "irakasleek",
+          "definition": "teachers"
+        },
+        {
+          "word": "eskolan",
+          "definition": "in a school"
+        },
+        {
+          "word": "afalduko",
+          "definition": "will eat dinner\nwill have dinner"
+        },
+        {
+          "word": "dute.",
+          "definition": "They have it\nThey have/ukan it"
+        }
+      ],
+      "chips": [
+        "Tomorrow",
+        "the",
+        "teachers",
+        "will",
+        "eat",
+        "dinner",
+        "at",
+        "school",
+        "her",
+        "car",
+        "The",
+        "ate",
+        "hear",
+        "ice",
+        "one"
+      ],
+      "solutions": [
+        [
+          "Tomorrow",
+          "the",
+          "teachers",
+          "will",
+          "eat",
+          "dinner",
+          "at",
+          "school"
+        ]
+      ],
+      "formattedSolution": "Tomorrow, the teachers will eat dinner at school.",
+      "id": "b87084e59108",
+      "priority": 2,
+      "group": "3b60b5b08c1f"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Guk afaltzeko pintxoak izango ditugu.",
+      "meaningInSourceLanguage": "We will have tapas for dinner.",
+      "id": "d162aa65ed9f",
+      "priority": 0,
+      "group": "0174577ee61f"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "We",
+          "definition": "gu"
+        },
+        {
+          "word": "will",
+          "definition": "future tense"
+        },
+        {
+          "word": "have",
+          "definition": "eduki\nedun\nizan\nukan"
+        },
+        {
+          "word": "tapas",
+          "definition": "pintxoak"
+        },
+        {
+          "word": "for",
+          "definition": "part of dative case phrase for me"
+        },
+        {
+          "word": "dinner.",
+          "definition": "afari"
+        }
+      ],
+      "chips": [
+        "Guk",
+        "afaltzeko",
+        "pintxoak",
+        "izango",
+        "ditugu",
+        "altuak",
+        "atzo",
+        "Aitak",
+        "nago"
+      ],
+      "solutions": [
+        [
+          "Guk",
+          "afaltzeko",
+          "pintxoak",
+          "izango",
+          "ditugu"
+        ],
+        [
+          "Afaltzeko",
+          "pintxoak",
+          "izango",
+          "ditugu"
+        ]
+      ],
+      "formattedSolution": "Guk afaltzeko pintxoak izango ditugu.",
+      "id": "37213d5938d6",
+      "priority": 2,
+      "group": "0174577ee61f"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Guk",
+          "definition": "we"
+        },
+        {
+          "word": "afaltzeko",
+          "definition": "for dinner"
+        },
+        {
+          "word": "pintxoak",
+          "definition": "tapas"
+        },
+        {
+          "word": "izango",
+          "definition": "future of izan"
+        },
+        {
+          "word": "ditugu.",
+          "definition": "We have them"
+        }
+      ],
+      "chips": [
+        "We",
+        "will",
+        "have",
+        "tapas",
+        "for",
+        "dinner",
+        "are",
+        "we",
+        "fine",
+        "her",
+        "five"
+      ],
+      "solutions": [
+        [
+          "We",
+          "will",
+          "have",
+          "tapas",
+          "for",
+          "dinner"
+        ],
+        [
+          "We'll",
+          "have",
+          "tapas",
+          "for",
+          "dinner"
+        ]
+      ],
+      "formattedSolution": "We will have tapas for dinner.",
+      "id": "b9a29b9c9735",
+      "priority": 2,
+      "group": "0174577ee61f"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Apaizak afaria egingo du elizan.",
+      "meaningInSourceLanguage": "The priest will eat dinner in the church.",
+      "id": "937482682707",
+      "priority": 0,
+      "group": "c6557ba0ffea"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "The",
+          "definition": "-a"
+        },
+        {
+          "word": "priest",
+          "definition": "apaiz\napaiza\napiza"
+        },
+        {
+          "word": "will",
+          "definition": "future tense"
+        },
+        {
+          "word": "eat",
+          "definition": "jango (future)\njateko (in order to eat)\njaten\njaten (present)"
+        },
+        {
+          "word": "dinner",
+          "definition": "afari"
+        },
+        {
+          "word": "in",
+          "definition": "Inessive case\nNON case, not a word"
+        },
+        {
+          "word": "the",
+          "definition": "-a"
+        },
+        {
+          "word": "church.",
+          "definition": "eliza"
+        }
+      ],
+      "chips": [
+        "Apaizak",
+        "afaria",
+        "egingo",
+        "du",
+        "elizan",
+        "eliza",
+        "Apiza",
+        "egin",
+        "izan"
+      ],
+      "solutions": [
+        [
+          "Apaizak",
+          "afaria",
+          "egingo",
+          "du",
+          "elizan"
+        ]
+      ],
+      "formattedSolution": "Apaizak afaria egingo du elizan.",
+      "id": "ecd695336544",
+      "priority": 2,
+      "group": "c6557ba0ffea"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Apaizak",
+          "definition": "priests"
+        },
+        {
+          "word": "afaria",
+          "definition": "dinner"
+        },
+        {
+          "word": "egingo",
+          "definition": "will be made\nwill do"
+        },
+        {
+          "word": "du",
+          "definition": "He has it\nHe/she/it has/ukan it"
+        },
+        {
+          "word": "elizan.",
+          "definition": "in a church"
+        }
+      ],
+      "chips": [
+        "The",
+        "priest",
+        "will",
+        "eat",
+        "dinner",
+        "in",
+        "the",
+        "church",
+        "lie",
+        "ice",
+        "She",
+        "it",
+        "her",
+        "one",
+        "are"
+      ],
+      "solutions": [
+        [
+          "The",
+          "priest",
+          "will",
+          "eat",
+          "dinner",
+          "in",
+          "the",
+          "church"
+        ]
+      ],
+      "formattedSolution": "The priest will eat dinner in the church.",
+      "id": "b39dfed4cbeb",
+      "priority": 2,
+      "group": "c6557ba0ffea"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": "bazkari",
+      "meaningInSourceLanguage": "lunch",
+      "id": "5d5ef187d0a7",
+      "priority": 0,
+      "group": "e18768e1af1e"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": [
+        "bazkari"
+      ],
+      "phrase": [
+        {
+          "word": "lunch",
+          "definition": "bazkari"
+        }
+      ],
+      "id": "d23918862061",
+      "priority": 1,
+      "group": "e18768e1af1e"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": "bazkaldu",
+      "meaningInSourceLanguage": "ate lunch",
+      "id": "f525c9e81f91",
+      "priority": 0,
+      "group": "1aa6abd9f279"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": [
+        "bazkaldu"
+      ],
+      "phrase": [
+        {
+          "word": "ate",
+          "definition": "jan"
+        },
+        {
+          "word": "lunch",
+          "definition": "bazkari"
+        }
+      ],
+      "id": "8d7d5e188fea",
+      "priority": 1,
+      "group": "1aa6abd9f279"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": "bazkaltzen",
+      "meaningInSourceLanguage": "eating lunch",
+      "id": "09d6af228a8a",
+      "priority": 0,
+      "group": "5aa0b7651a0d"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": [
+        "bazkaltzen"
+      ],
+      "phrase": [
+        {
+          "word": "eating",
+          "definition": "jaten ari"
+        },
+        {
+          "word": "lunch",
+          "definition": "bazkari"
+        }
+      ],
+      "id": "c8f6d56bf7c0",
+      "priority": 1,
+      "group": "5aa0b7651a0d"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": "bazkalduko",
+      "meaningInSourceLanguage": "will eat lunch",
+      "id": "f3bfa9b319c8",
+      "priority": 0,
+      "group": "d58e241d11b6"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": [
+        "bazkalduko"
+      ],
+      "phrase": [
+        {
+          "word": "will",
+          "definition": "future tense"
+        },
+        {
+          "word": "eat",
+          "definition": "jango (future)\njateko (in order to eat)\njaten\njaten (present)"
+        },
+        {
+          "word": "lunch",
+          "definition": "bazkari"
+        }
+      ],
+      "id": "9d03c21f7108",
+      "priority": 1,
+      "group": "d58e241d11b6"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": "afari",
+      "meaningInSourceLanguage": "dinner",
+      "id": "b12ef01e3cc5",
+      "priority": 0,
+      "group": "f44296ceb0be"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": [
+        "afari"
+      ],
+      "phrase": [
+        {
+          "word": "dinner",
+          "definition": "afari"
+        }
+      ],
+      "id": "c39b7345080e",
+      "priority": 1,
+      "group": "f44296ceb0be"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": "afaldu",
+      "meaningInSourceLanguage": "ate dinner",
+      "id": "1b6e60b6fa45",
+      "priority": 0,
+      "group": "504da7b1b5f0"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": [
+        "afaldu"
+      ],
+      "phrase": [
+        {
+          "word": "ate",
+          "definition": "jan"
+        },
+        {
+          "word": "dinner",
+          "definition": "afari"
+        }
+      ],
+      "id": "bd87aa72a7c7",
+      "priority": 1,
+      "group": "504da7b1b5f0"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": "afaltzen",
+      "meaningInSourceLanguage": "eating dinner",
+      "id": "4a545a148130",
+      "priority": 0,
+      "group": "a38c276b1205"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": [
+        "afaltzen"
+      ],
+      "phrase": [
+        {
+          "word": "eating",
+          "definition": "jaten ari"
+        },
+        {
+          "word": "dinner",
+          "definition": "afari"
+        }
+      ],
+      "id": "cc708a2afc37",
+      "priority": 1,
+      "group": "a38c276b1205"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": "afalduko",
+      "meaningInSourceLanguage": "will eat dinner",
+      "id": "8801b49799c8",
+      "priority": 0,
+      "group": "e9b14bc62516"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": [
+        "afalduko"
+      ],
+      "phrase": [
+        {
+          "word": "will",
+          "definition": "future tense"
+        },
+        {
+          "word": "eat",
+          "definition": "jango (future)\njateko (in order to eat)\njaten\njaten (present)"
+        },
+        {
+          "word": "dinner",
+          "definition": "afari"
+        }
+      ],
+      "id": "74a4c3b9776c",
+      "priority": 1,
+      "group": "e9b14bc62516"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": "pintxo",
+      "meaningInSourceLanguage": "tapa",
+      "id": "8a157dc9b0ae",
+      "priority": 0,
+      "group": "c03a9ed7ad35"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": [
+        "pintxo"
+      ],
+      "phrase": [
+        {
+          "word": "tapa",
+          "definition": "pintxo"
+        }
+      ],
+      "id": "1006bab554d9",
+      "priority": 1,
+      "group": "c03a9ed7ad35"
+    }
+  ]
+}

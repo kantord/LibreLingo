@@ -1,0 +1,1901 @@
+{
+  "id": "69835572e622",
+  "levels": 5,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Norekin zu joan zinen?",
+      "meaningInSourceLanguage": "Who did you go with?",
+      "id": "d7f3534e9e34",
+      "priority": 0,
+      "group": "ddb6b2e8b11c"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Who",
+          "definition": "nor\nnortzuk"
+        },
+        {
+          "word": "did",
+          "definition": "egin\nnot translated"
+        },
+        {
+          "word": "you",
+          "definition": "zu\nzuek"
+        },
+        {
+          "word": "go",
+          "definition": "joan\njoan (command)\njoango (future)\njoateko (in order to go)\njoaten\njoaten(present)"
+        },
+        {
+          "word": "with?",
+          "definition": "Norekin case"
+        }
+      ],
+      "chips": [
+        "Norekin",
+        "zu",
+        "joan",
+        "zinen",
+        "zen",
+        "zuen",
+        "on"
+      ],
+      "solutions": [
+        [
+          "Norekin",
+          "zu",
+          "joan",
+          "zinen"
+        ]
+      ],
+      "formattedSolution": "Norekin zu joan zinen?",
+      "id": "9dbeaddd68b8",
+      "priority": 2,
+      "group": "ddb6b2e8b11c"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Norekin",
+          "definition": "With whom"
+        },
+        {
+          "word": "zu",
+          "definition": "you"
+        },
+        {
+          "word": "joan",
+          "definition": "go\ngo (command)\nwent\nwent (+izan)"
+        },
+        {
+          "word": "zinen?",
+          "definition": "were\nyou were"
+        }
+      ],
+      "chips": [
+        "Who",
+        "did",
+        "you",
+        "go",
+        "with",
+        "to",
+        "it",
+        "No",
+        "Do"
+      ],
+      "solutions": [
+        [
+          "Who",
+          "did",
+          "you",
+          "go",
+          "with"
+        ],
+        [
+          "With",
+          "whom",
+          "did",
+          "you",
+          "go"
+        ]
+      ],
+      "formattedSolution": "Who did you go with?",
+      "id": "ec4f9be495b9",
+      "priority": 2,
+      "group": "ddb6b2e8b11c"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Ni Mikelekin joan nintzen.",
+      "meaningInSourceLanguage": "I went with Mikel.",
+      "id": "0d7d65837422",
+      "priority": 0,
+      "group": "474eb65cdcd1"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "I",
+          "definition": "ni"
+        },
+        {
+          "word": "went",
+          "definition": "joan\njoan zen (izan)"
+        },
+        {
+          "word": "with",
+          "definition": "Norekin case"
+        },
+        {
+          "word": "Mikel.",
+          "definition": "Mikel\nMikel (male name)\nMikel (name)\nMikel(male name)"
+        }
+      ],
+      "chips": [
+        "Ni",
+        "Mikelekin",
+        "joan",
+        "nintzen",
+        "izen",
+        "Miren",
+        "zinen"
+      ],
+      "solutions": [
+        [
+          "Ni",
+          "Mikelekin",
+          "joan",
+          "nintzen"
+        ],
+        [
+          "Mikelekin",
+          "joan",
+          "nintzen"
+        ]
+      ],
+      "formattedSolution": "Ni Mikelekin joan nintzen.",
+      "id": "77e838ca52b5",
+      "priority": 2,
+      "group": "474eb65cdcd1"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Ni",
+          "definition": "I\nme"
+        },
+        {
+          "word": "Mikelekin",
+          "definition": "With Mikel"
+        },
+        {
+          "word": "joan",
+          "definition": "go\ngo (command)\nwent\nwent (+izan)"
+        },
+        {
+          "word": "nintzen.",
+          "definition": "I was\nwas"
+        }
+      ],
+      "chips": [
+        "I",
+        "went",
+        "with",
+        "Mikel",
+        "wet",
+        "it",
+        "wine"
+      ],
+      "solutions": [
+        [
+          "I",
+          "went",
+          "with",
+          "Mikel"
+        ]
+      ],
+      "formattedSolution": "I went with Mikel.",
+      "id": "7f450cf43336",
+      "priority": 2,
+      "group": "474eb65cdcd1"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Norekin dantzatu zuen Mikelek?",
+      "meaningInSourceLanguage": "Who did Mikel dance with?",
+      "id": "e863a5f761f6",
+      "priority": 0,
+      "group": "913d8c524541"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Who",
+          "definition": "nor\nnortzuk"
+        },
+        {
+          "word": "did",
+          "definition": "egin\nnot translated"
+        },
+        {
+          "word": "Mikel",
+          "definition": "Mikel\nMikel (male name)\nMikel (name)\nMikel(male name)"
+        },
+        {
+          "word": "dance",
+          "definition": "dantza\ndantza egingo (future)\ndantza egiten (present)\ndantzan\ndantzatzea\ndantzatzen"
+        },
+        {
+          "word": "with?",
+          "definition": "Norekin case"
+        }
+      ],
+      "chips": [
+        "Norekin",
+        "dantzatu",
+        "zuen",
+        "Mikelek",
+        "azken",
+        "Miren",
+        "zinen"
+      ],
+      "solutions": [
+        [
+          "Norekin",
+          "dantzatu",
+          "zuen",
+          "Mikelek"
+        ]
+      ],
+      "formattedSolution": "Norekin dantzatu zuen Mikelek?",
+      "id": "a3d353d3f779",
+      "priority": 2,
+      "group": "913d8c524541"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Norekin",
+          "definition": "With whom"
+        },
+        {
+          "word": "dantzatu",
+          "definition": "dance"
+        },
+        {
+          "word": "zuen",
+          "definition": "He had it\nhe had it\nit had it\nshe had it\nyour\nyour (plural)\nyour(plural)\nyour, plural\nyours"
+        },
+        {
+          "word": "Mikelek?",
+          "definition": "Mikel"
+        }
+      ],
+      "chips": [
+        "Who",
+        "did",
+        "Mikel",
+        "dance",
+        "with",
+        "lie",
+        "wine",
+        "ice",
+        "the"
+      ],
+      "solutions": [
+        [
+          "Who",
+          "did",
+          "Mikel",
+          "dance",
+          "with"
+        ],
+        [
+          "With",
+          "whom",
+          "did",
+          "Mikel",
+          "dance"
+        ]
+      ],
+      "formattedSolution": "Who did Mikel dance with?",
+      "id": "33d7fca524a0",
+      "priority": 2,
+      "group": "913d8c524541"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Mikelek Mirenekin dantzatu zuen.",
+      "meaningInSourceLanguage": "Mikel danced with Miren.",
+      "id": "bbf316187405",
+      "priority": 0,
+      "group": "72dcd60bc86a"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Mikel",
+          "definition": "Mikel\nMikel (male name)\nMikel (name)\nMikel(male name)"
+        },
+        {
+          "word": "danced",
+          "definition": "dantza egin"
+        },
+        {
+          "word": "with",
+          "definition": "Norekin case"
+        },
+        {
+          "word": "Miren.",
+          "definition": "Miren\nMiren (female name)\nMiren (name)"
+        }
+      ],
+      "chips": [
+        "Mikelek",
+        "Mirenekin",
+        "dantzatu",
+        "zuen",
+        "Mirenek",
+        "Mirenen",
+        "Mikelen"
+      ],
+      "solutions": [
+        [
+          "Mikelek",
+          "Mirenekin",
+          "dantzatu",
+          "zuen"
+        ]
+      ],
+      "formattedSolution": "Mikelek Mirenekin dantzatu zuen.",
+      "id": "9bce524bc403",
+      "priority": 2,
+      "group": "72dcd60bc86a"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Mikelek",
+          "definition": "Mikel"
+        },
+        {
+          "word": "Mirenekin",
+          "definition": "With Miren"
+        },
+        {
+          "word": "dantzatu",
+          "definition": "dance"
+        },
+        {
+          "word": "zuen.",
+          "definition": "He had it\nhe had it\nit had it\nshe had it\nyour\nyour (plural)\nyour(plural)\nyour, plural\nyours"
+        }
+      ],
+      "chips": [
+        "Mikel",
+        "danced",
+        "with",
+        "Miren",
+        "wine",
+        "fine",
+        "nice"
+      ],
+      "solutions": [
+        [
+          "Mikel",
+          "danced",
+          "with",
+          "Miren"
+        ]
+      ],
+      "formattedSolution": "Mikel danced with Miren.",
+      "id": "05d0fff192fc",
+      "priority": 2,
+      "group": "72dcd60bc86a"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Norekin gu joango gara?",
+      "meaningInSourceLanguage": "Who will we go with?",
+      "id": "740cda992c27",
+      "priority": 0,
+      "group": "f3edbbba5323"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Who",
+          "definition": "nor\nnortzuk"
+        },
+        {
+          "word": "will",
+          "definition": "future tense"
+        },
+        {
+          "word": "we",
+          "definition": "gu"
+        },
+        {
+          "word": "go",
+          "definition": "joan\njoan (command)\njoango (future)\njoateko (in order to go)\njoaten\njoaten(present)"
+        },
+        {
+          "word": "with?",
+          "definition": "Norekin case"
+        }
+      ],
+      "chips": [
+        "Norekin",
+        "gu",
+        "joango",
+        "gara",
+        "Nor",
+        "on",
+        "gure"
+      ],
+      "solutions": [
+        [
+          "Norekin",
+          "gu",
+          "joango",
+          "gara"
+        ],
+        [
+          "Norekin",
+          "joango",
+          "gara"
+        ]
+      ],
+      "formattedSolution": "Norekin gu joango gara?",
+      "id": "1e75a791ef8b",
+      "priority": 2,
+      "group": "f3edbbba5323"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Norekin",
+          "definition": "With whom"
+        },
+        {
+          "word": "gu",
+          "definition": "we"
+        },
+        {
+          "word": "joango",
+          "definition": "will go\nwill go (+izan)"
+        },
+        {
+          "word": "gara?",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "Who",
+        "will",
+        "we",
+        "go",
+        "with",
+        "who",
+        "it",
+        "to",
+        "wet"
+      ],
+      "solutions": [
+        [
+          "Who",
+          "will",
+          "we",
+          "go",
+          "with"
+        ],
+        [
+          "With",
+          "whom",
+          "will",
+          "we",
+          "go"
+        ]
+      ],
+      "formattedSolution": "Who will we go with?",
+      "id": "1050fba4f103",
+      "priority": 2,
+      "group": "f3edbbba5323"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Gu Mirenekin joango gara.",
+      "meaningInSourceLanguage": "We will go with Miren.",
+      "id": "ea554df7abb1",
+      "priority": 0,
+      "group": "6160acf15b76"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "We",
+          "definition": "gu"
+        },
+        {
+          "word": "will",
+          "definition": "future tense"
+        },
+        {
+          "word": "go",
+          "definition": "joan\njoan (command)\njoango (future)\njoateko (in order to go)\njoaten\njoaten(present)"
+        },
+        {
+          "word": "with",
+          "definition": "Norekin case"
+        },
+        {
+          "word": "Miren.",
+          "definition": "Miren\nMiren (female name)\nMiren (name)"
+        }
+      ],
+      "chips": [
+        "Gu",
+        "Mirenekin",
+        "joango",
+        "gara",
+        "jan",
+        "ari",
+        "zara"
+      ],
+      "solutions": [
+        [
+          "Gu",
+          "Mirenekin",
+          "joango",
+          "gara"
+        ],
+        [
+          "Mirenekin",
+          "joango",
+          "gara"
+        ]
+      ],
+      "formattedSolution": "Gu Mirenekin joango gara.",
+      "id": "85f62325be54",
+      "priority": 2,
+      "group": "6160acf15b76"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Gu",
+          "definition": "we"
+        },
+        {
+          "word": "Mirenekin",
+          "definition": "With Miren"
+        },
+        {
+          "word": "joango",
+          "definition": "will go\nwill go (+izan)"
+        },
+        {
+          "word": "gara.",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "We",
+        "will",
+        "go",
+        "with",
+        "Miren",
+        "it",
+        "we",
+        "in",
+        "is"
+      ],
+      "solutions": [
+        [
+          "We",
+          "will",
+          "go",
+          "with",
+          "Miren"
+        ]
+      ],
+      "formattedSolution": "We will go with Miren.",
+      "id": "c79e05880ead",
+      "priority": 2,
+      "group": "6160acf15b76"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Zerekin zuk idatziko duzu?",
+      "meaningInSourceLanguage": "What did you write with?",
+      "id": "f2ecfc23dda4",
+      "priority": 0,
+      "group": "b3c4f7dfa098"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "What",
+          "definition": "zer"
+        },
+        {
+          "word": "did",
+          "definition": "egin\nnot translated"
+        },
+        {
+          "word": "you",
+          "definition": "zu\nzuek"
+        },
+        {
+          "word": "write",
+          "definition": "idatzi\nidatzi (command)\nidatziko (future)\nidaztea\nidazteko (in order to write)\nidazten\nidazten (present)"
+        },
+        {
+          "word": "with?",
+          "definition": "Norekin case"
+        }
+      ],
+      "chips": [
+        "Zerekin",
+        "zuk",
+        "idatziko",
+        "duzu",
+        "zuku",
+        "Zuek",
+        "Zuk"
+      ],
+      "solutions": [
+        [
+          "Zerekin",
+          "zuk",
+          "idatziko",
+          "duzu"
+        ],
+        [
+          "Zerekin",
+          "idatziko",
+          "duzu"
+        ]
+      ],
+      "formattedSolution": "Zerekin zuk idatziko duzu?",
+      "id": "24e9fe9d5540",
+      "priority": 2,
+      "group": "b3c4f7dfa098"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Zerekin",
+          "definition": "With what"
+        },
+        {
+          "word": "zuk",
+          "definition": "you"
+        },
+        {
+          "word": "idatziko",
+          "definition": "will write"
+        },
+        {
+          "word": "duzu?",
+          "definition": "You have it\nYou have/ukan it"
+        }
+      ],
+      "chips": [
+        "What",
+        "did",
+        "you",
+        "write",
+        "with",
+        "it",
+        "sit",
+        "bit",
+        "hat"
+      ],
+      "solutions": [
+        [
+          "What",
+          "did",
+          "you",
+          "write",
+          "with"
+        ],
+        [
+          "With",
+          "what",
+          "did",
+          "you",
+          "write"
+        ]
+      ],
+      "formattedSolution": "What did you write with?",
+      "id": "0429e88c4cfc",
+      "priority": 2,
+      "group": "b3c4f7dfa098"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Nik boligrafoarekin idatzi nuen.",
+      "meaningInSourceLanguage": "I wrote with a pen.",
+      "id": "3e0c979deaf6",
+      "priority": 0,
+      "group": "8ce4281764fc"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "I",
+          "definition": "ni"
+        },
+        {
+          "word": "wrote",
+          "definition": "idatzi"
+        },
+        {
+          "word": "with",
+          "definition": "Norekin case"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "pen.",
+          "definition": "boligrafo"
+        }
+      ],
+      "chips": [
+        "Nik",
+        "boligrafoarekin",
+        "idatzi",
+        "nuen",
+        "biak",
+        "ireki",
+        "daki"
+      ],
+      "solutions": [
+        [
+          "Nik",
+          "boligrafoarekin",
+          "idatzi",
+          "nuen"
+        ],
+        [
+          "Boligrafoarekin",
+          "idatzi",
+          "nuen"
+        ]
+      ],
+      "formattedSolution": "Nik boligrafoarekin idatzi nuen.",
+      "id": "8accce49d732",
+      "priority": 2,
+      "group": "8ce4281764fc"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Nik",
+          "definition": "I"
+        },
+        {
+          "word": "boligrafoarekin",
+          "definition": "With a pen"
+        },
+        {
+          "word": "idatzi",
+          "definition": "write\nwrite (command)\nwrote"
+        },
+        {
+          "word": "nuen.",
+          "definition": "I had it"
+        }
+      ],
+      "chips": [
+        "I",
+        "wrote",
+        "with",
+        "a",
+        "pen",
+        "it",
+        "at",
+        "wet",
+        "He"
+      ],
+      "solutions": [
+        [
+          "I",
+          "wrote",
+          "with",
+          "a",
+          "pen"
+        ]
+      ],
+      "formattedSolution": "I wrote with a pen.",
+      "id": "34b7fb8b6a4d",
+      "priority": 2,
+      "group": "8ce4281764fc"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Zerekin zu ari zinen jolasten?",
+      "meaningInSourceLanguage": "What were you playing with?",
+      "id": "d1b0ba5ef82b",
+      "priority": 0,
+      "group": "29b7b47c578c"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "What",
+          "definition": "zer"
+        },
+        {
+          "word": "were",
+          "definition": "geunden (we) (egon)\nginen\nginen (izan)\nzeuden (they) (egon)\nzeunden  (you) (egon)\nzeundeten (you (plural)) (egon)\nzinen\nzinen (izan)\nzineten\nzineten (izan)\nziren\nziren (izan)"
+        },
+        {
+          "word": "you",
+          "definition": "zu\nzuek"
+        },
+        {
+          "word": "playing",
+          "definition": "jolasten\njostatzen\njotzea"
+        },
+        {
+          "word": "with?",
+          "definition": "Norekin case"
+        }
+      ],
+      "chips": [
+        "Zerekin",
+        "zu",
+        "ari",
+        "zinen",
+        "jolasten",
+        "zen",
+        "ziren",
+        "zuen",
+        "ere"
+      ],
+      "solutions": [
+        [
+          "Zerekin",
+          "zu",
+          "ari",
+          "zinen",
+          "jolasten"
+        ],
+        [
+          "Zerekin",
+          "ari",
+          "zinen",
+          "jolasten"
+        ]
+      ],
+      "formattedSolution": "Zerekin zu ari zinen jolasten?",
+      "id": "28ae9fb348af",
+      "priority": 2,
+      "group": "29b7b47c578c"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Zerekin",
+          "definition": "With what"
+        },
+        {
+          "word": "zu",
+          "definition": "you"
+        },
+        {
+          "word": "ari",
+          "definition": "present perfect verb form"
+        },
+        {
+          "word": "zinen",
+          "definition": "were\nyou were"
+        },
+        {
+          "word": "jolasten?",
+          "definition": "playing"
+        }
+      ],
+      "chips": [
+        "What",
+        "were",
+        "you",
+        "playing",
+        "with",
+        "hat",
+        "what",
+        "wet",
+        "wine"
+      ],
+      "solutions": [
+        [
+          "What",
+          "were",
+          "you",
+          "playing",
+          "with"
+        ],
+        [
+          "With",
+          "what",
+          "were",
+          "you",
+          "playing"
+        ]
+      ],
+      "formattedSolution": "What were you playing with?",
+      "id": "13a7d87f8240",
+      "priority": 2,
+      "group": "29b7b47c578c"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Nik baloi batekin jolasten ari nintzen.",
+      "meaningInSourceLanguage": "I was playing with a ball.",
+      "id": "8ad2167555ce",
+      "priority": 0,
+      "group": "2b29ce92e684"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "I",
+          "definition": "ni"
+        },
+        {
+          "word": "was",
+          "definition": "nengoen(I)(egon)\nnintzen\nzegoen(he,she,it) (egon)\nzen"
+        },
+        {
+          "word": "playing",
+          "definition": "jolasten\njostatzen\njotzea"
+        },
+        {
+          "word": "with",
+          "definition": "Norekin case"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "ball.",
+          "definition": "baloi"
+        }
+      ],
+      "chips": [
+        "Nik",
+        "baloi",
+        "batekin",
+        "jolasten",
+        "ari",
+        "nintzen",
+        "bati",
+        "jaten",
+        "batek",
+        "ate",
+        "bat"
+      ],
+      "solutions": [
+        [
+          "Nik",
+          "baloi",
+          "batekin",
+          "jolasten",
+          "ari",
+          "nintzen"
+        ],
+        [
+          "Baloi",
+          "batekin",
+          "jolasten",
+          "ari",
+          "nintzen"
+        ]
+      ],
+      "formattedSolution": "Nik baloi batekin jolasten ari nintzen.",
+      "id": "0482d97b63e8",
+      "priority": 2,
+      "group": "2b29ce92e684"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Nik",
+          "definition": "I"
+        },
+        {
+          "word": "baloi",
+          "definition": "ball"
+        },
+        {
+          "word": "batekin",
+          "definition": "With one"
+        },
+        {
+          "word": "jolasten",
+          "definition": "playing"
+        },
+        {
+          "word": "ari",
+          "definition": "present perfect verb form"
+        },
+        {
+          "word": "nintzen.",
+          "definition": "I was\nwas"
+        }
+      ],
+      "chips": [
+        "I",
+        "was",
+        "playing",
+        "with",
+        "a",
+        "ball",
+        "an",
+        "at",
+        "am",
+        "lay",
+        "man"
+      ],
+      "solutions": [
+        [
+          "I",
+          "was",
+          "playing",
+          "with",
+          "a",
+          "ball"
+        ]
+      ],
+      "formattedSolution": "I was playing with a ball.",
+      "id": "947317baf10a",
+      "priority": 2,
+      "group": "2b29ce92e684"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Zerekin zuk jolasten duzu?",
+      "meaningInSourceLanguage": "What do you play with?",
+      "id": "266278c25d10",
+      "priority": 0,
+      "group": "35e9d7c4cbf2"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "What",
+          "definition": "zer"
+        },
+        {
+          "word": "do",
+          "definition": "egingo (future)\negiteko (in order to do/make)\negiten\negiten (present)\nnot translated"
+        },
+        {
+          "word": "you",
+          "definition": "zu\nzuek"
+        },
+        {
+          "word": "play",
+          "definition": "jolasten\njolastera\njotzea"
+        },
+        {
+          "word": "with?",
+          "definition": "Norekin case"
+        }
+      ],
+      "chips": [
+        "Zerekin",
+        "zuk",
+        "jolasten",
+        "duzu",
+        "Zuek",
+        "zuen",
+        "zen"
+      ],
+      "solutions": [
+        [
+          "Zerekin",
+          "zuk",
+          "jolasten",
+          "duzu"
+        ],
+        [
+          "Zerekin",
+          "jolasten",
+          "duzu"
+        ]
+      ],
+      "formattedSolution": "Zerekin zuk jolasten duzu?",
+      "id": "b3e9d06a22bc",
+      "priority": 2,
+      "group": "35e9d7c4cbf2"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Zerekin",
+          "definition": "With what"
+        },
+        {
+          "word": "zuk",
+          "definition": "you"
+        },
+        {
+          "word": "jolasten",
+          "definition": "playing"
+        },
+        {
+          "word": "duzu?",
+          "definition": "You have it\nYou have/ukan it"
+        }
+      ],
+      "chips": [
+        "What",
+        "do",
+        "you",
+        "play",
+        "with",
+        "hat",
+        "at",
+        "hot",
+        "lot"
+      ],
+      "solutions": [
+        [
+          "What",
+          "do",
+          "you",
+          "play",
+          "with"
+        ],
+        [
+          "With",
+          "what",
+          "do",
+          "you",
+          "play"
+        ]
+      ],
+      "formattedSolution": "What do you play with?",
+      "id": "a6735890a256",
+      "priority": 2,
+      "group": "35e9d7c4cbf2"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Nik baloiarekin jolasten dut.",
+      "meaningInSourceLanguage": "I play with a ball.",
+      "id": "eea6cb643d10",
+      "priority": 0,
+      "group": "c2ae79e67cd6"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "I",
+          "definition": "ni"
+        },
+        {
+          "word": "play",
+          "definition": "jolasten\njolastera\njotzea"
+        },
+        {
+          "word": "with",
+          "definition": "Norekin case"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "ball.",
+          "definition": "baloi"
+        }
+      ],
+      "chips": [
+        "Nik",
+        "baloiarekin",
+        "jolasten",
+        "dut",
+        "lan",
+        "bat",
+        "Non"
+      ],
+      "solutions": [
+        [
+          "Nik",
+          "baloiarekin",
+          "jolasten",
+          "dut"
+        ],
+        [
+          "Baloiarekin",
+          "jolasten",
+          "dut"
+        ]
+      ],
+      "formattedSolution": "Nik baloiarekin jolasten dut.",
+      "id": "72018fa08753",
+      "priority": 2,
+      "group": "c2ae79e67cd6"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Nik",
+          "definition": "I"
+        },
+        {
+          "word": "baloiarekin",
+          "definition": "With a ball"
+        },
+        {
+          "word": "jolasten",
+          "definition": "playing"
+        },
+        {
+          "word": "dut.",
+          "definition": "I have it\nI have/ukan it"
+        }
+      ],
+      "chips": [
+        "I",
+        "play",
+        "with",
+        "a",
+        "ball",
+        "at",
+        "am",
+        "all",
+        "an"
+      ],
+      "solutions": [
+        [
+          "I",
+          "play",
+          "with",
+          "a",
+          "ball"
+        ]
+      ],
+      "formattedSolution": "I play with a ball.",
+      "id": "81fcb22c0bd4",
+      "priority": 2,
+      "group": "c2ae79e67cd6"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Egunero erizaina bere txakurrarekin ibiltzen da.",
+      "meaningInSourceLanguage": "Every day the nurse walks with her dog.",
+      "id": "ee3256d6482c",
+      "priority": 0,
+      "group": "97e5532e94ce"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Every",
+          "definition": "-ero"
+        },
+        {
+          "word": "day",
+          "definition": "egun"
+        },
+        {
+          "word": "the",
+          "definition": "-a"
+        },
+        {
+          "word": "nurse",
+          "definition": "erizain\nerizaina"
+        },
+        {
+          "word": "walks",
+          "definition": "ibiliko (izan future)\nibiltzen (izan present)"
+        },
+        {
+          "word": "with",
+          "definition": "Norekin case"
+        },
+        {
+          "word": "her",
+          "definition": "bere"
+        },
+        {
+          "word": "dog.",
+          "definition": "txakur\ntxakurra"
+        }
+      ],
+      "chips": [
+        "Egunero",
+        "erizaina",
+        "bere",
+        "txakurrarekin",
+        "ibiltzen",
+        "da",
+        "ere",
+        "tren",
+        "izan",
+        "zen",
+        "gizen"
+      ],
+      "solutions": [
+        [
+          "Egunero",
+          "erizaina",
+          "bere",
+          "txakurrarekin",
+          "ibiltzen",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Egunero erizaina bere txakurrarekin ibiltzen da.",
+      "id": "d4126989e7b4",
+      "priority": 2,
+      "group": "97e5532e94ce"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Egunero",
+          "definition": "every day"
+        },
+        {
+          "word": "erizaina",
+          "definition": "nurse"
+        },
+        {
+          "word": "bere",
+          "definition": "her\nhers\nhis\nhis/hers/its\nits"
+        },
+        {
+          "word": "txakurrarekin",
+          "definition": "With a dog"
+        },
+        {
+          "word": "ibiltzen",
+          "definition": "walk\nwalking"
+        },
+        {
+          "word": "da.",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "Every",
+        "day",
+        "the",
+        "nurse",
+        "walks",
+        "with",
+        "her",
+        "dog",
+        "wer",
+        "was",
+        "dry",
+        "are",
+        "She",
+        "car",
+        "The"
+      ],
+      "solutions": [
+        [
+          "Every",
+          "day",
+          "the",
+          "nurse",
+          "walks",
+          "with",
+          "her",
+          "dog"
+        ]
+      ],
+      "formattedSolution": "Every day the nurse walks with her dog.",
+      "id": "156fb99c04d7",
+      "priority": 2,
+      "group": "97e5532e94ce"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Mendietan ni nabil nire txakurrarekin.",
+      "meaningInSourceLanguage": "I walk in the mountains with my dog.",
+      "id": "297d86ae647a",
+      "priority": 0,
+      "group": "879f98296a1b"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "I",
+          "definition": "ni"
+        },
+        {
+          "word": "walk",
+          "definition": "ibiliko\nibiliko (izan future)\nibiltzen\nibiltzen (izan present)"
+        },
+        {
+          "word": "in",
+          "definition": "Inessive case\nNON case, not a word"
+        },
+        {
+          "word": "the",
+          "definition": "-a"
+        },
+        {
+          "word": "mountains",
+          "definition": "mendiak"
+        },
+        {
+          "word": "with",
+          "definition": "Norekin case"
+        },
+        {
+          "word": "my",
+          "definition": "nire"
+        },
+        {
+          "word": "dog.",
+          "definition": "txakur\ntxakurra"
+        }
+      ],
+      "chips": [
+        "Mendietan",
+        "ni",
+        "nabil",
+        "nire",
+        "txakurrarekin",
+        "niri",
+        "naiz",
+        "nirea",
+        "nik"
+      ],
+      "solutions": [
+        [
+          "Mendietan",
+          "ni",
+          "nabil",
+          "nire",
+          "txakurrarekin"
+        ],
+        [
+          "Mendietan",
+          "nabil",
+          "nire",
+          "txakurrarekin"
+        ]
+      ],
+      "formattedSolution": "Mendietan ni nabil nire txakurrarekin.",
+      "id": "b0a05cc3bb06",
+      "priority": 2,
+      "group": "879f98296a1b"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Mendietan",
+          "definition": "on the mountains\nupon the mountain"
+        },
+        {
+          "word": "ni",
+          "definition": "I\nme"
+        },
+        {
+          "word": "nabil",
+          "definition": "I am walking"
+        },
+        {
+          "word": "nire",
+          "definition": "my"
+        },
+        {
+          "word": "txakurrarekin.",
+          "definition": "With a dog"
+        }
+      ],
+      "chips": [
+        "I",
+        "walk",
+        "in",
+        "the",
+        "mountains",
+        "with",
+        "my",
+        "dog",
+        "is",
+        "it",
+        "an",
+        "on",
+        "to",
+        "a",
+        "man"
+      ],
+      "solutions": [
+        [
+          "I",
+          "walk",
+          "in",
+          "the",
+          "mountains",
+          "with",
+          "my",
+          "dog"
+        ]
+      ],
+      "formattedSolution": "I walk in the mountains with my dog.",
+      "id": "1f3e0319ba61",
+      "priority": 2,
+      "group": "879f98296a1b"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": "norekin",
+      "meaningInSourceLanguage": "With whom",
+      "id": "97d616ca9808",
+      "priority": 0,
+      "group": "b211372995eb"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": [
+        "norekin"
+      ],
+      "phrase": [
+        {
+          "word": "With",
+          "definition": "Norekin case"
+        },
+        {
+          "word": "whom",
+          "definition": "Norekin (with whom)"
+        }
+      ],
+      "id": "84ed2af346c2",
+      "priority": 1,
+      "group": "b211372995eb"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": "zerekin",
+      "meaningInSourceLanguage": "With what",
+      "id": "0360dddd46b9",
+      "priority": 0,
+      "group": "647e86ffed4e"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": [
+        "zerekin"
+      ],
+      "phrase": [
+        {
+          "word": "With",
+          "definition": "Norekin case"
+        },
+        {
+          "word": "what",
+          "definition": "zer"
+        }
+      ],
+      "id": "f03d991ecfb4",
+      "priority": 1,
+      "group": "647e86ffed4e"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": "Mirenekin",
+      "meaningInSourceLanguage": "With Miren",
+      "id": "d40b7cc4f4fb",
+      "priority": 0,
+      "group": "eb4cc33636aa"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": [
+        "Mirenekin"
+      ],
+      "phrase": [
+        {
+          "word": "With",
+          "definition": "Norekin case"
+        },
+        {
+          "word": "Miren",
+          "definition": "Miren\nMiren (female name)\nMiren (name)"
+        }
+      ],
+      "id": "e5903aa5ce76",
+      "priority": 1,
+      "group": "eb4cc33636aa"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": "Mikeleking",
+      "meaningInSourceLanguage": "With Mikel",
+      "id": "651dba2e001e",
+      "priority": 0,
+      "group": "0f5c18d94464"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": [
+        "Mikeleking"
+      ],
+      "phrase": [
+        {
+          "word": "With",
+          "definition": "Norekin case"
+        },
+        {
+          "word": "Mikel",
+          "definition": "Mikel\nMikel (male name)\nMikel (name)\nMikel(male name)"
+        }
+      ],
+      "id": "f3597d2c784c",
+      "priority": 1,
+      "group": "0f5c18d94464"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": "boligrafoarekin",
+      "meaningInSourceLanguage": "With a pen",
+      "id": "c1d5998e832a",
+      "priority": 0,
+      "group": "1b8ee6762427"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": [
+        "boligrafoarekin"
+      ],
+      "phrase": [
+        {
+          "word": "With",
+          "definition": "Norekin case"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "pen",
+          "definition": "boligrafo"
+        }
+      ],
+      "id": "c1a13b19f14d",
+      "priority": 1,
+      "group": "1b8ee6762427"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": "batekin",
+      "meaningInSourceLanguage": "With one",
+      "id": "fb3d4a57d11c",
+      "priority": 0,
+      "group": "a1d6c83139be"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": [
+        "batekin"
+      ],
+      "phrase": [
+        {
+          "word": "With",
+          "definition": "Norekin case"
+        },
+        {
+          "word": "one",
+          "definition": "bat"
+        }
+      ],
+      "id": "b13251081494",
+      "priority": 1,
+      "group": "a1d6c83139be"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": "baloiarekin",
+      "meaningInSourceLanguage": "With a ball",
+      "id": "698c077d04d4",
+      "priority": 0,
+      "group": "98fa91307466"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": [
+        "baloiarekin"
+      ],
+      "phrase": [
+        {
+          "word": "With",
+          "definition": "Norekin case"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "ball",
+          "definition": "baloi"
+        }
+      ],
+      "id": "ab002640594a",
+      "priority": 1,
+      "group": "98fa91307466"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": "txakurrarekin",
+      "meaningInSourceLanguage": "With a dog",
+      "id": "afecf7cfbc16",
+      "priority": 0,
+      "group": "0c424544a0ba"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": [
+        "txakurrarekin"
+      ],
+      "phrase": [
+        {
+          "word": "With",
+          "definition": "Norekin case"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "dog",
+          "definition": "txakur\ntxakurra"
+        }
+      ],
+      "id": "db385f008aef",
+      "priority": 1,
+      "group": "0c424544a0ba"
+    }
+  ]
+}

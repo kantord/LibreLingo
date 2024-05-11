@@ -1,0 +1,638 @@
+{
+  "id": "38c2ea1c36d2",
+  "levels": 3,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Bon Nuit",
+      "meaningInSourceLanguage": "Good Night",
+      "id": "200f08f8e8b9",
+      "priority": 0,
+      "group": "2028cffbc89f"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Bon Nuit",
+      "meaning": "Good Night",
+      "audio": "077d7147031d7d763043701fc330c9f8a3705f0d429c51f9590f738df26e82c9",
+      "id": "cb47fbb2c052",
+      "priority": 1,
+      "group": "2028cffbc89f"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Good",
+          "definition": "Bon"
+        },
+        {
+          "word": "Night",
+          "definition": "nuit"
+        }
+      ],
+      "chips": [
+        "Bon",
+        "Nuit",
+        "Non",
+        "Nom"
+      ],
+      "solutions": [
+        [
+          "Bon",
+          "Nuit"
+        ]
+      ],
+      "formattedSolution": "Bon Nuit",
+      "id": "48b2d41fd802",
+      "priority": 2,
+      "group": "2028cffbc89f"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Bon",
+          "definition": "good"
+        },
+        {
+          "word": "Nuit",
+          "definition": "night"
+        }
+      ],
+      "chips": [
+        "Good",
+        "Night",
+        "good",
+        "night"
+      ],
+      "solutions": [
+        [
+          "Good",
+          "Night"
+        ]
+      ],
+      "formattedSolution": "Good Night",
+      "id": "10eb9cafa2db",
+      "priority": 2,
+      "group": "2028cffbc89f"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Je",
+      "meaningInSourceLanguage": "I",
+      "id": "66c4ae091786",
+      "priority": 0,
+      "group": "62b7ee502964"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Je",
+      "meaning": "I",
+      "audio": "f46588b1092345d3747e211bb2aa094c8b4f1b86d7bbd32245d7326c1e0c8e35",
+      "id": "b9de8ec9137c",
+      "priority": 1,
+      "group": "62b7ee502964"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Nom",
+      "meaningInSourceLanguage": "name",
+      "id": "cd1ec88f0166",
+      "priority": 0,
+      "group": "e367445383ba"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Nom",
+      "meaning": "name",
+      "audio": "b8a8d6c329900aebf5e5bf8501a3027d384941fc9c110a0575a3fcf306180744",
+      "id": "b5b435d68515",
+      "priority": 1,
+      "group": "e367445383ba"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Merci",
+      "meaningInSourceLanguage": "Thanks",
+      "id": "df10c185cda8",
+      "priority": 0,
+      "group": "84be523d0f1a"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Merci",
+      "meaning": "Thanks",
+      "audio": "50d59ab0633d72bd0aa0daca63424a93909487639bdd6188717518759012389b",
+      "id": "1680fce55253",
+      "priority": 1,
+      "group": "84be523d0f1a"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Salut, je suis Cecille.",
+      "meaningInSourceLanguage": "Hello, I am Cecille.",
+      "id": "f052406de081",
+      "priority": 0,
+      "group": "b59c93a5a035"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Salut, je suis Cecille.",
+      "meaning": "Hello, I am Cecille.",
+      "audio": "fd5c5956ea756bb403b30fafa09715be6641987c985cd1683bbb7da088547a49",
+      "id": "58f8134751e9",
+      "priority": 1,
+      "group": "b59c93a5a035"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Hello,",
+          "definition": "Salut"
+        },
+        {
+          "word": "I",
+          "definition": "Je"
+        },
+        {
+          "word": "am",
+          "definition": "suis"
+        },
+        {
+          "word": "Cecille.",
+          "definition": "Cecille (name)"
+        }
+      ],
+      "chips": [
+        "Salut",
+        "je",
+        "suis",
+        "Cecille",
+        "le",
+        "sale",
+        "scie"
+      ],
+      "solutions": [
+        [
+          "Salut",
+          "je",
+          "suis",
+          "Cecille"
+        ]
+      ],
+      "formattedSolution": "Salut, je suis Cecille.",
+      "id": "a02f426b15a5",
+      "priority": 2,
+      "group": "b59c93a5a035"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Salut,",
+          "definition": "Hello"
+        },
+        {
+          "word": "je",
+          "definition": "I"
+        },
+        {
+          "word": "suis",
+          "definition": "am"
+        },
+        {
+          "word": "Cecille.",
+          "definition": "Cecille (nom)\nCeclille (nom)"
+        }
+      ],
+      "chips": [
+        "Hello",
+        "I",
+        "am",
+        "Cecille",
+        "He",
+        "a",
+        "We"
+      ],
+      "solutions": [
+        [
+          "Hello",
+          "I",
+          "am",
+          "Cecille"
+        ]
+      ],
+      "formattedSolution": "Hello, I am Cecille.",
+      "id": "7b0b97717d2f",
+      "priority": 2,
+      "group": "b59c93a5a035"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Merci et bon nuit",
+      "meaningInSourceLanguage": "Thanks and good night",
+      "id": "af28dfa54f90",
+      "priority": 0,
+      "group": "1e48779cfbb3"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Merci et bon nuit",
+      "meaning": "Thanks and good night",
+      "audio": "5921c572ae7635313f27df60a25dc4b7c1baa02d625135d137d565e63051d2ed",
+      "id": "4ea0a9977d5e",
+      "priority": 1,
+      "group": "1e48779cfbb3"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Thanks",
+          "definition": "Merci"
+        },
+        {
+          "word": "and",
+          "definition": "et"
+        },
+        {
+          "word": "good",
+          "definition": "Bon"
+        },
+        {
+          "word": "night",
+          "definition": "nuit"
+        }
+      ],
+      "chips": [
+        "Merci",
+        "et",
+        "bon",
+        "nuit",
+        "est",
+        "en",
+        "eu"
+      ],
+      "solutions": [
+        [
+          "Merci",
+          "et",
+          "bon",
+          "nuit"
+        ]
+      ],
+      "formattedSolution": "Merci et bon nuit",
+      "id": "17d63299275c",
+      "priority": 2,
+      "group": "1e48779cfbb3"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Merci",
+          "definition": "Thanks"
+        },
+        {
+          "word": "et",
+          "definition": "and"
+        },
+        {
+          "word": "bon",
+          "definition": "good"
+        },
+        {
+          "word": "nuit",
+          "definition": "night"
+        }
+      ],
+      "chips": [
+        "Thanks",
+        "and",
+        "good",
+        "night",
+        "an",
+        "want",
+        "got"
+      ],
+      "solutions": [
+        [
+          "Thanks",
+          "and",
+          "good",
+          "night"
+        ]
+      ],
+      "formattedSolution": "Thanks and good night",
+      "id": "0779de1814fc",
+      "priority": 2,
+      "group": "1e48779cfbb3"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Comment t’appelles-tu ?",
+      "meaningInSourceLanguage": "What's your name?",
+      "id": "a4d0ae39b994",
+      "priority": 0,
+      "group": "d36ae1f5d540"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Comment t’appelles-tu ?",
+      "meaning": "What's your name?",
+      "audio": "01ac30389d9254d9306f8fe54bde19cc6e626ff1d489c130ac67b4f47181a1e1",
+      "id": "084fa1b89d3f",
+      "priority": 1,
+      "group": "d36ae1f5d540"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "What's",
+          "definition": "Comment"
+        },
+        {
+          "word": "your",
+          "definition": "ton\nvotre"
+        },
+        {
+          "word": "name?",
+          "definition": "nom"
+        }
+      ],
+      "chips": [
+        "Comment",
+        "t’appelles-tu",
+        "",
+        "et",
+        "est"
+      ],
+      "solutions": [
+        [
+          "Comment",
+          "t’appelles-tu",
+          ""
+        ]
+      ],
+      "formattedSolution": "Comment t’appelles-tu ?",
+      "id": "65be14024022",
+      "priority": 2,
+      "group": "d36ae1f5d540"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Comment",
+          "definition": "What's"
+        },
+        {
+          "word": "t’appelles-tu",
+          "definition": "your name"
+        }
+      ],
+      "chips": [
+        "What's",
+        "your",
+        "name",
+        "have",
+        "eats"
+      ],
+      "solutions": [
+        [
+          "What's",
+          "your",
+          "name"
+        ]
+      ],
+      "formattedSolution": "What's your name?",
+      "id": "f8a586d102c9",
+      "priority": 2,
+      "group": "d36ae1f5d540"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Je m’appelle Cecille.",
+      "meaningInSourceLanguage": "My name is Cecille.",
+      "id": "2a0e10fa038b",
+      "priority": 0,
+      "group": "74cf64f69418"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Je m’appelle Cecille.",
+      "meaning": "My name is Cecille.",
+      "audio": "94c31f9cac52b43065bf2becdca25fbbebd509b943c8b77d0c28fa6366802254",
+      "id": "4905200311db",
+      "priority": 1,
+      "group": "74cf64f69418"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "My",
+          "definition": "ma\nmes\nmon/ma"
+        },
+        {
+          "word": "name",
+          "definition": "nom"
+        },
+        {
+          "word": "is",
+          "definition": "es\nest"
+        },
+        {
+          "word": "Cecille.",
+          "definition": "Cecille (name)"
+        }
+      ],
+      "chips": [
+        "Je",
+        "m’appelle",
+        "Cecille",
+        "belle",
+        "fille"
+      ],
+      "solutions": [
+        [
+          "Je",
+          "m’appelle",
+          "Cecille"
+        ]
+      ],
+      "formattedSolution": "Je m’appelle Cecille.",
+      "id": "1bf5ada794d2",
+      "priority": 2,
+      "group": "74cf64f69418"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Je",
+          "definition": "I"
+        },
+        {
+          "word": "m’appelle",
+          "definition": "my name / i am called"
+        },
+        {
+          "word": "Cecille.",
+          "definition": "Cecille (nom)\nCeclille (nom)"
+        }
+      ],
+      "chips": [
+        "My",
+        "name",
+        "is",
+        "Cecille",
+        "me",
+        "am",
+        "in"
+      ],
+      "solutions": [
+        [
+          "My",
+          "name",
+          "is",
+          "Cecille"
+        ]
+      ],
+      "formattedSolution": "My name is Cecille.",
+      "id": "da1700683cfa",
+      "priority": 2,
+      "group": "74cf64f69418"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Cecille est un joli nom.",
+      "meaningInSourceLanguage": "Cecille is a nice name.",
+      "id": "477fbb661d97",
+      "priority": 0,
+      "group": "1b54fd214dce"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Cecille est un joli nom.",
+      "meaning": "Cecille is a nice name.",
+      "audio": "aea06a554603aed51b8b94622e99054deae7caca19691d226045d6b5fe4e3bd4",
+      "id": "2a8993f837f8",
+      "priority": 1,
+      "group": "1b54fd214dce"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Cecille",
+          "definition": "Cecille (name)"
+        },
+        {
+          "word": "is",
+          "definition": "es\nest"
+        },
+        {
+          "word": "a",
+          "definition": "un\nune\nune (feminin) or un (masculin)"
+        },
+        {
+          "word": "nice",
+          "definition": "beaux\nbelle\njoli\nsympa"
+        },
+        {
+          "word": "name.",
+          "definition": "nom"
+        }
+      ],
+      "chips": [
+        "Cecille",
+        "est",
+        "un",
+        "joli",
+        "nom",
+        "et",
+        "le",
+        "en",
+        "on"
+      ],
+      "solutions": [
+        [
+          "Cecille",
+          "est",
+          "un",
+          "joli",
+          "nom"
+        ]
+      ],
+      "formattedSolution": "Cecille est un joli nom.",
+      "id": "e4cf40f0e3ce",
+      "priority": 2,
+      "group": "1b54fd214dce"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Cecille",
+          "definition": "Cecille (nom)\nCeclille (nom)"
+        },
+        {
+          "word": "est",
+          "definition": "is"
+        },
+        {
+          "word": "un",
+          "definition": "a"
+        },
+        {
+          "word": "joli",
+          "definition": "nice / beautiful"
+        },
+        {
+          "word": "nom.",
+          "definition": "name"
+        }
+      ],
+      "chips": [
+        "Cecille",
+        "is",
+        "a",
+        "nice",
+        "name",
+        "me",
+        "am",
+        "in",
+        "are"
+      ],
+      "solutions": [
+        [
+          "Cecille",
+          "is",
+          "a",
+          "nice",
+          "name"
+        ]
+      ],
+      "formattedSolution": "Cecille is a nice name.",
+      "id": "e747d7823c46",
+      "priority": 2,
+      "group": "1b54fd214dce"
+    }
+  ]
+}

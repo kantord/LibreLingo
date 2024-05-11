@@ -1,0 +1,484 @@
+{
+  "id": "a3ab90692df4",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "ik zie de maan",
+      "meaningInSourceLanguage": "I see the moon.",
+      "id": "90ec86e16487",
+      "priority": 0,
+      "group": "e30a05f0dba5"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "I",
+          "definition": "Ik"
+        },
+        {
+          "word": "see",
+          "definition": "zie"
+        },
+        {
+          "word": "the",
+          "definition": "de"
+        },
+        {
+          "word": "moon.",
+          "definition": "de maan\nmaan"
+        }
+      ],
+      "chips": [
+        "ik",
+        "zie",
+        "de",
+        "maan",
+        "in",
+        "me",
+        "is"
+      ],
+      "solutions": [
+        [
+          "ik",
+          "zie",
+          "de",
+          "maan"
+        ]
+      ],
+      "formattedSolution": "ik zie de maan",
+      "id": "9a34ba20abe2",
+      "priority": 2,
+      "group": "e30a05f0dba5"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "ik",
+          "definition": "I"
+        },
+        {
+          "word": "zie",
+          "definition": "sehen"
+        },
+        {
+          "word": "de",
+          "definition": "the"
+        },
+        {
+          "word": "maan",
+          "definition": "Mond"
+        }
+      ],
+      "chips": [
+        "I",
+        "see",
+        "the",
+        "moon",
+        "me",
+        "See",
+        "son"
+      ],
+      "solutions": [
+        [
+          "I",
+          "see",
+          "the",
+          "moon"
+        ]
+      ],
+      "formattedSolution": "I see the moon.",
+      "id": "2ed8fb7e4bd1",
+      "priority": 2,
+      "group": "e30a05f0dba5"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "hij is prachtig.",
+      "meaningInSourceLanguage": "It's nice.",
+      "id": "8c79e5ee4f68",
+      "priority": 0,
+      "group": "4379b31a4251"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "It's",
+          "definition": "Het is"
+        },
+        {
+          "word": "nice.",
+          "definition": "Mooi\naardig\nmooie"
+        }
+      ],
+      "chips": [
+        "hij",
+        "is",
+        "prachtig",
+        "in",
+        "Hij"
+      ],
+      "solutions": [
+        [
+          "hij",
+          "is",
+          "prachtig"
+        ]
+      ],
+      "formattedSolution": "hij is prachtig.",
+      "id": "6307b9a7926f",
+      "priority": 2,
+      "group": "4379b31a4251"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "hij",
+          "definition": "He"
+        },
+        {
+          "word": "is",
+          "definition": "eats\nis"
+        },
+        {
+          "word": "prachtig.",
+          "definition": "nice"
+        }
+      ],
+      "chips": [
+        "It's",
+        "nice",
+        "name",
+        "live"
+      ],
+      "solutions": [
+        [
+          "It's",
+          "nice"
+        ]
+      ],
+      "formattedSolution": "It's nice.",
+      "id": "8b20286fafac",
+      "priority": 2,
+      "group": "4379b31a4251"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "het sneeuwt.",
+      "meaningInSourceLanguage": "It's snowing.",
+      "id": "d23df3dace41",
+      "priority": 0,
+      "group": "0b3a08ccfdf1"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "It's",
+          "definition": "Het is"
+        },
+        {
+          "word": "snowing.",
+          "definition": "sneeuwt"
+        }
+      ],
+      "chips": [
+        "het",
+        "sneeuwt",
+        "eet",
+        "heet"
+      ],
+      "solutions": [
+        [
+          "het",
+          "sneeuwt"
+        ]
+      ],
+      "formattedSolution": "het sneeuwt.",
+      "id": "ca978623385c",
+      "priority": 2,
+      "group": "0b3a08ccfdf1"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "het",
+          "definition": "it"
+        },
+        {
+          "word": "sneeuwt.",
+          "definition": "snowing\nsnows"
+        }
+      ],
+      "chips": [
+        "It's",
+        "snowing",
+        "snows",
+        "sing"
+      ],
+      "solutions": [
+        [
+          "It's",
+          "snowing"
+        ]
+      ],
+      "formattedSolution": "It's snowing.",
+      "id": "cd7f7bed0efb",
+      "priority": 2,
+      "group": "0b3a08ccfdf1"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Er zijn wat wolken in de lucht.",
+      "meaningInSourceLanguage": "There are a few clouds at the sky.",
+      "id": "d5ad02bfc720",
+      "priority": 0,
+      "group": "3f7678faf272"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "There",
+          "definition": "Er zijn"
+        },
+        {
+          "word": "are",
+          "definition": "zijn"
+        },
+        {
+          "word": "a",
+          "definition": "een"
+        },
+        {
+          "word": "few",
+          "definition": "weinig"
+        },
+        {
+          "word": "clouds",
+          "definition": "clouds"
+        },
+        {
+          "word": "at",
+          "definition": "in de"
+        },
+        {
+          "word": "the",
+          "definition": "de"
+        },
+        {
+          "word": "sky.",
+          "definition": "lucht"
+        }
+      ],
+      "chips": [
+        "Er",
+        "zijn",
+        "wat",
+        "wolken",
+        "in",
+        "de",
+        "lucht",
+        "en",
+        "je",
+        "ben",
+        "is",
+        "een",
+        "uit"
+      ],
+      "solutions": [
+        [
+          "Er",
+          "zijn",
+          "wat",
+          "wolken",
+          "in",
+          "de",
+          "lucht"
+        ]
+      ],
+      "formattedSolution": "Er zijn wat wolken in de lucht.",
+      "id": "c84e702b25ac",
+      "priority": 2,
+      "group": "3f7678faf272"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Er",
+          "definition": "There"
+        },
+        {
+          "word": "zijn",
+          "definition": "are\nhis"
+        },
+        {
+          "word": "wat",
+          "definition": "What"
+        },
+        {
+          "word": "wolken",
+          "definition": "clouds"
+        },
+        {
+          "word": "in",
+          "definition": "in"
+        },
+        {
+          "word": "de",
+          "definition": "the"
+        },
+        {
+          "word": "lucht.",
+          "definition": "sky"
+        }
+      ],
+      "chips": [
+        "There",
+        "are",
+        "a",
+        "few",
+        "clouds",
+        "at",
+        "the",
+        "sky",
+        "He",
+        "We",
+        "The",
+        "me",
+        "am",
+        "See",
+        "an"
+      ],
+      "solutions": [
+        [
+          "There",
+          "are",
+          "a",
+          "few",
+          "clouds",
+          "at",
+          "the",
+          "sky"
+        ]
+      ],
+      "formattedSolution": "There are a few clouds at the sky.",
+      "id": "aba0f0597859",
+      "priority": 2,
+      "group": "3f7678faf272"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "moon1.jpg",
+        "moon2.jpg",
+        "moon3.jpg"
+      ],
+      "formInTargetLanguage": "de maan",
+      "meaningInSourceLanguage": "moon",
+      "id": "9d671424d45e",
+      "priority": 0,
+      "group": "e43c061ba294"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "moon1.jpg",
+        "moon2.jpg",
+        "moon3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "de maan"
+      ],
+      "phrase": [
+        {
+          "word": "moon",
+          "definition": "de maan\nmaan"
+        }
+      ],
+      "id": "610891652a52",
+      "priority": 1,
+      "group": "e43c061ba294"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "hail1.jpg",
+        "hail1.jpg",
+        "hail1.jpg"
+      ],
+      "formInTargetLanguage": "hagel",
+      "meaningInSourceLanguage": "hail",
+      "id": "0c1b1d7bd6fe",
+      "priority": 0,
+      "group": "71207654ac2f"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "hail1.jpg",
+        "hail1.jpg",
+        "hail1.jpg"
+      ],
+      "formInTargetLanguage": [
+        "hagel"
+      ],
+      "phrase": [
+        {
+          "word": "hail",
+          "definition": "hagel"
+        }
+      ],
+      "id": "414d27a189bd",
+      "priority": 1,
+      "group": "71207654ac2f"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "tornado1.jpg",
+        "tornado1.jpg",
+        "tornado1.jpg"
+      ],
+      "formInTargetLanguage": "tornado",
+      "meaningInSourceLanguage": "tornado",
+      "id": "37ada3ffbbcb",
+      "priority": 0,
+      "group": "149e21936028"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "tornado1.jpg",
+        "tornado1.jpg",
+        "tornado1.jpg"
+      ],
+      "formInTargetLanguage": [
+        "tornado"
+      ],
+      "phrase": [
+        {
+          "word": "tornado",
+          "definition": "tornado"
+        }
+      ],
+      "id": "42f3241a2b93",
+      "priority": 1,
+      "group": "149e21936028"
+    }
+  ]
+}
