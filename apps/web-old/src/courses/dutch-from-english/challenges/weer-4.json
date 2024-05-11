@@ -1,0 +1,128 @@
+{
+  "id": "1bd54620400c",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Het is voorjaar.",
+      "meaningInSourceLanguage": "It's spring.",
+      "id": "4f6289d88b46",
+      "priority": 0,
+      "group": "8adaa1425f67"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "It's",
+          "definition": "Het is"
+        },
+        {
+          "word": "spring.",
+          "definition": "voorjaar"
+        }
+      ],
+      "chips": [
+        "Het",
+        "is",
+        "voorjaar",
+        "je",
+        "Hij"
+      ],
+      "solutions": [
+        [
+          "Het",
+          "is",
+          "voorjaar"
+        ]
+      ],
+      "formattedSolution": "Het is voorjaar.",
+      "id": "0ca0e1dd67e6",
+      "priority": 2,
+      "group": "8adaa1425f67"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Het",
+          "definition": "it"
+        },
+        {
+          "word": "is",
+          "definition": "eats\nis"
+        },
+        {
+          "word": "voorjaar.",
+          "definition": "spring"
+        }
+      ],
+      "chips": [
+        "It's",
+        "spring",
+        "sing",
+        "in"
+      ],
+      "solutions": [
+        [
+          "It's",
+          "spring"
+        ]
+      ],
+      "formattedSolution": "It's spring.",
+      "id": "a65f336773c1",
+      "priority": 2,
+      "group": "8adaa1425f67"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Voorjaar",
+      "meaningInSourceLanguage": "spring",
+      "id": "5ef56eb293a4",
+      "priority": 0,
+      "group": "258050b16319"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Zomer",
+      "meaningInSourceLanguage": "summer",
+      "id": "1ec869e7c5eb",
+      "priority": 0,
+      "group": "3132334b771b"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Herfst",
+      "meaningInSourceLanguage": "autumn",
+      "id": "4da038c5b7db",
+      "priority": 0,
+      "group": "90d975ab91ce"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "droog",
+      "meaningInSourceLanguage": "dry",
+      "id": "713ac799b183",
+      "priority": 0,
+      "group": "97e3c061713d"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "mild",
+      "meaningInSourceLanguage": "mild",
+      "id": "e5dd71482517",
+      "priority": 0,
+      "group": "0d1efa3501dc"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "bliksem",
+      "meaningInSourceLanguage": "lightning",
+      "id": "302c09abacf0",
+      "priority": 0,
+      "group": "a4afe0583dd0"
+    }
+  ]
+}

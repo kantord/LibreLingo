@@ -1,0 +1,572 @@
+{
+  "id": "d7279e4777cd",
+  "levels": 3,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Goedenavond",
+      "meaningInSourceLanguage": "Good Evening",
+      "id": "226a2204b8b9",
+      "priority": 0,
+      "group": "080c8ae7c76d"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "alsjeblieft",
+      "meaningInSourceLanguage": "please",
+      "id": "a7d85dc595aa",
+      "priority": 0,
+      "group": "c453c7d6abba"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Ik kom uit Den Haag",
+      "meaningInSourceLanguage": "I come from Den Haag.",
+      "id": "863205a9bcf5",
+      "priority": 0,
+      "group": "d4c86fb560f7"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "I",
+          "definition": "Ik"
+        },
+        {
+          "word": "come",
+          "definition": "kom"
+        },
+        {
+          "word": "from",
+          "definition": "uit"
+        },
+        {
+          "word": "Den",
+          "definition": "part of the word Den Haag"
+        },
+        {
+          "word": "Haag.",
+          "definition": "Haag (City)"
+        }
+      ],
+      "chips": [
+        "Ik",
+        "kom",
+        "uit",
+        "Den",
+        "Haag",
+        "in",
+        "ik",
+        "en",
+        "kan"
+      ],
+      "solutions": [
+        [
+          "Ik",
+          "kom",
+          "uit",
+          "Den",
+          "Haag"
+        ]
+      ],
+      "formattedSolution": "Ik kom uit Den Haag",
+      "id": "e2ca8a2c4f5e",
+      "priority": 2,
+      "group": "d4c86fb560f7"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Ik",
+          "definition": "I"
+        },
+        {
+          "word": "kom",
+          "definition": "come"
+        },
+        {
+          "word": "uit",
+          "definition": "from"
+        },
+        {
+          "word": "Den",
+          "definition": "part of the word Den Haag"
+        },
+        {
+          "word": "Haag",
+          "definition": "Haag (City)"
+        }
+      ],
+      "chips": [
+        "I",
+        "come",
+        "from",
+        "Den",
+        "Haag",
+        "am",
+        "He",
+        "Do",
+        "on"
+      ],
+      "solutions": [
+        [
+          "I",
+          "come",
+          "from",
+          "Den",
+          "Haag"
+        ]
+      ],
+      "formattedSolution": "I come from Den Haag.",
+      "id": "6a7416b79dbb",
+      "priority": 2,
+      "group": "d4c86fb560f7"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Goedenavond en bedankt.",
+      "meaningInSourceLanguage": "Good evening and thanks.",
+      "id": "65a1ef2672e2",
+      "priority": 0,
+      "group": "825248917dd4"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Good",
+          "definition": "goed\ngoede"
+        },
+        {
+          "word": "evening",
+          "definition": "avond"
+        },
+        {
+          "word": "and",
+          "definition": "en"
+        },
+        {
+          "word": "thanks.",
+          "definition": "bedankt"
+        }
+      ],
+      "chips": [
+        "Goedenavond",
+        "en",
+        "bedankt",
+        "ben",
+        "Bedankt"
+      ],
+      "solutions": [
+        [
+          "Goedenavond",
+          "en",
+          "bedankt"
+        ]
+      ],
+      "formattedSolution": "Goedenavond en bedankt.",
+      "id": "12a6bec7e8eb",
+      "priority": 2,
+      "group": "825248917dd4"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Goedenavond",
+          "definition": "Good Evening"
+        },
+        {
+          "word": "en",
+          "definition": "and"
+        },
+        {
+          "word": "bedankt.",
+          "definition": "Thanks"
+        }
+      ],
+      "chips": [
+        "Good",
+        "evening",
+        "and",
+        "thanks",
+        "an",
+        "in",
+        "one"
+      ],
+      "solutions": [
+        [
+          "Good",
+          "evening",
+          "and",
+          "thanks"
+        ]
+      ],
+      "formattedSolution": "Good evening and thanks.",
+      "id": "1e595710fd04",
+      "priority": 2,
+      "group": "825248917dd4"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Wat is je naam?",
+      "meaningInSourceLanguage": "What's your name?",
+      "id": "3ae7d25b1fd8",
+      "priority": 0,
+      "group": "d1ddb907749e"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "What's",
+          "definition": "Wat is"
+        },
+        {
+          "word": "your",
+          "definition": "je"
+        },
+        {
+          "word": "name?",
+          "definition": "naam"
+        }
+      ],
+      "chips": [
+        "Wat",
+        "is",
+        "je",
+        "naam",
+        "Ja",
+        "We",
+        "ga"
+      ],
+      "solutions": [
+        [
+          "Wat",
+          "is",
+          "je",
+          "naam"
+        ]
+      ],
+      "formattedSolution": "Wat is je naam?",
+      "id": "29506f6dbbe7",
+      "priority": 2,
+      "group": "d1ddb907749e"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Wat",
+          "definition": "What"
+        },
+        {
+          "word": "is",
+          "definition": "eats\nis"
+        },
+        {
+          "word": "je",
+          "definition": "you"
+        },
+        {
+          "word": "naam?",
+          "definition": "name"
+        }
+      ],
+      "chips": [
+        "What's",
+        "your",
+        "name",
+        "Name",
+        "have"
+      ],
+      "solutions": [
+        [
+          "What's",
+          "your",
+          "name"
+        ]
+      ],
+      "formattedSolution": "What's your name?",
+      "id": "ecdab264686c",
+      "priority": 2,
+      "group": "d1ddb907749e"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Mijn naam is Cecille.",
+      "meaningInSourceLanguage": "My name is Cecille.",
+      "id": "d0fcc7c45d56",
+      "priority": 0,
+      "group": "cea30d68932b"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "My",
+          "definition": "Mijn"
+        },
+        {
+          "word": "name",
+          "definition": "naam"
+        },
+        {
+          "word": "is",
+          "definition": "is"
+        },
+        {
+          "word": "Cecille.",
+          "definition": "Cecille (name)"
+        }
+      ],
+      "chips": [
+        "Mijn",
+        "naam",
+        "is",
+        "Cecille",
+        "in",
+        "mijn",
+        "Hij"
+      ],
+      "solutions": [
+        [
+          "Mijn",
+          "naam",
+          "is",
+          "Cecille"
+        ]
+      ],
+      "formattedSolution": "Mijn naam is Cecille.",
+      "id": "d1dd95aab737",
+      "priority": 2,
+      "group": "cea30d68932b"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Mijn",
+          "definition": "My"
+        },
+        {
+          "word": "naam",
+          "definition": "name"
+        },
+        {
+          "word": "is",
+          "definition": "eats\nis"
+        },
+        {
+          "word": "Cecille.",
+          "definition": "Cecille\nCecille (naam)\nCeclille (naam)"
+        }
+      ],
+      "chips": [
+        "My",
+        "name",
+        "is",
+        "Cecille",
+        "me",
+        "am",
+        "in"
+      ],
+      "solutions": [
+        [
+          "My",
+          "name",
+          "is",
+          "Cecille"
+        ]
+      ],
+      "formattedSolution": "My name is Cecille.",
+      "id": "9825d2a0d81e",
+      "priority": 2,
+      "group": "cea30d68932b"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Hoe gaat het met jou?",
+      "meaningInSourceLanguage": "How are you?",
+      "id": "f9401bd9ed55",
+      "priority": 0,
+      "group": "4dde5aee8343"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "How",
+          "definition": "Hoe"
+        },
+        {
+          "word": "are",
+          "definition": "zijn"
+        },
+        {
+          "word": "you?",
+          "definition": "jou\nu"
+        }
+      ],
+      "chips": [
+        "Hoe",
+        "gaat",
+        "het",
+        "met",
+        "jou",
+        "Het",
+        "Tot",
+        "eet",
+        "moet"
+      ],
+      "solutions": [
+        [
+          "Hoe",
+          "gaat",
+          "het",
+          "met",
+          "jou"
+        ]
+      ],
+      "formattedSolution": "Hoe gaat het met jou?",
+      "id": "3c4510438a8f",
+      "priority": 2,
+      "group": "4dde5aee8343"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Hoe",
+          "definition": "How"
+        },
+        {
+          "word": "gaat",
+          "definition": "goes"
+        },
+        {
+          "word": "het",
+          "definition": "it"
+        },
+        {
+          "word": "met",
+          "definition": "with"
+        },
+        {
+          "word": "jou?",
+          "definition": "you"
+        }
+      ],
+      "chips": [
+        "How",
+        "are",
+        "you",
+        "boy",
+        "of"
+      ],
+      "solutions": [
+        [
+          "How",
+          "are",
+          "you"
+        ]
+      ],
+      "formattedSolution": "How are you?",
+      "id": "49de71ba1481",
+      "priority": 2,
+      "group": "4dde5aee8343"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Uw naam, alstublieft?",
+      "meaningInSourceLanguage": "Your name, please?",
+      "id": "f8f9decc94fd",
+      "priority": 0,
+      "group": "0a101571f672"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Your",
+          "definition": "je"
+        },
+        {
+          "word": "name,",
+          "definition": "naam"
+        },
+        {
+          "word": "please?",
+          "definition": "alsjeblieft\nalstublief\nalstublieft"
+        }
+      ],
+      "chips": [
+        "Uw",
+        "naam",
+        "alstublieft",
+        "uw",
+        "uit"
+      ],
+      "solutions": [
+        [
+          "Uw",
+          "naam",
+          "alstublieft"
+        ]
+      ],
+      "formattedSolution": "Uw naam, alstublieft?",
+      "id": "e555ad2ce2f3",
+      "priority": 2,
+      "group": "0a101571f672"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Uw",
+          "definition": "your (formal)"
+        },
+        {
+          "word": "naam,",
+          "definition": "name"
+        },
+        {
+          "word": "alstublieft?",
+          "definition": "please"
+        }
+      ],
+      "chips": [
+        "Your",
+        "name",
+        "please",
+        "Name",
+        "game"
+      ],
+      "solutions": [
+        [
+          "Your",
+          "name",
+          "please"
+        ]
+      ],
+      "formattedSolution": "Your name, please?",
+      "id": "c7d009777476",
+      "priority": 2,
+      "group": "0a101571f672"
+    }
+  ]
+}

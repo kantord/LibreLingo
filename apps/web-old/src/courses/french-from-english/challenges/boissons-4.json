@@ -1,0 +1,926 @@
+{
+  "id": "f7ee2ecbddc1",
+  "levels": 4,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Santé",
+      "meaningInSourceLanguage": "Cheers",
+      "id": "f6cdd967c3ee",
+      "priority": 0,
+      "group": "5065c2c339db"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Santé",
+      "meaning": "Cheers",
+      "audio": "00d4229c332df0525a90c697eace2ca6f75c7157179f7bf2690244b5e03b6bc5",
+      "id": "c18940133cf3",
+      "priority": 1,
+      "group": "5065c2c339db"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Je bois un verre de vin blanc.",
+      "meaningInSourceLanguage": "I drink a glass of white wine.",
+      "id": "2d323c8493d5",
+      "priority": 0,
+      "group": "b37357d05bb9"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Je bois un verre de vin blanc.",
+      "meaning": "I drink a glass of white wine.",
+      "audio": "a3d5fcf9932e8a9e532e4561d716cd383f2ace17916ebd851635a844e041e5fd",
+      "id": "0f9dbc45224e",
+      "priority": 1,
+      "group": "b37357d05bb9"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "I",
+          "definition": "Je"
+        },
+        {
+          "word": "drink",
+          "definition": "boire"
+        },
+        {
+          "word": "a",
+          "definition": "un\nune\nune (feminin) or un (masculin)"
+        },
+        {
+          "word": "glass",
+          "definition": "Verre"
+        },
+        {
+          "word": "of",
+          "definition": "de"
+        },
+        {
+          "word": "white",
+          "definition": "blanc"
+        },
+        {
+          "word": "wine.",
+          "definition": "vin"
+        }
+      ],
+      "chips": [
+        "Je",
+        "bois",
+        "un",
+        "verre",
+        "de",
+        "vin",
+        "blanc",
+        "le",
+        "en",
+        "ne",
+        "on",
+        "vie",
+        "je"
+      ],
+      "solutions": [
+        [
+          "Je",
+          "bois",
+          "un",
+          "verre",
+          "de",
+          "vin",
+          "blanc"
+        ]
+      ],
+      "formattedSolution": "Je bois un verre de vin blanc.",
+      "id": "50a115d34529",
+      "priority": 2,
+      "group": "b37357d05bb9"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Je",
+          "definition": "I"
+        },
+        {
+          "word": "bois",
+          "definition": "drink"
+        },
+        {
+          "word": "un",
+          "definition": "a"
+        },
+        {
+          "word": "verre",
+          "definition": "Glass"
+        },
+        {
+          "word": "de",
+          "definition": "in"
+        },
+        {
+          "word": "vin",
+          "definition": "wine"
+        },
+        {
+          "word": "blanc.",
+          "definition": "white"
+        }
+      ],
+      "chips": [
+        "I",
+        "drink",
+        "a",
+        "glass",
+        "of",
+        "white",
+        "wine",
+        "in",
+        "is",
+        "an",
+        "it",
+        "at",
+        "on"
+      ],
+      "solutions": [
+        [
+          "I",
+          "drink",
+          "a",
+          "glass",
+          "of",
+          "white",
+          "wine"
+        ]
+      ],
+      "formattedSolution": "I drink a glass of white wine.",
+      "id": "5470f6feb95d",
+      "priority": 2,
+      "group": "b37357d05bb9"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Un verre d'eau",
+      "meaningInSourceLanguage": "A glass of water",
+      "id": "00a45b69fdc3",
+      "priority": 0,
+      "group": "1f6e9d486230"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Un verre d'eau",
+      "meaning": "A glass of water",
+      "audio": "d284deeb52538f084f782f0087cdcaf8e8316adc07b31631451119ee00000e2a",
+      "id": "0153d400e8ed",
+      "priority": 1,
+      "group": "1f6e9d486230"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "A",
+          "definition": "un\nune\nune (feminin) or un (masculin)"
+        },
+        {
+          "word": "glass",
+          "definition": "Verre"
+        },
+        {
+          "word": "of",
+          "definition": "de"
+        },
+        {
+          "word": "water",
+          "definition": "arrose\nl'eau"
+        }
+      ],
+      "chips": [
+        "Un",
+        "verre",
+        "d'eau",
+        "de",
+        "en"
+      ],
+      "solutions": [
+        [
+          "Un",
+          "verre",
+          "d'eau"
+        ]
+      ],
+      "formattedSolution": "Un verre d'eau",
+      "id": "928b89f05196",
+      "priority": 2,
+      "group": "1f6e9d486230"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Un",
+          "definition": "a"
+        },
+        {
+          "word": "verre",
+          "definition": "Glass"
+        },
+        {
+          "word": "d'eau",
+          "definition": "of water"
+        }
+      ],
+      "chips": [
+        "A",
+        "glass",
+        "of",
+        "water",
+        "a",
+        "at",
+        "am"
+      ],
+      "solutions": [
+        [
+          "A",
+          "glass",
+          "of",
+          "water"
+        ]
+      ],
+      "formattedSolution": "A glass of water",
+      "id": "6f160ef79c32",
+      "priority": 2,
+      "group": "1f6e9d486230"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "water1.jpg",
+        "water1.jpg",
+        "water1.jpg"
+      ],
+      "formInTargetLanguage": "Water",
+      "meaningInSourceLanguage": "Eau",
+      "id": "b7fc753a78cc",
+      "priority": 0,
+      "group": "15f845852337"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "water1.jpg",
+        "water1.jpg",
+        "water1.jpg"
+      ],
+      "formInTargetLanguage": [
+        "Water"
+      ],
+      "phrase": [
+        {
+          "word": "Eau",
+          "definition": "Water"
+        }
+      ],
+      "id": "b3d4a22eb15a",
+      "priority": 1,
+      "group": "15f845852337"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Water",
+      "meaning": "Eau",
+      "audio": "99f94397b234d70c2b142ea3cea8bdc0b1fe533bf90f05f5eb467e9aef99d3da",
+      "id": "d4ed0e87fa49",
+      "priority": 1,
+      "group": "15f845852337"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "orangejuice1.jpg",
+        "orangejuice1.jpg",
+        "orangejuice1.jpg"
+      ],
+      "formInTargetLanguage": "Jus d'orange",
+      "meaningInSourceLanguage": "Orange Juice",
+      "id": "5ada24ff81d8",
+      "priority": 0,
+      "group": "fa45a5df1371"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "orangejuice1.jpg",
+        "orangejuice1.jpg",
+        "orangejuice1.jpg"
+      ],
+      "formInTargetLanguage": [
+        "Jus d'orange"
+      ],
+      "phrase": [
+        {
+          "word": "Orange",
+          "definition": "Orange"
+        },
+        {
+          "word": "Juice",
+          "definition": "jus"
+        }
+      ],
+      "id": "fd300836419b",
+      "priority": 1,
+      "group": "fa45a5df1371"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Jus d'orange",
+      "meaning": "Orange Juice",
+      "audio": "de078784fb535335f95c75dfc4cd85a38c8323714253d32758710a5a0673a320",
+      "id": "99b7ca8c48a5",
+      "priority": 1,
+      "group": "fa45a5df1371"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "mineralwater1.jpg",
+        "mineralwater1.jpg",
+        "mineralwater1.jpg"
+      ],
+      "formInTargetLanguage": "Eau minérale",
+      "meaningInSourceLanguage": "Mineral water",
+      "id": "c374704d4eae",
+      "priority": 0,
+      "group": "39cfa70df19a"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "mineralwater1.jpg",
+        "mineralwater1.jpg",
+        "mineralwater1.jpg"
+      ],
+      "formInTargetLanguage": [
+        "Eau minérale"
+      ],
+      "phrase": [
+        {
+          "word": "Mineral",
+          "definition": "minérale"
+        },
+        {
+          "word": "water",
+          "definition": "arrose\nl'eau"
+        }
+      ],
+      "id": "8f676f213588",
+      "priority": 1,
+      "group": "39cfa70df19a"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Eau minérale",
+      "meaning": "Mineral water",
+      "audio": "2d5a1e2751ce34d2c19ed47c9e377a50a290cb25632597d207e0d2016e4a73d1",
+      "id": "7f9d330b9e92",
+      "priority": 1,
+      "group": "39cfa70df19a"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "glassofwater1.jpg",
+        "glassofwater1.jpg",
+        "glassofwater1.jpg"
+      ],
+      "formInTargetLanguage": "Verre d'eau",
+      "meaningInSourceLanguage": "Glass of water",
+      "id": "50aa4a5a213e",
+      "priority": 0,
+      "group": "c3feadf7b95d"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "glassofwater1.jpg",
+        "glassofwater1.jpg",
+        "glassofwater1.jpg"
+      ],
+      "formInTargetLanguage": [
+        "Verre d'eau"
+      ],
+      "phrase": [
+        {
+          "word": "Glass",
+          "definition": "Verre"
+        },
+        {
+          "word": "of",
+          "definition": "de"
+        },
+        {
+          "word": "water",
+          "definition": "arrose\nl'eau"
+        }
+      ],
+      "id": "1203319252a4",
+      "priority": 1,
+      "group": "c3feadf7b95d"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Verre d'eau",
+      "meaning": "Glass of water",
+      "audio": "c16a59a23ec4f5a1bc80c5622fb30f31cfcf95fe2ae5b4330f2cda84b037372f",
+      "id": "ba7a89af4701",
+      "priority": 1,
+      "group": "c3feadf7b95d"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "lemonjuice1.jpg",
+        "lemonjuice1.jpg",
+        "lemonjuice1.jpg"
+      ],
+      "formInTargetLanguage": "Citron pressé",
+      "meaningInSourceLanguage": "Lemon juice",
+      "id": "bd59c25eef7e",
+      "priority": 0,
+      "group": "60886d536c46"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "lemonjuice1.jpg",
+        "lemonjuice1.jpg",
+        "lemonjuice1.jpg"
+      ],
+      "formInTargetLanguage": [
+        "Citron pressé"
+      ],
+      "phrase": [
+        {
+          "word": "Lemon",
+          "definition": "Citron"
+        },
+        {
+          "word": "juice",
+          "definition": "jus"
+        }
+      ],
+      "id": "58d0dc6ca95a",
+      "priority": 1,
+      "group": "60886d536c46"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Citron pressé",
+      "meaning": "Lemon juice",
+      "audio": "5958d39821d7842f0a10a66f9c746e4a74e93687e476c18624e5475babdcd5cb",
+      "id": "1a33f523303a",
+      "priority": 1,
+      "group": "60886d536c46"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "milk1.jpg",
+        "milk1.jpg",
+        "milk1.jpg"
+      ],
+      "formInTargetLanguage": "Lait",
+      "meaningInSourceLanguage": "Milk",
+      "id": "30f467c639b5",
+      "priority": 0,
+      "group": "4810d4fc3cbe"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "milk1.jpg",
+        "milk1.jpg",
+        "milk1.jpg"
+      ],
+      "formInTargetLanguage": [
+        "Lait"
+      ],
+      "phrase": [
+        {
+          "word": "Milk",
+          "definition": "Lait"
+        }
+      ],
+      "id": "a2a54828d592",
+      "priority": 1,
+      "group": "4810d4fc3cbe"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Lait",
+      "meaning": "Milk",
+      "audio": "062d1f7796fa29124a52a64c1e6ef9b8576ca6b50acf4fc0956945f607a3d1b0",
+      "id": "e06f5988c359",
+      "priority": 1,
+      "group": "4810d4fc3cbe"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "syrup1.jpg",
+        "syrup1.jpg",
+        "syrup1.jpg"
+      ],
+      "formInTargetLanguage": "Syrup",
+      "meaningInSourceLanguage": "Sirop",
+      "id": "b27ac41bb144",
+      "priority": 0,
+      "group": "85f663ae099c"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "syrup1.jpg",
+        "syrup1.jpg",
+        "syrup1.jpg"
+      ],
+      "formInTargetLanguage": [
+        "Syrup"
+      ],
+      "phrase": [
+        {
+          "word": "Sirop",
+          "definition": "Syrup"
+        }
+      ],
+      "id": "eef83939f06d",
+      "priority": 1,
+      "group": "85f663ae099c"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Syrup",
+      "meaning": "Sirop",
+      "audio": "837a3b67cc6ddc95e7668cfa80b6b03c8fda6457bfba8c69669f2e01b86178a0",
+      "id": "f00cdd7498ad",
+      "priority": 1,
+      "group": "85f663ae099c"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "coffee1.jpg",
+        "coffee1.jpg",
+        "coffee1.jpg"
+      ],
+      "formInTargetLanguage": "Coffee",
+      "meaningInSourceLanguage": "Café",
+      "id": "3bb7aa920c35",
+      "priority": 0,
+      "group": "6dae0eb14c92"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "coffee1.jpg",
+        "coffee1.jpg",
+        "coffee1.jpg"
+      ],
+      "formInTargetLanguage": [
+        "Coffee"
+      ],
+      "phrase": [
+        {
+          "word": "Café",
+          "definition": "Coffee"
+        }
+      ],
+      "id": "3091f25be402",
+      "priority": 1,
+      "group": "6dae0eb14c92"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Coffee",
+      "meaning": "Café",
+      "audio": "2447fa9c1dd503bae50ef9e96c6ffb2b52ffc062bed95fa5d045473c3c6c10df",
+      "id": "6f40ac575ee7",
+      "priority": 1,
+      "group": "6dae0eb14c92"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "tea1.jpg",
+        "tea1.jpg",
+        "tea1.jpg"
+      ],
+      "formInTargetLanguage": "Thé",
+      "meaningInSourceLanguage": "Tea",
+      "id": "1c429e20ac48",
+      "priority": 0,
+      "group": "2aabcbf50b01"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "tea1.jpg",
+        "tea1.jpg",
+        "tea1.jpg"
+      ],
+      "formInTargetLanguage": [
+        "Thé"
+      ],
+      "phrase": [
+        {
+          "word": "Tea",
+          "definition": "Thé"
+        }
+      ],
+      "id": "736b09e347f9",
+      "priority": 1,
+      "group": "2aabcbf50b01"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Thé",
+      "meaning": "Tea",
+      "audio": "a0715b81bf4dd69f8c3f00b7bc4c7e58e70c44c822549bada81c2c5fc9784771",
+      "id": "6bc92c670fde",
+      "priority": 1,
+      "group": "2aabcbf50b01"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "beer1.jpg",
+        "beer2.jpg",
+        "beer3.jpg"
+      ],
+      "formInTargetLanguage": "Bière",
+      "meaningInSourceLanguage": "Beer",
+      "id": "911153ee2b68",
+      "priority": 0,
+      "group": "ed2e6cef7369"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "beer1.jpg",
+        "beer2.jpg",
+        "beer3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "Bière"
+      ],
+      "phrase": [
+        {
+          "word": "Beer",
+          "definition": "Bière"
+        }
+      ],
+      "id": "e695ddffb663",
+      "priority": 1,
+      "group": "ed2e6cef7369"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Bière",
+      "meaning": "Beer",
+      "audio": "4cb678ddc3961422f58ee85ab8aa0019a6fbace78dda7d825efc403112acfdde",
+      "id": "8bdb79dfeeaa",
+      "priority": 1,
+      "group": "ed2e6cef7369"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "hotchocolate1.jpg",
+        "hotchocolate1.jpg",
+        "hotchocolate1.jpg"
+      ],
+      "formInTargetLanguage": "Chocolat chaud",
+      "meaningInSourceLanguage": "Hot chocolate",
+      "id": "23e158f3ebd6",
+      "priority": 0,
+      "group": "b8662239b36e"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "hotchocolate1.jpg",
+        "hotchocolate1.jpg",
+        "hotchocolate1.jpg"
+      ],
+      "formInTargetLanguage": [
+        "Chocolat chaud"
+      ],
+      "phrase": [
+        {
+          "word": "Hot",
+          "definition": "chaud"
+        },
+        {
+          "word": "chocolate",
+          "definition": "chocolat"
+        }
+      ],
+      "id": "a02b22da5e78",
+      "priority": 1,
+      "group": "b8662239b36e"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Chocolat chaud",
+      "meaning": "Hot chocolate",
+      "audio": "1adc875b723acada67425851bffd468992ae34daa880149f07ac04b4373f9ad3",
+      "id": "7f510d1cc201",
+      "priority": 1,
+      "group": "b8662239b36e"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "whitewine1.jpg",
+        "whitewine1.jpg",
+        "whitewine1.jpg"
+      ],
+      "formInTargetLanguage": "Vin blanc",
+      "meaningInSourceLanguage": "White wine",
+      "id": "bb32004a70cf",
+      "priority": 0,
+      "group": "ab3083d3a2c8"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "whitewine1.jpg",
+        "whitewine1.jpg",
+        "whitewine1.jpg"
+      ],
+      "formInTargetLanguage": [
+        "Vin blanc"
+      ],
+      "phrase": [
+        {
+          "word": "White",
+          "definition": "blanc"
+        },
+        {
+          "word": "wine",
+          "definition": "vin"
+        }
+      ],
+      "id": "01d21c27f617",
+      "priority": 1,
+      "group": "ab3083d3a2c8"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Vin blanc",
+      "meaning": "White wine",
+      "audio": "8141a142740fb5d28520863cca8e67bee49f5fc0262c4d3a95473d1cac2b89a3",
+      "id": "17f69b984cbd",
+      "priority": 1,
+      "group": "ab3083d3a2c8"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "champange1.jpg",
+        "champange1.jpg",
+        "champange1.jpg"
+      ],
+      "formInTargetLanguage": "Champagne",
+      "meaningInSourceLanguage": "Champagne",
+      "id": "4bf82beb653a",
+      "priority": 0,
+      "group": "b812ec1f3bc2"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "champange1.jpg",
+        "champange1.jpg",
+        "champange1.jpg"
+      ],
+      "formInTargetLanguage": [
+        "Champagne"
+      ],
+      "phrase": [
+        {
+          "word": "Champagne",
+          "definition": "Champagne"
+        }
+      ],
+      "id": "c0a592ab8526",
+      "priority": 1,
+      "group": "b812ec1f3bc2"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Champagne",
+      "meaning": "Champagne",
+      "audio": "9f0d85a60890665e26d2251da8bfd72384f77500fc2707f4ba2aadc63f426700",
+      "id": "8e61ef539edd",
+      "priority": 1,
+      "group": "b812ec1f3bc2"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "redwine1.jpg",
+        "redwine1.jpg",
+        "redwine1.jpg"
+      ],
+      "formInTargetLanguage": "Vin rouge",
+      "meaningInSourceLanguage": "Red wine",
+      "id": "ce918e708aba",
+      "priority": 0,
+      "group": "029ee2d35a80"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "redwine1.jpg",
+        "redwine1.jpg",
+        "redwine1.jpg"
+      ],
+      "formInTargetLanguage": [
+        "Vin rouge"
+      ],
+      "phrase": [
+        {
+          "word": "Red",
+          "definition": "rouge"
+        },
+        {
+          "word": "wine",
+          "definition": "vin"
+        }
+      ],
+      "id": "3704afc299e7",
+      "priority": 1,
+      "group": "029ee2d35a80"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Vin rouge",
+      "meaning": "Red wine",
+      "audio": "eaa9fa6181457bfad89905671b411410b5c16e237e47b4fdbd7a6953745ac437",
+      "id": "4c048e58eaec",
+      "priority": 1,
+      "group": "029ee2d35a80"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "glass1.jpg",
+        "glass1.jpg",
+        "glass1.jpg"
+      ],
+      "formInTargetLanguage": "Verre",
+      "meaningInSourceLanguage": "Glass",
+      "id": "d382e913ceb6",
+      "priority": 0,
+      "group": "d734546c0173"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "glass1.jpg",
+        "glass1.jpg",
+        "glass1.jpg"
+      ],
+      "formInTargetLanguage": [
+        "Verre"
+      ],
+      "phrase": [
+        {
+          "word": "Glass",
+          "definition": "Verre"
+        }
+      ],
+      "id": "dd50bc8f03c7",
+      "priority": 1,
+      "group": "d734546c0173"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Verre",
+      "meaning": "Glass",
+      "audio": "2c603d2cc7edcc0054f38c6aba0ce2dc1e68b18cb468fe00673ede57d457b8ad",
+      "id": "c77f285d9e5f",
+      "priority": 1,
+      "group": "d734546c0173"
+    }
+  ]
+}

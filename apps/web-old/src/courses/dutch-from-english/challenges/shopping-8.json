@@ -1,0 +1,114 @@
+{
+  "id": "073c747cb47f",
+  "levels": 1,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Deze schoenen zijn te klein",
+      "meaningInSourceLanguage": "These shoes are too small",
+      "id": "7d3d9a541098",
+      "priority": 0,
+      "group": "cdb85f07d8a6"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "These",
+          "definition": "Deze"
+        },
+        {
+          "word": "shoes",
+          "definition": "schoenen"
+        },
+        {
+          "word": "are",
+          "definition": "zijn"
+        },
+        {
+          "word": "too",
+          "definition": "te"
+        },
+        {
+          "word": "small",
+          "definition": "klein"
+        }
+      ],
+      "chips": [
+        "Deze",
+        "schoenen",
+        "zijn",
+        "te",
+        "klein",
+        "een",
+        "Den",
+        "ben",
+        "en"
+      ],
+      "solutions": [
+        [
+          "Deze",
+          "schoenen",
+          "zijn",
+          "te",
+          "klein"
+        ]
+      ],
+      "formattedSolution": "Deze schoenen zijn te klein",
+      "id": "cfb2256e8800",
+      "priority": 2,
+      "group": "cdb85f07d8a6"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Deze",
+          "definition": "These\nThis"
+        },
+        {
+          "word": "schoenen",
+          "definition": "shoes"
+        },
+        {
+          "word": "zijn",
+          "definition": "are\nhis"
+        },
+        {
+          "word": "te",
+          "definition": "too"
+        },
+        {
+          "word": "klein",
+          "definition": "small"
+        }
+      ],
+      "chips": [
+        "These",
+        "shoes",
+        "are",
+        "too",
+        "small",
+        "the",
+        "has",
+        "See",
+        "Yes"
+      ],
+      "solutions": [
+        [
+          "These",
+          "shoes",
+          "are",
+          "too",
+          "small"
+        ]
+      ],
+      "formattedSolution": "These shoes are too small",
+      "id": "60b85131ad5f",
+      "priority": 2,
+      "group": "cdb85f07d8a6"
+    }
+  ]
+}
