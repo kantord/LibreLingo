@@ -1,0 +1,113 @@
+{
+  "languageName": "Occitan",
+  "languageCode": "oc-auv",
+  "uiLanguage": "fr",
+  "specialCharacters": [
+    "à",
+    "À",
+    "á",
+    "Á",
+    "è",
+    "È",
+    "é",
+    "É",
+    "í",
+    "Í",
+    "ï",
+    "Ï",
+    "ó",
+    "Ó",
+    "ò",
+    "Ò",
+    "ú",
+    "Ú",
+    "ü",
+    "Ü"
+  ],
+  "repositoryURL": "https://github.com/PrWalterB/LibreLingo-OCauv-from-FR",
+  "license": {
+    "name": {
+      "short": "CC BY-SA 4.0",
+      "full": "Attribution-ShareAlike 4.0 International"
+    },
+    "link": "https://creativecommons.org/licenses/by-sa/4.0/legalcode"
+  },
+  "modules": [
+    {
+      "title": "1-Bases",
+      "skills": [
+        {
+          "introduction": "1-phrases-de-base.md",
+          "summary": [
+            "Bonjorn!",
+            "Bonjorn, sèi Cecilia",
+            "Me sònan Joan",
+            "Coma quo vai?",
+            "{De que} se passa?",
+            "Adieu!",
+            "A totara!",
+            "Coma te sònan?",
+            "Bon \\'près-miejorn!",
+            "Bona nuèit, Joan!"
+          ],
+          "practiceHref": "1-phrases-de-base",
+          "id": "569673478a3d",
+          "title": "1-Phrases de base",
+          "levels": 3
+        },
+        {
+          "imageSet": [
+            "dog1",
+            "bear3",
+            "cat3"
+          ],
+          "introduction": "2-animaux.md",
+          "summary": [
+            "chin",
+            "chat",
+            "orse",
+            "vacha",
+            "canard",
+            "ega",
+            "le chat",
+            "un orse",
+            "una vacha",
+            "le canard",
+            "una ega",
+            "le chin",
+            "Quo-es una ega",
+            "Bernard z-es un chin",
+            "Un chin e una ega"
+          ],
+          "practiceHref": "2-animaux",
+          "id": "38c2ea1c36d2",
+          "title": "2-Animaux",
+          "levels": 3
+        },
+        {
+          "imageSet": [
+            "cow1",
+            "duck3",
+            "cat3"
+          ],
+          "introduction": "3-genre-bases.md",
+          "summary": [
+            "la china",
+            "la chata",
+            "una orsa",
+            "le buòu",
+            "la cana",
+            "un chavau",
+            "La genta china",
+            "Una brava chata e un mauvas chin",
+            "Una mauvasa cana e le brave buòu"
+          ],
+          "practiceHref": "3-genre-bases",
+          "id": "d7279e4777cd",
+          "title": "3-Genre bases",
+          "levels": 2
+        }
+      ]
+    }
+  ]
+}
