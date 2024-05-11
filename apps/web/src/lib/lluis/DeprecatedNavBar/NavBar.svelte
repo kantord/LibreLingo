@@ -10,7 +10,7 @@
   </div>
 </nav>
 
-<style type="text/scss">
+<style>
   nav {
     display: flex;
     position: relative;
@@ -23,15 +23,13 @@
     background: var(--deprecated-navbar-background);
     color: var(--deprecated-navbar-text-color);
     border: 0;
+  }
 
-    > * {
-      img {
-        height: var(--deprecated-navbar-logo-height);
-      }
-    }
+  nav >* img {
+      height: var(--deprecated-navbar-logo-height);
+  }
 
-    .middle {
+   nav .middle {
       flex-grow: 1;
     }
-  }
 </style>

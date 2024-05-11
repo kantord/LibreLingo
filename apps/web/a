@@ -1,4 +1,3 @@
-import fetch from "isomorphic-fetch"
 import parseMarkdown from "../utils/parseMarkdown"
 import { baseURL } from "../../../../config/gists.json"
 
@@ -80,13 +79,8 @@ export const get_course = async ({
   courseName: string
   gistId?: string
 }): Promise<CourseDataType> => {
-  if (gistId !== null) {
-    const files = await fetchGistFiles(gistId)
-    return formatCourseData(files["courseData.json"], { courseName })
-  }
-
-  // eslint-disable-next-line @typescript-eslint/no-var-requires
-  const rawCourseData = require(`../courses/${courseName}/courseData.json`) // eslint-disable-line @typescript-eslint/no-var-requires
+  // const rawCourseData = require(`../courses/${courseName}/courseData.json`)
+  const rawCourseData = import(`../../../../../courses/${courseName}/courseData.json`)
 
   return formatCourseData(rawCourseData, { courseName })
 }

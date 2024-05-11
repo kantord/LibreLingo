@@ -1,6 +1,6 @@
 <script lang="ts">
   import { format } from "svelte-i18n"
-  import isBrowser from "./utils/isBrowser"
+  import isBrowser from "$lib/utils/isBrowser"
 
   export let key: string
 </script>

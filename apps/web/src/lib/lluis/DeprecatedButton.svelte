@@ -1,8 +1,8 @@
 <script lang="ts">
   import { createEventDispatcher } from "svelte"
   import LinkOrButton from "./primitives/LinkOrButton.svelte"
-  import Icon from "lluis/Icon.svelte"
-  import Stack from "lluis/Stack.svelte"
+  import Icon from "./Icon.svelte"
+  import Stack from "./Stack.svelte"
 
   const dispatch = createEventDispatcher()
   export let href: string | null = null
@@ -47,7 +47,7 @@
   <a class="hidden-link" href={asHref}>&nbsp;</a>
 {/if}
 
-<style type="text/scss">
+<style lang="scss">
   @keyframes spinner {
     to {
       transform: rotate(360deg);

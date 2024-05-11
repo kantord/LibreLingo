@@ -1,8 +1,8 @@
 <script lang="typescript">
-  import Stack from "lluis/Stack.svelte"
-  import Translate from "../web/src/Translate.svelte"
-  import Hidden from "./Hidden.svelte"
-  import LicenseLogo from "../web/src/components/LicenseLogo.svelte"
+  import Stack from "$lib/lluis/Stack.svelte"
+  import Translate from "./Translate.svelte"
+  import Hidden from "$lib/lluis/Hidden.svelte"
+  import LicenseLogo from "./LicenseLogo.svelte"
 </script>
 
 <div class="main-footer">

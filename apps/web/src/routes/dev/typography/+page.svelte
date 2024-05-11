@@ -1,8 +1,8 @@
 <script lang="ts" context="module">
-  import NavBar from "../components/NavBar.svelte"
-  import Title from "lluis/Title.svelte"
-  import DeprecatedButton from "../../../lluis/DeprecatedButton.svelte"
-  import Button from "lluis/Button.svelte"
+  import Title from "$lib/lluis/Title.svelte"
+  import DeprecatedButton from "$lib/lluis/DeprecatedButton.svelte"
+  import Button from "$lib/lluis/Button.svelte"
+  import NavBar from "$lib/components/NavBar.svelte";
 </script>
 
 <svelte:head>
@@ -77,7 +77,7 @@
   </div>
 </section>
 
-<style>
+<style lang="scss">
   @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
   body {
     font-family: "Open Sans", sans-serif;

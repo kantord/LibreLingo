@@ -1,24 +1,15 @@
-<script lang="ts" context="module">
-  export async function preload(page) {
-    const { get_course } = await import("../../../course-client")
-    const { courseName } = page.params
-
-    return await get_course({ courseName })
-  }
-</script>
-
 <script lang="ts">
   import { locale } from "svelte-i18n"
-  import SkillCard from "../../../components/SkillCard/index.svelte"
-  import NavBar from "../../../components/NavBar.svelte"
-  import Column from "lluis/Column.svelte"
-  import Columns from "lluis/Columns.svelte"
-  import Content from "lluis/Content.svelte"
-  import Footer from "lluis/DeprecatedFooter.svelte"
-  import type { ModulesType } from "../../../types/ModulesType"
+  import SkillCard from "$lib/components/SkillCard/index.svelte"
+  import NavBar from "$lib/components/NavBar.svelte"
+  import Column from "$lib/lluis/Column.svelte"
+  import Columns from "$lib/lluis/Columns.svelte"
+  import Content from "$lib/lluis/Content.svelte"
+  import Footer from "$lib/lluis/DeprecatedFooter.svelte"
+  import type { ModulesType } from "$lib/types/ModulesType"
 
   export let courseName = null
-  export let modules: ModulesType = null
+  export let modules: ModulesType
   export let languageName = null
   export let repositoryURL = null
   export let uiLanguage = "es"
@@ -30,7 +21,7 @@
   <title>LibreLingo - learn {languageName} for free</title>
 </svelte:head>
 
-<NavBar hasAuth {repositoryURL} />
+<!-- <NavBar hasAuth {repositoryURL} /> -->
 
 {#each modules as { title, skills }}
   <section class="section">
@@ -77,8 +68,7 @@
   </Content>
 </Footer>
 
-<style type="text/scss">
-  @import "../../../variables";
+<style lang="scss">
   .container {
     padding-right: 20px;
     padding-left: 20px;

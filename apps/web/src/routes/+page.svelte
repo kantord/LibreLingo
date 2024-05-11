@@ -1,13 +1,13 @@
 <script lang="ts">
   import Button from "$lib/lluis/Button.svelte"
   import Hidden from "$lib/lluis/Hidden.svelte"
-  import Footer from "$lib/lluis/Footer.svelte"
+  import Footer from "$lib/components/Footer.svelte"
   import Hero from "$lib/lluis/Hero/index.svelte"
   import Stack from "$lib/lluis/Stack.svelte"
   import Heading from "$lib/lluis/Heading.svelte"
   import Page from "$lib/lluis/Page.svelte"
   import { _ } from "svelte-i18n"
-  import Translate from "$lib/Translate.svelte"
+  import Translate from "$lib/components/Translate.svelte"
   // import NewMascot from "$lib/components/NewMascot.svelte"
 
   // import NavBar from "../components/NewNavBar.svelte"
