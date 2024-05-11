@@ -1,0 +1,1143 @@
+{
+  "id": "f7ee2ecbddc1",
+  "levels": 4,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Tḥemmleḍ lqahwa?",
+      "meaningInSourceLanguage": "Aimes tu le café?",
+      "id": "4f81b5e541ae",
+      "priority": 0,
+      "group": "ce260bed5aeb"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Aimes",
+          "definition": "tḥemmleḍ"
+        },
+        {
+          "word": "tu",
+          "definition": "kemm\nkemmini\nkečč\nkeččini"
+        },
+        {
+          "word": "le",
+          "definition": "déterminant\ndéterminent\nyiwen"
+        },
+        {
+          "word": "café?",
+          "definition": "lqahwa"
+        }
+      ],
+      "chips": [
+        "Tḥemmleḍ",
+        "lqahwa",
+        "tḥemmleḍ",
+        "Tlemmdeḍ"
+      ],
+      "solutions": [
+        [
+          "Tḥemmleḍ",
+          "lqahwa"
+        ]
+      ],
+      "formattedSolution": "Tḥemmleḍ lqahwa?",
+      "id": "1acf42d05601",
+      "priority": 2,
+      "group": "ce260bed5aeb"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Tḥemmleḍ",
+          "definition": "aimes"
+        },
+        {
+          "word": "lqahwa?",
+          "definition": "café"
+        }
+      ],
+      "chips": [
+        "Aimes",
+        "tu",
+        "le",
+        "café",
+        "me",
+        "te",
+        "De"
+      ],
+      "solutions": [
+        [
+          "Aimes",
+          "tu",
+          "le",
+          "café"
+        ]
+      ],
+      "formattedSolution": "Aimes tu le café?",
+      "id": "ecb6b16a4c50",
+      "priority": 2,
+      "group": "ce260bed5aeb"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Ḥemmleɣ irektiyen",
+      "meaningInSourceLanguage": "J'aime les pâtes",
+      "id": "66800caa63c4",
+      "priority": 0,
+      "group": "2aef0b30693d"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "J'aime",
+          "definition": "ḥemmleɣ"
+        },
+        {
+          "word": "les",
+          "definition": "déterminant\ndéterminent"
+        },
+        {
+          "word": "pâtes",
+          "definition": "irektiyen"
+        }
+      ],
+      "chips": [
+        "Ḥemmleɣ",
+        "irektiyen",
+        "ḥemmleɣ",
+        "Tetteɣ"
+      ],
+      "solutions": [
+        [
+          "Ḥemmleɣ",
+          "irektiyen"
+        ],
+        [
+          "Terreɣ",
+          "irektiyen"
+        ]
+      ],
+      "formattedSolution": "Ḥemmleɣ irektiyen",
+      "id": "9be9c2cb9c7e",
+      "priority": 2,
+      "group": "2aef0b30693d"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Ḥemmleɣ",
+          "definition": "j'aime"
+        },
+        {
+          "word": "irektiyen",
+          "definition": "les pâtes\npâtes\n{des pâtes}"
+        }
+      ],
+      "chips": [
+        "J'aime",
+        "les",
+        "pâtes",
+        "Les",
+        "Je"
+      ],
+      "solutions": [
+        [
+          "J'aime",
+          "les",
+          "pâtes"
+        ]
+      ],
+      "formattedSolution": "J'aime les pâtes",
+      "id": "56cde8d5e342",
+      "priority": 2,
+      "group": "2aef0b30693d"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Ḥemmleɣ tabyirt",
+      "meaningInSourceLanguage": "J'aime la bière",
+      "id": "4829a7cbcef9",
+      "priority": 0,
+      "group": "d4d31f4c8471"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "J'aime",
+          "definition": "ḥemmleɣ"
+        },
+        {
+          "word": "la",
+          "definition": "déterminant\ndéterminent\nédterminant"
+        },
+        {
+          "word": "bière",
+          "definition": "tabyirt\ntebyirt"
+        }
+      ],
+      "chips": [
+        "Ḥemmleɣ",
+        "tabyirt",
+        "tebyirt",
+        "ḥemmleɣ"
+      ],
+      "solutions": [
+        [
+          "Ḥemmleɣ",
+          "tabyirt"
+        ],
+        [
+          "Terreɣ",
+          "tabyirt"
+        ]
+      ],
+      "formattedSolution": "Ḥemmleɣ tabyirt",
+      "id": "0236f0c26f2f",
+      "priority": 2,
+      "group": "d4d31f4c8471"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Ḥemmleɣ",
+          "definition": "j'aime"
+        },
+        {
+          "word": "tabyirt",
+          "definition": "bière\n{de la bière}\n{la bière}"
+        }
+      ],
+      "chips": [
+        "J'aime",
+        "la",
+        "bière",
+        "Je",
+        "me"
+      ],
+      "solutions": [
+        [
+          "J'aime",
+          "la",
+          "bière"
+        ]
+      ],
+      "formattedSolution": "J'aime la bière",
+      "id": "b1255f9d6d4c",
+      "priority": 2,
+      "group": "d4d31f4c8471"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Ur ḥemmleɣ ara ccṛab",
+      "meaningInSourceLanguage": "Je n'aime pas le vin",
+      "id": "25e37400e55d",
+      "priority": 0,
+      "group": "941463982d19"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Je",
+          "definition": "nekk\nnekkini"
+        },
+        {
+          "word": "n'aime",
+          "definition": "ur terreɣ\nur ḥemmleɣ"
+        },
+        {
+          "word": "pas",
+          "definition": "ara"
+        },
+        {
+          "word": "le",
+          "definition": "déterminant\ndéterminent\nyiwen"
+        },
+        {
+          "word": "vin",
+          "definition": "ccṛab"
+        }
+      ],
+      "chips": [
+        "Ur",
+        "ḥemmleɣ",
+        "ara",
+        "ccṛab",
+        "Ar",
+        "ur",
+        "La"
+      ],
+      "solutions": [
+        [
+          "Ur",
+          "ḥemmleɣ",
+          "ara",
+          "ccṛab"
+        ],
+        [
+          "Ur",
+          "terreɣ",
+          "ara",
+          "ccṛab"
+        ]
+      ],
+      "formattedSolution": "Ur ḥemmleɣ ara ccṛab",
+      "id": "21fbef3baddc",
+      "priority": 2,
+      "group": "941463982d19"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Ur",
+          "definition": "ne"
+        },
+        {
+          "word": "ḥemmleɣ",
+          "definition": "j'aime"
+        },
+        {
+          "word": "ara",
+          "definition": "pas"
+        },
+        {
+          "word": "ccṛab",
+          "definition": "le vin\nvin"
+        }
+      ],
+      "chips": [
+        "Je",
+        "n'aime",
+        "pas",
+        "le",
+        "vin",
+        "me",
+        "ne",
+        "De",
+        "la"
+      ],
+      "solutions": [
+        [
+          "Je",
+          "n'aime",
+          "pas",
+          "le",
+          "vin"
+        ]
+      ],
+      "formattedSolution": "Je n'aime pas le vin",
+      "id": "8f5e93616570",
+      "priority": 2,
+      "group": "941463982d19"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Ur itett ara tacriḥt",
+      "meaningInSourceLanguage": "Il ne mange pas la viande",
+      "id": "1c07bfe245c9",
+      "priority": 0,
+      "group": "a334189c6c63"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Il",
+          "definition": "netta"
+        },
+        {
+          "word": "ne",
+          "definition": "ne"
+        },
+        {
+          "word": "mange",
+          "definition": "ečč\nitett\ntetteɣ\nttett"
+        },
+        {
+          "word": "pas",
+          "definition": "ara"
+        },
+        {
+          "word": "la",
+          "definition": "déterminant\ndéterminent\nédterminant"
+        },
+        {
+          "word": "viande",
+          "definition": "aksum\ntacriḥt"
+        }
+      ],
+      "chips": [
+        "Ur",
+        "itett",
+        "ara",
+        "tacriḥt",
+        "Ar",
+        "ur",
+        "ɣer"
+      ],
+      "solutions": [
+        [
+          "Ur",
+          "itett",
+          "ara",
+          "tacriḥt"
+        ],
+        [
+          "Ur",
+          "itett",
+          "ara",
+          "aksum"
+        ]
+      ],
+      "formattedSolution": "Ur itett ara tacriḥt",
+      "id": "a5c7150b602e",
+      "priority": 2,
+      "group": "a334189c6c63"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Ur",
+          "definition": "ne"
+        },
+        {
+          "word": "itett",
+          "definition": "mange"
+        },
+        {
+          "word": "ara",
+          "definition": "pas"
+        },
+        {
+          "word": "tacriḥt",
+          "definition": "viande"
+        }
+      ],
+      "chips": [
+        "Il",
+        "ne",
+        "mange",
+        "pas",
+        "la",
+        "viande",
+        "Ça",
+        "me",
+        "La",
+        "a",
+        "De"
+      ],
+      "solutions": [
+        [
+          "Il",
+          "ne",
+          "mange",
+          "pas",
+          "la",
+          "viande"
+        ]
+      ],
+      "formattedSolution": "Il ne mange pas la viande",
+      "id": "9577f6d79e79",
+      "priority": 2,
+      "group": "a334189c6c63"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Nekk tesseɣ llatay",
+      "meaningInSourceLanguage": "Je bois du thé",
+      "id": "12cbe92e9b74",
+      "priority": 0,
+      "group": "50e79c3f27be"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Je",
+          "definition": "nekk\nnekkini"
+        },
+        {
+          "word": "bois",
+          "definition": "tetteɣ\nttesseḍ"
+        },
+        {
+          "word": "du",
+          "definition": "déterminant\nn"
+        },
+        {
+          "word": "thé",
+          "definition": "llatay"
+        }
+      ],
+      "chips": [
+        "Nekk",
+        "tesseɣ",
+        "llatay",
+        "tessen",
+        "Netta"
+      ],
+      "solutions": [
+        [
+          "Nekk",
+          "tesseɣ",
+          "llatay"
+        ],
+        [
+          "Tesseɣ",
+          "llatay"
+        ]
+      ],
+      "formattedSolution": "Nekk tesseɣ llatay",
+      "id": "2cf3e020b44d",
+      "priority": 2,
+      "group": "50e79c3f27be"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Nekk",
+          "definition": "je\nmoi"
+        },
+        {
+          "word": "tesseɣ",
+          "definition": "bois"
+        },
+        {
+          "word": "llatay",
+          "definition": "thé"
+        }
+      ],
+      "chips": [
+        "Je",
+        "bois",
+        "du",
+        "thé",
+        "ou",
+        "te",
+        "Du"
+      ],
+      "solutions": [
+        [
+          "Je",
+          "bois",
+          "du",
+          "thé"
+        ]
+      ],
+      "formattedSolution": "Je bois du thé",
+      "id": "43700bc152c2",
+      "priority": 2,
+      "group": "50e79c3f27be"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Cecilia ur ttett ara aslem",
+      "meaningInSourceLanguage": "Cecilia ne mange pas le poisson",
+      "id": "f9466b5ffa9b",
+      "priority": 0,
+      "group": "932b6264a384"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Cecilia",
+          "definition": "Cecilia (name)"
+        },
+        {
+          "word": "ne",
+          "definition": "ne"
+        },
+        {
+          "word": "mange",
+          "definition": "ečč\nitett\ntetteɣ\nttett"
+        },
+        {
+          "word": "pas",
+          "definition": "ara"
+        },
+        {
+          "word": "le",
+          "definition": "déterminant\ndéterminent\nyiwen"
+        },
+        {
+          "word": "poisson",
+          "definition": "aslem"
+        }
+      ],
+      "chips": [
+        "Cecilia",
+        "ur",
+        "ttett",
+        "ara",
+        "aslem",
+        "ɣer",
+        "seg",
+        "deg",
+        "neɣ"
+      ],
+      "solutions": [
+        [
+          "Cecilia",
+          "ur",
+          "ttett",
+          "ara",
+          "aslem"
+        ]
+      ],
+      "formattedSolution": "Cecilia ur ttett ara aslem",
+      "id": "a353f85186cc",
+      "priority": 2,
+      "group": "932b6264a384"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Cecilia",
+          "definition": "Cecilia (name)"
+        },
+        {
+          "word": "ur",
+          "definition": "ne"
+        },
+        {
+          "word": "ttett",
+          "definition": "mange"
+        },
+        {
+          "word": "ara",
+          "definition": "pas"
+        },
+        {
+          "word": "aslem",
+          "definition": "poisson"
+        }
+      ],
+      "chips": [
+        "Cecilia",
+        "ne",
+        "mange",
+        "pas",
+        "le",
+        "poisson",
+        "la",
+        "me",
+        "Ce",
+        "De",
+        "Je"
+      ],
+      "solutions": [
+        [
+          "Cecilia",
+          "ne",
+          "mange",
+          "pas",
+          "le",
+          "poisson"
+        ]
+      ],
+      "formattedSolution": "Cecilia ne mange pas le poisson",
+      "id": "93e6039e4f6f",
+      "priority": 2,
+      "group": "932b6264a384"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Yiwet n tebyirt, txil-k!",
+      "meaningInSourceLanguage": "Une bière s'il vous plait!",
+      "id": "a5856aa0cb3e",
+      "priority": 0,
+      "group": "1b95db8698f3"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Une",
+          "definition": "yiwet"
+        },
+        {
+          "word": "bière",
+          "definition": "tabyirt\ntebyirt"
+        },
+        {
+          "word": "s'il",
+          "definition": "netta"
+        },
+        {
+          "word": "vous",
+          "definition": "akent\nawen\nkunnemti\nkunwi\nvous"
+        },
+        {
+          "word": "plait!",
+          "definition": "yeɛǧeb"
+        }
+      ],
+      "chips": [
+        "Yiwet",
+        "n",
+        "tebyirt",
+        "txil-k",
+        "tiqit",
+        "i",
+        "yiwet"
+      ],
+      "solutions": [
+        [
+          "Yiwet",
+          "n",
+          "tebyirt",
+          "txil-k"
+        ]
+      ],
+      "formattedSolution": "Yiwet n tebyirt, txil-k!",
+      "id": "3815fc690676",
+      "priority": 2,
+      "group": "1b95db8698f3"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Yiwet",
+          "definition": "une"
+        },
+        {
+          "word": "n",
+          "definition": "de"
+        },
+        {
+          "word": "tebyirt,",
+          "definition": "bière"
+        },
+        {
+          "word": "txil-k!",
+          "definition": "s'il vous plait\n{s'il vous plaît}"
+        }
+      ],
+      "chips": [
+        "Une",
+        "bière",
+        "s'il",
+        "vous",
+        "plait",
+        "boit",
+        "ris",
+        "bois",
+        "lait"
+      ],
+      "solutions": [
+        [
+          "Une",
+          "bière",
+          "s'il",
+          "vous",
+          "plait"
+        ]
+      ],
+      "formattedSolution": "Une bière s'il vous plait!",
+      "id": "244dfcb3f2c2",
+      "priority": 2,
+      "group": "1b95db8698f3"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Tḥemmleḍ ccṛab?",
+      "meaningInSourceLanguage": "Aimes tu le vin?",
+      "id": "7edc96064a1a",
+      "priority": 0,
+      "group": "396176a47d81"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Aimes",
+          "definition": "tḥemmleḍ"
+        },
+        {
+          "word": "tu",
+          "definition": "kemm\nkemmini\nkečč\nkeččini"
+        },
+        {
+          "word": "le",
+          "definition": "déterminant\ndéterminent\nyiwen"
+        },
+        {
+          "word": "vin?",
+          "definition": "ccṛab"
+        }
+      ],
+      "chips": [
+        "Tḥemmleḍ",
+        "ccṛab",
+        "tḥemmleḍ",
+        "Acḥal"
+      ],
+      "solutions": [
+        [
+          "Tḥemmleḍ",
+          "ccṛab"
+        ],
+        [
+          "Tterreḍ",
+          "ccṛab"
+        ]
+      ],
+      "formattedSolution": "Tḥemmleḍ ccṛab?",
+      "id": "f1f819cb6451",
+      "priority": 2,
+      "group": "396176a47d81"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Tḥemmleḍ",
+          "definition": "aimes"
+        },
+        {
+          "word": "ccṛab?",
+          "definition": "le vin\nvin"
+        }
+      ],
+      "chips": [
+        "Aimes",
+        "tu",
+        "le",
+        "vin",
+        "me",
+        "te",
+        "De"
+      ],
+      "solutions": [
+        [
+          "Aimes",
+          "tu",
+          "le",
+          "vin"
+        ]
+      ],
+      "formattedSolution": "Aimes tu le vin?",
+      "id": "7a93bce81643",
+      "priority": 2,
+      "group": "396176a47d81"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "ur tḥemmleḍ ara aɣrum?",
+      "meaningInSourceLanguage": "Tu n'aimes pas le pain?",
+      "id": "e580032c003e",
+      "priority": 0,
+      "group": "1821875307ce"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Tu",
+          "definition": "kemm\nkemmini\nkečč\nkeččini"
+        },
+        {
+          "word": "n'aimes",
+          "definition": "ur tterreḍ\nur tḥemmleḍ"
+        },
+        {
+          "word": "pas",
+          "definition": "ara"
+        },
+        {
+          "word": "le",
+          "definition": "déterminant\ndéterminent\nyiwen"
+        },
+        {
+          "word": "pain?",
+          "definition": "aɣrum"
+        }
+      ],
+      "chips": [
+        "ur",
+        "tḥemmleḍ",
+        "ara",
+        "aɣrum",
+        "Ar",
+        "Ur",
+        "Aɣrum"
+      ],
+      "solutions": [
+        [
+          "ur",
+          "tḥemmleḍ",
+          "ara",
+          "aɣrum"
+        ],
+        [
+          "Ur",
+          "tterreḍ",
+          "ara",
+          "aɣrum"
+        ]
+      ],
+      "formattedSolution": "ur tḥemmleḍ ara aɣrum?",
+      "id": "c76ebed422f2",
+      "priority": 2,
+      "group": "1821875307ce"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "ur",
+          "definition": "ne"
+        },
+        {
+          "word": "tḥemmleḍ",
+          "definition": "aimes"
+        },
+        {
+          "word": "ara",
+          "definition": "pas"
+        },
+        {
+          "word": "aɣrum?",
+          "definition": "le pain\npain"
+        }
+      ],
+      "chips": [
+        "Tu",
+        "n'aimes",
+        "pas",
+        "le",
+        "pain",
+        "la",
+        "au",
+        "Ça",
+        "me"
+      ],
+      "solutions": [
+        [
+          "Tu",
+          "n'aimes",
+          "pas",
+          "le",
+          "pain"
+        ],
+        [
+          "N'aimes",
+          "tu",
+          "pas",
+          "le",
+          "pain"
+        ]
+      ],
+      "formattedSolution": "Tu n'aimes pas le pain?",
+      "id": "a0ad8f070cd3",
+      "priority": 2,
+      "group": "1821875307ce"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "coffee1.jpg",
+        "coffee2.jpg",
+        "coffee3.jpg"
+      ],
+      "formInTargetLanguage": "lqahwa",
+      "meaningInSourceLanguage": "café",
+      "id": "9d1e6be5799c",
+      "priority": 0,
+      "group": "45ef14d62e86"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "coffee1.jpg",
+        "coffee2.jpg",
+        "coffee3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "lqahwa"
+      ],
+      "phrase": [
+        {
+          "word": "café",
+          "definition": "lqahwa"
+        }
+      ],
+      "id": "c391ce434189",
+      "priority": 1,
+      "group": "45ef14d62e86"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "wine1.jpg",
+        "wine2.jpg",
+        "wine3.jpg"
+      ],
+      "formInTargetLanguage": "ccṛab",
+      "meaningInSourceLanguage": "vin",
+      "id": "28b9f85968dc",
+      "priority": 0,
+      "group": "97348e3f8861"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "wine1.jpg",
+        "wine2.jpg",
+        "wine3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "ccṛab"
+      ],
+      "phrase": [
+        {
+          "word": "vin",
+          "definition": "ccṛab"
+        }
+      ],
+      "id": "f48a0a571926",
+      "priority": 1,
+      "group": "97348e3f8861"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "beer1.jpg",
+        "beer2.jpg",
+        "beer3.jpg"
+      ],
+      "formInTargetLanguage": "tabyirt",
+      "meaningInSourceLanguage": "bière",
+      "id": "64e3e78387a0",
+      "priority": 0,
+      "group": "a2cd4735209b"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "beer1.jpg",
+        "beer2.jpg",
+        "beer3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "tabyirt"
+      ],
+      "phrase": [
+        {
+          "word": "bière",
+          "definition": "tabyirt\ntebyirt"
+        }
+      ],
+      "id": "97bfe001268e",
+      "priority": 1,
+      "group": "a2cd4735209b"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "coffee1.jpg",
+        "coffee2.jpg",
+        "coffee3.jpg"
+      ],
+      "formInTargetLanguage": "yiwet lqahwa",
+      "meaningInSourceLanguage": "un café",
+      "id": "81dd8cecd4fd",
+      "priority": 0,
+      "group": "78ce6b6bc5cd"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "coffee1.jpg",
+        "coffee2.jpg",
+        "coffee3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "yiwet lqahwa"
+      ],
+      "phrase": [
+        {
+          "word": "un",
+          "definition": "yiwen\nyiwet"
+        },
+        {
+          "word": "café",
+          "definition": "lqahwa"
+        }
+      ],
+      "id": "7879f7346327",
+      "priority": 1,
+      "group": "78ce6b6bc5cd"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "wine1.jpg",
+        "wine2.jpg",
+        "wine3.jpg"
+      ],
+      "formInTargetLanguage": "ccṛab",
+      "meaningInSourceLanguage": "le vin",
+      "id": "84541cb431ce",
+      "priority": 0,
+      "group": "39e77d4a7efc"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "wine1.jpg",
+        "wine2.jpg",
+        "wine3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "ccṛab"
+      ],
+      "phrase": [
+        {
+          "word": "le",
+          "definition": "déterminant\ndéterminent\nyiwen"
+        },
+        {
+          "word": "vin",
+          "definition": "ccṛab"
+        }
+      ],
+      "id": "8869f2804a6a",
+      "priority": 1,
+      "group": "39e77d4a7efc"
+    }
+  ]
+}
