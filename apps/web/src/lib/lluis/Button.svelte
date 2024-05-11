@@ -2,7 +2,7 @@
   import { createEventDispatcher } from "svelte"
   import LinkOrButton from "./primitives/LinkOrButton.svelte"
   import Spinner from "./Spinner.svelte"
-  import Stack from "lluis/Stack.svelte"
+  import Stack from "./Stack.svelte"
 
   const dispatch = createEventDispatcher()
   export let href: string | null = null

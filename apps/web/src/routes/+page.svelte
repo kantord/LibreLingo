@@ -1,14 +1,14 @@
 <script lang="ts">
-  import Button from "lluis/Button.svelte"
-  import Hidden from "lluis/Hidden.svelte"
-  import Footer from "lluis/Footer.svelte"
-  import Hero from "lluis/Hero/index.svelte"
-  import Stack from "lluis/Stack.svelte"
-  import Heading from "lluis/Heading.svelte"
-  import Page from "lluis/Page.svelte"
+  import Button from "$lib/lluis/Button.svelte"
+  import Hidden from "$lib/lluis/Hidden.svelte"
+  import Footer from "$lib/lluis/Footer.svelte"
+  import Hero from "$lib/lluis/Hero/index.svelte"
+  import Stack from "$lib/lluis/Stack.svelte"
+  import Heading from "$lib/lluis/Heading.svelte"
+  import Page from "$lib/lluis/Page.svelte"
   import { _ } from "svelte-i18n"
-  import Translate from "../Translate.svelte"
-  import NewMascot from "$lib/components/NewMascot.svelte"
+  import Translate from "$lib/Translate.svelte"
+  // import NewMascot from "$lib/components/NewMascot.svelte"
 
   // import NavBar from "../components/NewNavBar.svelte"
 </script>
@@ -24,7 +24,7 @@
       <Stack direction="column" spacing="m" fullHeight justify="center">
         <Stack spacing="m" direction="column" directionDesktop="row">
           <Stack shrink={4}>
-            <NewMascot shadow={false} glow={true} />
+            <!-- <NewMascot shadow={false} glow={true} /> -->
           </Stack>
           <Stack direction="column" justify="center" shrink={2}>
             <Heading level={1}>

@@ -8,7 +8,7 @@
     "commit": "git-cz",
     "test": "jest",
     "test:ci": "yarn web test:ci",
-    "web": "yarn workspace @librelingo/web",
+    "dev": "npm -w web run dev",
     "types": "yarn workspaces run types",
     "format": "eslint . --fix --max-warnings=0 && prettier --write apps/**/*.svelte docs --ignore-path ./.prettierignore_for_svelte",
     "lint": "eslint . --max-warnings=0 && prettier --check apps/**/*.svelte docs --ignore-path ./.prettierignore_for_svelte",
