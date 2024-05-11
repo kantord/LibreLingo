@@ -1,0 +1,190 @@
+{
+  "id": "e8455b6855b4",
+  "levels": 3,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Het sneeuwt.",
+      "meaningInSourceLanguage": "It snows.",
+      "id": "4b82c94d6c00",
+      "priority": 0,
+      "group": "460d0a8ef40d"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "It",
+          "definition": "het"
+        },
+        {
+          "word": "snows.",
+          "definition": "sneeuwt"
+        }
+      ],
+      "chips": [
+        "Het",
+        "sneeuwt",
+        "eet",
+        "het"
+      ],
+      "solutions": [
+        [
+          "Het",
+          "sneeuwt"
+        ]
+      ],
+      "formattedSolution": "Het sneeuwt.",
+      "id": "d59cf5b348b9",
+      "priority": 2,
+      "group": "460d0a8ef40d"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Het",
+          "definition": "it"
+        },
+        {
+          "word": "sneeuwt.",
+          "definition": "snowing\nsnows"
+        }
+      ],
+      "chips": [
+        "It",
+        "snows",
+        "not",
+        "I"
+      ],
+      "solutions": [
+        [
+          "It",
+          "snows"
+        ]
+      ],
+      "formattedSolution": "It snows.",
+      "id": "2ac11ba1a642",
+      "priority": 2,
+      "group": "460d0a8ef40d"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Het stormt",
+      "meaningInSourceLanguage": "It's stormy.",
+      "id": "1e64577830f1",
+      "priority": 0,
+      "group": "c9a9890cd979"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "It's",
+          "definition": "Het is"
+        },
+        {
+          "word": "stormy.",
+          "definition": "stormt"
+        }
+      ],
+      "chips": [
+        "Het",
+        "stormt",
+        "het",
+        "met"
+      ],
+      "solutions": [
+        [
+          "Het",
+          "stormt"
+        ]
+      ],
+      "formattedSolution": "Het stormt",
+      "id": "c1919dd90a14",
+      "priority": 2,
+      "group": "c9a9890cd979"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Het",
+          "definition": "it"
+        },
+        {
+          "word": "stormt",
+          "definition": "stormy"
+        }
+      ],
+      "chips": [
+        "It's",
+        "stormy",
+        "store",
+        "to"
+      ],
+      "solutions": [
+        [
+          "It's",
+          "stormy"
+        ]
+      ],
+      "formattedSolution": "It's stormy.",
+      "id": "d3fa69f05102",
+      "priority": 2,
+      "group": "c9a9890cd979"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "zonnig",
+      "meaningInSourceLanguage": "sunny",
+      "id": "2865fa648893",
+      "priority": 0,
+      "group": "4e0c1cd33d29"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "regenachtig",
+      "meaningInSourceLanguage": "rainy",
+      "id": "19d396460f1a",
+      "priority": 0,
+      "group": "99ae378b5cc8"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "stormachtig",
+      "meaningInSourceLanguage": "stormy",
+      "id": "54a9d1c6757d",
+      "priority": 0,
+      "group": "fa9e2d89921b"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "bewolkt",
+      "meaningInSourceLanguage": "cloudy",
+      "id": "bcbb9a41a343",
+      "priority": 0,
+      "group": "40d8de169c51"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "besneeuwd",
+      "meaningInSourceLanguage": "snowy",
+      "id": "eb587c7f7b9d",
+      "priority": 0,
+      "group": "c5ef38d58df5"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "mistig",
+      "meaningInSourceLanguage": "foggy",
+      "id": "1556b1a034ab",
+      "priority": 0,
+      "group": "d73a175981ac"
+    }
+  ]
+}

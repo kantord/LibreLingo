@@ -1,0 +1,757 @@
+{
+  "id": "f7ee2ecbddc1",
+  "levels": 4,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "bedankt",
+      "meaningInSourceLanguage": "Cheers!",
+      "id": "a8f546183723",
+      "priority": 0,
+      "group": "322bbe1fa62c"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "ik drink een glas witte wijn",
+      "meaningInSourceLanguage": "I drink a glass of white wine.",
+      "id": "cf4ddd0095e1",
+      "priority": 0,
+      "group": "174f3c5d9f25"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "I",
+          "definition": "Ik"
+        },
+        {
+          "word": "drink",
+          "definition": "drink"
+        },
+        {
+          "word": "a",
+          "definition": "een"
+        },
+        {
+          "word": "glass",
+          "definition": "glas"
+        },
+        {
+          "word": "of",
+          "definition": "van"
+        },
+        {
+          "word": "white",
+          "definition": "wit\nwitte"
+        },
+        {
+          "word": "wine.",
+          "definition": "wijn"
+        }
+      ],
+      "chips": [
+        "ik",
+        "drink",
+        "een",
+        "glas",
+        "witte",
+        "wijn",
+        "in",
+        "is",
+        "dit",
+        "wil",
+        "en"
+      ],
+      "solutions": [
+        [
+          "ik",
+          "drink",
+          "een",
+          "glas",
+          "witte",
+          "wijn"
+        ]
+      ],
+      "formattedSolution": "ik drink een glas witte wijn",
+      "id": "2b8fb7faa9df",
+      "priority": 2,
+      "group": "174f3c5d9f25"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "ik",
+          "definition": "I"
+        },
+        {
+          "word": "drink",
+          "definition": "drink"
+        },
+        {
+          "word": "een",
+          "definition": "One\na"
+        },
+        {
+          "word": "glas",
+          "definition": "Glass"
+        },
+        {
+          "word": "witte",
+          "definition": "white"
+        },
+        {
+          "word": "wijn",
+          "definition": "wine"
+        }
+      ],
+      "chips": [
+        "I",
+        "drink",
+        "a",
+        "glass",
+        "of",
+        "white",
+        "wine",
+        "in",
+        "is",
+        "an",
+        "at",
+        "on",
+        "am"
+      ],
+      "solutions": [
+        [
+          "I",
+          "drink",
+          "a",
+          "glass",
+          "of",
+          "white",
+          "wine"
+        ]
+      ],
+      "formattedSolution": "I drink a glass of white wine.",
+      "id": "9f0e101f4cfd",
+      "priority": 2,
+      "group": "174f3c5d9f25"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "een glas water",
+      "meaningInSourceLanguage": "A glass of water",
+      "id": "7ffa56a8b26f",
+      "priority": 0,
+      "group": "08b5da081184"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "A",
+          "definition": "een"
+        },
+        {
+          "word": "glass",
+          "definition": "glas"
+        },
+        {
+          "word": "of",
+          "definition": "van"
+        },
+        {
+          "word": "water",
+          "definition": "Water"
+        }
+      ],
+      "chips": [
+        "een",
+        "glas",
+        "water",
+        "geen",
+        "weer"
+      ],
+      "solutions": [
+        [
+          "een",
+          "glas",
+          "water"
+        ]
+      ],
+      "formattedSolution": "een glas water",
+      "id": "ff1938bec33d",
+      "priority": 2,
+      "group": "08b5da081184"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "een",
+          "definition": "One\na"
+        },
+        {
+          "word": "glas",
+          "definition": "Glass"
+        },
+        {
+          "word": "water",
+          "definition": "Water"
+        }
+      ],
+      "chips": [
+        "A",
+        "glass",
+        "of",
+        "water",
+        "a",
+        "at",
+        "am"
+      ],
+      "solutions": [
+        [
+          "A",
+          "glass",
+          "of",
+          "water"
+        ]
+      ],
+      "formattedSolution": "A glass of water",
+      "id": "378c2cc06b37",
+      "priority": 2,
+      "group": "08b5da081184"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "water1.jpg",
+        "water1.jpg",
+        "water1.jpg"
+      ],
+      "formInTargetLanguage": "Water",
+      "meaningInSourceLanguage": "Water",
+      "id": "9b6cbad8a8fe",
+      "priority": 0,
+      "group": "ba6730df957b"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "water1.jpg",
+        "water1.jpg",
+        "water1.jpg"
+      ],
+      "formInTargetLanguage": [
+        "Water"
+      ],
+      "phrase": [
+        {
+          "word": "Water",
+          "definition": "Water"
+        }
+      ],
+      "id": "1cbb01acac9f",
+      "priority": 1,
+      "group": "ba6730df957b"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "orangejuice1.jpg",
+        "orangejuice1.jpg",
+        "orangejuice1.jpg"
+      ],
+      "formInTargetLanguage": "sinaasappelsap",
+      "meaningInSourceLanguage": "Orange Juice",
+      "id": "8d0f42d96e0d",
+      "priority": 0,
+      "group": "06274be4caa5"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "orangejuice1.jpg",
+        "orangejuice1.jpg",
+        "orangejuice1.jpg"
+      ],
+      "formInTargetLanguage": [
+        "sinaasappelsap"
+      ],
+      "phrase": [
+        {
+          "word": "Orange",
+          "definition": "Sinaasappel"
+        },
+        {
+          "word": "Juice",
+          "definition": "sap"
+        }
+      ],
+      "id": "baccf5ff1f9a",
+      "priority": 1,
+      "group": "06274be4caa5"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "mineralwater1.jpg",
+        "mineralwater1.jpg",
+        "mineralwater1.jpg"
+      ],
+      "formInTargetLanguage": "mineraalwater",
+      "meaningInSourceLanguage": "Mineral water",
+      "id": "cbb4e843b537",
+      "priority": 0,
+      "group": "3338c9164f96"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "mineralwater1.jpg",
+        "mineralwater1.jpg",
+        "mineralwater1.jpg"
+      ],
+      "formInTargetLanguage": [
+        "mineraalwater"
+      ],
+      "phrase": [
+        {
+          "word": "Mineral",
+          "definition": "mineraal"
+        },
+        {
+          "word": "water",
+          "definition": "Water"
+        }
+      ],
+      "id": "4734d407df48",
+      "priority": 1,
+      "group": "3338c9164f96"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "glassofwater1.jpg",
+        "glassofwater1.jpg",
+        "glassofwater1.jpg"
+      ],
+      "formInTargetLanguage": "glas water",
+      "meaningInSourceLanguage": "Glass of water",
+      "id": "c5729eb9cadb",
+      "priority": 0,
+      "group": "15a6d66c6f9f"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "glassofwater1.jpg",
+        "glassofwater1.jpg",
+        "glassofwater1.jpg"
+      ],
+      "formInTargetLanguage": [
+        "glas water"
+      ],
+      "phrase": [
+        {
+          "word": "Glass",
+          "definition": "glas"
+        },
+        {
+          "word": "of",
+          "definition": "van"
+        },
+        {
+          "word": "water",
+          "definition": "Water"
+        }
+      ],
+      "id": "97548a9d9960",
+      "priority": 1,
+      "group": "15a6d66c6f9f"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "lemonjuice1.jpg",
+        "lemonjuice1.jpg",
+        "lemonjuice1.jpg"
+      ],
+      "formInTargetLanguage": "citroensap",
+      "meaningInSourceLanguage": "Lemon juice",
+      "id": "2ccacf670d74",
+      "priority": 0,
+      "group": "fa498bd3fb92"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "lemonjuice1.jpg",
+        "lemonjuice1.jpg",
+        "lemonjuice1.jpg"
+      ],
+      "formInTargetLanguage": [
+        "citroensap"
+      ],
+      "phrase": [
+        {
+          "word": "Lemon",
+          "definition": "Citroen"
+        },
+        {
+          "word": "juice",
+          "definition": "sap"
+        }
+      ],
+      "id": "b7e69f5a78bd",
+      "priority": 1,
+      "group": "fa498bd3fb92"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "milk1.jpg",
+        "milk1.jpg",
+        "milk1.jpg"
+      ],
+      "formInTargetLanguage": "melk",
+      "meaningInSourceLanguage": "Milk",
+      "id": "2e0b568c9cc9",
+      "priority": 0,
+      "group": "06c390ca5cff"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "milk1.jpg",
+        "milk1.jpg",
+        "milk1.jpg"
+      ],
+      "formInTargetLanguage": [
+        "melk"
+      ],
+      "phrase": [
+        {
+          "word": "Milk",
+          "definition": "melk"
+        }
+      ],
+      "id": "cb0c0ea4ee64",
+      "priority": 1,
+      "group": "06c390ca5cff"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "syrup1.jpg",
+        "syrup1.jpg",
+        "syrup1.jpg"
+      ],
+      "formInTargetLanguage": "siroop",
+      "meaningInSourceLanguage": "Sirop",
+      "id": "4a2062ab802d",
+      "priority": 0,
+      "group": "638e9a8bfcff"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "syrup1.jpg",
+        "syrup1.jpg",
+        "syrup1.jpg"
+      ],
+      "formInTargetLanguage": [
+        "siroop"
+      ],
+      "phrase": [
+        {
+          "word": "Sirop",
+          "definition": "siroop"
+        }
+      ],
+      "id": "6aadd536869e",
+      "priority": 1,
+      "group": "638e9a8bfcff"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "coffee1.jpg",
+        "coffee1.jpg",
+        "coffee1.jpg"
+      ],
+      "formInTargetLanguage": "koffie",
+      "meaningInSourceLanguage": "Café",
+      "id": "b6d0fef77dbf",
+      "priority": 0,
+      "group": "e78e91cc2bfe"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "coffee1.jpg",
+        "coffee1.jpg",
+        "coffee1.jpg"
+      ],
+      "formInTargetLanguage": [
+        "koffie"
+      ],
+      "phrase": [
+        {
+          "word": "Café",
+          "definition": "koffie"
+        }
+      ],
+      "id": "5397620b30c6",
+      "priority": 1,
+      "group": "e78e91cc2bfe"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "tea1.jpg",
+        "tea1.jpg",
+        "tea1.jpg"
+      ],
+      "formInTargetLanguage": "thee",
+      "meaningInSourceLanguage": "Tea",
+      "id": "ac652c0988d9",
+      "priority": 0,
+      "group": "9f358eb7f988"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "tea1.jpg",
+        "tea1.jpg",
+        "tea1.jpg"
+      ],
+      "formInTargetLanguage": [
+        "thee"
+      ],
+      "phrase": [
+        {
+          "word": "Tea",
+          "definition": "thee"
+        }
+      ],
+      "id": "deb283bd0feb",
+      "priority": 1,
+      "group": "9f358eb7f988"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "beer1.jpg",
+        "beer2.jpg",
+        "beer3.jpg"
+      ],
+      "formInTargetLanguage": "bier",
+      "meaningInSourceLanguage": "Beer",
+      "id": "e585d1225182",
+      "priority": 0,
+      "group": "9d9e982c49da"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "beer1.jpg",
+        "beer2.jpg",
+        "beer3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "bier"
+      ],
+      "phrase": [
+        {
+          "word": "Beer",
+          "definition": "bier"
+        }
+      ],
+      "id": "40b50107e5eb",
+      "priority": 1,
+      "group": "9d9e982c49da"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "beer1.jpg",
+        "beer2.jpg",
+        "beer3.jpg"
+      ],
+      "formInTargetLanguage": "warme chocolademelk",
+      "meaningInSourceLanguage": "Hot chocolate",
+      "id": "9e51949505fd",
+      "priority": 0,
+      "group": "32a8c4a2bfd1"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "beer1.jpg",
+        "beer2.jpg",
+        "beer3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "warme chocolademelk"
+      ],
+      "phrase": [
+        {
+          "word": "Hot",
+          "definition": "heet\nwarme"
+        },
+        {
+          "word": "chocolate",
+          "definition": "chocolade"
+        }
+      ],
+      "id": "71a98a012aa8",
+      "priority": 1,
+      "group": "32a8c4a2bfd1"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "whitewine1.jpg",
+        "whitewine1.jpg",
+        "whitewine1.jpg"
+      ],
+      "formInTargetLanguage": "witte wijn",
+      "meaningInSourceLanguage": "White wine",
+      "id": "bea3e160f9ea",
+      "priority": 0,
+      "group": "1d0972333f81"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "whitewine1.jpg",
+        "whitewine1.jpg",
+        "whitewine1.jpg"
+      ],
+      "formInTargetLanguage": [
+        "witte wijn"
+      ],
+      "phrase": [
+        {
+          "word": "White",
+          "definition": "wit\nwitte"
+        },
+        {
+          "word": "wine",
+          "definition": "wijn"
+        }
+      ],
+      "id": "87c60fde5acd",
+      "priority": 1,
+      "group": "1d0972333f81"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "champange1.jpg",
+        "champange1.jpg",
+        "champange1.jpg"
+      ],
+      "formInTargetLanguage": "champange",
+      "meaningInSourceLanguage": "Champagne",
+      "id": "83bba90b6cf9",
+      "priority": 0,
+      "group": "c103b0f632fa"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "champange1.jpg",
+        "champange1.jpg",
+        "champange1.jpg"
+      ],
+      "formInTargetLanguage": [
+        "champange"
+      ],
+      "phrase": [
+        {
+          "word": "Champagne",
+          "definition": "champange"
+        }
+      ],
+      "id": "354fd6c956a3",
+      "priority": 1,
+      "group": "c103b0f632fa"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "redwine1.jpg",
+        "redwine1.jpg",
+        "redwine1.jpg"
+      ],
+      "formInTargetLanguage": "rode wijn",
+      "meaningInSourceLanguage": "Red wine",
+      "id": "36a7542e8f4b",
+      "priority": 0,
+      "group": "075cc219114c"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "redwine1.jpg",
+        "redwine1.jpg",
+        "redwine1.jpg"
+      ],
+      "formInTargetLanguage": [
+        "rode wijn"
+      ],
+      "phrase": [
+        {
+          "word": "Red",
+          "definition": "red\nrood"
+        },
+        {
+          "word": "wine",
+          "definition": "wijn"
+        }
+      ],
+      "id": "e096fd162196",
+      "priority": 1,
+      "group": "075cc219114c"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "glass1.jpg",
+        "glass1.jpg",
+        "glass1.jpg"
+      ],
+      "formInTargetLanguage": "glas",
+      "meaningInSourceLanguage": "Glass",
+      "id": "49b149231672",
+      "priority": 0,
+      "group": "fd9f7ddf35b6"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "glass1.jpg",
+        "glass1.jpg",
+        "glass1.jpg"
+      ],
+      "formInTargetLanguage": [
+        "glas"
+      ],
+      "phrase": [
+        {
+          "word": "Glass",
+          "definition": "glas"
+        }
+      ],
+      "id": "1892658a9c46",
+      "priority": 1,
+      "group": "fd9f7ddf35b6"
+    }
+  ]
+}

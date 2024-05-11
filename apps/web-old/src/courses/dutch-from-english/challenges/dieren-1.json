@@ -1,0 +1,502 @@
+{
+  "id": "1873ab8eb8f8",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Ik heb een hond en Cecille heeft een kat.",
+      "meaningInSourceLanguage": "I have a dog and Cecille has a cat.",
+      "id": "9270acff280f",
+      "priority": 0,
+      "group": "b99613b97c65"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "I",
+          "definition": "Ik"
+        },
+        {
+          "word": "have",
+          "definition": "heb"
+        },
+        {
+          "word": "a",
+          "definition": "een"
+        },
+        {
+          "word": "dog",
+          "definition": "Hond\nhond"
+        },
+        {
+          "word": "and",
+          "definition": "en"
+        },
+        {
+          "word": "Cecille",
+          "definition": "Cecille (name)"
+        },
+        {
+          "word": "has",
+          "definition": "heeft"
+        },
+        {
+          "word": "a",
+          "definition": "een"
+        },
+        {
+          "word": "cat.",
+          "definition": "Vee\nkat"
+        }
+      ],
+      "chips": [
+        "Ik",
+        "heb",
+        "een",
+        "hond",
+        "en",
+        "Cecille",
+        "heeft",
+        "een",
+        "kat",
+        "het",
+        "eet",
+        "ben",
+        "Den",
+        "ren",
+        "met",
+        "heet",
+        "Nee"
+      ],
+      "solutions": [
+        [
+          "Ik",
+          "heb",
+          "een",
+          "hond",
+          "en",
+          "Cecille",
+          "heeft",
+          "een",
+          "kat"
+        ]
+      ],
+      "formattedSolution": "Ik heb een hond en Cecille heeft een kat.",
+      "id": "d26005d6f196",
+      "priority": 2,
+      "group": "b99613b97c65"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Ik",
+          "definition": "I"
+        },
+        {
+          "word": "heb",
+          "definition": "have\nhaving"
+        },
+        {
+          "word": "een",
+          "definition": "One\na"
+        },
+        {
+          "word": "hond",
+          "definition": "dog"
+        },
+        {
+          "word": "en",
+          "definition": "and"
+        },
+        {
+          "word": "Cecille",
+          "definition": "Cecille\nCecille (naam)\nCeclille (naam)"
+        },
+        {
+          "word": "heeft",
+          "definition": "has"
+        },
+        {
+          "word": "een",
+          "definition": "One\na"
+        },
+        {
+          "word": "kat.",
+          "definition": "cat"
+        }
+      ],
+      "chips": [
+        "I",
+        "have",
+        "a",
+        "dog",
+        "and",
+        "Cecille",
+        "has",
+        "a",
+        "cat",
+        "an",
+        "at",
+        "am",
+        "had",
+        "Can",
+        "are",
+        "A",
+        "in"
+      ],
+      "solutions": [
+        [
+          "I",
+          "have",
+          "a",
+          "dog",
+          "and",
+          "Cecille",
+          "has",
+          "a",
+          "cat"
+        ]
+      ],
+      "formattedSolution": "I have a dog and Cecille has a cat.",
+      "id": "9aee6fde4730",
+      "priority": 2,
+      "group": "b99613b97c65"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Mijn broer houdt van vis.",
+      "meaningInSourceLanguage": "My brother loves fishes.",
+      "id": "61beda2c226a",
+      "priority": 0,
+      "group": "d67fd763b40a"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "My",
+          "definition": "Mijn"
+        },
+        {
+          "word": "brother",
+          "definition": "broer"
+        },
+        {
+          "word": "loves",
+          "definition": "houdt"
+        },
+        {
+          "word": "fishes.",
+          "definition": "vis"
+        }
+      ],
+      "chips": [
+        "Mijn",
+        "broer",
+        "houdt",
+        "van",
+        "vis",
+        "ben",
+        "in",
+        "uit",
+        "vier"
+      ],
+      "solutions": [
+        [
+          "Mijn",
+          "broer",
+          "houdt",
+          "van",
+          "vis"
+        ]
+      ],
+      "formattedSolution": "Mijn broer houdt van vis.",
+      "id": "2f22695a0db1",
+      "priority": 2,
+      "group": "d67fd763b40a"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Mijn",
+          "definition": "My"
+        },
+        {
+          "word": "broer",
+          "definition": "brother"
+        },
+        {
+          "word": "houdt",
+          "definition": "likes\nloves"
+        },
+        {
+          "word": "van",
+          "definition": "of"
+        },
+        {
+          "word": "vis.",
+          "definition": "fishes"
+        }
+      ],
+      "chips": [
+        "My",
+        "brother",
+        "loves",
+        "fishes",
+        "the",
+        "notes",
+        "they"
+      ],
+      "solutions": [
+        [
+          "My",
+          "brother",
+          "loves",
+          "fishes"
+        ]
+      ],
+      "formattedSolution": "My brother loves fishes.",
+      "id": "908c65df8822",
+      "priority": 2,
+      "group": "d67fd763b40a"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "bear1.jpg",
+        "bear2.jpg",
+        "bear3.jpg"
+      ],
+      "formInTargetLanguage": "Bear",
+      "meaningInSourceLanguage": "bear",
+      "id": "348c05cac177",
+      "priority": 0,
+      "group": "0d3e2999b092"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "bear1.jpg",
+        "bear2.jpg",
+        "bear3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "Bear"
+      ],
+      "phrase": [
+        {
+          "word": "bear",
+          "definition": "Bear"
+        }
+      ],
+      "id": "5d18f729a7f6",
+      "priority": 1,
+      "group": "0d3e2999b092"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "bee1.jpg",
+        "bee1.jpg",
+        "bee1.jpg"
+      ],
+      "formInTargetLanguage": "Bijen",
+      "meaningInSourceLanguage": "bee",
+      "id": "914716ed0e31",
+      "priority": 0,
+      "group": "da202482fb8f"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "bee1.jpg",
+        "bee1.jpg",
+        "bee1.jpg"
+      ],
+      "formInTargetLanguage": [
+        "Bijen"
+      ],
+      "phrase": [
+        {
+          "word": "bee",
+          "definition": "Bijen"
+        }
+      ],
+      "id": "600c4187d4f0",
+      "priority": 1,
+      "group": "da202482fb8f"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "cat1.jpg",
+        "cat2.jpg",
+        "cat3.jpg"
+      ],
+      "formInTargetLanguage": "Vee",
+      "meaningInSourceLanguage": "cat",
+      "id": "3192597818e5",
+      "priority": 0,
+      "group": "293473d09c9b"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "cat1.jpg",
+        "cat2.jpg",
+        "cat3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "Vee"
+      ],
+      "phrase": [
+        {
+          "word": "cat",
+          "definition": "Vee\nkat"
+        }
+      ],
+      "id": "4a17f2753c0b",
+      "priority": 1,
+      "group": "293473d09c9b"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "mouse1.jpg",
+        "mouse2.jpg",
+        "mouse3.jpg"
+      ],
+      "formInTargetLanguage": "Muis",
+      "meaningInSourceLanguage": "mouse",
+      "id": "f8caa3e94122",
+      "priority": 0,
+      "group": "e01d8074f5b5"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "mouse1.jpg",
+        "mouse2.jpg",
+        "mouse3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "Muis"
+      ],
+      "phrase": [
+        {
+          "word": "mouse",
+          "definition": "Muis\nmuis"
+        }
+      ],
+      "id": "0eeea988cc25",
+      "priority": 1,
+      "group": "e01d8074f5b5"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "dog1.jpg",
+        "dog2.jpg",
+        "dog3.jpg"
+      ],
+      "formInTargetLanguage": "Hond",
+      "meaningInSourceLanguage": "dog",
+      "id": "3e5dcca2b5bb",
+      "priority": 0,
+      "group": "e9da560b3add"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "dog1.jpg",
+        "dog2.jpg",
+        "dog3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "Hond"
+      ],
+      "phrase": [
+        {
+          "word": "dog",
+          "definition": "Hond\nhond"
+        }
+      ],
+      "id": "306c72de1798",
+      "priority": 1,
+      "group": "e9da560b3add"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "horse1.jpg",
+        "horse2.jpg",
+        "horse3.jpg"
+      ],
+      "formInTargetLanguage": "Horse",
+      "meaningInSourceLanguage": "horse",
+      "id": "87f2118f87b4",
+      "priority": 0,
+      "group": "cf75e62449f0"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "horse1.jpg",
+        "horse2.jpg",
+        "horse3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "Horse"
+      ],
+      "phrase": [
+        {
+          "word": "horse",
+          "definition": "Horse\nhorse"
+        }
+      ],
+      "id": "86fe2796da1b",
+      "priority": 1,
+      "group": "cf75e62449f0"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "fish1.jpg",
+        "fish2.jpg",
+        "fish3.jpg"
+      ],
+      "formInTargetLanguage": "Fish",
+      "meaningInSourceLanguage": "fish",
+      "id": "9de07bf29f90",
+      "priority": 0,
+      "group": "4a1f57d5f1c1"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "fish1.jpg",
+        "fish2.jpg",
+        "fish3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "Fish"
+      ],
+      "phrase": [
+        {
+          "word": "fish",
+          "definition": "Fish\nfish"
+        }
+      ],
+      "id": "3449aa203cec",
+      "priority": 1,
+      "group": "4a1f57d5f1c1"
+    }
+  ]
+}

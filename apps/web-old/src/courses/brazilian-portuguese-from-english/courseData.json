@@ -1,0 +1,362 @@
+{
+  "languageName": "Brazilian Portuguese",
+  "languageCode": "pt-BR",
+  "uiLanguage": "en",
+  "specialCharacters": [
+    "á",
+    "Á",
+    "Ã",
+    "ã",
+    "é",
+    "ê",
+    "É",
+    "í",
+    "Í",
+    "ó",
+    "Ó",
+    "ú",
+    "Ú"
+  ],
+  "repositoryURL": "https://github.com/vandersdg/LibreLingo-ptBR-from-EN",
+  "license": {
+    "name": {
+      "short": "CC BY-SA 4.0",
+      "full": "Attribution-ShareAlike 4.0 International"
+    },
+    "link": "https://creativecommons.org/licenses/by-sa/4.0/legalcode"
+  },
+  "modules": [
+    {
+      "title": "Basics",
+      "skills": [
+        {
+          "imageSet": [
+            "dog1",
+            "lion3",
+            "cat3"
+          ],
+          "introduction": "animals.md",
+          "summary": [
+            "cão",
+            "gato",
+            "urso",
+            "leão",
+            "pato",
+            "cavalo",
+            "o gato",
+            "um urso",
+            "um leão",
+            "o pato",
+            "um cavalo",
+            "o cão",
+            "É um cavalo",
+            "Max é um cão",
+            "Um pato e um cavalo"
+          ],
+          "practiceHref": "animals",
+          "id": "38c2ea1c36d2",
+          "title": "Animals",
+          "levels": 3
+        },
+        {
+          "imageSet": [
+            "bread1",
+            "milk2",
+            "pasta3"
+          ],
+          "summary": [
+            "pão",
+            "leite",
+            "macarrão",
+            "casal",
+            "o pão",
+            "o leite",
+            "o macarrão",
+            "o casal",
+            "Bom apetite",
+            "Por favor",
+            "pão, por favor",
+            "Água, por favor",
+            "Cecília bebe água",
+            "o casal bebe cerveja",
+            "José come pão",
+            "Eu como macarrão"
+          ],
+          "practiceHref": "food",
+          "id": "569673478a3d",
+          "title": "Food",
+          "levels": 4
+        },
+        {
+          "imageSet": [
+            "dress2",
+            "t-shirt1",
+            "hat2"
+          ],
+          "summary": [
+            "vestido",
+            "camiseta",
+            "chapéu",
+            "sapatos",
+            "camisa",
+            "saia",
+            "meias",
+            "O vestido",
+            "A camiseta",
+            "um chapéu",
+            "os sapatos",
+            "uma camisa",
+            "A saia",
+            "as meias",
+            "Eu gosto!",
+            "Quanto custa?",
+            "Obrigado",
+            "O vestido é bonito",
+            "Os sapatos são grandes",
+            "A camiseta é grande",
+            "A saia é pequena"
+          ],
+          "practiceHref": "clothes",
+          "id": "c097516da9d5",
+          "title": "Clothes",
+          "levels": 4
+        },
+        {
+          "imageSet": [
+            "sky1",
+            "river2",
+            "sun3"
+          ],
+          "summary": [
+            "céu",
+            "río",
+            "sol",
+            "mar",
+            "montanha",
+            "lago",
+            "praia",
+            "o céu",
+            "um río",
+            "o sol",
+            "o mar",
+            "a montanha",
+            "um lago",
+            "a praia",
+            "Boa viagem!",
+            "Vamos para a praia!",
+            "Mar ou montanha?"
+          ],
+          "practiceHref": "nature",
+          "id": "27a92ea694cb",
+          "title": "Nature",
+          "levels": 4
+        },
+        {
+          "summary": [
+            "Eu sou um gato",
+            "Você é grande",
+            "O cavalo é pequeno",
+            "Eu como pão",
+            "Você come macarrão",
+            "Ela come pizza",
+            "Ele come pão",
+            "Eu bebo cerveja",
+            "Você bebe leite",
+            "Maria bebe cerveja",
+            "O cavalo bebe água"
+          ],
+          "practiceHref": "verbs",
+          "id": "62f74c5e3db9",
+          "title": "Verbs",
+          "levels": 3
+        },
+        {
+          "summary": [
+            "gatos",
+            "praias",
+            "patos",
+            "camisas",
+            "estudantes",
+            "morangos",
+            "óculos",
+            "médicos",
+            "os gatos",
+            "as praias",
+            "os patos",
+            "as camisas",
+            "os estudantes",
+            "os morangos",
+            "os óculos",
+            "os médicos",
+            "Gatos verdes",
+            "Praias bonitas",
+            "as camisas são vermelhas",
+            "os gatos são estudantes",
+            "os óculos são grandes",
+            "os patos são médicos"
+          ],
+          "practiceHref": "plurals",
+          "id": "76a6c8df6b2b",
+          "title": "Plurals",
+          "levels": 4
+        },
+        {
+          "summary": [
+            "Nós comemos bananas",
+            "Vocês comem mais",
+            "Nós bebemos muito",
+            "Vocês bebem água",
+            "Elas bebem cerveja",
+            "Nós somos cavalos",
+            "Vocês são gatos",
+            "Eles são cães"
+          ],
+          "practiceHref": "verb-plurals",
+          "id": "d0bba2699bff",
+          "title": "Verb plurals",
+          "levels": 3
+        },
+        {
+          "summary": [
+            "médico",
+            "bombeira",
+            "bombeiro",
+            "fazendeira",
+            "fazendeiro",
+            "uma médica",
+            "fazendeiras",
+            "A médica bebe água",
+            "O garçom trabalha",
+            "As bombeiras chegam",
+            "O fazendeiro vê os animais",
+            "Os enfermeiros moram aqui",
+            "O cantor canta muito bem"
+          ],
+          "practiceHref": "professions",
+          "id": "75e952736a7f",
+          "title": "Professions",
+          "levels": 3
+        }
+      ]
+    },
+    {
+      "title": "Introduction",
+      "skills": [
+        {
+          "summary": [
+            "Bom dia!",
+            "Bom dia, eu sou a Cecilia.",
+            "Meu nome  José",
+            "Como vai?",
+            "E, aí?",
+            "Prazer em conhecê-lo",
+            "Até logo!",
+            "Qual é o seu nome?",
+            "Boa tarde!",
+            "Boa noite, José!"
+          ],
+          "practiceHref": "phrases",
+          "id": "0beaa60946f0",
+          "title": "Phrases",
+          "levels": 3
+        },
+        {
+          "summary": [
+            "rato",
+            "elefante",
+            "parque",
+            "o rato",
+            "o elefante",
+            "o parque",
+            "Cecilia é alta",
+            "Max é alto",
+            "Eu sou velho",
+            "Ela é velha",
+            "Ele é velho",
+            "Eu sou grande",
+            "Ela é grande",
+            "Nós somos grandes",
+            "Elas são grandes",
+            "Eles são pequenos",
+            "Os gatos são pequenos",
+            "Os velhos comem carne",
+            "Max não é baixo",
+            "O cão é pequeno e velho",
+            "O parque é pequeno",
+            "O parque é grande",
+            "O rato é pequeno",
+            "Os elefantes são grandes, os ratos são pequenos",
+            "Os grandes ratos trabalham"
+          ],
+          "practiceHref": "adjectives",
+          "id": "82e89e72288d",
+          "title": "Adjectives",
+          "levels": 6
+        },
+        {
+          "summary": [
+            "café",
+            "vinho",
+            "cerveja",
+            "um café",
+            "o vinho",
+            "Você gosta de café?",
+            "Eu gosto de cerveja",
+            "Não gosto de vinho",
+            "Ele não come carne",
+            "Eu bebo vinho",
+            "Uma cerveja, por favor!",
+            "Você gosta de vinho?",
+            "Você não gosta de pão?"
+          ],
+          "practiceHref": "preferences",
+          "id": "f7ee2ecbddc1",
+          "title": "Preferences",
+          "levels": 3
+        }
+      ]
+    },
+    {
+      "title": "Activities",
+      "skills": [
+        {
+          "summary": [
+            "Eu sou um estudante",
+            "Eu estou na escola",
+            "Ela é enfermeira",
+            "Ela está doente",
+            "Nós estamos na cidade",
+            "O gato está limpo",
+            "Eles estão prontos",
+            "Eles são inteligentes",
+            "Vocês são médicos?",
+            "Você está contente?"
+          ],
+          "practiceHref": "ser-estar",
+          "id": "4873b8184638",
+          "title": "Ser/estar",
+          "levels": 3
+        },
+        {
+          "summary": [
+            "Nós estamos cozinhando a janta",
+            "Eu estou fazendo este exercício",
+            "Eles estão jogando",
+            "Você está escutando?",
+            "Você está aprendendo muito",
+            "O pato está abraçando o gato",
+            "Ela está nadando no mar",
+            "Ele está comendo chocolate",
+            "Vocês estão escrevendo uma carta?",
+            "Nós vamos ao parque",
+            "Eu estou cantando uma canção"
+          ],
+          "practiceHref": "continuous",
+          "id": "a3ab90692df4",
+          "title": "Continuous",
+          "levels": 3
+        }
+      ]
+    }
+  ]
+}
