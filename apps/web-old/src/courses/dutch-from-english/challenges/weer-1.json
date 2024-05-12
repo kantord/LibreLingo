@@ -1,0 +1,419 @@
+{
+  "id": "4873b8184638",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Het is warm",
+      "meaningInSourceLanguage": "It's warm.",
+      "id": "a2ddf1b26ec9",
+      "priority": 0,
+      "group": "503793d75104"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "It's",
+          "definition": "Het is"
+        },
+        {
+          "word": "warm.",
+          "definition": "warm"
+        }
+      ],
+      "chips": [
+        "Het",
+        "is",
+        "warm",
+        "Wat",
+        "je"
+      ],
+      "solutions": [
+        [
+          "Het",
+          "is",
+          "warm"
+        ]
+      ],
+      "formattedSolution": "Het is warm",
+      "id": "8b281c382c84",
+      "priority": 2,
+      "group": "503793d75104"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Het",
+          "definition": "it"
+        },
+        {
+          "word": "is",
+          "definition": "eats\nis"
+        },
+        {
+          "word": "warm",
+          "definition": "warm"
+        }
+      ],
+      "chips": [
+        "It's",
+        "warm",
+        "I'm",
+        "am"
+      ],
+      "solutions": [
+        [
+          "It's",
+          "warm"
+        ]
+      ],
+      "formattedSolution": "It's warm.",
+      "id": "330016f45ae0",
+      "priority": 2,
+      "group": "503793d75104"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Het regent",
+      "meaningInSourceLanguage": "It's raining.",
+      "id": "90376eab633e",
+      "priority": 0,
+      "group": "6786160aef34"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "It's",
+          "definition": "Het is"
+        },
+        {
+          "word": "raining.",
+          "definition": "regent"
+        }
+      ],
+      "chips": [
+        "Het",
+        "regent",
+        "eet",
+        "een"
+      ],
+      "solutions": [
+        [
+          "Het",
+          "regent"
+        ]
+      ],
+      "formattedSolution": "Het regent",
+      "id": "28009feed80f",
+      "priority": 2,
+      "group": "6786160aef34"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Het",
+          "definition": "it"
+        },
+        {
+          "word": "regent",
+          "definition": "raining"
+        }
+      ],
+      "chips": [
+        "It's",
+        "raining",
+        "rainy",
+        "sing"
+      ],
+      "solutions": [
+        [
+          "It's",
+          "raining"
+        ]
+      ],
+      "formattedSolution": "It's raining.",
+      "id": "8f25d7420791",
+      "priority": 2,
+      "group": "6786160aef34"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Het is zonnig",
+      "meaningInSourceLanguage": "It's sunny.",
+      "id": "f7b99e639e8b",
+      "priority": 0,
+      "group": "14953738b32b"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "It's",
+          "definition": "Het is"
+        },
+        {
+          "word": "sunny.",
+          "definition": "zonnig"
+        }
+      ],
+      "chips": [
+        "Het",
+        "is",
+        "zonnig",
+        "in",
+        "en"
+      ],
+      "solutions": [
+        [
+          "Het",
+          "is",
+          "zonnig"
+        ]
+      ],
+      "formattedSolution": "Het is zonnig",
+      "id": "0e8851155e5a",
+      "priority": 2,
+      "group": "14953738b32b"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Het",
+          "definition": "it"
+        },
+        {
+          "word": "is",
+          "definition": "eats\nis"
+        },
+        {
+          "word": "zonnig",
+          "definition": "sunny"
+        }
+      ],
+      "chips": [
+        "It's",
+        "sunny",
+        "sun",
+        "son"
+      ],
+      "solutions": [
+        [
+          "It's",
+          "sunny"
+        ]
+      ],
+      "formattedSolution": "It's sunny.",
+      "id": "96017b3a835b",
+      "priority": 2,
+      "group": "14953738b32b"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Wat voor weer is het vandaag?",
+      "meaningInSourceLanguage": "How is the weather today?",
+      "id": "a18e503ba45d",
+      "priority": 0,
+      "group": "3c4d3dcb231f"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "How",
+          "definition": "Hoe"
+        },
+        {
+          "word": "is",
+          "definition": "is"
+        },
+        {
+          "word": "the",
+          "definition": "de"
+        },
+        {
+          "word": "weather",
+          "definition": "weer"
+        },
+        {
+          "word": "today?",
+          "definition": "vandaag"
+        }
+      ],
+      "chips": [
+        "Wat",
+        "voor",
+        "weer",
+        "is",
+        "het",
+        "vandaag",
+        "eet",
+        "van",
+        "wat",
+        "en",
+        "een"
+      ],
+      "solutions": [
+        [
+          "Wat",
+          "voor",
+          "weer",
+          "is",
+          "het",
+          "vandaag"
+        ]
+      ],
+      "formattedSolution": "Wat voor weer is het vandaag?",
+      "id": "023d5d6b3eae",
+      "priority": 2,
+      "group": "3c4d3dcb231f"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Wat",
+          "definition": "What"
+        },
+        {
+          "word": "voor",
+          "definition": "for"
+        },
+        {
+          "word": "weer",
+          "definition": "weather"
+        },
+        {
+          "word": "is",
+          "definition": "eats\nis"
+        },
+        {
+          "word": "het",
+          "definition": "it"
+        },
+        {
+          "word": "vandaag?",
+          "definition": "today"
+        }
+      ],
+      "chips": [
+        "How",
+        "is",
+        "the",
+        "weather",
+        "today",
+        "to",
+        "they",
+        "too",
+        "He"
+      ],
+      "solutions": [
+        [
+          "How",
+          "is",
+          "the",
+          "weather",
+          "today"
+        ]
+      ],
+      "formattedSolution": "How is the weather today?",
+      "id": "dd4237008e84",
+      "priority": 2,
+      "group": "3c4d3dcb231f"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "weer",
+      "meaningInSourceLanguage": "weather",
+      "id": "b408df58a0e0",
+      "priority": 0,
+      "group": "3b86862e252b"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "heet",
+      "meaningInSourceLanguage": "hot",
+      "id": "cfd1f1ae8652",
+      "priority": 0,
+      "group": "24812b5bf6c9"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "sun1.jpg",
+        "sun2.jpg",
+        "sun3.jpg"
+      ],
+      "formInTargetLanguage": "Zon",
+      "meaningInSourceLanguage": "sun",
+      "id": "0af62054023f",
+      "priority": 0,
+      "group": "416ec6f142a6"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "sun1.jpg",
+        "sun2.jpg",
+        "sun3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "Zon"
+      ],
+      "phrase": [
+        {
+          "word": "sun",
+          "definition": "Zon"
+        }
+      ],
+      "id": "21ca9e78331b",
+      "priority": 1,
+      "group": "416ec6f142a6"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "rain1.jpg",
+        "rain2.jpg",
+        "rain3.jpg"
+      ],
+      "formInTargetLanguage": "regent",
+      "meaningInSourceLanguage": "raining",
+      "id": "e7ea103420de",
+      "priority": 0,
+      "group": "f56d616a7136"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "rain1.jpg",
+        "rain2.jpg",
+        "rain3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "regent"
+      ],
+      "phrase": [
+        {
+          "word": "raining",
+          "definition": "regent"
+        }
+      ],
+      "id": "463392c381d2",
+      "priority": 1,
+      "group": "f56d616a7136"
+    }
+  ]
+}

@@ -1,0 +1,419 @@
+{
+  "languageName": "Kabyle",
+  "languageCode": "kab",
+  "uiLanguage": "fr",
+  "specialCharacters": [
+    "č",
+    "Č",
+    "ḍ",
+    "Ḍ",
+    "ǧ",
+    "Ǧ",
+    "ḥ",
+    "Ḥ",
+    "ɣ",
+    "Ɣ",
+    "ṛ",
+    "Ṛ",
+    "ṣ",
+    "Ṣ",
+    "ṭ",
+    "Ṭ",
+    "ẓ",
+    "Ẓ",
+    "ɛ",
+    "Ɛ"
+  ],
+  "repositoryURL": "https://github.com/LibreLingo/LibreLingo-KAB-from-FR",
+  "license": {
+    "name": {
+      "short": "CC BY-SA 4.0",
+      "full": "Attribution-ShareAlike 4.0 International"
+    },
+    "link": "https://creativecommons.org/licenses/by-sa/4.0/legalcode"
+  },
+  "modules": [
+    {
+      "title": "Basics",
+      "skills": [
+        {
+          "imageSet": [
+            "dog1",
+            "lion3",
+            "cat3"
+          ],
+          "introduction": "animaux.md",
+          "summary": [
+            "aqjun",
+            "amcic",
+            "lmerd",
+            "izem",
+            "abṛik",
+            "agmar",
+            "amcic",
+            "lmerd",
+            "izem",
+            "abṛik",
+            "aɛudiw",
+            "aqjun",
+            "D agmar",
+            "Max d aqjun",
+            "Abṛik d uɛudiw"
+          ],
+          "practiceHref": "animaux",
+          "id": "38c2ea1c36d2",
+          "title": "Animaux",
+          "levels": 3
+        },
+        {
+          "imageSet": [
+            "bread1",
+            "milk2",
+            "pasta3"
+          ],
+          "summary": [
+            "aɣrum",
+            "ayefki",
+            "irektiyen",
+            "imeddukal",
+            "aɣrum",
+            "ayefki",
+            "irektiyen",
+            "imeddukal",
+            "S tezmert tanalt-ik",
+            "Txil-k",
+            "Aɣrum, txil-k",
+            "Aman, txil-m",
+            "Cecilia ttess aman",
+            "Imeddukal tessen tabyirt",
+            "Yanis itett aɣrum",
+            "Tetteɣ irektiyen"
+          ],
+          "practiceHref": "aliments",
+          "id": "569673478a3d",
+          "title": "Aliments",
+          "levels": 4
+        },
+        {
+          "imageSet": [
+            "dress2",
+            "t-shirt1",
+            "hat2"
+          ],
+          "summary": [
+            "taqenduṛt",
+            "atriku",
+            "tamḍelliwt",
+            "isebbaḍen",
+            "taseddrit",
+            "timeḥremt",
+            "iqaciṛen",
+            "taqenduṛt",
+            "atriku",
+            "tamḍelliwt",
+            "isebbaḍen",
+            "taseddrit",
+            "timeḥremt",
+            "aqaciṛ",
+            "Yeɛjeb-iyi!",
+            "Acḥal azal-is?",
+            "Tanemmirt",
+            "Taqenduṛt tecbeḥ",
+            "Meqrit isebbaḍen",
+            "Atriku meqqer",
+            "Timeḥremt meẓẓiyet"
+          ],
+          "practiceHref": "habits",
+          "id": "c097516da9d5",
+          "title": "Habits",
+          "levels": 4
+        },
+        {
+          "imageSet": [
+            "sky1",
+            "river2",
+            "sun3"
+          ],
+          "summary": [
+            "igenni",
+            "asif",
+            "itij",
+            "ilel",
+            "adrar",
+            "agelmim",
+            "taftist",
+            "yiwen yigenni",
+            "yiwen wasif",
+            "yiwen yitij",
+            "yiwen yilel",
+            "yiwen udrar",
+            "yiwen ugelmim",
+            "yiwet teftist",
+            "Inig ameggaz!",
+            "Ad nruḥ ɣer teftist!",
+            "Ilel neɣ adrar?",
+            "Asif yetturug ɣer yilel",
+            "Itij yettali deg yigenni",
+            "Agelmim yetturug deg wasif"
+          ],
+          "practiceHref": "nature",
+          "id": "27a92ea694cb",
+          "title": "Nature",
+          "levels": 4
+        },
+        {
+          "summary": [
+            "Nekk d amcic",
+            "Kemm tdesseḍ",
+            "Agmar iderreɛ",
+            "Nekk tetteɣ aɣrum",
+            "Kečč ttetteḍ irektiyen",
+            "Nettat ttett pizza",
+            "Netta itett aɣrum",
+            "Nekk tesseɣ tabyirt",
+            "Kemm ttesseḍ ayefki",
+            "Maria ttess lqahwa",
+            "Agmar itess aman"
+          ],
+          "practiceHref": "verbes",
+          "id": "62f74c5e3db9",
+          "title": "Verbes",
+          "levels": 3
+        },
+        {
+          "summary": [
+            "imcac",
+            "tiftisin",
+            "ibṛiken",
+            "tisedray",
+            "inelmaden",
+            "tizwal uṛumi",
+            "nnwaḍer",
+            "imsujiyen",
+            "imcac",
+            "tiftisin",
+            "ibṛiken",
+            "tisedray",
+            "inelmaden",
+            "tizwal-uṛumi",
+            "nnwaḍer",
+            "imsujiyen",
+            "Imcac izegzawen",
+            "Tiftisin tihuskayin",
+            "Tizwal uṛumi d tizeggaɣin",
+            "Imcac d inelmaden",
+            "Nnwaḍer meqrit",
+            "Ibṛiken d imsujiyen",
+            "Tisedray d tiẓerwalin"
+          ],
+          "practiceHref": "pluriels",
+          "id": "76a6c8df6b2b",
+          "title": "Pluriels",
+          "levels": 5
+        },
+        {
+          "summary": [
+            "Nekni ntett seksu",
+            "Kunwi ttettem aḍil",
+            "Kunnemti ttettemt tibexsisin",
+            "Nutenti tettent tiẓuṛin",
+            "Nutni tetten tiɣrifin",
+            "Nekkenti ntess lqahwa",
+            "Kunnemti ttessemt aman",
+            "Kunwi ttessem llatay",
+            "Nutenti tessent ayefki",
+            "Nutni tessen tabyirt",
+            "Nekni nrekkeb iɛudiwen",
+            "Kunnemti tetturaremt d yimcac",
+            "Kunwi tettazzalem d yiqjan",
+            "Nutenti zzuɣurent taqejjirt",
+            "Nutni nehhren aɣyul"
+          ],
+          "practiceHref": "verbes-pluriels",
+          "id": "d0bba2699bff",
+          "title": "Verbes pluriels",
+          "levels": 4
+        },
+        {
+          "summary": [
+            "amsuji",
+            "tamsujit",
+            "tasexsayt",
+            "asexsay",
+            "tafellaḥt",
+            "afellaḥ",
+            "yiwet temsujit",
+            "ifellaḥen",
+            "tifellaḥin",
+            "Tamsujit ttess aman",
+            "Aqeddac yettmahal",
+            "Isexsayen wwḍen ɣer tmes",
+            "Afellaḥ yettwali iɣersiwen",
+            "Timaragin n umsuji zedɣent dagi",
+            "Tacennayt tecna taɣect tahuskayt",
+            "Tacennayt d ucennay d inaẓuren"
+          ],
+          "practiceHref": "professions",
+          "id": "75e952736a7f",
+          "title": "Professions",
+          "levels": 4
+        }
+      ]
+    },
+    {
+      "title": "Introduction",
+      "skills": [
+        {
+          "summary": [
+            "Azul!",
+            "Azul, nekk d Cecilia.",
+            "Isem-ik?",
+            "Isem-iw Ali",
+            "Amek tettiliḍ?",
+            "Dacu akka?",
+            "Ferḥeɣ imi k - sneɣ",
+            "Ferḥeɣ imi kem-sneɣ",
+            "Ar tufat!",
+            "Ass ameggaz!",
+            "Iḍ ameggaz, Ali!"
+          ],
+          "practiceHref": "phrases",
+          "id": "0beaa60946f0",
+          "title": "Phrases",
+          "levels": 3
+        },
+        {
+          "summary": [
+            "aɣerda",
+            "lfil",
+            "lejnan",
+            "iɣerdayen",
+            "lfilat",
+            "lejnanat",
+            "Cecilia ɣezzifet",
+            "Idir ɣezzif",
+            "Nekk meqreɣ",
+            "Tameṭṭut meqret",
+            "Argaz meqqer",
+            "Nekk zureɣ",
+            "Nettat zuret",
+            "Nekni zurit",
+            "Tullas zurit",
+            "Iqjan meẓẓiyit",
+            "Imcac mellulit",
+            "Imeqranen tetten aksum",
+            "Idir d azubaɣ",
+            "Aqjun meẓẓi u wesser",
+            "Lejnan zegzaw",
+            "Lejnan hraw",
+            "Aɣerda d azerzaɣ",
+            "Lfilat meqrit, iɣerdayen meẓẓiyit",
+            "Iɣerdayen imeqranen qeddcen"
+          ],
+          "practiceHref": "adjectifs",
+          "id": "82e89e72288d",
+          "title": "Adjectifs",
+          "levels": 6
+        },
+        {
+          "summary": [
+            "lqahwa",
+            "ccṛab",
+            "tabyirt",
+            "yiwet lqahwa",
+            "ccṛab",
+            "Tḥemmleḍ lqahwa?",
+            "Ḥemmleɣ irektiyen",
+            "Ḥemmleɣ tabyirt",
+            "Ur ḥemmleɣ ara ccṛab",
+            "Ur itett ara tacriḥt",
+            "Nekk tesseɣ llatay",
+            "Cecilia ur ttett ara aslem",
+            "Yiwet n tebyirt, txil-k!",
+            "Tḥemmleḍ ccṛab?",
+            "ur tḥemmleḍ ara aɣrum?"
+          ],
+          "practiceHref": "preferences",
+          "id": "f7ee2ecbddc1",
+          "title": "Préférences",
+          "levels": 4
+        }
+      ]
+    },
+    {
+      "title": "Activities",
+      "skills": [
+        {
+          "imageSet": [
+            "dog1",
+            "lion3",
+            "cat3"
+          ],
+          "summary": [
+            "aqjun",
+            "amcic",
+            "lmerd",
+            "izem",
+            "abṛik",
+            "agmar",
+            "amcic",
+            "lmerd",
+            "izem",
+            "abṛik",
+            "aɛudiw",
+            "aqjun",
+            "D agmar",
+            "Max d aqjun",
+            "Abṛik d uɛudiw"
+          ],
+          "practiceHref": "test-jr",
+          "id": "43ab4b67a720",
+          "title": "Test_JR",
+          "levels": 3
+        },
+        {
+          "summary": [
+            "Lluẓeɣ",
+            "Aql-i deg uɣerbaz",
+            "Neffud tiqit n waman",
+            "Maria d yimeddukal-is ɛyan",
+            "Omar d Idir serden seg tikli",
+            "Amcic-agi zeddig",
+            "Aqjun-agi yeqlundem",
+            "Arrac llexsen",
+            "Aɣyul yeglalez deg uɣebbar",
+            "Lmerd yumes d tibuxin",
+            "Ttergigiɣ seg usemmiḍ",
+            "Maria tetcirriw si tawla",
+            "Tulawin nnecrahent",
+            "Taqcict tenneɣni"
+          ],
+          "practiceHref": "etat",
+          "id": "4873b8184638",
+          "title": "État",
+          "levels": 4
+        },
+        {
+          "summary": [
+            "Nekkni nessewway imensi",
+            "Nekk seɣtayeɣ alaɣmu-agi",
+            "Nutenti tturarent tuffra",
+            "La tesmuzguteḍ?",
+            "Tlemmdeḍ aṭas",
+            "Abṛik yeslufuy i umcic",
+            "Taqcict tettɛummu deg wasif",
+            "Aqcic itett tiẓidanin",
+            "La ttarun tabṛat?",
+            "Nekkenti netteddu ɣer lexla",
+            "La cennuɣ yiwet taɣect",
+            "Abṛik ineqqeb aqjun, amcic ixebbec lmerd"
+          ],
+          "practiceHref": "continuons",
+          "id": "a3ab90692df4",
+          "title": "Continuons",
+          "levels": 3
+        }
+      ]
+    }
+  ]
+}

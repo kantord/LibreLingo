@@ -1,0 +1,914 @@
+{
+  "id": "c097516da9d5",
+  "levels": 4,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Yeɛjeb-iyi!",
+      "meaningInSourceLanguage": "Ça me plaît!",
+      "id": "7d4b9c9dc984",
+      "priority": 0,
+      "group": "1e4a1489c1c2"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Acḥal azal-is?",
+      "meaningInSourceLanguage": "Combien ça coûte?",
+      "id": "06735990660f",
+      "priority": 0,
+      "group": "efb14d61cdf0"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Combien",
+          "definition": "acḥal"
+        },
+        {
+          "word": "ça",
+          "definition": "tagi\nwagi"
+        },
+        {
+          "word": "coûte?",
+          "definition": "azal"
+        }
+      ],
+      "chips": [
+        "Acḥal",
+        "azal-is",
+        "Azul",
+        "Aql-i"
+      ],
+      "solutions": [
+        [
+          "Acḥal",
+          "azal-is"
+        ]
+      ],
+      "formattedSolution": "Acḥal azal-is?",
+      "id": "1c0732b5bc55",
+      "priority": 2,
+      "group": "efb14d61cdf0"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Acḥal",
+          "definition": "combien"
+        },
+        {
+          "word": "azal-is?",
+          "definition": "{son prix}"
+        }
+      ],
+      "chips": [
+        "Combien",
+        "ça",
+        "coûte",
+        "me",
+        "robe"
+      ],
+      "solutions": [
+        [
+          "Combien",
+          "ça",
+          "coûte"
+        ]
+      ],
+      "formattedSolution": "Combien ça coûte?",
+      "id": "d6733eaf59e3",
+      "priority": 2,
+      "group": "efb14d61cdf0"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Tanemmirt",
+      "meaningInSourceLanguage": "Merci",
+      "id": "57d8a79db6fc",
+      "priority": 0,
+      "group": "fa60dc86f71e"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Taqenduṛt tecbeḥ",
+      "meaningInSourceLanguage": "La robe est belle",
+      "id": "6fb0d3c5ea21",
+      "priority": 0,
+      "group": "8a1612fb1f68"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "La",
+          "definition": "déterminant\ndéterminent\nédterminant"
+        },
+        {
+          "word": "robe",
+          "definition": "taqenduṛt"
+        },
+        {
+          "word": "est",
+          "definition": "d\nyella\nêtre"
+        },
+        {
+          "word": "belle",
+          "definition": "igerrez\ntahuskayt\ntecbeḥ\ntgerrez\nyecbeḥ"
+        }
+      ],
+      "chips": [
+        "Taqenduṛt",
+        "tecbeḥ",
+        "tezmert",
+        "tessen"
+      ],
+      "solutions": [
+        [
+          "Taqenduṛt",
+          "tecbeḥ"
+        ]
+      ],
+      "formattedSolution": "Taqenduṛt tecbeḥ",
+      "id": "ecb80dae4bb8",
+      "priority": 2,
+      "group": "8a1612fb1f68"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Taqenduṛt",
+          "definition": "la robe\nrobe"
+        },
+        {
+          "word": "tecbeḥ",
+          "definition": "belle"
+        }
+      ],
+      "chips": [
+        "La",
+        "robe",
+        "est",
+        "belle",
+        "et",
+        "Le",
+        "es"
+      ],
+      "solutions": [
+        [
+          "La",
+          "robe",
+          "est",
+          "belle"
+        ]
+      ],
+      "formattedSolution": "La robe est belle",
+      "id": "589618a01524",
+      "priority": 2,
+      "group": "8a1612fb1f68"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Meqrit isebbaḍen",
+      "meaningInSourceLanguage": "Les souliers sont grands",
+      "id": "3e28ca8795a9",
+      "priority": 0,
+      "group": "c20ad610ee63"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Les",
+          "definition": "déterminant\ndéterminent"
+        },
+        {
+          "word": "souliers",
+          "definition": "isebbaḍen"
+        },
+        {
+          "word": "sont",
+          "definition": "d\ndéterminant\nllan\nêtre"
+        },
+        {
+          "word": "grands",
+          "definition": "meqrit"
+        }
+      ],
+      "chips": [
+        "Meqrit",
+        "isebbaḍen",
+        "meqrit",
+        "meqret"
+      ],
+      "solutions": [
+        [
+          "Meqrit",
+          "isebbaḍen"
+        ]
+      ],
+      "formattedSolution": "Meqrit isebbaḍen",
+      "id": "1b04fc04e1d4",
+      "priority": 2,
+      "group": "c20ad610ee63"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Meqrit",
+          "definition": "grandes\ngrands"
+        },
+        {
+          "word": "isebbaḍen",
+          "definition": "chaussures\nles chaussures\nsouliers"
+        }
+      ],
+      "chips": [
+        "Les",
+        "souliers",
+        "sont",
+        "grands",
+        "ses",
+        "suis",
+        "les"
+      ],
+      "solutions": [
+        [
+          "Les",
+          "souliers",
+          "sont",
+          "grands"
+        ]
+      ],
+      "formattedSolution": "Les souliers sont grands",
+      "id": "6ab2fa59157e",
+      "priority": 2,
+      "group": "c20ad610ee63"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Atriku meqqer",
+      "meaningInSourceLanguage": "Le t-shirt est grand",
+      "id": "37aebc2a287a",
+      "priority": 0,
+      "group": "b75388944f44"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Le",
+          "definition": "déterminant\ndéterminent\nyiwen"
+        },
+        {
+          "word": "t-shirt",
+          "definition": "atriku"
+        },
+        {
+          "word": "est",
+          "definition": "d\nyella\nêtre"
+        },
+        {
+          "word": "grand",
+          "definition": "meqqer\nmeqret"
+        }
+      ],
+      "chips": [
+        "Atriku",
+        "meqqer",
+        "meqreɣ",
+        "meqret"
+      ],
+      "solutions": [
+        [
+          "Atriku",
+          "meqqer"
+        ]
+      ],
+      "formattedSolution": "Atriku meqqer",
+      "id": "eed1833e2b9c",
+      "priority": 2,
+      "group": "b75388944f44"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Atriku",
+          "definition": "le t-shirt\nt-shirt"
+        },
+        {
+          "word": "meqqer",
+          "definition": "grand\nvieux"
+        }
+      ],
+      "chips": [
+        "Le",
+        "t-shirt",
+        "est",
+        "grand",
+        "et",
+        "Les",
+        "rat"
+      ],
+      "solutions": [
+        [
+          "Le",
+          "t-shirt",
+          "est",
+          "grand"
+        ]
+      ],
+      "formattedSolution": "Le t-shirt est grand",
+      "id": "0ec46450f5b9",
+      "priority": 2,
+      "group": "b75388944f44"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Timeḥremt meẓẓiyet",
+      "meaningInSourceLanguage": "La jupe est petite",
+      "id": "a5a8900617b9",
+      "priority": 0,
+      "group": "63e76a1f2e72"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "La",
+          "definition": "déterminant\ndéterminent\nédterminant"
+        },
+        {
+          "word": "jupe",
+          "definition": "timeḥremt"
+        },
+        {
+          "word": "est",
+          "definition": "d\nyella\nêtre"
+        },
+        {
+          "word": "petite",
+          "definition": "meẓẓiyet"
+        }
+      ],
+      "chips": [
+        "Timeḥremt",
+        "meẓẓiyet",
+        "meqret",
+        "meẓẓiyit"
+      ],
+      "solutions": [
+        [
+          "Timeḥremt",
+          "meẓẓiyet"
+        ]
+      ],
+      "formattedSolution": "Timeḥremt meẓẓiyet",
+      "id": "d5560904bd1c",
+      "priority": 2,
+      "group": "63e76a1f2e72"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Timeḥremt",
+          "definition": "jupe\nla jupe"
+        },
+        {
+          "word": "meẓẓiyet",
+          "definition": "petite"
+        }
+      ],
+      "chips": [
+        "La",
+        "jupe",
+        "est",
+        "petite",
+        "et",
+        "Le",
+        "te"
+      ],
+      "solutions": [
+        [
+          "La",
+          "jupe",
+          "est",
+          "petite"
+        ]
+      ],
+      "formattedSolution": "La jupe est petite",
+      "id": "bbd64482156c",
+      "priority": 2,
+      "group": "63e76a1f2e72"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "dress1.jpg",
+        "dress2.jpg",
+        "dress3.jpg"
+      ],
+      "formInTargetLanguage": "taqenduṛt",
+      "meaningInSourceLanguage": "robe",
+      "id": "e19e27b66f58",
+      "priority": 0,
+      "group": "01da6a3c515f"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "dress1.jpg",
+        "dress2.jpg",
+        "dress3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "taqenduṛt"
+      ],
+      "phrase": [
+        {
+          "word": "robe",
+          "definition": "taqenduṛt"
+        }
+      ],
+      "id": "704f2d5f9e64",
+      "priority": 1,
+      "group": "01da6a3c515f"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "t-shirt1.jpg",
+        "t-shirt2.jpg",
+        "t-shirt3.jpg"
+      ],
+      "formInTargetLanguage": "atriku",
+      "meaningInSourceLanguage": "t-shirt",
+      "id": "374465e419a9",
+      "priority": 0,
+      "group": "6389d59660e7"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "t-shirt1.jpg",
+        "t-shirt2.jpg",
+        "t-shirt3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "atriku"
+      ],
+      "phrase": [
+        {
+          "word": "t-shirt",
+          "definition": "atriku"
+        }
+      ],
+      "id": "313195c7a358",
+      "priority": 1,
+      "group": "6389d59660e7"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "hat1.jpg",
+        "hat2.jpg",
+        "hat3.jpg"
+      ],
+      "formInTargetLanguage": "tamḍelliwt",
+      "meaningInSourceLanguage": "chapeau",
+      "id": "412be6f23430",
+      "priority": 0,
+      "group": "b2a95a8dcedb"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "hat1.jpg",
+        "hat2.jpg",
+        "hat3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "tamḍelliwt"
+      ],
+      "phrase": [
+        {
+          "word": "chapeau",
+          "definition": "tamḍelliwt"
+        }
+      ],
+      "id": "adaccc43085e",
+      "priority": 1,
+      "group": "b2a95a8dcedb"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "shoes1.jpg",
+        "shoes2.jpg",
+        "shoes3.jpg"
+      ],
+      "formInTargetLanguage": "isebbaḍen",
+      "meaningInSourceLanguage": "les chaussures",
+      "id": "c4738b94b2e1",
+      "priority": 0,
+      "group": "6552ba84afe1"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "shoes1.jpg",
+        "shoes2.jpg",
+        "shoes3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "isebbaḍen"
+      ],
+      "phrase": [
+        {
+          "word": "les",
+          "definition": "déterminant\ndéterminent"
+        },
+        {
+          "word": "chaussures",
+          "definition": "isebbaḍen"
+        }
+      ],
+      "id": "a286618435be",
+      "priority": 1,
+      "group": "6552ba84afe1"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "shirt1.jpg",
+        "shirt2.jpg",
+        "shirt3.jpg"
+      ],
+      "formInTargetLanguage": "taseddrit",
+      "meaningInSourceLanguage": "chemise",
+      "id": "8b7de9f111eb",
+      "priority": 0,
+      "group": "3f03273818f2"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "shirt1.jpg",
+        "shirt2.jpg",
+        "shirt3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "taseddrit"
+      ],
+      "phrase": [
+        {
+          "word": "chemise",
+          "definition": "taseddrit"
+        }
+      ],
+      "id": "8bc3fe7f71cf",
+      "priority": 1,
+      "group": "3f03273818f2"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "skirt1.jpg",
+        "skirt2.jpg",
+        "skirt3.jpg"
+      ],
+      "formInTargetLanguage": "timeḥremt",
+      "meaningInSourceLanguage": "jupe",
+      "id": "47fda7f95fbf",
+      "priority": 0,
+      "group": "75fa122f7f74"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "skirt1.jpg",
+        "skirt2.jpg",
+        "skirt3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "timeḥremt"
+      ],
+      "phrase": [
+        {
+          "word": "jupe",
+          "definition": "timeḥremt"
+        }
+      ],
+      "id": "28328ba82da3",
+      "priority": 1,
+      "group": "75fa122f7f74"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "socks1.jpg",
+        "socks2.jpg",
+        "socks3.jpg"
+      ],
+      "formInTargetLanguage": "iqaciṛen",
+      "meaningInSourceLanguage": "chaussettes",
+      "id": "6a29df81e18c",
+      "priority": 0,
+      "group": "961f9495dff6"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "socks1.jpg",
+        "socks2.jpg",
+        "socks3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "iqaciṛen"
+      ],
+      "phrase": [
+        {
+          "word": "chaussettes",
+          "definition": "iqaciṛen"
+        }
+      ],
+      "id": "47c5add65e51",
+      "priority": 1,
+      "group": "961f9495dff6"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "dress1.jpg",
+        "dress2.jpg",
+        "dress3.jpg"
+      ],
+      "formInTargetLanguage": "taqenduṛt",
+      "meaningInSourceLanguage": "la robe",
+      "id": "908407f99d87",
+      "priority": 0,
+      "group": "9dc594fe9de9"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "dress1.jpg",
+        "dress2.jpg",
+        "dress3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "taqenduṛt"
+      ],
+      "phrase": [
+        {
+          "word": "la",
+          "definition": "déterminant\ndéterminent\nédterminant"
+        },
+        {
+          "word": "robe",
+          "definition": "taqenduṛt"
+        }
+      ],
+      "id": "505d47f13445",
+      "priority": 1,
+      "group": "9dc594fe9de9"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "t-shirt1.jpg",
+        "t-shirt2.jpg",
+        "t-shirt3.jpg"
+      ],
+      "formInTargetLanguage": "atriku",
+      "meaningInSourceLanguage": "le t-shirt",
+      "id": "95ffc78261b7",
+      "priority": 0,
+      "group": "e7ef0938bc35"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "t-shirt1.jpg",
+        "t-shirt2.jpg",
+        "t-shirt3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "atriku"
+      ],
+      "phrase": [
+        {
+          "word": "le",
+          "definition": "déterminant\ndéterminent\nyiwen"
+        },
+        {
+          "word": "t-shirt",
+          "definition": "atriku"
+        }
+      ],
+      "id": "a8f29a1baf31",
+      "priority": 1,
+      "group": "e7ef0938bc35"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "hat1.jpg",
+        "hat2.jpg",
+        "hat3.jpg"
+      ],
+      "formInTargetLanguage": "tamḍelliwt",
+      "meaningInSourceLanguage": "un chapeau",
+      "id": "bf667a48c8ac",
+      "priority": 0,
+      "group": "e770dcc147cb"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "hat1.jpg",
+        "hat2.jpg",
+        "hat3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "tamḍelliwt"
+      ],
+      "phrase": [
+        {
+          "word": "un",
+          "definition": "yiwen\nyiwet"
+        },
+        {
+          "word": "chapeau",
+          "definition": "tamḍelliwt"
+        }
+      ],
+      "id": "e3bdafe2b5be",
+      "priority": 1,
+      "group": "e770dcc147cb"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "shoes1.jpg",
+        "shoes2.jpg",
+        "shoes3.jpg"
+      ],
+      "formInTargetLanguage": "isebbaḍen",
+      "meaningInSourceLanguage": "les chaussures",
+      "id": "c4738b94b2e1",
+      "priority": 0,
+      "group": "6552ba84afe1"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "shoes1.jpg",
+        "shoes2.jpg",
+        "shoes3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "isebbaḍen"
+      ],
+      "phrase": [
+        {
+          "word": "les",
+          "definition": "déterminant\ndéterminent"
+        },
+        {
+          "word": "chaussures",
+          "definition": "isebbaḍen"
+        }
+      ],
+      "id": "a286618435be",
+      "priority": 1,
+      "group": "6552ba84afe1"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "shirt1.jpg",
+        "shirt2.jpg",
+        "shirt3.jpg"
+      ],
+      "formInTargetLanguage": "taseddrit",
+      "meaningInSourceLanguage": "une chemise",
+      "id": "9151a1f2c74b",
+      "priority": 0,
+      "group": "973fb81387e6"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "shirt1.jpg",
+        "shirt2.jpg",
+        "shirt3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "taseddrit"
+      ],
+      "phrase": [
+        {
+          "word": "une",
+          "definition": "yiwet"
+        },
+        {
+          "word": "chemise",
+          "definition": "taseddrit"
+        }
+      ],
+      "id": "2d9bf4208066",
+      "priority": 1,
+      "group": "973fb81387e6"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "skirt1.jpg",
+        "skirt2.jpg",
+        "skirt3.jpg"
+      ],
+      "formInTargetLanguage": "timeḥremt",
+      "meaningInSourceLanguage": "la jupe",
+      "id": "afa554c0dba4",
+      "priority": 0,
+      "group": "52f60000504f"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "skirt1.jpg",
+        "skirt2.jpg",
+        "skirt3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "timeḥremt"
+      ],
+      "phrase": [
+        {
+          "word": "la",
+          "definition": "déterminant\ndéterminent\nédterminant"
+        },
+        {
+          "word": "jupe",
+          "definition": "timeḥremt"
+        }
+      ],
+      "id": "60e398b8598e",
+      "priority": 1,
+      "group": "52f60000504f"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "socks1.jpg",
+        "socks2.jpg",
+        "socks3.jpg"
+      ],
+      "formInTargetLanguage": "aqaciṛ",
+      "meaningInSourceLanguage": "la chaussette",
+      "id": "b22f92906d76",
+      "priority": 0,
+      "group": "0eccf7c2b908"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "socks1.jpg",
+        "socks2.jpg",
+        "socks3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "aqaciṛ"
+      ],
+      "phrase": [
+        {
+          "word": "la",
+          "definition": "déterminant\ndéterminent\nédterminant"
+        },
+        {
+          "word": "chaussette",
+          "definition": "aqaciṛ"
+        }
+      ],
+      "id": "02e674742100",
+      "priority": 1,
+      "group": "0eccf7c2b908"
+    }
+  ]
+}

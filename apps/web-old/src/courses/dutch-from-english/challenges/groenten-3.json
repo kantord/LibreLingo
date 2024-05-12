@@ -1,0 +1,458 @@
+{
+  "id": "75e952736a7f",
+  "levels": 3,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Ik heb een komkommer",
+      "meaningInSourceLanguage": "I have a cucumber",
+      "id": "d21d26aa6011",
+      "priority": 0,
+      "group": "f10c73a7b079"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "I",
+          "definition": "Ik"
+        },
+        {
+          "word": "have",
+          "definition": "heb"
+        },
+        {
+          "word": "a",
+          "definition": "een"
+        },
+        {
+          "word": "cucumber",
+          "definition": "Komkommers\nkomkommer"
+        }
+      ],
+      "chips": [
+        "Ik",
+        "heb",
+        "een",
+        "komkommer",
+        "en",
+        "me",
+        "ben"
+      ],
+      "solutions": [
+        [
+          "Ik",
+          "heb",
+          "een",
+          "komkommer"
+        ]
+      ],
+      "formattedSolution": "Ik heb een komkommer",
+      "id": "5f61a4db8749",
+      "priority": 2,
+      "group": "f10c73a7b079"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Ik",
+          "definition": "I"
+        },
+        {
+          "word": "heb",
+          "definition": "have\nhaving"
+        },
+        {
+          "word": "een",
+          "definition": "One\na"
+        },
+        {
+          "word": "komkommer",
+          "definition": "cucumber"
+        }
+      ],
+      "chips": [
+        "I",
+        "have",
+        "a",
+        "cucumber",
+        "am",
+        "me",
+        "are"
+      ],
+      "solutions": [
+        [
+          "I",
+          "have",
+          "a",
+          "cucumber"
+        ]
+      ],
+      "formattedSolution": "I have a cucumber",
+      "id": "97934bdecbdd",
+      "priority": 2,
+      "group": "f10c73a7b079"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Ik heb een wortel",
+      "meaningInSourceLanguage": "I have a carrot",
+      "id": "8206a7140398",
+      "priority": 0,
+      "group": "1ad7142df955"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "I",
+          "definition": "Ik"
+        },
+        {
+          "word": "have",
+          "definition": "heb"
+        },
+        {
+          "word": "a",
+          "definition": "een"
+        },
+        {
+          "word": "carrot",
+          "definition": "Wortelen\nwortel"
+        }
+      ],
+      "chips": [
+        "Ik",
+        "heb",
+        "een",
+        "wortel",
+        "wel",
+        "en",
+        "ren"
+      ],
+      "solutions": [
+        [
+          "Ik",
+          "heb",
+          "een",
+          "wortel"
+        ]
+      ],
+      "formattedSolution": "Ik heb een wortel",
+      "id": "2cd9bfc276a7",
+      "priority": 2,
+      "group": "1ad7142df955"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Ik",
+          "definition": "I"
+        },
+        {
+          "word": "heb",
+          "definition": "have\nhaving"
+        },
+        {
+          "word": "een",
+          "definition": "One\na"
+        },
+        {
+          "word": "wortel",
+          "definition": "carrot"
+        }
+      ],
+      "chips": [
+        "I",
+        "have",
+        "a",
+        "carrot",
+        "at",
+        "am",
+        "are"
+      ],
+      "solutions": [
+        [
+          "I",
+          "have",
+          "a",
+          "carrot"
+        ]
+      ],
+      "formattedSolution": "I have a carrot",
+      "id": "27996dd112d8",
+      "priority": 2,
+      "group": "1ad7142df955"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "garlic1.jpg",
+        "garlic1.jpg",
+        "garlic1.jpg"
+      ],
+      "formInTargetLanguage": "Knoflook",
+      "meaningInSourceLanguage": "garlic",
+      "id": "ef7cc502a9bb",
+      "priority": 0,
+      "group": "bb2b6a55f5a7"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "garlic1.jpg",
+        "garlic1.jpg",
+        "garlic1.jpg"
+      ],
+      "formInTargetLanguage": [
+        "Knoflook"
+      ],
+      "phrase": [
+        {
+          "word": "garlic",
+          "definition": "Knoflook"
+        }
+      ],
+      "id": "29da1cfa87aa",
+      "priority": 1,
+      "group": "bb2b6a55f5a7"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "asparagus2.jpg",
+        "asparagus2.jpg",
+        "asparagus2.jpg"
+      ],
+      "formInTargetLanguage": "Asperges",
+      "meaningInSourceLanguage": "asparagus",
+      "id": "8f0b9fa98031",
+      "priority": 0,
+      "group": "ed4436c96d81"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "asparagus2.jpg",
+        "asparagus2.jpg",
+        "asparagus2.jpg"
+      ],
+      "formInTargetLanguage": [
+        "Asperges"
+      ],
+      "phrase": [
+        {
+          "word": "asparagus",
+          "definition": "Asperges"
+        }
+      ],
+      "id": "fa6f48abbceb",
+      "priority": 1,
+      "group": "ed4436c96d81"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "carott1.jpg",
+        "carott1.jpg",
+        "carott1.jpg"
+      ],
+      "formInTargetLanguage": "Wortelen",
+      "meaningInSourceLanguage": "carrot",
+      "id": "cdb750aee452",
+      "priority": 0,
+      "group": "a2f526fffbed"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "carott1.jpg",
+        "carott1.jpg",
+        "carott1.jpg"
+      ],
+      "formInTargetLanguage": [
+        "Wortelen"
+      ],
+      "phrase": [
+        {
+          "word": "carrot",
+          "definition": "Wortelen\nwortel"
+        }
+      ],
+      "id": "ff12141d5b85",
+      "priority": 1,
+      "group": "a2f526fffbed"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "cucumber1.jpg",
+        "cucumber1.jpg",
+        "cucumber1.jpg"
+      ],
+      "formInTargetLanguage": "Komkommers",
+      "meaningInSourceLanguage": "cucumber",
+      "id": "2ea0d50d5efd",
+      "priority": 0,
+      "group": "26d925638f31"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "cucumber1.jpg",
+        "cucumber1.jpg",
+        "cucumber1.jpg"
+      ],
+      "formInTargetLanguage": [
+        "Komkommers"
+      ],
+      "phrase": [
+        {
+          "word": "cucumber",
+          "definition": "Komkommers\nkomkommer"
+        }
+      ],
+      "id": "565d08e080a2",
+      "priority": 1,
+      "group": "26d925638f31"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "onion1.jpg",
+        "onion1.jpg",
+        "onion1.jpg"
+      ],
+      "formInTargetLanguage": "Uien",
+      "meaningInSourceLanguage": "onion",
+      "id": "c9b5c6f759b4",
+      "priority": 0,
+      "group": "82e7b56e3b78"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "onion1.jpg",
+        "onion1.jpg",
+        "onion1.jpg"
+      ],
+      "formInTargetLanguage": [
+        "Uien"
+      ],
+      "phrase": [
+        {
+          "word": "onion",
+          "definition": "Uien"
+        }
+      ],
+      "id": "f27ef7779c27",
+      "priority": 1,
+      "group": "82e7b56e3b78"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "zucchini1.jpg",
+        "zucchini1.jpg",
+        "zucchini1.jpg"
+      ],
+      "formInTargetLanguage": "Zucini",
+      "meaningInSourceLanguage": "zucchini",
+      "id": "af7166359911",
+      "priority": 0,
+      "group": "4ab1a9656f96"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "zucchini1.jpg",
+        "zucchini1.jpg",
+        "zucchini1.jpg"
+      ],
+      "formInTargetLanguage": [
+        "Zucini"
+      ],
+      "phrase": [
+        {
+          "word": "zucchini",
+          "definition": "Zucini"
+        }
+      ],
+      "id": "ce3c1354a185",
+      "priority": 1,
+      "group": "4ab1a9656f96"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "spinach1.jpg",
+        "spinach1.jpg",
+        "spinach1.jpg"
+      ],
+      "formInTargetLanguage": "Spinazie",
+      "meaningInSourceLanguage": "spinach",
+      "id": "b3550b3adaf7",
+      "priority": 0,
+      "group": "f5b596364d0e"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "spinach1.jpg",
+        "spinach1.jpg",
+        "spinach1.jpg"
+      ],
+      "formInTargetLanguage": [
+        "Spinazie"
+      ],
+      "phrase": [
+        {
+          "word": "spinach",
+          "definition": "Spinazie"
+        }
+      ],
+      "id": "7f0bb666d6c2",
+      "priority": 1,
+      "group": "f5b596364d0e"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "sweetcorn2.jpg",
+        "sweetcorn1.jpg",
+        "sweetcorn1.jpg"
+      ],
+      "formInTargetLanguage": "Suikermaïs",
+      "meaningInSourceLanguage": "sweetcorn",
+      "id": "4280e68c5a92",
+      "priority": 0,
+      "group": "7f552108ebdb"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "sweetcorn2.jpg",
+        "sweetcorn1.jpg",
+        "sweetcorn1.jpg"
+      ],
+      "formInTargetLanguage": [
+        "Suikermaïs"
+      ],
+      "phrase": [
+        {
+          "word": "sweetcorn",
+          "definition": "Suikermaïs"
+        }
+      ],
+      "id": "4f31b024713b",
+      "priority": 1,
+      "group": "7f552108ebdb"
+    }
+  ]
+}
