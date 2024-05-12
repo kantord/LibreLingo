@@ -1,0 +1,15 @@
+/* Override global Sass variables from the /utilities folder */
+@use 'bulma/sass/utilities' with (
+	$link: $pink
+);
+@use 'bulma/sass/base' with (
+	$body-overflow-y: auto
+);
+/* Import the components you need */
+@use 'bulma/sass/elements';
+@use 'bulma/sass/form';
+@use 'bulma/sass/components';
+@use 'bulma/sass/grid';
+@use 'bulma/sass/helpers';
+@use 'bulma/sass/layout';
+@use 'bulma/sass/themes';
