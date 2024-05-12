@@ -1,0 +1,436 @@
+{
+  "id": "379dca1c8ae9",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Tot morgen",
+      "meaningInSourceLanguage": "See you tomorrow.",
+      "id": "a40d43e25311",
+      "priority": 0,
+      "group": "0e8fd87f010a"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "See",
+          "definition": "zie"
+        },
+        {
+          "word": "you",
+          "definition": "jou\nu"
+        },
+        {
+          "word": "tomorrow.",
+          "definition": "morgen"
+        }
+      ],
+      "chips": [
+        "Tot",
+        "morgen",
+        "moet",
+        "Hoe"
+      ],
+      "solutions": [
+        [
+          "Tot",
+          "morgen"
+        ]
+      ],
+      "formattedSolution": "Tot morgen",
+      "id": "5218316c8ec3",
+      "priority": 2,
+      "group": "0e8fd87f010a"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Tot",
+          "definition": "To"
+        },
+        {
+          "word": "morgen",
+          "definition": "Morning\ntomorrow"
+        }
+      ],
+      "chips": [
+        "See",
+        "you",
+        "tomorrow",
+        "too",
+        "your"
+      ],
+      "solutions": [
+        [
+          "See",
+          "you",
+          "tomorrow"
+        ]
+      ],
+      "formattedSolution": "See you tomorrow.",
+      "id": "feb316925a73",
+      "priority": 2,
+      "group": "0e8fd87f010a"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Dank je wel, Cecille",
+      "meaningInSourceLanguage": "Thanks, Cecille.",
+      "id": "94fc58af7828",
+      "priority": 0,
+      "group": "63514f853c9f"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Thanks,",
+          "definition": "bedankt"
+        },
+        {
+          "word": "Cecille.",
+          "definition": "Cecille (name)"
+        }
+      ],
+      "chips": [
+        "Dank",
+        "je",
+        "wel",
+        "Cecille",
+        "Den",
+        "ben",
+        "en"
+      ],
+      "solutions": [
+        [
+          "Dank",
+          "je",
+          "wel",
+          "Cecille"
+        ]
+      ],
+      "formattedSolution": "Dank je wel, Cecille",
+      "id": "c8053e714845",
+      "priority": 2,
+      "group": "63514f853c9f"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Dank",
+          "definition": "Thanks"
+        },
+        {
+          "word": "je",
+          "definition": "you"
+        },
+        {
+          "word": "wel,",
+          "definition": "part of thank you"
+        },
+        {
+          "word": "Cecille",
+          "definition": "Cecille\nCecille (naam)\nCeclille (naam)"
+        }
+      ],
+      "chips": [
+        "Thanks",
+        "Cecille",
+        "thanks",
+        "This"
+      ],
+      "solutions": [
+        [
+          "Thanks",
+          "Cecille"
+        ]
+      ],
+      "formattedSolution": "Thanks, Cecille.",
+      "id": "9b191fbdb17a",
+      "priority": 2,
+      "group": "63514f853c9f"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Wat is je naam?",
+      "meaningInSourceLanguage": "What's your name?",
+      "id": "3ae7d25b1fd8",
+      "priority": 0,
+      "group": "d1ddb907749e"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "What's",
+          "definition": "Wat is"
+        },
+        {
+          "word": "your",
+          "definition": "je"
+        },
+        {
+          "word": "name?",
+          "definition": "naam"
+        }
+      ],
+      "chips": [
+        "Wat",
+        "is",
+        "je",
+        "naam",
+        "Ja",
+        "We",
+        "ga"
+      ],
+      "solutions": [
+        [
+          "Wat",
+          "is",
+          "je",
+          "naam"
+        ]
+      ],
+      "formattedSolution": "Wat is je naam?",
+      "id": "29506f6dbbe7",
+      "priority": 2,
+      "group": "d1ddb907749e"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Wat",
+          "definition": "What"
+        },
+        {
+          "word": "is",
+          "definition": "eats\nis"
+        },
+        {
+          "word": "je",
+          "definition": "you"
+        },
+        {
+          "word": "naam?",
+          "definition": "name"
+        }
+      ],
+      "chips": [
+        "What's",
+        "your",
+        "name",
+        "Name",
+        "have"
+      ],
+      "solutions": [
+        [
+          "What's",
+          "your",
+          "name"
+        ]
+      ],
+      "formattedSolution": "What's your name?",
+      "id": "ecdab264686c",
+      "priority": 2,
+      "group": "d1ddb907749e"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Mijn naam is Cecille",
+      "meaningInSourceLanguage": "My name is Cecille.",
+      "id": "3e6dffc80341",
+      "priority": 0,
+      "group": "1606e004efea"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "My",
+          "definition": "Mijn"
+        },
+        {
+          "word": "name",
+          "definition": "naam"
+        },
+        {
+          "word": "is",
+          "definition": "is"
+        },
+        {
+          "word": "Cecille.",
+          "definition": "Cecille (name)"
+        }
+      ],
+      "chips": [
+        "Mijn",
+        "naam",
+        "is",
+        "Cecille",
+        "in",
+        "mijn",
+        "Hij"
+      ],
+      "solutions": [
+        [
+          "Mijn",
+          "naam",
+          "is",
+          "Cecille"
+        ]
+      ],
+      "formattedSolution": "Mijn naam is Cecille",
+      "id": "398a6f8c7af2",
+      "priority": 2,
+      "group": "1606e004efea"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Mijn",
+          "definition": "My"
+        },
+        {
+          "word": "naam",
+          "definition": "name"
+        },
+        {
+          "word": "is",
+          "definition": "eats\nis"
+        },
+        {
+          "word": "Cecille",
+          "definition": "Cecille\nCecille (naam)\nCeclille (naam)"
+        }
+      ],
+      "chips": [
+        "My",
+        "name",
+        "is",
+        "Cecille",
+        "me",
+        "am",
+        "in"
+      ],
+      "solutions": [
+        [
+          "My",
+          "name",
+          "is",
+          "Cecille"
+        ]
+      ],
+      "formattedSolution": "My name is Cecille.",
+      "id": "43ca746a6854",
+      "priority": 2,
+      "group": "1606e004efea"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Hoe gaat het, Jaques?",
+      "meaningInSourceLanguage": "How are you Jaques?",
+      "id": "f41f69c12ae6",
+      "priority": 0,
+      "group": "301a58bf563b"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "How",
+          "definition": "Hoe"
+        },
+        {
+          "word": "are",
+          "definition": "zijn"
+        },
+        {
+          "word": "you",
+          "definition": "jou\nu"
+        },
+        {
+          "word": "Jaques?",
+          "definition": "Jaques (name)"
+        }
+      ],
+      "chips": [
+        "Hoe",
+        "gaat",
+        "het",
+        "Jaques",
+        "Het",
+        "Wat",
+        "met"
+      ],
+      "solutions": [
+        [
+          "Hoe",
+          "gaat",
+          "het",
+          "Jaques"
+        ]
+      ],
+      "formattedSolution": "Hoe gaat het, Jaques?",
+      "id": "de66ace551b6",
+      "priority": 2,
+      "group": "301a58bf563b"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Hoe",
+          "definition": "How"
+        },
+        {
+          "word": "gaat",
+          "definition": "goes"
+        },
+        {
+          "word": "het,",
+          "definition": "it"
+        },
+        {
+          "word": "Jaques?",
+          "definition": "Jaques\nJaques (naam)"
+        }
+      ],
+      "chips": [
+        "How",
+        "are",
+        "you",
+        "Jaques",
+        "He",
+        "Are",
+        "am"
+      ],
+      "solutions": [
+        [
+          "How",
+          "are",
+          "you",
+          "Jaques"
+        ]
+      ],
+      "formattedSolution": "How are you Jaques?",
+      "id": "ababd00a207e",
+      "priority": 2,
+      "group": "301a58bf563b"
+    }
+  ]
+}

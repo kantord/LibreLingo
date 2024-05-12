@@ -1,0 +1,661 @@
+{
+  "id": "569673478a3d",
+  "levels": 3,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Bonjorn!",
+      "meaningInSourceLanguage": "Bonjour!",
+      "id": "47c694554ef9",
+      "priority": 0,
+      "group": "93d0970c3b1e"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Bonjorn, sèi Cecilia",
+      "meaningInSourceLanguage": "Bonjour, je suis Cécile",
+      "id": "8f5441406594",
+      "priority": 0,
+      "group": "877ea2eb2bc3"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Bonjour,",
+          "definition": "bonjorn"
+        },
+        {
+          "word": "je suis",
+          "definition": "sèi"
+        },
+        {
+          "word": "Cécile",
+          "definition": "Cecilia"
+        }
+      ],
+      "chips": [
+        "Bonjorn",
+        "sèi",
+        "Cecilia",
+        "Bon",
+        "Bona"
+      ],
+      "solutions": [
+        [
+          "Bonjorn",
+          "sèi",
+          "Cecilia"
+        ]
+      ],
+      "formattedSolution": "Bonjorn, sèi Cecilia",
+      "id": "e3d2226f42eb",
+      "priority": 2,
+      "group": "877ea2eb2bc3"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Bonjorn,",
+          "definition": "bonjour"
+        },
+        {
+          "word": "sèi",
+          "definition": "je suis"
+        },
+        {
+          "word": "Cecilia",
+          "definition": "Cécile (nom)"
+        }
+      ],
+      "chips": [
+        "Bonjour",
+        "je",
+        "suis",
+        "Cécile",
+        "ce",
+        "se",
+        "le"
+      ],
+      "solutions": [
+        [
+          "Bonjour",
+          "je",
+          "suis",
+          "Cécile"
+        ]
+      ],
+      "formattedSolution": "Bonjour, je suis Cécile",
+      "id": "8cecc643aeb3",
+      "priority": 2,
+      "group": "877ea2eb2bc3"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Me sònan Joan",
+      "meaningInSourceLanguage": "Je m'apelle Jean",
+      "id": "435aad900f43",
+      "priority": 0,
+      "group": "5d21ec097851"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Je",
+          "definition": "iu"
+        },
+        {
+          "word": "m'apelle",
+          "definition": "me \\'pèla\nme sòna"
+        },
+        {
+          "word": "Jean",
+          "definition": "Joan"
+        }
+      ],
+      "chips": [
+        "Me",
+        "sònan",
+        "Joan",
+        "se",
+        "Bon"
+      ],
+      "solutions": [
+        [
+          "Me",
+          "sònan",
+          "Joan"
+        ],
+        [
+          "Me",
+          "'pèlan",
+          "Joan"
+        ]
+      ],
+      "formattedSolution": "Me sònan Joan",
+      "id": "e3fef6632a03",
+      "priority": 2,
+      "group": "5d21ec097851"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Me",
+          "definition": "me"
+        },
+        {
+          "word": "sònan",
+          "definition": "elles/ils apellent"
+        },
+        {
+          "word": "Joan",
+          "definition": "Jean (nom)"
+        }
+      ],
+      "chips": [
+        "Je",
+        "m'apelle",
+        "Jean",
+        "le",
+        "je"
+      ],
+      "solutions": [
+        [
+          "Je",
+          "m'apelle",
+          "Jean"
+        ]
+      ],
+      "formattedSolution": "Je m'apelle Jean",
+      "id": "b2fdb711b493",
+      "priority": 2,
+      "group": "5d21ec097851"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Coma quo vai?",
+      "meaningInSourceLanguage": "Comment ça va?",
+      "id": "3bd491fe2a54",
+      "priority": 0,
+      "group": "3ba034766e2d"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Comment",
+          "definition": "coma"
+        },
+        {
+          "word": "ça",
+          "definition": "quo"
+        },
+        {
+          "word": "va?",
+          "definition": "vai"
+        }
+      ],
+      "chips": [
+        "Coma",
+        "quo",
+        "vai",
+        "que",
+        "La"
+      ],
+      "solutions": [
+        [
+          "Coma",
+          "quo",
+          "vai"
+        ]
+      ],
+      "formattedSolution": "Coma quo vai?",
+      "id": "88678904fabe",
+      "priority": 2,
+      "group": "3ba034766e2d"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Coma",
+          "definition": "comment"
+        },
+        {
+          "word": "quo",
+          "definition": "ça"
+        },
+        {
+          "word": "vai?",
+          "definition": "elle/il/on va"
+        }
+      ],
+      "chips": [
+        "Comment",
+        "ça",
+        "va",
+        "et",
+        "La"
+      ],
+      "solutions": [
+        [
+          "Comment",
+          "ça",
+          "va"
+        ]
+      ],
+      "formattedSolution": "Comment ça va?",
+      "id": "9dd595e626bd",
+      "priority": 2,
+      "group": "3ba034766e2d"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "De que se passa?",
+      "meaningInSourceLanguage": "Qu'est ce qu'il se passe?",
+      "id": "f782d0a8bafa",
+      "priority": 0,
+      "group": "8ca868194a41"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Qu'est ce qu'",
+          "definition": "de que"
+        },
+        {
+          "word": "il",
+          "definition": "i-aul"
+        },
+        {
+          "word": "se",
+          "definition": "se"
+        },
+        {
+          "word": "passe?",
+          "definition": "passa"
+        }
+      ],
+      "chips": [
+        "De",
+        "que",
+        "se",
+        "passa",
+        "Me",
+        "te",
+        "e"
+      ],
+      "solutions": [
+        [
+          "De",
+          "que",
+          "se",
+          "passa"
+        ]
+      ],
+      "formattedSolution": "De que se passa?",
+      "id": "fe9d8176d380",
+      "priority": 2,
+      "group": "8ca868194a41"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "De que",
+          "definition": "qu'est ce que"
+        },
+        {
+          "word": "se",
+          "definition": "se"
+        },
+        {
+          "word": "passa?",
+          "definition": "elle/il/on passe"
+        }
+      ],
+      "chips": [
+        "Qu'est",
+        "ce",
+        "qu'}il",
+        "se",
+        "passe",
+        "je",
+        "le",
+        "est",
+        "suis"
+      ],
+      "solutions": [
+        [
+          "Qu'est",
+          "ce",
+          "qu'}il",
+          "se",
+          "passe"
+        ]
+      ],
+      "formattedSolution": "Qu'est ce qu'il se passe?",
+      "id": "79b870d38e4a",
+      "priority": 2,
+      "group": "8ca868194a41"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Adieu!",
+      "meaningInSourceLanguage": "Salut!",
+      "id": "7a40910ab58f",
+      "priority": 0,
+      "group": "2cfd88f996e7"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "A totara!",
+      "meaningInSourceLanguage": "À plus tard!",
+      "id": "2c69b7af0b86",
+      "priority": 0,
+      "group": "9c35e459e5c9"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "À",
+          "definition": "a"
+        },
+        {
+          "word": "plus tard",
+          "definition": "mai tard\ntotara"
+        }
+      ],
+      "chips": [
+        "A",
+        "totara",
+        "te",
+        "e"
+      ],
+      "solutions": [
+        [
+          "A",
+          "totara"
+        ]
+      ],
+      "formattedSolution": "A totara!",
+      "id": "3a37218ea3f3",
+      "priority": 2,
+      "group": "9c35e459e5c9"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "A",
+          "definition": "à"
+        },
+        {
+          "word": "totara!",
+          "definition": "plus tard"
+        }
+      ],
+      "chips": [
+        "À",
+        "plus",
+        "tard",
+        "tu",
+        "ça"
+      ],
+      "solutions": [
+        [
+          "À",
+          "plus",
+          "tard"
+        ]
+      ],
+      "formattedSolution": "À plus tard!",
+      "id": "a1a4e6e47908",
+      "priority": 2,
+      "group": "9c35e459e5c9"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Coma te sònan?",
+      "meaningInSourceLanguage": "Comment tu t'apelles?",
+      "id": "7ab89eb5af6a",
+      "priority": 0,
+      "group": "4fe11089c056"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Comment",
+          "definition": "coma"
+        },
+        {
+          "word": "tu",
+          "definition": "tu"
+        },
+        {
+          "word": "t'apelles?",
+          "definition": "te \\'pèlas\nte sònas"
+        }
+      ],
+      "chips": [
+        "Coma",
+        "te",
+        "sònan",
+        "se",
+        "Bona"
+      ],
+      "solutions": [
+        [
+          "Coma",
+          "te",
+          "sònan"
+        ]
+      ],
+      "formattedSolution": "Coma te sònan?",
+      "id": "8dc627927ff9",
+      "priority": 2,
+      "group": "4fe11089c056"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Coma",
+          "definition": "comment"
+        },
+        {
+          "word": "te",
+          "definition": "te"
+        },
+        {
+          "word": "sònan?",
+          "definition": "elles/ils apellent"
+        }
+      ],
+      "chips": [
+        "Comment",
+        "tu",
+        "t'apelles",
+        "et",
+        "le"
+      ],
+      "solutions": [
+        [
+          "Comment",
+          "tu",
+          "t'apelles"
+        ]
+      ],
+      "formattedSolution": "Comment tu t'apelles?",
+      "id": "3235c488f001",
+      "priority": 2,
+      "group": "4fe11089c056"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Bon \\'près-miejorn!",
+      "meaningInSourceLanguage": "Bon après-midi!",
+      "id": "098c5e680b8d",
+      "priority": 0,
+      "group": "8c2b4f8db82e"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Bon",
+          "definition": "bon\nbrave"
+        },
+        {
+          "word": "après-midi!",
+          "definition": "\\'près-miejorn"
+        }
+      ],
+      "chips": [
+        "Bon",
+        "'près-miejorn",
+        "Bonjorn",
+        "Joan"
+      ],
+      "solutions": [
+        [
+          "Bon",
+          "'près-miejorn"
+        ]
+      ],
+      "formattedSolution": "Bon \\'près-miejorn!",
+      "id": "8d848dbefd72",
+      "priority": 2,
+      "group": "8c2b4f8db82e"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Bon",
+          "definition": "bon"
+        },
+        {
+          "word": "\\'près-miejorn!",
+          "definition": "après-midi"
+        }
+      ],
+      "chips": [
+        "Bon",
+        "après-midi",
+        "bon",
+        "suis"
+      ],
+      "solutions": [
+        [
+          "Bon",
+          "après-midi"
+        ]
+      ],
+      "formattedSolution": "Bon après-midi!",
+      "id": "4ec9e217d0be",
+      "priority": 2,
+      "group": "8c2b4f8db82e"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Bona nuèit, Joan!",
+      "meaningInSourceLanguage": "Bonne nuit, Jean!",
+      "id": "b05e3dd3e761",
+      "priority": 0,
+      "group": "4aaf472273d3"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Bonne",
+          "definition": "bona"
+        },
+        {
+          "word": "nuit,",
+          "definition": "nuèit"
+        },
+        {
+          "word": "Jean!",
+          "definition": "Joan"
+        }
+      ],
+      "chips": [
+        "Bona",
+        "nuèit",
+        "Joan",
+        "Bon",
+        "una"
+      ],
+      "solutions": [
+        [
+          "Bona",
+          "nuèit",
+          "Joan"
+        ]
+      ],
+      "formattedSolution": "Bona nuèit, Joan!",
+      "id": "9d6e3cf0b34b",
+      "priority": 2,
+      "group": "4aaf472273d3"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Bona",
+          "definition": "bonne"
+        },
+        {
+          "word": "nuèit,",
+          "definition": "nuit"
+        },
+        {
+          "word": "Joan!",
+          "definition": "Jean (nom)"
+        }
+      ],
+      "chips": [
+        "Bonne",
+        "nuit",
+        "Jean",
+        "Bon",
+        "un"
+      ],
+      "solutions": [
+        [
+          "Bonne",
+          "nuit",
+          "Jean"
+        ]
+      ],
+      "formattedSolution": "Bonne nuit, Jean!",
+      "id": "a57306708f2c",
+      "priority": 2,
+      "group": "4aaf472273d3"
+    }
+  ]
+}

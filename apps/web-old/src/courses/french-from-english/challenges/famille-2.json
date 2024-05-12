@@ -1,0 +1,648 @@
+{
+  "id": "e7c150774a40",
+  "levels": 3,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Mamie",
+      "meaningInSourceLanguage": "Grandma",
+      "id": "aeeea071fcba",
+      "priority": 0,
+      "group": "3d9d5d3dd57d"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Mamie",
+      "meaning": "Grandma",
+      "audio": "66625b35da7cfe7931e55f38b07631a1c0dd183fb2f7ddce1aa8a175475c40e5",
+      "id": "625cba551428",
+      "priority": 1,
+      "group": "3d9d5d3dd57d"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Grand-père",
+      "meaningInSourceLanguage": "Grandfather",
+      "id": "8384c17d24c0",
+      "priority": 0,
+      "group": "1d4fd10b5ba2"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Grand-père",
+      "meaning": "Grandfather",
+      "audio": "c3c12df943fd0c9b0e5513888209bee10fd52c4bb3ebbe0e408e211e6d6602ed",
+      "id": "7fd7a90573a8",
+      "priority": 1,
+      "group": "1d4fd10b5ba2"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Père",
+      "meaningInSourceLanguage": "Father",
+      "id": "7b909ce57188",
+      "priority": 0,
+      "group": "a8aef0f6eed9"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Père",
+      "meaning": "Father",
+      "audio": "90cfe898014ad127d73b6a0df718cf69e3cd0d8bc2a6c2e3ab1ab5412c6a5823",
+      "id": "b6a75d6275d5",
+      "priority": 1,
+      "group": "a8aef0f6eed9"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Enfant",
+      "meaningInSourceLanguage": "child",
+      "id": "c09c301d5570",
+      "priority": 0,
+      "group": "0479e40fa0e8"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Enfant",
+      "meaning": "child",
+      "audio": "9e7a0f821c1f712dc1c1eb4cad093aa72879631ea898b84026c401d63f82ffdf",
+      "id": "a7adde157ffd",
+      "priority": 1,
+      "group": "0479e40fa0e8"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Le mari",
+      "meaningInSourceLanguage": "husband",
+      "id": "87800655c4df",
+      "priority": 0,
+      "group": "00bc717eeba1"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Le mari",
+      "meaning": "husband",
+      "audio": "48a416a11817e2d0d45c7e8e238bd4774dd99f02b8815f1222d889fc83956da3",
+      "id": "2df850c80d51",
+      "priority": 1,
+      "group": "00bc717eeba1"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Ma grand-mère est mariée à mon grand-père.",
+      "meaningInSourceLanguage": "My grandmother is married to my grandfather.",
+      "id": "19bd3531d061",
+      "priority": 0,
+      "group": "776e709490c9"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Ma grand-mère est mariée à mon grand-père.",
+      "meaning": "My grandmother is married to my grandfather.",
+      "audio": "c54f95e4a6ea39ede8bbbbcd45b3ea29cf58ed95921466e23550b1c3fe876b2b",
+      "id": "0e554c9e1716",
+      "priority": 1,
+      "group": "776e709490c9"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "My",
+          "definition": "ma\nmes\nmon/ma"
+        },
+        {
+          "word": "grandmother",
+          "definition": "grand-mère"
+        },
+        {
+          "word": "is",
+          "definition": "es\nest"
+        },
+        {
+          "word": "married",
+          "definition": "marié(e)"
+        },
+        {
+          "word": "to",
+          "definition": "au\nà"
+        },
+        {
+          "word": "my",
+          "definition": "ma\nmes\nmon/ma"
+        },
+        {
+          "word": "grandfather.",
+          "definition": "Grand-père"
+        }
+      ],
+      "chips": [
+        "Ma",
+        "grand-mère",
+        "est",
+        "mariée",
+        "à",
+        "mon",
+        "grand-père",
+        "ma",
+        "me",
+        "de",
+        "mère",
+        "a",
+        "ne"
+      ],
+      "solutions": [
+        [
+          "Ma",
+          "grand-mère",
+          "est",
+          "mariée",
+          "à",
+          "mon",
+          "grand-père"
+        ]
+      ],
+      "formattedSolution": "Ma grand-mère est mariée à mon grand-père.",
+      "id": "aff6bb12450c",
+      "priority": 2,
+      "group": "776e709490c9"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Ma",
+          "definition": "my (female)"
+        },
+        {
+          "word": "grand-mère",
+          "definition": "grandmother"
+        },
+        {
+          "word": "est",
+          "definition": "is"
+        },
+        {
+          "word": "mariée",
+          "definition": "married"
+        },
+        {
+          "word": "à",
+          "definition": "in"
+        },
+        {
+          "word": "mon",
+          "definition": "My\nmy (male)"
+        },
+        {
+          "word": "grand-père.",
+          "definition": "grandfather"
+        }
+      ],
+      "chips": [
+        "My",
+        "grandmother",
+        "is",
+        "married",
+        "to",
+        "my",
+        "grandfather",
+        "me",
+        "an",
+        "at",
+        "am",
+        "in",
+        "and"
+      ],
+      "solutions": [
+        [
+          "My",
+          "grandmother",
+          "is",
+          "married",
+          "to",
+          "my",
+          "grandfather"
+        ]
+      ],
+      "formattedSolution": "My grandmother is married to my grandfather.",
+      "id": "90d93be37d38",
+      "priority": 2,
+      "group": "776e709490c9"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Il est un enfant.",
+      "meaningInSourceLanguage": "He is a child.",
+      "id": "14bb507b390f",
+      "priority": 0,
+      "group": "80ed5275c0be"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Il est un enfant.",
+      "meaning": "He is a child.",
+      "audio": "75437ee247513c49a9bcbdc77082c8bed068a1bca1f8b0a68a633d7b1e978224",
+      "id": "6bf5b14aeb3c",
+      "priority": 1,
+      "group": "80ed5275c0be"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "He",
+          "definition": "il"
+        },
+        {
+          "word": "is",
+          "definition": "es\nest"
+        },
+        {
+          "word": "a",
+          "definition": "un\nune\nune (feminin) or un (masculin)"
+        },
+        {
+          "word": "child.",
+          "definition": "enfant"
+        }
+      ],
+      "chips": [
+        "Il",
+        "est",
+        "un",
+        "enfant",
+        "et",
+        "en",
+        "Un"
+      ],
+      "solutions": [
+        [
+          "Il",
+          "est",
+          "un",
+          "enfant"
+        ]
+      ],
+      "formattedSolution": "Il est un enfant.",
+      "id": "a2b092c17592",
+      "priority": 2,
+      "group": "80ed5275c0be"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Il",
+          "definition": "He\nhe\nhe or it's"
+        },
+        {
+          "word": "est",
+          "definition": "is"
+        },
+        {
+          "word": "un",
+          "definition": "a"
+        },
+        {
+          "word": "enfant.",
+          "definition": "child"
+        }
+      ],
+      "chips": [
+        "He",
+        "is",
+        "a",
+        "child",
+        "in",
+        "he",
+        "it"
+      ],
+      "solutions": [
+        [
+          "He",
+          "is",
+          "a",
+          "child"
+        ]
+      ],
+      "formattedSolution": "He is a child.",
+      "id": "a77a7a2549ba",
+      "priority": 2,
+      "group": "80ed5275c0be"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Il est mon père.",
+      "meaningInSourceLanguage": "He is my father.",
+      "id": "a2a628bf1145",
+      "priority": 0,
+      "group": "44e12f46d289"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Il est mon père.",
+      "meaning": "He is my father.",
+      "audio": "09de18fa9f8f336be3ba5e1cec5a218345b378c3a09540309a34bb365106b935",
+      "id": "ac1d003eb8cc",
+      "priority": 1,
+      "group": "44e12f46d289"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "He",
+          "definition": "il"
+        },
+        {
+          "word": "is",
+          "definition": "es\nest"
+        },
+        {
+          "word": "my",
+          "definition": "ma\nmes\nmon/ma"
+        },
+        {
+          "word": "father.",
+          "definition": "Père"
+        }
+      ],
+      "chips": [
+        "Il",
+        "est",
+        "mon",
+        "père",
+        "et",
+        "en",
+        "on"
+      ],
+      "solutions": [
+        [
+          "Il",
+          "est",
+          "mon",
+          "père"
+        ]
+      ],
+      "formattedSolution": "Il est mon père.",
+      "id": "2ebbf6195d73",
+      "priority": 2,
+      "group": "44e12f46d289"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Il",
+          "definition": "He\nhe\nhe or it's"
+        },
+        {
+          "word": "est",
+          "definition": "is"
+        },
+        {
+          "word": "mon",
+          "definition": "My\nmy (male)"
+        },
+        {
+          "word": "père.",
+          "definition": "father"
+        }
+      ],
+      "chips": [
+        "He",
+        "is",
+        "my",
+        "father",
+        "me",
+        "he",
+        "We"
+      ],
+      "solutions": [
+        [
+          "He",
+          "is",
+          "my",
+          "father"
+        ]
+      ],
+      "formattedSolution": "He is my father.",
+      "id": "888282a3efc8",
+      "priority": 2,
+      "group": "44e12f46d289"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Je suis une Mamie.",
+      "meaningInSourceLanguage": "I am a Granny.",
+      "id": "5666e1d1fa59",
+      "priority": 0,
+      "group": "b6ca317cb2d1"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Je suis une Mamie.",
+      "meaning": "I am a Granny.",
+      "audio": "b4bef6586364bb04b9c3d3624ca823e5cc6370b6c8cf9991466afae61a7622ae",
+      "id": "01d769a26564",
+      "priority": 1,
+      "group": "b6ca317cb2d1"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "I",
+          "definition": "Je"
+        },
+        {
+          "word": "am",
+          "definition": "suis"
+        },
+        {
+          "word": "a",
+          "definition": "un\nune\nune (feminin) or un (masculin)"
+        },
+        {
+          "word": "Granny.",
+          "definition": "Mamie"
+        }
+      ],
+      "chips": [
+        "Je",
+        "suis",
+        "une",
+        "Mamie",
+        "ne",
+        "me",
+        "vie"
+      ],
+      "solutions": [
+        [
+          "Je",
+          "suis",
+          "une",
+          "Mamie"
+        ]
+      ],
+      "formattedSolution": "Je suis une Mamie.",
+      "id": "1ae4cb2b7cdb",
+      "priority": 2,
+      "group": "b6ca317cb2d1"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Je",
+          "definition": "I"
+        },
+        {
+          "word": "suis",
+          "definition": "am"
+        },
+        {
+          "word": "une",
+          "definition": "a\nan"
+        },
+        {
+          "word": "Mamie.",
+          "definition": "Grandma"
+        }
+      ],
+      "chips": [
+        "I",
+        "am",
+        "a",
+        "Granny",
+        "an",
+        "at",
+        "A"
+      ],
+      "solutions": [
+        [
+          "I",
+          "am",
+          "a",
+          "Granny"
+        ]
+      ],
+      "formattedSolution": "I am a Granny.",
+      "id": "54a1a94b63a0",
+      "priority": 2,
+      "group": "b6ca317cb2d1"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Il est mon mari.",
+      "meaningInSourceLanguage": "He is my husband.",
+      "id": "e7441da7fe85",
+      "priority": 0,
+      "group": "94bf7301841f"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Il est mon mari.",
+      "meaning": "He is my husband.",
+      "audio": "fe7b7d0ad999d1864687ea40edcb27bd66bc3a7fe290a612292d05337e8ba8d3",
+      "id": "4c88f17f1e7f",
+      "priority": 1,
+      "group": "94bf7301841f"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "He",
+          "definition": "il"
+        },
+        {
+          "word": "is",
+          "definition": "es\nest"
+        },
+        {
+          "word": "my",
+          "definition": "ma\nmes\nmon/ma"
+        },
+        {
+          "word": "husband.",
+          "definition": "le mari"
+        }
+      ],
+      "chips": [
+        "Il",
+        "est",
+        "mon",
+        "mari",
+        "et",
+        "en",
+        "on"
+      ],
+      "solutions": [
+        [
+          "Il",
+          "est",
+          "mon",
+          "mari"
+        ]
+      ],
+      "formattedSolution": "Il est mon mari.",
+      "id": "35789a9acc39",
+      "priority": 2,
+      "group": "94bf7301841f"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Il",
+          "definition": "He\nhe\nhe or it's"
+        },
+        {
+          "word": "est",
+          "definition": "is"
+        },
+        {
+          "word": "mon",
+          "definition": "My\nmy (male)"
+        },
+        {
+          "word": "mari.",
+          "definition": "husband"
+        }
+      ],
+      "chips": [
+        "He",
+        "is",
+        "my",
+        "husband",
+        "in",
+        "an",
+        "me"
+      ],
+      "solutions": [
+        [
+          "He",
+          "is",
+          "my",
+          "husband"
+        ]
+      ],
+      "formattedSolution": "He is my husband.",
+      "id": "e87deec2a9c5",
+      "priority": 2,
+      "group": "94bf7301841f"
+    }
+  ]
+}

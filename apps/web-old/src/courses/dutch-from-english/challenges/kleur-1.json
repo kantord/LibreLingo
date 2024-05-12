@@ -1,0 +1,326 @@
+{
+  "id": "d1cf174acaae",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Ik heb zwarte zonnebril.",
+      "meaningInSourceLanguage": "I have black sunglasses.",
+      "id": "80517221276f",
+      "priority": 0,
+      "group": "598f2ef03199"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "I",
+          "definition": "Ik"
+        },
+        {
+          "word": "have",
+          "definition": "heb"
+        },
+        {
+          "word": "black",
+          "definition": "zwart\nzwarte"
+        },
+        {
+          "word": "sunglasses.",
+          "definition": "zonnebril"
+        }
+      ],
+      "chips": [
+        "Ik",
+        "heb",
+        "zwarte",
+        "zonnebril",
+        "te",
+        "je",
+        "wel"
+      ],
+      "solutions": [
+        [
+          "Ik",
+          "heb",
+          "zwarte",
+          "zonnebril"
+        ]
+      ],
+      "formattedSolution": "Ik heb zwarte zonnebril.",
+      "id": "4ba8c70c3e46",
+      "priority": 2,
+      "group": "598f2ef03199"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Ik",
+          "definition": "I"
+        },
+        {
+          "word": "heb",
+          "definition": "have\nhaving"
+        },
+        {
+          "word": "zwarte",
+          "definition": "black"
+        },
+        {
+          "word": "zonnebril.",
+          "definition": "sunglasses"
+        }
+      ],
+      "chips": [
+        "I",
+        "have",
+        "black",
+        "sunglasses",
+        "name",
+        "a",
+        "are"
+      ],
+      "solutions": [
+        [
+          "I",
+          "have",
+          "black",
+          "sunglasses"
+        ]
+      ],
+      "formattedSolution": "I have black sunglasses.",
+      "id": "d7092b29cadf",
+      "priority": 2,
+      "group": "598f2ef03199"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "De wijn is rood.",
+      "meaningInSourceLanguage": "The wine is red.",
+      "id": "73d8de2eab76",
+      "priority": 0,
+      "group": "0280e1bf3d21"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "The",
+          "definition": "de"
+        },
+        {
+          "word": "wine",
+          "definition": "wijn"
+        },
+        {
+          "word": "is",
+          "definition": "is"
+        },
+        {
+          "word": "red.",
+          "definition": "red\nrood"
+        }
+      ],
+      "chips": [
+        "De",
+        "wijn",
+        "is",
+        "rood",
+        "in",
+        "je",
+        "en"
+      ],
+      "solutions": [
+        [
+          "De",
+          "wijn",
+          "is",
+          "rood"
+        ]
+      ],
+      "formattedSolution": "De wijn is rood.",
+      "id": "b8b2de717c1e",
+      "priority": 2,
+      "group": "0280e1bf3d21"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "De",
+          "definition": "the"
+        },
+        {
+          "word": "wijn",
+          "definition": "wine"
+        },
+        {
+          "word": "is",
+          "definition": "eats\nis"
+        },
+        {
+          "word": "rood.",
+          "definition": "red"
+        }
+      ],
+      "chips": [
+        "The",
+        "wine",
+        "is",
+        "red",
+        "in",
+        "He",
+        "We"
+      ],
+      "solutions": [
+        [
+          "The",
+          "wine",
+          "is",
+          "red"
+        ]
+      ],
+      "formattedSolution": "The wine is red.",
+      "id": "2dae5926b27c",
+      "priority": 2,
+      "group": "0280e1bf3d21"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "red1.jpg",
+        "red2.jpg",
+        "red3.jpg"
+      ],
+      "formInTargetLanguage": "red",
+      "meaningInSourceLanguage": "red",
+      "id": "5ca760d39d5c",
+      "priority": 0,
+      "group": "b5361ee94586"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "red1.jpg",
+        "red2.jpg",
+        "red3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "red"
+      ],
+      "phrase": [
+        {
+          "word": "red",
+          "definition": "red\nrood"
+        }
+      ],
+      "id": "3604cf637d1f",
+      "priority": 1,
+      "group": "b5361ee94586"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "blue1.jpg",
+        "blue2.jpg",
+        "blue3.jpg"
+      ],
+      "formInTargetLanguage": "blauw",
+      "meaningInSourceLanguage": "blue",
+      "id": "61d065e96680",
+      "priority": 0,
+      "group": "0c39a8267d95"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "blue1.jpg",
+        "blue2.jpg",
+        "blue3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "blauw"
+      ],
+      "phrase": [
+        {
+          "word": "blue",
+          "definition": "blauw"
+        }
+      ],
+      "id": "6af2b10d79d8",
+      "priority": 1,
+      "group": "0c39a8267d95"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "black1.jpg",
+        "black2.jpg",
+        "black3.jpg"
+      ],
+      "formInTargetLanguage": "zwart",
+      "meaningInSourceLanguage": "black",
+      "id": "9724cb7279ba",
+      "priority": 0,
+      "group": "9fbdb298dd1e"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "black1.jpg",
+        "black2.jpg",
+        "black3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "zwart"
+      ],
+      "phrase": [
+        {
+          "word": "black",
+          "definition": "zwart\nzwarte"
+        }
+      ],
+      "id": "fb76d9074ce5",
+      "priority": 1,
+      "group": "9fbdb298dd1e"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "white1.jpg",
+        "white2.jpg",
+        "white3.jpg"
+      ],
+      "formInTargetLanguage": "wit",
+      "meaningInSourceLanguage": "white",
+      "id": "0e94c3ab7450",
+      "priority": 0,
+      "group": "a29ff5e2142d"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "white1.jpg",
+        "white2.jpg",
+        "white3.jpg"
+      ],
+      "formInTargetLanguage": [
+        "wit"
+      ],
+      "phrase": [
+        {
+          "word": "white",
+          "definition": "wit\nwitte"
+        }
+      ],
+      "id": "3d273e1b5215",
+      "priority": 1,
+      "group": "a29ff5e2142d"
+    }
+  ]
+}

@@ -1,0 +1,756 @@
+{
+  "id": "0beaa60946f0",
+  "levels": 3,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Azul!",
+      "meaningInSourceLanguage": "Bonjour!",
+      "id": "8de6cef29ccd",
+      "priority": 0,
+      "group": "acd04453200b"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Azul, nekk d Cecilia.",
+      "meaningInSourceLanguage": "Bonjour, je suis Cecilia.",
+      "id": "8361fb802a83",
+      "priority": 0,
+      "group": "5990c775a530"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Bonjour,",
+          "definition": "azul"
+        },
+        {
+          "word": "je",
+          "definition": "nekk\nnekkini"
+        },
+        {
+          "word": "suis",
+          "definition": "aql-i\nêtre"
+        },
+        {
+          "word": "Cecilia.",
+          "definition": "Cecilia (name)"
+        }
+      ],
+      "chips": [
+        "Azul",
+        "nekk",
+        "d",
+        "Cecilia",
+        "deg",
+        "Ad",
+        "neɣ"
+      ],
+      "solutions": [
+        [
+          "Azul",
+          "nekk",
+          "d",
+          "Cecilia"
+        ]
+      ],
+      "formattedSolution": "Azul, nekk d Cecilia.",
+      "id": "1dd534b97dad",
+      "priority": 2,
+      "group": "5990c775a530"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Azul,",
+          "definition": "bonjour"
+        },
+        {
+          "word": "nekk",
+          "definition": "je\nmoi"
+        },
+        {
+          "word": "d",
+          "definition": "avec\nc'est\ndéterminant\nest\net\nsont\ntanzeɣt"
+        },
+        {
+          "word": "Cecilia.",
+          "definition": "Cecilia (name)"
+        }
+      ],
+      "chips": [
+        "Bonjour",
+        "je",
+        "suis",
+        "Cecilia",
+        "ou",
+        "ne",
+        "ses"
+      ],
+      "solutions": [
+        [
+          "Bonjour",
+          "je",
+          "suis",
+          "Cecilia"
+        ]
+      ],
+      "formattedSolution": "Bonjour, je suis Cecilia.",
+      "id": "99ed2f5e0fbc",
+      "priority": 2,
+      "group": "5990c775a530"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Isem-ik?",
+      "meaningInSourceLanguage": "Quel est ton nom?",
+      "id": "9c6ea6bbc11b",
+      "priority": 0,
+      "group": "ea7d87767921"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Isem-iw Ali",
+      "meaningInSourceLanguage": "Mon nom est Ali",
+      "id": "30967b0cef61",
+      "priority": 0,
+      "group": "6a9e93ec0272"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Mon",
+          "definition": "inu"
+        },
+        {
+          "word": "nom",
+          "definition": "isem"
+        },
+        {
+          "word": "est",
+          "definition": "d\nyella\nêtre"
+        },
+        {
+          "word": "Ali",
+          "definition": "Ali (name)"
+        }
+      ],
+      "chips": [
+        "Isem-iw",
+        "Ali",
+        "Asif",
+        "Isem-ik"
+      ],
+      "solutions": [
+        [
+          "Isem-iw",
+          "Ali"
+        ]
+      ],
+      "formattedSolution": "Isem-iw Ali",
+      "id": "058a9181b46e",
+      "priority": 2,
+      "group": "6a9e93ec0272"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Isem-iw",
+          "definition": "{mon nom}"
+        },
+        {
+          "word": "Ali",
+          "definition": "Ali (name)"
+        }
+      ],
+      "chips": [
+        "Mon",
+        "nom",
+        "est",
+        "Ali",
+        "Bon",
+        "ton",
+        "et"
+      ],
+      "solutions": [
+        [
+          "Mon",
+          "nom",
+          "est",
+          "Ali"
+        ],
+        [
+          "On",
+          "m'appelle",
+          "Ali"
+        ]
+      ],
+      "formattedSolution": "Mon nom est Ali",
+      "id": "ab483d37d2c8",
+      "priority": 2,
+      "group": "6a9e93ec0272"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Amek tettiliḍ?",
+      "meaningInSourceLanguage": "Comment vas-tu?",
+      "id": "8e4ac191fea4",
+      "priority": 0,
+      "group": "5aeda3edaee1"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Comment",
+          "definition": "amek"
+        },
+        {
+          "word": "vas-tu?",
+          "definition": "tettiliḍ"
+        }
+      ],
+      "chips": [
+        "Amek",
+        "tettiliḍ",
+        "itett",
+        "ttett"
+      ],
+      "solutions": [
+        [
+          "Amek",
+          "tettiliḍ"
+        ]
+      ],
+      "formattedSolution": "Amek tettiliḍ?",
+      "id": "f614abd76fbe",
+      "priority": 2,
+      "group": "5aeda3edaee1"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Amek",
+          "definition": "comment"
+        },
+        {
+          "word": "tettiliḍ?",
+          "definition": "vas"
+        }
+      ],
+      "chips": [
+        "Comment",
+        "vas-tu",
+        "valet",
+        "C'est"
+      ],
+      "solutions": [
+        [
+          "Comment",
+          "vas-tu"
+        ]
+      ],
+      "formattedSolution": "Comment vas-tu?",
+      "id": "c933e159b015",
+      "priority": 2,
+      "group": "5aeda3edaee1"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Dacu akka?",
+      "meaningInSourceLanguage": "Quoi de neuf?",
+      "id": "f67e64b36fcf",
+      "priority": 0,
+      "group": "7dc89894252a"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Quoi",
+          "definition": "dacu"
+        },
+        {
+          "word": "de",
+          "definition": "déterminant\nn\nseg\nsi"
+        },
+        {
+          "word": "neuf?",
+          "definition": "nouveau"
+        }
+      ],
+      "chips": [
+        "Dacu",
+        "akka",
+        "ara",
+        "La"
+      ],
+      "solutions": [
+        [
+          "Dacu",
+          "akka"
+        ]
+      ],
+      "formattedSolution": "Dacu akka?",
+      "id": "df4ffe8af55c",
+      "priority": 2,
+      "group": "7dc89894252a"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Dacu",
+          "definition": "quel\nquoi"
+        },
+        {
+          "word": "akka?",
+          "definition": "neuf"
+        }
+      ],
+      "chips": [
+        "Quoi",
+        "de",
+        "neuf",
+        "ne",
+        "un"
+      ],
+      "solutions": [
+        [
+          "Quoi",
+          "de",
+          "neuf"
+        ]
+      ],
+      "formattedSolution": "Quoi de neuf?",
+      "id": "d2056d24763e",
+      "priority": 2,
+      "group": "7dc89894252a"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Ferḥeɣ imi k - sneɣ",
+      "meaningInSourceLanguage": "Heureux de te connaitre",
+      "id": "838085050810",
+      "priority": 0,
+      "group": "fb82cf6744e3"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Heureux",
+          "definition": "ferḥeɣ"
+        },
+        {
+          "word": "de",
+          "definition": "déterminant\nn\nseg\nsi"
+        },
+        {
+          "word": "te",
+          "definition": "déterminant"
+        },
+        {
+          "word": "connaitre",
+          "definition": "issin"
+        }
+      ],
+      "chips": [
+        "Ferḥeɣ",
+        "imi",
+        "k",
+        "",
+        "sneɣ",
+        "neɣ",
+        "n",
+        "i",
+        "D"
+      ],
+      "solutions": [
+        [
+          "Ferḥeɣ",
+          "imi",
+          "k",
+          "",
+          "sneɣ"
+        ]
+      ],
+      "formattedSolution": "Ferḥeɣ imi k - sneɣ",
+      "id": "cb18a23fefe6",
+      "priority": 2,
+      "group": "fb82cf6744e3"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Ferḥeɣ",
+          "definition": "heureuse\nheureux"
+        },
+        {
+          "word": "imi",
+          "definition": "parceque"
+        },
+        {
+          "word": "k",
+          "definition": "toi"
+        },
+        {
+          "word": "sneɣ",
+          "definition": "connais"
+        }
+      ],
+      "chips": [
+        "Heureux",
+        "de",
+        "te",
+        "connaitre",
+        "ne",
+        "De",
+        "Je"
+      ],
+      "solutions": [
+        [
+          "Heureux",
+          "de",
+          "te",
+          "connaitre"
+        ],
+        [
+          "Heureuse",
+          "de",
+          "te",
+          "connaitre"
+        ]
+      ],
+      "formattedSolution": "Heureux de te connaitre",
+      "id": "a188139ad689",
+      "priority": 2,
+      "group": "fb82cf6744e3"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Ferḥeɣ imi kem-sneɣ",
+      "meaningInSourceLanguage": "Heureux de te connaitre",
+      "id": "802de2bf7137",
+      "priority": 0,
+      "group": "e3f88db85241"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Heureux",
+          "definition": "ferḥeɣ"
+        },
+        {
+          "word": "de",
+          "definition": "déterminant\nn\nseg\nsi"
+        },
+        {
+          "word": "te",
+          "definition": "déterminant"
+        },
+        {
+          "word": "connaitre",
+          "definition": "issin"
+        }
+      ],
+      "chips": [
+        "Ferḥeɣ",
+        "imi",
+        "kem-sneɣ",
+        "neɣ",
+        "sneɣ"
+      ],
+      "solutions": [
+        [
+          "Ferḥeɣ",
+          "imi",
+          "kem-sneɣ"
+        ]
+      ],
+      "formattedSolution": "Ferḥeɣ imi kem-sneɣ",
+      "id": "54f17a6ea012",
+      "priority": 2,
+      "group": "e3f88db85241"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Ferḥeɣ",
+          "definition": "heureuse\nheureux"
+        },
+        {
+          "word": "imi",
+          "definition": "parceque"
+        },
+        {
+          "word": "kem-sneɣ",
+          "definition": "{te connais}"
+        }
+      ],
+      "chips": [
+        "Heureux",
+        "de",
+        "te",
+        "connaitre",
+        "ne",
+        "De",
+        "Je"
+      ],
+      "solutions": [
+        [
+          "Heureux",
+          "de",
+          "te",
+          "connaitre"
+        ],
+        [
+          "Heureuse",
+          "de",
+          "te",
+          "connaitre"
+        ]
+      ],
+      "formattedSolution": "Heureux de te connaitre",
+      "id": "fff93a26817b",
+      "priority": 2,
+      "group": "e3f88db85241"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Ar tufat!",
+      "meaningInSourceLanguage": "Au revoir!",
+      "id": "4b9dc5035189",
+      "priority": 0,
+      "group": "1195fb4c5200"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Au",
+          "definition": "ar\nɣer"
+        },
+        {
+          "word": "revoir!",
+          "definition": "tufat"
+        }
+      ],
+      "chips": [
+        "Ar",
+        "tufat",
+        "Ad",
+        "u"
+      ],
+      "solutions": [
+        [
+          "Ar",
+          "tufat"
+        ]
+      ],
+      "formattedSolution": "Ar tufat!",
+      "id": "6dfa50bd5c49",
+      "priority": 2,
+      "group": "1195fb4c5200"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Ar",
+          "definition": "au\nà"
+        },
+        {
+          "word": "tufat!",
+          "definition": "revoir"
+        }
+      ],
+      "chips": [
+        "Au",
+        "revoir",
+        "ou",
+        "et"
+      ],
+      "solutions": [
+        [
+          "Au",
+          "revoir"
+        ]
+      ],
+      "formattedSolution": "Au revoir!",
+      "id": "48d564cf8db7",
+      "priority": 2,
+      "group": "1195fb4c5200"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Ass ameggaz!",
+      "meaningInSourceLanguage": "Bonne journée!",
+      "id": "376a79f6acb1",
+      "priority": 0,
+      "group": "7e30c33006b1"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Bonne",
+          "definition": "tameggazt"
+        },
+        {
+          "word": "journée!",
+          "definition": "ass"
+        }
+      ],
+      "chips": [
+        "Ass",
+        "ameggaz",
+        "Aman",
+        "deg"
+      ],
+      "solutions": [
+        [
+          "Ass",
+          "ameggaz"
+        ]
+      ],
+      "formattedSolution": "Ass ameggaz!",
+      "id": "d82fb790c015",
+      "priority": 2,
+      "group": "7e30c33006b1"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Ass",
+          "definition": "journée"
+        },
+        {
+          "word": "ameggaz!",
+          "definition": "bon"
+        }
+      ],
+      "chips": [
+        "Bonne",
+        "journée",
+        "monte",
+        "Bon"
+      ],
+      "solutions": [
+        [
+          "Bonne",
+          "journée"
+        ]
+      ],
+      "formattedSolution": "Bonne journée!",
+      "id": "21ba1ecaf2d5",
+      "priority": 2,
+      "group": "7e30c33006b1"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Iḍ ameggaz, Ali!",
+      "meaningInSourceLanguage": "Bonne nuit, Ali!",
+      "id": "dceef3c3bcfc",
+      "priority": 0,
+      "group": "9d3bacac1a6d"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Bonne",
+          "definition": "tameggazt"
+        },
+        {
+          "word": "nuit,",
+          "definition": "iḍ"
+        },
+        {
+          "word": "Ali!",
+          "definition": "Ali (name)"
+        }
+      ],
+      "chips": [
+        "Iḍ",
+        "ameggaz",
+        "Ali",
+        "deg",
+        "Ad"
+      ],
+      "solutions": [
+        [
+          "Iḍ",
+          "ameggaz",
+          "Ali"
+        ]
+      ],
+      "formattedSolution": "Iḍ ameggaz, Ali!",
+      "id": "c6b4199540a3",
+      "priority": 2,
+      "group": "9d3bacac1a6d"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Iḍ",
+          "definition": "nuit"
+        },
+        {
+          "word": "ameggaz,",
+          "definition": "bon"
+        },
+        {
+          "word": "Ali!",
+          "definition": "Ali (name)"
+        }
+      ],
+      "chips": [
+        "Bonne",
+        "nuit",
+        "Ali",
+        "Bon",
+        "boit"
+      ],
+      "solutions": [
+        [
+          "Bonne",
+          "nuit",
+          "Ali"
+        ]
+      ],
+      "formattedSolution": "Bonne nuit, Ali!",
+      "id": "c5d4b1856da3",
+      "priority": 2,
+      "group": "9d3bacac1a6d"
+    }
+  ]
+}

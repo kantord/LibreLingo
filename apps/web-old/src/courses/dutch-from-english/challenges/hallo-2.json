@@ -1,0 +1,412 @@
+{
+  "id": "38c2ea1c36d2",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Naam",
+      "meaningInSourceLanguage": "Name",
+      "id": "c726ed8405a7",
+      "priority": 0,
+      "group": "6cc9dae66838"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Goedenacht",
+      "meaningInSourceLanguage": "Good Night",
+      "id": "7f69f529d0bd",
+      "priority": 0,
+      "group": "22356fce39fd"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Hallo, ik ben Cecille",
+      "meaningInSourceLanguage": "Hello, I am Cecille.",
+      "id": "8fcb0647d529",
+      "priority": 0,
+      "group": "04a9fa4389b3"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Hello,",
+          "definition": "Hallo"
+        },
+        {
+          "word": "I",
+          "definition": "Ik"
+        },
+        {
+          "word": "am",
+          "definition": "ben"
+        },
+        {
+          "word": "Cecille.",
+          "definition": "Cecille (name)"
+        }
+      ],
+      "chips": [
+        "Hallo",
+        "ik",
+        "ben",
+        "Cecille",
+        "in",
+        "wel",
+        "en"
+      ],
+      "solutions": [
+        [
+          "Hallo",
+          "ik",
+          "ben",
+          "Cecille"
+        ]
+      ],
+      "formattedSolution": "Hallo, ik ben Cecille",
+      "id": "67d0e9800863",
+      "priority": 2,
+      "group": "04a9fa4389b3"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Hallo,",
+          "definition": "Hello"
+        },
+        {
+          "word": "ik",
+          "definition": "I"
+        },
+        {
+          "word": "ben",
+          "definition": "am"
+        },
+        {
+          "word": "Cecille",
+          "definition": "Cecille\nCecille (naam)\nCeclille (naam)"
+        }
+      ],
+      "chips": [
+        "Hello",
+        "I",
+        "am",
+        "Cecille",
+        "He",
+        "a",
+        "We"
+      ],
+      "solutions": [
+        [
+          "Hello",
+          "I",
+          "am",
+          "Cecille"
+        ]
+      ],
+      "formattedSolution": "Hello, I am Cecille.",
+      "id": "e63a06b6c4ec",
+      "priority": 2,
+      "group": "04a9fa4389b3"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Dank je wel en goedenacht",
+      "meaningInSourceLanguage": "Thanks and good night",
+      "id": "c479e88e39bd",
+      "priority": 0,
+      "group": "b45361c2bf99"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Thanks",
+          "definition": "bedankt"
+        },
+        {
+          "word": "and",
+          "definition": "en"
+        },
+        {
+          "word": "good",
+          "definition": "goed\ngoede"
+        },
+        {
+          "word": "night",
+          "definition": "nacht"
+        }
+      ],
+      "chips": [
+        "Dank",
+        "je",
+        "wel",
+        "en",
+        "goedenacht",
+        "een",
+        "Den",
+        "ben",
+        "ren"
+      ],
+      "solutions": [
+        [
+          "Dank",
+          "je",
+          "wel",
+          "en",
+          "goedenacht"
+        ]
+      ],
+      "formattedSolution": "Dank je wel en goedenacht",
+      "id": "d47c48aaada7",
+      "priority": 2,
+      "group": "b45361c2bf99"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Dank",
+          "definition": "Thanks"
+        },
+        {
+          "word": "je",
+          "definition": "you"
+        },
+        {
+          "word": "wel",
+          "definition": "part of thank you"
+        },
+        {
+          "word": "en",
+          "definition": "and"
+        },
+        {
+          "word": "goedenacht",
+          "definition": "Good Night"
+        }
+      ],
+      "chips": [
+        "Thanks",
+        "and",
+        "good",
+        "night",
+        "an",
+        "want",
+        "got"
+      ],
+      "solutions": [
+        [
+          "Thanks",
+          "and",
+          "good",
+          "night"
+        ]
+      ],
+      "formattedSolution": "Thanks and good night",
+      "id": "ce2077206f28",
+      "priority": 2,
+      "group": "b45361c2bf99"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Wat is uw naam?",
+      "meaningInSourceLanguage": "What's your name?",
+      "id": "235a6a517451",
+      "priority": 0,
+      "group": "e9272b6d2c76"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "What's",
+          "definition": "Wat is"
+        },
+        {
+          "word": "your",
+          "definition": "je"
+        },
+        {
+          "word": "name?",
+          "definition": "naam"
+        }
+      ],
+      "chips": [
+        "Wat",
+        "is",
+        "uw",
+        "naam",
+        "Ja",
+        "ga",
+        "in"
+      ],
+      "solutions": [
+        [
+          "Wat",
+          "is",
+          "uw",
+          "naam"
+        ]
+      ],
+      "formattedSolution": "Wat is uw naam?",
+      "id": "3bb7fb910ffb",
+      "priority": 2,
+      "group": "e9272b6d2c76"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Wat",
+          "definition": "What"
+        },
+        {
+          "word": "is",
+          "definition": "eats\nis"
+        },
+        {
+          "word": "uw",
+          "definition": "your (formal)"
+        },
+        {
+          "word": "naam?",
+          "definition": "name"
+        }
+      ],
+      "chips": [
+        "What's",
+        "your",
+        "name",
+        "Name",
+        "have"
+      ],
+      "solutions": [
+        [
+          "What's",
+          "your",
+          "name"
+        ]
+      ],
+      "formattedSolution": "What's your name?",
+      "id": "1dd162df16a2",
+      "priority": 2,
+      "group": "e9272b6d2c76"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Cecille is een mooie naam",
+      "meaningInSourceLanguage": "Cecille is a nice name.",
+      "id": "cf840ec64d60",
+      "priority": 0,
+      "group": "fbcde04e5ff0"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Cecille",
+          "definition": "Cecille (name)"
+        },
+        {
+          "word": "is",
+          "definition": "is"
+        },
+        {
+          "word": "a",
+          "definition": "een"
+        },
+        {
+          "word": "nice",
+          "definition": "Mooi\naardig\nmooie"
+        },
+        {
+          "word": "name.",
+          "definition": "naam"
+        }
+      ],
+      "chips": [
+        "Cecille",
+        "is",
+        "een",
+        "mooie",
+        "naam",
+        "in",
+        "zie",
+        "me",
+        "Wie"
+      ],
+      "solutions": [
+        [
+          "Cecille",
+          "is",
+          "een",
+          "mooie",
+          "naam"
+        ]
+      ],
+      "formattedSolution": "Cecille is een mooie naam",
+      "id": "e4a1e18378d0",
+      "priority": 2,
+      "group": "fbcde04e5ff0"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Cecille",
+          "definition": "Cecille\nCecille (naam)\nCeclille (naam)"
+        },
+        {
+          "word": "is",
+          "definition": "eats\nis"
+        },
+        {
+          "word": "een",
+          "definition": "One\na"
+        },
+        {
+          "word": "mooie",
+          "definition": "nice / beautiful"
+        },
+        {
+          "word": "naam",
+          "definition": "name"
+        }
+      ],
+      "chips": [
+        "Cecille",
+        "is",
+        "a",
+        "nice",
+        "name",
+        "me",
+        "am",
+        "in",
+        "are"
+      ],
+      "solutions": [
+        [
+          "Cecille",
+          "is",
+          "a",
+          "nice",
+          "name"
+        ]
+      ],
+      "formattedSolution": "Cecille is a nice name.",
+      "id": "0ca0ce26da43",
+      "priority": 2,
+      "group": "fbcde04e5ff0"
+    }
+  ]
+}

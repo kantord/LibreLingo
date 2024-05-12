@@ -1,0 +1,336 @@
+{
+  "id": "569673478a3d",
+  "levels": 3,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Salut",
+      "meaningInSourceLanguage": "Hello",
+      "id": "9b1f87aa788f",
+      "priority": 0,
+      "group": "79873f80e00b"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Salut",
+      "meaning": "Hello",
+      "audio": "23ada3a9f060263cae61c7adf13d08fd60a3bf07116cd7ced7a13dd573f97962",
+      "id": "7456c73dd5ee",
+      "priority": 1,
+      "group": "79873f80e00b"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Bonjour",
+      "meaningInSourceLanguage": "Good Morning",
+      "id": "4fef0d6b2ab9",
+      "priority": 0,
+      "group": "35f7edddffe3"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Bonjour",
+      "meaning": "Good Morning",
+      "audio": "7a748c6e4f56960c2f0f9c1a31edbf0921bc471f7604761e3f4561617fe9de42",
+      "id": "7147e25b2e78",
+      "priority": 1,
+      "group": "35f7edddffe3"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Je",
+      "meaningInSourceLanguage": "I",
+      "id": "66c4ae091786",
+      "priority": 0,
+      "group": "62b7ee502964"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Je",
+      "meaning": "I",
+      "audio": "f46588b1092345d3747e211bb2aa094c8b4f1b86d7bbd32245d7326c1e0c8e35",
+      "id": "b9de8ec9137c",
+      "priority": 1,
+      "group": "62b7ee502964"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Merci",
+      "meaningInSourceLanguage": "Thanks",
+      "id": "df10c185cda8",
+      "priority": 0,
+      "group": "84be523d0f1a"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Merci",
+      "meaning": "Thanks",
+      "audio": "50d59ab0633d72bd0aa0daca63424a93909487639bdd6188717518759012389b",
+      "id": "1680fce55253",
+      "priority": 1,
+      "group": "84be523d0f1a"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Je suis",
+      "meaningInSourceLanguage": "I am",
+      "id": "4523ed745cd4",
+      "priority": 0,
+      "group": "d675ea9381f3"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Je suis",
+      "meaning": "I am",
+      "audio": "6d9f09ea3506e8d4f0edbe8e54ee68a533b008f6c95c8d98dbcff7db4aea1713",
+      "id": "ffa7b567db5e",
+      "priority": 1,
+      "group": "d675ea9381f3"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "I",
+          "definition": "Je"
+        },
+        {
+          "word": "am",
+          "definition": "suis"
+        }
+      ],
+      "chips": [
+        "Je",
+        "suis",
+        "je",
+        "un"
+      ],
+      "solutions": [
+        [
+          "Je",
+          "suis"
+        ]
+      ],
+      "formattedSolution": "Je suis",
+      "id": "237f5962e9b1",
+      "priority": 2,
+      "group": "d675ea9381f3"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Je",
+          "definition": "I"
+        },
+        {
+          "word": "suis",
+          "definition": "am"
+        }
+      ],
+      "chips": [
+        "I",
+        "am",
+        "a",
+        "an"
+      ],
+      "solutions": [
+        [
+          "I",
+          "am"
+        ]
+      ],
+      "formattedSolution": "I am",
+      "id": "ef78725e933f",
+      "priority": 2,
+      "group": "d675ea9381f3"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Salut",
+      "meaningInSourceLanguage": "Hello",
+      "id": "9b1f87aa788f",
+      "priority": 0,
+      "group": "79873f80e00b"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Salut",
+      "meaning": "Hello",
+      "audio": "23ada3a9f060263cae61c7adf13d08fd60a3bf07116cd7ced7a13dd573f97962",
+      "id": "7456c73dd5ee",
+      "priority": 1,
+      "group": "79873f80e00b"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Comment t’appelles-tu ?",
+      "meaningInSourceLanguage": "What's your name?",
+      "id": "a4d0ae39b994",
+      "priority": 0,
+      "group": "d36ae1f5d540"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Comment t’appelles-tu ?",
+      "meaning": "What's your name?",
+      "audio": "01ac30389d9254d9306f8fe54bde19cc6e626ff1d489c130ac67b4f47181a1e1",
+      "id": "084fa1b89d3f",
+      "priority": 1,
+      "group": "d36ae1f5d540"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "What's",
+          "definition": "Comment"
+        },
+        {
+          "word": "your",
+          "definition": "ton\nvotre"
+        },
+        {
+          "word": "name?",
+          "definition": "nom"
+        }
+      ],
+      "chips": [
+        "Comment",
+        "t’appelles-tu",
+        "",
+        "et",
+        "est"
+      ],
+      "solutions": [
+        [
+          "Comment",
+          "t’appelles-tu",
+          ""
+        ]
+      ],
+      "formattedSolution": "Comment t’appelles-tu ?",
+      "id": "65be14024022",
+      "priority": 2,
+      "group": "d36ae1f5d540"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Comment",
+          "definition": "What's"
+        },
+        {
+          "word": "t’appelles-tu",
+          "definition": "your name"
+        }
+      ],
+      "chips": [
+        "What's",
+        "your",
+        "name",
+        "have",
+        "eats"
+      ],
+      "solutions": [
+        [
+          "What's",
+          "your",
+          "name"
+        ]
+      ],
+      "formattedSolution": "What's your name?",
+      "id": "f8a586d102c9",
+      "priority": 2,
+      "group": "d36ae1f5d540"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "J’habite à",
+      "meaningInSourceLanguage": "I live in",
+      "id": "725acd253ad6",
+      "priority": 0,
+      "group": "cb43ba0f42f4"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "J’habite à",
+      "meaning": "I live in",
+      "audio": "084de45e22c3784fbd08a66d1f62517d7d05eee4179e76b683bf30bfacb485ad",
+      "id": "03c919afed55",
+      "priority": 1,
+      "group": "cb43ba0f42f4"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "I",
+          "definition": "Je"
+        },
+        {
+          "word": "live",
+          "definition": "habite\nviens"
+        },
+        {
+          "word": "in",
+          "definition": "de\nen\nà"
+        }
+      ],
+      "chips": [
+        "J’habite",
+        "à",
+        "Je",
+        "a"
+      ],
+      "solutions": [
+        [
+          "J’habite",
+          "à"
+        ]
+      ],
+      "formattedSolution": "J’habite à",
+      "id": "dceba2023c24",
+      "priority": 2,
+      "group": "cb43ba0f42f4"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "J’habite",
+          "definition": "I live"
+        },
+        {
+          "word": "à",
+          "definition": "in"
+        }
+      ],
+      "chips": [
+        "I",
+        "live",
+        "in",
+        "is",
+        "In"
+      ],
+      "solutions": [
+        [
+          "I",
+          "live",
+          "in"
+        ]
+      ],
+      "formattedSolution": "I live in",
+      "id": "03530ca22cd0",
+      "priority": 2,
+      "group": "cb43ba0f42f4"
+    }
+  ]
+}

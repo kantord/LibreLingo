@@ -1,0 +1,22 @@
+@use 'bulma/sass/utilities' with (
+	$link: $pink
+);
+@use 'bulma/sass/base' with (
+	$body-overflow-y: auto
+);
+
+@use './custom_variables.scss';
+
+
+@use 'bulma/sass/base/minireset';
+@use 'bulma/sass/form/shared';
+@use 'bulma/sass/form/input-textarea';
+@use 'bulma/sass/grid/columns';
+@use 'bulma/sass/elements/icon';
+@use 'bulma/sass/elements/image';
+@use 'bulma/sass/elements/content';
+@use 'bulma/sass/elements/box';
+@use 'bulma/sass/elements/tag';
+@use 'bulma/sass/layout/section';
+@use 'bulma/sass/layout/hero';
+@use 'bulma/sass/base/generic';

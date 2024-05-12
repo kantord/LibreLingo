@@ -1,0 +1,968 @@
+{
+  "languageName": "French",
+  "languageCode": "fr",
+  "uiLanguage": "en",
+  "specialCharacters": [
+    "É",
+    "é",
+    "À",
+    "à",
+    "È",
+    "è",
+    "Ù",
+    "ù",
+    "Â",
+    "â",
+    "Ê",
+    "ê",
+    "Î",
+    "î",
+    "Ô",
+    "ô",
+    "Û",
+    "û",
+    "Ç",
+    "ç",
+    "Ë",
+    "V",
+    "Ï",
+    "ï",
+    "V",
+    "ü"
+  ],
+  "repositoryURL": "https://codeberg.org/kate/LibreLingo_FR_from_EN",
+  "license": {
+    "name": {
+      "short": "CC BY-NC-SA 4.0",
+      "full": "Attribution-NonCommercial-ShareAlike 4.0 International"
+    },
+    "link": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+  },
+  "modules": [
+    {
+      "title": "1_Hello",
+      "skills": [
+        {
+          "imageSet": [
+            "name1",
+            "name2",
+            "name3"
+          ],
+          "introduction": "salut-1.md",
+          "summary": [
+            "Salut",
+            "Bonjour",
+            "Je",
+            "Merci",
+            "Je suis",
+            "Salut",
+            "Comment t’appelles-tu ?",
+            "J’habite à"
+          ],
+          "practiceHref": "salut-1",
+          "id": "569673478a3d",
+          "title": "Salut 1",
+          "levels": 3
+        },
+        {
+          "imageSet": [
+            "name1",
+            "name2",
+            "name3"
+          ],
+          "introduction": "salut-2.md",
+          "summary": [
+            "Bon Nuit",
+            "Je",
+            "Nom",
+            "Merci",
+            "Salut, je suis Cecille.",
+            "Merci et bon nuit",
+            "Comment t’appelles-tu ?",
+            "Je m’appelle Cecille.",
+            "Cecille est un joli nom."
+          ],
+          "practiceHref": "salut-2",
+          "id": "38c2ea1c36d2",
+          "title": "Salut 2",
+          "levels": 3
+        },
+        {
+          "imageSet": [
+            "name1",
+            "name2",
+            "name3"
+          ],
+          "summary": [
+            "Bonsoir",
+            "Bonjour",
+            "s'il vous plaît",
+            "Nom",
+            "Merci",
+            "Je viens de Paris.",
+            "Bonsoir et merci.",
+            "Comment t’appelles-tu ?",
+            "Je m’appelle Cecille.",
+            "Ça va ?",
+            "Votre nom, s'il vous plaît ?"
+          ],
+          "practiceHref": "salut-3",
+          "id": "d7279e4777cd",
+          "title": "Salut 3",
+          "levels": 3
+        },
+        {
+          "imageSet": [
+            "name1",
+            "name2",
+            "name3"
+          ],
+          "introduction": "salut-4.md",
+          "summary": [
+            "À demain!",
+            "Bonjour",
+            "s'il vous plaît",
+            "Nom",
+            "Merci",
+            "À demain!",
+            "Merci, Cecille",
+            "Comment t’appelles-tu ?",
+            "Je m’appelle Cecille.",
+            "Ça va, Jaques ?"
+          ],
+          "practiceHref": "salut-4",
+          "id": "379dca1c8ae9",
+          "title": "Salut 4",
+          "levels": 3
+        }
+      ]
+    },
+    {
+      "title": "2_Family",
+      "skills": [
+        {
+          "imageSet": [
+            "granddaugther1",
+            "father1",
+            "grandfather1"
+          ],
+          "introduction": "famille-1.md",
+          "summary": [
+            "soeur",
+            "frère",
+            "fils",
+            "daugther",
+            "Cecille est une fille.",
+            "Jaques est un garçon.",
+            "Ma mère et mon père.",
+            "Je suis Cecille et je suis une fille.",
+            "Oui, c'est ma mère.",
+            "Jaques est le frère de Cecille.",
+            "Mère",
+            "Maman",
+            "Père",
+            "Famille",
+            "Fille",
+            "Garçon"
+          ],
+          "practiceHref": "famille-1",
+          "id": "e859eeaa5871",
+          "title": "Famille 1",
+          "levels": 4
+        },
+        {
+          "imageSet": [
+            "grandmother1",
+            "father1",
+            "grandfather2"
+          ],
+          "introduction": "famille-2.md",
+          "summary": [
+            "Mamie",
+            "Grand-père",
+            "Père",
+            "Enfant",
+            "Le mari",
+            "Ma grand-mère est mariée à mon grand-père.",
+            "Il est un enfant.",
+            "Il est mon père.",
+            "Je suis une Mamie.",
+            "Il est mon mari."
+          ],
+          "practiceHref": "famille-2",
+          "id": "e7c150774a40",
+          "title": "Famille 2",
+          "levels": 3
+        },
+        {
+          "imageSet": [
+            "grandparents3",
+            "child1",
+            "father1"
+          ],
+          "introduction": "famille-3.md",
+          "summary": [
+            "la tante",
+            "l’oncle",
+            "le neveu",
+            "la nièce",
+            "cousin(e)",
+            "les grand-parents",
+            "le petit-fils",
+            "la patite-fille",
+            "le cousin germain",
+            "Je suis fille unique.",
+            "Il est mon petit-fils."
+          ],
+          "practiceHref": "famille-3",
+          "id": "c097516da9d5",
+          "title": "Famille 3",
+          "levels": 3
+        },
+        {
+          "imageSet": [
+            "child1",
+            "child1",
+            "child1"
+          ],
+          "introduction": "famille-4.md",
+          "summary": [
+            "belle-mère",
+            "demi-frère",
+            "demi-soeur",
+            "beau-fils",
+            "belle-fille",
+            "la belle-soeur",
+            "le beau-frère",
+            "J'ai une belle-soeur.",
+            "Il est mon beau-frère",
+            "J'ai un demi-frère"
+          ],
+          "practiceHref": "famille-4",
+          "id": "27a92ea694cb",
+          "title": "Famille 4",
+          "levels": 3
+        },
+        {
+          "imageSet": [
+            "group1",
+            "group2",
+            "group3"
+          ],
+          "introduction": "famille-5.md",
+          "summary": [
+            "parrain",
+            "marraine",
+            "filleule",
+            "Je suis une fille et je suis la benjamine",
+            "Je suis un garçon et je suis le benjamin."
+          ],
+          "practiceHref": "famille-5",
+          "id": "62f74c5e3db9",
+          "title": "Famille 5",
+          "levels": 2
+        }
+      ]
+    },
+    {
+      "title": "3_Food",
+      "skills": [
+        {
+          "imageSet": [
+            "orange2",
+            "banana1",
+            "strawberry1"
+          ],
+          "introduction": "fruits-1.md",
+          "summary": [
+            "Banane",
+            "Citron",
+            "Orange",
+            "Clémentine",
+            "Pamplemousse",
+            "Cerise",
+            "Noix de coco",
+            "Mangue",
+            "Fruit du dragone",
+            "Lime",
+            "Raisin",
+            "Cecille aime les oranges",
+            "Cecille mange une orange",
+            "Je n'aime pas la mangue"
+          ],
+          "practiceHref": "fruits-1",
+          "id": "d0bba2699bff",
+          "title": "Fruits 1",
+          "levels": 3
+        },
+        {
+          "imageSet": [
+            "strawberry3",
+            "banana2",
+            "orange3"
+          ],
+          "introduction": "fruits-2.md",
+          "summary": [
+            "Airelle",
+            "Framboise",
+            "Carambola",
+            "Fraise",
+            "Melon",
+            "Mangue",
+            "Olive",
+            "J'ai une pastèque",
+            "Il mange des fraises et des framboises",
+            "Nous aimons les olives"
+          ],
+          "practiceHref": "fruits-2",
+          "id": "76a6c8df6b2b",
+          "title": "Fruits 2",
+          "levels": 3
+        },
+        {
+          "imageSet": [
+            "zucchini1",
+            "garlic1",
+            "carott1"
+          ],
+          "introduction": "legumes-3.md",
+          "summary": [
+            "l’ail",
+            "l’asperge",
+            "carotte",
+            "concombre",
+            "l'oignon",
+            "courgette",
+            "l’épinard",
+            "maïs doux",
+            "J'ai un concombre",
+            "J'ai une carotte"
+          ],
+          "practiceHref": "legumes-3",
+          "id": "75e952736a7f",
+          "title": "Légumes 3",
+          "levels": 3
+        },
+        {
+          "imageSet": [
+            "bar1",
+            "bar2",
+            "bar3"
+          ],
+          "introduction": "boissons-4.md",
+          "summary": [
+            "Water",
+            "Jus d'orange",
+            "Eau minérale",
+            "Verre d'eau",
+            "Citron pressé",
+            "Lait",
+            "Syrup",
+            "Coffee",
+            "Thé",
+            "Bière",
+            "Chocolat chaud",
+            "Vin blanc",
+            "Champagne",
+            "Vin rouge",
+            "Verre",
+            "Santé",
+            "Je bois un verre de vin blanc.",
+            "Un verre d'eau"
+          ],
+          "practiceHref": "boissons-4",
+          "id": "f7ee2ecbddc1",
+          "title": "Boissons 4",
+          "levels": 4
+        }
+      ]
+    },
+    {
+      "title": "4_Numbers",
+      "skills": [
+        {
+          "imageSet": [
+            "five2",
+            "one1",
+            "three1"
+          ],
+          "introduction": "chiffres-1.md",
+          "summary": [
+            "Un",
+            "Deux",
+            "Trois",
+            "Quatre",
+            "Cinq",
+            "Cecille a un frère",
+            "La mère de Cecille a quatre frères.",
+            "Cecille a trois ans.",
+            "Je m'appelle Cecille et je suis une fille"
+          ],
+          "practiceHref": "chiffres-1",
+          "id": "0beaa60946f0",
+          "title": "Chiffres 1",
+          "levels": 3
+        },
+        {
+          "imageSet": [
+            "six1",
+            "five1",
+            "four2"
+          ],
+          "summary": [
+            "six",
+            "sept",
+            "huit",
+            "neuf",
+            "dix",
+            "Six téléphones, s'il vous plaît.",
+            "sept hommes et huit femmes..",
+            "Mon numéro de téléphone est dix cinq huit trois zéro"
+          ],
+          "practiceHref": "chiffres-2",
+          "id": "82e89e72288d",
+          "title": "Chiffres 2",
+          "levels": 2
+        }
+      ]
+    },
+    {
+      "title": "5_Weather",
+      "skills": [
+        {
+          "imageSet": [
+            "sun1",
+            "rain1",
+            "cloud1"
+          ],
+          "introduction": "temps-1.md",
+          "summary": [
+            "soleil",
+            "pleut",
+            "Il fait chaud.",
+            "weather",
+            "chaud",
+            "Il pleut.",
+            "Il fait soleil.",
+            "Quel temps fait-il aujourd'hui ?"
+          ],
+          "practiceHref": "temps-1",
+          "id": "4873b8184638",
+          "title": "Temps 1",
+          "levels": 2
+        },
+        {
+          "imageSet": [
+            "cloud3",
+            "moon1",
+            "moon2"
+          ],
+          "introduction": "temps-2.md",
+          "summary": [
+            "la lune",
+            "grêle",
+            "tornade",
+            "weather",
+            "Je vois la lune",
+            "Il fait beau.",
+            "Il neige.",
+            "Il y a quelques nuages dans le ciel."
+          ],
+          "practiceHref": "temps-2",
+          "id": "a3ab90692df4",
+          "title": "Temps 2",
+          "levels": 2
+        },
+        {
+          "imageSet": [
+            "sun1",
+            "sun2",
+            "sun3"
+          ],
+          "summary": [
+            "ensoleillé",
+            "pluvieux",
+            "orageux",
+            "nuageux",
+            "neigeux",
+            "brumeux",
+            "venté",
+            "C'est nuageux.",
+            "C'est orageux."
+          ],
+          "practiceHref": "temps-3",
+          "id": "e8455b6855b4",
+          "title": "Temps 3",
+          "levels": 3
+        },
+        {
+          "imageSet": [
+            "sun1",
+            "sun2",
+            "sun3"
+          ],
+          "summary": [
+            "le printemps",
+            "l'été",
+            "L'automne",
+            "sec",
+            "humide",
+            "doux",
+            "éclair",
+            "C'est le printemps."
+          ],
+          "practiceHref": "temps-4",
+          "id": "1bd54620400c",
+          "title": "Temps 4",
+          "levels": 3
+        }
+      ]
+    },
+    {
+      "title": "6_Activities",
+      "skills": [
+        {
+          "imageSet": [
+            "ball1",
+            "dance1",
+            "ball2"
+          ],
+          "summary": [
+            "football",
+            "basket-ball",
+            "danse",
+            "karaté",
+            "l'escalade",
+            "courir",
+            "natation",
+            "Je joue au football.",
+            "Je vais au center de fitness.",
+            "Je cours vite.",
+            "Je fais de la natation.",
+            "Je fais de l'escalade.",
+            "Je suis le meilleur en karaté.",
+            "Je joue au tennis.",
+            "J'aime faire du jogging.",
+            "Je joue au basket-ball."
+          ],
+          "practiceHref": "le-sport-1",
+          "id": "482d5ddc7eb8",
+          "title": "Le Sport 1",
+          "levels": 4
+        },
+        {
+          "imageSet": [
+            "sing1",
+            "sing2",
+            "sing3"
+          ],
+          "introduction": "faire-de-la-musique-2.md",
+          "summary": [
+            "la guitare",
+            "le piano",
+            "la guitar électrique",
+            "l'accordeon",
+            "le geige",
+            "tambour",
+            "trompette",
+            "Je joue de la guitar.",
+            "J'aime jouer du piano.",
+            "Je ne sais pas lire la musique.",
+            "La guitar électrique est belle.",
+            "Je chante avec un micro.",
+            "J'ai un vieux violon.",
+            "En Èncosse, on joue de la cornemuse.",
+            "Les harmonicas sont une partie importante de la musique de blues.",
+            "Il a un trompete."
+          ],
+          "practiceHref": "faire-de-la-musique-2",
+          "id": "3e8e332663cb",
+          "title": "Faire de la musique 2",
+          "levels": 4
+        },
+        {
+          "imageSet": [
+            "theater1",
+            "theater2",
+            "theater3"
+          ],
+          "introduction": "au-cinema-3.md",
+          "summary": [
+            "cinéma",
+            "Salle",
+            "Film d'amour",
+            "movie",
+            "acheter",
+            "Je aime les films d'horreur",
+            "Ce film est rigard.",
+            "Les comédies d'action sont les meilleurs films.",
+            "Peux-tu, s'il te plaît, acheter deux tickets de cinéma pour samedi ?"
+          ],
+          "practiceHref": "au-cinema-3",
+          "id": "47082a238710",
+          "title": "Au cinéma 3",
+          "levels": 3
+        },
+        {
+          "imageSet": [
+            "mountain1",
+            "mountain2",
+            "mountain3"
+          ],
+          "introduction": "radonnee-4.md",
+          "summary": [
+            "Radonnée",
+            "la pancarte",
+            "la montagne",
+            "banc",
+            "La montagne est haute.",
+            "Cette pancarte est sale.",
+            "Tu as une carte ?",
+            "L'herbe est verte",
+            "Mes chaussures de randonnée sont sales"
+          ],
+          "practiceHref": "radonnee-4",
+          "id": "e3b95a96a7dc",
+          "title": "Radonnée 4",
+          "levels": 3
+        },
+        {
+          "imageSet": [
+            "tree1",
+            "flower1",
+            "flower2"
+          ],
+          "introduction": "bricolage-et-jardinage-5.md",
+          "summary": [
+            "bricolage",
+            "jardin",
+            "marteau",
+            "J’arrose mes plantes.",
+            "Je dois aller au magasin de bricolage",
+            "Le soleil brille sur mes plantes",
+            "Je scie du bois",
+            "Je cherche mon marteau"
+          ],
+          "practiceHref": "bricolage-et-jardinage-5",
+          "id": "2309ee941a54",
+          "title": "Bricolage et jardinage 5",
+          "levels": 3
+        },
+        {
+          "imageSet": [
+            "theater1",
+            "theater2",
+            "theater3"
+          ],
+          "introduction": "culturel-6.md",
+          "summary": [
+            "théâtre",
+            "échecs",
+            "jardin",
+            "marteau",
+            "J'aime regarder les dinosaures",
+            "Quel âge ont les dinosaures ?",
+            "Allons-nous au théâtre ?",
+            "Non, j'aime les comédies musicales",
+            "Est-ce que tu joues aux échecs ?"
+          ],
+          "practiceHref": "culturel-6",
+          "id": "31da25cf0788",
+          "title": "Culturel 6",
+          "levels": 3
+        },
+        {
+          "imageSet": [
+            "credit_card1",
+            "woman1",
+            "dress1"
+          ],
+          "introduction": "faire-du-shopping-7.md",
+          "summary": [
+            "carte de crédit",
+            "Puis-je payer en espèces ?",
+            "Voici ma carte de crédit.",
+            "Je n'aime pas la coupe.",
+            "Ce pantalon est trop serré.",
+            "Ces chaussures sont trop petites.",
+            "J'adore acheter des chaussures.",
+            "Quelle est ta taille de vêtements ?"
+          ],
+          "practiceHref": "faire-du-shopping-7",
+          "id": "f0a4facc3dea",
+          "title": "Faire du shopping 7",
+          "levels": 3
+        },
+        {
+          "imageSet": [
+            "shoes1",
+            "credit_card1",
+            "woman1"
+          ],
+          "introduction": "faire-du-shopping-8.md",
+          "summary": [
+            "carte de crédit",
+            "espèces",
+            "chaussures",
+            "Puis-je payer en espèces ?",
+            "Voici ma carte de crédit",
+            "Je n'aime pas la coupe.",
+            "Ce pantalon est trop serré.",
+            "Ces chaussures sont trop petites.",
+            "J'adore acheter des chaussures.",
+            "Quelle est ta taille de vêtements ?"
+          ],
+          "practiceHref": "faire-du-shopping-8",
+          "id": "073c747cb47f",
+          "title": "Faire du shopping 8",
+          "levels": 3
+        },
+        {
+          "imageSet": [
+            "ball3",
+            "sea3",
+            "ball1"
+          ],
+          "introduction": "sports-nautiques-9.md",
+          "summary": [
+            "crème solaire",
+            "Je ne veux pas sauter dans l'eau.",
+            "Je vais surfer avec Max demain.",
+            "Tu as de la crème solaire ?",
+            "Tu as une belle planche de surf.",
+            "Tu sais faire de la voile ?"
+          ],
+          "practiceHref": "sports-nautiques-9",
+          "id": "75ab0e75181a",
+          "title": "Sports nautiques 9",
+          "levels": 2
+        },
+        {
+          "imageSet": [
+            "console1",
+            "computer1",
+            "console1"
+          ],
+          "introduction": "jeux-video-10.md",
+          "summary": [
+            "console",
+            "J'ai battu ton meilleur score.",
+            "Les graphismes du jeu sont super.",
+            "Les personnages du jeu ne me convainquent pas.",
+            "Les commandes du jeu sont cassées."
+          ],
+          "practiceHref": "jeux-video-10",
+          "id": "df121e5b3878",
+          "title": "Jeux vidéo 10",
+          "levels": 2
+        },
+        {
+          "imageSet": [
+            "spain1",
+            "france1",
+            "france2"
+          ],
+          "introduction": "apprendre-des-langues-10.md",
+          "summary": [
+            "français",
+            "allemand",
+            "anglais",
+            "Je m'écris une liste de vocabulaire.",
+            "J'ai des problèmes de prononciation.",
+            "Le français est une langue difficile."
+          ],
+          "practiceHref": "apprendre-des-langues-10",
+          "id": "955a93a0ed9f",
+          "title": "Apprendre des langues 10",
+          "levels": 2
+        }
+      ]
+    },
+    {
+      "title": "7_Work",
+      "skills": [
+        {
+          "imageSet": [
+            "contract1",
+            "contract1",
+            "contract1"
+          ],
+          "introduction": "titres-d-emploi-1.md",
+          "summary": [
+            "chanteur",
+            "chanteuse",
+            "peintre",
+            "coiffeur",
+            "architecte",
+            "caissier",
+            "Je suis au chômage.",
+            "Je suis enterpreneuer.",
+            "Il est ingénieur.",
+            "gérant",
+            "ingénieur",
+            "travailleur",
+            "chômeurs"
+          ],
+          "practiceHref": "titres-d-emploi-1",
+          "id": "2fdd76f3de18",
+          "title": "Titres d'emploi 1",
+          "levels": 3
+        },
+        {
+          "imageSet": [
+            "business1",
+            "business2",
+            "business3"
+          ],
+          "summary": [
+            "téléphone",
+            "Mon frère est un travailleur indépendant.",
+            "Mon ami est ingénieur et il aime son travail.",
+            "Il est ingénieur.",
+            "Je cherche un stage.",
+            "travail",
+            "Le métier",
+            "L’emploi",
+            "carrière",
+            "L’opportunité d'emploi",
+            "Le stage en enterprise"
+          ],
+          "practiceHref": "titres-d-emploi-2",
+          "id": "fb37ae25378b",
+          "title": "Titres d'emploi 2",
+          "levels": 3
+        },
+        {
+          "imageSet": [
+            "business1",
+            "business2",
+            "business3"
+          ],
+          "summary": [
+            "contrat",
+            "réunion",
+            "le bureau",
+            "Notre client est épuisant.",
+            "Mon collègue est sympa.",
+            "Je suis en route pour le bureau.",
+            "Je suis en voyage d'affaires.",
+            "Mon collègue suit une formation demain.",
+            "Nous avons eu une longue réunion",
+            "Nous avons beaucoup de tâches à accomplir.",
+            "Tu vas signer le contrat ?"
+          ],
+          "practiceHref": "titres-d-emploi-3",
+          "id": "3890d971bae9",
+          "title": "Titres d'emploi 3",
+          "levels": 3
+        },
+        {
+          "imageSet": [
+            "business1",
+            "business2",
+            "business3"
+          ],
+          "summary": [
+            "Qu’est-ce que tu fais dans la vie ?",
+            "Quelle est ta profession ?",
+            "Oui, je vais le faire tout de suite.",
+            "Je l'ai déjà fait."
+          ],
+          "practiceHref": "titres-d-emploi-4",
+          "id": "92b456e530fc",
+          "title": "Titres d'emploi 4",
+          "levels": 2
+        },
+        {
+          "imageSet": [
+            "telephone1",
+            "telephone2",
+            "telephone3"
+          ],
+          "summary": [
+            "Pourrais-je parler à Max ?",
+            "C’est de la part de qui ?",
+            "Je vous le passe.",
+            "Ne quittez pas."
+          ],
+          "practiceHref": "au-telephone-5",
+          "id": "893071f4f028",
+          "title": "Au téléphone 5",
+          "levels": 2
+        }
+      ]
+    },
+    {
+      "title": "8_Plurals.yaml",
+      "skills": [
+        {
+          "imageSet": [
+            "two1",
+            "two2",
+            "two3"
+          ],
+          "summary": [
+            "J'ai une belle maison et ils ont de belles maisons.",
+            "Les châteaux sont beaux.",
+            "Je visite un château."
+          ],
+          "practiceHref": "pluriel-1",
+          "id": "904a160c3661",
+          "title": "Pluriel 1",
+          "levels": 2
+        }
+      ]
+    },
+    {
+      "title": "9_Animals.yaml",
+      "skills": [
+        {
+          "imageSet": [
+            "lion1",
+            "mouse1",
+            "cat1"
+          ],
+          "summary": [
+            "l'ours",
+            "l'abeille",
+            "le chat",
+            "la souris",
+            "le chien",
+            "le fléau",
+            "le poisson",
+            "J'ai un chien et Cecille a un chat.",
+            "Mon frère aime les poissons."
+          ],
+          "practiceHref": "animals-1",
+          "id": "1873ab8eb8f8",
+          "title": "Animals 1",
+          "levels": 2
+        }
+      ]
+    },
+    {
+      "title": "10_Colors.yaml",
+      "skills": [
+        {
+          "imageSet": [
+            "red1",
+            "blue1",
+            "green1"
+          ],
+          "summary": [
+            "rouge",
+            "bleu",
+            "noir",
+            "blanc",
+            "J'ai noir lunettes.",
+            "Le vin est rouge."
+          ],
+          "practiceHref": "coleurs-1",
+          "id": "d1cf174acaae",
+          "title": "Coleurs 1",
+          "levels": 2
+        }
+      ]
+    }
+  ]
+}
