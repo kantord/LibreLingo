@@ -1,0 +1,592 @@
+{
+  "id": "f0a4facc3dea",
+  "levels": 2,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Kan ik contant betalen?",
+      "meaningInSourceLanguage": "Can I pay cash?",
+      "id": "9bc277da8228",
+      "priority": 0,
+      "group": "0542bc9bcb2a"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Can",
+          "definition": "Kan"
+        },
+        {
+          "word": "I",
+          "definition": "Ik"
+        },
+        {
+          "word": "pay",
+          "definition": "betalen"
+        },
+        {
+          "word": "cash?",
+          "definition": "contant"
+        }
+      ],
+      "chips": [
+        "Kan",
+        "ik",
+        "contant",
+        "betalen",
+        "man",
+        "van",
+        "kan"
+      ],
+      "solutions": [
+        [
+          "Kan",
+          "ik",
+          "contant",
+          "betalen"
+        ]
+      ],
+      "formattedSolution": "Kan ik contant betalen?",
+      "id": "9beeb7c0f536",
+      "priority": 2,
+      "group": "0542bc9bcb2a"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Kan",
+          "definition": "can"
+        },
+        {
+          "word": "ik",
+          "definition": "I"
+        },
+        {
+          "word": "contant",
+          "definition": "cash"
+        },
+        {
+          "word": "betalen?",
+          "definition": "pay"
+        }
+      ],
+      "chips": [
+        "Can",
+        "I",
+        "pay",
+        "cash",
+        "a",
+        "an",
+        "am"
+      ],
+      "solutions": [
+        [
+          "Can",
+          "I",
+          "pay",
+          "cash"
+        ]
+      ],
+      "formattedSolution": "Can I pay cash?",
+      "id": "3e4d07e7eca5",
+      "priority": 2,
+      "group": "0542bc9bcb2a"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Mijn creditcard.",
+      "meaningInSourceLanguage": "Here, my credit card.",
+      "id": "c314b837f40b",
+      "priority": 0,
+      "group": "8ec53450a3f1"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Here,",
+          "definition": "Hier"
+        },
+        {
+          "word": "my",
+          "definition": "Mijn"
+        },
+        {
+          "word": "credit",
+          "definition": "Credit"
+        },
+        {
+          "word": "card.",
+          "definition": "kaart"
+        }
+      ],
+      "chips": [
+        "Mijn",
+        "creditcard",
+        "dit",
+        "mijn"
+      ],
+      "solutions": [
+        [
+          "Mijn",
+          "creditcard"
+        ]
+      ],
+      "formattedSolution": "Mijn creditcard.",
+      "id": "753896e91107",
+      "priority": 2,
+      "group": "8ec53450a3f1"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Mijn",
+          "definition": "My"
+        },
+        {
+          "word": "creditcard.",
+          "definition": "credit card"
+        }
+      ],
+      "chips": [
+        "Here",
+        "my",
+        "credit",
+        "card",
+        "are",
+        "red",
+        "He"
+      ],
+      "solutions": [
+        [
+          "Here",
+          "my",
+          "credit",
+          "card"
+        ]
+      ],
+      "formattedSolution": "Here, my credit card.",
+      "id": "46c5da6f765d",
+      "priority": 2,
+      "group": "8ec53450a3f1"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Ik hou niet van de snee",
+      "meaningInSourceLanguage": "I don't like the cut.",
+      "id": "a23f2d2222c5",
+      "priority": 0,
+      "group": "b9bb79bf8268"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "I",
+          "definition": "Ik"
+        },
+        {
+          "word": "don't",
+          "definition": "hou niet\nniet"
+        },
+        {
+          "word": "like",
+          "definition": "mag\nzoals"
+        },
+        {
+          "word": "the",
+          "definition": "de"
+        },
+        {
+          "word": "cut.",
+          "definition": "snee"
+        }
+      ],
+      "chips": [
+        "Ik",
+        "hou",
+        "niet",
+        "van",
+        "de",
+        "snee",
+        "je",
+        "in",
+        "en",
+        "het",
+        "We"
+      ],
+      "solutions": [
+        [
+          "Ik",
+          "hou",
+          "niet",
+          "van",
+          "de",
+          "snee"
+        ]
+      ],
+      "formattedSolution": "Ik hou niet van de snee",
+      "id": "b50ddc13ca35",
+      "priority": 2,
+      "group": "b9bb79bf8268"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Ik",
+          "definition": "I"
+        },
+        {
+          "word": "hou",
+          "definition": "like"
+        },
+        {
+          "word": "niet",
+          "definition": "not"
+        },
+        {
+          "word": "van",
+          "definition": "of"
+        },
+        {
+          "word": "de",
+          "definition": "the"
+        },
+        {
+          "word": "snee",
+          "definition": "cut"
+        }
+      ],
+      "chips": [
+        "I",
+        "don't",
+        "like",
+        "the",
+        "cut",
+        "one",
+        "It",
+        "lot",
+        "in"
+      ],
+      "solutions": [
+        [
+          "I",
+          "don't",
+          "like",
+          "the",
+          "cut"
+        ]
+      ],
+      "formattedSolution": "I don't like the cut.",
+      "id": "98970a2d0a04",
+      "priority": 2,
+      "group": "b9bb79bf8268"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Deze broek is te strak.",
+      "meaningInSourceLanguage": "These pants are too tight.",
+      "id": "ae2e41196917",
+      "priority": 0,
+      "group": "7bfaf954f30a"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "These",
+          "definition": "Deze"
+        },
+        {
+          "word": "pants",
+          "definition": "broek"
+        },
+        {
+          "word": "are",
+          "definition": "zijn"
+        },
+        {
+          "word": "too",
+          "definition": "te"
+        },
+        {
+          "word": "tight.",
+          "definition": "strak"
+        }
+      ],
+      "chips": [
+        "Deze",
+        "broek",
+        "is",
+        "te",
+        "strak",
+        "je",
+        "de",
+        "We",
+        "ren"
+      ],
+      "solutions": [
+        [
+          "Deze",
+          "broek",
+          "is",
+          "te",
+          "strak"
+        ]
+      ],
+      "formattedSolution": "Deze broek is te strak.",
+      "id": "1d7adca492f1",
+      "priority": 2,
+      "group": "7bfaf954f30a"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Deze",
+          "definition": "These\nThis"
+        },
+        {
+          "word": "broek",
+          "definition": "pants"
+        },
+        {
+          "word": "is",
+          "definition": "eats\nis"
+        },
+        {
+          "word": "te",
+          "definition": "too"
+        },
+        {
+          "word": "strak.",
+          "definition": "tight"
+        }
+      ],
+      "chips": [
+        "These",
+        "pants",
+        "are",
+        "too",
+        "tight",
+        "the",
+        "to",
+        "has",
+        "ten"
+      ],
+      "solutions": [
+        [
+          "These",
+          "pants",
+          "are",
+          "too",
+          "tight"
+        ]
+      ],
+      "formattedSolution": "These pants are too tight.",
+      "id": "43fca86ed41f",
+      "priority": 2,
+      "group": "7bfaf954f30a"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Ik koop graag schoenen",
+      "meaningInSourceLanguage": "I love buying shoes.",
+      "id": "2484670f8daa",
+      "priority": 0,
+      "group": "045352d08a47"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "I",
+          "definition": "Ik"
+        },
+        {
+          "word": "love",
+          "definition": "hou"
+        },
+        {
+          "word": "buying",
+          "definition": "koop"
+        },
+        {
+          "word": "shoes.",
+          "definition": "schoenen"
+        }
+      ],
+      "chips": [
+        "Ik",
+        "koop",
+        "graag",
+        "schoenen",
+        "hoog",
+        "op",
+        "woon"
+      ],
+      "solutions": [
+        [
+          "Ik",
+          "koop",
+          "graag",
+          "schoenen"
+        ]
+      ],
+      "formattedSolution": "Ik koop graag schoenen",
+      "id": "9830563e7fe2",
+      "priority": 2,
+      "group": "045352d08a47"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Ik",
+          "definition": "I"
+        },
+        {
+          "word": "koop",
+          "definition": "buying"
+        },
+        {
+          "word": "graag",
+          "definition": "please"
+        },
+        {
+          "word": "schoenen",
+          "definition": "shoes"
+        }
+      ],
+      "chips": [
+        "I",
+        "love",
+        "buying",
+        "shoes",
+        "live",
+        "boy",
+        "son"
+      ],
+      "solutions": [
+        [
+          "I",
+          "love",
+          "buying",
+          "shoes"
+        ]
+      ],
+      "formattedSolution": "I love buying shoes.",
+      "id": "f72ee2dec67d",
+      "priority": 2,
+      "group": "045352d08a47"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Wat is je kledingmaat?",
+      "meaningInSourceLanguage": "What's your clothing size?",
+      "id": "126444fcad39",
+      "priority": 0,
+      "group": "a57a2ce58a37"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "What's",
+          "definition": "Wat is"
+        },
+        {
+          "word": "your",
+          "definition": "je"
+        },
+        {
+          "word": "clothing",
+          "definition": "kleding"
+        },
+        {
+          "word": "size?",
+          "definition": "maat"
+        }
+      ],
+      "chips": [
+        "Wat",
+        "is",
+        "je",
+        "kledingmaat",
+        "in",
+        "dit",
+        "We"
+      ],
+      "solutions": [
+        [
+          "Wat",
+          "is",
+          "je",
+          "kledingmaat"
+        ]
+      ],
+      "formattedSolution": "Wat is je kledingmaat?",
+      "id": "536b0b8d4564",
+      "priority": 2,
+      "group": "a57a2ce58a37"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Wat",
+          "definition": "What"
+        },
+        {
+          "word": "is",
+          "definition": "eats\nis"
+        },
+        {
+          "word": "je",
+          "definition": "you"
+        },
+        {
+          "word": "kledingmaat?",
+          "definition": "clothing size"
+        }
+      ],
+      "chips": [
+        "What's",
+        "your",
+        "clothing",
+        "size",
+        "hot",
+        "sing",
+        "his"
+      ],
+      "solutions": [
+        [
+          "What's",
+          "your",
+          "clothing",
+          "size"
+        ]
+      ],
+      "formattedSolution": "What's your clothing size?",
+      "id": "c2ed1b14b2b5",
+      "priority": 2,
+      "group": "a57a2ce58a37"
+    }
+  ]
+}

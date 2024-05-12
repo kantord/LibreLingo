@@ -1,0 +1,2825 @@
+{
+  "id": "5b5f1117e7cc",
+  "levels": 7,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Gosaria prest dago.",
+      "meaningInSourceLanguage": "Breakfast is ready",
+      "id": "04f1d3dbafbf",
+      "priority": 0,
+      "group": "bedcc3035590"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Breakfast",
+          "definition": "gosari"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago\ndago (egon)"
+        },
+        {
+          "word": "ready",
+          "definition": "prest"
+        }
+      ],
+      "chips": [
+        "Gosaria",
+        "prest",
+        "dago",
+        "ari",
+        "zara"
+      ],
+      "solutions": [
+        [
+          "Gosaria",
+          "prest",
+          "dago"
+        ]
+      ],
+      "formattedSolution": "Gosaria prest dago.",
+      "id": "e6c7f67375e6",
+      "priority": 2,
+      "group": "bedcc3035590"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Gosaria",
+          "definition": "breakfast"
+        },
+        {
+          "word": "prest",
+          "definition": "ready"
+        },
+        {
+          "word": "dago.",
+          "definition": "he is (egon)\nis\nit is (egon)\nshe is (egon)"
+        }
+      ],
+      "chips": [
+        "Breakfast",
+        "is",
+        "ready",
+        "red",
+        "fast"
+      ],
+      "solutions": [
+        [
+          "Breakfast",
+          "is",
+          "ready"
+        ]
+      ],
+      "formattedSolution": "Breakfast is ready",
+      "id": "00c439c63cee",
+      "priority": 2,
+      "group": "bedcc3035590"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Ni gose naiz. Noiz da gosaria?",
+      "meaningInSourceLanguage": "I am hungry. When is breakfast?",
+      "id": "d1941a09da9c",
+      "priority": 0,
+      "group": "393e6cb3bf82"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "I",
+          "definition": "ni"
+        },
+        {
+          "word": "am",
+          "definition": "NORTAZ case\nnago (egon)\nnaiz\nnaiz (izan)"
+        },
+        {
+          "word": "hungry.",
+          "definition": "gose"
+        },
+        {
+          "word": "When",
+          "definition": "noiz"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago\ndago (egon)"
+        },
+        {
+          "word": "breakfast?",
+          "definition": "gosari"
+        }
+      ],
+      "chips": [
+        "Ni",
+        "gose",
+        "naiz",
+        "Noiz",
+        "da",
+        "gosaria",
+        "goiz",
+        "ni",
+        "Bai",
+        "maiz",
+        "goaz"
+      ],
+      "solutions": [
+        [
+          "Ni",
+          "gose",
+          "naiz",
+          "Noiz",
+          "da",
+          "gosaria"
+        ],
+        [
+          "Gose",
+          "naiz",
+          "Noiz",
+          "da",
+          "gosaria"
+        ]
+      ],
+      "formattedSolution": "Ni gose naiz. Noiz da gosaria?",
+      "id": "151a71d4aa7b",
+      "priority": 2,
+      "group": "393e6cb3bf82"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Ni",
+          "definition": "I\nme"
+        },
+        {
+          "word": "gose",
+          "definition": "hungry"
+        },
+        {
+          "word": "naiz.",
+          "definition": "I am (izan)\nam\nam (izan)"
+        },
+        {
+          "word": "Noiz",
+          "definition": "when"
+        },
+        {
+          "word": "da",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        },
+        {
+          "word": "gosaria?",
+          "definition": "breakfast"
+        }
+      ],
+      "chips": [
+        "I",
+        "am",
+        "hungry",
+        "When",
+        "is",
+        "breakfast",
+        "an",
+        "a",
+        "We",
+        "Is",
+        "in"
+      ],
+      "solutions": [
+        [
+          "I",
+          "am",
+          "hungry",
+          "When",
+          "is",
+          "breakfast"
+        ],
+        [
+          "I'm",
+          "hungry",
+          "When",
+          "is",
+          "breakfast"
+        ]
+      ],
+      "formattedSolution": "I am hungry. When is breakfast?",
+      "id": "605ed5795de3",
+      "priority": 2,
+      "group": "393e6cb3bf82"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Nik txuleta bat nahi dut gosaltzeko.",
+      "meaningInSourceLanguage": "I want a steak for breakfast.",
+      "id": "c27129f7216b",
+      "priority": 0,
+      "group": "708dfc92c303"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "I",
+          "definition": "ni"
+        },
+        {
+          "word": "want",
+          "definition": "nahi"
+        },
+        {
+          "word": "a",
+          "definition": "-a"
+        },
+        {
+          "word": "steak",
+          "definition": "txuleta"
+        },
+        {
+          "word": "for",
+          "definition": "part of dative case phrase for me"
+        },
+        {
+          "word": "breakfast.",
+          "definition": "gosari"
+        }
+      ],
+      "chips": [
+        "Nik",
+        "txuleta",
+        "bat",
+        "nahi",
+        "dut",
+        "gosaltzeko",
+        "Bat",
+        "bata",
+        "bati",
+        "ate",
+        "da"
+      ],
+      "solutions": [
+        [
+          "Nik",
+          "txuleta",
+          "bat",
+          "nahi",
+          "dut",
+          "gosaltzeko"
+        ],
+        [
+          "Txuleta",
+          "bat",
+          "nahi",
+          "dut",
+          "gosaltzeko"
+        ]
+      ],
+      "formattedSolution": "Nik txuleta bat nahi dut gosaltzeko.",
+      "id": "c50c672e99ff",
+      "priority": 2,
+      "group": "708dfc92c303"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Nik",
+          "definition": "I"
+        },
+        {
+          "word": "txuleta",
+          "definition": "steak"
+        },
+        {
+          "word": "bat",
+          "definition": "one"
+        },
+        {
+          "word": "nahi",
+          "definition": "want\nwanted"
+        },
+        {
+          "word": "dut",
+          "definition": "I have it\nI have/ukan it"
+        },
+        {
+          "word": "gosaltzeko.",
+          "definition": "for breakfast"
+        }
+      ],
+      "chips": [
+        "I",
+        "want",
+        "a",
+        "steak",
+        "for",
+        "breakfast",
+        "fat",
+        "at",
+        "eat",
+        "an",
+        "sat"
+      ],
+      "solutions": [
+        [
+          "I",
+          "want",
+          "a",
+          "steak",
+          "for",
+          "breakfast"
+        ]
+      ],
+      "formattedSolution": "I want a steak for breakfast.",
+      "id": "037ba7835b26",
+      "priority": 2,
+      "group": "708dfc92c303"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Apaiza gaur etxean gosaltzen.",
+      "meaningInSourceLanguage": "The priest at breakfast at home today.",
+      "id": "9f7b5588acc3",
+      "priority": 0,
+      "group": "a6b19827093b"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "The",
+          "definition": "-a"
+        },
+        {
+          "word": "priest",
+          "definition": "apaiz\napaiza\napiza"
+        },
+        {
+          "word": "at",
+          "definition": "not translated, part of insessive case"
+        },
+        {
+          "word": "breakfast",
+          "definition": "gosari"
+        },
+        {
+          "word": "at",
+          "definition": "not translated, part of insessive case"
+        },
+        {
+          "word": "home",
+          "definition": "etxe"
+        },
+        {
+          "word": "today.",
+          "definition": "gaur"
+        }
+      ],
+      "chips": [
+        "Apaiza",
+        "gaur",
+        "etxean",
+        "gosaltzen",
+        "goaz",
+        "gauean",
+        "gara"
+      ],
+      "solutions": [
+        [
+          "Apaiza",
+          "gaur",
+          "etxean",
+          "gosaltzen"
+        ]
+      ],
+      "formattedSolution": "Apaiza gaur etxean gosaltzen.",
+      "id": "96696db9ad24",
+      "priority": 2,
+      "group": "a6b19827093b"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Apaiza",
+          "definition": "priest\nthe priest"
+        },
+        {
+          "word": "gaur",
+          "definition": "today"
+        },
+        {
+          "word": "etxean",
+          "definition": "in a house\nin the house"
+        },
+        {
+          "word": "gosaltzen.",
+          "definition": "eat breakfast\neating breakfast"
+        }
+      ],
+      "chips": [
+        "The",
+        "priest",
+        "at",
+        "breakfast",
+        "at",
+        "home",
+        "today",
+        "eat",
+        "fat",
+        "hat",
+        "are",
+        "cat",
+        "sat"
+      ],
+      "solutions": [
+        [
+          "The",
+          "priest",
+          "at",
+          "breakfast",
+          "at",
+          "home",
+          "today"
+        ]
+      ],
+      "formattedSolution": "The priest at breakfast at home today.",
+      "id": "5581982acbe6",
+      "priority": 2,
+      "group": "a6b19827093b"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Gaur goizean nik gosaldu dut.",
+      "meaningInSourceLanguage": "I ate breakfast this morning.",
+      "id": "cfac1e1f86d8",
+      "priority": 0,
+      "group": "23620e9ea02b"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "I",
+          "definition": "ni"
+        },
+        {
+          "word": "ate",
+          "definition": "jan"
+        },
+        {
+          "word": "breakfast",
+          "definition": "gosari"
+        },
+        {
+          "word": "this",
+          "definition": "hau"
+        },
+        {
+          "word": "morning.",
+          "definition": "goizean"
+        }
+      ],
+      "chips": [
+        "Gaur",
+        "goizean",
+        "nik",
+        "gosaldu",
+        "dut",
+        "hau",
+        "lau",
+        "gaur",
+        "goiz"
+      ],
+      "solutions": [
+        [
+          "Gaur",
+          "goizean",
+          "nik",
+          "gosaldu",
+          "dut"
+        ]
+      ],
+      "formattedSolution": "Gaur goizean nik gosaldu dut.",
+      "id": "b0ff1be3a30b",
+      "priority": 2,
+      "group": "23620e9ea02b"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Gaur",
+          "definition": "today"
+        },
+        {
+          "word": "goizean",
+          "definition": "morning"
+        },
+        {
+          "word": "nik",
+          "definition": "I"
+        },
+        {
+          "word": "gosaldu",
+          "definition": "ate breakfast"
+        },
+        {
+          "word": "dut.",
+          "definition": "I have it\nI have/ukan it"
+        }
+      ],
+      "chips": [
+        "I",
+        "ate",
+        "breakfast",
+        "this",
+        "morning",
+        "are",
+        "is",
+        "it",
+        "his"
+      ],
+      "solutions": [
+        [
+          "I",
+          "ate",
+          "breakfast",
+          "this",
+          "morning"
+        ]
+      ],
+      "formattedSolution": "I ate breakfast this morning.",
+      "id": "c103803eeffd",
+      "priority": 2,
+      "group": "23620e9ea02b"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Egunero nik gosaltzen dut.",
+      "meaningInSourceLanguage": "I eat breakfast every day",
+      "id": "4c5514880055",
+      "priority": 0,
+      "group": "85e3cd3a2dcd"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "I",
+          "definition": "ni"
+        },
+        {
+          "word": "eat",
+          "definition": "jango (future)\njateko (in order to eat)\njaten\njaten (present)"
+        },
+        {
+          "word": "breakfast",
+          "definition": "gosari"
+        },
+        {
+          "word": "every",
+          "definition": "-ero"
+        },
+        {
+          "word": "day",
+          "definition": "egun"
+        }
+      ],
+      "chips": [
+        "Egunero",
+        "nik",
+        "gosaltzen",
+        "dut",
+        "guk",
+        "dute",
+        "Egun"
+      ],
+      "solutions": [
+        [
+          "Egunero",
+          "nik",
+          "gosaltzen",
+          "dut"
+        ],
+        [
+          "Egunero",
+          "gosaltzen",
+          "dut"
+        ]
+      ],
+      "formattedSolution": "Egunero nik gosaltzen dut.",
+      "id": "d8c1fd9e4b3e",
+      "priority": 2,
+      "group": "85e3cd3a2dcd"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Egunero",
+          "definition": "every day"
+        },
+        {
+          "word": "nik",
+          "definition": "I"
+        },
+        {
+          "word": "gosaltzen",
+          "definition": "eat breakfast\neating breakfast"
+        },
+        {
+          "word": "dut.",
+          "definition": "I have it\nI have/ukan it"
+        }
+      ],
+      "chips": [
+        "I",
+        "eat",
+        "breakfast",
+        "every",
+        "day",
+        "fat",
+        "at",
+        "a",
+        "cat"
+      ],
+      "solutions": [
+        [
+          "I",
+          "eat",
+          "breakfast",
+          "every",
+          "day"
+        ]
+      ],
+      "formattedSolution": "I eat breakfast every day",
+      "id": "a26be84ff6da",
+      "priority": 2,
+      "group": "85e3cd3a2dcd"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Ni arrautzak eta txerria gosaltzen ari naiz.",
+      "meaningInSourceLanguage": "I am eating eggs and pork for breakfast.",
+      "id": "acec44ec1595",
+      "priority": 0,
+      "group": "955dad101c16"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "I",
+          "definition": "ni"
+        },
+        {
+          "word": "am",
+          "definition": "NORTAZ case\nnago (egon)\nnaiz\nnaiz (izan)"
+        },
+        {
+          "word": "eating",
+          "definition": "jaten ari"
+        },
+        {
+          "word": "eggs",
+          "definition": "arrautzak"
+        },
+        {
+          "word": "and",
+          "definition": "eta"
+        },
+        {
+          "word": "pork",
+          "definition": "txerriki"
+        },
+        {
+          "word": "for",
+          "definition": "part of dative case phrase for me"
+        },
+        {
+          "word": "breakfast.",
+          "definition": "gosari"
+        }
+      ],
+      "chips": [
+        "Ni",
+        "arrautzak",
+        "eta",
+        "txerria",
+        "gosaltzen",
+        "ari",
+        "naiz",
+        "ate",
+        "aita",
+        "gara",
+        "Bai",
+        "arte",
+        "sei"
+      ],
+      "solutions": [
+        [
+          "Ni",
+          "arrautzak",
+          "eta",
+          "txerria",
+          "gosaltzen",
+          "ari",
+          "naiz"
+        ],
+        [
+          "Arrautzak",
+          "eta",
+          "txerria",
+          "gosaltzen",
+          "ari",
+          "naiz"
+        ]
+      ],
+      "formattedSolution": "Ni arrautzak eta txerria gosaltzen ari naiz.",
+      "id": "c777f8483c4f",
+      "priority": 2,
+      "group": "955dad101c16"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Ni",
+          "definition": "I\nme"
+        },
+        {
+          "word": "arrautzak",
+          "definition": "eggs"
+        },
+        {
+          "word": "eta",
+          "definition": "and"
+        },
+        {
+          "word": "txerria",
+          "definition": "a pig\npig"
+        },
+        {
+          "word": "gosaltzen",
+          "definition": "eat breakfast\neating breakfast"
+        },
+        {
+          "word": "ari",
+          "definition": "present perfect verb form"
+        },
+        {
+          "word": "naiz.",
+          "definition": "I am (izan)\nam\nam (izan)"
+        }
+      ],
+      "chips": [
+        "I",
+        "am",
+        "eating",
+        "eggs",
+        "and",
+        "pork",
+        "for",
+        "breakfast",
+        "an",
+        "at",
+        "eat",
+        "a",
+        "or",
+        "fat",
+        "far"
+      ],
+      "solutions": [
+        [
+          "I",
+          "am",
+          "eating",
+          "eggs",
+          "and",
+          "pork",
+          "for",
+          "breakfast"
+        ]
+      ],
+      "formattedSolution": "I am eating eggs and pork for breakfast.",
+      "id": "20ef26d45760",
+      "priority": 2,
+      "group": "955dad101c16"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Bihar nik etxean gosalduko dut.",
+      "meaningInSourceLanguage": "I will eat breakfast at home tomorrow.",
+      "id": "141a84beca4d",
+      "priority": 0,
+      "group": "39fcbcd836ac"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "I",
+          "definition": "ni"
+        },
+        {
+          "word": "will",
+          "definition": "future tense"
+        },
+        {
+          "word": "eat",
+          "definition": "jango (future)\njateko (in order to eat)\njaten\njaten (present)"
+        },
+        {
+          "word": "breakfast",
+          "definition": "gosari"
+        },
+        {
+          "word": "at",
+          "definition": "not translated, part of insessive case"
+        },
+        {
+          "word": "home",
+          "definition": "etxe"
+        },
+        {
+          "word": "tomorrow.",
+          "definition": "bihar"
+        }
+      ],
+      "chips": [
+        "Bihar",
+        "nik",
+        "etxean",
+        "gosalduko",
+        "dut",
+        "eta",
+        "onak",
+        "hau",
+        "han"
+      ],
+      "solutions": [
+        [
+          "Bihar",
+          "nik",
+          "etxean",
+          "gosalduko",
+          "dut"
+        ]
+      ],
+      "formattedSolution": "Bihar nik etxean gosalduko dut.",
+      "id": "bb3cb11526e2",
+      "priority": 2,
+      "group": "39fcbcd836ac"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Bihar",
+          "definition": "tomorrow"
+        },
+        {
+          "word": "nik",
+          "definition": "I"
+        },
+        {
+          "word": "etxean",
+          "definition": "in a house\nin the house"
+        },
+        {
+          "word": "gosalduko",
+          "definition": "will eat breakfast"
+        },
+        {
+          "word": "dut.",
+          "definition": "I have it\nI have/ukan it"
+        }
+      ],
+      "chips": [
+        "I",
+        "will",
+        "eat",
+        "breakfast",
+        "at",
+        "home",
+        "tomorrow",
+        "am",
+        "fat",
+        "hat",
+        "a",
+        "or",
+        "it"
+      ],
+      "solutions": [
+        [
+          "I",
+          "will",
+          "eat",
+          "breakfast",
+          "at",
+          "home",
+          "tomorrow"
+        ],
+        [
+          "I'll",
+          "eat",
+          "breakfast",
+          "at",
+          "home",
+          "tomorrow"
+        ]
+      ],
+      "formattedSolution": "I will eat breakfast at home tomorrow.",
+      "id": "45396f01aaca",
+      "priority": 2,
+      "group": "39fcbcd836ac"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Gidariek jatetxean gosalduko dute.",
+      "meaningInSourceLanguage": "The drivers will eat breakfast in the restaurant.",
+      "id": "309e773183f4",
+      "priority": 0,
+      "group": "1ad072e35011"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "The",
+          "definition": "-a"
+        },
+        {
+          "word": "drivers",
+          "definition": "gidariak\ngidariek"
+        },
+        {
+          "word": "will",
+          "definition": "future tense"
+        },
+        {
+          "word": "eat",
+          "definition": "jango (future)\njateko (in order to eat)\njaten\njaten (present)"
+        },
+        {
+          "word": "breakfast",
+          "definition": "gosari"
+        },
+        {
+          "word": "in",
+          "definition": "Inessive case\nNON case, not a word"
+        },
+        {
+          "word": "the",
+          "definition": "-a"
+        },
+        {
+          "word": "restaurant.",
+          "definition": "jatetxe"
+        }
+      ],
+      "chips": [
+        "Gidariek",
+        "jatetxean",
+        "gosalduko",
+        "dute",
+        "arte",
+        "daude",
+        "jaten"
+      ],
+      "solutions": [
+        [
+          "Gidariek",
+          "jatetxean",
+          "gosalduko",
+          "dute"
+        ]
+      ],
+      "formattedSolution": "Gidariek jatetxean gosalduko dute.",
+      "id": "898a62938e13",
+      "priority": 2,
+      "group": "1ad072e35011"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Gidariek",
+          "definition": "drivers"
+        },
+        {
+          "word": "jatetxean",
+          "definition": "in a restaurant"
+        },
+        {
+          "word": "gosalduko",
+          "definition": "will eat breakfast"
+        },
+        {
+          "word": "dute.",
+          "definition": "They have it\nThey have/ukan it"
+        }
+      ],
+      "chips": [
+        "The",
+        "drivers",
+        "will",
+        "eat",
+        "breakfast",
+        "in",
+        "the",
+        "restaurant",
+        "are",
+        "ran",
+        "is",
+        "it",
+        "fat",
+        "her",
+        "sat"
+      ],
+      "solutions": [
+        [
+          "The",
+          "drivers",
+          "will",
+          "eat",
+          "breakfast",
+          "in",
+          "the",
+          "restaurant"
+        ]
+      ],
+      "formattedSolution": "The drivers will eat breakfast in the restaurant.",
+      "id": "a1e95cfc4dcd",
+      "priority": 2,
+      "group": "1ad072e35011"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Zopa hotza da",
+      "meaningInSourceLanguage": "The soup is cold",
+      "id": "c97f22abc047",
+      "priority": 0,
+      "group": "9b026131aabb"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "The",
+          "definition": "-a"
+        },
+        {
+          "word": "soup",
+          "definition": "zopa"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago\ndago (egon)"
+        },
+        {
+          "word": "cold",
+          "definition": "hotz"
+        }
+      ],
+      "chips": [
+        "Zopa",
+        "hotza",
+        "da",
+        "doa",
+        "ona"
+      ],
+      "solutions": [
+        [
+          "Zopa",
+          "hotza",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Zopa hotza da",
+      "id": "f4addafff73a",
+      "priority": 2,
+      "group": "9b026131aabb"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Zopa",
+          "definition": "soup"
+        },
+        {
+          "word": "hotza",
+          "definition": "cold"
+        },
+        {
+          "word": "da",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "The",
+        "soup",
+        "is",
+        "cold",
+        "old",
+        "so",
+        "one"
+      ],
+      "solutions": [
+        [
+          "The",
+          "soup",
+          "is",
+          "cold"
+        ]
+      ],
+      "formattedSolution": "The soup is cold",
+      "id": "feb40d57d587",
+      "priority": 2,
+      "group": "9b026131aabb"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Zopa prest al dago?",
+      "meaningInSourceLanguage": "Is the soup ready?",
+      "id": "9d6e97414a8f",
+      "priority": 0,
+      "group": "6bdc6e5cb648"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Is",
+          "definition": "da\nda (izan)\ndago\ndago (egon)"
+        },
+        {
+          "word": "the",
+          "definition": "-a"
+        },
+        {
+          "word": "soup",
+          "definition": "zopa"
+        },
+        {
+          "word": "ready?",
+          "definition": "prest"
+        }
+      ],
+      "chips": [
+        "Zopa",
+        "prest",
+        "al",
+        "dago",
+        "da",
+        "bat",
+        "nago"
+      ],
+      "solutions": [
+        [
+          "Zopa",
+          "prest",
+          "al",
+          "dago"
+        ]
+      ],
+      "formattedSolution": "Zopa prest al dago?",
+      "id": "f51e42ba10af",
+      "priority": 2,
+      "group": "6bdc6e5cb648"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Zopa",
+          "definition": "soup"
+        },
+        {
+          "word": "prest",
+          "definition": "ready"
+        },
+        {
+          "word": "al",
+          "definition": "question word\nquestion_word"
+        },
+        {
+          "word": "dago?",
+          "definition": "he is (egon)\nis\nit is (egon)\nshe is (egon)"
+        }
+      ],
+      "chips": [
+        "Is",
+        "the",
+        "soup",
+        "ready",
+        "He",
+        "We",
+        "me"
+      ],
+      "solutions": [
+        [
+          "Is",
+          "the",
+          "soup",
+          "ready"
+        ]
+      ],
+      "formattedSolution": "Is the soup ready?",
+      "id": "5ab7979ebc5c",
+      "priority": 2,
+      "group": "6bdc6e5cb648"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Nik babarrun zopa nahi dut.",
+      "meaningInSourceLanguage": "I want bean soup.",
+      "id": "5fb0dde46a1f",
+      "priority": 0,
+      "group": "088de44fa3fe"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "I",
+          "definition": "ni"
+        },
+        {
+          "word": "want",
+          "definition": "nahi"
+        },
+        {
+          "word": "bean",
+          "definition": "babarrun"
+        },
+        {
+          "word": "soup.",
+          "definition": "zopa"
+        }
+      ],
+      "chips": [
+        "Nik",
+        "babarrun",
+        "zopa",
+        "nahi",
+        "dut",
+        "bat",
+        "da",
+        "ona",
+        "ama"
+      ],
+      "solutions": [
+        [
+          "Nik",
+          "babarrun",
+          "zopa",
+          "nahi",
+          "dut"
+        ],
+        [
+          "Babarrun",
+          "zopa",
+          "nahi",
+          "dut"
+        ]
+      ],
+      "formattedSolution": "Nik babarrun zopa nahi dut.",
+      "id": "c2bc82ba97ef",
+      "priority": 2,
+      "group": "088de44fa3fe"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Nik",
+          "definition": "I"
+        },
+        {
+          "word": "babarrun",
+          "definition": "bean"
+        },
+        {
+          "word": "zopa",
+          "definition": "soup"
+        },
+        {
+          "word": "nahi",
+          "definition": "want\nwanted"
+        },
+        {
+          "word": "dut.",
+          "definition": "I have it\nI have/ukan it"
+        }
+      ],
+      "chips": [
+        "I",
+        "want",
+        "bean",
+        "soup",
+        "an",
+        "a",
+        "man"
+      ],
+      "solutions": [
+        [
+          "I",
+          "want",
+          "bean",
+          "soup"
+        ]
+      ],
+      "formattedSolution": "I want bean soup.",
+      "id": "67f6b31a94fc",
+      "priority": 2,
+      "group": "088de44fa3fe"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Mahatsak fruta dira.",
+      "meaningInSourceLanguage": "Grapes are fruit.",
+      "id": "be8d962c5797",
+      "priority": 0,
+      "group": "fca5096a1377"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Grapes",
+          "definition": "mahatsak"
+        },
+        {
+          "word": "are",
+          "definition": "daude\ndaude (egon)\ndaude (izan)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzarete (izan)\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "fruit.",
+          "definition": "fruta"
+        }
+      ],
+      "chips": [
+        "Mahatsak",
+        "fruta",
+        "dira",
+        "aita",
+        "bata"
+      ],
+      "solutions": [
+        [
+          "Mahatsak",
+          "fruta",
+          "dira"
+        ]
+      ],
+      "formattedSolution": "Mahatsak fruta dira.",
+      "id": "d10c901eda16",
+      "priority": 2,
+      "group": "fca5096a1377"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Mahatsak",
+          "definition": "grapes"
+        },
+        {
+          "word": "fruta",
+          "definition": "fruit"
+        },
+        {
+          "word": "dira.",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "Grapes",
+        "are",
+        "fruit",
+        "Are",
+        "red"
+      ],
+      "solutions": [
+        [
+          "Grapes",
+          "are",
+          "fruit"
+        ]
+      ],
+      "formattedSolution": "Grapes are fruit.",
+      "id": "2367daa20f8f",
+      "priority": 2,
+      "group": "fca5096a1377"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Mahatsak berdeak dira.",
+      "meaningInSourceLanguage": "The grapes are green.",
+      "id": "ca0d41475e35",
+      "priority": 0,
+      "group": "42b97c25c1a2"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "The",
+          "definition": "-a"
+        },
+        {
+          "word": "grapes",
+          "definition": "mahatsak"
+        },
+        {
+          "word": "are",
+          "definition": "daude\ndaude (egon)\ndaude (izan)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzarete (izan)\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "green.",
+          "definition": "berde"
+        }
+      ],
+      "chips": [
+        "Mahatsak",
+        "berdeak",
+        "dira",
+        "bereak",
+        "berdea"
+      ],
+      "solutions": [
+        [
+          "Mahatsak",
+          "berdeak",
+          "dira"
+        ]
+      ],
+      "formattedSolution": "Mahatsak berdeak dira.",
+      "id": "131fc3d92f74",
+      "priority": 2,
+      "group": "42b97c25c1a2"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Mahatsak",
+          "definition": "grapes"
+        },
+        {
+          "word": "berdeak",
+          "definition": "green"
+        },
+        {
+          "word": "dira.",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "The",
+        "grapes",
+        "are",
+        "green",
+        "Are",
+        "grey",
+        "tree"
+      ],
+      "solutions": [
+        [
+          "The",
+          "grapes",
+          "are",
+          "green"
+        ]
+      ],
+      "formattedSolution": "The grapes are green.",
+      "id": "c203f2f0b424",
+      "priority": 2,
+      "group": "42b97c25c1a2"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Guk gosaltzeko fruta hartzen dugu.",
+      "meaningInSourceLanguage": "We have fruit for breakfast.",
+      "id": "ac00dc553728",
+      "priority": 0,
+      "group": "29e52e72dc3d"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "We",
+          "definition": "gu"
+        },
+        {
+          "word": "have",
+          "definition": "eduki\nedun\nizan\nukan"
+        },
+        {
+          "word": "fruit",
+          "definition": "fruta"
+        },
+        {
+          "word": "for",
+          "definition": "part of dative case phrase for me"
+        },
+        {
+          "word": "breakfast.",
+          "definition": "gosari"
+        }
+      ],
+      "chips": [
+        "Guk",
+        "gosaltzeko",
+        "fruta",
+        "hartzen",
+        "dugu",
+        "arte",
+        "dute",
+        "hauek",
+        "luze"
+      ],
+      "solutions": [
+        [
+          "Guk",
+          "gosaltzeko",
+          "fruta",
+          "hartzen",
+          "dugu"
+        ],
+        [
+          "Gosaltzeko",
+          "fruta",
+          "hartzen",
+          "dugu"
+        ]
+      ],
+      "formattedSolution": "Guk gosaltzeko fruta hartzen dugu.",
+      "id": "84078a0346d1",
+      "priority": 2,
+      "group": "29e52e72dc3d"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Guk",
+          "definition": "we"
+        },
+        {
+          "word": "gosaltzeko",
+          "definition": "for breakfast"
+        },
+        {
+          "word": "fruta",
+          "definition": "fruit"
+        },
+        {
+          "word": "hartzen",
+          "definition": "take"
+        },
+        {
+          "word": "dugu.",
+          "definition": "We have it\nWe have/ukan it"
+        }
+      ],
+      "chips": [
+        "We",
+        "have",
+        "fruit",
+        "for",
+        "breakfast",
+        "fat",
+        "are",
+        "fast",
+        "far"
+      ],
+      "solutions": [
+        [
+          "We",
+          "have",
+          "fruit",
+          "for",
+          "breakfast"
+        ]
+      ],
+      "formattedSolution": "We have fruit for breakfast.",
+      "id": "0f096de00b8f",
+      "priority": 2,
+      "group": "29e52e72dc3d"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Sagarrak ere fruituak dira.",
+      "meaningInSourceLanguage": "Apples are also fruit.",
+      "id": "c2f5ca9dfe6c",
+      "priority": 0,
+      "group": "f17da85222b0"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Apples",
+          "definition": "sagarrak"
+        },
+        {
+          "word": "are",
+          "definition": "daude\ndaude (egon)\ndaude (izan)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzarete (izan)\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "also",
+          "definition": "ere"
+        },
+        {
+          "word": "fruit.",
+          "definition": "fruta"
+        }
+      ],
+      "chips": [
+        "Sagarrak",
+        "ere",
+        "fruituak",
+        "dira",
+        "gara",
+        "dirua",
+        "zara"
+      ],
+      "solutions": [
+        [
+          "Sagarrak",
+          "ere",
+          "fruituak",
+          "dira"
+        ]
+      ],
+      "formattedSolution": "Sagarrak ere fruituak dira.",
+      "id": "fd395a417fac",
+      "priority": 2,
+      "group": "f17da85222b0"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Sagarrak",
+          "definition": "apples"
+        },
+        {
+          "word": "ere",
+          "definition": "also"
+        },
+        {
+          "word": "fruituak",
+          "definition": "fruit"
+        },
+        {
+          "word": "dira.",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "Apples",
+        "are",
+        "also",
+        "fruit",
+        "Are",
+        "all",
+        "plus"
+      ],
+      "solutions": [
+        [
+          "Apples",
+          "are",
+          "also",
+          "fruit"
+        ]
+      ],
+      "formattedSolution": "Apples are also fruit.",
+      "id": "b8e43c61c3bb",
+      "priority": 2,
+      "group": "f17da85222b0"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Limoiak fruituak al dira?",
+      "meaningInSourceLanguage": "Are lemons fruit?",
+      "id": "8ba166f15b5f",
+      "priority": 0,
+      "group": "ee042391c632"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Are",
+          "definition": "daude\ndaude (egon)\ndaude (izan)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzarete (izan)\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "lemons",
+          "definition": "limoiak"
+        },
+        {
+          "word": "fruit?",
+          "definition": "fruta"
+        }
+      ],
+      "chips": [
+        "Limoiak",
+        "fruituak",
+        "al",
+        "dira",
+        "aita",
+        "biak",
+        "Aitak"
+      ],
+      "solutions": [
+        [
+          "Limoiak",
+          "fruituak",
+          "al",
+          "dira"
+        ],
+        [
+          "Limoiak",
+          "fruituak",
+          "dira"
+        ]
+      ],
+      "formattedSolution": "Limoiak fruituak al dira?",
+      "id": "c0e426350c35",
+      "priority": 2,
+      "group": "ee042391c632"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Limoiak",
+          "definition": "lemons"
+        },
+        {
+          "word": "fruituak",
+          "definition": "fruit"
+        },
+        {
+          "word": "al",
+          "definition": "question word\nquestion_word"
+        },
+        {
+          "word": "dira?",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "Are",
+        "lemons",
+        "fruit",
+        "front",
+        "one"
+      ],
+      "solutions": [
+        [
+          "Are",
+          "lemons",
+          "fruit"
+        ]
+      ],
+      "formattedSolution": "Are lemons fruit?",
+      "id": "1fab9317a74e",
+      "priority": 2,
+      "group": "ee042391c632"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Sugea gose da.",
+      "meaningInSourceLanguage": "The snake is hungry.",
+      "id": "2f91aca30366",
+      "priority": 0,
+      "group": "ee060dd6732f"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "The",
+          "definition": "-a"
+        },
+        {
+          "word": "snake",
+          "definition": "suge\nsugea"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago\ndago (egon)"
+        },
+        {
+          "word": "hungry.",
+          "definition": "gose"
+        }
+      ],
+      "chips": [
+        "Sugea",
+        "gose",
+        "da",
+        "doa",
+        "gosea"
+      ],
+      "solutions": [
+        [
+          "Sugea",
+          "gose",
+          "da"
+        ]
+      ],
+      "formattedSolution": "Sugea gose da.",
+      "id": "b65f5b1be868",
+      "priority": 2,
+      "group": "ee060dd6732f"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Sugea",
+          "definition": "a snake\nsnake"
+        },
+        {
+          "word": "gose",
+          "definition": "hungry"
+        },
+        {
+          "word": "da.",
+          "definition": "he is (izan)\nis\nit is (izan)\nshe is (izan)"
+        }
+      ],
+      "chips": [
+        "The",
+        "snake",
+        "is",
+        "hungry",
+        "one",
+        "are",
+        "in"
+      ],
+      "solutions": [
+        [
+          "The",
+          "snake",
+          "is",
+          "hungry"
+        ]
+      ],
+      "formattedSolution": "The snake is hungry.",
+      "id": "a97e67b43d41",
+      "priority": 2,
+      "group": "ee060dd6732f"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Ikasleak ere gose dira.",
+      "meaningInSourceLanguage": "The students are also hungry.",
+      "id": "45ecdeae553c",
+      "priority": 0,
+      "group": "2ad6e979cd7d"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "The",
+          "definition": "-a"
+        },
+        {
+          "word": "students",
+          "definition": "ikasleak"
+        },
+        {
+          "word": "are",
+          "definition": "daude\ndaude (egon)\ndaude (izan)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzarete (izan)\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "also",
+          "definition": "ere"
+        },
+        {
+          "word": "hungry.",
+          "definition": "gose"
+        }
+      ],
+      "chips": [
+        "Ikasleak",
+        "ere",
+        "gose",
+        "dira",
+        "gara",
+        "Ere",
+        "nire"
+      ],
+      "solutions": [
+        [
+          "Ikasleak",
+          "ere",
+          "gose",
+          "dira"
+        ]
+      ],
+      "formattedSolution": "Ikasleak ere gose dira.",
+      "id": "28f2e2ab16fe",
+      "priority": 2,
+      "group": "2ad6e979cd7d"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Ikasleak",
+          "definition": "students"
+        },
+        {
+          "word": "ere",
+          "definition": "also"
+        },
+        {
+          "word": "gose",
+          "definition": "hungry"
+        },
+        {
+          "word": "dira.",
+          "definition": "are\nare (izan)"
+        }
+      ],
+      "chips": [
+        "The",
+        "students",
+        "are",
+        "also",
+        "hungry",
+        "ate",
+        "use",
+        "the",
+        "Are"
+      ],
+      "solutions": [
+        [
+          "The",
+          "students",
+          "are",
+          "also",
+          "hungry"
+        ]
+      ],
+      "formattedSolution": "The students are also hungry.",
+      "id": "92c9ad6fbea0",
+      "priority": 2,
+      "group": "2ad6e979cd7d"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Zu gose zara?",
+      "meaningInSourceLanguage": "Are you hungry?",
+      "id": "0d7ed03b6f70",
+      "priority": 0,
+      "group": "9cbbeca6f92f"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Are",
+          "definition": "daude\ndaude (egon)\ndaude (izan)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzarete (izan)\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "you",
+          "definition": "zu\nzuek"
+        },
+        {
+          "word": "hungry?",
+          "definition": "gose"
+        }
+      ],
+      "chips": [
+        "Zu",
+        "gose",
+        "zara",
+        "gara",
+        "zu"
+      ],
+      "solutions": [
+        [
+          "Zu",
+          "gose",
+          "zara"
+        ],
+        [
+          "Gose",
+          "zara"
+        ]
+      ],
+      "formattedSolution": "Zu gose zara?",
+      "id": "892808fc44f8",
+      "priority": 2,
+      "group": "9cbbeca6f92f"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Zu",
+          "definition": "you"
+        },
+        {
+          "word": "gose",
+          "definition": "hungry"
+        },
+        {
+          "word": "zara?",
+          "definition": "are\nyou are (izan)"
+        }
+      ],
+      "chips": [
+        "Are",
+        "you",
+        "hungry",
+        "are",
+        "or"
+      ],
+      "solutions": [
+        [
+          "Are",
+          "you",
+          "hungry"
+        ]
+      ],
+      "formattedSolution": "Are you hungry?",
+      "id": "6d4d44030a6b",
+      "priority": 2,
+      "group": "9cbbeca6f92f"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Bai, ni oso gose naiz.",
+      "meaningInSourceLanguage": "Yes, I am very hungry.",
+      "id": "88b28f228781",
+      "priority": 0,
+      "group": "36a579594406"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Yes,",
+          "definition": "bai"
+        },
+        {
+          "word": "I",
+          "definition": "ni"
+        },
+        {
+          "word": "am",
+          "definition": "NORTAZ case\nnago (egon)\nnaiz\nnaiz (izan)"
+        },
+        {
+          "word": "very",
+          "definition": "oso"
+        },
+        {
+          "word": "hungry.",
+          "definition": "gose"
+        }
+      ],
+      "chips": [
+        "Bai",
+        "ni",
+        "oso",
+        "gose",
+        "naiz",
+        "ohi",
+        "ogi",
+        "Ni",
+        "ona"
+      ],
+      "solutions": [
+        [
+          "Bai",
+          "ni",
+          "oso",
+          "gose",
+          "naiz"
+        ],
+        [
+          "Bai",
+          "oso",
+          "gose",
+          "naiz"
+        ]
+      ],
+      "formattedSolution": "Bai, ni oso gose naiz.",
+      "id": "bb35c0afe2d1",
+      "priority": 2,
+      "group": "36a579594406"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Bai,",
+          "definition": "Yes\nyes"
+        },
+        {
+          "word": "ni",
+          "definition": "I\nme"
+        },
+        {
+          "word": "oso",
+          "definition": "very"
+        },
+        {
+          "word": "gose",
+          "definition": "hungry"
+        },
+        {
+          "word": "naiz.",
+          "definition": "I am (izan)\nam\nam (izan)"
+        }
+      ],
+      "chips": [
+        "Yes",
+        "I",
+        "am",
+        "very",
+        "hungry",
+        "her",
+        "a",
+        "He",
+        "We"
+      ],
+      "solutions": [
+        [
+          "Yes",
+          "I",
+          "am",
+          "very",
+          "hungry"
+        ],
+        [
+          "Yes",
+          "I'm",
+          "very",
+          "hungry"
+        ]
+      ],
+      "formattedSolution": "Yes, I am very hungry.",
+      "id": "b7301e2cbc42",
+      "priority": 2,
+      "group": "36a579594406"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Txuletak prest daude.",
+      "meaningInSourceLanguage": "The steaks are ready.",
+      "id": "1113ac625296",
+      "priority": 0,
+      "group": "ff407a065844"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "The",
+          "definition": "-a"
+        },
+        {
+          "word": "steaks",
+          "definition": "txuletak"
+        },
+        {
+          "word": "are",
+          "definition": "daude\ndaude (egon)\ndaude (izan)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzarete (izan)\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "ready.",
+          "definition": "prest"
+        }
+      ],
+      "chips": [
+        "Txuletak",
+        "prest",
+        "daude",
+        "zaude",
+        "gaude"
+      ],
+      "solutions": [
+        [
+          "Txuletak",
+          "prest",
+          "daude"
+        ]
+      ],
+      "formattedSolution": "Txuletak prest daude.",
+      "id": "84eff7e09797",
+      "priority": 2,
+      "group": "ff407a065844"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Txuletak",
+          "definition": "steaks"
+        },
+        {
+          "word": "prest",
+          "definition": "ready"
+        },
+        {
+          "word": "daude.",
+          "definition": "are\nare (egon)\nthey are (egon)"
+        }
+      ],
+      "chips": [
+        "The",
+        "steaks",
+        "are",
+        "ready",
+        "ate",
+        "Are",
+        "red"
+      ],
+      "solutions": [
+        [
+          "The",
+          "steaks",
+          "are",
+          "ready"
+        ]
+      ],
+      "formattedSolution": "The steaks are ready.",
+      "id": "16586294e26e",
+      "priority": 2,
+      "group": "ff407a065844"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Gosaria ez dago oraindik prest.",
+      "meaningInSourceLanguage": "Breakfast is not ready yet.",
+      "id": "976600034fca",
+      "priority": 0,
+      "group": "7caab08d9cfd"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Breakfast",
+          "definition": "gosari"
+        },
+        {
+          "word": "is",
+          "definition": "da\nda (izan)\ndago\ndago (egon)"
+        },
+        {
+          "word": "not",
+          "definition": "ez"
+        },
+        {
+          "word": "ready",
+          "definition": "prest"
+        },
+        {
+          "word": "yet.",
+          "definition": "oraindik"
+        }
+      ],
+      "chips": [
+        "Gosaria",
+        "ez",
+        "dago",
+        "oraindik",
+        "prest",
+        "orain",
+        "ari",
+        "naiz",
+        "da"
+      ],
+      "solutions": [
+        [
+          "Gosaria",
+          "ez",
+          "dago",
+          "oraindik",
+          "prest"
+        ]
+      ],
+      "formattedSolution": "Gosaria ez dago oraindik prest.",
+      "id": "da3c612ad36e",
+      "priority": 2,
+      "group": "7caab08d9cfd"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Gosaria",
+          "definition": "breakfast"
+        },
+        {
+          "word": "ez",
+          "definition": "no\nnot\nnot, no\nnot,no"
+        },
+        {
+          "word": "dago",
+          "definition": "he is (egon)\nis\nit is (egon)\nshe is (egon)"
+        },
+        {
+          "word": "oraindik",
+          "definition": "still\nstill/yet"
+        },
+        {
+          "word": "prest.",
+          "definition": "ready"
+        }
+      ],
+      "chips": [
+        "Breakfast",
+        "is",
+        "not",
+        "ready",
+        "yet",
+        "eat",
+        "red",
+        "fat",
+        "at"
+      ],
+      "solutions": [
+        [
+          "Breakfast",
+          "is",
+          "not",
+          "ready",
+          "yet"
+        ]
+      ],
+      "formattedSolution": "Breakfast is not ready yet.",
+      "id": "96d178413de7",
+      "priority": 2,
+      "group": "7caab08d9cfd"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Arrautzak prest daude.",
+      "meaningInSourceLanguage": "The eggs are ready.",
+      "id": "bd6ed2681bba",
+      "priority": 0,
+      "group": "f556dc61ed2f"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "The",
+          "definition": "-a"
+        },
+        {
+          "word": "eggs",
+          "definition": "arrautzak"
+        },
+        {
+          "word": "are",
+          "definition": "daude\ndaude (egon)\ndaude (izan)\ndira\ndira (izan)\ngara\ngara (izan)\ngare\ngaude (egon)\nzara\nzara (izan)\nzarete\nzarete (izan)\nzaude  (egon)\nzaude (egon)\nzaudete (egon)"
+        },
+        {
+          "word": "ready.",
+          "definition": "prest"
+        }
+      ],
+      "chips": [
+        "Arrautzak",
+        "prest",
+        "daude",
+        "zaude",
+        "gaude"
+      ],
+      "solutions": [
+        [
+          "Arrautzak",
+          "prest",
+          "daude"
+        ]
+      ],
+      "formattedSolution": "Arrautzak prest daude.",
+      "id": "afcd238306e1",
+      "priority": 2,
+      "group": "f556dc61ed2f"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Arrautzak",
+          "definition": "eggs"
+        },
+        {
+          "word": "prest",
+          "definition": "ready"
+        },
+        {
+          "word": "daude.",
+          "definition": "are\nare (egon)\nthey are (egon)"
+        }
+      ],
+      "chips": [
+        "The",
+        "eggs",
+        "are",
+        "ready",
+        "Are",
+        "red",
+        "ate"
+      ],
+      "solutions": [
+        [
+          "The",
+          "eggs",
+          "are",
+          "ready"
+        ]
+      ],
+      "formattedSolution": "The eggs are ready.",
+      "id": "0beedad2855e",
+      "priority": 2,
+      "group": "f556dc61ed2f"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": "gosari",
+      "meaningInSourceLanguage": "breakfast",
+      "id": "d8370a46fd12",
+      "priority": 0,
+      "group": "0a9a5b4be178"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": [
+        "gosari"
+      ],
+      "phrase": [
+        {
+          "word": "breakfast",
+          "definition": "gosari"
+        }
+      ],
+      "id": "f1930335ca5b",
+      "priority": 1,
+      "group": "0a9a5b4be178"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": "gosaldu",
+      "meaningInSourceLanguage": "ate breakfast",
+      "id": "4defff5c8270",
+      "priority": 0,
+      "group": "45415015824a"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": [
+        "gosaldu"
+      ],
+      "phrase": [
+        {
+          "word": "ate",
+          "definition": "jan"
+        },
+        {
+          "word": "breakfast",
+          "definition": "gosari"
+        }
+      ],
+      "id": "34ad15a73930",
+      "priority": 1,
+      "group": "45415015824a"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": "gosaltzen",
+      "meaningInSourceLanguage": "eating breakfast",
+      "id": "0316966daf4f",
+      "priority": 0,
+      "group": "2276c1855c90"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": [
+        "gosaltzen"
+      ],
+      "phrase": [
+        {
+          "word": "eating",
+          "definition": "jaten ari"
+        },
+        {
+          "word": "breakfast",
+          "definition": "gosari"
+        }
+      ],
+      "id": "a4fa73d9471c",
+      "priority": 1,
+      "group": "2276c1855c90"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": "gosalduko",
+      "meaningInSourceLanguage": "will eat breakfast",
+      "id": "b743a2986076",
+      "priority": 0,
+      "group": "4dd5be5b2a0d"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": [
+        "gosalduko"
+      ],
+      "phrase": [
+        {
+          "word": "will",
+          "definition": "future tense"
+        },
+        {
+          "word": "eat",
+          "definition": "jango (future)\njateko (in order to eat)\njaten\njaten (present)"
+        },
+        {
+          "word": "breakfast",
+          "definition": "gosari"
+        }
+      ],
+      "id": "e1935ed5862a",
+      "priority": 1,
+      "group": "4dd5be5b2a0d"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": "zopa",
+      "meaningInSourceLanguage": "soup",
+      "id": "412b12e022ab",
+      "priority": 0,
+      "group": "3ff25f4c2e51"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": [
+        "zopa"
+      ],
+      "phrase": [
+        {
+          "word": "soup",
+          "definition": "zopa"
+        }
+      ],
+      "id": "032c1af9db42",
+      "priority": 1,
+      "group": "3ff25f4c2e51"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": "fruta",
+      "meaningInSourceLanguage": "fruit",
+      "id": "b1a2571da027",
+      "priority": 0,
+      "group": "caea203dec40"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": [
+        "fruta"
+      ],
+      "phrase": [
+        {
+          "word": "fruit",
+          "definition": "fruta"
+        }
+      ],
+      "id": "3c1b2d7dff6e",
+      "priority": 1,
+      "group": "caea203dec40"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": "mahats",
+      "meaningInSourceLanguage": "grape",
+      "id": "e1dbfc353724",
+      "priority": 0,
+      "group": "68ae7f037981"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": [
+        "mahats"
+      ],
+      "phrase": [
+        {
+          "word": "grape",
+          "definition": "mahats"
+        }
+      ],
+      "id": "cf8134e3eff0",
+      "priority": 1,
+      "group": "68ae7f037981"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": "gose",
+      "meaningInSourceLanguage": "hungry",
+      "id": "cf2d16ec03e7",
+      "priority": 0,
+      "group": "55f0dd7131f7"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": [
+        "gose"
+      ],
+      "phrase": [
+        {
+          "word": "hungry",
+          "definition": "gose"
+        }
+      ],
+      "id": "17c0fed639eb",
+      "priority": 1,
+      "group": "55f0dd7131f7"
+    },
+    {
+      "type": "cards",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": "prest",
+      "meaningInSourceLanguage": "ready",
+      "id": "83f76f3a45d5",
+      "priority": 0,
+      "group": "be8f14a7b912"
+    },
+    {
+      "type": "shortInput",
+      "pictures": [
+        "nothing.jpg",
+        "nothing.jpg",
+        "nothing.jpg"
+      ],
+      "formInTargetLanguage": [
+        "prest"
+      ],
+      "phrase": [
+        {
+          "word": "ready",
+          "definition": "prest"
+        }
+      ],
+      "id": "3a22796483b6",
+      "priority": 1,
+      "group": "be8f14a7b912"
+    }
+  ]
+}
