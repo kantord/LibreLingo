@@ -12,6 +12,8 @@
 		"format": "prettier --write ."
 	},
 	"dependencies": {
+		"@fontsource-variable/noto-sans": "^5.0.5",
+		"bulmaswatch": "^0.8.1",
 		"lluis": "*",
 		"svelte-i18n": "^4.0.0"
 	},
@@ -24,19 +26,19 @@
 		"@types/eslint": "^8.56.0",
 		"@typescript-eslint/eslint-plugin": "^7.0.0",
 		"@typescript-eslint/parser": "^7.0.0",
+		"bulma": "^1.0.0",
 		"eslint": "^8.56.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.35.1",
 		"prettier": "^3.1.1",
 		"prettier-plugin-svelte": "^3.1.2",
+		"sass": "^1.71.1",
 		"svelte": "^4.2.7",
 		"svelte-check": "^3.6.0",
 		"tslib": "^2.4.1",
 		"typescript": "^5.0.0",
 		"vite": "^5.0.3",
-		"vitest": "^1.2.0",
-		"bulma": "^1.0.0",
-		"sass": "^1.71.1"
+		"vitest": "^1.2.0"
 	},
 	"type": "module"
 }

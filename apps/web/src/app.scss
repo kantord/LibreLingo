@@ -1,3 +1,6 @@
+@use './custom_variables.scss';
+@use 'bulmaswatch/lumen/variables.scss';
+
 @use 'bulma/sass/utilities' with (
 	$link: $pink
 );
@@ -5,7 +8,6 @@
 	$body-overflow-y: auto
 );
 
-@use './custom_variables.scss';
 
 
 @use 'bulma/sass/base/minireset';
@@ -20,3 +22,4 @@
 @use 'bulma/sass/layout/section';
 @use 'bulma/sass/layout/hero';
 @use 'bulma/sass/base/generic';
+

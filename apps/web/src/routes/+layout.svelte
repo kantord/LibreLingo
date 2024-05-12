@@ -2,6 +2,7 @@
 	import '../app.scss';
 	import isBrowser from '$lib/utils/isBrowser';
 	import { waitLocale } from 'svelte-i18n';
+  import '@fontsource-variable/noto-sans/wdth-italic.css';
 
 	export async function preload() {
 		// See documentation: https://github.com/kaisermann/svelte-i18n/blob/main/docs/Methods.md#waitlocale
