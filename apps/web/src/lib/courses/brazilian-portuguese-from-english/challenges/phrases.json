@@ -1,0 +1,963 @@
+{
+  "id": "0beaa60946f0",
+  "levels": 3,
+  "challenges": [
+    {
+      "type": "options",
+      "formInTargetLanguage": "Bom dia!",
+      "meaningInSourceLanguage": "Good morning!",
+      "id": "e5bf0222bf04",
+      "priority": 0,
+      "group": "4592e2878378"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Bom dia!",
+      "meaning": "Good morning!",
+      "audio": "a019cfc2f9234dc0c6f95da237fa3d1afd5fdba33f98b622f853be75a9944dad",
+      "id": "686a0356d81d",
+      "priority": 1,
+      "group": "4592e2878378"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Good",
+          "definition": "bem\nboa\nbom"
+        },
+        {
+          "word": "morning!",
+          "definition": "manhã"
+        }
+      ],
+      "chips": [
+        "Bom",
+        "dia",
+        "Boa",
+        "um"
+      ],
+      "solutions": [
+        [
+          "Bom",
+          "dia"
+        ]
+      ],
+      "formattedSolution": "Bom dia!",
+      "id": "be38232378d6",
+      "priority": 2,
+      "group": "4592e2878378"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Bom",
+          "definition": "good"
+        },
+        {
+          "word": "dia!",
+          "definition": "day"
+        }
+      ],
+      "chips": [
+        "Good",
+        "morning",
+        "good",
+        "more"
+      ],
+      "solutions": [
+        [
+          "Good",
+          "morning"
+        ],
+        [
+          "Good",
+          "day"
+        ]
+      ],
+      "formattedSolution": "Good morning!",
+      "id": "e5c2ed839c1e",
+      "priority": 2,
+      "group": "4592e2878378"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Bom dia, eu sou a Cecilia.",
+      "meaningInSourceLanguage": "Good morning, I am Cecilia.",
+      "id": "0fbcb7c4d76d",
+      "priority": 0,
+      "group": "ce250f5efce3"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Bom dia, eu sou a Cecilia.",
+      "meaning": "Good morning, I am Cecilia.",
+      "audio": "acf46f11f84b2331a5b48e7404916d8ac37f4c3ef9d54552e95281af296ff551",
+      "id": "affb6e3d4d58",
+      "priority": 1,
+      "group": "ce250f5efce3"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Good",
+          "definition": "bem\nboa\nbom"
+        },
+        {
+          "word": "morning,",
+          "definition": "manhã"
+        },
+        {
+          "word": "I",
+          "definition": "eu"
+        },
+        {
+          "word": "am",
+          "definition": "sou"
+        },
+        {
+          "word": "Cecilia.",
+          "definition": "Cecília (name)"
+        }
+      ],
+      "chips": [
+        "Bom",
+        "dia",
+        "eu",
+        "sou",
+        "a",
+        "Cecilia",
+        "Boa",
+        "ou",
+        "e",
+        "o",
+        "em"
+      ],
+      "solutions": [
+        [
+          "Bom",
+          "dia",
+          "eu",
+          "sou",
+          "a",
+          "Cecilia"
+        ],
+        [
+          "Bom",
+          "dia",
+          "sou",
+          "Cecilia"
+        ]
+      ],
+      "formattedSolution": "Bom dia, eu sou a Cecilia.",
+      "id": "66910056679c",
+      "priority": 2,
+      "group": "ce250f5efce3"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Bom",
+          "definition": "good"
+        },
+        {
+          "word": "dia,",
+          "definition": "day"
+        },
+        {
+          "word": "eu",
+          "definition": "I\nme"
+        },
+        {
+          "word": "sou",
+          "definition": "I am"
+        },
+        {
+          "word": "a",
+          "definition": "the\nto"
+        },
+        {
+          "word": "Cecilia.",
+          "definition": "personal name"
+        }
+      ],
+      "chips": [
+        "Good",
+        "morning",
+        "I",
+        "am",
+        "Cecilia",
+        "a",
+        "or",
+        "in",
+        "is"
+      ],
+      "solutions": [
+        [
+          "Good",
+          "morning",
+          "I",
+          "am",
+          "Cecilia"
+        ]
+      ],
+      "formattedSolution": "Good morning, I am Cecilia.",
+      "id": "9b2a9f341311",
+      "priority": 2,
+      "group": "ce250f5efce3"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Meu nome  José",
+      "meaningInSourceLanguage": "My name is José",
+      "id": "bfd3d5057b63",
+      "priority": 0,
+      "group": "2195b5677f54"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Meu nome  José",
+      "meaning": "My name is José",
+      "audio": "4536b94e68ab521c6897cd65043dca9fcd4df4bf73f173c1a146f0485fa671db",
+      "id": "4ceaec22c524",
+      "priority": 1,
+      "group": "2195b5677f54"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "My",
+          "definition": "meu"
+        },
+        {
+          "word": "name",
+          "definition": "nome"
+        },
+        {
+          "word": "is",
+          "definition": "é"
+        },
+        {
+          "word": "José",
+          "definition": "José (name)"
+        }
+      ],
+      "chips": [
+        "Meu",
+        "nome",
+        "José",
+        "Bom",
+        "come"
+      ],
+      "solutions": [
+        [
+          "Meu",
+          "nome",
+          "José"
+        ],
+        [
+          "Me",
+          "chamo",
+          "José"
+        ],
+        [
+          "Meu",
+          "nome",
+          "é",
+          "José"
+        ]
+      ],
+      "formattedSolution": "Meu nome  José",
+      "id": "c1d80b10a723",
+      "priority": 2,
+      "group": "2195b5677f54"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Meu",
+          "definition": "mine\nmy"
+        },
+        {
+          "word": "nome",
+          "definition": "name"
+        },
+        {
+          "word": "José",
+          "definition": "José (name)\npersonal name"
+        }
+      ],
+      "chips": [
+        "My",
+        "name",
+        "is",
+        "José",
+        "am",
+        "a",
+        "it"
+      ],
+      "solutions": [
+        [
+          "My",
+          "name",
+          "is",
+          "José"
+        ],
+        [
+          "I",
+          "am",
+          "called",
+          "José"
+        ],
+        [
+          "I'm",
+          "called",
+          "José"
+        ]
+      ],
+      "formattedSolution": "My name is José",
+      "id": "b38848d1bc27",
+      "priority": 2,
+      "group": "2195b5677f54"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Como vai?",
+      "meaningInSourceLanguage": "How are you?",
+      "id": "4fedf8d698e5",
+      "priority": 0,
+      "group": "938c5e2f7fc8"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Como vai?",
+      "meaning": "How are you?",
+      "audio": "2ae487cddf564396673a1a499748cd1d5009473fbad76ed8973efebc8d3c1b0c",
+      "id": "f99e256fce1b",
+      "priority": 1,
+      "group": "938c5e2f7fc8"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "How",
+          "definition": "como"
+        },
+        {
+          "word": "are",
+          "definition": "são"
+        },
+        {
+          "word": "you?",
+          "definition": "tu\nvocê"
+        }
+      ],
+      "chips": [
+        "Como",
+        "vai",
+        "Bom",
+        "como"
+      ],
+      "solutions": [
+        [
+          "Como",
+          "vai"
+        ]
+      ],
+      "formattedSolution": "Como vai?",
+      "id": "ffda72f8e8db",
+      "priority": 2,
+      "group": "938c5e2f7fc8"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Como",
+          "definition": "I eat\nSorry? What?\nhow\nlike"
+        },
+        {
+          "word": "vai?",
+          "definition": "goes"
+        }
+      ],
+      "chips": [
+        "How",
+        "are",
+        "you",
+        "or",
+        "You"
+      ],
+      "solutions": [
+        [
+          "How",
+          "are",
+          "you"
+        ]
+      ],
+      "formattedSolution": "How are you?",
+      "id": "e9daf0cea7c7",
+      "priority": 2,
+      "group": "938c5e2f7fc8"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "E, aí?",
+      "meaningInSourceLanguage": "What's up?",
+      "id": "c7ce25d19937",
+      "priority": 0,
+      "group": "a84e8264743f"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "E, aí?",
+      "meaning": "What's up?",
+      "audio": "c90a2834ec6445185583d6015f2bb8e042225ad0d9efb80c96e9f2b2bfafad44",
+      "id": "7b1178f09991",
+      "priority": 1,
+      "group": "a84e8264743f"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "What's",
+          "definition": "qual é"
+        },
+        {
+          "word": "up?",
+          "definition": "acima\naté\npara cima"
+        }
+      ],
+      "chips": [
+        "E",
+        "aí",
+        "É",
+        "e"
+      ],
+      "solutions": [
+        [
+          "E",
+          "aí"
+        ]
+      ],
+      "formattedSolution": "E, aí?",
+      "id": "ab7d76d3a3e2",
+      "priority": 2,
+      "group": "a84e8264743f"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "E,",
+          "definition": "and"
+        },
+        {
+          "word": "aí?",
+          "definition": "there"
+        }
+      ],
+      "chips": [
+        "What's",
+        "up",
+        "What",
+        "at"
+      ],
+      "solutions": [
+        [
+          "What's",
+          "up"
+        ]
+      ],
+      "formattedSolution": "What's up?",
+      "id": "4709fe2355e2",
+      "priority": 2,
+      "group": "a84e8264743f"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Prazer em conhecê-lo",
+      "meaningInSourceLanguage": "Nice to meet you",
+      "id": "29083ef5d37c",
+      "priority": 0,
+      "group": "bfe6f8166dbe"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Prazer em conhecê-lo",
+      "meaning": "Nice to meet you",
+      "audio": "7d601e16a82ab880a3ecd0f2a58da259bac3345ca3ee692811a5c5035dc1485f",
+      "id": "218efdb858e3",
+      "priority": 1,
+      "group": "bfe6f8166dbe"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Nice",
+          "definition": "agradável\nbem\nbom\nbonita\nbonito\nótimo"
+        },
+        {
+          "word": "to",
+          "definition": "a\npara"
+        },
+        {
+          "word": "meet",
+          "definition": "conhecer\nencontrar-se"
+        },
+        {
+          "word": "you",
+          "definition": "tu\nvocê"
+        }
+      ],
+      "chips": [
+        "Prazer",
+        "em",
+        "conhecê-lo",
+        "e",
+        "come"
+      ],
+      "solutions": [
+        [
+          "Prazer",
+          "em",
+          "conhecê-lo"
+        ]
+      ],
+      "formattedSolution": "Prazer em conhecê-lo",
+      "id": "d66deb8d1bd7",
+      "priority": 2,
+      "group": "bfe6f8166dbe"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Prazer",
+          "definition": "pleasure"
+        },
+        {
+          "word": "em",
+          "definition": "at\nin\non\nto"
+        },
+        {
+          "word": "conhecê-lo",
+          "definition": "meet you (masc.)"
+        }
+      ],
+      "chips": [
+        "Nice",
+        "to",
+        "meet",
+        "you",
+        "it",
+        "go",
+        "You"
+      ],
+      "solutions": [
+        [
+          "Nice",
+          "to",
+          "meet",
+          "you"
+        ],
+        [
+          "Nice",
+          "meeting",
+          "you"
+        ]
+      ],
+      "formattedSolution": "Nice to meet you",
+      "id": "e1ef6bb142c1",
+      "priority": 2,
+      "group": "bfe6f8166dbe"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Até logo!",
+      "meaningInSourceLanguage": "See you later!",
+      "id": "00b8810551d2",
+      "priority": 0,
+      "group": "a5b0b9b0e2c0"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Até logo!",
+      "meaning": "See you later!",
+      "audio": "b8deb65728219b66357ecd1cec7b19faab4654d12ff3493ac466f4bf9e862cca",
+      "id": "a98a94c3c9a3",
+      "priority": 1,
+      "group": "a5b0b9b0e2c0"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "See",
+          "definition": "veem\nvejo\nver\nvê"
+        },
+        {
+          "word": "you",
+          "definition": "tu\nvocê"
+        },
+        {
+          "word": "later!",
+          "definition": "depois\nlogo\nmais tarde"
+        }
+      ],
+      "chips": [
+        "Até",
+        "logo",
+        "cão",
+        "pato"
+      ],
+      "solutions": [
+        [
+          "Até",
+          "logo"
+        ]
+      ],
+      "formattedSolution": "Até logo!",
+      "id": "e886b13c1e2b",
+      "priority": 2,
+      "group": "a5b0b9b0e2c0"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Até",
+          "definition": "until"
+        },
+        {
+          "word": "logo!",
+          "definition": "later\nsoon\nthen"
+        }
+      ],
+      "chips": [
+        "See",
+        "you",
+        "later",
+        "are",
+        "Sea"
+      ],
+      "solutions": [
+        [
+          "See",
+          "you",
+          "later"
+        ],
+        [
+          "See",
+          "you",
+          "soon"
+        ]
+      ],
+      "formattedSolution": "See you later!",
+      "id": "04265865bc49",
+      "priority": 2,
+      "group": "a5b0b9b0e2c0"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Qual é o seu nome?",
+      "meaningInSourceLanguage": "What's your name?",
+      "id": "920e17ab52a2",
+      "priority": 0,
+      "group": "d7e483bfaca2"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Qual é o seu nome?",
+      "meaning": "What's your name?",
+      "audio": "9417d8069945e4f8364c78b88837d3b196366a01ce0cfb9b04604e069609004c",
+      "id": "7c4f9dd03808",
+      "priority": 1,
+      "group": "d7e483bfaca2"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "What's",
+          "definition": "qual é"
+        },
+        {
+          "word": "your",
+          "definition": "seu\nsua"
+        },
+        {
+          "word": "name?",
+          "definition": "nome"
+        }
+      ],
+      "chips": [
+        "Qual",
+        "é",
+        "o",
+        "seu",
+        "nome",
+        "e",
+        "ou",
+        "no",
+        "ao"
+      ],
+      "solutions": [
+        [
+          "Qual",
+          "é",
+          "o",
+          "seu",
+          "nome"
+        ]
+      ],
+      "formattedSolution": "Qual é o seu nome?",
+      "id": "d348e493e707",
+      "priority": 2,
+      "group": "d7e483bfaca2"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Qual",
+          "definition": "what\nwhich"
+        },
+        {
+          "word": "é",
+          "definition": "is\nyou are"
+        },
+        {
+          "word": "o",
+          "definition": "the"
+        },
+        {
+          "word": "seu",
+          "definition": "your"
+        },
+        {
+          "word": "nome?",
+          "definition": "name"
+        }
+      ],
+      "chips": [
+        "What's",
+        "your",
+        "name",
+        "Water",
+        "eats"
+      ],
+      "solutions": [
+        [
+          "What's",
+          "your",
+          "name"
+        ],
+        [
+          "What",
+          "is",
+          "your",
+          "name"
+        ]
+      ],
+      "formattedSolution": "What's your name?",
+      "id": "0d82bb472661",
+      "priority": 2,
+      "group": "d7e483bfaca2"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Boa tarde!",
+      "meaningInSourceLanguage": "Good afternoon!",
+      "id": "9581e2f3c992",
+      "priority": 0,
+      "group": "8e90bd1bc7b4"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Boa tarde!",
+      "meaning": "Good afternoon!",
+      "audio": "a1f3bccdf4f3fbdb3daa73b2ce270c1076555d8b89f018359c84126eb03ab690",
+      "id": "a2acbfa02a65",
+      "priority": 1,
+      "group": "8e90bd1bc7b4"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Good",
+          "definition": "bem\nboa\nbom"
+        },
+        {
+          "word": "afternoon!",
+          "definition": "tarde"
+        }
+      ],
+      "chips": [
+        "Boa",
+        "tarde",
+        "Bom",
+        "Por"
+      ],
+      "solutions": [
+        [
+          "Boa",
+          "tarde"
+        ]
+      ],
+      "formattedSolution": "Boa tarde!",
+      "id": "477c5e298136",
+      "priority": 2,
+      "group": "8e90bd1bc7b4"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Boa",
+          "definition": "good"
+        },
+        {
+          "word": "tarde!",
+          "definition": "afternoon"
+        }
+      ],
+      "chips": [
+        "Good",
+        "afternoon",
+        "good",
+        "soon"
+      ],
+      "solutions": [
+        [
+          "Good",
+          "afternoon"
+        ],
+        [
+          "Good",
+          "evening"
+        ]
+      ],
+      "formattedSolution": "Good afternoon!",
+      "id": "fb3e5df07a24",
+      "priority": 2,
+      "group": "8e90bd1bc7b4"
+    },
+    {
+      "type": "options",
+      "formInTargetLanguage": "Boa noite, José!",
+      "meaningInSourceLanguage": "Good night, José!",
+      "id": "e7b6a00c0c7d",
+      "priority": 0,
+      "group": "646bcbc9ba41"
+    },
+    {
+      "type": "listeningExercise",
+      "answer": "Boa noite, José!",
+      "meaning": "Good night, José!",
+      "audio": "592d237b43fa46e5f655d3295e72cf4ae48c758adbba3cc68553cfbfbb788176",
+      "id": "7c33c2ba0aa2",
+      "priority": 1,
+      "group": "646bcbc9ba41"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": false,
+      "phrase": [
+        {
+          "word": "Good",
+          "definition": "bem\nboa\nbom"
+        },
+        {
+          "word": "night,",
+          "definition": "noite"
+        },
+        {
+          "word": "José!",
+          "definition": "José (name)"
+        }
+      ],
+      "chips": [
+        "Boa",
+        "noite",
+        "José",
+        "Bom",
+        "nome"
+      ],
+      "solutions": [
+        [
+          "Boa",
+          "noite",
+          "José"
+        ]
+      ],
+      "formattedSolution": "Boa noite, José!",
+      "id": "76376c74ec56",
+      "priority": 2,
+      "group": "646bcbc9ba41"
+    },
+    {
+      "type": "chips",
+      "translatesToSourceLanguage": true,
+      "phrase": [
+        {
+          "word": "Boa",
+          "definition": "good"
+        },
+        {
+          "word": "noite,",
+          "definition": "night"
+        },
+        {
+          "word": "José!",
+          "definition": "José (name)\npersonal name"
+        }
+      ],
+      "chips": [
+        "Good",
+        "night",
+        "José",
+        "good",
+        "not"
+      ],
+      "solutions": [
+        [
+          "Good",
+          "night",
+          "José"
+        ]
+      ],
+      "formattedSolution": "Good night, José!",
+      "id": "46dc7cd3e2c9",
+      "priority": 2,
+      "group": "646bcbc9ba41"
+    }
+  ]
+}
