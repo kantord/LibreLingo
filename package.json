@@ -2,6 +2,7 @@
   "name": "@librelingo/monorepo",
   "private": true,
   "scripts": {
+    "dev": "npm -w web run dev",
     "exportAllCourses": "./scripts/exportAllYamlCourses.sh",
     "exportCourse": "./scripts/exportYamlCourse.sh",
     "docs": "pdm run mkdocs serve",
