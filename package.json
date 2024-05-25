@@ -1,0 +1,18 @@
+{
+  "name": "librelingo-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "This is the monorepo for LibreLingo",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "web-dev": "npm run -w librelingo-web dev"
+  },
+  "workspaces": [
+    "librelingo-web"
+  ],
+  "keywords": [],
+  "author": ""
+}
