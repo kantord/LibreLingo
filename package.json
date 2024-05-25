@@ -8,10 +8,10 @@
     "test": "tests"
   },
   "scripts": {
-    "web-dev": "npm run -w librelingo-web dev"
+    "web-dev": "npm -w librelingo-web run dev"
   },
   "workspaces": [
-    "librelingo-web"
+    "apps/librelingo-web"
   ],
   "keywords": [],
   "author": ""
