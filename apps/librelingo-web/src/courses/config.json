@@ -83,7 +83,7 @@
     },
     "deploy": true,
     "devtoolsEnabled": true,
-    "inProduction": false,
+    "inProduction": true,
     "name": "german-from-english",
     "source": "English",
     "target": "German",
@@ -96,7 +96,7 @@
       "yamlFolder": "LibreLingo-EU-from-EN-main",
       "jsonFolder": "basque-from-english"
     },
-    "deploy": true,
+    "deploy": false,
     "devtoolsEnabled": true,
     "inProduction": false,
     "name": "basque-from-english",
@@ -126,7 +126,7 @@
       "yamlFolder": "LibreLingo-FR-from-EN",
       "jsonFolder": "french-from-english"
     },
-    "deploy": true,
+    "deploy": false,
     "devtoolsEnabled": false,
     "inProduction": false,
     "name": "french-from-english",
@@ -171,7 +171,7 @@
       "yamlFolder": "LibreLingo-ptBR-from-EN",
       "jsonFolder": "brazilian-portuguese-from-english"
     },
-    "deploy": true,
+    "deploy": false,
     "devtoolsEnabled": false,
     "inProduction": false,
     "name": "brazilian-portuguese-from-english",
@@ -201,7 +201,7 @@
       "yamlFolder": "LibreLingo-OCauv-from-FR",
       "jsonFolder": "occitan-auvergnat-from-french"
     },
-    "deploy": true,
+    "deploy": false,
     "devtoolsEnabled": false,
     "inProduction": false,
     "name": "occitan-auvergnat-from-french",
@@ -216,7 +216,7 @@
       "yamlFolder": "LibreLingo-KAB-from-FR-last-passing",
       "jsonFolder": "kabyle-from-french"
     },
-    "deploy": true,
+    "deploy": false,
     "devtoolsEnabled": false,
     "inProduction": false,
     "name": "kabyle-from-french",
@@ -233,7 +233,7 @@
     },
     "deploy": true,
     "devtoolsEnabled": false,
-    "inProduction": false,
+    "inProduction": true,
     "name": "dutch-from-english",
     "source": "English",
     "target": "Dutch",
