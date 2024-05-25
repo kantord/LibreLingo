@@ -8,11 +8,17 @@
     "test": "tests"
   },
   "scripts": {
-    "web-dev": "npm -w librelingo-web run dev"
+    "web-dev": "npm -w librelingo-web run dev",
+    "e2e:test": "playwright test",
+    "e2e:ui": "playwright test --ui",
+    "e2e:report": "playwright show-report"
   },
   "workspaces": [
     "apps/librelingo-web"
   ],
   "keywords": [],
-  "author": ""
+  "author": "",
+  "dependencies": {
+    "playwright": "^1.44.1"
+  }
 }
