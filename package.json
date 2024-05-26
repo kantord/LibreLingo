@@ -11,7 +11,8 @@
     "web-dev": "npm -w librelingo-web run dev",
     "e2e:test": "playwright test",
     "e2e:ui": "playwright test --ui",
-    "e2e:report": "playwright show-report"
+    "e2e:report": "playwright show-report",
+    "lint": "eslint ."
   },
   "workspaces": [
     "apps/librelingo-web"
@@ -23,6 +24,8 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.44.1",
-    "@types/node": "^20.12.12"
+    "@types/node": "^20.12.12",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3"
   }
 }
