@@ -20,5 +20,9 @@
   "author": "",
   "dependencies": {
     "playwright": "^1.44.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.1",
+    "@types/node": "^20.12.12"
   }
 }
