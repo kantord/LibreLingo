@@ -9,6 +9,7 @@
   },
   "scripts": {
     "web-dev": "npm -w librelingo-web run dev",
+    "build": "npm -w librelingo-web run build",
     "e2e:test": "playwright test",
     "e2e:ui": "playwright test --ui",
     "e2e:report": "playwright show-report",
