@@ -7,6 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import Link from "next/link"
 
 type Course = {
   source: string
@@ -33,7 +34,7 @@ return (<Card>
     <p>Card Content</p>
   </CardContent>
   <CardFooter>
-      <Button>Go to course</Button>
+      <Button asChild><Link href="/en/course/es">Go to course</Link></Button>
   </CardFooter>
 </Card>)
 }

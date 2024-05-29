@@ -12,7 +12,7 @@ export default function Home() {
     <>
       <ul className='flex space-y-6 flex-col p-6'>
         {courseData.map((course) => (
-          <li key={course.url} ><CourseCard course={course} /></li>
+          <li key={course.url}><CourseCard course={course} /></li>
         ))}
       </ul>
    </> 
