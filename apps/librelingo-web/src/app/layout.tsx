@@ -14,15 +14,17 @@ type RootLayoutProps = {
  
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <head />
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
+          "font-sans antialiased",
           fontSans.variable
         )}
       >
+        <div className="container">
         {children}
+        </div>
       </body>
     </html>
   )
