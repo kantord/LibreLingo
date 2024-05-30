@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import CourseCard from './CourseCard';
-import courseData from "@/courses/courses.json"
+import courseData from "@/courses/config.json"
  
 export const metadata: Metadata = {
   title: 'LibreLingo',
