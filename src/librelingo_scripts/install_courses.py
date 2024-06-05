@@ -38,15 +38,12 @@ def process_course(course):
     os.makedirs(dest_dir, exist_ok=True)
     
     try:
-        # Download
         print(f"Downloading {url}...")
         download_file(url, temp_zip)
         
-        # Unzip
         print(f"Unzipping to {dest_dir}...")
         unzip_file(temp_zip, dest_dir)
         
-        # Move files
         print(f"Moving files in {dest_dir}...")
         move_files(dest_dir, dest_dir)
     except Exception as e:
@@ -57,7 +54,6 @@ def process_course(course):
             os.remove(temp_zip)
 
 def main():
-    # Fixed path to the config file
     config_filename = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../apps/librelingo-web/src/courses/config.json'))
     
     if not os.path.isfile(config_filename):

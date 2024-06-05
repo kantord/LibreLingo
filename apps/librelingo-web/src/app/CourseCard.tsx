@@ -8,21 +8,8 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import Link from "next/link"
+import { Course } from "./page"
 
-type Language = {
-  code: string
-  name: string
-}
-
-type Course = {
-  source: Language
-  target: Language
-  deploy: boolean
-  inProduction: boolean
-  devtoolsEnabled: boolean
-  repositoryURL: string
-  url: string
-}
 
 type Props = {
   course: Course
