@@ -1,94 +1,33 @@
 {
-  "name": "@librelingo/monorepo",
+  "name": "librelingo-monorepo",
+  "version": "1.0.0",
   "private": true,
-  "scripts": {
-    "cypress": "yarn web cypress",
-    "export:production": "yarn web installAllExternalCourses && yarn exportAllCourses && yarn web export && yarn docs:build && mv ./apps/web/__sapper__/ . && pdm run python apps/tools/librelingo_tools/generate.py --courses ./config/courses.json --outdir ./__sapper__/export/course-tools-legacy",
-    "export": "yarn web export && mv ./apps/web/__sapper__/ .",
-    "commit": "git-cz",
-    "test": "jest",
-    "test:ci": "yarn web test:ci",
-    "web": "yarn workspace @librelingo/web",
-    "types": "yarn workspaces run types",
-    "format": "eslint . --fix --max-warnings=0 && prettier --write apps/**/*.svelte docs --ignore-path ./.prettierignore_for_svelte",
-    "lint": "eslint . --max-warnings=0 && prettier --check apps/**/*.svelte docs --ignore-path ./.prettierignore_for_svelte",
-    "exportAllCourses": "./scripts/exportAllYamlCourses.sh",
-    "exportCourse": "./scripts/exportYamlCourse.sh",
-    "docs": "pdm run mkdocs serve",
-    "docs:build": "pdm run mkdocs build --site-dir ./apps/web/__sapper__/export/docs/"
+  "description": "This is the monorepo for LibreLingo",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
   },
-  "workspaces": {
-    "packages": [
-      "apps/*"
-    ],
-    "nohoist": [
-      "**/bulma",
-      "**/bulma/**",
-      "**/@openfonts/**",
-      "**/svelte/**",
-      "svelte/**",
-      "svelte",
-      "**/svelte",
-      "sapper/**",
-      "sapper",
-      "**/sapper",
-      "knapsack-pro-cypress"
-    ]
+  "scripts": {
+    "web-dev": "npm -w librelingo-web run dev",
+    "build": "npm -w librelingo-web run build",
+    "e2e:test": "playwright test",
+    "e2e:ui": "playwright test --ui",
+    "e2e:report": "playwright show-report",
+    "lint": "eslint .",
+    "course:build": "./scripts/exportYamlCourse.sh"
+  },
+  "workspaces": [
+    "apps/librelingo-web"
+  ],
+  "keywords": [],
+  "author": "",
+  "dependencies": {
+    "playwright": "^1.44.1"
   },
   "devDependencies": {
-    "@babel/preset-typescript": "7.24.1",
-    "@tsconfig/svelte": "3.0.0",
-    "@types/jest": "29.5.12",
-    "@types/node": "20.12.10",
-    "@typescript-eslint/eslint-plugin": "5.62.0",
-    "@typescript-eslint/parser": "5.62.0",
-    "eslint": "8.57.0",
-    "eslint-config-prettier": "9.1.0",
-    "eslint-plugin-cypress": "2.15.2",
-    "eslint-plugin-jest": "27.9.0",
-    "eslint-plugin-prettier": "4.2.1",
-    "eslint-plugin-svelte3": "4.0.0",
-    "prettier": "2.8.8",
-    "prettier-plugin-svelte": "2.10.1",
-    "remark": "15.0.1",
-    "sapper": "0.29.3",
-    "semantic-release": "19.0.5",
-    "semantic-release-monorepo": "7.0.8",
-    "source-map-loader": "4.0.2",
-    "svelte": "3.59.2",
-    "svelte-check": "3.7.1",
-    "svelte-preprocess": "4.10.7",
-    "typescript": "4.9.5"
-  },
-  "nyc": {
-    "report-dir": "cypress-coverage",
-    "extension": [
-      ".js",
-      ".svelte"
-    ],
-    "all": true,
-    "cache": false
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "cypress-cucumber-preprocessor": {
-    "nonGlobalStepDefinitions": true
-  },
-  "release": {
-    "extends": "semantic-release-monorepo",
-    "branches": [
-      "main"
-    ]
-  },
-  "msw": {
-    "workerDirectory": "apps/web/static"
+    "@playwright/test": "^1.44.1",
+    "@types/node": "^20.12.12",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3"
   }
 }
