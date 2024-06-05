@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import CourseCard from './CourseCard';
 import courseData from "@/courses/config.json"
- 
+
 export const metadata: Metadata = {
   title: 'LibreLingo',
   description: 'LibreLingo is an open source language-learning platform',
@@ -15,6 +15,6 @@ export default function Home() {
           <li key={course.url}><CourseCard course={course} /></li>
         ))}
       </ul>
-   </> 
+    </>
   );
 }

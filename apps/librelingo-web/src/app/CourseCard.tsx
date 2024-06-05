@@ -25,16 +25,18 @@ type Props = {
 
 export default function CourseCard(props: Props) {
   const { course } = props
-return (<Card>
-  <CardHeader>
-    <CardTitle>{course.target}</CardTitle>
-    <CardDescription>Card Description</CardDescription>
-  </CardHeader>
-  <CardContent>
-    <p>Card Content</p>
-  </CardContent>
-  <CardFooter>
-      <Button asChild><Link href="/en/course/es">Go to course</Link></Button>
-  </CardFooter>
-</Card>)
+  const coursePageUrl = `/${course.source}/course/${course.target}`
+
+  return (<Card>
+    <CardHeader>
+      <CardTitle>{course.target}</CardTitle>
+      <CardDescription>Card Description</CardDescription>
+    </CardHeader>
+    <CardContent>
+      <p>Card Content</p>
+    </CardContent>
+    <CardFooter>
+      <Button asChild><Link href={coursePageUrl}>Go to course</Link></Button>
+    </CardFooter>
+  </Card>)
 }
