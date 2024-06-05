@@ -8,6 +8,8 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
+
+
   return (
     <>
       <ul className='flex space-y-6 flex-col p-6'>

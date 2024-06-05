@@ -9,9 +9,14 @@ import {
 } from "@/components/ui/card"
 import Link from "next/link"
 
+type Language = {
+  code: string
+  name: string
+}
+
 type Course = {
-  source: string
-  target: string
+  source: Language
+  target: Language
   deploy: boolean
   inProduction: boolean
   devtoolsEnabled: boolean
@@ -25,11 +30,11 @@ type Props = {
 
 export default function CourseCard(props: Props) {
   const { course } = props
-  const coursePageUrl = `/${course.source}/course/${course.target}`
+  const coursePageUrl = `/${course.source.code}/course/${course.target.code}`
 
   return (<Card>
     <CardHeader>
-      <CardTitle>{course.target}</CardTitle>
+      <CardTitle>{course.target.name}</CardTitle>
       <CardDescription>Card Description</CardDescription>
     </CardHeader>
     <CardContent>
