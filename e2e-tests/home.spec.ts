@@ -9,7 +9,7 @@ test('has the correct content', async ({ page }) => {
 
   await expect(page).toHaveTitle("LibreLingo");
   await expect(firstCard.getByRole('heading')).toBeVisible();
-  await expect(firstCard.getByRole('link', { name: 'Go to course' })).toBeVisible();
+  await expect(firstCard.getByRole('link', { name: 'Learn' })).toBeVisible();
 });
 
 test('all card buttons lead to URLs matching the pattern', async ({ page }) => {
@@ -22,7 +22,7 @@ test('all card buttons lead to URLs matching the pattern', async ({ page }) => {
   const urls = new Set();
 
   for (const card of cards) {
-    const button = card.getByRole('link', { name: 'Go to course' });
+    const button = card.getByRole('link', { name: 'Learn' });
     const url = await button.getAttribute('href');
 
     expect(url).toMatch(courseHomePagePattern);

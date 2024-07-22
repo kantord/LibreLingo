@@ -28,7 +28,7 @@ export default function CourseCard(props: Props) {
       <p>Card Content</p>
     </CardContent>
     <CardFooter>
-      <Button asChild><Link href={coursePageUrl}>Go to course</Link></Button>
+      <Button asChild><Link href={coursePageUrl}>Learn</Link></Button>
     </CardFooter>
   </Card>)
 }
