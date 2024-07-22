@@ -17,7 +17,7 @@ pycache-delete: ## Delete the __pycache__ folders
 clean: ## Delete cache generated
 	rm -fr .mypy_cache/ .pytest_cache/ && make pycache-delete
 
-backend-ci: ## Run python corresponding ci
+backend-ci: ## run python corresponding ci
 	make format && make lint && make type-check
 
 help:

@@ -17,7 +17,7 @@ type Props = {
 
 export default function CourseCard(props: Props) {
   const { course } = props
-  const coursePageUrl = `/${course.source.code}/course/${course.target.code}`
+  const coursePageUrl = `/${course.source.code}/courses/${course.target.code}`
 
   return (<Card>
     <CardHeader>

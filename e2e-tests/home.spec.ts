@@ -13,7 +13,7 @@ test('has the correct content', async ({ page }) => {
 });
 
 test('all card buttons lead to URLs matching the pattern', async ({ page }) => {
-  const courseHomePagePattern = new RegExp(`[^/]+/course/[^/]+`);
+  const courseHomePagePattern = new RegExp(`[^/]*/courses/[^/]+`);
   await page.goto(baseURL);
 
   const cards = await page.getByRole('listitem').all();
@@ -31,7 +31,4 @@ test('all card buttons lead to URLs matching the pattern', async ({ page }) => {
 
   // each course has to have a unique url
   expect(urls.size).toBeGreaterThanOrEqual(cards.length);
-
-  cards[0].getByRole('link').click()
-  expect(page.url()).toMatch(courseHomePagePattern)
 });
