@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import CourseCard from './CourseCard';
-import { Course, listAllCourses } from '@/data/course';
+import { Course, listAvailableCourses } from '@/data/course';
 
 
 
@@ -10,8 +10,7 @@ export const metadata: Metadata = {
 }
 
 export default async function Home() {
-  const courseData = await listAllCourses()
-  console.log(courseData)
+  const courseData = await listAvailableCourses()
 
   return (
     <>

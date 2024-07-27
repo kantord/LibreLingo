@@ -18,7 +18,7 @@ test('all card buttons lead to URLs matching the pattern', async ({ page }) => {
 
   const cards = await page.getByRole('listitem').all();
 
-  expect(cards.length).toBeGreaterThanOrEqual(2);
+  expect(cards.length).toBeGreaterThanOrEqual(1);
   const urls = new Set();
 
   for (const card of cards) {

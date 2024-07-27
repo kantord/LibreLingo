@@ -1,5 +1,19 @@
 [
   {
+    "url": "",
+    "repositoryURL": "",
+    "paths": {
+      "yamlFolder": "test-1",
+      "jsonFolder": "test-1"
+    },
+    "deploy": true,
+    "inProduction": false,
+    "name": "test-1",
+    "source": "English",
+    "target": "Test1",
+    "description": "Test1 for English speakers"
+  },
+  {
     "url": "https://github.com/LibreLingo/LibreLingo-ES-from-EN/archive/refs/heads/main.zip",
     "repositoryURL": "https://github.com/LibreLingo/LibreLingo-ES-from-EN",
     "paths": {
@@ -7,7 +21,6 @@
       "jsonFolder": "spanish-from-english"
     },
     "deploy": true,
-    "devtoolsEnabled": true,
     "inProduction": true,
     "name": "spanish-from-english",
     "source": "English",
@@ -22,7 +35,6 @@
       "jsonFolder": "ladino-from-english"
     },
     "deploy": false,
-    "devtoolsEnabled": false,
     "inProduction": false,
     "name": "ladino-from-english",
     "source": "English",
@@ -37,7 +49,6 @@
       "jsonFolder": "ladino-from-hebrew"
     },
     "deploy": false,
-    "devtoolsEnabled": false,
     "inProduction": false,
     "name": "ladino-from-hebrew",
     "source": "Hebrew",
@@ -52,7 +63,6 @@
       "jsonFolder": "ladino-from-spanish"
     },
     "deploy": false,
-    "devtoolsEnabled": false,
     "inProduction": false,
     "name": "ladino-from-spanish",
     "source": "Spanish",
@@ -67,7 +77,6 @@
       "jsonFolder": "hungarian-from-spanish"
     },
     "deploy": false,
-    "devtoolsEnabled": true,
     "inProduction": false,
     "name": "hungarian-from-spanish",
     "source": "Spanish",
@@ -82,7 +91,6 @@
       "jsonFolder": "german-from-english"
     },
     "deploy": true,
-    "devtoolsEnabled": true,
     "inProduction": true,
     "name": "german-from-english",
     "source": "English",
@@ -97,7 +105,6 @@
       "jsonFolder": "basque-from-english"
     },
     "deploy": false,
-    "devtoolsEnabled": true,
     "inProduction": false,
     "name": "basque-from-english",
     "source": "English",
@@ -112,7 +119,6 @@
       "jsonFolder": "bangla-from-english"
     },
     "deploy": false,
-    "devtoolsEnabled": false,
     "inProduction": false,
     "name": "bangla-from-english",
     "source": "English",
@@ -127,7 +133,6 @@
       "jsonFolder": "french-from-english"
     },
     "deploy": false,
-    "devtoolsEnabled": false,
     "inProduction": false,
     "name": "french-from-english",
     "source": "English",
@@ -142,7 +147,6 @@
       "jsonFolder": "parsig-from-english"
     },
     "deploy": false,
-    "devtoolsEnabled": false,
     "inProduction": false,
     "name": "parsig-from-english",
     "source": "English",
@@ -157,7 +161,6 @@
       "jsonFolder": "houma-from-english"
     },
     "deploy": false,
-    "devtoolsEnabled": false,
     "inProduction": false,
     "name": "houma-from-english",
     "source": "English",
@@ -172,7 +175,6 @@
       "jsonFolder": "brazilian-portuguese-from-english"
     },
     "deploy": false,
-    "devtoolsEnabled": false,
     "inProduction": false,
     "name": "brazilian-portuguese-from-english",
     "source": "English",
@@ -187,7 +189,6 @@
       "jsonFolder": "neolatin-from-english"
     },
     "deploy": false,
-    "devtoolsEnabled": false,
     "inProduction": false,
     "name": "neolatin-from-english",
     "source": "English",
@@ -202,7 +203,6 @@
       "jsonFolder": "occitan-auvergnat-from-french"
     },
     "deploy": false,
-    "devtoolsEnabled": false,
     "inProduction": false,
     "name": "occitan-auvergnat-from-french",
     "source": "French",
@@ -217,7 +217,6 @@
       "jsonFolder": "kabyle-from-french"
     },
     "deploy": false,
-    "devtoolsEnabled": false,
     "inProduction": false,
     "name": "kabyle-from-french",
     "source": "French",
@@ -232,7 +231,6 @@
       "jsonFolder": "dutch-from-english"
     },
     "deploy": true,
-    "devtoolsEnabled": false,
     "inProduction": true,
     "name": "dutch-from-english",
     "source": "English",
