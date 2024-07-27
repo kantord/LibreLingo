@@ -35,6 +35,9 @@ def process_course(course):
     
     temp_zip = os.path.join(dest_dir, 'temp.zip')
     
+    if os.path.exists(dest_dir):
+        shutil.rmtree(dest_dir)
+    
     os.makedirs(dest_dir, exist_ok=True)
     
     try:
