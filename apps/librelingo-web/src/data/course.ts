@@ -11,16 +11,21 @@ export type Course = {
   inProduction: boolean
 }
 
+function getFullJsonPath(jsonPath: string) {
+    return path.join(process.cwd(), 'src', 'courses', jsonPath, 'courseData.json');
+}
+
 async function getCourseMetadataByJsonPath(jsonPath: string) 
 {
-    const jsonFilePath = path.join(process.cwd(), 'src', 'courses', jsonPath, 'courseData.json');
-    const fileContent = await fs.promises.readFile(jsonFilePath, 'utf-8');
+    const fileContent = await fs.promises.readFile(getFullJsonPath(jsonPath), 'utf-8');
     return JSON.parse(fileContent);
 }
 
-
-export async function listAllCourses(): Promise<Course[]> {
-  return Promise.all(courseConfig.filter(item => item.deploy).map(async (item) => {
+export async function listAvailableCourses(): Promise<Course[]> {
+  return Promise.all(courseConfig
+   .filter(item => { 
+     return item.deploy && fs.existsSync(getFullJsonPath(item.paths.jsonFolder))
+  }).map(async (item) => {
 
     const jsonPath = item.paths.jsonFolder
 const data = await getCourseMetadataByJsonPath(jsonPath)
