@@ -11,7 +11,6 @@ export const metadata: Metadata = {
 
 export default async function Home() {
   const courseData = await listAllCourses()
-  console.log(courseData)
 
   return (
     <>
