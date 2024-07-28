@@ -5,7 +5,7 @@
             "rootDir": "./apps/librelingo-web/src"
         }
     },
-    "ignorePatterns": ["playwright-report"],
+    "ignorePatterns": ["playwright-report", "apps/librelingo-web/out"],
     "rules": {
         "@next/next/no-html-link-for-pages": "off"
     }
