@@ -2,11 +2,11 @@ __pycache__
 .pdm-python
 .next
 node_modules
-apps/librelingo-web/out/
 playwright-report
 test-results
 neovide_backtraces.log
-courses/
-!courses/test-1
-!courses/test-2
 **/*.tsbuildinfo
+/apps/librelingo-web/out/
+/apps/librelingo-web/src/courses/*
+/courses/*
+!/apps/librelingo-web/src/courses/test-*
