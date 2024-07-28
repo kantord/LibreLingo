@@ -1,6 +1,14 @@
+'use server'
+
 import path from 'node:path'
 import courseConfig from '@/courses/config.json'
 import fs from 'node:fs'
+import { notFound } from 'next/navigation'
+
+export type CourseIdentityDescription = {
+    sourceLanguageCode: string
+    targetLanguageCode: string
+}
 
 export type Course = {
     id: string
@@ -59,3 +67,28 @@ export async function listAvailableCourses(): Promise<Course[]> {
             })
     )
 }
+
+export async function getCourseId(
+    parameters: CourseIdentityDescription
+): Promise<string> {
+  const availableCourses = await listAvailableCourses() 
+
+  const course = availableCourses.find(item => item.uiLanguage === parameters.sourceLanguageCode && item.languageCode === parameters.targetLanguageCode)
+
+  if (course === undefined) {
+    notFound()
+  }
+
+  return  course.id
+}
+
+export async function getCourseDetail(courseId: string)  {
+  const {languageName} = await getCourseMetadataByJsonPath(courseId)
+
+  return {
+    targetLanguage: {
+      name: languageName,
+    }
+  }
+}
+
