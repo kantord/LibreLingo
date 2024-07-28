@@ -199,9 +199,9 @@ This might not be necessary for you in all cases, but it cannot be avoided if yo
 
 Here's a list of the tokens you need to set up. Each of them is a link to a page explaining how to obtain the token:
 
-- [GH_TOKEN](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token)
-- [KNAPSACK_PRO_TEST_SUITE_TOKEN_CYPRESS](https://www.npmjs.com/package/@knapsack-pro/cypress#configuration-steps)
-- [PERCY_TOKEN](https://docs.percy.io/docs/environment-variables)
+-   [GH_TOKEN](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token)
+-   [KNAPSACK_PRO_TEST_SUITE_TOKEN_CYPRESS](https://www.npmjs.com/package/@knapsack-pro/cypress#configuration-steps)
+-   [PERCY_TOKEN](https://docs.percy.io/docs/environment-variables)
 
 ## Testing courses using GitHub gists
 

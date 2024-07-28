@@ -222,10 +222,10 @@ Out[6]:
 We'll need some data to write our tests. We could use real data here, but that
 would have some disadvantages:
 
-- Real courses evolve over time, so they might break our tests in the future
-- A real course can be difficult to navigate due to its size
-- A real course can take up a lot of memory
-- Loading real courses could slow our tests down
+-   Real courses evolve over time, so they might break our tests in the future
+-   A real course can be difficult to navigate due to its size
+-   A real course can take up a lot of memory
+-   Loading real courses could slow our tests down
 
 Thankfully, LibreLingo comes with a library with fake data to simplify
 writing tests! Let's install it:
