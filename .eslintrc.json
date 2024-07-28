@@ -1,14 +1,12 @@
 {
-  "extends": "next",
-  "settings": {
-    "next": {
-      "rootDir": "./apps/librelingo-web/src"
+    "extends": "next",
+    "settings": {
+        "next": {
+            "rootDir": "./apps/librelingo-web/src"
+        }
+    },
+    "ignorePatterns": ["playwright-report", "apps/librelingo-web/out"],
+    "rules": {
+        "@next/next/no-html-link-for-pages": "off"
     }
-  },
-  "ignorePatterns":[
-    "playwright-report"
-  ],
-  "rules": {
-    "@next/next/no-html-link-for-pages": "off"
-  }
 }

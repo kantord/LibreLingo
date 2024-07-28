@@ -1,78 +1,77 @@
 Skill:
-  Id: 4
-  Name: Hello
-  Thumbnails:
-    - people1
-    - woman1
-    - man1
+    Id: 4
+    Name: Hello
+    Thumbnails:
+        - people1
+        - woman1
+        - man1
 
 New words:
-  - Word: l'homme
-    Translation: the man
-    Images:
-      - man1
-      - man2
-      - man3
+    - Word: l'homme
+      Translation: the man
+      Images:
+          - man1
+          - man2
+          - man3
 
-  - Word: la femme
-    Synonyms:
-      - la dame
-    Translation: the woman
-    Also accepted:
-      - the female
-    Images:
-      - man1
-      - man2
-      - man3
+    - Word: la femme
+      Synonyms:
+          - la dame
+      Translation: the woman
+      Also accepted:
+          - the female
+      Images:
+          - man1
+          - man2
+          - man3
 
 Phrases:
-  - Phrase: La femme dit bonjour
-    Alternative versions:
-      - la femme dit salut
-    Translation: The woman says hello
-    Alternative translations:
-      - The woman says hi
+    - Phrase: La femme dit bonjour
+      Alternative versions:
+          - la femme dit salut
+      Translation: The woman says hello
+      Alternative translations:
+          - The woman says hi
 
-  - Phrase: L'homme dit bonjour
-    Alternative versions:
-      - true
-    Translation: The man says hello
-    Alternative translations:
-      - The man says hi
+    - Phrase: L'homme dit bonjour
+      Alternative versions:
+          - true
+      Translation: The man says hello
+      Alternative translations:
+          - The man says hi
 
 Mini-dictionary:
-  French:
-    - dit: says
-    - bonjour:
-      - hello
-      - hi
-    - L'homme: the man
-    - La: the
-    - femme: woman
+    French:
+        - dit: says
+        - bonjour:
+              - hello
+              - hi
+        - L'homme: the man
+        - La: the
+        - femme: woman
 
-  English:
-    - says: dit
-    - hello:
-      - bonjour
-      - salut
-    - The:
-      - le
-      - la
-    - the:
-      - le
-      - la
-    - woman: femme
-    - man: homme
-    - source_word: target_translation_1
-    - source_word: target_translation_2
-    - source_word: target_translation_2
+    English:
+        - says: dit
+        - hello:
+              - bonjour
+              - salut
+        - The:
+              - le
+              - la
+        - the:
+              - le
+              - la
+        - woman: femme
+        - man: homme
+        - source_word: target_translation_1
+        - source_word: target_translation_2
+        - source_word: target_translation_2
 
 Two-way-dictionary:
-  - source_1: target_1
-  - source_2: target_2_a
-  - source_2: target_2_b
-  - source_3_a: target_3
-  - source_3_b: target_3
-  - (I) eat: (yo) como
-  - (before_s) source_4 (after_s): (before_t) target_4 (after_t)
-
+    - source_1: target_1
+    - source_2: target_2_a
+    - source_2: target_2_b
+    - source_3_a: target_3
+    - source_3_b: target_3
+    - (I) eat: (yo) como
+    - (before_s) source_4 (after_s): (before_t) target_4 (after_t)

@@ -12,11 +12,11 @@ Looking at the big picture, the greater approach of LibreLingo is to fully embra
 
 LibreLingo has five types of challenges:
 
-- **Cards challenges** are multiple choice questions that create associations between words and images. Visual association is a powerful learning technique, especially for simple words, and the images add fun and vibrancy to the learning experience. The photos also provide clues to the student, making this one of the easier challenges.
-- **Options challenges** are multiple choice questions that allow students to become comfortable with phrases, rather than single words. Unlike the card challenges, there are no clues.
-- **Short input challenges** serve to teach the target language's native writing system by requiring the learner to spell a word. If the student does need a hint, the mini-dictionary is available for this challenge.
-- **Listening challenges** aim to train the student’s listening comprehension with audio of a word or phrase in the target language. In this challenge, the student is asked to transcribe the word or phrase. The student can re-play the audio as many times as desired, allowing for further listening repetition of the spoken language.
-- **Chips challenges** are generated from phrases and train the user to construct sentences on their own, given some “building blocks.” This is meant to reinforce the syntax of a language as well as expose the learner to more complex examples. The mini-dictionary is available for clues in this challenge type, but there are no hints about sentence structure.
+-   **Cards challenges** are multiple choice questions that create associations between words and images. Visual association is a powerful learning technique, especially for simple words, and the images add fun and vibrancy to the learning experience. The photos also provide clues to the student, making this one of the easier challenges.
+-   **Options challenges** are multiple choice questions that allow students to become comfortable with phrases, rather than single words. Unlike the card challenges, there are no clues.
+-   **Short input challenges** serve to teach the target language's native writing system by requiring the learner to spell a word. If the student does need a hint, the mini-dictionary is available for this challenge.
+-   **Listening challenges** aim to train the student’s listening comprehension with audio of a word or phrase in the target language. In this challenge, the student is asked to transcribe the word or phrase. The student can re-play the audio as many times as desired, allowing for further listening repetition of the spoken language.
+-   **Chips challenges** are generated from phrases and train the user to construct sentences on their own, given some “building blocks.” This is meant to reinforce the syntax of a language as well as expose the learner to more complex examples. The mini-dictionary is available for clues in this challenge type, but there are no hints about sentence structure.
 
 ## In what order do challenges appear?
 
@@ -28,8 +28,8 @@ Challenges are split randomly into different levels so that you have smaller chu
 
 Challenges are split randomly for the following reasons:
 
-- There's often a partial overlap between each level of a skill, thus it offers some repetition even before completing the skill.
-- Randomness reduces fatigue by making the practice sessions less predictable. It also reduces boredom by increasing the chance of encountering new words even as you practice the same skill by partially practicing material from a previous level.
-- Random splits do not require any manual work from the course creator.
+-   There's often a partial overlap between each level of a skill, thus it offers some repetition even before completing the skill.
+-   Randomness reduces fatigue by making the practice sessions less predictable. It also reduces boredom by increasing the chance of encountering new words even as you practice the same skill by partially practicing material from a previous level.
+-   Random splits do not require any manual work from the course creator.
 
 For more insights on the creation of LibreLingo, check out the article ['Why I Built LibreLingo'](https://dev.to/kantord/why-i-built-librelingo-280o) by creator Daniel Kantor.
