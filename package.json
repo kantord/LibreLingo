@@ -14,7 +14,9 @@
         "e2e:test": "playwright test",
         "e2e:ui": "playwright test --ui",
         "e2e:report": "playwright show-report",
-        "lint": "eslint .",
+        "lint": "npm run lint:eslint && npm run lint:prettier",
+        "lint:eslint": "eslint .",
+        "lint:prettier": "npx prettier --check .",
         "format": "npx prettier . --write",
         "course:build": "./scripts/exportYamlCourse.sh"
     },
