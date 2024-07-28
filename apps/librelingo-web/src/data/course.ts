@@ -1,6 +1,6 @@
-import path from 'path'
+import path from 'node:path'
 import courseConfig from '@/courses/config.json'
-import fs from 'fs'
+import fs from 'node:fs'
 
 export type Course = {
     id: string
@@ -24,7 +24,7 @@ function getFullJsonPath(jsonPath: string) {
 async function getCourseMetadataByJsonPath(jsonPath: string) {
     const fileContent = await fs.promises.readFile(
         getFullJsonPath(jsonPath),
-        'utf-8'
+        'utf8'
     )
     return JSON.parse(fileContent)
 }
