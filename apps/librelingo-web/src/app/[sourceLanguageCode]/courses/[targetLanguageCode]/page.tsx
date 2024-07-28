@@ -1,4 +1,4 @@
-import { listAvailableCourses } from "@/data/course"
+import { getCourseDetail, getCourseId, listAvailableCourses } from "@/data/course"
 
 export async function generateStaticParams() {
   const courses = await listAvailableCourses()
@@ -9,6 +9,16 @@ export async function generateStaticParams() {
   }))
 }
 
-export default function CourseHomePage() {
-  return <h1>Hello world</h1>
+type Props = {
+  params: {
+    sourceLanguageCode: string
+    targetLanguageCode: string
+  }
+}
+
+export default async function CourseHomePage({params}: Props) {
+  const courseId = await getCourseId(params)
+  const detail = await getCourseDetail(courseId)
+
+  return <h1>{detail.targetLanguage.name}</h1>
 }
