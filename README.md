@@ -14,14 +14,12 @@
 </p>
 <hr/>
 
-
 [![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/LibreLingo/LibreLingo)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/kantord/LibreLingo?color=darkcyan)](https://github.com/kantord/LibreLingo/releases)
-![Build status](https://kantord.semaphoreci.com/badges/LibreLingo.svg?style=shields "Build status")
+![Build status](https://kantord.semaphoreci.com/badges/LibreLingo.svg?style=shields 'Build status')
 [![Matrix](https://img.shields.io/matrix/space-librelingo:matrix.org?color=%23000&label=chat%20on%20matrix&logo=matrix)](https://app.element.io/#/room/#space-librelingo:matrix.org)
 [![call](https://img.shields.io/badge/%E2%98%8E%EF%B8%8F-Schedule_a_call-darkcyan)](https://app.harmonizely.com/harmonizely-uoicqk)
 [![Mastodon](https://img.shields.io/mastodon/follow/000318010?domain=https%3A%2F%2Ffosstodon.org%2F&style=social)](https://fosstodon.org/@librelingo)
-
 
 ## About
 
@@ -72,23 +70,24 @@ If you want to know why I built LibreLingo, [I recommend reading my article on d
   </ol>
 </details>
 
-
-
 ## Using LibreLingo
 
 ### Web app
+
 LibreLingo offers an official [web app](https://librelingo.app/), which is very lightweight and written in Javascript using Svelte framework and pouchDB by the way, to try out LibreLingo courses interactively right in your browser, no installation required!
 
 #### Features
-* :bow_and_arrow: practice using interactive exercises
-* :juggling_person: spaced repetition
-* :bar_chart: save and monitor progress
-* :arrows_counterclockwise: synchronise progress across multiple devices
-* :iphone: works on various devices such as phones, tablets and desktop computers
-* :people_holding_hands: owned by you, the community
-* :dove: most courses are free, as in freedom and also as in beer
+
+-   :bow_and_arrow: practice using interactive exercises
+-   :juggling_person: spaced repetition
+-   :bar_chart: save and monitor progress
+-   :arrows_counterclockwise: synchronise progress across multiple devices
+-   :iphone: works on various devices such as phones, tablets and desktop computers
+-   :people_holding_hands: owned by you, the community
+-   :dove: most courses are free, as in freedom and also as in beer
 
 #### Screenshots
+
 <p align="center">
   <img src="/docs/screenshots/screenshot1.png" width="15%" />
   <img src="/docs/screenshots/screenshot2.png" width="15%" />
@@ -97,30 +96,45 @@ LibreLingo offers an official [web app](https://librelingo.app/), which is very 
 </p>
 
 ### librelingo-yaml-loader
+
 [librelingo-yaml-loader](https://pypi.org/project/librelingo-yaml-loader/) is a Python 🐍 package that lets you load LibreLingo courses to create software based on LibreLingo. To see an extensive tutorial, [check out this article](https://dev.to/kantord/practice-tdd-by-creating-a-librelingo-based-language-learning-app-4apf).
+
 #### Setup
+
 [librelingo-yaml-loader](https://pypi.org/project/librelingo-yaml-loader/) can be installed using pip:
+
 ```sh
 pip install librelingo-yaml-loader
 ```
+
 #### Loading courses in a Python program
+
 You can use librelingo-yaml-loader to load YAML-based LibreLingo courses in your Python program.
+
 ```python
 from librelingo_yaml_loader import yaml_loader
 
-course = yaml_loader.load_course("./path/to/my/course") 
+course = yaml_loader.load_course("./path/to/my/course")
 ```
+
 `load_course` returns a [Course()](https://github.com/kantord/LibreLingo/blob/main/apps/librelingo_yaml_loader/librelingo_yaml_loader/data_types.py) object.
 
 ### librelingo-json-export
+
 [librelingo-json-export](https://pypi.org/project/librelingo-json-export/) is a Python 🐍 package that contains modules that let's you export LibreLingo courses into JSON files that will be read by the web app. This might be useful if you want to deploy YAML-based LibreLingo courses as a web app.
+
 #### Setup
+
 [librelingo-json-export](https://pypi.org/project/librelingo-json-export/) can be installed using pip:
+
 ```sh
 pip install librelingo-json-export
 ```
+
 #### Exporting courses to JSON
+
 [librelingo-json-export](https://pypi.org/project/librelingo-json-export/) has a command line program that can export YAML-based LibreLingo courses into the JSON format used by the web app.
+
 ```sh
 Usage:
   cli.py [OPTIONS] INPUT_PATH OUTPUT_PATH
@@ -138,61 +152,70 @@ To get started with running the development environment on your computer and und
 
 ## Milestones
 
-- [x] 🏁 Demo course content in Spanish for English speakers
-- [x] 🏁 Some basic building blocks of course content implemented
-- [x] 🏁 Developers can use course editor
-- [x] 🏁 Basic theme/branding
-- [x] 🏁 Course progress can be properly synchronised across devices
-- [x] 🏁 Course editor can be accessed by all course contributors
-- [x] 🏁 At least the basics of the Spanish course are ready
-- [x] 🏁 Most of the course building blocks are implemented
-- [x] 🏁 All of the basic building blocks of courses are implemented
-- [x] 🏁 Spaced repetition implemented
-
+-   [x] 🏁 Demo course content in Spanish for English speakers
+-   [x] 🏁 Some basic building blocks of course content implemented
+-   [x] 🏁 Developers can use course editor
+-   [x] 🏁 Basic theme/branding
+-   [x] 🏁 Course progress can be properly synchronised across devices
+-   [x] 🏁 Course editor can be accessed by all course contributors
+-   [x] 🏁 At least the basics of the Spanish course are ready
+-   [x] 🏁 Most of the course building blocks are implemented
+-   [x] 🏁 All of the basic building blocks of courses are implemented
+-   [x] 🏁 Spaced repetition implemented
 
 ## Roadmap
-- [ ] Officially releasing Basque course
-- [ ] Make it possible to contribute to courses through GitHub
-- [ ] Improving course creation UX over Github
 
+-   [ ] Officially releasing Basque course
+-   [ ] Make it possible to contribute to courses through GitHub
+-   [ ] Improving course creation UX over Github
 
 ### Projects
-* [Better audio support](https://github.com/kantord/LibreLingo/projects/14)
-* [Support non-latin scripts](https://github.com/kantord/LibreLingo/projects/15)
 
-
+-   [Better audio support](https://github.com/kantord/LibreLingo/projects/14)
+-   [Support non-latin scripts](https://github.com/kantord/LibreLingo/projects/15)
 
 ## Contribution
+
 ### Become a contributor
+
 #### are you a developer?
+
 You can help LibreLingo by testing it and submitting feature requests or bug reports: [here](https://github.com/kantord/LibreLingo/issues/new). If you want to get in touch, you can use my contact details on [my GitHub profile](https://github.com/kantord).
 Go through the dev docs [here](https://librelingo.app/docs/CONTRIBUTING.html).
 
 Still got questions? Our Matrix/FreeNode IRC channel is `#LibreLingo`, join the dev community there and feel free to ask anything.
-* Matrix: [`#LibreLingo`](https://app.element.io/#/room/#space-librelingo:matrix.org) on `matrix.org`
-* IRC: connect to `irc.freenode.net` with your favourite client and join `#LibreLingo` 
+
+-   Matrix: [`#LibreLingo`](https://app.element.io/#/room/#space-librelingo:matrix.org) on `matrix.org`
+-   IRC: connect to `irc.freenode.net` with your favourite client and join `#LibreLingo`
 
 #### are you a linguaphile?
+
 Learning new language is an awesome experience right? If you wanna let others experience that too, make a course on LibreLingo! Get started [here](https://github.com/kantord/LibreLingo/tree/main/docs/courses).
 
 We are working on the process of creating courses, to make it more streamlined, if you have an idea to make it better, do share with us, create an [issue](https://github.com/kantord/LibreLingo/issues/new).
 Note: You are always encouraged to release the courses under a free license.
 
 #### are you a wordsmith?
+
 Translate the LibreLingo UI(LLUI) to make it more accessible, you can start [here](https://poeditor.com/join/project?hash=jKiKfen2Ye).
 
 ### Attributions
+
 #### Mascot
+
 The mascot is designed by [@almostdesigner](https://github.com/almostdesigner).
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Mascot images are released under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
 
 ### Contributors
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-92-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
+[![All Contributors](https://img.shields.io/badge/all_contributors-92-orange.svg?style=flat-square)](#contributors-)
+
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
@@ -329,12 +352,11 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
 
-
 ## Contributors who don't have a GitHub account.
 
 Since [All Contributors](https://allcontributors.org/) relies on GitHub accounts to show user info, it's not possible to use it to credit people who don't have a GitHub account. This place is intended as a list of people who contributed without registering for a GitHub account.
 
-* **[Kate](https://codeberg.org/kate)** - creating a [LibreLingo course](https://codeberg.org/kate/LibreLingo_FR_from_EN) on Codeberg
+-   **[Kate](https://codeberg.org/kate)** - creating a [LibreLingo course](https://codeberg.org/kate/LibreLingo_FR_from_EN) on Codeberg
 
 ## License
 
@@ -342,11 +364,10 @@ LibreLingo is licensed under the AGPL-3.0 license. In addition, course content a
 
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fkantord%2FLibreLingo.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fkantord%2FLibreLingo?ref=badge_large)
 
-
 ## See also
-* [omnilingo](https://github.com/omnilingo/omnilingo), listening-based language learning
 
+-   [omnilingo](https://github.com/omnilingo/omnilingo), listening-based language learning
 
 ## Donate
-Help us to keep going
 
+Help us to keep going

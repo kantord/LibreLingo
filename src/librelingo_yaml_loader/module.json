@@ -1,21 +1,21 @@
 {
-    "type" : "object",
-    "properties" : {
-        "Module" : {
-            "type" : "object",
-            "properties" : {
-                "Name" : {
-                    "type" : "string"
+    "type": "object",
+    "properties": {
+        "Module": {
+            "type": "object",
+            "properties": {
+                "Name": {
+                    "type": "string"
                 }
             },
             "required": ["Name"]
         },
-        "Skills" : {
-            "type" : "array",
-            "items" : {
-                "type" : "string"
+        "Skills": {
+            "type": "array",
+            "items": {
+                "type": "string"
             }
         }
     },
-    "required": ["Module","Skills"]
+    "required": ["Module", "Skills"]
 }
