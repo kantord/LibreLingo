@@ -29,6 +29,7 @@ def _get_module_summary(module):
         return calculate_number_of_levels(len(words), len(phrases))
 
     return {
+        "slug": slugify(module.title),
         "title": module.title,
         "skills": [
             {
