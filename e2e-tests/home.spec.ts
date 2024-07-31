@@ -1,9 +1,7 @@
 import { test, expect } from '@playwright/test'
 
-const baseURL = 'http://localhost:3000/'
-
 test('has the correct content', async ({ page }) => {
-    await page.goto(baseURL)
+    await page.goto('/')
 
     const firstCard = page.getByRole('listitem').first()
 
@@ -14,7 +12,7 @@ test('has the correct content', async ({ page }) => {
 
 test('all card buttons lead to URLs matching the pattern', async ({ page }) => {
     const courseHomePagePattern = new RegExp(`[^/]*/courses/[^/]+`)
-    await page.goto(baseURL)
+    await page.goto('/')
 
     const cards = await page.getByRole('listitem').all()
 
