@@ -4,6 +4,7 @@ import path from 'node:path'
 import courseConfig from '@/courses/config.json'
 import fs from 'node:fs'
 import { notFound } from 'next/navigation'
+import { getAbsoluteCoursePath } from './utils'
 
 export type CourseIdentityDescription = {
     sourceLanguageCode: string
@@ -20,13 +21,7 @@ export type Course = {
 }
 
 function getFullJsonPath(jsonPath: string) {
-    return path.join(
-        process.cwd(),
-        'src',
-        'courses',
-        jsonPath,
-        'courseData.json'
-    )
+    return path.join(getAbsoluteCoursePath(jsonPath), 'courseData.json')
 }
 
 async function getCourseMetadataByJsonPath(jsonPath: string) {
@@ -86,12 +81,26 @@ export async function getCourseId(
     return course.id
 }
 
-export async function getCourseDetail(courseId: string) {
-    const { languageName } = await getCourseMetadataByJsonPath(courseId)
+export type Module = {
+    title: string
+    slug: string
+}
+
+type CourseDetail = {
+    targetLanguage: {
+        name: string
+    }
+    modules: Module[]
+}
+
+export async function getCourseDetail(courseId: string): Promise<CourseDetail> {
+    const { languageName, modules } =
+        await getCourseMetadataByJsonPath(courseId)
 
     return {
         targetLanguage: {
             name: languageName,
         },
+        modules,
     }
 }
