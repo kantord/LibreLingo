@@ -20,5 +20,14 @@ export default async function CourseHomePage({params}: Props) {
   const courseId = await getCourseId(params)
   const detail = await getCourseDetail(courseId)
 
-  return <h1>{detail.targetLanguage.name}</h1>
+  return <><h1>{detail.targetLanguage.name}</h1>
+            <ul className="flex space-y-6 flex-col p-6">
+                {detail.modules.map((module) => (
+                    <li key={module.slug}>
+                    {module.title}
+                    </li>
+                ))}
+            </ul>
+
+  </>
 }
