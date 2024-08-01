@@ -87,11 +87,13 @@ export async function getCourseId(
 }
 
 export async function getCourseDetail(courseId: string) {
-    const { languageName } = await getCourseMetadataByJsonPath(courseId)
+    const { languageName, modules } =
+        await getCourseMetadataByJsonPath(courseId)
 
     return {
         targetLanguage: {
             name: languageName,
         },
+        modules,
     }
 }
