@@ -39,6 +39,7 @@ def test__get_course_data_return_value():
         },
         "modules": [
             {
+                "slug": "basics",
                 "title": "Basics",
                 "skills": [
                     {
@@ -67,7 +68,7 @@ def test__get_course_data_return_value():
                     },
                 ],
             },
-            {"title": "Phrases", "skills": []},
+            {"slug": "phrases", "title": "Phrases", "skills": []},
         ],
     }
 
@@ -89,6 +90,7 @@ def test__get_course_data_return_value_2():
         },
         "modules": [
             {
+                "slug": "animals",
                 "title": "Animals",
                 "skills": [
                     {
@@ -122,6 +124,7 @@ def test__get_course_data_return_value_with_introduction():
         },
         "modules": [
             {
+                "slug": "animals",
                 "title": "Animals",
                 "skills": [
                     {

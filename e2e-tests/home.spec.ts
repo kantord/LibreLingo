@@ -10,7 +10,9 @@ test('has the correct content', async ({ page }) => {
     await expect(firstCard.getByRole('link', { name: 'Learn' })).toBeVisible()
 })
 
-test('all card buttons lead to URLs matching the pattern', async ({ page }) => {
+test('has cards for each course leading to the course page', async ({
+    page,
+}) => {
     const courseHomePagePattern = new RegExp(`[^/]*/courses/[^/]+`)
     await page.goto('/')
 
