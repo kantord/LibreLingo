@@ -1,6 +1,9 @@
 import json
+import os
 import random
 import subprocess
+import urllib.error
+import urllib.request
 from pathlib import Path
 from typing import Set, Union
 
@@ -8,6 +11,29 @@ from librelingo_types.data_types import Course, PhraseIdentity
 from librelingo_utils import audio_id
 
 from librelingo_audios.functions import list_required_audios
+
+CAMBAI_TTS_STREAM_URL = "https://client.camb.ai/apis/tts-stream"
+
+# Maps LibreLingo's target_language codes (ISO-639-1) to CAMB AI BCP-47 codes.
+# Extend as new courses are added.
+_CAMBAI_LANGUAGE_CODES = {
+    "en": "en-us",
+    "es": "es-es",
+    "fr": "fr-fr",
+    "de": "de-de",
+    "it": "it-it",
+    "pt": "pt-br",
+    "nl": "nl-nl",
+    "ru": "ru-ru",
+    "ja": "ja-jp",
+    "ko": "ko-kr",
+    "zh": "zh-cn",
+    "hi": "hi-in",
+    "ar": "ar-sa",
+    "ta": "ta-in",
+    "te": "te-in",
+    "bn": "bn-in",
+}
 
 
 def update_audios_for_course(
@@ -116,36 +142,119 @@ def _generate_audio_with_tts(
             f"Generating {destination_path} "
             f"using {chosen_tts_settings.voice} {chosen_tts_settings.engine}"
         )
-        # This is where more more TTS providers would be added with an if statement.
-        # For now there is only Polly.
-        tts_provider = "polly"
-        subprocess.run(
-            [
-                "aws",
-                tts_provider,
-                "synthesize-speech",
-                "--output-format",
-                "mp3",
-                "--voice-id",
-                chosen_tts_settings.voice,
-                "--engine",
-                chosen_tts_settings.engine,
-                "--text",
-                phrase_identity.text,
-                destination_path,
-            ],
-            stdout=subprocess.DEVNULL,
-        )
+        provider = (chosen_tts_settings.provider or "Polly").lower()
+        if provider == "polly":
+            _synthesize_with_polly(
+                phrase_identity, chosen_tts_settings, destination_path
+            )
+        elif provider == "cambai":
+            _synthesize_with_cambai(
+                phrase_identity, chosen_tts_settings, destination_path, course
+            )
+        else:
+            raise RuntimeError(
+                f"Unknown TTS provider '{chosen_tts_settings.provider}'. "
+                f"Supported providers: Polly, CambAI."
+            )
 
     return {
         "id": file_name,
         "text": phrase_identity.text,
         "source": "TTS",
         "license": course.license.full_name,
-        "ttsProvider": "Polly",
+        "ttsProvider": chosen_tts_settings.provider,
         "ttsVoice": chosen_tts_settings.voice,
         "ttsEngine": chosen_tts_settings.engine,
     }
+
+
+def _synthesize_with_polly(
+    phrase_identity: PhraseIdentity,
+    chosen_tts_settings,
+    destination_path: Path,
+):
+    subprocess.run(
+        [
+            "aws",
+            "polly",
+            "synthesize-speech",
+            "--output-format",
+            "mp3",
+            "--voice-id",
+            chosen_tts_settings.voice,
+            "--engine",
+            chosen_tts_settings.engine,
+            "--text",
+            phrase_identity.text,
+            destination_path,
+        ],
+        stdout=subprocess.DEVNULL,
+    )
+
+
+def _synthesize_with_cambai(
+    phrase_identity: PhraseIdentity,
+    chosen_tts_settings,
+    destination_path: Path,
+    course: Course,
+):
+    api_key = os.environ.get("CAMB_API_KEY")
+    if not api_key:
+        raise RuntimeError(
+            "CAMB_API_KEY environment variable is required for the CambAI TTS provider. "
+            "Get a key at https://studio.camb.ai and export CAMB_API_KEY=<your key>."
+        )
+
+    language_code = course.target_language.code
+    language = _CAMBAI_LANGUAGE_CODES.get(language_code)
+    if language is None:
+        raise RuntimeError(
+            f"CambAI provider does not yet have a BCP-47 mapping for target_language "
+            f"code '{language_code}'. Add it to _CAMBAI_LANGUAGE_CODES in "
+            f"update_audios.py."
+        )
+
+    try:
+        voice_id = int(chosen_tts_settings.voice)
+    except (TypeError, ValueError) as exc:
+        raise RuntimeError(
+            f"CambAI voice must be a numeric voice_id (e.g. 147320); got "
+            f"'{chosen_tts_settings.voice}'. List voices at "
+            f"https://client.camb.ai/apis/list-voices."
+        ) from exc
+
+    payload = {
+        "text": phrase_identity.text,
+        "voice_id": voice_id,
+        "language": language,
+        "speech_model": chosen_tts_settings.engine or "mars-pro",
+        "output_configuration": {"format": "mp3"},
+    }
+
+    request = urllib.request.Request(
+        CAMBAI_TTS_STREAM_URL,
+        data=json.dumps(payload).encode("utf-8"),
+        headers={
+            "x-api-key": api_key,
+            "Content-Type": "application/json",
+        },
+        method="POST",
+    )
+
+    try:
+        with urllib.request.urlopen(request) as response, open(
+            destination_path, "wb"
+        ) as out_file:
+            while True:
+                chunk = response.read(8192)
+                if not chunk:
+                    break
+                out_file.write(chunk)
+    except urllib.error.HTTPError as exc:
+        body = exc.read().decode("utf-8", errors="replace")
+        raise RuntimeError(
+            f"CambAI TTS request failed ({exc.code}): {body}"
+        ) from exc
 
 
 def _delete_phrases(
