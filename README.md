@@ -1,3 +1,11 @@
+
+> [!IMPORTANT]
+> The repository will be archived until further notice. I am currently not maintaining LibreLingo. A few better-maintained forks exists, such as [LibreLingoRelive](https://codeberg.org/LibreLingoRelive/LibreLingoRelive)
+
+
+
+
+
 <p align="center">
   <img src="/docs/branding/LibreLingo_Mascot/LightShadow/Turtle1_jetPack.svg" height="250" />
   <br/><br/>
