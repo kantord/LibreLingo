@@ -1,6 +1,6 @@
 
 > [!IMPORTANT]
-> The repository will be archived until further notice. I am currently not maintaining LibreLingo. A few better-maintained forks exists, such as [LibreLingoRelive](https://codeberg.org/LibreLingoRelive/LibreLingoRelive)
+> The repository will be archived until further notice. I am currently not maintaining LibreLingo. A few better-maintained forks exists, such as [LibreLingoRelive](https://codeberg.org/LibreLingoRelive/LibreLingoRelive). I am not directly affiliated with that fork or any other fork.
 
 
 
